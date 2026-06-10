@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Humidity Guide — Species Requirements | Lizard.com', description: 'Humidity requirements by species, how to raise and lower humidity, misting schedules, and how to set up a proper moist hide for shedding.', path: '/setup/humidity-guide', type: 'article' })
@@ -20,15 +20,24 @@ export default function HumidityGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Humidity Guide', href: '/setup/humidity-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Temperature Setup Guide', href: '/setup/temperature-guide' }, { label: 'Substrate Guide', href: '/setup/substrate-guide' }, { label: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="setup-humidity" ctaText="Download Free" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Humidity Matters</h2>
         <p><strong>Too low:</strong> Chronic dehydration even if a water dish is provided — reptiles absorb moisture through their environment as well as drinking. Dehydration causes: dysecdysis (stuck shed, particularly dangerous on toes and eye caps where it can cut off circulation), kidney stress, reduced immune function, and poor overall condition.</p>
         <p><strong>Too high:</strong> Respiratory infection. Bacteria and mold thrive in constantly wet environments; humid-loving species require high humidity AND ventilation — the combination of warm, stagnant humid air is what causes respiratory disease, not humidity itself. Enclosures must be designed with appropriate airflow.</p>

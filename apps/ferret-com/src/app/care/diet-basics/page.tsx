@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -33,6 +33,31 @@ const med = buildMedicalWebPageSchema({
 })
 const combined = combineSchemas(schema, med)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret nutrition and endocrine disease",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "AVMA — policy on raw or undercooked animal-source protein in pet food",
+    url: "https://www.avma.org",
+    publisher: "American Veterinary Medical Association",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease",
+    publisher: "Elsevier",
+  },
+]
+
 export default function FerretDietBasicsPage() {
   return (
     <>
@@ -46,7 +71,6 @@ export default function FerretDietBasicsPage() {
             'Ferrets (Mustela putorius furo) are obligate carnivores with a short intestinal tract and rapid gut transit. They cannot derive useful energy from plants. Diet is the single largest controllable input on a ferret’s lifespan, and the biggest single mistake new owners make is feeding cat food, dog food, or a "premium" kibble that is actually high in plant carbohydrate.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -77,6 +101,7 @@ export default function FerretDietBasicsPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -86,13 +111,28 @@ export default function FerretDietBasicsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Toxic Foods', href: '/care/toxic-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-diet-basics"
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="physiology">Obligate Carnivore Physiology</h2>
           <p>
             Ferrets descend from the European polecat and retain a strictly carnivorous digestive system. The gastrointestinal tract is short (roughly 5× body length, compared to 8–9× in cats and 4–6× in dogs) and lacks the long fermenting colon that grain-eating mammals use to extract energy from plant cell walls. Transit time from ingestion to defecation is approximately 3–4 hours. The pancreas does not produce the carbohydrate-handling enzyme profile seen in omnivores, and there is no functional cecum.
@@ -180,7 +220,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Animal-first, starch-free, grain-free"
             score={9.3}
@@ -206,7 +245,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Mid Tier"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
             score={8.0}
@@ -231,7 +269,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="carniwhole"
             badge="Direct-to-Consumer"
-            badgeEmoji="📦"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
             score={8.2}
@@ -253,10 +290,7 @@ export default function FerretDietBasicsPage() {
             ctaAffiliateProduct="ferret-diet"
           />
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Macronutrient targets and obligate-carnivore physiology are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>, 4th edition, Saunders (Elsevier). Carbohydrate–insulinoma associations are discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> issue on ferret endocrine disease and in the <em>Journal of Exotic Pet Medicine</em>. The American Ferret Association (AFA) maintains an owner-facing nutrition statement consistent with the high-protein, low-carbohydrate framework. The raw-feeding harm-reduction discussion draws on the AVMA policy on raw or undercooked animal-source protein in pet food. None of these sources are linked here directly because URLs change; readers are encouraged to search the primary publications by title.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general information about ferret nutrition. It is not a substitute for individualized veterinary advice. If your ferret has been diagnosed with insulinoma, adrenal disease, or any other endocrine or gastrointestinal condition, work with a veterinarian familiar with ferrets before changing the diet.
           </p>

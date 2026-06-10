@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     question: 'I already have a puppy older than 16 weeks — is this still useful?',
-    answer: 'The schedule itself is most useful in the 8–16 week window. After 16 weeks, the structured schedule still works for adolescents (and is in fact recommended) but the socialization emphasis shifts to maintenance rather than acquisition. The deeper content lives in our <a href="/training/socialization-window">Critical Socialization Window</a> guide.',
+    answer: 'The schedule itself is most useful in the 8–16 week window. After 16 weeks, the structured schedule still works for adolescents (and is in fact recommended) but the socialization emphasis shifts to maintenance rather than acquisition. The deeper content lives in our <a href="/training/dog-socialization-window">Critical Socialization Window</a> guide.',
   },
   {
     question: 'How often will you email me?',
@@ -45,7 +45,13 @@ const FAQS = [
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
-const allSchemas = combineSchemas(articleSchema, faqSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Puppy Schedule', url: 'https://dog.com/puppy-schedule' },
+  ],
+})
+const allSchemas = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
 
 const WEEKLY_PREVIEW = [
   { week: '8', focus: 'Settle in', milestones: 'Crate intro · Name recognition · Outdoor potty schedule · First vet visit' },
@@ -200,7 +206,7 @@ export default function PuppySchedulePage() {
             <p className="mb-2">More puppy training reference:</p>
             <ul className="space-y-1.5">
               <li><Link href="/training/puppy-schedule" className="text-brand-primary hover:underline">Full puppy-schedule article (deep dive)</Link></li>
-              <li><Link href="/training/socialization-window" className="text-brand-primary hover:underline">The critical socialization window</Link></li>
+              <li><Link href="/training/dog-socialization-window" className="text-brand-primary hover:underline">The critical socialization window</Link></li>
               <li><Link href="/training/puppy-biting" className="text-brand-primary hover:underline">Puppy biting and bite inhibition</Link></li>
               <li><Link href="/training/house-training" className="text-brand-primary hover:underline">House training: the schedule method</Link></li>
             </ul>

@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Neocaridina davidi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/neocaridina-davidi/", publisher: "Seriously Fish" },
+  { label: "Neocaridina davidi — FishBase species record", url: "https://www.fishbase.se/summary/Neocaridina-davidi.html", publisher: "FishBase" },
+  { label: "Klotz, W. et al. Neocaridina davidi (Bouvier, 1904) in Germany: the ornamental cherry shrimp as a potential invasive species. BioInvasions Records, 2013.", publisher: "BioInvasions Records" },
+  { label: "Freshwater Shrimp Care — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA177", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks', path: '/species/cherry-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryShrimpPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Cherry Shrimp Care Guide', subtitle: 'Neocaridina davidi — the cherry shrimp is the gateway invertebrate for most aquarists. Hardy, colorful, endlessly interesting to watch, and prolific breeders that establish self-sustaining colonies in established tanks. They clean glass, graze on biofilm, and add movement and color to any community setup.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Cherry Shrimp Care Guide', subtitle: 'Neocaridina davidi — the cherry shrimp is the gateway invertebrate for most aquarists. Hardy, colorful, endlessly interesting to watch, and prolific breeders that establish self-sustaining colonies in established tanks. They clean glass, graze on biofilm, and add movement and color to any community setup.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Amano Shrimp", href: "/species/amano-shrimp", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Color Grades</div>
@@ -20,10 +29,13 @@ export default function CherryShrimpPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Amano Shrimp', href: '/species/amano-shrimp' }, { label: 'Mystery Snail', href: '/species/mystery-snail' }, { label: 'Otocinclus Care', href: '/species/otocinclus' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-cherry-shrimp" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-cherry-shrimp" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry shrimp in a home aquarium." priority />
         <h2>Grades — What You're Paying For</h2>
         <p>Cherry shrimp are sold in grades based on color intensity and coverage. All grades are the same species (Neocaridina davidi) and have identical care requirements — grade is purely aesthetic and affects price, not ease of care. Low-grade "cherry" shrimp have pale, patchy red coloration with transparent areas. Higher grades have progressively more intense and solid red coloration, culminating in "Painted Fire Red" with solid, opaque red coloration throughout. Breeding higher-grade shrimp together tends to produce higher-grade offspring — but population grades drift toward lower grades without selective culling of pale individuals.</p>
         <p>Important note: do not mix different Neocaridina color morphs (cherry, blue dream, yellow, orange rili) in the same tank. They interbreed freely and within a few generations produce drab, genetically mixed offspring in place of the pure-color varieties. Keep each Neocaridina color morph in its own tank or with other compatible species.</p>
@@ -42,6 +54,7 @@ export default function CherryShrimpPage() {
 
         <h2>Feeding</h2>
         <p>Cherry shrimp are primarily biofilm grazers — in an established planted tank with adequate biofilm, supplemental feeding may not be necessary. For regular feeding: sinking algae wafers (Hikari Crab Cuisine, Repashy Soilent Green), blanched vegetables (zucchini, spinach, cucumber weighted down), commercial shrimp food (Bacter AE promotes biofilm growth on substrate). Feed small amounts every 2-3 days — overfeeding fouls the water, which is more damaging to shrimp than underfeeding. Remove uneaten food within 24 hours.</p>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cherry Shrimp — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cherry shrimp care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -51,6 +64,7 @@ export default function CherryShrimpPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

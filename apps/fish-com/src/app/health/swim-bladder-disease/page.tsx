@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Swim Bladder Disease in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/swim-bladder-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish — Causes, Pea Treatment | Fish.com', description: 'Swim bladder problems cause floating, sinking, or listing. Constipation is the most common cause in fancy goldfish. The fasting and pea protocol', path: '/health/swim-bladder-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish', description: 'Causes, constipation treatment, and prognosis for swim bladder disorders in aquarium fish.', url: 'https://fish.com/health/swim-bladder-disease', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SwimBladderPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Swim Bladder Disease', subtitle: 'Swim bladder disorder describes any condition affecting the gas-filled organ fish use to control buoyancy. The fish floats helplessly at the surface, sinks to the bottom, or lists sideways — dramatic and distressing to observe. The cause determines the prognosis: constipation-related disorders often resolve; structural or degenerative disorders in fancy goldfish often do not.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Swim Bladder Disease', subtitle: 'Swim bladder disorder describes any condition affecting the gas-filled organ fish use to control buoyancy. The fish floats helplessly at the surface, sinks to the bottom, or lists sideways — dramatic and distressing to observe. The cause determines the prognosis: constipation-related disorders often resolve; structural or degenerative disorders in fancy goldfish often do not.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Swim Bladder Disease', href: '/health/swim-bladder-disease' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Diagnosis</div>
@@ -24,6 +33,7 @@ export default function SwimBladderPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Causes — What's Actually Wrong</h2>
         <p><strong>Constipation and gas (most common, most treatable):</strong> Intestinal gas from constipation or rapid food intake presses against the swim bladder, displacing or compressing it. This is the most common cause of sudden swim bladder symptoms in goldfish and bettas after feeding — particularly with dry foods that expand in the stomach. The fish that was fine before feeding and now floats after eating has constipation-related swim bladder compression. This is the case the pea protocol addresses.</p>
         <p><strong>Infection:</strong> Bacterial infection of the swim bladder itself, or infection elsewhere that spreads to it. Presents as swim bladder symptoms accompanied by other systemic signs (loss of appetite, fin clamping, lethargy). Treated with appropriate antibiotics.</p>
@@ -36,6 +46,7 @@ export default function SwimBladderPage() {
 
         <h2>Long-Term Management for Structural Cases</h2>
         <p>Fancy goldfish with chronic swim bladder disorders can live comfortably for years with appropriate management. Key adjustments: feed sinking rather than floating foods (surface feeding causes air ingestion that worsens buoyancy problems), soak all dry foods before feeding (reduces expansion in the stomach), reduce feeding frequency slightly, and maintain excellent water quality (stressed fish with compromised organ function need pristine conditions). Some keepers use shallow water (4-6 inches) for severely affected fish — the reduced depth makes swimming and reaching food much easier for a fish that cannot maintain neutral buoyancy.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

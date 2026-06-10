@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide — Largest Gecko | Lizard.com", description: "The New Caledonian giant gecko is the largest living gecko. Tall enclosures, moderate temps, a CGD-based diet, and why they must be housed alone.", path: "/species/leachianus-gecko", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Leachianus Gec
 export default function SpeciesLeachianusGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Leachianus Gecko", href: "/species/leachianus-gecko" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Mossy Leaf-Tail Gecko', href: '/species/mossy-leaf-tail-gecko', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesLeachianusGeckoPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Crested Gecko Care", href: "/species/crested-gecko" }, { label: "Gargoyle Gecko Care", href: "/species/gargoyle-gecko" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-leachianus-gecko"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Leachianus geckos are arboreal New Caledonian giants prized for their size, longevity (often well over 20 years), and the distinctive growling and barking vocalizations they use to defend territory. Like their crested and gargoyle gecko relatives, they thrive at room-ish temperatures, eat a convenient commercial powdered diet, and do not require UVB to survive, making them comparatively low-fuss for an animal of their impressive size. The one firm rule that beginners overlook is that adult leachies are highly territorial and must be housed individually outside supervised breeding."}</p>
           <h2>{"Why Leachies Must Be Housed Alone"}</h2>
 
@@ -58,6 +68,7 @@ export default function SpeciesLeachianusGeckoPage() {
             <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier)."}</li>
             <li>{"Pangea / Repashy complete gecko-diet formulation notes."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Leachianus Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse tall arboreal enclosures, low-level UVB, thermostats, foggers, substrate, and complete gecko diet sized for leachianus gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

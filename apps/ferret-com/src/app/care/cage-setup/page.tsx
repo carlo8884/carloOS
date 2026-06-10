@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,26 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+]
+
 export default function FerretCageSetupPage() {
   return (
     <>
@@ -37,7 +57,6 @@ export default function FerretCageSetupPage() {
             'A ferret cage is the bedroom, not the house. Ferrets sleep 14–18 hours a day, and during their waking 6–10 hours they need to be out of the cage exploring, playing, and running. The right cage is what they come back to between play sessions — secure, vertically interesting, and clean.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -69,6 +88,7 @@ export default function FerretCageSetupPage() {
                 { label: 'Insulinoma', href: '/health/insulinoma' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -78,13 +98,28 @@ export default function FerretCageSetupPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Multi-Level Housing', href: '/care/multi-level-housing' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-cage-setup"
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="sizing">Cage Sizing and Bar Spacing</h2>
           <p>
             The American Ferret Association recommends a minimum cage floor area of roughly 24 × 24 inches with a minimum height of 18 inches per ferret, with strong preference for multi-level cages that increase usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — most keepers settle on a 36 × 24-inch or larger footprint with at least three levels.
@@ -179,7 +214,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="critter-nation"
             badge="Best Overall"
-            badgeEmoji="🏆"
             name="MidWest Critter Nation Double Unit (Model 162)"
             subtitle="Two-level, 36×25×62 inches, 1/2-inch bar spacing on lower portion"
             score={9.4}
@@ -205,7 +239,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="marshall"
             badge="Best Starter"
-            badgeEmoji="🛠️"
             name="Marshall Designer Ferret Cage"
             subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
             score={8.2}
@@ -235,7 +268,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="marshall-sleep-sack"
             badge="Top Pick"
-            badgeEmoji="😴"
             name="Marshall Ferret Sleep Sack & Hammock Set"
             subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
             score={9.0}
@@ -253,7 +285,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="kaytee-litter-pan"
             badge="Essential"
-            badgeEmoji="🗑️"
             name="Kaytee Corner Ferret Litter Pan"
             subtitle="Corner-shaped, high back wall, low-entry front lip"
             score={8.8}
@@ -269,10 +300,7 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Cage sizing, bar spacing, and out-of-cage time recommendations are drawn from American Ferret Association (AFA) owner-education materials. Bedding, foreign-body, and respiratory-irritant discussions reference Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>. Product picks are widely-stocked cages observed in keeper communities and at exotic-mammal shelters; this page does not claim hands-on testing.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             Affiliate disclosure: Ferret.com may earn a commission on qualifying purchases made through links on this page. Editorial picks are based on documented product specifications and community-reported reliability; commission does not influence inclusion.
           </p>

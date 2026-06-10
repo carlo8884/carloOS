@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Argentine Tegu Care Guide — Enclosure, Diet, Brumation | Lizard.com', description: 'Argentine black & white tegu (Salvator merianae) care. 6×3×3 ft minimum adult enclosure, omnivorous diet rotation, brumation behavior, intelligent and tameable.', path: '/species/tegu', type: 'article' })
@@ -25,8 +25,16 @@ export default function TeguPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Argentine Black & White Tegu Care Guide', subtitle: 'Salvator merianae — the Argentine black and white tegu is one of the most intelligent, interactive, and physically demanding reptiles in the trade. A 4-foot, 10+ kg omnivore with a 15–20 year lifespan, dog-like behavior, and serious enclosure requirements.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
+        hero={{ title: 'Argentine Black & White Tegu Care Guide', subtitle: 'Salvator merianae — the Argentine black and white tegu is one of the most intelligent, interactive, and physically demanding reptiles in the trade. A 4-foot, 10+ kg omnivore with a 15–20 year lifespan, dog-like behavior, and serious enclosure requirements.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Argentine Tegu', href: '/species/tegu' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Argentine Tegu Care (Alternate)', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+          { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+          { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+          { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+          { title: 'Gout Prevention', href: '/health/gout-prevention', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>
@@ -39,9 +47,11 @@ export default function TeguPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Savannah Monitor Care', href: '/species/savannah-monitor' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-tegu" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Argentine black &amp; white tegus</strong> (<em>Salvator merianae</em>) are large, intelligent, omnivorous lizards from southern South America. Adults reach 3.5–4.5 feet and 4–10+ kg with a 15–20 year lifespan. The minimum responsible adult enclosure is 6×3×3 feet (preferably 8×4×3). They are diurnal baskers needing strong UVB (Arcadia 12%) and a 110–130°F basking surface. Diet is omnivorous: whole prey, insects, lean protein, and fruit on rotation. Most captive tegus brumate in winter and this should be accommodated, not fought. Verify legality before acquiring — restricted in several US states.</p>
 
@@ -134,6 +144,7 @@ export default function TeguPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Tegu — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for tegu care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

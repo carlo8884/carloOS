@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Enclosure Size Guide — Minimums by Species | Lizard.com", description: "How big a reptile enclosure should be, why bigger is better, the myth that snakes prefer cramped tanks, and minimum footprints for popular species.", path: "/setup/terrarium-size-guide", type: 'article' })
@@ -8,9 +9,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Enclos
 export default function SetupTerrariumSizeGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Screen vs PVC Enclosures', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Sizing Rules"}</div>
@@ -26,6 +35,8 @@ export default function SetupTerrariumSizeGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
           <p>{"A reptile enclosure has to do more than contain the animal; it has to hold a working thermal gradient, provide cover and enrichment, and give the animal enough room to express natural behaviors like climbing, burrowing, foraging, and exploring. Undersized enclosures make all of this difficult: a short tank cannot maintain a basking-to-cool gradient, a cramped cage offers no exercise, and a barren small box leaves the animal chronically stressed. Modern husbandry favors generous, heavily furnished enclosures over the minimal tanks of decades past."}</p>
           <h2>{"The \"Snakes Like It Small\" Myth"}</h2>
 
@@ -36,6 +47,7 @@ export default function SetupTerrariumSizeGuidePage() {
             <li>{"Ensure the longest dimension is long enough to establish a real warm-to-cool gradient with distinct zones"}</li>
             <li>{"Bigger is almost always better as long as the animal still has adequate hides and cover so the space does not feel exposed"}</li>
           </ul>
+          <p>{"To get a calculated number from your animal's adult body length and locomotor habit, use the "}<Link href="/tools/enclosure-size-calculator" className="text-brand-primary hover:underline">{"Enclosure Size Calculator"}</Link>{" — it outputs recommended minimum L x W x H, floor footprint in sq ft, and volume in gallons and liters."}</p>
           <h2>{"Minimum Footprints for Popular Species"}</h2>
           <p>{"These are widely cited practical minimums for a single adult; larger is encouraged. Always confirm against a current species-specific care sheet."}</p>
           <ul>
@@ -48,6 +60,31 @@ export default function SetupTerrariumSizeGuidePage() {
             <li>{"Chinese water dragon (arboreal): 4x2x4 ft, taller better"}</li>
             <li>{"Large monitors and tegus: room-scale custom enclosures of 8x4x4 ft or larger"}</li>
           </ul>
+          <BuyBox
+            label="Enclosures sized for the species above"
+            disclosure="We earn a commission when you purchase through these links, at no extra cost to you. We never rank by commission — enclosure recommendations follow husbandry minimums."
+            brands={[
+              {
+                name: 'Exo Terra 36x18x18 (bearded dragons, skinks)',
+                vendors: [
+                  { vendor: 'amazon', href: '/go/amazon-brand/exo+terra+36x18x18+terrarium?s=setup-terrarium-size' },
+                ],
+              },
+              {
+                name: 'Exo Terra 18x18x24 Tall (crested geckos, chameleons)',
+                vendors: [
+                  { vendor: 'amazon', href: '/go/amazon-brand/exo+terra+18x18x24+tall+terrarium?s=setup-terrarium-size' },
+                ],
+              },
+              {
+                name: 'REPTI ZOO 48x24x24 (ball pythons, corn snakes, monitors)',
+                vendors: [
+                  { vendor: 'amazon', href: '/go/amazon-brand/repti+zoo+48x24x24+reptile+enclosure?s=setup-terrarium-size' },
+                ],
+              },
+            ]}
+          />
+
           <h2>{"Signs an Enclosure Is Too Small"}</h2>
           <ul>
             <li>{"Glass-surfing or pacing the walls (common in undersized water dragons and bearded dragons)"}</li>

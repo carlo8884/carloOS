@@ -3,12 +3,12 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { States } from '@/data/states'
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Find an Exotic-Pet Vet for Your Ferret | Ferrets.com',
   description:
-    'Most general-practice vets see fewer than ten ferrets a year. Seven questions to ask, the AEMV directory, and a state-by-state index of exotic-pet vets who actually treat ferrets.',
+    'Most general-practice vets see few ferrets a year. Seven questions to ask, the AEMV directory, and a state-by-state index of exotic-pet vets who treat ferrets.',
   path: '/find-a-vet',
   type: 'website',
 })
@@ -105,14 +105,19 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Find a Vet', url: 'https://ferrets.com/find-a-vet' },
-  ],
-})
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Find a Ferret Vet by State',
+  numberOfItems: States.length,
+  itemListElement: States.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.name,
+    url: `https://ferrets.com/find-a-vet/${s.slug}`,
+  })),
+}
 
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = combineSchemas(faqSchema, itemListSchema)
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -394,6 +399,51 @@ export default function FindAVetPage() {
               <em>Veterinary Clinics of North America: Exotic Animal
               Practice</em> — issues on ferret endocrine and neoplastic
               disease.
+            </li>
+          </ul>
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/directory/rescues" className="text-brand-primary font-medium hover:underline">
+                Ferret rescue &amp; adoption guide &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/adopt" className="text-brand-primary font-medium hover:underline">
+                Adopting a ferret (regional guides) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/acquiring" className="text-brand-primary font-medium hover:underline">
+                Acquiring a ferret (checklist + permits) &rarr;
+              </Link>
             </li>
           </ul>
         </section>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Senior Dog Nutrition — When to Switch | Dog.com', description: 'Senior dog nutrition guide. When to switch to senior food, what "senior" formulas actually do, protein requirements in old age.', path: '/nutrition/senior-dog-nutrition', type: 'article' })
@@ -14,6 +14,7 @@ export default function SeniorDogNutritionPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Senior Dog Nutrition', subtitle: 'Dogs age faster than humans and their nutritional needs change with age — but "senior dog food" as a category is less well-defined than many owners realize. Here\'s what the research says about feeding aging dogs well.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Dog Supplements', href: '/nutrition/dog-supplements', category: 'Nutrition' }, { title: 'Best Dog Food Senior', href: '/reviews/best-dog-food-senior', category: 'Reviews' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When Is "Senior"?</div>
@@ -25,10 +26,12 @@ export default function SeniorDogNutritionPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-senior" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>What "Senior Dog Food" Actually Means</h2>
           <p><a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> does not have a separate nutritional standard for "senior" dog food — the category is a marketing designation, not a regulated nutritional specification. Senior formulas from different manufacturers vary enormously in their actual nutritional profile. Some reduce calories (appropriate for overweight seniors), some add joint supplements (useful), some simply add the label "senior" to an adult formula with minimal changes. Always look at the actual nutrient profile, not just the label.</p>
           <p>The most important factors for senior dogs: caloric density appropriate to activity level and weight, high-quality protein, reduced phosphorus if kidney disease is present, and omega-3 fatty acids for cognitive and joint support.</p>

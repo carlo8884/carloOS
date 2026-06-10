@@ -3,14 +3,24 @@ import {
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
   StockImage,
+  AffiliateDisclosure,
+  ArticleByline,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Betta splendens — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/betta-splendens/", publisher: "Seriously Fish" },
+  { label: "Betta splendens — FishBase species record", url: "https://www.fishbase.se/summary/Betta-splendens.html", publisher: "FishBase" },
+  { label: "Mahapatro, D. et al. Captive Breeding of Siamese Fighting Fish Betta splendens. Asian Fisheries Science, 2012.", publisher: "Asian Fisheries Science" },
+  { label: "Pinter, H. Labyrinth Fish. Barron's Educational Series, 1986.", publisher: "Barron's" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -103,7 +113,6 @@ export default function BettaFishPage() {
             'Betta splendens — the Siamese fighting fish is one of the most commonly purchased aquarium fish and one of the most commonly mistreated. The bowls, vases, and tiny containers sold for bettas do not constitute adequate housing. A heated, filtered tank of at least 5 gallons is the welfare minimum.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '14 min',
         }}
@@ -112,6 +121,7 @@ export default function BettaFishPage() {
           { name: 'Species', href: '/species' },
           { name: 'Betta Fish', href: '/species/betta-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates', category: 'Species Guide' }, { title: 'Nano Tank Setup', href: '/setup/nano-tank-setup', category: 'Tank Setup' }, { title: 'Best Nano Tanks', href: '/reviews/best-nano-tanks', category: 'Reviews' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -146,6 +156,7 @@ export default function BettaFishPage() {
                 { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -157,6 +168,7 @@ export default function BettaFishPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <StockImage manifestKey="fish-com:cornerstone-species-betta" aspect="16:9" variant="inline" caption="A betta (Betta splendens) displaying its fins in a planted aquarium." priority />
           <h2>The Bowl Myth — Why Bettas Die Young</h2>
           <p>
@@ -375,7 +387,8 @@ export default function BettaFishPage() {
             includeSchema={false}
             allowMultiple
           />
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Betta Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for betta fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -384,6 +397,7 @@ export default function BettaFishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

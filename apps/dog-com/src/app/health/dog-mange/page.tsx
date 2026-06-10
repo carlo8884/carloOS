@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Mange in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/mange/overview-of-mange', publisher: 'Merck Vet Manual' },
+  { label: 'CAPC: Companion Animal Parasite Council — Sarcoptic Mange and Demodex', url: 'https://capcvet.org/guidelines/external-parasites/', publisher: 'CAPC' },
+  { label: 'AVMA: Mange (Sarcoptic and Demodectic) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Mueller RS et al. A review of topical therapy for skin infections with bacteria and yeast. Vet Dermatol. 2012;23(4):330-341.', publisher: 'Vet Dermatology' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Mange in Dogs — Sarcoptic vs Demodectic, Treatment | Dog.com', description: 'Two types of mange in dogs: sarcoptic (scabies — highly contagious to humans) and demodectic (not contagious). Different causes, presentations, and treatments.', path: '/health/dog-mange', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -14,6 +22,7 @@ export default function DogMangePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Mange in Dogs', subtitle: 'Two completely different mite species cause two completely different diseases both called "mange." Sarcoptic mange is highly contagious to other animals and humans. Demodectic mange is not contagious but indicates immune compromise. The distinction matters enormously for treatment and household management.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Mange', href: '/health/dog-mange' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Pyoderma in Dogs', href: '/health/dog-pyoderma', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Sarcoptic vs Demodectic</div>
@@ -36,7 +45,8 @@ export default function DogMangePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-mange" />
         </>}
       >
@@ -53,6 +63,8 @@ export default function DogMangePage() {
           <p><strong>Juvenile (localized) demodicosis:</strong> Small patches of hair loss, typically on the face and legs of puppies under 18 months. Often self-resolving as the immune system matures. Limited to fewer than 5 lesions. Monitor — often does not require treatment.</p>
           <p><strong>Generalized demodicosis:</strong> Extensive hair loss affecting the entire body, often with secondary bacterial infection (pyoderma). Can occur in juveniles or adults. In adult-onset generalized demodicosis — any dog over 18 months developing new generalized demodex — an underlying cause of immune suppression must be investigated: Cushing's disease, hypothyroidism, diabetes mellitus, neoplasia, immunosuppressive medications. Treating the skin without addressing the underlying cause results in treatment failure.</p>
           <p><strong>Treatment:</strong> Isoxazoline products (Bravecto, NexGard, Simparica) are highly effective — they have revolutionized demodectic mange treatment and are now the standard of care. Monthly or every-3-month dosing continues until two consecutive negative skin scrapings are achieved. Traditional treatments (amitraz dips, oral ivermectin) are still used in some cases. Secondary bacterial pyoderma requires concurrent antibiotic treatment. Treatment duration: typically 3–6 months for generalized cases.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

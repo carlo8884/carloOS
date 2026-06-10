@@ -1,19 +1,31 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. Reference guide.', path: '/health/pain-management-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'WSAVA: Pain Management Guidelines', url: 'https://wsava.org/global-guidelines/global-pain-council-guidelines/', publisher: 'WSAVA' },
+  { label: 'AAHA: Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/pain-management/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: Pain Assessment and Management', url: 'https://www.merckvetmanual.com/pharmacology/analgesia/pain-assessment-and-treatment-in-animals', publisher: 'Merck Vet Manual' },
+]
 
 export default function PainManagementPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
+        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Management', href: '/health/pain-management-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs', category: 'Veterinary Guide' },
+          { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Subtle Pain Signs</div>
@@ -21,7 +33,7 @@ export default function PainManagementPage() {
               <div key={s} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{s}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-mgmt" />
         </>}
       >
@@ -45,6 +57,8 @@ export default function PainManagementPage() {
 
           <h2>Weight Management as Pain Treatment</h2>
           <p>For osteoarthritic dogs, weight loss to ideal BCS is a pain management intervention, not just a wellness recommendation. Every pound of excess weight adds approximately 3-4 pounds of force on the joints with each step. A study in Labrador Retrievers showed that dogs at ideal body weight developed osteoarthritis significantly later and with lower severity than littermates maintained at slightly over ideal weight. For a dog already arthritic, losing 10% of body weight may produce pain reduction equivalent to starting an NSAID — without the medication cost or monitoring requirements.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

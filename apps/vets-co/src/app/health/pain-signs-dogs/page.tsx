@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 const SIGNS = [
   { sign: 'Changes in posture', detail: 'A hunched back, tucked abdomen, or a stance with weight shifted away from one limb indicates pain. Dogs with abdominal pain adopt a "praying position" (front down, rear elevated). Hunched posture in a dog that normally stands upright is significant.' },
@@ -21,13 +22,24 @@ const SIGNS = [
   { sign: 'Squinting or pawing at the face', detail: 'Eye pain — corneal ulcer, glaucoma, uveitis — causes squinting, rubbing at the eye or face, and discharge. Any squinting eye in a dog warrants same-day veterinary evaluation.' },
   { sign: 'Changes in elimination habits', detail: 'Reluctance to posture for urination or defecation — crouching low, not fully assuming the normal position — can indicate perineal, lower back, or joint pain. New house soiling in a previously reliable dog may reflect pain when moving to eliminate location.' },
 ]
+const SOURCES = [
+  { label: 'WSAVA: Pain Management Guidelines', url: 'https://wsava.org/global-guidelines/global-pain-council-guidelines/', publisher: 'WSAVA' },
+  { label: 'AAHA: Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/pain-management/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: Signs of Pain in Animals', url: 'https://www.merckvetmanual.com/pharmacology/analgesia/pain-assessment-and-treatment-in-animals', publisher: 'Merck Vet Manual' },
+]
 export default function PainSignsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Signs', href: '/health/pain-signs-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Pain Management in Dogs', href: '/health/pain-management-dogs', category: 'Veterinary Guide' },
+          { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">The Dog Grimace Scale</div>
@@ -36,7 +48,7 @@ export default function PainSignsPage() {
               <div key={s} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid flex gap-2"><span className="text-brand-primary">→</span>{s}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-signs" />
         </>}
       >
@@ -51,6 +63,8 @@ export default function PainSignsPage() {
               </div>
             </div>
           ))}
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

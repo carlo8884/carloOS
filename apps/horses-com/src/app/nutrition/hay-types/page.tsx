@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Hay Types Compared — Grass, Legume, and Mixed",
   description:
-    "Reference guide to hay types for horses: grass hays (timothy, orchard, bermuda), legume hays (alfalfa, clover), mixed hays, quality assessment, and matching hay to the horse.",
+    "Reference guide to hay types for horses: grass hays (timothy, orchard), legume hays (alfalfa, clover), quality assessment, and matching hay to the horse.",
   path: '/nutrition/hay-types',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Hay Types Compared — Grass, Legume, and Mixed",
   description:
-    "Reference guide to hay types for horses: grass hays (timothy, orchard, bermuda), legume hays (alfalfa, clover), mixed hays, quality assessment, and matching hay to the horse.",
+    "Reference guide to hay types for horses: grass hays (timothy, orchard), legume hays (alfalfa, clover), quality assessment, and matching hay to the horse.",
   url: 'https://horses.com/nutrition/hay-types',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function HayTypesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+          { title: 'Heaves (Equine Asthma)', href: '/health/heaves' },
+        ]}
         hero={{
           title: "Horse Hay Types Compared",
           subtitle:
@@ -88,6 +94,7 @@ export default function HayTypesPage() {
               { label: "Heaves (Equine Asthma)", href: "/health/heaves" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function HayTypesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="grass">Grass Hays</h2>
           <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled.</p>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -39,7 +39,6 @@ export default function UVBLightingGuidePage() {
         subtitle: 'UVB is not optional for most reptile species. It is the difference between metabolic bone disease and skeletal health. This guide covers everything from Ferguson Zones to bulb selection to the replacement schedule most keepers miss.',
         category: 'Setup Guide',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '13 min',
       }}
@@ -49,6 +48,13 @@ export default function UVBLightingGuidePage() {
         { name: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Why UVB Matters', href: '#why' },
@@ -71,6 +77,8 @@ export default function UVBLightingGuidePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
 
         <CalloutBox variant="evidence" title="Evidence-anchored">
           UVI targets in this guide follow the <strong>Ferguson Zone</strong> framework derived from field UVI measurements of free-ranging reptiles. Verify actual UVI at the basking site with a <strong>Solarmeter 6.5</strong> — the long-standing reference instrument for reptile-keepers — rather than relying on bulb labels alone.
@@ -123,6 +131,31 @@ export default function UVBLightingGuidePage() {
           <li><strong>Arcadia T5 HO 6% Forest</strong> — Zone 2–3 species. Same exceptional build quality as the 12%.</li>
           <li><strong>Zoo Med T5 HO Reptisun 10.0</strong> — good output, wider availability, faster output decline (70–75% at 6 months — replace every 6 months not 12).</li>
         </ul>
+
+        <BuyBox
+          label="Where to buy T5 HO UVB bulbs"
+          disclosure="We earn a commission when you purchase through these links, at no extra cost to you. We never rank by commission — rankings follow measured UVI output data."
+          brands={[
+            {
+              name: 'Arcadia T5 HO 12% Desert',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/arcadia+t5+12+desert?s=setup-uvb-guide' },
+              ],
+            },
+            {
+              name: 'Arcadia T5 HO 6% Forest',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/arcadia+t5+6+forest?s=setup-uvb-guide' },
+              ],
+            },
+            {
+              name: 'Zoo Med T5 HO Reptisun 10.0',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/zoo+med+reptisun+t5+ho+10.0?s=setup-uvb-guide' },
+              ],
+            },
+          ]}
+        />
 
         <h2 id="distance">Correct Bulb Distance</h2>
 

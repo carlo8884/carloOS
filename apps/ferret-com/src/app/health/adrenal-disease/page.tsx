@@ -12,12 +12,36 @@ import {
   DropCap,
   ReviewCard,
   AffiliateDisclosure,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret adrenal-disease chapter, including the early-neuter hypothesis and deslorelin therapy.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: adrenal cortical disease, sex-steroid overproduction, diagnosis, and surgical management",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education materials on ferret adrenal disease and deslorelin use",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret adrenal disease, deslorelin implant outcomes, and surgical adrenalectomy",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -52,13 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/adrenal-disease' },
-    { name: 'Adrenal Disease', url: 'https://ferret.com/health/adrenal-disease' },
-  ],
-})
 
 const FAQS = [
   {
@@ -94,7 +111,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretAdrenalDiseasePage() {
   return (
@@ -109,7 +126,6 @@ export default function FerretAdrenalDiseasePage() {
             "Adrenal gland disease — hyperplasia, adenoma, or adenocarcinoma of the adrenal cortex — is the second most commonly diagnosed disease of middle-aged ferrets, behind only insulinoma. It is hormonally driven rather than cortisol-driven (unlike canine Cushing's), which changes both the clinical picture and the diagnostic workup.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}
@@ -144,6 +160,7 @@ export default function FerretAdrenalDiseasePage() {
                 { label: 'First-Year Schedule', href: '/first-year-schedule' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <div className="bg-brand-dark rounded-lg p-5 mb-4">
               <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
                 Adrenal Disease + Insurance
@@ -173,7 +190,14 @@ export default function FerretAdrenalDiseasePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-adrenal"
@@ -618,39 +642,7 @@ export default function FerretAdrenalDiseasePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The ferret endocrine-disease chapter is the
-              standard reference for adrenal disease diagnosis and management.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple issues covering ferret endocrine disease
-              and surgical management.
-            </li>
-            <li>
-              <em>Journal of the American Veterinary Medical Association
-              (JAVMA)</em>, case series and retrospective studies on adrenal
-              disease prevalence, deslorelin implant outcomes, and surgical
-              outcomes.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, clinical articles on
-              ferret endocrinology and the hypothesized early-neuter link.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — member
-              directory and continuing-education materials.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing position
-              statements on adrenal disease awareness and breeder neuter
-              timing concerns.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret adrenal
             disease. It is not individualized veterinary advice. Any ferret

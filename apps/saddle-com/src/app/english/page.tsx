@@ -1,72 +1,83 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Best English Saddles 2025 — By Discipline & Budget | Saddle.com',
-  description: 'English saddles ranked by discipline: dressage, show jumping, eventing, all-purpose, and close contact.',
+  title: 'English Saddles by Discipline — Dressage, Jumping | Saddle.com',
+  description: 'Browse English saddles by discipline — dressage, show jumping, eventing, and all-purpose. Discipline differences, brand origins, and price ranges explained.',
   path: '/english',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'English Saddles', url: 'https://saddle.com/english' },
+  ],
 })
 
 const DISCIPLINES = [
   {
-    name: 'Dressage', icon: '🎖️',
+    name: 'Dressage',
     desc: 'Deep seat, straight-cut flap, close contact with horse\'s back. Designed for collection and lateral work.',
     brands: ['Stubben', 'Passier', 'Amerigo', 'County'],
     priceRange: '$800–5,000',
     topPick: 'Stubben Roxane',
     topPickScore: '9.5',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-dressage',
+    imgFallback: 'saddle-com:category-dressage',
   },
   {
-    name: 'Show Jumping', icon: '🏆',
+    name: 'Show Jumping',
     desc: 'Forward-cut flap, close contact, minimal bulk between rider and horse. Built for speed and precision.',
     brands: ['Pessoa', 'Devoucoux', 'Antares', 'CWD'],
     priceRange: '$1,000–5,000+',
     topPick: 'Pessoa Gen X Pro',
     topPickScore: '9.2',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-jumping',
+    imgFallback: 'saddle-com:category-jumping',
   },
   {
-    name: 'Eventing', icon: '⚡',
+    name: 'Eventing',
     desc: 'Hybrid design balancing dressage position with jumping security. Used across all three phases.',
     brands: ['Bates', 'Thorowgood', 'Wintec', 'County'],
     priceRange: '$600–3,500',
     topPick: 'County Perfection',
     topPickScore: '9.0',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-eventing',
+    imgFallback: 'saddle-com:category-jumping',
   },
   {
-    name: 'All-Purpose', icon: '🐎',
+    name: 'All-Purpose',
     desc: 'Versatile design for flatwork, jumping, trail, and general use. Best for recreational riders.',
     brands: ['Collegiate', 'Bates', 'Wintec', 'Thorowgood'],
     priceRange: '$300–1,500',
     topPick: 'Bates Caprilli',
     topPickScore: '8.9',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-allpurpose',
+    imgFallback: 'saddle-com:category-dressage',
   },
 ]
 
 const BRAND_GUIDE = [
-  { name: 'Stubben', country: 'Germany', specialty: 'Dressage, all disciplines', priceRange: '$2,500–5,000+', verdict: 'Gold standard — 130 years of craftsmanship' },
-  { name: 'Pessoa', country: 'Brazil', specialty: 'Show jumping', priceRange: '$1,500–3,500', verdict: 'Most Olympic medals of any jumping brand' },
-  { name: 'Passier', country: 'Germany', specialty: 'Dressage', priceRange: '$2,000–4,500', verdict: 'Renowned for leather quality and longevity' },
+  { name: 'Stubben', country: 'Germany', specialty: 'Dressage, all disciplines', priceRange: '$2,500–5,000+', verdict: 'German-made, long-established maker known for durable construction and strong resale' },
+  { name: 'Pessoa', country: 'Brazil', specialty: 'Show jumping', priceRange: '$1,500–3,500', verdict: 'Widely fitted performance jumper with predictable resale' },
+  { name: 'Passier', country: 'Germany', specialty: 'Dressage', priceRange: '$2,000–4,500', verdict: 'Known for leather quality and longevity' },
   { name: 'Bates', country: 'Australia', specialty: 'Eventing, all-purpose', priceRange: '$800–2,000', verdict: 'CAIR panel system, adjustable gullet — practical value' },
-  { name: 'Collegiate', country: 'UK', specialty: 'All-purpose, budget', priceRange: '$400–1,200', verdict: 'Best budget English option for recreational riders' },
-  { name: 'Devoucoux', country: 'France', specialty: 'Show jumping, dressage', priceRange: '$3,000–6,000+', verdict: 'Artisan French craftsmanship — preferred by top professionals' },
-  { name: 'County', country: 'UK/USA', specialty: 'Eventing, custom fit', priceRange: '$2,500–4,500', verdict: 'Custom-fit focus — best for hard-to-fit horses' },
-  { name: 'CWD', country: 'France', specialty: 'Show jumping', priceRange: '$3,500–7,000+', verdict: 'Premium French jumping saddle — consistent at elite level' },
+  { name: 'Collegiate', country: 'UK', specialty: 'All-purpose, budget', priceRange: '$400–1,200', verdict: 'Entry-tier English option for recreational riders' },
+  { name: 'Devoucoux', country: 'France', specialty: 'Show jumping, dressage', priceRange: '$3,000–6,000+', verdict: 'French-made, often fitted at upper competition levels' },
+  { name: 'County', country: 'UK/USA', specialty: 'Eventing, custom fit', priceRange: '$2,500–4,500', verdict: 'Custom-fit focus — suits hard-to-fit horses' },
+  { name: 'CWD', country: 'France', specialty: 'Show jumping', priceRange: '$3,500–7,000+', verdict: 'French-made jumping saddle commonly fitted at the elite level' },
 ]
 
 export default function EnglishSaddlesPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }}
@@ -78,10 +89,16 @@ export default function EnglishSaddlesPage() {
           </div>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4"
             style={{ fontSize: 'clamp(28px, 5vw, 54px)' }}>
-            Best English Saddles — By Discipline
+            English Saddles by Discipline
           </h1>
           <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-            A dressage saddle on a jumping horse is the wrong tool for the job. English discipline saddles are meaningfully different — here&apos;s how to navigate the market by what you actually do.
+            A dressage saddle on a jumping horse is the wrong tool for the job. This hub organizes English saddles by discipline — dressage, show jumping, eventing, and all-purpose — so you can browse what fits what you actually ride.
+          </p>
+          <p className="mt-5 text-sm text-white/70">
+            Looking for our ranked picks?{' '}
+            <Link href="/reviews/best-english-saddles" className="font-bold text-brand-primary underline underline-offset-2">
+              See Best English Saddles →
+            </Link>
           </p>
         </div>
       </div>
@@ -97,10 +114,10 @@ export default function EnglishSaddlesPage() {
           {DISCIPLINES.map((disc) => (
             <div key={disc.name} className="bg-brand-white border border-brand-border rounded-xl overflow-hidden hover:border-brand-primary hover:shadow-card-hover transition-all duration-200">
               <div className="relative h-40 overflow-hidden">
-                <Image src={disc.img} alt={disc.name} fill className="object-cover" sizes="50vw" />
+                <StockImage manifestKey={disc.img} fallbackKey={disc.imgFallback} alt={disc.name} aspect="16:9" variant="inline" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end">
-                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-white/80">{disc.icon} {disc.name}</span>
+                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-white/80">{disc.name}</span>
                   <span className="text-sm font-bold text-brand-primary">{disc.priceRange}</span>
                 </div>
               </div>

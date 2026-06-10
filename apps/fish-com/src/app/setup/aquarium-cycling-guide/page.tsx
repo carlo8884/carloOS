@@ -11,6 +11,8 @@ import {
   buildFAQSchema,
   combineSchemas,
   ArticleByline,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,6 +128,34 @@ const faqSchema = buildFAQSchema({
 
 const combinedSchema = combineSchemas(articleSchema, howToSchema, faqSchema)
 
+const SOURCES = [
+  {
+    label: "Nitrification and the Aquarium Nitrogen Cycle",
+    url: "https://www.researchgate.net/publication/228393977",
+    publisher: "Aquacultural Engineering (peer-reviewed)",
+  },
+  {
+    label: "Nitrosomonas and Nitrospira in Biological Filters",
+    url: "https://aem.asm.org/content/67/12/5768",
+    publisher: "Applied and Environmental Microbiology",
+  },
+  {
+    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
+    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
+    publisher: "University of Arkansas Cooperative Extension",
+  },
+  {
+    label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
+    url: "https://srac.tamu.edu/serveFactSheet/140",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "Aquarium Water Chemistry: Ammonia, Nitrite, Nitrate",
+    url: "https://fisheries.org/docs/wp/Urban-Fisheries/Aquarium-Water-Chemistry.pdf",
+    publisher: "American Fisheries Society",
+  },
+]
+
 export default function CyclingGuidePage() {
   return (
     <>
@@ -138,7 +168,6 @@ export default function CyclingGuidePage() {
             'The nitrogen cycle is the foundation of every aquarium. Without it, fish die within days of ammonia poisoning. With it, fish live for years in stable water. This guide walks through fishless and fish-in cycling, the right ammonia sources, a six-week test schedule, and what to do when a cycle stalls.',
           category: 'Tank Setup',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '15 min',
         }}
@@ -147,6 +176,7 @@ export default function CyclingGuidePage() {
           { name: 'Setup', href: '/setup' },
           { name: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' },
         ]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }, { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Fish Health' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -469,13 +499,15 @@ export default function CyclingGuidePage() {
             includeSchema={false}
             allowMultiple
           />
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Tank Cycling Essentials — Where to Shop</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>

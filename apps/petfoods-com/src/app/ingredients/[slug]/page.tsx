@@ -7,6 +7,7 @@ import {
   buildFAQSchema,
   buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -1219,6 +1220,12 @@ export default async function IngredientPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[
+        { title: 'Ingredient Catalog (all)', href: '/ingredients', category: 'Hub' },
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -1255,8 +1262,8 @@ export default async function IngredientPage({ params }: PageProps) {
         </>
       }
     >
-      {/* Inline FAQPage + BreadcrumbList schemas, in addition to the Article
-          schema injected by ArticleLayout. */}
+      {/* Inline FAQPage + BreadcrumbList + DefinedTerm schemas, in addition
+          to the Article schema injected by ArticleLayout. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -1265,8 +1272,31 @@ export default async function IngredientPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'DefinedTerm',
+            name: ingredient.name,
+            description: ingredient.aafcoDefinition,
+            inDefinedTermSet: {
+              '@type': 'DefinedTermSet',
+              name: 'Pet Food Ingredient Glossary',
+              url: 'https://petfoods.com/ingredients',
+            },
+            url: `https://petfoods.com/ingredients/${slug}`,
+          }),
+        }}
+      />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(ingredient)}
         </p>

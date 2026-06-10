@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function MarketingTermsDecodedPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,13 @@ export default function MarketingTermsDecodedPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'Pet Food Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The By-Products Myth', href: '/myths/by-products-myth' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +110,7 @@ export default function MarketingTermsDecodedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Pet food marketing relies on terms that sound meaningful but are mostly undefined and unenforceable. The regulated, comparable information — the ingredient list, guaranteed analysis, and AAFCO statement — is on the back of the bag, while the front carries the marketing. Knowing which terms have a definition and which do not is essential to reading a label honestly. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
         <h2 id="frontback">Front vs Back of Bag</h2>
         <p>The front of the bag is designed to sell; the back carries the regulated disclosures. Brand names, imagery, and adjectives on the front are largely outside AAFCO&apos;s enforceable definitions, while the ingredient panel, guaranteed analysis, calorie statement, and nutritional adequacy statement are regulated and comparable. Buying decisions should rest on the back, not the front. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a>.</p>
@@ -94,13 +125,7 @@ export default function MarketingTermsDecodedPage() {
         <h2 id="reading">Reading Past the Marketing</h2>
         <p>To read past marketing: ignore undefined adjectives (holistic, premium, gourmet); treat natural and organic as production claims, not quality or nutrition guarantees; verify human-grade applies to the whole product; and base decisions on the ingredient panel, guaranteed analysis, calorie statement, AAFCO substantiation, and manufacturer transparency. The regulated back of the bag, not the marketed front, is where comparison happens. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

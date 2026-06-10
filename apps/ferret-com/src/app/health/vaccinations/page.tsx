@@ -9,12 +9,37 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret infectious disease chapters covering CDV epidemiology and vaccine product history.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Preventive Care of Ferrets: vaccination schedules, distemper and rabies products, and adverse-reaction management",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret preventive-medicine and vaccination continuing-education materials",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Veterinary Medical Association (AVMA) — rabies vaccination compendium and guidance for ferrets as companion exotic species",
+    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
+    publisher: "AVMA",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/vaccinations' },
-    { name: 'Vaccination Schedule', url: 'https://ferret.com/health/vaccinations' },
-  ],
-})
 
 const FAQS = [
   {
@@ -91,7 +109,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretVaccinationsPage() {
   return (
@@ -106,7 +124,6 @@ export default function FerretVaccinationsPage() {
             'Two vaccines matter for ferrets: canine distemper virus (CDV) and rabies. The first is a near-certain death sentence in unvaccinated exposed animals; the second is a legal requirement in most US states. Both have well-documented adverse-reaction profiles that change the practical protocol. Done right, ferret vaccination is straightforward; done casually, it is a real source of preventable harm.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '11 min',
         }}
@@ -140,6 +157,7 @@ export default function FerretVaccinationsPage() {
                 { label: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -149,8 +167,22 @@ export default function FerretVaccinationsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+          { title: 'Canine Distemper in Ferrets', href: '/health/canine-distemper-in-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-vaccinations"
+            alt="A ferret during a routine veterinary health visit — preventive care reference"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
@@ -460,49 +492,7 @@ export default function FerretVaccinationsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              American Animal Hospital Association (AAHA) — canine and
-              feline vaccination guidelines, which include ferret
-              vaccination guidance produced jointly with exotic-pet
-              specialty groups.
-            </li>
-            <li>
-              American Veterinary Medical Association (AVMA) — public
-              health and rabies-vaccination resources for non-traditional
-              companion species including ferrets.
-            </li>
-            <li>
-              USDA APHIS — current import/export requirements for
-              ferrets, including vaccination documentation requirements.
-            </li>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
-              and Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The infectious disease chapters cover
-              CDV epidemiology and vaccine product history in ferrets.
-            </li>
-            <li>
-              <em>Journal of the American Veterinary Medical Association
-              (JAVMA)</em>, case series on ferret vaccine adverse events.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, ferret-focused issues covering preventive
-              medicine and vaccination protocols.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              practitioner directory and continuing-education materials
-              on ferret preventive medicine.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing
-              vaccination education and state-by-state legal status
-              resources.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret
             vaccination. Specific product choices, dosing, premedication

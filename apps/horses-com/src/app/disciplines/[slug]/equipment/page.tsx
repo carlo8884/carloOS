@@ -33,7 +33,6 @@ import { notFound } from 'next/navigation'
 import {
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   ArticleLayout,
@@ -116,25 +115,19 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://horses.com/' },
-      { name: 'Disciplines', url: 'https://horses.com/disciplines' },
-      {
-        name: data.disciplineName,
-        url: `https://horses.com/disciplines/${data.slug}`,
-      },
-      { name: 'Equipment', url },
-    ],
-  })
-
-  const combined = combineSchemas(articleSchema, breadcrumbSchema)
+  const combined = combineSchemas(articleSchema)
 
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: `${data.disciplineName} Equipment`,
           subtitle: `Buyer's guide to ${data.disciplineName.toLowerCase()} tack and apparel — what you need at the starter level, what you can add later, brands, budget tiers, and the governing-body rulebook the rules come from.`,

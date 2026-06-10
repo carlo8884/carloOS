@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -127,6 +127,7 @@ export default function BasicCommandsPage() {
         { name: 'Training', href: '/training' },
         { name: 'Basic Commands', href: '/training/basic-commands' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Loose Leash Walking', href: '/training/loose-leash-walking', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={COMMANDS.map(c => ({ label: c.name, href: `#${c.name.toLowerCase().replace(' ', '-')}` }))} />
@@ -135,10 +136,12 @@ export default function BasicCommandsPage() {
           { label: 'Marker Training', href: '/training/marker-training' },
           { label: 'Puppy Schedule', href: '/training/puppy-schedule' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-basic-commands" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <div style={{ background: 'var(--brand-primary-pale)', borderLeft: '4px solid var(--brand-primary)', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '8px' }}>Session Length</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Keep sessions short: 3–5 minutes for puppies, 5–10 minutes for adult dogs. Multiple short sessions daily produce faster results than one long session. Always end on success — finish with something the dog does well, reward generously, and stop before either of you loses focus.</p>

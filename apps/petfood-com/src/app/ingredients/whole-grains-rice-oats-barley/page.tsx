@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function WholeGrainsRiceOatsBarleyPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function WholeGrainsRiceOatsBarleyPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Whole Grains — Rice, Oats, and Barley', href: '/ingredients/whole-grains-rice-oats-barley' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +95,14 @@ export default function WholeGrainsRiceOatsBarleyPage() {
               { label: 'Corn in Pet Food Myth', href: '/myths/corn-in-pet-food-myth' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+              { label: 'Purina Pro Plan — Independent Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -80,6 +114,7 @@ export default function WholeGrainsRiceOatsBarleyPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Grains — rice, oats, barley, corn, wheat, sorghum — provide digestible carbohydrate energy, fiber, some protein, and B-vitamins and minerals in pet diets. Cooked and ground for pet food, they are well utilized by dogs and cats. The grain-free narrative cast grains as fillers and allergens, but the evidence supports grains as functional, digestible ingredients suitable for most animals. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
         <h2 id="contribute">What Grains Contribute</h2>
         <p>Grains supply the starch that, gelatinized in extrusion, both provides energy and binds kibble together. They also contribute fiber for digestive health, plant protein, essential fatty acids in some cases, and B-vitamins and minerals. As a digestible energy source in a complete diet, grains do real work. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
@@ -94,12 +129,7 @@ export default function WholeGrainsRiceOatsBarleyPage() {
         <h2 id="avoid">When to Avoid Grain</h2>
         <p>Grain avoidance is warranted in the uncommon case of a confirmed grain allergy or a specific diagnosed enteropathy, identified by elimination trial — not as a default. For most animals, a grain-inclusive diet from a reputable manufacturer is a sound, often preferable choice, particularly given the DCM signal associated with some legume-heavy grain-free formulas. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

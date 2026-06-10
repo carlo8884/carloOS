@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Orthopedic Foundation for Animals (OFA): Hip Dysplasia — German Shepherd Statistics', url: 'https://www.ofa.org/diseases/hip-dysplasia/', publisher: 'OFA' },
+  { label: 'Merck Veterinary Manual: Degenerative Myelopathy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/degenerative-myelopathy-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Degenerative Myelopathy and Hip Dysplasia in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Awano T et al. Genome-wide association analysis reveals a SOD1 mutation in canine degenerative myelopathy that resembles amyotrophic lateral sclerosis. Proc Natl Acad Sci. 2009;106(8):2794-2799.', publisher: 'PNAS' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -50,6 +58,7 @@ export default function GermanShepherdHealthPage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'German Shepherd Health', href: '/health/german-shepherd-health' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -65,6 +74,7 @@ export default function GermanShepherdHealthPage() {
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Find a Neurologist', href: '/find-a-vet' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."
@@ -130,6 +140,8 @@ export default function GermanShepherdHealthPage() {
           <li><strong>Maintain lean body weight throughout life</strong> — reduces joint disease progression dramatically</li>
           <li><strong>Twice-yearly exams from age 8</strong></li>
         </ul>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

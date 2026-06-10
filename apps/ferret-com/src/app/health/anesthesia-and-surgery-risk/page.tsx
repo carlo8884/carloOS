@@ -9,12 +9,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret anesthesia, surgical protocols, and complication-risk chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Anesthesia and Analgesia for Exotic Mammals: ferret-specific pre-anesthetic fasting, induction, and monitoring considerations",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — anesthesia standards and continuing-education resources for exotic-mammal practitioners",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret anesthetic management, complication rates, and perioperative protocols",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Anesthesia & Surgery Risk', url: 'https://ferret.com/health/anesthesia-and-surgery-risk' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretAnesthesiaRiskPage() {
   return (
@@ -100,7 +117,6 @@ export default function FerretAnesthesiaRiskPage() {
             'Ferrets are not small dogs. They cool fast, run low on blood sugar fast, and tolerate error poorly under anesthesia — which is exactly why a ferret-experienced surgical team, short fasting, and real monitoring turn a daunting procedure into a routine one.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -132,6 +148,7 @@ export default function FerretAnesthesiaRiskPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -141,7 +158,14 @@ export default function FerretAnesthesiaRiskPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+          { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -299,26 +323,7 @@ export default function FerretAnesthesiaRiskPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret anesthesia and surgery chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — exotic-mammal anesthesia and analgesia reviews.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret anesthetic management.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and anesthesia continuing-education content.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret anesthesia
             and surgical risk. It is not individualized veterinary advice. All

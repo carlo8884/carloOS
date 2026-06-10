@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, StockImage } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
   buildHowToSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -100,7 +101,14 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://ferret.com/' },
+    { name: 'First-Year Schedule', url: 'https://ferret.com/first-year-schedule' },
+  ],
+})
+
+const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema, breadcrumbSchema)
 
 const QUARTERS = [
   {
@@ -209,6 +217,10 @@ export default function FerretFirstYearSchedulePage() {
           </div>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="ferret-com:first-year-hero" aspect="16:9" variant="wide" />
+      </div>
 
       {/* QUARTERLY PREVIEW */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -326,6 +338,12 @@ export default function FerretFirstYearSchedulePage() {
           <FAQAccordion items={FAQS} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
+            <p className="mb-2">Ferret reference hubs:</p>
+            <ul className="space-y-1.5 mb-4">
+              <li><Link href="/health" className="text-brand-primary hover:underline">Ferret Health Hub — insulinoma, adrenal disease, vaccinations &amp; more</Link></li>
+              <li><Link href="/care" className="text-brand-primary hover:underline">Ferret Care Hub — diet, housing, grooming &amp; safety</Link></li>
+              <li><Link href="/ownership" className="text-brand-primary hover:underline">Ferret Ownership Hub — cost, legality, adoption &amp; the first week</Link></li>
+            </ul>
             <p className="mb-2">More ferret reference:</p>
             <ul className="space-y-1.5">
               <li><Link href="/care/diet-basics" className="text-brand-primary hover:underline">Ferret Diet Basics — obligate-carnivore feeding</Link></li>

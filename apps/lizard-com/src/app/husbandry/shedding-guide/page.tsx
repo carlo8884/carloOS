@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Shedding Guide — Stuck Shed Prevention | Lizard.com", description: "How reptile shedding (ecdysis) works in snakes, lizards, and geckos, why humidity matters, and how to safely manage and prevent retained shed.", path: "/husbandry/shedding-guide", type: 'article' })
@@ -8,9 +8,16 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Sheddi
 export default function HusbandrySheddingGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Shedding Guide", subtitle: "Shedding, or ecdysis, is the periodic renewal of the outer skin layer that lets a growing reptile replace worn skin. Done well it is invisible maintenance; done in too-dry conditions it produces retained shed that can constrict toes, tail tips, and eye caps. This guide explains the process across snakes, lizards, and geckos and how to prevent the problems.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
-      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Husbandry", href: "/husbandry" }, { name: "Shedding Guide", href: "/husbandry/shedding-guide" }]}
+      hero={{ title: "Reptile Shedding Guide", subtitle: "Shedding, or ecdysis, is the periodic renewal of the outer skin layer that lets a growing reptile replace worn skin. Done well it is invisible maintenance; done in too-dry conditions it produces retained shed that can constrict toes, tail tips, and eye caps. This guide explains the process across snakes, lizards, and geckos and how to prevent the problems.", category: "Husbandry", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
+      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Shedding Guide", href: "/husbandry/shedding-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Retained Eye Caps', href: '/health/retained-eye-caps', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -26,6 +33,7 @@ export default function HusbandrySheddingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"All reptiles shed their skin throughout life, replacing the outer epidermal layer as they grow and to renew worn skin. The frequency depends on species, age, growth rate, and health: fast-growing juveniles shed much more often than mature adults, and a well-fed, fast-growing snake may shed every few weeks while an adult sheds a few times a year. Shedding is a normal, healthy process, and the goal of good husbandry is simply to make sure each shed comes off completely."}</p>
           <h2>{"How Different Reptiles Shed"}</h2>
           <ul>

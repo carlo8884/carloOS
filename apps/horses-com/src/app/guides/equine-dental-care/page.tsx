@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Dental Care — Floats, Wolf Teeth, EOTRH, and Annual Care',
   description:
-    'Equine dental anatomy, annual float schedule, signs of dental problems, wolf-tooth extraction, EOTRH in seniors. Aligned with AAEP and American Veterinary Dental College guidance.',
+    'Equine dental anatomy, annual float schedule, signs of dental problems, wolf-tooth extraction, and EOTRH in seniors. Aligned with AAEP and AVDC guidance.',
   path: '/guides/equine-dental-care',
   type: 'article',
 })
@@ -92,6 +92,12 @@ export default function EquineDentalCarePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+        ]}
         hero={{
           title: 'Equine Dental Care',
           subtitle:
@@ -136,6 +142,7 @@ export default function EquineDentalCarePage() {
               { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -146,6 +153,13 @@ export default function EquineDentalCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Dental Care Matters</h2>
           <p>Horses are unique among domestic species in having <strong>hypsodont teeth</strong> — teeth with very long crowns embedded in the jaw at the time of eruption, designed to continue erupting throughout the animal&apos;s life as the occlusal (chewing) surface wears down. A horse&apos;s incisor and cheek teeth erupt approximately 2–3 mm per year for most of the horse&apos;s working life. This evolutionary design suited the wild horse&apos;s grass-grazing lifestyle — constant slow grinding of high-silica grasses produced predictable, even wear across the dental arcades.</p>
 

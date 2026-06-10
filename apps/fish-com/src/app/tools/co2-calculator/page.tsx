@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -97,7 +98,6 @@ export default function CO2CalculatorPage() {
         subtitle: 'Estimate dissolved CO2 in your planted aquarium from carbonate hardness and pH. The standard formula, with honest caveats about when it breaks.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🌿',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}
@@ -107,6 +107,7 @@ export default function CO2CalculatorPage() {
         { name: 'CO2 Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={
         <>
           <TableOfContents
@@ -144,6 +145,7 @@ export default function CO2CalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
@@ -195,6 +197,11 @@ export default function CO2CalculatorPage() {
         <p>
           For full planted-tank setup including substrate, lighting, and dosing schedule, see our{' '}
           <Link href="/setup/planted-tank-setup">planted tank setup guide</Link>.
+          Accurate readings depend on a quality liquid test kit — our{' '}
+          <Link href="/reviews/best-water-test-kits">water test kit reviews</Link> cover the options for KH and pH.
+          If your CO2 numbers are in range but plants still struggle, the bottleneck is usually light or nutrients — see our{' '}
+          <Link href="/reviews/best-aquarium-lighting">aquarium lighting reviews</Link> and{' '}
+          <Link href="/reviews/best-planted-tank-fertilizers">planted-tank fertilizer reviews</Link>.
         </p>
 
         <h2 id="faq">FAQ</h2>

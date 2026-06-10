@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function TransitioningFoodsPage() {
             "Ferrets imprint on the texture and smell of what they ate as kits, which makes them famously stubborn about switching foods. A change done too fast triggers refusal or digestive upset; done slowly and with a few tricks, even a fixated ferret can be moved to a better diet. Here is the method and the timeline.",
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -85,8 +84,22 @@ export default function TransitioningFoodsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Whole Prey vs. Kibble', href: '/diet/whole-prey-vs-kibble' },
+          { title: 'Kit vs. Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Ferrets Resist Change</h2>
           <p>
             Ferrets imprint on the smell, taste, and texture of the food they
@@ -196,7 +209,6 @@ export default function TransitioningFoodsPage() {
           <ReviewCard
             id="meat-topper"
             badge="Transition Aid"
-            badgeEmoji="🥄"
             name="Meat-Based Food Topper / Gravy (Sugar-Free)"
             subtitle="Animal-protein topper to coax a reluctant eater onto new food"
             score={8.1}

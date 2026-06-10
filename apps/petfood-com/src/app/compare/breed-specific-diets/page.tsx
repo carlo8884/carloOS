@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -6,6 +7,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline,
+  AffiliateDisclosure,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +34,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function BreedSpecificDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +67,14 @@ export default function BreedSpecificDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Breed-Specific Diets — Useful or Marketing?', href: '/compare/breed-specific-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+        { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+        { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +109,8 @@ export default function BreedSpecificDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-breed-specific-diets" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Breed-specific diets — where breed-tailored formulation is substance, and where it is marketing." />
         <p>Breed-specific diets are formulated and marketed for individual breeds, implying a precision-tailored nutrition. Some of what they offer is genuinely useful — addressing the calorie needs, kibble preferences, and disease predispositions that do vary by breed and size. But much of the differentiation is size-based or cosmetic, and the breed-precise framing often outruns the actual formulation differences. The category is a mix of substance and marketing. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
         <h2 id="claim">What They Claim</h2>
         <p>Breed-specific lines claim to tailor nutrition to a breed&apos;s unique needs — energy level, body type, coat, and predisposition to certain conditions. The implication is that a generic diet cannot serve a specific breed as well. Some of this is real; much is a premium-positioning narrative built on features that are really about size category.</p>
@@ -94,12 +125,45 @@ export default function BreedSpecificDietsPage() {
         <h2 id="worthit">When It Is Worth It</h2>
         <p>A breed-specific diet is worth considering when its features address a real need for your animal — an appropriate kibble shape for a flat-faced breed, evidence-supported targeting of a genuine breed predisposition — and when it is otherwise a complete, well-substantiated diet from a transparent manufacturer. It is not worth a premium for breed branding alone. For most animals, a quality diet matched to size, life stage, and any medical needs serves as well. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            What usually matters more than the breed name
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop size- and life-stage-matched diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most animals, a complete diet matched to size and life stage serves as well as a
+            breed-labeled one, often for less. Compare options with our independent{' '}
+            <Link href="/brands">brand evaluations</Link>, then search the category below — small-,
+            large-, and giant-breed lines cover most of what breed-specific framing offers. Confirm
+            the AAFCO complete-and-balanced statement for the life stage on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/breed%20size%20life%20stage%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search size-matched diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/small%20large%20breed%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

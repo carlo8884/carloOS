@@ -2,13 +2,18 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -19,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Skin and Coat Supplements for Pets — Evidence | PetFood.com',
   description:
@@ -30,6 +35,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Skin and Coat Supplements for Pets — Evidence | PetFood.com',
+  description:
+    'What helps a dull coat — omega fatty acids, zinc, biotin, and protein — when the diet is the real fix, and why a poor coat can signal underlying disease.',
+  url: 'https://petfood.com/supplements/skin-and-coat-supplements',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function SkinAndCoatSupplementsPage() {
   return (
@@ -46,8 +81,14 @@ export default function SkinAndCoatSupplementsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Skin and Coat Supplements', href: '/supplements/skin-and-coat-supplements' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Fish Oil and Omega-3', href: '/supplements/fish-oil-omega-3' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
+        { title: 'Glucosamine and Joint Support', href: '/supplements/glucosamine-and-joint-support' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +124,13 @@ export default function SkinAndCoatSupplementsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Skin-and-coat omega supplement for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>The skin and coat have high nutrient demands — the skin is the body&apos;s largest organ and hair is largely protein — so coat quality is a sensitive readout of nutritional status and overall health. Several supplement ingredients support skin and coat, but the most effective intervention is usually ensuring the diet is complete, adequate in essential fatty acids and high-quality protein, and that no underlying disease is undermining the coat. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>
         <h2 id="drivers">What Drives Coat Quality</h2>
         <p>A healthy coat depends on adequate energy, high-quality protein (hair is keratin, a protein), essential fatty acids, zinc, and several vitamins. Deficiency or imbalance in any of these shows up as a dull, dry, flaky, or thin coat. Because a complete diet supplies all of these, a coat problem in an animal on a good diet often points to a medical cause rather than a nutrient gap.</p>
@@ -148,12 +196,7 @@ export default function SkinAndCoatSupplementsPage() {
           ctaAffiliateProduct="dog+skin+coat+supplement+omega+zinc"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

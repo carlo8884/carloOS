@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function FiberAndDigestiveHealthPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function FiberAndDigestiveHealthPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Fiber and Digestive Health Diets', href: '/diets/fiber-and-digestive-health' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function FiberAndDigestiveHealthPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A high-fiber gastrointestinal pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Fiber is the indigestible carbohydrate fraction of the diet, and its functional effects depend on type. Gastrointestinal therapeutic diets manipulate fiber, fat, and ingredient digestibility to manage a wide range of digestive disorders. The same nutritional category can be tuned in opposite directions — a low-residue highly digestible diet for one problem, a high-fiber bulking diet for another — which is why GI diets are matched to the specific disorder.</p>
         <h2 id="fibertypes">Fiber Types — Soluble vs Insoluble</h2>
         <p>Insoluble fiber (cellulose, many vegetable fibers) adds bulk, speeds transit in constipation, and firms stool. Soluble and fermentable fibers (beet pulp, psyllium, inulin, fructooligosaccharides) absorb water, slow transit, and feed colonic bacteria that produce short-chain fatty acids nourishing the gut lining. Many GI diets use a blend tuned to the disorder. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
@@ -94,13 +133,7 @@ export default function FiberAndDigestiveHealthPage() {
         <h2 id="prebiotics">Prebiotics and the Microbiome</h2>
         <p>Prebiotics are fermentable fibers (such as fructooligosaccharides and inulin) that selectively feed beneficial gut bacteria, and many GI diets include them. The gut microbiome is increasingly recognized as central to digestive and immune health, and dietary fiber is the primary lever owners have to shape it. Probiotic supplements are a separate, complementary tool. See <a href="/supplements/probiotics-for-pets">Probiotics for Pets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

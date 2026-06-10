@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BridleTypesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Martingales and Breastplates', href: '/tack/martingales-and-breastplates' },
+          { title: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
+        ]}
         hero={{
           title: "Horse Bridle Types",
           subtitle:
@@ -89,6 +95,7 @@ export default function BridleTypesPage() {
               { label: "Saddle Fit Basics", href: "/guides/saddle-fit-basics" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function BridleTypesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="parts">Parts of a Bridle</h2>
           <ul>
             <li><strong>Headpiece (crownpiece)</strong> over the poll, from which the bridle hangs.</li>

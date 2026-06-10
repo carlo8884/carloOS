@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Ranch Riding — The Working Horse Pattern Class",
   description:
-    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the forward natural way of going, and governing bodies.",
+    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the natural way of going, and governing bodies.",
   path: '/disciplines/ranch-riding',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Ranch Riding — The Working Horse Pattern Class",
   description:
-    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the forward natural way of going, and governing bodies.",
+    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the natural way of going, and governing bodies.",
   url: 'https://horses.com/disciplines/ranch-riding',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function RanchRidingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Western Pleasure', href: '/disciplines/western-pleasure' },
+          { title: 'Cutting', href: '/disciplines/cutting' },
+        ]}
         hero={{
           title: "Ranch Riding",
           subtitle:
@@ -88,6 +94,7 @@ export default function RanchRidingPage() {
               { label: "American Quarter Horse", href: "/breeds/quarter-horse" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function RanchRidingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Ranch Riding Is</h2>
           <p>Ranch riding is a judged pattern class in which horse and rider perform a set sequence of gaits and maneuvers that reflect the work of a versatile ranch horse. It emerged and grew rapidly in the 2010s, championed by the AQHA and other stock-horse associations, as part of a broader ranch-horse movement reacting against the increasingly artificial western pleasure style. The class prizes a horse that is forward, soft, willing, and looks like a genuine working partner.</p>
 

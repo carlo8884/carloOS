@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BeetPulpPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Feeding the Hard Keeper', href: '/nutrition/feeding-the-hard-keeper' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Beet Pulp for Horses",
           subtitle:
@@ -88,6 +94,7 @@ export default function BeetPulpPage() {
               { label: "Forage Basics", href: "/nutrition/forage-basics" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function BeetPulpPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Beet Pulp Is</h2>
           <p>Beet pulp is the fibrous material left after sugar is extracted from sugar beets -- a by-product that, despite the name, is relatively low in sugar because the sugar has been removed. It is sold dried as shreds or pellets, with or without added molasses (the molasses-free or rinsed forms being preferred for low-sugar diets). Soaked in water it expands into a soft mash that many horses eat readily.</p>
 

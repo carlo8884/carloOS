@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -14,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -38,14 +38,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://horses.com' },
-    { name: 'Disciplines', url: 'https://horses.com/disciplines' },
-    { name: 'Western Pleasure', url: 'https://horses.com/disciplines/western-pleasure' },
-  ],
 })
 
 const FAQS = [
@@ -104,7 +96,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combined = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function WesternPleasurePage() {
   return (
@@ -113,6 +105,12 @@ export default function WesternPleasurePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Ranch Riding', href: '/disciplines/ranch-riding' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Equitation', href: '/disciplines/equitation' },
+        ]}
         hero={{
           title: 'Western Pleasure',
           subtitle:
@@ -152,6 +150,7 @@ export default function WesternPleasurePage() {
               { label: 'Reining Overview', href: '/disciplines/reining' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

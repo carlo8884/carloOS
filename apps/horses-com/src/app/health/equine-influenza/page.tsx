@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,12 @@ export default function EquineInfluenzaPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Strangles', href: '/health/strangles' },
+          { title: 'Heaves (Equine Asthma)', href: '/health/heaves' },
+        ]}
         hero={{
           title: "Equine Influenza",
           subtitle:
@@ -100,6 +106,7 @@ export default function EquineInfluenzaPage() {
               { label: "Trailering and Transport", href: "/care/trailering" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -110,6 +117,13 @@ export default function EquineInfluenzaPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Equine Influenza</h2>
           <p>Equine influenza is caused by influenza A virus subtypes adapted to horses, principally the H3N8 lineage. The virus infects and damages the lining of the respiratory tract, stripping the protective cilia and leaving the airway vulnerable to secondary bacterial infection. It is endemic in many horse populations worldwide and is a notifiable concern in regions that are normally free of it, where an incursion can shut down equine movement entirely.</p>
 

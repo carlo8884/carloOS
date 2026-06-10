@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Water Quality in Aquaculture — UF/IFAS Extension FA-120", url: "https://edis.ifas.ufl.edu/publication/FA120", publisher: "UF/IFAS Extension" },
+  { label: "Nitrogen Cycle in Aquaculture Systems — SRAC Publication 4600", url: "https://www.srac.tamu.edu/", publisher: "Southern Regional Aquaculture Center" },
+  { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
+  { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.', path: '/setup/water-chemistry-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WaterChemistryGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Aquarium Water Parameters", href: "/water-parameters", category: "Water Chemistry" }, { title: "GH & KH Water Hardness", href: "/setup/gh-kh-water-hardness", category: "Tank Setup" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Best Water Test Kits", href: "/reviews/best-water-test-kits", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Reference</div>
@@ -24,6 +33,7 @@ export default function WaterChemistryGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>pH — The Scale and What It Means</h2>
         <p>pH is a logarithmic measure of hydrogen ion concentration — pH 7 is neutral, below 7 is acidic, above 7 is alkaline. Because the scale is logarithmic, pH 6 is 10× more acidic than pH 7, and pH 5 is 100× more acidic. Small numerical differences represent large actual differences in water chemistry. A stable pH within the appropriate range for your fish is more important than hitting a precise target number — fish handle a consistent pH that is slightly off-ideal better than they handle pH swings.</p>
         <p>What determines pH: the balance of carbonate buffering (KH), dissolved CO2, and other acids and bases in the water. In CO2-injected planted tanks, pH drops as CO2 dissolves into carbonic acid — this is intentional and managed. Understanding that pH is a result of other parameters (primarily KH and CO2), rather than something to be directly adjusted with pH-Up/pH-Down chemicals, allows for more stable management.</p>
@@ -44,7 +54,8 @@ export default function WaterChemistryGuidePage() {
 
         <h2>TDS — Total Dissolved Solids</h2>
         <p>TDS is measured with a simple meter and reflects the total concentration of dissolved substances in parts per million. It includes GH minerals, KH ions, nitrate, sodium, chloride, and everything else dissolved. TDS is useful as a quick check of overall water quality and RO membrane effectiveness (RO/DI water should read 0–10 TDS; tap water reads 100–400+ depending on your water supply). It does not distinguish between beneficial minerals and waste products — two waters with the same TDS can have very different chemistries. TDS is most useful as a consistency check and RO quality indicator rather than as a specific parameter to target.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Water Test & Chemistry Tools — Where to Shop</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -53,6 +64,7 @@ export default function WaterChemistryGuidePage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

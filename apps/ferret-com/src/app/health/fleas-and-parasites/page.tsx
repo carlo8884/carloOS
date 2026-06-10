@@ -9,12 +9,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret parasitology, ectoparasites, and heartworm chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Parasitic Diseases of Ferrets: flea control, ear mites, heartworm prevention, and antiparasitic safety",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/parasitic-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret parasite-control guidance and ectoparasitology continuing-education materials",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret flea infestation, heartworm, and antiparasitic treatment protocols",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Fleas & Parasites', url: 'https://ferret.com/health/fleas-and-parasites' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretFleasParasitesPage() {
   return (
@@ -100,7 +117,6 @@ export default function FerretFleasParasitesPage() {
             'Fleas, mites, heartworm, and intestinal parasites all affect ferrets — and the ferret’s small size turns parasite control into a precision job where the wrong dog product can do real harm. Here is the landscape, and why every preventive is a veterinary decision.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -132,6 +148,7 @@ export default function FerretFleasParasitesPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -141,7 +158,14 @@ export default function FerretFleasParasitesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Ear Mites', href: '/health/ear-mites' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -273,26 +297,7 @@ export default function FerretFleasParasitesPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret parasitology and dermatology chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret ectoparasites and heartworm.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret parasite control.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and parasite-control guidance for exotic mammals.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret parasites. It
             is not individualized veterinary advice. Antiparasitic selection and

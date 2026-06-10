@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Reptile Calculators & Tools — UVB, Enclosures, Husbandry | Lizard.com',
-  description: 'Free reptile-keeping calculators: UVB distance estimator with Ferguson Zone targets, plus husbandry references sourced from keeper literature.',
+  description: 'Free reptile-keeping calculators: UVB distance estimator with Ferguson Zone targets, enclosure size calculator, and husbandry references.',
   path: '/tools',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://lizard.com/' },
+    { name: 'Tools', url: 'https://lizard.com/tools' },
+  ],
 })
 
 const TOOLS = [
@@ -16,11 +23,33 @@ const TOOLS = [
     desc: 'Estimate UVI at the basking surface from bulb strength, mounting distance, and screen attenuation. Compared against published Ferguson Zone targets per species.',
     tag: 'Lighting',
   },
+  {
+    href: '/tools/enclosure-size-calculator',
+    title: 'Enclosure Size Calculator',
+    desc: 'Compute recommended minimum enclosure dimensions, floor footprint, and volume from adult body length and locomotor habit. Includes a check-my-tank mode to compare an existing enclosure against the minimums.',
+    tag: 'Housing',
+  },
 ]
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Reptile Husbandry Calculators',
+  numberOfItems: TOOLS.length,
+  itemListElement: TOOLS.map((t, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: t.title,
+    url: `https://lizard.com${t.href}`,
+  })),
+}
+
+const hubSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={hubSchema} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"

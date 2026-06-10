@@ -1,19 +1,27 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Xiphophorus maculatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/xiphophorus-maculatus/", publisher: "Seriously Fish" },
+  { label: "Xiphophorus maculatus — FishBase species record", url: "https://www.fishbase.se/summary/Xiphophorus-maculatus.html", publisher: "FishBase" },
+  { label: "Schartl, M. et al. The Platyfish, Xiphophorus maculatus: a Model Organism in Comparative and Evolutionary Genomics. Molecular Ecology Resources, 2013.", publisher: "Molecular Ecology Resources" },
+  { label: "Rosen, D.E. & Bailey, R.M. The Poeciliid Fishes (Cyprinodontiformes). Bulletin of the AMNH, 1963.", publisher: "American Museum of Natural History" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -34,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Platy Fish', url: 'https://fish.com/species/platy-fish' },
-  ],
 })
 
 const FAQS = [
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function PlatyPage() {
   return (
@@ -107,7 +107,6 @@ export default function PlatyPage() {
             'Xiphophorus maculatus — platies are among the most forgiving and broadly recommended fish in the freshwater hobby. They tolerate a wide range of water conditions, eat almost anything, coexist peacefully with virtually all community fish, and come in dozens of color and finnage varieties. The one consistent management challenge: they breed every four weeks and a starter tank turns into a population without intervention.',
           category: 'Species Guide — Beginner',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '11 min',
         }}
@@ -116,6 +115,7 @@ export default function PlatyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Platy Fish', href: '/species/platy-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -174,6 +174,7 @@ export default function PlatyPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -191,6 +192,7 @@ export default function PlatyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-platy-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Platies (Xiphophorus maculatus) are the textbook beginner
@@ -430,7 +432,8 @@ export default function PlatyPage() {
               practice referral directory.
             </li>
           </ul>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Platy Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for platy fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -439,6 +442,7 @@ export default function PlatyPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

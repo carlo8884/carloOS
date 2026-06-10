@@ -182,6 +182,13 @@ export default async function VivariumBuildPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={combined}
+      relatedLinks={[
+        { title: 'Vivarium Builds Hub', href: '/builds', category: 'Hub' },
+        { title: 'Setup Guides', href: '/setup', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        ...(speciesSlug ? [{ title: `${build.speciesName} Care`, href: `/species/${speciesSlug}`, category: 'Species' }] : []),
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -211,11 +218,11 @@ export default async function VivariumBuildPage({ params }: PageProps) {
                 label: `${build.speciesName} Care`,
                 href: `/species/${speciesSlug}`,
               },
-              { label: 'Husbandry Deep-Dives', href: '/husbandry' },
-              { label: 'UVB Lighting Guide', href: '/husbandry/uvb-lighting' },
+              { label: 'Enclosure Setup Guides', href: '/setup' },
+              { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' },
               {
-                label: 'Vivarium Sizing Guide',
-                href: '/husbandry/vivarium-sizing',
+                label: 'Enclosure Size Guide',
+                href: '/setup/terrarium-size-guide',
               },
             ]}
           />

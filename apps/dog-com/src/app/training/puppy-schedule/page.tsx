@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
@@ -48,14 +48,18 @@ export default function PuppySchedulePage() {
       contentType="training"
       hero={{ title: 'Puppy Schedule — Week by Week Guide', subtitle: 'A structured schedule is the single most effective puppy training tool. It sets the puppy up for success by making accidents nearly impossible and building reliable habits from day one.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Schedule', href: '/training/puppy-schedule' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }, { title: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition', category: 'Nutrition' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Schedule Matters', href: '#why' }, { label: 'Sleep Requirements', href: '#sleep' }, { label: 'Sample Daily Schedule', href: '#schedule' }, { label: 'The Socialization Window', href: '#socialization' }, { label: 'Week-by-Week Milestones', href: '#milestones' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Free printable schedule + 8-week course', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]} />
+        <RelatedLinks title="Feeding a Growing Puppy" links={[{ label: 'Best Dog Food for Puppies', href: '/reviews/best-dog-food-for-puppies' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-schedule" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why a Schedule Is Your Best Training Tool</h2>
         <p>A consistent schedule accomplishes what training alone cannot: it makes accidents nearly impossible by creating predictable patterns of eating, eliminating, playing, and sleeping. A puppy on a schedule eliminates at predictable times — you can be there to reward outdoor elimination before indoor accidents become a habit. A puppy without a schedule eliminates unpredictably — owners miss opportunities to reinforce correct behavior and the habit of going outside develops more slowly.</p>
         <p>The schedule is also about managing energy. Puppies need substantial sleep — 16–18 hours per day for young puppies. A puppy that is not getting enough sleep becomes overtired, which manifests as biting, zoomies, and inability to focus. Scheduled naps prevent the overtired state that makes puppies appear to have behavior problems they wouldn&apos;t have if well-rested.</p>

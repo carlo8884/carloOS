@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Periodontal Disease in Dogs & Cats — Dental Health | Vets.co", description: "Periodontal disease affects most pets by age 3. Learn how dental disease harms the whole body, the signs, and how professional cleaning and home care help.", path: '/health/periodontal-disease-pets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,13 +11,24 @@ const FAQS = [
   { question: "Can dental disease affect the rest of the body?", answer: "Yes. Advanced periodontal disease is not just a mouth problem — the chronic infection and inflammation can affect the whole body, and severe dental disease has been associated with changes in the kidneys, liver, and heart. Locally, untreated disease causes painful tooth root abscesses, bone loss in the jaw, and oral-nasal fistulas. The pain alone significantly affects quality of life, even though pets rarely show it openly. Treating dental disease often produces a noticeable improvement in a pet's energy and comfort." },
   { question: "What is the best way to prevent dental disease at home?", answer: "Daily tooth brushing with a pet-safe toothpaste is the gold standard — it mechanically removes plaque before it hardens into tartar, which is the root of the problem. Most pets can be trained to accept brushing with patience and gradual introduction. When brushing is not possible, products carrying the Veterinary Oral Health Council (VOHC) seal — certain dental diets, chews, and water additives — have demonstrated effectiveness. Home care slows disease but does not replace professional cleanings, which remain necessary periodically." },
 ]
+const SOURCES = [
+  { label: 'AVDC: Nomenclature — Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
+  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-configuration/', publisher: 'AAHA' },
+  { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
+]
 export default function PeriodontalDiseasePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Dental Cleaning Guide', href: '/health/dental-cleaning-guide', category: 'Veterinary Guide' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+          { title: 'Senior Pet Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of Dental Disease</div>
@@ -56,6 +67,8 @@ export default function PeriodontalDiseasePage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

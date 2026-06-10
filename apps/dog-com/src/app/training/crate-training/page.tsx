@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Crate Training Guide — How to Make the Crate a Good Place | Dog.com', description: 'Step-by-step crate training guide. Introduction protocol, how long is too long, night training, and how to use the crate without it feeling like punishment.', path: '/training/crate-training', type: 'article' })
@@ -30,14 +30,17 @@ export default function CrateTrainingPage() {
       contentType="training"
       hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Crate Training', href: '/training/crate-training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Dog Crates', href: '/reviews/best-dog-crates', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Crate Train', href: '#why' }, { label: 'Right Crate Size', href: '#size' }, { label: 'Introduction Protocol', href: '#intro' }, { label: 'Duration Guidelines', href: '#duration' }, { label: 'Night Training', href: '#night' }, { label: 'Common Problems', href: '#problems' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'House Training Guide', href: '/training/house-training' }, { label: 'Best Dog Crates 2025', href: '/reviews/best-dog-crates' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-crate" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why Crate Training Is Worth It</h2>
         <p>A crate serves multiple functions: it prevents destructive behavior and accidents when unsupervised, provides a den-like retreat that most dogs come to value, makes traveling and vet visits less stressful (a dog comfortable in a crate is dramatically calmer in any confined space), and is an essential housetraining tool (dogs typically avoid soiling their sleeping area).</p>
         <p>The crate should never be used as punishment. Sending a dog to their crate in anger changes the association from safe space to negative consequence. Instead, the crate should always be associated with good things — meals fed in the crate, high-value treats, rest after exercise.</p>

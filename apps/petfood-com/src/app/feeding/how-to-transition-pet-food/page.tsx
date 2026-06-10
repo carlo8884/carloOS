@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function HowToTransitionPetFoodPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function HowToTransitionPetFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'How to Transition Pet Food', href: '/feeding/how-to-transition-pet-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
+        { title: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function HowToTransitionPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>A new food differs from the old one in ingredients, fiber, fat, and nutrient profile, and the digestive system — including the gut microbiome that helps process food — adapts to those differences over days. An abrupt switch can outpace that adaptation, producing soft stool, gas, vomiting, or refusal. A gradual transition gives the gut time to adjust and is the standard recommendation for any food change in a healthy animal.</p>
         <h2 id="why">Why Transition Gradually</h2>
         <p>The gut microbiome shifts its composition in response to diet, and abrupt dietary change disrupts it transiently, which is a common cause of diet-change diarrhea. Mixing increasing proportions of the new food with the old lets the microbiome and digestive enzymes adapt incrementally. The same logic applies whether switching brands, formulas, or formats. See <a href="/diets/fiber-and-digestive-health">Fiber and Digestive Health Diets</a>.</p>
@@ -100,12 +127,7 @@ export default function HowToTransitionPetFoodPage() {
         <h2 id="after">After the Switch</h2>
         <p>Once fully transitioned, recalculate the feeding amount for the new food&apos;s calorie density — a step owners frequently skip, leading to over- or underfeeding when the new food differs in calories per cup. Monitor body condition over the following weeks and adjust. See <a href="/feeding/how-much-to-feed-a-dog">How Much to Feed a Dog</a> and <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

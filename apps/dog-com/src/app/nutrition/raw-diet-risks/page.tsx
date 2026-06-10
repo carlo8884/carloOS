@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Pathogens, AAFCO | Dog.com', description: 'Raw dog diets: Salmonella, Listeria, Campylobacter contamination, AAFCO completeness gaps, household risk, bone hazards, and harm-reduction guidance.', path: '/nutrition/raw-diet-risks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs', description: 'Pathogen contamination, nutritional completeness, household zoonotic risk, and bone hazards in raw dog diets — with WSAVA, AVMA, AAHA, and FDA positions cited.', url: 'https://dog.com/nutrition/raw-diet-risks', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence on pathogen contamination, AAFCO completeness, and household risk in raw dog feeding.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
-const combined = combineSchemas(schema, med)
-
 const FAQS = [
   { question: 'Do veterinary professional organizations actually recommend against raw diets?', answer: 'Yes. The WSAVA Global Nutrition Committee, the AVMA (American Veterinary Medical Association), the AAHA (American Animal Hospital Association), the CDC, and the FDA Center for Veterinary Medicine have all published statements advising against feeding raw or undercooked animal-source protein to pets, primarily citing zoonotic pathogen risk and, secondarily, nutritional adequacy concerns. Specific policy text is linked from each organization\'s website (avma.org, aaha.org, wsava.org).' },
   { question: 'How prevalent is Salmonella contamination in commercial raw dog food?', answer: 'Survey studies vary by sample and method. An FDA Center for Veterinary Medicine survey of commercial raw pet foods (2010–2012) reported Salmonella in roughly 1 in 5 raw samples tested (the agency reported a figure near 24 percent in that survey), with Listeria monocytogenes also frequently detected. Multiple subsequent academic surveys in the Veterinary Record, Journal of Food Protection, and PLOS ONE have reported broadly consistent contamination rates. Cooked commercial diets have shown far lower detection rates in comparable surveys.' },
@@ -16,6 +14,8 @@ const FAQS = [
   { question: 'What is the safest middle ground if I want a less-processed diet?', answer: 'Options that are commonly raised by veterinary nutritionists: a cooked, complete-and-balanced home-prepared diet formulated by a board-certified veterinary nutritionist (DACVN) using a service such as BalanceIT.com or PetDIETS.com; a gently-cooked commercial fresh food from a manufacturer that publishes its nutritionist credentials, AAFCO substantiation method, and feeding-trial status; or a freeze-dried diet that has been HPP-treated. None of these eliminates risk completely but each addresses specific gaps. Discuss the choice with your primary care vet.' },
 ]
 
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
+
 export default function RawDietRisksPage() {
   return (
     <>
@@ -23,6 +23,7 @@ export default function RawDietRisksPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Raw Diet Risks for Dogs — What the Evidence Shows', subtitle: 'Raw feeding is popular and contentious. The published evidence on pathogen contamination, household zoonotic transmission, and nutritional completeness is substantial, and the position statements of the major veterinary professional bodies are unambiguous. This page summarizes that evidence without moralizing — and ends with harm-reduction guidance for owners who choose raw despite the recommendation against it.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '13 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Raw Diet Risks', href: '/nutrition/raw-diet-risks' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'WSAVA Guidelines', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Where the Profession Stands', href: '#positions' }, { label: 'Pathogen Contamination', href: '#pathogens' }, { label: 'Household & Zoonotic Risk', href: '#household' }, { label: 'Bacterial Shedding', href: '#shedding' }, { label: 'AAFCO Completeness', href: '#aafco' }, { label: 'Bone Hazards', href: '#bones' }, { label: 'Alternatives', href: '#alternatives' }, { label: 'Harm Reduction', href: '#harm-reduction' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -36,10 +37,12 @@ export default function RawDietRisksPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'WSAVA Explained', href: '/nutrition/wsava-explained' }, { label: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }, { label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Nutrition Tips" subtitle="Evidence-based guidance weekly." source="nutrition-raw-risks" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <div style={{ background: 'rgba(60, 90, 140, 0.06)', border: '1px solid rgba(60, 90, 140, 0.20)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '8px' }}>Scope</div>
             <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>This page describes published evidence on documented risks. It is informational and does not replace consultation with a veterinarian or a board-certified veterinary nutritionist (DACVN) about an individual dog&apos;s diet.</p>

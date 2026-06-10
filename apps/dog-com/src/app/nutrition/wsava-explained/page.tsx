@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -42,6 +42,7 @@ export default function WSAVAExplainedPage() {
         { name: 'Nutrition', href: '/nutrition' },
         { name: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' },
       ]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Reading Food Labels', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Grain-Free DCM Risk', href: '/nutrition/grain-free-dcm-risk', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[
@@ -49,6 +50,7 @@ export default function WSAVAExplainedPage() {
           { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' },
           { label: 'Nutrition Hub', href: '/nutrition' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-wsava" />
       </>}
     >

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal management of canine osteoarthritis.', url: 'https://vets.co/health/arthritis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,13 +11,25 @@ const FAQS = [
   { question: "Can I give my dog human pain relievers like ibuprofen?", answer: "No. Human anti-inflammatories such as ibuprofen, naproxen, and acetaminophen are toxic to dogs and can cause severe stomach ulcers, kidney failure, or death even at small doses. Dogs need veterinary anti-inflammatories formulated and dosed specifically for them, prescribed and monitored by your veterinarian. Never give any human pain medication to a dog without explicit veterinary direction — it is one of the most common causes of accidental poisoning." },
   { question: "Does weight really affect arthritis that much?", answer: "Weight is the single most powerful factor an owner controls. Every extra pound increases the mechanical load on already-damaged joints and, just as importantly, fat tissue produces inflammatory signals that worsen joint disease. Studies show overweight dogs that lose weight have measurably less lameness and pain. For many arthritic dogs, achieving a lean body condition reduces pain as much as adding a medication — and it is the foundation that everything else builds on." },
 ]
+const SOURCES = [
+  { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/global-pain-council-guidelines/', publisher: 'WSAVA' },
+  { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs/osteoarthritis-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
+  { label: 'AVMA: Osteoarthritis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/osteoarthritis-pets', publisher: 'AVMA' },
+]
 export default function ArthritisDogsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '10 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Arthritis', href: '/health/arthritis-in-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs', category: 'Veterinary Guide' },
+          { title: 'Pain Management in Dogs', href: '/health/pain-management-dogs', category: 'Veterinary Guide' },
+          { title: 'Weight Management', href: '/health/weight-management', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Pillars of Management</div>
@@ -59,6 +71,8 @@ export default function ArthritisDogsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

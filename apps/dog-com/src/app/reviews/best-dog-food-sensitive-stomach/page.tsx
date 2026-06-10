@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Sensitive Skin & Stomach', description: 'Single salmon protein, no corn/wheat/soy, live probiotics — the standard vet recommendation for sensitive stomachs.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, ppSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Purina Pro Plan Sensitive Skin & Stomach', subtitle: 'Salmon protein · No corn/wheat/soy · Live probiotics', href: '#purina' },
-  { label: "Best Hill's", emoji: '⭐', name: "Hill's Science Diet Sensitive Stomach & Skin", subtitle: 'Chicken & barley · Prebiotic fiber · WSAVA', href: '#hills' },
-  { label: 'Best Royal Canin', emoji: '🔬', name: 'Royal Canin Digestive Care', subtitle: 'Highly digestible proteins · Fiber blend · Research-backed', href: '#rc' },
+  { label: 'Best Overall', name: 'Purina Pro Plan Sensitive Skin & Stomach', subtitle: 'Salmon protein · No corn/wheat/soy · Live probiotics', href: '#purina' },
+  { label: "Best Hill's", name: "Hill's Science Diet Sensitive Stomach & Skin", subtitle: 'Chicken & barley · Prebiotic fiber · WSAVA', href: '#hills' },
+  { label: 'Best Royal Canin', name: 'Royal Canin Digestive Care', subtitle: 'Highly digestible proteins · Fiber blend · Research-backed', href: '#rc' },
 ]
 export default function SensitiveStomachFoodPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Food for Sensitive Stomach 2025', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -35,7 +35,7 @@ export default function SensitiveStomachFoodPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="purina" badge="Best Overall" badgeEmoji="🏆" name="Purina Pro Plan Sensitive Skin & Stomach" subtitle="Salmon & rice · No corn/wheat/soy · Live probiotics · WSAVA top tier" score={9.4} winner
+            <ReviewCard id="purina" badge="Best Overall" name="Purina Pro Plan Sensitive Skin & Stomach" subtitle="Salmon & rice · No corn/wheat/soy · Live probiotics · WSAVA top tier" score={9.4} winner
               description={<p>Purina Pro Plan Sensitive Skin & Stomach (salmon and rice formula) is the standard veterinary recommendation for dogs with GI sensitivity and the most consistently recommended sensitive stomach food in general practice. The formula uses salmon as the single animal protein, rice as the primary carbohydrate, and contains no corn, wheat, or soy — common dietary components that some dogs with GI sensitivity react to. The inclusion of live probiotics (Bacillus coagulans) supports digestive health. High digestibility coefficients across all nutrients. WSAVA top-tier compliance with full veterinary nutritionist oversight and feeding trial data. Available in multiple sizes and a cat version for multi-pet households.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: 'Salmon — single animal protein', highlight: 'good' }, { label: 'Probiotic', value: 'Live B. coagulans', highlight: 'good' }, { label: 'Excludes', value: 'Corn, wheat, soy' }]}
               pros={['WSAVA top-tier', 'Single novel protein (salmon)', 'Live probiotics', 'No corn/wheat/soy', 'Most vet-recommended sensitive stomach formula']}
@@ -57,7 +57,7 @@ export default function SensitiveStomachFoodPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet', href: '/nutrition/elimination-diet' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Elimination Diet', href: '/nutrition/elimination-diet' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-sensitive-food" />
           </aside>
         </div>

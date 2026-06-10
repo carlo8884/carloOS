@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, Breadcrumb, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { SchemaScript } from '@carloOS/ui'
 import { SADDLE_BRANDS } from '@/data/saddle-brands'
 
 export const metadata: Metadata = buildMetadata({
@@ -12,15 +12,25 @@ export const metadata: Metadata = buildMetadata({
   path: '/brands',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://saddle.com/' },
-    { name: 'Brands', url: 'https://saddle.com/brands' },
-  ],
-})
-
 const ENGLISH = SADDLE_BRANDS.filter((b) => b.discipline.startsWith('English'))
 const WESTERN = SADDLE_BRANDS.filter((b) => b.discipline === 'Western')
+
+// ItemList of every brand rendered on the hub — structured, citable index of
+// the brand cluster for AI Overviews / Perplexity (GEO authority signal).
+const brandListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Saddle Brands Compared at Saddle.com',
+  numberOfItems: ENGLISH.length + WESTERN.length,
+  itemListElement: [...ENGLISH, ...WESTERN].map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://saddle.com/brands/${b.slug}`,
+  })),
+}
+
+const schema = brandListSchema
 
 function priceTier(lo: number) {
   if (lo >= 4500) return 'Premium / bespoke'
@@ -31,7 +41,7 @@ function priceTier(lo: number) {
 export default function BrandsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
@@ -122,6 +132,9 @@ export default function BrandsHubPage() {
           ctaText="Get Free Guide"
           perks={['📋 Brand comparison', '💰 Market pricing']}
         />
+      </div>
+      <div className="px-container-sm sm:px-container py-10">
+        <CrossPortfolioCard currentSite="saddle-com" contentType="brand" variant="footer" />
       </div>
     </>
   )

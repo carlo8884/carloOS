@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hypoadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hypoadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Diagnosis of Hypoadrenocorticism in Dogs and Cats — Consensus Statement', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'AVMA: Addison\'s Disease in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Baumstark ME et al. Alternate-day dosing of desoxycorticosterone pivalate in dogs with hypoadrenocorticism. J Vet Intern Med. 2014;28(4):1214-1220.', publisher: 'JVIM' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Addison's Disease in Dogs — Vague Signs | Dog.com", description: "Addison's disease (hypoadrenocorticism) is the 'great imitator' — vague signs mimic many conditions. Addisonian crisis is life-threatening.", path: '/health/addisons-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: "Addison's Disease in Dogs", description: "Hypoadrenocorticism — diagnosis, Addisonian crisis management, and DOCP treatment.", url: 'https://dog.com/health/addisons-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -14,6 +22,7 @@ export default function AddisonsDiseaseePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: "Addison's Disease in Dogs", subtitle: "Hypoadrenocorticism (Addison's disease) results from insufficient production of adrenal cortex hormones — glucocorticoids (primarily cortisol) and mineralocorticoids (primarily aldosterone). It is sometimes called 'the great imitator' because its signs are vague and non-specific, leading to misdiagnosis for months or years before the characteristic electrolyte changes point to the diagnosis.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Addison's Disease", href: '/health/addisons-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Hypothyroidism', href: '/health/hypothyroidism', category: 'Dog Health' }, { title: 'Megaesophagus', href: '/health/megaesophagus', category: 'Dog Health' }, { title: 'Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Predisposed Breeds</div>
@@ -21,7 +30,8 @@ export default function AddisonsDiseaseePage() {
               <div key={b} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{b}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Megaesophagus', href: '/health/megaesophagus' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Megaesophagus', href: '/health/megaesophagus' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-addisons" />
         </>}
       >
@@ -36,12 +46,14 @@ export default function AddisonsDiseaseePage() {
 
           <h2>Treatment — DOCP or Fludrocortisone</h2>
           <p>Treatment requires lifelong hormone supplementation:</p>
-          <p><strong>DOCP (Percorten-V / desoxycorticosterone pivalate):</strong> Injectable mineralocorticoid given every 25-28 days (the standard) or every 21-30 days depending on electrolyte response. Most widely used in the US. Requires a separate veterinarian-prescribed glucocorticoid (typically prednisone at a low physiologic dose determined by a veterinarian) since DOCP provides only mineralocorticoid activity. Dogs typically do very well on this regimen.</p>
+          <p><strong>DOCP (Percorten-V / desoxycorticosterone pivalate):</strong> Injectable mineralocorticoid given every 25-28 days (the standard) or every 21-30 days depending on electrolyte response. Widely used in the US. Requires a separate veterinarian-prescribed glucocorticoid (typically prednisone at a low physiologic dose determined by a veterinarian) since DOCP provides only mineralocorticoid activity. Dogs typically do very well on this regimen.</p>
           <p><strong>Fludrocortisone (Florinef):</strong> Oral tablet daily. Provides both mineralocorticoid and some glucocorticoid activity. Easier for owners who struggle with injections. Some dogs require an additional low-dose prednisone supplement. Requires daily dosing compliance.</p>
-          <p>During periods of stress (travel, veterinary procedures, illness, boarding), the glucocorticoid dose is temporarily increased ("stress dosing") to cover the increased demand — typically 2-3× the maintenance dose for the duration of the stressor. Owners should keep oral prednisone on hand specifically for this purpose and know when to administer it.</p>
+          <p>During periods of stress (travel, veterinary procedures, illness, boarding), the glucocorticoid dose is temporarily increased ("stress dosing") to cover the increased demand. Ask your veterinarian for a written stress-dosing protocol — how much to give, and when — and keep oral prednisone on hand as they direct.</p>
 
           <h2>Long-Term Prognosis</h2>
           <p>Addison's disease is one of the most manageable chronic conditions in veterinary medicine — with appropriate treatment, Addisonian dogs live normal, full-quality lives with normal lifespans. The majority of owners describe their dogs as transformed after diagnosis and treatment begins — the dog that had been intermittently unwell for months becomes consistently well, energetic, and normal once adequate hormone replacement is established. Annual rechecks with electrolyte monitoring ensure treatment is appropriately dosed as the dog ages.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

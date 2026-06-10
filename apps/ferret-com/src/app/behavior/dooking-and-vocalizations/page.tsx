@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Dooking & Vocalizations', url: 'https://ferret.com/behavior/dooking-and-vocalizations' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and communication chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret behaviour and communication owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretVocalizationsPage() {
   return (
@@ -85,7 +94,6 @@ export default function FerretVocalizationsPage() {
             "Ferrets are chattier than most people expect. Once you learn the handful of sounds in their vocabulary, your ferret becomes a lot easier to read — and a lot more entertaining. Here is the full field guide, from the joyful dook to the rare and serious scream.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -125,7 +133,14 @@ export default function FerretVocalizationsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Dead Sleep Explained', href: '/behavior/dead-sleep-explained' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -252,22 +267,7 @@ export default function FerretVocalizationsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour and communication chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour and welfare assessment.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing behaviour and
-              communication guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary advice. New or persistent distress vocalizations,

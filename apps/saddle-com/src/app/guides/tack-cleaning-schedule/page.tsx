@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Cleaning Schedule — Saddle, Bridle | Saddle.com', description: 'Complete tack cleaning schedule and leather care guide. What to clean after every ride, weekly deep clean protocol.', path: '/guides/tack-cleaning-schedule', type: 'article' })
@@ -21,13 +21,22 @@ export default function TackCleaningSchedulePage() {
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Tack Cleaning Schedule', subtitle: 'Leather is a living material that degrades without care and lasts decades with it. A consistent cleaning and conditioning schedule is the difference between tack that lasts 30 years and tack that fails in 5.', category: 'Leather Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' }]}
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+          { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+          { title: 'Tack Room Organization', href: '/guides/tack-room-organization', category: 'Care' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+          { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        ]}
         sidebar={<>
           <TableOfContents items={[{ label: 'After Every Ride', href: '#after-ride' }, { label: 'Weekly Deep Clean', href: '#weekly' }, { label: 'Monthly', href: '#monthly' }, { label: 'Annual', href: '#annual' }, { label: 'Products', href: '#products' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
           <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and care guides." source="guides-tack-cleaning" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2 id="after-ride">After Every Ride (5 Minutes)</h2>
           <p>This is the most important step — sweat is the primary enemy of leather. Sweat contains salt, amino acids, and enzymes that break down leather fiber structure. Allowing sweat to dry on leather repeatedly causes irreversible damage — brittleness, cracking, and deterioration of the grain.</p>
           <ul>

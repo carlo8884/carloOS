@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Diet, Burrows, Brumation | Lizard.com', description: 'Complete Russian tortoise (Testudo horsfieldii) care. High-fiber weed diet (no fruit), outdoor enclosures, brumation, 40+ year lifespan — beginner-friendly.', path: '/species/russian-tortoise', type: 'article' })
@@ -25,8 +25,16 @@ export default function RussianTortoisePage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian or Horsfield\'s tortoise is the most popular pet tortoise in North America and one of the best-suited tortoises to captivity. Small (4–8 inches), cold-tolerant, personable, and routinely lives 40+ years. Beginner-friendly in housing complexity; lifelong in commitment.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '14 min' }}
+        hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian or Horsfield\'s tortoise is the most popular pet tortoise in North America and one of the best-suited tortoises to captivity. Small (4–8 inches), cold-tolerant, personable, and routinely lives 40+ years. Beginner-friendly in housing complexity; lifelong in commitment.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Russian Tortoise', href: '/species/russian-tortoise' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Sulcata Tortoise Care', href: '/species/sulcata-tortoise', category: 'Species' },
+          { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+          { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+          { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+          { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>
@@ -39,9 +47,11 @@ export default function RussianTortoisePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Sulcata Tortoise Care', href: '/species/sulcata-tortoise' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-russian-tortoise" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Russian tortoises</strong> (<em>Testudo horsfieldii</em>) are small Central Asian tortoises that adapt well to captivity, tolerate cold better than most pet tortoises, and routinely live 40–50+ years. Outdoor enclosures during warm months are strongly preferred; indoor minimum is 4×8 ft floor. Diet is high-fiber greens, wild weeds, and hay — fruit is contraindicated. Adults brumate for 8–12 weeks at 35–45°F when supported correctly. The lifespan is the biggest underestimated factor — plan for the tortoise to outlive you.</p>
 
@@ -132,6 +142,7 @@ export default function RussianTortoisePage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Russian Tortoise — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for russian tortoise care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

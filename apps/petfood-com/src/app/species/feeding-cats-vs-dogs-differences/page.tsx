@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function FeedingCatsVsDogsDifferencesPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function FeedingCatsVsDogsDifferencesPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Feeding Cats vs Dogs — Practical Differences', href: '/species/feeding-cats-vs-dogs-differences' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+        { title: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
+        { title: 'Dog vs Cat Nutrition Overview', href: '/species/dog-vs-cat-nutrition-overview' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function FeedingCatsVsDogsDifferencesPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The nutritional differences between cats and dogs translate into different feeding behaviors and routines. A feeding plan that works for a dog can fail for a cat and vice versa. Understanding how each species naturally eats — and where that behavior creates problems in a household — helps owners build routines that support good nutrition and a healthy weight. See <a href="/feeding/feeding-frequency-and-schedules">Feeding Frequency and Schedules</a>.</p>
         <h2 id="patterns">Eating Patterns</h2>
         <p>Dogs, descended from pack hunters, tend to eat quickly and opportunistically — gorging when food is available, which suits meal feeding. Cats, hunters of small prey, naturally eat many small meals throughout the day, which is why cats often graze and why several small measured meals (or a measured portion in a puzzle feeder) suit feline physiology. Forcing a cat into a single large meal works against its nature; letting a dog graze invites overeating.</p>
@@ -94,12 +121,7 @@ export default function FeedingCatsVsDogsDifferencesPage() {
         <h2 id="together">Putting It Together</h2>
         <p>For dogs: measured meals (usually twice daily), strict treat discipline, and slow-feeders for fast eaters. For cats: several small measured meals or puzzle feeding, patience and gradual change for transitions, attention to hydration and format, and avoidance of free-fed dry food in weight-prone cats. Both species: count all calories, monitor body condition, and keep the species on their own complete, species-appropriate diets. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

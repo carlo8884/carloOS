@@ -29,6 +29,8 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { getSiteConfig } from '@carloOS/config'
 import {
@@ -314,6 +316,10 @@ export default function SymptomsHubPage() {
         <span className="text-brand-text-mid font-medium">Symptoms</span>
       </nav>
 
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:symptoms-hero" aspect="16:9" variant="wide" priority />
+      </div>
+
       {/* Body */}
       <div className="px-container-sm sm:px-container py-12">
         {/* Rule #1 callout — mirrors the master guide voice */}
@@ -415,6 +421,7 @@ export default function SymptomsHubPage() {
           </div>
         </section>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
     </>
   )
 }

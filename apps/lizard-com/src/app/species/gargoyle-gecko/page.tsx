@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Gargoyle Gecko Care Guide — Diet, Humidity, Setup | Lizard.com', description: 'Gargoyle gecko (Rhacodactylus auriculatus) care: powdered CGD, 60–75% humidity, 72–80°F, vertical arboreal setup, tail regeneration.', path: '/species/gargoyle-gecko', type: 'article' })
@@ -25,8 +25,16 @@ export default function GargoyleGeckoPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Gargoyle Gecko Care Guide', subtitle: 'Rhacodactylus auriculatus — the New Caledonian gargoyle gecko is a hardy, food-motivated, low-maintenance arboreal species. Easier than chameleons, less fragile than cresteds, and one of the few geckos that regrows its tail after autotomy.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '13 min' }}
+        hero={{ title: 'Gargoyle Gecko Care Guide', subtitle: 'Rhacodactylus auriculatus — the New Caledonian gargoyle gecko is a hardy, food-motivated, low-maintenance arboreal species. Easier than chameleons, less fragile than cresteds, and one of the few geckos that regrows its tail after autotomy.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2026', readTime: '13 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Gargoyle Gecko', href: '/species/gargoyle-gecko' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+          { title: 'Leachianus Gecko Care', href: '/species/leachianus-gecko', category: 'Species' },
+          { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+          { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+          { title: 'Dysecdysis (Stuck Shed)', href: '/health/dysecdysis', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>
@@ -39,9 +47,11 @@ export default function GargoyleGeckoPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Crested Gecko Care', href: '/species/crested-gecko' }, { label: 'Day Gecko Care', href: '/species/day-gecko' }, { label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-gargoyle-gecko" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Gargoyle geckos</strong> (<em>Rhacodactylus auriculatus</em>) are New Caledonian arboreal geckos closely related to crested and leachianus geckos. They are nocturnal, tolerant of household temperatures (72–80°F), and thrive on a base of commercial powdered crested-gecko diet plus occasional insects. A bioactive 18×18×24 inch vertical terrarium with cork branches, live plants, and 60–75% humidity (nightly misting) is sufficient. Unlike crested geckos, gargoyles regenerate dropped tails. House individually — males fight and pairs breed continuously.</p>
 
@@ -125,6 +135,7 @@ export default function GargoyleGeckoPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Gargoyle Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for gargoyle gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Trailer Guide — Buying, Types, Loading | Saddle.com', description: 'Horse trailer types (straight-load, slant-load, stock), what to inspect when buying used, loading a reluctant horse, and trailering safety for horse and driver.', path: '/guides/horse-trailer-guide', type: 'article' })
@@ -11,6 +11,12 @@ export default function HorseTrailerGuidePage() {
       hero={{ title: 'Horse Trailer Guide', subtitle: 'A horse trailer is one of the largest equipment investments an equestrian makes — and one of the most safety-critical. A reliable, well-maintained trailer is essential for veterinary emergencies, show travel, and trail riding access. Understanding the types, what to inspect when buying used, and how to operate safely makes the difference between a tool and a liability.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Trailer Guide', href: '/guides/horse-trailer-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Trailer Loading Guide', href: '/guides/trailer-loading-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+        { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Trailer Types</div>
@@ -26,6 +32,7 @@ export default function HorseTrailerGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Bumper Pull vs Gooseneck</h2>
         <p>The fundamental trailer choice: bumper pull (attaches to a standard receiver hitch on the truck) versus gooseneck (attaches over the truck's bed via a ball hitch in the bed). Bumper pulls are more accessible — most trucks can pull a 2-horse bumper pull with appropriate towing capacity — and more affordable. Gooseneck trailers are more stable, particularly at highway speeds with loaded horses, and the hitch weight is distributed more favorably over the truck's rear axle. For 2-horse local transport, a quality bumper pull is entirely appropriate. For larger capacity, long distances, or show circuit use, the gooseneck's stability advantages become more significant.</p>
 

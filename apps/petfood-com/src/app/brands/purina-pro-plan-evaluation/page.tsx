@@ -8,6 +8,9 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -31,6 +34,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function PurinaProPlanEvaluationPage() {
   return (
     <ArticleLayout
@@ -46,8 +72,13 @@ export default function PurinaProPlanEvaluationPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: 'Purina Pro Plan — An Independent Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
+        { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +114,8 @@ export default function PurinaProPlanEvaluationPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-purina-pro-plan" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Purina Pro Plan — an independent five-dimension evaluation of the Nestle Purina premium line." />
         <p>Purina Pro Plan is the premium line of Nestle Purina PetCare, evaluated here against the PetFood.com five-dimension rubric: corporate context, ingredient sourcing and research, manufacturing, AAFCO substantiation, and recall history. The evaluation is independent and never influenced by any commercial relationship. Pro Plan is notable for the depth of nutrition research and feeding-trial substantiation behind it, which aligns with the WSAVA selection criteria. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="corporate">Corporate Context</h2>
         <p>Nestle Purina PetCare is one of the largest pet food companies in the world, a division of Nestle, with deep resources for research and manufacturing. Scale brings both advantages (research budgets, quality-control infrastructure, feeding-trial capacity) and the usual scrutiny that attaches to large corporate ownership. For evaluating a diet, the relevant corporate question is whether that scale is directed toward nutritional rigor — and Purina is among the manufacturers that most visibly invest in it.</p>
@@ -126,13 +159,7 @@ export default function PurinaProPlanEvaluationPage() {
           ctaAffiliateProduct="Purina%20Pro%20Plan"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

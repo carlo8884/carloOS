@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling.', path: '/species/veiled-chameleon', type: 'article' })
@@ -24,8 +24,16 @@ export default function VeiledChameleonPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
+        hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '13 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Veiled Chameleon', href: '/species/veiled-chameleon' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Panther Chameleon Care', href: '/species/panther-chameleon', category: 'Species' },
+          { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
+          { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+          { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+          { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -38,9 +46,11 @@ export default function VeiledChameleonPage() {
           </div>
           <RelatedLinks title="Related Species" links={[{ label: 'Panther Chameleon', href: '/species/panther-chameleon' }, { label: 'Day Gecko', href: '/species/day-gecko' }, { label: 'Egg Binding', href: '/health/egg-binding' }, { label: 'Hypocalcemia', href: '/health/hypocalcemia' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-veiled-chameleon" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Screen Cages — The Non-Negotiable</h2>
           <p>Veiled chameleons require screen enclosures — not glass, not plastic tubs, not hybrid enclosures with glass sides and screen tops. Chameleons need maximum airflow throughout the entire enclosure at all times. The warm, stagnant air that accumulates in glass or plastic enclosures causes upper respiratory infections rapidly in chameleons. The screen cage allows air movement that prevents this while still allowing appropriate temperature gradients and humidity fluctuation.</p>
           <p>Minimum dimensions: 24×24×48 inches for adult males. Females are smaller and can be maintained in a 24×24×36 at minimum. Taller is always better — chameleons are arboreal and feel most secure at height. The cage must be densely planted with live plants (pothos is the standard — cheap, fast-growing, non-toxic to chameleons, and tolerant of the humidity cycles) and structured with branches at multiple heights to allow full use of vertical space.</p>
@@ -105,6 +115,7 @@ export default function VeiledChameleonPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Veiled Chameleon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for veiled chameleon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

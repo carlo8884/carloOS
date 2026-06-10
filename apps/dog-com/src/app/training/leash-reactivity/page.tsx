@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +58,7 @@ export default function LeashReactivityPage() {
         { name: 'Training', href: '/training' },
         { name: 'Leash Reactivity', href: '/training/leash-reactivity' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -73,10 +74,12 @@ export default function LeashReactivityPage() {
           { label: 'Separation Anxiety', href: '/training/separation-anxiety' },
           { label: 'Training Hub', href: '/training' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-leash-reactivity" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why Leash Reactivity Happens</h2>
         <p>Leash reactivity is almost always one of two things: frustration or fear — or a combination of both. Understanding which is driving your dog&apos;s behavior shapes the protocol.</p>
         <p><strong>Frustration-based reactivity (barrier frustration):</strong> A social dog that wants to approach and greet other dogs learns that the leash prevents this. The frustration of restrained access to a desired resource — other dogs — produces a classic frustration response: barking, lunging, spinning. These dogs are often described as &quot;great with other dogs off-leash but terrible on-leash.&quot; Their body language tends forward: weight forward, tail up and wagging, straining toward the other dog.</p>

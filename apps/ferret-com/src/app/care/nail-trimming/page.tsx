@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,18 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
+
 export default function NailTrimmingPage() {
   return (
     <>
@@ -36,7 +48,6 @@ export default function NailTrimmingPage() {
             'Ferret nails grow continuously and, indoors, never wear down enough on their own. Overgrown nails snag on fabric, curl into the pad, and catch in cage bars. Trimming is a basic, frequent grooming task — and with the right tool and the distraction trick keepers rely on, it takes under a minute.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -66,6 +77,7 @@ export default function NailTrimmingPage() {
                 { label: 'Diet Basics', href: '/care/diet-basics' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,13 +87,27 @@ export default function NailTrimmingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-nail-trim"
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Ferrets Need Regular Trims — and How Often</h2>
           <p>
             A ferret's claws are non-retractable and grow continuously. In the wild, digging and rough terrain keep them worn back; an indoor pet ferret has neither, so the nails simply keep growing. Left untrimmed, they cause real problems: they snag and tear on fabric hammocks and carpet, catch painfully in cage bars, alter how the ferret walks, and in the worst case curl far enough to grow into the foot pad.
@@ -144,10 +170,7 @@ export default function NailTrimmingPage() {
             A single nicked quick needs only home first aid. If bleeding will not stop despite pressure and styptic powder, or the nail looks injured beyond a simple nick, contact your veterinarian — having an exotics-capable clinic identified in advance, as our <a href="/health/vet-visit-prep">vet visit prep</a> guide recommends, makes that call easy.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Nail anatomy, trimming frequency, and grooming technique draw on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. The carbohydrate–insulinoma context for treat choice references the same exotic-mammal literature. This page is general grooming guidance and does not recommend specific products. Pair it with our <a href="/care/bathing-and-grooming">bathing and grooming</a> and <a href="/care/ear-cleaning">ear cleaning</a> guides, or return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

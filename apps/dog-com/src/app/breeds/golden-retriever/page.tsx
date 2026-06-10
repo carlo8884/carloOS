@@ -4,10 +4,9 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -17,7 +16,6 @@ export const metadata: Metadata = buildMetadata({
   description: 'Complete Golden Retriever breed profile. Temperament scores, size, lifespan, health conditions, exercise needs, grooming, training.',
   path: '/breeds/golden-retriever',
   type: 'article',
-  ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
 })
 
 const schema = buildArticleSchema({
@@ -25,7 +23,7 @@ const schema = buildArticleSchema({
   title: 'Golden Retriever Breed Guide',
   description: 'Complete Golden Retriever breed profile.',
   url: 'https://dog.com/breeds/golden-retriever',
-  imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
+  imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
@@ -43,13 +41,12 @@ const SCORES = [
 export default function GoldenRetrieverBreedPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'Golden Retriever', url: 'https://dog.com/breeds/golden-retriever' } ] }))} />
 
       {/* Hero */}
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
-        <div className="relative h-64 lg:h-auto order-first">
-          <Image src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80&auto=format&fit=crop"
-            alt="Golden Retriever" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
+        <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden order-first">
+          <StockImage manifestKey="dog-com:breed-golden-retriever" alt="Golden Retriever" aspect="4:3" priority />
         </div>
         <div className="flex flex-col justify-center px-container-sm sm:px-container py-12 relative">
           <div className="absolute inset-0 opacity-10"
@@ -185,13 +182,19 @@ export default function GoldenRetrieverBreedPage() {
             <RelatedLinks title="Health Resources" links={[
               { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
-              { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },
             ]} />
             <RelatedLinks title="Related Breeds" links={[
+              { label: 'All Dog Breeds', href: '/breeds' },
               { label: 'Labrador Retriever', href: '/breeds/labrador-retriever' },
               { label: 'German Shepherd', href: '/breeds/german-shepherd' },
             ]} />
+            <RelatedLinks title="Breed Comparisons" links={[
+              { label: 'Golden Retriever vs Labrador Retriever', href: '/compare/golden-retriever-vs-labrador-retriever' },
+              { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
+            ]} />
+            <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
               subtitle="Practical guidance every Tuesday."

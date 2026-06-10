@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Boots and Leg Wraps — Types, Purpose, and Pitfalls",
   description:
-    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, what they do, and the risks of wrapping wrong.",
+    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, and the risks of wrapping wrong.",
   path: '/tack/boots-and-wraps',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Boots and Leg Wraps — Types, Purpose, and Pitfalls",
   description:
-    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, what they do, and the risks of wrapping wrong.",
+    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, and the risks of wrapping wrong.",
   url: 'https://horses.com/tack/boots-and-wraps',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function BootsWrapsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+          { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
+        ]}
         hero={{
           title: "Horse Boots and Leg Wraps",
           subtitle:
@@ -89,6 +95,7 @@ export default function BootsWrapsPage() {
               { label: "First-Aid Kit", href: "/ownership/first-aid-kit" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function BootsWrapsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Use Leg Protection</h2>
           <p>Horses can strike one leg with another (brushing or interfering), overreach with a hind foot onto a front heel, or knock a leg on a fence or jump. Boots and wraps protect against these impacts and abrasions during work, travel, and turnout. Some are also used in veterinary care to hold dressings or provide support during recovery. The key is to use the right protection for the purpose and to fit it correctly.</p>
 
@@ -135,7 +149,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="brushing-boots"
             badge="Everyday Protection"
-            badgeEmoji="🛡️"
             name="Synthetic Brushing / Splint Boots"
             subtitle="Impact and interference protection for schooling"
             score={8.5}
@@ -161,7 +174,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="bell-boots"
             badge="Overreach Protection"
-            badgeEmoji="🔔"
             name="Pull-On Bell Boots"
             subtitle="Protects the heel bulbs and shoes from overreaching"
             score={8.4}
@@ -186,7 +198,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="standing-wraps"
             badge="Stable Wraps"
-            badgeEmoji="🧵"
             name="Standing Wraps with Quilted Liners"
             subtitle="Stable bandaging — only with correct technique"
             score={8.0}

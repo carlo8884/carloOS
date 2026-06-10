@@ -13,9 +13,11 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live tree-size estimator embedded on the homepage — a fit tool you use on
+// the first screens, not a link to one (premium gate 3).
+import { TreeSizeEstimator } from '../components/visual/TreeSizeEstimator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -117,12 +119,16 @@ interface FeaturedReview {
   takeaway: string
   href: string
   /**
-   * Optional cover photo. Photo IDs reuse the equestrian Unsplash CDN URLs
-   * already shipped on /english (verified-in-production). Atmospheric
-   * subjects — horse-in-tack, not branded gear shots — keep the editorial
-   * voice and avoid implying paid endorsement.
+   * Optional cover photo manifest key. Resolved via image-manifest.json
+   * (populated by sync-images.mjs) so photographer attribution is always
+   * rendered. Per QC §1: no raw CDN URLs here.
    */
-  image?: string
+  imageKey?: string
+  /**
+   * Guaranteed-synced manifest key. Used when `imageKey` is not yet synced
+   * so the card renders a real on-brand photo instead of the paw placeholder.
+   */
+  imageFallbackKey?: string
   imageAlt?: string
 }
 
@@ -136,8 +142,8 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Deep seat, narrow twist, hand-stitched bridle leather. Pricing aligned with the German-made cohort; resale holds among the strongest in the category.',
     href: '/reviews/stubben-saddle-review',
-    image:
-      'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop',
+    imageKey: 'saddle-com:review-dressage',
+    imageFallbackKey: 'saddle-com:category-dressage',
     imageAlt: 'Dressage horse in tack at the canter',
   },
   {
@@ -149,8 +155,8 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Forward flap, anatomic panels, calfskin grip. The benchmark performance jumper; widely fitted, with predictable resale.',
     href: '/reviews/pessoa-saddle-review',
-    image:
-      'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=900&q=80&auto=format&fit=crop',
+    imageKey: 'saddle-com:review-jumping',
+    imageFallbackKey: 'saddle-com:category-jumping',
     imageAlt: 'Show jumper mid-flight over a fence',
   },
   {
@@ -162,8 +168,7 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Adjustable gullet, synthetic-blocked tree, calf-padded flap. The honest entry-tier choice for a growing horse or a second-saddle slot.',
     href: '/reviews/collegiate-saddle-review',
-    image:
-      'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=900&q=80&auto=format&fit=crop',
+    imageKey: 'saddle-com:review-allpurpose',
     imageAlt: 'Horse and rider in an all-purpose schooling session',
   },
 ]
@@ -179,14 +184,14 @@ const CATEGORIES: Array<{
   {
     icon: 'english',
     title: 'English Saddles',
-    desc: 'Dressage, jumping, all-purpose — ranked on tree fit, panel contact, balance, and resale.',
-    href: '/reviews/best-english-saddles',
+    desc: 'Dressage, jumping, all-purpose — organized by discipline, ranked on tree fit, panel contact, balance, and resale.',
+    href: '/english',
   },
   {
     icon: 'western',
     title: 'Western Saddles',
-    desc: 'Roping, barrel, trail, and ranch — evaluated on tree quality, rigging position, and rider geometry.',
-    href: '/reviews/best-western-saddles',
+    desc: 'Roping, barrel, trail, and ranch — organized by discipline, evaluated on tree quality, rigging position, and rider geometry.',
+    href: '/western',
   },
   {
     icon: 'guides',
@@ -253,33 +258,29 @@ export default function SaddleHomePage() {
           }}
         />
 
-        {/* Hero photo — dressage horse in profile, blended into the brass
-            radial wash. Photo ID is already in production on /english.
-            Mobile collapses to CSS-only; lg+ takes the right 50% of the
-            masthead with a cordovan-toned edge fade. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden lg:block w-1/2 z-0"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1400&q=80&auto=format&fit=crop"
-            alt=""
-            fill
-            sizes="50vw"
-            className="object-cover"
-            priority
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(90deg, rgba(16,10,4,1) 0%, rgba(16,10,4,0.78) 25%, rgba(16,10,4,0.28) 65%, rgba(16,10,4,0.40) 100%)',
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
-          <div className="max-w-3xl">
+        {/* Hero photo — manifest-managed StockImage with photographer
+            attribution (subtle overlay). Image-first on mobile: a real,
+            on-brand saddle-leather photo leads the first screen above the
+            masthead text. On desktop it sits beside the masthead as the
+            right rail. saddle-com:hero is a verified-synced key. Per QC §1:
+            no raw CDN URLs, attribution always rendered. */}
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-12 sm:py-20 lg:py-28">
+          <div className="lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:items-center">
+            {/* Mobile-first hero photo — appears first on mobile (order-first),
+                moves to the right rail on desktop. */}
+            <div className="order-first lg:order-last mb-10 lg:mb-0">
+              <div className="overflow-hidden rounded-xl border border-white/10 shadow-card-hover">
+                <StockImage
+                  manifestKey="saddle-com:hero"
+                  alt="Hand-stitched saddle leather and tack"
+                  aspect="4:3"
+                  variant="inline"
+                  priority
+                  subtleCredit
+                />
+              </div>
+            </div>
+          <div className="max-w-3xl lg:order-first">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-7">
               <span
@@ -380,6 +381,7 @@ export default function SaddleHomePage() {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
 
@@ -418,6 +420,23 @@ export default function SaddleHomePage() {
           ))}
         </div>
       </div>
+
+      {/* ── LIVE TOOL — saddle tree-size estimator (premium gate 3) ─── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
+        <div className="mx-auto max-w-container-wide">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Try it · Tree-size estimator
+          </div>
+          <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+            What tree width does your horse need?
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+            Wither profile and breed type point you to a starting tree width — the single
+            biggest fit decision before you shop, and where most ill-fitting saddles go wrong.
+          </p>
+          <TreeSizeEstimator />
+        </div>
+      </section>
 
       {/* ── CATEGORY GRID — six lanes ───────────────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -534,19 +553,16 @@ export default function SaddleHomePage() {
                 href={r.href}
                 className="group relative bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline transition-all duration-200 hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/40 flex flex-col"
               >
-                {/* Cover photo — equestrian editorial subject, not a branded
-                    product shot. Hover-zoom is restrained to avoid the
-                    over-active marketing-card feel. */}
-                {r.image && r.imageAlt ? (
-                  <div className="relative w-full aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={r.image}
-                      alt={r.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
-                  </div>
+                {/* Cover photo — manifest-managed with photographer attribution.
+                    Per QC §1: no raw CDN URLs. */}
+                {r.imageKey ? (
+                  <StockImage
+                    manifestKey={r.imageKey}
+                    fallbackKey={r.imageFallbackKey}
+                    alt={r.imageAlt}
+                    aspect="4:3"
+                    variant="inline"
+                  />
                 ) : null}
                 <div className="relative p-7 flex flex-col flex-1">
                 {/* Brass top-rule */}

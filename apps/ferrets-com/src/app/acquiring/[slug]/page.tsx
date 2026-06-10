@@ -10,6 +10,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { buildMetadata } from '@carloOS/ui'
 import { GuideArticle } from '@/components/GuideArticle'
+import { SuppliesCTA } from '@/components/SuppliesCTA'
 import { ACQUIRING_GUIDES, ACQUIRING_SLUGS } from '@/data/guides/acquiring'
 
 export function generateStaticParams() {
@@ -68,6 +69,7 @@ export default async function AcquiringGuidePage({
       faqs={guide.faqs}
       related={guide.related}
       source={guide.source}
+      afterBody={slug === 'first-supplies' ? <SuppliesCTA /> : undefined}
     />
   )
 }

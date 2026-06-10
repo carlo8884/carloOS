@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, TableOfContents, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -41,7 +41,6 @@ export default function ReptileFeedingGuidePage() {
         subtitle: 'Prey size, feeding frequency, gut-loading protocols, and the supplementation schedule that prevents metabolic bone disease. Species-specific data for the most common captive reptiles.',
         category: 'Health & Husbandry',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '11 min',
       }}
@@ -51,6 +50,14 @@ export default function ReptileFeedingGuidePage() {
         { name: 'Feeding Guide', href: '/health/reptile-feeding-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Prey Size — The Core Rule', href: '#prey-size' },
@@ -69,9 +76,11 @@ export default function ReptileFeedingGuidePage() {
           title="Free Care Sheets"
           subtitle="20 species — free for subscribers."
           source="feeding-guide" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="prey-size">Prey Size — The Core Rule</h2>
         <p>The universal rule for prey size: <strong>no wider than the widest part of your reptile&apos;s head</strong>. This applies to insects, rodents, and most other prey items. Prey that is too large causes regurgitation, impaction, and in severe cases, injury. When in doubt, go smaller.</p>
         <p>The head-width rule applies to the prey item&apos;s widest point, not its length. A cricket can be longer than the gecko&apos;s head as long as it isn&apos;t wider. For snakes, the rule is slightly different: prey should be 1–1.5x the diameter of the snake&apos;s body at its widest point — snakes can swallow proportionally larger prey because their jaws are not rigidly connected.</p>
@@ -148,6 +157,8 @@ export default function ReptileFeedingGuidePage() {
           <li><strong>Illness:</strong> If refusal continues beyond seasonal norms with other symptoms (weight loss, lethargy, abnormal feces), vet visit is warranted.</li>
         </ul>
         <p>Track weight monthly. A snake that hasn&apos;t eaten for 3 months but maintains weight is probably fine. A snake that has lost 15% of body weight warrants veterinary attention.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Feeders + Gutload</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Live and freeze-dried feeders (Dubia roaches, BSFL, crickets), gutload mix, and calcium dusting powder. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

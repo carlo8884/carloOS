@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 import { States, type CensusRegion } from '../../data/states'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
 
@@ -12,39 +13,45 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 const SPECIALISTS = [
-  { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', icon: '🚨', color: '#C84A2A' },
-  { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', icon: '🔬', color: '#2563EB' },
-  { specialty: 'Cardiology', credential: 'DACVIM (Cardiology)', when: 'Heart murmur detected, arrhythmia, suspected cardiac disease, pre-breeding cardiac clearance (Cavaliers)', icon: '❤️', color: '#DC2626' },
-  { specialty: 'Neurology', credential: 'DACVIM (Neurology)', when: 'Seizures, spinal disease (IVDD), wobbler syndrome, brain tumors, paralysis, vestibular disease', icon: '🧠', color: '#7C3AED' },
-  { specialty: 'Oncology', credential: 'DACVIM (Oncology)', when: 'Cancer diagnosis, chemotherapy protocols, radiation referrals, prognosis discussion', icon: '🎗️', color: '#059669' },
-  { specialty: 'Dermatology', credential: 'DACVD', when: 'Chronic skin disease, environmental or food allergies, autoimmune skin conditions, recurrent ear infections', icon: '🩺', color: '#D97706' },
-  { specialty: 'Ophthalmology', credential: 'DACVO', when: 'Eye injuries, cataracts, glaucoma, progressive retinal atrophy, corneal ulcers not responding to treatment', icon: '👁️', color: '#0891B2' },
-  { specialty: 'Surgery', credential: 'DACVS', when: 'Orthopedic surgery (TPLO, FHO, THR), soft tissue surgery, oncologic surgery, complex fracture repair', icon: '⚕️', color: '#475569' },
-  { specialty: 'Dentistry', credential: 'DAVDC', when: 'Complex dental extractions, oral tumors, jaw fractures, advanced periodontal disease, dental radiograph interpretation', icon: '🦷', color: '#64748B' },
-  { specialty: 'Behavioral Medicine', credential: 'DACVB', when: 'Aggression, severe anxiety, separation anxiety, compulsive disorders, medication management for behavioral conditions', icon: '🧡', color: '#92400E' },
+  { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', abbr: 'ER', color: '#C84A2A' },
+  { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', abbr: 'IM', color: '#2563EB' },
+  { specialty: 'Cardiology', credential: 'DACVIM (Cardiology)', when: 'Heart murmur detected, arrhythmia, suspected cardiac disease, pre-breeding cardiac clearance (Cavaliers)', abbr: 'CA', color: '#DC2626' },
+  { specialty: 'Neurology', credential: 'DACVIM (Neurology)', when: 'Seizures, spinal disease (IVDD), wobbler syndrome, brain tumors, paralysis, vestibular disease', abbr: 'NE', color: '#7C3AED' },
+  { specialty: 'Oncology', credential: 'DACVIM (Oncology)', when: 'Cancer diagnosis, chemotherapy protocols, radiation referrals, prognosis discussion', abbr: 'ON', color: '#059669' },
+  { specialty: 'Dermatology', credential: 'DACVD', when: 'Chronic skin disease, environmental or food allergies, autoimmune skin conditions, recurrent ear infections', abbr: 'DM', color: '#D97706' },
+  { specialty: 'Ophthalmology', credential: 'DACVO', when: 'Eye injuries, cataracts, glaucoma, progressive retinal atrophy, corneal ulcers not responding to treatment', abbr: 'OP', color: '#0891B2' },
+  { specialty: 'Surgery', credential: 'DACVS', when: 'Orthopedic surgery (TPLO, FHO, THR), soft tissue surgery, oncologic surgery, complex fracture repair', abbr: 'SX', color: '#475569' },
+  { specialty: 'Dentistry', credential: 'DAVDC', when: 'Complex dental extractions, oral tumors, jaw fractures, advanced periodontal disease, dental radiograph interpretation', abbr: 'DT', color: '#64748B' },
+  { specialty: 'Behavioral Medicine', credential: 'DACVB', when: 'Aggression, severe anxiety, separation anxiety, compulsive disorders, medication management for behavioral conditions', abbr: 'BM', color: '#92400E' },
 ]
 export default function FindAVetPage() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
       <div>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Veterinary Directory</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>Find the Right Vet</h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-8">General practice vets handle most of your dog's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each.</p>
-        <div className="flex flex-wrap gap-3">
-          <Link href="#general" className="bg-brand-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">General Practice</Link>
-          <Link href="#specialists" className="bg-white/10 text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:bg-white/20">Specialists</Link>
-          <Link href="#emergency" className="bg-brand-danger text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">Emergency</Link>
-        </div>
-      </div>
+      <HubMasthead
+        eyebrow="Veterinary Directory"
+        title="Find the Right Vet"
+        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each, and find care by state."
+        manifestKey="vets-co:find-a-vet-hero"
+        fallbackKey="vets-co:hero"
+        imageAlt="The exterior entrance of a veterinary clinic building"
+        primaryCta={{ href: '#states', label: 'Find a vet by state' }}
+        secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs guide' }}
+      />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Find a Vet</span>
       </nav>
 
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="vets-co:find-a-vet-hero" priority aspect="16:9" variant="wide" />
+      <div className="px-container-sm sm:px-container py-3 bg-brand-surface border-b border-brand-border flex flex-wrap gap-3">
+        <Link href="#general" className="text-xs font-bold text-brand-primary no-underline hover:underline">General Practice</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#specialists" className="text-xs font-bold text-brand-primary no-underline hover:underline">Specialists</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#emergency" className="text-xs font-bold text-brand-danger no-underline hover:underline">Emergency</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#states" className="text-xs font-bold text-brand-primary no-underline hover:underline">By State</Link>
       </div>
 
       <div className="px-container-sm sm:px-container py-14 max-w-5xl">
@@ -70,7 +77,7 @@ export default function FindAVetPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             {SPECIALISTS.map(s => (
               <div key={s.specialty} className="bg-brand-surface border border-brand-border rounded-xl p-5 flex gap-4">
-                <div className="text-2xl flex-shrink-0">{s.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style={{ backgroundColor: s.color }} aria-hidden="true">{s.abbr}</div>
                 <div>
                   <div className="font-bold text-brand-dark text-sm mb-0.5">{s.specialty}</div>
                   <div className="text-2xs font-mono text-brand-primary mb-2">{s.credential}</div>

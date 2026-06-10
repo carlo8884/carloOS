@@ -14,7 +14,7 @@ export default function PreExistingPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Pre-Existing Conditions, Explained', subtitle: 'The single most important concept in pet insurance is the pre-existing condition. Because insurers do not cover conditions that existed before coverage began, the value of a policy is largely set the day you enroll. Understanding how pre-existing conditions are defined — and why timing matters so much — is essential before buying.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Pre-Existing Conditions, Explained', subtitle: 'The single most important concept in pet insurance is the pre-existing condition. Because insurers do not cover conditions that existed before coverage began, the value of a policy is largely set the day you enroll. Understanding how pre-existing conditions are defined — and why timing matters so much — is essential before buying.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function PreExistingPage() {
           <ReviewCard
             id="embrace"
             badge="Curable-Condition Policy"
-            badgeEmoji="📋"
             name="Embrace"
             subtitle="May re-cover curable pre-existing conditions after a symptom-free period"
             score={8.5}
@@ -82,7 +81,6 @@ export default function PreExistingPage() {
           <ReviewCard
             id="aspca"
             badge="Established Carrier"
-            badgeEmoji="🏛️"
             name="ASPCA Pet Health Insurance"
             subtitle="Accident-and-illness with curable pre-existing flexibility"
             score={8.1}

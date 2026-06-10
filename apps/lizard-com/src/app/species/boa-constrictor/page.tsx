@@ -1,14 +1,22 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide — Size Reality | Lizard.com', description: 'Boa constrictors reach 6-10 feet — not the beginner snake they\'re sometimes sold as. Common boa (BCI) vs Colombian (BCC) differences, locality color variants.', path: '/species/boa-constrictor', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide', description: 'Size expectations, BCI vs BCC subspecies, locality colors, and adult enclosure requirements for boa constrictors.', url: 'https://lizard.com/species/boa-constrictor', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BoaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Boa Constrictor Care Guide', subtitle: 'Boa imperator and Boa constrictor — the boa constrictors of Central and South America. Stunning, intelligent, long-lived (25+ years), and frequently the first large snake in a keeper\'s collection. The decision point is honest: a 7-foot, 20-pound animal with the husbandry requirements and feeding schedule that implies. The reward for those prepared for it is one of the most impressive reptiles in the hobby.', category: 'Species Guide — Intermediate/Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Boa Constrictor Care Guide', subtitle: 'Boa imperator and Boa constrictor — the boa constrictors of Central and South America. Stunning, intelligent, long-lived (25+ years), and frequently the first large snake in a keeper\'s collection. The decision point is honest: a 7-foot, 20-pound animal with the husbandry requirements and feeding schedule that implies. The reward for those prepared for it is one of the most impressive reptiles in the hobby.', category: 'Species Guide — Intermediate/Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Boa Constrictor', href: '/species/boa-constrictor' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -21,9 +29,11 @@ export default function BoaPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Ball Python', href: '/species/ball-python' }, { label: 'Corn Snake', href: '/species/corn-snake' }, { label: 'Respiratory Infection', href: '/health/respiratory-infection' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-boa" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>BCI vs BCC — Two Different Snakes</h2>
         <p><strong>Boa imperator (Common boa / Central American boa / BCI — formerly Boa constrictor imperator):</strong> The most commonly kept boa in the hobby. Central American and northern South American distribution. Adult size: most males 5–7 feet, most females 6–8 feet. Smaller, lighter, and generally more handleable than the Colombian form. Multiple locality variants with dramatically different coloration (see below).</p>
         <p><strong>Boa constrictor constrictor (Colombian boa / red-tailed boa / BCC):</strong> The larger South American subspecies. Adult females commonly reach 8–10+ feet and 30–60+ pounds. The "red tail" name comes from the vivid red or orange tail pattern more distinct in Colombian animals. BCC are truly large animals requiring substantial enclosures and significant handling experience — they are not a beginner snake regardless of temperament.</p>
@@ -43,6 +53,7 @@ export default function BoaPage() {
 
         <h2>Feeding</h2>
         <p>Frozen/thawed is strongly preferred over live for the same reasons as all constrictors — live prey bites cause significant wounds in boas, particularly during the strikes-and-wraps feeding sequence. Adults feed on frozen/thawed adult rats every 10–14 days; large adults may require rabbits or multiple large rats. Prey size: slightly smaller than the widest part of the snake's body (boas are thicker than corn snakes — appropriately sized prey is larger). Boas fed too frequently become obese — every 2 weeks for adults is adequate.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Boa Constrictor — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for boa constrictor care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

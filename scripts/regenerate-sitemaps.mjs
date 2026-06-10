@@ -88,19 +88,60 @@ function ferretsExtraRoutes() {
   return Array.from(new Set(out))
 }
 
+// Dog.com /compare/[slug] pairs live in data/breed-comparisons.ts as
+// `{ breedASlug: 'a', breedBSlug: 'b', ... }`; slug = `${a}-vs-${b}`. Parsing
+// the data file keeps the sitemap in sync as pairs are added/removed.
+function dogComExtraRoutes() {
+  let src = ''
+  try {
+    src = readFileSync(
+      join(ROOT, 'apps/dog-com/src/data/breed-comparisons.ts'),
+      'utf8'
+    )
+  } catch {
+    return []
+  }
+  const out = []
+  for (const m of src.matchAll(
+    /breedASlug:\s*'([a-z0-9-]+)',\s*breedBSlug:\s*'([a-z0-9-]+)'/g
+  )) {
+    out.push(`/compare/${m[1]}-vs-${m[2]}`)
+  }
+  return Array.from(new Set(out))
+}
+
 const SITES = [
-  { id: 'dog-com', domain: 'dog.com' },
-  { id: 'fish-com', domain: 'fish.com' },
+  { id: 'dog-com', domain: 'dog.com', extraRoutes: dogComExtraRoutes() },
+  {
+    id: 'fish-com',
+    domain: 'fish.com',
+    // /data is a low-priority data-partnerships page, deliberately downranked
+    // below editorial hubs (PR #368).
+    priorityOverrides: { '/data': 0.3 },
+  },
   { id: 'lizard-com', domain: 'lizard.com' },
   {
     id: 'saddle-com',
     domain: 'saddle.com',
     extraRoutes: SADDLE_BRAND_SLUGS.map((s) => `/brands/${s}`),
   },
-  { id: 'vets-co', domain: 'vets.co' },
+  {
+    id: 'vets-co',
+    domain: 'vets.co',
+    // /vets directory hub + [state]/[city] pages are noIndex placeholder/sample
+    // data until a verified data source lands ([state]/[city] are dynamic and
+    // already excluded; the bare /vets hub must be excluded explicitly). IR P1-1.
+    noIndexRoutes: ['/vets'],
+  },
   // Added 2026-05-31: extend coverage to the remaining 5 production sites
   // so sitemap regeneration is comprehensive post-mega-wave.
-  { id: 'horses-com', domain: 'horses.com' },
+  {
+    id: 'horses-com',
+    domain: 'horses.com',
+    // /data is a low-priority data/partnerships page, downranked below editorial
+    // hubs (mirrors fish-com; was defaulting to 0.9 as a depth-1 route).
+    priorityOverrides: { '/data': 0.3 },
+  },
   { id: 'petfood-com', domain: 'petfood.com' },
   {
     id: 'petfoods-com',
@@ -140,6 +181,7 @@ function listRoutes(siteId) {
           entry.name.startsWith('.') ||
           entry.name === 'api' ||
           entry.name === 'admin' ||
+          entry.name === 'dashboard' ||
           entry.name.includes('[') ||
           entry.name === 'node_modules'
         ) {
@@ -153,7 +195,22 @@ function listRoutes(siteId) {
         const nextPrefix = isRouteGroup ? prefix : `${prefix}/${entry.name}`
         walk(path, nextPrefix)
       } else if (/^page\.(tsx|ts|jsx|js)$/.test(entry.name)) {
-        routes.add(prefix === '' ? '/' : prefix)
+        // Skip redirect stubs (a `next/navigation` `redirect()` page with no
+        // buildMetadata) — they exist only to 308 a duplicate URL to its
+        // canonical and must not compete as their own sitemap entries.
+        let src = ''
+        try {
+          src = readFileSync(path, 'utf8')
+        } catch {
+          src = ''
+        }
+        const isRedirectStub =
+          /from\s+['"]next\/navigation['"]/.test(src) &&
+          /\bredirect\(/.test(src) &&
+          !/buildMetadata\(/.test(src)
+        if (!isRedirectStub) {
+          routes.add(prefix === '' ? '/' : prefix)
+        }
       }
     }
   }
@@ -167,6 +224,7 @@ function priorityFor(route) {
   const depth = (route.match(/\//g) || []).length
   if (route.startsWith('/legal/')) return 0.2
   if (route === '/editorial-standards') return 0.3
+  if (route === '/disclosure') return 0.3 // FTC utility page, not a content hub
   if (route === '/tools') return 0.95 // calculator hub
   if (route.startsWith('/tools/')) return 0.85 // individual calculator
   if (depth === 1) return 0.9 // category index
@@ -185,9 +243,11 @@ function frequencyFor(route) {
 
 function generateSitemap(site, routes) {
   const baseUrl = `https://${site.domain}`
+  const priorityOverrides = site.priorityOverrides || {}
   const lines = routes.map((route) => {
     const url = route === '/' ? baseUrl : `${baseUrl}${route}`
-    const priority = priorityFor(route)
+    const priority =
+      route in priorityOverrides ? priorityOverrides[route] : priorityFor(route)
     const freq = frequencyFor(route)
     return `    { url: '${url}', lastModified: now, changeFrequency: '${freq}', priority: ${priority.toFixed(2)} },`
   })
@@ -214,6 +274,10 @@ for (const site of SITES) {
   const walked = listRoutes(site.id)
   const merged = new Set(walked)
   for (const r of site.extraRoutes || []) merged.add(r)
+  // Per-site noIndex overrides: routes whose page is rendered with
+  // `noIndex: true` metadata (placeholder/sample data, etc.). The walker
+  // can't see metadata, so these are listed explicitly and kept out.
+  for (const r of site.noIndexRoutes || []) merged.delete(r)
   const routes = Array.from(merged).sort((a, b) => a.localeCompare(b))
   totalRoutes += routes.length
   const sitemapPath = join(ROOT, 'apps', site.id, 'src/app/sitemap.ts')

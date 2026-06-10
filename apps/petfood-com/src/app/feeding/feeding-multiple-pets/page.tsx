@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function FeedingMultiplePetsPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function FeedingMultiplePetsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'Feeding Multiple Pets in One Household', href: '/feeding/feeding-multiple-pets' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
+        { title: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function FeedingMultiplePetsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>When several animals share a home, free-choice feeding makes it impossible to know who ate what, and it lets the fastest or most food-motivated animal overeat while a slower or sicker one is crowded out. The solution is structured, separated feeding, with portions matched to each animal&apos;s needs. This matters most when animals differ in size, life stage, body condition, or medical needs.</p>
         <h2 id="problem">The Core Problem</h2>
         <p>Different animals have different calorie needs, different life-stage diets, and sometimes a therapeutic diet that is harmful if eaten by the wrong animal. A shared bowl cannot meet these differing needs and obscures intake. The first principle of multi-pet feeding is that each animal&apos;s portion must be controllable and observable. See <a href="/feeding/how-much-to-feed-a-dog">How Much to Feed a Dog</a>.</p>
@@ -94,12 +121,7 @@ export default function FeedingMultiplePetsPage() {
         <h2 id="monitoring">Monitoring Each Animal</h2>
         <p>Separated feeding makes individual monitoring possible: track each animal&apos;s intake, weigh and body-condition-score each one regularly, and watch for changes in appetite that a shared bowl would hide. In a multi-pet home, a drop in one animal&apos;s appetite is easy to miss without separation, yet it is often the first sign of illness. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

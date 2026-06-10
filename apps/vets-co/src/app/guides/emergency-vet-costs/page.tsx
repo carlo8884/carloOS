@@ -14,7 +14,7 @@ export default function EmergencyCostsPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Emergency Vet Costs, Explained', subtitle: 'Emergency veterinary care costs significantly more than routine care, and the difference is not arbitrary — it reflects the round-the-clock staffing, intensive-care equipment, and instant readiness that an emergency hospital must maintain. Understanding what drives ER pricing, and how to prepare, lets you face an emergency focused on your pet rather than the bill.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Emergency Vet Costs, Explained', subtitle: 'Emergency veterinary care costs significantly more than routine care, and the difference is not arbitrary — it reflects the round-the-clock staffing, intensive-care equipment, and instant readiness that an emergency hospital must maintain. Understanding what drives ER pricing, and how to prepare, lets you face an emergency focused on your pet rather than the bill.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

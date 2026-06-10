@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BlanketWeightsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Winter Care', href: '/care/winter-care' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: "Horse Blanket Weights Explained",
           subtitle:
@@ -88,6 +94,7 @@ export default function BlanketWeightsPage() {
               { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function BlanketWeightsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="types">Turnout vs Stable Rugs</h2>
           <p>The first distinction is turnout versus stable. Turnout rugs are waterproof and tough, built for the field and the weather. Stable rugs are not waterproof, made for use indoors over a clean horse. Using a stable rug outside leaves a horse soaked, and a turnout rug indoors can be unnecessarily heavy and harder-wearing than needed. Many horses have both, plus liners that add warmth to a shell.</p>
 

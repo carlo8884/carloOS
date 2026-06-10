@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -22,7 +22,7 @@ const SECTIONS = [
     category: 'Fundamentals',
     items: [
       { title: 'Positive Reinforcement — How It Works', desc: 'Why reward-based training outperforms punishment: the science', href: '/training/positive-reinforcement' },
-      { title: 'The Critical Socialization Window', desc: '8–16 weeks — what it is, why it matters, what to do', href: '/training/socialization-window', badge: '⏰ Time-sensitive' },
+      { title: 'The Critical Socialization Window', desc: '8–16 weeks — what it is, why it matters, what to do', href: '/training/dog-socialization-window', badge: '⏰ Time-sensitive' },
       { title: 'Basic Commands Every Dog Should Know', desc: 'Sit, down, stay, come, leave it — in that order, with why', href: '/training/basic-commands' },
       { title: 'Marker Training & Clicker Training', desc: 'How to use a marker word or clicker effectively', href: '/training/marker-training' },
     ],
@@ -54,10 +54,26 @@ const SECTIONS = [
   },
 ]
 
+const ALL_TRAINING_ITEMS = SECTIONS.flatMap((s) => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Training Guides',
+  numberOfItems: ALL_TRAINING_ITEMS.length,
+  itemListElement: ALL_TRAINING_ITEMS.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://dog.com${item.href}`,
+  })),
+}
+
+const trainingSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function TrainingHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={trainingSchema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
@@ -146,12 +162,13 @@ export default function TrainingHubPage() {
         <Link key="puppy-schedule" href="/training/puppy-schedule" className="text-sm text-brand-primary no-underline hover:underline">Puppy Schedule</Link>
         <Link key="resource-guarding" href="/training/resource-guarding" className="text-sm text-brand-primary no-underline hover:underline">Resource Guarding</Link>
         <Link key="separation-anxiety" href="/training/separation-anxiety" className="text-sm text-brand-primary no-underline hover:underline">Separation Anxiety</Link>
-        <Link key="socialization-window" href="/training/socialization-window" className="text-sm text-brand-primary no-underline hover:underline">Socialization Window</Link>
+        <Link key="socialization-window" href="/training/dog-socialization-window" className="text-sm text-brand-primary no-underline hover:underline">Socialization Window</Link>
         <Link key="trainer-credentials" href="/training/trainer-credentials" className="text-sm text-brand-primary no-underline hover:underline">Trainer Credentials</Link>
         <Link key="training-red-flags" href="/training/training-red-flags" className="text-sm text-brand-primary no-underline hover:underline">Training Red Flags</Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="footer" />
     </>
   </>
   )

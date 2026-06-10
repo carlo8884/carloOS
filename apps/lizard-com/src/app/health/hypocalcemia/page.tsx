@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Hypocalcemia and Metabolic Bone Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Metabolic Bone Diseases in Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/metabolic-bone-diseases-in-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Baines F.M. — UV-tool: evidence-based UVB and D3 recommendations for reptiles in captivity", publisher: "Journal of Zoo and Aquarium Research", url: "https://jzar.org/jzar/article/view/150" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) in reptiles causes tremors, tetany, and seizures. Emergency calcium gluconate by injection. How to distinguish from MBD.', path: '/health/hypocalcemia', type: 'article' })
 
@@ -27,8 +34,16 @@ export default function HypocalcemiaPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="health"
-        hero={{ title: 'Hypocalcemia in Reptiles', subtitle: 'Hypocalcemia — abnormally low blood calcium — is an acute neuromuscular emergency distinct from the chronic skeletal changes of MBD. When circulating calcium falls below the threshold required for normal nerve and muscle function, tremors, tetany, and seizures follow. Parenteral calcium administered by a veterinarian is the only reliable rescue. This page explains the distinction from MBD, the causes, the clinical course, and a prevention protocol you can build into routine husbandry.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '12 min' }}
+        hero={{ title: 'Hypocalcemia in Reptiles', subtitle: 'Hypocalcemia — abnormally low blood calcium — is an acute neuromuscular emergency distinct from the chronic skeletal changes of MBD. When circulating calcium falls below the threshold required for normal nerve and muscle function, tremors, tetany, and seizures follow. Parenteral calcium administered by a veterinarian is the only reliable rescue. This page explains the distinction from MBD, the causes, the clinical course, and a prevention protocol you can build into routine husbandry.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Hypocalcemia', href: '/health/hypocalcemia' }]}
+        relatedLinks={[
+          { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+          { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+          { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+          { title: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency', category: 'Health' },
+          { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+          { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>Emergency Signs</div>
@@ -38,9 +53,11 @@ export default function HypocalcemiaPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Egg Binding', href: '/health/egg-binding' }, { label: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency' }, { label: 'Leopard Gecko Care', href: '/species/leopard-gecko' }, { label: 'Veiled Chameleon Care', href: '/species/veiled-chameleon' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-hypocalcemia" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <h2>What Hypocalcemia Is</h2>
           <p>Calcium in the blood exists in three forms: ionized (the biologically active fraction, roughly half of the total), protein-bound (mostly to albumin), and complexed with anions such as citrate and bicarbonate. It is the ionized fraction that determines neuromuscular function. When ionized calcium falls below the species-specific threshold, voltage-gated sodium channels in nerve membranes become hyperexcitable — nerves fire spontaneously, muscles contract without voluntary input, and the syndrome of tremor, tetany, and seizure begins. This is what veterinarians and herpetologists mean by acute hypocalcemia.</p>
           <p>The body defends ionized calcium aggressively. Parathyroid hormone (PTH) is released from the parathyroid glands the moment blood calcium drops, and PTH mobilizes calcium from bone, increases renal calcium retention, and (via activation of vitamin D3) increases intestinal calcium absorption. The skeleton acts as a calcium reservoir that the body draws on for years before the reservoir is exhausted. <a href="/health/metabolic-bone-disease">Metabolic bone disease</a> is what that reservoir depletion looks like on radiographs and physical exam: thin cortices, soft jaw, pathological fractures, deformity. Acute hypocalcemia is what happens when even this aggressive buffering is overwhelmed — usually because demand spikes (gravidity, rapid growth) or because the buffering machinery itself fails (severe long-standing deficiency, renal disease).</p>
@@ -106,6 +123,9 @@ export default function HypocalcemiaPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <ArticleSourcesList sources={SOURCES} />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Calcium Supplementation</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Reptile calcium-with-D3 and calcium-without-D3 powders (Repashy, Rep-Cal, Zoo Med). Dose per the husbandry schedule and veterinary direction. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function AdditivesAndSupplementsOnLabelsPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,14 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Additives on Pet Food Labels', href: '/ingredients/additives-and-supplements-on-labels' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +100,14 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
               { label: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Blue Buffalo — Independent Evaluation', href: '/brands/blue-buffalo-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -80,6 +119,7 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>After the main ingredients, a complete pet food lists a long series of added vitamins, minerals, amino acids, and other additives. The chemical-sounding names can look concerning, but most are the supplement premix that brings the food to AAFCO completeness, plus functional additives for palatability, texture, and preservation. Understanding what each group does removes most of the alarm. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a> and <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="bottom">The Bottom of the Panel</h2>
         <p>Because the panel is ordered by weight, the additives present in tiny amounts cluster at the bottom. Their position reflects their small quantity, not low importance — many are essential nutrients added in milligram or microgram amounts. A long additive tail is normal and expected on a complete diet; its absence would more likely indicate an incomplete product. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a>.</p>
@@ -94,13 +134,7 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
         <h2 id="colors">Colors — Cosmetic Only</h2>
         <p>Artificial colors (dyes named with numbers, such as Red 40 or Yellow 5) and some natural colorants add no nutritional value and exist purely to make the food look appealing to the human buyer — the animal does not care about color. Colors are the one additive category an owner can reasonably prefer to avoid, since they serve no purpose for the pet, though approved colors are not established as harmful at use levels. Many higher-end foods omit artificial colors. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -4,16 +4,15 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
+  title: 'Dog Breed Guide — 50+ Breeds Profiled',
+  description: 'Breed profiles for 50+ dog breeds. Temperament, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
 
@@ -24,19 +23,64 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
-const BREED_IMAGES: Record<string, string> = {
-  'golden-retriever': 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&auto=format&fit=crop',
-  'labrador-retriever': 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=400&q=80&auto=format&fit=crop',
-  'french-bulldog': 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&auto=format&fit=crop',
-  'german-shepherd': 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&auto=format&fit=crop',
-  'beagle': 'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=400&q=80&auto=format&fit=crop',
-  'poodle': 'https://images.unsplash.com/photo-1616149955247-48c60b1d4413?w=400&q=80&auto=format&fit=crop',
+// ItemList of every profiled breed — gives AI Overviews / Perplexity a
+// structured, citable index of the breed cluster (GEO authority signal).
+const breedListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Breeds Profiled at Dog.com',
+  numberOfItems: Breeds.length,
+  itemListElement: Breeds.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://dog.com/breeds/${b.slug}`,
+  })),
 }
 
-// Size filters for UI
-const SIZE_FILTERS = ['All', 'Small', 'Medium', 'Large', 'Giant']
-const GROUP_FILTERS = ['All Groups', 'Sporting', 'Hound', 'Working', 'Terrier', 'Toy', 'Non-Sporting', 'Herding']
+const schema = combineSchemas(breadcrumbSchema, breedListSchema)
+
+// ─── Inline SVG icons (replace emoji; match homepage idiom) ──────────────────
+
+function IconArrowRight({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  )
+}
+
+function IconAlert({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 9v4M12 17h.01" />
+      <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+    </svg>
+  )
+}
+
+// Strip StockImage's outer margins so it fills a tile/masthead edge-to-edge.
+const FILL_IMAGE = "[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0"
+
+// Health-condition slugs render as readable names (varies per breed instead of
+// a flat "{n} known conditions" count). Known veterinary acronyms stay
+// upper-cased; everything else is title-cased.
+const CONDITION_ACRONYMS = new Set(['boas', 'ivdd', 'pra', 'dm', 'acl', 'dcm', 'pda'])
+function formatCondition(slug: string): string {
+  return slug
+    .split('-')
+    .map((w) => (CONDITION_ACRONYMS.has(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(' ')
+}
+
+const BREED_MANIFEST_KEYS: Record<string, string> = {
+  'golden-retriever': 'dog-com:breed-golden-retriever',
+  'labrador-retriever': 'dog-com:breed-labrador-retriever',
+  'french-bulldog': 'dog-com:breed-french-bulldog',
+  'german-shepherd': 'dog-com:breed-german-shepherd',
+  'beagle': 'dog-com:breed-beagle',
+  'poodle': 'dog-com:breed-poodle',
+}
 
 export default async function BreedsPage() {
   let breeds: Array<{
@@ -70,22 +114,57 @@ export default async function BreedsPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Encyclopedia</span>
+      {/* Hero — image-first masthead (mirrors homepage). The hub hero photo is
+          pulled INTO the dark header: the H1 + intro overlay the photo on a
+          bottom-up gradient scrim instead of sitting in an orphaned band below.
+          Reuses the existing dog-com:category-breeds key (no new manifest
+          entries). subtleCredit keeps photographer attribution present (QC §1). */}
+      <section className="relative bg-brand-dark min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh]">
+        <div
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:!w-full [&_figure>div]:h-full [&_figure>div]:!w-full [&_figure>div]:!aspect-auto [&_figure>div]:!rounded-none [&>div]:h-full`}
+        >
+          <StockImage
+            manifestKey="dog-com:category-breeds"
+            alt="Dog breed portrait"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
         </div>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}>
-          Dog Breed Guide
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          research-based profiles for 200+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
-        </p>
-      </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/25"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse at 25% 75%, rgba(232,98,42,0.35) 0%, transparent 60%)',
+          }}
+        />
+        <div className="relative z-10 flex flex-col justify-end min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Encyclopedia</span>
+          </div>
+          <h1
+            className="font-display font-black text-white tracking-tighter leading-[1.03] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(36px, 5vw, 60px)', textShadow: '0 2px 18px rgba(0,0,0,0.45)' }}
+          >
+            Dog Breed Guide
+          </h1>
+          <p
+            className="text-lg font-light text-white/85 max-w-xl leading-relaxed"
+            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
+          >
+            Research-based profiles for 50+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
+          </p>
+        </div>
+      </section>
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -94,9 +173,46 @@ export default async function BreedsPage() {
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
 
-      {/* Hero image */}
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="dog-com:category-breeds" aspect="16:9" variant="wide" priority />
+      {/* Breed-match wizard — prominent on-brand entry CTA. Surfaces the
+          /breeds/match decision wizard at the top of the hub (previously
+          reachable only via direct URL). Mirrors the hub's card idiom:
+          brand accent, paw glyph, IconArrowRight, hover lift. */}
+      <div className="px-container-sm sm:px-container pt-10">
+        <Link
+          href="/breeds/match"
+          className="group relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 overflow-hidden rounded-xl bg-brand-dark text-white p-6 sm:p-7 no-underline hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-30 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(ellipse at 85% 50%, rgba(232,98,42,0.45) 0%, transparent 60%)',
+            }}
+          />
+          <span className="relative flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-brand-primary/20 text-brand-primary" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="26" height="26" fill="currentColor">
+              <ellipse cx="20" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="44" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="11" cy="36" rx="5.4" ry="6.8" />
+              <ellipse cx="53" cy="36" rx="5.4" ry="6.8" />
+              <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
+            </svg>
+          </span>
+          <div className="relative flex-1">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">Decision wizard</div>
+            <div className="font-display font-bold text-lg sm:text-xl leading-tight mb-1">
+              Find your match — breed-match wizard
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed max-w-xl">
+              Answer 7 quick questions about your home and lifestyle and get your top 3 breed matches, with honest trade-offs. No email required.
+            </p>
+          </div>
+          <span className="relative inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary group-hover:gap-2.5 transition-all whitespace-nowrap">
+            Start the wizard
+            <IconArrowRight className="w-4 h-4" />
+          </span>
+        </Link>
       </div>
 
       {/* Content */}
@@ -105,13 +221,17 @@ export default async function BreedsPage() {
           <p className="text-sm text-brand-text-light">
             {breeds.length} breeds profiled
           </p>
+          <Link href="/compare" className="text-sm font-bold text-brand-primary no-underline hover:underline flex items-center gap-1">
+            Compare breeds side-by-side
+            <IconArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Breed grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {breeds.map((breed) => {
             const careData = breed.care_data
-            const image = BREED_IMAGES[breed.slug]
+            const manifestKey = BREED_MANIFEST_KEYS[breed.slug]
 
             return (
               <Link
@@ -119,18 +239,16 @@ export default async function BreedsPage() {
                 href={`/breeds/${breed.slug}`}
                 className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
               >
-                <div className="relative h-44 bg-brand-surface overflow-hidden">
-                  {image ? (
-                    <Image
-                      src={image}
-                      alt={breed.common_name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-5xl">🐕</div>
-                  )}
+                {/* Always render StockImage. For breeds whose per-breed key
+                    isn't synced yet, fall back to the real breeds-category photo
+                    (not the branded paw placeholder) so every tile shows a dog. */}
+                <div className={`overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure>div]:!rounded-none`}>
+                  <StockImage
+                    manifestKey={manifestKey ?? `dog-com:breed-${breed.slug}`}
+                    fallbackKey="dog-com:category-breeds"
+                    alt={breed.common_name}
+                    aspect="4:3"
+                  />
                 </div>
                 <div className="p-4">
                   <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
@@ -140,8 +258,12 @@ export default async function BreedsPage() {
                     {String(careData.size ?? '')} · {String(careData.exercise_level ?? '')} exercise
                   </div>
                   {breed.health_conditions?.length > 0 && (
-                    <div className="text-2xs text-brand-danger font-medium">
-                      ⚠ {breed.health_conditions.length} known conditions
+                    <div className="flex items-center gap-1 text-2xs text-brand-text-light font-medium" title={`${breed.health_conditions.length} breed-associated health conditions profiled`}>
+                      <IconAlert className="shrink-0 text-brand-primary" />
+                      <span className="truncate">
+                        {breed.health_conditions.slice(0, 2).map(formatCondition).join(' · ')}
+                        {breed.health_conditions.length > 2 ? ` +${breed.health_conditions.length - 2}` : ''}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -149,18 +271,34 @@ export default async function BreedsPage() {
             )
           })}
 
-          {/* More breeds coming */}
-          <div className="border-2 border-dashed border-brand-border rounded-lg flex items-center justify-center text-center p-6 text-brand-text-light">
-            <div>
-              <div className="text-3xl mb-2">🐾</div>
-              <div className="text-sm font-semibold text-brand-text-mid mb-1">200+ breeds</div>
-              <div className="text-xs">More profiles added weekly</div>
-            </div>
-          </div>
+          {/* More breeds — premium branded card (no dashed box, no emoji).
+              Anchors to the full A–Z list below so it's a real navigation
+              affordance, not a dead placeholder tile. */}
+          <Link
+            href="#all-breeds"
+            className="group flex flex-col items-center justify-center text-center rounded-lg bg-brand-primary-pale border border-brand-border p-6 no-underline hover:border-brand-primary transition-colors duration-200"
+            style={{ aspectRatio: '4 / 5' }}
+          >
+            <span className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-primary/10 text-brand-primary mb-3" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="26" height="26" fill="currentColor">
+                <ellipse cx="20" cy="22" rx="6.2" ry="8" />
+                <ellipse cx="44" cy="22" rx="6.2" ry="8" />
+                <ellipse cx="11" cy="36" rx="5.4" ry="6.8" />
+                <ellipse cx="53" cy="36" rx="5.4" ry="6.8" />
+                <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
+              </svg>
+            </span>
+            <div className="text-sm font-display font-bold text-brand-dark mb-1">50+ breeds</div>
+            <div className="text-xs text-brand-text-mid mb-2">Growing profile library</div>
+            <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-primary group-hover:gap-2 transition-all">
+              Browse all
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
         </div>
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
+      <section id="all-breeds" className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">All Dog Breeds</h2>
         <p className="text-sm text-brand-text-light mb-6">
           {Breeds.length} breed profiles, grouped by AKC group. Profiles
@@ -211,6 +349,7 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>
   )

@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Glickman LT et al. Non-dietary risk factors for gastric dilatation-volvulus in large and giant breed dogs. J Am Vet Med Assoc. 2000;217(10):1492-1499.', publisher: 'JAVMA' },
+  { label: 'AVMA: Bloat (Gastric Dilatation and Volvulus) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-dogs', publisher: 'AVMA' },
+  { label: 'Brockman DJ et al. Canine gastric dilatation-volvulus syndrome in a veterinary critical care unit: 295 cases (1986-1992). J Am Vet Med Assoc. 1995;207(4):460-464.', publisher: 'JAVMA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs — Signs, Emergency Response | Dog.com', description: 'Gastric dilatation-volvulus (GDV) kills within hours without surgery. Know the signs — unproductive retching, distended abdomen — and act immediately.', path: '/health/dog-bloat-gvd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -17,6 +25,7 @@ export default function GdvPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'GDV (Bloat) in Dogs — Emergency Guide', subtitle: 'Gastric dilatation-volvulus is fatal without emergency surgery, typically within 4–6 hours of onset. The signs are specific. Knowing them in advance is the difference between life and death.', category: 'Emergency Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'German Shepherd Health', href: '/health/german-shepherd-health', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs — Go Now</div>
@@ -34,6 +43,7 @@ export default function GdvPage() {
             </div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-gdv" />
         </>}
       >
@@ -68,6 +78,8 @@ export default function GdvPage() {
           <p>Prophylactic gastropexy is a surgical procedure that permanently attaches the stomach to the abdominal wall, preventing the torsion (twisting) component of GDV. It does not prevent the stomach from dilating (the first stage) but eliminates the life-threatening second stage. It can be performed laparoscopically (minimally invasive) at the time of spay or neuter, adding $300–500 to the procedure cost.</p>
           <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $400 prophylactic surgery versus a $10,000+ emergency procedure if GDV occurs.</p>
           <p>Ask your vet: <em>"Is my dog's breed a candidate for prophylactic gastropexy? Can it be performed with the spay/neuter?"</em></p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

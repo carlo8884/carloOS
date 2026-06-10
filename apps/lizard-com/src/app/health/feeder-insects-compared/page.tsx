@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeder Insects Compared — Dubia, Crickets, Worms | Lizard.com", description: "Crickets, dubia roaches, mealworms, superworms, BSFL, hornworms, and waxworms compared on nutrition, fat, and which to use as staples vs treats.", path: "/health/feeder-insects-compared", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeder Insects
 export default function HealthFeederInsectsComparedPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeder Insects Compared", subtitle: "Not all feeder insects are equal. Some make excellent nutritional staples, others are fatty treats that cause problems if overused, and a couple are best avoided as primary feeders. This guide compares the common options, crickets, dubia roaches, mealworms, superworms, black soldier fly larvae, hornworms, and waxworms, so you can build a varied, balanced insectivore diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeder Insects Compared", subtitle: "Not all feeder insects are equal. Some make excellent nutritional staples, others are fatty treats that cause problems if overused, and a couple are best avoided as primary feeders. This guide compares the common options, crickets, dubia roaches, mealworms, superworms, black soldier fly larvae, hornworms, and waxworms, so you can build a varied, balanced insectivore diet.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Dubia Roach Care', href: '/health/dubia-roach-care', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Roles"}</div>
@@ -23,9 +31,11 @@ export default function HealthFeederInsectsComparedPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }, { label: "Dubia Roach Care", href: "/health/dubia-roach-care" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }, { label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-feeder-insects-compared"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Insectivorous reptiles do best on a varied diet built around a few nutritious staples, with fattier or specialty insects used sparingly for variety, hydration, or enrichment. The two factors that most determine a feeder’s role are its fat content and its calcium-to-phosphorus balance, along with how much hard-to-digest chitin (exoskeleton) it carries. Gut-loading and calcium dusting improve any feeder, but the underlying choice of insect still matters. Here is how the common options stack up."}</p>
           <h2>{"Staple Feeders"}</h2>
           <ul>

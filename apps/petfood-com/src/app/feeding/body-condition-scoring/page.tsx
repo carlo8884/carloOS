@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function BodyConditionScoringPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,13 @@ export default function BodyConditionScoringPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +105,7 @@ export default function BodyConditionScoringPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Body condition score (BCS) is a standardized hands-on assessment of an animal&apos;s fat cover, used by veterinarians worldwide. Unlike body weight, which means nothing without context (is 30 kilograms heavy or light? it depends on the dog), BCS directly answers whether the animal carries too much, too little, or the right amount of fat. It is the practical readout of whether feeding is on target.</p>
         <h2 id="whybcs">Why BCS Beats the Scale</h2>
         <p>A number on the scale has no meaning without a frame of reference, and breed-average weight tables hide enormous individual variation. BCS normalizes for frame: a correctly-conditioned animal scores the same whether it is large or small. This is why feeding decisions should be anchored to BCS, with body weight used to track change once an ideal weight is established. See <a href="/feeding/how-much-to-feed-a-dog">How Much to Feed a Dog</a>.</p>
@@ -94,12 +120,7 @@ export default function BodyConditionScoringPage() {
         <h2 id="tracking">Tracking Over Time</h2>
         <p>Reassess BCS every two to four weeks during a weight program and at least every few months otherwise. Because owners see their animal daily, gradual change is easy to miss; periodic scoring and a recorded weight catch drift early. Photos from above and from the side, taken on a schedule, are a useful supplement. Establish the ideal weight once, then track the scale against it.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

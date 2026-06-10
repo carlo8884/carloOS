@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Clinical Signs and Triage", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Clinical Examination of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/clinical-examination-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Find a Vet Directory", publisher: "ARAV", url: "https://arav.org/find-a-vet" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -86,9 +92,9 @@ const SIGNS = [
 ]
 
 const STYLES = {
-  emergency: { bg: 'rgba(224,90,58,0.07)', border: 'rgba(224,90,58,0.2)', numColor: '#E05A3A', badge: '🚨 Emergency', badgeBg: 'rgba(224,90,58,0.1)' },
-  urgent: { bg: 'rgba(200,168,64,0.07)', border: 'rgba(200,168,64,0.2)', numColor: '#C8A840', badge: '⚠️ Urgent', badgeBg: 'rgba(200,168,64,0.1)' },
-  monitor: { bg: 'rgba(122,181,42,0.05)', border: 'rgba(122,181,42,0.15)', numColor: '#7AB52A', badge: '👁 Monitor', badgeBg: 'rgba(122,181,42,0.1)' },
+  emergency: { bg: 'rgba(224,90,58,0.07)', border: 'rgba(224,90,58,0.2)', numColor: '#E05A3A', badge: 'Emergency', badgeBg: 'rgba(224,90,58,0.1)' },
+  urgent: { bg: 'rgba(200,168,64,0.07)', border: 'rgba(200,168,64,0.2)', numColor: '#C8A840', badge: 'Urgent', badgeBg: 'rgba(200,168,64,0.1)' },
+  monitor: { bg: 'rgba(122,181,42,0.05)', border: 'rgba(122,181,42,0.15)', numColor: '#7AB52A', badge: 'Monitor', badgeBg: 'rgba(122,181,42,0.1)' },
 }
 
 export default function SickReptileSignsPage() {
@@ -101,7 +107,6 @@ export default function SickReptileSignsPage() {
         subtitle: 'Reptiles are prey animals — they conceal illness as a survival mechanism. By the time obvious symptoms appear, disease is often advanced. These are the signs to watch for, and what to do about them.',
         category: 'Health Guide',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '9 min',
       }}
@@ -111,6 +116,14 @@ export default function SickReptileSignsPage() {
         { name: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Respiratory Infection', href: '/health/respiratory-infection', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+        { title: 'Egg Binding', href: '/health/egg-binding', category: 'Health' },
+      ]}
       sidebar={<>
         <div className="rounded-lg p-4" style={{ background: 'rgba(224,90,58,0.08)', border: '1px solid rgba(224,90,58,0.2)' }}>
           <div className="text-2xs font-bold tracking-eyebrow uppercase mb-3 text-brand-danger">Find a Reptile Vet</div>
@@ -126,9 +139,11 @@ export default function SickReptileSignsPage() {
           title="Free Care Sheets"
           subtitle="20 species care sheets for subscribers."
           source="sick-reptile-signs" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The most important thing to understand about reptile health: by the time a reptile looks obviously sick, it has usually been sick for some time. Prey animals cannot afford to appear vulnerable — their survival instinct suppresses visible illness until the animal can no longer compensate. This means early detection requires active monitoring, not waiting for obvious symptoms.</p>
 
         <p>Know your individual animal&apos;s baseline: normal activity level, normal color, normal feces, normal feeding response. Deviations from the individual&apos;s baseline matter more than general species averages.</p>
@@ -176,6 +191,7 @@ export default function SickReptileSignsPage() {
             Find a Reptile Vet (ARAV) →
           </a>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

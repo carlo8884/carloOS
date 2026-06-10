@@ -4,16 +4,18 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Ingredients } from '../../data/ingredients'
 
-// Slug set for the 15 ingredient deep-dive pages live under /ingredients/[slug].
+// Slug set for ingredient deep-dive pages live under /ingredients/[slug].
 // Used to render real <Link>s for those entries and to fall back to an anchor
-// for the remaining catalog entries that have not yet been built out.
+// for entries that link elsewhere (e.g. external PetFood.com references).
 const DEEP_DIVE_SLUGS = new Set(Ingredients.map((i) => i.slug))
 
 export const metadata: Metadata = buildMetadata({
@@ -39,9 +41,8 @@ const schema = buildArticleSchema({
 
 // ─── Ingredient catalog ─────────────────────────────────────────────────────
 // Grouped by AAFCO functional category. Each entry has a short factual note —
-// not a recommendation. Per-ingredient detail pages are queued; this hub is
-// the spine. Where PetFood.com has already published an ingredient-level
-// reference (e.g., grain-free / DCM), the entry cross-links to it.
+// not a recommendation. Where PetFood.com has already published an ingredient-
+// level reference (e.g., grain-free / DCM), the entry cross-links to it.
 
 interface IngredientEntry {
   name: string
@@ -223,6 +224,12 @@ export default function IngredientsHubPage() {
         { name: 'Ingredients', href: '/ingredients' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Hub' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Hub' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -242,10 +249,21 @@ export default function IngredientsHubPage() {
               { label: 'Grain-Free and DCM — The FDA Record', href: 'https://petfood.com/ingredients/grain-free-dcm-risk' },
             ]}
           />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="nutrition"
+            variant="sidebar"
+          />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> This is the ingredient catalog. Entries are grouped by functional
           category — proteins, carbs, fats, fibers, preservatives, supplements, and disclosure
@@ -406,6 +424,12 @@ export default function IngredientsHubPage() {
             The underlying nutritional science volume that AAFCO nutrient profiles draw on.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

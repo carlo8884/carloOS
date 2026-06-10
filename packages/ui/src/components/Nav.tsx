@@ -42,7 +42,7 @@ export function Nav({ siteId, activePath }: NavProps) {
         className={[
           'fixed top-0 left-0 right-0 z-50',
           'flex items-center justify-between',
-          'px-container sm:px-container-sm',
+          'px-container-sm sm:px-container',
           'h-nav',
           'bg-brand-white/95 backdrop-blur-md',
           'border-b border-brand-border',
@@ -82,7 +82,7 @@ export function Nav({ siteId, activePath }: NavProps) {
 
         {/* Hamburger (mobile) */}
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-1 cursor-pointer border-0 bg-transparent"
+          className="lg:hidden flex flex-col gap-1.5 p-2.5 cursor-pointer border-0 bg-transparent"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}

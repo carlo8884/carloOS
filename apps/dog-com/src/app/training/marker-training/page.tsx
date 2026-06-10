@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Marker Training for Dogs — How to Start | Dog.com', description: 'Marker training uses a precise signal (click or verbal "yes") to mark the exact moment of correct behavior.', path: '/training/marker-training', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Marker Training for Dogs', description: 'Clicker training and verbal marker protocol for dogs.', url: 'https://dog.com/training/marker-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -17,6 +17,7 @@ export default function MarkerTrainingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Marker Training for Dogs', subtitle: 'Marker training — using a precise, consistent signal to mark the exact moment of correct behavior — is the most powerful positive reinforcement training tool available. The marker (a clicker or verbal "yes") bridges the gap between the behavior and the reward, providing information with millisecond precision that is impossible to achieve with treats alone.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Marker Training', href: '/training/marker-training' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Off-Leash Training', href: '/training/off-leash-training', category: 'Training' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Marker Options</div>
@@ -28,10 +29,12 @@ export default function MarkerTrainingPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Basic Commands', href: '/training/basic-commands' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-marker" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Why Timing Is Everything</h2>
           <p>Dogs learn through contiguity — the events that occur close together in time become associated. When you say "good dog" 3 seconds after a correct behavior, the dog is not learning what you think — it is associating "good dog" with whatever it was doing 3 seconds after the behavior (probably looking at you after sitting, not the sit itself). The window for effective reinforcement is approximately 1.3 seconds in dogs — behaviors that are reinforced more than 1.3 seconds after they occur are not effectively marked.</p>
           <p>The marker solves this: a click or "yes" delivered in the exact moment of correct behavior bridges the time gap between the behavior and the treat. The dog hears the click while its haunches are touching the floor — not 2 seconds later while you reach for the treat. The mark is the information; the treat is the reinforcement that maintains the mark's value. This is why marker training produces faster, more precise behavior than treat-luring alone.</p>

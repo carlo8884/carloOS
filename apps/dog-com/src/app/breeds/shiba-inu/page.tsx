@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry.', path: '/breeds/shiba-inu', type: 'article' })
@@ -10,6 +10,7 @@ export default function ShibaInuPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Shiba Inu Breed Guide', subtitle: 'The Shiba Inu is a Japanese hunting breed — small (17-23 lbs), compact, foxy-faced, and independent in a way that surprises owners who expected a small, friendly dog. Shibas are not Labradors in a different body. They are a primitive breed that has been shaped by thousands of years as an independent hunting dog, and their personality reflects that heritage in ways that delight experienced owners and frustrate unprepared ones.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shiba Inu', href: '/breeds/shiba-inu' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Akita Guide', href: '/breeds/akita', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,14 @@ export default function ShibaInuPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }, { label: 'Resource Guarding', href: '/training/resource-guarding' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-shiba" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>The Shiba Personality — What It Actually Means</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>The Shiba Personality — What It Actually Means</h2>
         <p>Shiba Inus are described as cat-like, and the comparison is accurate: they are clean, self-grooming, fastidious dogs that dislike being dirty or wet. They are independent and do not seek validation the way retrievers or herding breeds do — they observe their owners with cool assessment rather than eager attention. They form deep bonds with their family but show it differently than more demonstratively affectionate breeds — through proximity, attention, and occasional dramatic affection rather than continuous tail-wagging enthusiasm.</p>
         <p>This independence manifests in training: Shibas are intelligent — they understand what you're asking. They may simply decide the reward is not sufficient motivation at this moment. Positive reinforcement with high-value rewards and short, engaging sessions work far better than extended drilling. Harsh corrections produce a dog that shuts down or redirects, not increased compliance. Early socialization and training establishes the patterns that make a Shiba manageable — starting at 8-12 weeks and being consistent through adolescence.</p>
 

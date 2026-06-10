@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Labrador Retriever Health — Hip & Elbow Dysplasia | Vets.co', description: 'From a veterinarian\'s perspective: Labrador health priorities — OFA screening, weight management, exercise-induced collapse, and when to refer to a specialist.', path: '/breeds/labrador-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health',
   description: 'Hip dysplasia, EIC, and obesity management in Labradors.',
   url: 'https://vets.co/breeds/labrador-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2025-05-01',
+  lastReviewed: '2026-06-07',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
 
@@ -23,16 +23,17 @@ export default function VetsLabradorHealthPage() {
       <ArticleLayout
       siteId="vets-co"
       contentType="breed"
-      hero={{ title: 'Labrador Retriever Health — A Veterinarian\'s Perspective', subtitle: 'Labradors are among my highest-volume patients. Fantastic temperaments, but specific health predispositions require proactive management. Here\'s what I prioritize with every Lab owner.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+      hero={{ title: 'Labrador Retriever Health — A Veterinarian\'s Perspective', subtitle: 'Labradors are among my highest-volume patients. Fantastic temperaments, but specific health predispositions require proactive management. Here\'s what I prioritize with every Lab owner.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'Labrador Health', href: '/breeds/labrador-health' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find an Orthopedic Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' }]} />
         <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-labrador" />
+        <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2>The Conditions I Monitor Most Closely</h2>
 
@@ -50,7 +51,7 @@ export default function VetsLabradorHealthPage() {
         <CalloutBox variant="evidence" title="The POMC deletion is genuine — and prevalent">
           A 2016 Cell Metabolism study identified a POMC gene deletion that impairs satiety in Labradors; roughly 23% of pet Labs and a higher proportion of assistance dogs carry the mutation. The implication is that a hungry Lab is often biologically driven, not behaviorally manipulative. Measured meals and no free-feeding are management essentials, not preferences.
         </CalloutBox>
-        <p>My recommendation: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
+        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
 
         <h2>Recommended Screening</h2>
         <ul>

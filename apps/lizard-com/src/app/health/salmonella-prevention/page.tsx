@@ -1,14 +1,30 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "CDC — Healthy Pets, Healthy People: Reptiles and Amphibians", publisher: "U.S. Centers for Disease Control and Prevention", url: "https://www.cdc.gov/healthy-pets/about/reptiles-and-amphibians.html" },
+  { label: "Merck Veterinary Manual — Salmonellosis in Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/bacterial-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Zoonoses", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Salmonella & Reptiles — Safe Handling | Lizard.com', description: 'All reptiles carry Salmonella naturally. Children under 5, pregnant women, elderly, and immunocompromised people are at highest risk.', path: '/health/salmonella-prevention', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function SalmonellaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Salmonella & Reptiles', subtitle: 'All reptiles — regardless of species, cleanliness of their enclosure, or how healthy they appear — naturally carry Salmonella bacteria in their GI tract. This is not a disease they have; it is part of their normal flora. For healthy adults, the infection risk with basic precautions is low. For at-risk groups, reptile contact requires careful management.', category: 'Reptile Health & Safety', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Salmonella & Reptiles', subtitle: 'All reptiles — regardless of species, cleanliness of their enclosure, or how healthy they appear — naturally carry Salmonella bacteria in their GI tract. This is not a disease they have; it is part of their normal flora. For healthy adults, the infection risk with basic precautions is low. For at-risk groups, reptile contact requires careful management.', category: 'Reptile Health & Safety', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Salmonella Prevention', href: '/health/salmonella-prevention' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>High-Risk Groups — Extra Caution</div>
@@ -18,9 +34,11 @@ export default function SalmonellaPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Corn Snake Care', href: '/species/corn-snake' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-salmonella" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Salmonella Is and How It Spreads</h2>
         <p>Salmonella is a genus of gram-negative bacteria that lives in the intestinal tracts of reptiles (and many other animals) as normal flora — without causing disease in the reptile. Transmission to humans is fecal-oral: the bacteria present in reptile feces (and on the reptile's skin, which contacts feces during normal movement) can transfer to human hands during handling, and from hands to mouth — either directly or via surfaces, food preparation areas, or food. The bacteria does not need to be visibly present to transmit — contaminated hands touching a face, a mouth, or food preparation surfaces complete the transmission chain.</p>
         <p>Salmonella in the environment can survive on surfaces for extended periods. The enclosure, substrate, water dishes, and any surface the reptile contacts can harbor the bacteria. This is why "my reptile looks clean" or "I cleaned the tank recently" does not eliminate the risk — the bacteria are a permanent feature of the reptile and its environment.</p>
@@ -43,6 +61,7 @@ export default function SalmonellaPage() {
 
         <h2>Cleaning and Disinfection</h2>
         <p>Enclosure cleaning: remove the reptile to a secure temporary container. Remove and discard substrate (dispose in sealed bag). Clean all surfaces with a reptile-safe disinfectant (F10SC, Veterinary Formula Clinical Care, or diluted bleach solution at 1:32 with water — rinse thoroughly after bleach). Allow to dry completely before adding new substrate and returning the reptile. Do not use household cleaners (many contain phenols or other chemicals toxic to reptiles).</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -13,12 +13,36 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — senior care, endocrine, oncology, and geriatric-ferret chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Management of Older Ferrets: monitoring cadence, common senior-ferret diseases, and quality-of-life indicators",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — senior exotic-mammal care continuing-education materials and practitioner directory",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret geriatric medicine, palliative care, and quality-of-life assessment",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -53,13 +77,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/aging-ferret-care' },
-    { name: 'Aging Ferret Care', url: 'https://ferret.com/health/aging-ferret-care' },
-  ],
-})
 
 const FAQS = [
   {
@@ -95,7 +112,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretAgingPage() {
   return (
@@ -110,7 +127,6 @@ export default function FerretAgingPage() {
             'Ferrets live 5-8 years on average in captivity, sometimes 9-10. The last third of that lifespan — roughly age 4-5 onward — is when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}
@@ -143,6 +159,7 @@ export default function FerretAgingPage() {
                 { label: 'Dental Disease', href: '/health/dental-disease' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <div className="bg-brand-dark rounded-lg p-5 mb-4">
               <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
                 Senior Ferret + Insurance
@@ -173,7 +190,14 @@ export default function FerretAgingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-aging"
@@ -545,7 +569,6 @@ export default function FerretAgingPage() {
           <ReviewCard
             id="floor-level-hammock"
             badge="Senior Comfort"
-            badgeEmoji="🛏️"
             name="Floor-Level Fleece Sleep Sack / Low Hammock"
             subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
             score={8.5}
@@ -574,49 +597,7 @@ export default function FerretAgingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The senior care, endocrine, and oncology
-              chapters cover the disease incidence and monitoring
-              frameworks summarized here.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple ferret-focused issues covering
-              senior care, neoplasia, and end-of-life management.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, clinical articles on
-              ferret geriatric medicine and quality-of-life assessment.
-            </li>
-            <li>
-              <em>Journal of the American Veterinary Medical Association
-              (JAVMA)</em>, case series and retrospective work on
-              ferret-specific senior disease.
-            </li>
-            <li>
-              Villalobos A. <em>HHHHHMM Quality of Life Scale.</em> The
-              companion-animal palliative-care framework now standard in
-              veterinary hospice practice.
-            </li>
-            <li>
-              American Veterinary Medical Association (AVMA) — Companion
-              Animal Quality of Life and end-of-life resources.
-            </li>
-            <li>
-              American Animal Hospital Association (AAHA) / International
-              Association of Animal Hospice and Palliative Care (IAAHPC)
-              joint hospice guidelines.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and continuing-education materials on senior
-              exotic-mammal care.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about senior ferret
             care. It is not individualized veterinary advice. Senior-care

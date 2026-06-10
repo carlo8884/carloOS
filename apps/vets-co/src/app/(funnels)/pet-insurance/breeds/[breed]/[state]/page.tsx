@@ -52,7 +52,7 @@ export async function generateMetadata({
   return buildMetadata({
     siteId: 'vets-co',
     title: `${b.breedName} Pet Insurance in ${s.name} | Vets.co`,
-    description: `Best pet insurance for ${b.breedName}s in ${s.name}. Breed-specific carrier picks, regulatory context, sample premiums.`,
+    description: `Pet insurance options for ${b.breedName}s in ${s.name}. Breed-specific carrier comparisons, regulatory context, sample premiums.`,
     path: `/pet-insurance/breeds/${breed}/${state}`,
     type: 'article',
     // IR F6 gate (dir-007): the 2,912 breed×state cross-product pages stay
@@ -154,7 +154,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
       {recommendedCarrier && (
         <section className="mt-10 border-l-4 border-brand-primary bg-brand-surface p-6 rounded-r-lg">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
-            Top pick for {b.breedName}s in {s.name}
+            Editorial option for {b.breedName}s in {s.name}
           </div>
           <div className="font-display text-2xl font-bold mb-2">
             {recommendedCarrier.name}

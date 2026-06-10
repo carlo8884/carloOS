@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
@@ -12,13 +13,43 @@ const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', des
   { name: 'Add fish slowly', text: 'Saltwater fish are more sensitive to water quality changes than freshwater fish. Add one or two fish at a time, wait 2-4 weeks between additions. Quarantine all new fish for 4-6 weeks.' },
 ]})
 const combined = combineSchemas(schema, howTo)
+
+const SOURCES = [
+  {
+    label: "Cryptocaryon irritans (Marine Ich) — Biology and Treatment",
+    url: "https://edis.ifas.ufl.edu/publication/FA031",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Reverse Osmosis and Water Quality for Marine Aquariums",
+    url: "https://srac.tamu.edu/serveFactSheet/452",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "Live Rock: Biology and Use in Marine Aquariums",
+    url: "https://www.advancesmarinebiology.com/article/S0065-2881(09)56001-2/abstract",
+    publisher: "Advances in Marine Biology (peer-reviewed)",
+  },
+  {
+    label: "Amyloodinium ocellatum (Marine Velvet) in Saltwater Fish",
+    url: "https://edis.ifas.ufl.edu/publication/FA027",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Protein Skimmers and Dissolved Organic Carbon Removal",
+    url: "https://www.sciencedirect.com/science/article/pii/S0044848608001816",
+    publisher: "Aquaculture (peer-reviewed)",
+  },
+]
+
 export default function SaltwaterTankSetupPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '12 min' }}
+        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Saltwater Setup', href: '/setup/saltwater-tank-setup' }]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Clownfish', href: '/species/clownfish', category: 'Species Guide' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Saltwater Parameters</div>
@@ -33,6 +64,7 @@ export default function SaltwaterTankSetupPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>FOWLR vs Reef — Choose First</h2>
           <p><strong>FOWLR (Fish Only With Live Rock):</strong> Saltwater fish in a tank with live rock for biological filtration. No corals or invertebrates. Much more forgiving water chemistry requirements. Standard lighting. Less equipment. Less expensive. The appropriate starting point for most people entering saltwater keeping. Many popular marine fish — tangs, angelfish, triggers, lionfish — are kept in FOWLR tanks.</p>
           <p><strong>Reef tank:</strong> Corals, invertebrates, and fish. Corals require precise alkalinity, calcium, magnesium, and phosphate levels, high-intensity lighting, and low nitrate/phosphate. Significantly higher equipment cost ($500–2000+ for lighting and dosing equipment alone) and daily monitoring requirements. Not appropriate as a first saltwater tank. Recommend 12+ months of FOWLR experience before reef.</p>
@@ -50,13 +82,15 @@ export default function SaltwaterTankSetupPage() {
 
           <h2>Quarantine — Non-Negotiable in Saltwater</h2>
           <p>Marine fish diseases (marine ich/Cryptocaryon, velvet/Amyloodinium) are significantly harder to treat in a reef or established display tank than in a bare quarantine tank. Copper-based treatments kill corals and invertebrates. The standard of care: quarantine all new saltwater fish in a bare-bottom QT tank for 4–6 weeks, observe for disease, treat if necessary, then move to the display tank. Skipping quarantine is the single most common mistake that causes disease outbreaks in established reef tanks.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Saltwater Reef Setup — Where to Shop</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>

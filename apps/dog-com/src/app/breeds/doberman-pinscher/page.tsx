@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide — DCM Screening, vWD | Dog.com', description: 'Dobermans have the highest DCM rate of any breed (up to 58% by age 7). Annual Holter + echo is required.', path: '/breeds/doberman-pinscher', type: 'article' })
@@ -10,6 +10,7 @@ export default function DobermanPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function DobermanPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'IVDD', href: '/health/intervertebral-disc-disease' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-doberman" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Dilated Cardiomyopathy (DCM)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Dilated Cardiomyopathy (DCM)" riskLevel="very-high"
           description="Doberman Pinschers have the highest prevalence of DCM of any breed studied — multiple studies report 40–58% of Dobermans develop DCM by age 7, and nearly all by age 10. DCM in Dobermans has two phases: the occult (preclinical) phase where the heart muscle is weakening but no clinical signs are present, and the overt phase where CHF or sudden cardiac death occurs. The most dangerous aspect: sudden cardiac death from ventricular tachycardia or fibrillation can occur in occult-phase dogs with no warning. Annual screening is not precautionary — it is the standard of care for this breed."
           signs={['May have no signs until sudden collapse', 'Exercise intolerance', 'Episodic weakness or syncope', 'Cough when CHF develops', 'Abdominal distension (ascites in right-sided CHF)']}
           management="Annual echocardiogram from age 3 to detect cardiac enlargement. Annual 24-hour Holter monitor to detect ventricular premature contractions (VPCs) — the electrical warning of DCM before structural changes appear. Pimobendan started when occult DCM is detected. ACE inhibitor added at first sign of cardiac enlargement. DNA test available for one PDK4 mutation (identifies some but not all affected dogs — negative test does not rule out DCM)." />

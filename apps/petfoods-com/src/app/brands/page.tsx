@@ -4,9 +4,12 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
+  StockImage,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands as BRAND_DATA } from '../../data/brands'
@@ -16,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
   title: 'Pet Food Brands — Independent Reviews & WSAVA Scorecards',
   description:
-    'Independent reviews of major pet food brands — WSAVA Global Nutrition Committee scorecards, FDA recall history, and corporate-parent context. Companion catalog to PetFood.com.',
+    'Independent reviews of major pet food brands: WSAVA Global Nutrition Committee scorecards, FDA recall history, and corporate-parent context.',
   path: '/brands',
   type: 'article',
 })
@@ -81,6 +84,18 @@ const BRANDS: BrandEntry[] = BRAND_DATA.map((b) => ({
 
 const SORTED = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name))
 
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Pet Food Brand Index (A-Z)',
+  numberOfItems: SORTED.length,
+  itemListElement: SORTED.map((brand, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: brand.name,
+    url: `https://petfoods.com/brands/${brand.slug}`,
+  })),
+}
+
 const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'How is the WSAVA scorecard calculated?',
@@ -92,9 +107,9 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Why does this index list brands you have not reviewed yet?',
     answer:
-      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is the first deliverable. The long-form review is the second. Ten brands have a full WSAVA-scored review at launch; the remaining catalog entries link to the structured reference page and are queued for review.',
+      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is a distinct deliverable from the long-form review. Ten brands have a full WSAVA-scored review; the remaining catalog entries link to the structured reference page for that brand.',
     answerText:
-      'The catalog is the spine; the long-form reviews come next. Ten brands have full reviews at launch; the rest are queued.',
+      'The catalog spine and the long-form reviews are distinct deliverables. Ten brands have full WSAVA reviews; the rest link to the structured reference page.',
   },
   {
     question: 'Do any brands pay for inclusion or for assessment language?',
@@ -136,7 +151,13 @@ export default function BrandsHubPage() {
         { name: 'Home', href: '/' },
         { name: 'Brands', href: '/brands' },
       ]}
-      schema={schema}
+      schema={[schema, itemListSchema]}
+      relatedLinks={[
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -160,10 +181,21 @@ export default function BrandsHubPage() {
               { label: 'PetFood.com — Scoring Methodology v1.0', href: 'https://petfood.com/guides/methodology' },
             ]}
           />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="brand"
+            variant="sidebar"
+          />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <div
           style={{
             background: 'var(--brand-surface)',
@@ -183,13 +215,21 @@ export default function BrandsHubPage() {
           sale.
         </div>
 
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt="Shelves of commercial dog and cat food bags from major pet food brands"
+          aspect="16:9"
+          priority
+        />
+
         <p id="tldr">
           <strong>TL;DR.</strong> This page indexes the major commercial pet-food brands sold in the
           United States, each annotated with corporate parent and primary manufacturing country.
           {' '}<strong>Ten brands</strong> carry a full long-form independent review, with a WSAVA
           Global Nutrition Committee 6-question scorecard, FDA CVM recall history, product-line
           breakdown, strengths and weaknesses, and an editorial assessment paragraph. The remainder
-          of the catalog links to a structured reference page and is queued for the next review pass.
+          of the catalog links to the structured reference page for that brand.
         </p>
 
         <h2 id="how-to-read">How to Read This Index</h2>
@@ -476,6 +516,12 @@ export default function BrandsHubPage() {
             acquisition press releases) from the parent companies named above.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="brand"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

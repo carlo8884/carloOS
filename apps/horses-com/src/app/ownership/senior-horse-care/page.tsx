@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Senior Horse Care — Keeping the Older Horse Thriving",
   description:
-    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort and exercise, and quality of life.",
+    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort, and quality of life.",
   path: '/ownership/senior-horse-care',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Senior Horse Care — Keeping the Older Horse Thriving",
   description:
-    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort and exercise, and quality of life.",
+    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort, and quality of life.",
   url: 'https://horses.com/ownership/senior-horse-care',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function SeniorHorseCarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+        ]}
         hero={{
           title: "Senior Horse Care",
           subtitle:
@@ -85,8 +91,8 @@ export default function SeniorHorseCarePage() {
             links={[
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Osteoarthritis in Horses", href: "/health/osteoarthritis" },
-              { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
             ]}
           />
           <EmailCapture
@@ -99,6 +105,13 @@ export default function SeniorHorseCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="when">When Is a Horse Old</h2>
           <p>There is no single age at which a horse becomes a senior -- much depends on the individual, the breed, and a lifetime of management. Many horses are considered geriatric somewhere from the late teens into the twenties, but a well-kept horse may be working soundly at twenty-five while another shows its age at fifteen. Rather than a birthday, the cue to shift into senior care is the appearance of age-related changes, which is why regular monitoring matters more than counting years.</p>
 

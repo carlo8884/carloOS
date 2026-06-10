@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide — Upturned Snout | Lizard.com", description: "Western hognose snakes are small, charismatic beginner snakes known for bluffing and playing dead. Care, feeding, the mild rear-fang concern, and morphs.", path: "/species/western-hognose-snake", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Western Hognos
 export default function SpeciesWesternHognoseSnakePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Western Hognose Snake Care Guide", subtitle: "Heterodon nasicus is a small, stout, upturned-snout colubrid famous for its theatrical defensive bluff: hissing, flattening the neck like a cobra, and ultimately rolling over to play dead. Females reach 24 to 36 inches, males 14 to 24. Their personality and manageable size have made them one of the most popular pet snakes of the last decade.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Western Hognose Snake Care Guide", subtitle: "Heterodon nasicus is a small, stout, upturned-snout colubrid famous for its theatrical defensive bluff: hissing, flattening the neck like a cobra, and ultimately rolling over to play dead. Females reach 24 to 36 inches, males 14 to 24. Their personality and manageable size have made them one of the most popular pet snakes of the last decade.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Western Hognose", href: "/species/western-hognose-snake" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesWesternHognoseSnakePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Kenyan Sand Boa", href: "/species/kenyan-sand-boa" }, { label: "Frozen/Thawed Feeding", href: "/health/feeding-frozen-thawed-rodents" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-western-hognose-snake"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The western hognose is a diurnal, semi-fossorial colubrid from the central plains of North America, where it uses its keeled, upturned rostral scale to dig for toads and reptile eggs. In captivity it is hardy, long-lived, and endlessly entertaining. The defensive display is pure bluff: hognose snakes almost never bite in defense, instead hissing, hooding, false-striking with a closed mouth, and finally feigning death by going limp, gaping, and even emitting a musk."}</p>
           <h2>{"Is a Hognose Venomous?"}</h2>
           <p>{"Western hognose snakes are technically rear-fanged and produce a mild salivary toxin (a Duvernoy gland secretion) used to subdue amphibian prey. They are not considered medically dangerous to humans and are widely kept as pets. Defensive bites are extremely rare because the species bluffs rather than bites. The rare reported reactions to a prolonged feeding-response bite are localized swelling and itching, comparable to an insect sting, and resolve on their own. Anyone with known allergies should exercise extra care, and feeding should always be done with tongs to avoid hand-strikes."}</p>
@@ -58,6 +68,7 @@ export default function SpeciesWesternHognoseSnakePage() {
             <li>{"Weinstein, S. A., et al., reviews of mildly venomous colubrid (Duvernoy gland) secretions."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Western Hognose — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, under-tank heating, thermostats, aspen or sand substrate, and hides sized for western hognose snake care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

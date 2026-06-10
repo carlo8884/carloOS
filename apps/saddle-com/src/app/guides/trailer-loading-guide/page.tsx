@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Trailer Loading Guide — Positive Training | Saddle.com', description: 'Teaching a horse to load willingly and safely. Pressure-and-release technique, what not to do.', path: '/guides/trailer-loading-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Trailer Loading Guide', description: 'Pressure-and-release trailer loading, problem loaders, and safety for horses.', url: 'https://saddle.com/guides/trailer-loading-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,12 @@ export default function TrailerLoadingGuidePage() {
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Horse Trailer Loading Guide', subtitle: 'A horse that loads willingly is safer for itself, its handler, and bystanders than one that must be wrestled into a trailer. Forcing a horse that is afraid creates a horse that is more afraid. Building loading through positive association and pressure-release takes longer the first time but produces a horse that loads reliably for life.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Trailer Loading', href: '/guides/trailer-loading-guide' }]}
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+          { title: 'Horse Trailer Guide', href: '/guides/horse-trailer-guide', category: 'Equipment' },
+          { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+          { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+        ]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Do This</div>
@@ -31,6 +37,7 @@ export default function TrailerLoadingGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Why Horses Refuse to Load</h2>
           <p>Trailer loading is asking a prey animal to voluntarily enter a small, dark, moving metal box — something every instinct tells it to avoid. A horse that refuses to load is not being stubborn or dominant; it is responding to genuine fear. The most common reasons for loading refusal: a previous traumatic loading experience (fell, was injured, arrived somewhere frightening), insufficient training that leaves the horse with no positive association with the trailer, a trailer that is dark inside (horses are reluctant to step into darkness), and slippery footing in the trailer.</p>
           <p>The approach that works consistently: make the trailer the best place to be. This sounds simple but requires genuine investment in the horse's comfort and in building the positive association that overrides the instinctive avoidance.</p>

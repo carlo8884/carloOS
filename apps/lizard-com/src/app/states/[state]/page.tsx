@@ -202,6 +202,12 @@ export default async function StateReptileLawPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={combined}
+      relatedLinks={[
+        { title: 'State Laws Hub', href: '/states', category: 'Hub' },
+        { title: 'Species Library', href: '/species', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'Enclosure Setup Guides', href: '/setup', category: 'Setup' },
+      ]}
       sidebar={
         <>
           <TableOfContents items={sectionIds} />
@@ -210,7 +216,7 @@ export default async function StateReptileLawPage({ params }: PageProps) {
             links={[
               { label: 'All states (hub)', href: '/states' },
               { label: 'Editorial standards', href: '/editorial-standards' },
-              { label: 'Husbandry deep-dives', href: '/husbandry' },
+              { label: 'Enclosure setup guides', href: '/setup' },
               { label: 'Vivarium build guides', href: '/builds' },
             ]}
           />

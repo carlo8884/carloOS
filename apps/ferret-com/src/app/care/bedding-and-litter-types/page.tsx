@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,22 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case literature on substrate-related complications in small mammals",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — bedding and litter-material owner-education guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
+
 export default function BeddingAndLitterTypesPage() {
   return (
     <>
@@ -36,7 +52,6 @@ export default function BeddingAndLitterTypesPage() {
             'Ferrets are burrowers who sleep face-buried for 16 hours a day and eliminate in corners by instinct. Those two facts decide almost every bedding and litter choice you will make. This is a material-by-material guide to what is safe, what is hazardous, and why.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}
@@ -66,6 +81,7 @@ export default function BeddingAndLitterTypesPage() {
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +91,22 @@ export default function BeddingAndLitterTypesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Litter Training', href: '/care/litter-training' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>
           <p>
             Two hardwired behaviors govern bedding and litter selection. First, ferrets are <strong>burrowers</strong>: they seek enclosed, dark, fabric-lined spaces to sleep, and they pull bedding around themselves. Second, they are <strong>corner eliminators</strong>: they back into a corner to defecate and urinate, and they will not reliably use an open central tray. Bedding satisfies the first instinct; litter accommodates the second. Confusing the two — using loose substrate as bedding, or expecting a ferret to nest in litter — is the root of most husbandry mistakes.
@@ -140,10 +170,7 @@ export default function BeddingAndLitterTypesPage() {
             Litter pans want a daily spot-clean and a full empty-and-wipe weekly. Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Respiratory-irritant and foreign-body discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em>. Bedding and litter-material recommendations align with American Ferret Association (AFA) owner-education guidance. This page covers general material safety and does not claim hands-on product testing. Return to the <a href="/care">Ferret Care hub</a> or pair this with our <a href="/care/cage-setup">cage setup</a> guide.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

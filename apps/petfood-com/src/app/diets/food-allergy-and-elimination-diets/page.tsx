@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function FoodAllergyAndEliminationDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,13 @@ export default function FoodAllergyAndEliminationDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +111,13 @@ export default function FoodAllergyAndEliminationDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A hypoallergenic elimination-diet pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Cutaneous adverse food reaction (the precise term for what owners call food allergy) is an immune or non-immune reaction to a dietary protein that produces itching, recurrent skin and ear infections, and sometimes gastrointestinal signs. The most common culprit proteins in dogs are beef, dairy, chicken, and wheat; in cats, beef, dairy, and fish. Importantly, the allergen is almost always a protein the animal has eaten before — grain is a far less common trigger than the grain-free narrative implies.</p>
         <h2 id="whatis">What Food Allergy Is</h2>
         <p>Food allergy is one of several causes of itch in dogs and cats, alongside environmental allergy (atopic dermatitis), flea allergy, and parasites. It is frequently overdiagnosed by owners and overpromised by products. There is no validated blood, saliva, or hair test for food allergy; the serum and saliva tests marketed to owners have repeatedly failed validation studies, returning positives for water and for foods the animal has never eaten.</p>
@@ -94,13 +132,7 @@ export default function FoodAllergyAndEliminationDietsPage() {
         <h2 id="provocation">The Provocation Step</h2>
         <p>A properly conducted trial does not end when signs resolve — it ends with provocation: reintroducing the original diet to confirm that signs return, which proves the response was diet-related rather than coincidental (or due to seasonal change in environmental allergy). Only after a positive provocation is food allergy confirmed; individual ingredients can then be reintroduced to identify the specific trigger. This entire process should be directed by a veterinarian.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

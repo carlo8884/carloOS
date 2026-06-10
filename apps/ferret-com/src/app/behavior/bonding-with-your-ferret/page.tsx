@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Bonding With Your Ferret', url: 'https://ferret.com/behavior/bonding-with-your-ferret' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,28 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour and welfare chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — socialization and bonding owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement and trust-based handling",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 
 export default function FerretBondingPage() {
   return (
@@ -85,7 +99,6 @@ export default function FerretBondingPage() {
             "A bonded ferret is a joy: it seeks you out, naps on your lap, and greets you with the bouncy war dance. Getting there is mostly about patience, consistency, and working with a ferret's instincts rather than against them. Here is a practical, week-by-week plan for building real trust with a new, shy, or rescue ferret.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -125,7 +138,14 @@ export default function FerretBondingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+          { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
+          { title: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -276,26 +296,7 @@ export default function FerretBondingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour, socialization, and handling chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              socialization and welfare.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing socialization and
-              bonding guidance.
-            </li>
-            <li>
-              American Veterinary Society of Animal Behavior (AVSAB) — positions
-              favoring positive-reinforcement, trust-based handling.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary or behavioural advice. Prolonged fear or avoidance can have

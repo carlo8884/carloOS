@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'American Heartworm Society: Current Canine Heartworm Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
+  { label: 'CAPC: Companion Animal Parasite Council — Heartworm Recommendations', url: 'https://capcvet.org/guidelines/heartworm/', publisher: 'CAPC' },
+  { label: 'AVMA: Heartworm Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
+  { label: 'FDA CVM: Heartworm Prevention Products — Approved Drugs for Dogs', url: 'https://www.fda.gov/animal-veterinary/product-safety-information/heartworm-disease', publisher: 'FDA CVM' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs — Monthly Preventives | Dog.com', description: 'Heartworm disease is preventable and expensive to treat. Monthly preventives, annual testing, and what to do if your dog tests positive.', path: '/health/heartworm-prevention', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -23,9 +31,12 @@ export default function HeartwormPreventionPage() {
       contentType="health"
       hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'Heartworm disease is preventable with a monthly chew that costs $8–15/month. Treatment when disease is established costs $1,000–2,000 and requires months of strict rest. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heartworm Prevention', href: '/health/heartworm-prevention' }]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'Best Heartworm Prevention', href: '/reviews/best-heartworm-prevention', category: 'Related' }, { title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention', category: 'Related' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+        <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="health-heartworm" />
       </>}
     >
@@ -37,7 +48,7 @@ export default function HeartwormPreventionPage() {
         <h2>Prevention — Monthly Preventives</h2>
         <p>Monthly heartworm preventives work by eliminating any larvae the dog was exposed to in the previous month before they can mature. They do not prevent infection in real-time — they clear it monthly. This is why monthly dosing is essential: missing a month creates a gap during which larvae can mature.</p>
         <ul>
-          <li><strong>Heartgard Plus (ivermectin + pyrantel):</strong> The most commonly prescribed standalone heartworm preventive. Also covers roundworms and hookworms. Monthly beef-flavored chew.</li>
+          <li><strong>Heartgard Plus (ivermectin + pyrantel):</strong> A commonly used standalone heartworm preventive. Also covers roundworms and hookworms. Monthly beef-flavored chew.</li>
           <li><strong>Interceptor Plus (milbemycin + praziquantel):</strong> Heartworm plus roundworm, hookworm, whipworm, and tapeworm coverage. Good for dogs with GI parasite exposure.</li>
           <li><strong>Simparica Trio (sarolaner + moxidectin + pyrantel):</strong> Heartworm + flea + tick + roundworm + hookworm in one monthly chew. The most complete single-product preventive available. Appropriate if you also need flea/tick prevention — see our flea/tick guide.</li>
           <li><strong>ProHeart 6 / ProHeart 12:</strong> Injectable heartworm prevention given by a veterinarian — 6-month or 12-month formulation. No monthly compliance required. Excellent option for dogs whose owners forget monthly dosing.</li>
@@ -50,6 +61,8 @@ export default function HeartwormPreventionPage() {
 
         <h2>Treatment If Positive</h2>
         <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
     </>

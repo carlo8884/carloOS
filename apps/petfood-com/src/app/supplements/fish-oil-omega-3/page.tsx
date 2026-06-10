@@ -2,13 +2,18 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -19,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Fish Oil and Omega-3 Supplements for Pets | PetFood.com',
   description:
@@ -30,6 +35,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Fish Oil and Omega-3 Supplements for Pets | PetFood.com',
+  description:
+    'The evidence for EPA and DHA in joint, skin, kidney, and heart health, dosing and quality concerns, oxidation, and why plant omega-3 sources fall short.',
+  url: 'https://petfood.com/supplements/fish-oil-omega-3',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function FishOilOmega3Page() {
   return (
@@ -46,8 +81,13 @@ export default function FishOilOmega3Page() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Fish Oil and Omega-3 Supplements', href: '/supplements/fish-oil-omega-3' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
+        { title: 'Glucosamine and Joint Support', href: '/supplements/glucosamine-and-joint-support' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +123,13 @@ export default function FishOilOmega3Page() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Fish-oil and omega-3 supplement softgels and liquid for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>Fish oil supplies the long-chain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), which modulate inflammation and support several tissues. Among pet supplements, omega-3 fatty acids have some of the best-supported clinical evidence, and they are incorporated into many therapeutic diets for exactly this reason. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>
         <h2 id="epadha">EPA and DHA</h2>
         <p>EPA and DHA are the biologically active omega-3s. They shift the production of inflammatory mediators toward a less-inflammatory profile, which underlies their benefit in inflammatory and degenerative conditions. DHA also supports neural and retinal tissue, making it important in growth diets. The relevant figure on a supplement label is the combined EPA and DHA content, not the total fish-oil weight.</p>
@@ -149,12 +196,7 @@ export default function FishOilOmega3Page() {
           ctaAffiliateProduct="pet+omega+3+fish+oil+epa+dha"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

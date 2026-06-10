@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Brumation Guide — Safe Cool-Down | Lizard.com", description: "What reptile brumation is, which species do it, how to safely cool down and warm up an animal, and how to tell brumation apart from illness.", path: "/husbandry/brumation-guide", type: 'article' })
@@ -8,9 +8,16 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Brumat
 export default function HusbandryBrumationGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Brumation Guide", subtitle: "Brumation is the reptilian analogue of hibernation: a seasonal period of dormancy triggered by cooling temperatures and shortening days during which metabolism slows, appetite stops, and activity drops sharply. Understanding it prevents two common mistakes, panicking over a healthy brumating animal and overlooking a sick one that only looks like it is brumating.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
-      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Husbandry", href: "/husbandry" }, { name: "Brumation Guide", href: "/husbandry/brumation-guide" }]}
+      hero={{ title: "Reptile Brumation Guide", subtitle: "Brumation is the reptilian analogue of hibernation: a seasonal period of dormancy triggered by cooling temperatures and shortening days during which metabolism slows, appetite stops, and activity drops sharply. Understanding it prevents two common mistakes, panicking over a healthy brumating animal and overlooking a sick one that only looks like it is brumating.", category: "Husbandry", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
+      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Brumation Guide", href: "/husbandry/brumation-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Shedding Guide', href: '/husbandry/shedding-guide', category: 'Husbandry' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -26,6 +33,7 @@ export default function HusbandryBrumationGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Brumation is a survival strategy that lets ectothermic reptiles ride out a cold or dry season when food is scarce and they cannot maintain the body temperature needed for digestion. It is not sleep and not true mammalian hibernation; the animal can rouse, may move or drink occasionally, and its physiology remains active but throttled down. In captivity, temperate-climate species often attempt to brumate on their own as autumn light and temperatures shift, even indoors, because the cues come from photoperiod and ambient cooling as much as the calendar."}</p>
           <h2>{"Which Reptiles Brumate?"}</h2>
           <p>{"Brumation is tied to a species’ natural climate. Temperate species that experience real winters typically brumate; tropical species from stable warm climates generally do not and should not be artificially cooled."}</p>

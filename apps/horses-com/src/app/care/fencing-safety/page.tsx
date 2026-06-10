@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function FencingSafetyPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Owning a Horse — Costs', href: '/ownership/cost-of-owning-a-horse' },
+        ]}
         hero={{
           title: "Horse Fencing and Safety",
           subtitle:
@@ -88,6 +94,7 @@ export default function FencingSafetyPage() {
               { label: "Cost of Owning a Horse", href: "/ownership/cost-of-owning-a-horse" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function FencingSafetyPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Fencing Safety Matters</h2>
           <p>A horse that hits, leans on, or gets a leg through a fence at speed can suffer catastrophic injury. The goals of good fencing are to be highly visible so horses respect and avoid it, to contain without trapping, to flex or break safely rather than impale or saw, and to have no gaps, points, or loops that catch a leg or head. Cheap, sharp, or flimsy fencing is a false economy.</p>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -81,10 +81,25 @@ const FEEDING = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Feeding Guides',
+  numberOfItems: FEEDING.length,
+  itemListElement: FEEDING.map((i, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: i.title,
+    url: `https://petfood.com/feeding/${i.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function FeedingHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
@@ -109,6 +124,10 @@ export default function FeedingHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Feeding</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="petfood-com:feeding-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       <div className="px-container-sm sm:px-container py-12">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0 max-w-content-wide">

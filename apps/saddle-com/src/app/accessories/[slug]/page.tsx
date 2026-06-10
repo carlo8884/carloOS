@@ -10,11 +10,11 @@ import {
   CalloutBox,
   ArticleByline,
   TableOfContents,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -86,17 +86,9 @@ export default async function AccessoryPage({ params }: AccessoryPageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://saddle.com/' },
-      { name: 'Accessories', url: 'https://saddle.com/accessories' },
-      { name: accessory.categoryName, url },
-    ],
-  })
-
   const faqSchema = buildFAQSchema({ questions: accessory.faqs })
 
-  const combinedSchema = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
   // Other accessory categories for the "related guides" section.
   const relatedAccessories = ACCESSORY_CATEGORIES.filter((a) => a.slug !== accessory.slug).slice(0, 5)
@@ -119,6 +111,12 @@ export default async function AccessoryPage({ params }: AccessoryPageProps) {
           { name: 'Home', href: '/' },
           { name: 'Accessories', href: '/accessories' },
           { name: accessory.categoryName, href: `/accessories/${accessory.slug}` },
+        ]}
+        relatedLinks={[
+          { title: 'Accessories Hub', href: '/accessories', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
         ]}
         sidebar={
           <>
@@ -329,23 +327,18 @@ export default async function AccessoryPage({ params }: AccessoryPageProps) {
             })}
           </div>
 
+          <AffiliateDisclosure variant="inline" siteId="saddle-com" />
           <CalloutBox variant="tip" title="Buying online">
             <p className="m-0">
               {accessory.affiliateAngle} Shop the named models through your preferred retailer — Amazon and{' '}
               <a
-                href="https://www.smartpakequine.com"
-                rel="nofollow sponsored noopener"
-                target="_blank"
+                href="/go/smartpak/home?s=accessories"
+                rel="sponsored noopener"
                 className="text-brand-primary underline"
               >
                 SmartPak
               </a>{' '}
-              both carry most of the brands listed above. Saddle.com may earn a commission on qualifying purchases —
-              see our{' '}
-              <Link href="/disclosure" className="text-brand-primary underline">
-                affiliate disclosure
-              </Link>{' '}
-              for details.
+              both carry most of the brands listed above.
             </p>
           </CalloutBox>
 

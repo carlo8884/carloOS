@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
@@ -10,6 +10,7 @@ export default function GreatPyreneesPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Great Pyrenees Breed Guide', subtitle: 'Majestic, gentle, and deeply independent — Great Pyrenees were bred for thousands of years to guard livestock in remote mountain terrain without human supervision. The traits that made them exceptional livestock guardian dogs (LGDs) — independence, territorial behavior, nighttime activity, loud barking — are the same traits that make them challenging household pets without appropriate management.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Pyrenees', href: '/breeds/great-pyrenees' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Bernese Mountain Dog Guide', href: '/breeds/bernese-mountain-dog', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Training: Excessive Barking', href: '/training/excessive-barking', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function GreatPyreneesPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Great Dane Guide', href: '/breeds/great-dane' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Great Pyrenees vs Newfoundland', href: '/compare/great-pyrenees-vs-newfoundland' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-pyrenees" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>Understanding the Livestock Guardian Dog</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>Understanding the Livestock Guardian Dog</h2>
         <p>The Great Pyrenees was not bred as a companion, an obedience competitor, or a dog that looks to humans for direction. For thousands of years, these dogs lived with flocks in the Pyrenean mountains, patrolling territory, deterring predators, and making independent decisions — entirely on their own, often without a human nearby for days. They were selected for self-sufficiency, noise (to warn away predators), territorial behavior, and the judgment to act without instruction.</p>
         <p>This heritage is still fully present in the breed. A Great Pyrenees that is barking at 2am is not being disobedient — it heard something and is doing its job. A Great Pyrenees that escapes the yard is not being defiant — it is patrolling what it perceives as its territory. A Great Pyrenees that does not respond to recall with a squirrel in sight is not failing its training — it has evolved to make independent decisions. Understanding this context does not eliminate the management challenges, but it reframes them from "behavioral problems" to "breed characteristics requiring appropriate management."</p>
 

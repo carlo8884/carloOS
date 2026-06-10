@@ -13,13 +13,13 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
   CalloutBox,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { ADOPT_GUIDES } from '@/data/guides/adopt'
@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Ferret Adoption & Rescue Hub — Regional Guides, Costs, How-To',
   description:
-    'How to adopt a ferret responsibly: regional adoption guides for all four US regions, rescue-vs-breeder comparison, the application process, real costs, and rehoming guidance.',
+    'How to adopt a ferret responsibly: regional guides for all four US regions, rescue-vs-breeder, the application process, real costs, and rehoming guidance.',
   path: '/adopt',
   type: 'website',
   category: 'Adoption',
@@ -66,19 +66,28 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const ADOPT_ALL_SLUGS = [...REGIONAL, ...TOPICS]
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Ferret Adoption Guides',
+  numberOfItems: ADOPT_ALL_SLUGS.length,
+  itemListElement: ADOPT_ALL_SLUGS.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (ADOPT_GUIDES[slug].heading ?? ADOPT_GUIDES[slug].title),
+    url: `https://ferrets.com/adopt/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
-  buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'Adopt', url: 'https://ferrets.com/adopt' },
-    ],
-  }),
   buildFAQSchema({
     questions: FAQS.map((f) => ({
       question: f.question,
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function AdoptHubPage() {
@@ -269,6 +278,56 @@ export default function AdoptHubPage() {
             subtitle="One email when our adoption or state legality guidance changes."
             source="adopt-hub"
           />
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/legality" className="text-brand-primary font-medium hover:underline">
+                Ferret legality topics (bans, travel, renting) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/acquiring" className="text-brand-primary font-medium hover:underline">
+                Acquiring a ferret (checklist + permits) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/moving" className="text-brand-primary font-medium hover:underline">
+                Moving with a ferret &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/find-a-vet" className="text-brand-primary font-medium hover:underline">
+                Find an exotic-pet vet by state &rarr;
+              </Link>
+            </li>
+          </ul>
         </section>
 
         <footer className="text-sm text-brand-text-light leading-relaxed border-t border-brand-border pt-6">

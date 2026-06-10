@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Multi-Ferret Introductions', url: 'https://ferret.com/behavior/multi-ferret-introductions' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,24 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour, quarantine, and infectious-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret social behavior and infectious disease",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function MultiFerretIntroductionsPage() {
   return (
@@ -85,7 +95,6 @@ export default function MultiFerretIntroductionsPage() {
             'Ferrets are social animals and most do better in pairs or small groups. But adding a ferret to your home is a staged process, not a one-day event: a quarantine period, neutral-ground meetings, and a tolerance for a startling amount of normal posturing. Rushed introductions are the ones that go wrong.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -126,7 +135,14 @@ export default function MultiFerretIntroductionsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Introducing a Second Ferret', href: '/care/introducing-a-second-ferret' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Play Aggression', href: '/behavior/play-aggression' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -259,24 +275,7 @@ export default function MultiFerretIntroductionsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Behavior chapter covers social structure and
-              introduction approaches; infectious-disease chapters cover ECE and
-              influenza.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on
-              quarantine, introductions, and group housing.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret social behavior and infectious disease.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general behavior information about ferrets, not
             individualized veterinary advice. Quarantine length and disease risk

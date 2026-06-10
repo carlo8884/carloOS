@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure , CrossPortfolioCard} from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall, Paddock, Western | Saddle.com', description: 'Best riding boots by category — tall field and dress boots, paddock boots, western boots, and half-chaps. Ariat, Mountain Horse, Tucci, Konig, Justin, Lucchese.', path: '/reviews/best-riding-boots', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Boots 2025', description: 'Tall boots, paddock boots, western boots, and half chaps ranked by discipline and use case.', url: 'https://saddle.com/reviews/best-riding-boots', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -42,7 +42,14 @@ const FAQ_ITEMS = [
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQ_ITEMS.map((f) => ({ question: f.question, answer: f.answerText || (typeof f.answer === 'string' ? f.answer : '') })) })
-const allSchemas = combineSchemas(schema, ariatSchema, mountainHorseSchema, tucciSchema, faqSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Riding Boots', url: 'https://saddle.com/reviews/best-riding-boots' },
+  ],
+})
+const allSchemas = combineSchemas(schema, ariatSchema, mountainHorseSchema, tucciSchema, faqSchema, breadcrumbSchema)
 
 const PICKS = [
   { label: 'Best Tall Boot', emoji: '🏆', name: 'Ariat Heritage Contour II', subtitle: 'Full-zip · ATS comfort · All-day wear', href: '#ariat' },
@@ -230,6 +237,7 @@ export default function BestRidingBootsPage() {
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }, { label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule' }]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Reviews and fitting guides." source="review-riding-boots" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

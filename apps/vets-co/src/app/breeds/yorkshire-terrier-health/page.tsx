@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
+  EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
 } from '@carloOS/ui'
@@ -10,7 +10,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,14 +48,6 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://vets.co/' },
-    { name: 'Breed Health', url: 'https://vets.co/breeds' },
-    { name: 'Yorkshire Terrier Health', url: PAGE_URL },
-  ],
-})
-
 const FAQS = [
   {
     question: 'What is a portosystemic shunt and why are Yorkies prone to it?',
@@ -91,7 +82,6 @@ const combinedSchema = combineSchemas(
   articleSchema,
   medicalSchema,
   faqSchema,
-  breadcrumbSchema,
 )
 
 export default function VetsYorkshireTerrierHealthPage() {
@@ -107,7 +97,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             'A tough little terrier in a 7-pound package, the Yorkie is long-lived but carries a distinct set of liver, orthopedic, airway and dental predispositions. Early bile-acids screening and committed dental care are the highest-yield interventions.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -135,6 +125,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               subtitle="Practical guidance every Tuesday."
               source="breeds-yorkshire-terrier"
             />
+            <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
           </>
         }
       >
@@ -277,7 +268,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             obvious pain. Yorkies decompensate fast; do not wait for morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             Build a year-one screening plan around bile-acids testing, patellar palpation, cardiac auscultation
             and an ACVO eye exam. A normal puppy screening doesn’t mean lifelong immunity, but it sets a clean

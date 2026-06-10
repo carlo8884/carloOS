@@ -14,7 +14,7 @@ export default function ERvsUrgentPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'ER vs. Urgent Care vs. Regular Vet', subtitle: 'When something is wrong with your pet, knowing where to go — the emergency hospital, an urgent care clinic, or your regular veterinarian — saves time, money, and sometimes your pet\'s life. This guide explains what each setting is for and how to match the severity and timing of a problem to the right level of care.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'ER vs. Urgent Care vs. Regular Vet', subtitle: 'When something is wrong with your pet, knowing where to go — the emergency hospital, an urgent care clinic, or your regular veterinarian — saves time, money, and sometimes your pet\'s life. This guide explains what each setting is for and how to match the severity and timing of a problem to the right level of care.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

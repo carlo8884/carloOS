@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Nutrition and Metabolic Bone Disease Chapters", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Baines F.M. — UV-tool: evidence-based UVB and vitamin D3 recommendations for reptiles in captivity", publisher: "Journal of Zoo and Aquarium Research", url: "https://jzar.org/jzar/article/view/150" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Merck Veterinary Manual — Nutritional Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-diseases-of-reptiles" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Calcium & D3 Supplementation for Reptiles | Lizard.com", description: "Supplementing reptiles with calcium, vitamin D3, and multivitamins: calcium with vs without D3, the UVB link, and avoiding over-supplementation.", path: "/health/calcium-d3-supplementation", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3 Supplementation for Reptiles", description: "How to use calcium, vitamin D3, and multivitamin supplements for reptiles, and how supplementation interacts with UVB.", url: "https://lizard.com/health/calcium-d3-supplementation", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -8,9 +15,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3
 export default function HealthCalciumD3SupplementationPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Calcium and D3 Supplementation for Reptiles", subtitle: "Supplementation, dusting feeders or food with calcium, vitamin D3, and multivitamins, is essential for most captive reptiles because their diets and lighting rarely match the wild. Getting it right prevents metabolic bone disease, the most common nutritional disease in captivity, while getting it wrong in either direction (too little or too much) causes its own problems. This guide explains the products and the logic behind a sensible schedule.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Calcium and D3 Supplementation for Reptiles", subtitle: "Supplementation, dusting feeders or food with calcium, vitamin D3, and multivitamins, is essential for most captive reptiles because their diets and lighting rarely match the wild. Getting it right prevents metabolic bone disease, the most common nutritional disease in captivity, while getting it wrong in either direction (too little or too much) causes its own problems. This guide explains the products and the logic behind a sensible schedule.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Hypocalcemia', href: '/health/hypocalcemia', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -23,9 +38,11 @@ export default function HealthCalciumD3SupplementationPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Metabolic Bone Disease", href: "/health/metabolic-bone-disease" }, { label: "Hypocalcemia", href: "/health/hypocalcemia" }, { label: "UVB Lighting Guide", href: "/setup/uvb-lighting-guide" }, { label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-calcium-d3-supplementation"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Captive reptile diets and lighting rarely replicate the wild, so most kept species need supplemental calcium and, depending on their lighting, vitamin D3, plus periodic multivitamins. Calcium is the building block of bone and is consumed in countless body processes; vitamin D3 is the hormone-like vitamin that allows the body to absorb and use calcium; and a multivitamin fills in the other micronutrients a captive diet may lack. The single most common preventable disease in captive reptiles, metabolic bone disease, is fundamentally a failure of this calcium-and-D3 system."}</p>
           <h2>{"Calcium With D3 Versus Without D3"}</h2>
 
@@ -53,12 +70,7 @@ export default function HealthCalciumD3SupplementationPage() {
             <li>{"Excess vitamin A: skin and mucous-membrane problems from over-dosed multivitamins"}</li>
             <li>{"When growth, bone, or movement looks abnormal, have a reptile vet evaluate calcium and D3 status"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), nutrition and metabolic-bone-disease chapters."}</li>
-            <li>{"Baines, F. M., et al., UV index and vitamin D3 synthesis in reptiles."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

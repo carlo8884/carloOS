@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
@@ -13,12 +13,32 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
-const SECTIONS = [
-  { category: '🚨 Emergency', items: [{ title: '15 Dog Symptoms to Never Ignore', href: '/health/dog-symptoms-guide', badge: 'Essential' }, { title: 'Find an Emergency Vet', href: '/find-a-vet' }] },
-  { category: '🐕 Breed Health Guides', items: [{ title: 'Golden Retriever Health', href: '/health/golden-retriever-health', badge: '60%+ cancer rate' }, { title: 'Labrador Retriever Health', href: '/health/labrador-health' }, { title: 'French Bulldog Health', href: '/health/french-bulldog-health', badge: 'BOAS · IVDD' }, { title: 'German Shepherd Health', href: '/health/german-shepherd-health', badge: 'DM · GDV' }] },
-  { category: '🦷 Preventive Care', items: [{ title: 'Dog Dental Care Guide', href: '/health/dog-dental-care' }, { title: 'Senior Dog Care Guide', href: '/health/senior-dog-care' }, { title: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }, { title: 'Heartworm Prevention', href: '/health/heartworm-prevention' }] },
-  { category: '💊 Treatments & Products', items: [{ title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { title: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
+type SectionIcon = "emergency" | "breed" | "preventive" | "treatment"
+
+const SECTIONS: Array<{ category: string; icon: SectionIcon; items: Array<{ title: string; href: string; badge?: string }> }> = [
+  { category: "Emergency", icon: "emergency", items: [{ title: "15 Dog Symptoms to Never Ignore", href: "/health/dog-symptoms-guide", badge: "Essential" }, { title: "Find an Emergency Vet", href: "/find-a-vet" }] },
+  { category: "Breed Health Guides", icon: "breed", items: [{ title: "Golden Retriever Health", href: "/health/golden-retriever-health", badge: "60%+ cancer rate" }, { title: "Labrador Retriever Health", href: "/health/labrador-health" }, { title: "French Bulldog Health", href: "/health/french-bulldog-health", badge: "BOAS · IVDD" }, { title: "German Shepherd Health", href: "/health/german-shepherd-health", badge: "DM · GDV" }] },
+  { category: "Preventive Care", icon: "preventive", items: [{ title: "Dog Dental Care Guide", href: "/health/dog-dental-care" }, { title: "Senior Dog Care Guide", href: "/health/senior-dog-care" }, { title: "Dog Vaccination Guide", href: "/health/dog-vaccinations" }, { title: "Heartworm Prevention", href: "/health/heartworm-prevention" }] },
+  { category: "Treatments & Products", icon: "treatment", items: [{ title: "Best Flea & Tick Prevention", href: "/reviews/best-flea-tick-prevention" }, { title: "Best Dry Dog Food 2025", href: "/reviews/best-dry-dog-food" }, { title: "Best Pet Insurance 2025", href: "/reviews/best-pet-insurance" }] },
 ]
+
+const healthItems = SECTIONS.flatMap(s => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Health Library',
+  numberOfItems: healthItems.length,
+  itemListElement: healthItems.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://dog.com${item.href}`,
+  })),
+}
+const healthSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
+// Strip StockImage's outer margins so it fills the masthead edge-to-edge.
+const FILL_IMAGE = "[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0"
 
 const CATEGORY_ORDER: DiseaseCategory[] = [
   'Infectious',
@@ -38,22 +58,66 @@ const CATEGORY_ORDER: DiseaseCategory[] = [
   'Genetic',
 ]
 
-const CATEGORY_ICONS: Record<DiseaseCategory, string> = {
-  Infectious: '🦠',
-  Oncology: '🩺',
-  Cardiac: '❤️',
-  Renal: '💧',
-  GI: '🍽️',
-  Endocrine: '⚖️',
-  Orthopedic: '🦴',
-  Neurological: '🧠',
-  Ocular: '👁️',
-  Respiratory: '🫁',
-  Skin: '🐕',
-  Dental: '🦷',
-  Reproductive: '🧬',
-  Behavioral: '🐾',
-  Genetic: '🧬',
+// ─── Inline SVG icons (replace emoji; match homepage + /breeds idiom) ─────────
+
+// Branded paw mark — the same glyph the /breeds hub + homepage use as the
+// category/section marker. Used for both the SECTIONS headers and the
+// Conditions A–Z category headers, replacing the per-category emoji map.
+function IconPaw({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 64 64" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <ellipse cx="20" cy="22" rx="6.2" ry="8" />
+      <ellipse cx="44" cy="22" rx="6.2" ry="8" />
+      <ellipse cx="11" cy="36" rx="5.4" ry="6.8" />
+      <ellipse cx="53" cy="36" rx="5.4" ry="6.8" />
+      <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
+    </svg>
+  )
+}
+
+// Section-header icons (stroke idiom, 24px viewBox) for the four top SECTIONS.
+function SectionIcon({ name, className }: { name: SectionIcon; className?: string }) {
+  const common = {
+    className,
+    width: 18,
+    height: 18,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.6,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  }
+  switch (name) {
+    case "emergency":
+      // Alert triangle
+      return (
+        <svg {...common}>
+          <path d="M12 9v4M12 17h.01" />
+          <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+        </svg>
+      )
+    case "breed":
+      // Paw (reuse branded mark, stroke-styled container handles color)
+      return <IconPaw className={className} />
+    case "preventive":
+      // Shield (preventive care)
+      return (
+        <svg {...common}>
+          <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
+          <path d="M9.2 12l2 2 3.6-3.6" />
+        </svg>
+      )
+    case "treatment":
+      // Capsule / pill (treatments & products)
+      return (
+        <svg {...common}>
+          <rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-45 12 12)" />
+          <path d="M9 9l6 6" />
+        </svg>
+      )
+  }
 }
 
 function urgencyBadge(u: string): { label: string; cls: string } {
@@ -88,20 +152,66 @@ export default function DogHealthHubPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={healthSchema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health Library</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">100+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
-      </div>
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="dog-com:category-health" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* Hero — image-first masthead (mirrors homepage + /breeds). The hub hero
+          photo is pulled INTO the dark header: the H1 + intro overlay the photo
+          on a bottom-up gradient scrim instead of sitting in an orphaned band
+          below. Reuses the existing dog-com:category-health key (no new manifest
+          entries). subtleCredit keeps photographer attribution present (QC §1). */}
+      <section className="relative bg-brand-dark min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh]">
+        <div
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:!w-full [&_figure>div]:h-full [&_figure>div]:!w-full [&_figure>div]:!aspect-auto [&_figure>div]:!rounded-none [&>div]:h-full`}
+        >
+          <StockImage
+            manifestKey="dog-com:category-health"
+            alt="A dog being checked for health symptoms"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/25"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at 25% 75%, rgba(232,98,42,0.35) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative z-10 flex flex-col justify-end min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span>
+          </div>
+          <h1
+            className="font-display font-black text-white tracking-tighter leading-[1.03] mb-4 max-w-3xl"
+            style={{ fontSize: "clamp(28px, 5vw, 50px)", textShadow: "0 2px 18px rgba(0,0,0,0.45)" }}
+          >
+            Dog Health Library
+          </h1>
+          <p
+            className="text-lg font-light text-white/85 max-w-xl leading-relaxed"
+            style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
+          >
+            100+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.
+          </p>
+        </div>
+      </section>
       <div className="px-container-sm sm:px-container py-14">
         {SECTIONS.map(section => (
           <div key={section.category} className="mb-10">
-            <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
+            <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border flex items-center gap-2.5">
+              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-primary shrink-0">
+                <SectionIcon name={section.icon} />
+              </span>
+              <span>{section.category}</span>
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {section.items.map(item => (
                 <Link key={item.href} href={item.href} className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors">
@@ -132,7 +242,9 @@ export default function DogHealthHubPage() {
             return (
               <div key={cat}>
                 <h3 className="font-display font-bold text-brand-dark text-base mb-3 flex items-center gap-2">
-                  <span>{CATEGORY_ICONS[cat]}</span>
+                  <span className="flex items-center justify-center w-6 h-6 rounded-md bg-brand-primary/10 text-brand-primary shrink-0">
+                    <IconPaw className="w-3.5 h-3.5" />
+                  </span>
                   <span>{cat}</span>
                   <span className="text-xs font-normal text-brand-text-light">({list.length})</span>
                 </h3>
@@ -164,7 +276,7 @@ export default function DogHealthHubPage() {
       </section>
 
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 Breed-specific']} />
+        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={["Research-based", "Weekly", "Breed-specific"]} />
       </div>
 
       {/* agent1-browse-all-start */}
@@ -193,7 +305,6 @@ export default function DogHealthHubPage() {
         <Link key="dog-mange" href="/health/dog-mange" className="text-sm text-brand-primary no-underline hover:underline">Dog Mange</Link>
         <Link key="dog-obesity" href="/health/dog-obesity" className="text-sm text-brand-primary no-underline hover:underline">Dog Obesity</Link>
         <Link key="dog-pyoderma" href="/health/dog-pyoderma" className="text-sm text-brand-primary no-underline hover:underline">Dog Pyoderma</Link>
-        <Link key="dog-pyoderma-guide" href="/health/dog-pyoderma-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Pyoderma Guide</Link>
         <Link key="dog-seizures" href="/health/dog-seizures" className="text-sm text-brand-primary no-underline hover:underline">Dog Seizures</Link>
         <Link key="dog-skin-allergies" href="/health/dog-skin-allergies" className="text-sm text-brand-primary no-underline hover:underline">Dog Skin Allergies</Link>
         <Link key="dog-symptoms-guide" href="/health/dog-symptoms-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Symptoms Guide</Link>
@@ -213,6 +324,7 @@ export default function DogHealthHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
 </>
   </>
   )

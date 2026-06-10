@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function BestFerretKibblePage() {
             'Most of the work in feeding a ferret well is choosing the right dry food, then staying consistent. This page is a method, not a shopping list: how to read an ingredient panel, what macronutrient window to aim for, and the red flags that separate an appropriate formula from supermarket "ferret food" that exists only because owners keep buying it.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -86,8 +85,24 @@ export default function BestFerretKibblePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
+          { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="panel">Read the Panel First</h2>
           <p>
             The single most useful skill in ferret nutrition is reading an ingredient panel. Ingredients are listed by weight, so the first three to five entries define the formula. For a ferret kibble, those entries should be <strong>named animal proteins and animal fats</strong> — chicken, chicken meal, turkey, lamb, fish meal, chicken fat. If the first ingredient is a grain ("ground corn," "brewers rice," "wheat") or a plant-protein concentrate ("corn gluten meal," "pea protein," "soybean meal"), the formula is built on plant carbohydrate that a ferret cannot use, regardless of the marketing on the front of the bag.
@@ -144,7 +159,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Starch-free, animal-first, lowest commercial carb load in wide ferret use"
             score={9.3}
@@ -170,7 +184,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Mid Tier"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, in-range macros"
             score={8.0}
@@ -195,7 +208,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="carniwhole"
             badge="Direct-to-Consumer"
-            badgeEmoji="📦"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
             score={8.2}

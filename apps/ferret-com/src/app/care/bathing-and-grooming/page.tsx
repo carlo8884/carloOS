@@ -13,11 +13,12 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -43,13 +44,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-29T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care/bathing-and-grooming' },
-    { name: 'Bathing and Grooming', url: 'https://ferret.com/care/bathing-and-grooming' },
-  ],
-})
 
 const FAQS = [
   {
@@ -85,7 +79,32 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and dermatology",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease",
+    publisher: "Elsevier",
+  },
+]
 
 export default function FerretBathingGroomingPage() {
   return (
@@ -100,7 +119,6 @@ export default function FerretBathingGroomingPage() {
             'The defining feature of ferret grooming is that less is more. The musky smell new owners are trying to bathe away is produced by skin glands that respond to bathing by overproducing — the more you bathe, the worse it gets. The right routine is small, infrequent, and consistent: occasional bath, regular ear and nail care, daily teeth, and recognition of when the coat is signaling a medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '11 min',
         }}
@@ -135,6 +153,7 @@ export default function FerretBathingGroomingPage() {
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -144,7 +163,14 @@ export default function FerretBathingGroomingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
+          { title: 'Nail Trimming', href: '/care/nail-trimming' },
+          { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-grooming"
@@ -499,7 +525,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="marshall-ferret-shampoo"
             badge="Shampoo Default"
-            badgeEmoji="🧴"
             name="Marshall Ferret Shampoo (Original / Fragrance-Free)"
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             score={8.5}
@@ -524,7 +549,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="pet-ear-cleaner"
             badge="Ear Care"
-            badgeEmoji="👂"
             name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
             subtitle="Gentle pet ear cleaner used in exotic-pet practice"
             score={8.4}
@@ -543,7 +567,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="pet-nail-kit"
             badge="Nail Care"
-            badgeEmoji="✂️"
             name="Small-Pet Nail Clippers + Styptic Powder"
             subtitle="Small clippers sized for ferret nails plus styptic for accidents"
             score={8.0}
@@ -567,34 +590,7 @@ export default function FerretBathingGroomingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
-              and Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Integumentary, dental, and grooming
-              chapters describe ferret skin physiology and normal
-              variation.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — ferret husbandry and dermatology issues.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing care
-              guidance on bathing, smell management, and seasonal coat
-              changes.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              continuing-education resources on ferret husbandry and
-              dermatologic disease.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical
-              articles on ferret dermatology and ear disease.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry guidance. Skin disease,
             chronic ear problems, and abnormal alopecia are clinical

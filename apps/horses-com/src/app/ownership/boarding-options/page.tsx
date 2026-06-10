@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BoardingOptionsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+        ]}
         hero={{
           title: "Horse Boarding Options",
           subtitle:
@@ -99,6 +105,13 @@ export default function BoardingOptionsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="spectrum">The Spectrum of Options</h2>
           <p>Boarding arrangements sit on a spectrum from most service to least. At one end, full-care board has the facility do all the daily work for a higher fee; at the other, self-care board provides only the space while you do everything; and keeping a horse at home gives total control and total responsibility. Between them lie partial and pasture board. The right choice depends on your time, budget, experience, facilities available, and how hands-on you want or need to be.</p>
 

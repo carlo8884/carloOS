@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function SupplementsAndVitaminsPage() {
             'The honest headline: a ferret on a complete, appropriate diet needs very few supplements, and several popular products do more for the owner’s peace of mind than for the ferret. This page sorts the genuinely useful from the redundant from the ones that warrant real caution.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -85,8 +84,22 @@ export default function SupplementsAndVitaminsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+          { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="default">The Default: A Complete Diet Needs Little</h2>
           <p>
             A reputable commercial ferret kibble or a correctly balanced raw/whole-prey diet is formulated to supply complete nutrition, including taurine and the vitamin and mineral spread a ferret needs. For a healthy adult on such a diet, routine supplementation is generally unnecessary and can even be counterproductive — fat-soluble vitamins in particular accumulate, so "more" is not safer. Treat supplements as targeted tools for specific situations, not as daily insurance. If a diet is so marginal that it needs propping up with supplements, the better fix is usually a better base diet (see <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>).

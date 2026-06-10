@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Pomacea bridgesii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/pomacea-bridgesii/", publisher: "Seriously Fish" },
+  { label: "Pomacea bridgesii — FishBase species record", url: "https://www.fishbase.se/summary/Pomacea-bridgesii.html", publisher: "FishBase" },
+  { label: "Rawlings, T.A. et al. Molecular phylogenetics of Pomacea apple snails. Molecular Phylogenetics and Evolution, 2007.", publisher: "Molecular Phylogenetics and Evolution" },
+  { label: "Invasive Apple Snails in Florida — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/IN920", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper', path: '/species/mystery-snail', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MysterySnailPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Mystery Snail Care Guide', subtitle: 'Pomacea bridgesii — the mystery snail, named for appearing to give birth to live young (actually they lay eggs above the waterline, and the hatchlings mysteriously appear in the tank). Available in stunning color varieties — gold, blue, ivory, purple, magenta — and completely peaceful with all community fish.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Mystery Snail Care Guide', subtitle: 'Pomacea bridgesii — the mystery snail, named for appearing to give birth to live young (actually they lay eggs above the waterline, and the hatchlings mysteriously appear in the tank). Available in stunning color varieties — gold, blue, ivory, purple, magenta — and completely peaceful with all community fish.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Mystery Snail', href: '/species/mystery-snail' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Amano Shrimp", href: "/species/amano-shrimp", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -19,10 +28,13 @@ export default function MysterySnailPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Amano Shrimp', href: '/species/amano-shrimp' }, { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-mystery-snail" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-mystery-snail" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A mystery snail in a home aquarium." priority />
         <h2>Copper — The Single Most Important Care Fact</h2>
         <p>Mystery snails, like all freshwater snails, are killed by copper at concentrations that are safe for fish. This is the most critical care fact — more important than any other husbandry consideration. Sources of copper that kill snails: copper-based algae treatments (API AlgaeFix contains copper), copper-based disease treatments, tap water from old copper pipes, some plant fertilizers, and some fish foods. Before adding mystery snails to any established tank, verify that no copper-containing products have ever been used. Test with a copper test kit if uncertain. Even trace copper remaining from a previous treatment can kill snails.</p>
 
@@ -38,7 +50,8 @@ export default function MysterySnailPage() {
 
         <h2>Breeding — The Egg Clutch</h2>
         <p>Mystery snails are the only commonly kept freshwater snail species that lays eggs above the waterline — a distinctive pink-to-cream colored clutch stuck to the glass above the water surface or on the tank lid. The eggs require air humidity to develop (they dry out and fail if fully submerged, and they drown if pushed into the water). Clutches hatch in 2–4 weeks depending on temperature — hatchlings drop into the water and begin grazing immediately. Unlike nerite snails, mystery snails breed readily in freshwater and populations can grow if both male and female are present — manage population by refrigerating unwanted egg clutches for several days before discarding.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Mystery Snail — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for mystery snail care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -47,6 +60,7 @@ export default function MysterySnailPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

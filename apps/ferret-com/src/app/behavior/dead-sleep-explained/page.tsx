@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Dead Sleep Explained', url: 'https://ferret.com/behavior/dead-sleep-explained' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, husbandry, and insulinoma chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour and endocrine disease",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret care and behaviour owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretDeadSleepPage() {
   return (
@@ -85,7 +94,6 @@ export default function FerretDeadSleepPage() {
             "Sooner or later, nearly every ferret owner has the same heart-stopping moment: they find their ferret limp, floppy, and seemingly unresponsive — and assume the worst. Almost always, the ferret is simply in a very, very deep sleep. Here is why ferrets do this, and how to tell a normal deep sleep from a real emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -124,7 +132,14 @@ export default function FerretDeadSleepPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Dooking & Vocalizations', href: '/behavior/dooking-and-vocalizations' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -259,22 +274,7 @@ export default function FerretDeadSleepPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour, husbandry, and insulinoma chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour, husbandry, and endocrine disease.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing care and behaviour
-              guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary advice. An unrousable ferret, or deep sleep paired with

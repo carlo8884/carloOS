@@ -1,14 +1,29 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Integumentary Disease and Ecdysis", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Skin Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/skin-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles — Retained Shed, Causes | Lizard.com', description: 'Dysecdysis (retained shed) is almost always caused by low humidity or dehydration. Safe soaking protocol, how to remove stuck shed from toes and eyes.', path: '/health/dysecdysis', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function DysecdysisPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Dysecdysis (Retained Shed)', subtitle: 'Dysecdysis is the failure to shed skin completely in a single, clean shed. Retained shed — old skin that did not release — is one of the most common health issues in captive reptiles. It is almost entirely preventable and almost entirely caused by inadequate humidity or dehydration during the pre-shed period.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Dysecdysis (Retained Shed)', subtitle: 'Dysecdysis is the failure to shed skin completely in a single, clean shed. Retained shed — old skin that did not release — is one of the most common health issues in captive reptiles. It is almost entirely preventable and almost entirely caused by inadequate humidity or dehydration during the pre-shed period.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Dysecdysis', href: '/health/dysecdysis' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Shedding Guide', href: '/husbandry/shedding-guide', category: 'Husbandry' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Retained Eye Caps', href: '/health/retained-eye-caps', category: 'Health' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>High-Risk Areas</div>
@@ -18,9 +33,11 @@ export default function DysecdysisPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Ball Python Care', href: '/species/ball-python' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-dysecdysis" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why It Happens</h2>
         <p>Healthy shedding requires: adequate hydration (the reptile must be well-hydrated throughout its body for the old skin to separate cleanly from the new), adequate environmental humidity during the active shed period, and appropriate substrate that allows the reptile to find edges to anchor and pull against during shedding. Disruption of any of these produces incomplete sheds in varying degrees of severity.</p>
         <p><strong>Low humidity:</strong> The most common cause. The fluid layer between old skin and new skin dries before the shed can complete — the old skin becomes desiccated and adheres to the new skin rather than releasing. Species-specific humidity requirements must be maintained consistently, not just increased when the shed is already in progress. Humidity management is proactive (always maintained) rather than reactive (increased only when the problem is occurring).</p>
@@ -48,6 +65,8 @@ export default function DysecdysisPage() {
 
         <h2>Prevention</h2>
         <p>Maintain species-appropriate humidity consistently — not only when in shed. Provide a moist hide (a container lined with dampened sphagnum moss) in the enclosure year-round for species that benefit from it (most snakes, many geckos). Ensure the reptile is adequately hydrated — fresh water always available, soaking opportunities for species that need them. Provide rough surfaces (cork bark, rocks with texture) that the reptile can use to anchor and rub during shedding. Check for mites if dysecdysis occurs repeatedly in a well-maintained setup.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Shed-Support Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Husbandry equipment that helps with shedding: humid hides, sphagnum moss, ultrasonic humidifiers. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -56,7 +75,7 @@ export default function DysecdysisPage() {
             <a href="/go/chewy-brand/reptile%20humid%20hide%20moss%20sphagnum?s=health-dysecdysis" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
-
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "The Farrier Schedule — How Often, Barefoot vs Shod, Working With Your Farrier",
+  title: "Farrier Schedule — Trim Intervals, Barefoot vs Shod & Your Farrier",
   description:
     "Reference guide to the equine farrier schedule: trim and shoeing intervals, seasonal growth, barefoot vs shod, and how to work effectively with your farrier.",
   path: '/care/farrier-schedule',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "The Farrier Schedule — How Often, Barefoot vs Shod, Working With Your Farrier",
+  title: "Farrier Schedule — Trim Intervals, Barefoot vs Shod & Your Farrier",
   description:
     "Reference guide to the equine farrier schedule: trim and shoeing intervals, seasonal growth, barefoot vs shod, and how to work effectively with your farrier.",
   url: 'https://horses.com/care/farrier-schedule',
@@ -54,6 +54,12 @@ export default function FarrierSchedulePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+        ]}
         hero={{
           title: "The Farrier Schedule",
           subtitle:
@@ -88,6 +94,7 @@ export default function FarrierSchedulePage() {
               { label: "Cost of Owning a Horse", href: "/ownership/cost-of-owning-a-horse" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function FarrierSchedulePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why a Schedule</h2>
           <p>Because the hoof wall grows constantly, a foot that was balanced six weeks ago is now longer and out of balance. Overgrown feet flare, the breakover point moves forward, the angles change, and the strain shifts onto joints and tendons. A regular schedule keeps the foot balanced before problems start, which is far cheaper and kinder than fixing the lameness that neglect produces.</p>
 

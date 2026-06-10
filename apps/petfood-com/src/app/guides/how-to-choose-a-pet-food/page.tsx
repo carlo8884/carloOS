@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function HowToChooseAPetFoodPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,13 @@ export default function HowToChooseAPetFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
       ]}
       schema={schema}
       sidebar={
@@ -76,10 +107,12 @@ export default function HowToChooseAPetFoodPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="how-to-choose-a-pet-food"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The pet food aisle offers thousands of options and a barrage of marketing, but a defensible choice rests on a handful of evidence-based criteria. The strongest framework comes from the WSAVA Global Nutrition Committee, which directs owners to ask about a manufacturer&apos;s nutritional expertise, quality control, and research rather than judging by ingredient marketing. This page turns that guidance into a practical process. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="completeness">Start with Completeness</h2>
         <p>The first filter is the AAFCO nutritional adequacy statement: confirm the food is complete and balanced for your animal&apos;s life stage, and prefer feeding-trial substantiation over formulation-only where available. A food without a complete-and-balanced statement (carrying instead intermittent or supplemental feeding only) is a treat or topper, not a diet. This single check rules out a great deal. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
@@ -101,13 +134,7 @@ export default function HowToChooseAPetFoodPage() {
           <li>Reassess via body condition over the following weeks and adjust.</li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

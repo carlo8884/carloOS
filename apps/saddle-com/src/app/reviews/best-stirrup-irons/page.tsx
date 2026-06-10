@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard} from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025 — Safety, INOX | Saddle.com', description: 'Best stirrup irons ranked — Sprenger Bow Balance, MDC International, and safety stirrups compared.', path: '/reviews/best-stirrup-irons', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025', description: 'Safety, offset, and standard stirrup irons ranked for English riding disciplines.', url: 'https://saddle.com/reviews/best-stirrup-irons', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const sprSchema = buildProductSchema({ name: 'Sprenger Bow Balance Stirrup', description: 'Offset eye design reduces knee and hip stress in the two-point and jumping position.', url: 'https://sprenger.de', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, sprSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Stirrup Irons', url: 'https://saddle.com/reviews/best-stirrup-irons' },
+  ],
+})
+const allSchemas = combineSchemas(schema, sprSchema, breadcrumbSchema)
 const PICKS = [
   { label: 'Best Ergonomic', emoji: '🏆', name: 'Sprenger Bow Balance', subtitle: 'Offset eye · Reduces knee/hip stress · Show-legal', href: '#sprenger' },
   { label: 'Best Safety', emoji: '⭐', name: 'Ophena S Magnetic Safety Stirrup', subtitle: 'Magnetic release · Open side · XC/trail use', href: '#ophena' },
@@ -72,6 +79,7 @@ export default function BestStirrupIronsPage() {
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'English Riding Guide', href: '/guides/english-riding-guide' }]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and fitting guides." source="review-stirrups" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

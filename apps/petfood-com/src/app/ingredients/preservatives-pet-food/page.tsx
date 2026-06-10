@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,40 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-05-29T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "21 CFR §573 — Food Additives Permitted in Feed; Pet Food Ingredient Approvals",
+      url: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-E/part-573",
+      publisher: "U.S. Food and Drug Administration / Code of Federal Regulations",
+    },
+    {
+      label: "EFSA Scientific opinions on insect-derived proteins and novel feed ingredients",
+      url: "https://www.efsa.europa.eu/en/topics/topic/animal-feed",
+      publisher: "European Food Safety Authority",
+    },
+    {
+      label: "IARC Monographs on the Evaluation of Carcinogenic Risks — relevant food additive assessments",
+      url: "https://monographs.iarc.who.int/",
+      publisher: "International Agency for Research on Cancer, WHO",
+    },
+    {
+      label: "Association of American Feed Control Officials. 2025 AAFCO Official Publication, Chapter 6 (ingredient definitions for antioxidants); Chapter 4 (labeling requirements for preservatives).",
+    },
+    {
+      label: "Esterbauer H, Schaur RJ, Zollner H. Chemistry and biochemistry of 4-hydroxynonenal, malonaldehyde and related aldehydes.",
+      url: "https://doi.org/10.1016/0891-5849(91)90192-6",
+      publisher: "Free Radical Biology and Medicine, 1991",
+    },
+    {
+      label: "Commission Implementing Regulation (EU) 2017/962 — Suspension of ethoxyquin authorisation as feed additive",
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0962",
+      publisher: "European Commission, 2017",
+    },
+    {
+      label: "Lin C-Y, Carpenter DE, et al. Pet food oxidative stability literature; rendering- industry technical references on preservative system efficacy and shelf-life modeling.",
+    },
+]
+
 export default function PreservativesPetFoodPage() {
   return (
     <ArticleLayout
@@ -44,8 +80,13 @@ export default function PreservativesPetFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Preservatives', href: '/ingredients/preservatives-pet-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
       ]}
       schema={schema}
       sidebar={
@@ -74,6 +115,14 @@ export default function PreservativesPetFoodPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Blue Buffalo — Independent Evaluation', href: '/brands/blue-buffalo-evaluation' },
+              { label: 'Compare Food Types', href: '/compare' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -85,6 +134,7 @@ export default function PreservativesPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           Pet food contains fat — typically 8-20% of dry kibble on a dry-matter basis — and fat
           oxidizes in the presence of oxygen, heat, light, and trace metals. Oxidation produces
@@ -346,45 +396,7 @@ export default function PreservativesPetFoodPage() {
           </li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>21 CFR §573
-            — Food Additives Permitted in Feed and Drinking Water of Animals</em>; informal
-            guidance on ethoxyquin reduction in pet food (1997); recalls database (Animal &amp;
-            Veterinary).
-          </li>
-          <li>
-            European Commission. <em>Commission Implementing Regulation (EU) 2017/962 of 7 June
-            2017 suspending the authorisation of ethoxyquin as a feed additive</em>. European
-            Food Safety Authority (EFSA) Scientific Opinions on BHA, BHT, ethoxyquin, mixed
-            tocopherols, and rosemary extract as feed and food additives.
-          </li>
-          <li>
-            International Agency for Research on Cancer (IARC). <em>IARC Monographs on the
-            Evaluation of Carcinogenic Risks to Humans</em>, Volume 40 (BHA — Group 2B) and
-            Volume 40 (BHT — Group 3).
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official
-            Publication</em>, Chapter 6 (ingredient definitions for antioxidants); Chapter 4
-            (labeling requirements for preservatives).
-          </li>
-          <li>
-            Esterbauer H, Schaur RJ, Zollner H. <em>Chemistry and biochemistry of
-            4-hydroxynonenal, malonaldehyde and related aldehydes</em>. Free Radical Biology
-            and Medicine (1991) and subsequent literature on lipid peroxidation products.
-          </li>
-          <li>
-            FAO/WHO Joint Expert Committee on Food Additives (JECFA). Monographs on BHA, BHT,
-            and ethoxyquin food-additive evaluations.
-          </li>
-          <li>
-            Lin C-Y, Carpenter DE, et al. Pet food oxidative stability literature; rendering-
-            industry technical references on preservative system efficacy and shelf-life
-            modeling.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Specific preservative concerns for an animal with diagnosed sensitivity or seizure

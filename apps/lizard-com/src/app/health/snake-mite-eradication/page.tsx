@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Parasitology: Ophionyssus natricis", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — External Parasites of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/external-parasites-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Ophionyssus natricis literature", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Snake Mites — Identification & Eradication | Lizard.com", description: "Snake mites (Ophionyssus natricis) are a common, fast-spreading external parasite. How to spot them, why quarantine matters, and the long road to eradication.", path: "/health/snake-mite-eradication", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites and Reptile Mites", description: "Identifying snake mites (Ophionyssus natricis), their life cycle, eradication strategy, and quarantine to prevent spread.", url: "https://lizard.com/health/snake-mite-eradication", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -8,9 +15,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites an
 export default function HealthSnakeMiteEradicationPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Snake Mites and Reptile Mites", subtitle: "Snake mites (Ophionyssus natricis) are tiny external parasites that feed on a reptile’s blood and spread explosively through a collection. They cause irritation, stress, anemia, and can transmit disease. Eradication is achievable but demands persistence: you must break the mite life cycle on the animal and in the entire environment, not just kill the adults you can see.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Snake Mites and Reptile Mites", subtitle: "Snake mites (Ophionyssus natricis) are tiny external parasites that feed on a reptile’s blood and spread explosively through a collection. They cause irritation, stress, anemia, and can transmit disease. Eradication is achievable but demands persistence: you must break the mite life cycle on the animal and in the entire environment, not just kill the adults you can see.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Snake Mites", href: "/health/snake-mite-eradication" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>
@@ -21,11 +36,13 @@ export default function HealthSnakeMiteEradicationPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Parasites", href: "/health/parasites" }, { label: "Parasites Guide", href: "/health/parasites-guide" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }, { label: "Ball Python Care", href: "/species/ball-python" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Parasites", href: "/health/parasites" }, { label: "Parasites Guide", href: "/health/parasites-guide" }, { label: "Enclosure Setup", href: "/setup" }, { label: "Ball Python Care", href: "/species/ball-python" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-snake-mite-eradication"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The snake mite is the most common external parasite of captive snakes and also affects lizards. These blood-feeding arachnids are small but visible, and an infestation can build with alarming speed because a single fed female can lay many eggs, and the life cycle, from egg to larva to nymph to adult, can complete in as little as one to two weeks under warm conditions. They spread between animals on hands, equipment, and substrate, so an infestation in one enclosure quickly becomes a collection-wide problem if not contained immediately."}</p>
           <h2>{"Identifying Snake Mites"}</h2>
           <ul>
@@ -56,12 +73,7 @@ export default function HealthSnakeMiteEradicationPage() {
             <li>{"Source animals from clean, reputable keepers and inspect at purchase"}</li>
             <li>{"Treat any mite sighting as an emergency containment situation before it spreads"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), parasitology chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, Ophionyssus natricis literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

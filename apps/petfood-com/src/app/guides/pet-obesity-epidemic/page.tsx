@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function PetObesityEpidemicPage() {
   return (
     <ArticleLayout
@@ -44,8 +65,14 @@ export default function PetObesityEpidemicPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'The Pet Obesity Epidemic', href: '/guides/pet-obesity-epidemic' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+        { title: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
       ]}
       schema={schema}
       sidebar={
@@ -76,10 +103,12 @@ export default function PetObesityEpidemicPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="pet-obesity-epidemic"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Surveys consistently find that more than half of dogs and cats in many countries are overweight or obese, making it the most common nutrition-related disorder in companion animals. Unlike many diseases, obesity is largely preventable and reversible through feeding and activity. Its consequences are serious and well-documented, and the benefits of keeping a pet lean are among the clearest findings in companion-animal nutrition. See <a href="/diets/weight-management-diets">Weight-Management Diets</a>.</p>
         <h2 id="widespread">How Widespread</h2>
         <p>Estimates from veterinary surveys regularly put the overweight-or-obese share of pet dogs and cats above 50 percent, and rising over recent decades. The trend mirrors the human obesity trend and shares causes: energy-dense food, sedentary lifestyles, and overfeeding. Because obesity develops gradually and is normalized, it is often unrecognized until it causes a problem. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>
@@ -94,12 +123,7 @@ export default function PetObesityEpidemicPage() {
         <h2 id="reversing">Reversing It</h2>
         <p>Obesity is reversible with a structured plan: a veterinarian-set target weight, a calorie deficit (ideally via a weight-management diet that preserves protein and nutrients), measured feeding with a kitchen scale, treat discipline within the 10 percent rule, increased activity, and regular reweighing. Loss should be gradual — and especially careful in cats to avoid hepatic lipidosis. The payoff, in years of healthier life, is large. See <a href="/diets/weight-management-diets">Weight-Management Diets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

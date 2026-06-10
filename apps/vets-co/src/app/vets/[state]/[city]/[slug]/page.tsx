@@ -63,7 +63,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     siteId: 'vets-co',
     title: `${vet.practiceName} — ${vet.city}, ${state.code} | Vets.co`,
     description: `${vet.practiceName} in ${vet.city}, ${state.name}. ${vet.specialties.length} specialt${vet.specialties.length === 1 ? 'y' : 'ies'}, accepted insurance, services, and contact info. Sample directory listing.`,
-    path: `/vets/${state.slug}/${vet.slug}`,
+    path: `/vets/${state.slug}/${params.city}/${vet.slug}`,
     type: 'website',
     noIndex: true, // Sample listings must not be indexed — see disclaimer banner.
   })

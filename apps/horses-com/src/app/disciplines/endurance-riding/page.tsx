@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function EnduranceRidingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Trail Riding', href: '/disciplines/trail-riding' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+        ]}
         hero={{
           title: "Endurance Riding",
           subtitle:
@@ -88,6 +94,7 @@ export default function EnduranceRidingPage() {
               { label: "Summer Heat Care", href: "/care/summer-heat-care" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function EnduranceRidingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Endurance Riding Is</h2>
           <p>Endurance riding tests a horse and rider over long distances of natural trail against the clock, but with a crucial twist: the horse must pass veterinary inspections throughout, and any horse judged unfit to continue is eliminated. The ethos -- captured in the motto to finish is to win -- places the horse&apos;s soundness and metabolic health above raw speed. It is one of the few equestrian sports where finishing a tough ride is itself a celebrated achievement.</p>
 

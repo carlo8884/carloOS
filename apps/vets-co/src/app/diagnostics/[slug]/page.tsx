@@ -6,7 +6,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   ArticleLayout,
@@ -118,14 +117,7 @@ export default function DiagnosticPage({ params }: PageProps) {
     lastReviewed: '2026-05-30',
   })
   const faqSchema = buildFAQSchema({ questions: d.faqs })
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://vets.co' },
-      { name: 'Diagnostics', url: 'https://vets.co/diagnostics' },
-      { name: d.testName, url },
-    ],
-  })
-  const combined = combineSchemas(articleSchema, medSchema, faqSchema, breadcrumbSchema)
+  const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
   const breadcrumbs = [
     { name: 'Home', href: '/' },
@@ -143,7 +135,7 @@ export default function DiagnosticPage({ params }: PageProps) {
           subtitle: `What it measures, why a veterinarian orders it, what the results mean in plain language, and typical US cost ranges — sourced from ACVIM, AAHA, ACVR, and the Merck Veterinary Manual.`,
           category: `Diagnostic Test · ${categoryLabel(d)}`,
           authorName: 'Vets.co Editorial — sourced from cited references',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

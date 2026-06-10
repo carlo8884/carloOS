@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function WholePreyVsKibblePage() {
             'Almost every feeding question a ferret owner faces nests under one decision: do you feed a biologically appropriate raw or whole-prey diet, a high-quality commercial kibble, or a combination of the two? Each model has real advantages and real failure modes. This page compares them honestly rather than crowning a winner.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -88,8 +87,31 @@ export default function WholePreyVsKibblePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
+          { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:diet-raw-vs-kibble"
+            alt="Raw meat and dry kibble side by side — the ferret whole-prey versus kibble feeding decision"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="models">The Two Models</h2>
           <p>
             Ferrets (<em>Mustela putorius furo</em>) are obligate carnivores descended from the European polecat. In the wild, their relatives eat whole small prey — rodents, rabbits, birds — consuming muscle, organ, bone, and a small amount of fur. Two feeding philosophies attempt to meet that requirement in a domestic setting. The <strong>whole-prey / raw model</strong> feeds animal tissue directly: whole frozen-thawed prey, or a "frankenprey" assembly of muscle meat, organ, and raw meaty bone. The <strong>commercial-kibble model</strong> feeds a dry, shelf-stable formula engineered to hit the ferret macronutrient profile from rendered animal ingredients.
@@ -146,7 +168,6 @@ export default function WholePreyVsKibblePage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Kibble Model"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Starch-free premium kibble — the lower-risk base diet"
             score={9.3}
@@ -171,7 +192,6 @@ export default function WholePreyVsKibblePage() {
           <ReviewCard
             id="frozen-feeder-prey"
             badge="Whole-Prey Model"
-            badgeEmoji="🧊"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey for the raw model or middle-path supplementation"
             score={8.4}

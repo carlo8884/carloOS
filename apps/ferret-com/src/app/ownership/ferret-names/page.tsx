@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +35,6 @@ export default function FerretNamesPage() {
             'Naming a ferret is one of the small joys of bringing one home. Ferrets are mischievous, fast, and full of character, and the best names tend to capture that. This page offers themed ideas, a few principles for picking a name that fits, and an honest note on whether your ferret will ever actually answer to it.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '7 min',
         }}
@@ -75,8 +74,22 @@ export default function FerretNamesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Ferret Glossary', href: '/ownership/ferret-glossary' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How to Choose</h2>
           <p>
             A few practical principles help. Short names with a clear, distinct sound — typically one or two syllables — are easiest for a ferret to learn to recognize, much as with a dog or cat. A name with a hard consonant or a bright vowel tends to cut through household noise better than something soft and mumbly. Beyond that, let the ferret's personality guide you: many owners wait a few days after bringing a ferret home and let a name suggest itself once the animal's character shows. There is no wrong answer; the lists below are starting points, not rules.

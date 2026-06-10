@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Brachycephalic Airway Syndrome', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/brachycephalic-airway-syndrome-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Brachycephalic Breeds and BOAS — Health Resources', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/brachycephalic-syndrome', publisher: 'AVMA' },
+  { label: 'ACVS: Brachycephalic Syndrome (BAS)', url: 'https://www.acvs.org/small-animal/brachycephalic-syndrome', publisher: 'ACVS' },
+  { label: 'Roedler FS et al. How strongly does conformity affect the respiratory phenotype? Correlations between brachycephaly and BOAS in French Bulldogs. PLoS ONE. 2013;8(3):e63551.', publisher: 'PLoS ONE' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -50,6 +58,7 @@ export default function FrenchBulldogHealthPage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'French Bulldog Health', href: '/health/french-bulldog-health' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Luxating Patella', href: '/health/dog-luxating-patella', category: 'Dog Health' }, { title: 'Spay or Neuter Guide', href: '/health/spay-neuter-guide', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -63,9 +72,10 @@ export default function FrenchBulldogHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."
@@ -137,6 +147,8 @@ export default function FrenchBulldogHealthPage() {
           <li><strong>The breeder asks you questions</strong> — a breeder who cares about their dogs wants to know your living situation, experience, and commitment</li>
           <li><strong>Avoid the &quot;extreme&quot; Frenchie look</strong> — maximally flat face, deeply furrowed skin, very small nostrils. These features are associated with the worst health outcomes.</li>
         </ul>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

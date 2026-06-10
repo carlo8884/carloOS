@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'AVDC: American Veterinary Dental College — Periodontal Disease in Dogs', url: 'https://afd.avdc.org', publisher: 'AVDC' },
+  { label: 'WSAVA Global Dental Guidelines — Home Care and Professional Dental Cleaning', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
+  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-guidelines/dental-care-guidelines/', publisher: 'AAHA' },
+  { label: 'Veterinary Oral Health Council (VOHC): Accepted Products for Plaque and Tartar Control in Dogs', url: 'http://www.vohc.org/pets.html', publisher: 'VOHC' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3 (AVDC/AAHA). Daily toothbrushing is the most effective intervention.', path: '/health/dog-dental-care', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Dental Care Guide', description: 'Daily brushing, VOHC products, and periodontal disease prevention for dogs.', url: 'https://dog.com/health/dog-dental-care', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Dental Care Guide', description: 'Toothbrushing, VOHC products, and professional dental cleaning for dogs.', url: 'https://dog.com/health/dog-dental-care', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -13,6 +21,7 @@ export default function DogDentalCarePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Dental Care Guide', subtitle: 'Periodontal disease — infection and destruction of the supporting structures around the teeth — affects over 80% of dogs by age 3. It is painful, it contributes to systemic inflammation (with implications for heart, kidney, and liver health), and it is almost entirely preventable. The tools are simple; the commitment is daily.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dental Care', href: '/health/dog-dental-care' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Related' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">VOHC-Accepted Products</div>
@@ -24,7 +33,8 @@ export default function DogDentalCarePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dental Cleaning Guide', href: '/health/dog-dental-care' }, { label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-dental" />
         </>}
       >
@@ -56,6 +66,8 @@ export default function DogDentalCarePage() {
 
           <h2>Why Professional Cleaning Is Still Necessary</h2>
           <p>Home dental care slows the progression of periodontal disease and extends the interval between professional cleanings — but it does not eliminate the need. Plaque becomes tartar (calculus) at the gum line and below it — in areas the brush cannot reach. Professional cleaning under anesthesia with full-mouth radiographs is required annually or every 1-2 years (depending on the dog's dental disease progression rate) even with excellent home care. Think of home care as maintaining the cleaning, not replacing it.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

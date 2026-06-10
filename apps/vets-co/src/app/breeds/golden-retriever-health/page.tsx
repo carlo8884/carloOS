@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -28,7 +28,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   description: 'Managing Golden Retriever cancer risk with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2025-05-01',
+  lastReviewed: '2026-06-07',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
 
@@ -44,7 +44,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         subtitle: 'Golden Retrievers are one of the most common breeds in general practice. The points most worth giving every Golden owner: the cancer statistics are real, the monitoring matters, and early detection is the single most impactful thing you can do.',
         category: 'Breed Health Guide',
         authorName: 'Vets.co Editorial',
-        authorAvatar: '🐾',
+       
         publishedAt: 'May 2025',
         readTime: '10 min',
       }}
@@ -70,6 +70,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           title="Free Pet Health Tips"
           subtitle="Practical guidance every Tuesday."
           source="breeds-golden-retriever" />
+        <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
@@ -115,7 +116,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
         <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
-        <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fastest claims, no limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
+        <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fast claims processing per the carrier, no payout limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
       </div>
     </ArticleLayout>
     </>

@@ -7,12 +7,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
-import { buildFAQSchema, SchemaScript } from '@carloOS/ui'
+import { buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Find a Veterinary Specialist — Near You',
-  description: 'Find board-certified veterinary specialists near you. Neurology, orthopedics, oncology, cardiology, ophthalmology, emergency and critical care',
+  title: 'Find a Board-Certified Veterinary Specialist',
+  description: 'Find board-certified veterinary specialists by discipline — neurology, orthopedics, oncology, cardiology, emergency care — via official directories.',
   path: '/find-a-vet',
 })
 
@@ -102,10 +102,19 @@ const faqSchema = buildFAQSchema({
   questions: FAQ_ITEMS.map(f => ({ question: f.question, answer: f.answerText })),
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Find a Vet', url: 'https://dog.com/find-a-vet' },
+  ],
+})
+
+const findAVetSchema = combineSchemas(faqSchema, breadcrumbSchema)
+
 export default function FindAVetPage() {
   return (
     <>
-      <SchemaScript schema={faqSchema} />
+      <SchemaScript schema={findAVetSchema} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">

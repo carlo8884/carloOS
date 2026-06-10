@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'AVMA: Spaying and Neutering — Policy and Owner Resources', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/spay-neuter-your-pet', publisher: 'AVMA' },
+  { label: 'Torres de la Riva G et al. Neutering dogs: effects on joint disorders and cancers in Golden Retrievers. PLoS ONE. 2013;8(2):e55937.', publisher: 'PLoS ONE' },
+  { label: 'AAHA: Canine Life Stage Guidelines — Spay/Neuter Timing Recommendations', url: 'https://www.aaha.org/aaha-guidelines/life-stage-canine-2019/life-stage-canine-home/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: Reproductive System Overview — Spay and Neuter in Dogs', url: 'https://www.merckvetmanual.com/reproductive-system/small-animal-reproduction/overview-of-small-animal-reproduction', publisher: 'Merck Vet Manual' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog — Timing by Breed | Dog.com', description: 'The science on spay/neuter timing has changed. Large breeds benefit from waiting until 12-24 months. Reference guide to timing, benefits, risks.', path: '/health/spay-neuter-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog', description: 'Updated spay/neuter timing guidance by breed size — what the research shows.', url: 'https://dog.com/health/spay-neuter-guide', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +28,7 @@ export default function SpayNeuterGuidePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'When to Spay or Neuter Your Dog', subtitle: 'The standard advice of spay/neuter at 6 months is being revised by research. For large and giant breeds especially, the timing has meaningful health implications. Here\'s what the current evidence shows.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Spay/Neuter Guide', href: '/health/spay-neuter-guide' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'German Shepherd Health', href: '/health/german-shepherd-health', category: 'Dog Health' }, { title: 'Labrador Health', href: '/health/labrador-health', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Timing by Size</div>
@@ -31,6 +40,7 @@ export default function SpayNeuterGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever Health', href: '/health/golden-retriever-health' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
         </>}
       >
@@ -58,6 +68,8 @@ export default function SpayNeuterGuidePage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

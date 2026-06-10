@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -41,6 +41,13 @@ export default function QuarterHorseBreedPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="breed"
+        relatedLinks={[
+          { title: 'Horse Breeds Hub', href: '/breeds', category: 'Breeds' },
+          { title: 'Disciplines Hub', href: '/disciplines' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Barrel Racing', href: '/disciplines/barrel-racing' },
+          { title: 'Quarter Horse Racing', href: '/racing/quarter-horse-racing' },
+        ]}
         hero={{
           title: 'American Quarter Horse',
           subtitle:
@@ -50,15 +57,8 @@ export default function QuarterHorseBreedPage() {
           authorAvatar: '☘',
           publishedAt: 'May 2026',
           readTime: '14 min',
-          // Cover photo — horse and rider in an all-purpose schooling
-          // session. Reuses the verified saddle-com /english Unsplash ID
-          // (verified-in-production CarloOS catalog). The schooling-session
-          // composition fits the Quarter Horse's discipline versatility
-          // better than a breed-specific stance shot. Wikimedia Commons
-          // breed-conformation photography is the right long-term source.
-          image:
-            'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1600&q=80&auto=format&fit=crop',
-          imageAlt: 'A horse and rider working in an all-purpose schooling session',
+          // Cover photo supplied via manifest-managed StockImage below.
+          // Raw CDN URLs removed per QC §1 (Unsplash attribution required).
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
@@ -102,6 +102,7 @@ export default function QuarterHorseBreedPage() {
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="breed" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -112,6 +113,13 @@ export default function QuarterHorseBreedPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="history">History &amp; Origins</h2>
           <p>The American Quarter Horse was, before it was a breed, a working type. Seventeenth-century English colonists in Virginia and the Carolinas crossed imported Galloway and Hobby mares with locally adapted Iberian and Chickasaw stock, then later with the Thoroughbred founder Janus (1746) and other early Thoroughbreds. The result was a compact horse that could outrun anything at distances under a quarter mile — hence "Quarter Horse." Match races on Main Street, often run between two horses for a side bet, were the breed's first proving ground (AQHA, &ldquo;Breed History,&rdquo; aqha.com).</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide — Hypoglycemia | Dog.com', description: 'Yorkshire Terriers have big personalities in a fragile body. Hypoglycemia in puppies, tracheal collapse from collar pressure.', path: '/breeds/yorkshire-terrier', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -8,6 +8,7 @@ export default function YorkiePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Yorkshire Terrier Breed Guide', subtitle: 'Yorkies pack terrier tenacity into a 4–7 lb body. They are bold, intelligent, and affectionate — and require specific health management for their small size. Hypoglycemia in puppies, tracheal damage from collars, and severe dental disease are the primary concerns every Yorkie owner should understand from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Dachshund Guide', href: '/breeds/dachshund', category: 'Breed Guide' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -21,11 +22,17 @@ export default function YorkiePage() {
         </div>
         <RelatedLinks title="Yorkie Health Deep-Dive" links={[{ label: 'Yorkshire Terrier Health Issues & Screenings', href: '/breeds/yorkshire-terrier/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Yorkie Feeding Guide', href: '/breeds/yorkshire-terrier/feeding' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Yorkshire Terrier vs Maltese', href: '/compare/yorkshire-terrier-vs-maltese' },
+          { label: 'Pomeranian vs Yorkshire Terrier', href: '/compare/pomeranian-vs-yorkshire-terrier' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-yorkie" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Hypoglycemia (Low Blood Sugar)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Hypoglycemia (Low Blood Sugar)" riskLevel="very-high"
           description="Yorkie puppies under 4 months — and occasionally adults under 4 lbs — are at significant risk of hypoglycemic episodes. Their tiny body mass cannot store adequate glycogen to maintain blood glucose between meals, especially when stressed, active, or if a meal is missed. Hypoglycemic episodes: weakness, disorientation, trembling, seizure-like activity, collapse, coma, death. This is a genuine emergency."
           signs={['Weakness, wobbly gait', 'Disorientation or glazed eyes', 'Trembling', 'Seizure-like activity', 'Loss of consciousness']}
           management="Yorkie puppies must eat every 4-6 hours. Keep Karo syrup or honey accessible — rub on gums immediately if hypoglycemia is suspected, then get to a veterinarian. Do not withhold food from young Yorkies. Adults over 5 lbs and over 6 months rarely experience hypoglycemia with normal feeding schedules." />

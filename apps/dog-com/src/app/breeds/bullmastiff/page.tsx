@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide — Hip Dysplasia, Bloat Risk | Dog.com', description: 'Bullmastiffs are quiet, loyal giant breed dogs. GDV/bloat risk, hip and elbow dysplasia, and cardiac screening are the primary health priorities.', path: '/breeds/bullmastiff', type: 'article' })
@@ -10,6 +10,7 @@ export default function BullmastiffPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bullmastiff Breed Guide', subtitle: 'The Bullmastiff was bred in 19th century England as the "Gamekeeper\'s Night Dog" — large and powerful enough to pin poachers but tractable enough to be controlled. The result is a breed that combines impressive size (100–130 lbs) with a surprisingly calm, low-energy temperament indoors. They are not the bouncing-off-walls giant most people expect.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bullmastiff', href: '/breeds/bullmastiff' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function BullmastiffPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-bullmastiff" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high"
           description="Bullmastiffs, like most giant breeds, carry significant risk of hip and elbow dysplasia. Their rapid growth rate and substantial adult weight amplify the developmental joint disease risk present in larger breeds generally. OFA certification of both hips and elbows on both parents is the minimum expectation from responsible breeders. Limit high-impact exercise during growth — no forced running or jumping until 18 months."
           signs={['Hind-end weakness or stiffness after rest', 'Altered gait — bunny-hopping or reduced stride', 'Reluctance to rise, climb stairs, or jump', 'Forelimb lameness (elbows)']}
           management="Lean weight maintained throughout life. Fish oil from puppy stage. Joint supplement from young adulthood. NSAIDs or Librela when pain management is needed. Surgical options (TPO, THR, elbow procedures) for appropriate cases." />

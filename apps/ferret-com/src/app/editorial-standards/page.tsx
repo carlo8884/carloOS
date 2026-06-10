@@ -27,6 +27,7 @@ export default function EditorialStandardsPage() {
 
       <h2>Sources We Cite</h2>
       <p>Primary sources first. We prefer peer-reviewed veterinary literature, regulatory bodies (FDA CVM, AAFCO, state veterinary boards), recognized professional associations (AVMA, AAHA, WSAVA, AAEP, AEMV), breed and species clubs with documented health programs, and original manufacturer disclosures. Secondary sources are used only as pointers to the primary source.</p>
+      <p>Our ferret husbandry and health content is grounded in the exotic-mammal veterinary literature — principally Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>; the <em>Journal of Exotic Pet Medicine</em>; and <em>Veterinary Clinics of North America: Exotic Animal Practice</em> — alongside the American Ferret Association (AFA) and the Association of Exotic Mammal Veterinarians (AEMV). Ferret.com publishes general reference, not individualized veterinary advice; work with an exotic-pet vet for clinical decisions.</p>
 
       <h2>Authorship</h2>
       <p>Articles are bylined by the Ferret.com editorial team. Where a specific reviewer or contributor has subject-matter expertise, that credential is named in the byline. We do not impersonate clinical credentials our authors do not hold. “Editorial team” is our default attribution.</p>

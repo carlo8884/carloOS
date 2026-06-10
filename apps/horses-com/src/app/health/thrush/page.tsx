@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Thrush in Horses — Causes, Treatment, Prevention",
   description:
-    "Reference guide to equine thrush: bacterial infection of the frog, causes, the telltale black discharge and odor, treatment, and prevention through hoof hygiene.",
+    "Reference guide to equine thrush: bacterial infection of the frog, causes, the telltale black discharge and odor, treatment, and prevention via hoof hygiene.",
   path: '/health/thrush',
   type: 'article',
 })
@@ -65,6 +65,12 @@ export default function ThrushPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Mud Fever', href: '/health/mud-fever' },
+        ]}
         hero={{
           title: "Thrush in Horses",
           subtitle:
@@ -99,6 +105,7 @@ export default function ThrushPage() {
               { label: "Mud Fever", href: "/health/mud-fever" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -109,6 +116,13 @@ export default function ThrushPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Thrush</h2>
           <p>Thrush is a degenerative infection of the frog -- the V-shaped, rubbery cushion on the underside of the hoof -- and especially of the deep grooves (sulci) on either side of it and in its center. Anaerobic bacteria, classically Fusobacterium necrophorum, colonize the grooves and break down the horn, producing a characteristic black, moist, foul-smelling discharge. It usually starts in the central or collateral sulci where debris packs in and air cannot reach.</p>
 

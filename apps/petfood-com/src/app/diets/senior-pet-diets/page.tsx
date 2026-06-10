@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function SeniorPetDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function SeniorPetDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Senior Pet Diets', href: '/diets/senior-pet-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function SeniorPetDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A senior pet-food bag photographed in clinical light"
+          eyebrow="Life-Stage Diet"
+          priority
+        />
         <p>Dogs and cats are generally considered senior in the last quarter to third of their expected lifespan — roughly 7 years and up for many dogs (earlier for giant breeds), and 10 to 11 years and up for cats, with cats over 15 sometimes termed geriatric. Aging brings real physiological changes, but the senior pet food category is unregulated, and a senior diet must be evaluated on its actual formulation, not its label claim.</p>
         <h2 id="noaafco">There Is No AAFCO Senior Stage</h2>
         <p>AAFCO recognizes growth, reproduction, adult maintenance, and all life stages — there is no senior or mature category. A food labeled senior is sold under the adult-maintenance designation, and its nutrient profile need only meet the adult-maintenance minimums. This means senior diets vary enormously: some are lower in calories, some higher in protein, some add joint or cognitive support, and some differ from the brand&apos;s adult food only in name. See <a href="/life-stage">Pet Food by Life Stage</a>.</p>
@@ -94,13 +133,7 @@ export default function SeniorPetDietsPage() {
         <h2 id="choosing">Choosing a Senior Food</h2>
         <p>Because senior is unregulated, evaluate the actual diet: confirm it is complete and balanced for adult maintenance, check the calorie density against your animal&apos;s body condition, confirm adequate high-quality protein, and look for evidence-supported additions (EPA/DHA, antioxidants) rather than marketing buzzwords. For an animal with a diagnosed condition, a targeted therapeutic diet usually beats a generic senior food.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

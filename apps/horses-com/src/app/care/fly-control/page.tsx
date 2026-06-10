@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function FlyControlPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Sweet Itch', href: '/health/sweet-itch' },
+        ]}
         hero={{
           title: "Fly Control for Horses",
           subtitle:
@@ -88,6 +94,7 @@ export default function FlyControlPage() {
               { label: "Deworming Program", href: "/care/deworming-program" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function FlyControlPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Flies Matter</h2>
           <p>Different flies cause different problems. Stable and horn flies inflict painful bites; face flies cluster at the eyes and spread conjunctivitis; bot flies lay eggs on the legs that the horse ingests, becoming stomach bots; and biting midges trigger sweet itch in allergic horses. Beyond disease, constant fly worry causes stamping (hard on hooves and shoes), stress, and weight loss, so control is a genuine welfare and health issue, not just comfort.</p>
 

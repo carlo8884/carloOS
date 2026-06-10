@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -69,10 +69,27 @@ const INGREDIENTS = [
   },
 ]
 
+// ItemList of the ingredient reference guides — structured, citable index of
+// the ingredient cluster for AI Overviews / Perplexity (GEO authority signal).
+const ingredientListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Food Ingredient Reference Guides at PetFood.com',
+  numberOfItems: INGREDIENTS.length,
+  itemListElement: INGREDIENTS.map((ing, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: ing.title,
+    url: `https://petfood.com/ingredients/${ing.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, ingredientListSchema)
+
 export default function IngredientsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
@@ -121,6 +138,61 @@ export default function IngredientsHubPage() {
               </Link>
             </li>
           ))}
+        </ul>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <div className="flex items-center gap-2.5 mb-4">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Next Step — Apply It to a Real Food
+          </span>
+        </div>
+        <p className="text-sm text-brand-text-mid leading-relaxed max-w-xl mb-5">
+          Once you can read an ingredient panel, the next step is putting two real foods
+          side by side. These compare and brand-evaluation pages apply the same standards to
+          specific food types and manufacturers.
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 list-none p-0">
+          <li>
+            <Link
+              href="/compare"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Compare Food Types
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Wet vs dry, fresh vs kibble, grain-free vs grain-inclusive, and more.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/compare/grain-free-vs-grain-inclusive"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Grain-Free vs Grain-Inclusive
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                The legume, pulse, and DCM context applied to a head-to-head comparison.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/brands"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Brand Evaluations
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Independent evaluations of major pet food brands against our rubric.
+              </p>
+            </Link>
+          </li>
         </ul>
       </div>
 

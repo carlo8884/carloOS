@@ -1,21 +1,20 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article', ogImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function FrenchBulldogBreedPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'French Bulldog', url: 'https://dog.com/breeds/french-bulldog' } ] }))} />
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
-        <div className="relative h-64 lg:h-auto">
-          <Image src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&auto=format&fit=crop" alt="French Bulldog" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
+        <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+          <StockImage manifestKey="dog-com:breed-french-bulldog" alt="French Bulldog" aspect="4:3" priority />
         </div>
         <div className="flex flex-col justify-center px-container-sm sm:px-container py-12 relative">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(232,98,42,0.3) 0%, transparent 60%)' }} aria-hidden="true" />
@@ -66,8 +65,14 @@ export default function FrenchBulldogBreedPage() {
             <p>Realistic lifetime medical costs for a Frenchie with typical challenges: BOAS surgery ($1,500–5,000), IVDD treatment ($5,000–8,000+ for surgery), ongoing skin fold management, regular ear and eye care. Enroll pet insurance before the first vet visit. Compare policies specifically for BOAS and spinal coverage.</p>
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Bulldog', href: '/breeds/bulldog' }, { label: 'Poodle', href: '/breeds/poodle' }]} />
             <RelatedLinks title="French Bulldog Health Deep-Dive" links={[{ label: 'French Bulldog Health Issues & Screenings', href: '/breeds/french-bulldog/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Breed Comparisons" links={[
+              { label: 'French Bulldog vs Bulldog', href: '/compare/french-bulldog-vs-bulldog' },
+              { label: 'French Bulldog vs Boston Terrier', href: '/compare/french-bulldog-vs-boston-terrier' },
+            ]} />
+            <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-french-bulldog" />
           </aside>
         </div>

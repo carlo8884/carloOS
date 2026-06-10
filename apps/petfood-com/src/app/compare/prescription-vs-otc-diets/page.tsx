@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function PrescriptionVsOtcDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +65,14 @@ export default function PrescriptionVsOtcDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Prescription vs Over-the-Counter Diets', href: '/compare/prescription-vs-otc-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+        { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+        { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
       schema={schema}
       sidebar={
@@ -64,8 +91,10 @@ export default function PrescriptionVsOtcDietsPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Condition-Specific Diets', href: '/conditions' },
+              { label: 'Kidney Disease — Renal Diets', href: '/conditions/kidney-disease-renal-diets' },
+              { label: 'Food Allergies and Intolerances', href: '/conditions/food-allergies-and-intolerances' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
-              { label: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
               { label: 'Scoring Methodology', href: '/guides/methodology' },
             ]}
           />
@@ -80,6 +109,8 @@ export default function PrescriptionVsOtcDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-prescription-vs-otc-diets" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Prescription versus over-the-counter diets — what the prescription requirement does and does not mean." />
         <p>Therapeutic diets, commonly called prescription diets, are foods formulated to manage specific diagnosed conditions and sold only with veterinary authorization. Despite the name, they are not drugs and the prescription is not a legal controlled-substance requirement; rather, manufacturers restrict them to veterinary channels because their correct use depends on diagnosis and monitoring. Over-the-counter wellness and even condition-themed foods are formulated to ordinary maintenance standards. See <a href="/diets">Condition-Specific Diets</a>.</p>
         <h2 id="whatmeans">What Prescription Means Here</h2>
         <p>A prescription diet is authorized by a veterinarian for a patient with a diagnosed condition. The veterinary-channel restriction exists because these diets can be inappropriate or harmful for animals that do not have the target condition — a phosphorus-restricted renal diet, for example, is not suitable for a healthy growing animal. The authorization ties the diet to a diagnosis and to follow-up monitoring.</p>
@@ -94,12 +125,7 @@ export default function PrescriptionVsOtcDietsPage() {
         <h2 id="choosing">Choosing Between Them</h2>
         <p>For a diagnosed condition with a therapeutic diet validated in that disease, the prescription diet is usually the right choice, used under veterinary direction. For a healthy animal, an OTC complete-and-balanced diet is appropriate and a therapeutic diet is unnecessary and potentially harmful. The decision is driven by diagnosis: match the diet to the documented need, not to the marketing. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

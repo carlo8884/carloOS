@@ -1,6 +1,29 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret endocrine-disease and insulinoma chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: insulinoma overview, clinical signs, diagnosis, and treatment",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal practitioner directory and ferret medicine continuing-education resources",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret insulinoma diagnosis, surgical outcomes, and medical management",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -46,7 +69,6 @@ export default function FerretInsulinomaPage() {
             'Insulinoma — a functional tumor of the pancreatic beta cells — is the most commonly diagnosed neoplasm in middle-aged and older domestic ferrets. The clinical picture is easily mistaken for "an old ferret slowing down". The biochemistry is unambiguous when looked for, and the treatment is well-established. Early recognition meaningfully changes the prognosis.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}
@@ -98,6 +120,7 @@ export default function FerretInsulinomaPage() {
                 Compare exotic-pet insurance →
               </a>
             </div>
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -107,13 +130,27 @@ export default function FerretInsulinomaPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Weight Management', href: '/diet/weight-management' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-insulinoma"
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="pathophys">What It Is</h2>
           <p>
             Insulinoma is a functional neoplasm of the pancreatic islet beta cells — the cells that produce insulin. The tumor cells continue to secrete insulin in an unregulated manner, independent of the normal feedback loop that suppresses insulin release when blood glucose is low. The result is chronic, intermittent, often severe hypoglycemia. Most ferret insulinomas are classified histopathologically as adenomas or low-grade adenocarcinomas. Metastasis to regional lymph nodes and liver does occur but is less common than the equivalent canine disease.
@@ -213,18 +250,7 @@ export default function FerretInsulinomaPage() {
             A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Primary references for this page:
-          </p>
-          <ul>
-            <li>Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery.</em> 4th ed. Saunders/Elsevier. The ferret endocrine-disease chapter is the standard reference for insulinoma diagnosis and management.</li>
-            <li><em>Veterinary Clinics of North America: Exotic Animal Practice</em>, multiple issues covering ferret endocrine disease. The journal’s ferret-focused special issues are the deepest peer-reviewed treatments of insulinoma available.</li>
-            <li><em>Journal of the American Veterinary Medical Association (JAVMA)</em>, case series and retrospective studies on ferret insulinoma diagnosis, surgical outcomes, and medical management.</li>
-            <li><em>Journal of Exotic Pet Medicine</em>, clinical articles on ferret oncology and endocrinology.</li>
-            <li>American Ferret Association (AFA) owner-facing position statements on diet, insulinoma awareness, and emergency response.</li>
-            <li>Association of Exotic Mammal Veterinarians (AEMV), which maintains a directory of exotic-mammal-credentialed clinicians for owners seeking surgical or specialist consultation.</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about insulinoma in ferrets. It is not individualized veterinary advice. Any ferret with signs consistent with hypoglycemia needs to be evaluated by a veterinarian familiar with ferrets — ideally a clinician with active AEMV membership or board certification in exotic-companion-mammal practice.
           </p>

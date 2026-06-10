@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
 
@@ -71,7 +72,19 @@ export default function DiagnosticsHubPage() {
       { name: 'Diagnostics', url: 'https://vets.co/diagnostics' },
     ],
   })
-  const schema = combineSchemas(breadcrumbSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Veterinary Diagnostic Tests',
+    numberOfItems: Diagnostics.length,
+    itemListElement: Diagnostics.map((d, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: d.testName,
+      url: `https://vets.co/diagnostics/${d.slug}`,
+    })),
+  }
+  const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
     <>
@@ -128,6 +141,10 @@ export default function DiagnosticsHubPage() {
           </a>
           .
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="vets-co:diagnostics-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">

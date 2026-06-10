@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function FerretInsuranceBasicsPage() {
             "Ferrets get expensive in their senior years, and that is exactly when owners start asking whether pet insurance is worth it. This is an educational overview — not a recommendation of any carrier — of how exotic-pet coverage generally works for ferrets: what it tends to cover, what it usually does not, why timing matters so much, and how it stacks up against simply saving for the vet yourself.",
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -85,8 +84,22 @@ export default function FerretInsuranceBasicsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <CalloutBox variant="info" title="Educational only">
             <p>
               This page explains how exotic-pet insurance works in general. It

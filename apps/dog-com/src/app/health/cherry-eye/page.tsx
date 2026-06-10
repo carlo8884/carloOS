@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Cherry Eye (Prolapsed Nictitating Membrane Gland)', url: 'https://www.merckvetmanual.com/eye-and-ear/ophthalmology/cherry-eye-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'American College of Veterinary Ophthalmologists (ACVO): Ocular Conditions in Dogs', url: 'https://www.acvo.org/general-public-2/eye-conditions', publisher: 'ACVO' },
+  { label: 'AVMA: Eye Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Mazzucchelli S et al. Retrospective study of 155 dogs undergoing pocket technique for correction of prolapse of the nictitating membrane gland. Vet Rec. 2012;170(4):95.', publisher: 'Vet Record' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction", path: '/health/cherry-eye', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cherry Eye in Dogs', description: 'Prolapsed third eyelid gland — causes, surgical correction, and why manual replacement fails.', url: 'https://dog.com/health/cherry-eye', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +28,7 @@ export default function CherryEyePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Cherry Eye in Dogs', subtitle: 'That red mass appearing at the inner corner of your dog\'s eye is cherry eye — the prolapse of the third eyelid gland (nictitating membrane gland). It looks alarming but is not immediately painful. It does, however, require surgical correction — not manual replacement, which almost always fails.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cherry Eye', href: '/health/cherry-eye' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Dental Care', href: '/health/dog-dental-care', category: 'Dog Health' }, { title: 'Dog Ear Infections', href: '/health/dog-ear-infections', category: 'Dog Health' }, { title: 'Dog Allergies', href: '/health/dog-allergies', category: 'Dog Health' }, { title: 'French Bulldog Health', href: '/health/french-bulldog-health', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Most Affected Breeds</div>
@@ -28,6 +37,7 @@ export default function CherryEyePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Health', href: '/breeds/bulldog' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cherry-eye" />
         </>}
       >
@@ -49,6 +59,8 @@ export default function CherryEyePage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

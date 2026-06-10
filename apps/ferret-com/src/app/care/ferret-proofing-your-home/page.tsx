@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,22 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
+
 export default function FerretProofingPage() {
   return (
     <>
@@ -36,7 +52,6 @@ export default function FerretProofingPage() {
             'A ferret will find every gap, every hazard, and every soft object in a room within its first hour loose. Ferret-proofing is not optional housekeeping — it is the precondition for the daily out-of-cage time a ferret must have. This is the room-by-room checklist.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}
@@ -66,6 +81,7 @@ export default function FerretProofingPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +91,22 @@ export default function FerretProofingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how-differ">How Ferret-Proofing Differs From Puppy-Proofing</h2>
           <p>
             People who have child- or puppy-proofed a home tend to assume they are most of the way there. They are not. Ferrets break three of the assumptions that ordinary baby-proofing relies on. They <strong>squeeze through any opening their skull fits through</strong> — the body deforms around the skeleton, so an opening that looks far too small is not. They <strong>investigate by mouthing soft objects</strong>, which turns a huge range of household items into ingestion hazards. And they <strong>climb anything with texture</strong>, reaching shelves and surfaces a puppy never could. A room that is safe for a crawling baby can be lethal for a loose ferret.
@@ -141,10 +171,7 @@ export default function FerretProofingPage() {
             This dedicated room is what makes the daily out-of-cage time workable. Ferrets are not cage animals; they need several hours out every day, and a single thoroughly proofed room is far safer and easier to maintain than ad-hoc whole-house access. From there you can expand to additional proofed rooms as your confidence and the proofing grow.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Foreign-body, appliance-injury, and household-hazard discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), case literature in the <em>Journal of Exotic Pet Medicine</em>, and American Ferret Association (AFA) owner-education materials. Toxic-plant references align with veterinary toxicology resources for small mammals. This page is general safety guidance. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -8,6 +8,13 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Reference index of equine supplement categories with evidence-anchored guidance — joint, hoof, gastric, and beyond.',
   path: '/supplements',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Supplements', url: 'https://horses.com/supplements' },
+  ],
 })
 
 const CATEGORIES = [
@@ -19,9 +26,20 @@ const CATEGORIES = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Horse Supplement Categories',
+  numberOfItems: CATEGORIES.length,
+  itemListElement: CATEGORIES.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.title, url: `https://horses.com/supplements/${x.slug}` })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function SupplementsHubPage() {
   return (
     <>
+      <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />

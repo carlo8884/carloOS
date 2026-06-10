@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function FirstWeekChecklistPage() {
             'The first week sets the tone for everything that follows. A new ferret arrives stressed by the move, and a calm, structured introduction to its home builds the trust that makes training and bonding possible. This is a day-by-day plan — what to have ready before the ferret arrives, and how to pace the first seven days without overwhelming a small, nervous animal.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -86,12 +85,49 @@ export default function FirstWeekChecklistPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'First-Year Schedule', href: '/first-year-schedule' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="before">Before You Bring It Home</h2>
           <p>
             Have the essentials in place before the ferret arrives, so its first day is calm rather than chaotic. The core setup: a properly sized multi-level cage with hammocks and bedding, litter boxes and ferret-safe litter, food and water dishes (a heavy ceramic bowl plus an optional backup bottle), a starter supply of an appropriate food — ideally the same one the ferret has been eating, to avoid an immediate diet change — and a carrier. Confirm ferrets are legal where you live before any of this (see <a href="/ownership/ferret-legality-by-state">legality by state</a>), and ferret-proof at least one room: ferrets squeeze through gaps as small as an inch or two, chew and swallow soft rubber and foam, and climb into appliances. The full cage and proofing detail is on the <a href="/care/cage-setup">cage setup</a> page.
           </p>
+
+          <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6">
+            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Getting the core setup together</p>
+            <p className="mt-2 text-base font-semibold text-brand-text-dark">See the starter essentials</p>
+            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
+              The ferret starter essentials page collects the day-one core above — cage, bedding, litter,
+              food and water, and a carrier — in one place so nothing is missing on arrival day. For the
+              non-commercial reference version, the{' '}
+              <a href="/ownership/ferret-supplies-checklist" className="text-brand-primary underline-offset-2 hover:underline">supplies checklist</a>{' '}
+              walks the same categories with no links.
+            </p>
+            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
+              The starter essentials page includes affiliate links; we may earn a commission at no extra
+              cost to you, and we never accept payment for favorable placement.{' '}
+              <a href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">Disclosure</a>.
+            </p>
+            <a
+              href="/ferret-starter-kit"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
+            >
+              See the ferret starter essentials &rarr;
+            </a>
+          </div>
 
           <h2 id="day1">Day 1: Arrival</h2>
           <p>

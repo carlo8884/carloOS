@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Tanichthys albonubes — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/tanichthys-albonubes/", publisher: "Seriously Fish" },
+  { label: "Tanichthys albonubes — FishBase species record", url: "https://www.fishbase.se/summary/Tanichthys-albonubes.html", publisher: "FishBase" },
+  { label: "Tanichthys albonubes — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/21449/9286097", publisher: "IUCN Red List" },
+  { label: "Kottelat, M. & Whitten, A.J. Freshwater Biodiversity in Asia. World Bank Technical Paper, 1996.", publisher: "World Bank" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WhiteCloudPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'White Cloud Mountain Minnow', subtitle: 'Tanichthys albonubes — the "poor man\'s neon tetra," though the nickname sells them short. These 1.5-inch fish from the mountain streams of southern China are hardier than neons, tolerant of cold water that most tropical fish cannot handle, and in peak condition display iridescent red tails and a brilliant lateral stripe. They are the ideal fish for unheated indoor tanks.', category: 'Species Guide — Cold Water', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'White Cloud Mountain Minnow', subtitle: 'Tanichthys albonubes — the "poor man\'s neon tetra," though the nickname sells them short. These 1.5-inch fish from the mountain streams of southern China are hardier than neons, tolerant of cold water that most tropical fish cannot handle, and in peak condition display iridescent red tails and a brilliant lateral stripe. They are the ideal fish for unheated indoor tanks.', category: 'Species Guide — Cold Water', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Zebra Danio", href: "/species/zebra-danio", category: "Species Guide" }, { title: "Celestial Pearl Danio", href: "/species/celestial-pearl-danio", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -19,10 +28,13 @@ export default function WhiteCloudPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Axolotl Care', href: '/species/axolotl' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-white-cloud" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
         <p>At tropical temperatures (78°F+), white clouds decline: their lifespan shortens significantly, their immune function is compromised, and they are less active and less colorful than at their preferred range. If you are running a heated tropical tank at 78°F, white clouds are not appropriate tankmates — keep them in their preferred temperature range where they thrive.</p>
@@ -39,7 +51,8 @@ export default function WhiteCloudPage() {
 
         <h2>Compatibility</h2>
         <p>Peaceful with all species of similar size that tolerate the same temperature range. Natural tankmates in the cold-water aquarium: other white clouds (same species colonies are especially active), Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches (love the same cool, oxygenated conditions), and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F+ — the temperature mismatch creates a chronic welfare problem for one or both species.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>White Cloud Mountain Minnow — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for white cloud mountain minnow care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -48,6 +61,7 @@ export default function WhiteCloudPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

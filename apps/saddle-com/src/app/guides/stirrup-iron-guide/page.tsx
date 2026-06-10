@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, ReviewCard, ScoreMethodology } from '@carloOS/ui'
+import { GuideMasthead } from '../../../components/GuideMasthead'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Stirrup Iron Guide 2025 — Safety Stirrups, Sizing | Saddle.com', description: 'Complete stirrup iron guide. Why safety stirrups matter, correct sizing (1 inch wider than boot), and which irons work for dressage, jumping, and trail riding.', path: '/guides/stirrup-iron-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Stirrup Iron Guide', description: 'Safety stirrups, sizing, and discipline selection for riders.', url: 'https://saddle.com/guides/stirrup-iron-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function StirrupIronGuidePage() {
@@ -10,16 +11,33 @@ export default function StirrupIronGuidePage() {
       hero={{ title: 'Stirrup Iron Guide', subtitle: 'The stirrup iron is a safety-critical piece of equipment. A foot caught in a traditional stirrup during a fall drags the rider. Safety stirrups prevent this — and modern designs are both safer and more ergonomic than traditional alternatives.', category: 'Equipment Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Stirrup Iron Guide', href: '/guides/stirrup-iron-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Stirrup Irons', href: '/reviews/best-stirrup-irons', category: 'Reviews' },
+        { title: 'Best Stirrups', href: '/reviews/best-stirrups', category: 'Reviews' },
+        { title: 'Best Riding Boots', href: '/reviews/best-riding-boots', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Sizing Rule</div>
           <p className="text-xs text-brand-text-mid leading-relaxed m-0">Stirrup width should be 1 inch wider than your boot at its widest point. Too narrow — foot gets stuck. Too wide — foot slides through. Measure your boot, add 1 inch.</p>
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Stirrup Irons', href: '/reviews/best-stirrup-irons' }, { label: 'Best Stirrups', href: '/reviews/best-stirrups' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and fitting guides." source="guides-stirrups" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <GuideMasthead
+          manifestKey="saddle-com:guide-stirrup-iron"
+          fallbackKey="saddle-com:hub-english"
+          eyebrow="Equipment Guide"
+          standfirst="A foot caught in a traditional iron during a fall drags the rider — and modern safety designs are both safer and more ergonomic than the irons they replace."
+          alt="A rider's foot positioned in a stirrup iron"
+        />
+
         <h2>Why Safety Stirrups Matter</h2>
         <p>Traditional solid-sided stirrups (fillis irons) are a drag-risk in a fall. If the foot does not clear the iron, the rider is dragged. Every year, dragging accidents cause serious injury and death in equestrian sports. Modern safety stirrups — with breakaway sides, angled treads, or open designs — significantly reduce this risk. There is no competitive disadvantage to safety stirrups. There is a meaningful safety advantage. The question is not whether to use them but which design works best for your discipline and riding style.</p>
 
@@ -51,6 +69,67 @@ export default function StirrupIronGuidePage() {
 
         <h2>Stirrup Leathers</h2>
         <p>The leather connecting the stirrup to the saddle matters as much as the iron. Leather stretches unevenly — after years of right-hand mounting (or left in UK tradition), one leather is longer than the other. Replace leathers in pairs every 2–3 years or when visible stretching creates uneven length. Synthetic leathers (nylon-core) are more consistent in length over time — used by serious competitive riders who want perfectly even leathers. Biothane leathers are waterproof and very durable for trail riding.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2>Safety-Stirrup Picks</h2>
+        <p>
+          Two designs tied directly to the article above — an open-branch jumping stirrup (the lateral-release
+          design the &quot;Types&quot; section recommends for jumping and eventing) and the original rubber-band
+          peacock (the budget entry the article flags for trail and schooling, with the annual-band-replacement
+          caveat). A documented-spec comparison of widely-stocked US/EU equestrian safety stirrups; this page
+          does not claim hands-on testing. For full discipline-by-discipline coverage see the{' '}
+          <Link href="/reviews/best-stirrup-irons" className="text-brand-primary hover:underline">best stirrup irons</Link> ranking.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="open-branch-stirrup"
+          badge="Best for Jumping"
+          badgeEmoji="🏇"
+          name="Open-Branch Safety Stirrup (Freejump-style)"
+          subtitle="The outer branch is open so the foot slides free laterally in a fall"
+          score={9.0}
+          description={
+            <p>The article&apos;s &quot;Types of Safety Stirrups&quot; section names open-outer-branch designs (Freejump and similar) as the durable, consistent-release choice for jumping and eventing, where a reliable release at speed is non-negotiable. More expensive than band stirrups, but the lateral-release geometry has no rubber band to dry out and replace.</p>
+          }
+          specs={[
+            { label: 'Release', value: 'Open outer branch — lateral', highlight: 'good' },
+            { label: 'Best for', value: 'Jumping, eventing', highlight: 'good' },
+            { label: 'Tread width', value: 'Size 1in wider than boot' },
+            { label: 'Maintenance', value: 'No band to replace' },
+          ]}
+          pros={['Consistent release at speed', 'No rubber band to dry out', 'Durable for regular jumping']}
+          cons={['Premium price vs. band stirrups', 'Heavier than composite trail irons']}
+          price="$100–250"
+          ctaText="Find open-branch safety stirrups"
+          ctaHref="/go/amazon-brand/freejump+soft+up+pro+stirrup?s=guides-stirrup-iron-guide"
+          ctaAffiliateProgram="amazon"
+          ctaAffiliateProduct="open-branch-stirrup"
+        />
+        <ReviewCard
+          id="peacock-safety-stirrup"
+          badge="Budget Safety"
+          badgeEmoji="🛡️"
+          name="Peacock Safety Stirrup (Rubber-Band Side)"
+          subtitle="The original safety iron — one side releases under pressure"
+          score={7.8}
+          description={
+            <p>The original safety stirrup the article describes: one side of the iron is a rubber band that releases under load. Inexpensive and reliable <em>provided</em> the band is replaced annually before it dries out and loses elasticity — the article&apos;s key caveat. A sound entry point for schooling and trail; the asymmetric design affects some riders&apos; position.</p>
+          }
+          specs={[
+            { label: 'Release', value: 'Rubber-band side', highlight: 'good' },
+            { label: 'Best for', value: 'Schooling, trail, budget' },
+            { label: 'Upkeep', value: 'Replace band annually' },
+            { label: 'Tread width', value: 'Size 1in wider than boot' },
+          ]}
+          pros={['Lowest-cost safety design', 'Widely available', 'Simple, proven mechanism']}
+          cons={['Band must be replaced annually', 'Release less consistent than open-branch', 'Asymmetric design affects some positions']}
+          price="$30–50"
+          ctaText="Find peacock safety stirrups"
+          ctaHref="/go/amazon-brand/korsteel+peacock+safety+stirrup?s=guides-stirrup-iron-guide"
+          ctaAffiliateProgram="amazon"
+          ctaAffiliateProduct="peacock-safety-stirrup"
+        />
       </div>
     </ArticleLayout>
   )

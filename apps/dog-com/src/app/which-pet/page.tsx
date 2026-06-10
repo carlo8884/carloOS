@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getSiteConfig } from '@carloOS/config'
 import {
   ArticleLayout,
+  ArticleByline,
   FAQAccordion,
   SchemaScript,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
@@ -104,14 +105,7 @@ const FAQS = [
 
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Dog.com', url: 'https://dog.com' },
-    { name: 'Which Pet Should I Get?', url: PAGE_URL },
-  ],
-})
-
-const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema, breadcrumbSchema)
+const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema)
 
 // ─── Sister-site canonical URLs (sourced from siteConfigs) ──────────────────
 
@@ -202,6 +196,7 @@ export default function WhichPetPage() {
           readTime: '3 min',
         }}
       >
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
           Picking the right species — not just the right breed — is the single biggest predictor of whether a pet relationship works. Roughly 6.3 million companion animals enter U.S. shelters each year (ASPCA, 2024 figures); the most common reason cited at intake is a mismatch between owner expectations and species reality.
@@ -217,6 +212,36 @@ export default function WhichPetPage() {
         <div className="mb-12 not-prose">
           <WhichPetWizard />
         </div>
+
+        {/* Result next-step — for a dog-leaning result, the natural next step is
+            narrowing to a breed. One soft, internal editorial path (no
+            commercial link here — this is a top-of-funnel species decision). */}
+        <section className="mb-12 not-prose">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Leaning toward a dog?
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              If your top match is a dog, the next decision is which breed fits your home
+              and schedule. Take the breed-match wizard, then read the full care guide for
+              any breed you are considering before you commit.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/breeds/match"
+                className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Find your breed match →
+              </Link>
+              <Link
+                href="/breeds"
+                className="inline-block border border-brand-border text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+              >
+                Browse breed care guides →
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Static results — SEO + AI crawl visibility */}
         <section className="mb-12">

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Navicular Syndrome — Caudal Heel Pain, Diagnosis, Management",
   description:
-    "Reference guide to navicular syndrome (caudal heel pain): anatomy of the podotrochlear apparatus, signs, MRI and nerve-block diagnosis, farriery, and management.",
+    "Reference guide to navicular syndrome (caudal heel pain): podotrochlear apparatus anatomy, signs, MRI and nerve-block diagnosis, farriery, and management.",
   path: '/health/navicular-syndrome',
   type: 'article',
 })
@@ -65,6 +65,12 @@ export default function NavicularPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Osteoarthritis', href: '/health/osteoarthritis' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+        ]}
         hero={{
           title: "Navicular Syndrome",
           subtitle:
@@ -101,6 +107,7 @@ export default function NavicularPage() {
               { label: "The Farrier Schedule", href: "/care/farrier-schedule" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -111,6 +118,13 @@ export default function NavicularPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="anatomy">The Anatomy</h2>
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
 

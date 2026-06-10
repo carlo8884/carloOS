@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,23 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner education on travel, carrier safety, and temperature management",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
+
 export default function TravelAndCarriersPage() {
   return (
     <>
@@ -36,7 +53,6 @@ export default function TravelAndCarriersPage() {
             'Most ferret travel is short — a carrier ride to the vet and back. But the same principles that make a vet trip safe apply to a road trip or a move: the right carrier, a temperature-controlled vehicle, water on the road, and a plan for stress. Here is how to do it without turning a routine trip into an emergency.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -66,6 +82,7 @@ export default function TravelAndCarriersPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +92,22 @@ export default function TravelAndCarriersPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Traveling With a Ferret', href: '/ownership/traveling-with-a-ferret' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="carrier">Choosing a Carrier</h2>
           <p>
             A ferret carrier needs three things a generic small-pet box often lacks: secure latching, ventilation, and an interior the ferret cannot turn into an escape puzzle. A hard-sided plastic carrier of the type sold for cats and small dogs works well and is easy to clean if there is a litter accident. Soft-sided carriers are lighter and cozier but must have zippers a ferret cannot work open — ferrets are skilled at manipulating zippers and latches, and a determined ferret will test every seam.
@@ -135,10 +166,7 @@ export default function TravelAndCarriersPage() {
             Air travel is more involved and far less routine. Airline policies on ferrets vary widely and many carriers do not accept them in the cabin or as cargo at all; some jurisdictions restrict or prohibit ferrets entirely, which makes destination legality a real concern. Anyone planning to fly with a ferret should confirm the specific airline's current pet policy in writing and verify that ferrets are legal at the destination well before booking. Health documentation and a recent veterinary check are typically required. Because the rules change and differ by carrier and region, treat air travel as something to research case by case rather than assume.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Travel-safety, thermoregulation, and metabolism discussion draws on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. Airline and destination-legality policies vary and should be confirmed directly with the carrier and relevant authorities. This page is general guidance and does not recommend specific products to purchase. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

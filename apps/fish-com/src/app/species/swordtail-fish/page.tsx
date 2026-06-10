@@ -1,15 +1,25 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
+  AffiliateDisclosure,
+  ArticleByline,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Xiphophorus hellerii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/xiphophorus-hellerii/", publisher: "Seriously Fish" },
+  { label: "Xiphophorus hellerii — FishBase species record", url: "https://www.fishbase.se/summary/Xiphophorus-hellerii.html", publisher: "FishBase" },
+  { label: "Basolo, A.L. Female Preference Predates the Evolution of the Sword in Swordtail Fish. Science, 250(4982), 808–810, 1990.", publisher: "Science" },
+  { label: "Rosen, D.E. & Bailey, R.M. The Poeciliid Fishes (Cyprinodontiformes). Bulletin of the AMNH, 1963.", publisher: "American Museum of Natural History" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -102,7 +112,6 @@ export default function SwordtailPage() {
             'Xiphophorus hellerii — named for the elongated lower caudal lobe that forms the male’s "sword." Hard-water livebearers from Mexico and Central America, intensely studied as a model for sex determination, and one of the easiest aquarium species to breed accidentally to the point of overpopulation.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
@@ -111,6 +120,7 @@ export default function SwordtailPage() {
           { name: 'Species', href: '/species' },
           { name: 'Swordtail', href: '/species/swordtail-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -146,6 +156,7 @@ export default function SwordtailPage() {
                 { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -157,6 +168,8 @@ export default function SwordtailPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-swordtail-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A swordtail in a home aquarium." priority />
           <h2>The Fish in One Paragraph</h2>
           <p>
             Swordtails are hard-water livebearers from the Atlantic slope of Mexico, Belize, Guatemala,
@@ -354,7 +367,8 @@ export default function SwordtailPage() {
             includeSchema={false}
             allowMultiple
           />
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Swordtail Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for swordtail fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -363,6 +377,7 @@ export default function SwordtailPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

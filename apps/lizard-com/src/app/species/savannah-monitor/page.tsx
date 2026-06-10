@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Savannah Monitor Care Guide — Burrowing, Heat, Diet | Lizard.com', description: 'Savannah monitor (Varanus exanthematicus) care. 18+ inch substrate for burrowing, 130–150°F basking, insectivorous diet, avoiding the obesity epidemic.', path: '/species/savannah-monitor', type: 'article' })
@@ -25,8 +25,16 @@ export default function SavannahMonitorPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Savannah Monitor Care Guide', subtitle: 'Varanus exanthematicus — the African savannah monitor is a powerful, intelligent, burrowing insectivore that is among the most consistently mis-kept reptiles in the pet trade. Done right, a 15–20 year companion; done wrong, an obese 6-year tragedy.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
+        hero={{ title: 'Savannah Monitor Care Guide', subtitle: 'Varanus exanthematicus — the African savannah monitor is a powerful, intelligent, burrowing insectivore that is among the most consistently mis-kept reptiles in the pet trade. Done right, a 15–20 year companion; done wrong, an obese 6-year tragedy.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Savannah Monitor', href: '/species/savannah-monitor' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Nile Monitor Care', href: '/species/nile-monitor', category: 'Species' },
+          { title: 'Argentine Tegu Care', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+          { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+          { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+          { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>
@@ -39,9 +47,11 @@ export default function SavannahMonitorPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Argentine Tegu Care', href: '/species/tegu' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-savannah-monitor" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Savannah monitors</strong> (<em>Varanus exanthematicus</em>) are West African burrowing lizards that are routinely mis-kept in the pet trade and routinely die early as a result. Done correctly, they require an 8×4×4 ft minimum adult enclosure with 18+ inches of burrow-grade substrate, 130–150°F basking surface temperatures, Arcadia 12% UVB, and an overwhelmingly insectivorous diet (large dubia roaches, hornworms, crickets, snails) with rodents used minimally if at all. The obesity epidemic in pet savannah monitors — fed all-rodent diets in small enclosures with shallow substrate — is a husbandry failure, not a species failure. Wild-caught imports require strict 60–90 day quarantine with veterinary fecal exams.</p>
 
@@ -124,6 +134,7 @@ export default function SavannahMonitorPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Savannah Monitor — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for savannah monitor care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

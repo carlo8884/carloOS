@@ -9,11 +9,14 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +42,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'DIY Enrichment Toys', url: 'https://ferret.com/behavior/diy-enrichment-toys' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +67,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry and GI foreign-body chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret enrichment, welfare, and GI foreign bodies",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — enrichment and toy-safety owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretDIYEnrichmentPage() {
   return (
@@ -85,7 +97,6 @@ export default function FerretDIYEnrichmentPage() {
             "Ferrets are relentlessly curious, easily bored, and absurdly easy to delight. You do not need an expensive shopping cart to keep one stimulated — a few cardboard boxes, a length of hose, and some household odds and ends go a remarkably long way. Here are safe, cheap, ferret-tested ideas, plus the safety rules that keep DIY fun from becoming a vet emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -104,6 +115,7 @@ export default function FerretDIYEnrichmentPage() {
                 { label: 'Foraging Games', href: '#forage' },
                 { label: 'Safety Rules', href: '#safety' },
                 { label: 'Toy Rotation', href: '#rotation' },
+                { label: 'Ready-Made Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -125,7 +137,14 @@ export default function FerretDIYEnrichmentPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Digging & Burrowing', href: '/behavior/digging-and-burrowing' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -281,26 +300,66 @@ export default function FerretDIYEnrichmentPage() {
             guide</a>.
           </p>
 
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Ready-Made Picks</h2>
+          <p>
+            Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-pop-n-play-diy"
+            badge="Tunnel Set"
+            name="Marshall Pop-N-Play Tunnel Set"
+            subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
+            score={8.6}
+            winner
+            description={
+              <p>DIY tunnels (dryer hose, cardboard tubes) are genuinely good, but the Marshall set earns its place because the fabric diameter is designed for ferret bodies, it chains to itself for longer circuits, and it folds flat when not in use. A length of dryer hose and a cardboard tunnel box are excellent supplements; the Pop-N-Play is the better primary tunnel for consistent daily use.</p>
+            }
+            specs={[
+              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
+              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
+              { label: 'Connectivity', value: 'Multi-tunnel chain' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+              { label: 'Storage', value: 'Folds flat' },
+            ]}
+            pros={['Correct ferret body diameter', 'Chainable for longer courses', 'Machine washable', 'Compact storage']}
+            cons={['Fabric wears in heavy-chewer households — inspect the internal wire periodically']}
+            price="$15–30"
+            ctaText="Find Marshall Pop-N-Play tunnels"
+            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-diy-enrichment"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="pop-n-play-tunnel"
+          />
+          <ReviewCard
+            id="snuffle-mat-ferret"
+            badge="Foraging"
+            name="Snuffle Mat (Dog/Small-Pet)"
+            subtitle="Rubber-backed fabric mat with pockets for hiding treats — nose-work puzzle"
+            score={7.8}
+            description={
+              <p>A snuffle mat — the kind sold for dogs — works well for ferrets as a foraging puzzle. Tuck small, high-protein treat pieces into the fabric pockets; the ferret roots them out by scent. Mental exercise in five minutes. Avoid mats with loose rubber loops or stringy fabric the ferret can chew off and swallow. Look for a mat with dense, firmly attached fabric strips and a solid rubber base.</p>
+            }
+            specs={[
+              { label: 'Drive targeted', value: 'Foraging / nose-work', highlight: 'good' },
+              { label: 'Time to engage', value: '3–8 minutes per session' },
+              { label: 'Washable', value: 'Most brands — hand wash or gentle cycle' },
+              { label: 'Safety note', value: 'Choose dense-fabric, not loose-loop styles' },
+            ]}
+            pros={['Mental enrichment in minutes', 'Works with treats already on hand', 'Compact and portable', 'Easy to wash']}
+            cons={['Loose-loop mats can shed chewable pieces — inspect before each use', 'Ferrets finish the treats quickly; limited session length']}
+            price="$10–20"
+            ctaText="Find snuffle mats for ferrets"
+            ctaHref="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="snuffle+mat+small+pet"
+          />
+
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret husbandry chapters and the gastrointestinal foreign-body
-              literature.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              enrichment, welfare, and GI foreign bodies.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing enrichment and
-              toy-safety guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General enrichment and behaviour information about ferrets, not
             individualized veterinary advice. Suspected toy ingestion or

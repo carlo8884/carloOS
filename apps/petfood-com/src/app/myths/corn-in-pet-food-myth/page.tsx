@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function CornInPetFoodMythPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function CornInPetFoodMythPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'Corn in Pet Food Myth', href: '/myths/corn-in-pet-food-myth' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The By-Products Myth', href: '/myths/by-products-myth' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
+        { title: 'Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function CornInPetFoodMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Corn is accused of two things in pet food: being an indigestible filler, and being a common allergen. Both claims are widely repeated and weakly supported. Properly cooked corn is well digested by dogs, contributes meaningful nutrients, and is an uncommon cause of food allergy relative to animal proteins. The corn myth is a clear case of marketing outrunning evidence. See <a href="/myths/fillers-myth">Pet Food Fillers Myth</a>.</p>
         <h2 id="claims">The Claims</h2>
         <p>The two charges against corn are that it is cheap filler with little nutritional value, and that it commonly causes allergies. These claims underpin grain-free and corn-free marketing. Examined separately, the digestibility claim is wrong for properly processed corn, and the allergy claim overstates a relatively rare problem.</p>
@@ -94,12 +121,7 @@ export default function CornInPetFoodMythPage() {
         <h2 id="verdict">The Verdict</h2>
         <p>Corn is neither an indigestible filler nor a common allergen. Properly processed, it is digestible and contributes energy, essential fatty acids, and protein. Corn allergy is uncommon. There is no general reason to avoid corn, and corn-free is a marketing position rather than a health upgrade. Judge a diet on its overall formulation, not the presence of corn. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

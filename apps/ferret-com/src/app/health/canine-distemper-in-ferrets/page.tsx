@@ -9,12 +9,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret infectious disease chapter covering canine distemper virus pathogenesis and near-universal mortality.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Canine Distemper in Ferrets: morbillivirus susceptibility, transmission, clinical course, and vaccination",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/canine-distemper-in-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret vaccination protocols and practitioner continuing-education resources",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Veterinary Medical Association (AVMA) — ferret distemper and rabies vaccination guidance for companion exotic species",
+    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
+    publisher: "AVMA",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Canine Distemper', url: 'https://ferret.com/health/canine-distemper-in-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretCanineDistemperPage() {
   return (
@@ -100,7 +117,6 @@ export default function FerretCanineDistemperPage() {
             'Canine distemper is the single most important reason ferrets are vaccinated. In an unvaccinated ferret it is almost always fatal — and it can reach even a strictly indoor pet. This is preventable, and prevention is the whole story.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -131,6 +147,7 @@ export default function FerretCanineDistemperPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -140,7 +157,14 @@ export default function FerretCanineDistemperPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Vaccinations', href: '/health/vaccinations' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Ferret Influenza', href: '/health/ferret-influenza' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -272,26 +296,7 @@ export default function FerretCanineDistemperPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret infectious disease chapter.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret viral disease and vaccination.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              canine distemper in ferrets.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing distemper and
-              vaccination guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about canine distemper in
             ferrets. It is not individualized veterinary advice. Vaccination

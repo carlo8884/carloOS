@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Mossy Leaf-Tail Gecko Care — Uroplatus sikorae | Lizard.com', description: 'Uroplatus sikorae care for advanced keepers. 75–90% humidity, 68–78°F, Madagascar montane rainforest setup, captive-bred only, IUCN-listed.', path: '/species/mossy-leaf-tail-gecko', type: 'article' })
@@ -25,8 +25,16 @@ export default function MossyLeafTailGeckoPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Mossy Leaf-Tail Gecko Care Guide', subtitle: 'Uroplatus sikorae — Madagascar\'s mossy leaf-tailed gecko is one of the most spectacular camouflage specialists in herpetology. It is also one of the most demanding species in the hobby. Captive-bred only, advanced keepers only, IUCN Vulnerable.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '14 min' }}
+        hero={{ title: 'Mossy Leaf-Tail Gecko Care Guide', subtitle: 'Uroplatus sikorae — Madagascar\'s mossy leaf-tailed gecko is one of the most spectacular camouflage specialists in herpetology. It is also one of the most demanding species in the hobby. Captive-bred only, advanced keepers only, IUCN Vulnerable.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2026', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Mossy Leaf-Tail Gecko', href: '/species/mossy-leaf-tail-gecko' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+          { title: 'Leachianus Gecko Care', href: '/species/leachianus-gecko', category: 'Species' },
+          { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+          { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+          { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>
@@ -39,9 +47,11 @@ export default function MossyLeafTailGeckoPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Crested Gecko Care', href: '/species/crested-gecko' }, { label: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko' }, { label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }, { label: 'Respiratory Infection', href: '/health/respiratory-infection' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-mossy-leaf-tail-gecko" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Mossy leaf-tail geckos</strong> (<em>Uroplatus sikorae</em>) are Madagascan rainforest geckos with the most refined dermal-flap and color-change camouflage of any reptile in the trade. They require a tightly controlled humidity envelope (75–90% RH cycling daily), cool stable temperatures (68–78°F day, hard ceiling 80°F), a planted vertical enclosure with strong ventilation, and an experienced keeper. Captive-bred only — wild-caught animals carry heavy parasite loads, fail to acclimate, and contribute to the decline of an IUCN Vulnerable species. Handling is contraindicated as a default.</p>
 
@@ -135,6 +145,7 @@ export default function MossyLeafTailGeckoPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Mossy Leaf Tail Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for mossy leaf tail gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -112,7 +113,6 @@ export default function AquariumCyclingEstimatorPage() {
           'How long will my new tank take to cycle? Pick a method and temperature; the estimator returns days to completion and a phase-by-phase timeline.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🔬',
         publishedAt: 'May 2026',
         readTime: '4 min',
       }}
@@ -122,6 +122,7 @@ export default function AquariumCyclingEstimatorPage() {
         { name: 'Cycling Estimator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
       sidebar={
         <>
           <TableOfContents
@@ -159,6 +160,7 @@ export default function AquariumCyclingEstimatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2 id="estimator">The estimator</h2>
         <p>
@@ -223,7 +225,11 @@ export default function AquariumCyclingEstimatorPage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair the estimator with our <Link href="/water-parameters">water parameters reference</Link> and <Link href="/reviews/best-water-test-kits">test kit reviews</Link>. New aquarists: this is the single most important step in your setup.
+          Pair the estimator with our <Link href="/water-parameters">water parameters reference</Link> and{' '}
+          <Link href="/reviews/best-water-test-kits">test kit reviews</Link> — the dose-and-wait test is the only reliable completion signal.
+          Filter media surface area is the main variable that changes cycling speed; see our{' '}
+          <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> for high-bio-media-volume picks.
+          New aquarists: this is the single most important step in your setup.
         </p>
       </div>
     </ArticleLayout>

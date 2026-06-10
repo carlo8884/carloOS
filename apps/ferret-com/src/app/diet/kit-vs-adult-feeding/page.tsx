@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function KitVsAdultFeedingPage() {
             'The most consequential window in a ferret’s dietary life is its first six months. What a kit learns to recognize as food during that period shapes what it will accept for the rest of its life. This page walks through feeding from weaning through adulthood and into the senior years, and explains why early variety is the best insurance you can give.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -86,8 +85,22 @@ export default function KitVsAdultFeedingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>
             Ferret kits wean from their mother's milk onto solid food at around six weeks of age and grow rapidly through their first several months. During this period their requirements sit at the high end of the ferret window — more protein and more fat to fuel growth (see <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>). Many keepers and breeders feed a high-quality kit or ferret diet free-choice during this stage, sometimes lightly moistened at first to ease the transition from milk to kibble. Whole-prey and raw feeders introduce appropriate raw food in this window as well. The constant is high-calorie, high-protein, animal-based nutrition available throughout the day, because a growing kit eats often.
@@ -128,7 +141,6 @@ export default function KitVsAdultFeedingPage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Ferret-Specific Diet"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
             score={8.0}

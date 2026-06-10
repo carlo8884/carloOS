@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "The Pre-Purchase Exam — Vetting a Horse Before You Buy",
   description:
-    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and how to use the results.",
+    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and using the results.",
   path: '/ownership/pre-purchase-exam',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "The Pre-Purchase Exam — Vetting a Horse Before You Buy",
   description:
-    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and how to use the results.",
+    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and using the results.",
   url: 'https://horses.com/ownership/pre-purchase-exam',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function PrePurchaseExamPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Choosing an Equine Vet', href: '/ownership/choosing-a-vet' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+        ]}
         hero={{
           title: "The Pre-Purchase Exam",
           subtitle:
@@ -99,6 +105,13 @@ export default function PrePurchaseExamPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="purpose">What the Exam Is For</h2>
           <p>A pre-purchase exam is a veterinary assessment of a horse&apos;s current health and soundness, carried out for a prospective buyer to inform the buying decision. Its purpose is not to pass or fail the horse, nor to guarantee its future, but to identify any existing problems and assess the horse&apos;s suitability for the buyer&apos;s intended use. A jumping prospect and a quiet trail horse are judged against different demands, so the buyer&apos;s plans shape what matters in the findings.</p>
 

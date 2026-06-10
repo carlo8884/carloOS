@@ -9,6 +9,10 @@ import {
   RelatedLinks,
   EmailCapture,
   BuyBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,6 +63,37 @@ const schema = combineSchemas(
   buildFAQSchema({ questions: FAQ }),
 )
 
+const SOURCES = [
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "U.S. Food and Drug Administration, Center for Veterinary Medicine. Recalls, Market Withdrawals and Safety Alerts database (Animal & Veterinary). Hill's January 2019 voluntary canned dog food recall (elevated vitamin D), expanded March 2019. Industry-wide 2007 melamine-contamination recalls (multiple brands including Royal Canin USA).",
+    },
+    {
+      label: "Colgate-Palmolive Company. Annual Reports and 10-K filings (NYSE: CL). Hill's Pet Nutrition segment financial disclosure.",
+    },
+    {
+      label: "Mars, Incorporated; Mars Petcare. Public communications and segment overviews. Royal Canin acquisition by Mars in 2002.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements; FSSC 22000 and SQF scheme documentation.",
+    },
+    {
+      label: "International Renal Interest Society (IRIS). Staging and dietary management guidance referenced in the renal-diet discussion.",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "FDA Food Safety Modernization Act (FSMA) and the Pet Food Safety Working Group recommendations following the 2007 melamine contamination episode.",
+    },
+]
+
 export default function HillsVsRoyalCaninPage() {
   return (
     <ArticleLayout
@@ -74,8 +109,13 @@ export default function HillsVsRoyalCaninPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+        { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
       schema={schema}
       sidebar={
@@ -98,9 +138,11 @@ export default function HillsVsRoyalCaninPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Kidney Disease — Renal Diets', href: '/conditions/kidney-disease-renal-diets' },
+              { label: 'Diabetes Diets', href: '/conditions/diabetes' },
+              { label: 'Condition-Specific Diets', href: '/conditions' },
+              { label: 'Prescription vs OTC Diets', href: '/compare/prescription-vs-otc-diets' },
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
-              { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
-              { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
             ]}
           />
@@ -115,6 +157,8 @@ export default function HillsVsRoyalCaninPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-hills-vs-royal-canin" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Hill's vs Royal Canin — a side-by-side reference comparison of the two largest veterinary therapeutic diet brands." />
         <p>
           Hill&apos;s Pet Nutrition and Royal Canin are the two largest companies in the U.S.
           veterinary therapeutic diet channel. They are the two brands a small-animal clinician is
@@ -128,8 +172,9 @@ export default function HillsVsRoyalCaninPage() {
           experience.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
-          label="Where to buy either brand"
+          label="Where to buy either brand (OTC retail lines only)"
           disclosure="Both brands are widely available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
           secondaryDisclosure="We never rank by commission."
           brands={[
@@ -149,6 +194,13 @@ export default function HillsVsRoyalCaninPage() {
             },
           ]}
         />
+        <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '-8px', marginBottom: '24px' }}>
+          These links surface the over-the-counter retail lines only. Therapeutic and prescription
+          diet lines (Hill&apos;s Prescription Diet, Royal Canin Veterinary Diet) require a
+          veterinary authorization and are dispensed through your veterinarian or a licensed
+          online pharmacy with a valid prescription. Therapeutic diets should be used only under
+          veterinary guidance. This is not medical advice.
+        </p>
 
         <h2 id="corporate">Corporate Context</h2>
         <p>
@@ -182,68 +234,71 @@ export default function HillsVsRoyalCaninPage() {
         </p>
 
         <h2 id="at-a-glance">At-a-Glance Comparison</h2>
-        <div style={{ background: 'rgba(31,26,20,0.04)', border: '1px solid rgba(31,26,20,0.10)', borderRadius: '10px', padding: '18px 22px', margin: '20px 0', overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', minWidth: '560px' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid rgba(31,26,20,0.18)' }}>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Dimension</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Hill&apos;s</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Royal Canin</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Parent</td>
-                <td style={{ padding: '8px 6px' }}>Colgate-Palmolive (NYSE: CL)</td>
-                <td style={{ padding: '8px 6px' }}>Mars, Incorporated (private)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Founded</td>
-                <td style={{ padding: '8px 6px' }}>1907 (Topeka, Kansas)</td>
-                <td style={{ padding: '8px 6px' }}>1968 (Aimargues, France)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Maintenance retail line</td>
-                <td style={{ padding: '8px 6px' }}>Science Diet</td>
-                <td style={{ padding: '8px 6px' }}>Royal Canin (size / breed / life-stage)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Veterinary therapeutic line</td>
-                <td style={{ padding: '8px 6px' }}>Prescription Diet</td>
-                <td style={{ padding: '8px 6px' }}>Veterinary Diet</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>AAFCO pathway (most adult lines)</td>
-                <td style={{ padding: '8px 6px' }}>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
-                <td style={{ padding: '8px 6px' }}>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Primary U.S. manufacturing</td>
-                <td style={{ padding: '8px 6px' }}>Owned plants in Kansas, Indiana, Tennessee, Iowa</td>
-                <td style={{ padding: '8px 6px' }}>Owned plants in South Dakota, Missouri</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>FDA CVM recall history (last decade)</td>
-                <td style={{ padding: '8px 6px' }}>Yes — 2019 canned excess vitamin D</td>
-                <td style={{ padding: '8px 6px' }}>Yes — periodic limited withdrawals</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Board-certified veterinary nutritionists on staff</td>
-                <td style={{ padding: '8px 6px' }}>Yes (disclosed; multiple DACVIM-Nutrition)</td>
-                <td style={{ padding: '8px 6px' }}>Yes (disclosed; multiple DACVIM-Nutrition and ECVCN)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Approximate price per 100 kcal (U.S. retail, 2025-2026)</td>
-                <td style={{ padding: '8px 6px' }}>$0.09–$0.20 (therapeutic higher)</td>
-                <td style={{ padding: '8px 6px' }}>$0.10–$0.22 (therapeutic higher)</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '8px 6px' }}>Positioning</td>
-                <td style={{ padding: '8px 6px' }}>Clinical/therapeutic heritage; broad veterinary channel</td>
-                <td style={{ padding: '8px 6px' }}>Breed/size/life-stage segmentation; broad veterinary channel</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="pf-compare">
+          <div className="pf-compare-caption">Hill&apos;s vs Royal Canin — side-by-side reference</div>
+          <div className="pf-compare-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Dimension</th>
+                  <th scope="col">Hill&apos;s</th>
+                  <th scope="col">Royal Canin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Parent</th>
+                  <td>Colgate-Palmolive (NYSE: CL)</td>
+                  <td>Mars, Incorporated (private)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Founded</th>
+                  <td>1907 (Topeka, Kansas)</td>
+                  <td>1968 (Aimargues, France)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Maintenance retail line</th>
+                  <td>Science Diet</td>
+                  <td>Royal Canin (size / breed / life-stage)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Veterinary therapeutic line</th>
+                  <td>Prescription Diet</td>
+                  <td>Veterinary Diet</td>
+                </tr>
+                <tr>
+                  <th scope="row">AAFCO pathway (most adult lines)</th>
+                  <td>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
+                  <td>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
+                </tr>
+                <tr>
+                  <th scope="row">Primary U.S. manufacturing</th>
+                  <td>Owned plants in Kansas, Indiana, Tennessee, Iowa</td>
+                  <td>Owned plants in South Dakota, Missouri</td>
+                </tr>
+                <tr>
+                  <th scope="row">FDA CVM recall history (last decade)</th>
+                  <td>Yes — 2019 canned excess vitamin D</td>
+                  <td>Yes — periodic limited withdrawals</td>
+                </tr>
+                <tr>
+                  <th scope="row">Board-certified veterinary nutritionists on staff</th>
+                  <td>Yes (disclosed; multiple DACVIM-Nutrition)</td>
+                  <td>Yes (disclosed; multiple DACVIM-Nutrition and ECVCN)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Approximate price per 100 kcal (U.S. retail, 2025-2026)</th>
+                  <td>$0.09–$0.20 (therapeutic higher)</td>
+                  <td>$0.10–$0.22 (therapeutic higher)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Positioning</th>
+                  <td>Clinical/therapeutic heritage; broad veterinary channel</td>
+                  <td>Breed/size/life-stage segmentation; broad veterinary channel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <h2 id="manufacturing">Manufacturing Footprint</h2>
@@ -466,46 +521,7 @@ export default function HillsVsRoyalCaninPage() {
           not support one.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee.
-            <em> Recommendations on Selecting Pet Foods</em>; <em>Global Nutrition Guidelines</em>.
-            Published guidance documents.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Recalls,
-            Market Withdrawals and Safety Alerts</em> database (Animal &amp; Veterinary).
-            Hill&apos;s January 2019 voluntary canned dog food recall (elevated vitamin D),
-            expanded March 2019. Industry-wide 2007 melamine-contamination recalls (multiple
-            brands including Royal Canin USA).
-          </li>
-          <li>
-            Colgate-Palmolive Company. Annual Reports and 10-K filings (NYSE: CL). Hill&apos;s
-            Pet Nutrition segment financial disclosure.
-          </li>
-          <li>
-            Mars, Incorporated; Mars Petcare. Public communications and segment overviews.
-            Royal Canin acquisition by Mars in 2002.
-          </li>
-          <li>
-            Global Food Safety Initiative. <em>GFSI Benchmarking Requirements</em>; FSSC 22000
-            and SQF scheme documentation.
-          </li>
-          <li>
-            International Renal Interest Society (IRIS). Staging and dietary management guidance
-            referenced in the renal-diet discussion.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 4 (AAFCO nutritional adequacy substantiation procedures: formulation and
-            feeding trial pathways).
-          </li>
-          <li>
-            FDA Food Safety Modernization Act (FSMA) and the Pet Food Safety Working Group
-            recommendations following the 2007 melamine contamination episode.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice and
           we do not endorse either brand. Selection of a therapeutic diet for a specific animal is

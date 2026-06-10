@@ -1,14 +1,22 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets.', path: '/species/frilled-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FrilledDragonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Frilled Dragon', href: '/species/frilled-dragon' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -21,9 +29,11 @@ export default function FrilledDragonPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Bearded Dragon', href: '/species/bearded-dragon' }, { label: 'Uromastyx', href: '/species/uromastyx' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-frilled-dragon" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Frill — What It Means</h2>
         <p>The frill is a skin membrane supported by elongated hyoid bones that can be rapidly erected by muscular contraction. It is richly vascular and is used for: thermoregulation (angling toward the sun to absorb heat, or fully spreading to increase surface area for cooling), communication between conspecifics (territorial displays between males, courtship displays toward females), and the defensive threat display (full frill erection combined with open mouth, body flattening, bipedal stance, hissing — designed to appear larger and more threatening to a predator). In captivity, a frilled dragon that displays willingly is a comfortable, confident animal. A frilled dragon that never displays is often one that is stressed, cold, or in an environment that suppresses normal behavior.</p>
         <p>The defensive display is not dangerous to humans — it is theatrical rather than functional. A frilled dragon that threat-displays at its keeper is communicating discomfort, not aggression. Regular, gentle interaction from a young age produces adults that display rarely at humans. The display is more commonly seen toward their own reflections in glass, toward other lizards, and when encountering new objects in the enclosure.</p>
@@ -41,6 +51,7 @@ export default function FrilledDragonPage() {
 
         <h2>Handling — Gradual Trust Building</h2>
         <p>Wild-caught frilled dragons are very difficult to tame and spend considerable time in defensive displays. Captive-bred juveniles, handled gently and consistently from 6-8 weeks old, become remarkably calm and interactive adults. The key is not forcing interaction but building positive associations: offer food from tongs then from the hand, allow the dragon to climb onto you voluntarily rather than grabbing, and keep initial sessions very short (5 minutes). A well-socialized adult frilled dragon is a genuinely impressive animal — large, responsive, and active in a way that smaller lizards cannot match.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Frilled Dragon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for frilled dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

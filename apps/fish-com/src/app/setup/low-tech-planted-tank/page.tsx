@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
+  { label: "Kasselmann, C. Aquarium Plants. Krieger Publishing, 2003.", publisher: "Krieger Publishing" },
+  { label: "Barr, T. & Roger, E. The Estimative Index of Dosing. Barr Report, 2004.", publisher: "Barr Report" },
+  { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Low-Tech Planted Tank — No CO2, Low Light, Low Effort | Fish.com', description: "How to run a thriving low-tech planted tank without pressurized CO2. Easy plants, modest light, light fertilization, and a slow, stable, beautiful balance.", path: '/setup/low-tech-planted-tank', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Low-Tech Planted Tank Guide', description: 'Running a planted aquarium without CO2 injection: easy plants, light, and fertilization.', url: 'https://fish.com/setup/low-tech-planted-tank', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function LowTechPlantedTankPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Low-Tech Planted Tank Guide', subtitle: "A low-tech planted tank runs without pressurized CO2 injection, on modest lighting and minimal fertilization. It grows more slowly than a high-tech setup, which is precisely its advantage: slower growth means less trimming, fewer nutrient swings, and far less algae. For most aquarists, a well-chosen low-tech tank is the most beautiful, most sustainable, and least demanding planted aquarium they can keep.", category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🌿', publishedAt: 'June 2026', readTime: '9 min' }}
+      hero={{ title: 'Low-Tech Planted Tank Guide', subtitle: "A low-tech planted tank runs without pressurized CO2 injection, on modest lighting and minimal fertilization. It grows more slowly than a high-tech setup, which is precisely its advantage: slower growth means less trimming, fewer nutrient swings, and far less algae. For most aquarists, a well-chosen low-tech tank is the most beautiful, most sustainable, and least demanding planted aquarium they can keep.", category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Low-Tech Planted Tank', href: '/setup/low-tech-planted-tank' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Best Aquarium Lighting", href: "/reviews/best-aquarium-lighting", category: "Reviews" }, { title: "Best Planted-Tank Fertilizers", href: "/reviews/best-planted-tank-fertilizers", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Bulletproof Plants</div>
@@ -20,7 +28,7 @@ export default function LowTechPlantedTankPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Aquascaping Guide', href: '/setup/aquascaping-guide' }, { label: 'Algae Control', href: '/setup/aquarium-algae-control' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Best Fertilizers', href: '/reviews/best-planted-tank-fertilizers' }, { label: 'Algae Control', href: '/setup/aquarium-algae-control' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-low-tech-planted" />
       </>}
     >
@@ -45,6 +53,7 @@ export default function LowTechPlantedTankPage() {
 
         <h2>Maintenance Rhythm</h2>
         <p>The low-tech tank is defined by its easy upkeep: a weekly or biweekly water change, occasional trimming of the faster growers, glass cleaning as needed, and light feeding of any fish. The slow growth means the scape holds its shape for long stretches without intervention. This forgiving rhythm is what makes the low-tech approach ideal for beginners and busy keepers alike, and it pairs naturally with the gentle conditions favored by nano fish and shrimp. For the broader setup mechanics shared with high-tech tanks, see the <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

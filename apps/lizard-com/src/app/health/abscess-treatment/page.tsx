@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Abscesses and Infectious Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Bacterial Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/bacterial-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Aural abscess and infectious disease case reports", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Abscesses in Reptiles — Caseous Pus & Treatment | Lizard.com", description: "Reptile abscesses form firm, cheese-like pus that the body cannot drain on its own. Why they need surgical removal, common causes, and prevention.", path: "/health/abscess-treatment", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in Reptiles", description: "Why reptile abscesses are solid (caseous), how they form, why they need surgical removal, and prevention.", url: "https://lizard.com/health/abscess-treatment", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -8,9 +15,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in R
 export default function HealthAbscessTreatmentPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Abscesses in Reptiles", subtitle: "Abscesses in reptiles look and behave differently from those in mammals. Because reptile immune systems produce thick, cheese-like (caseous) pus rather than the liquid pus mammals form, a reptile abscess becomes a firm, walled-off lump that the body cannot reabsorb or drain on its own. That is why most reptile abscesses require surgical removal by a veterinarian rather than simple lancing.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
+      hero={{ title: "Abscesses in Reptiles", subtitle: "Abscesses in reptiles look and behave differently from those in mammals. Because reptile immune systems produce thick, cheese-like (caseous) pus rather than the liquid pus mammals form, a reptile abscess becomes a firm, walled-off lump that the body cannot reabsorb or drain on its own. That is why most reptile abscesses require surgical removal by a veterinarian rather than simple lancing.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Abscesses", href: "/health/abscess-treatment" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Respiratory Infection', href: '/health/respiratory-infection', category: 'Health' },
+        { title: 'Stomatitis (Mouth Rot)', href: '/health/stomatitis', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>
@@ -21,11 +36,13 @@ export default function HealthAbscessTreatmentPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Stomatitis (Mouth Rot)", href: "/health/stomatitis" }, { label: "Thermal Burns", href: "/health/thermal-burns" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Stomatitis (Mouth Rot)", href: "/health/stomatitis" }, { label: "Thermal Burns", href: "/health/thermal-burns" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Enclosure Setup", href: "/setup" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-abscess-treatment"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"An abscess is a localized pocket of infection. In mammals, the immune system produces liquid pus that can be drained, and the cavity then heals. Reptiles produce a fundamentally different, semi-solid caseous (cheese-like) pus, so a reptile abscess becomes a firm, encapsulated mass. The body walls it off but cannot break it down or expel it, which means the infection persists and often slowly enlarges until it is physically removed. Understanding this difference explains why a reptile lump should never simply be squeezed or lanced like a mammalian boil."}</p>
           <h2>{"How Abscesses Form"}</h2>
           <ul>
@@ -49,12 +66,7 @@ export default function HealthAbscessTreatmentPage() {
             <li>{"Inspect animals regularly and address wounds, burns, or swellings early with a reptile veterinarian"}</li>
           </ol>
           <p>{"Caught early and removed surgically, most reptile abscesses resolve well; left alone in the hope they will drain or heal, they persist and can seed deeper infection."}</p>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), infectious-disease and surgery chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, abscess and aural-abscess literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

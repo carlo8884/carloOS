@@ -28,6 +28,7 @@ import {
   CalloutBox,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 import { PARAMETERS } from '../../data/water-parameters'
 
 export const metadata: Metadata = buildMetadata({
@@ -153,27 +154,20 @@ export default function WaterParametersHubPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-5">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Water Parameter Reference
-          </span>
-        </div>
-        <h1
-          className="font-display font-bold text-white tracking-tight leading-tight mb-4"
-          style={{ fontSize: 'clamp(30px, 5vw, 54px)' }}
-        >
-          Aquarium Water Parameters — Targets, Tests, and Troubleshooting
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-3">
-          Water chemistry is the single largest determinant of whether aquarium fish live or die.
-          This reference catalogs the 8 parameters that drive fish survival, ideal target ranges
-          for community freshwater, planted / soft-water, and reef setups, how each parameter is
-          tested, and the common problems that arise when readings drift.
-        </p>
-        <p className="text-sm font-light text-white/50 max-w-2xl leading-relaxed mb-6">
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:water-parameters-hero"
+        alt="A freshwater aquarium test kit being used to check water parameters"
+        eyebrow="Water Parameter Reference"
+        title="Aquarium Water Parameters — Targets, Tests, and Troubleshooting"
+        subtitle="Water chemistry is the single largest determinant of whether aquarium fish live or die. This reference catalogs the 8 parameters that drive fish survival, their target ranges, how each is tested, and what goes wrong when readings drift."
+        primaryCta={{ href: '/tools/water-change-calculator', label: 'Plan a water change' }}
+        secondaryCta={{ href: '/setup/water-chemistry-guide', label: 'Read the chemistry guide' }}
+      />
+
+      {/* Sourcing + byline band (preserved from the prior hero) */}
+      <div className="bg-brand-dark border-t border-white/5 px-container-sm sm:px-container pb-10 pt-2">
+        <p className="text-sm font-light text-white/50 max-w-2xl leading-relaxed mb-3">
           Ranges below are typical hobby-literature bands drawn from published aquatic-science and
           ornamental-fish references (Noga; Boyd; Walstad; UF/IFAS Extension; WAVMA), not
           quantitative tolerances. Individual species edge cases and citations are on each
@@ -342,7 +336,7 @@ export default function WaterParametersHubPage() {
             {
               title: 'Hard water on soft-water specialists',
               body: 'Discus, wild apistos, and Caridina shrimp are kept on RO/DI water remineralized to a target GH and KH. Dropping soft-water species into tap water above 12 dGH is a common acclimation failure; dilute the source water first.',
-              href: '/species/discus-guide',
+              href: '/species/discus',
             },
             {
               title: 'Pre-dawn DO crash in planted tanks',
@@ -531,7 +525,7 @@ export default function WaterParametersHubPage() {
           subtitle="Water-chemistry references, species guides, and equipment picks every Thursday."
           source="water-parameters-hub"
           ctaText="Subscribe Free"
-          perks={['🧪 Water chemistry', '🐠 Species guides', '⚙️ Equipment picks']}
+          perks={['Water chemistry', 'Species guides', 'Equipment picks']}
         />
       </div>
     </>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function TravelingWithAFerretPage() {
             "Ferrets travel better than most exotic pets — they sleep deeply, settle in a carrier, and adapt to routine — but they are also exquisitely sensitive to heat and bound by a patchwork of legality that does not stop at your home state. This is how to move a ferret safely by car or air, what to pack, and the cases where the kindest choice is to leave them behind with a sitter.",
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -85,8 +84,22 @@ export default function TravelingWithAFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="decide">Before You Decide to Travel</h2>
           <p>
             Start with the question of whether the trip is for the ferret&apos;s

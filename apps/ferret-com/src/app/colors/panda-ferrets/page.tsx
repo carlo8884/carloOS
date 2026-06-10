@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Panda Ferrets', url: 'https://ferret.com/colors/panda-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function PandaFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function PandaFerretsPage() {
             "A panda ferret looks like it dipped its head in white paint: a fully white head and shoulders over a colored saddle, with white feet to match. It is one of the most striking ferret patterns — and one of the most important to understand, because the same genetics that paint the head white are tied to a high rate of deafness. Here is what panda is, how it differs from blaze, and what the pattern means for hearing.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -125,7 +116,14 @@ export default function PandaFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Blaze & Roan Patterns', href: '/colors/blaze-and-roan-patterns' },
+          { title: 'Dark-Eyed White Ferrets', href: '/colors/dark-eyed-white-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-panda"

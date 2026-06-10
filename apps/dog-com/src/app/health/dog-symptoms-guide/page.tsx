@@ -1,12 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Emergency and Critical Care Standards', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: '15 Dog Symptoms You Should Never Ignore | Dog.com',
-  description: 'A board-certified emergency vet explains 15 dog symptoms requiring immediate care — and how to tell when something can wait vs. when to go to the ER at 2am.',
+  description: '15 dog symptoms that warrant emergency care, with the ER-vs-wait criteria from veterinary emergency medicine — which signs can wait, and which cannot.',
   path: '/health/dog-symptoms-guide',
   type: 'article',
 })
@@ -14,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'dog-com',
   title: '15 Dog Symptoms You Should Never Ignore',
-  description: 'Emergency vet explains which symptoms need immediate care vs. which can wait.',
+  description: 'Which dog symptoms need immediate care vs. which can wait, using veterinary emergency-medicine criteria.',
   url: 'https://dog.com/health/dog-symptoms-guide',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -108,7 +116,7 @@ export default function DogSymptomsGuidePage() {
       contentType="health"
       hero={{
         title: '15 Dog Symptoms You Should Never Ignore',
-        subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. A board-certified emergency and critical care veterinarian explains exactly what warrants a 2am ER visit.',
+        subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. This guide lays out 15 symptoms that warrant emergency care, using the ER-vs-wait criteria from veterinary emergency medicine.',
         category: 'Emergency Guide',
         authorName: 'Dog.com Editorial',
         authorAvatar: '🐾',
@@ -120,6 +128,7 @@ export default function DogSymptomsGuidePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-lg p-4">
@@ -140,6 +149,7 @@ export default function DogSymptomsGuidePage() {
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."
@@ -209,6 +219,8 @@ export default function DogSymptomsGuidePage() {
             Find Your Nearest Emergency Vet →
           </Link>
         </div>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
     </>

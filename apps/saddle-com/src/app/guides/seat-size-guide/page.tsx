@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -50,6 +50,14 @@ export default function SeatSizeGuidePage() {
         { name: 'Seat Size Guide', href: '/guides/seat-size-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Tree Size Estimator', href: '/tools/tree-size-estimator', category: 'Tool' },
+        { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'The Core Concept', href: '#concept' },
@@ -61,7 +69,9 @@ export default function SeatSizeGuidePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
+          { label: 'Tree Size Estimator', href: '/tools/tree-size-estimator' },
           { label: 'Best English Saddles 2025', href: '/reviews/best-english-saddles' },
+          { label: 'Best Western Saddles 2025', href: '/reviews/best-western-saddles' },
           { label: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
         ]} />
         <EmailCapture variant="sidebar" siteId="saddle-com"
@@ -71,6 +81,7 @@ export default function SeatSizeGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="concept">The Core Concept</h2>
         <p>Saddle seat size is measured as the distance from the nail (the stud at the front of the seat) to the middle of the cantle. It determines how much room the rider has from front to back. Your seat bones — the bony protrusions at the base of your pelvis — determine how much width you need in the seat. The relationship between these two dimensions is what creates a well-fitting seat: enough room front-to-back that you can move freely, narrow enough that your seat bones are supported rather than sitting over the edges.</p>
         <p>Tall riders do not necessarily need larger seats. Short riders do not necessarily need smaller seats. A tall rider with narrow seat bones may ride well in a 16.5" that fits poorly on a short rider with wide seat bones. This is why riding in a saddle before purchasing — or working with a certified fitter — is valuable.</p>

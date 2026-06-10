@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Buying Checklist — Before You Buy | Lizard.com", description: "A pre-purchase reptile checklist: research the species, set up before buying, choose captive-bred, check health signs, and plan quarantine.", path: "/species/reptile-buying-checklist", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Buying
 export default function SpeciesReptileBuyingChecklistPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Before You Buy"}</div>
@@ -21,11 +29,14 @@ export default function SpeciesReptileBuyingChecklistPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }, { label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Enclosure Setup", href: "/setup" }, { label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-reptile-buying-checklist"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="lizard-com:category-species" fallbackKey="lizard-com:hero" aspect="16:9" variant="inline" caption="Work through the checklist before bringing any reptile home." priority />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Buying a reptile responsibly is mostly about what you do before money changes hands. The animal may live for one to several decades, will grow to an adult size you must be ready for, and needs a working enclosure waiting for it, not one assembled in a panic that evening. The most common mistakes, choosing a species you have not researched, buying before the setup is ready, picking a sick or wild-caught animal, and having no veterinary or quarantine plan, are all avoidable with a checklist. Here is the one to run through every time."}</p>
           <h2>{"1. Research the Species Thoroughly"}</h2>
           <ul>
@@ -55,6 +66,18 @@ export default function SpeciesReptileBuyingChecklistPage() {
           </ul>
           <h2>{"6. Be Honest About the Commitment"}</h2>
           <p>{"Finally, confirm you can meet the species’ needs for its full lifespan, including its adult size, decades-long lifespan for many species, ongoing costs, and the space and time required. Many reptiles are surrendered or neglected because an impulse purchase outgrew the keeper’s expectations. If, after working through this checklist, you are confident and prepared, you are far more likely to give the animal a long, healthy life and to enjoy keeping it."}</p>
+
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+            <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Set Up Before the Animal Comes Home</div>
+            <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Step 2 of the checklist is to have the enclosure running and stable before you buy. Browse enclosures, heating, lighting, and substrate to get the build dialed in early. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the guidance above.</p>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a href="/go/amazon-brand/reptile%20terrarium%20setup%20kit?s=species-reptile-buying-checklist" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Enclosure Setups on Amazon →</a>
+              <a href="/go/chewy-brand/reptile%20habitat?s=species-reptile-buying-checklist" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+              <a href="/setup" style={{ display: 'inline-block', padding: '9px 16px', border: '1px solid var(--brand-border-strong, #3a4358)', color: 'var(--brand-white)', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>The setup hub →</a>
+            </div>
+          </div>
+
           <h2>{"Sources & Further Reading"}</h2>
           <ul>
             <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), husbandry and quarantine chapters."}</li>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching.', path: '/species/crested-gecko', type: 'article' })
@@ -7,9 +7,19 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Crested Gecko 
 export default function CrestedGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Crested Gecko', href: '/species/crested-gecko' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Stuck Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -22,6 +32,7 @@ export default function CrestedGeckoPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Leopard Gecko', href: '/species/leopard-gecko' }, { label: 'Day Gecko', href: '/species/day-gecko' }, { label: 'Dysecdysis Guide', href: '/health/dysecdysis' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-crested-gecko" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
@@ -49,6 +60,7 @@ export default function CrestedGeckoPage() {
 
         <h2>Tail Autotomy — No Regrowth in Cresties</h2>
         <p>Crested geckos can drop their tails as a predator defense — tail autotomy. Unlike many gecko species, crested geckos do not regenerate their tails after dropping them. A tailless crested gecko (called a "frogbutt") is permanent. This does not affect health, longevity, or quality of life — tailless crested geckos live full, normal lives. However, it does affect value if the animal is to be sold. Avoid situations that stress the gecko into tail drop: rough handling, being grabbed by the tail, loud noises, and encounters with aggressive tankmates (crested geckos should be housed individually except during supervised breeding).</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Crested Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for crested gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

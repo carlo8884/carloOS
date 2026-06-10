@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established.', path: '/species/blue-tongued-skink', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BlueTonguedSkinkPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Blue-Tongued Skink', href: '/species/blue-tongued-skink' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Fire Skink Care', href: '/species/fire-skink', category: 'Species' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -21,9 +33,11 @@ export default function BlueTonguedSkinkPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Bearded Dragon', href: '/species/bearded-dragon' }, { label: 'Uromastyx Care', href: '/species/uromastyx' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-bts" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why BTS Are the Best Beginner Lizard for Adults</h2>
         <p>The beginner lizard recommendation is typically the leopard gecko (for children and those wanting a small, low-maintenance species) or the blue-tongued skink (for adults wanting a larger, interactive, genuinely personable lizard). Blue-tongued skinks win the "best adult beginner" category because: they are large enough to handle comfortably without feeling fragile, they are not climbers or escape artists in the way of arboreal species, they eat a varied omnivore diet that is easy to provide without maintaining live insect colonies, they tolerate handling very well once established, and they are robust enough to tolerate beginner mistakes that would be fatal to more delicate species like chameleons.</p>
         <p>They are also long-lived — a blue-tongued skink purchased at 2 years old will still be with you at 22 years old. This is a commitment worth acknowledging. Their intelligence and recognition of their keepers makes them genuinely rewarding pets rather than simple display animals.</p>
@@ -43,6 +57,7 @@ export default function BlueTonguedSkinkPage() {
         <p><strong>Tiliqua scincoides scincoides (Eastern BTS / Australian):</strong> Wild-caught imports are not legally available in the US — US population is captive-bred. Typically the most docile personality and the most recommended for beginners. Northern BTS (T. s. intermedia) are the most commonly captive-bred in the US.</p>
         <p><strong>Tiliqua gigas (Indonesian/Merauke/Irian Jaya):</strong> Various Indonesian locality BTS legally imported. Generally slightly more variable in personality — some animals are more defensive initially than Australian species. All become manageable with consistent handling.</p>
         <p><strong>Pygmy blue-tongued skink (T. adelaidensis):</strong> Critically endangered, rarely captive-bred, entirely different care — not a practical pet option and their conservation status makes collecting inappropriate.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Blue Tongued Skink — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for blue tongued skink care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

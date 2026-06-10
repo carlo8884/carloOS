@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -6,6 +7,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline,
+  AffiliateDisclosure,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +34,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function WetVsDryFoodPage() {
   return (
     <ArticleLayout
@@ -44,8 +67,13 @@ export default function WetVsDryFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+        { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +108,8 @@ export default function WetVsDryFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-wet-vs-dry-food" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Wet versus dry food — comparing water content, cost, dental claims, and palatability." />
         <p>The defining difference between wet and dry food is water content: canned food is roughly 75 to 82 percent water, dry kibble about 6 to 12 percent. Almost every other practical difference flows from that, plus the manufacturing difference (extrusion requires starch; canning does not). Neither format is universally better; the right choice depends on the species, the individual animal, and the household. Nutrient comparisons between them must be done on a dry-matter basis. See <a href="/nutrition/dry-matter-basis-explained">Dry-Matter Basis Explained</a>.</p>
         <h2 id="moisture">The Core Difference — Moisture</h2>
         <p>The high moisture of canned food is its biggest functional advantage, especially for cats. Cats have a weak thirst drive and tend to under-hydrate on dry food, and increased dietary water supports urinary and kidney health. For cats with a history of urinary disease or kidney disease, the moisture of canned food is a genuine clinical benefit. See <a href="/nutrition/water-and-hydration">Water and Hydration</a> and <a href="/diets/urinary-tract-diets">Urinary and Bladder Stone Diets</a>.</p>
@@ -94,12 +124,44 @@ export default function WetVsDryFoodPage() {
         <h2 id="choosing">Choosing or Combining</h2>
         <p>Many owners successfully combine the two: kibble for cost and convenience, with canned food added for hydration, palatability, and satiety. A combination captures several of each format&apos;s advantages, provided total calories are counted across both. For most healthy animals either format, if complete and balanced, supports good health; the choice can be made on the individual&apos;s needs and the household&apos;s practicality. See <a href="/feeding/how-much-to-feed-a-cat">How Much to Feed a Cat</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shopping for either format
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop wet and dry complete diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            Both formats work when the food is complete and balanced for the life stage. Compare
+            picks with our independent <Link href="/brands">brand evaluations</Link>, then search the
+            category at a major retailer. The search links below surface complete wet and dry diets;
+            confirm the AAFCO statement and life-stage match on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20wet%20and%20dry%20cat%20and%20dog%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20wet%20dry%20pet%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

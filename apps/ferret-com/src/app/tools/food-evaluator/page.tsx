@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
+  ArticleByline,
   FAQAccordion,
   EmailCapture,
   TableOfContents,
@@ -151,8 +152,22 @@ export default function FerretFoodEvaluatorPage() {
           />
         </>
       }
-    >
+    
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+        ]}
+>
       <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-01"
+            updatedAt="2026-05-01"
+            reviewedBy="Editorial team"
+          />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}

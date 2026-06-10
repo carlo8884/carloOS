@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,22 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — cage sizing, level spacing, and out-of-cage time owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — housing and husbandry chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on fall injuries and foot abrasion in ferrets",
+    publisher: "Elsevier",
+  },
+]
+
 export default function MultiLevelHousingPage() {
   return (
     <>
@@ -36,7 +52,6 @@ export default function MultiLevelHousingPage() {
             'Ferrets are vertical animals in a way most small mammals are not. They climb, they perch, and they sleep elevated. A multi-level cage buys you more usable habitat per square foot than any single-floor model — but only if the levels are spaced, ramped, and zoned correctly.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -66,6 +81,7 @@ export default function MultiLevelHousingPage() {
                 { label: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +91,22 @@ export default function MultiLevelHousingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why-vertical">Why Vertical Layout Wins</h2>
           <p>
             A ferret evaluates a space in three dimensions. In the wild, the European polecat — the ancestor of the domestic ferret — moves through burrow systems, root tangles, and stacked cover, not open floor. That instinct survives in the pet: given a choice between a wide flat cage and a tall narrow one of equal volume, most ferrets use the tall one more completely, climbing between levels dozens of times a day.
@@ -145,10 +175,7 @@ export default function MultiLevelHousingPage() {
             Get the vertical layout right and a multi-level cage becomes what it should be: a secure, interesting home base the ferret returns to between the supervised out-of-cage hours that no amount of cage real estate replaces.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Cage sizing, level spacing, and out-of-cage guidance draw on American Ferret Association (AFA) owner-education materials. Fall-injury and foot-abrasion discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em>. This page describes general husbandry principles and does not claim hands-on product testing. For the broader habitat picture, start with our <a href="/care/cage-setup">cage setup</a> guide or return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

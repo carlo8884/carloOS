@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Herbivorous Reptile Diet — Tortoises, Uromastyx | Lizard.com", description: "How to feed herbivorous reptiles like tortoises and uromastyx. Greens, calcium-to-phosphorus balance, why protein and fruit are limited, and toxic foods.", path: "/health/herbivore-reptile-diet", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeding Herbiv
 export default function HealthHerbivoreReptileDietPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeding Herbivorous Reptiles", subtitle: "Herbivorous reptiles, including most tortoises, uromastyx, and largely plant-eating lizards, have digestive systems built for high-fiber, low-protein plant matter. Feeding them like omnivores, with too much protein, fruit, or the wrong greens, causes serious long-term disease. This guide covers building a correct herbivore diet around the right greens and plants, with attention to calcium balance and the foods to avoid.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeding Herbivorous Reptiles", subtitle: "Herbivorous reptiles, including most tortoises, uromastyx, and largely plant-eating lizards, have digestive systems built for high-fiber, low-protein plant matter. Feeding them like omnivores, with too much protein, fruit, or the wrong greens, causes serious long-term disease. This guide covers building a correct herbivore diet around the right greens and plants, with attention to calcium balance and the foods to avoid.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Herbivore Reptile Diet", href: "/health/herbivore-reptile-diet" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -23,9 +31,11 @@ export default function HealthHerbivoreReptileDietPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Uromastyx Care", href: "/species/uromastyx" }, { label: "Russian Tortoise Care", href: "/species/russian-tortoise" }, { label: "Reptile Gout", href: "/health/gout-prevention" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-herbivore-reptile-diet"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Herbivorous reptiles evolved to extract nutrition from large volumes of fibrous, relatively low-protein plant matter, fermenting it in a specialized gut. Their bodies are not built to process the protein loads or sugar-rich fruit that omnivores tolerate. Feeding a tortoise or uromastyx an inappropriate high-protein or fruit-heavy diet causes a cascade of problems over time, from shell deformity and rapid unhealthy growth to kidney disease and gout. A correct herbivore diet is built around the right leafy greens and plants, fed generously, with everything else kept to a minimum."}</p>
           <h2>{"The Foundation: Leafy Greens and Weeds"}</h2>
           <ul>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Goldendoodle Guide — F1 vs F1B, Coat Types | Dog.com', description: 'Goldendoodles: F1 (50% Golden/Poodle) vs F1B (75% Poodle) coat and shedding differences explained.', path: '/breeds/golden-doodle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Goldendoodle Breed Guide', description: 'F1 vs F1B generations, coat types, health testing, and realistic expectations for Goldendoodles.', url: 'https://dog.com/breeds/golden-doodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -8,6 +8,7 @@ export default function GoldendoodlePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Goldendoodle Breed Guide', subtitle: 'The Goldendoodle (Golden Retriever × Poodle) is one of the most popular "designer breeds" in the US. They combine the Golden\'s temperament with Poodle intelligence and low-shedding coat potential. The key word: potential. Goldendoodles vary significantly in coat, shedding, and health — generation matters enormously.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Goldendoodle', href: '/breeds/golden-doodle' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Poodle Guide', href: '/breeds/poodle', category: 'Breed Guide' }, { title: 'Golden Retriever Guide', href: '/breeds/golden-retriever', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -21,11 +22,18 @@ export default function GoldendoodlePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever', href: '/breeds/golden-retriever' }, { label: 'Dog Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Grooming', href: '/training/basic-commands' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },
+          { label: 'Labradoodle vs Goldendoodle', href: '/compare/labradoodle-vs-golden-doodle' },
+        ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>Generations — Why This Matters More Than Anything</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>Generations — Why This Matters More Than Anything</h2>
         <p>The most common Goldendoodle misunderstanding: assuming any Goldendoodle will be low-shedding and "hypoallergenic." Goldendoodle coat outcome depends almost entirely on generation. Each dog inherits a random combination of genes from both parents — in an F1 (first generation), the range is enormous.</p>
         <p><strong>F1 (50% Golden / 50% Poodle):</strong> Coat ranges from essentially a Golden Retriever coat (straight, sheds heavily) to a curly Poodle-like coat (minimal shedding). The majority fall somewhere in between — a wavy coat that sheds moderately. There is no way to predict the coat of an F1 Goldendoodle puppy at birth with certainty.</p>
         <p><strong>F1B (25% Golden / 75% Poodle — F1 Goldendoodle × Poodle):</strong> The most common choice for allergy sufferers. The higher Poodle percentage produces curlier, lower-shedding coats in the majority of offspring — though still not guaranteed. F1B Goldendoodles typically have curlier coats that require professional grooming every 6–8 weeks.</p>

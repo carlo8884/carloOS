@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Stirrups and Rider Safety — Types, Sizing, and Avoiding Being Dragged",
   description:
-    "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing the risk of being dragged.",
+    "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing drag risk.",
   path: '/tack/stirrups-and-safety',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Stirrups and Rider Safety — Types, Sizing, and Avoiding Being Dragged",
   description:
-    "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing the risk of being dragged.",
+    "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing drag risk.",
   url: 'https://horses.com/tack/stirrups-and-safety',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function StirrupsSafetyPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Riding Helmet Guide', href: '/tack/helmet-guide' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: "Stirrups and Rider Safety",
           subtitle:
@@ -88,6 +94,7 @@ export default function StirrupsSafetyPage() {
               { label: "Buying Your First Horse", href: "/ownership/buying-your-first-horse" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function StirrupsSafetyPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How Stirrups Work</h2>
           <p>Stirrups hang from the saddle by leathers (English) or fenders (western) and give the rider a platform for the ball of the foot, aiding balance, security, and the ability to rise and absorb the horse&apos;s movement. The foot should rest on the tread with the ball of the foot, heel down, so the foot can slip free in a fall rather than being trapped. The stirrup is a support to rest on lightly, not a stirrup to jam the foot through.</p>
 

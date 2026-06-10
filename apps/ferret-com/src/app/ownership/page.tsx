@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -89,13 +90,6 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
       'Everything a new ferret actually needs, by category — cage, bedding, litter, food, grooming, carrier, enrichment — what to buy first, what can wait, and what to avoid entirely.',
   },
   {
-    slug: 'ferret-vocabulary-for-beginners',
-    eyebrow: 'Vocabulary',
-    title: 'Ferret Vocabulary for Beginners',
-    description:
-      'The starter language of ferret keeping — hob, jill, kit, gib, sprite, dooking, the war dance, a business of ferrets, descenting, altering — the words you meet in your first week.',
-  },
-  {
     slug: 'traveling-with-a-ferret',
     eyebrow: 'On the move',
     title: 'Traveling With a Ferret',
@@ -118,55 +112,35 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Ownership and Lifestyle Guides',
+  numberOfItems: OWNERSHIP_CARDS.length,
+  itemListElement: OWNERSHIP_CARDS.map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: o.title,
+    url: `https://ferret.com/ownership/${o.slug}`,
+  })),
+}
+
+const ferretOwnershipSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function OwnershipHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={ferretOwnershipSchema} />
 
-      {/* Hero */}
-      <div
-        style={{
-          background: 'var(--brand-dark)',
-          padding: 'clamp(48px, 8vw, 80px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Ownership & Lifestyle
-            </span>
-          </div>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              fontWeight: 800,
-              color: 'var(--brand-primary-pale)',
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              margin: '0 0 16px',
-            }}
-          >
-            Ferret Ownership & Lifestyle
-          </h1>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              fontWeight: 300,
-              color: 'rgba(251, 245, 232, 0.65)',
-              maxWidth: '640px',
-              lineHeight: 1.65,
-              margin: 0,
-            }}
-          >
-            Before the cage and the kibble comes the decision itself. Ten references for people
-            deciding whether — and how — to bring a ferret home: real cost, where ferrets are legal,
-            adopting versus buying, living with other pets and children, naming, vocabulary, a
-            supplies checklist, and the first week. Practical, honest, and pushy about nothing.
-          </p>
-        </div>
-      </div>
+      {/* Hero — image-first overlaid masthead (matches the homepage identity) */}
+      <HubHero
+        eyebrow="Ownership & Lifestyle"
+        title="Ferret Ownership & Lifestyle"
+        intro="Before the cage and the kibble comes the decision itself. Ten references for people deciding whether — and how — to bring a ferret home: real cost, where ferrets are legal, adopting versus buying, living with other pets and children, naming, vocabulary, a supplies checklist, and the first week. Practical, honest, and pushy about nothing."
+        manifestKey="ferret-com:ownership-hero"
+        imageAlt="Ferret ownership and lifestyle reference"
+        cta={{ href: '/ownership/cost-of-owning-a-ferret', label: 'See the real cost first' }}
+      />
 
       {/* Breadcrumb */}
       <nav
@@ -185,9 +159,117 @@ export default function OwnershipHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Ownership</span>
       </nav>
 
-      {/* Hero image */}
-      <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:ownership-hero" aspect="16:9" variant="wide" priority />
+
+      {/* Featured ownership spokes — three photo-backed pillar articles */}
+      <div
+        style={{
+          maxWidth: '1180px',
+          margin: '0 auto',
+          padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 80px) 0',
+        }}
+      >
+        <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-amber-dark)', margin: '0 0 20px' }}>
+          Decide well, start well
+        </p>
+        <ul
+          style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '18px',
+          }}
+        >
+          {[
+            {
+              href: '/ownership/is-a-ferret-right-for-you',
+              eyebrow: 'Decision',
+              title: 'Is a Ferret Right for You?',
+              desc: 'Daily time, real veterinary cost, odor, legality, and the 6–10-year commitment honestly assessed.',
+              manifestKey: 'ferret-com:ownership-hero',
+              imageAlt: 'A ferret being held gently — deciding if a ferret is right for you',
+            },
+            {
+              href: '/ownership/cost-of-owning-a-ferret',
+              eyebrow: 'Budget',
+              title: 'Cost of Owning a Ferret',
+              desc: 'Startup and recurring costs broken out — including the insulinoma/adrenal surgery line item most owners underestimate.',
+              manifestKey: 'ferret-com:care-cage-setup',
+              imageAlt: 'A ferret in its habitat — the real cost of ferret ownership',
+            },
+            {
+              href: '/ownership/adoption-vs-buying',
+              eyebrow: 'Sourcing',
+              title: 'Adoption vs Buying',
+              desc: 'Shelters, breeders, and large-scale farm-bred pet-store ferrets compared on health, early altering, and temperament.',
+              manifestKey: 'ferret-com:health-hero',
+              imageAlt: 'A ferret portrait — adoption versus buying a ferret',
+            },
+          ].map((card) => (
+            <li key={card.href}>
+              <a
+                href={card.href}
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  height: '100%',
+                  minHeight: '260px',
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  boxShadow: 'inset 0 0 0 1px var(--brand-border)',
+                }}
+              >
+                <div
+                  className="[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0 [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full"
+                  style={{ position: 'absolute', inset: 0 }}
+                >
+                  <StockImage
+                    manifestKey={card.manifestKey}
+                    alt={card.imageAlt}
+                    aspect="3:4"
+                    variant="inline"
+                    subtleCredit
+                  />
+                </div>
+                <div
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.35) 55%, rgba(30,20,10,0.08) 100%)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'relative',
+                    zIndex: 10,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
+                    minHeight: '260px',
+                    padding: '22px',
+                  }}
+                >
+                  <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-amber)', marginBottom: '6px' }}>
+                    {card.eyebrow}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: 'rgba(251, 245, 232, 0.98)', lineHeight: 1.2, marginBottom: '8px' }}>
+                    {card.title}
+                  </div>
+                  <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(251, 245, 232, 0.78)', margin: '0 0 10px' }}>
+                    {card.desc}
+                  </p>
+                  <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--brand-amber)' }}>
+                    Read &rarr;
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Cards */}
@@ -212,7 +294,9 @@ export default function OwnershipHubPage() {
           start well. Once a ferret is home, the{' '}
           <Link href="/care" className="amber-link" style={{ fontWeight: 600 }}>Care</Link>{' '}and{' '}
           <Link href="/health" className="amber-link" style={{ fontWeight: 600 }}>Health</Link>{' '}
-          hubs cover day-to-day husbandry and medical references.
+          hubs cover day-to-day husbandry and medical references. New owners can also grab the free{' '}
+          <Link href="/first-year-schedule" className="amber-link" style={{ fontWeight: 600 }}>52-week first-year schedule</Link>{' '}
+          — a week-by-week calendar covering vaccines, dental onset, diet milestones, and the insulinoma watch window.
         </p>
 
         <ul

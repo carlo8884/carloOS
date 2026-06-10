@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Akita Breed Guide — Same-Sex Aggression, Loyalty | Dog.com', description: 'Akitas are fiercely loyal to their family and potentially dangerous to other dogs. Same-sex aggression is strong in the breed.', path: '/breeds/akita', type: 'article' })
@@ -10,6 +10,7 @@ export default function AkitaPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Akita Breed Guide', subtitle: "The Akita is a large Japanese spitz-type breed — national dog of Japan, subject of the famous Hachikō loyalty story, and a breed that demands experienced, committed ownership. They form intense bonds with their immediate family and can be deeply suspicious of strangers and dangerously aggressive toward other dogs of the same sex. The same loyalty that makes them extraordinary companions makes them a liability in the wrong hands.", category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Akita', href: '/breeds/akita' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Shiba Inu Guide', href: '/breeds/shiba-inu', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,10 +23,13 @@ export default function AkitaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Sebaceous Adenitis', href: '/health/dog-skin-allergies' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-akita" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Loyalty — What Hachikō Represents</h2>
         <p>Hachikō was a real Akita who waited for his deceased owner at a Tokyo train station for nearly 10 years after the owner's death — a story that became internationally known through the 2009 film. The story is not mythology — the behavioral documentation is real. Akitas form deep, exclusive bonds with their primary person or family that are qualitatively different from the attachment most other breeds form. They can be aloof to the point of apparent indifference with strangers while being deeply demonstrative with their family.</p>
         <p>This exclusivity is a double-edged characteristic. The depth of the Akita-owner bond is one of the most profound available in dog ownership. The same exclusivity means an Akita does not generalize positive experiences — a well-socialized Akita that accepts your visitors is not reliably accepting of strangers it encounters away from home. Management, not assumption of friendly generalization, is the correct approach.</p>

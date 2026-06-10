@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function EasyKeeperPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Feeding the Easy Keeper",
           subtitle:
@@ -89,6 +95,7 @@ export default function EasyKeeperPage() {
               { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function EasyKeeperPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is an Easy Keeper</h2>
           <p>An easy keeper is a horse that maintains or gains weight on relatively little feed, often a pony or a breed adapted to sparse forage -- Shetlands, Welsh ponies, cobs, Morgans, mustangs, and many gaited and Iberian types. Their efficient metabolism was a survival advantage in harsh native environments but becomes a liability on rich modern pasture and feed, where they readily become overweight.</p>
 

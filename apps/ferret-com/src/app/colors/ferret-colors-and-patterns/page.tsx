@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Colors & Patterns', url: 'https://ferret.com/colors/ferret-colors-and-patterns' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function FerretColorsPatternsPage() {
   return (
@@ -86,7 +78,6 @@ export default function FerretColorsPatternsPage() {
             "From the classic masked sable to the snow-white albino, ferrets come in a surprisingly rich palette. Better still, color and pattern combine, so almost every ferret is a little unique. Here is the full guide to what you are looking at — the recognized colors, the pattern overlays, and the genetics quirks worth knowing.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}
@@ -125,7 +116,14 @@ export default function FerretColorsPatternsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Sable Ferrets', href: '/colors/sable-ferrets' },
+          { title: 'Albino Ferrets', href: '/colors/albino-ferrets' },
+          { title: 'Blaze & Roan Patterns', href: '/colors/blaze-and-roan-patterns' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:colors-overview"

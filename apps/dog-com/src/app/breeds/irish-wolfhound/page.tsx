@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
@@ -10,6 +10,7 @@ export default function IrishWolfhoundPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Irish Wolfhound Breed Guide', subtitle: 'The Irish Wolfhound stands as the tallest dog breed — males average 32-35 inches at the shoulder and weigh 120-180 lbs. They are gentle, quiet, and deeply affectionate. They are also the shortest-lived of any dog breed: the median lifespan is 6-7 years. Prospective owners must understand and accept this before acquisition.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Wolfhound', href: '/breeds/irish-wolfhound' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,13 @@ export default function IrishWolfhoundPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-irish-wolfhound" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>The Lifespan Reality — Before You Decide</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>The Lifespan Reality — Before You Decide</h2>
         <p>Irish Wolfhound owners describe the breed as "heartbreak dogs" — because loving them means accepting a much shorter relationship than any other breed. The median lifespan in published studies is 6.2-7.0 years. A significant percentage of Irish Wolfhounds die between 4-6 years from osteosarcoma — the most aggressive bone cancer in dogs. Owners who have had Wolfhounds describe the depth of the relationship, the quality of the years together, and the community of Wolfhound people as compensation. But the grief is real and the timeline is short. This should be known before the decision, not discovered afterward.</p>
 
         <BreedHealthCard name="Osteosarcoma (Bone Cancer)" riskLevel="very-high"

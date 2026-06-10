@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Tack and Gear Guides — Bits, Bridles, Girths, Boots, Helmets, and Rugs",
   description:
-    "Equine tack and gear references: bits and bridles, girths and cinches, saddle pads, stirrups and rider safety, blanket weights, halters, leg boots and wraps, helmets, and martingales.",
+    "Equine tack and gear references: bits and bridles, girths and cinches, saddle pads, stirrups and safety, blanket weights, halters, leg boots, and helmets.",
   path: '/tack',
 })
 
@@ -90,30 +91,32 @@ const ENTRIES = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Equine Tack and Gear Guides',
+  numberOfItems: ENTRIES.length,
+  itemListElement: ENTRIES.map((e, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: e.title,
+    url: `https://horses.com/tack/${e.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function TackHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Tack & Gear
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Tack &amp; Gear Guides
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Reference guides to the tack and gear horses wear and work in, focused on how each piece functions, how to fit it, and how to choose humanely and safely.
-        </p>
-      </div>
-
-      <StockImage manifestKey="horses-com:category-tack" aspect="16:9" variant="full-bleed" priority />
+      <PremiumMasthead
+        manifestKey="horses-com:category-tack"
+        eyebrow="Tack & Gear"
+        title="Tack & Gear Guides"
+        subtitle="Reference guides to the tack and gear horses wear and work in, focused on how each piece functions, how to fit it, and how to choose humanely and safely."
+      />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
@@ -167,6 +170,7 @@ export default function TackHubPage() {
           ]}
         />
       </section>
+      <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="footer" />
     </>
   )
 }

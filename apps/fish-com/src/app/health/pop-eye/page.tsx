@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Exophthalmia (Pop-Eye) in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/exophthalmia-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pop-Eye in Fish — Exophthalmia Causes | Fish.com', description: 'Pop-eye (exophthalmia) is fluid accumulation behind the eye causing it to bulge outward. Bacterial infection treated with Kanaplex.', path: '/health/pop-eye', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pop-Eye in Fish (Exophthalmia)', description: 'Causes, unilateral vs bilateral presentation, and Kanaplex treatment for pop-eye in fish.', url: 'https://fish.com/health/pop-eye', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PopEyePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Pop-Eye', href: '/health/pop-eye' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Unilateral vs Bilateral</div>
@@ -26,6 +35,7 @@ export default function PopEyePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Causes and the Unilateral vs Bilateral Distinction</h2>
         <p><strong>Unilateral pop-eye (one eye):</strong> Most commonly caused by a localized bacterial infection or physical injury — the fish bumped into something, was nipped by a tankmate, or got a minor scratch that became infected. Bacteria infect the tissue behind the eye, causing localized inflammation and fluid accumulation. Prognosis for unilateral pop-eye caught and treated early is generally good. The eye may not fully return to normal position even after successful treatment — some minor protrusion often remains.</p>
         <p><strong>Bilateral pop-eye (both eyes):</strong> Both eyes involved simultaneously suggests a systemic problem — bacteria throughout the bloodstream, organ failure (often kidney-related), or the same systemic fluid accumulation that causes dropsy. Bilateral pop-eye combined with abdominal distension (a fish that has both pop-eye and a bloated belly) is a sign of systemic organ failure with a poor prognosis, even with aggressive treatment. Treat immediately and aggressively, but prepare for the possibility that the fish will not recover.</p>
@@ -42,6 +52,7 @@ export default function PopEyePage() {
 
         <h2>Prevention</h2>
         <p>Pop-eye prevention is water quality management. The vast majority of pop-eye cases occur in tanks with elevated nitrate, inadequate filtration, or irregular maintenance. Weekly water changes of 25-30%, filter maintenance, and not overstocking are the primary preventive measures. Quarantine new fish before adding to established tanks — new fish stressed from shipping are more susceptible to bacterial infection including orbital infection.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

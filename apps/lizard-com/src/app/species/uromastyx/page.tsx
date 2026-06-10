@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Uromastyx Care Guide — High Heat, Seed Diet | Lizard.com', description: 'Uromastyx (spiny-tailed lizards) need extreme heat (120°F basking), a dry desert setup, and a primarily seed-based herbivore diet.', path: '/species/uromastyx', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function UromastcyxPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Uromastyx', href: '/species/uromastyx' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Thermostats', href: '/reviews/best-thermostats', category: 'Reviews' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -21,9 +33,11 @@ export default function UromastcyxPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Bearded Dragon', href: '/species/bearded-dragon' }, { label: 'Blue-Tongued Skink', href: '/species/blue-tongued-skink' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-uromastyx" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Temperature Requirement — Higher Than Almost Any Other Lizard</h2>
         <p>Uromastyx come from some of the hottest desert environments on Earth — North African rock deserts where midday surface temperatures regularly exceed 120°F. In captivity, they require a basking surface of 120–130°F (measured directly on the surface with an infrared thermometer, not air temperature). At lower basking temperatures they cannot properly thermoregulate, digest food, or maintain immune function. The ambient warm-side temperature should be 90–100°F — significantly hotter than most other reptile setups.</p>
         <p>Achieving these temperatures requires high-wattage incandescent or halogen bulbs — a single 100W or 150W basking bulb over a basking rock or slate. Test the surface temperature with an infrared gun and adjust wattage until the correct surface temperature is reached. CHE (ceramic heat emitters) provide ambient warmth but not the radiant heat needed at the basking surface.</p>
@@ -42,6 +56,7 @@ export default function UromastcyxPage() {
         <p><strong>U. ornata (Ornate uromastyx):</strong> The most colorful — males display vivid blue, green, and orange patterns. Native to Egypt and the Middle East. 14–16 inches. The most popular and widely available.</p>
         <p><strong>U. geyri (Saharan uromastyx):</strong> Yellow-orange coloration, slightly smaller at 10–13 inches. More docile temperament than ornata — often recommended for beginners to the species.</p>
         <p><strong>U. maliensis (Mali uromastyx):</strong> Dark base with yellow or red patterning. Robust and adaptable. 10–14 inches. One of the hardier species for beginners.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Uromastyx — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for uromastyx care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

@@ -13,7 +13,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +38,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Ferret Lifespan', url: 'https://ferret.com/colors/ferret-lifespan' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +63,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function FerretLifespanPage() {
   return (
@@ -85,7 +77,6 @@ export default function FerretLifespanPage() {
             "Bringing a ferret home means signing up for several years of one of the most entertaining companions in the small-pet world. Knowing what to expect — the typical lifespan, the life stages, and the factors you can actually influence — helps you give your ferret the longest, healthiest run possible. Here is the honest picture.",
           category: 'Ferret Facts',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -124,7 +115,14 @@ export default function FerretLifespanPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Choosing a Healthy Ferret', href: '/colors/choosing-a-healthy-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

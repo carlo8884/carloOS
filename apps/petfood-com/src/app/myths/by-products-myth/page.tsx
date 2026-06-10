@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function ByProductsMythPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,13 @@ export default function ByProductsMythPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'The By-Products Myth', href: '/myths/by-products-myth' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
+        { title: 'Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +110,7 @@ export default function ByProductsMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The claim is that by-products are low-quality waste — beaks, hooves, floor sweepings, diseased tissue — used as cheap filler, and that a food free of by-products is therefore superior. This framing has driven significant marketing, but it does not match the AAFCO ingredient definitions or the nutritional reality. By-products are a defined ingredient category consisting largely of nutritious organ meats. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a>.</p>
         <h2 id="claim">The Claim</h2>
         <p>Premium and boutique brands frequently advertise no by-products as a quality marker, leaning on the negative connotation of the word. The implication is that by-products are nutritionally inferior or even unsafe. Examined against the regulatory definition and nutritional science, the claim conflates a transparency issue with a quality issue and overstates both.</p>
@@ -94,13 +125,7 @@ export default function ByProductsMythPage() {
         <h2 id="verdict">The Verdict</h2>
         <p>By-products are not waste or filler — they are largely nutritious organ meats, formally defined and recognized by AAFCO and the FDA as appropriate pet food ingredients. The valid concern is transparency (species-generic terms reveal less), not quality. A no by-products claim is a marketing position, not a nutritional upgrade. Evaluate a food on its overall formulation and manufacturer transparency, not on the presence or absence of by-products. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -14,7 +14,7 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -98,6 +98,7 @@ export default function DogTreatsGuidePage() {
           { name: 'Dog Nutrition', href: '/nutrition' },
           { name: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
         ]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents
@@ -124,6 +125,7 @@ export default function DogTreatsGuidePage() {
                 { label: 'Body Condition Score', href: '/guides/dog-body-condition-score' },
               ]}
             />
+          <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"

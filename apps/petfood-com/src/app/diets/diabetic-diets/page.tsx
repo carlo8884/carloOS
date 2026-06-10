@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function DiabeticDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function DiabeticDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Diabetic Diets for Dogs and Cats', href: '/diets/diabetic-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function DiabeticDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A therapeutic diabetic-management pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Diabetes mellitus results from inadequate insulin action, leading to high blood glucose. The condition is common in middle-aged and older cats and dogs, and while insulin therapy is the foundation of treatment, diet meaningfully influences glycemic control, insulin requirements, and — in cats — the chance of remission. The right dietary approach depends on which species and which form of diabetes is present.</p>
         <h2 id="twodiseases">Two Different Diseases</h2>
         <p>Feline diabetes resembles human type 2 diabetes: it is closely tied to obesity and insulin resistance, and the high-carbohydrate diets historically common in cat food are implicated. Canine diabetes more often resembles type 1, with absolute insulin deficiency, frequently following pancreatitis or immune destruction of the beta cells. Because the underlying problem differs, the dietary strategy differs.</p>
@@ -94,13 +133,7 @@ export default function DiabeticDietsPage() {
         <h2 id="insulin">Coordinating with Insulin</h2>
         <p>Diet changes alter insulin requirements, so any dietary change in a diabetic animal must be coordinated with the veterinarian and accompanied by glucose monitoring — switching a diabetic cat to a low-carbohydrate diet can drop insulin needs quickly, risking hypoglycemia if the insulin dose is not adjusted. Diabetic diet selection is a medical decision made with the treating veterinarian, not a standalone choice.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

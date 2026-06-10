@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -15,6 +15,18 @@ const TOOLS = [
     title: 'Ferret Food Evaluator',
     desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes.',
     tag: 'Nutrition',
+  },
+  {
+    href: '/tools/cost-calculator',
+    title: 'Ferret Cost Calculator',
+    desc: 'Estimate one-time setup, yearly recurring costs, and the lifetime total of ferret ownership — scaled by number of ferrets, with a separate prompt to budget for adrenal, insulinoma, and blockage care.',
+    tag: 'Budgeting',
+  },
+  {
+    href: '/tools/readiness-quiz',
+    title: 'Ferret Ownership Readiness Quiz',
+    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment. Returns a calibrated readiness tier with plain-English next steps.',
+    tag: 'Decision Tool',
   },
 ]
 
@@ -70,6 +82,10 @@ export default function ToolsHub() {
           </p>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="ferret-com:tools-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
         <div className="max-w-2xl">

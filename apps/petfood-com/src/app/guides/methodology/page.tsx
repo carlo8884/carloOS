@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,28 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "U.S. Food and Drug Administration. Recalls, Market Withdrawals and Safety Alerts (Animal & Veterinary); FDA CVM Inspection Observations (Form 483) and warning letters.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements. Recognized schemes include SQF, BRCGS, FSSC 22000, and IFS.",
+    },
+    {
+      label: "American College of Veterinary Nutrition (ACVN) Diplomate directory; European College of Veterinary and Comparative Nutrition (ECVCN) Diplomate directory.",
+    },
+]
+
 export default function MethodologyPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,14 @@ export default function MethodologyPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'Methodology', href: '/guides/methodology' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+        { title: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
       ]}
       schema={schema}
       sidebar={
@@ -81,21 +112,24 @@ export default function MethodologyPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="methodology"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           PetFood.com exists to answer one question per product, with citations: <em>compared to its
           category peers, how does this food rate on a fixed set of criteria that matter?</em> The
           rubric below is the one we apply to every review, and it is structured so that a careful
-          reader can reconstruct any score from the brand page&apos;s factual claims.
+          reader can reconstruct our reasoning from the brand page&apos;s factual claims.
         </p>
 
         <h2 id="what">What We Score On — Five Dimensions</h2>
         <p>
-          A formula or brand carries a score on each of five dimensions. The dimensions are weighted
-          to produce an overall score on a ten-point scale. The dimensions are:
+          Every evaluation works through the same five dimensions. Each is weighted in our overall
+          judgment and — where the evidence supports a single defensible figure — combined into an
+          overall ten-point score. The dimensions are:
         </p>
         <ol>
           <li><strong>AAFCO completeness</strong> — what does the nutritional adequacy statement say, and was it earned by feeding trial or by formulation only?</li>
@@ -280,18 +314,18 @@ export default function MethodologyPage() {
 
         <h2 id="aggregation">Score Aggregation</h2>
         <p>
-          Dimension scores are combined into an overall ten-point score using a fixed weight vector
-          published with this rubric. v1.0 weights: AAFCO completeness 25%, ingredient sourcing
-          transparency 25%, recall history 20%, manufacturing standards 20%, feeding-outcome
-          literature 10%. The overall score is rounded to one decimal place; on every brand page,
-          the dimension scores are shown alongside the overall, so a reader can recompute or
-          override the weighting.
+          When we publish an overall ten-point score, it reflects a fixed weighting across the five
+          dimensions. v1.0 weights: AAFCO completeness 25%, ingredient sourcing transparency 25%,
+          recall history 20%, manufacturing standards 20%, feeding-outcome literature 10%. Each
+          brand evaluation walks through these dimensions in prose so a reader can follow the
+          reasoning behind the assessment — and weight them differently if they disagree. Where the
+          evidence does not support a single defensible figure, we say so rather than force a number.
         </p>
         <p>
-          We do not collapse multi-formula brands into a single brand score. Each formula carries
-          its own score because the AAFCO statement, ingredient panel, and (sometimes) the
-          manufacturing facility differ between formulas. A brand-level page averages the
-          published formula scores and explicitly shows the spread.
+          We do not collapse multi-formula brands into a single definitive brand score. The AAFCO
+          statement, ingredient panel, and (sometimes) the manufacturing facility differ between
+          formulas, so a brand-level evaluation discusses that spread in prose rather than hiding it
+          behind one number.
         </p>
 
         <h2 id="differ">Why Our Methodology Differs from Other Pet Food Sites</h2>
@@ -353,31 +387,7 @@ export default function MethodologyPage() {
           cover.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            World Small Animal Veterinary Association Global Nutrition Committee. <em>Guidelines on
-            Selecting Pet Foods</em> and <em>Recommendations on Selecting Pet Foods</em>.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 6 (Model Regulations for Pet Food and Specialty Pet Food); Dog and Cat Food
-            Nutrient Profiles.
-          </li>
-          <li>
-            U.S. Food and Drug Administration. <em>Recalls, Market Withdrawals and Safety Alerts</em>
-            (Animal &amp; Veterinary); FDA CVM <em>Inspection Observations</em> (Form 483) and
-            warning letters.
-          </li>
-          <li>
-            Global Food Safety Initiative. <em>GFSI Benchmarking Requirements</em>. Recognized
-            schemes include SQF, BRCGS, FSSC 22000, and IFS.
-          </li>
-          <li>
-            American College of Veterinary Nutrition (ACVN) Diplomate directory; European College
-            of Veterinary and Comparative Nutrition (ECVCN) Diplomate directory.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diet selection and management of diagnosed disease require a licensed

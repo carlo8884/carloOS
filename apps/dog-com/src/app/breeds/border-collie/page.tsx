@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Border Collie Guide — Intelligence, MDR1 Gene | Dog.com', description: 'Border Collies are the most intelligent dog breed — and the most demanding. MDR1 drug sensitivity affects the breed.', path: '/breeds/border-collie', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Border Collie Breed Guide', description: 'Intelligence requirements, MDR1 gene, Collie Eye Anomaly, and exercise for Border Collies.', url: 'https://dog.com/breeds/border-collie', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -8,6 +8,7 @@ export default function BorderColliePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Border Collie Breed Guide', subtitle: 'Ranked first in canine intelligence by virtually every behavioral assessment — Border Collies learn commands after fewer than 5 repetitions and obey them 95% of the time. This is not a breed for inactive households. A Border Collie without adequate mental and physical work becomes a behavioral problem in a way that few other breeds can match.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Border Collie', href: '/breeds/border-collie' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Australian Shepherd Guide', href: '/breeds/australian-shepherd', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -19,12 +20,18 @@ export default function BorderColliePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Australian Shepherd', href: '/breeds/australian-shepherd' }, { label: 'Socialization Window', href: '/training/socialization-window' }, { label: 'Marker Training', href: '/training/marker-training' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Australian Shepherd', href: '/breeds/australian-shepherd' }, { label: 'Socialization Window', href: '/training/dog-socialization-window' }, { label: 'Marker Training', href: '/training/marker-training' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Border Collie vs Australian Shepherd', href: '/compare/border-collie-vs-australian-shepherd' },
+        ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-border-collie" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>What "Most Intelligent Breed" Actually Means</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>What "Most Intelligent Breed" Actually Means</h2>
         <p>Border Collie intelligence in the working context is extraordinary — they can learn the names of 1,000+ objects (documented in the famous case of Chaser), read subtle human social cues, and problem-solve in ways that approach conceptual reasoning. In the household context, this intelligence creates specific challenges: they need far more mental stimulation than most breeds, they notice and respond to subtle cues owners don't realize they're giving, and they apply their problem-solving ability to things owners don't want solved (opening gates, escaping, figuring out treat-dispensing puzzles in minutes).</p>
         <p>The practical reality: an inadequately stimulated Border Collie invents work — obsessive ball-chasing (to the point of behavioral addiction), herding anything that moves (children, cats, cars), shadow-chasing, and other repetitive behaviors that are difficult to extinguish once established. These are not behavioral failures. They are the predictable output of a high-powered brain without a job to do. Border Collies belong in active households that can provide structured activity — agility, herding, obedience, disc, flyball, or any sport that channels their capability.</p>
 

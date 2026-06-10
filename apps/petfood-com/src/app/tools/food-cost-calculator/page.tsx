@@ -8,6 +8,8 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
+  AffiliateDisclosure
 } from '@carloOS/ui'
 import { FoodCostCalculator } from '../../../components/visual/FoodCostCalculator'
 
@@ -113,7 +115,13 @@ export default function FoodCostCalculatorPage() {
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Tools', href: '/tools' },
-        { name: 'Food Cost Calculator' },
+        { name: 'Food Cost Calculator', href: '/tools/food-cost-calculator' },
+      ]}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools' },
+        { title: 'Portion Calculator', href: '/tools/portion-calculator' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'Pet Food Calories and Energy Density', href: '/nutrition/calories-and-energy-density' },
       ]}
       schema={schema}
       sidebar={
@@ -146,6 +154,7 @@ export default function FoodCostCalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
@@ -156,6 +165,41 @@ export default function FoodCostCalculatorPage() {
           Enter cups-per-day, bag size, and bag price. The calculator returns cost per day, per month, per year, and per cup. Toggle compare-mode to evaluate two foods side-by-side.
         </p>
         <FoodCostCalculator />
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Have your per-cup number?
+          </p>
+          <h3 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Compare foods at that price point
+          </h3>
+          <p className="text-sm text-brand-text-mid mb-4">
+            Once you know your real cost per cup, the next question is value. Start with our
+            independent <Link href="/brands">brand evaluations</Link> and the{' '}
+            <Link href="/ingredients">ingredients library</Link> to judge what you&apos;re actually
+            paying for, then price a specific food against your current one.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <Link
+              href="/brands"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Read brand evaluations
+            </Link>
+            <a
+              href="/go/chewy-brand/complete%20balanced%20dog%20food?s=tools-food-cost-calculator"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Price foods on Chewy →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through the retailer link — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="per-cup">Why per-cup, not per-pound</h2>
         <p>

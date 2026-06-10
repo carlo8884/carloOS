@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer, AffiliateDisclosure, DisplayAds } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import './globals.css'
@@ -100,30 +100,34 @@ export default function RootLayout({
         )}
       </head>
       <body>
+        {/* Skip-link — first focusable element; hidden until focused (WCAG 2.4.1) */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-brand-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
+        >
+          Skip to content
+        </a>
+
         {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="dog-com" />
 
         {/*
-          Sitewide above-the-fold FTC affiliate disclosure
-          (QC-STANDARDS §3.2, ops/policies/bot-coordination.md §3,
-          csro-dir-2026-W22-015 #3). Skimlinks loads on every page (see
-          <Script> below) and may auto-convert any brand mention into an
-          affiliate link — so every dog.com page qualifies as "a page that
-          contains affiliate links," and 16 CFR Part 255 "clear and
-          conspicuous" requires disclosure above the fold, not just in the
-          footer. The Footer disclosure (variant="footer") stays as
-          defense-in-depth.
-          Dog.com is a Tier-1 protect-asset with a live $2.3M offer
-          (per CSRO dogfish-acquirer-narrative) — over-disclosure is the
-          correct diligence-cleanliness posture.
-          Some monetized pages (e.g. /dna-testing) render their own mid-
-          content <AffiliateDisclosure variant="inline" /> above their
-          first CTA; duplicate disclosures are intentional, not a defect.
+          FTC disclosure posture (csro-dir-2026-W22-015 → Carlo phone review
+          2026-06-05): the top-of-page inline disclosure banner was REMOVED so
+          the homepage's first emotional impression is dog photography, not a
+          compliance notice. Disclosure stays FTC-safe via two surfaces:
+            1. Sitewide footer disclosure — <Footer ... showAffiliateDisclosure />
+               below (one subtle line, AffiliateDisclosure variant="footer").
+            2. In-context disclosures rendered by individual monetized pages
+               (review / product / DNA-testing pages render their own
+               <AffiliateDisclosure variant="inline" /> directly above the
+               first affiliate CTA — 16 CFR Part 255 "clear and conspicuous"
+               is satisfied at the point of monetization).
+          Do NOT re-add a top banner here.
         */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
         {/* Page content */}
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
 
         {/* Shared Footer */}
         <Footer siteId="dog-com" showAffiliateDisclosure />

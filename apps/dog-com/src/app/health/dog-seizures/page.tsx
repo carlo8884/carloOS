@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Podell M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. J Vet Intern Med. 2016;30(2):477-490.', publisher: 'JVIM / ACVIM' },
+  { label: 'De Risio L et al. International veterinary epilepsy task force consensus proposal: diagnostic approach to epilepsy in dogs. BMC Vet Res. 2015;11:148.', publisher: 'BMC Vet Research' },
+  { label: 'Merck Veterinary Manual: Seizure Disorders in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/seizure-disorders/overview-of-seizure-disorders-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Epilepsy and Seizures in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Seizures — Types, Causes, When to ER | Dog.com', description: 'Dog seizures: focal vs generalized, cluster vs status, idiopathic vs symptomatic causes, anticonvulsants, seizure journaling, and ER red flags.', path: '/health/dog-seizures', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, diagnostic workup, anticonvulsant management, and emergency criteria for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency criteria, diagnostic workup, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
-const combined = combineSchemas(schema, med)
-
 const FAQS = [
   { question: 'My dog just had a first seizure — what do I do right now?', answer: 'During the event: do not put your hands near the dog\'s mouth, do not try to restrain the dog, time the seizure from start to finish, move hazards away, and if possible video the event for your veterinarian. After the seizure: keep the dog in a quiet, dim, soft space. The post-ictal period (confusion, temporary blindness, pacing) can last minutes to hours. Contact your vet the same day for a first seizure. If the dog is under one year old, over five years old, has had a seizure longer than five minutes, or has had more than one seizure in 24 hours, go to an emergency veterinarian immediately.' },
   { question: 'How urgent is a five-minute seizure?', answer: 'Five minutes is the published threshold for operational status epilepticus in both human and veterinary neurology (ACVIM consensus on canine epilepsy, JVIM 2016). At or beyond five minutes the seizure is unlikely to self-terminate, brain injury risk rises, and emergency anticonvulsant therapy (typically IV diazepam, midazolam, or levetiracetam) is indicated. This is an immediate ER visit.' },
@@ -16,6 +22,8 @@ const FAQS = [
   { question: 'When should we see a veterinary neurologist?', answer: 'Reasonable triggers include: first seizure in a dog under one year or over five years (atypical age suggests structural disease), focal seizures, abnormal neurologic exam findings between seizures, cluster seizures or status epilepticus, refractory seizures on first-line medication, or a desire for advanced imaging (MRI) and cerebrospinal fluid analysis. Diplomates of the American College of Veterinary Internal Medicine specialty of Neurology (ACVIM-Neurology) are searchable through the ACVIM directory at acvim.org.' },
 ]
 
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
+
 export default function DogSeizuresPage() {
   return (
     <>
@@ -23,6 +31,7 @@ export default function DogSeizuresPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Seizures in Dogs — Types, Causes, and Emergency Criteria', subtitle: 'Watching a dog seize is one of the most distressing experiences in pet ownership. Most single seizures are short and self-limiting; the urgent priorities are safety, accurate observation, and knowing the published thresholds that change a seizure from an outpatient event to an emergency. This page summarizes the ACVIM consensus on canine epilepsy and the standard neurology approach to work-up and treatment.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '13 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Seizures', href: '/health/dog-seizures' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Anxiety', href: '/health/dog-anxiety', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency — Go Now</div>
@@ -32,6 +41,7 @@ export default function DogSeizuresPage() {
           </div>
           <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
         </>}
       >
@@ -137,6 +147,8 @@ export default function DogSeizuresPage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

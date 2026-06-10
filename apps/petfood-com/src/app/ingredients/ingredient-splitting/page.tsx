@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function IngredientSplittingPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function IngredientSplittingPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Ingredient Splitting on Pet Food Labels', href: '/ingredients/ingredient-splitting' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +95,14 @@ export default function IngredientSplittingPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Brand Evaluations', href: '/brands' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -80,6 +114,7 @@ export default function IngredientSplittingPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>AAFCO requires the ingredient list to be ordered by ingoing weight before processing, descending. Owners reasonably read the first few ingredients as what the food is mostly made of. Ingredient splitting exploits this by dividing one component into multiple named fractions, each of which weighs less individually and so appears lower on the list — making a less-desirable ingredient look like a minor one. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
         <h2 id="rule">The Descending-Order Rule</h2>
         <p>Each ingredient is listed by its weight as it goes into the batch, heaviest first. This single rule drives most label interpretation — and most label confusion. Because the order is by weight, not by nutritional contribution, and because water-heavy fresh ingredients rank higher than their dry contribution warrants, the order can mislead even without deliberate manipulation. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a>.</p>
@@ -94,12 +129,7 @@ export default function IngredientSplittingPage() {
         <h2 id="trust">What to Trust Instead</h2>
         <p>Because the ingredient order is gameable, do not rely on it alone. Use the guaranteed analysis (on a dry-matter basis), request the typical analysis and the dry-matter nutrient breakdown from the manufacturer, check the AAFCO substantiation, and weigh manufacturer transparency. The ingredient list is one input among several, not the verdict. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

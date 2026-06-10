@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Combined Driving — The Three-Phase Sport of Driven Horses",
   description:
-    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts and teams, and governing bodies.",
+    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts, and governing bodies.",
   path: '/disciplines/combined-driving',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Combined Driving — The Three-Phase Sport of Driven Horses",
   description:
-    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts and teams, and governing bodies.",
+    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts, and governing bodies.",
   url: 'https://horses.com/disciplines/combined-driving',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function CombinedDrivingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Equestrian Vaulting', href: '/disciplines/vaulting' },
+        ]}
         hero={{
           title: "Combined Driving",
           subtitle:
@@ -88,6 +94,7 @@ export default function CombinedDrivingPage() {
               { label: "Cleveland Bay", href: "/breeds/cleveland-bay" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function CombinedDrivingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Combined Driving Is</h2>
           <p>Combined driving applies the format of ridden eventing to horses in harness. Instead of being ridden, the horse (or pair or team) pulls a carriage driven by a whip (the driver), assisted by one or more grooms (called the navigator or backstepper, especially in the marathon). Over one to three days, the same turnout competes in three contrasting phases, and the scores combine -- testing obedience and elegance, fitness and boldness, and accuracy in turn.</p>
 

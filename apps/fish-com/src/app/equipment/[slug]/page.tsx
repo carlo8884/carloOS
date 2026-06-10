@@ -23,15 +23,16 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
+  AffiliateDisclosure,
   CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
   EmailCapture,
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -124,13 +125,6 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://fish.com${b.href}`,
-    })),
-  })
-
   const faqSchema = buildFAQSchema({
     questions: faqItems.map((f) => ({
       question: f.question,
@@ -141,7 +135,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
   // ArticleLayout will inject one schema via <SchemaScript>. combineSchemas
   // returns an array; SchemaScript serializes the array into one JSON-LD
   // <script> tag.
-  const allSchemas = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const allSchemas = combineSchemas(articleSchema, faqSchema)
 
   return (
     <ArticleLayout
@@ -151,12 +145,12 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         subtitle: category.whatItIs,
         category: 'Equipment Buyer Guide',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}
       breadcrumbs={breadcrumbItems}
       schema={allSchemas as unknown as Record<string, unknown>}
+      relatedLinks={[{ title: 'Equipment Hub', href: '/equipment', category: 'Equipment' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }]}
       sidebar={
         <>
           <RelatedLinks
@@ -200,6 +194,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -378,6 +373,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         </div>
 
         <h2 id="shop">Where to Shop</h2>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
           Browse the {category.categoryName.toLowerCase()} category on Amazon or Chewy. Fish.com
           earns an affiliate commission when you purchase through these links — at no extra cost

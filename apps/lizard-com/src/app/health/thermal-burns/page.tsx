@@ -1,14 +1,29 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Thermal Injury and Wound Management", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Skin Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/skin-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Thermal Burns in Reptiles — Hot Rocks | Lizard.com', description: 'Hot rocks burn reptiles before they can detect the heat. Loose heat lamp placement causes dorsal burns. Signs, first aid.', path: '/health/thermal-burns', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Thermal Burns in Reptiles', description: 'Causes, signs, and treatment of thermal burns from hot rocks and heat lamps in reptiles.', url: 'https://lizard.com/health/thermal-burns', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Thermal Burns in Reptiles', description: 'Causes, signs, and treatment of thermal burns from hot rocks and heat lamps in reptiles.', url: 'https://lizard.com/health/thermal-burns', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function ThermalBurnsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Thermal Burns in Reptiles', subtitle: 'Thermal burns are one of the most common reptile injuries seen in veterinary practice and almost entirely preventable. The two main culprits: heated rocks (reptiles cannot detect conductive heat until burned) and loose heat lamps positioned too close or not properly secured. Burns are painful, slow to heal, and frequently become infected.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Thermal Burns in Reptiles', subtitle: 'Thermal burns are one of the most common reptile injuries seen in veterinary practice and almost entirely preventable. The two main culprits: heated rocks (reptiles cannot detect conductive heat until burned) and loose heat lamps positioned too close or not properly secured. Burns are painful, slow to heal, and frequently become infected.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Thermal Burns', href: '/health/thermal-burns' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Abscess Treatment', href: '/health/abscess-treatment', category: 'Health' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Screen vs PVC Enclosure', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Prevention Checklist</div>
@@ -20,9 +35,11 @@ export default function ThermalBurnsPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-thermal-burns" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Hot Rocks Are Dangerous</h2>
         <p>Reptiles thermoregulate by moving between warm and cool areas — they seek radiant heat from above (like the sun) rather than conductive heat from below. Their skin is not adapted to detect conductive heat from a surface until it is already causing tissue damage. An electric hot rock may reach 120–140°F on its surface — far above safe contact temperatures — while the reptile rests on it, unaware that damage is occurring. By the time behavioral signals indicate discomfort, full-thickness burns may be present on the ventral surface.</p>
         <p><strong>Electric hot rocks should never be used.</strong> This is not a recommendation — it is a categorical safety statement. Every reptile veterinarian and organization agrees: heated rocks are inappropriate for reptile husbandry. Appropriate heat sources are overhead (basking lamps, radiant heat panels) and under-tank heaters on thermostats (for belly heat in species that require it — on a thermostat set to appropriate substrate temperature, surface temperature verified with an infrared thermometer).</p>
@@ -39,14 +56,16 @@ export default function ThermalBurnsPage() {
         <p><strong>First aid:</strong> Remove the animal from the heat source immediately. Cool the burn gently with room-temperature (not cold) water for 5–10 minutes. Do not apply butter, petroleum jelly, or any home remedy to the burn. Cover loosely with a clean damp cloth. Veterinary evaluation is required for any burn beyond superficial reddening.</p>
         <p><strong>Veterinary treatment:</strong> Debridement of necrotic tissue, topical antimicrobial (silver sulfadiazine cream is commonly used), systemic antibiotics for infected burns, and pain management. Burns in reptiles heal slowly — weeks to months depending on depth and extent. The reptile must be kept in a clean, sterile substrate during healing to prevent wound contamination. Full recovery from significant burns may require extended veterinary management.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Prevention — Digital Thermostat</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Thermal-burn prevention is non-negotiable: every heat element on a digital thermostat (Herpstat, Jump Start, Inkbird ITC-308). No exceptions. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/reptile%20digital%20thermostat%20herpstat%20jumpstart?s=health-thermal-burns" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/reptile%20digital%20thermostat%20herpstat%20jumpstart?s=health-thermal-burns" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
-          </div>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>A burn is a veterinary matter</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Thermal burns are painful, slow to heal, and prone to infection. Any burn beyond superficial reddening needs a reptile veterinarian — debridement, antimicrobials, and pain management are not safe to manage at home. Find an ARAV-affiliated reptile vet through the <a href="https://arav.org" rel="noopener" target="_blank" style={{ color: '#7bc25c' }}>ARAV member directory</a>.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Prevention is a setup problem. Review these husbandry guides so the heat source that caused the burn cannot do it again:</p>
+          <ul style={{ margin: 0, paddingLeft: '20px', color: '#8a96ad', fontSize: '14px', lineHeight: 1.7 }}>
+            <li><a href="/setup/temperature-guide" style={{ color: '#7bc25c' }}>Temperature Guide</a> — safe basking ranges and how to verify them</li>
+            <li><a href="/setup/lighting-guide" style={{ color: '#7bc25c' }}>Lighting &amp; Heat Guide</a> — overhead heat done safely, why hot rocks are never used</li>
+            <li><a href="/setup/screen-vs-pvc-enclosure" style={{ color: '#7bc25c' }}>Screen vs PVC Enclosures</a> — mounting fixtures so a climbing reptile cannot reach the bulb</li>
+          </ul>
         </div>
-
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

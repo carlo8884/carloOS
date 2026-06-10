@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -11,22 +10,25 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SPECIES = [
-  { name: 'Bearded Dragon', sci: 'Pogona vitticeps', level: 'Beginner', zone: 'Zone 4', slug: 'bearded-dragon', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Leopard Gecko', sci: 'Eublepharis macularius', level: 'Beginner', zone: 'Zone 1–2', slug: 'leopard-gecko', img: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Crested Gecko', sci: 'Correlophus ciliatus', level: 'Beginner', zone: 'Zone 2', slug: 'crested-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Ball Python', sci: 'Python regius', level: 'Beginner', zone: 'Zone 2–3', slug: 'ball-python', img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Corn Snake', sci: 'Pantherophis guttatus', level: 'Beginner', zone: 'Zone 2', slug: 'corn-snake', img: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Blue-Tongue Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongue-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
-  { name: 'African Fat-Tailed Gecko', sci: 'Hemitheconyx caudicinctus', level: 'Beginner', zone: 'Zone 1', slug: 'african-fat-tailed-gecko', img: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Western Hognose', sci: 'Heterodon nasicus', level: 'Beginner', zone: 'Zone 1–2', slug: 'western-hognose-snake', img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Kenyan Sand Boa', sci: 'Gongylophis colubrinus', level: 'Beginner', zone: 'Zone 1', slug: 'kenyan-sand-boa', img: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Green Anole', sci: 'Anolis carolinensis', level: 'Intermediate', zone: 'Zone 2–3', slug: 'green-anole', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Chinese Water Dragon', sci: 'Physignathus cocincinus', level: 'Intermediate', zone: 'Zone 2–3', slug: 'chinese-water-dragon', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Fire Skink', sci: 'Lepidothyris fernandi', level: 'Intermediate', zone: 'Zone 2', slug: 'fire-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Leachianus Gecko', sci: 'Rhacodactylus leachianus', level: 'Intermediate', zone: 'Zone 1–2', slug: 'leachianus-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Mourning Gecko', sci: 'Lepidodactylus lugubris', level: 'Beginner', zone: 'Zone 1–2', slug: 'mourning-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Argentine Tegu', sci: 'Salvator merianae', level: 'Advanced', zone: 'Zone 3–4', slug: 'argentine-black-and-white-tegu', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Nile Monitor', sci: 'Varanus niloticus', level: 'Advanced', zone: 'Zone 3–4', slug: 'nile-monitor', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Bearded Dragon', sci: 'Pogona vitticeps', level: 'Beginner', zone: 'Zone 4', slug: 'bearded-dragon', img: 'lizard-com:species-bearded-dragon' },
+  { name: 'Leopard Gecko', sci: 'Eublepharis macularius', level: 'Beginner', zone: 'Zone 1–2', slug: 'leopard-gecko', img: 'lizard-com:species-leopard-gecko' },
+  { name: 'Crested Gecko', sci: 'Correlophus ciliatus', level: 'Beginner', zone: 'Zone 2', slug: 'crested-gecko', img: 'lizard-com:species-crested-gecko' },
+  { name: 'Gargoyle Gecko', sci: 'Rhacodactylus auriculatus', level: 'Beginner', zone: 'Zone 1', slug: 'gargoyle-gecko', img: 'lizard-com:species-thumb-gargoyle-gecko' },
+  { name: 'Ball Python', sci: 'Python regius', level: 'Beginner', zone: 'Zone 2–3', slug: 'ball-python', img: 'lizard-com:species-thumb-ball-python' },
+  { name: 'Corn Snake', sci: 'Pantherophis guttatus', level: 'Beginner', zone: 'Zone 2', slug: 'corn-snake', img: 'lizard-com:species-thumb-corn-snake' },
+  { name: 'Blue-Tongue Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongue-skink', img: 'lizard-com:species-thumb-blue-tongue-skink' },
+  { name: 'African Fat-Tailed Gecko', sci: 'Hemitheconyx caudicinctus', level: 'Beginner', zone: 'Zone 1', slug: 'african-fat-tailed-gecko', img: 'lizard-com:species-thumb-african-fat-tailed-gecko' },
+  { name: 'Western Hognose', sci: 'Heterodon nasicus', level: 'Beginner', zone: 'Zone 1–2', slug: 'western-hognose-snake', img: 'lizard-com:species-thumb-western-hognose' },
+  { name: 'Kenyan Sand Boa', sci: 'Gongylophis colubrinus', level: 'Beginner', zone: 'Zone 1', slug: 'kenyan-sand-boa', img: 'lizard-com:species-thumb-kenyan-sand-boa' },
+  { name: 'Green Anole', sci: 'Anolis carolinensis', level: 'Intermediate', zone: 'Zone 2–3', slug: 'green-anole', img: 'lizard-com:species-thumb-green-anole' },
+  { name: 'Chinese Water Dragon', sci: 'Physignathus cocincinus', level: 'Intermediate', zone: 'Zone 2–3', slug: 'chinese-water-dragon', img: 'lizard-com:species-thumb-chinese-water-dragon' },
+  { name: 'Fire Skink', sci: 'Lepidothyris fernandi', level: 'Intermediate', zone: 'Zone 2', slug: 'fire-skink', img: 'lizard-com:species-thumb-fire-skink' },
+  { name: 'Leachianus Gecko', sci: 'Rhacodactylus leachianus', level: 'Intermediate', zone: 'Zone 1–2', slug: 'leachianus-gecko', img: 'lizard-com:species-thumb-leachianus-gecko' },
+  { name: 'Mourning Gecko', sci: 'Lepidodactylus lugubris', level: 'Beginner', zone: 'Zone 1–2', slug: 'mourning-gecko', img: 'lizard-com:species-thumb-mourning-gecko' },
+  { name: 'Mossy Leaf-Tail Gecko', sci: 'Uroplatus sikorae', level: 'Advanced', zone: 'Zone 1', slug: 'mossy-leaf-tail-gecko', img: 'lizard-com:species-thumb-mossy-leaf-tail-gecko' },
+  { name: 'Argentine Tegu', sci: 'Salvator merianae', level: 'Advanced', zone: 'Zone 3–4', slug: 'argentine-black-and-white-tegu', img: 'lizard-com:species-thumb-argentine-tegu' },
+  { name: 'Savannah Monitor', sci: 'Varanus exanthematicus', level: 'Advanced', zone: 'Zone 3–4', slug: 'savannah-monitor', img: 'lizard-com:species-thumb-savannah-monitor' },
+  { name: 'Nile Monitor', sci: 'Varanus niloticus', level: 'Advanced', zone: 'Zone 3–4', slug: 'nile-monitor', img: 'lizard-com:species-thumb-nile-monitor' },
 ]
 
 const LEVEL_COLORS = {
@@ -43,9 +45,26 @@ export default function SpeciesIndexPage() {
     ],
   })
 
+  // ItemList of the featured species — structured, citable index of the
+  // species cluster for AI Overviews / Perplexity (GEO authority signal).
+  const speciesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Reptile & Amphibian Species at Lizard.com',
+    numberOfItems: SPECIES.length,
+    itemListElement: SPECIES.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: `https://lizard.com/species/${s.slug}`,
+    })),
+  }
+
+  const schema = combineSchemas(breadcrumbSchema, speciesListSchema)
+
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <div className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-5">
@@ -72,7 +91,7 @@ export default function SpeciesIndexPage() {
               className="block rounded-xl overflow-hidden no-underline group"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
               <div className="relative h-36 overflow-hidden">
-                <Image src={s.img} alt={s.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, 16vw" />
+                <StockImage manifestKey={s.img} fallbackKey="lizard-com:category-species" alt={s.name} aspect="1:1" variant="inline" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
               <div className="p-3">
@@ -149,6 +168,8 @@ export default function SpeciesIndexPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="footer" />
 </>
   )
 }

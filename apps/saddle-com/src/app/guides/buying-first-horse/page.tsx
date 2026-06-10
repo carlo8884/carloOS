@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Buying Your First Horse — Pre-Purchase Exam, Budget | Saddle.com', description: 'First horse buying guide. The pre-purchase exam is non-negotiable. True cost breakdown, breed considerations for beginners, and what to ask before purchase.', path: '/guides/buying-first-horse', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Buying Your First Horse Guide', description: 'Pre-purchase exam, true cost, and breed selection for buying a first horse.', url: 'https://saddle.com/guides/buying-first-horse', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -9,6 +9,12 @@ export default function BuyingFirstHorsePage() {
       hero={{ title: 'Buying Your First Horse', subtitle: 'The purchase price is the smallest expense of horse ownership. The monthly cost of keeping a horse is significant and ongoing for the animal\'s 25–35 year lifespan. Understanding the true cost before acquisition — and getting a veterinary pre-purchase examination — are the two most important steps in responsible first-horse purchase.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Buying First Horse', href: '/guides/buying-first-horse' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },
+        { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Monthly Cost Estimate</div>
@@ -23,6 +29,7 @@ export default function BuyingFirstHorsePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The True Cost — Before You Fall in Love</h2>
         <p>The purchase price of a first horse ($1,000–15,000 for a suitable beginner horse depending on market, training level, and soundness) is a one-time expense. The ongoing expenses are permanent for the horse's life. Full-care board (the facility feeds, waters, cleans stalls, and provides pasture access) runs $400–1,500/month depending on region and facility quality. Self-care or pasture board is significantly cheaper but requires daily owner involvement — appropriate if you have your own property or the flexibility to be at the barn twice daily.</p>
         <p>The "hidden" costs that surprise new owners: emergency veterinary care (colic surgery costs $5,000–15,000; significant injuries can exceed this — budget or insure for it), dental care (horses need annual floating of sharp points on their teeth — $150–300 per session), farrier every 6–8 weeks whether or not the horse is ridden (hooves grow continuously and must be trimmed), and blankets, fly gear, and other seasonal equipment that accumulates over years.</p>

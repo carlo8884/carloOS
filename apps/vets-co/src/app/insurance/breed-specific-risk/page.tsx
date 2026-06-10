@@ -14,7 +14,7 @@ export default function BreedRiskPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Breed-Specific Insurance Risk', subtitle: 'Breed shapes both the conditions a pet is likely to face and how insurers price and structure coverage. For breeds with known predispositions — orthopedic disease in large breeds, airway problems in flat-faced breeds, cancer and cardiac risks in others — matching the policy to the breed\'s likely needs matters more than chasing the lowest premium.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Breed-Specific Insurance Risk', subtitle: 'Breed shapes both the conditions a pet is likely to face and how insurers price and structure coverage. For breeds with known predispositions — orthopedic disease in large breeds, airway problems in flat-faced breeds, cancer and cardiac risks in others — matching the policy to the breed\'s likely needs matters more than chasing the lowest premium.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Breed-Specific Risk', href: '/insurance/breed-specific-risk' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function BreedRiskPage() {
           <ReviewCard
             id="trupanion"
             badge="Unlimited Payouts"
-            badgeEmoji="🏆"
             name="Trupanion"
             subtitle="Unlimited annual payouts, strong for predictable major needs"
             score={9.0}
@@ -82,7 +81,6 @@ export default function BreedRiskPage() {
           <ReviewCard
             id="figo"
             badge="High-Limit Plans"
-            badgeEmoji="🐶"
             name="Figo Pet Insurance"
             subtitle="High and unlimited annual-limit options, app-based claims"
             score={8.3}

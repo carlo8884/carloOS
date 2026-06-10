@@ -10,15 +10,17 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live body-condition-score tool embedded on the homepage so the first
+// screens are something you DO, not a link to a tool (premium gate 3).
+import { BodyConditionScoreCalculator } from '../components/visual/BodyConditionScoreCalculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The Reference for Horse Owners',
   description:
-    'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
+    'Horses.com — research-based reference for horse owners: breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
   path: '/',
   type: 'website',
 })
@@ -32,6 +34,7 @@ type CategoryIcon =
   | 'supplements'
   | 'reviews'
   | 'roadmap'
+  | 'racing'
 
 function CategoryIconSvg({ name }: { name: CategoryIcon }) {
   const common = {
@@ -102,6 +105,16 @@ function CategoryIconSvg({ name }: { name: CategoryIcon }) {
           <circle cx="20" cy="17" r="1.4" />
         </svg>
       )
+    case 'racing':
+      // Finish post with motion lines — racing discipline, restrained
+      return (
+        <svg {...common}>
+          <line x1="18" y1="3" x2="18" y2="21" strokeWidth="2" />
+          <path d="M18 5l-6 2-6-2" />
+          <path d="M4 14c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
+          <path d="M4 18c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
+        </svg>
+      )
   }
 }
 
@@ -149,6 +162,12 @@ const CATEGORIES: {
     desc: 'A free 90-day plan and 8-email course for the first-time owner.',
     href: '/first-horse-roadmap',
   },
+  {
+    icon: 'racing',
+    title: 'Racing Intelligence',
+    desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference -- disciplines, governance, and OTTB aftercare.',
+    href: '/racing',
+  },
 ]
 
 const FEATURED_ARTICLES: {
@@ -158,13 +177,11 @@ const FEATURED_ARTICLES: {
   teaser: string
   readTime: string
   /**
-   * Optional cover photo. Photo IDs are either reused from the CarloOS
-   * Saddle.com codebase (verified-in-production) or sourced via Unsplash
-   * search for equestrian editorial subjects matching the brand mood.
-   * Per playbook: moody single-subject, environmental over isolated,
-   * never the "smiling rider on stock horse" cliché.
+   * Optional cover photo manifest key. Resolved via image-manifest.json
+   * (populated by sync-images.mjs) so photographer attribution is always
+   * rendered. Per QC §1: no raw CDN URLs here.
    */
-  image?: string
+  imageKey?: string
   imageAlt?: string
 }[] = [
   {
@@ -174,12 +191,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration. AQHA registry, the 5-panel genetic test, and what to expect as a first-time owner.',
     readTime: '14 min',
-    // All-purpose horse and rider photo — reused from saddle-com /english
-    // (verified-in-production CarloOS Unsplash ID). Quarter Horse is the
-    // workhorse of multiple disciplines; the schooling-session photo fits
-    // the breed's versatility better than a discipline-specific shot.
-    image:
-      'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=900&q=80&auto=format&fit=crop',
+    // Horse and rider schooling session — manifest-managed with photographer
+    // attribution. Quarter Horse's discipline versatility matches this subject.
+    imageKey: 'horses-com:featured-quarter-horse',
     imageAlt: 'A horse and rider in an all-purpose schooling session',
   },
   {
@@ -214,12 +228,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'Glucosamine, chondroitin, hyaluronic acid, MSM — the four ingredients on most labels. What the literature actually shows, the difference between maintenance and loading doses, and where to skip the marketing.',
     readTime: '13 min',
-    // Show-jumper mid-flight — reused from saddle-com production. Joint
-    // supplements are most relevant to the explosive-impact sport horse;
-    // the airborne jumper makes the subject visible without staging a
-    // bottle-marketing scene.
-    image:
-      'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=900&q=80&auto=format&fit=crop',
+    // Show-jumper mid-flight — manifest-managed with photographer attribution.
+    // Joint supplements are most relevant to the explosive-impact sport horse.
+    imageKey: 'horses-com:featured-joint-supplements',
     imageAlt: 'A show jumper mid-flight over a fence',
   },
   {
@@ -251,46 +262,31 @@ export default function HomePage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
-        {/* Hero photograph — moody single-subject equestrian editorial.
-            Reuses the dressage-horse-at-canter ID from Saddle.com
-            production (verified-in-production CarloOS Unsplash catalog).
-            Per the COO playbook: no smiling-rider cliché, environmental
-            over staged. The dressage portrait is the strongest single-
-            subject image in the verified catalog and grades cleanly into
-            the deep green-black masthead via the multi-stop gradient. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden lg:block w-[55%] z-0"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop"
-            alt=""
-            fill
-            sizes="55vw"
-            className="object-cover"
+        {/* Hero photograph — image-first masthead. The manifest-managed hero
+            photo renders full-bleed BEHIND the headline band so the first
+            mobile screen leads with photography, not a flat text band.
+            Attribution stays present + linked (StockImage subtleCredit;
+            Unsplash/Pexels TOS, QC §1). */}
+        <div className="absolute inset-0 z-0">
+          <StockImage
+            manifestKey="horses-com:hero"
+            aspect="16:9"
+            variant="full-bleed"
             priority
-          />
-          {/* Multi-stop gradient blends photo into the green-black masthead;
-              keeps the left 45% clear for the text block. */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(90deg, rgba(19,36,28,1) 0%, rgba(19,36,28,0.82) 22%, rgba(19,36,28,0.30) 60%, rgba(19,36,28,0.45) 100%)',
-            }}
+            subtleCredit
           />
         </div>
 
-        {/* Atmospheric overlays kept on top of photo for cohesion with the
-            CSS-only fallback on mobile. */}
+        {/* Atmospheric overlays kept on top of photo for legibility and
+            cohesion with the deep green-black masthead. */}
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none z-[1]"
           style={{
             backgroundImage: [
-              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.22) 0%, transparent 55%)',
-              'radial-gradient(ellipse 70% 70% at 12% 95%, rgba(31,58,47,0.55) 0%, transparent 60%)',
-              'linear-gradient(180deg, rgba(19,36,28,0.0) 0%, rgba(19,36,28,0.55) 95%)',
+              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.20) 0%, transparent 55%)',
+              'linear-gradient(90deg, rgba(19,36,28,0.88) 0%, rgba(19,36,28,0.62) 45%, rgba(19,36,28,0.28) 100%)',
+              'linear-gradient(180deg, rgba(19,36,28,0.35) 0%, rgba(19,36,28,0.72) 100%)',
             ].join(','),
           }}
         />
@@ -422,10 +418,23 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── HERO PHOTO (manifest-managed) ───────────────────────────── */}
-      <div className="bg-brand-surface px-container-sm sm:px-container">
-        <StockImage manifestKey="horses-com:hero" aspect="16:9" variant="inline" />
-      </div>
+      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Try it · Henneke body condition score
+          </span>
+        </div>
+        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+          Is your horse the right weight?
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+          Score the six Henneke checkpoints and get the 1–9 body-condition score with
+          what to change — the standard vets and nutritionists use.
+        </p>
+        <BodyConditionScoreCalculator />
+      </section>
 
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
       <section
@@ -483,6 +492,7 @@ export default function HomePage() {
               { label: 'Western riders',      href: '/disciplines/western-pleasure' },
               { label: 'Reining',             href: '/disciplines/reining' },
               { label: 'Trail riders',        href: '/disciplines/trail-riding' },
+              { label: 'Racing',              href: '/racing' },
               { label: 'All disciplines',     href: '/disciplines' },
             ].map((chip) => (
               <Link
@@ -585,19 +595,15 @@ export default function HomePage() {
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                {/* Cover photo — verified Unsplash equestrian editorial.
-                    Aspect 16/9. Renders only when both image and alt are
-                    provided. */}
-                {art.image && art.imageAlt ? (
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={art.image}
-                      alt={art.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
-                  </div>
+                {/* Cover photo — manifest-managed with photographer attribution.
+                    Renders only when imageKey is set. */}
+                {art.imageKey ? (
+                  <StockImage
+                    manifestKey={art.imageKey}
+                    alt={art.imageAlt}
+                    aspect="16:9"
+                    variant="inline"
+                  />
                 ) : null}
                 <div className="p-7 lg:p-8">
                   {/* Decorative top rule — brass, signals premium */}

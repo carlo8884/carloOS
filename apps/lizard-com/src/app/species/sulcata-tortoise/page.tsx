@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed.', path: '/species/sulcata-tortoise', type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Sulcata Tortoi
 export default function SulcataTortoisePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Sulcata Tortoise', href: '/species/sulcata-tortoise' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+        { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Size Timeline</div>
@@ -23,9 +31,11 @@ export default function SulcataTortoisePage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Russian Tortoise', href: '/species/russian-tortoise' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'Dehydration Guide', href: '/health/dehydration-reptiles' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-sulcata" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Rehoming Crisis — Why It Happens</h2>
         <p>Sulcata tortoises are the most surrendered reptile to rescue organizations in the US. The trajectory is predictable: a hatchling is purchased cheaply (they breed prolifically and hatchlings are inexpensive), kept indoors in a tank for 1-3 years while it grows manageable, then moved outdoors as it outgrows indoor housing, then surrendered at 5-15 years old when it is 20+ inches, destroying fencing, digging through landscaping, and consuming $50-100 of produce weekly. Rescue organizations are overwhelmed — many refuse new sulcata surrenders.</p>
         <p>This is not an exaggeration intended to discourage — it is the documented pattern for the majority of sulcata acquisitions that don't go to prepared, experienced keepers with appropriate long-term facilities. Anyone considering a sulcata should look at photographs of 10-year-old and 20-year-old sulcatas, visit a rescue that has adult sulcatas, and honestly assess whether they have the land, infrastructure, and commitment for that animal for the next 70+ years.</p>
@@ -40,6 +50,7 @@ export default function SulcataTortoisePage() {
         <h2>Who Sulcatas Are Appropriate For</h2>
         <p>Sulcatas are appropriate for: people who own or have permanent access to a minimum half-acre of appropriate outdoor land in a warm climate, have resources to build appropriate substantial fencing, can provide lifelong care or have a credible long-term plan for the animal's future, and have experience with large reptiles or are connecting with experienced mentors. They make genuinely spectacular animals for the right keeper — their longevity, impressive size, and the relationship that develops with a well-cared-for sulcata over decades are extraordinary. But the barriers to providing appropriate care are real and high.</p>
         <p>For people who want a tortoise but cannot meet sulcata requirements: Russian tortoises are the recommended alternative — manageable size, similar personality, cold-tolerant, and appropriate for a much wider range of living situations.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Sulcata Tortoise — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for sulcata tortoise care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

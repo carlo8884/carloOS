@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -48,6 +48,7 @@ export default function PositiveReinforcementPage() {
         { name: 'Training', href: '/training' },
         { name: 'Positive Reinforcement', href: '/training/positive-reinforcement' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -64,6 +65,7 @@ export default function PositiveReinforcementPage() {
           { label: 'Crate Training', href: '/training/crate-training' },
           { label: 'Leash Reactivity', href: '/training/leash-reactivity' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-positive-reinforcement" />
       </>}
     >

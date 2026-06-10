@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BodyClippingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Fly Control for Horses', href: '/care/fly-control' },
+        ]}
         hero={{
           title: "Body Clipping Horses",
           subtitle:
@@ -88,6 +94,7 @@ export default function BodyClippingPage() {
               { label: "Blanket Weights Explained", href: "/tack/blanket-weights" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function BodyClippingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Clip</h2>
           <p>A horse in regular winter work grows a thick coat, sweats heavily under it, and then takes hours to dry -- risking chills and making proper cooling impossible. Clipping removes the coat so the horse sweats less, cools and dries quickly after work, is easier to keep clean, and recovers better. Clipping is also used to help old or PPID horses that fail to shed and overheat under heavy coats. The trade-off is that the horse loses its natural insulation and must be blanketed.</p>
 

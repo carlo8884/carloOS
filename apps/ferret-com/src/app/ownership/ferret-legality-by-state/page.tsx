@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function FerretLegalityByStatePage() {
             'In most of the United States, keeping a ferret is perfectly legal — but not everywhere, and the exceptions matter enough to check before you buy. Two states ban ferrets outright, and a number of cities and counties impose their own restrictions or permit requirements regardless of state law. This page explains the landscape and, more importantly, how to verify the rules where you actually live.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -86,8 +85,22 @@ export default function FerretLegalityByStatePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Traveling With a Ferret', href: '/ownership/traveling-with-a-ferret' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="short">The Short Version</h2>
           <p>
             Domestic ferrets are legal to own in the large majority of US states. The headline exceptions are <strong>California</strong> and <strong>Hawaii</strong>, where keeping a pet ferret is prohibited statewide. Beyond those two, the complication is that <em>local</em> law can be stricter than state law: some cities and counties — historically including places such as New York City and Washington, D.C. — have had their own bans or restrictions even where the surrounding state permits ferrets. Legality is therefore a two-layer question: your state, and then your specific city or county.

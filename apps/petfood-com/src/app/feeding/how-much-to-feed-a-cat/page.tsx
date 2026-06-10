@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function HowMuchToFeedACatPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,13 @@ export default function HowMuchToFeedACatPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +105,7 @@ export default function HowMuchToFeedACatPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>A cat&apos;s feeding amount, like a dog&apos;s, is best derived from its energy requirement and the food&apos;s calorie density rather than from the bag&apos;s range. Cats are obligate carnivores with relatively high protein needs and, when kept indoors and neutered, comparatively low energy needs — a combination that makes portion control essential. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a> and <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="energy">Cat Energy Requirements</h2>
         <p>Resting energy requirement uses the same formula as for dogs: RER = 70 x (kg)^0.75, or approximately 30 x kg + 70 for typical cats. The daily energy requirement is RER times an activity factor. For cats the factors are lower than for dogs: neutered adult roughly 1.2; intact adult roughly 1.4; weight loss roughly 0.8; inactive or obese-prone roughly 1.0; kitten roughly 2.5. A typical lean 4-kilogram neutered indoor cat needs only on the order of 200 to 250 kcal per day.</p>
@@ -94,12 +120,7 @@ export default function HowMuchToFeedACatPage() {
         <h2 id="example">Worked Example</h2>
         <p>A neutered 4.5-kilogram indoor cat: RER = 30 x 4.5 + 70 = 205 kcal. Daily energy requirement = 205 x 1.2 = roughly 246 kcal. If a canned food provides 90 kcal per 85-gram can, that is about 2.7 cans per day; if dry food provides 350 kcal per cup, the full allowance would be about 0.7 cup. Most owners are surprised how little that is — which is precisely why measuring matters for cats.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

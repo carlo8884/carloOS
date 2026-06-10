@@ -20,6 +20,8 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../data/breeds'
 import {
@@ -154,6 +156,10 @@ export default function CompareHubPage() {
         <span className="text-brand-text-mid font-medium">Compare Breeds</span>
       </nav>
 
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:compare-hero" aspect="16:9" variant="wide" priority />
+      </div>
+
       {/* Methodology */}
       <div className="px-container-sm sm:px-container py-10 border-b border-brand-border">
         <h2 className="font-display font-bold text-brand-dark text-xl mb-3">
@@ -246,6 +252,7 @@ export default function CompareHubPage() {
           Browse all breeds →
         </Link>
       </section>
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
     </>
   )
 }

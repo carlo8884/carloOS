@@ -9,12 +9,37 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal and soft-tissue surgery chapters covering foreign-body obstruction.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: foreign-body obstruction, diagnosis, and surgical management",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal surgical standards and ferret anesthesia guidelines",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret foreign-body obstruction, trichobezoar, and enterotomy outcomes",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'GI Blockage', url: 'https://ferret.com/health/gastrointestinal-blockage' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +104,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretGIBlockagePage() {
   return (
@@ -100,7 +118,6 @@ export default function FerretGIBlockagePage() {
             'Ferrets explore with their teeth, love rubber, and have an intestine narrow enough that a swallowed earplug can become a surgical emergency. GI obstruction is common, time-sensitive, and largely preventable with disciplined ferret-proofing.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -131,6 +148,7 @@ export default function FerretGIBlockagePage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -140,8 +158,22 @@ export default function FerretGIBlockagePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
+          { title: 'Anesthesia & Surgery Risk', href: '/health/anesthesia-and-surgery-risk' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-gi-blockage"
+            alt="A ferret exploring its environment — GI blockage prevention begins with ferret-proofing"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
@@ -322,26 +354,7 @@ export default function FerretGIBlockagePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret gastrointestinal and soft-tissue surgery chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret GI disease and surgery.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret foreign-body obstruction.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing ferret-proofing
-              and safety guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about gastrointestinal
             obstruction in ferrets. It is not individualized veterinary advice.

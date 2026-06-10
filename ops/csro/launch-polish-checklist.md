@@ -12,40 +12,6 @@ New pages only to fill a CSRO-named gap; otherwise all throughput goes to defect
 
 Cohort (top 7): Dog · Fish · Ferret · PetFood · Vets · Horses · Lizard.
 
-## Launch cohort ORDER (2026-06-01, Carlo) — supersedes prior ordering
-
-CSRO directly orchestrates the launch-polish sprint in this order:
-
-1. **Ferret.com** — first sprint; build it into the launch-quality template
-2. **PetFood.com**
-3. **Vets.co** — high-upside, but MUST pass trust/placeholder checks before any launch
-4. **Fish.com**
-5. **Saddle.com / Lizard.com** — parallel polish candidates
-6. **Dog.com** — last among the premium Tier 1 cohort
-
-**Rationale:** Dog.com and Fish.com are the highest-value, **offer-backed** assets (real inbound
-offers) → they get MORE premium polish before launch, so they go later. Ferret + PetFood are
-lower-risk, faster revenue-validation sites → first. Vets.co is high-upside but trust/placeholder
-gated.
-
-**Extra-polish flag:** Dog.com and Fish.com require extra premium polish because of real inbound
-offers — do not rush either to the front.
-
-## Operating model (2026-06-01, Carlo) — CSRO-orchestrated sprint
-
-CSRO is the controller and may spin up **temporary, narrow, disposable** sub-agents for Visual,
-Monetization, COO, QA, and IR tasks when that is faster. Every sub-agent brief MUST specify:
-`site` · `lane` · `exact task` · `done-when` · `output/handoff file` · `deadline`.
-
-**Hard rules (no exceptions without Carlo):**
-- CSRO remains the controller; sub-agents are temporary and disposable.
-- No broad new content expansion (freeze stands).
-- No DNS launch without Carlo approval.
-- No spend, vendor approvals, secrets, or domain-sale/redirect decisions without Carlo approval.
-- Trust-bar (QC §1) is absolute.
-
-**Launch-polish objective:** each site feels like a premium domain asset, not a basic content site.
-
 ## Per-site launch-polish gate — every box must be ✅ before a site is advisor-ready
 
 For EACH site:
@@ -78,43 +44,41 @@ For EACH site:
 | — | Lizard logo | Visual | ⬜ handed off |
 | — | Top-20-page sweep, all 7 sites | COO | ⬜ audit agent running |
 
-## Sequence (advisor-mandated, per site)
+## Sequence (advisor-mandated)
 1. COO closes broken routes + trust copy ← **largely done (1,2,6,7,8)**
-2. Visual replaces wrong/duplicate imagery + applies premium first-screen standard
+2. Visual replaces wrong/duplicate imagery ← handed off (3,4,lizard)
 3. Monetization audits ONLY after 1+2 land — no aggressive monetization on medical/vet pages
 4. CSRO holds page-expansion until this checklist is all ✅ per site, then re-runs IR + advisor
 
 CSRO refreshes this after each defect-closure wave.
 
-## Sprint 1 — Ferret.com (active, 2026-06-01)
+## Cohort PR wave — 2026-06-01 (COO conveyor)
 
-Brief: `ops/handoffs/2026-06-01-csro-ferret-sprint1.md`. Done-when ALL true:
-- [ ] Actual ferret imagery on hero + key pages (replaces dog-hero defect) — **Visual**
-- [ ] Warmer niche owner identity / first-screen experience, not generic content-list — **Visual**
-- [ ] Safe monetization; every commercial CTA via `/go`; disclosures above monetized surfaces — **Monetization**
-- [ ] No clinical dosing / medicated-product overreach (launch blocker) — **QA/trust**
-- [ ] Top-page QA: homepage + hubs + top spokes load, links resolve, copy honest — **QA/COO**
-- [ ] Clean internal navigation (no dead links, coherent hub→spoke) — **COO**
-- [ ] Strong first-screen; no generic content-site feel — **Visual + COO**
-- [ ] All CI gates green (trust-guard, metadata-policy, link-check, thin-page-audit, affiliate-integrity) — **COO**
-- [ ] IR sign-off: no Tier-1 trust/valuation risk — **IR**
+Merged this session (verify-gated, merge-on-green): #364 (docs), #365
+(metadata-policy redirect-stub exemption + ferret stubs/tools schema),
+#366 (petfood nav/footer), #367 (vets trust + telehealth schema), #368
+(fish footer + tools ItemList + /data priority), #369 (ferret homepage
+trust line + sister-site section removed), #370 (saddle footer +
+western trust copy), #371 (lizard nav/footer + first-year-care href +
+sitemap), #372 (ferret Visual premium-redesign brief), #373 (ferret
+`/find-an-exotic-vet` editorial route), #374 (saddle Stubben first-person
+claims fixed), #375 (vets `/vets` placeholder noIndex + sitemap).
 
-Then apply the same bar to PetFood → Vets → Fish → Saddle/Lizard → Dog (last).
+In flight (open, verify-gated):
+- **#376** — ferrets-com `/moving` meta desc ≤160 (was main-red on an
+  enforced site; **blocks #377/#378 metadata-policy until merged**).
+- **#377** — dog-com symptom-guide fabricated vet-authorship removed (QC §1 P0).
+- **#378** — dog-com orphaned `/compare` + `/which-pet` tools surfaced in
+  nav/footer (cohort-#6 audit P0-2) + audit doc persisted.
 
-### Sprint-1 audit result (2026-06-01) — `ops/handoffs/2026-06-01-qa-ferret-com-launch-audit.md`
-**Verdict: clears §8a hard gates. No P0 launch blockers.** trust-guard / metadata-policy / link-check
-all green; no clinical-dosing overreach; dog-hero defect already resolved (manifest now a real ferret).
+Routed (not COO execution):
+- Ferret homepage premium first-screen redesign (incl. real ferret hero,
+  6-path owner-intent first screen) → **Visual** (brief #372).
+- Dog homepage first-screen tool promotion → **Visual**.
+- Dog "symptom checker" promise resolves to static `/symptoms` →
+  **CSRO/Carlo** product-gap decision (reframe vs. build interactive triage).
 
-COO-lane defects closed this pass:
-- ✅ Orphan dup `/care/seasonal-coat-and-shedding` → redirect to canonical `/care/seasonal-shedding`
-- ✅ Orphan dup `/behavior/scratching-and-digging-furniture` → redirect to `/behavior/digging-and-burrowing`
-- ✅ `/tools` hub: added BreadcrumbList + ItemList/WebApplication JSON-LD (citable product surface)
-
-Handed off (not COO-lane):
-- ⬜ `/legal/affiliate-disclosure` dup of canonical `/disclosure` → **Monetization** (shared §5 FTC lane):
-  `ops/handoffs/2026-06-01-csro-to-monetization-ferret-disclosure-dup.md`
-- ⬜ Surface Food Evaluator on homepage first-screen → **Visual** (gated on premium first-screen standard)
-
-P2 backlog (polish, not launch-gating):
-- ⬜ Standardize breadcrumb pattern (some hubs hand-roll inline nav+schema; some `/diet/*`,`/ownership/*`
-  spokes have neither) → uniform `Breadcrumb` component + BreadcrumbList JSON-LD across ferret-com
+Dog.com P1 backlog (COO, post-merge): sitemap `/dashboard/revenue`+`/data`
+hygiene, `/breeds` ItemList JSON-LD, `/compare/[slug]` in sitemap,
+duplicate-topic canonical review. See
+`ops/handoffs/2026-06-01-dog-com-launch-audit.md`.

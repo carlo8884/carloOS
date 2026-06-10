@@ -5,11 +5,11 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { States, type StateEntry } from '@/data/states'
@@ -132,15 +132,7 @@ export default async function StateVetDirectoryPage({
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'Find a Vet', url: 'https://ferrets.com/find-a-vet' },
-      { name: state.name, url: pageUrl },
-    ],
-  })
-
-  const schema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+  const schema = combineSchemas(articleSchema, faqSchema)
 
   return (
     <>
@@ -345,6 +337,63 @@ export default async function StateVetDirectoryPage({
               </a>{' '}
               — national owner-and-shelter network with vet contact lists and
               regional rescue referrals.
+            </li>
+          </ul>
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs-vet"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs-vet"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link
+                href="/find-a-vet"
+                className="text-brand-primary font-medium hover:underline"
+              >
+                Vet directory hub &mdash; all states &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/states/${state.slug}`}
+                className="text-brand-primary font-medium hover:underline"
+              >
+                Ferret laws in {state.name} &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/adopt"
+                className="text-brand-primary font-medium hover:underline"
+              >
+                Adopting a ferret &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/directory/rescues"
+                className="text-brand-primary font-medium hover:underline"
+              >
+                Ferret rescue directory &rarr;
+              </Link>
             </li>
           </ul>
         </section>

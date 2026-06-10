@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mikrogeophagus ramirezi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/mikrogeophagus-ramirezi/", publisher: "Seriously Fish" },
+  { label: "Mikrogeophagus ramirezi — FishBase species record", url: "https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html", publisher: "FishBase" },
+  { label: "Kullander, S.O. Cichlidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+  { label: "Keenleyside, M.H.A. Diversity and Adaptation in Fish Behaviour. Springer-Verlag, 1979.", publisher: "Springer-Verlag" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0, 80-86°F). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BlueRamPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'German Blue Ram Care Guide', subtitle: 'Mikrogeophagus ramirezi — one of the most spectacularly colored dwarf cichlids available. Electric blue body, brilliant yellow head, red eye, and flowing fins make blue rams stunning in a planted tank. They also require specific water conditions that most beginners cannot provide — and they die quickly when those conditions are wrong.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'German Blue Ram Care Guide', subtitle: 'Mikrogeophagus ramirezi — one of the most spectacularly colored dwarf cichlids available. Electric blue body, brilliant yellow head, red eye, and flowing fins make blue rams stunning in a planted tank. They also require specific water conditions that most beginners cannot provide — and they die quickly when those conditions are wrong.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'German Blue Ram', href: '/species/blue-ram' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -19,10 +28,13 @@ export default function BlueRamPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Discus Care', href: '/species/discus' }, { label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Angelfish Care', href: '/species/angelfish' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-blue-ram" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-blue-ram" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A blue ram cichlid in a home aquarium." priority />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
         <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
         <p><strong>Water preparation for blue rams:</strong> If your tap water is hard, mix with RO/DI water to achieve the target GH and pH. A 50/50 RO/tap mix is a starting point — test the result and adjust. Alternatively, use full RO water remineralized with Seachem Equilibrium (adds GH without raising KH) to achieve GH 5–8 with minimal KH, which allows CO2 or driftwood tannins to set a low, stable pH. Peat filtration and Indian almond leaves add tannins that lower pH and provide antibacterial properties beneficial to rams.</p>
@@ -42,7 +54,8 @@ export default function BlueRamPage() {
 
         <h2>Breeding</h2>
         <p>A compatible pair in good condition in appropriate water conditions will spawn regularly — depositing eggs on a flat surface (broad leaf, flat stone, or directly on the substrate) in a cleared spawning site. Both parents guard the eggs and fry. Fry are tiny — fed infusoria or baby brine shrimp. Many first spawns fail as the pair learns parenting; experienced pairs are reliable parents. The challenge is fry survival in a community tank — other fish eat fry readily, and even the parents may eat fry if stressed.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Blue Ram — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for blue ram care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -51,6 +64,7 @@ export default function BlueRamPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

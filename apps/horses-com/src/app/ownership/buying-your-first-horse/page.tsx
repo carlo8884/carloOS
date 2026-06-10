@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Buying Your First Horse — A Practical Buyer’s Guide",
   description:
-    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, trying a horse, and the pre-purchase exam.",
+    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, and the pre-purchase exam.",
   path: '/ownership/buying-your-first-horse',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Buying Your First Horse — A Practical Buyer’s Guide",
   description:
-    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, trying a horse, and the pre-purchase exam.",
+    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, and the pre-purchase exam.",
   url: 'https://horses.com/ownership/buying-your-first-horse',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function BuyingFirstHorsePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+          { title: 'Leasing a Horse', href: '/ownership/leasing-a-horse' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+        ]}
         hero={{
           title: "Buying Your First Horse",
           subtitle:
@@ -89,6 +95,7 @@ export default function BuyingFirstHorsePage() {
               { label: "American Quarter Horse", href: "/breeds/quarter-horse" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function BuyingFirstHorsePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="honest">Be Honest About Your Level</h2>
           <p>The single most important step is an honest assessment of your own experience and goals. A first-time or returning rider needs a calm, well-trained, forgiving horse that already knows its job -- the opposite of the young, green, or athletic prospect that appeals to ambition. The painful truth behind many failed first purchases is the saying that green plus green equals black and blue: an inexperienced rider and an inexperienced horse are a dangerous combination. Buy the horse for who you are now, not who you hope to become.</p>
 

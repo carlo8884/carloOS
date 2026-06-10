@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure.', path: '/health/dog-heart-disease', type: 'article' })
@@ -14,6 +14,7 @@ export default function DogHeartDiseasePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Roughly 10% of dogs seen in general practice have some form of cardiac disease (BSAVA Manual of Canine and Feline Cardiorespiratory Medicine). Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heart Disease', href: '/health/dog-heart-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }, { label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
@@ -23,6 +24,7 @@ export default function DogHeartDiseasePage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly exceed $8,000. Insurance covers it — but only if enrolled before diagnosis.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-heart-disease" />
         </>}
       >
@@ -73,12 +75,46 @@ export default function DogHeartDiseasePage() {
           <p>CHF management is multimodal — medications work in concert. Standard protocol for left-sided CHF from MMVD:</p>
           <ul>
             <li><strong>Pimobendan (Vetmedin):</strong> Already started in the pre-CHF stage for most dogs. Continues through CHF.</li>
-            <li><strong>Furosemide (Lasix):</strong> Loop diuretic — removes excess fluid from the lungs. Dosage adjusted to the minimum effective dose (too much causes dehydration and kidney stress). BID to TID dosing for most CHF dogs.</li>
+            <li><strong>Furosemide (Lasix):</strong> Loop diuretic — removes excess fluid from the lungs. Dosage and frequency are determined and adjusted by the prescribing veterinarian to achieve the minimum effective dose (too much causes dehydration and kidney stress).</li>
             <li><strong>ACE inhibitor (enalapril or benazepril):</strong> Reduces cardiac workload and slows disease progression. Standard in CHF management.</li>
             <li><strong>Spironolactone:</strong> Potassium-sparing diuretic with cardiac protective effects. Often added to furosemide in CHF management.</li>
             <li><strong>Dietary sodium restriction:</strong> Reduces fluid retention — cardiac-specific diets (Hill's h/d, Royal Canin Cardiac) provide appropriate sodium levels.</li>
           </ul>
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
+
+          <ArticleSourcesList
+            sources={[
+              {
+                label: 'BSAVA Manual of Canine and Feline Cardiorespiratory Medicine (2nd ed.) — cardiac disease prevalence in general practice',
+                publisher: 'British Small Animal Veterinary Association',
+              },
+              {
+                label: 'ACVIM Consensus Guidelines for the Diagnosis and Treatment of Myxomatous Mitral Valve Disease in Dogs — staging criteria and pimobendan thresholds',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15488',
+                publisher: 'J Vet Intern Med (Boswood et al., 2019)',
+              },
+              {
+                label: 'EPIC Trial — Effect of Pimobendan in Dogs with Preclinical Myxomatous Mitral Valve Disease and Cardiomegaly',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.14586',
+                publisher: 'J Vet Intern Med (Boswood et al., 2016)',
+              },
+              {
+                label: 'Prevalence of DCM in Doberman Pinschers — longitudinal echocardiographic study',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1939-1676.2010.0527.x',
+                publisher: 'J Vet Intern Med (Wess et al., 2010)',
+              },
+              {
+                label: 'WSAVA Global Nutrition Committee — grain-free diet guidance and legume-associated DCM advisory',
+                url: 'https://wsava.org/committees/global-nutrition-committee/',
+                publisher: 'WSAVA',
+              },
+              {
+                label: 'FDA Investigation: Potential Dietary Causes of DCM in Dogs',
+                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+                publisher: 'U.S. Food and Drug Administration',
+              },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

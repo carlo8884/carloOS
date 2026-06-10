@@ -14,7 +14,15 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, CrossPortfolioCard } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'AAHA: Weight Management Guidelines for Dogs and Cats (2014, updated 2021)', url: 'https://www.aaha.org/aaha-guidelines/weight-management/weight-management-guidelines/', publisher: 'AAHA' },
+  { label: 'Kealy RD et al. Effects of diet restriction on life span and age-related changes in dogs. J Am Vet Med Assoc. 2002;220(9):1315-1320.', publisher: 'JAVMA' },
+  { label: 'WSAVA: Global Nutrition Committee — Body Condition Score (BCS) Chart and Nutritional Assessment Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
+  { label: 'Association for Pet Obesity Prevention (APOP): 2022 US Pet Obesity Survey', url: 'https://petobesityprevention.org', publisher: 'APOP' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -98,6 +106,7 @@ export default function DogObesityPage() {
           { name: 'Dog Health', href: '/health' },
           { name: 'Dog Obesity', href: '/health/dog-obesity' },
         ]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
         sidebar={
           <>
             <TableOfContents
@@ -121,8 +130,10 @@ export default function DogObesityPage() {
                 { label: 'Weight Management Diets', href: '/nutrition/weight-management' },
                 { label: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
                 { label: 'Dog Arthritis', href: '/health/dog-arthritis' },
+                { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               ]}
             />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"
@@ -277,6 +288,8 @@ export default function DogObesityPage() {
               Kealy RD et al. &ldquo;Effects of diet restriction on life span and age-related changes in dogs.&rdquo; <em>JAVMA</em> 220(9):1315–1320, 2002. • German AJ et al. &ldquo;Weight management in obese pets: the tailoring of a complex multi-faceted plan.&rdquo; <em>International Journal of Obesity Supplements</em> 2(Suppl 1):S33–S37, 2012 (and related German et al. work on canine weight management). • AAHA Weight Management Guidelines for Dogs and Cats (2014, updated 2021). • WSAVA Global Nutrition Committee — Nutritional Assessment Guidelines and Body Condition Score chart. • Association for Pet Obesity Prevention (APOP), 2022 US Pet Obesity Survey.
             </p>
           </CalloutBox>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

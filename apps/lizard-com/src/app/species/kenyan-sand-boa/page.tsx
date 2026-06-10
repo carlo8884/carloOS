@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide — Burrowing Snake | Lizard.com", description: "Kenyan sand boas are a beginner-friendly burrowing snake. Belly heat, deep aspen substrate, frozen/thawed mice, and why they spend most of their life buried.", path: "/species/kenyan-sand-boa", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Kenyan Sand Bo
 export default function SpeciesKenyanSandBoaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Kenyan Sand Boa", href: "/species/kenyan-sand-boa" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesKenyanSandBoaPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Frozen/Thawed Feeding", href: "/health/feeding-frozen-thawed-rodents" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-kenyan-sand-boa"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Kenyan sand boa is a fossorial (burrowing) ambush predator native to the dry scrub and semi-desert of East Africa. In captivity it is prized for a small adult size, a docile disposition, decades-long lifespan, and an undemanding husbandry profile that tolerates the small errors beginners make. The trade-off is that it is not a display animal: a healthy sand boa is buried almost all the time, surfacing mainly to feed and occasionally to thermoregulate at night."}</p>
           <h2>{"Enclosure and Substrate"}</h2>
           <p>{"A single adult female is comfortable in a 20-gallon long (30 by 12 inches of floor space); males do well in 10 to 15 gallons. Floor area matters far more than height because this is a terrestrial burrower with no climbing instinct. A secure, low-profile enclosure with a tight lid prevents escape, though sand boas are far less determined escape artists than colubrids."}</p>
@@ -57,6 +67,7 @@ export default function SpeciesKenyanSandBoaPage() {
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV) member directory, arav.org."}</li>
             <li>{"Reptiles Magazine species husbandry references for Gongylophis colubrinus."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Kenyan Sand Boa — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, under-tank heating, thermostats, deep aspen or sand substrate, and hides sized for Kenyan sand boa care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

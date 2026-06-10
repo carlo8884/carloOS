@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +35,6 @@ export default function FerretGlossaryPage() {
             'Ferret keeping comes with its own vocabulary, and a new owner can feel lost in a forum thread full of jills, gibs, dooking, and war dances. This glossary collects the terms in one place — the words for ferrets by sex and age, the names for their behaviors, and the husbandry and health terms you will meet at the vet and in the community.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -75,8 +74,28 @@ export default function FerretGlossaryPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Vocabulary for Beginners', href: '/ownership/ferret-vocabulary-for-beginners' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Dooking & Vocalizations', href: '/behavior/dooking-and-vocalizations' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:glossary-hero"
+            aspect="16:9"
+            variant="inline"
+            caption="An alert ferret — the animal whose vocabulary this glossary defines."
+          />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="sex-age">Ferrets by Sex & Age</h2>
           <ul>
             <li><strong>Hob</strong> — an intact (un-neutered) male ferret.</li>

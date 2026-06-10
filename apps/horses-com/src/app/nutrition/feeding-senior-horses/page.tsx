@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding Senior Horses — Diet for the Aging Horse",
   description:
-    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, dealing with PPID, and keeping older horses thriving.",
+    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, managing PPID, and keeping seniors thriving.",
   path: '/nutrition/feeding-senior-horses',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding Senior Horses — Diet for the Aging Horse",
   description:
-    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, dealing with PPID, and keeping older horses thriving.",
+    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, managing PPID, and keeping seniors thriving.",
   url: 'https://horses.com/nutrition/feeding-senior-horses',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function SeniorFeedingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Beet Pulp for Horses', href: '/nutrition/beet-pulp' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+        ]}
         hero={{
           title: "Feeding Senior Horses",
           subtitle:
@@ -84,11 +90,12 @@ export default function SeniorFeedingPage() {
             title="Related Reading"
             links={[
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
+              { label: "Joint Supplements", href: "/supplements/joint-supplements" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
-              { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
-              { label: "Feeding the Hard Keeper", href: "/nutrition/feeding-the-hard-keeper" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function SeniorFeedingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="aging">How Aging Changes Needs</h2>
           <p>As horses age, several things shift together: teeth wear down and chewing becomes less effective, digestion of fiber and protein becomes somewhat less efficient, the ability to maintain condition declines, and chronic conditions such as PPID become common. Some seniors become hard keepers needing more support, while others -- especially those with PPID and regional fat -- stay overweight and need restriction. The diet must be tailored to the individual aging horse, not a single senior template.</p>
 

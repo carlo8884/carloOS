@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeding Frozen-Thawed Rodents to Snakes | Lizard.com", description: "Why feed snakes frozen-thawed instead of live rodents, how to thaw and warm prey safely, correct prey size, and how to handle a stubborn feeder.", path: "/health/feeding-frozen-thawed-rodents", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeding Frozen
 export default function HealthFeedingFrozenThawedRodentsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeding Frozen-Thawed Rodents", subtitle: "Frozen-thawed feeding, offering rodents that were humanely pre-killed, frozen, and then thawed and warmed, is the standard, safest way to feed pet snakes. It eliminates the real risk of a live rodent injuring or killing your snake, is more convenient and humane, and most captive-bred snakes take it readily. This guide covers why, how to thaw and offer prey safely, and what to do with a reluctant feeder.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeding Frozen-Thawed Rodents", subtitle: "Frozen-thawed feeding, offering rodents that were humanely pre-killed, frozen, and then thawed and warmed, is the standard, safest way to feed pet snakes. It eliminates the real risk of a live rodent injuring or killing your snake, is more convenient and humane, and most captive-bred snakes take it readily. This guide covers why, how to thaw and offer prey safely, and what to do with a reluctant feeder.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Feeding Frozen-Thawed Rodents", href: "/health/feeding-frozen-thawed-rodents" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Boa Constrictor Care', href: '/species/boa-constrictor', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -23,9 +31,11 @@ export default function HealthFeedingFrozenThawedRodentsPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Kenyan Sand Boa Care", href: "/species/kenyan-sand-boa" }, { label: "Western Hognose Care", href: "/species/western-hognose-snake" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-feeding-frozen-thawed-rodents"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Most pet snakes eat rodents, and there are two ways to provide them: live or frozen-thawed (often abbreviated F/T). Frozen-thawed is the strongly preferred standard among experienced keepers and welfare-minded vets for a simple reason: a live rodent is a defensive animal with teeth and claws, and a snake that is not hungry, is shedding, or simply misses its strike can be seriously bitten, scarred, or even killed by the very prey meant to feed it. Frozen-thawed prey carries none of that risk, is more convenient to store and buy in bulk, and is generally regarded as more humane."}</p>
           <h2>{"Why Not Live Prey?"}</h2>
           <ul>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -167,55 +168,37 @@ const HEALTH_CARDS: HealthCard[] = [
   },
 ]
 
+// ItemList of the health condition guides — structured, citable index of the
+// health cluster for AI Overviews / Perplexity (GEO authority signal).
+const healthListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Health & Condition Guides at Ferret.com',
+  numberOfItems: HEALTH_CARDS.length,
+  itemListElement: HEALTH_CARDS.map((card, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: card.title,
+    url: `https://ferret.com/health/${card.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, healthListSchema)
+
 export default function HealthHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
-      {/* Hero */}
-      <div
-        style={{
-          background: 'var(--brand-dark)',
-          padding: 'clamp(48px, 8vw, 80px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Health Reference
-            </span>
-          </div>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              fontWeight: 800,
-              color: 'var(--brand-primary-pale)',
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              margin: '0 0 16px',
-            }}
-          >
-            Ferret Health
-          </h1>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              fontWeight: 300,
-              color: 'rgba(251, 245, 232, 0.65)',
-              maxWidth: '600px',
-              lineHeight: 1.65,
-              margin: 0,
-            }}
-          >
-            Evidence-based references on the conditions ferret owners encounter most often — from
-            the two most common neoplasms to infectious disease, emergencies, surgery, parasites,
-            preventive care, and aging. Citations from peer-reviewed exotic-mammal veterinary
-            literature throughout.
-          </p>
-        </div>
-      </div>
+      {/* Hero — image-first overlaid masthead (matches the homepage identity) */}
+      <HubHero
+        eyebrow="Health Reference"
+        title="Ferret Health"
+        intro="Evidence-based references on the conditions ferret owners encounter most often — from the two most common neoplasms to infectious disease, emergencies, surgery, parasites, preventive care, and aging. Citations from peer-reviewed exotic-mammal veterinary literature throughout."
+        manifestKey="ferret-com:health-hero"
+        imageAlt="Ferret health reference"
+        cta={{ href: '/health/insulinoma', label: 'Start with insulinoma' }}
+      />
 
       {/* Breadcrumb */}
       <nav
@@ -233,11 +216,6 @@ export default function HealthHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Health</span>
       </nav>
-
-      {/* Hero image */}
-      <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:health-hero" aspect="16:9" variant="wide" priority />
-      </div>
 
       {/* Cards */}
       <div
@@ -257,9 +235,12 @@ export default function HealthHubPage() {
           }}
         >
           These reference pages do not replace veterinary consultation. Ferrets in the United States
-          should be seen by a veterinarian with exotic-mammal experience. The AEMV (Association of
-          Exotic Mammal Veterinarians) member directory is the best starting point if your general-practice
-          vet does not treat ferrets.
+          should be seen by a veterinarian with exotic-mammal experience. If your general-practice vet
+          does not treat ferrets, our guide on{' '}
+          <Link href="/find-an-exotic-vet" className="amber-link" style={{ fontWeight: 600 }}>
+            how to find an exotic-pet vet
+          </Link>{' '}
+          walks through the directories to check and the questions to ask.
         </p>
 
         <ul
@@ -375,6 +356,8 @@ export default function HealthHubPage() {
           ]}
         />
       </section>
+
+      <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="footer" />
     </>
   )
 }

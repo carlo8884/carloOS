@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-30T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Patterns', url: 'https://ferret.com/colors' },
-    { name: 'Black Ferrets', url: 'https://ferret.com/colors/black-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function BlackFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function BlackFerretsPage() {
             'At the darkest end of the ferret palette sit the blacks — black sable and true black, with near-black guard hairs, deep masks, and dark noses. A crisp black coat over a white undercoat is one of the most dramatic looks in the species. Here is how the dark colors are defined and told apart.',
           category: 'Colors & Patterns',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}
@@ -125,7 +116,14 @@ export default function BlackFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Sable Ferrets', href: '/colors/sable-ferrets' },
+          { title: 'Chocolate Ferrets', href: '/colors/chocolate-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-black"

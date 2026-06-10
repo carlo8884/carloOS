@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', description: 'Step-by-step quarantine tank setup for new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', totalTime: 'P1D', steps: [
@@ -12,13 +12,43 @@ const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', descri
   { name: 'Consider prophylactic treatment', text: 'Many experienced fishkeepers treat all new fish prophylactically for external parasites (praziquantel for flukes) and internal parasites (metronidazole + fenbendazole) during quarantine. This is particularly important for wild-caught fish. Discuss with your fish veterinarian or knowledgeable aquarium professional.' },
 ]})
 const combined = combineSchemas(schema, howTo)
+
+const SOURCES = [
+  {
+    label: "Ichthyophthirius multifiliis (Ich): Biology, Pathology, and Control",
+    url: "https://edis.ifas.ufl.edu/publication/FA026",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Fish Disease Diagnosis and Treatment — Quarantine Procedures",
+    url: "https://srac.tamu.edu/serveFactSheet/473",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "AVMA Guidelines for the Humane Slaughter of Animals — Aquatic Species",
+    url: "https://www.avma.org/sites/default/files/2020-01/2020-Euthanasia-Final-1-17-20.pdf",
+    publisher: "American Veterinary Medical Association (AVMA)",
+  },
+  {
+    label: "Praziquantel for Monogenean Fluke Infections in Ornamental Fish",
+    url: "https://www.sciencedirect.com/science/article/pii/S0044848617303769",
+    publisher: "Aquaculture (peer-reviewed)",
+  },
+  {
+    label: "Biosecurity Practices for Aquarium Fish: Quarantine and Disease Prevention",
+    url: "https://edis.ifas.ufl.edu/publication/FA032",
+    publisher: "University of Florida IFAS Extension",
+  },
+]
+
 export default function QuarantineGuidePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Quarantine Tank Guide', subtitle: 'The single most effective disease-prevention measure in fishkeeping — and the most commonly skipped. A quarantine tank intercepts sick fish before they introduce disease to an established aquarium. Four to six weeks catches most diseases with clinical latency. One disease introduction to an established planted or reef tank can cost more in treatment and fish loss than a lifetime of quarantine supplies.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+        hero={{ title: 'Quarantine Tank Guide', subtitle: 'The single most effective disease-prevention measure in fishkeeping — and the most commonly skipped. A quarantine tank intercepts sick fish before they introduce disease to an established aquarium. Four to six weeks catches most diseases with clinical latency. One disease introduction to an established planted or reef tank can cost more in treatment and fish loss than a lifetime of quarantine supplies.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Quarantine Tank', href: '/setup/quarantine-tank-guide' }]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }, { title: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters', category: 'Reviews' }, { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', category: 'Fish Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">QT Essentials</div>
@@ -28,7 +58,7 @@ export default function QuarantineGuidePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }, { label: 'Columnaris', href: '/health/columnaris' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }]} />
           <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-quarantine" />
         </>}
       >
@@ -58,13 +88,15 @@ export default function QuarantineGuidePage() {
           <h2>Duration — Why 4 Weeks Is the Minimum</h2>
           <p>The 4-week minimum is based on the incubation and latency periods of the most common fish diseases. Ich (Ichthyophthirius): can be subclinical for 2–3 weeks as the parasite completes multiple cycles before enough trophonts are attached to cause visible white spots. Velvet (Oodinium): shorter latency but invisible early — the flashlight test daily catches it before clinical signs appear. Lymphocystis: slow-growing viral infection that may not be visible for 3–4 weeks. Bacterial infections: most become apparent within 1–2 weeks. The 4-week window catches essentially all of these.</p>
           <p>Six weeks is better for wild-caught fish from unfamiliar regions, discus (which carry internal parasites that emerge slowly), and any fish from a source where disease history is unknown. Two weeks is not sufficient for any situation — skip quarantine entirely rather than use a 2-week period that provides false assurance without capturing the diseases that appear in weeks 3–4.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Quarantine Tank Essentials — Where to Shop</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>

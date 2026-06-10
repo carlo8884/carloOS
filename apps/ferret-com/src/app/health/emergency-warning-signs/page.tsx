@@ -9,12 +9,37 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret emergency presentation, critical-care, and triage chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Emergency Care of Ferrets: hypoglycemic crisis, respiratory distress, urinary obstruction, and other can-wait vs cannot-wait presentations",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal emergency care standards and practitioner directory",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret emergency presentations including GI obstruction, respiratory failure, and hypoglycemic collapse",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Emergency Warning Signs', url: 'https://ferret.com/health/emergency-warning-signs' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +104,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretEmergencySignsPage() {
   return (
@@ -100,7 +118,6 @@ export default function FerretEmergencySignsPage() {
             'Ferrets hide illness and crash fast. This is the can’t-wait list — the signs that mean stop reading and call a vet — along with what each one can indicate. Knowing them in advance is the difference between a scare and a tragedy.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -130,6 +147,7 @@ export default function FerretEmergencySignsPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -139,8 +157,22 @@ export default function FerretEmergencySignsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+          { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-emergency"
+            alt="A ferret resting calmly — learn to recognise emergency warning signs before they happen"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
@@ -274,26 +306,7 @@ export default function FerretEmergencySignsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret emergency and critical-care chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — exotic-mammal emergency and critical-care reviews.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret emergency presentations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and owner-facing emergency guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret emergencies.
             It is not individualized veterinary advice, and it is not a

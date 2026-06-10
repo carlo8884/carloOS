@@ -3,12 +3,11 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 
@@ -18,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Find a Ferret Rescue Near You | Ferrets.com',
   description:
-    'A directory of ferret rescues organized by US state, plus the case for rescue adoption, red and green flags, and the American Ferret Association shelter accreditation criteria.',
+    'A directory of ferret rescues by US state, plus the case for rescue adoption, red and green flags, and AFA shelter accreditation criteria.',
   path: '/directory/rescues',
   type: 'website',
 })
@@ -148,15 +147,7 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Directory', url: 'https://ferrets.com/directory/rescues' },
-    { name: 'Rescues', url: 'https://ferrets.com/directory/rescues' },
-  ],
-})
-
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = faqSchema
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -357,9 +348,8 @@ export default function RescuesDirectoryPage() {
             below shows the planned navigation structure.
           </p>
           <p className="text-sm text-brand-text-light leading-relaxed mb-6">
-            <em>
-              Coming soon — Q3 2026. State links currently 404 by design.
-            </em>
+            <em>Coming soon — Q3 2026. The state index below previews the
+            planned navigation; entries activate as each state directory ships.</em>
           </p>
           <ul
             className="list-none p-0 m-0 grid gap-2"
@@ -369,13 +359,13 @@ export default function RescuesDirectoryPage() {
           >
             {US_STATES.map((s) => (
               <li key={s.slug}>
-                <Link
-                  href={`/directory/rescues/${s.slug}`}
-                  className="block px-3 py-2 rounded-md border border-brand-border bg-brand-surface text-sm text-brand-text-mid hover:bg-brand-primary/5 hover:border-brand-primary/40 transition-colors no-underline"
-                  aria-label={`${s.name} ferret rescues — directory coming soon`}
+                <span
+                  className="block px-3 py-2 rounded-md border border-brand-border bg-brand-surface text-sm text-brand-text-light no-underline cursor-not-allowed select-none"
+                  aria-disabled="true"
+                  title={`${s.name} ferret rescues — directory coming soon (Q3 2026)`}
                 >
                   {s.name}
-                </Link>
+                </span>
               </li>
             ))}
           </ul>
@@ -442,6 +432,51 @@ export default function RescuesDirectoryPage() {
               <em>Journal of Exotic Pet Medicine</em> — peer-reviewed
               discussion of early gonadectomy and adrenal disease prevalence
               in the US pet ferret population.
+            </li>
+          </ul>
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/adopt" className="text-brand-primary font-medium hover:underline">
+                Adopting a ferret (regional guides) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/find-a-vet" className="text-brand-primary font-medium hover:underline">
+                Find an exotic-pet vet by state &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/acquiring" className="text-brand-primary font-medium hover:underline">
+                Acquiring a ferret (checklist + permits) &rarr;
+              </Link>
             </li>
           </ul>
         </section>

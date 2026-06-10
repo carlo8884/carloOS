@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding the Performance Horse — Energy, Recovery, and Safe Fueling",
   description:
-    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and avoiding diet-related problems.",
+    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and diet pitfalls.",
   path: '/nutrition/feeding-the-performance-horse',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding the Performance Horse — Energy, Recovery, and Safe Fueling",
   description:
-    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and avoiding diet-related problems.",
+    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and diet pitfalls.",
   url: 'https://horses.com/nutrition/feeding-the-performance-horse',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function PerformanceFeedingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Grain and Concentrates', href: '/nutrition/grain-and-concentrates' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+          { title: 'Tying-Up in Horses', href: '/health/tying-up' },
+        ]}
         hero={{
           title: "Feeding the Performance Horse",
           subtitle:
@@ -88,6 +94,7 @@ export default function PerformanceFeedingPage() {
               { label: "Grain and Concentrates", href: "/nutrition/grain-and-concentrates" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function PerformanceFeedingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="energy">Match Energy to Work</h2>
           <p>The starting point is honest workload assessment. The energy needs of a horse in light schooling are far below those of an upper-level eventer, endurance horse, or racehorse, and overfeeding energy to a horse not doing the work makes it fat and hot, while underfeeding a hard-working horse erodes condition and performance. Feed the work the horse is actually doing, adjusting as the training load rises and falls through the season.</p>
 

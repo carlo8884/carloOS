@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function GrainFreeVsGrainInclusivePage() {
   return (
     <ArticleLayout
@@ -44,8 +70,13 @@ export default function GrainFreeVsGrainInclusivePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+        { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
       schema={schema}
       sidebar={
@@ -64,6 +95,7 @@ export default function GrainFreeVsGrainInclusivePage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Food Allergies and Intolerances', href: '/conditions/food-allergies-and-intolerances' },
               { label: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
               { label: 'Carbohydrates in Pet Food', href: '/nutrition/carbohydrates-in-pet-food' },
               { label: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
@@ -80,6 +112,8 @@ export default function GrainFreeVsGrainInclusivePage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-grain-free-vs-grain-inclusive" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Grain-free versus grain-inclusive — the DCM question and what the evidence actually supports." />
         <p>Grain-free pet food replaces cereal grains (corn, wheat, rice) with other carbohydrate sources, most often potatoes, peas, lentils, and other legumes. The category was built on the marketing premise that grains are common allergens and low-quality fillers, and that a grain-free diet is therefore healthier. Neither premise holds up well, and the FDA later identified a possible association between some grain-free diets and canine heart disease. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
         <h2 id="whatis">What Grain-Free Means</h2>
         <p>Grain-free means only that the recipe contains no cereal grains. It says nothing about carbohydrate content, protein quality, or overall nutritional value, because the grains are simply replaced by other carbohydrate ingredients. The term is a marketing claim about one ingredient category, not a measure of diet quality.</p>
@@ -94,13 +128,7 @@ export default function GrainFreeVsGrainInclusivePage() {
         <h2 id="bottomline">The Bottom Line</h2>
         <p>Grain-free is a marketing position, not a quality tier. It does not reduce allergy risk for most animals, does not necessarily lower carbohydrate, and — in legume-heavy forms — has been associated with a heart-disease signal still under investigation. Choose a diet on its overall formulation, manufacturer transparency, and AAFCO substantiation rather than on the presence or absence of grain. See <a href="/myths">Pet Food Myths</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides Update on Investigation into Potential Connection Between Certain Diets and Cases of Canine Heart Disease</em> (27 June 2019).</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

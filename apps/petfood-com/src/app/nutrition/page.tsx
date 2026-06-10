@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import type { FAQItem } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -87,10 +88,50 @@ const NUTRITION = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Nutrition Fundamentals',
+  numberOfItems: NUTRITION.length,
+  itemListElement: NUTRITION.map((i, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: i.title,
+    url: `https://petfood.com/nutrition/${i.slug}`,
+  })),
+}
+
+const nutritionFAQItems: FAQItem[] = [
+  {
+    question: "Why does the guaranteed analysis on a pet food bag show percentages but not tell me whether the food is nutritionally complete?",
+    answer: "The guaranteed analysis is a regulatory disclosure of minimum crude protein, minimum crude fat, maximum crude fiber, and maximum moisture — four numbers that are legally required on every bag. These numbers tell you the analytical composition of the food as manufactured, not whether the food meets AAFCO nutrient profiles for a specific life stage. A food could hit 30% crude protein and still be deficient in one or more essential amino acids such as taurine, methionine, or cysteine, because crude protein measures nitrogen content, not amino acid completeness. The nutritional adequacy statement — the sentence that says the food is formulated to meet or substantiated by animal feeding trials to meet AAFCO profiles for a specific life stage — is the regulatory signal for completeness. The guaranteed analysis supports but does not replace it.",
+    answerText: "The guaranteed analysis is a regulatory disclosure of minimum crude protein, minimum crude fat, maximum crude fiber, and maximum moisture — four numbers that are legally required on every bag. These numbers tell you the analytical composition of the food as manufactured, not whether the food meets AAFCO nutrient profiles for a specific life stage. A food could hit 30% crude protein and still be deficient in one or more essential amino acids such as taurine, methionine, or cysteine, because crude protein measures nitrogen content, not amino acid completeness. The nutritional adequacy statement — the sentence that says the food is formulated to meet or substantiated by animal feeding trials to meet AAFCO profiles for a specific life stage — is the regulatory signal for completeness. The guaranteed analysis supports but does not replace it.",
+  },
+  {
+    question: "What is dry-matter basis and why does it matter for comparing wet and dry pet food?",
+    answer: "Dry-matter basis is a mathematical conversion that removes the water content from nutrient percentages so that wet food and dry food can be compared on the same scale. A wet food labeled at 10% crude protein contains roughly 88% moisture, so on a dry-matter basis the protein content is approximately 83% — far higher than the as-fed label suggests. Without this conversion, comparing a dry kibble at 28% protein to a wet food at 9% protein appears to favor the kibble, when the wet food may actually deliver more protein per calorie once moisture is accounted for. The dry-matter basis formula is: (nutrient percentage / (100 minus moisture percentage)) times 100. The dry-matter basis page in this cluster walks through the calculation step by step with worked examples.",
+    answerText: "Dry-matter basis is a mathematical conversion that removes the water content from nutrient percentages so that wet food and dry food can be compared on the same scale. A wet food labeled at 10% crude protein contains roughly 88% moisture, so on a dry-matter basis the protein content is approximately 83% — far higher than the as-fed label suggests. Without this conversion, comparing a dry kibble at 28% protein to a wet food at 9% protein appears to favor the kibble, when the wet food may actually deliver more protein per calorie once moisture is accounted for. The dry-matter basis formula is: nutrient percentage divided by (100 minus moisture percentage), multiplied by 100. The dry-matter basis page in this cluster walks through the calculation step by step with worked examples.",
+  },
+  {
+    question: "Does a higher protein percentage on a pet food label mean it is a better food?",
+    answer: "Not necessarily. Crude protein percentage measures total dietary nitrogen, not protein quality, amino acid completeness, or digestibility. A food with 35% crude protein from a low-digestibility plant protein source may deliver less usable amino acids than a food with 28% crude protein from a highly digestible animal source. The AAFCO nutrient profiles set minimum requirements for total crude protein and for specific essential amino acids such as arginine, lysine, methionine, and taurine — meeting both is required for nutritional adequacy, and crude protein alone does not confirm amino acid sufficiency. For most healthy adult dogs and cats eating a complete-and-balanced diet, protein level within a normal range is less important than the overall nutrient profile and the quality of the protein sources used.",
+    answerText: "Not necessarily. Crude protein percentage measures total dietary nitrogen, not protein quality, amino acid completeness, or digestibility. A food with 35% crude protein from a low-digestibility plant protein source may deliver less usable amino acids than a food with 28% crude protein from a highly digestible animal source. The AAFCO nutrient profiles set minimum requirements for total crude protein and for specific essential amino acids such as arginine, lysine, methionine, and taurine — meeting both is required for nutritional adequacy, and crude protein alone does not confirm amino acid sufficiency. For most healthy adult dogs and cats eating a complete-and-balanced diet, protein level within a normal range is less important than the overall nutrient profile and the quality of the protein sources used.",
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: nutritionFAQItems.map((f) => ({
+    question: f.question,
+    answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : ''),
+  })),
+})
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema, faqSchema)
+
 export default function NutritionHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
@@ -112,12 +153,24 @@ export default function NutritionHubPage() {
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
-        <span>›</span>
+        <span>&#x203A;</span>
         <span className="text-brand-text-mid font-medium">Nutrition</span>
       </nav>
 
       <div className="px-container-sm sm:px-container pt-12">
         <StockImage manifestKey="petfood-com:nutrition-hero" priority aspect="16:9" variant="wide" />
+      </div>
+
+      <div className="px-container-sm sm:px-container py-10 max-w-content-wide">
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          Understanding what is actually in a pet food bag — and what the label does and does not tell you — starts with the underlying nutrient science. AAFCO 2025 Chapter 6 sets the regulatory framework for macronutrient and micronutrient minimums and maximums in complete-and-balanced pet food; the NRC 2006 Nutrient Requirements of Dogs and Cats provides the underlying biological requirements those profiles are built on. This cluster of eleven reference pages covers the nutrient categories that appear on labels, explain the label math required to interpret them, and addresses the marketing claims built around them.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          The pages are organized by nutrient type: macronutrients (protein, fat, carbohydrate, calories), label math (dry-matter basis, guaranteed analysis), micronutrients (vitamins, minerals, taurine and amino acids), hydration, and functional nutrients. Each page explains what the nutrient does, what the AAFCO profile requires, how it appears on the label, and what marketing claims are typically attached to it and whether those claims are supported. Decision factors to look for: the AAFCO nutritional adequacy statement (not just the crude protein number), the dry-matter basis protein and fat when comparing across formats, and the calcium-to-phosphorus ratio if selecting food for a growing large-breed puppy.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed">
+          New to reading labels? Start with the <Link href="/glossary" className="text-brand-primary hover:underline">pet food glossary</Link> for plain-language definitions, then return to this cluster to go deeper on individual nutrients.
+        </p>
       </div>
 
       <div className="px-container-sm sm:px-container py-12">
@@ -140,6 +193,65 @@ export default function NutritionHubPage() {
         </ul>
       </div>
 
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <div className="flex items-center gap-2.5 mb-4">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Next Step — Apply the Nutrient Science
+          </span>
+        </div>
+        <p className="text-sm text-brand-text-mid leading-relaxed max-w-xl mb-5">
+          Once you understand the nutrients, the next step is comparing real foods on those
+          terms. These pages apply the same standards to specific food types and manufacturers.
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 list-none p-0">
+          <li>
+            <Link
+              href="/compare"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Compare Food Types
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Wet vs dry, fresh vs kibble, prescription vs OTC, and more — head to head.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/compare/wet-vs-dry-food"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Wet vs Dry Food
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                The dry-matter and moisture math applied to a real format comparison.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/brands"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Brand Evaluations
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Independent evaluations of major pet food brands against our rubric.
+              </p>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <h2 className="font-display font-bold text-brand-dark text-2xl mb-6">Frequently Asked Questions</h2>
+        <FAQAccordion items={nutritionFAQItems} includeSchema={false} />
+      </div>
+
       <section
         className="px-container-sm sm:px-container py-12"
         style={{ background: 'var(--brand-primary-pale)' }}
@@ -152,6 +264,10 @@ export default function NutritionHubPage() {
           source="nutrition-hub"
         />
       </section>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="footer" />
+      </div>
     </>
   </>
   )

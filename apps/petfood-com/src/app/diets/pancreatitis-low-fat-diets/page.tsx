@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function PancreatitisLowFatDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function PancreatitisLowFatDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Pancreatitis and Low-Fat Diets', href: '/diets/pancreatitis-low-fat-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function PancreatitisLowFatDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A low-fat therapeutic pet-food bag photographed in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Pancreatitis is inflammation of the pancreas, in which digestive enzymes activate prematurely and damage the organ. It ranges from mild and self-limiting to severe and fatal. In dogs it is frequently triggered by a high-fat meal — the classic case follows a holiday when the dog ate fatty table food — and dietary fat management is central to prevention. The condition can become chronic and recurrent, making long-term diet a priority.</p>
         <h2 id="whatis">What Pancreatitis Is</h2>
         <p>The pancreas produces digestive enzymes and insulin. In pancreatitis, enzyme activation within the gland causes inflammation, pain, vomiting, and in severe cases systemic illness. Acute pancreatitis requires immediate veterinary care; chronic or recurrent pancreatitis is managed largely through diet. Repeated episodes can damage the pancreas enough to cause diabetes or exocrine pancreatic insufficiency.</p>
@@ -94,13 +133,7 @@ export default function PancreatitisLowFatDietsPage() {
         <h2 id="recurrence">Managing Recurrence</h2>
         <p>Chronic pancreatitis is managed by maintaining a consistent low-fat diet indefinitely, controlling body weight, and avoiding dietary indiscretion. Dogs with high blood triglycerides may need additional management. Recurrent or severe disease should be monitored by a veterinarian, who can confirm the diagnosis (pancreas-specific lipase testing and imaging) and set the long-term fat target appropriate to the individual.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -21,7 +21,6 @@ import {
   ArticleLayout,
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMedicalWebPageSchema,
   combineSchemas,
@@ -181,19 +180,10 @@ export default async function BreedHealthPage({ params }: PageProps) {
     lastReviewed: '2026-05-29',
     medicalAudience: 'Caregiver',
   })
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://horses.com/' },
-      { name: 'Breeds', url: 'https://horses.com/breeds' },
-      { name: record.breedName, url: `https://horses.com/breeds/${record.slug}` },
-      { name: 'Health', url },
-    ],
-  })
   const faqSchema = buildFAQSchema({ questions: record.faqs })
   const combined = combineSchemas(
     articleSchema,
     medicalSchema,
-    breadcrumbSchema,
     faqSchema,
   )
 
@@ -208,6 +198,12 @@ export default async function BreedHealthPage({ params }: PageProps) {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Horse Breeds Hub', href: '/breeds', category: 'Breeds' },
+          { title: 'Equine Health Hub', href: '/health' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+        ]}
         hero={{
           title: `${record.breedName} — Health Deep-Dive`,
           subtitle:

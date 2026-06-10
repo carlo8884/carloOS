@@ -9,12 +9,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret respiratory and infectious disease chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Respiratory Diseases of Ferrets: influenza transmission, clinical signs, supportive management, and zoonotic risk",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/respiratory-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "CDC — Influenza in Ferrets: ferret susceptibility to human influenza strains and household-transmission considerations",
+    url: "https://www.cdc.gov/flu/other/index.htm",
+    publisher: "CDC",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on influenza infection in ferrets and the ferret as an influenza research model",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Ferret Influenza', url: 'https://ferret.com/health/ferret-influenza' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretInfluenzaPage() {
   return (
@@ -100,7 +117,6 @@ export default function FerretInfluenzaPage() {
             'Ferrets are the textbook animal model for human flu — and that is not just a lab fact. Your ferret can catch influenza from you, and give it back. Usually mild, occasionally serious, and almost entirely a hygiene problem to manage.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -131,6 +147,7 @@ export default function FerretInfluenzaPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -140,7 +157,14 @@ export default function FerretInfluenzaPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Canine Distemper in Ferrets', href: '/health/canine-distemper-in-ferrets' },
+          { title: 'Vaccinations', href: '/health/vaccinations' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -280,26 +304,7 @@ export default function FerretInfluenzaPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret respiratory and infectious disease chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret viral respiratory disease.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              influenza in ferrets and the ferret influenza model.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on
-              ferret respiratory illness.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about influenza in
             ferrets. It is not individualized veterinary advice. Medication for

@@ -12,11 +12,13 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
+  StockImage,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -42,13 +44,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care/exercise-and-enrichment' },
-    { name: 'Exercise & Enrichment', url: 'https://ferret.com/care/exercise-and-enrichment' },
-  ],
-})
 
 const FAQS = [
   {
@@ -84,7 +79,32 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour, welfare, and enrichment chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — behavioural welfare and enrichment articles for exotic companion mammals",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — cage sizing, out-of-cage time, and enrichment owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner resources on welfare assessment in exotic mammals",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function FerretExerciseEnrichmentPage() {
   return (
@@ -99,7 +119,6 @@ export default function FerretExerciseEnrichmentPage() {
             'Ferrets are not cage animals. A ferret that lives 24 hours a day in its cage is an under-stimulated, behaviourally frustrated, and ultimately less healthy ferret. Four hours of out-of-cage time per day is the working minimum across the exotic-pet welfare literature; six to eight hours is closer to ideal. The enrichment side of that time matters as much as the duration.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}
@@ -132,6 +151,7 @@ export default function FerretExerciseEnrichmentPage() {
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -141,8 +161,22 @@ export default function FerretExerciseEnrichmentPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
+          { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:care-exercise"
+            alt="A ferret at play in an enriched environment — exercise and enrichment guide"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
@@ -490,7 +524,6 @@ export default function FerretExerciseEnrichmentPage() {
           <ReviewCard
             id="marshall-pop-n-play"
             badge="Tunnel Default"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
             score={8.6}
@@ -516,7 +549,6 @@ export default function FerretExerciseEnrichmentPage() {
           <ReviewCard
             id="dig-box-supplies"
             badge="Dig Box"
-            badgeEmoji="🪨"
             name="Storage-Tote Dig Box + Safe Fill"
             subtitle="Plastic tote plus washed river rocks, ferret-safe plastic balls, or rice"
             score={8.0}
@@ -540,35 +572,7 @@ export default function FerretExerciseEnrichmentPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The behaviour and welfare chapters address
-              enrichment and housing standards.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, behavioural welfare
-              studies on housing and enrichment in domestic ferrets,
-              including the environmental-enrichment-and-adrenal-disease
-              research line.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple issues addressing ferret husbandry and
-              welfare assessment.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-education materials
-              on cage sizing, out-of-cage time, and enrichment supply
-              recommendations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              resources on welfare assessment in exotic mammals.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry information for ferret owners.
             It is not individualized veterinary advice. Ferret-proofing

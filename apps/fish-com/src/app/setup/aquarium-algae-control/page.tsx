@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Algae in the Aquarium — Seriously Fish", url: "https://www.seriouslyfish.com/algae-in-the-aquarium/", publisher: "Seriously Fish" },
+  { label: "Algae Control in Freshwater Aquaria — UF/IFAS Extension FA-161", url: "https://edis.ifas.ufl.edu/publication/FA161", publisher: "UF/IFAS Extension" },
+  { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
+  { label: "Dodds, W.K. & Gudder, D.A. The Ecology of Cladophora. Journal of Phycology, 1992.", publisher: "Journal of Phycology" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Algae Control — Identify and Beat Every Type | Fish.com', description: "How to identify and control aquarium algae: green spot, hair, black beard, diatoms, and cyanobacteria. Fix the root causes — light, nutrients, and CO2.", path: '/setup/aquarium-algae-control', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function AlgaeControlPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Aquarium Algae Control Guide', subtitle: "Algae is not a disease — it is a symptom. Every algae outbreak is the tank telling you that light, nutrients, and CO2 are out of balance, and that some surplus is being claimed by the fastest-growing organism in the water. Killing algae directly without fixing the imbalance only postpones the next bloom. This guide identifies the common types and treats their actual causes.", category: 'Tank Maintenance', authorName: 'Fish.com Editorial', authorAvatar: '🌿', publishedAt: 'June 2026', readTime: '10 min' }}
+      hero={{ title: 'Aquarium Algae Control Guide', subtitle: "Algae is not a disease — it is a symptom. Every algae outbreak is the tank telling you that light, nutrients, and CO2 are out of balance, and that some surplus is being claimed by the fastest-growing organism in the water. Killing algae directly without fixing the imbalance only postpones the next bloom. This guide identifies the common types and treats their actual causes.", category: 'Tank Maintenance', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Algae Control', href: '/setup/aquarium-algae-control' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Best Aquarium Lighting", href: "/reviews/best-aquarium-lighting", category: "Reviews" }, { title: "Best Planted-Tank Fertilizers", href: "/reviews/best-planted-tank-fertilizers", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Algae at a Glance</div>
@@ -20,7 +28,7 @@ export default function AlgaeControlPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Otocinclus', href: '/species/otocinclus' }, { label: 'Bristlenose Pleco', href: '/species/bristlenose-pleco' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Best Fertilizers', href: '/reviews/best-planted-tank-fertilizers' }, { label: 'Otocinclus', href: '/species/otocinclus' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-algae-control" />
       </>}
     >
@@ -45,6 +53,7 @@ export default function AlgaeControlPage() {
 
         <h2>Preventing the Next Bloom</h2>
         <p>The tanks that stay algae-free long term share a few traits: a consistent, modest photoperiod on a timer; healthy, actively growing plants that monopolize nutrients; regular water changes that prevent nutrient accumulation; and restrained feeding. Establish those routines and algae becomes a minor, occasional nuisance rather than a recurring battle. Test nitrate and phosphate periodically — both unusually high and unusually low readings can drive specific algae types, and balance is the goal.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

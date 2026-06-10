@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Resource Guarding in Dogs — Trade Game | Dog.com', description: 'Resource guarding is normal dog behavior. How to manage it safely, teach the trade game, and when to involve a professional. Never punish resource guarding.', path: '/training/resource-guarding', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Resource Guarding in Dogs', description: 'The trade game, safety protocol, and management for canine resource guarding.', url: 'https://dog.com/training/resource-guarding', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -18,6 +18,7 @@ export default function ResourceGuardingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Resource Guarding in Dogs', subtitle: 'Resource guarding — growling, snapping, or biting when someone approaches food, toys, or resting spots — is a normal canine behavior. It becomes a problem when it creates safety risks. The solution is not punishment: it is teaching the dog that giving things up results in better things.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Resource Guarding', href: '/training/resource-guarding' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Do This</div>
@@ -28,10 +29,12 @@ export default function ResourceGuardingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Puppy Biting', href: '/training/puppy-biting' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-resource-guarding" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Why Resource Guarding Exists</h2>
           <p>In evolutionary terms, an animal that does not defend valuable resources loses them to competitors. Guarding food, high-value chews, and resting spots is adaptive behavior that helped dogs' ancestors survive. The fact that a domestic dog guards a marrow bone from a human is not aggression, dominance, or disrespect — it is a normal behavioral tendency applied in the wrong context. Understanding this matters because the intervention must change the dog's emotional state around approach, not suppress the behavior through punishment.</p>
           <p><strong>Punishment makes resource guarding worse.</strong> Punishing a growl removes the warning signal without addressing the underlying emotion — the dog that stops growling before biting is more dangerous than the dog that growls first. Punishing the behavior without changing the emotional trigger creates a dog that bites without warning.</p>

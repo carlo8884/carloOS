@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
   description:
@@ -28,6 +33,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
+  description:
+    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
+  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function MineralsInPetFoodPage() {
   return (
@@ -44,8 +79,14 @@ export default function MineralsInPetFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'Minerals in Pet Food', href: '/nutrition/minerals-in-pet-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -67,6 +108,7 @@ export default function MineralsInPetFoodPage() {
               { label: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
               { label: 'Large-Breed Puppy Nutrition', href: '/feeding/large-breed-puppy-nutrition' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
@@ -76,10 +118,12 @@ export default function MineralsInPetFoodPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="minerals-in-pet-food"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Minerals are required in defined amounts, and several of them interact — an excess of one can induce deficiency of another. The AAFCO profiles set minima for the essential minerals and, importantly, maxima for several, because over-supply is as harmful as under-supply. A complete diet meets these targets through ingredients plus a mineral premix; the balance and ratio matter as much as the absolute amounts.</p>
         <h2 id="macrotrace">Macrominerals vs Trace Minerals</h2>
         <p>Macrominerals (calcium, phosphorus, magnesium, sodium, potassium, chloride) are needed in gram quantities and form the structural and electrolyte backbone of the body. Trace minerals (zinc, copper, iron, manganese, selenium, iodine) are needed in milligram or microgram quantities and act largely as enzyme cofactors. Both groups are essential; the difference is quantity, not importance.</p>
@@ -94,12 +138,7 @@ export default function MineralsInPetFoodPage() {
         <h2 id="largebreed">Large-Breed Puppy Calcium Ceilings</h2>
         <p>Large- and giant-breed puppies are uniquely sensitive to excess calcium during growth, which is linked to developmental orthopedic diseases including osteochondrosis and hip dysplasia. For this reason AAFCO created a separate growth profile for large-size dogs (adult weight 70 pounds or more) with a tighter calcium maximum. An all-life-stages food not validated for large-size growth can legally exceed this ceiling, which is why owners of large-breed puppies must confirm the food is labeled for growth including large-size growth. See <a href="/feeding/large-breed-puppy-nutrition">Large-Breed Puppy Nutrition</a> and <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

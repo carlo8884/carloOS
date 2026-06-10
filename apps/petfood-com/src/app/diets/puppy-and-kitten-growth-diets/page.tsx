@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function PuppyAndKittenGrowthDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +65,14 @@ export default function PuppyAndKittenGrowthDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Puppy and Kitten Growth Diets', href: '/diets/puppy-and-kitten-growth-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +107,13 @@ export default function PuppyAndKittenGrowthDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A growth-formula pet-food bag for puppies and kittens in clinical light"
+          eyebrow="Growth-Stage Diet"
+          priority
+        />
         <p>During growth, an animal builds bone, muscle, organs, and nervous tissue at a rapid rate, requiring more energy and more of nearly every nutrient per unit of body weight than at any other life stage except lactation. AAFCO sets a distinct growth-and-reproduction nutrient profile with higher minimums, and feeding a growing animal a diet formulated only for adult maintenance can produce deficiencies with lasting consequences. See <a href="/life-stage">Pet Food by Life Stage</a>.</p>
         <h2 id="demanding">Why Growth Is Demanding</h2>
         <p>A growing puppy or kitten may need roughly twice the energy per kilogram of an adult, and proportionally more protein to lay down lean tissue, more calcium and phosphorus to mineralize the skeleton, and more of several micronutrients. This is why growth diets and all-life-stages diets carry higher minimums than adult-maintenance foods, and why a food labeled for adult maintenance only is inappropriate for a youngster.</p>
@@ -100,12 +134,7 @@ export default function PuppyAndKittenGrowthDietsPage() {
           <li>Switching to adult food too early or too late — timing depends on breed size and should follow veterinary guidance.</li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

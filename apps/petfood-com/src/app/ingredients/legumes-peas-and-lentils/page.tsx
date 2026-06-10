@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function LegumesPeasAndLentilsPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,14 @@ export default function LegumesPeasAndLentilsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Legumes — Peas, Lentils, and Chickpeas', href: '/ingredients/legumes-peas-and-lentils' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +100,14 @@ export default function LegumesPeasAndLentilsPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Taste of the Wild — Independent Evaluation', href: '/brands/taste-of-the-wild-evaluation' },
+              { label: 'Orijen vs Acana — Grain-Free Lines', href: '/brands/orijen-vs-acana-comparison' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -80,6 +119,7 @@ export default function LegumesPeasAndLentilsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Legumes (pulses) include peas, lentils, chickpeas, and beans, along with concentrated derivatives like pea protein and pea starch. They became prominent in pet food as grain-free formulas needed a carbohydrate and binding source to replace cereal grains in extrusion. They are nutritious ingredients, but their heavy use is also at the center of the unresolved diet-associated dilated cardiomyopathy question. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
         <h2 id="rose">Why Legumes Rose</h2>
         <p>Extruded kibble requires starch to form, so a grain-free recipe must replace cereal starch with something — and legumes (plus potato and tapioca) filled that role. Pulses offered the additional marketing advantage of boosting the crude-protein number on the guaranteed analysis, since they are higher in protein than grains. The result was a rapid rise in pulse-heavy formulas. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
@@ -94,13 +134,7 @@ export default function LegumesPeasAndLentilsPage() {
         <h2 id="panel">Reading a Pulse-Heavy Panel</h2>
         <p>When several pulses and pulse fractions appear high on the ingredient list (peas, pea protein, pea starch, lentils, chickpeas), the diet is pulse-heavy, and the practice of ingredient splitting can spread legumes across multiple entries to keep any single one lower on the list. For dogs in DCM-predisposed breeds or with cardiac concerns, a pulse-heavy formula is worth discussing with the veterinarian. For most animals, moderate legume inclusion is fine. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides Update on Investigation into Potential Connection Between Certain Diets and Cases of Canine Heart Disease</em> (27 June 2019).</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -160,6 +160,7 @@ export default function ToxicFoodsPage() {
           { name: 'Nutrition', href: '/nutrition' },
           { name: 'Toxic Foods', href: '/nutrition/toxic-foods' },
         ]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Safe Human Foods', href: '/nutrition/safe-human-foods', category: 'Nutrition' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }, { title: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide', category: 'Nutrition' }]}
         schema={schema}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -179,10 +180,12 @@ export default function ToxicFoodsPage() {
             { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             { label: 'Nutrition Hub', href: '/nutrition' },
           ]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-toxic-foods" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <div id="critical" style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Emergency Contact</div>
             <p style={{ fontSize: '15px', fontWeight: 600, color: 'var(--brand-dark)', margin: 0 }}>ASPCA Animal Poison Control: <strong>888-426-4435</strong> — available 24/7. Consultation fee applies. Call immediately for suspected poisoning — do not wait for symptoms.</p>

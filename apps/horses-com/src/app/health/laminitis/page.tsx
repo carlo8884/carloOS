@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Laminitis — Causes, Signs, Treatment, Prevention',
   description:
-    'Reference guide to equine laminitis: endocrinopathic, sepsis-associated, and supporting-limb forms, clinical signs, Obel grading, diagnostics, emergency care, and prevention.',
+    'Reference guide to equine laminitis: endocrinopathic, sepsis-associated, and supporting-limb forms, signs, Obel grading, diagnostics, and emergency care.',
   path: '/health/laminitis',
   type: 'article',
 })
@@ -72,6 +72,12 @@ export default function LaminitisPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        ]}
         hero={{
           title: 'Equine Laminitis',
           subtitle:
@@ -113,8 +119,10 @@ export default function LaminitisPage() {
               { label: 'Cushing&apos;s / PPID', href: '/health/cushings-ppid' },
               { label: 'Hoof Abscess', href: '/health/abscess' },
               { label: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+              { label: 'Body Condition Score Tool', href: '/tools/body-condition-score' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -125,6 +133,13 @@ export default function LaminitisPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Laminitis</h2>
           <p>Inside the hoof capsule, the coffin bone (the third phalanx, or P3) is not resting on the sole; it is suspended from the inner hoof wall by interleaved sheets of tissue called the laminae. The epidermal laminae grow from the hoof wall and interlock with the dermal laminae attached to the bone, like two combs pushed together. This suspensory apparatus holds the entire bodyweight of the horse and transmits it to the ground through the hoof wall. Laminitis is the breakdown of that bond.</p>
           <p>When the laminae inflame, lose their attachment, or are starved of blood supply, the mechanical connection between bone and wall weakens. The constant downward pull of the deep digital flexor tendon on the back of the coffin bone, combined with bodyweight, can then rotate the coffin bone away from the dorsal hoof wall (rotational founder) or allow the entire bone to descend within the capsule (sinking, the more dangerous form). In severe cases the tip of the coffin bone can penetrate the sole.</p>

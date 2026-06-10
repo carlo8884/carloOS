@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Amphiprion ocellaris — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/amphiprion-ocellaris/", publisher: "Seriously Fish" },
+  { label: "Amphiprion ocellaris — FishBase species record", url: "https://www.fishbase.se/summary/Amphiprion-ocellaris.html", publisher: "FishBase" },
+  { label: "Fautin, D.G. & Allen, G.R. Field Guide to Anemonefishes and Their Host Sea Anemones. Western Australian Museum, 1992.", publisher: "Western Australian Museum" },
+  { label: "Godwin, J. Behavioral Aspects of Protandrous Sex Change in the Anemonefish, Amphiprion melanopus. Environmental Biology of Fishes, 52(4), 365–374, 1998.", publisher: "Environmental Biology of Fishes" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Clownfish Care Guide — Saltwater Tank Requirements | Fish.com', description: 'Complete clownfish care guide. Saltwater tank requirements, FOWLR vs reef setup, whether they need anemones (no), tankmates, and feeding for Amphiprioninae.', path: '/species/clownfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Clownfish Care Guide', description: 'Saltwater setup, anemone question, tankmates, and feeding for clownfish.', url: 'https://fish.com/species/clownfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -9,11 +17,13 @@ export default function ClownfishPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
-      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Clownfish', href: '/species/clownfish' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Saltwater Tank Setup", href: "/setup/saltwater-tank-setup", category: "Tank Setup" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }, { title: "Best Aquarium Filters", href: "/reviews/best-aquarium-filters", category: "Reviews" }]}
       sidebar={<>
-        <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '12px', padding: '16px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '12px' }}>Quick Stats</div>
           {[['Scientific name', 'Amphiprioninae (many species)'], ['Type', 'Saltwater (marine)'], ['Difficulty', 'Beginner (for saltwater)'], ['Min tank', '20 gallons'], ['Temperature', '74–82°F'], ['Salinity', '1.023–1.026 SG'], ['Anemone', 'Not required'], ['Lifespan', '6–10+ years'], ['Diet', 'Omnivore']].map(([k, v]) => (
             <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid var(--brand-border)', fontSize: '13px' }}>
@@ -22,11 +32,14 @@ export default function ClownfishPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water-parameters' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-clownfish" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-clownfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A clownfish in a home aquarium." priority />
         <h2>Saltwater Tank Basics</h2>
         <p>Clownfish are marine fish — they require saltwater maintained at 1.023–1.026 specific gravity (SG). This is measured with a refractometer (more accurate) or hydrometer. Mix Instant Ocean or Red Sea Salt with RODI (reverse osmosis/deionized) water — never tap water in a marine tank. Marine tanks also require protein skimmers and higher-quality filtration than freshwater setups.</p>
         <p>The good news: captive-bred clownfish (available from most reputable marine fish retailers) are significantly hardier than wild-caught fish and tolerate the parameter fluctuations that are inevitable in any tank. Always choose captive-bred over wild-caught for both ecological and practical reasons.</p>
@@ -73,6 +86,7 @@ export default function ClownfishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

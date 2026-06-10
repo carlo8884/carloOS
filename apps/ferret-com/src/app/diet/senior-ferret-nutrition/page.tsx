@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function SeniorFerretNutritionPage() {
             'Ferrets are considered senior from around four to five years of age. The diet rarely needs a dramatic overhaul, but it does need closer attention: protein stays high, eating gets harder as teeth wear, and several age-related diseases reshape what and how a ferret should be fed.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -86,8 +85,22 @@ export default function SeniorFerretNutritionPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Weight Management', href: '/diet/weight-management' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="when">When a Ferret Becomes Senior</h2>
           <p>
             Ferrets are generally considered senior from around four to five
@@ -203,7 +216,6 @@ export default function SeniorFerretNutritionPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Senior-Friendly Kibble"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
             score={9.0}

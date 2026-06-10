@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -51,7 +51,7 @@ const SPEC_TABLE = [
 export default function BestWinterBlanketsPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://horses.com/' }, { name: 'Reviews', url: 'https://horses.com/reviews' }, { name: 'Best Winter Horse Blankets 2026', url: 'https://horses.com/reviews/best-winter-horse-blankets' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer&apos;s Guide · 2026 Winter Season</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
@@ -81,6 +81,7 @@ export default function BestWinterBlanketsPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>The Blanket Categories</h2>
 
@@ -155,13 +156,12 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="rambo"
               badge="Best Premium Turnout"
-              badgeEmoji="🏆"
               name="Horseware Rambo Original Turnout"
               subtitle="1000-denier ballistic · Leg-arch shoulder · Premium build standard"
               score={9.4}
               winner
               description={<>
-                <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is the most durable in the standard mid-weight market; multi-season use in active pasture turnout is the norm, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
+                <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is among the most durable in the standard mid-weight market; multi-season use in active pasture turnout is commonly reported, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
                 <p>The trade-off is price. A new Rambo Original retails 50–80 percent higher than the equivalent fill-weight competitor from a value-tier brand. The cost-per-season math favors Rambo for any owner who plans to keep horses long-term and prefers not to replace a blanket every two winters.</p>
               </>}
               specs={[
@@ -183,7 +183,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="rhino"
               badge="Best Modern Standard"
-              badgeEmoji="⭐"
               name="Horseware Rhino Original Turnout"
               subtitle="1200-denier ripstop · Modern Horseware design · Strong mainstream choice"
               score={9.0}
@@ -210,7 +209,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="schneiders"
               badge="Best Heavy Winter"
-              badgeEmoji="❄"
               name="Schneiders StormShield Euro Turnout"
               subtitle="1680-denier ballistic · 300+ g heavy fill · Harsh-winter specification"
               score={9.2}
@@ -237,7 +235,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="smartpak"
               badge="Best House Brand"
-              badgeEmoji="◎"
               name="SmartPak Ultimate Turnout"
               subtitle="1200-denier ripstop · Shoulder gussets · SmartPak quality at house-brand pricing"
               score={8.7}
@@ -264,7 +261,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="weatherbeeta"
               badge="Best Mid-Tier"
-              badgeEmoji="⭐"
               name="Weatherbeeta ComFiTec Plus Dynamic II"
               subtitle="1200-denier ripstop · Memory-foam wither relief · Strong feature set"
               score={8.6}
@@ -291,7 +287,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="amigo"
               badge="Best Value"
-              badgeEmoji="◎"
               name="Horseware Amigo Bravo 12 Plus Turnout"
               subtitle="1000-denier ballistic · Horseware build at the value tier"
               score={8.5}

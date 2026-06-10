@@ -6,6 +6,11 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  DropCap,
+  PullQuote,
+  CalloutBox,
+  ArticleByline,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -26,7 +31,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'PetFood.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-06-05T00:00:00Z',
 })
 
 export default function GrainFreeDCMRiskPage() {
@@ -37,15 +42,20 @@ export default function GrainFreeDCMRiskPage() {
       hero={{
         title: 'Grain-Free Dog Food and DCM',
         subtitle:
-          'Beginning in 2018, the U.S. Food and Drug Administration’s Center for Veterinary Medicine opened a public investigation into reports of dilated cardiomyopathy in dog breeds not previously considered predisposed to the disease. The investigation pointed at — but did not prove a causal link to — grain-free diets heavy in pulse ingredients. This page summarizes what the FDA CVM record actually says, what the peer-reviewed literature has added since 2019, and what is appropriate for an owner to do with the information.',
+          'Beginning in 2018, the U.S. Food and Drug Administration\'s Center for Veterinary Medicine opened a public investigation into reports of dilated cardiomyopathy in dog breeds not previously considered predisposed to the disease. The investigation pointed at — but did not prove a causal link to — grain-free diets heavy in pulse ingredients. This page summarizes what the FDA CVM record actually says, what the peer-reviewed literature has added since 2019, and what is appropriate for an owner to do with the information.',
         category: 'Ingredient & Diet Safety',
         publishedAt: 'May 2026',
         readTime: '15 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Grain-Free and DCM', href: '/ingredients/grain-free-dcm-risk' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -68,9 +78,19 @@ export default function GrainFreeDCMRiskPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Ingredients Hub', href: '/ingredients' },
+              { label: 'Taurine and Amino Acids', href: '/nutrition/taurine-and-amino-acids' },
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
+            ]}
+          />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
@@ -84,7 +104,14 @@ export default function GrainFreeDCMRiskPage() {
       }
     >
       <div className="carloOS-article">
-        <p>
+        <ArticleByline
+          siteName="PetFood.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-06-05T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
+
+        <DropCap>
           This is the most-discussed and most-misreported topic in current pet food coverage. The
           underlying record is more limited than either the &quot;grain-free is killing dogs&quot;
           framing on social media or the &quot;FDA already exonerated grain-free&quot; framing on
@@ -92,7 +119,7 @@ export default function GrainFreeDCMRiskPage() {
           mechanism is not established, the investigation is open, and the appropriate response is
           informed dietary choice for individual animals — particularly those in breeds with
           documented predisposition to dilated cardiomyopathy.
-        </p>
+        </DropCap>
 
         <h2 id="2018">The July 2018 FDA CVM Notice</h2>
         <p>
@@ -180,6 +207,11 @@ export default function GrainFreeDCMRiskPage() {
           subsequent research.
         </p>
 
+        <PullQuote
+          quote="The BEG framework should be understood as a hypothesis that organized the early case reports, not as a settled mechanism."
+          variant="inline"
+        />
+
         <h2 id="taurine">Taurine Status — Part of the Picture, Not All of It</h2>
         <p>
           Taurine is a sulfonic amino acid that dogs synthesize endogenously from methionine and
@@ -207,6 +239,10 @@ export default function GrainFreeDCMRiskPage() {
           cardiology consensus on DCM screening) have continued to treat the mechanism as
           unresolved.
         </p>
+
+        <CalloutBox variant="evidence" title="ACVIM position on diet-associated DCM">
+          <p>The American College of Veterinary Internal Medicine Consensus Guidelines note that diet-associated DCM is a distinct clinical entity from breed-genetic DCM, with a subset of affected dogs showing echocardiographic improvement following diet change. The ACVIM recommends asking about diet on every DCM work-up and considering diet change as part of clinical management in atypical-breed dogs.</p>
+        </CalloutBox>
 
         <h2 id="research">Tufts and Other Research Since 2019</h2>
         <p>
@@ -334,48 +370,45 @@ export default function GrainFreeDCMRiskPage() {
           by categorical grain-free status.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Investigating
-            Potential Connection Between Diet and Cases of Canine Heart Disease</em> (12 July 2018);
-            <em>FDA Provides Update on Investigation into Potential Connection Between Certain Diets
-            and Cases of Canine Heart Disease</em> (27 June 2019); <em>Update on the FDA&apos;s
-            Investigation into Possible Connection Between Diet and Heart Disease in Dogs</em>
-            (subsequent updates through December 2022).
-          </li>
-          <li>
-            Freeman LM, Stern JA, Fries R, Adin DB, Rush JE. <em>Diet-associated dilated
-            cardiomyopathy in dogs: what do we know?</em> Journal of the American Veterinary Medical
-            Association, 2018; 253(11):1390-1394.
-          </li>
-          <li>
-            Adin D, DeFrancesco TC, Keene B, Tou S, Meurs K, Atkins C, et al. <em>Echocardiographic
-            phenotype of canine dilated cardiomyopathy differs based on diet type.</em> Journal of
-            Veterinary Cardiology, 2019; 21:1-9.
-          </li>
-          <li>
-            Kaplan JL, Stern JA, Fascetti AJ, Larsen JA, Skolnik H, Peddle GD, et al. <em>Taurine
-            deficiency and dilated cardiomyopathy in golden retrievers fed commercial diets.</em>
-            PLoS ONE, 2018; 13(12):e0209112.
-          </li>
-          <li>
-            Walker AL, DeFrancesco TC, Bonagura JD, et al. <em>Multicenter evaluation of cardiac
-            changes in dogs with diet-associated dilated cardiomyopathy following diet change.</em>
-            Journal of Veterinary Internal Medicine, 2022.
-          </li>
-          <li>
-            Mansilla WD, Marinangeli CPF, Ekenstedt KJ, Larsen JA, Aldrich CG, Columbus DA, et al.
-            <em> The association between pulse ingredients and canine dilated cardiomyopathy:
-            addressing the knowledge gaps before establishing causation.</em> Journal of Animal
-            Science, 2019.
-          </li>
-          <li>
-            American College of Veterinary Internal Medicine. <em>ACVIM consensus statement
-            guidelines for the diagnosis and treatment of canine myxomatous mitral valve disease</em>
-            and related cardiology consensus material on DCM screening.
-          </li>
-        </ul>
+        <ArticleSourcesList
+          title="Sources"
+          sources={[
+            {
+              label: 'FDA Investigating Potential Connection Between Diet and Cases of Canine Heart Disease (12 July 2018); FDA Provides Update (27 June 2019); FDA Update (December 2022)',
+              url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+              publisher: 'U.S. Food and Drug Administration, Center for Veterinary Medicine',
+            },
+            {
+              label: 'Freeman LM, Stern JA, Fries R, Adin DB, Rush JE. Diet-associated dilated cardiomyopathy in dogs: what do we know?',
+              url: 'https://doi.org/10.2460/javma.253.11.1390',
+              publisher: 'Journal of the American Veterinary Medical Association, 2018; 253(11):1390-1394',
+            },
+            {
+              label: 'Adin D, DeFrancesco TC, Keene B, et al. Echocardiographic phenotype of canine dilated cardiomyopathy differs based on diet type.',
+              url: 'https://doi.org/10.1016/j.jvc.2018.11.002',
+              publisher: 'Journal of Veterinary Cardiology, 2019; 21:1-9',
+            },
+            {
+              label: 'Kaplan JL, Stern JA, Fascetti AJ, et al. Taurine deficiency and dilated cardiomyopathy in golden retrievers fed commercial diets.',
+              url: 'https://doi.org/10.1371/journal.pone.0209112',
+              publisher: 'PLoS ONE, 2018; 13(12):e0209112',
+            },
+            {
+              label: 'Walker AL, DeFrancesco TC, Bonagura JD, et al. Multicenter evaluation of cardiac changes in dogs with diet-associated dilated cardiomyopathy following diet change.',
+              publisher: 'Journal of Veterinary Internal Medicine, 2022',
+            },
+            {
+              label: 'Mansilla WD, Marinangeli CPF, Ekenstedt KJ, et al. The association between pulse ingredients and canine dilated cardiomyopathy: addressing the knowledge gaps before establishing causation.',
+              publisher: 'Journal of Animal Science, 2019',
+            },
+            {
+              label: 'ACVIM Consensus Statement Guidelines — Diagnosis and Treatment of Canine Myxomatous Mitral Valve Disease; cardiology consensus material on DCM screening',
+              url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15488',
+              publisher: 'American College of Veterinary Internal Medicine',
+            },
+          ]}
+        />
+
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           If your dog is showing exercise intolerance, coughing, syncope, or abdominal distension —

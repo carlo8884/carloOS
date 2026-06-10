@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equine Cushing's Disease (PPID) — Signs, Testing, Treatment",
   description:
-    "Reference guide to PPID (pituitary pars intermedia dysfunction), the equine Cushing's disease: hormonal mechanism, signs, ACTH testing, pergolide therapy, and laminitis risk.",
+    "Reference guide to PPID (pituitary pars intermedia dysfunction), equine Cushing's disease: mechanism, signs, ACTH testing, pergolide, and laminitis risk.",
   path: '/health/cushings-ppid',
   type: 'article',
 })
@@ -65,6 +65,12 @@ export default function PPIDPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+        ]}
         hero={{
           title: "Equine Cushing's Disease (PPID)",
           subtitle:
@@ -99,8 +105,10 @@ export default function PPIDPage() {
               { label: "Equine Metabolic Syndrome", href: "/health/equine-metabolic-syndrome" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
+              { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -111,6 +119,13 @@ export default function PPIDPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is PPID</h2>
           <p>PPID is a disease of the pars intermedia, the middle lobe of the pituitary gland at the base of the brain. With age, the dopamine-producing neurons that normally restrain this lobe degenerate, the pars intermedia enlarges, and it oversecretes a group of hormones derived from a precursor called proopiomelanocortin (POMC), including ACTH. The result is a cascade of downstream effects on coat, muscle, immune function, and -- critically -- insulin regulation. PPID is most common in horses and ponies over 15, but it can appear earlier.</p>
 

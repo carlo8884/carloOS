@@ -1,19 +1,27 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Poecilia sphenops — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/poecilia-sphenops/", publisher: "Seriously Fish" },
+  { label: "Poecilia sphenops — FishBase species record", url: "https://www.fishbase.se/summary/Poecilia-sphenops.html", publisher: "FishBase" },
+  { label: "Rosen, D.E. & Bailey, R.M. The Poeciliid Fishes (Cyprinodontiformes), Their Structure, Zoogeography, and Systematics. Bulletin of the AMNH, 1963.", publisher: "American Museum of Natural History" },
+  { label: "Turner, C.L. The Trophotaeniae of the Goodeidae. Journal of Morphology, 1937.", publisher: "Journal of Morphology" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -34,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Molly Fish', url: 'https://fish.com/species/molly-fish' },
-  ],
 })
 
 const FAQS = [
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function MollyPage() {
   return (
@@ -107,7 +107,6 @@ export default function MollyPage() {
             'Poecilia sphenops, P. latipinna, and P. velifera — mollies are livebearing fish from coastal and brackish waters of the Americas. They tolerate salt better than almost any common aquarium fish, come in dozens of color varieties including the dramatic sailfin form, and breed enthusiastically enough that population control is the central management challenge.',
           category: 'Species Guide — Beginner/Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
@@ -116,6 +115,7 @@ export default function MollyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Molly Fish', href: '/species/molly-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -173,6 +173,7 @@ export default function MollyPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -190,6 +191,7 @@ export default function MollyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-molly-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A molly in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Mollies (Poecilia sphenops, P. latipinna, P. velifera) are
@@ -452,7 +454,8 @@ export default function MollyPage() {
               referral directory.
             </li>
           </ul>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Molly Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for molly fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -461,6 +464,7 @@ export default function MollyPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

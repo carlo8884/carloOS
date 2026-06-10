@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Guaranteed Analysis on Pet Food Labels Explained | PetFood.com',
   description:
@@ -28,6 +33,41 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Guaranteed Analysis on Pet Food Labels Explained | PetFood.com',
+  description:
+    'What the guaranteed analysis discloses, the minimum-maximum framing, why it is not a typical analysis, and how to use it without being misled.',
+  url: 'https://petfood.com/nutrition/guaranteed-analysis-explained',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
 
 export default function GuaranteedAnalysisExplainedPage() {
   return (
@@ -44,8 +84,14 @@ export default function GuaranteedAnalysisExplainedPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'The Guaranteed Analysis Explained', href: '/nutrition/guaranteed-analysis-explained' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +115,14 @@ export default function GuaranteedAnalysisExplainedPage() {
               { label: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -76,10 +130,12 @@ export default function GuaranteedAnalysisExplainedPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="guaranteed-analysis-explained"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The guaranteed analysis is required on every pet food label under AAFCO model regulations. It states the manufacturer&apos;s guarantee for certain nutrients, expressed as minimum or maximum percentages on an as-fed basis. The word guarantee is the key: the food will contain at least the stated minimum of protein and fat, and no more than the stated maximum of fiber and moisture. The actual content is usually somewhat different from the guarantee.</p>
         <h2 id="whatis">What It Is</h2>
         <p>The guaranteed analysis exists for regulatory enforcement. A state feed-control official can pull a sample and test whether the food meets its own guarantees; a food that falls below its guaranteed protein minimum or above its guaranteed fiber maximum is misbranded. The guarantee is therefore a floor-and-ceiling commitment, not a description of the average batch.</p>
@@ -100,13 +156,7 @@ export default function GuaranteedAnalysisExplainedPage() {
           <li>Treat voluntary guarantees (taurine, omega-3) as a transparency signal, not a completeness check.</li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

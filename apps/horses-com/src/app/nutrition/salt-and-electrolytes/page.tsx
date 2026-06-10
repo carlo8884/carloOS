@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Salt and Electrolytes for Horses — Daily Salt and Replacing Sweat Losses",
+  title: "Salt and Electrolytes for Horses — Daily Salt & Replacing Sweat Loss",
   description:
     "Reference guide to equine salt and electrolytes: why every horse needs daily salt, what electrolytes do, when to supplement, and how to use them safely.",
   path: '/nutrition/salt-and-electrolytes',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Salt and Electrolytes for Horses — Daily Salt and Replacing Sweat Losses",
+  title: "Salt and Electrolytes for Horses — Daily Salt & Replacing Sweat Loss",
   description:
     "Reference guide to equine salt and electrolytes: why every horse needs daily salt, what electrolytes do, when to supplement, and how to use them safely.",
   url: 'https://horses.com/nutrition/salt-and-electrolytes',
@@ -54,6 +54,12 @@ export default function SaltElectrolytesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Water Requirements', href: '/nutrition/water-requirements' },
+          { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
+          { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
+        ]}
         hero={{
           title: "Salt and Electrolytes for Horses",
           subtitle:
@@ -89,6 +95,7 @@ export default function SaltElectrolytesPage() {
               { label: "Tying-Up", href: "/health/tying-up" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function SaltElectrolytesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="salt">Why Salt Matters</h2>
           <p>Sodium and chloride -- common salt -- are essential nutrients that forage is usually too low in to meet a horse&apos;s baseline needs, even before any sweating. Adequate salt drives the thirst that maintains water intake, supports nerve and muscle function, and underpins the body&apos;s fluid balance. Every horse should have access to salt, and many benefit from a measured daily amount of loose salt added to feed, which is more reliably consumed than a salt block alone.</p>
 
@@ -136,7 +150,6 @@ export default function SaltElectrolytesPage() {
           <ReviewCard
             id="plain-salt-block"
             badge="Year-Round Baseline"
-            badgeEmoji="🧂"
             name="Plain White Salt Block / Loose Salt"
             subtitle="The free-choice baseline every horse needs"
             score={8.7}
@@ -162,7 +175,6 @@ export default function SaltElectrolytesPage() {
           <ReviewCard
             id="sweat-electrolyte"
             badge="Sweat Replacement"
-            badgeEmoji="💧"
             name="Salt-First Sweat-Replacement Electrolyte"
             subtitle="For horses in heavy work or hot, humid conditions"
             score={8.5}

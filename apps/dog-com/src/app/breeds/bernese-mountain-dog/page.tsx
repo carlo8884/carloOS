@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bernese Mountain Dog Guide — Cancer, 7-Year Lifespan | Dog.com', description: 'Berners have the shortest lifespan of any breed (~7 years). Cancer causes ~50% of deaths, with histiocytic sarcoma a breed-specific malignancy.', path: '/breeds/bernese-mountain-dog', type: 'article' })
@@ -10,6 +10,7 @@ export default function BerneseMountainDogPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bernese Mountain Dog Breed Guide', subtitle: 'Gentle, devoted, and extraordinarily beautiful — Bernese Mountain Dogs are among the most loved family breeds. They are also among the shortest-lived and most cancer-prone. The average lifespan is 7–8 years. Approximately 50% die from cancer. This is not meant to discourage ownership — it is information every prospective Berner owner deserves to have before falling in love.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bernese Mountain Dog', href: '/breeds/bernese-mountain-dog' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function BerneseMountainDogPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-berner" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Histiocytic Sarcoma" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Histiocytic Sarcoma" riskLevel="very-high"
           description="Histiocytic sarcoma is a malignant proliferation of histiocytes (immune cells) that is dramatically overrepresented in Bernese Mountain Dogs — they develop this cancer at rates orders of magnitude higher than other breeds. It can present as localized (affecting a single site — spleen, lung, bone marrow, skin) or disseminated (systemic, affecting multiple organs simultaneously). Disseminated histiocytic sarcoma is rapidly fatal — median survival even with chemotherapy (CCNU/lomustine) is 2–4 months. Localized disease treated surgically has a more variable prognosis."
           signs={['Rapid weight loss and muscle wasting', 'Lethargy and anorexia', 'Abdominal distension (splenic involvement)', 'Lameness (bone involvement)', 'Pale gums (anemia from bone marrow involvement)', 'Neurological signs (CNS involvement)']}
           management="No prevention currently available. Rapid veterinary evaluation for any unexplained decline, weight loss, or systemic signs in a Berner. Chemotherapy (CCNU) for disseminated disease. Surgical excision for localized disease. Veterinary oncologist involvement for all cases. Research into histiocytic sarcoma genetics in Berners is ongoing — the Bernese Mountain Dog Club of America funds breed health research." />

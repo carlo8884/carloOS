@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function CardiacAndLowSodiumDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function CardiacAndLowSodiumDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Cardiac and Low-Sodium Diets', href: '/diets/cardiac-and-low-sodium-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function CardiacAndLowSodiumDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A therapeutic cardiac pet-food bag photographed in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Cardiac disease — degenerative valve disease and dilated cardiomyopathy in dogs, and various conditions in cats — is managed primarily with medication, but diet supports management and helps counter the muscle loss (cardiac cachexia) that accompanies advanced heart failure. The classic dietary lever is sodium, but cardiac nutrition is more than salt restriction, and it must be staged to the disease and individualized. See <a href="/nutrition/taurine-and-amino-acids">Taurine and Amino Acids</a>.</p>
         <h2 id="role">Diet in Heart Disease</h2>
         <p>Diet in heart disease aims to reduce fluid-retention pressures (via sodium control), preserve lean muscle against cardiac cachexia, ensure adequate taurine and other heart-relevant nutrients, reduce inflammation with omega-3s, and above all maintain caloric intake. It complements, never replaces, cardiac medication and veterinary management. The plan changes as the disease progresses.</p>
@@ -94,13 +133,7 @@ export default function CardiacAndLowSodiumDietsPage() {
         <h2 id="appetite">Keeping Them Eating</h2>
         <p>Inappetence is a major challenge in heart failure, and a cardiac patient that stops eating loses muscle and misses medication often hidden in food. Palatability frequently trumps the theoretically ideal sodium target — a slightly higher-sodium food the animal will eat can be better than an ideal one it refuses. Maintaining intake, with warming, variety, and veterinary guidance, is a priority. See <a href="/diets/senior-pet-diets">Senior Pet Diets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides Update on Investigation into Potential Connection Between Certain Diets and Cases of Canine Heart Disease</em> (27 June 2019).</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

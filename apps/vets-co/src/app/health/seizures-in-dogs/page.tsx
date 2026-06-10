@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Seizures in Dogs — What to Do, Causes, Epilepsy | Vets.co", description: "A seizure is frightening but rarely an immediate emergency unless prolonged. Learn what to do during a seizure, common causes, and how epilepsy is managed.", path: '/health/seizures-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Seizures in Dogs', description: 'What to do during a seizure, common causes, and management of canine epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'What to do during a seizure, causes, and management of epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,13 +11,24 @@ const FAQS = [
   { question: "When is a seizure an emergency?", answer: "A single brief seizure in a dog that recovers is frightening but usually not an immediate emergency, though it always warrants a veterinary evaluation. It becomes an emergency when a seizure lasts more than about five minutes (status epilepticus), when multiple seizures occur close together without full recovery between them (cluster seizures), or when the dog does not return to normal afterward. Prolonged seizures can cause dangerous overheating and brain injury, so these situations require immediate emergency veterinary care." },
   { question: "Is epilepsy in dogs treatable?", answer: "Yes — epilepsy is usually well managed, not cured. When seizures are frequent or severe enough to warrant treatment, veterinarians prescribe anti-seizure medication, with the specific drug and dose determined and adjusted by your veterinarian based on response and monitoring bloodwork. The goal is to reduce the frequency and severity of seizures to an acceptable level rather than to eliminate them entirely, and many epileptic dogs live full, happy lives. Consistency in giving medication and keeping a seizure diary greatly aid management." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Seizures and Epilepsy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/seizure-disorders/seizure-disorders-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Epilepsy in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/epilepsy-pets', publisher: 'AVMA' },
+  { label: 'International Veterinary Epilepsy Task Force: Consensus Statements', url: 'https://bmcvetres.biomedcentral.com/articles/supplements/volume-11-supplement-1', publisher: 'BMC Veterinary Research' },
+]
 export default function SeizuresPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Seizures in Dogs', subtitle: 'A seizure is one of the most frightening things an owner can witness, but knowing what to do — and what not to do — makes a real difference. Most single seizures are brief and not immediately life-threatening, though all warrant veterinary evaluation. Understanding the causes, the danger signs, and how epilepsy is managed helps you respond calmly and protect your dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Seizures in Dogs', subtitle: 'A seizure is one of the most frightening things an owner can witness, but knowing what to do — and what not to do — makes a real difference. Most single seizures are brief and not immediately life-threatening, though all warrant veterinary evaluation. Understanding the causes, the danger signs, and how epilepsy is managed helps you respond calmly and protect your dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Seizures', href: '/health/seizures-in-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+          { title: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">During a Seizure</div>
@@ -56,6 +67,8 @@ export default function SeizuresPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

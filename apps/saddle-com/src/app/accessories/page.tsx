@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { SchemaScript } from '@carloOS/ui'
 import { ACCESSORY_CATEGORIES } from '@/data/accessories'
 
 export const metadata: Metadata = buildMetadata({
@@ -12,17 +12,25 @@ export const metadata: Metadata = buildMetadata({
   path: '/accessories',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://saddle.com/' },
-    { name: 'Accessories', url: 'https://saddle.com/accessories' },
-  ],
-})
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Saddle Accessory Buyer Guides',
+  numberOfItems: ACCESSORY_CATEGORIES.length,
+  itemListElement: ACCESSORY_CATEGORIES.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.categoryName,
+    url: `https://saddle.com/accessories/${a.slug}`,
+  })),
+}
+
+const accessoriesSchema = itemListSchema
 
 export default function AccessoriesHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={accessoriesSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"

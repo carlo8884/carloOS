@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'AAHA: Senior Care Guidelines for Dogs and Cats (2023)', url: 'https://www.aaha.org/aaha-guidelines/senior-care/senior-care-guidelines/', publisher: 'AAHA' },
+  { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/caring-senior-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Aging in Dogs — Physiologic Changes and Preventive Care', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/aging-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin North Am Small Anim Pract. 2012;42(4):749-768.', publisher: 'Vet Clinics Small Animal Practice' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -77,6 +85,7 @@ export default function SeniorDogCarePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Senior Dog Care', href: '/health/senior-dog-care' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }, { title: 'Dog Cancer Signs', href: '/health/dog-cancer-signs', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -93,10 +102,11 @@ export default function SeniorDogCarePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Dog Dental Care', href: '/health/dog-dental-care' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."
@@ -155,6 +165,8 @@ export default function SeniorDogCarePage() {
 
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

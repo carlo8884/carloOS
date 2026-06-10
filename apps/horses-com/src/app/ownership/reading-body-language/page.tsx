@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BodyLanguagePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit' },
+        ]}
         hero={{
           title: "Reading Horse Body Language",
           subtitle:
@@ -99,6 +105,13 @@ export default function BodyLanguagePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why It Matters</h2>
           <p>The horse is a large, powerful prey animal whose first instinct in fear is to flee, and it broadcasts its emotional state through subtle and not-so-subtle body signals. Reading those signals lets a handler anticipate a spook, defuse tension before it becomes a kick or bite, recognize discomfort or pain, and build the trust that comes from responding to what the horse is saying. It is fundamental to both safety and good horsemanship -- the horse is always communicating, and the skill is learning to listen.</p>
 

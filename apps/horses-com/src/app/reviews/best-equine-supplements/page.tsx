@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Best Equine Supplements 2026 — Joint, Gastric, Hoof, Calmer, Electrolyte',
+  title: 'Best Equine Supplements 2026 — Joint, Gastric, Hoof & Electrolyte',
   description:
-    'Buyer&apos;s guide to equine supplements across the major categories. Platinum Performance, Cosequin, SmartPak, KER, Equithrive, Standlee. NASC Quality Seal, FEI prohibited substances, and the evidence behind each category.',
+    'Buyer&apos;s guide to equine supplements by category: Platinum Performance, Cosequin, SmartPak, KER, Equithrive. NASC Quality Seal and FEI rules explained.',
   path: '/reviews/best-equine-supplements',
   type: 'article',
 })
@@ -92,7 +92,7 @@ const FAQS = [
 export default function BestEquineSupplementsPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://horses.com/' }, { name: 'Reviews', url: 'https://horses.com/reviews' }, { name: 'Best Equine Supplements 2025', url: 'https://horses.com/reviews/best-equine-supplements' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer&apos;s Guide · May 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
@@ -122,6 +122,7 @@ export default function BestEquineSupplementsPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>How to Read the Equine Supplement Aisle</h2>
             <p>Three filters separate useful equine supplements from money-wasting marketing:</p>
@@ -165,13 +166,12 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="cosequin-asu"
               badge="Best Joint Evidence"
-              badgeEmoji="🏆"
               name="Cosequin ASU Plus (Nutramax)"
               subtitle="Avocado-soybean unsaponifiables + glucosamine + chondroitin · NASC sealed"
               score={9.1}
               winner
               description={<>
-                <p>Cosequin from Nutramax is the most peer-reviewed equine joint supplement brand on the market. The ASU formulations specifically have the strongest published equine clinical-trial evidence of any oral joint supplement, with chondroprotective effects demonstrated in induced-osteoarthritis models (Kawcak CE et al., <em>American Journal of Veterinary Research</em>, 2007). Nutramax is NASC-sealed and runs its own pharmaceutical-grade manufacturing.</p>
+                <p>Cosequin from Nutramax is among the most-studied equine joint supplement brands. Its ASU formulations have some of the strongest published equine clinical-trial evidence of any oral joint supplement, with chondroprotective effects demonstrated in induced-osteoarthritis models (Kawcak CE et al., <em>American Journal of Veterinary Research</em>, 2007). Nutramax is NASC-sealed and runs its own pharmaceutical-grade manufacturing.</p>
                 <p>The trade-off: Cosequin ASU runs at the higher end of the joint-supplement price range, and the loading-dose-then-maintenance protocol increases first-month cost. For horses with diagnosed osteoarthritis or significant work-related joint loading, the evidence justifies the price.</p>
               </>}
               specs={[
@@ -195,7 +195,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="platinum"
               badge="Best Comprehensive"
-              badgeEmoji="◎"
               name="Platinum Performance Equine"
               subtitle="Omega-3 + antioxidants + amino acids · Veterinary distribution model"
               score={9.0}
@@ -225,7 +224,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="smartgut"
               badge="Best Gastric Adjunct"
-              badgeEmoji="🐴"
               name="SmartPak SmartGut Ultra"
               subtitle="Calcium &amp; magnesium buffering · Glutamine · Sea buckthorn · NASC sealed"
               score={8.6}
@@ -255,7 +253,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="ker-eo3"
               badge="Best Marine Omega-3"
-              badgeEmoji="🐟"
               name="KER EO-3 (Kentucky Equine Research)"
               subtitle="Marine DHA + EPA · Equine-research-backed formulation · Liquid"
               score={8.9}
@@ -284,7 +281,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="equithrive"
               badge="Best Resveratrol"
-              badgeEmoji="⭐"
               name="Equithrive Original Pellets"
               subtitle="Trans-resveratrol · Anti-inflammatory and joint support"
               score={8.5}
@@ -309,17 +305,16 @@ export default function BestEquineSupplementsPage() {
             />
 
             <h2>Forage and Forage-Replacement</h2>
-            <p>The single most powerful equine "supplement" is appropriate forage. Standlee Premium Forage is the leading US producer of premium pelleted and baled forage products. Standlee alfalfa, timothy, and orchard grass products serve as forage-extension (slow-feeders, soaked products for senior horses with dental compromise), pre-exercise gastric buffer (an alfalfa flake 30 minutes before work reduces ESGD risk), and travel/competition forage where consistent hay supply matters.</p>
+            <p>The single most powerful equine "supplement" is appropriate forage. Standlee Premium Forage is one of the most widely-distributed US producers of premium pelleted and baled forage products. Standlee alfalfa, timothy, and orchard grass products serve as forage-extension (slow-feeders, soaked products for senior horses with dental compromise), pre-exercise gastric buffer (an alfalfa flake 30 minutes before work reduces ESGD risk), and travel/competition forage where consistent hay supply matters.</p>
 
             <ReviewCard
               id="standlee"
               badge="Best Forage Products"
-              badgeEmoji="🌾"
               name="Standlee Premium Forage"
               subtitle="Premium alfalfa, timothy, orchard grass · Pelleted, cubed, and baled"
               score={8.7}
               description={<>
-                <p>Standlee Premium Forage is the dominant US brand for shelf-stable, consistent-quality forage products — pelleted alfalfa, alfalfa-orchard blends, timothy pellets and cubes, beet pulp, and various forage-extender products. The product line is most useful for horses needing soaked forage (senior horses with dental compromise, post-colic recovery, travel where local hay quality is unpredictable) and for owners using alfalfa as a pre-exercise gastric buffer.</p>
+                <p>Standlee Premium Forage is a widely-stocked US brand for shelf-stable, consistent-quality forage products — pelleted alfalfa, alfalfa-orchard blends, timothy pellets and cubes, beet pulp, and various forage-extender products. The product line is most useful for horses needing soaked forage (senior horses with dental compromise, post-colic recovery, travel where local hay quality is unpredictable) and for owners using alfalfa as a pre-exercise gastric buffer.</p>
                 <p>Standlee is not a "supplement" in the traditional sense, but it earns mention here because the forage stack is the foundation of all equine nutrition decisions, and standardized commercial forage products solve real ration consistency problems that no pelleted supplement can address.</p>
               </>}
               specs={[
@@ -343,7 +338,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="adams"
               badge="Best Electrolyte"
-              badgeEmoji="💧"
               name="Adams Plus Equine Electrolyte"
               subtitle="Sodium chloride balanced with potassium · For performance and travel"
               score={8.3}

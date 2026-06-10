@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,12 @@ export default function LamenessBasicsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Navicular Syndrome', href: '/health/navicular-syndrome' },
+          { title: 'Osteoarthritis', href: '/health/osteoarthritis' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+        ]}
         hero={{
           title: "Equine Lameness Basics",
           subtitle:
@@ -100,6 +106,7 @@ export default function LamenessBasicsPage() {
               { label: "The Farrier Schedule", href: "/care/farrier-schedule" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -110,6 +117,13 @@ export default function LamenessBasicsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Lameness Is</h2>
           <p>Lameness is any deviation from a horse&apos;s normal gait, almost always caused by pain somewhere in the limb, foot, back, or pelvis, though occasionally by a mechanical restriction such as a scarred-down joint. By far the most common source is the foot -- the old farrier adage that lameness is in the foot until proven otherwise holds up statistically. Lameness can be sudden and severe (an abscess, a fracture) or slow and subtle (arthritis, navicular syndrome).</p>
 

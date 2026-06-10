@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Pasture Management for Horses — Grazing, Rotation, Weeds, Poisonous Plants",
+  title: "Pasture Management for Horses — Grazing, Rotation & Poisonous Plants",
   description:
     "Reference guide to equine pasture management: grazing behavior, rotational grazing, weed and poisonous-plant control, soil and reseeding, and overgrazing.",
   path: '/care/pasture-management',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Pasture Management for Horses — Grazing, Rotation, Weeds, Poisonous Plants",
+  title: "Pasture Management for Horses — Grazing, Rotation & Poisonous Plants",
   description:
     "Reference guide to equine pasture management: grazing behavior, rotational grazing, weed and poisonous-plant control, soil and reseeding, and overgrazing.",
   url: 'https://horses.com/care/pasture-management',
@@ -54,6 +54,12 @@ export default function PastureManagementPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Pasture Management for Horses",
           subtitle:
@@ -89,6 +95,7 @@ export default function PastureManagementPage() {
               { label: "Equine Laminitis", href: "/health/laminitis" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function PastureManagementPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="grazing">How Horses Graze</h2>
           <p>Horses are selective grazers that crop grass close with their incisors and create distinct lawns and roughs -- short, repeatedly grazed areas and tall, manure-fouled areas they avoid. Left unmanaged, this patchy grazing wastes pasture, concentrates parasite larvae in the roughs, and lets weeds invade the bare lawns. Understanding this behavior is the starting point for managing the land.</p>
 

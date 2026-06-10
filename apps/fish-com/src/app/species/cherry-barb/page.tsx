@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Puntius titteya — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/puntius-titteya/", publisher: "Seriously Fish" },
+  { label: "Puntius titteya — FishBase species record", url: "https://www.fishbase.se/summary/Puntius-titteya.html", publisher: "FishBase" },
+  { label: "Puntius titteya (Cherry Barb) — IUCN Red List", url: "https://www.iucnredlist.org/species/191759/2004768", publisher: "IUCN Red List" },
+  { label: "Kottelat, M. & Whitten, A.J. Freshwater Fishes of Western Indonesia and Sulawesi. Periplus, 1996.", publisher: "Periplus" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred.', path: '/species/cherry-barb', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryBarbPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Barb', href: '/species/cherry-barb' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -19,10 +28,13 @@ export default function CherryBarbPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Neon Tetra', href: '/species/neon-tetra' }, { label: 'Corydoras Care', href: '/species/corydoras' }, { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-cherry-barb" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-cherry-barb" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry barb in a home aquarium." priority />
         <h2>Why Cherry Barbs Are Different From Other Barbs</h2>
         <p>The barb family has an undeserved reputation for aggression — deserved by tiger barbs (notorious fin-nippers), rosy barbs (semi-aggressive), and odessa barbs (males fight). Cherry barbs are the exception. They are peaceful with every species small enough to not eat them. They will not nip fins, harass smaller fish, or bother invertebrates. This makes them one of the few barbs appropriate for tanks with guppies, bettas, neon tetras, and shrimp.</p>
         <p>Cherry barbs are listed as vulnerable on the IUCN Red List — their native Sri Lankan stream habitats are under pressure from deforestation and agricultural runoff. All cherry barbs in the trade are commercially bred, but that wild population status is worth knowing.</p>
@@ -40,7 +52,8 @@ export default function CherryBarbPage() {
 
         <h2>Breeding</h2>
         <p>Cherry barbs breed readily in the aquarium. Males display (flaring, circling) to females and chase them through plants. Eggs are scattered among fine-leaved plants — Java moss is ideal as a spawning medium. Parents do not exhibit significant parental care and will eat eggs and fry if not removed. Fry are tiny — fed infusoria initially, then baby brine shrimp. A small breeding setup with Java moss, a sponge filter, and a pair or trio produces regular fry with minimal management.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cherry Barb — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cherry barb care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -49,6 +62,7 @@ export default function CherryBarbPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

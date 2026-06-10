@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildProductSchema,
@@ -75,14 +75,14 @@ export default function StubbenReviewPage() {
             Stubben Saddle Review 2025 — Roxane, Portos & Aramis
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Stubben has been making saddles in Germany since 1894. We reviewed their three flagship models — the Quick-Change tree system, leather quality, and who each model suits.
+            Stubben has been making saddles in Germany since 1894. This guide compares their three flagship models — the Quick-Change tree system, leather quality, and who each model suits — on published geometry and aggregated rider reports.
           </p>
           <div className="mt-4 text-xs text-white/30">Saddle.com Editorial · Updated May 2025</div>
         </div>
       </div>
 
       <QuickPicks items={PICKS} />
-      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Stubben Saddle" }]} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Stubben Saddle", href: "/reviews/stubben-saddle-review" }]} />
 
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
@@ -95,6 +95,7 @@ export default function StubbenReviewPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="roxane"
               badge="Best Dressage — Top Pick"
@@ -104,8 +105,8 @@ export default function StubbenReviewPage() {
               score={9.5}
               winner
               description={<div>
-                <p>The Roxane is Stubben&apos;s flagship dressage saddle and the benchmark by which other dressage saddles are measured. Quick-Change tree width adjustment, hand-finished German leather that wears exceptionally well, and a deep seat geometry developed over decades of feedback from FEI-level dressage riders.</p>
-                <p>The panel construction is notably supple and conforms well to a range of back types. We have seen Roxanes fitting horses that other saddle brands struggled with. The leather develops a beautiful patina over years of care — a well-maintained 10-year-old Roxane often looks better than a new competitor saddle. Resale value is consistently strong, making the initial investment more reasonable amortized over the saddle&apos;s life.</p>
+                <p>The Roxane is Stubben&apos;s flagship dressage saddle and one that many riders treat as a benchmark when comparing dressage saddles. Quick-Change tree width adjustment, hand-finished German leather that wears exceptionally well, and a deep seat geometry developed over decades of feedback from FEI-level dressage riders.</p>
+                <p>The panel construction is notably supple and conforms well to a range of back types. Riders report Roxanes fitting horses that other saddle brands struggled with. The leather develops a beautiful patina over years of care — a well-maintained 10-year-old Roxane often looks better than a new competitor saddle. Resale value is consistently strong, making the initial investment more reasonable amortized over the saddle&apos;s life.</p>
               </div>}
               specs={[
                 { label: 'Tree', value: 'Quick-Change (5 widths)', highlight: 'good' },
@@ -115,7 +116,7 @@ export default function StubbenReviewPage() {
                 { label: 'Seat', value: 'Deep (dressage geometry)' },
                 { label: 'Resale', value: 'Excellent', highlight: 'good' },
               ]}
-              pros={['Quick-Change tree — adjusts in seconds', 'Best-in-class German leather', 'Excellent resale value', 'Panel fits wide range of horses', 'Available new and used market', 'CSF-documented excellent fit outcomes']}
+              pros={['Quick-Change tree — adjusts in seconds', 'Hand-finished German bridle leather', 'Excellent resale value', 'Panel fits wide range of horses', 'Available new and used market', 'CSF-documented excellent fit outcomes']}
               cons={['$3,200–4,500 new — significant investment', 'Deep seat not suitable for all riders/disciplines', 'Used market requires careful inspection (see buying guide)']}
               price="$3,200–$4,500 new"
               priceNote="Used: $1,200–$2,400"
@@ -194,6 +195,7 @@ export default function StubbenReviewPage() {
               { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
             ]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buyer's Guide" subtitle="Saddle reviews and market intelligence." source="review-stubben" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

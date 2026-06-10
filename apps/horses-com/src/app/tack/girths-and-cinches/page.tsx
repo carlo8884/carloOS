@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function GirthsCinchesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: "Girths and Cinches",
           subtitle:
@@ -89,6 +95,7 @@ export default function GirthsCinchesPage() {
               { label: "Equine Gastric Ulcers", href: "/health/equine-ulcers" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function GirthsCinchesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What the Girth Does</h2>
           <p>The girth passes under the barrel just behind the elbows and fastens to the saddle on both sides, holding it securely in place against the forces of riding. Because it sits in the sensitive girth groove and moves against the skin with every stride, its material, shape, and fit directly affect the horse&apos;s comfort and freedom of movement. It must be secure enough that the saddle cannot slip, without being so tight or ill-shaped that it pinches or rubs.</p>
 
@@ -129,7 +143,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="anatomic-english-girth"
             badge="English Everyday"
-            badgeEmoji="🐴"
             name="Anatomic / Shaped English Girth"
             subtitle="Contoured shape to relieve the elbow and reduce galls"
             score={8.6}
@@ -155,7 +168,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="mohair-cinch"
             badge="Western"
-            badgeEmoji="🤠"
             name="Mohair / Roper Western Cinch"
             subtitle="Breathable natural-fiber cinch for long rides"
             score={8.5}
@@ -180,7 +192,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="fleece-girth-cover"
             badge="Gall Prevention"
-            badgeEmoji="🐑"
             name="Sheepskin / Fleece Girth Cover"
             subtitle="Cushioning sleeve to reduce friction on sensitive horses"
             score={8.1}

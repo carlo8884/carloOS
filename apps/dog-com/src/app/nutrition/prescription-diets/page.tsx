@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Prescription Dog Food Explained — Kidney, Liver | Dog.com', description: 'When prescription diet food matters and what each type does. Kidney disease, liver disease, urinary health, weight management, allergies.', path: '/nutrition/prescription-diets', type: 'article' })
@@ -22,14 +22,17 @@ export default function PrescriptionDietsPage() {
       contentType="nutrition"
       hero={{ title: 'Prescription Dog Food Explained', subtitle: 'Prescription diets are not premium marketing — they are clinically formulated foods for specific medical conditions, with meaningful research behind them. Here\'s when each type matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Prescription Diets', href: '/nutrition/prescription-diets' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Dog Supplements', href: '/nutrition/dog-supplements', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Kidney Disease in Dogs', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Diabetes in Dogs', href: '/health/dog-diabetes', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={DIETS.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s\/&,()]/g, '-').replace(/-+/g, '-')}` }))} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-prescription" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <div style={{ background: 'var(--brand-primary-pale)', borderLeft: '4px solid var(--brand-primary)', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '8px' }}>Important</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Prescription diets require veterinary authorization because using the wrong diet for the wrong condition can be harmful. Do not use a renal diet for a dog without kidney disease, or a urinary diet without knowing the crystal type. These foods are tools for specific diagnoses, not general upgrades.</p>

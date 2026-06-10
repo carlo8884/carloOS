@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -97,7 +98,6 @@ export default function HeaterWattageCalculatorPage() {
         subtitle: 'Size your aquarium heater correctly based on tank volume, room temperature, and target temperature. With redundancy guidance for large tanks.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🔥',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}
@@ -107,6 +107,7 @@ export default function HeaterWattageCalculatorPage() {
         { name: 'Heater Wattage Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
       sidebar={
         <>
           <TableOfContents
@@ -143,6 +144,7 @@ export default function HeaterWattageCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Hoof Care Basics — Anatomy, Daily Care, Healthy Hooves",
   description:
-    "Reference guide to equine hoof care: hoof anatomy, the no foot no horse principle, daily picking, trimming and shoeing cycles, and what a healthy hoof looks like.",
+    "Reference guide to equine hoof care: hoof anatomy, the no-foot-no-horse principle, daily picking, trim and shoeing cycles, and what a healthy hoof looks like.",
   path: '/care/hoof-care-basics',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Hoof Care Basics — Anatomy, Daily Care, Healthy Hooves",
   description:
-    "Reference guide to equine hoof care: hoof anatomy, the no foot no horse principle, daily picking, trimming and shoeing cycles, and what a healthy hoof looks like.",
+    "Reference guide to equine hoof care: hoof anatomy, the no-foot-no-horse principle, daily picking, trim and shoeing cycles, and what a healthy hoof looks like.",
   url: 'https://horses.com/care/hoof-care-basics',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function HoofCareBasicsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Farrier Schedule', href: '/care/farrier-schedule' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Thrush', href: '/health/thrush' },
+        ]}
         hero={{
           title: "Hoof Care Basics",
           subtitle:
@@ -89,6 +95,7 @@ export default function HoofCareBasicsPage() {
               { label: "Hoof Abscess", href: "/health/abscess" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function HoofCareBasicsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why the Foot Matters</h2>
           <p>The hoof bears and dissipates enormous loads, helps pump blood back up the leg, and provides traction and feel. A neglected foot is the root of an outsized share of lameness, from abscesses and thrush to long-term imbalance that strains joints and tendons higher up the limb. Good hoof care is cheap insurance against expensive lameness.</p>
 

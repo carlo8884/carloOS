@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Dubia Roach Care — Keeping a Feeder Colony | Lizard.com", description: "How to keep and breed Dubia roaches as feeder insects. Colony setup, heat, gut-loading, why they cannot infest your home, and harvesting safely.", path: "/health/dubia-roach-care", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Dubia Roach Ca
 export default function HealthDubiaRoachCarePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Dubia Roach Care and Colony Keeping", subtitle: "Dubia roaches (Blaptica dubia) are the premier feeder insect for many reptile keepers: nutritious, quiet, odorless compared to crickets, unable to climb smooth surfaces or infest a typical home, and easy to breed into a self-sustaining colony. Keeping your own colony cuts costs and guarantees well-gut-loaded feeders on demand. This guide covers setup, care, and harvesting.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Dubia Roach Care and Colony Keeping", subtitle: "Dubia roaches (Blaptica dubia) are the premier feeder insect for many reptile keepers: nutritious, quiet, odorless compared to crickets, unable to climb smooth surfaces or infest a typical home, and easy to breed into a self-sustaining colony. Keeping your own colony cuts costs and guarantees well-gut-loaded feeders on demand. This guide covers setup, care, and harvesting.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Dubia Roach Care", href: "/health/dubia-roach-care" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Colony Basics"}</div>
@@ -23,9 +31,11 @@ export default function HealthDubiaRoachCarePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }, { label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }, { label: "Bearded Dragon Care", href: "/species/bearded-dragon" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-dubia-roach-care"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Dubia roaches have become the feeder of choice for a large share of reptile keepers, and for good reason. They offer an excellent protein-to-fat ratio with a soft body and high meat-to-shell ratio, they are quiet and far less smelly than crickets, they live a long time without the rapid die-off crickets suffer, and, critically, they cannot climb smooth vertical surfaces and cannot establish in typical temperate homes, so an escapee will not start an infestation. A modest colony quickly becomes self-sustaining, giving you a steady supply of pre-gut-loaded feeders."}</p>
           <h2>{"Why Dubia Cannot Infest Your Home"}</h2>
 

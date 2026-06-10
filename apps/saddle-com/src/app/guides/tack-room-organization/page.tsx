@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Room Organization — Storage, Humidity | Saddle.com', description: 'How to organize a tack room for efficiency and leather longevity. Saddle racks, bridle hooks, humidity control.', path: '/guides/tack-room-organization', type: 'article' })
@@ -11,6 +11,14 @@ export default function TackRoomPage() {
       hero={{ title: 'Tack Room Organization', subtitle: 'A well-organized tack room is not just about aesthetics — it directly affects the longevity of leather equipment that represents thousands of dollars of investment, the efficiency of your barn routine, and the ease of identifying when something needs maintenance or replacement before it fails during a ride.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Room Organization', href: '/guides/tack-room-organization' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+        { title: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule', category: 'Care' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Checklist</div>
@@ -20,11 +28,12 @@ export default function TackRoomPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert care and fitting guides." source="guides-tack-room" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Saddle Storage — The Foundation</h2>
         <p>Saddles should never be stored on the floor, on a flat surface, or stacked. Incorrect storage deforms the tree (the rigid internal structure), warps the panels, and causes irreversible shape distortion that affects both saddle fit and rider position. Proper storage: a wall-mounted saddle rack or freestanding rack that supports the saddle's pommel and cantle in the same orientation the saddle sits on the horse — slightly elevated at the front, panels supported evenly on both sides.</p>
         <p>Commercial saddle racks are available in fixed and folding versions. Folding racks (swing-out from the wall) maximize space efficiency in tight tack rooms. Padded racks (covered in carpet or foam) protect the saddle's underside from pressure marks. Each saddle needs its own dedicated rack — saddles stacked or sharing a rack develop permanent indentations at the contact points. Budget one rack per saddle and build around that requirement.</p>

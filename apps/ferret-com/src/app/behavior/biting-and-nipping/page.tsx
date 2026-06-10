@@ -9,11 +9,12 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  StockImage,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Biting & Nipping', url: 'https://ferret.com/behavior/biting-and-nipping' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +65,28 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 
 export default function FerretBitingNippingPage() {
   return (
@@ -85,7 +100,6 @@ export default function FerretBitingNippingPage() {
             "Almost every new ferret owner gets a few sharp surprises in the first month. Good news: biting is one of the most fixable ferret behaviours, and almost none of it requires punishment. The trick is reading WHY the ferret is biting — play, teething, fear, or pain — because each one has a different answer.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -125,8 +139,22 @@ export default function FerretBitingNippingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+          { title: 'Play Aggression', href: '/behavior/play-aggression' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:behavior-biting"
+            alt="A ferret's face in close portrait — ferret biting and nipping behaviour guide"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
@@ -313,28 +341,7 @@ export default function FerretBitingNippingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour and handling chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour, socialization, and welfare assessment.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing bite-inhibition
-              and socialization guidance.
-            </li>
-            <li>
-              American Veterinary Society of Animal Behavior (AVSAB) — position
-              statements favoring positive-reinforcement over punishment-based
-              training; the conclusions generalize across companion-animal
-              species.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary or behavioural advice. A sudden change to biting in a

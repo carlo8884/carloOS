@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing\'s Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Diagnosis and Treatment of Hyperadrenocorticism in Dogs — Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'AVMA: Cushing\'s Disease (Hyperadrenocorticism) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Feldman EC et al. Use of low- and high-dose dexamethasone tests for distinguishing pituitary-dependent from adrenal tumor hyperadrenocorticism in dogs. J Am Vet Med Assoc. 1996;209(4):772-775.', publisher: 'JAVMA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test", path: '/health/cushing-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -14,6 +22,7 @@ export default function CushingDiseasePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism — Cushing's syndrome — is caused by chronic cortisol excess. It is one of the most commonly misdiagnosed conditions in middle-aged and older dogs because its signs resemble normal aging. The classic presentation: a middle-aged dog that is drinking more, has a pot belly, is losing hair, and seems lethargic.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Cushing's Disease", href: '/health/cushing-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Hypothyroidism', href: '/health/hypothyroidism', category: 'Dog Health' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Addison's Disease", href: '/health/addisons-disease', category: 'Dog Health' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Classic Signs', href: '#signs' }, { label: 'PDH vs ADH', href: '#types' }, { label: 'Diagnostic Tests', href: '#tests' }, { label: 'Treatment', href: '#treatment' }, { label: 'Monitoring', href: '#monitoring' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -29,6 +38,7 @@ export default function CushingDiseasePage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane/mitotane, ACTH-stim recheck panels, endocrinology consults — typically runs $3,000-$8,000+ over the dog&apos;s lifetime. Insurance covers it if enrolled before diagnosis.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
         </>}
       >
@@ -54,6 +64,8 @@ export default function CushingDiseasePage() {
 
           <h2 id="monitoring">Monitoring on Trilostane</h2>
           <p>ACTH stimulation testing is required 10–14 days after starting or changing trilostane dose, then every 3 months once stable, and any time the dog shows signs of illness or weakness. Target post-ACTH cortisol: 1.45–5.4 μg/dL (lab-specific reference ranges may vary). Values below this indicate over-suppression — dose reduction. Values above this with persistent clinical signs indicate underdosing. Trilostane management requires commitment to regular monitoring — it is not a "set and forget" medication.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

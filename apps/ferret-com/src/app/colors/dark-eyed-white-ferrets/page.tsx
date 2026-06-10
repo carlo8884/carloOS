@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Dark-Eyed White Ferrets', url: 'https://ferret.com/colors/dark-eyed-white-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function DarkEyedWhiteFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function DarkEyedWhiteFerretsPage() {
             "At a glance, a dark-eyed white looks like an albino — same snowy coat, same striking presence. But look at the eyes: deep burgundy or near-black instead of bright red. That single difference marks an entirely separate kind of white ferret, with its own genetics and a couple of things worth knowing before you bring one home.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -125,7 +116,14 @@ export default function DarkEyedWhiteFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Albino Ferrets', href: '/colors/albino-ferrets' },
+          { title: 'Blaze & Roan Patterns', href: '/colors/blaze-and-roan-patterns' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-dark-eyed-white"

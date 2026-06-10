@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'English Riding Guide — Disciplines, Equipment | Saddle.com', description: 'Introduction to English riding. Disciplines compared (dressage, hunter/jumper, eventing), essential equipment.', path: '/guides/english-riding-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'English Riding Guide', description: 'English riding disciplines, equipment, and position fundamentals.', url: 'https://saddle.com/guides/english-riding-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -9,6 +9,15 @@ export default function EnglishRidingGuidePage() {
       hero={{ title: 'English Riding Guide', subtitle: '"English riding" encompasses a broad family of equestrian disciplines — from the precise geometry of dressage to the athleticism of show jumping to the three-phase demands of eventing. What they share: a close-contact saddle, two-handed rein contact, and a riding position built around balance, following the horse\'s movement.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'English Riding Guide', href: '/guides/english-riding-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Dressage Basics Guide', href: '/guides/dressage-basics-guide', category: 'Disciplines' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        { title: 'Best Riding Helmets', href: '/reviews/best-riding-helmets', category: 'Reviews' },
+        { title: 'Best Riding Boots', href: '/reviews/best-riding-boots', category: 'Reviews' },
+        { title: 'Best Riding Gloves', href: '/reviews/best-riding-gloves', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Essential Equipment</div>
@@ -19,11 +28,12 @@ export default function EnglishRidingGuidePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Best English Saddles', href: '/reviews/best-english-saddles' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Best English Saddles', href: '/reviews/best-english-saddles' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Helmets', href: '/reviews/best-riding-helmets' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best Riding Gloves', href: '/reviews/best-riding-gloves' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert fitting and care guides." source="guides-english-riding" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>English Disciplines — Which One?</h2>
         <p><strong>Dressage:</strong> The art of riding — developing the horse's natural movement and responsiveness through progressive training. At its base levels, dressage is the foundation of all English riding — correct, harmonious, connected riding. At upper levels, it is one of the most technically demanding equestrian sports. Dressage horses perform walk, trot, and canter movements with precision and self-carriage. The rider appears still while communicating through invisible aids. Competitions are judged on movement quality, submission, and harmony.</p>
         <p><strong>Hunter/Jumper:</strong> The most popular English discipline in the US. Hunters are judged on the horse's movement, manners, and jumping style over a course of natural-looking fences. Jumpers are judged only on whether fences are cleared within the time allowed — the horse and rider's style is irrelevant, only the rail count and time matter. Hunters require a consistent, rhythmical, ground-covering canter and a horse that jumps in a quiet, round arc. Jumpers reward speed and accuracy.</p>

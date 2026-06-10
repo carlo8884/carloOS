@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -96,7 +97,6 @@ export default function VolumeCalculatorPage() {
         subtitle: 'Convert tank dimensions to US gallons, UK gallons, and liters. Supports rectangular, bow-front, cube, hexagonal, and cylinder tanks with realistic water-fill adjustment.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '📏',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}
@@ -106,6 +106,7 @@ export default function VolumeCalculatorPage() {
         { name: 'Aquarium Volume Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Heater Wattage Calculator", href: "/tools/heater-wattage-calculator", category: "Tools" }, { title: "Stocking Calculator", href: "/tools/stocking-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
       sidebar={
         <>
           <TableOfContents
@@ -142,6 +143,7 @@ export default function VolumeCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 

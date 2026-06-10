@@ -14,7 +14,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
@@ -24,6 +23,7 @@ import {
   CalloutBox,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { PageMasthead } from '@/components/PageMasthead'
 import {
   States,
   TOP_STATE_SLUGS,
@@ -145,12 +145,6 @@ export default function StatesHubPage() {
   ]
 
   // ─── Schema ────────────────────────────────────────────────────────────────
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'States', url: 'https://ferrets.com/states' },
-    ],
-  })
   const faqSchema = buildFAQSchema({
     questions: faqs.map((f) => ({
       question: f.question,
@@ -158,7 +152,19 @@ export default function StatesHubPage() {
         typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   })
-  const schema = combineSchemas(breadcrumbSchema, faqSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'US State Ferret Laws Directory',
+    numberOfItems: States.length,
+    itemListElement: States.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: `https://ferrets.com/states/${s.slug}`,
+    })),
+  }
+  const schema = combineSchemas(faqSchema, itemListSchema)
 
   return (
     <>
@@ -172,24 +178,15 @@ export default function StatesHubPage() {
       />
 
       <div className="px-container-sm sm:px-container py-14 max-w-5xl mx-auto">
-        {/* ─── Header ─────────────────────────────────────────────────── */}
-        <header className="mb-10">
-          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            State Directory
-          </p>
-          <h1
-            className="font-display font-black text-brand-text-dark leading-tight tracking-tighter mb-5"
-            style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}
-          >
-            Are ferrets legal in your state?
-          </h1>
-          <p className="text-lg text-brand-text-mid leading-relaxed m-0">
-            A color-coded reference for ferret-ownership laws across all 50
-            states and the District of Columbia. Each state page cites the
-            governing statute or administrative rule, links to the official
-            state department, and surfaces AFA-affiliated adoption resources.
-          </p>
-        </header>
+        {/* ─── Image-first masthead ───────────────────────────────────── */}
+        <PageMasthead
+          eyebrow="State Directory"
+          heading="Are ferrets legal in your state?"
+          dek="A color-coded reference for ferret-ownership laws across all 50 states and the District of Columbia. Each state page cites the governing statute or administrative rule, links to the official state department, and surfaces AFA-affiliated adoption resources."
+          manifestKey="ferrets-com:states-masthead"
+          fallbackKey="ferrets-com:category-directory"
+          alt="Ferret looking up — state-by-state legality directory"
+        />
 
         {/* ─── Mandatory disclaimer callout ──────────────────────────── */}
         <CalloutBox variant="warning" title="Verify before you adopt">

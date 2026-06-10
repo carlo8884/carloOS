@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works', path: '/training/puppy-biting', type: 'article' })
@@ -12,13 +12,17 @@ export default function PuppyBitingPage() {
       contentType="training"
       hero={{ title: 'Puppy Biting & Bite Inhibition', subtitle: 'Puppies explore the world with their mouths. Biting during play is completely normal. The goal is not "stop all biting immediately" — it is to teach bite inhibition: a soft mouth that can distinguish between play and real bite pressure.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Biting', href: '/training/puppy-biting' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }]} />
+        <RelatedLinks title="Planning Ahead for a New Puppy" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-biting" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Bite Inhibition — Why It Matters More Than Stopping Biting</h2>
         <p>Bite inhibition is a dog&apos;s learned ability to control the pressure of its bite. A dog with good bite inhibition that bites during excitement will cause bruising, not puncture wounds. A dog without bite inhibition that bites will cause serious injury. Bite inhibition is learned during puppyhood through play — primarily with other puppies and with humans who teach it correctly. It cannot be effectively taught to adult dogs.</p>
         <p>This is why the goal is not to immediately stop all biting — it is to first teach the puppy to bite softly (inhibition), then progressively teach the puppy not to put teeth on skin at all. Skipping the inhibition phase and going straight to suppression produces a dog that has simply been punished into not biting until something changes — and then bites hard, without inhibition, because it was never taught otherwise.</p>

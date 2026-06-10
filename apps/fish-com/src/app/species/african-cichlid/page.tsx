@@ -1,19 +1,27 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Haplochromine Cichlids of Lake Malawi — Seriously Fish", url: "https://www.seriouslyfish.com/taxonomy/cichlidae/", publisher: "Seriously Fish" },
+  { label: "Lake Malawi Cichlids — FishBase taxonomy", url: "https://www.fishbase.se/identification/SpeciesList.php?family=Cichlidae", publisher: "FishBase" },
+  { label: "Konings, A. Malawi Cichlids in Their Natural Habitat, 5th ed. Cichlid Press, 2016.", publisher: "Cichlid Press" },
+  { label: "Stauffer, J.R. Jr. et al. The Cichlids of the Lake Malawi National Park. Smithsonian Institution Press, 1997.", publisher: "Smithsonian Institution Press" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -34,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'African Cichlid', url: 'https://fish.com/species/african-cichlid' },
-  ],
 })
 
 const FAQS = [
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function AfricanCichlidPage() {
   return (
@@ -107,7 +107,6 @@ export default function AfricanCichlidPage() {
             'African rift-lake cichlids — the Mbuna, Peacocks, and Haplochromines of Lake Malawi, the Tropheus and shell-dwellers of Lake Tanganyika, and the Haplochromis complex of Lake Victoria — represent some of the most colorful freshwater fish in the world and some of the most behaviorally complex. They need hard alkaline water, large tanks, dense rockwork, and species-matched diet. None of that is beginner difficulty; all of it is doable in a first serious tank.',
           category: 'Species Guide — Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '14 min',
         }}
@@ -116,6 +115,7 @@ export default function AfricanCichlidPage() {
           { name: 'Species', href: '/species' },
           { name: 'African Cichlid', href: '/species/african-cichlid' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Discus', href: '/species/discus', category: 'Species Guide' }, { title: 'Oscar', href: '/species/oscar', category: 'Species Guide' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -168,6 +168,7 @@ export default function AfricanCichlidPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -185,6 +186,7 @@ export default function AfricanCichlidPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             African rift-lake cichlids from Lakes Malawi, Tanganyika, and
@@ -538,7 +540,8 @@ export default function AfricanCichlidPage() {
               practice referral directory.
             </li>
           </ul>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>African Cichlid — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for african cichlid care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -547,6 +550,7 @@ export default function AfricanCichlidPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

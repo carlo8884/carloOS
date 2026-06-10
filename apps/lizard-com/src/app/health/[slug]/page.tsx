@@ -34,6 +34,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -263,7 +264,6 @@ export default async function ConditionPage({ params }: PageProps) {
         subtitle: `${condition.category} reptile condition — symptoms, diagnostic ladder, treatment tiers, and prevention via husbandry.`,
         category: 'Reptile Health',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}
@@ -324,6 +324,7 @@ export default async function ConditionPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p id="tldr">
           <strong style={{ color: urgency.color }}>TL;DR — {urgency.label}.</strong>{' '}
           {buildTldr(condition)}

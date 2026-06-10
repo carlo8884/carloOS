@@ -1,19 +1,27 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Paracheirodon axelrodi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/paracheirodon-axelrodi/", publisher: "Seriously Fish" },
+  { label: "Paracheirodon axelrodi — FishBase species record", url: "https://www.fishbase.se/summary/Paracheirodon-axelrodi.html", publisher: "FishBase" },
+  { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+  { label: "Project Piaba — Sustainability in Cardinal Tetra Trade. Amazon Conservation Association, 2019.", url: "https://www.projectpiaba.org", publisher: "Project Piaba / Amazon Conservation Association" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -34,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Cardinal Tetra', url: 'https://fish.com/species/cardinal-tetra' },
-  ],
 })
 
 const FAQS = [
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function CardinalTetraPage() {
   return (
@@ -107,7 +107,6 @@ export default function CardinalTetraPage() {
             'Paracheirodon axelrodi — the full-body red-and-blue cardinal tetra is widely considered the most visually striking schooling fish in the freshwater hobby. Unlike its smaller cousin the neon tetra, the cardinal carries red coloration the entire length of the body. It demands softer, warmer, more acidic water than the neon — and rewards correct conditions with a school display nothing else at its size matches.',
           category: 'Species Guide — Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
@@ -116,6 +115,7 @@ export default function CardinalTetraPage() {
           { name: 'Species', href: '/species' },
           { name: 'Cardinal Tetra', href: '/species/cardinal-tetra' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -172,6 +172,7 @@ export default function CardinalTetraPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -189,6 +190,7 @@ export default function CardinalTetraPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-cardinal-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cardinal tetra in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from
@@ -413,7 +415,8 @@ export default function CardinalTetraPage() {
               referral directory.
             </li>
           </ul>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cardinal Tetra — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cardinal tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -422,6 +425,7 @@ export default function CardinalTetraPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

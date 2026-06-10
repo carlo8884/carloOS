@@ -563,6 +563,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Dog Health', href: '/health' },
       { label: 'Nutrition', href: '/nutrition' },
       { label: 'Training', href: '/training' },
+      { label: 'Compare Breeds', href: '/compare' },
       { label: 'Reviews', href: '/reviews' },
       { label: 'Find a Vet', href: '/find-a-vet', highlight: true },
     ],
@@ -599,6 +600,15 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'FAQ', href: '/faq' },
         ],
       },
+      {
+        heading: 'Tools & Guides',
+        links: [
+          { label: 'Compare Breeds', href: '/compare' },
+          { label: 'Which Pet Quiz', href: '/which-pet' },
+          { label: 'Puppy Schedule', href: '/puppy-schedule' },
+          { label: 'Care Guides', href: '/guides' },
+        ],
+      },
     ],
     defaultOgImage: 'https://dog.com/og-default.jpg',
     twitterHandle: '@dogcom',
@@ -620,6 +630,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'Find a Vet', href: '/find-a-vet' },
       { label: 'Pet Health', href: '/health' },
+      { label: 'Tools', href: '/tools' },
       { label: 'Telehealth', href: '/telehealth' },
       { label: 'Pet Insurance', href: '/reviews/best-pet-insurance', highlight: true },
     ],
@@ -630,15 +641,26 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Find a Vet', href: '/find-a-vet' },
           { label: 'Telehealth Options', href: '/telehealth' },
           { label: 'Emergency Signs', href: '/health/emergency-signs' },
+          { label: 'Emergency Triage Card', href: '/emergency-triage-card' },
         ],
       },
       {
         heading: 'Pet Health',
         links: [
           { label: 'Pet Health Library', href: '/health' },
+          { label: 'Symptom Checker', href: '/symptoms' },
+          { label: 'Medications', href: '/medications' },
           { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
-          { label: 'Vaccinations Guide', href: '/health/dog-vaccinations-guide' },
           { label: 'Preventive Care', href: '/health/preventive-care-schedule' },
+        ],
+      },
+      {
+        heading: 'Tools & Reference',
+        links: [
+          { label: 'Tools & Calculators', href: '/tools' },
+          { label: 'Diagnostics Guide', href: '/diagnostics' },
+          { label: 'Specialists', href: '/specialists' },
+          { label: 'Pet Health Data', href: '/data' },
         ],
       },
       {
@@ -678,6 +700,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Fish Species', href: '/species' },
       { label: 'Water Parameters', href: '/water-parameters' },
       { label: 'Aquarium Setup', href: '/setup' },
+      { label: 'Equipment', href: '/equipment' },
       { label: 'Calculators', href: '/tools' },
       { label: 'Fish Health', href: '/health' },
       { label: 'Reviews', href: '/reviews' },
@@ -721,6 +744,13 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'CO2 (KH/pH)', href: '/tools/co2-calculator' },
         ],
       },
+      {
+        heading: 'Fish.com',
+        links: [
+          { label: 'Aquarium Calculators', href: '/tools' },
+          { label: 'Data Partnerships', href: '/data' },
+        ],
+      },
     ],
     defaultOgImage: 'https://fish.com/og-default.jpg',
   },
@@ -741,6 +771,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'English Saddles', href: '/reviews/best-english-saddles' },
       { label: 'Western Saddles', href: '/reviews/best-western-saddles' },
+      { label: 'Brands', href: '/brands' },
       { label: 'Guides', href: '/guides' },
       { label: 'Reviews', href: '/reviews' },
       { label: 'Fit Checklist', href: '/saddle-fit-checklist' },
@@ -765,6 +796,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Seat Size', href: '/guides/seat-size-guide' },
           { label: 'Used Saddle', href: '/guides/used-saddle-buying-guide' },
           { label: 'First Horse', href: '/guides/buying-first-horse' },
+          { label: 'Fit by Discipline', href: '/fit' },
         ],
       },
       {
@@ -774,6 +806,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' },
           { label: 'Bit Selection', href: '/guides/bit-selection-guide' },
           { label: 'Bridle Guide', href: '/guides/horse-bridle-guide' },
+          { label: 'Accessories', href: '/accessories' },
         ],
       },
     ],
@@ -795,8 +828,10 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Species Guides', href: '/species' },
-      { label: 'Reptile Health', href: '/health/sick-reptile-signs' },
+      { label: 'Health', href: '/health' },
       { label: 'Enclosure Setup', href: '/setup' },
+      { label: 'Vivarium Builds', href: '/builds' },
+      { label: 'Tools', href: '/tools' },
       { label: 'Reviews', href: '/reviews' },
     ],
     footerLinks: [
@@ -829,6 +864,16 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'All Reviews', href: '/reviews' },
         ],
       },
+      {
+        heading: 'Tools & Reference',
+        links: [
+          { label: 'Reptile Calculators', href: '/tools' },
+          { label: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator' },
+          { label: 'Health Hub', href: '/health' },
+          { label: 'Legality by State', href: '/states' },
+          { label: 'First-Year Care Schedule', href: '/first-year-care-schedule' },
+        ],
+      },
     ],
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
@@ -850,6 +895,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Home', href: '/' },
       { label: 'Breeds', href: '/breeds' },
       { label: 'Disciplines', href: '/disciplines' },
+      { label: 'Racing', href: '/racing' },
       { label: 'Health', href: '/health' },
       { label: 'Care', href: '/care' },
       { label: 'Nutrition', href: '/nutrition' },
@@ -862,6 +908,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'Breeds', href: '/breeds' },
           { label: 'Disciplines', href: '/disciplines' },
+          { label: 'Racing Intelligence', href: '/racing' },
           { label: 'Health', href: '/health' },
           { label: 'Guides', href: '/guides' },
           { label: 'Tools', href: '/tools' },
@@ -875,6 +922,8 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tack & Gear', href: '/tack' },
           { label: 'Ownership', href: '/ownership' },
           { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
+          { label: 'Supplements', href: '/supplements' },
+          { label: 'Reviews', href: '/reviews' },
         ],
       },
     ],
@@ -896,12 +945,44 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Compare Foods', href: '/compare' },
+      { label: 'Brands', href: '/brands' },
+      { label: 'Conditions', href: '/conditions' },
+      { label: 'Ingredients', href: '/ingredients' },
+      { label: 'Life Stage', href: '/life-stage' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
       {
-        heading: 'PetFood.com',
+        heading: 'Browse',
         links: [
-          { label: 'Home', href: '/' },
+          { label: 'Compare Foods', href: '/compare' },
+          { label: 'Brands', href: '/brands' },
+          { label: 'Conditions', href: '/conditions' },
+          { label: 'Therapeutic Diets', href: '/diets' },
+          { label: 'Ingredients', href: '/ingredients' },
+          { label: 'Nutrition', href: '/nutrition' },
+          { label: 'Feeding', href: '/feeding' },
+          { label: 'Life Stage', href: '/life-stage' },
+          { label: 'Supplements', href: '/supplements' },
+          { label: 'Species', href: '/species' },
+        ],
+      },
+      {
+        heading: 'Reference',
+        links: [
+          { label: 'Guides', href: '/guides' },
+          { label: 'Scoring Methodology', href: '/guides/methodology' },
+          { label: 'Myths', href: '/myths' },
+          { label: 'Tools', href: '/tools' },
+        ],
+      },
+      {
+        heading: 'About',
+        links: [
+          { label: 'Editorial Standards', href: '/editorial-standards' },
+          { label: 'Affiliate Disclosure', href: '/disclosure' },
         ],
       },
     ],
@@ -937,6 +1018,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'Home', href: '/' },
           { label: 'Health', href: '/health' },
+          { label: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { label: 'Care', href: '/care' },
           { label: 'Behavior', href: '/behavior' },
           { label: 'Colors', href: '/colors' },
@@ -1244,6 +1326,45 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   'ferrets-com:directory': [
     { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', href: 'https://ferret.com/care' },
     { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', href: 'https://ferret.com/health' },
+  ],
+
+  // ── horses-com (activate already-placed cards: care/gear/health/nutrition/training)
+  // Equestrian sibling Saddle.com is the relevant cross-portfolio target.
+  'horses-com:health': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Care & First-Aid Guides', blurb: 'Grooming, first aid, dentistry, and trailer-safety guides for owners.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:nutrition': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Nutrition & Body Condition', blurb: 'Body-condition scoring and feeding guidance from the equestrian library.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:care': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack, Grooming & Daily Care', blurb: 'Leather care, tack cleaning, and grooming routines for the well-kept horse.', cta: 'See care guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:gear': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddles, Tack & Accessories', blurb: 'Independent saddle, bridle, and accessory buyer guidance by discipline.', cta: 'Shop the guide', href: 'https://saddle.com/accessories' },
+  ],
+  'horses-com:training': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Discipline & Riding Guides', blurb: 'English, western, dressage, and discipline-specific tack and technique.', cta: 'Browse disciplines', href: 'https://saddle.com/guides' },
+  ],
+
+  // ── petfood-com (activate already-placed brand card) — sibling ingredient/brand DB
+  'petfood-com:brand': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand & Ingredient Database', blurb: 'WSAVA compliance, ingredient sourcing, and brand evaluations side by side.', cta: 'Compare brands', href: 'https://petfoods.com/brands' },
+  ],
+
+  // ── saddle-com (activate already-placed guide card) — equestrian sibling authority
+  'saddle-com:guide': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', href: 'https://horses.com/tack' },
+  ],
+
+  // ── dog-com guide spokes (general dog-owner guides → clinical + nutrition siblings)
+  'dog-com:guide': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Veterinary Care Reference', blurb: 'Conditions, medications, and specialist directories from a clinical-authority desk.', cta: 'Browse vet topics', href: 'https://vets.co/health' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Feeding & Nutrition Guides', blurb: 'AAFCO life-stage profiles, label-reading, and feeding fundamentals.', cta: 'Read nutrition guides', href: 'https://petfood.com/nutrition' },
+  ],
+
+  // ── horses-com guide spokes (equestrian sibling)
+  'horses-com:guide': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack Fit & Care Guides', blurb: 'Saddle fit, leather care, and discipline-specific tack guidance.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
   ],
 }
 

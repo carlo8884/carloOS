@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,23 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — social behaviour and infectious-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret social behavior and disease-transmission clinician resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
+
 export default function IntroducingSecondFerretPage() {
   return (
     <>
@@ -36,7 +53,6 @@ export default function IntroducingSecondFerretPage() {
             'Ferrets are social and most thrive with company, so adding a second ferret is usually a good decision. But ferrets play rough, and the introduction has to be managed — quarantine first for health, then a gradual, supervised bonding on neutral ground. Here is how to do it without confusing normal play for a fight.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -66,6 +82,7 @@ export default function IntroducingSecondFerretPage() {
                 { label: 'Vaccinations', href: '/health/vaccinations' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +92,22 @@ export default function IntroducingSecondFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why a Second Ferret Is Usually a Good Idea</h2>
           <p>
             Ferrets are social animals. In most households a single ferret left alone for the hours its owner is at work is an under-stimulated ferret, and the common result is a more demanding, sometimes more frustrated animal. A bonded pair or group entertains itself, sleeps in a companionable pile, and engages in the wrestling play that is central to ferret behavior. For most keepers, two ferrets are not twice the work of one — the marginal effort is small and the welfare gain is large.
@@ -141,10 +172,7 @@ export default function IntroducingSecondFerretPage() {
             Some ferret pairs bond within days; others take several weeks of patient, repeated sessions. Both are normal. The variables are individual temperament, age, and prior socialization — a young, well-socialized ferret often accepts a companion quickly, while an older ferret long used to being an only pet may need more time. Let the ferrets set the pace, resist the urge to force shared space before the play is consistently friendly, and judge success by a calm, mutually engaged relationship rather than by hitting a deadline.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Social-behavior, quarantine, and introduction guidance draws on American Ferret Association (AFA) owner-education materials and Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Quarantine length and pre-introduction veterinary checks should be confirmed with your own exotics-capable veterinarian. This page is general behavior and husbandry guidance. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function FishAndMarineIngredientsPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function FishAndMarineIngredientsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Ingredients' },
+        { name: 'Ingredients', href: '/ingredients' },
         { name: 'Fish and Marine Ingredients', href: '/ingredients/fish-and-marine-ingredients' },
+      ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +95,14 @@ export default function FishAndMarineIngredientsPage() {
               { label: 'Dietary Fat and Essential Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Orijen vs Acana — Fish & Marine Lines', href: '/brands/orijen-vs-acana-comparison' },
+              { label: 'Taste of the Wild — Independent Evaluation', href: '/brands/taste-of-the-wild-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -80,6 +114,7 @@ export default function FishAndMarineIngredientsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Fish and marine ingredients — named fish (salmon, whitefish, herring), fish meal, and fish oil — supply high-quality animal protein and, importantly, the long-chain omega-3 fatty acids EPA and DHA. They are valued both as a primary protein and as a functional omega-3 source. They also carry specific considerations around thiamine, contaminants, and sustainability that distinguish them from land-animal proteins. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a> and <a href="/supplements/fish-oil-omega-3">Fish Oil and Omega-3 Supplements</a>.</p>
         <h2 id="why">Why Fish Is Used</h2>
         <p>Fish provides a complete, highly digestible animal protein and is a leading natural source of EPA and DHA, the omega-3s with evidence for skin, joint, and other benefits. Named fish also serves as a novel protein for some animals in allergy management. These advantages make fish a desirable ingredient in both maintenance and therapeutic diets. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>
@@ -94,12 +129,7 @@ export default function FishAndMarineIngredientsPage() {
         <h2 id="sustainability">Sustainability and Sourcing</h2>
         <p>Marine ingredient sustainability varies with the fishery and species. Some manufacturers use byproducts of the human seafood industry or certified-sustainable sources; others do not disclose. For owners who weigh environmental impact, manufacturer transparency on fish sourcing and certification (such as Marine Stewardship Council) is the relevant signal. As with all ingredients, disclosure is the differentiator. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -21,7 +21,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   buildMedicalWebPageSchema,
   ArticleLayout,
   TableOfContents,
@@ -29,6 +28,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -221,16 +221,10 @@ export default async function DiseasePage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://fish.com${b.href}`,
-    })),
-  })
-
   // ArticleLayout injects one schema via SchemaScript; emit the FAQ +
-  // Breadcrumb + MedicalWebPage schemas inline below as additional <script>
-  // tags (same pattern as the petfoods ingredient template).
+  // MedicalWebPage schemas inline below as additional <script> tags. The
+  // canonical BreadcrumbList is emitted by ArticleLayout's <Breadcrumb> from
+  // the breadcrumbs prop (single source of truth).
 
   return (
     <ArticleLayout
@@ -240,12 +234,12 @@ export default async function DiseasePage({ params }: PageProps) {
         subtitle: `${disease.category} disease in ${disease.waterType.toLowerCase()} aquarium fish — symptoms, treatment, and prevention.`,
         category: 'Fish Health',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '7 min',
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[{ title: 'Fish Health Hub', href: '/health', category: 'Fish Health' }, { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', category: 'Fish Health' }, { title: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide', category: 'Tank Setup' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }]}
       sidebar={
         <>
           <TableOfContents
@@ -289,11 +283,8 @@ export default async function DiseasePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p id="tldr">
           <strong style={{ color: urgency.color }}>TL;DR — {urgency.label}.</strong> {buildTldr(disease)}
         </p>

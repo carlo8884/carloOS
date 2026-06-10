@@ -45,6 +45,12 @@ export default function DisclosurePage() {
         { name: 'Disclosure', href: '/disclosure' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Editorial Standards', href: '/editorial-standards', category: 'Legal' },
+        { title: 'Species Library', href: '/species', category: 'Species' },
+        { title: 'Reptile Health Hub', href: '/health', category: 'Health' },
+        { title: 'Setup Guides', href: '/setup', category: 'Setup' },
+      ]}
     >
       <div className="carloOS-article">
         <AffiliateDisclosure variant="page" siteId="lizard-com" />

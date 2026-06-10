@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equine Metabolic Syndrome (EMS) — Signs, Diagnosis, Management",
   description:
-    "Reference guide to equine metabolic syndrome: insulin dysregulation, regional adiposity, laminitis risk, diagnostic testing, and dietary and exercise management.",
+    "Reference guide to equine metabolic syndrome: insulin dysregulation, regional adiposity, laminitis risk, diagnostic testing, and diet and exercise management.",
   path: '/health/equine-metabolic-syndrome',
   type: 'article',
 })
@@ -65,6 +65,12 @@ export default function EMSPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: "Equine Cushing's Disease (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        ]}
         hero={{
           title: "Equine Metabolic Syndrome",
           subtitle:
@@ -107,6 +113,7 @@ export default function EMSPage() {
               { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -117,6 +124,13 @@ export default function EMSPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is EMS</h2>
           <p>Equine metabolic syndrome describes a horse with insulin dysregulation and an elevated risk of laminitis, frequently in combination with generalized obesity or localized fat deposits over the crest of the neck, the tailhead, behind the shoulder, and around the sheath or mammary region. The syndrome was formalized in the early 2000s and refined by the Equine Endocrinology Group, which publishes the consensus diagnostic and management guidance veterinarians follow.</p>
           <p>Certain breeds are genetically predisposed. Ponies, Morgans, Arabians, Paso Finos, Saddlebreds, and many warmblood and gaited types are classic &apos;easy keepers&apos; that evolved to thrive on sparse forage and store energy efficiently -- a survival trait that becomes a liability on modern rich pasture and calorie-dense feed.</p>

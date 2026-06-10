@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Carbohydrates in Pet Food — Are They Necessary? | PetFood.com',
   description:
@@ -28,6 +33,41 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-30T00:00:00Z',
   modifiedAt: '2026-05-30T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Carbohydrates in Pet Food — Are They Necessary? | PetFood.com',
+  description:
+    'Whether dogs and cats need dietary carbohydrate, how starch is used in extrusion, fiber types, glycemic considerations, and why "no carbohydrate minimum" is widely misread.',
+  url: 'https://petfood.com/nutrition/carbohydrates-in-pet-food',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-05-30',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
 
 export default function CarbohydratesInPetFoodPage() {
   return (
@@ -44,8 +84,14 @@ export default function CarbohydratesInPetFoodPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'Carbohydrates in Pet Food', href: '/nutrition/carbohydrates-in-pet-food' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -67,6 +113,7 @@ export default function CarbohydratesInPetFoodPage() {
               { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
               { label: 'Diabetic Diets for Dogs and Cats', href: '/diets/diabetic-diets' },
               { label: 'Fiber and Digestive Health Diets', href: '/diets/fiber-and-digestive-health' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
@@ -76,10 +123,12 @@ export default function CarbohydratesInPetFoodPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="carbohydrates-in-pet-food"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         <p>Carbohydrate is the only macronutrient for which AAFCO sets no minimum, because dogs and cats can meet their glucose needs through gluconeogenesis from protein and glycerol. That fact is correct and is the kernel of truth inside grain-free marketing. It does not follow that dietary carbohydrate is harmful, nor that a low-carbohydrate diet is automatically superior. Carbohydrate is a digestible energy source, and starch is functionally necessary to manufacture extruded kibble.</p>
         <h2 id="required">Is Carbohydrate Required?</h2>
         <p>There is no established essential dietary carbohydrate requirement for healthy adult dogs or cats. The brain and certain tissues need glucose, but the body can supply it from non-carbohydrate precursors. The one well-documented exception is reproduction: pregnant and lactating dams (and to some extent kittens) appear to benefit from dietary carbohydrate or face metabolic stress on near-zero-carbohydrate diets. For the general adult population, carbohydrate is best understood as a usable, inexpensive energy source rather than a required nutrient.</p>
@@ -94,13 +143,7 @@ export default function CarbohydratesInPetFoodPage() {
         <h2 id="label">Reading Carbohydrate on a Label</h2>
         <p>Carbohydrate is not listed on the guaranteed analysis. It is estimated by difference: subtract the guaranteed protein, fat, moisture, ash, and crude fiber percentages from 100. The remainder, called nitrogen-free extract, approximates the digestible carbohydrate. Because the guaranteed analysis lists minima and maxima rather than typical values, this estimate is rough; for a precise figure, request the typical (as-fed or dry-matter) analysis from the manufacturer. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides Update on Investigation into Potential Connection Between Certain Diets and Cases of Canine Heart Disease</em> (27 June 2019).</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

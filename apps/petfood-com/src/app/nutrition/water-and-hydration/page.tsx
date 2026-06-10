@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Water and Hydration for Dogs and Cats | PetFood.com',
   description:
@@ -28,6 +33,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Water and Hydration for Dogs and Cats | PetFood.com',
+  description:
+    'Why water is the most important nutrient, the feline thirst-drive problem, moisture content of wet vs dry diets, and hydration in urinary and kidney disease.',
+  url: 'https://petfood.com/nutrition/water-and-hydration',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function WaterAndHydrationPage() {
   return (
@@ -44,8 +79,14 @@ export default function WaterAndHydrationPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'Water and Hydration in Pet Nutrition', href: '/nutrition/water-and-hydration' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -67,6 +108,7 @@ export default function WaterAndHydrationPage() {
               { label: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
               { label: 'Urinary and Bladder Stone Diets', href: '/diets/urinary-tract-diets' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
@@ -76,10 +118,12 @@ export default function WaterAndHydrationPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="water-and-hydration"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Water makes up roughly 60 to 70 percent of an adult animal&apos;s body and is involved in every physiological process. An animal can lose nearly all its fat and half its protein and survive, but a loss of 10 to 15 percent of body water is life-threatening. Water is not on the AAFCO nutrient profile in the usual sense, but it is correctly described as the most important nutrient, and the way a diet supplies it has real clinical weight, especially for cats.</p>
         <h2 id="important">The Most Important Nutrient</h2>
         <p>Water sources are drinking water, the moisture in food, and metabolic water produced by oxidizing nutrients. A healthy animal self-regulates total intake well when fresh water is freely available and when no medical condition impairs thirst or increases losses. Requirements rise with heat, exercise, lactation, and any disease causing increased urination, vomiting, or diarrhea.</p>
@@ -100,12 +144,7 @@ export default function WaterAndHydrationPage() {
           <li>For any animal with urinary or kidney disease, treat hydration as a managed part of the diet plan with your veterinarian.</li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

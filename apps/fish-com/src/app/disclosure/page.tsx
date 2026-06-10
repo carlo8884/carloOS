@@ -4,6 +4,7 @@ import {
   buildArticleSchema,
   ArticleLayout,
   AffiliateDisclosure,
+  ArticleByline,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,8 +46,10 @@ export default function DisclosurePage() {
         { name: 'Disclosure', href: '/disclosure' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }]}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <AffiliateDisclosure variant="page" siteId="fish-com" />
 
         <h2>FTC Affiliate Disclosure (Full Version)</h2>

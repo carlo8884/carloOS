@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Low-Maintenance Reptiles — Realistically Easy Pets | Lizard.com", description: "The lowest-maintenance reptiles for busy keepers, ranked by feeding frequency, equipment, and daily effort, with honest expectations.", path: "/species/low-maintenance-reptiles", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Low-Maintenanc
 export default function SpeciesLowMaintenanceReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Low-Maintenance Reptiles", subtitle: "Some reptiles genuinely fit a busy life, eating infrequently, needing simple equipment, and asking little daily attention. But low-maintenance is relative; no reptile is a set-and-forget pet, and every species needs correct conditions and routine care. This guide ranks the most realistically low-effort reptiles and is honest about what low-maintenance does and does not mean.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Low-Maintenance Reptiles", subtitle: "Some reptiles genuinely fit a busy life, eating infrequently, needing simple equipment, and asking little daily attention. But low-maintenance is relative; no reptile is a set-and-forget pet, and every species needs correct conditions and routine care. This guide ranks the most realistically low-effort reptiles and is honest about what low-maintenance does and does not mean.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Reptiles That Don\'t Need UVB', href: '/species/reptiles-that-dont-need-uvb', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Lowest Effort"}</div>
@@ -23,9 +31,12 @@ export default function SpeciesLowMaintenanceReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Crested Gecko Care", href: "/species/crested-gecko" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-low-maintenance-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="lizard-com:species-crested-gecko" fallbackKey="lizard-com:category-species" aspect="16:9" variant="inline" caption="The crested gecko — a room-temperature, low-effort display species." priority />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"For keepers with limited time, some reptiles are far less demanding than others. The lowest-maintenance species share a few traits: they eat infrequently, need relatively simple equipment, tolerate room-ish temperatures or stable setups, and do not require daily handling or constant intervention. That said, low-maintenance is a comparison, not a promise, every reptile needs correct temperatures, clean water, periodic feeding, enclosure maintenance, and attention to health. This guide ranks the realistically easy options and sets honest expectations."}</p>
           <h2>{"What \"Low-Maintenance\" Actually Means"}</h2>
 
@@ -50,6 +61,18 @@ export default function SpeciesLowMaintenanceReptilesPage() {
             <li>{"Always: keep a relationship with a reptile veterinarian for when something goes wrong"}</li>
           </ul>
           <p>{"Choose a low-maintenance species honestly matched to the time you have, and you will have a healthier animal and a better experience than someone who bought a demanding reptile expecting it to be effortless."}</p>
+
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+            <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Low-Maintenance Setup Gear</div>
+            <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>A thermostat-controlled heat source and the right enclosure do most of the work of keeping a low-maintenance reptile easy. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences which species we recommend above.</p>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a href="/go/amazon-brand/reptile%20thermostat%20heat%20mat?s=species-low-maintenance-reptiles" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Heat &amp; Thermostats on Amazon →</a>
+              <a href="/go/chewy-brand/reptile%20terrarium?s=species-low-maintenance-reptiles" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+              <a href="/reviews/best-thermostats" style={{ display: 'inline-block', padding: '9px 16px', border: '1px solid var(--brand-border-strong, #3a4358)', color: 'var(--brand-white)', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Our thermostat reviews →</a>
+            </div>
+          </div>
+
           <h2>{"Sources & Further Reading"}</h2>
           <ul>
             <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), husbandry chapters."}</li>

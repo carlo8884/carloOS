@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Consensus Statement on the Diagnosis and Management of Diabetes Mellitus in Dogs and Cats', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'AVMA: Diabetes Mellitus in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-mellitus-pets', publisher: 'AVMA' },
+  { label: 'FDA CVM: Vetsulin (porcine insulin zinc suspension) — FDA-Approved for Canine Diabetes', url: 'https://www.fda.gov/animal-veterinary/approved-animal-drug-products/nada-141-236-vetsulin', publisher: 'FDA CVM' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -13,6 +21,7 @@ export default function DogDiabetesPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Diabetes in Dogs', subtitle: 'Canine diabetes mellitus is manageable — many diabetic dogs live years of good-quality life with appropriate treatment. The commitment is real: twice-daily insulin injections at consistent times, consistent diet, and regular veterinary monitoring. The learning curve is steep at first and becomes routine within weeks.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diabetes', href: '/health/dog-diabetes' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
@@ -22,6 +31,7 @@ export default function DogDiabetesPage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Diabetic management — insulin, syringes, glucose curves, recheck bloodwork — runs $100-$300/month for life. Insurance with no chronic-claim reset (Trupanion-style) is purpose-built for this.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diabetes" />
         </>}
       >
@@ -37,11 +47,11 @@ export default function DogDiabetesPage() {
 
           <h2 id="insulin">Insulin — Why Injections, Not Pills</h2>
           <p>Dogs require insulin injections — oral antidiabetic medications used in human type 2 diabetes (metformin, glipizide) are not effective for canine diabetes. Canine diabetes is typically insulin-deficient (similar to human type 1) rather than insulin-resistant, and oral medications work by different mechanisms that are inadequate for the dog's diabetic physiology.</p>
-          <p><strong>Vetsulin (porcine insulin zinc suspension):</strong> The only <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved insulin for dogs in the US. Intermediate-acting. Given twice daily (every 12 hours) with meals. Starting dose: 0.25–0.5 U/kg, adjusted based on glucose curves. The twice-daily schedule with consistent timing is the foundation of diabetic management — irregular timing produces uncontrolled glucose swings.</p>
+          <p><strong>Vetsulin (porcine insulin zinc suspension):</strong> The only <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved insulin for dogs in the US. Intermediate-acting, typically given twice daily (every 12 hours) with meals. The starting dose and all adjustments are set by your veterinarian based on glucose curves — never adjust insulin on your own. The twice-daily schedule with consistent timing is the foundation of diabetic management — irregular timing produces uncontrolled glucose swings.</p>
           <p><strong>NPH insulin (Humulin N, Novolin N):</strong> Human NPH insulin is used by many veterinarians and is less expensive than Vetsulin. Works similarly to Vetsulin in most dogs. Some dogs respond better to one formulation — if one is not achieving adequate control, the other can be tried under veterinary guidance.</p>
 
           <h2 id="diet">Diet — Consistency Is Everything</h2>
-          <p>Same food, same amount, same time as insulin injections — consistency is the dietary requirement for diabetic dogs. Dietary changes alter glucose absorption kinetics and can destabilize previously controlled diabetes. High-fiber diets (Hill's w/d, Royal Canin Diabetic) slow glucose absorption and reduce post-meal glucose spikes. Feed immediately before or with each insulin injection. If the dog does not eat, give half the dose and contact your veterinarian — insulin given without food risks dangerous hypoglycemia.</p>
+          <p>Same food, same amount, same time as insulin injections — consistency is the dietary requirement for diabetic dogs. Dietary changes alter glucose absorption kinetics and can destabilize previously controlled diabetes. High-fiber diets (Hill's w/d, Royal Canin Diabetic) slow glucose absorption and reduce post-meal glucose spikes. Feed immediately before or with each insulin injection. If the dog does not eat, do not give the usual insulin dose — contact your veterinarian for instructions, because insulin given without food risks dangerous hypoglycemia.</p>
 
           <h2 id="monitoring">Blood Glucose Monitoring</h2>
           <p><strong>Glucose curves:</strong> Serial blood glucose measured every 1–2 hours over a full 12-hour dosing interval to assess the insulin's peak effect and duration. This identifies whether the dose is adequate, too high, or too low. Performed in clinic initially and then periodically during management adjustments. Home glucose monitoring using a pet glucometer or human glucometer (on the ear margin or inner lip) allows owners to detect hypoglycemia or poor control between clinic visits.</p>
@@ -54,6 +64,8 @@ export default function DogDiabetesPage() {
           </CalloutBox>
 
           <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have Karo corn syrup or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of Karo syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

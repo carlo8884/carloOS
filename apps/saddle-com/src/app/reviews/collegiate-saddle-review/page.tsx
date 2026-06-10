@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildProductSchema,
@@ -81,7 +81,7 @@ export default function CollegiateReviewPage() {
       </div>
 
       <QuickPicks items={PICKS} />
-      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Collegiate Saddle" }]} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Collegiate Saddle", href: "/reviews/collegiate-saddle-review" }]} />
 
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
@@ -92,6 +92,7 @@ export default function CollegiateReviewPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="convertible"
               badge="Best Collegiate — Most Value"
@@ -109,7 +110,7 @@ export default function CollegiateReviewPage() {
                 { label: 'Material', value: 'Synthetic or synthetic/leather' },
                 { label: 'Panel', value: 'Foam or CAIR option' },
                 { label: 'Discipline', value: 'All-purpose' },
-                { label: 'Price', value: 'Best value at this level', highlight: 'good' },
+                { label: 'Price', value: 'Strong for the entry price tier', highlight: 'good' },
                 { label: 'Used Resale', value: 'Low — but purchase price reflects this' },
               ]}
               pros={['Adjustable gullet — no saddler needed for minor width changes', 'Easy to clean synthetic option', 'Widely available and well-supported', 'Good for growing horses', 'Budget-friendly purchase price']}
@@ -186,6 +187,7 @@ export default function CollegiateReviewPage() {
               { label: 'Pessoa Saddle Review', href: '/reviews/pessoa-saddle-review' },
             ]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buyer's Guide" subtitle="Reviews and market intelligence." source="review-collegiate" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

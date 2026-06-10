@@ -1,14 +1,22 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Corn Snake Care Guide — Morphs, Feeding | Lizard.com', description: 'Corn snakes are the best beginner snake. 100+ morphs from red wild-type to lavender. Frozen/thawed mice only — no live prey.', path: '/species/corn-snake', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CornSnakePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corn Snake', href: '/species/corn-snake' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
+        { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -21,9 +29,11 @@ export default function CornSnakePage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Ball Python', href: '/species/ball-python' }, { label: 'Boa Constrictor', href: '/species/boa-constrictor' }, { label: 'Dysecdysis Guide', href: '/health/dysecdysis' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-corn-snake" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Morph Overview — 100+ Color Variations</h2>
         <p>The corn snake has the most diverse morph library of any commonly kept snake species — decades of selective breeding have produced mutations affecting every aspect of color and pattern. Understanding the genetic system unlocks the ability to predict breeding outcomes.</p>
         <p><strong>Classic base morphs:</strong> Amel (amelanistic/albino) — removes black pigment, leaving red, orange, and white; vivid and very popular. Anerythristic (anery) — removes red pigment, leaving black, white, and gray. Hypomelanistic (hypo) — reduces black pigment without eliminating it. Snow — amel + anery = white with pale pink patterns.</p>
@@ -41,6 +51,7 @@ export default function CornSnakePage() {
 
         <h2>Handling and Temperament</h2>
         <p>Corn snakes are among the calmest and most handleable snakes in captivity. Most individuals calm quickly with regular, gentle handling — 10–15 minutes several times a week from a young age produces adults that emerge from their hides willingly and rarely bite defensively. Avoid handling for 48–72 hours after feeding (regurgitation risk during digestion) and during the blue phase of shedding (the snake is semi-blind and more defensive). Otherwise, corn snakes are excellent for both beginner and experienced handlers.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Corn Snake — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for corn snake care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

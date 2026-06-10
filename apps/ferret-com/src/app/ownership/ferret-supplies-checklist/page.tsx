@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function FerretSuppliesChecklistPage() {
             'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Editorial reference only — no products, no links, just what to look for.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -87,8 +86,22 @@ export default function FerretSuppliesChecklistPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'First Week Checklist', href: '/ownership/first-week-checklist' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="priority">Buy First vs Later</h2>
           <p>
             Not everything has to be ready on day one, but the essentials do. <strong>Before the ferret comes home</strong> you need: a proper cage, bedding, a litter pan and litter, food and water dishes, an appropriate food, and a carrier. <strong>In the first week or two</strong> you can add: grooming tools, a fuller toy rotation, and tunnels and enrichment. Buying the core well is more important than buying a lot — a single good cage matters more than a pile of accessories. Use this alongside the day-by-day <a href="/ownership/first-week-checklist">first-week checklist</a>, and budget with <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>.

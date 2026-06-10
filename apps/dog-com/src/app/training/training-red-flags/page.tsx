@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Training Red Flags — Dominance Theory | Dog.com', description: 'What the behavioral science says about dominance theory, shock collars, prong collars, and alpha rolling — and what the alternatives actually accomplish.', path: '/training/training-red-flags', type: 'article' })
@@ -21,13 +21,16 @@ export default function TrainingRedFlagsPage() {
       contentType="training"
       hero={{ title: 'Dog Training Red Flags', subtitle: 'Dog training is unregulated — anyone can call themselves a trainer and use any method they choose. These are the approaches that behavioral science has consistently found harmful, and what the alternatives accomplish.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Red Flags', href: '/training/training-red-flags' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-red-flags" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The AVSAB (American Veterinary Society of Animal Behavior) position statement on punishment summarizes the scientific consensus: &quot;The AVSAB recommends that veterinarians not refer clients to trainers or behavior consultants who routinely use punishment (including choke chains, prong collars, shock collars, alpha rolls, dominance downs, and other aversive methods).&quot; This is not a fringe position — it is the consensus of the professional veterinary behavior community.</p>
         {RED_FLAGS.map((r, i) => (
           <div key={r.flag} style={{ background: i % 2 === 0 ? 'rgba(200,74,42,0.04)' : 'var(--brand-surface)', border: '1px solid rgba(200,74,42,0.12)', borderRadius: '10px', padding: '20px', marginBottom: '12px' }}>

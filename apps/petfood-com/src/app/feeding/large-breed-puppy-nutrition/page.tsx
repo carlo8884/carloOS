@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function LargeBreedPuppyNutritionPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function LargeBreedPuppyNutritionPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'Large-Breed Puppy Nutrition', href: '/feeding/large-breed-puppy-nutrition' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
+        { title: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function LargeBreedPuppyNutritionPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Puppies expected to reach 70 pounds or more as adults grow over a longer window and are uniquely sensitive to dietary calcium and to over-rapid growth. Feeding them a standard puppy or all-life-stages food not validated for large-size growth, or over-supplementing calcium, raises the risk of developmental orthopedic disease — joint and bone abnormalities that can cause lifelong lameness. This is the clearest case in which the specific diet, and the feeding amount, materially affect long-term health.</p>
         <h2 id="risk">The Unique Risk</h2>
         <p>Unlike small breeds, large-breed puppies cannot fully regulate calcium absorption when dietary calcium is high — excess calcium is absorbed and interferes with normal skeletal development. Combined with the long growth period of large breeds and the temptation to feed for maximum size, this creates a window of vulnerability that the right diet manages and the wrong diet aggravates. See <a href="/diets/puppy-and-kitten-growth-diets">Puppy and Kitten Growth Diets</a>.</p>
@@ -94,12 +121,7 @@ export default function LargeBreedPuppyNutritionPage() {
         <h2 id="switch">When to Switch to Adult</h2>
         <p>Large-breed puppies grow for longer than small breeds and are typically kept on an appropriate large-breed growth (or validated all-life-stages) diet until they approach skeletal maturity, often 12 to 24 months depending on breed. The timing is individualized and best confirmed with the veterinarian, who can assess growth and body condition. Switching too early can shortchange growth nutrition; switching appropriately avoids prolonged excess energy intake.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

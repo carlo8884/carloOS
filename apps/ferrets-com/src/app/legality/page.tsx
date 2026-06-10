@@ -10,13 +10,13 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
   CalloutBox,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { LEGALITY_GUIDES } from '@/data/guides/legality'
@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Ferret Legality Topics — Bans, Permits, Travel, Renting & More',
   description:
-    'Cross-cutting ferret-legality topics: where ferrets are illegal, why bans exist, city-vs-state law, rabies vaccination law, traveling and moving with a ferret, renting, and service/ESA status.',
+    'Cross-cutting ferret-legality topics: where ferrets are illegal, why bans exist, city-vs-state law, rabies law, travel, renting, and service/ESA status.',
   path: '/legality',
   type: 'website',
   category: 'Legality',
@@ -60,19 +60,26 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Ferret Legality Topics',
+  numberOfItems: TOPICS.length,
+  itemListElement: TOPICS.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (LEGALITY_GUIDES[slug].heading ?? LEGALITY_GUIDES[slug].title),
+    url: `https://ferrets.com/legality/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
-  buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'Legality', url: 'https://ferrets.com/legality' },
-    ],
-  }),
   buildFAQSchema({
     questions: FAQS.map((f) => ({
       question: f.question,
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function LegalityHubPage() {
@@ -182,6 +189,56 @@ export default function LegalityHubPage() {
             subtitle="One email when our ferret-legality guidance changes."
             source="legality-hub"
           />
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/adopt" className="text-brand-primary font-medium hover:underline">
+                Adopting a ferret (regional guides) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/acquiring" className="text-brand-primary font-medium hover:underline">
+                Acquiring a ferret (checklist + permits) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/moving" className="text-brand-primary font-medium hover:underline">
+                Moving with a ferret &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/find-a-vet" className="text-brand-primary font-medium hover:underline">
+                Find an exotic-pet vet by state &rarr;
+              </Link>
+            </li>
+          </ul>
         </section>
 
         <footer className="text-sm text-brand-text-light leading-relaxed border-t border-brand-border pt-6">

@@ -6,6 +6,7 @@ import {
   buildFAQSchema,
   buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -270,6 +271,12 @@ export default function GlossaryHubPage() {
       }}
       breadcrumbs={breadcrumbItems}
       schema={schema}
+      relatedLinks={[
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Brand Index & Reviews', href: '/brands', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -306,6 +313,12 @@ export default function GlossaryHubPage() {
       />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-06-01T00:00:00Z"
+          updatedAt="2026-06-01T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> US pet food labels mix terms with strict AAFCO and FDA definitions
           (the 95%/25%/with/flavor naming rules, "complete &amp; balanced," "human-grade," "natural,"
@@ -401,6 +414,12 @@ export default function GlossaryHubPage() {
             "organic" claim on pet food.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

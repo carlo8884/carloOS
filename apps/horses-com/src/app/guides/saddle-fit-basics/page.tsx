@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Saddle Fit Basics — 12-Point Framework for Horse Owners',
   description:
-    'A 12-point framework for evaluating saddle fit: wither clearance, panel contact, tree angle, balance point, billet alignment, sweat patterns, and dynamic checks.',
+    'A 12-point framework for evaluating saddle fit: wither clearance, panel contact, tree angle, balance point, billet alignment, and dynamic checks.',
   path: '/guides/saddle-fit-basics',
   type: 'article',
 })
@@ -45,6 +45,12 @@ export default function SaddleFitBasicsPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Saddle Pads', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: 'Saddle Fit Basics — A 12-Point Framework',
           subtitle:
@@ -54,14 +60,8 @@ export default function SaddleFitBasicsPage() {
           authorAvatar: '☘',
           publishedAt: 'May 2026',
           readTime: '14 min',
-          // Cover photo — dressage horse and rider in tack at the canter.
-          // Reuses the verified saddle-com hero Unsplash ID (CarloOS
-          // production catalog). English dressage tack is the most-checked
-          // saddle type in the framework; the photo signals the subject
-          // without staging a clinical/marketing scene.
-          image:
-            'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop',
-          imageAlt: 'A dressage horse and rider working in tack at the canter',
+          // Cover photo supplied via manifest-managed StockImage.
+          // Raw CDN URLs removed per QC §1 (Unsplash attribution required).
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
@@ -97,6 +97,7 @@ export default function SaddleFitBasicsPage() {
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -107,6 +108,13 @@ export default function SaddleFitBasicsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Saddle Fit Changes</h2>
           <p>Owners are often told to have a saddle fitted to a horse and treat the result as permanent. The horse's back does not cooperate with this view. A working horse's topline gains and loses muscle on a timescale of weeks; the topline of a horse coming back into work after winter turnout looks measurably different from the same horse at the end of a competition season. A saddle that fit at the start of the season often fits poorly six months later, and a saddle that fits a fit horse in July fits poorly the same horse in February.</p>
 
@@ -212,7 +220,6 @@ export default function SaddleFitBasicsPage() {
           <ReviewCard
             id="mattes-sheepskin-half-pad"
             badge="Half-Pad"
-            badgeEmoji="🐑"
             name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
             subtitle="Cushioning + correction-pocket shims for minor asymmetries"
             score={8.6}
@@ -237,7 +244,6 @@ export default function SaddleFitBasicsPage() {
           <ReviewCard
             id="all-purpose-saddle-pad"
             badge="Daily Pad"
-            badgeEmoji="🐎"
             name="Contoured All-Purpose Saddle Pad"
             subtitle="Standard daily-use saddle pad — contoured to the horse's back"
             score={8.0}

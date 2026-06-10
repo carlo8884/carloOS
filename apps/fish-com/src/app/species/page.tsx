@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -20,15 +20,32 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const FEATURED = [
-  { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', img: 'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Neon Tetra', sci: 'Paracheirodon innesi', type: 'Freshwater', diff: 'Beginner', slug: 'neon-tetra', img: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Clownfish', sci: 'Amphiprioninae', type: 'Saltwater', diff: 'Beginner', slug: 'clownfish', img: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Goldfish', sci: 'Carassius auratus', type: 'Freshwater', diff: 'Beginner', slug: 'goldfish', img: 'https://images.unsplash.com/photo-1524704654690-b56af7d6b9f1?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Angelfish', sci: 'Pterophyllum scalare', type: 'Freshwater', diff: 'Intermediate', slug: 'angelfish', img: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Discus', sci: 'Symphysodon spp.', type: 'Freshwater', diff: 'Advanced', slug: 'discus', img: 'https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Guppy', sci: 'Poecilia reticulata', type: 'Freshwater', diff: 'Beginner', slug: 'guppy', img: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Oscar', sci: 'Astronotus ocellatus', type: 'Freshwater', diff: 'Intermediate', slug: 'oscar', img: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', manifestKey: 'fish-com:species-thumb-betta' },
+  { name: 'Neon Tetra', sci: 'Paracheirodon innesi', type: 'Freshwater', diff: 'Beginner', slug: 'neon-tetra', manifestKey: 'fish-com:species-thumb-neon-tetra' },
+  { name: 'Clownfish', sci: 'Amphiprioninae', type: 'Saltwater', diff: 'Beginner', slug: 'clownfish', manifestKey: 'fish-com:species-thumb-clownfish' },
+  { name: 'Goldfish', sci: 'Carassius auratus', type: 'Freshwater', diff: 'Beginner', slug: 'goldfish', manifestKey: 'fish-com:species-thumb-goldfish' },
+  { name: 'Angelfish', sci: 'Pterophyllum scalare', type: 'Freshwater', diff: 'Intermediate', slug: 'angelfish', manifestKey: 'fish-com:species-thumb-angelfish' },
+  { name: 'Discus', sci: 'Symphysodon spp.', type: 'Freshwater', diff: 'Advanced', slug: 'discus', manifestKey: 'fish-com:species-thumb-discus' },
+  { name: 'Guppy', sci: 'Poecilia reticulata', type: 'Freshwater', diff: 'Beginner', slug: 'guppy', manifestKey: 'fish-com:species-thumb-guppy' },
+  { name: 'Oscar', sci: 'Astronotus ocellatus', type: 'Freshwater', diff: 'Intermediate', slug: 'oscar', manifestKey: 'fish-com:species-thumb-oscar' },
 ]
+
+// ItemList of the featured species — structured, citable index of the
+// species cluster for AI Overviews / Perplexity (GEO authority signal).
+const speciesListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Featured Aquarium Fish Species at Fish.com',
+  numberOfItems: FEATURED.length,
+  itemListElement: FEATURED.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.name,
+    url: `https://fish.com/species/${s.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, speciesListSchema)
 
 const DIFF_COLORS = {
   Beginner: 'text-green-700 bg-green-50 border-green-200',
@@ -63,25 +80,18 @@ export default async function SpeciesIndexPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-5">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Species Library</span>
-        </div>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4"
-          style={{ fontSize: 'clamp(30px, 5vw, 54px)' }}>
-          Aquarium Fish Species Guide
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium.
-        </p>
-      </div>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:category-species" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:category-species"
+        alt="A vividly colored betta fish displaying its fins in a planted aquarium"
+        eyebrow="Species Library"
+        title="Aquarium Fish Species Guide"
+        subtitle="Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium."
+        primaryCta={{ href: '/tools/stocking-calculator', label: 'Check tank compatibility' }}
+        secondaryCta={{ href: '/species/betta-fish', label: 'Start with betta care' }}
+      />
 
       {/* Category filters */}
       <div className="bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-4">
@@ -106,16 +116,15 @@ export default async function SpeciesIndexPage() {
           {FEATURED.map((species) => (
             <Link key={species.slug} href={`/species/${species.slug}`}
               className="block bg-brand-white border border-brand-border rounded-xl overflow-hidden no-underline hover:border-brand-primary hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200">
-              <div className="relative h-44 overflow-hidden">
-                <Image src={species.img} alt={species.name} fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-2 left-2">
-                  <span className={`text-2xs font-bold px-2 py-0.5 rounded-pill border ${DIFF_COLORS[species.diff as keyof typeof DIFF_COLORS] ?? ''}`}>
-                    {species.diff}
-                  </span>
-                </div>
+              <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+                <StockImage manifestKey={species.manifestKey} alt={species.name} aspect="4:3" />
               </div>
-              <div className="p-4">
+              <div className="px-4 pt-1 pb-0.5">
+                <span className={`text-2xs font-bold px-2 py-0.5 rounded-pill border ${DIFF_COLORS[species.diff as keyof typeof DIFF_COLORS] ?? ''}`}>
+                  {species.diff}
+                </span>
+              </div>
+              <div className="p-4 pt-2">
                 <div className="font-display font-bold text-brand-dark text-base mb-0.5 leading-tight">{species.name}</div>
                 <div className="text-xs italic text-brand-text-light mb-1">{species.sci}</div>
                 <div className="text-xs font-semibold text-brand-primary">{species.type}</div>
@@ -126,18 +135,18 @@ export default async function SpeciesIndexPage() {
           {/* More coming CTA */}
           <div className="border-2 border-dashed border-brand-border rounded-xl flex items-center justify-center text-center p-6">
             <div>
-              <div className="text-3xl mb-2">🐠</div>
-              <div className="text-sm font-bold text-brand-text-mid mb-1">200+ species</div>
+              <div className="text-sm font-bold text-brand-text-mid mb-1">40+ species</div>
               <div className="text-xs text-brand-text-light">Added weekly</div>
             </div>
           </div>
         </div>
 
         {/* Quick links */}
-        <div className="mt-12 grid sm:grid-cols-3 gap-4">
+        <div className="mt-12 grid sm:grid-cols-4 gap-4">
           {[
             { title: 'Aquarium Setup Guide', href: '/setup', desc: 'First tank, step by step' },
-            { title: 'Water Chemistry', href: '/water', desc: 'pH, ammonia, nitrate explained' },
+            { title: 'Equipment Reviews', href: '/reviews', desc: 'Filters, heaters, lighting ranked' },
+            { title: 'Water Chemistry', href: '/water-parameters', desc: 'pH, ammonia, nitrate explained' },
             { title: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained', desc: 'Why cycling is essential' },
           ].map(link => (
             <Link key={link.href} href={link.href}
@@ -154,7 +163,7 @@ export default async function SpeciesIndexPage() {
           title="The Weekly Tank"
           subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
           source="species-index" ctaText="Subscribe Free"
-          perks={['🐠 Species spotlights', '🧪 Water chemistry', '⚙️ Equipment picks']} />
+          perks={['Species spotlights', 'Water chemistry', 'Equipment picks']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
@@ -177,7 +186,6 @@ export default async function SpeciesIndexPage() {
         <Link key="clownfish" href="/species/clownfish" className="text-sm text-brand-primary no-underline hover:underline">Clownfish</Link>
         <Link key="corydoras" href="/species/corydoras" className="text-sm text-brand-primary no-underline hover:underline">Corydoras</Link>
         <Link key="discus" href="/species/discus" className="text-sm text-brand-primary no-underline hover:underline">Discus</Link>
-        <Link key="discus-guide" href="/species/discus-guide" className="text-sm text-brand-primary no-underline hover:underline">Discus Guide</Link>
         <Link key="dwarf-gourami" href="/species/dwarf-gourami" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Gourami</Link>
         <Link key="dwarf-puffer" href="/species/dwarf-puffer" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Puffer</Link>
         <Link key="ember-tetra" href="/species/ember-tetra" className="text-sm text-brand-primary no-underline hover:underline">Ember Tetra</Link>
@@ -188,13 +196,11 @@ export default async function SpeciesIndexPage() {
         <Link key="hillstream-loach" href="/species/hillstream-loach" className="text-sm text-brand-primary no-underline hover:underline">Hillstream Loach</Link>
         <Link key="koi" href="/species/koi" className="text-sm text-brand-primary no-underline hover:underline">Koi</Link>
         <Link key="kuhli-loach" href="/species/kuhli-loach" className="text-sm text-brand-primary no-underline hover:underline">Kuhli Loach</Link>
-        <Link key="kuhli-loach-guide" href="/species/kuhli-loach-guide" className="text-sm text-brand-primary no-underline hover:underline">Kuhli Loach Guide</Link>
         <Link key="molly-fish" href="/species/molly-fish" className="text-sm text-brand-primary no-underline hover:underline">Molly Fish</Link>
         <Link key="mystery-snail" href="/species/mystery-snail" className="text-sm text-brand-primary no-underline hover:underline">Mystery Snail</Link>
         <Link key="neon-tetra" href="/species/neon-tetra" className="text-sm text-brand-primary no-underline hover:underline">Neon Tetra</Link>
         <Link key="oscar" href="/species/oscar" className="text-sm text-brand-primary no-underline hover:underline">Oscar</Link>
         <Link key="otocinclus" href="/species/otocinclus" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus</Link>
-        <Link key="otocinclus-guide" href="/species/otocinclus-guide" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus Guide</Link>
         <Link key="panda-corydoras" href="/species/panda-corydoras" className="text-sm text-brand-primary no-underline hover:underline">Panda Corydoras</Link>
         <Link key="pearl-gourami" href="/species/pearl-gourami" className="text-sm text-brand-primary no-underline hover:underline">Pearl Gourami</Link>
         <Link key="platy-fish" href="/species/platy-fish" className="text-sm text-brand-primary no-underline hover:underline">Platy Fish</Link>

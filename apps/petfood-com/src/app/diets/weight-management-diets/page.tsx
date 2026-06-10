@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function WeightManagementDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,13 @@ export default function WeightManagementDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +111,13 @@ export default function WeightManagementDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A weight-management therapeutic pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Obesity in pets is a clinical disease, not a cosmetic issue. Excess adipose tissue is metabolically active and pro-inflammatory, and obesity is associated with shortened lifespan, osteoarthritis, diabetes (especially in cats), respiratory compromise, and reduced quality of life. A landmark lifetime study in Labrador Retrievers found that dogs kept lean lived roughly two years longer than their overweight littermates. Weight management is among the highest-impact nutritional interventions available.</p>
         <h2 id="problem">The Scale of the Problem</h2>
         <p>Body condition is assessed on a 9-point body condition score (BCS), where 4 to 5 is ideal; each point above 5 represents roughly 10 to 15 percent over ideal weight. Most owners underestimate their pet&apos;s body condition. Establishing the ideal target weight is the first step, and it should be set by a veterinarian based on frame and BCS, not by breed-average tables. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>
@@ -94,13 +132,7 @@ export default function WeightManagementDietsPage() {
         <h2 id="rate">Safe Rate of Loss</h2>
         <p>Weight should come off gradually: roughly 1 to 2 percent of body weight per week is a common safe target, individualized by the veterinarian. Cats in particular must not lose weight too fast — rapid weight loss or anorexia in an overweight cat can precipitate hepatic lipidosis, a life-threatening liver condition. Any weight-loss program should include regular weigh-ins and reassessment of the plan. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

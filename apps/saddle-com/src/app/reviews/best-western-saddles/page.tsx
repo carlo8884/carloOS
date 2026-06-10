@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -25,7 +25,14 @@ const schema = buildArticleSchema({
 
 const circleYSchema = buildProductSchema({ name: 'Circle Y Park and Trail Saddle', description: 'American-made western saddle with flex tree for trail and recreational riding.', url: 'https://circley.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const martinSchema = buildProductSchema({ name: 'Martin Saddlery Reiner', description: 'Handmade reining saddle from Weatherford TX — deep seat, low cantle, close contact.', url: 'https://martinsaddlery.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, circleYSchema, martinSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Western Saddles', url: 'https://saddle.com/reviews/best-western-saddles' },
+  ],
+})
+const allSchemas = combineSchemas(schema, circleYSchema, martinSchema, breadcrumbSchema)
 
 const PICKS = [
   { label: 'Best Reining', emoji: '🏆', name: 'Martin Saddlery Reiner', subtitle: 'Handmade TX · Deep seat · NRHA proven', href: '#martin' },
@@ -76,6 +83,7 @@ export default function BestWesternSaddlesPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="martin"
               badge="Best Reining"
@@ -198,6 +206,7 @@ export default function BestWesternSaddlesPage() {
               { label: 'Best English Saddles', href: '/reviews/best-english-saddles' },
             ]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buyer\'s Guide" subtitle="Reviews and market intelligence." source="review-western-saddles" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

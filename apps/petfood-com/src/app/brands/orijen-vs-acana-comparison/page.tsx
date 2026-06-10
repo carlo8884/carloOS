@@ -7,6 +7,10 @@ import {
   RelatedLinks,
   EmailCapture,
   BuyBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -30,6 +34,31 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "Champion Petfoods. Transparency Reports, White Papers, and per-SKU ingredient panels published on the Orijen and Acana consumer sites. Treat as manufacturer-published material; verify against third-party sources where possible.",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+    {
+      label: "Mars Petcare. Public communications on the 2022 acquisition of Champion Petfoods.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements; SQF (Safe Quality Food) Level 2 scheme documentation.",
+    },
+    {
+      label: "Federal court records, multi-district litigation against Champion Petfoods (2018 filings and subsequent rulings). Cited as public-record litigation context; allegations were contested and the cases were substantially dismissed at the federal level.",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+]
+
 export default function OrijenVsAcanaComparisonPage() {
   return (
     <ArticleLayout
@@ -45,8 +74,13 @@ export default function OrijenVsAcanaComparisonPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
+        { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
       ]}
       schema={schema}
       sidebar={
@@ -85,6 +119,8 @@ export default function OrijenVsAcanaComparisonPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-orijen-vs-acana" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Orijen vs Acana — both Champion Petfoods lines compared on ingredients, sourcing, recalls, and price." />
         <p>
           The two brands sit close together in the premium grain-free category and are frequently
           cross-shopped. Because they share a parent (Champion Petfoods, headquartered in Edmonton,
@@ -94,6 +130,7 @@ export default function OrijenVsAcanaComparisonPage() {
           facilities, and distinct price tiers.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy either line"
           disclosure="Both lines are available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
@@ -140,58 +177,61 @@ export default function OrijenVsAcanaComparisonPage() {
         </p>
 
         <h2 id="at-a-glance">At-a-Glance Comparison</h2>
-        <div style={{ background: 'rgba(31,26,20,0.04)', border: '1px solid rgba(31,26,20,0.10)', borderRadius: '10px', padding: '18px 22px', margin: '20px 0', overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', minWidth: '560px' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid rgba(31,26,20,0.18)' }}>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Dimension</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Orijen</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Acana</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Parent</td>
-                <td style={{ padding: '8px 6px' }}>Champion Petfoods (Mars Petcare)</td>
-                <td style={{ padding: '8px 6px' }}>Champion Petfoods (Mars Petcare)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Target animal-ingredient inclusion (dry recipes, published)</td>
-                <td style={{ padding: '8px 6px' }}>~85% (varies by SKU)</td>
-                <td style={{ padding: '8px 6px' }}>50–75% (varies by SKU and sub-line)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Grain-free vs grain-inclusive</td>
-                <td style={{ padding: '8px 6px' }}>Predominantly grain-free; pulses and lentils present in most SKUs</td>
-                <td style={{ padding: '8px 6px' }}>Both grain-free and grain-inclusive sub-lines (Singles, Classics)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Primary U.S. manufacturing site</td>
-                <td style={{ padding: '8px 6px' }}>DogStar Kitchens, Auburn, Kentucky</td>
-                <td style={{ padding: '8px 6px' }}>DogStar Kitchens, Auburn, Kentucky (U.S. SKUs); NorthStar Kitchens, Morinville, Alberta (Canadian SKUs)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>AAFCO adequacy pathway (most SKUs)</td>
-                <td style={{ padding: '8px 6px' }}>Formulation</td>
-                <td style={{ padding: '8px 6px' }}>Formulation</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>FDA CVM 2018-2019 DCM dataset</td>
-                <td style={{ padding: '8px 6px' }}>Brand named in 2019 update</td>
-                <td style={{ padding: '8px 6px' }}>Brand named in 2019 update</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Approximate price per 100 kcal (U.S., 2025-2026 typical)</td>
-                <td style={{ padding: '8px 6px' }}>$0.13–$0.18</td>
-                <td style={{ padding: '8px 6px' }}>$0.08–$0.12</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '8px 6px' }}>Positioning</td>
-                <td style={{ padding: '8px 6px' }}>Higher animal-ingredient inclusion, higher price</td>
-                <td style={{ padding: '8px 6px' }}>Lower animal-ingredient inclusion, lower price, broader SKU range</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="pf-compare">
+          <div className="pf-compare-caption">Orijen vs Acana — side-by-side reference</div>
+          <div className="pf-compare-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Dimension</th>
+                  <th scope="col">Orijen</th>
+                  <th scope="col">Acana</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Parent</th>
+                  <td>Champion Petfoods (Mars Petcare)</td>
+                  <td>Champion Petfoods (Mars Petcare)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Target animal-ingredient inclusion (dry recipes, published)</th>
+                  <td>~85% (varies by SKU)</td>
+                  <td>50–75% (varies by SKU and sub-line)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Grain-free vs grain-inclusive</th>
+                  <td>Predominantly grain-free; pulses and lentils present in most SKUs</td>
+                  <td>Both grain-free and grain-inclusive sub-lines (Singles, Classics)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Primary U.S. manufacturing site</th>
+                  <td>DogStar Kitchens, Auburn, Kentucky</td>
+                  <td>DogStar Kitchens, Auburn, Kentucky (U.S. SKUs); NorthStar Kitchens, Morinville, Alberta (Canadian SKUs)</td>
+                </tr>
+                <tr>
+                  <th scope="row">AAFCO adequacy pathway (most SKUs)</th>
+                  <td>Formulation</td>
+                  <td>Formulation</td>
+                </tr>
+                <tr>
+                  <th scope="row">FDA CVM 2018-2019 DCM dataset</th>
+                  <td>Brand named in 2019 update</td>
+                  <td>Brand named in 2019 update</td>
+                </tr>
+                <tr>
+                  <th scope="row">Approximate price per 100 kcal (U.S., 2025-2026 typical)</th>
+                  <td>$0.13–$0.18</td>
+                  <td>$0.08–$0.12</td>
+                </tr>
+                <tr>
+                  <th scope="row">Positioning</th>
+                  <td>Higher animal-ingredient inclusion, higher price</td>
+                  <td>Lower animal-ingredient inclusion, lower price, broader SKU range</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <h2 id="ingredients">Ingredient Panels</h2>
@@ -371,38 +411,7 @@ export default function OrijenVsAcanaComparisonPage() {
           and apply the five-dimension scoring rubric.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            Champion Petfoods. <em>Transparency Reports</em>, <em>White Papers</em>, and per-SKU
-            ingredient panels published on the Orijen and Acana consumer sites. Treat as
-            manufacturer-published material; verify against third-party sources where possible.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides
-            Update on Investigation into Potential Connection Between Certain Diets and Cases of
-            Canine Heart Disease</em> (27 June 2019); subsequent FDA CVM updates through
-            December 2022. <em>Recalls, Market Withdrawals and Safety Alerts</em> database
-            (Animal &amp; Veterinary).
-          </li>
-          <li>
-            Mars Petcare. Public communications on the 2022 acquisition of Champion Petfoods.
-          </li>
-          <li>
-            Global Food Safety Initiative. <em>GFSI Benchmarking Requirements</em>; SQF
-            (Safe Quality Food) Level 2 scheme documentation.
-          </li>
-          <li>
-            Federal court records, multi-district litigation against Champion Petfoods (2018
-            filings and subsequent rulings). Cited as public-record litigation context;
-            allegations were contested and the cases were substantially dismissed at the federal
-            level.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 6 nutrient profile rules referenced in the SKU-level AAFCO statements.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice
           and we do not endorse either brand. Diet selection for a specific animal — especially

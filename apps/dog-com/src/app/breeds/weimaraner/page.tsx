@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Weimaraner Breed Guide — Gray Ghost, Bloat Risk | Dog.com', description: 'Weimaraners are the "Gray Ghost" — haunting silver-gray, intense, and demanding. GDV/bloat risk high, prey drive extreme, and they bond deeply with one person.', path: '/breeds/weimaraner', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Weimaraner Breed Guide', description: 'GDV risk, prey drive, separation anxiety, and care for Weimaraners.', url: 'https://dog.com/breeds/weimaraner', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -8,6 +8,7 @@ export default function WeimaranerPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Weimaraner Breed Guide', subtitle: 'The Gray Ghost — the Weimaraner\'s silver-gray coat, pale amber or blue-gray eyes, and intense, aristocratic bearing make them immediately distinctive. Bred as all-purpose hunting dogs by German nobility, they combine exceptional prey drive, high intelligence, deep loyalty, and significant intensity in a package that is deeply rewarding for owners who can match them.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Weimaraner', href: '/breeds/weimaraner' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Vizsla Guide', href: '/breeds/vizsla', category: 'Breed Guide' }, { title: 'Irish Setter Guide', href: '/breeds/irish-setter', category: 'Breed Guide' }, { title: 'Separation Anxiety', href: '/training/separation-anxiety', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -20,11 +21,17 @@ export default function WeimaranerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Vizsla vs Weimaraner', href: '/compare/vizsla-vs-weimaraner' },
+        ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-weimaraner" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="high"
           description="Weimaraners are a deep-chested breed with significant GDV predisposition. Prophylactic gastropexy at spay/neuter is recommended — it prevents the stomach rotation that makes GDV rapidly fatal while not affecting the dog's normal function. Discuss with your veterinarian before the spay/neuter procedure."
           signs={['Unproductive retching', 'Distended, taut abdomen', 'Restlessness to sudden collapse', 'Excessive drooling', 'Pale gums']}
           management="Prophylactic gastropexy at spay/neuter. Know the nearest 24-hour emergency vet. This is a surgical emergency — minutes matter." />

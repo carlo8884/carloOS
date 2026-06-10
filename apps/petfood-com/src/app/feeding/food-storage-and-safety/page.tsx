@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function FoodStorageAndSafetyPage() {
   return (
     <ArticleLayout
@@ -44,8 +69,14 @@ export default function FoodStorageAndSafetyPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Feeding' },
+        { name: 'Feeding', href: '/feeding' },
         { name: 'Pet Food Storage and Safety', href: '/feeding/food-storage-and-safety' },
+      ]}
+      relatedLinks={[
+        { title: 'Feeding Hub', href: '/feeding' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'How Much to Feed a Cat', href: '/feeding/how-much-to-feed-a-cat' },
+        { title: 'Body Condition Scoring', href: '/feeding/body-condition-scoring' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +111,7 @@ export default function FoodStorageAndSafetyPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Once a bag is opened, pet food begins to degrade through fat oxidation (rancidity), moisture uptake, and exposure to air, light, heat, and pests. Spoiled food loses palatability and nutritional value — oxidation destroys fat-soluble vitamins and essential fatty acids — and contaminated food poses a safety risk. Proper storage preserves quality through the best-by window, and proper handling prevents foodborne illness in pets and people. See <a href="/ingredients/preservatives-pet-food">Preservatives in Pet Food</a>.</p>
         <h2 id="spoils">How Pet Food Spoils</h2>
         <p>The main spoilage pathway for dry food is oxidation of the fats, which produces rancid off-flavors and destroys nutrients, accelerated by air, heat, and light. Foods preserved with natural antioxidants (mixed tocopherols, rosemary) oxidize faster than those with synthetic preservatives, so natural-preserved foods have shorter shelf lives once opened. Moisture uptake also promotes mold, and warmth invites pantry-moth and beetle infestation.</p>
@@ -94,13 +126,7 @@ export default function FoodStorageAndSafetyPage() {
         <h2 id="recall">Recall Awareness</h2>
         <p>Pet food recalls happen — for pathogen contamination, formulation errors (such as toxic vitamin D levels), or foreign material. Keep the original bag or can with its lot number and best-by date so a recalled product can be identified, and check the FDA CVM Recalls and Withdrawals database periodically or sign up for alerts. If a food is recalled, stop feeding it and follow the manufacturer and FDA instructions. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

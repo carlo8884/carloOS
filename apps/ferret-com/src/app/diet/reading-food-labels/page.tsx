@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function ReadingFoodLabelsPage() {
             "The front of a ferret-food bag is marketing; the back is where the truth is. Learning to read the ingredient split and the guaranteed analysis — and to convert those numbers to a dry-matter basis — turns you from a shopper who trusts the label's claims into one who can judge a food in under a minute at the shelf.",
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -86,8 +85,22 @@ export default function ReadingFoodLabelsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Supplements & Vitamins', href: '/diet/supplements-and-vitamins' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why the Label Matters</h2>
           <p>
             Ferrets are obligate carnivores with a short gut and a roughly
@@ -201,7 +214,6 @@ export default function ReadingFoodLabelsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Clean Panel"
-            badgeEmoji="🔍"
             name="Wysong Epigen 90"
             subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
             score={9.1}

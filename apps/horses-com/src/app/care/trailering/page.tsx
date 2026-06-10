@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function TraileringPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Ownership Hub', href: '/ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Equine First Aid Kit', href: '/ownership/first-aid-kit' },
+        ]}
         hero={{
           title: "Trailering and Transporting Horses",
           subtitle:
@@ -88,6 +94,7 @@ export default function TraileringPage() {
               { label: "First-Aid Kit", href: "/ownership/first-aid-kit" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function TraileringPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="safety">Trailer Safety</h2>
           <ul>
             <li><strong>Maintain the trailer</strong> -- check the floor (rot is a deadly hazard), tires, brakes, hitch, lights, and ramp before every trip.</li>

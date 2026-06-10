@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Cloacal Disease and Prolapse", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Cloacal Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/cloacal-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Prolapse case literature", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles — Emergency Care | Lizard.com", description: "Cloacal and organ prolapse in reptiles is a true emergency. Causes, why you must keep the tissue moist, what not to do, and immediate vet steps.", path: "/health/prolapse-first-aid", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles", description: "Causes, emergency first aid, and veterinary treatment of cloacal and organ prolapse in reptiles.", url: "https://lizard.com/health/prolapse-first-aid", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -8,9 +15,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolap
 export default function HealthProlapseFirstAidPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Cloacal Prolapse in Reptiles", subtitle: "A prolapse is the protrusion of internal tissue, the cloaca, intestine, oviduct, or hemipenis, through the vent. It is a true veterinary emergency: exposed tissue dries, swells, and dies quickly. Recognizing a prolapse, keeping the tissue moist and protected, and getting to a reptile vet immediately are the difference between a recoverable animal and a fatal outcome.", category: "Health — Emergency", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Cloacal Prolapse in Reptiles", subtitle: "A prolapse is the protrusion of internal tissue, the cloaca, intestine, oviduct, or hemipenis, through the vent. It is a true veterinary emergency: exposed tissue dries, swells, and dies quickly. Recognizing a prolapse, keeping the tissue moist and protected, and getting to a reptile vet immediately are the difference between a recoverable animal and a fatal outcome.", category: "Health — Emergency", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Cloacal Prolapse", href: "/health/prolapse-first-aid" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Egg Binding', href: '/health/egg-binding', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Constipation & Impaction', href: '/health/constipation-impaction', category: 'Health' },
+        { title: 'Thermal Burns', href: '/health/thermal-burns', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>
@@ -23,9 +38,11 @@ export default function HealthProlapseFirstAidPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Egg Binding (Dystocia)", href: "/health/egg-binding" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Constipation & Impaction", href: "/health/constipation-impaction" }, { label: "Hypocalcemia", href: "/health/hypocalcemia" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-prolapse-first-aid"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A prolapse occurs when internal tissue is pushed out through the cloaca (the common vent through which reptiles pass waste, eggs, and reproductive structures). Depending on the underlying cause, the protruding tissue may be cloacal lining, a section of intestine, the oviduct, or, in males, a hemipenis. Whatever the tissue, the principle is the same: it is not meant to be outside the body, and once exposed it rapidly dries, swells, becomes contaminated, and loses blood supply. Untreated, the tissue dies and the animal can become septic. This is one of the few reptile problems that genuinely cannot wait."}</p>
           <h2>{"Recognizing a Prolapse"}</h2>
           <ul>
@@ -62,12 +79,7 @@ export default function HealthProlapseFirstAidPage() {
             <li>{"Keep up routine parasite screening, especially for wild-caught animals"}</li>
             <li>{"Address straining, abnormal stool, or appetite changes early, before they progress to a prolapse"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), cloacal-disease chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, prolapse case literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

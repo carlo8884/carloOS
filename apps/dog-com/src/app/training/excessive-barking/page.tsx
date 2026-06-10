@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
@@ -21,13 +21,16 @@ export default function ExcessiveBarkingPage() {
       contentType="training"
       hero={{ title: 'Excessive Barking — Types, Causes & What Works', subtitle: 'Barking is not a monolithic behavior with one solution. There are six distinct types of excessive barking, each with a different cause and a different appropriate response. Treating them the same way is why most barking interventions fail.', category: 'Behavior Problems', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Excessive Barking', href: '/training/excessive-barking' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Separation Anxiety', href: '/training/separation-anxiety', category: 'Training' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-barking" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Diagnose Before You Treat</h2>
         <p>The first step is identifying which type of barking you are dealing with — not guessing. Set up a camera and record your dog when the barking occurs. Watch the footage. Is the barking triggered by something external (alert barking)? Does it happen when the dog is alone (separation anxiety)? Is it during play (excitement)? Does it happen when the dog sees a specific trigger (fear)? The footage tells you what type you have.</p>
         {TYPES.map((t, i) => (

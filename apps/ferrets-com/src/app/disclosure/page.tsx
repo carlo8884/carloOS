@@ -45,6 +45,12 @@ export default function DisclosurePage() {
         { name: 'Disclosure', href: '/disclosure' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'State-by-State Legality Directory', href: '/states', category: 'Directory' },
+        { title: 'Ferret Legality Topics', href: '/legality', category: 'Legality' },
+        { title: 'Adopting a Ferret', href: '/adopt', category: 'Adoption' },
+        { title: 'Find an Exotic-Pet Vet', href: '/find-a-vet', category: 'Directory' },
+      ]}
     >
       <div className="carloOS-article">
         <AffiliateDisclosure variant="page" siteId="ferrets-com" />

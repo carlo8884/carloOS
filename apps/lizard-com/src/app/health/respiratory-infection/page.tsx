@@ -1,14 +1,30 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Respiratory Diseases", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Respiratory Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/respiratory-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Jacobson E.R. — Infectious Diseases and Pathology of Reptiles: Color Atlas and Text, 2nd ed.", publisher: "CRC Press / Taylor & Francis", url: "https://www.taylorfrancis.com/books/mono/10.1201/9781315119632/infectious-diseases-pathology-reptiles-elliott-jacobson" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles — Wheezing | Lizard.com', description: 'Reptile respiratory infections: wheezing, mucus from nostrils, and open-mouth breathing. Almost always caused by incorrect temperatures or humidity.', path: '/health/respiratory-infection', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function RespiratoryInfectionPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Respiratory Infection', href: '/health/respiratory-infection' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Stomatitis (Mouth Rot)', href: '/health/stomatitis', category: 'Health' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Signs</div>
@@ -18,9 +34,11 @@ export default function RespiratoryInfectionPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Stomatitis', href: '/health/stomatitis' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-respiratory" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Low Temperatures Cause Respiratory Infections</h2>
         <p>Reptiles are ectothermic — their immune system function is temperature-dependent. A ball python at 75°F ambient has a significantly impaired immune response compared to the same snake at 88°F basking temperature. The bacteria that cause respiratory infections (Pseudomonas, Aeromonas, Mycoplasma, and others) are present in the reptile's environment and even in its own oral flora — they do not cause disease when the immune system is functioning at appropriate temperature. When temperatures are too low or the thermal gradient is insufficient (no warm basking spot), immune function is depressed enough that opportunistic bacteria establish in the respiratory tract.</p>
         <p>High humidity in species that require dry conditions (ball pythons in glass tanks with mesh tops exposed to high ambient humidity) promotes bacterial and fungal growth in the respiratory tissue. Conversely, inadequate humidity in tropical species causes desiccation of mucous membranes, reducing their barrier function. Both extremes from the species-appropriate range predispose to respiratory infection.</p>
@@ -35,6 +53,7 @@ export default function RespiratoryInfectionPage() {
 
         <h2>Mycoplasma in Chelonians</h2>
         <p>Tortoises and box turtles are susceptible to Mycoplasma agassizii — a specific respiratory pathogen that causes chronic upper respiratory tract disease (URTD). Signs include nasal discharge, open-mouth breathing, and conjunctivitis. Mycoplasma is not eliminated by standard antibiotics — it is managed with azithromycin or enrofloxacin that suppress it without clearing infection. Infected chelonians should not be mixed with Mycoplasma-naive populations — it is highly contagious and can devastate wild tortoise populations if captive animals are released.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function CatsAreObligateCarnivoresPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,13 @@ export default function CatsAreObligateCarnivoresPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
+        { title: 'Dog vs Cat Nutrition Overview', href: '/species/dog-vs-cat-nutrition-overview' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +105,7 @@ export default function CatsAreObligateCarnivoresPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>An obligate carnivore is an animal that must consume animal tissue to obtain certain nutrients it cannot synthesize, because its metabolism has specialized for a meat diet and lost biochemical pathways that omnivores retain. The domestic cat is the textbook example. This is a statement about physiology, not philosophy, and it underlies the entire feline AAFCO nutrient profile. See <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="defined">The Term Defined</h2>
         <p>Obligate means required, and carnivore means meat-eater: the cat is obligated by its biology to eat animal tissue. Over evolution as a hunter of small prey, the cat lost or downregulated several enzymatic pathways that would let it make certain nutrients from plant precursors, because its diet always supplied them pre-formed. The lost flexibility is the defining feature.</p>
@@ -94,12 +120,7 @@ export default function CatsAreObligateCarnivoresPage() {
         <h2 id="practical">Practical Implications</h2>
         <p>In practice, obligate-carnivore status means: feed a complete, animal-based, feline-formulated diet; never substitute dog food; favor adequate protein and consider lower-carbohydrate, higher-moisture options especially for at-risk cats; and treat the feline nutrient requirements as non-negotiable. The term is not marketing — it is the reason cat food and dog food are formulated differently. See <a href="/compare/kibble-vs-canned-for-cats">Kibble vs Canned for Cats</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

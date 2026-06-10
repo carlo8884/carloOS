@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding the Hard Keeper — Putting and Keeping Weight On",
   description:
-    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring condition.",
+    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring.",
   path: '/nutrition/feeding-the-hard-keeper',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding the Hard Keeper — Putting and Keeping Weight On",
   description:
-    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring condition.",
+    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring.",
   url: 'https://horses.com/nutrition/feeding-the-hard-keeper',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function HardKeeperPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Beet Pulp for Horses', href: '/nutrition/beet-pulp' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Ration Balancers', href: '/nutrition/ration-balancers' },
+        ]}
         hero={{
           title: "Feeding the Hard Keeper",
           subtitle:
@@ -84,11 +90,12 @@ export default function HardKeeperPage() {
             title="Related Reading"
             links={[
               { label: "Equine Gastric Ulcers", href: "/health/equine-ulcers" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
               { label: "Beet Pulp Explained", href: "/nutrition/beet-pulp" },
-              { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function HardKeeperPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="cause">Rule Out the Cause First</h2>
           <p>A horse that will not hold weight despite good feeding usually has an underlying reason, and piling on grain without finding it wastes money and can do harm. Common culprits include dental problems that prevent proper chewing, a heavy parasite burden, gastric ulcers, PPID and other endocrine disease, chronic pain, and competition from herdmates at feeding time. A veterinary workup -- including a dental exam, fecal egg count, and consideration of ulcers and PPID -- should come before simply increasing the ration.</p>
 

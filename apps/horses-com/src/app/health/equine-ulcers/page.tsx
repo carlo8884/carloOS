@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -41,6 +41,12 @@ export default function EquineUlcersPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
+        ]}
         hero={{
           title: 'Equine Gastric Ulcer Syndrome (EGUS)',
           subtitle:
@@ -78,11 +84,13 @@ export default function EquineUlcersPage() {
           <RelatedLinks
             title="Related Guides"
             links={[
+              { label: 'Best Equine Supplements', href: '/reviews/best-equine-supplements' },
               { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
               { label: 'Quarter Horse Genetics', href: '/breeds/quarter-horse' },
               { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -93,6 +101,13 @@ export default function EquineUlcersPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="esgd-vs-eggd">ESGD vs EGGD — Two Diseases, Same Stomach</h2>
           <p>The equine stomach has two anatomically and functionally distinct regions, and the two regions develop ulcers for entirely different reasons. This is the single most important fact in EGUS management — &ldquo;ulcers&rdquo; is not one disease, and the right answer for one type can be the wrong answer for the other.</p>
 
@@ -208,6 +223,7 @@ export default function EquineUlcersPage() {
 
           <p><strong>Tier 6 — Aloe vera, slippery elm, marshmallow root:</strong> Anecdotal use is common; controlled trials are essentially absent in horses. A controlled trial of aloe vera vs omeprazole (Bush J et al., <em>Equine Veterinary Journal</em>, 2018) found omeprazole significantly more effective. These products may be benign but should not replace evidence-based therapy.</p>
 
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
           <div
             style={{
               background: 'var(--brand-surface, #f8f8f8)',

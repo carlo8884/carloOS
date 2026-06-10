@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Nile Monitor Care Guide — Advanced Large Monitor | Lizard.com", description: "Nile monitors are large, fast, defensive semi-aquatic monitors for experts only. Room-sized enclosures, intense heat, water, and honest expectations.", path: "/species/nile-monitor", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Nile Monitor C
 export default function SpeciesNileMonitorPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Nile Monitor Care Guide", subtitle: "Varanus niloticus is a large, powerful, semi-aquatic African monitor reaching 4 to 6 feet. Fast, intelligent, and often defensive, the Nile monitor is an advanced-only species that needs a room-sized custom enclosure, intense heat and UVB, a large water feature, and a keeper with realistic expectations: most do not become tame, and they are a serious safety and space commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
+      hero={{ title: "Nile Monitor Care Guide", subtitle: "Varanus niloticus is a large, powerful, semi-aquatic African monitor reaching 4 to 6 feet. Fast, intelligent, and often defensive, the Nile monitor is an advanced-only species that needs a room-sized custom enclosure, intense heat and UVB, a large water feature, and a keeper with realistic expectations: most do not become tame, and they are a serious safety and space commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Nile Monitor", href: "/species/nile-monitor" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+        { title: 'Argentine Tegu Care', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesNileMonitorPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor Care", href: "/species/savannah-monitor" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-nile-monitor"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Nile monitor is one of the most challenging lizards in the pet trade and is recommended only for experienced keepers who fully understand the commitment. In the wild it is a fast, semi-aquatic predator of rivers and lakes across much of Africa; in captivity it remains powerful, alert, and frequently defensive, with sharp claws, a strong bite, and a punishing tail whip. Cheap, widely sold hatchlings give a false impression of an easy pet; the adult is a large dangerous animal requiring a dedicated room-scale habitat. This care sheet emphasizes realistic expectations as much as parameters."}</p>
           <h2>{"A Realistic Temperament Warning"}</h2>
 
@@ -58,6 +68,7 @@ export default function SpeciesNileMonitorPage() {
             <li>{"Bennett, D., monitor lizard (Varanus) husbandry and ecology references."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Nile Monitor — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse large custom enclosures, high-output UVB, halogen flood basking bulbs, thermostats, and deep substrate sized for Nile monitor care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

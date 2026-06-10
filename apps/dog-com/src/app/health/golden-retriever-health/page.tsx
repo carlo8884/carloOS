@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer and Longevity', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
+  { label: 'Orthopedic Foundation for Animals (OFA): Golden Retriever Hip and Cardiac Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
+  { label: 'AVMA: Cancer Prevalence and Monitoring in Golden Retrievers', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Hemangiosarcoma in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/tumors-of-the-skin-and-soft-tissues-in-dogs-and-cats/hemangiosarcoma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -10,7 +18,6 @@ export const metadata: Metadata = buildMetadata({
   description: 'Over 60% of Golden Retrievers develop cancer (Morris Animal Foundation lifetime study). Complete guide to hemangiosarcoma, lymphoma, hip dysplasia, SAS.',
   path: '/health/golden-retriever-health',
   type: 'article',
-  ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
 })
 
 const schema = buildArticleSchema({
@@ -18,7 +25,7 @@ const schema = buildArticleSchema({
   title: 'Golden Retriever Health Guide',
   description: 'Complete Golden Retriever health guide covering cancer risk, hip dysplasia, SAS, and preventive care.',
   url: 'https://dog.com/health/golden-retriever-health',
-  imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
+  imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
@@ -48,8 +55,6 @@ export default function GoldenRetrieverHealthPage() {
         authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '12 min',
-        image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1200&q=80&auto=format&fit=crop',
-        imageAlt: 'Veterinarian examining a Golden Retriever',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -72,10 +77,11 @@ export default function GoldenRetrieverHealthPage() {
           ]} />
           <RelatedLinks title="Related" links={[
             { label: 'Golden Retriever Breed Profile', href: '/breeds/golden-retriever' },
-            { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+            { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             { label: 'Find a Specialist', href: '/find-a-vet' },
             { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
           ]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com"
             title="Free Dog Health Tips"
             subtitle="Breed spotlights and health alerts every Tuesday."
@@ -84,11 +90,13 @@ export default function GoldenRetrieverHealthPage() {
       }
       relatedLinks={[
         { title: 'Golden Retriever Breed Guide', href: '/breeds/golden-retriever', category: 'Breed Profile' },
-        { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance', category: 'Insurance' },
+        { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
     >
       <div className="carloOS-article">
+
+        <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />
 
         <p>The Golden Retriever is America&apos;s most beloved family dog — and one of the breeds that most requires informed, proactive health management. The combination of their cancer predisposition, orthopedic vulnerabilities, and cardiac risks means that Golden ownership carries real medical responsibilities that owners deserve to understand from the start.</p>
 
@@ -200,7 +208,7 @@ export default function GoldenRetrieverHealthPage() {
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
 
-        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fastest claims, no limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
+        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fast claims processing per the carrier, no payout limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
           <Link href="/reviews/best-pet-insurance"
@@ -209,6 +217,8 @@ export default function GoldenRetrieverHealthPage() {
           </Link>
         </div>
 
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
     </>

@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Litter Box Troubleshooting', url: 'https://ferret.com/behavior/litter-box-troubleshooting' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,24 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour and clinical chapters on elimination and disease",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — litter-training guidance and realistic compliance expectations",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret GI and urinary disease",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function LitterBoxTroubleshootingPage() {
   return (
@@ -85,7 +95,6 @@ export default function LitterBoxTroubleshootingPage() {
             'Ferrets are not cats. They never fully commit to a single box the way a tidy cat does, and an 80-90% hit rate is a realistic ceiling rather than a failure. When the miss rate climbs higher than that, the fix is almost always placement, cleaning, or litter choice — or, in a previously reliable adult, a medical change worth investigating.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -111,6 +120,7 @@ export default function LitterBoxTroubleshootingPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Litter Training', href: '/care/litter-training' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
                 { label: 'Behavior Hub', href: '/behavior' },
@@ -125,7 +135,14 @@ export default function LitterBoxTroubleshootingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Litter Training', href: '/care/litter-training' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -256,23 +273,7 @@ export default function LitterBoxTroubleshootingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Behavior and clinical chapters cover
-              elimination behavior and the diseases that disrupt it.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing litter-training
-              guidance and realistic compliance expectations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret GI and urinary disease.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general behavior information about ferrets, not
             individualized veterinary advice. A sudden change in litter habits

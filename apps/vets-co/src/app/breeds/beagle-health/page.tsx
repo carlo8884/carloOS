@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
+  EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
 } from '@carloOS/ui'
@@ -10,7 +10,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,14 +48,6 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://vets.co/' },
-    { name: 'Breed Health', url: 'https://vets.co/breeds' },
-    { name: 'Beagle Health', url: PAGE_URL },
-  ],
-})
-
 const FAQS = [
   {
     question: 'Why is my Beagle always hungry?',
@@ -91,7 +82,6 @@ const combinedSchema = combineSchemas(
   articleSchema,
   medicalSchema,
   faqSchema,
-  breadcrumbSchema,
 )
 
 export default function VetsBeagleHealthPage() {
@@ -107,7 +97,7 @@ export default function VetsBeagleHealthPage() {
             'Friendly, food-motivated and remarkably long-lived, the Beagle is over-represented in idiopathic epilepsy research and carries a small set of breed-specific genetic conditions. Lean body condition and neurologic awareness are the two highest-yield interventions.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -135,6 +125,7 @@ export default function VetsBeagleHealthPage() {
               subtitle="Practical guidance every Tuesday."
               source="breeds-beagle"
             />
+            <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
           </>
         }
       >
@@ -281,7 +272,7 @@ export default function VetsBeagleHealthPage() {
             to cluster — call ahead and go.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             The yield of a Beagle-specific screening plan is unusually high. DNA testing for MLS and IGS is
             inexpensive and definitive. Annual weight and body condition score is non-negotiable. From

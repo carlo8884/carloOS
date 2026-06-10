@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Cleanup Crew — Isopods & Springtails | Lizard.com", description: "How isopods and springtails keep a bioactive reptile enclosure clean, which species to use, how to seed and feed them, and when a cleanup crew fails.", path: "/setup/cleanup-crew-isopods-springtails", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Bioactive Clea
 export default function SetupCleanupCrewIsopodsSpringtailsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates', category: 'Reviews' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Drainage Layer Guide', href: '/setup/drainage-layer-bioactive', category: 'Setup' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -26,6 +34,7 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A bioactive enclosure works because waste does not just sit there; a community of detritivores breaks it down continuously. Isopods (terrestrial crustaceans, also called woodlice, pillbugs, or rollie-pollies) handle the larger organic debris, while springtails (tiny hexapods) graze on mold and microscopic decay. Together with beneficial soil microbes, they form the cleanup crew that processes reptile feces, shed skin, dead plant matter, and uneaten food into a stable, low-odor substrate that supports plant growth."}</p>
           <h2>{"What Each Member Does"}</h2>
           <ul>

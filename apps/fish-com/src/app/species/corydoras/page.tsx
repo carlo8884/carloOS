@@ -1,19 +1,27 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Corydoras paleatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-paleatus/", publisher: "Seriously Fish" },
+  { label: "Corydoras — FishBase genus overview", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=corydoras", publisher: "FishBase" },
+  { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
+  { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -34,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Corydoras', url: 'https://fish.com/species/corydoras' },
-  ],
 })
 
 const FAQS = [
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function CorydorasPage() {
   return (
@@ -107,7 +107,6 @@ export default function CorydorasPage() {
             'Corydoras spp. — corydoras are the most widely kept bottom-dwelling fish in the freshwater hobby. Peaceful, active, fascinating to watch, and available across more than 170 described species ranging from the pygmy cory at 1 inch to the emerald catfish at 3.5 inches. One rule applies to all of them: groups of six or more of the same species, on smooth sand, in a peaceful community.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '13 min',
         }}
@@ -116,6 +115,7 @@ export default function CorydorasPage() {
           { name: 'Species', href: '/species' },
           { name: 'Corydoras', href: '/species/corydoras' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Bronze Corydoras', href: '/species/bronze-corydoras', category: 'Species Guide' }, { title: 'Panda Corydoras', href: '/species/panda-corydoras', category: 'Species Guide' }, { title: 'Kuhli Loach', href: '/species/kuhli-loach', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -174,6 +174,7 @@ export default function CorydorasPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"
@@ -191,6 +192,7 @@ export default function CorydorasPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A corydoras catfish in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Corydoras catfish are peaceful South American bottom-dwellers
@@ -484,7 +486,8 @@ export default function CorydorasPage() {
               practice referral directory.
             </li>
           </ul>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Corydoras — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for corydoras care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -493,6 +496,7 @@ export default function CorydorasPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

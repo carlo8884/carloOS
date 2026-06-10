@@ -4,13 +4,16 @@ import { notFound } from 'next/navigation'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
   FAQAccordion,
   EmailCapture,
   BuyBox,
+  StockImage,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands, getBrandBySlug, getRelatedBrandsByPriceTier, type Brand } from '../../../data/brands'
@@ -174,6 +177,14 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
 
   const faqItems: FAQItem[] = buildBrandFaq(brand)
 
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://petfoods.com/' },
+      { name: 'Brands', url: 'https://petfoods.com/brands' },
+      { name: brand.name, url: `https://petfoods.com/brands/${brand.slug}` },
+    ],
+  })
+
   return (
     <ArticleLayout
       siteId="petfoods-com"
@@ -190,6 +201,12 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
         { name: brand.name, href: `/brands/${brand.slug}` },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (all)', href: '/brands', category: 'Hub' },
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -208,7 +225,7 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
           <RelatedLinks
             title="Companion References"
             links={[
-              { label: 'Brand Index (all 35)', href: '/brands' },
+              { label: 'Brand Index (all)', href: '/brands' },
               { label: 'Ingredient Glossary', href: '/ingredients' },
               { label: 'Pet Food Recall Database', href: '/recalls' },
               { label: 'Life-Stage Catalog', href: '/life-stage' },
@@ -236,9 +253,27 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <DisclosureBanner />
+
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt={`Commercial pet food on retailer shelves — reference context for ${brand.name}`}
+          aspect="16:9"
+          priority
+        />
 
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(brand)}
@@ -490,6 +525,14 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
   const reviewedQuestions = new Set(review.wsavaQuestionsAnswered.map((q) => q.question))
   const allQuestions: WsavaAnsweredQuestion['question'][] = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']
 
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://petfoods.com/' },
+      { name: 'Brands', url: 'https://petfoods.com/brands' },
+      { name: review.brandName, url: `https://petfoods.com/brands/${review.slug}` },
+    ],
+  })
+
   const faqItems: FAQItem[] = [
     {
       question: `What is ${review.brandName}’s WSAVA compliance score?`,
@@ -544,6 +587,12 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
         { name: review.brandName, href: `/brands/${review.slug}` },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (all)', href: '/brands', category: 'Hub' },
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -593,9 +642,27 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <DisclosureBanner />
+
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt={`Commercial pet food on retailer shelves — reference context for ${review.brandName}`}
+          aspect="16:9"
+          priority
+        />
 
         <BuyBox
           label={`Where to buy ${review.brandName}`}

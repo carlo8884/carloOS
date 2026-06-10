@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
   description:
@@ -28,6 +33,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
+  description:
+    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
+  url: 'https://petfood.com/nutrition/antioxidants-and-functional-nutrients',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function AntioxidantsAndFunctionalNutrientsPage() {
   return (
@@ -44,8 +79,14 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'Antioxidants and Functional Nutrients', href: '/nutrition/antioxidants-and-functional-nutrients' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +110,14 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
               { label: 'Glucosamine and Joint Supplements', href: '/supplements/glucosamine-and-joint-support' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+              { label: 'Compare Food Types', href: '/compare' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -76,10 +125,12 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="antioxidants-and-functional-nutrients"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Oxidative stress — damage from reactive oxygen species — contributes to aging and disease, and antioxidants are nutrients and compounds that neutralize it. Several antioxidants are essential nutrients with established roles in pet diets, while a growing class of functional ingredients makes broader claims with variable evidence. Separating the established from the speculative is the goal here. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a>.</p>
         <h2 id="antioxidants">What Antioxidants Do</h2>
         <p>Antioxidants protect cells and dietary fats from oxidative damage, and the body uses a network of them — some made internally, some dietary. In pet food they serve two purposes: protecting the food itself from rancidity (as preservatives) and supporting the animal&apos;s own antioxidant defenses. The most important dietary antioxidants are vitamin E, selenium, vitamin C, and a range of plant compounds. See <a href="/ingredients/preservatives-pet-food">Preservatives in Pet Food</a>.</p>
@@ -94,12 +145,7 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
         <h2 id="judging">Judging the Evidence</h2>
         <p>To judge functional claims: prefer ingredients with published, ideally independent, evidence in dogs or cats for the specific claim (omega-3s, certain cognitive diets); be skeptical of proprietary blends that obscure the dose; recognize that a complete diet already supplies the essential antioxidants; and discuss functional-diet choices for a medical condition with the veterinarian. Established essential nutrients are the foundation; functional add-ons are evaluated case by case. See <a href="/supplements/multivitamins-for-pets">Multivitamins for Pets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

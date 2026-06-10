@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -41,6 +41,7 @@ const GUIDES = [
     items: [
       { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
       { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
+      { title: 'Dog Treats Guide', desc: 'Caloric budget (the 10% rule), dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
       { title: 'Supplements That Work', desc: 'Fish oil, joint supplements, probiotics — evidence graded', href: '/nutrition/dog-supplements' },
     ],
   },
@@ -54,10 +55,26 @@ const GUIDES = [
   },
 ]
 
+const ALL_NUTRITION_ITEMS = GUIDES.flatMap((s) => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Nutrition Guides',
+  numberOfItems: ALL_NUTRITION_ITEMS.length,
+  itemListElement: ALL_NUTRITION_ITEMS.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://dog.com${item.href}`,
+  })),
+}
+
+const nutritionSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function NutritionHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={nutritionSchema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
@@ -137,6 +154,18 @@ export default function NutritionHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <section className="px-container-sm sm:px-container pb-10">
+        <p className="text-sm text-brand-text-light max-w-2xl">
+          Hitting an unfamiliar term? The <Link href="/glossary" className="text-brand-primary hover:underline">dog owner glossary</Link> defines
+          AAFCO, by-product, grain-free/DCM, body condition score, and more in plain English.
+          Need to put a number on how much to feed?{' '}
+          <Link href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">
+            The Dog Calorie Calculator
+          </Link>{' '}
+          estimates daily kcal needs using the standard RER formula and WSAVA/AAHA-style life-stage factors.
+        </p>
+      </section>
+      <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="footer" />
     </>
   </>
   )

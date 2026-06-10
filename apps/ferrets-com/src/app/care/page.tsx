@@ -3,14 +3,14 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { PageMasthead } from '@/components/PageMasthead'
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
@@ -60,14 +60,7 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Care Library', url: 'https://ferrets.com/care' },
-  ],
-})
-
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = faqSchema
 
 // ─── Category data ───────────────────────────────────────────────────────────
 
@@ -188,22 +181,15 @@ export default function CareHubPage() {
       />
 
       <div className="px-container-sm sm:px-container py-12 max-w-4xl mx-auto">
-        {/* ─── Header ─────────────────────────────────────────────────── */}
-        <header className="mb-10">
-          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Ferrets.com Library
-          </p>
-          <h1 className="font-display font-black text-brand-text-dark leading-tight tracking-tighter mb-5"
-              style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}>
-            Ferret Care Library
-          </h1>
-          <p className="text-lg text-brand-text-mid leading-relaxed">
-            A long-form reference for ferret owners. Diet, housing, hygiene,
-            enrichment, travel, multi-ferret households, and senior-ferret care
-            — grounded in the exotic-mammal veterinary literature and the
-            American Ferret Association&rsquo;s owner-facing guidance.
-          </p>
-        </header>
+        {/* ─── Masthead ───────────────────────────────────────────────── */}
+        <PageMasthead
+          eyebrow="Ferrets.com Library"
+          heading="Ferret Care Library"
+          dek="A long-form reference for ferret owners. Diet, housing, hygiene, enrichment, travel, multi-ferret households, and senior-ferret care — grounded in the exotic-mammal veterinary literature and the American Ferret Association's owner-facing guidance."
+          manifestKey="ferrets-com:care-masthead"
+          fallbackKey="ferrets-com:hero"
+          alt="A ferret resting in its enclosure"
+        />
 
         {/* ─── TL;DR ──────────────────────────────────────────────────── */}
         <aside
@@ -341,6 +327,51 @@ export default function CareHubPage() {
             Frequently Asked Questions
           </h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/find-a-vet" className="text-brand-primary font-medium hover:underline">
+                Find an exotic-pet vet by state &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/directory/rescues" className="text-brand-primary font-medium hover:underline">
+                Ferret rescue &amp; adoption guide &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/adopt" className="text-brand-primary font-medium hover:underline">
+                Adopting a ferret (regional guides) &rarr;
+              </Link>
+            </li>
+          </ul>
         </section>
 
         {/* ─── Closing note ───────────────────────────────────────────── */}

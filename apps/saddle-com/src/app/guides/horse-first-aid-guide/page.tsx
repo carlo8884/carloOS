@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse First Aid Guide — Colic, Wounds, Lameness | Saddle.com', description: 'Every horse owner needs basic first aid knowledge. Colic assessment, wound care, lameness evaluation.', path: '/guides/horse-first-aid-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse First Aid Guide', description: 'Colic assessment, wound care, lameness evaluation, and vital signs for horse owners.', url: 'https://saddle.com/guides/horse-first-aid-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -9,6 +9,12 @@ export default function HorseFirstAidPage() {
       hero={{ title: 'Horse First Aid Guide', subtitle: 'Basic first aid knowledge and the ability to take and interpret vital signs are essential for every horse owner. Knowing the difference between a situation you can manage at the barn and one requiring an immediate veterinary call can save your horse\'s life — and knowing your horse\'s normal baseline makes abnormalities obvious.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse First Aid', href: '/guides/horse-first-aid-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },
+        { title: 'Horse Grooming Guide', href: '/guides/horse-grooming-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Normal Vital Signs</div>
@@ -23,6 +29,7 @@ export default function HorseFirstAidPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Know Your Horse's Normal — Before an Emergency</h2>
         <p>The most important first aid preparation: know your individual horse's normal vital signs before any emergency occurs. Take temperature, heart rate, respiratory rate, and gut sounds weekly for a month when the horse is healthy — this establishes a personal baseline. The published "normal" ranges are population averages; your horse's resting heart rate of 36 versus another horse's normal of 28 matters when you're trying to determine whether 42 is alarming. Record the numbers. Keep them accessible at the barn.</p>
 

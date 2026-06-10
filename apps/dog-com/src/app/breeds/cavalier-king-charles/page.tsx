@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cavalier King Charles Spaniel Guide — MVD | Dog.com', description: 'CKCSs develop mitral valve disease — 100% will have a murmur by age 10. MVD Protocol cardiac screening, syringomyelia.', path: '/breeds/cavalier-king-charles', type: 'article' })
@@ -10,6 +10,7 @@ export default function CavalierPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Cavalier King Charles Spaniel', subtitle: 'One of the most affectionate and gentle family dogs in existence — and one of the most health-compromised breeds due to decades of selective breeding without sufficient health screening. Understanding the health landscape before acquiring a Cavalier changes the experience of owning one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Cocker Spaniel Guide', href: '/breeds/cocker-spaniel', category: 'Breed Guide' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function CavalierPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cavalier" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Mitral Valve Disease (MVD)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Mitral Valve Disease (MVD)" riskLevel="very-high"
           description="MVD is the defining health crisis of the Cavalier breed. The mitral valve degenerates over time, causing regurgitation of blood back into the left atrium with each heartbeat. The heart compensates by enlarging; eventually it cannot compensate and congestive heart failure develops. In poorly bred Cavaliers, MVD onset may be as early as 1–2 years of age. In health-tested lines following the MVD Breeding Protocol, onset is pushed to 6–7+ years. The difference — buying from health-tested breeders — is the difference between a dog that develops heart failure at 4 years and one that may not until 10."
           signs={['Heart murmur on auscultation (often first sign)', 'Coughing — especially at night', 'Reduced exercise tolerance', 'Rapid respiratory rate at rest', 'Fluid accumulation (congestive heart failure)']}
           management="Pimobendan (Vetmedin) is started when cardiac enlargement is confirmed by echo — EPIC trial data showed it delays CHF onset by 15+ months. ACE inhibitors and diuretics when CHF develops. Annual cardiac auscultation from age 1. Echo when murmur is detected. Cardiologist involvement for disease management." />

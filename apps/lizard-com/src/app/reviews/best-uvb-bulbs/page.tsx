@@ -24,10 +24,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Desert', emoji: '🏆', name: 'Arcadia T5 12% Desert', subtitle: 'Highest consistent UVI', href: '#arcadia-12' },
-  { label: 'Best Forest', emoji: '🌿', name: 'Arcadia T5 6% Forest', subtitle: 'For shade-dwelling species', href: '#arcadia-6' },
-  { label: 'Best Value', emoji: '💰', name: 'Zoo Med T5 HO 10.0', subtitle: 'Strong output, lower cost', href: '#zoomed-10' },
-  { label: 'Avoid', emoji: '⚠️', name: 'Coil/Compact UVB', subtitle: 'Unreliable, poor penetration', href: '#avoid' },
+  { label: 'Best Desert', name: 'Arcadia T5 12% Desert', subtitle: 'Highest consistent UVI', href: '#arcadia-12' },
+  { label: 'Best Forest', name: 'Arcadia T5 6% Forest', subtitle: 'For shade-dwelling species', href: '#arcadia-6' },
+  { label: 'Best Value', name: 'Zoo Med T5 HO 10.0', subtitle: 'Strong output, lower cost', href: '#zoomed-10' },
+  { label: 'Avoid', name: 'Coil/Compact UVB', subtitle: 'Unreliable, poor penetration', href: '#avoid' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Arcadia T5 HO 12% Desert', description: 'T5 HO UVB bulb for Zone 4 desert reptiles, Solarmeter-tested.', url: 'https://arcadiareptile.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
@@ -41,7 +41,7 @@ export default function BestUVBBulbsPage() {
 
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Solarmeter 6.5 Data · May 2025
+          Solarmeter 6.5 Data · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
@@ -76,7 +76,6 @@ export default function BestUVBBulbsPage() {
             <ReviewCard
               id="arcadia-12"
               badge="Best for Desert Species"
-              badgeEmoji="🏆"
               name="Arcadia T5 HO 12% Desert"
               subtitle="Highest measured UVI · Most consistent output · Ferguson Zone 3–4 species"
               score={9.6}
@@ -108,7 +107,6 @@ export default function BestUVBBulbsPage() {
             <ReviewCard
               id="arcadia-6"
               badge="Best for Forest Species"
-              badgeEmoji="🌿"
               name="Arcadia T5 HO 6% Forest"
               subtitle="Ferguson Zone 1–2 · Crested geckos, chameleons, day geckos"
               score={9.4}
@@ -134,7 +132,6 @@ export default function BestUVBBulbsPage() {
             <ReviewCard
               id="zoomed-10"
               badge="Best Value"
-              badgeEmoji="💰"
               name="Zoo Med T5 HO Reptisun 10.0"
               subtitle="Strong output · Widely available · More accessible price"
               score={8.9}
@@ -158,7 +155,7 @@ export default function BestUVBBulbsPage() {
             />
 
             <div id="avoid" className="rounded-lg p-6 mt-4" style={{ background: 'rgba(224,90,58,0.07)', border: '1px solid rgba(224,90,58,0.2)' }}>
-              <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#FF9980' }}>⚠️ Avoid — Coil/Compact UVB Bulbs</div>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#FF9980' }}>Avoid — Coil/Compact UVB Bulbs</div>
               <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.7)' }}>
                 Compact/coil UVB bulbs (the screw-in type) consistently measured 1.5–3.0 UVI at 15cm — dangerously close range — dropping to near zero at 30cm. T5 HO tubes penetrate 30–60cm; compact bulbs essentially don&apos;t. Several keeper reports of metabolic bone disease in animals kept exclusively under compact bulbs have been documented. Regardless of brand, compact UVB bulbs are not adequate for most reptile species. Use T5 HO only.
               </p>

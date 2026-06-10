@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -12,6 +12,7 @@ export default function BeaglePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Beagle Breed Guide', subtitle: 'One of the most popular breeds in America — for good reason. Beagles are sturdy, friendly, and endlessly curious. They are also motivated by their nose in ways that require specific management strategies.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Beagle', href: '/breeds/beagle' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Dachshund Guide', href: '/breeds/dachshund', category: 'Breed Guide' }, { title: 'Cocker Spaniel Guide', href: '/breeds/cocker-spaniel', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Excessive Barking', href: '/training/excessive-barking', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -25,6 +26,11 @@ export default function BeaglePage() {
         </div>
         <RelatedLinks title="Beagle Health Deep-Dive" links={[{ label: 'Beagle Health Issues & Screenings', href: '/breeds/beagle/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Beagle Feeding Guide', href: '/breeds/beagle/feeding' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Beagle vs Basset Hound', href: '/compare/beagle-vs-basset-hound' },
+        ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
     >

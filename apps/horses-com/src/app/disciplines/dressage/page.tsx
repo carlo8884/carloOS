@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -14,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -38,14 +38,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://horses.com' },
-    { name: 'Disciplines', url: 'https://horses.com/disciplines' },
-    { name: 'Dressage', url: 'https://horses.com/disciplines/dressage' },
-  ],
 })
 
 const FAQS = [
@@ -104,7 +96,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combined = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function DressagePage() {
   return (
@@ -113,6 +105,12 @@ export default function DressagePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+        ]}
         hero={{
           title: 'Dressage',
           subtitle:
@@ -151,6 +149,11 @@ export default function DressagePage() {
               { label: 'Lusitano Breed Profile', href: '/breeds/lusitano' },
               { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="horses-com"
+            contentType="discipline"
+            variant="sidebar"
           />
           <EmailCapture
             variant="sidebar"

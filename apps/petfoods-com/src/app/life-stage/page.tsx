@@ -3,8 +3,10 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -180,6 +182,12 @@ export default function LifeStageHubPage() {
         { name: 'Life Stage', href: '/life-stage' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Ingredient Catalog (A–Z)', href: '/ingredients', category: 'Hub' },
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Hub' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -199,10 +207,21 @@ export default function LifeStageHubPage() {
               { label: 'PetFood.com Methodology', href: 'https://petfood.com/guides/methodology' },
             ]}
           />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="nutrition"
+            variant="sidebar"
+          />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> Every US commercial dog or cat food carries an AAFCO statement
           declaring which life stage it is formulated for. The statement is binding: it determines
@@ -289,7 +308,7 @@ export default function LifeStageHubPage() {
               <strong style={{ fontSize: '13px', color: 'var(--brand-text-dark)' }}>Watch-outs</strong>
               <p style={{ margin: '6px 0 8px', fontSize: '13px', color: 'var(--brand-text-mid)' }}>{stage.watchOuts}</p>
               <div style={{ fontSize: '11px', color: 'var(--brand-text-light)', fontWeight: 600, marginTop: '10px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                Brand examples for this stage — coming soon
+                Brand examples by stage — see brand catalog
               </div>
             </article>
           ))}
@@ -301,14 +320,13 @@ export default function LifeStageHubPage() {
           the bag (Step 1 — what life stage is this formula substantiated for?), read the
           guaranteed analysis (Step 2 — does it match the nutrient highlights for that life
           stage?), and cross-reference the brand’s scored profile on PetFood.com (Step 3 — has the
-          rubric been applied to this brand yet?). When the per-brand scored profiles for each
-          life stage land in this catalog, they will be linked from the corresponding card above.
-          For now, the editorial sister site is the place to look for specific brand evaluations —
-          for example, the{' '}
+          rubric been applied to this brand yet?). The{'  '}
           <a href="https://petfood.com/brands/orijen-vs-acana-comparison" target="_blank" rel="noopener">
             Orijen vs Acana comparison
-          </a>{' '}
-          works through life-stage substantiation for two premium grain-free brands.
+          </a>{'  '}
+          on the editorial sister site is an example of this rubric applied to life-stage
+          substantiation for two premium grain-free brands. The brand catalog at{'  '}
+          <a href="/brands">PetFoods.com/brands</a> cross-links to scored profiles as they publish.
         </p>
 
         <h2 id="faq">FAQ</h2>
@@ -340,6 +358,12 @@ export default function LifeStageHubPage() {
             from retail life-stage formulas.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

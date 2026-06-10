@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function DogVsCatNutritionOverviewPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,13 @@ export default function DogVsCatNutritionOverviewPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Dog vs Cat Nutrition', href: '/species/dog-vs-cat-nutrition-overview' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+        { title: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +105,7 @@ export default function DogVsCatNutritionOverviewPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Dogs and cats diverged onto different nutritional paths through evolution. The cat is a strict (obligate) carnivore whose metabolism assumes a diet of animal tissue and which has lost the ability to make several nutrients from plant precursors. The dog is a facultative omnivore, more flexible, able to synthesize nutrients the cat must eat pre-formed. The AAFCO Dog and Cat Food Nutrient Profiles encode these differences, and they are the reason the two species need different food. See <a href="/nutrition/dietary-protein-requirements">Dietary Protein Requirements</a>.</p>
         <h2 id="carnivoreomnivore">Carnivore vs Omnivore</h2>
         <p>Cats evolved as desert-dwelling hunters eating whole small prey — high protein, high moisture, very low carbohydrate. Their physiology reflects this: a continuous high rate of protein use, limited carbohydrate-handling enzymes, a weak thirst drive, and obligate dietary requirements for nutrients found only in animal tissue. Dogs, sharing a long domestication history with humans, adapted to a broader diet, including expanded starch-digestion capacity, and can derive nutrition from a wider ingredient base. See <a href="/species/cats-are-obligate-carnivores">Cats Are Obligate Carnivores</a>.</p>
@@ -94,12 +120,7 @@ export default function DogVsCatNutritionOverviewPage() {
         <h2 id="whyfails">Why Dog Food Fails Cats</h2>
         <p>Put together, the differences mean a dog food cannot meet a cat&apos;s needs: it is typically too low in protein, may lack adequate taurine, does not guarantee pre-formed vitamin A and arachidonic acid at feline levels, and may not supply enough niacin. A cat fed dog food long-term risks taurine-deficiency heart disease and blindness, vitamin A deficiency, and protein inadequacy. Feeding each species its own complete, species-formulated diet is a nutritional necessity. See <a href="/feeding/feeding-multiple-pets">Feeding Multiple Pets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

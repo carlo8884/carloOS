@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,23 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ear anatomy, ear mites, and dermatology chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ear-cleaning and grooming owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Merck Veterinary Manual — Otodectes cynotis (ear mites) in ferrets and small mammals",
+    url: "https://www.merckvetmanual.com",
+    publisher: "Merck/MSD",
+  },
+]
+
 export default function EarCleaningPage() {
   return (
     <>
@@ -36,7 +53,6 @@ export default function EarCleaningPage() {
             'Ferrets produce a lot of ear wax — normally a reddish-brown color that alarms first-time owners but is completely typical. Knowing what is normal, how to clean gently, and how to spot the difference between routine wax and ear mites keeps a minor grooming task from becoming a missed medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -66,6 +82,7 @@ export default function EarCleaningPage() {
                 { label: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +92,22 @@ export default function EarCleaningPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ear Mites', href: '/health/ear-mites' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="normal">What Normal Ferret Ear Wax Looks Like</h2>
           <p>
             Ferrets are naturally waxy-eared animals. Healthy ferret ear wax is typically a <strong>reddish-brown to dark-brown color</strong>, and the amount can look surprising to someone used to dogs or cats. By itself, brownish wax is normal and not a sign of disease. The job of routine ear cleaning is simply to manage that normal buildup so it does not accumulate, not to chase an imaginary problem.
@@ -129,10 +160,7 @@ export default function EarCleaningPage() {
             The important point is that ear mites are a parasitic infestation, not a hygiene failure, and they require a veterinary diagnosis and a prescribed treatment to clear. You cannot resolve mites with cleaning alone, and over-the-counter approaches are unreliable. If a ferret's ears look like coffee grounds or it is scratching and shaking its head persistently, that is a vet visit. This is exactly the kind of problem where having an exotics-capable clinic already identified — as our <a href="/health/vet-visit-prep">vet visit prep</a> guide recommends — saves time. Because mite treatment involves prescription medication and dosing, leave that decision and the regimen to the veterinarian rather than attempting it at home.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Normal ear-wax description, cleaning technique, and ear-mite identification draw on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. This page is general grooming guidance and does not provide medication dosing or recommend specific products; ear mites and ear infections require veterinary diagnosis and treatment. Pair this with our <a href="/care/bathing-and-grooming">bathing and grooming</a> guide or return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

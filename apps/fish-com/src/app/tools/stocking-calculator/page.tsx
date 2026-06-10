@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  ArticleByline,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -97,7 +98,6 @@ export default function StockingCalculatorPage() {
         subtitle: 'How many fish can your tank actually hold? Modern surface-area model adjusted for filtration and aquascape style — not the broken inch-per-gallon rule.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '4 min',
       }}
@@ -107,6 +107,7 @@ export default function StockingCalculatorPage() {
         { name: 'Stocking Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Species Hub", href: "/species", category: "Species" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={
         <>
           <TableOfContents
@@ -144,6 +145,7 @@ export default function StockingCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
@@ -196,6 +198,13 @@ export default function StockingCalculatorPage() {
         <p>
           For specific species pairings, see our <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
           <Link href="/species/neon-tetra">neon tetra</Link> profile, and <Link href="/species/angelfish">angelfish</Link> profile.
+        </p>
+        <p>
+          Once you know your stocking ceiling, filtration becomes the lever. Oversizing your filter is the single cheapest way to raise it.
+          See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
+          <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for picks by tank size.
+          If your result is under 20 gallons, see our <Link href="/reviews/best-nano-tanks">nano tank reviews</Link> for
+          purpose-built setups that handle the tight stocking ceiling more reliably than standard tanks.
         </p>
 
         <h2 id="faq">FAQ</h2>

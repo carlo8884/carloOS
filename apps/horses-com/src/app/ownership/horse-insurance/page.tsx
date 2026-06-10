@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Insurance Explained — Mortality, Major Medical, and Liability",
   description:
-    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, exclusions, and deciding what to insure.",
+    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, and deciding what to insure.",
   path: '/ownership/horse-insurance',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Insurance Explained — Mortality, Major Medical, and Liability",
   description:
-    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, exclusions, and deciding what to insure.",
+    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, and deciding what to insure.",
   url: 'https://horses.com/ownership/horse-insurance',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function HorseInsurancePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+          { title: 'Equine Health Hub', href: '/health' },
+        ]}
         hero={{
           title: "Horse Insurance Explained",
           subtitle:
@@ -99,6 +105,13 @@ export default function HorseInsurancePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Insure a Horse</h2>
           <p>Insurance exists because the big costs of horse ownership -- the loss of a valuable horse, an emergency surgery, a long course of treatment, or a claim from someone the horse injures -- can be financially devastating and arrive without warning. Insurance spreads that risk for a recurring premium. Whether it is worth it depends on the horse&apos;s value, the owner&apos;s finances, and their appetite for risk; some owners insure heavily, others self-insure by keeping an emergency fund instead.</p>
 

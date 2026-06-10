@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equestrian Vaulting — Gymnastics on Horseback",
   description:
-    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and the vaulting horse, compulsories and freestyle, and safety.",
+    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and vaulting horse, compulsories, freestyle, and safety.",
   path: '/disciplines/vaulting',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Equestrian Vaulting — Gymnastics on Horseback",
   description:
-    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and the vaulting horse, compulsories and freestyle, and safety.",
+    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and vaulting horse, compulsories, freestyle, and safety.",
   url: 'https://horses.com/disciplines/vaulting',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function VaultingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Combined Driving', href: '/disciplines/combined-driving' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+        ]}
         hero={{
           title: "Equestrian Vaulting",
           subtitle:
@@ -88,6 +94,7 @@ export default function VaultingPage() {
               { label: "Helmet Guide", href: "/tack/helmet-guide" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function VaultingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Vaulting Is</h2>
           <p>Equestrian vaulting is the performance of gymnastic and balletic movements on the back of a moving horse. The horse canters in a circle controlled by a lunger on a lunge line, wearing a surcingle with handles and a thick back pad (the vaulting roller and pad) rather than a saddle, and the vaulter performs mounts, balances, kneeling and standing positions, swings, and dismounts in time with the horse&apos;s rhythm. It blends athleticism, artistry, and a calm partnership with the horse.</p>
 

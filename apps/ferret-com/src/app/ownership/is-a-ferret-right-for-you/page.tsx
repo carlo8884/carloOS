@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function IsAFerretRightForYouPage() {
             'Ferrets are funny, affectionate, deeply interactive animals — and they are also demanding, sometimes smelly, expensive to keep well, and illegal in a few places. This is a candid self-assessment: not a sales pitch, but an honest set of questions to help you decide whether a ferret genuinely fits your life before you commit to six to ten years of one.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -87,8 +86,22 @@ export default function IsAFerretRightForYouPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How to Use This</h2>
           <p>
             Read each section below and answer honestly — not how you wish things were, but how they actually are. A ferret is a delightful pet for the right home and a stressful, expensive mistake for the wrong one, and the difference is almost always predictable in advance. There are no wrong answers here, only the right pet for your circumstances. If most sections feel easy to say yes to, a ferret may suit you well. If several give you pause, that is valuable information, not failure.

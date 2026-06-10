@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function AdoptionVsBuyingPage() {
             'A ferret can come from a rescue, a breeder, or a pet store, and the choice shapes more than price — it affects health history, whether the ferret arrives already altered and descented, temperament, and what you can know about its background. This page compares the three honestly so you can decide what fits your situation.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -86,8 +85,22 @@ export default function AdoptionVsBuyingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="sources-overview">The Three Sources</h2>
           <p>
             Most people acquire a ferret from one of three places: a <strong>shelter or breed-specific rescue</strong>, a <strong>private breeder</strong>, or a <strong>pet store</strong> (which in much of North America means a large-scale commercially bred ferret). Each has a characteristic profile. None is automatically right — the best choice depends on whether you want a kit or are open to an adult, how much background information you need, and your stance on supporting rescue versus breeding. Before any of this, confirm ferrets are legal where you live (see <a href="/ownership/ferret-legality-by-state">legality by state</a>).

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function SafeTreatsPage() {
             'Treats are where well-meaning owners do the most accidental harm. A surprising number of products sold as "ferret treats" — yogurt drops, raisin treats, fruit-and-vegetable medleys — are quietly inappropriate for an obligate carnivore. This page sorts the safe from the unsafe and gives you one reliable rule to apply at the store.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -86,8 +85,22 @@ export default function SafeTreatsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Toxic Foods', href: '/care/toxic-foods' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="rule">The One Rule</h2>
           <p>
             Here is a rule that resolves most treat questions: <strong>if it isn't meat, it probably isn't a ferret treat.</strong> Ferrets are obligate carnivores; they have no nutritional use for sugar, grain, fruit, or vegetables, and chronic sugar exposure is implicated in pancreatic beta-cell stress and elevated insulinoma risk. A useful corollary: if you wouldn't feed it to a cat with diabetes, it is probably wrong for a ferret. Almost every safe treat is some form of plain animal protein.
@@ -138,7 +151,6 @@ export default function SafeTreatsPage() {
           <ReviewCard
             id="wysong-freeze-dried-treats"
             badge="Meat-Based Treat"
-            badgeEmoji="🥩"
             name="Wysong Single-Ingredient Freeze-Dried Treats"
             subtitle="Single-protein freeze-dried treat, no added sugar or grain"
             score={8.6}

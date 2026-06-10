@@ -4,7 +4,7 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   TableOfContents,
 } from '@carloOS/ui'
 import {
@@ -97,6 +97,7 @@ export default function DogSpayNeuterTimingPage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing' },
         ]}
+        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score', category: 'Guides' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents
@@ -123,6 +124,7 @@ export default function DogSpayNeuterTimingPage() {
                 { label: 'Dog Vaccinations', href: '/health/dog-vaccinations' },
               ]}
             />
+            <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"

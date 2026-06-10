@@ -9,11 +9,12 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-29T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care/toxic-foods' },
-    { name: 'Toxic Foods', url: 'https://ferret.com/care/toxic-foods' },
-  ],
-})
 
 const FAQS = [
   {
@@ -81,7 +75,33 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
+    url: "https://www.aspca.org/pet-care/animal-poison-control",
+    publisher: "ASPCA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret toxicology and emergency medicine",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function FerretToxicFoodsPage() {
   return (
@@ -96,7 +116,6 @@ export default function FerretToxicFoodsPage() {
             'Ferrets are obligate carnivores with a short gastrointestinal tract, a high metabolic rate, and a famously curious chewing habit. The combination means accidental ingestions are common and the toxicity profile for many household items is different from cats and dogs. A small chocolate dose that a 25 kg dog would shrug off can be a life-threatening exposure in a 1 kg ferret.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -129,6 +148,7 @@ export default function FerretToxicFoodsPage() {
                 { label: 'Insulinoma', href: '/health/insulinoma' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -138,7 +158,14 @@ export default function FerretToxicFoodsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -486,41 +513,7 @@ export default function FerretToxicFoodsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              ASPCA Animal Poison Control Center — toxic substance
-              database and species-specific exposure guidance.
-            </li>
-            <li>
-              Pet Poison Helpline — toxic food and household substance
-              database covering exotic companion species.
-            </li>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets,
-              Rabbits, and Rodents: Clinical Medicine and Surgery.</em>
-              4th ed. Saunders/Elsevier. Toxicology and gastrointestinal
-              foreign body chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — ferret toxicology and emergency-medicine
-              issues.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing toxic
-              food and household hazard resources.
-            </li>
-            <li>
-              American Veterinary Medical Association (AVMA) — pet
-              poison prevention and household safety guidance.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              continuing-education materials on exotic-mammal
-              toxicology.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general guidance on common toxic exposures in
             ferrets. Any actual ingestion is a clinical event that

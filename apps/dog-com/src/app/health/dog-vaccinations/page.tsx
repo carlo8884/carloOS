@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'WSAVA: Vaccination Guidelines for the Owners and Breeders of Dogs and Cats', url: 'https://wsava.org/committees/vaccination-guidelines-group/', publisher: 'WSAVA' },
+  { label: 'AAHA: Canine Vaccination Guidelines (2022)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/vaccination-canine/', publisher: 'AAHA' },
+  { label: 'AVMA: Vaccination Basics for Dogs and Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccination-basics', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Overview of Vaccination Programs for Dogs', url: 'https://www.merckvetmanual.com/dog-owners/disorders-affecting-multiple-body-systems-of-dogs/vaccination-of-dogs', publisher: 'Merck Vet Manual' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vaccination Schedule', description: 'Core and non-core vaccines, puppy schedule, and titer testing for dogs.', url: 'https://dog.com/health/dog-vaccinations', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Schedule', description: 'Core vaccines, non-core vaccines, and puppy vaccination schedule.', url: 'https://dog.com/health/dog-vaccinations', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -17,6 +25,7 @@ export default function DogVaccinationsPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Vaccination Schedule', subtitle: 'Vaccines are among the most impactful preventive health tools in veterinary medicine. Understanding which vaccines are essential, which are lifestyle-dependent, and how often to booster prevents both under-vaccination (disease risk) and over-vaccination (unnecessary procedures).', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Vaccinations', href: '/health/dog-vaccinations' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Heartworm Prevention', href: '/health/heartworm-prevention', category: 'Dog Health' }, { title: 'Dog Dental Care', href: '/health/dog-dental-care', category: 'Dog Health' }, { title: 'Spay or Neuter Guide', href: '/health/spay-neuter-guide', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">Core Vaccines</div>
@@ -30,6 +39,8 @@ export default function DogVaccinationsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vaccinations" />
         </>}
       >
@@ -86,6 +97,8 @@ export default function DogVaccinationsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

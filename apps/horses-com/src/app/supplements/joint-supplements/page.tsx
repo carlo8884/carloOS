@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -40,7 +39,7 @@ const PICKS = [
 export default function JointSupplementsPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://horses.com/' }, { name: 'Supplements', url: 'https://horses.com/supplements' }, { name: 'Joint Supplements', url: 'https://horses.com/supplements/joint-supplements' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Evidence-Based Reference · May 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
@@ -51,18 +50,14 @@ export default function JointSupplementsPage() {
         </p>
       </div>
 
-      {/* Cover photo — show-jumper mid-flight. Reuses the verified
-          saddle-com Unsplash ID (CarloOS production catalog). Joint
-          supplements are most consequential for the explosive-impact
-          sport horse; the airborne composition makes the editorial
-          subject visible without bottle-marketing staging. */}
-      <div className="relative w-full aspect-[21/9] md:aspect-[21/7] overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1600&q=80&auto=format&fit=crop"
+      {/* Cover photo — show-jumper mid-flight. Manifest-managed so photographer
+          attribution is always rendered per QC §1. */}
+      <div className="px-container-sm sm:px-container">
+        <StockImage
+          manifestKey="horses-com:supplement-joint"
           alt="A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for"
-          fill
-          sizes="100vw"
-          className="object-cover"
+          aspect="16:9"
+          variant="wide"
           priority
         />
       </div>
@@ -137,17 +132,17 @@ export default function JointSupplementsPage() {
             <p><strong>&ldquo;Proprietary blends&rdquo; without per-ingredient amounts:</strong> Any product whose label lists ingredients but not the milligram quantity of each cannot be evaluated for clinical relevance. NASC-Quality-Seal products disclose ingredient amounts; choose those preferentially.</p>
 
             <h2>Reviewed Products</h2>
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <ReviewCard
               id="cosequin-asu"
               badge="Best Evidence (ASU)"
-              badgeEmoji="🏆"
               name="Nutramax Cosequin ASU Plus"
               subtitle="Avocado/Soybean Unsaponifiables + Glucosamine + Chondroitin"
               score={8.9}
               winner
               description={<>
-                <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU is the ingredient with the best peer-reviewed equine evidence. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
+                <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU has among the strongest peer-reviewed equine evidence of the common joint-supplement ingredients. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
                 <p>Reasonable choice for: an adult performance horse where joint maintenance is preventive rather than rescue, or an early-grade osteoarthritis horse used as part of a broader management plan that includes veterinary diagnosis. Not a replacement for intra-articular medication when synovitis or active osteoarthritis is documented.</p>
               </>}
               specs={[
@@ -168,7 +163,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="platinum-cj"
               badge="Best Comprehensive"
-              badgeEmoji="◎"
               name="Platinum Performance CJ"
               subtitle="Whole-system formula with joint-targeted CJ blend"
               score={9.0}
@@ -194,7 +188,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="smartflex"
               badge="Best Senior"
-              badgeEmoji="🐴"
               name="SmartPak SmartFlex Senior"
               subtitle="Glucosamine + chondroitin + MSM + HA at senior-targeted dosing"
               score={8.5}
@@ -220,7 +213,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="omega-3"
               badge="Reference Ingredient"
-              badgeEmoji="🐟"
               name="Marine-Source Omega-3 (DHA/EPA)"
               subtitle="Algal or fish-oil source — flax is not equivalent"
               score={8.6}

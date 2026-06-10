@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Anorexia and Clinical Approach Chapters", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Nutritional Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Supportive care and anorexia references", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Anorexia — Why a Reptile Stops Eating | Lizard.com", description: "A reptile refusing food can be normal (brumation, shedding, breeding) or a sign of illness. A structured checklist to find the cause before it becomes serious.", path: "/health/anorexia-in-reptiles", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Anorexia in Reptiles (Food Refusal)", description: "A structured approach to reptile food refusal, distinguishing normal causes from illness and when to see a vet.", url: "https://lizard.com/health/anorexia-in-reptiles", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -8,9 +15,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Anorexia in Re
 export default function HealthAnorexiaInReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Anorexia in Reptiles (Food Refusal)", subtitle: "A reptile that stops eating is one of the most common reasons keepers worry, and the cause ranges from completely normal (brumation, shedding, breeding season, a recent move) to genuinely serious illness. The skill is in working through the possibilities systematically, ruling out husbandry and natural cycles first, and knowing when food refusal crosses into a medical emergency.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Anorexia in Reptiles (Food Refusal)", subtitle: "A reptile that stops eating is one of the most common reasons keepers worry, and the cause ranges from completely normal (brumation, shedding, breeding season, a recent move) to genuinely serious illness. The skill is in working through the possibilities systematically, ruling out husbandry and natural cycles first, and knowing when food refusal crosses into a medical emergency.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Anorexia in Reptiles", href: "/health/anorexia-in-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Constipation & Impaction', href: '/health/constipation-impaction', category: 'Health' },
+        { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>
@@ -23,9 +38,11 @@ export default function HealthAnorexiaInReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Brumation Guide", href: "/husbandry/brumation-guide" }, { label: "Constipation & Impaction", href: "/health/constipation-impaction" }, { label: "Temperature Guide", href: "/setup/temperature-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-anorexia-in-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Food refusal (anorexia) is a symptom, not a diagnosis. Reptiles are ectotherms with slow metabolisms, and a healthy adult of many species can go weeks, even months, without eating under certain natural circumstances without harm. That same refusal can also be the first sign of a serious problem. The difference lies in the context and, above all, in whether the animal is maintaining its body weight and condition. A structured approach prevents both needless panic and dangerous complacency."}</p>
           <h2>{"First, Track the Weight"}</h2>
 
@@ -58,12 +75,7 @@ export default function HealthAnorexiaInReptilesPage() {
           <h2>{"When to See a Veterinarian"}</h2>
           <p>{"Seek a reptile-experienced veterinarian when food refusal is accompanied by weight loss, lethargy, abnormal posture, discharge from the mouth or nose, wheezing, swelling, straining, abnormal or absent stool, or any other sign of illness, and whenever refusal lasts beyond what is normal for the species and season with no benign explanation. A young, small, or already underweight animal that stops eating warrants attention sooner than a robust adult, because it has fewer reserves. Never force-feed a reptile without veterinary guidance; force-feeding a sick or obstructed animal can cause harm."}</p>
           <p>{"In short: confirm the weight trend, rule out natural cycles and husbandry, and escalate to a vet when refusal is paired with any sign of decline. Patience is appropriate for a healthy, weight-stable animal; it is dangerous for one that is wasting."}</p>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), clinical-approach chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, anorexia and supportive-care references."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

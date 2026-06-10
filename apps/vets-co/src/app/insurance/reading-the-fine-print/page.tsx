@@ -14,7 +14,7 @@ export default function FinePrintPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Reading the Fine Print', subtitle: 'The difference between a plan that pays when you need it and one that disappoints lives in the policy document, not the marketing page. Waiting periods, payout structures, exam-fee handling, and the exclusions list quietly determine your real coverage. This checklist walks through what to read before you sign.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Reading the Fine Print', subtitle: 'The difference between a plan that pays when you need it and one that disappoints lives in the policy document, not the marketing page. Waiting periods, payout structures, exam-fee handling, and the exclusions list quietly determine your real coverage. This checklist walks through what to read before you sign.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function FinePrintPage() {
           <ReviewCard
             id="spot"
             badge="Customizable"
-            badgeEmoji="🔎"
             name="Spot Pet Insurance"
             subtitle="Adjustable limits and an optional preventive add-on"
             score={8.2}
@@ -82,7 +81,6 @@ export default function FinePrintPage() {
           <ReviewCard
             id="manypets"
             badge="Straightforward Terms"
-            badgeEmoji="📄"
             name="ManyPets"
             subtitle="Single comprehensive plan, clearer fine print"
             score={8.0}

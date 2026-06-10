@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function CostOfOwningAFerretPage() {
             'Ferrets are inexpensive to acquire and deceptively expensive to keep well. The animal itself is the smallest line on the budget; the cage, the food, and above all the veterinary care over a 6–10 year life are what add up. This page lays out startup and recurring costs honestly, including the surgery line item that catches most owners by surprise.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -86,8 +85,22 @@ export default function CostOfOwningAFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Insurance Basics', href: '/ownership/ferret-insurance-basics' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="numbers">How to Read These Numbers</h2>
           <p>
             All figures here are general ranges to plan around, not quotes — actual prices vary by region, by retailer, and by veterinarian, and exotic-mammal veterinary care in particular runs higher than care for cats and dogs because fewer practices offer it. Treat the ranges as a planning framework: the goal is to make sure no major category surprises you, especially the veterinary ones. The single most important point on this page is that you should budget for ferret <em>illness</em>, not just ferret <em>upkeep</em>.
@@ -135,6 +148,29 @@ export default function CostOfOwningAFerretPage() {
           <p>
             Over a 6–10 year lifespan, the recurring food and litter costs are real but modest; the veterinary costs are what dominate the lifetime total, and they are heavily back-loaded into the senior years when chronic disease becomes likely. A useful mental model: the cheapest year of ferret ownership is usually the first healthy adult year, and the most expensive years are the last ones. Budget so that a senior ferret's medical needs are a planning question, not a crisis.
           </p>
+
+          <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6">
+            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Ready to bring one home?</p>
+            <p className="mt-2 text-base font-semibold text-brand-text-dark">See the starter essentials</p>
+            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
+              Once the budget makes sense, the next step is the startup list itself. The ferret starter
+              essentials page turns the setup category above into the specific items a new ferret needs
+              before homecoming. Prefer the editorial version with no links? The{' '}
+              <a href="/ownership/ferret-supplies-checklist" className="text-brand-primary underline-offset-2 hover:underline">supplies checklist</a>{' '}
+              covers the same categories.
+            </p>
+            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
+              The starter essentials page includes affiliate links; we may earn a commission at no extra
+              cost to you, and we never accept payment for favorable placement.{' '}
+              <a href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">Disclosure</a>.
+            </p>
+            <a
+              href="/ferret-starter-kit"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
+            >
+              See the ferret starter essentials &rarr;
+            </a>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>

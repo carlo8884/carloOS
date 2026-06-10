@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function AreDogsCarnivoresOrOmnivoresPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,13 @@ export default function AreDogsCarnivoresOrOmnivoresPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+        { title: 'Dog vs Cat Nutrition Overview', href: '/species/dog-vs-cat-nutrition-overview' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +105,7 @@ export default function AreDogsCarnivoresOrOmnivoresPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Dogs descend from wolves, and the assumption that they share the wolf&apos;s carnivorous physiology drives much of the meat-maximalist marketing in pet food. But dogs diverged from wolves through a long domestication process that included dietary adaptation, and modern dogs are not metabolically identical to wolves. The evidence points to the dog as a facultative omnivore — able to thrive on a meat-based diet but also adapted to use carbohydrate. See <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="wolf">The Wolf Comparison</h2>
         <p>While dogs and wolves are closely related, domestication over roughly 15,000 to 30,000 years selected for traits suited to living alongside humans, including the ability to digest the starch-rich scraps of human settlements. Treating the modern dog as a captive wolf ignores this adaptation. The wolf comparison is a starting point, not a conclusion about how to feed a dog.</p>
@@ -94,12 +120,7 @@ export default function AreDogsCarnivoresOrOmnivoresPage() {
         <h2 id="practical">Practical Feeding</h2>
         <p>For feeding a dog, the carnivore-versus-omnivore debate matters less than diet quality: feed a complete and balanced diet appropriate to life stage, with adequate high-quality protein and essential fatty acids, from a transparent manufacturer. The dog&apos;s omnivore flexibility means the ingredient base can vary; the completeness and balance cannot. Do not let the wolf myth drive an unbalanced meat-only home diet. See <a href="/compare/home-cooked-vs-commercial">Home-Cooked vs Commercial Diets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

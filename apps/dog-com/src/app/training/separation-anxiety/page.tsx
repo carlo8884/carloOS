@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -57,6 +57,7 @@ export default function SeparationAnxietyPage() {
         { name: 'Training', href: '/training' },
         { name: 'Separation Anxiety', href: '/training/separation-anxiety' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Anxiety (Health)', href: '/health/dog-anxiety', category: 'Dog Health' }, { title: 'Excessive Barking', href: '/training/excessive-barking', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -72,10 +73,12 @@ export default function SeparationAnxietyPage() {
           { label: 'Puppy Schedule', href: '/training/puppy-schedule' },
           { label: 'Training Hub', href: '/training' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-sep-anxiety" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="distinguish">True Separation Anxiety vs Boredom — How to Tell</h2>
         <p>This distinction matters enormously because the protocols are completely different. Applying the boredom protocol to a dog with true SA makes things worse; applying the SA protocol to a bored dog is unnecessary and slow.</p>
         <p><strong>The best diagnostic tool: a camera.</strong> Set up a phone or security camera to record your dog for 30 minutes after you leave. What you see tells you everything.</p>
@@ -118,7 +121,7 @@ export default function SeparationAnxietyPage() {
         <p>This protocol is slow, demanding, and genuinely difficult for owners who need to go to work. The realistic timescale for meaningful improvement in moderate SA is weeks to months of consistent training. Many owners need a certified separation anxiety trainer (CSAT) — see below.</p>
 
         <h2 id="medication">Medication — When and What</h2>
-        <p>Veterinary behavior medication is appropriate for moderate to severe separation anxiety — not as a substitute for behavior modification, but as a tool that reduces baseline anxiety enough for training to be effective. The most commonly prescribed:</p>
+        <p>Veterinary behavior medication is appropriate for moderate to severe separation anxiety — not as a substitute for behavior modification, but as a tool that reduces baseline anxiety enough for training to be effective. Commonly used options:</p>
         <ul>
           <li><strong>Fluoxetine (Prozac, Reconcile):</strong> <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for canine separation anxiety. Takes 4–6 weeks for full effect. Used as a daily medication alongside behavior modification.</li>
           <li><strong>Clomipramine (Clomicalm):</strong> Also FDA-approved for canine SA. Similar mechanism. Some dogs respond better to one than the other.</li>

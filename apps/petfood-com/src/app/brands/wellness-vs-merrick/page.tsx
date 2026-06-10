@@ -8,6 +8,9 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -31,6 +34,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function WellnessVsMerrickPage() {
   return (
     <ArticleLayout
@@ -46,8 +72,14 @@ export default function WellnessVsMerrickPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: 'Wellness vs Merrick', href: '/brands/wellness-vs-merrick' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
+        { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+        { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +115,8 @@ export default function WellnessVsMerrickPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-wellness-vs-merrick" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Wellness vs Merrick — two natural-positioned premium brands compared on formulation, AAFCO posture, and recalls." />
         <p>Wellness and Merrick are premium brands positioned on natural ingredients and recognizable whole foods, and both compete for the same buyer. This comparison evaluates them side by side on the PetFood.com five-dimension rubric, independent of any commercial relationship. A recurring theme is that both, despite an artisanal brand image, are owned by large corporations — a reminder that brand image and corporate reality often differ. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="twobrands">Two Natural Brands</h2>
         <p>Both brands lean on natural and whole-ingredient marketing, with named meats, recognizable produce, and an emphasis on what they exclude (artificial colors, certain by-products). As covered elsewhere, natural is a narrowly defined AAFCO term and not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. The brands should be judged on substance, not the natural framing. See <a href="/myths/by-products-myth">The By-Products Myth</a>.</p>
@@ -147,13 +181,7 @@ export default function WellnessVsMerrickPage() {
           ctaAffiliateProduct="Merrick%20pet%20food"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Poecilia wingei — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/poecilia-wingei/", publisher: "Seriously Fish" },
+  { label: "Poecilia wingei — FishBase species record", url: "https://www.fishbase.se/summary/Poecilia-wingei.html", publisher: "FishBase" },
+  { label: "Poeser, F.N. et al. Description of Poecilia (Acanthophacelus) wingei n. sp. Contributions to Zoology, 2005.", publisher: "Contributions to Zoology" },
+  { label: "Endler, J.A. Natural Selection on Color Patterns in Poecilia reticulata. Evolution, 34(1), 76–91, 1980.", publisher: "Evolution" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide — The Nano Guppy | Fish.com", description: "Endler's livebearers are tiny, dazzling, prolific guppy relatives ideal for nano tanks. Easy to keep, easy to breed, and they hybridize freely with guppies.", path: '/species/endlers-livebearer', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide", description: "Care, hybridization, and breeding for Poecilia wingei, the Endler's livebearer.", url: 'https://fish.com/species/endlers-livebearer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function EndlersLivebearerPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: "Endler's Livebearer Care Guide", subtitle: "Poecilia wingei — the Endler's livebearer is a diminutive cousin of the guppy, prized for the neon-bright metallic patches of orange, green, and black that males display in a body barely an inch long. Hardy, peaceful, and astonishingly prolific, Endlers are one of the best fish for a planted nano aquarium and a favorite of livebearer enthusiasts worldwide.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'June 2026', readTime: '7 min' }}
+      hero={{ title: "Endler's Livebearer Care Guide", subtitle: "Poecilia wingei — the Endler's livebearer is a diminutive cousin of the guppy, prized for the neon-bright metallic patches of orange, green, and black that males display in a body barely an inch long. Hardy, peaceful, and astonishingly prolific, Endlers are one of the best fish for a planted nano aquarium and a favorite of livebearer enthusiasts worldwide.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: "Endler's Livebearer", href: '/species/endlers-livebearer' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Guppy", href: "/species/guppy", category: "Species Guide" }, { title: "Molly Fish", href: "/species/molly-fish", category: "Species Guide" }, { title: "Platy Fish", href: "/species/platy-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -20,11 +28,13 @@ export default function EndlersLivebearerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Guppy', href: '/species/guppy' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Nano Tank Setup', href: '/setup/nano-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-endlers-livebearer" />
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-endlers-livebearer" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An Endler’s livebearer in a home aquarium." priority />
 
         <h2>A Nano Powerhouse</h2>
         <DropCap>The Endler's livebearer packs more color into a one-inch body than almost any other freshwater fish. Originally found in the Laguna de Patos region of Venezuela, the species was nearly lost in the wild and survives largely through aquarium populations and dedicated hobbyist breeders. Its small size, peaceful nature, and hardiness make it ideal for nano and planted tanks where a full-sized guppy would feel cramped. Males are the showpieces, flashing metallic patches and performing constant courtship displays; females are larger, plainer, and silvery. Because they are so small and active, even a 10-gallon tank can support a lively colony.</DropCap>
@@ -42,7 +52,8 @@ export default function EndlersLivebearerPage() {
 
         <h2>Tankmates and Setup</h2>
         <p>Endlers are perfectly peaceful and pair well with other small, calm species: pygmy corydoras, otocinclus, small rasboras, and dwarf shrimp such as cherry shrimp. Avoid anything large enough to view a one-inch fish as a snack. A heavily planted tank with fine-leaved and floating plants offers fry cover and shows off the males' colors against a green backdrop. Feed small, frequent meals of quality flake, micro-pellets, and frozen baby brine shrimp.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Endler&apos;s Livebearer — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, sponge filters, heaters, live plants, and food sized for Endler&apos;s livebearer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -50,6 +61,7 @@ export default function EndlersLivebearerPage() {
             <a href="/go/chewy-brand/endlers%20livebearer%20nano%20tank%20setup?s=species-endlers-livebearer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

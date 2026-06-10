@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies.', path: '/species/ball-python', type: 'article' })
@@ -7,9 +7,20 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Ca
 export default function BallPythonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ball Python', href: '/species/ball-python' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
+        { title: 'Ball Python Morphs', href: '/species/ball-python-morphs', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
@@ -22,6 +33,7 @@ export default function BallPythonPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Corn Snake', href: '/species/corn-snake' }, { label: 'Boa Constrictor', href: '/species/boa-constrictor' }, { label: 'Dysecdysis Guide', href: '/health/dysecdysis' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-ball-python" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
@@ -46,6 +58,7 @@ export default function BallPythonPage() {
 
         <h2>Enclosure — Tub vs Tank vs PVC</h2>
         <p>Ball pythons do best in secure, humid, snug enclosures — not large open spaces. Counter-intuitively, a massive tank with lots of open space stresses ball pythons. They are ambush predators that feel secure in tight-fitting hides that touch their body on all sides. Three enclosure options: (1) Plastic tubs (the breeder standard — cheap, secure, hold humidity, easy to clean; aesthetically plain), (2) PVC enclosures (Reptile Sciences, Boamaster — expensive but retain humidity excellently and look good; recommended), (3) Glass tanks (poor humidity retention with screen tops; require partial screen covering). Minimum adult dimensions: 4×2 feet floor space. A 4×2×2 PVC with front-opening sliding doors is the widely regarded ideal adult ball python enclosure.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Ball Python — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for ball python care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

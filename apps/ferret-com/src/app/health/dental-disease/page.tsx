@@ -10,12 +10,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal and dental chapters covering periodontal disease and oral-cavity neoplasia.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Dental Disease in Ferrets: periodontal staging, tartar accumulation, and dental-procedure anesthesia considerations",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dentistry and oral-surgery continuing-education resources",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dental disease, periodontal grading, and anesthetic dental-cleaning outcomes",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -50,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/dental-disease' },
-    { name: 'Dental Disease', url: 'https://ferret.com/health/dental-disease' },
-  ],
-})
 
 const FAQS = [
   {
@@ -92,7 +109,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretDentalDiseasePage() {
   return (
@@ -107,7 +124,6 @@ export default function FerretDentalDiseasePage() {
             'Dental disease is the most under-treated condition in pet ferrets. Tartar builds fast on kibble diets, periodontal disease is often clinically meaningful by age 2-3, and the consequences compound silently for years. The leverage of early home dental care is large.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -139,6 +155,7 @@ export default function FerretDentalDiseasePage() {
                 { label: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -148,7 +165,14 @@ export default function FerretDentalDiseasePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Anesthesia & Surgery Risk', href: '/health/anesthesia-and-surgery-risk' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-dental"
@@ -485,38 +509,7 @@ export default function FerretDentalDiseasePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The ferret gastrointestinal and dental
-              chapters are the standard reference.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, clinical articles on
-              ferret dentistry, anesthesia, and oral disease.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple issues covering ferret clinical
-              medicine including dental disease and oral surgery.
-            </li>
-            <li>
-              American Veterinary Dental College (AVDC) — position statement
-              on anesthesia-free dentistry; companion-animal periodontal
-              staging framework.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and continuing-education content on ferret clinical
-              medicine.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing dental care
-              guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret dental
             disease. It is not individualized veterinary advice. Anesthesia,

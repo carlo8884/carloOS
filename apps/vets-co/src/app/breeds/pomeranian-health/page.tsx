@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
+  EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
 } from '@carloOS/ui'
@@ -10,7 +10,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,14 +48,6 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://vets.co/' },
-    { name: 'Breed Health', url: 'https://vets.co/breeds' },
-    { name: 'Pomeranian Health', url: PAGE_URL },
-  ],
-})
-
 const FAQS = [
   {
     question: 'At what age do Pomeranian health problems usually appear?',
@@ -91,7 +82,6 @@ const combinedSchema = combineSchemas(
   articleSchema,
   medicalSchema,
   faqSchema,
-  breadcrumbSchema,
 )
 
 export default function VetsPomeranianHealthPage() {
@@ -107,7 +97,7 @@ export default function VetsPomeranianHealthPage() {
             'A small dog with a long working life — but a tight, breed-specific cluster of orthopedic, airway, dermatologic and dental conditions that benefit from early screening and proactive management.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -135,6 +125,7 @@ export default function VetsPomeranianHealthPage() {
               subtitle="Practical guidance every Tuesday."
               source="breeds-pomeranian"
             />
+            <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
           </>
         }
       >
@@ -280,10 +271,10 @@ export default function VetsPomeranianHealthPage() {
             because of their small body size — do not wait until morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             Every Pomeranian benefits from a standardized screening package built around the breed’s
-            predispositions. At each well visit I recommend an orthopedic exam (patellar grade), cardiac
+            predispositions. At each well visit, the recommended workup is an orthopedic exam (patellar grade), cardiac
             auscultation, dental score, and body condition score. Eyes warrant an ACVO-listed ophthalmology
             examination at least once in the first year for breeding stock, and again at age 5–6 in pet dogs to
             screen for cataract.

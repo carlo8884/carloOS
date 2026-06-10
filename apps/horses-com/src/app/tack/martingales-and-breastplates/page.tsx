@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function MartingalesBreastplatesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bridle Types', href: '/tack/bridle-types' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+        ]}
         hero={{
           title: "Martingales and Breastplates",
           subtitle:
@@ -88,6 +94,7 @@ export default function MartingalesBreastplatesPage() {
               { label: "Saddle Fit Basics", href: "/guides/saddle-fit-basics" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function MartingalesBreastplatesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="martingales">Martingales</h2>
           <p>A martingale is a strap arrangement that runs from the girth, between the front legs, to the bit (via rings) or the noseband, limiting how high the horse can raise its head. Its legitimate purpose is to prevent a horse flinging its head dangerously high -- high enough to hit the rider or to evade the bit by getting its head above the angle of control. A martingale does not teach a horse to carry its head correctly; that is the job of training.</p>
 

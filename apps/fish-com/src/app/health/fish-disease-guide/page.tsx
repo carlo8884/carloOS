@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Overview of Fish Health — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-fish-health", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -102,10 +109,10 @@ const DISEASES = [
 ]
 
 const URGENCY_STYLES = {
-  'treat-immediately': { label: '🚨 Treat Immediately', bg: 'rgba(200,74,42,0.05)', border: 'rgba(200,74,42,0.18)', color: '#C84A2A' },
-  'treat-soon': { label: '⚠️ Treat Soon', bg: 'rgba(200,149,42,0.05)', border: 'rgba(200,149,42,0.15)', color: '#C8952A' },
-  'prognosis-poor': { label: '⚡ Poor Prognosis — Act Immediately', bg: 'rgba(200,74,42,0.07)', border: 'rgba(200,74,42,0.22)', color: '#C84A2A' },
-  'monitor': { label: '👁 Monitor Closely', bg: 'rgba(14,107,138,0.05)', border: 'rgba(14,107,138,0.15)', color: '#0E6B8A' },
+  'treat-immediately': { label: 'Treat Immediately', bg: 'rgba(200,74,42,0.05)', border: 'rgba(200,74,42,0.18)', color: '#C84A2A' },
+  'treat-soon': { label: 'Treat Soon', bg: 'rgba(200,149,42,0.05)', border: 'rgba(200,149,42,0.15)', color: '#C8952A' },
+  'prognosis-poor': { label: 'Poor Prognosis — Act Immediately', bg: 'rgba(200,74,42,0.07)', border: 'rgba(200,74,42,0.22)', color: '#C84A2A' },
+  'monitor': { label: 'Monitor Closely', bg: 'rgba(14,107,138,0.05)', border: 'rgba(14,107,138,0.15)', color: '#0E6B8A' },
 }
 
 export default function FishDiseaseGuidePage() {
@@ -117,8 +124,7 @@ export default function FishDiseaseGuidePage() {
         subtitle: 'Most fish disease is preventable — excellent water quality, proper quarantine, and stress reduction prevent the vast majority of common conditions. When disease does occur, early identification makes treatment faster and more effective.',
         category: 'Fish Health Guide',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
-        publishedAt: 'May 2025',
+          publishedAt: 'May 2025',
         readTime: '12 min',
       }}
       breadcrumbs={[
@@ -127,6 +133,7 @@ export default function FishDiseaseGuidePage() {
         { name: 'Disease Guide', href: '/health/fish-disease-guide' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }, { title: "Velvet Disease", href: "/health/velvet-disease", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-4">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The #1 Prevention</div>
@@ -135,7 +142,7 @@ export default function FishDiseaseGuidePage() {
         <TableOfContents items={DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` }))} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Nitrogen Cycle Guide', href: '/health/nitrogen-cycle-explained' },
-          { label: 'Water Chemistry', href: '/water' },
+          { label: 'Water Chemistry', href: '/water-parameters' },
           { label: 'Tank Setup Guide', href: '/setup' },
         ]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-disease-guide" />
@@ -198,6 +205,7 @@ export default function FishDiseaseGuidePage() {
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
           <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
@@ -10,6 +10,7 @@ export default function GreatDanePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Great Dane Breed Guide', subtitle: 'The largest dog breed — "Apollo of dogs." Great Danes are gentle giants with an unfortunately short lifespan of 7–10 years, driven primarily by their susceptibility to GDV/bloat and cardiac disease. Understanding these risks before acquiring a Great Dane changes how you manage their health from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Dane', href: '/breeds/great-dane' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Irish Wolfhound Guide', href: '/breeds/irish-wolfhound', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -22,11 +23,16 @@ export default function GreatDanePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Great Dane vs Mastiff', href: '/compare/great-dane-vs-mastiff' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-dane" />
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
           description="GDV is the leading cause of death in Great Danes after cancer. The deep, narrow chest creates the anatomical predisposition: the stomach can fill with gas and rotate on its long axis, trapping gas and cutting off blood supply. This is a true surgical emergency — a Great Dane with GDV has hours, not days. Prophylactic gastropexy (surgically tacking the stomach to the abdominal wall, preventing rotation) performed at the time of spay/neuter is the most impactful preventive measure available and is strongly recommended for Great Danes. It does not prevent bloating (gas accumulation) but prevents the rotation that makes GDV fatal."
           signs={['Unproductive retching — attempting to vomit without producing anything', 'Distended, drum-like abdomen', 'Restlessness followed by sudden lethargy', 'Excessive drooling', 'Pale gums and cardiovascular collapse in advanced disease']}
           management="Prophylactic gastropexy at spay/neuter — the most important preventive decision for Great Dane owners. If GDV occurs: immediate emergency surgery. Call ahead while driving. Know the location of the nearest 24-hour emergency vet before you need it." />

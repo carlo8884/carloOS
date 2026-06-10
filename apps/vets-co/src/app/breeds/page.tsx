@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -29,10 +29,27 @@ const BREEDS = [
   { name: 'Pomeranian', slug: 'pomeranian-health', desc: 'Tracheal collapse, alopecia X, patellar luxation.' },
 ]
 
+// ItemList of the breed health guides — structured, citable index of the
+// breed-health cluster for AI Overviews / Perplexity (GEO authority signal).
+const breedListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Breed-Specific Health Guides at Vets.co',
+  numberOfItems: BREEDS.length,
+  itemListElement: BREEDS.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://vets.co/breeds/${b.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, breedListSchema)
+
 export default function BreedsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">

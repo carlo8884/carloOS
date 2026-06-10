@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts.', path: '/breeds/australian-shepherd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -8,6 +8,7 @@ export default function AustralianShepherdPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Australian Shepherd Breed Guide', subtitle: 'Working herding dogs bred for intelligence, endurance, and problem-solving ability. In a family home with inadequate exercise and mental stimulation, these traits produce a dog that herds children, destroys furniture, and creates challenges. In an active home that channels the breed\'s capabilities appropriately, Aussies are extraordinary companions.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Australian Shepherd', href: '/breeds/australian-shepherd' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Border Collie Guide', href: '/breeds/border-collie', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
@@ -19,11 +20,18 @@ export default function AustralianShepherdPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Socialization Window', href: '/training/socialization-window' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Socialization Window', href: '/training/dog-socialization-window' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Siberian Husky vs Australian Shepherd', href: '/compare/siberian-husky-vs-australian-shepherd' },
+          { label: 'Border Collie vs Australian Shepherd', href: '/compare/border-collie-vs-australian-shepherd' },
+          { label: 'Australian Shepherd vs Australian Cattle Dog', href: '/compare/australian-shepherd-vs-australian-cattle-dog' },
+        ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-aussie" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <BreedHealthCard name="MDR1 Gene Mutation (Drug Sensitivity)" riskLevel="high"
           description="The MDR1 (ABCB1) gene mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in dogs without the mutation. The MDR1 protein (P-glycoprotein) normally pumps drugs out of the brain — dogs with two mutant copies of the gene lack this protective mechanism, allowing normal doses of certain drugs to accumulate to toxic levels in the brain. The classic example: ivermectin at the low doses used for routine heartworm prevention is safe in all dogs; at the higher doses used in some parasite treatments, MDR1-affected dogs suffer neurological toxicity and death. This affects dozens of drugs including loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs."
           signs={['Drug-specific: ataxia, blindness, seizures, coma after exposure to affected drugs', 'Signs appear within hours of drug administration']}

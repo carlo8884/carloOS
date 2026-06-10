@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gut-Loading Feeder Insects — How & Why | Lizard.com", description: "Gut-loading feeder insects before offering them transfers nutrition to your reptile. What to feed feeders, how long before use, and why it beats dusting alone.", path: "/health/gut-loading-guide", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gut-Loading Fe
 export default function HealthGutLoadingGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Gut-Loading Feeder Insects", subtitle: "Gut-loading is the practice of feeding nutritious food to feeder insects before offering them to your reptile, so the insect becomes a vehicle delivering that nutrition. A cricket fed garbage is mostly empty calories; a cricket gut-loaded for a day or two becomes a far better meal. Done alongside calcium dusting, gut-loading is one of the simplest, cheapest upgrades to a reptile’s diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
+      hero={{ title: "Gut-Loading Feeder Insects", subtitle: "Gut-loading is the practice of feeding nutritious food to feeder insects before offering them to your reptile, so the insect becomes a vehicle delivering that nutrition. A cricket fed garbage is mostly empty calories; a cricket gut-loaded for a day or two becomes a far better meal. Done alongside calcium dusting, gut-loading is one of the simplest, cheapest upgrades to a reptile’s diet.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Gut-Loading Guide", href: "/health/gut-loading-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Dubia Roach Care', href: '/health/dubia-roach-care', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>
@@ -23,9 +31,11 @@ export default function HealthGutLoadingGuidePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }, { label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }, { label: "Dubia Roach Care", href: "/health/dubia-roach-care" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-gut-loading-guide"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Feeder insects bought from a shop are often shipped and stored without proper food, arriving dehydrated and nutritionally hollow. An insect in that state passes little of value to the reptile eating it. Gut-loading fixes this: by feeding the insects a nutritious diet for a day or two before they become a meal, you fill their digestive tract and bodies with nutrients that transfer to your reptile. It is the difference between feeding your animal a vitamin-packed insect and feeding it an empty shell."}</p>
           <h2>{"Gut-Loading Versus Dusting"}</h2>
           <p>{"Gut-loading and supplement dusting are complementary, not interchangeable."}</p>

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Best Aquarium Filters 2025 — HOB, Canister | Fish.com',
+  title: 'Best Aquarium Filters 2026 — HOB, Canister | Fish.com',
   description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options.',
   path: '/reviews/best-aquarium-filters',
   type: 'article',
@@ -13,20 +13,20 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Best Aquarium Filters 2025',
-  description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
+  title: 'Best Aquarium Filters 2026',
+  description: 'HOB, canister, and sponge filters compared on published biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const PICKS = [
-  { label: 'Best HOB', emoji: '🏆', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear' },
-  { label: 'Best Canister', emoji: '⚙️', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
-  { label: 'Best Sponge', emoji: '🧽', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
-  { label: 'Best Budget HOB', emoji: '💰', name: 'Aqueon QuietFlow 30', subtitle: 'Under $35 · Widely available', href: '#aqueon' },
+  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear' },
+  { label: 'Best Canister', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
+  { label: 'Best Sponge', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
+  { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: 'Under $35 · Widely available', href: '#aqueon' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
@@ -36,12 +36,12 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 export default function BestAquariumFiltersPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Filters 2026', url: 'https://fish.com/reviews/best-aquarium-filters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Editor Pick · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editor Pick · June 2026</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Aquarium Filters 2025 — HOB, Canister & Sponge Ranked
+          Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
@@ -70,7 +70,6 @@ export default function BestAquariumFiltersPage() {
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
-              badgeEmoji="🏆"
               name="AquaClear 70 Power Filter"
               subtitle="Refillable media basket · Most biological capacity in HOB class · Quiet"
               score={9.4}
@@ -99,7 +98,6 @@ export default function BestAquariumFiltersPage() {
             <ReviewCard
               id="fluval"
               badge="Best Canister"
-              badgeEmoji="⚙️"
               name="Fluval 307 Canister Filter"
               subtitle="Near-silent · Excellent biological capacity · Self-priming"
               score={9.2}
@@ -124,7 +122,6 @@ export default function BestAquariumFiltersPage() {
             <ReviewCard
               id="sponge"
               badge="Best Sponge Filter"
-              badgeEmoji="🧽"
               name="Hikari Bacto-Surge Sponge Filter"
               subtitle="Nano tanks · Shrimp · Breeding setups · Safe for fry"
               score={9.0}
@@ -149,7 +146,6 @@ export default function BestAquariumFiltersPage() {
             <ReviewCard
               id="aqueon"
               badge="Best Budget HOB"
-              badgeEmoji="💰"
               name="Aqueon QuietFlow 30"
               subtitle="Under $35 · LED indicator light · Widely available"
               score={8.3}
@@ -161,7 +157,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
                 { label: 'Availability', value: 'Every pet store', highlight: 'good' },
               ]}
-              pros={['Lowest price of HOBs tested', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
+              pros={['Lowest price of the HOBs in this comparison', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
               ctaText="Shop Aqueon QuietFlow →"
@@ -191,7 +187,7 @@ export default function BestAquariumFiltersPage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Tank Setup Guide', href: '/setup' },
               { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' },
-              { label: 'Water Chemistry', href: '/water' },
+              { label: 'Water Chemistry', href: '/water-parameters' },
             ]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Equipment picks every Thursday." source="review-filters" />
           </aside>

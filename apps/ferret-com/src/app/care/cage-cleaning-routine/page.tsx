@@ -9,11 +9,12 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Cage Cleaning Routine', url: 'https://ferret.com/care/cage-cleaning-routine' },
-  ],
-})
 
 const FAQS = [
   {
@@ -81,7 +75,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — husbandry, environmental hygiene, and toxicology chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — articles on ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — cage-care and cleaning guidance for ferret owners",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretCageCleaningRoutinePage() {
   return (
@@ -95,7 +105,6 @@ export default function FerretCageCleaningRoutinePage() {
             "A clean cage is the single biggest lever on a ferret household's odor and on litter-training reliability — and it takes less effort with a routine than with sporadic blitzes. The trick is layering small daily tasks, a weekly reset, and a monthly deep clean, while leaving just enough familiar scent to keep litter habits intact.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -126,6 +135,7 @@ export default function FerretCageCleaningRoutinePage() {
                 { label: 'Litter Training', href: '/care/litter-training' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -135,7 +145,14 @@ export default function FerretCageCleaningRoutinePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -304,24 +321,7 @@ export default function FerretCageCleaningRoutinePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              husbandry, environmental hygiene, and toxicology chapters
-              relevant to ferret housing.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret husbandry and environmental
-              management.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing cage-care and
-              cleaning guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry guidance. Cleaning-product choices
             should always favor products labeled safe for small mammals, and any

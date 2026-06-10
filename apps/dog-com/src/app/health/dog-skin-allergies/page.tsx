@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Olivry T et al. Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals (ICADA). BMC Vet Res. 2015;11:210.', publisher: 'BMC Vet Research / ICADA' },
+  { label: 'AVMA: Atopic Dermatitis and Skin Allergies in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'American College of Veterinary Dermatology (ACVD): Atopic Dermatitis and Allergy Management', url: 'https://www.acvd.org', publisher: 'ACVD' },
+  { label: 'Gonzales AJ et al. Oclacitinib (APOQUEL) is a novel Janus kinase inhibitor with activity against cytokines involved in allergy. J Vet Pharmacol Ther. 2014;37(4):317-324.', publisher: 'JVPT' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Skin Allergies — Environmental, Food | Dog.com', description: 'Dog skin allergies: environmental (atopy), food allergy, and flea allergy dermatitis. How to distinguish them, the correct diagnostic approach.', path: '/health/dog-skin-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +28,7 @@ export default function DogSkinAllergiesPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Skin Allergies', subtitle: 'Allergic skin disease is the most common dermatological condition in dogs and one of the most common reasons for veterinary visits. Three types account for most cases: environmental allergy (atopy), food allergy, and flea allergy dermatitis. They overlap, coexist, and require different management approaches.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '12 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Skin Allergies', href: '/health/dog-skin-allergies' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Allergies', href: '/health/dog-allergies', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Dog Ear Infections', href: '/health/dog-ear-infections', category: 'Dog Health' }, { title: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet', category: 'Nutrition' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopy (Environmental)', href: '#atopy' }, { label: 'Food Allergy', href: '#food' }, { label: 'Flea Allergy', href: '#flea' }, { label: 'Apoquel & Cytopoint', href: '#medications' }, { label: 'Immunotherapy', href: '#immunotherapy' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -28,7 +37,8 @@ export default function DogSkinAllergiesPage() {
               <div key={b} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{b}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-skin-allergies" />
         </>}
       >
@@ -73,6 +83,8 @@ export default function DogSkinAllergiesPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

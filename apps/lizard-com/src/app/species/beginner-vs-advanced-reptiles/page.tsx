@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Beginner vs Advanced Reptiles — Difficulty Tiers | Lizard.com", description: "What makes a reptile beginner, intermediate, or advanced, the husbandry factors that raise difficulty, and why some popular reptiles are not for newcomers.", path: "/species/beginner-vs-advanced-reptiles", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Beginner vs Ad
 export default function SpeciesBeginnerVsAdvancedReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Beginner vs Advanced Reptiles", subtitle: "Reptile care difficulty is not arbitrary; it comes from specific, identifiable factors. Size, husbandry precision, temperament, diet complexity, and how forgiving a species is of mistakes all add up to a difficulty tier. Understanding these factors lets you judge any species honestly, and explains why some cheap, widely sold reptiles are emphatically not beginner animals.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Beginner vs Advanced Reptiles", subtitle: "Reptile care difficulty is not arbitrary; it comes from specific, identifiable factors. Size, husbandry precision, temperament, diet complexity, and how forgiving a species is of mistakes all add up to a difficulty tier. Understanding these factors lets you judge any species honestly, and explains why some cheap, widely sold reptiles are emphatically not beginner animals.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Beginner vs Advanced", href: "/species/beginner-vs-advanced-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Low-Maintenance Reptiles', href: '/species/low-maintenance-reptiles', category: 'Species' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Difficulty Drivers"}</div>
@@ -23,9 +31,12 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-beginner-vs-advanced-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="lizard-com:species-bearded-dragon" fallbackKey="lizard-com:category-species" aspect="16:9" variant="inline" caption="The bearded dragon — beginner-friendly in temperament, intermediate in setup." priority />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The labels beginner, intermediate, and advanced get applied loosely in the reptile hobby, but they map onto real, measurable husbandry factors. A species is harder to keep when it is large, needs precise environmental control, has a difficult temperament, eats a specialized diet, or punishes mistakes with rapid decline. Conversely, the easiest species are small, forgiving, calm, and simple to feed. Learning to read these factors lets you assess any reptile, including ones not covered by a care sheet, and avoid the classic trap of an inexpensive lizard that turns out to be an expert-level animal."}</p>
           <h2>{"The Factors That Raise Difficulty"}</h2>
           <ul>

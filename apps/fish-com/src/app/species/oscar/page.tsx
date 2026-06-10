@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Astronotus ocellatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/astronotus-ocellatus/", publisher: "Seriously Fish" },
+  { label: "Astronotus ocellatus — FishBase species record", url: "https://www.fishbase.se/summary/Astronotus-ocellatus.html", publisher: "FishBase" },
+  { label: "Loiselle, P.V. The Cichlid Aquarium. Tetra Press, 1985.", publisher: "Tetra Press" },
+  { label: "Novaes, J.L.C. et al. Age, growth and mortality of the oscar cichlid, Astronotus ocellatus, in the middle Solimoes River. Fisheries Research, 2004.", publisher: "Fisheries Research" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Oscar Fish Care Guide — Large Tank, Personality | Fish.com', description: 'Oscars are the most personable large cichlid. They recognize owners, beg for food, and rearrange their tank. 75+ gallons required, high protein diet.', path: '/species/oscar', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Oscar Fish Care Guide', description: 'Large tank requirements, personality, HITH disease, and feeding for Oscar cichlids.', url: 'https://fish.com/species/oscar', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function OscarPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Oscar Fish Care Guide', subtitle: 'Astronotus ocellatus — the most personable large cichlid in the hobby. Oscars recognize their owners, react to their approach, beg for food at feeding time, and rearrange decorations to suit their preferences. They can live 10–15 years and become genuinely interactive animals. The commitment: they require at minimum 75 gallons, produce enormous waste, and will eat anything smaller than themselves.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Oscar Fish Care Guide', subtitle: 'Astronotus ocellatus — the most personable large cichlid in the hobby. Oscars recognize their owners, react to their approach, beg for food at feeding time, and rearrange decorations to suit their preferences. They can live 10–15 years and become genuinely interactive animals. The commitment: they require at minimum 75 gallons, produce enormous waste, and will eat anything smaller than themselves.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Oscar', href: '/species/oscar' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "African Cichlid", href: "/species/african-cichlid", category: "Species Guide" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Best Canister Filters", href: "/reviews/best-canister-filters", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -19,10 +28,13 @@ export default function OscarPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'African Cichlid', href: '/species/african-cichlid' }, { label: 'Puffer Fish', href: '/species/puffer-fish' }, { label: 'Best Canister Filters', href: '/reviews/best-canister-filters' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-oscar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-oscar" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An oscar in a home aquarium." priority />
         <h2>Tank Size — The Most Common Mistake</h2>
         <p>Oscars are sold as juveniles (2–4 inches) in fish stores and grow to 12–18 inches within 12–18 months at the rate of approximately 1 inch per month in good conditions. A 30-gallon tank that seems spacious for a 3-inch juvenile is severely cramped for an 18-inch adult — and oscars do not stop growing until conditions limit them (stunted fish are unhealthy fish). Minimum tank for one oscar: 75 gallons. For two oscars: 125+ gallons. Two oscars in a 75-gallon tank will eventually result in one dead oscar when they reach territorial adult size.</p>
         <p>The waste production of a 15-inch oscar is significant — comparable to a heavily stocked community tank alone. Heavy filtration is required: canister filter rated for 3-4× tank volume, or multiple filters. Weekly 25-30% water changes are the baseline — Oscars in poor water quality develop HITH (see below) and their immune function declines. The tank maintenance commitment scales with the fish size.</p>
@@ -38,7 +50,8 @@ export default function OscarPage() {
 
         <h2>Personality and Interaction</h2>
         <p>Oscars develop genuine recognitions of their keepers. They come to the front of the tank when their owner approaches, ignore strangers, beg at feeding time with clear anticipation, and some learn to take food from fingers (be careful — oscar bites break skin). They also rearrange their tank — moving gravel, shifting decorations, uprooting any plants placed in the tank. This is not destructive behavior — it is territory management that is part of their normal behavioral repertoire. Oscar tanks should be decorated with items that can be moved without causing injury: large smooth rocks, driftwood, nothing sharp-edged or easily broken.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Oscar — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for oscar care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -47,6 +60,7 @@ export default function OscarPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

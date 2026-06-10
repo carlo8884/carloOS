@@ -223,6 +223,30 @@
     "alt": "Portrait of a ferret's face",
     "orientation": "landscape"
   },
+  "ferrets-com:home-masthead": {
+    "query": "two ferrets exploring together",
+    "provider": "either",
+    "alt": "Two ferrets exploring together",
+    "orientation": "landscape"
+  },
+  "ferrets-com:states-masthead": {
+    "query": "curious ferret looking up",
+    "provider": "either",
+    "alt": "A curious ferret looking up",
+    "orientation": "landscape"
+  },
+  "ferrets-com:care-masthead": {
+    "query": "ferret in cozy bedding",
+    "provider": "either",
+    "alt": "A ferret resting in cozy bedding",
+    "orientation": "landscape"
+  },
+  "ferrets-com:acquiring-masthead": {
+    "query": "young ferret being held",
+    "provider": "either",
+    "alt": "A young ferret being held by its owner",
+    "orientation": "landscape"
+  },
   "fish-com:hero": {
     "query": "planted freshwater aquarium",
     "provider": "either",
@@ -428,9 +452,9 @@
     "orientation": "landscape"
   },
   "vets-co:category-find-a-vet": {
-    "query": "veterinary clinic exterior",
+    "query": "small animal veterinary clinic",
     "provider": "either",
-    "alt": "The exterior of a small veterinary clinic",
+    "alt": "A small animal veterinary clinic",
     "orientation": "landscape"
   },
   "vets-co:category-pet-insurance": {
@@ -452,9 +476,9 @@
     "orientation": "landscape"
   },
   "vets-co:cornerstone-breed-health": {
-    "query": "stethoscope clinical desk close-up",
+    "query": "purebred dog portrait outdoor",
     "provider": "either",
-    "alt": "A stethoscope on a clinician's desk — texture-led, no human subject",
+    "alt": "A purebred dog in natural light -- breed health cornerstone hero",
     "orientation": "landscape"
   },
   "lizard-com:tool-uvb-calculator": {
@@ -731,6 +755,1758 @@
     "query": "horse hoof farrier",
     "provider": "either",
     "alt": "A horse hoof being cared for",
+    "orientation": "landscape"
+  },
+  "dog-com:symptoms-hero": {
+    "query": "dog resting looking tired",
+    "provider": "either",
+    "alt": "A tired-looking dog resting -- dog symptoms triage hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:conditions-hero": {
+    "query": "dog lying down resting calm",
+    "provider": "either",
+    "alt": "A calm dog lying down -- canine conditions reference hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:tools-hero": {
+    "query": "dog food bowl measuring cup",
+    "provider": "either",
+    "alt": "A dog food bowl beside a measuring cup -- dog care tools hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:compare-hero": {
+    "query": "dog food kibble bowl close up",
+    "provider": "either",
+    "alt": "A close-up of dog food kibble in a bowl -- dog food comparison hub hero",
+    "orientation": "landscape"
+  },
+  "petfood-com:feeding-hero": {
+    "query": "pet food bowl kitchen",
+    "provider": "either",
+    "alt": "A pet food bowl in a kitchen setting -- feeding guide hub hero",
+    "orientation": "landscape"
+  },
+  "petfood-com:supplements-hero": {
+    "query": "supplement capsules vitamins natural light",
+    "provider": "either",
+    "alt": "Supplement capsules and vitamins on a neutral surface -- pet supplements hub hero",
+    "orientation": "landscape"
+  },
+  "petfood-com:tools-hero": {
+    "query": "pet food bowl kitchen scale",
+    "provider": "either",
+    "alt": "A pet food bowl beside a kitchen scale -- cost-per-day calculation reference",
+    "orientation": "landscape"
+  },
+  "petfood-com:guides-hero": {
+    "query": "pet food nutrition label closeup",
+    "provider": "either",
+    "alt": "A close-up of a pet food nutrition label -- foundational guides hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:symptoms-hero": {
+    "query": "stethoscope desk close up",
+    "provider": "either",
+    "alt": "A stethoscope on a clean desk -- pet symptom triage hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:medications-hero": {
+    "query": "pet medication pills bottle",
+    "provider": "either",
+    "alt": "Pet medication pill bottle on a clean surface -- medications hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:diagnostics-hero": {
+    "query": "veterinary stethoscope tools",
+    "provider": "either",
+    "alt": "Veterinary stethoscope and tools on a clean surface -- diagnostics hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:specialists-hero": {
+    "query": "small animal veterinary clinic",
+    "provider": "either",
+    "alt": "A small animal veterinary clinic interior -- specialists hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:tools-hero": {
+    "query": "veterinary clipboard stethoscope desk",
+    "provider": "either",
+    "alt": "A clipboard and stethoscope on a clean desk -- veterinary tools hub",
+    "orientation": "landscape"
+  },
+  "petfood-com:myths-hero": {
+    "query": "food label ingredients close up",
+    "provider": "either",
+    "alt": "A food label with ingredients in focus -- myth-busting reference hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-retriever": {
+    "query": "golden retriever dog",
+    "provider": "either",
+    "alt": "A Golden Retriever dog",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-french-bulldog": {
+    "query": "french bulldog dog",
+    "provider": "either",
+    "alt": "A French Bulldog dog",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shepherd": {
+    "query": "german shepherd dog",
+    "provider": "either",
+    "alt": "A German Shepherd dog",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-beagle": {
+    "query": "beagle dog",
+    "provider": "either",
+    "alt": "A Beagle dog",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-poodle": {
+    "query": "poodle dog",
+    "provider": "either",
+    "alt": "A Poodle dog",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-betta": {
+    "query": "betta fish",
+    "provider": "either",
+    "alt": "A betta fish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-neon-tetra": {
+    "query": "neon tetra aquarium",
+    "provider": "either",
+    "alt": "Neon tetra fish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-clownfish": {
+    "query": "clownfish",
+    "provider": "either",
+    "alt": "A clownfish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-goldfish": {
+    "query": "goldfish",
+    "provider": "either",
+    "alt": "A goldfish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-angelfish": {
+    "query": "angelfish aquarium",
+    "provider": "either",
+    "alt": "An angelfish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-discus": {
+    "query": "discus fish",
+    "provider": "either",
+    "alt": "A discus fish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-guppy": {
+    "query": "guppy fish",
+    "provider": "either",
+    "alt": "A guppy fish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-oscar": {
+    "query": "oscar fish",
+    "provider": "either",
+    "alt": "An Oscar fish",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-corydoras": {
+    "query": "corydoras catfish",
+    "provider": "either",
+    "alt": "Corydoras catfish",
+    "orientation": "landscape"
+  },
+  "fish-com:tools-hero": {
+    "query": "aquarium water test kit",
+    "provider": "either",
+    "alt": "An aquarium water test kit -- fish care tools hub hero",
+    "orientation": "landscape"
+  },
+  "fish-com:water-parameters-hero": {
+    "query": "aquarium water testing tubes",
+    "provider": "either",
+    "alt": "Aquarium water testing tubes and reagents -- water parameters reference hero",
+    "orientation": "landscape"
+  },
+  "fish-com:glossary-hero": {
+    "query": "planted aquarium clear water",
+    "provider": "either",
+    "alt": "A clear planted aquarium -- aquarium terminology glossary hero",
+    "orientation": "landscape"
+  },
+  "ferret-com:tools-hero": {
+    "query": "ferret playing",
+    "provider": "either",
+    "alt": "A ferret food bowl -- ferret tools hub hero",
+    "orientation": "landscape"
+  },
+  "ferret-com:first-year-hero": {
+    "query": "young ferret kit",
+    "provider": "either",
+    "alt": "A young ferret kit -- first-year care guide hero",
+    "orientation": "landscape"
+  },
+  "ferret-com:find-vet-hero": {
+    "query": "small animal veterinary clinic",
+    "provider": "either",
+    "alt": "A small animal veterinary clinic -- find a vet guide hero",
+    "orientation": "landscape"
+  },
+  "ferret-com:glossary-hero": {
+    "query": "ferret portrait close up",
+    "provider": "either",
+    "alt": "A close portrait of a ferret -- ferret terminology glossary hero",
+    "orientation": "landscape"
+  },
+  "horses-com:breed-quarter-horse": {
+    "query": "horse rider schooling session all-purpose",
+    "provider": "either",
+    "alt": "A horse and rider working in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "horses-com:supplement-joint": {
+    "query": "horse jumping",
+    "provider": "either",
+    "alt": "A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for",
+    "orientation": "landscape"
+  },
+  "horses-com:guide-saddle-fit": {
+    "query": "dressage horse rider canter tack",
+    "provider": "either",
+    "alt": "A dressage horse and rider working in tack at the canter",
+    "orientation": "landscape"
+  },
+  "horses-com:featured-quarter-horse": {
+    "query": "horse rider schooling arena versatile",
+    "provider": "either",
+    "alt": "A horse and rider in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "horses-com:featured-joint-supplements": {
+    "query": "show jumping horse fence sport",
+    "provider": "either",
+    "alt": "A show jumper mid-flight over a fence",
+    "orientation": "landscape"
+  },
+  "lizard-com:hero-portrait": {
+    "query": "crested gecko portrait branch macro",
+    "provider": "either",
+    "alt": "A crested gecko on a branch in dark atmospheric light",
+    "orientation": "landscape"
+  },
+  "lizard-com:featured-leopard-gecko": {
+    "query": "leopard gecko profile naturalistic",
+    "provider": "either",
+    "alt": "A leopard gecko (Eublepharis macularius) in profile",
+    "orientation": "landscape"
+  },
+  "lizard-com:featured-bearded-dragon": {
+    "query": "bearded dragon basking",
+    "provider": "either",
+    "alt": "A bearded dragon (Pogona vitticeps) basking",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-corn-snake": {
+    "query": "corn snake macro",
+    "provider": "either",
+    "alt": "A corn snake (Pantherophis guttatus) in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-blue-tongue-skink": {
+    "query": "blue tongue skink macro",
+    "provider": "either",
+    "alt": "A blue-tongue skink (Tiliqua spp.) on a naturalistic surface",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-ball-python": {
+    "query": "ball python coiled macro",
+    "provider": "either",
+    "alt": "A ball python coiled in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-dressage": {
+    "query": "dressage horse rider tack canter",
+    "provider": "either",
+    "alt": "Dressage horse in tack at the canter",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-jumping": {
+    "query": "show jumping horse mid-flight fence",
+    "provider": "either",
+    "alt": "Show jumper mid-flight over a fence",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-allpurpose": {
+    "query": "horse rider schooling session all-purpose",
+    "provider": "either",
+    "alt": "Horse and rider in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-dressage": {
+    "query": "dressage horse tack arena",
+    "provider": "either",
+    "alt": "A dressage horse in tack",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-jumping": {
+    "query": "show jumping horse fence sport",
+    "provider": "either",
+    "alt": "A show jumping horse clearing a fence",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-eventing": {
+    "query": "eventing horse cross-country rider",
+    "provider": "either",
+    "alt": "An eventing horse and rider on cross-country",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-allpurpose": {
+    "query": "horse rider schooling flatwork",
+    "provider": "either",
+    "alt": "A horse and rider working in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "saddle-com:hero-dressage": {
+    "query": "dressage horse profile tack dark background",
+    "provider": "either",
+    "alt": "A dressage horse in profile at the canter",
+    "orientation": "landscape"
+  },
+  "horses-com:hero-section": {
+    "query": "dressage horse canter dark moody equestrian",
+    "provider": "either",
+    "alt": "A dressage horse at the canter in moody equestrian light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-gargoyle-gecko": {
+    "query": "gargoyle gecko macro",
+    "provider": "either",
+    "alt": "A gargoyle gecko (Rhacodactylus auriculatus) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-african-fat-tailed-gecko": {
+    "query": "fat tailed gecko portrait",
+    "provider": "either",
+    "alt": "An African fat-tailed gecko (Hemitheconyx caudicinctus) in profile",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-western-hognose": {
+    "query": "hognose snake macro portrait",
+    "provider": "either",
+    "alt": "A western hognose snake (Heterodon nasicus) in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-kenyan-sand-boa": {
+    "query": "kenyan sand boa snake macro",
+    "provider": "either",
+    "alt": "A Kenyan sand boa (Gongylophis colubrinus) coiled",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-green-anole": {
+    "query": "green anole macro",
+    "provider": "either",
+    "alt": "A green anole (Anolis carolinensis) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-chinese-water-dragon": {
+    "query": "chinese water dragon macro",
+    "provider": "either",
+    "alt": "A Chinese water dragon (Physignathus cocincinus) in naturalistic light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-fire-skink": {
+    "query": "fire skink macro",
+    "provider": "either",
+    "alt": "A fire skink (Lepidothyris fernandi) showing vivid coloration",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-leachianus-gecko": {
+    "query": "leachianus gecko portrait",
+    "provider": "either",
+    "alt": "A leachianus gecko (Rhacodactylus leachianus) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-mourning-gecko": {
+    "query": "mourning gecko macro portrait",
+    "provider": "either",
+    "alt": "A mourning gecko (Lepidodactylus lugubris) close-up",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-mossy-leaf-tail-gecko": {
+    "query": "leaf tail gecko camouflage macro",
+    "provider": "either",
+    "alt": "A mossy leaf-tail gecko (Uroplatus sikorae) in camouflage",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-argentine-tegu": {
+    "query": "argentine tegu macro portrait",
+    "provider": "either",
+    "alt": "An Argentine black-and-white tegu (Salvator merianae) close-up",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-savannah-monitor": {
+    "query": "savannah monitor portrait",
+    "provider": "either",
+    "alt": "A savannah monitor (Varanus exanthematicus) in natural light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-nile-monitor": {
+    "query": "nile monitor macro portrait",
+    "provider": "either",
+    "alt": "A Nile monitor (Varanus niloticus) in naturalistic setting",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-gi-blockage": {
+    "query": "domestic ferret",
+    "provider": "either",
+    "alt": "A curious ferret exploring its environment — GI blockage prevention begins with ferret-proofing",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-vaccinations": {
+    "query": "ferret resting",
+    "provider": "either",
+    "alt": "A calm domestic ferret — ferret vaccination schedule reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-emergency": {
+    "query": "ferret closeup",
+    "provider": "either",
+    "alt": "An alert ferret — learn to recognise emergency warning signs before they happen",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-training": {
+    "query": "ferret pet",
+    "provider": "either",
+    "alt": "A ferret being handled gently — ferret training and bonding guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-biting": {
+    "query": "ferret face",
+    "provider": "either",
+    "alt": "A close ferret portrait showing whiskers — ferret biting and nipping behaviour guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-raw-vs-kibble": {
+    "query": "ferret eating",
+    "provider": "either",
+    "alt": "Raw meat protein beside dry kibble — the ferret whole-prey versus kibble feeding decision",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-exercise": {
+    "query": "ferret running",
+    "provider": "either",
+    "alt": "A ferret actively playing — ferret exercise and enrichment guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-adrenal-feature": {
+    "query": "domestic ferret resting portrait close up",
+    "provider": "either",
+    "alt": "A ferret resting calmly — adrenal disease feature reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-dental-feature": {
+    "query": "ferret face close portrait macro",
+    "provider": "either",
+    "alt": "A close ferret face portrait suited to a dental health reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-exercise-feature": {
+    "query": "ferret playing tunnels enrichment",
+    "provider": "either",
+    "alt": "An active ferret playing with enrichment tunnels",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-grooming-feature": {
+    "query": "ferret being held gently hands",
+    "provider": "either",
+    "alt": "A ferret held gently — grooming and handling reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-bonding-feature": {
+    "query": "ferret curious exploring alert",
+    "provider": "either",
+    "alt": "An alert, curious ferret exploring its environment — bonding reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-dooking-feature": {
+    "query": "ferret playful happy active",
+    "provider": "either",
+    "alt": "A happy, active ferret mid-movement — vocalizations and dooking reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-kibble-feature": {
+    "query": "ferret eating food bowl close",
+    "provider": "either",
+    "alt": "A ferret eating from its food bowl — kibble diet reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-raw-feature": {
+    "query": "raw meat protein fresh dark surface",
+    "provider": "either",
+    "alt": "Raw meat protein on a dark surface — raw ferret diet reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-sable-feature": {
+    "query": "ferret dark brown coat portrait",
+    "provider": "either",
+    "alt": "A sable-coated ferret portrait showing warm brown guard hairs",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-albino-feature": {
+    "query": "white ferret pale coat portrait",
+    "provider": "either",
+    "alt": "A light-coated ferret portrait — albino ferret reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:ownership-cost-feature": {
+    "query": "ferret in hammock cage sleeping cozy",
+    "provider": "either",
+    "alt": "A ferret resting in a hammock inside its cage — cost of ownership reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:ownership-adoption-feature": {
+    "query": "ferret curious exploring home indoor",
+    "provider": "either",
+    "alt": "A ferret curiously exploring its home — adoption and new ownership reference",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-akita": {
+    "query": "Akita dog portrait",
+    "provider": "either",
+    "alt": "A Akita in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-shepherd": {
+    "query": "Australian Shepherd dog portrait",
+    "provider": "either",
+    "alt": "A Australian Shepherd in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bernese-mountain-dog": {
+    "query": "Bernese Mountain Dog dog portrait",
+    "provider": "either",
+    "alt": "A Bernese Mountain Dog in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-border-collie": {
+    "query": "Border Collie dog portrait",
+    "provider": "either",
+    "alt": "A Border Collie in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boxer": {
+    "query": "Boxer dog portrait",
+    "provider": "either",
+    "alt": "A Boxer in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bulldog": {
+    "query": "Bulldog dog portrait",
+    "provider": "either",
+    "alt": "A Bulldog in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bullmastiff": {
+    "query": "Bullmastiff dog portrait",
+    "provider": "either",
+    "alt": "A Bullmastiff in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavalier-king-charles": {
+    "query": "Cavalier King Charles Spaniel dog portrait",
+    "provider": "either",
+    "alt": "A Cavalier King Charles Spaniel in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cocker-spaniel": {
+    "query": "Cocker Spaniel dog portrait",
+    "provider": "either",
+    "alt": "A Cocker Spaniel in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-dachshund": {
+    "query": "Dachshund dog portrait",
+    "provider": "either",
+    "alt": "A Dachshund in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-doberman-pinscher": {
+    "query": "Doberman Pinscher dog portrait",
+    "provider": "either",
+    "alt": "A Doberman Pinscher in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-doodle": {
+    "query": "Goldendoodle dog portrait",
+    "provider": "either",
+    "alt": "A Goldendoodle in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-dane": {
+    "query": "Great Dane dog portrait",
+    "provider": "either",
+    "alt": "A Great Dane in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-pyrenees": {
+    "query": "Great Pyrenees dog portrait",
+    "provider": "either",
+    "alt": "A Great Pyrenees in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-setter": {
+    "query": "Irish Setter dog portrait",
+    "provider": "either",
+    "alt": "A Irish Setter in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-wolfhound": {
+    "query": "Irish Wolfhound dog portrait",
+    "provider": "either",
+    "alt": "A Irish Wolfhound in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rottweiler": {
+    "query": "Rottweiler dog portrait",
+    "provider": "either",
+    "alt": "A Rottweiler in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-saint-bernard": {
+    "query": "Saint Bernard dog portrait",
+    "provider": "either",
+    "alt": "A Saint Bernard in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shiba-inu": {
+    "query": "Shiba Inu dog portrait",
+    "provider": "either",
+    "alt": "A Shiba Inu in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shih-tzu": {
+    "query": "Shih Tzu dog portrait",
+    "provider": "either",
+    "alt": "A Shih Tzu in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-siberian-husky": {
+    "query": "Siberian Husky dog portrait",
+    "provider": "either",
+    "alt": "A Siberian Husky in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-vizsla": {
+    "query": "Vizsla dog portrait",
+    "provider": "either",
+    "alt": "A Vizsla in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-weimaraner": {
+    "query": "Weimaraner dog portrait",
+    "provider": "either",
+    "alt": "A Weimaraner in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-yorkshire-terrier": {
+    "query": "Yorkshire Terrier dog portrait",
+    "provider": "either",
+    "alt": "A Yorkshire Terrier in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shorthaired-pointer": {
+    "query": "German Shorthaired Pointer dog portrait",
+    "provider": "either",
+    "alt": "A German Shorthaired Pointer in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pembroke-welsh-corgi": {
+    "query": "Pembroke Welsh Corgi dog portrait",
+    "provider": "either",
+    "alt": "A Pembroke Welsh Corgi in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-miniature-schnauzer": {
+    "query": "Miniature Schnauzer dog portrait",
+    "provider": "either",
+    "alt": "A Miniature Schnauzer in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cane-corso": {
+    "query": "Cane Corso dog portrait",
+    "provider": "either",
+    "alt": "A Cane Corso in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boston-terrier": {
+    "query": "Boston Terrier dog portrait",
+    "provider": "either",
+    "alt": "A Boston Terrier in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pomeranian": {
+    "query": "Pomeranian dog portrait",
+    "provider": "either",
+    "alt": "A Pomeranian in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-havanese": {
+    "query": "Havanese dog portrait",
+    "provider": "either",
+    "alt": "A Havanese in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shetland-sheepdog": {
+    "query": "Shetland Sheepdog dog portrait",
+    "provider": "either",
+    "alt": "A Shetland Sheepdog in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-english-springer-spaniel": {
+    "query": "English Springer Spaniel dog portrait",
+    "provider": "either",
+    "alt": "A English Springer Spaniel in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-brittany": {
+    "query": "Brittany dog portrait",
+    "provider": "either",
+    "alt": "A Brittany in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-mastiff": {
+    "query": "Mastiff dog portrait",
+    "provider": "either",
+    "alt": "A Mastiff in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-chihuahua": {
+    "query": "Chihuahua dog portrait",
+    "provider": "either",
+    "alt": "A Chihuahua in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltese": {
+    "query": "Maltese dog portrait",
+    "provider": "either",
+    "alt": "A Maltese in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-belgian-malinois": {
+    "query": "Belgian Malinois dog portrait",
+    "provider": "either",
+    "alt": "A Belgian Malinois in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-collie": {
+    "query": "Collie dog portrait",
+    "provider": "either",
+    "alt": "A Collie in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-newfoundland": {
+    "query": "Newfoundland dog portrait",
+    "provider": "either",
+    "alt": "A Newfoundland in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rhodesian-ridgeback": {
+    "query": "Rhodesian Ridgeback dog portrait",
+    "provider": "either",
+    "alt": "A Rhodesian Ridgeback in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-west-highland-white-terrier": {
+    "query": "West Highland White Terrier dog portrait",
+    "provider": "either",
+    "alt": "A West Highland White Terrier in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bichon-frise": {
+    "query": "Bichon Frise dog portrait",
+    "provider": "either",
+    "alt": "A Bichon Frise in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-portuguese-water-dog": {
+    "query": "Portuguese Water Dog dog portrait",
+    "provider": "either",
+    "alt": "A Portuguese Water Dog in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-cattle-dog": {
+    "query": "Australian Cattle Dog dog portrait",
+    "provider": "either",
+    "alt": "A Australian Cattle Dog in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-basset-hound": {
+    "query": "Basset Hound dog portrait",
+    "provider": "either",
+    "alt": "A Basset Hound in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-papillon": {
+    "query": "Papillon dog portrait",
+    "provider": "either",
+    "alt": "A Papillon in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labradoodle": {
+    "query": "Labradoodle dog portrait",
+    "provider": "either",
+    "alt": "A Labradoodle in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cockapoo": {
+    "query": "Cockapoo dog portrait",
+    "provider": "either",
+    "alt": "A Cockapoo in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltipoo": {
+    "query": "Maltipoo dog portrait",
+    "provider": "either",
+    "alt": "A Maltipoo in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavachon": {
+    "query": "Cavachon dog portrait",
+    "provider": "either",
+    "alt": "A Cavachon in natural light",
+    "orientation": "landscape"
+  },
+  "fish-com:species-african-cichlid": {
+    "query": "African cichlid aquarium fish",
+    "provider": "either",
+    "alt": "A African Cichlid in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-amano-shrimp": {
+    "query": "Amano shrimp aquarium",
+    "provider": "either",
+    "alt": "A Amano Shrimp in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-angelfish": {
+    "query": "freshwater angelfish aquarium",
+    "provider": "either",
+    "alt": "A Angelfish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-axolotl": {
+    "query": "axolotl aquarium",
+    "provider": "either",
+    "alt": "A Axolotl in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-betta-fish-tank-mates": {
+    "query": "planted community aquarium fish",
+    "provider": "either",
+    "alt": "A Betta Community Tank in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-blue-ram": {
+    "query": "German blue ram cichlid aquarium",
+    "provider": "either",
+    "alt": "A German Blue Ram in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-boesemani-rainbowfish": {
+    "query": "Boesemani rainbowfish aquarium",
+    "provider": "either",
+    "alt": "A Boesemani Rainbowfish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-bristlenose-pleco": {
+    "query": "bristlenose pleco aquarium",
+    "provider": "either",
+    "alt": "A Bristlenose Pleco in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-bronze-corydoras": {
+    "query": "bronze corydoras catfish aquarium",
+    "provider": "either",
+    "alt": "A Bronze Corydoras in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-cardinal-tetra": {
+    "query": "cardinal tetra aquarium school",
+    "provider": "either",
+    "alt": "A Cardinal Tetra in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-celestial-pearl-danio": {
+    "query": "celestial pearl danio aquarium nano fish",
+    "provider": "either",
+    "alt": "A Celestial Pearl Danio in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-cherry-barb": {
+    "query": "cherry barb aquarium fish",
+    "provider": "either",
+    "alt": "A Cherry Barb in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-cherry-shrimp": {
+    "query": "red cherry shrimp aquarium",
+    "provider": "either",
+    "alt": "A Cherry Shrimp in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-clownfish": {
+    "query": "clownfish anemone reef saltwater aquarium",
+    "provider": "either",
+    "alt": "A Clownfish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-corydoras": {
+    "query": "corydoras catfish aquarium",
+    "provider": "either",
+    "alt": "A Corydoras in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-discus": {
+    "query": "discus fish aquarium",
+    "provider": "either",
+    "alt": "A Discus in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-dwarf-gourami": {
+    "query": "dwarf gourami aquarium fish",
+    "provider": "either",
+    "alt": "A Dwarf Gourami in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-dwarf-puffer": {
+    "query": "dwarf pea puffer aquarium",
+    "provider": "either",
+    "alt": "A Dwarf Puffer in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-ember-tetra": {
+    "query": "ember tetra aquarium nano fish",
+    "provider": "either",
+    "alt": "A Ember Tetra in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-endlers-livebearer": {
+    "query": "Endlers livebearer aquarium fish",
+    "provider": "either",
+    "alt": "A Endler's Livebearer in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-guppy": {
+    "query": "guppy aquarium fish",
+    "provider": "either",
+    "alt": "A Guppy in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-harlequin-rasbora": {
+    "query": "harlequin rasbora aquarium school",
+    "provider": "either",
+    "alt": "A Harlequin Rasbora in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-hillstream-loach": {
+    "query": "hillstream loach aquarium",
+    "provider": "either",
+    "alt": "A Hillstream Loach in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-koi": {
+    "query": "koi carp pond fish",
+    "provider": "either",
+    "alt": "A Koi in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-kuhli-loach": {
+    "query": "kuhli loach aquarium",
+    "provider": "either",
+    "alt": "A Kuhli Loach in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-molly-fish": {
+    "query": "molly fish aquarium",
+    "provider": "either",
+    "alt": "A Molly Fish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-mystery-snail": {
+    "query": "mystery snail aquarium",
+    "provider": "either",
+    "alt": "A Mystery Snail in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-oscar": {
+    "query": "oscar fish aquarium cichlid",
+    "provider": "either",
+    "alt": "A Oscar in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-otocinclus": {
+    "query": "otocinclus catfish aquarium algae eater",
+    "provider": "either",
+    "alt": "A Otocinclus in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-panda-corydoras": {
+    "query": "panda corydoras catfish aquarium",
+    "provider": "either",
+    "alt": "A Panda Corydoras in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-pearl-gourami": {
+    "query": "pearl gourami aquarium fish",
+    "provider": "either",
+    "alt": "A Pearl Gourami in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-platy-fish": {
+    "query": "platy fish aquarium",
+    "provider": "either",
+    "alt": "A Platy Fish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-pleco": {
+    "query": "plecostomus catfish aquarium",
+    "provider": "either",
+    "alt": "A Pleco in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-puffer-fish": {
+    "query": "freshwater puffer fish aquarium",
+    "provider": "either",
+    "alt": "A Puffer Fish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-rainbow-fish": {
+    "query": "rainbowfish aquarium",
+    "provider": "either",
+    "alt": "A Rainbowfish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-sparkling-gourami": {
+    "query": "sparkling gourami aquarium nano fish",
+    "provider": "either",
+    "alt": "A Sparkling Gourami in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-swordtail-fish": {
+    "query": "swordtail fish aquarium",
+    "provider": "either",
+    "alt": "A Swordtail Fish in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-white-cloud-mountain-minnow": {
+    "query": "white cloud mountain minnow aquarium",
+    "provider": "either",
+    "alt": "A White Cloud Mountain Minnow in an aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-zebra-danio": {
+    "query": "zebra danio aquarium school",
+    "provider": "either",
+    "alt": "A Zebra Danio in an aquarium",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-blue-buffalo": {
+    "query": "premium dog food kibble bowl close up",
+    "provider": "either",
+    "alt": "A bowl of premium dry kibble photographed in natural light",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-hills-vs-royal-canin": {
+    "query": "two bowls dry pet food comparison",
+    "provider": "either",
+    "alt": "Two bowls of dry pet food side by side for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-orijen-vs-acana": {
+    "query": "high protein kibble bowl raw ingredients",
+    "provider": "either",
+    "alt": "A bowl of high-protein kibble beside raw ingredient sources",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-kirkland-signature": {
+    "query": "value dog food kibble scoop bag",
+    "provider": "either",
+    "alt": "Dry kibble with a scoop beside an unbranded food bag",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-purina-pro-plan": {
+    "query": "dry pet food bowl measuring cup",
+    "provider": "either",
+    "alt": "A bowl of dry pet food beside a measuring cup",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-taste-of-the-wild": {
+    "query": "grain free kibble bowl roasted meat",
+    "provider": "either",
+    "alt": "A bowl of kibble alongside roasted-meat ingredient sources",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-wellness-vs-merrick": {
+    "query": "natural pet food bowls comparison",
+    "provider": "either",
+    "alt": "Two bowls of natural pet food arranged for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-breed-specific-diets": {
+    "query": "different kibble shapes sizes bowls",
+    "provider": "either",
+    "alt": "Bowls of differently shaped kibble illustrating breed-specific formulas",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-freeze-dried-and-dehydrated": {
+    "query": "freeze dried pet food raw meat pieces",
+    "provider": "either",
+    "alt": "Pieces of freeze-dried and dehydrated pet food on a neutral surface",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-fresh-vs-kibble": {
+    "query": "fresh meat vegetables beside dry kibble",
+    "provider": "either",
+    "alt": "Fresh meat and vegetables beside a bowl of dry kibble",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-grain-free-vs-grain-inclusive": {
+    "query": "grains legumes beside kibble bowl",
+    "provider": "either",
+    "alt": "Grains and legumes beside a bowl of kibble for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-home-cooked-vs-commercial": {
+    "query": "home cooked pet meal beside kibble bowl",
+    "provider": "either",
+    "alt": "A home-cooked pet meal beside a bowl of commercial kibble",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-kibble-vs-canned-for-cats": {
+    "query": "dry kibble beside wet canned cat food",
+    "provider": "either",
+    "alt": "Dry kibble beside wet canned food in cat bowls",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-prescription-vs-otc-diets": {
+    "query": "veterinary diet pet food bowls clinical",
+    "provider": "either",
+    "alt": "Bowls of pet food in clinical light illustrating diet comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-raw-vs-cooked-diets": {
+    "query": "raw meat beside cooked meat pet food",
+    "provider": "either",
+    "alt": "Raw meat beside cooked meat illustrating a raw-versus-cooked comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-wet-vs-dry-food": {
+    "query": "wet canned food beside dry kibble bowls",
+    "provider": "either",
+    "alt": "Wet canned food beside dry kibble in two bowls for comparison",
+    "orientation": "landscape"
+  },
+  "saddle-com:guide-leather-care": {
+    "query": "leather saddle care conditioning",
+    "provider": "either",
+    "alt": "Leather conditioner being applied to a saddle — leather care guide reference",
+    "orientation": "landscape"
+  },
+  "saddle-com:guide-stirrup-iron": {
+    "query": "stirrup iron leather close up",
+    "provider": "either",
+    "alt": "A close-up of a stirrup iron and leather — stirrup guide reference",
+    "orientation": "landscape"
+  },
+  "saddle-com:guide-western-saddle": {
+    "query": "western saddle on fence",
+    "provider": "either",
+    "alt": "A Western saddle resting on a fence rail — Western saddle guide reference",
+    "orientation": "landscape"
+  },
+  "horses-com:racing": {
+    "query": "thoroughbred racehorse galloping track",
+    "provider": "either",
+    "alt": "A thoroughbred racehorse galloping on the track — horse racing reference",
+    "orientation": "landscape"
+  },
+  "horses-com:care-grooming": {
+    "query": "grooming a horse brush",
+    "provider": "either",
+    "alt": "A horse being groomed with a body brush — grooming care reference",
+    "orientation": "landscape"
+  },
+  "horses-com:tack-halters": {
+    "query": "horse halter and lead rope",
+    "provider": "either",
+    "alt": "A horse wearing a halter with a lead rope — halters tack reference",
+    "orientation": "landscape"
+  },
+  "horses-com:tack-bits": {
+    "query": "horse bridle bit close up",
+    "provider": "either",
+    "alt": "A close-up of a snaffle bit on a bridle — bits tack reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-hero": {
+    "query": "thoroughbred mare and foal paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred mare and foal in a breeding paddock — bloodstock and breeding reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-business": {
+    "query": "thoroughbred horses stud farm",
+    "provider": "either",
+    "alt": "Thoroughbred horses at a stud farm — bloodstock business reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-sales": {
+    "query": "thoroughbred yearling led at sales paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred yearling being led at a sales paddock — Thoroughbred sales reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-pedigree": {
+    "query": "thoroughbred broodmare with foal pasture",
+    "provider": "either",
+    "alt": "A Thoroughbred broodmare with her foal in a pasture — pedigree and breeding reference",
+    "orientation": "landscape"
+  },
+  "horses-com:first-derby-hero": {
+    "query": "crowd at a horse racing grandstand on a sunny race day",
+    "provider": "either",
+    "alt": "A lively crowd watching from the grandstand on a sunny race day — first day at the races spectator guide",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-maiden": {
+    "query": "young thoroughbreds breaking from the starting gate",
+    "provider": "either",
+    "alt": "Young Thoroughbreds breaking from the starting gate — maiden races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-claiming": {
+    "query": "thoroughbreds in the paddock before a race",
+    "provider": "either",
+    "alt": "Thoroughbreds in the paddock before an everyday race — claiming races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-allowance": {
+    "query": "thoroughbreds racing at a daytime meeting",
+    "provider": "either",
+    "alt": "Thoroughbreds racing at a mid-level daytime meeting — allowance races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-optional-claiming": {
+    "query": "thoroughbreds walking onto a racetrack",
+    "provider": "either",
+    "alt": "Thoroughbreds walking onto the racetrack for a mixed-conditions race — optional claiming races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-stakes": {
+    "query": "thoroughbreds racing at a major stakes meeting",
+    "provider": "either",
+    "alt": "Thoroughbreds contesting a major stakes race — stakes races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-graded-stakes": {
+    "query": "thoroughbred field racing toward the finish line",
+    "provider": "either",
+    "alt": "A field racing toward the finish at a championship meeting — graded stakes reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-handicap": {
+    "query": "thoroughbred racehorses competing on a turf course",
+    "provider": "either",
+    "alt": "Thoroughbreds competing carrying assigned weights — handicap races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:triple-crown-derby": {
+    "query": "thoroughbred field rounding the turn at a packed grandstand racecourse",
+    "provider": "either",
+    "alt": "A full field of Thoroughbreds racing past a packed grandstand on a spring race day — Kentucky Derby reference",
+    "orientation": "landscape"
+  },
+  "horses-com:triple-crown-preakness": {
+    "query": "thoroughbreds racing down the homestretch at a historic racetrack",
+    "provider": "either",
+    "alt": "Thoroughbreds driving down the homestretch at a historic dirt racecourse — Preakness Stakes reference",
+    "orientation": "landscape"
+  },
+  "horses-com:triple-crown-belmont": {
+    "query": "lone thoroughbred galloping clear on a wide dirt racetrack",
+    "provider": "either",
+    "alt": "A Thoroughbred galloping clear over a long dirt course — Belmont Stakes reference",
+    "orientation": "landscape"
+  },
+  "horses-com:role-jockey": {
+    "query": "jockey riding a thoroughbred at speed during a race",
+    "provider": "either",
+    "alt": "A jockey riding a Thoroughbred at speed during a race — the jockey role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-trainer": {
+    "query": "horse trainer with a thoroughbred at the stable on a morning at the track",
+    "provider": "either",
+    "alt": "A trainer with a Thoroughbred at the stable on a morning at the track — the trainer role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-owner": {
+    "query": "racegoers watching from the owners enclosure at a racecourse",
+    "provider": "either",
+    "alt": "Owners watching their horse from the enclosure on a race day — the owner role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-official": {
+    "query": "photo finish camera and finish line at a horse racing track",
+    "provider": "either",
+    "alt": "The photo-finish line at a racecourse — the racing officials and stewards role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:history-hero": {
+    "query": "thoroughbred field at a historic american racecourse grandstand",
+    "provider": "either",
+    "alt": "A Thoroughbred field at a historic American racecourse — racing history heritage reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-origins": {
+    "query": "thoroughbred horse at liberty in an open english paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred at liberty in an open paddock — origins of Thoroughbred racing reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-triple-crown": {
+    "query": "thoroughbred field rounding the turn at a classic american racecourse",
+    "provider": "either",
+    "alt": "A Thoroughbred field rounding the turn at a historic racecourse — Triple Crown history reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-secretariat": {
+    "query": "powerful chestnut thoroughbred racehorse at full stride",
+    "provider": "either",
+    "alt": "A powerful chestnut Thoroughbred at full stride — heritage profile of a champion racehorse",
+    "orientation": "landscape"
+  },
+  "horses-com:history-man-o-war": {
+    "query": "muscular chestnut thoroughbred standing portrait",
+    "provider": "either",
+    "alt": "A muscular chestnut Thoroughbred standing in profile — early-century champion heritage profile",
+    "orientation": "landscape"
+  },
+  "horses-com:history-great-mares": {
+    "query": "thoroughbred mare and foal in a green pasture",
+    "provider": "either",
+    "alt": "A Thoroughbred mare with her foal in a pasture — the great mares of racing history reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-milestones": {
+    "query": "historic american racecourse grandstand architecture",
+    "provider": "either",
+    "alt": "A historic American grandstand and racecourse — milestones in American racing reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-setup": {
+    "query": "planted aquarium setup",
+    "provider": "either",
+    "alt": "A planted freshwater aquarium setup — aquarium setup category reference",
+    "orientation": "landscape"
+  },
+  "fish-com:species-goldfish": {
+    "query": "goldfish in aquarium",
+    "provider": "either",
+    "alt": "A goldfish swimming in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-neon-tetra": {
+    "query": "neon tetra fish aquarium",
+    "provider": "either",
+    "alt": "Neon tetras in a planted freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-health": {
+    "query": "reptile veterinary care",
+    "provider": "either",
+    "alt": "A reptile during a veterinary health check — reptile health category reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-setup": {
+    "query": "reptile terrarium setup",
+    "provider": "either",
+    "alt": "A naturalistic reptile terrarium setup — enclosure setup category reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-species": {
+    "query": "colorful reptile lizard",
+    "provider": "either",
+    "alt": "A colorful reptile in naturalistic light — reptile species category reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-reviews": {
+    "query": "aquarium equipment gear",
+    "provider": "either",
+    "alt": "Aquarium equipment and gear — fish keeping reviews hub reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-species": {
+    "query": "colorful freshwater aquarium fish",
+    "provider": "either",
+    "alt": "Colorful freshwater aquarium fish — species profiles hub reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-health": {
+    "query": "aquarium water test kit",
+    "provider": "either",
+    "alt": "An aquarium water test kit — fish health and disease hub reference",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-akita-2": {
+    "query": "Akita dog outdoors",
+    "provider": "either",
+    "alt": "A Akita outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-cattle-dog-2": {
+    "query": "Australian Cattle Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Australian Cattle Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-shepherd-2": {
+    "query": "Australian Shepherd dog outdoors",
+    "provider": "either",
+    "alt": "A Australian Shepherd outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-basset-hound-2": {
+    "query": "Basset Hound dog outdoors",
+    "provider": "either",
+    "alt": "A Basset Hound outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-beagle-2": {
+    "query": "Beagle dog outdoors",
+    "provider": "either",
+    "alt": "A Beagle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-belgian-malinois-2": {
+    "query": "Belgian Malinois dog outdoors",
+    "provider": "either",
+    "alt": "A Belgian Malinois outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bernese-mountain-dog-2": {
+    "query": "Bernese Mountain Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Bernese Mountain Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bichon-frise-2": {
+    "query": "Bichon Frise dog outdoors",
+    "provider": "either",
+    "alt": "A Bichon Frise outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-border-collie-2": {
+    "query": "Border Collie dog outdoors",
+    "provider": "either",
+    "alt": "A Border Collie outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boston-terrier-2": {
+    "query": "Boston Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A Boston Terrier outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boxer-2": {
+    "query": "Boxer dog outdoors",
+    "provider": "either",
+    "alt": "A Boxer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-brittany-2": {
+    "query": "Brittany dog outdoors",
+    "provider": "either",
+    "alt": "A Brittany outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bulldog-2": {
+    "query": "Bulldog dog outdoors",
+    "provider": "either",
+    "alt": "A Bulldog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bullmastiff-2": {
+    "query": "Bullmastiff dog outdoors",
+    "provider": "either",
+    "alt": "A Bullmastiff outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cane-corso-2": {
+    "query": "Cane Corso dog outdoors",
+    "provider": "either",
+    "alt": "A Cane Corso outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavachon-2": {
+    "query": "Cavachon dog outdoors",
+    "provider": "either",
+    "alt": "A Cavachon outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavalier-king-charles-2": {
+    "query": "Cavalier King Charles Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A Cavalier King Charles Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-chihuahua-2": {
+    "query": "Chihuahua dog outdoors",
+    "provider": "either",
+    "alt": "A Chihuahua outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cockapoo-2": {
+    "query": "Cockapoo dog outdoors",
+    "provider": "either",
+    "alt": "A Cockapoo outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cocker-spaniel-2": {
+    "query": "Cocker Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A Cocker Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-collie-2": {
+    "query": "Collie dog outdoors",
+    "provider": "either",
+    "alt": "A Collie outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-dachshund-2": {
+    "query": "Dachshund dog outdoors",
+    "provider": "either",
+    "alt": "A Dachshund outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-doberman-pinscher-2": {
+    "query": "Doberman Pinscher dog outdoors",
+    "provider": "either",
+    "alt": "A Doberman Pinscher outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-english-springer-spaniel-2": {
+    "query": "English Springer Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A English Springer Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-french-bulldog-2": {
+    "query": "French Bulldog dog outdoors",
+    "provider": "either",
+    "alt": "A French Bulldog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shepherd-2": {
+    "query": "German Shepherd dog outdoors",
+    "provider": "either",
+    "alt": "A German Shepherd outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shorthaired-pointer-2": {
+    "query": "German Shorthaired Pointer dog outdoors",
+    "provider": "either",
+    "alt": "A German Shorthaired Pointer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-doodle-2": {
+    "query": "Goldendoodle dog outdoors",
+    "provider": "either",
+    "alt": "A Goldendoodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-retriever-2": {
+    "query": "Golden Retriever dog outdoors",
+    "provider": "either",
+    "alt": "A Golden Retriever outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-dane-2": {
+    "query": "Great Dane dog outdoors",
+    "provider": "either",
+    "alt": "A Great Dane outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-pyrenees-2": {
+    "query": "Great Pyrenees dog outdoors",
+    "provider": "either",
+    "alt": "A Great Pyrenees outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-havanese-2": {
+    "query": "Havanese dog outdoors",
+    "provider": "either",
+    "alt": "A Havanese outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-setter-2": {
+    "query": "Irish Setter dog outdoors",
+    "provider": "either",
+    "alt": "A Irish Setter outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-wolfhound-2": {
+    "query": "Irish Wolfhound dog outdoors",
+    "provider": "either",
+    "alt": "A Irish Wolfhound outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labradoodle-2": {
+    "query": "Labradoodle dog outdoors",
+    "provider": "either",
+    "alt": "A Labradoodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labrador-retriever-2": {
+    "query": "Labrador Retriever dog outdoors",
+    "provider": "either",
+    "alt": "A Labrador Retriever outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltese-2": {
+    "query": "Maltese dog outdoors",
+    "provider": "either",
+    "alt": "A Maltese outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltipoo-2": {
+    "query": "Maltipoo dog outdoors",
+    "provider": "either",
+    "alt": "A Maltipoo outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-mastiff-2": {
+    "query": "Mastiff dog outdoors",
+    "provider": "either",
+    "alt": "A Mastiff outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-miniature-schnauzer-2": {
+    "query": "Miniature Schnauzer dog outdoors",
+    "provider": "either",
+    "alt": "A Miniature Schnauzer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-newfoundland-2": {
+    "query": "Newfoundland dog outdoors",
+    "provider": "either",
+    "alt": "A Newfoundland outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-papillon-2": {
+    "query": "Papillon dog outdoors",
+    "provider": "either",
+    "alt": "A Papillon outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pembroke-welsh-corgi-2": {
+    "query": "Pembroke Welsh Corgi dog outdoors",
+    "provider": "either",
+    "alt": "A Pembroke Welsh Corgi outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pomeranian-2": {
+    "query": "Pomeranian dog outdoors",
+    "provider": "either",
+    "alt": "A Pomeranian outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-poodle-2": {
+    "query": "Poodle dog outdoors",
+    "provider": "either",
+    "alt": "A Poodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-portuguese-water-dog-2": {
+    "query": "Portuguese Water Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Portuguese Water Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rhodesian-ridgeback-2": {
+    "query": "Rhodesian Ridgeback dog outdoors",
+    "provider": "either",
+    "alt": "A Rhodesian Ridgeback outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rottweiler-2": {
+    "query": "Rottweiler dog outdoors",
+    "provider": "either",
+    "alt": "A Rottweiler outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-saint-bernard-2": {
+    "query": "Saint Bernard dog outdoors",
+    "provider": "either",
+    "alt": "A Saint Bernard outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shetland-sheepdog-2": {
+    "query": "Shetland Sheepdog dog outdoors",
+    "provider": "either",
+    "alt": "A Shetland Sheepdog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shiba-inu-2": {
+    "query": "Shiba Inu dog outdoors",
+    "provider": "either",
+    "alt": "A Shiba Inu outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shih-tzu-2": {
+    "query": "Shih Tzu dog outdoors",
+    "provider": "either",
+    "alt": "A Shih Tzu outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-siberian-husky-2": {
+    "query": "Siberian Husky dog outdoors",
+    "provider": "either",
+    "alt": "A Siberian Husky outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-vizsla-2": {
+    "query": "Vizsla dog outdoors",
+    "provider": "either",
+    "alt": "A Vizsla outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-weimaraner-2": {
+    "query": "Weimaraner dog outdoors",
+    "provider": "either",
+    "alt": "A Weimaraner outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-west-highland-white-terrier-2": {
+    "query": "West Highland White Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A West Highland White Terrier outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-yorkshire-terrier-2": {
+    "query": "Yorkshire Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A Yorkshire Terrier outdoors in natural light — temperament and training",
     "orientation": "landscape"
   }
 }

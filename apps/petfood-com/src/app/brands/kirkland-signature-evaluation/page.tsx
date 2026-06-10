@@ -8,6 +8,9 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -31,6 +34,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
+
 export default function KirklandSignatureEvaluationPage() {
   return (
     <ArticleLayout
@@ -46,8 +72,14 @@ export default function KirklandSignatureEvaluationPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: 'Kirkland Signature — An Independent Evaluation', href: '/brands/kirkland-signature-evaluation' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
+        { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+        { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +115,8 @@ export default function KirklandSignatureEvaluationPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-kirkland-signature" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Kirkland Signature — Costco's store brand evaluated on value, the who-makes-it question, and recall exposure." />
         <p>Kirkland Signature is Costco&apos;s private-label brand, including a well-regarded pet food line evaluated here on the PetFood.com five-dimension rubric. Its standout feature is value — premium-positioned formulation at a notably lower price per pound than name-brand competitors. The store-brand model also raises the central question of who manufactures it and how much the supply chain is disclosed. The evaluation is independent and never influenced by any commercial relationship. See <a href="/tools/food-cost-calculator">Food Cost Calculator</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="value">The Value Proposition</h2>
         <p>Kirkland Signature pet food is consistently priced below comparable premium name brands while offering named-meat-forward formulas, which makes it one of the strongest value options for cost-conscious owners who still want a premium-positioned diet. For large dogs especially, where food cost is significant, the per-calorie savings are meaningful. Value, however, is only one dimension — it must be weighed against transparency and substantiation. See the <a href="/tools/food-cost-calculator">Food Cost Calculator</a>.</p>
@@ -126,13 +160,7 @@ export default function KirklandSignatureEvaluationPage() {
           ctaAffiliateProduct="Kirkland%20Signature%20pet%20food"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Dietary Fat and Fatty Acids in Pet Food | PetFood.com',
   description:
@@ -28,6 +33,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-30T00:00:00Z',
   modifiedAt: '2026-05-30T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Dietary Fat and Fatty Acids in Pet Food | PetFood.com',
+  description:
+    'The role of fat in pet diets, essential fatty acids (linoleic, alpha-linolenic, arachidonic, EPA, DHA), the omega-6 to omega-3 ratio, and AAFCO fat minima.',
+  url: 'https://petfood.com/nutrition/dietary-fat-and-fatty-acids',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-05-30',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function DietaryFatAndFattyAcidsPage() {
   return (
@@ -44,8 +79,13 @@ export default function DietaryFatAndFattyAcidsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Nutrition' },
+        { name: 'Nutrition', href: '/nutrition' },
         { name: 'Dietary Fat and Essential Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+      ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
       ]}
       schema={schema}
       sidebar={
@@ -69,6 +109,14 @@ export default function DietaryFatAndFattyAcidsPage() {
               { label: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Orijen vs Acana — Fat & Protein Profiles', href: '/brands/orijen-vs-acana-comparison' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
@@ -76,10 +124,12 @@ export default function DietaryFatAndFattyAcidsPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="dietary-fat-and-fatty-acids"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         <p>Fat supplies roughly 8.5 kilocalories of metabolizable energy per gram — more than twice the energy density of protein or carbohydrate. Beyond energy, dietary fat carries the fat-soluble vitamins A, D, E, and K, improves diet palatability, and provides the essential fatty acids the body cannot synthesize. A diet too low in fat produces a dull, flaky coat and impaired fat-soluble vitamin status; a diet too high in fat, fed without matching energy expenditure, drives weight gain and, in predisposed dogs, can trigger pancreatitis.</p>
         <h2 id="why">Why Fat Matters</h2>
         <p>Because fat is so energy-dense, the fat content of a food largely determines its caloric density. Two foods of identical protein can differ substantially in calories per cup driven by fat. This is why feeding guidelines and the energy math on the bag matter: a higher-fat performance food fed at the same volume as a maintenance food delivers more calories. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
@@ -94,12 +144,7 @@ export default function DietaryFatAndFattyAcidsPage() {
         <h2 id="rancidity">Rancidity and Preservation</h2>
         <p>Dietary fats oxidize over time, producing rancid off-flavors and destroying fat-soluble vitamins and essential fatty acids. This is why fat-containing foods require antioxidant preservation — either natural (mixed tocopherols, rosemary extract) or synthetic (BHA, BHT, ethoxyquin). Natural preservatives have a shorter effective window, which shortens shelf life. Storage matters: keep food sealed, cool, and used within the best-by window. See <a href="/ingredients/preservatives-pet-food">Preservatives in Pet Food</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

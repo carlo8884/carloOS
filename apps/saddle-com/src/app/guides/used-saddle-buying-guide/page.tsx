@@ -42,6 +42,15 @@ export default function UsedSaddleBuyingGuidePage() {
         { name: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Tree Size Estimator', href: '/tools/tree-size-estimator', category: 'Tool' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        { title: 'Stubben Saddle Review', href: '/reviews/stubben-saddle-review', category: 'Reviews' },
+        { title: 'Pessoa Saddle Review', href: '/reviews/pessoa-saddle-review', category: 'Reviews' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Before You View', href: '#before' },
@@ -56,8 +65,11 @@ export default function UsedSaddleBuyingGuidePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
+          { label: 'Tree Size Estimator', href: '/tools/tree-size-estimator' },
           { label: 'Leather Care Guide', href: '/guides/leather-care-guide' },
           { label: 'Best English Saddles 2025', href: '/reviews/best-english-saddles' },
+          { label: 'Stubben Review', href: '/reviews/stubben-saddle-review' },
+          { label: 'Pessoa Review', href: '/reviews/pessoa-saddle-review' },
         ]} />
         <EmailCapture variant="sidebar" siteId="saddle-com"
           title="Free Buyer\'s Guide"
@@ -68,7 +80,7 @@ export default function UsedSaddleBuyingGuidePage() {
         <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <DropCap>The used saddle market offers genuine value — a well-maintained Stubben or Passier at 40–60% of new price is a better saddle than a new budget-brand at full price. But the used market also contains damaged saddles whose problems are cosmetically hidden, saddles that have been mis-stored, and saddles with tree damage that will injure your horse in ways that take months to diagnose.</DropCap>
-        <p>This checklist is what I walk through on every used saddle I inspect, in the order I do it. Each step builds on the last. If you find a serious problem in step one, you don&apos;t need to continue — the saddle is not worth considering at any price.</p>
+        <p>This checklist is what I walk through on every used saddle I inspect, in the order I do it. Each step builds on the last. If you find a serious problem in step one, you don&apos;t need to continue — the saddle is not worth considering at any price. Before viewing, use the <a href="/tools/tree-size-estimator" className="text-brand-primary hover:underline">tree size estimator</a> to establish a starting tree-width category for your horse — knowing that going in helps you immediately filter out saddles that are the wrong tree family. For brand background, see the <a href="/reviews/best-english-saddles" className="text-brand-primary hover:underline">English saddle reviews</a>, the <a href="/reviews/stubben-saddle-review" className="text-brand-primary hover:underline">Stubben review</a>, or the <a href="/reviews/pessoa-saddle-review" className="text-brand-primary hover:underline">Pessoa review</a>.</p>
 
         <h2 id="before">Before You View — What to Ask in Advance</h2>
         <p>Before making the trip, establish these facts by phone or message:</p>

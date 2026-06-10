@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function WinterCarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Deworming Program', href: '/care/deworming-program' },
+          { title: 'Water Requirements', href: '/nutrition/water-requirements' },
+        ]}
         hero={{
           title: "Winter Horse Care",
           subtitle:
@@ -83,11 +89,12 @@ export default function WinterCarePage() {
             title="Related Reading"
             links={[
               { label: "Blanketing Guide", href: "/care/blanketing" },
+              { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
               { label: "Water Requirements", href: "/nutrition/water-requirements" },
               { label: "Equine Colic", href: "/health/colic" },
-              { label: "Forage Basics", href: "/nutrition/forage-basics" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function WinterCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="water">Water First</h2>
           <p>The biggest winter health risk is reduced water intake. Horses drink less when water is icy, and dehydration combined with dry winter forage is a leading cause of impaction colic. Keep water available and unfrozen with tank heaters or frequent breaking and refilling, and offer slightly warmed water, which horses drink more readily in cold weather. A horse needs roughly 5 to 10 gallons or more a day even in winter; monitor that troughs are actually being drunk down.</p>
 

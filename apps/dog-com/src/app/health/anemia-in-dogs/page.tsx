@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Anemia in Dogs and Cats', url: 'https://www.merckvetmanual.com/circulatory-system/anemia/anemia-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Immune-Mediated Hemolytic Anemia (IMHA) Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'Swann JW et al. ACVIM consensus statement on the treatment of IMHA in dogs. J Vet Intern Med. 2019;33(3):1141-1172.', publisher: 'JVIM' },
+  { label: 'AVMA: Blood Disorders in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -12,6 +20,7 @@ export default function DogAnemiaPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Anemia in Dogs', subtitle: 'Anemia — an abnormally low red blood cell count or hemoglobin concentration — causes the tissues to receive insufficient oxygen. The clinical signs reflect this: pale gums, lethargy, exercise intolerance, and in severe cases, rapid breathing at rest. Anemia is always secondary to an underlying cause, and the cause determines the treatment.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Anemia', href: '/health/anemia-in-dogs' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Cancer Signs', href: '/health/dog-cancer-signs', category: 'Dog Health' }, { title: 'Liver Disease', href: '/health/dog-liver-disease', category: 'Dog Health' }, { title: 'Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of Anemia</div>
@@ -26,6 +35,7 @@ export default function DogAnemiaPage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Anemia diagnostic workups (IMHA, hemorrhagic disease, neoplasia) commonly run $2,000-$5,000 before treatment even begins. Insurance covers diagnostics if enrolled before symptoms.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anemia" />
         </>}
       >
@@ -47,6 +57,8 @@ export default function DogAnemiaPage() {
 
           <h2>Blood Transfusion</h2>
           <p>Transfusion is indicated when PCV (packed cell volume, a measure of red cell percentage) falls below approximately 15–18% in dogs without active compensation, or when clinical signs (collapse, extreme lethargy, respiratory distress at rest) indicate that the anemia is compromising vital organ function regardless of the specific PCV. Canine blood transfusion uses whole blood or packed red blood cells from typed donors. Most specialty and emergency hospitals maintain blood banks. DEA 1.1 is the most important blood type antigen — typing before first transfusion prevents significant transfusion reactions.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

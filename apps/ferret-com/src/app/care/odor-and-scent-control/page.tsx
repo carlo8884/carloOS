@@ -9,11 +9,12 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Odor & Scent Control', url: 'https://ferret.com/care/odor-and-scent-control' },
-  ],
-})
 
 const FAQS = [
   {
@@ -81,7 +75,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, sebaceous-gland physiology, and reproductive endocrinology",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry, skin/coat, and odor-change clinical significance",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner guidance on ferret odor, descenting, and bathing",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretOdorScentControlPage() {
   return (
@@ -95,7 +105,6 @@ export default function FerretOdorScentControlPage() {
             "Ferrets carry a natural musky scent, and the two things most new owners reach for — descenting and frequent baths — are the two least effective ways to manage it. The smell that fills a room is mostly husbandry, not biology, and the husbandry is very controllable. Here is where ferret odor actually comes from and what genuinely reduces it.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -126,6 +135,7 @@ export default function FerretOdorScentControlPage() {
                 { label: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -135,7 +145,14 @@ export default function FerretOdorScentControlPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -313,24 +330,7 @@ export default function FerretOdorScentControlPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources-list">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret dermatology, sebaceous-gland physiology, reproductive
-              endocrinology, and the descenting discussion.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret husbandry, skin and coat, and
-              the clinical relevance of odor change.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on ferret
-              odor, descenting, and bathing.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry information. Descenting, spay/neuter
             timing, and any sudden change in a ferret&apos;s odor are matters for

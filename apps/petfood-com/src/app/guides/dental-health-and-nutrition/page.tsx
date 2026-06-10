@@ -6,6 +6,9 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +32,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function DentalHealthAndNutritionPage() {
   return (
     <ArticleLayout
@@ -44,8 +65,14 @@ export default function DentalHealthAndNutritionPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'Dental Health and Nutrition', href: '/guides/dental-health-and-nutrition' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+        { title: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
       ]}
       schema={schema}
       sidebar={
@@ -76,10 +103,12 @@ export default function DentalHealthAndNutritionPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="dental-health-and-nutrition"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Periodontal disease affects a majority of dogs and cats by middle age and contributes to pain, tooth loss, and systemic effects. Diet is frequently invoked as a dental solution — most commonly the claim that dry food cleans teeth — but the evidence is more limited than the marketing suggests. Specially designed dental products have a real but modest effect; ordinary food does not substitute for dental care. See <a href="/compare/wet-vs-dry-food">Wet vs Dry Food</a>.</p>
         <h2 id="scale">The Scale of Dental Disease</h2>
         <p>Plaque (a bacterial film) forms on teeth continuously and mineralizes into tartar, driving gingivitis and periodontal disease. The high prevalence of dental disease in pets reflects how little routine dental care most receive. Because diet contact with the teeth is brief and most food does little mechanical cleaning, nutrition is a minor player in a problem that mainly requires brushing and professional cleaning.</p>
@@ -94,12 +123,7 @@ export default function DentalHealthAndNutritionPage() {
         <h2 id="notenough">Nutrition Is Not Enough</h2>
         <p>Even the best dental diet or chew is an adjunct, not a replacement, for dental care. The gold standard is daily tooth brushing plus professional cleanings under anesthesia as recommended by the veterinarian. Diet and dental products support oral health at the margins; they do not prevent periodontal disease on their own. Owners should not rely on food to keep teeth healthy. See <a href="/diets/senior-pet-diets">Senior Pet Diets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

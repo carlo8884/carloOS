@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Chinese Water Dragon Care Guide — Arboreal | Lizard.com", description: "Chinese water dragons need tall planted enclosures, high humidity, strong UVB, and a large water feature. Why snout-rub damage is the main welfare risk.", path: "/species/chinese-water-dragon", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Chinese Water 
 export default function SpeciesChineseWaterDragonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Chinese Water Dragon Care Guide", subtitle: "Physignathus cocincinus is a striking green arboreal agamid from Southeast Asian rainforests, reaching 2 to 3 feet (mostly tail). It needs a tall, heavily planted, humid enclosure with a large water feature for swimming. Its biggest captive welfare problem is rostral (snout) damage from rubbing on enclosure walls when housed too small or too exposed.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
+      hero={{ title: "Chinese Water Dragon Care Guide", subtitle: "Physignathus cocincinus is a striking green arboreal agamid from Southeast Asian rainforests, reaching 2 to 3 feet (mostly tail). It needs a tall, heavily planted, humid enclosure with a large water feature for swimming. Its biggest captive welfare problem is rostral (snout) damage from rubbing on enclosure walls when housed too small or too exposed.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Chinese Water Dragon", href: "/species/chinese-water-dragon" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Frilled Dragon Care', href: '/species/frilled-dragon', category: 'Species' },
+        { title: 'Veiled Chameleon Care', href: '/species/veiled-chameleon', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesChineseWaterDragonPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Veiled Chameleon Care", href: "/species/veiled-chameleon" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "UVB Lighting Guide", href: "/setup/uvb-lighting-guide" }, { label: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-chinese-water-dragon"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Chinese water dragon is a semi-arboreal, semi-aquatic agamid that lives along forest streams, basking on overhanging branches and diving into the water to escape threats. In captivity it is rewarding but demanding: it needs height, humidity, a large soakable water feature, strong UVB, and, critically, an enclosure designed to prevent the snout injuries that plague this species. Captive-bred animals are far hardier and calmer than the wild-caught imports that still dominate the cheaper end of the trade."}</p>
           <h2>{"The Snout-Rub Problem"}</h2>
 
@@ -58,6 +68,7 @@ export default function SpeciesChineseWaterDragonPage() {
             <li>{"Baines, F. M., et al., Ferguson Zone UV-index guidance."}</li>
             <li>{"Reptiles Magazine, Physignathus cocincinus husbandry references."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Chinese Water Dragon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse tall arboreal enclosures, UVB, basking bulbs, foggers, thermostats, and substrate sized for Chinese water dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

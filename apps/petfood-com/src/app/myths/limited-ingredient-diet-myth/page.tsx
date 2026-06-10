@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +31,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function LimitedIngredientDietMythPage() {
   return (
     <ArticleLayout
@@ -44,8 +64,14 @@ export default function LimitedIngredientDietMythPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'The Limited-Ingredient Diet Myth', href: '/myths/limited-ingredient-diet-myth' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The By-Products Myth', href: '/myths/by-products-myth' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
+        { title: 'Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +106,7 @@ export default function LimitedIngredientDietMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Limited-ingredient diets (LIDs) contain a short ingredient list, typically one protein and one carbohydrate, and are marketed for pets with food sensitivities. The implied promise is that they are hypoallergenic or suitable for an elimination trial. In practice, over-the-counter LIDs frequently fail at both, because the term hypoallergenic has no standard and because independent testing finds undeclared ingredients. See <a href="/diets/food-allergy-and-elimination-diets">Food Allergy and Elimination Diets</a>.</p>
         <h2 id="claim">The Claim</h2>
         <p>The marketing suggests that a short ingredient list reduces allergy risk and that an LID can serve as a diagnostic or management diet for food-allergic pets. Owners often select an LID on their own to address itching or digestive upset, assuming fewer ingredients equals safer. The assumption does not survive scrutiny of how these products are made and labeled.</p>
@@ -94,12 +121,7 @@ export default function LimitedIngredientDietMythPage() {
         <h2 id="verdict">The Verdict</h2>
         <p>Limited-ingredient is a marketing description, not a hypoallergenic guarantee. OTC LIDs are unreliable for food-allergy diagnosis and management due to the lack of a hypoallergenic standard and documented cross-contamination, and a short list of common proteins offers no allergy benefit. For genuine food allergy, use a veterinary elimination diet under veterinary direction. See <a href="/myths/by-products-myth">The By-Products Myth</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

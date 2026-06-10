@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Western Saddles 2025 — By Discipline & Budget | Saddle.com', description: 'Western saddles ranked by discipline — barrel racing, roping, trail, reining, and general use. Expert tested with price guides and brand comparisons.', path: '/western' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Saddles by Discipline — Barrel, Roping, Trail | Saddle.com', description: 'Browse Western saddles by discipline — barrel racing, roping, trail, reining, and ranch. Discipline differences, top brands, and price ranges explained.', path: '/western' })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Western Saddles', url: 'https://saddle.com/western' },
+  ],
+})
 
 const DISCIPLINES = [
   { title: 'Barrel Racing Saddles', desc: 'High rise forks, free swing stirrups, lightweight construction — what actually matters', href: '/reviews/best-western-saddles#barrel-racing', badge: 'Performance' },
@@ -23,12 +30,14 @@ const TOP_BRANDS = [
 export default function WesternSaddlesPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <div className="flex items-center gap-2.5 mb-5"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Western Saddles</span></div>
-          <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 52px)' }}>Western Saddles — By Discipline</h1>
-          <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">The right western saddle depends entirely on what you do with it. Barrel saddles are wrong for roping. Trail saddles are wrong for reining. Here&apos;s how to navigate the market by discipline.</p>
+          <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 52px)' }}>Western Saddles by Discipline</h1>
+          <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">The right western saddle depends entirely on what you do with it. This hub organizes western saddles by discipline — barrel racing, roping, trail, reining, and ranch — so you can browse what fits the riding you actually do.</p>
+          <p className="mt-5 text-sm text-white/70">Looking for our ranked picks? <Link href="/reviews/best-western-saddles" className="font-bold text-brand-primary underline underline-offset-2">See Best Western Saddles →</Link></p>
         </div>
       </div>
       <div className="px-container-sm sm:px-container pt-8">

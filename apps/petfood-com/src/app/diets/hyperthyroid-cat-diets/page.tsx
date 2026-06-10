@@ -6,7 +6,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -29,6 +32,29 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+]
+
 export default function HyperthyroidCatDietsPage() {
   return (
     <ArticleLayout
@@ -44,8 +70,14 @@ export default function HyperthyroidCatDietsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Diets' },
+        { name: 'Diets', href: '/diets' },
         { name: 'Hyperthyroid Cat Diets', href: '/diets/hyperthyroid-cat-diets' },
+      ]}
+      relatedLinks={[
+        { title: 'Diets Hub', href: '/diets' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
       schema={schema}
       sidebar={
@@ -80,6 +112,13 @@ export default function HyperthyroidCatDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="An iodine-restricted therapeutic cat-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Hyperthyroidism — overproduction of thyroid hormone, usually from a benign thyroid tumor — is common in cats over about 10 years and causes weight loss despite a ravenous appetite, hyperactivity, and secondary effects on the heart and kidneys. Among the treatment options, an iodine-restricted therapeutic diet can control the disease by limiting the iodine the thyroid needs to make hormone, but only if fed strictly and exclusively. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="disease">Feline Hyperthyroidism</h2>
         <p>The disease produces excess thyroid hormone, accelerating metabolism. Classic signs are weight loss with a strong appetite, increased thirst and urination, restlessness, and sometimes vomiting; untreated, it strains the heart and can mask or worsen kidney disease. Diagnosis is by blood thyroid-hormone testing. Treatment options include medication, radioiodine, surgery, and the iodine-restricted diet. See <a href="/diets/senior-pet-diets">Senior Pet Diets</a>.</p>
@@ -94,13 +133,7 @@ export default function HyperthyroidCatDietsPage() {
         <h2 id="monitoring">Monitoring</h2>
         <p>Whichever treatment is used, hyperthyroid cats need monitoring of thyroid levels and kidney values, because controlling hyperthyroidism can unmask underlying kidney disease (the high thyroid state had been propping up apparent kidney function). Diet-managed cats need confirmation that thyroid levels have normalized and ongoing checks. This is a managed chronic disease, directed by the veterinarian. See <a href="/diets/kidney-disease-diets">Kidney Disease Diets</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>American Animal Hospital Association (AAHA) and American College of Veterinary Internal Medicine (ACVIM) consensus statements and nutrition guidelines, as applicable to the condition.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

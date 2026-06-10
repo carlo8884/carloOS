@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Fire Skink Care Guide — Colorful Burrowing Skink | Lizard.com", description: "Fire skinks are vivid, hardy, burrowing West African lizards. Deep substrate, a humid warm enclosure, UVB, and an insect-based diet make them rewarding.", path: "/species/fire-skink", type: 'article' })
@@ -8,9 +8,17 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Fire Skink Car
 export default function SpeciesFireSkinkPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Fire Skink", href: "/species/fire-skink" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Blue-Tongued Skink Care', href: '/species/blue-tongued-skink', category: 'Species' },
+        { title: 'Green Anole Care', href: '/species/green-anole', category: 'Species' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>
@@ -23,9 +31,11 @@ export default function SpeciesFireSkinkPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Blue-Tongued Skink Care", href: "/species/blue-tongued-skink" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-fire-skink"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Fire skinks are terrestrial, semi-fossorial forest-floor lizards from West and Central Africa, named for the fiery red and black coloration along their sides. They are hardy and undemanding once established, but their burrowing habit means a shallow, sparse enclosure leaves them stressed and hidden. Provide deep, slightly moist substrate and dense cover and a fire skink will become a confident, visible animal that surfaces to bask and hunt. Many in the trade are wild-caught, so captive-bred stock is worth seeking for hardiness."}</p>
           <h2>{"Enclosure and Substrate"}</h2>
           <p>{"An adult fire skink needs a floor-focused enclosure of at least 36 by 18 inches; height matters less than ground space for a terrestrial burrower. Furnish with cork bark, leaf litter, hides at both temperature ends, and a water dish. A bioactive setup with live plants suits the species and helps hold humidity."}</p>
@@ -57,6 +67,7 @@ export default function SpeciesFireSkinkPage() {
             <li>{"Reptiles Magazine, Lepidothyris fernandi husbandry references."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Fire Skink — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB, basking bulbs, thermostats, deep burrowing substrate, and hides sized for fire skink care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

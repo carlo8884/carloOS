@@ -21,10 +21,11 @@ const schema = buildArticleSchema({
   modifiedAt: '2025-05-01T00:00:00Z',
 })
 
+
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Govee H5053', subtitle: 'WiFi · App alerts · ±0.54°F', href: '#govee' },
-  { label: 'Best Budget', emoji: '💰', name: 'Inkbird IBS-TH2', subtitle: 'Bluetooth · Good accuracy · Low cost', href: '#inkbird' },
-  { label: 'Avoid', emoji: '⚠️', name: 'Analog Dial Gauges', subtitle: 'Inaccurate, unreliable — skip', href: '#avoid' },
+  { label: 'Best Overall', name: 'Govee H5053', subtitle: 'WiFi · App alerts · ±0.54°F', href: '#govee' },
+  { label: 'Best Budget', name: 'Inkbird IBS-TH2', subtitle: 'Bluetooth · Good accuracy · Low cost', href: '#inkbird' },
+  { label: 'Avoid', name: 'Analog Dial Gauges', subtitle: 'Inaccurate, unreliable — skip', href: '#avoid' },
 ]
 
 export default function BestThermometersPage() {
@@ -32,7 +33,7 @@ export default function BestThermometersPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Published Accuracy Data · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Reptile Thermometers & Hygrometers 2025 — Ranked by Published Accuracy
         </h1>
@@ -58,14 +59,13 @@ export default function BestThermometersPage() {
             <ReviewCard
               id="govee"
               badge="Best Overall"
-              badgeEmoji="🏆"
               name="Govee H5053 Temperature & Humidity Sensor"
               subtitle="WiFi · App with push alerts · ±0.54°F accuracy · Data logging"
               score={9.5}
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. Published ±0.54°F temperature accuracy against reference standards — one of the most accurate consumer devices reported against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is our top pick in this comparison for serious keepers. Published ±0.54°F temperature accuracy against reference standards puts it among the most accurate consumer devices reported against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>The data logging function stores 2 years of readings, allowing you to audit temperature gradients and identify if your thermostat is cycling correctly. For enclosures with complex heating (CHE + basking + heat mat), the logging history is invaluable for diagnosing inconsistency. Buy multiple — place one at the basking zone, one at the cool side, one inside any humid hides.</p>
                 </div>
               }
@@ -90,7 +90,6 @@ export default function BestThermometersPage() {
             <ReviewCard
               id="inkbird"
               badge="Best Budget"
-              badgeEmoji="💰"
               name="Inkbird IBS-TH2"
               subtitle="Bluetooth · Good accuracy · Lower cost than Govee"
               score={8.8}
@@ -113,7 +112,7 @@ export default function BestThermometersPage() {
             />
 
             <div id="avoid" className="rounded-lg p-6 mt-4" style={{ background: 'rgba(224,90,58,0.07)', border: '1px solid rgba(224,90,58,0.2)' }}>
-              <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#FF9980' }}>⚠️ Avoid — Analog Dial Gauges</div>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#FF9980' }}>Avoid — Analog Dial Gauges</div>
               <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.7)' }}>The analog combo dial gauges sold in every pet store (Zoo Med, Exo Terra, Zilla) reported at ±8–12°F variance against reference standards by multiple keeper review threads. That is not a useful measurement for reptile keeping. They look like they work, but the readings are unreliable. Owner reports describe them reading 85°F in a 73°F room and 65°F in a 78°F room. Use a digital device. The $18 Govee H5053 is not optional for responsible keeping — it is the baseline.</p>
             </div>
           </div>

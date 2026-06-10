@@ -9,11 +9,14 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +42,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Stress Signs', url: 'https://ferret.com/behavior/stress-signs' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +67,28 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret welfare and behaviour assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret welfare",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Ferret Association (AFA) — husbandry and welfare owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretStressSignsPage() {
   return (
@@ -85,7 +102,6 @@ export default function FerretStressSignsPage() {
             "Ferrets are stoic little animals that often mask discomfort until it is significant. Learning to read the early, subtle signals of stress — and knowing which of them overlap with illness — lets you act before a small problem becomes a big one. Here is what to watch for and what it usually means.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -104,6 +120,7 @@ export default function FerretStressSignsPage() {
                 { label: 'Common Causes', href: '#causes' },
                 { label: 'Reducing Stress', href: '#reduce' },
                 { label: 'Stress vs. Illness', href: '#illness' },
+                { label: 'Comfort Supplies', href: '#supplies' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -125,7 +142,14 @@ export default function FerretStressSignsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -277,29 +301,68 @@ export default function FerretStressSignsPage() {
             <a href="/behavior/dead-sleep-explained">dead-sleep explainer</a>.
           </p>
 
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="supplies">Comfort and Enrichment Supplies</h2>
+          <p>
+            Environmental stress is often improved by providing a quiet, enclosed sleeping space and reliable enrichment. Two items that address the most common environmental causes — inadequate sleep hiding spots and under-stimulation. This is a documented-spec comparison based on published product details; this page does not claim hands-on testing.
+          </p>
+          <p className="text-sm font-medium border border-amber-300 bg-amber-50 rounded p-3 my-4">
+            Comfort supplies do not treat adrenal disease, insulinoma, or other medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="ferret-sleep-sack"
+            badge="Sleep Comfort"
+            name="Ferret Sleep Sack / Hammock"
+            subtitle="Enclosed fleece sleeping pouch — quiet, dark, enclosed resting space"
+            score={8.4}
+            winner
+            description={
+              <p>Ferrets sleep 14-18 hours a day and are most settled when they have a fully enclosed, dark, soft place to do it. A fleece sleep sack or hanging hammock with an enclosed top satisfies this better than open bedding. Many stressed ferrets improve when given a dedicated enclosed sleeping space separate from the busier areas of the cage. Washable fleece, sized for a ferret to curl inside rather than on top of.</p>
+            }
+            specs={[
+              { label: 'Style', value: 'Fully enclosed fleece pouch', highlight: 'good' },
+              { label: 'Function', value: 'Dark, quiet, enclosed sleeping space', highlight: 'good' },
+              { label: 'Washable', value: 'Yes — machine wash, low heat', highlight: 'good' },
+              { label: 'Sizing', value: 'Ferret-specific (verify it closes fully around occupant)' },
+            ]}
+            pros={['Enclosed darkness supports deep sleep', 'Washable fleece', 'Pairs well with a consistent sleep-and-play routine', 'Low cost']}
+            cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
+            price="$8–18"
+            ctaText="Find ferret sleep sacks"
+            ctaHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret+sleep+sack+fleece"
+          />
+          <ReviewCard
+            id="ferret-tunnel-stress"
+            badge="Enrichment"
+            name="Marshall Pop-N-Play Tunnel Set"
+            subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
+            score={8.6}
+            description={
+              <p>Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
+            }
+            specs={[
+              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
+              { label: 'Drive targeted', value: 'Burrowing / tunnelling', highlight: 'good' },
+              { label: 'Connectivity', value: 'Multi-tunnel chain' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Addresses under-stimulation directly', 'Highest enrichment value per dollar for most ferrets', 'Washable', 'Chainable for longer circuits']}
+            cons={['Does not address social loneliness — a tunnel is not a companion', 'Fabric wears in heavy-chewer households']}
+            price="$15–30"
+            ctaText="Find Marshall Pop-N-Play tunnels"
+            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="pop-n-play-tunnel"
+          />
+
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour, welfare, and disease chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              welfare and behaviour assessment.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret welfare.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing husbandry and
-              welfare guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour and welfare information about ferrets, not
             individualized veterinary advice. Because stress and illness share so

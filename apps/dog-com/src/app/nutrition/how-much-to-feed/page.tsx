@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -20,14 +20,17 @@ export default function HowMuchToFeedPage() {
       contentType="nutrition"
       hero={{ title: 'How Much to Feed Your Dog', subtitle: 'There is no universal feeding amount — caloric needs depend on weight, ideal weight, age, activity level, and whether your dog is spayed or neutered. This guide gives you the framework.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Feeding Frequency', href: '/nutrition/feeding-frequency', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Body Condition Scoring', href: '#bcs' }, { label: 'Using Package Guidelines', href: '#guidelines' }, { label: 'Calorie Calculator', href: '#calculator' }, { label: 'Adjusting for Activity', href: '#activity' }, { label: 'Puppies', href: '#puppies' }, { label: 'Senior Dogs', href: '#seniors' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-how-much" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="bcs">Body Condition Score — The Most Important Tool</h2>
         <p>Calorie tables and package guidelines are starting points. The definitive measure of whether you are feeding the right amount is your dog&apos;s body condition score (BCS) — a standardized 9-point scale that assesses body fat relative to muscle and frame. No formula accounts for every individual variation; BCS is how you interpret the result.</p>
         <p>Check your dog&apos;s BCS monthly — the same day each month is easiest to remember. Adjust food based on trajectory, not single readings.</p>

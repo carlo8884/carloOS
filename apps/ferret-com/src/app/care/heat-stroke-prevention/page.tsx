@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,6 +24,23 @@ const schema = buildArticleSchema({
 })
 const combined = combineSchemas(schema)
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Merck Veterinary Manual — heatstroke and hyperthermia in small mammals",
+    url: "https://www.merckvetmanual.com",
+    publisher: "Merck/MSD",
+  },
+]
+
 export default function HeatStrokePreventionPage() {
   return (
     <>
@@ -36,7 +53,6 @@ export default function HeatStrokePreventionPage() {
             'Of all the routine hazards a ferret faces, heat is among the most lethal and the most preventable. Ferrets cannot sweat, tolerate heat poorly, and can decline from comfortable to critical within an hour on a hot day. Knowing the safe range, the warning signs, and the cooling response is core ferret-keeping.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -66,6 +82,7 @@ export default function HeatStrokePreventionPage() {
                 { label: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -75,8 +92,22 @@ export default function HeatStrokePreventionPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Ferrets Overheat So Easily</h2>
           <p>
             A ferret's thermoregulation is built for cool burrows, not warm rooms. Ferrets have very few functional sweat glands and cannot cool themselves by sweating the way humans do. They also pant far less effectively than dogs, so the two main mammalian cooling routes are both largely unavailable. On top of that, their dense fur traps heat, their compact bodies have limited surface area to shed it, and they cannot tell you they are in trouble until they are already in distress.
@@ -140,10 +171,7 @@ export default function HeatStrokePreventionPage() {
             Some ferrets are less able to cope with heat and warrant extra caution: senior ferrets and those with the chronic conditions common in older animals (see <a href="/health/aging-ferret-care">aging ferret care</a>), overweight ferrets, very young kits, and any ferret already unwell or recovering from illness. For these animals, hold the environment cooler and watch more closely through warm spells.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Thermoregulation, safe-range, and heat-stroke discussion draws on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. This page is general husbandry and first-aid guidance, not a substitute for veterinary care; a ferret showing heat-stroke signs needs an exotics-capable veterinarian. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

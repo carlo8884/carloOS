@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equitation — Judging the Rider, Not the Horse",
   description:
-    "Reference overview of equitation: the discipline that judges the rider position and effectiveness, flat and over-fences equitation, the medal classes, and position basics.",
+    "Reference overview of equitation: the discipline judging rider position and effectiveness, flat and over-fences classes, the medal classes, and position basics.",
   path: '/disciplines/equitation',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Equitation — Judging the Rider, Not the Horse",
   description:
-    "Reference overview of equitation: the discipline that judges the rider position and effectiveness, flat and over-fences equitation, the medal classes, and position basics.",
+    "Reference overview of equitation: the discipline judging rider position and effectiveness, flat and over-fences classes, the medal classes, and position basics.",
   url: 'https://horses.com/disciplines/equitation',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function EquitationPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Hunter Under Saddle', href: '/disciplines/hunter-under-saddle' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+        ]}
         hero={{
           title: "Equitation",
           subtitle:
@@ -88,6 +94,7 @@ export default function EquitationPage() {
               { label: "Stirrups and Safety", href: "/tack/stirrups-and-safety" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function EquitationPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Equitation Is</h2>
           <p>Equitation is the art and judged discipline of correct, effective riding, where the focus is entirely on the rider. The horse is the vehicle; the rider&apos;s seat, position, use of the aids, and overall effectiveness are what the judge assesses. Strong equitation -- a balanced, quiet, secure position from which the rider can influence the horse subtly -- underpins success in every other English discipline, which is why it is the cornerstone of junior and amateur development in the hunter/jumper world.</p>
 

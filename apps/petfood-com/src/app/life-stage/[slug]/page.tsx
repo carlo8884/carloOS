@@ -13,6 +13,9 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -382,6 +385,7 @@ export default async function LifeStagePage({ params }: PageProps) {
       />
 
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(stage)}
         </p>
@@ -466,6 +470,7 @@ export default async function LifeStagePage({ params }: PageProps) {
           available). Per-SKU AAFCO statements vary within a brand portfolio and must be verified
           on the specific product label.
         </p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <div
           style={{
             display: 'grid',
@@ -608,12 +613,30 @@ export default async function LifeStagePage({ params }: PageProps) {
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={faqItems} includeSchema={false} />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          {stage.citations.map((c) => (
-            <li key={c}>{c}</li>
-          ))}
-        </ul>
+        <ArticleSourcesList
+              sources={[
+                {
+                  label: 'AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)',
+                  url: 'https://www.aafco.org/resources/publications/',
+                  publisher: 'Association of American Feed Control Officials, 2025',
+                },
+                {
+                  label: 'Nutrient Requirements of Dogs and Cats',
+                  url: 'https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats',
+                  publisher: 'National Research Council, National Academies Press, 2006',
+                },
+                {
+                  label: 'WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods',
+                  url: 'https://wsava.org/committees/global-nutrition-committee/',
+                  publisher: 'World Small Animal Veterinary Association Global Nutrition Committee',
+                },
+                {
+                  label: 'AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management',
+                  url: 'https://www.aaha.org/veterinary-resources/guidelines/',
+                  publisher: 'American Animal Hospital Association / American College of Veterinary Internal Medicine',
+                },
+              ]}
+            />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualised veterinary advice.
           Diet selection for pets with diagnosed conditions should be discussed with the treating

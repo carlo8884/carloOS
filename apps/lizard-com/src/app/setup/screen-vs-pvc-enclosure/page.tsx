@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Screen vs PVC vs Glass Reptile Enclosures | Lizard.com", description: "Screen, glass, and PVC reptile enclosures compared on humidity retention, heat efficiency, cost, and which species each suits best.", path: "/setup/screen-vs-pvc-enclosure", type: 'article' })
@@ -8,9 +8,18 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Screen vs PVC 
 export default function SetupScreenVsPvcEnclosurePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Screen vs PVC vs Glass Reptile Enclosures", subtitle: "The material your enclosure is built from determines how well it holds humidity and heat, how it ventilates, and how easy it is to maintain. The three dominant options, all-screen, glass, and PVC (or sealed wood), each suit different species and climates. Choosing wrong forces you to fight your enclosure to maintain the conditions your animal needs.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Screen vs PVC vs Glass Reptile Enclosures", subtitle: "The material your enclosure is built from determines how well it holds humidity and heat, how it ventilates, and how easy it is to maintain. The three dominant options, all-screen, glass, and PVC (or sealed wood), each suit different species and climates. Choosing wrong forces you to fight your enclosure to maintain the conditions your animal needs.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Terrarium Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Comparison"}</div>
@@ -26,6 +35,7 @@ export default function SetupScreenVsPvcEnclosurePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Enclosure material is a humidity and heat decision before it is an aesthetic one. A high-humidity rainforest species fights a losing battle in an all-screen cage, while a desert species can develop respiratory problems in a poorly ventilated solid box kept too damp. Matching the material to the species’ climate makes maintaining correct conditions effortless; mismatching it means constant misting, constant adjustment, and chronic husbandry stress. Here is how the three main options compare."}</p>
           <h2>{"All-Screen Enclosures"}</h2>
           <ul>

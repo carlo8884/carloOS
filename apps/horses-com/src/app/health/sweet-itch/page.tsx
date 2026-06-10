@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,12 @@ export default function SweetItchPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Rain Rot', href: '/health/rain-rot' },
+          { title: 'Fly Control', href: '/care/fly-control' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+        ]}
         hero={{
           title: "Sweet Itch in Horses",
           subtitle:
@@ -99,6 +105,7 @@ export default function SweetItchPage() {
               { label: "Grooming the Horse", href: "/care/grooming" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -109,6 +116,13 @@ export default function SweetItchPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Sweet Itch</h2>
           <p>Sweet itch -- known clinically as Culicoides hypersensitivity or summer seasonal recurrent dermatitis -- is an allergic skin disease. It is one of the most common allergic conditions in horses worldwide and is strongly seasonal, flaring when the biting insects that trigger it are active and subsiding in cold weather. The hallmark is relentless itching that drives the horse to rub and damage its own skin.</p>
 

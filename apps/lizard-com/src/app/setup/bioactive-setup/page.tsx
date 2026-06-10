@@ -1,14 +1,25 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide — Substrate, CUC | Lizard.com', description: 'Bioactive vivariums use a living substrate, plants, and a cleanup crew (springtails + isopods) to self-maintain.', path: '/setup/bioactive-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BioactiveSetupPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Bioactive Setup', href: '/setup/bioactive-setup' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Drainage Layer Guide', href: '/setup/drainage-layer-bioactive', category: 'Setup' },
+        { title: 'Cleanup Crew Guide', href: '/setup/cleanup-crew-isopods-springtails', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Cleanup Crew (CUC)</div>
@@ -24,6 +35,7 @@ export default function BioactiveSetupPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>How Bioactive Systems Work</h2>
         <p>A bioactive vivarium functions like a miniature ecosystem: the reptile produces waste (feces, shed skin, uneaten food), the cleanup crew (CUC) — springtails and isopods — consume and break down the waste, beneficial soil microorganisms continue the decomposition into nutrients, and plants uptake those nutrients while roots stabilize the substrate structure. This closed-loop waste processing is why a functioning bioactive setup can go months without substrate changes.</p>
         <p>The key word: functioning. A bioactive setup that does not have an established CUC, sufficient substrate depth for microbial activity, or appropriate moisture conditions does not self-process waste — it is just a decorated tank. The biological system takes time to establish (typically 2-4 months after setup for the CUC to reach working population density) and requires appropriate conditions to maintain. Bioactive is not "set it and forget it" — it is a different kind of ongoing management compared to traditional spot-cleaning setups.</p>

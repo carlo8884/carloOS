@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
+  ArticleByline,
   FAQAccordion,
   EmailCapture,
   TableOfContents,
@@ -122,6 +123,12 @@ export default function BodyConditionScorePage() {
   return (
     <ArticleLayout
       siteId="horses-com"
+      relatedLinks={[
+        { title: 'Equine Health Hub', href: '/health', category: 'Tools' },
+        { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        { title: 'Feeding the Hard Keeper', href: '/nutrition/feeding-the-hard-keeper' },
+        { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+      ]}
       hero={{
         title: 'Horse Body Condition Score Calculator',
         subtitle:
@@ -169,6 +176,13 @@ export default function BodyConditionScorePage() {
       }
     >
       <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2025-05-01"
+            updatedAt="2025-05-01"
+            reviewedBy="Editorial team"
+          />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}

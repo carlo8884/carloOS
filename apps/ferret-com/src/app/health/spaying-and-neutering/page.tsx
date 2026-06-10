@@ -9,12 +9,36 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret reproduction, estrogen toxicity, and the early-neuter adrenal-disease hypothesis.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Reproductive Diseases of Ferrets: persistent estrus, aplastic anemia risk in unspayed jills, and surgical options",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/reproductive-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret spay/neuter timing discussions and surgical continuing-education materials",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical and review articles on early neutering, ferret adrenal disease incidence, and deslorelin alternatives",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Spaying & Neutering', url: 'https://ferret.com/health/spaying-and-neutering' },
-  ],
-})
 
 const FAQS = [
   {
@@ -86,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretSpayNeuterPage() {
   return (
@@ -100,7 +117,6 @@ export default function FerretSpayNeuterPage() {
             'For female ferrets, spaying is not optional cosmetic surgery — an unspayed jill left in heat can die of estrogen toxicity. The biology is unusual, the stakes are high, and the early-spay-neuter debate adds a real wrinkle worth understanding.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -131,6 +147,7 @@ export default function FerretSpayNeuterPage() {
                 { label: 'Health Hub', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
@@ -140,7 +157,14 @@ export default function FerretSpayNeuterPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Anesthesia & Surgery Risk', href: '/health/anesthesia-and-surgery-risk' },
+          { title: 'Male vs. Female Ferrets', href: '/colors/male-vs-female-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -261,28 +285,7 @@ export default function FerretSpayNeuterPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret reproduction, estrogen toxicity, and adrenal disease
-              chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret reproductive and endocrine
-              disease.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical and review
-              articles on early neutering and ferret adrenal disease.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on
-              spaying, neutering, and descenting.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about spaying and
             neutering ferrets. It is not individualized veterinary advice.

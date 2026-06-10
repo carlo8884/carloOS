@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { FieldNumber, FieldSelect } from '../_components/CalcShell'
+import { ResultCTA } from '../_components/ResultCTA'
 
 type StarterMethod = 'fishless-ammonia' | 'bottled-bacteria' | 'used-media' | 'fish-in'
 
@@ -181,6 +182,32 @@ export default function Calculator() {
       <p className="mt-4 text-xs text-brand-text-light">
         Estimator only. Real cycling time depends on bacterial colonization rate, filter media surface area, and uncontrolled variables (e.g. residual cleaner residues in new tanks). The only ground-truth signal is a test kit reading 0 ppm ammonia and 0 ppm nitrite within 24 hours of a 4 ppm ammonia dose.
       </p>
+
+      {method === 'bottled-bacteria' ? (
+        <ResultCTA
+          heading="Get a bottled bacteria starter to seed the cycle"
+          blurb={
+            <>
+              A bacteria starter is what shortens this timeline &mdash; pair it with a test kit so you can confirm when ammonia and nitrite both hit zero.
+            </>
+          }
+          query="aquarium bacteria starter"
+          cta="Browse bacteria starters on Amazon"
+          source="tools-cycling-estimator"
+        />
+      ) : (
+        <ResultCTA
+          heading="Track the cycle with an ammonia, nitrite & nitrate test kit"
+          blurb={
+            <>
+              The only way to confirm the cycle is complete is a test kit reading 0 ppm ammonia and 0 ppm nitrite 24 hours after a dose.
+            </>
+          }
+          query="ammonia nitrite nitrate aquarium test kit"
+          cta="Browse test kits on Amazon"
+          source="tools-cycling-estimator"
+        />
+      )}
     </div>
   )
 }

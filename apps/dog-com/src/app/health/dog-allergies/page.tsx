@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Olivry T et al. Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals. BMC Vet Res. 2015;11:210.', publisher: 'BMC Vet Research / ICADA' },
+  { label: 'Mueller RS et al. Critically appraised topic on adverse food reactions of companion animals: common food allergen sources in dogs and cats. BMC Vet Res. 2016;12:9.', publisher: 'BMC Vet Research' },
+  { label: 'AVMA: Skin Allergies and Atopic Dermatitis in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'FDA CVM: Questions and Answers: FDA\'s Work on Potential Causes of Non-Hereditary DCM in Dogs (2018-2019 Grain-Free Diet Updates)', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy', publisher: 'FDA CVM' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Atopic, Food, Contact | Dog.com', description: 'Three allergy types in dogs: atopic dermatitis, food allergy, contact allergy. Diagnostic ladder, treatment tiers, and when to refer to a dermatologist.', path: '/health/dog-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Atopic, food, and contact allergies in dogs — differential diagnosis, treatment ladder, and specialist referral.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
@@ -23,6 +31,7 @@ export default function DogAllergiesPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Allergies — Atopic, Food, and Contact', subtitle: 'Allergic skin disease is one of the most common reasons dogs are seen by veterinarians, and one of the most frequently mismanaged. The three immunologic categories — atopic dermatitis, cutaneous adverse food reaction, and contact allergy — present similarly but require very different work-ups and treatment plans.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '14 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Allergies', href: '/health/dog-allergies' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Ear Infections', href: '/health/dog-ear-infections', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet', category: 'Nutrition' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopic Dermatitis', href: '#atopy' }, { label: 'Food Allergy (CAFR)', href: '#food' }, { label: 'Contact Allergy', href: '#contact' }, { label: 'Differential Diagnosis', href: '#differential' }, { label: 'Diagnostic Ladder', href: '#ladder' }, { label: 'Treatment Tiers', href: '#treatment' }, { label: 'When to See a Dermatologist', href: '#specialist' }, { label: 'Common Owner Mistakes', href: '#mistakes' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -35,7 +44,8 @@ export default function DogAllergiesPage() {
               <li>Veterinary Dermatology (journal) reviews</li>
             </ul>
           </div>
-          <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }]} />
+          <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-allergies" />
         </>}
       >
@@ -141,6 +151,8 @@ export default function DogAllergiesPage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

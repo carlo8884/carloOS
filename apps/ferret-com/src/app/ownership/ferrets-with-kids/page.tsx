@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function FerretsWithKidsPage() {
             'Ferrets can be wonderful family animals — playful, curious, and endlessly entertaining — but they are not a "starter pet" you hand to a small child and walk away from. They are quick, they nip when frightened or untrained, and they require an adult ultimately in charge. This page is an honest look at which households suit a ferret and how to set children and ferret up to do well together.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -85,8 +84,22 @@ export default function FerretsWithKidsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferrets & Other Pets', href: '/ownership/ferrets-and-other-pets' },
+          { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+        ]}
+>
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="family">Are Ferrets Good Family Pets?</h2>
           <p>
             For the right family, yes. Ferrets are intelligent, social, and genuinely playful, and many children find them captivating. But they suit a particular kind of household: one with an engaged adult who takes ultimate responsibility, older or well-supervised children, and a willingness to invest in training and an exotic-mammal veterinarian over a 6–10 year life. A ferret is a poor match for a home expecting a low-effort, child-managed pet — they need daily out-of-cage time, careful handling, and a level of supervision that a hamster or fish does not.

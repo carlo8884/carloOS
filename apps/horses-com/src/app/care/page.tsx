@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Care and Husbandry — Hooves, Pasture, Seasons, and Daily Routine",
   description:
-    "Practical horse care and husbandry references: hoof care and the farrier schedule, grooming, blanketing, pasture and fencing, deworming, seasonal care, and transport.",
+    "Practical horse care references: hoof care and farrier schedule, grooming, blanketing, pasture and fencing, deworming, seasonal care, and transport.",
   path: '/care',
 })
 
@@ -118,30 +119,32 @@ const ENTRIES = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Horse Care and Husbandry Guides',
+  numberOfItems: ENTRIES.length,
+  itemListElement: ENTRIES.map((e, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: e.title,
+    url: `https://horses.com/care/${e.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function CareHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Horse Care
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Horse Care &amp; Husbandry
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Practical, evidence-led references on the daily and seasonal care of horses, from hooves and grooming to pasture, parasites, and transport.
-        </p>
-      </div>
-
-      <StockImage manifestKey="horses-com:category-care" aspect="16:9" variant="full-bleed" priority />
+      <PremiumMasthead
+        manifestKey="horses-com:category-care"
+        eyebrow="Horse Care"
+        title="Horse Care & Husbandry"
+        subtitle="Practical, evidence-led references on the daily and seasonal care of horses, from hooves and grooming to pasture, parasites, and transport."
+      />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
@@ -152,6 +155,7 @@ export default function CareHubPage() {
       <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-10 max-w-2xl">
           Husbandry references covering the routines that keep a horse healthy and safe. Each guide cites AAEP guidance, extension resources, and the equine veterinary literature.
+          New to equestrian terminology? The <Link href="/glossary" className="text-brand-primary hover:underline">Equestrian Glossary</Link> defines key care, anatomy, and horsemanship terms.
         </p>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
@@ -195,6 +199,7 @@ export default function CareHubPage() {
           ]}
         />
       </section>
+      <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="footer" />
     </>
   )
 }

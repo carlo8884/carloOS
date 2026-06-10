@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -86,17 +85,9 @@ export default async function DisciplineFitPage({ params }: FitPageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://saddle.com/' },
-      { name: 'Saddle Fit', url: 'https://saddle.com/fit' },
-      { name: `${fit.disciplineName} Saddle Fit`, url },
-    ],
-  })
-
   const faqSchema = buildFAQSchema({ questions: fit.faqs })
 
-  const combinedSchema = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
   // Other discipline guides for the "related fit guides" section.
   const relatedFitGuides = DISCIPLINE_FITS.filter((d) => d.slug !== fit.slug).slice(0, 5)
@@ -125,6 +116,12 @@ export default async function DisciplineFitPage({ params }: FitPageProps) {
           { name: 'Home', href: '/' },
           { name: 'Saddle Fit', href: '/fit' },
           { name: fit.disciplineName, href: `/fit/${fit.slug}` },
+        ]}
+        relatedLinks={[
+          { title: 'Saddle Fit Hub', href: '/fit', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
         ]}
         sidebar={
           <>

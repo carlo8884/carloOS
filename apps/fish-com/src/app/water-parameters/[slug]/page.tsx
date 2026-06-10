@@ -24,7 +24,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   buildHowToSchema,
   ArticleLayout,
   TableOfContents,
@@ -32,6 +31,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -192,10 +192,6 @@ export default async function ParameterPage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({ name: b.name, url: `https://fish.com${b.href}` })),
-  })
-
   // HowTo schema: emit only if the parameter has meaningful "lower" steps.
   const lowerSteps = param.howToLower.filter((s) => !s.toLowerCase().includes('not applicable'))
   const howToLowerSchema =
@@ -234,12 +230,12 @@ export default async function ParameterPage({ params }: PageProps) {
         category: 'Water Parameters',
         categoryHref: '/water-parameters',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🧪',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[{ title: 'Water Parameters Hub', href: '/water-parameters', category: 'Water Chemistry' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
       sidebar={
         <>
           <TableOfContents
@@ -283,10 +279,6 @@ export default async function ParameterPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       {howToLowerSchema && (
         <script
           type="application/ld+json"
@@ -301,9 +293,7 @@ export default async function ParameterPage({ params }: PageProps) {
       )}
 
       <div className="carloOS-article">
-        <p>
-          <em>By Fish.com Editorial — sourced from cited references. Published May 2026.</em>
-        </p>
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2 id="at-a-glance">At a Glance</h2>
         <div

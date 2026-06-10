@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,12 @@ export default function MudFeverPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Rain Rot', href: '/health/rain-rot' },
+          { title: 'Thrush', href: '/health/thrush' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+        ]}
         hero={{
           title: "Mud Fever in Horses",
           subtitle:
@@ -99,6 +105,7 @@ export default function MudFeverPage() {
               { label: "Pasture Management", href: "/care/pasture-management" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -109,6 +116,13 @@ export default function MudFeverPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Mud Fever</h2>
           <p>Mud fever is dermatitis -- skin inflammation -- on the back of the pastern and the heel, and sometimes higher up the leg. When the skin is repeatedly wetted, it softens and its protective barrier breaks down, allowing organisms (often the same Dermatophilus congolensis behind rain rot, plus other bacteria and sometimes mites or fungal involvement) to colonize and inflame it. The result is scabbing, crusting, and soreness in the lower limb.</p>
 

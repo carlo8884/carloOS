@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +94,12 @@ export default function HorseBridleGuidePage() {
           { name: 'Guides', href: '/guides/saddle-fit-guide' },
           { name: 'Horse Bridle Guide', href: '/guides/horse-bridle-guide' },
         ]}
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+          { title: 'Bridle Fit Guide', href: '/guides/bridle-fit-guide', category: 'Fitting' },
+          { title: 'Bit Selection Guide', href: '/guides/bit-selection-guide', category: 'Equipment' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        ]}
         sidebar={<>
           <TableOfContents items={[
             { label: 'Bridle Types', href: '#types' },
@@ -111,6 +117,7 @@ export default function HorseBridleGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2 id="types">Bridle Types</h2>
 
           {BRIDLE_TYPES.map((bridle) => (

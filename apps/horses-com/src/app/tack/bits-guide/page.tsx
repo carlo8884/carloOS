@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function BitsGuidePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bridle Types', href: '/tack/bridle-types' },
+          { title: 'Martingales and Breastplates', href: '/tack/martingales-and-breastplates' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+        ]}
         hero={{
           title: "Horse Bits Explained",
           subtitle:
@@ -88,6 +94,7 @@ export default function BitsGuidePage() {
               { label: "Equitation", href: "/disciplines/equitation" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,8 +105,17 @@ export default function BitsGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How a Bit Works</h2>
           <p>A bit communicates through pressure on sensitive structures of the head: the bars (the toothless gum between incisors and molars where the mouthpiece rests), the tongue, the lips and corners of the mouth, and -- with leverage bits -- the poll and chin groove. Rein pressure is transmitted through the bit to these points, and the horse learns to respond by yielding to and seeking relief from that pressure. Because these structures are sensitive, the bit must be matched to the horse and used with educated hands.</p>
+
+          <StockImage manifestKey="horses-com:tack-bits" fallbackKey="horses-com:category-tack" aspect="16:9" />
 
           <h2 id="families">Snaffle vs Curb</h2>
           <p>All bits fall broadly into two action families. A snaffle applies direct pressure -- the rein pressure equals the pressure on the mouth, acting mainly on the corners of the lips, tongue, and bars, with no leverage. A curb is a leverage bit: it has shanks (cheekpieces) and usually a curb chain, so rein pressure is multiplied and acts on the bars, tongue, poll, and chin groove. Longer shanks increase leverage. A double bridle carries both a small snaffle (bradoon) and a curb together for refined communication in advanced dressage.</p>

@@ -2,13 +2,18 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -19,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
   description:
@@ -30,6 +35,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
+  description:
+    'How probiotics and prebiotics support the gut — strain-specific evidence, why human products differ, viability and quality, and proper use.',
+  url: 'https://petfood.com/supplements/probiotics-for-pets',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function ProbioticsForPetsPage() {
   return (
@@ -46,8 +81,13 @@ export default function ProbioticsForPetsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Fish Oil and Omega-3', href: '/supplements/fish-oil-omega-3' },
+        { title: 'Glucosamine and Joint Support', href: '/supplements/glucosamine-and-joint-support' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +123,13 @@ export default function ProbioticsForPetsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Probiotic supplement powders and chews for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>Probiotics are live microorganisms that, given in adequate amounts, confer a health benefit; prebiotics are fermentable fibers that feed beneficial gut bacteria. Together they aim to support a healthy gut microbiome. The pet probiotic category is large and uneven — some uses are well-supported, many marketing claims are not, and product quality varies considerably. See <a href="/diets/fiber-and-digestive-health">Fiber and Digestive Health Diets</a>.</p>
         <h2 id="probioticsprebiotics">Probiotics and Prebiotics</h2>
         <p>Probiotics supply live beneficial bacteria (and sometimes yeast such as Saccharomyces boulardii); prebiotics (fructooligosaccharides, inulin, beet pulp) are the fibers that nourish them. Synbiotics combine both. Many gastrointestinal diets already include prebiotics, and probiotics are added as a separate supplement or as a component of some diets. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
@@ -149,12 +196,7 @@ export default function ProbioticsForPetsPage() {
           ctaAffiliateProduct="dog+synbiotic+probiotic+prebiotic"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

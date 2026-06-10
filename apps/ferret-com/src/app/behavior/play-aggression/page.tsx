@@ -9,11 +9,11 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Play Aggression', url: 'https://ferret.com/behavior/play-aggression' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +64,28 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, social dynamics, and disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, play, and welfare",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret play and social behaviour owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement methods",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 
 export default function FerretPlayAggressionPage() {
   return (
@@ -85,7 +99,6 @@ export default function FerretPlayAggressionPage() {
             "Ferret play looks alarmingly like combat. They grab each other by the neck, drag one another across the floor, tumble, hiss, and thump — and then do it all again, delightedly, for an hour. Learning to read the line between exuberant rough play and genuine aggression is one of the most useful skills a ferret owner can have.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -125,7 +138,14 @@ export default function FerretPlayAggressionPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
+          { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -272,26 +292,7 @@ export default function FerretPlayAggressionPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour, social dynamics, and disease chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour and welfare.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on ferret
-              play and social behaviour.
-            </li>
-            <li>
-              American Veterinary Society of Animal Behavior (AVSAB) — positions
-              favoring positive-reinforcement methods over punishment.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary or behavioural advice. New or escalating aggression in a

@@ -9,11 +9,14 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +42,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Digging & Burrowing', url: 'https://ferret.com/behavior/digging-and-burrowing' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +67,23 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret natural history, behaviour, and enrichment chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, enrichment, and welfare",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — enrichment and housing owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretDiggingBurrowingPage() {
   return (
@@ -85,7 +97,6 @@ export default function FerretDiggingBurrowingPage() {
             "If you have ever watched a ferret attack the corner of a rug with the focus of a tiny excavator, you have met one of the species' oldest instincts. Digging is not a behaviour problem — it is a feature. The job is not to eliminate it but to point it somewhere that doesn't cost you your carpet.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -104,6 +115,7 @@ export default function FerretDiggingBurrowingPage() {
                 { label: 'Safe & Unsafe Fillers', href: '#fillers' },
                 { label: 'Protecting Your Floors', href: '#protect' },
                 { label: 'When Digging Signals Stress', href: '#stress' },
+                { label: 'Dig Box & Tunnel Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -125,7 +137,14 @@ export default function FerretDiggingBurrowingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
+          { title: 'Scratching & Digging Furniture', href: '/behavior/scratching-and-digging-furniture' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -276,25 +295,65 @@ export default function FerretDiggingBurrowingPage() {
             usually settle it.
           </p>
 
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Dig Box and Tunnel Picks</h2>
+          <p>
+            Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-pop-n-play-dig"
+            badge="Tunnel Set"
+            name="Marshall Pop-N-Play Tunnel Set"
+            subtitle="Pop-up fabric tunnels sized for ferrets, machine washable, chainable"
+            score={8.6}
+            winner
+            description={
+              <p>The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The Marshall Pop-N-Play set pops up in seconds, stores flat, and chains to itself for longer circuits. Machine washable, which matters for a floor-level item collecting dander and dust.</p>
+            }
+            specs={[
+              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
+              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
+              { label: 'Connectivity', value: 'Multi-tunnel chain' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+              { label: 'Storage', value: 'Folds flat' },
+            ]}
+            pros={['Highest enrichment value per dollar for tunnelling ferrets', 'Chainable for longer circuits', 'Machine washable', 'Pop-up + foldable storage']}
+            cons={['Fabric wears in heavy-chewer households', 'Internal wire is a defect risk if exposed — inspect periodically']}
+            price="$15–30"
+            ctaText="Find Marshall Pop-N-Play tunnels"
+            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-digging-burrowing"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="pop-n-play-tunnel"
+          />
+          <ReviewCard
+            id="ball-pit-fill-dig"
+            badge="Dig Box Fill"
+            name="Ferret-Safe Ball Pit Balls"
+            subtitle="Hollow plastic balls for a dig-box or ball pit — cheap, washable, ingest-safe"
+            score={8.0}
+            description={
+              <p>Hollow plastic ball-pit balls are one of the most reliable dig-box fills: they move with satisfying give, cannot be ingested in chunks, and clean easily. A standard storage tote filled with a bag of these creates a dig pit that most ferrets prefer to carpet edges. Rotate fill type weekly for novelty; alternating with rice or river rocks keeps the dig box interesting.</p>
+            }
+            specs={[
+              { label: 'Ingest risk', value: 'Low (hard plastic, too large to swallow)', highlight: 'good' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+              { label: 'Rotation value', value: 'High — combine with other fills' },
+            ]}
+            pros={['Low ingest risk', 'Ferrets enjoy the give and movement', 'Cheap and replaceable', 'Easy to wash']}
+            cons={['Balls migrate outside the tote — keep near a sweep-friendly surface', 'No texture variety — best rotated with rice or rocks']}
+            price="$10–20 / bag"
+            ctaText="Find ferret-safe ball pit balls"
+            ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=behavior-digging-burrowing"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="small-pet-ball-pit-balls"
+          />
+
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret natural history and behaviour chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour, enrichment, and welfare.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing enrichment and
-              housing guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour and enrichment information about ferrets, not
             individualized veterinary advice. Suspected ingestion of dig-box

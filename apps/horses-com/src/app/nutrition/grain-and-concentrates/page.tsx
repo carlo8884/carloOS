@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Grain and Concentrates for Horses — When and How to Feed",
   description:
-    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when they are needed, the dangers of large starchy meals, and safe feeding rules.",
+    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when needed, the dangers of large starchy meals, and safe feeding rules.",
   path: '/nutrition/grain-and-concentrates',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Grain and Concentrates for Horses — When and How to Feed",
   description:
-    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when they are needed, the dangers of large starchy meals, and safe feeding rules.",
+    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when needed, the dangers of large starchy meals, and safe feeding rules.",
   url: 'https://horses.com/nutrition/grain-and-concentrates',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function GrainConcentratesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Ration Balancers', href: '/nutrition/ration-balancers' },
+          { title: 'Equine Colic', href: '/health/colic' },
+        ]}
         hero={{
           title: "Grain and Concentrates for Horses",
           subtitle:
@@ -88,6 +94,7 @@ export default function GrainConcentratesPage() {
               { label: "Tying-Up", href: "/health/tying-up" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -98,6 +105,13 @@ export default function GrainConcentratesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Concentrates Are</h2>
           <p>Concentrates are energy-dense feeds fed in addition to forage -- traditional cereal grains such as oats, barley, and corn, and the formulated bagged feeds (textured sweet feeds, pellets, and cubes) that combine grains with added protein, vitamins, minerals, and often fat and fiber. They concentrate calories and nutrients into a small volume, which is their usefulness and, fed wrongly, their danger.</p>
 

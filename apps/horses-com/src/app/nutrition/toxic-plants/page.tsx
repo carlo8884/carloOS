@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function ToxicPlantsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Toxic Plants for Horses",
           subtitle:
@@ -94,6 +100,7 @@ export default function ToxicPlantsPage() {
               { label: "Equine Colic", href: "/health/colic" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -104,6 +111,13 @@ export default function ToxicPlantsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How Poisoning Happens</h2>
           <p>Horses are selective grazers and often avoid bitter or unpalatable toxic plants when good forage is plentiful. The danger rises when pasture is bare or overgrazed and hungry horses eat what they normally would not, when toxic plants are dried in hay (which can mask bitterness and concentrate toxin), when wilted leaves become more palatable or more poisonous, or when curious or bored horses sample ornamental plants and hedge clippings. Never assume a horse will simply avoid everything harmful.</p>
 

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Saddle Pads and Numnahs — Purpose, Types, and What They Cannot Fix",
   description:
-    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a badly fitting saddle.",
+    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a bad-fitting saddle.",
   path: '/tack/saddle-pads',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Saddle Pads and Numnahs — Purpose, Types, and What They Cannot Fix",
   description:
-    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a badly fitting saddle.",
+    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a bad-fitting saddle.",
   url: 'https://horses.com/tack/saddle-pads',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -54,6 +54,12 @@ export default function SaddlePadsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:
@@ -89,6 +95,7 @@ export default function SaddlePadsPage() {
               { label: "Equine Lameness Basics", href: "/health/lameness-basics" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function SaddlePadsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What a Pad Does</h2>
           <p>The primary jobs of a saddle pad are simple: to absorb sweat and protect the underside of the saddle from it, to provide a thin, clean, comfortable interface between saddle and back, and to wick moisture. A correctly fitting saddle on a healthy back needs only a clean, appropriate pad. The pad is a supporting player, not the thing that determines whether the saddle fits.</p>
 
@@ -135,7 +149,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="cotton-quilted-numnah"
             badge="Everyday English"
-            badgeEmoji="🐴"
             name="Quilted Cotton All-Purpose Pad"
             subtitle="Washable everyday numnah for schooling"
             score={8.3}
@@ -161,7 +174,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="sheepskin-half-pad"
             badge="Half Pad"
-            badgeEmoji="🐑"
             name="Sheepskin Half Pad"
             subtitle="Friction reduction and wicking under a fitting saddle"
             score={8.5}
@@ -186,7 +198,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="western-felt-pad"
             badge="Western"
-            badgeEmoji="🤠"
             name="Wool-Felt Western Pad"
             subtitle="Cushion and durability for heavier saddles and long rides"
             score={8.7}

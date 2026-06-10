@@ -2,13 +2,18 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -19,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
   description:
@@ -30,6 +35,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
+  description:
+    'What the evidence shows for glucosamine, chondroitin, and green-lipped mussel — the regulation gap, quality concerns, and realistic expectations.',
+  url: 'https://petfood.com/supplements/glucosamine-and-joint-support',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function GlucosamineAndJointSupportPage() {
   return (
@@ -46,8 +81,13 @@ export default function GlucosamineAndJointSupportPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Glucosamine and Joint Supplements', href: '/supplements/glucosamine-and-joint-support' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Fish Oil and Omega-3', href: '/supplements/fish-oil-omega-3' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
       ]}
       schema={schema}
       sidebar={
@@ -83,6 +123,13 @@ export default function GlucosamineAndJointSupportPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Glucosamine and joint-support supplement chews for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>Glucosamine and chondroitin sulfate are cartilage-component molecules marketed to support joint health in animals with osteoarthritis. They are among the most-used pet supplements and are widely added to mobility diets and treats. Their popularity outruns their evidence, and as supplements they sit in a lightly regulated market where label accuracy is not guaranteed. See <a href="/diets/joint-and-mobility-diets">Joint and Mobility Diets</a>.</p>
         <h2 id="ingredients">The Ingredients</h2>
         <p>Glucosamine is an amino sugar involved in building cartilage; chondroitin sulfate is a major structural component of cartilage. The rationale is that supplementing these building blocks supports cartilage maintenance and repair. They are often combined, sometimes with manganese, methylsulfonylmethane (MSM), or other additives. The theory is plausible; the clinical proof is the weak link.</p>
@@ -149,12 +196,7 @@ export default function GlucosamineAndJointSupportPage() {
           ctaAffiliateProduct="green+lipped+mussel+dog+joint"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

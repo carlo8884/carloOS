@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Paracheirodon innesi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/paracheirodon-innesi/", publisher: "Seriously Fish" },
+  { label: "Paracheirodon innesi — FishBase species record", url: "https://www.fishbase.se/summary/Paracheirodon-innesi.html", publisher: "FishBase" },
+  { label: "Neon Tetra Disease (Pleistophora hyphessobryconis) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/microsporidiosis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure', path: '/species/neon-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NeonTetraPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Neon Tetra', href: '/species/neon-tetra' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -20,13 +28,14 @@ export default function NeonTetraPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-neon-tetra" />
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
-        <StockImage manifestKey="fish-com:species-neon-tetra" aspect="16:9" variant="inline" caption="A school of neon tetras (Paracheirodon innesi) in a planted aquarium." priority />
+        <StockImage manifestKey="fish-com:species-neon-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A school of neon tetras (Paracheirodon innesi) in a planted aquarium." priority />
 
         <h2>Why Store Neons Die — And How to Prevent It</h2>
         <DropCap>Neon tetras have an undeserved reputation for being fragile. Wild-caught neons from the Amazon, properly handled and quarantined, are actually quite hardy. The fish that die within days of purchase are almost always mass-farmed specimens subjected to: overcrowded holding tanks, poor water quality in transit, exposure to multiple disease sources from mixed-source holding systems, and the compounded stress of temperature and chemistry changes during shipping. The solution is quarantine (4 weeks minimum in a separate tank before introducing to an established aquarium) and purchasing from quality sources — not cheap bulk-lot fish store stock.</DropCap>
@@ -46,7 +55,8 @@ export default function NeonTetraPage() {
 
         <h2>Neon vs Cardinal Tetra</h2>
         <p>The cardinal tetra (Paracheirodon axelrodi) is the neon's larger cousin — 2 inches versus 1.25 inches, with the red coloration extending the full length of the belly rather than only the posterior half as in neons. Cardinals are generally considered more vivid and more impressive in large schools, but they are more sensitive to water quality than neons and prefer more strictly soft, acidic conditions. Cardinals also tend to be more expensive as they are predominantly wild-caught rather than farm-raised. For planted blackwater setups targeting optimal display with slightly acidic soft water, cardinals are the upgrade. For general community tanks with harder or more neutral water, neons are more appropriate.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Neon Tetra — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for neon tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -55,6 +65,7 @@ export default function NeonTetraPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

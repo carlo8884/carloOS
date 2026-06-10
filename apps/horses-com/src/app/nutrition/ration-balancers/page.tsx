@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Ration Balancers for Horses — Filling Nutritional Gaps Without Calories",
+  title: "Ration Balancers for Horses — Filling Nutrition Gaps Without Calories",
   description:
     "Reference guide to equine ration balancers: what they are, why forage-only diets need them, who benefits most, and how they differ from regular feeds.",
   path: '/nutrition/ration-balancers',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Ration Balancers for Horses — Filling Nutritional Gaps Without Calories",
+  title: "Ration Balancers for Horses — Filling Nutrition Gaps Without Calories",
   description:
     "Reference guide to equine ration balancers: what they are, why forage-only diets need them, who benefits most, and how they differ from regular feeds.",
   url: 'https://horses.com/nutrition/ration-balancers',
@@ -54,6 +54,12 @@ export default function RationBalancersPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+          { title: 'Grain and Concentrates', href: '/nutrition/grain-and-concentrates' },
+        ]}
         hero={{
           title: "Ration Balancers for Horses",
           subtitle:
@@ -89,6 +95,7 @@ export default function RationBalancersPage() {
               { label: "Equine Metabolic Syndrome", href: "/health/equine-metabolic-syndrome" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function RationBalancersPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What a Ration Balancer Is</h2>
           <p>A ration balancer is a concentrated, low-calorie feed designed to supply protein, vitamins, and minerals in a small daily serving -- typically a few hundred grams rather than the kilograms of a regular feed. It is essentially a fortified top-up that balances a forage diet nutritionally without adding meaningful calories, sugar, or starch. Think of it as a multivitamin-and-protein source rather than an energy feed.</p>
 
@@ -130,7 +144,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="grass-forage-balancer"
             badge="Grass-Forage Diets"
-            badgeEmoji="🌾"
             name="Purina Enrich Plus Ration Balancer"
             subtitle="Concentrated protein, vitamins, and minerals for forage-based diets"
             score={8.7}
@@ -156,7 +169,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="low-starch-balancer"
             badge="Metabolic / Low-Starch"
-            badgeEmoji="⚖️"
             name="Triple Crown 30% Ration Balancer"
             subtitle="Low-NSC option for metabolic and easy-keeper horses"
             score={8.6}
@@ -181,7 +193,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="senior-balancer"
             badge="Senior Forage Diets"
-            badgeEmoji="🐴"
             name="Nutrena Empower Topline Balancer"
             subtitle="Amino-acid-focused balancer to support topline on forage"
             score={8.4}

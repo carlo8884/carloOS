@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -125,55 +126,37 @@ const COLOR_CARDS: ColorCard[] = [
   },
 ]
 
+// ItemList of the color & pattern guides — structured, citable index of the
+// color cluster for AI Overviews / Perplexity (GEO authority signal).
+const colorListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Color & Pattern Guides at Ferret.com',
+  numberOfItems: COLOR_CARDS.length,
+  itemListElement: COLOR_CARDS.map((card, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: card.title,
+    url: `https://ferret.com/colors/${card.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, colorListSchema)
+
 export default function ColorsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
-      {/* Hero */}
-      <div
-        style={{
-          background: 'var(--brand-dark)',
-          padding: 'clamp(48px, 8vw, 80px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Colors &amp; Patterns
-            </span>
-          </div>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              fontWeight: 800,
-              color: 'var(--brand-primary-pale)',
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              margin: '0 0 16px',
-            }}
-          >
-            Ferret Colors &amp; Patterns
-          </h1>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              fontWeight: 300,
-              color: 'rgba(251, 245, 232, 0.65)',
-              maxWidth: '640px',
-              lineHeight: 1.65,
-              margin: 0,
-            }}
-          >
-            Sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — ferret coats
-            come in a small but gorgeously confusing palette. This is the field guide: what each
-            color actually looks like, how the labels overlap, and where coat color does (and
-            doesn&apos;t) connect to health and lifespan.
-          </p>
-        </div>
-      </div>
+      {/* Hero — image-first overlaid masthead (matches the homepage identity) */}
+      <HubHero
+        eyebrow="Colors & Patterns"
+        title="Ferret Colors & Patterns"
+        intro="Sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — ferret coats come in a small but gorgeously confusing palette. This is the field guide: what each color actually looks like, how the labels overlap, and where coat color does (and doesn't) connect to health and lifespan."
+        manifestKey="ferret-com:colors-hero"
+        imageAlt="Ferret coat colors and patterns"
+        cta={{ href: '/colors/ferret-colors-and-patterns', label: 'See the full color guide' }}
+      />
 
       {/* Breadcrumb */}
       <nav
@@ -192,10 +175,6 @@ export default function ColorsHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Patterns</span>
       </nav>
 
-      {/* Hero image */}
-      <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:colors-hero" aspect="16:9" variant="wide" priority />
-      </div>
 
       {/* Intro */}
       <div

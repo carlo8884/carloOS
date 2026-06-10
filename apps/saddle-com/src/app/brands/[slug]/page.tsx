@@ -12,11 +12,11 @@ import {
   CalloutBox,
   ArticleByline,
   TableOfContents,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -102,17 +102,9 @@ export default async function BrandPage({ params }: BrandPageProps) {
     description: brand.tagline,
   }
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://saddle.com/' },
-      { name: 'Brands', url: 'https://saddle.com/brands' },
-      { name: brand.name, url },
-    ],
-  })
-
   const faqSchema = buildFAQSchema({ questions: brand.faq })
 
-  const combinedSchema = combineSchemas(articleSchema, organizationSchema, breadcrumbSchema, faqSchema)
+  const combinedSchema = combineSchemas(articleSchema, organizationSchema, faqSchema)
 
   return (
     <>
@@ -132,6 +124,12 @@ export default async function BrandPage({ params }: BrandPageProps) {
           { name: 'Home', href: '/' },
           { name: 'Brands', href: '/brands' },
           { name: brand.name, href: `/brands/${brand.slug}` },
+        ]}
+        relatedLinks={[
+          { title: 'Brands Hub', href: '/brands', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
         ]}
         sidebar={
           <>
@@ -273,6 +271,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
           )}
 
           <h2 id="buy">Where to Buy a {brand.name}</h2>
+          <AffiliateDisclosure variant="inline" siteId="saddle-com" />
           <ReviewCard
             id="buy-card"
             badge={`${brand.name} — Current Lineup`}

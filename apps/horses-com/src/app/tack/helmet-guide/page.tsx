@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,12 @@ export default function HelmetGuidePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Stirrups and Rider Safety', href: '/tack/stirrups-and-safety' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Disciplines Hub', href: '/disciplines' },
+        ]}
         hero={{
           title: "Riding Helmet Guide",
           subtitle:
@@ -89,6 +95,7 @@ export default function HelmetGuidePage() {
               { label: "Eventing", href: "/disciplines/eventing" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -99,6 +106,13 @@ export default function HelmetGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Helmets Matter</h2>
           <p>Riders sit well above the ground on a powerful, sometimes unpredictable animal, and a fall onto the head can cause traumatic brain injury. Head injuries are the leading cause of riding-related death and serious disability, and a correctly fitted, certified helmet absorbs and distributes the energy of an impact, substantially reducing the severity of head trauma. No level of experience makes a rider immune -- many serious accidents happen to skilled riders on quiet horses.</p>
 
@@ -138,7 +152,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="troxel-spirit"
             badge="Best Value"
-            badgeEmoji="💲"
             name="Troxel Spirit"
             subtitle="ASTM/SEI-certified schooling helmet at an entry price"
             score={8.4}
@@ -164,7 +177,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="ovation-deluxe"
             badge="Best Mid-Range"
-            badgeEmoji="🎩"
             name="Ovation Deluxe Schooler"
             subtitle="Certified all-purpose helmet with broader fit range"
             score={8.6}
@@ -189,7 +201,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="charles-owen-ayr8"
             badge="Premium / Show"
-            badgeEmoji="🏆"
             name="Charles Owen AYR8 Plus"
             subtitle="Multi-standard certified show helmet"
             score={9.1}

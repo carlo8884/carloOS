@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -6,6 +7,10 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList,
+  ArticleByline,
+  AffiliateDisclosure,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +34,24 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
+
 export default function HomeCookedVsCommercialPage() {
   return (
     <ArticleLayout
@@ -44,8 +67,14 @@ export default function HomeCookedVsCommercialPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Home-Cooked vs Commercial Diets', href: '/compare/home-cooked-vs-commercial' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+        { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+        { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
       schema={schema}
       sidebar={
@@ -64,6 +93,7 @@ export default function HomeCookedVsCommercialPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Gastrointestinal Sensitivity Diets', href: '/conditions/gastrointestinal-sensitivity' },
               { label: 'Minerals in Pet Food', href: '/nutrition/minerals-in-pet-food' },
               { label: 'Multivitamins for Pets', href: '/supplements/multivitamins-for-pets' },
               { label: 'Raw vs Cooked Diets', href: '/compare/raw-vs-cooked-diets' },
@@ -80,6 +110,8 @@ export default function HomeCookedVsCommercialPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-home-cooked-vs-commercial" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Home-cooked versus commercial — balancing control against the risk of nutritional imbalance." />
         <p>Home-cooking lets owners control ingredients, accommodate preferences and some medical needs, and avoid commercial processing. The problem is not the concept but the execution: balancing a complete diet by hand is genuinely difficult, and study after study finds that the large majority of home-prepared recipes — including many published in books and online and even some from veterinarians without nutrition training — fail to meet established nutrient requirements. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="appeal">The Appeal</h2>
         <p>Owners turn to home-cooking for control over ingredient quality, to manage picky eaters or food sensitivities, for animals with multiple conditions that no single commercial diet addresses, and out of distrust of commercial processing. These are understandable motivations, and a properly formulated home diet can be a fine choice — the issue is ensuring proper formulation.</p>
@@ -94,12 +126,46 @@ export default function HomeCookedVsCommercialPage() {
         <h2 id="justified">When It Is Justified</h2>
         <p>Home-cooking is justified when an animal will not eat or cannot tolerate suitable commercial diets, when a combination of medical conditions is not addressed by any commercial therapeutic diet, or when an owner is committed to it and willing to do it properly through a veterinary nutritionist. It is not justified as a casual swap from commercial food based on a recipe found online. Done right it is excellent; done casually it is a common cause of preventable nutritional disease. See <a href="/compare/fresh-vs-kibble">Fresh vs Kibble</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The reliable default
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop complete, balanced commercial diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most households, a complete-and-balanced commercial diet is the dependable way to
+            meet nutrient requirements without the imbalance risk of an unsupervised home recipe.
+            Compare options with our independent <Link href="/brands">brand evaluations</Link>, then
+            search the category below and confirm the AAFCO complete-and-balanced statement for the
+            life stage. A genuinely needed home diet should be formulated by a board-certified
+            veterinary nutritionist, not assembled from a recipe online.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20balanced%20pet%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20dog%20cat%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

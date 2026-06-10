@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -13,15 +13,31 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const SECTIONS = [
-  { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: '💵 Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
+  { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
   { category: 'The Vet Visit', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
   { category: 'Urgent vs. Routine', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
 ]
 
+const ALL_GUIDE_ITEMS = SECTIONS.flatMap((s) => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Vet Visit and Cost-of-Care Guides',
+  numberOfItems: ALL_GUIDE_ITEMS.length,
+  itemListElement: ALL_GUIDE_ITEMS.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://vets.co${item.href}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function VetsGuidesHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Owner Guides</span></div>
@@ -61,7 +77,7 @@ export default function VetsGuidesHubPage() {
         ))}
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Owner Newsletter" subtitle="Practical, vet-informed guidance every week." source="guides-hub" ctaText="Subscribe Free" perks={['✓ Practical', '📬 Weekly', '🐾 Owner-focused']} />
+        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Owner Newsletter" subtitle="Practical, vet-informed guidance every week." source="guides-hub" ctaText="Subscribe Free" perks={['Practical', 'Weekly', 'Owner-focused']} />
       </div>
     </>
   </>
