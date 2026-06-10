@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -11,12 +11,14 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const PAGE_URL = 'https://ferret.com/diet/best-ferret-kibble'
+
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'How to Choose a Ferret Kibble',
   description:
     'A framework for evaluating commercial ferret kibble by ingredient panel and macronutrient profile, with the three quality tiers and the red flags to avoid.',
-  url: 'https://ferret.com/diet/best-ferret-kibble',
+  url: PAGE_URL,
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
@@ -27,11 +29,52 @@ const med = buildMedicalWebPageSchema({
   name: 'How to Choose a Ferret Kibble',
   description:
     'Guidance on selecting an appropriate commercial dry diet for domestic ferrets based on ingredient and macronutrient panels.',
-  url: 'https://ferret.com/diet/best-ferret-kibble',
+  url: PAGE_URL,
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+
+// GEO: ItemList of the three kibbles that fit the profile + an editorial
+// Product/Review per pick. reviewRating maps each card's on-page disclosed
+// editorial score (via ScoreMethodology); name + reviewBody come only from this
+// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Ferret Kibbles That Fit the Profile',
+  items: [
+    { name: 'Wysong Epigen 90', url: `${PAGE_URL}#wysong-epigen-90` },
+    { name: 'Marshall Premium Ferret Diet', url: `${PAGE_URL}#marshall-premium-diet` },
+    { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
+  ],
+})
+
+const products = [
+  buildProductSchema({
+    name: 'Wysong Epigen 90',
+    description: 'Starch-free, animal-first, lowest commercial carb load in wide ferret use',
+    url: `${PAGE_URL}#wysong-epigen-90`,
+    ratingValue: 9.3,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits — the default choice when insulinoma risk is the priority. Premium price and not always stocked in chain pet aisles.',
+  }),
+  buildProductSchema({
+    name: 'Marshall Premium Ferret Diet',
+    description: 'Ferret-specific formulation, widely stocked, in-range macros',
+    url: `${PAGE_URL}#marshall-premium-diet`,
+    ratingValue: 8.0,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets, with protein and fat in the working ferret range. The panel is imperfect (some plant protein) but acceptable for healthy adults, and it is the most likely appropriate brand to find on a chain shelf at short notice.',
+  }),
+  buildProductSchema({
+    name: 'Carniwhole Ferret Food',
+    description: 'Direct-to-consumer, published macros, subscription-shipped',
+    url: `${PAGE_URL}#carniwhole`,
+    ratingValue: 8.2,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
+  }),
+]
+
+const combined = combineSchemas(schema, med, itemList, ...products)
 
 export default function BestFerretKibblePage() {
   return (

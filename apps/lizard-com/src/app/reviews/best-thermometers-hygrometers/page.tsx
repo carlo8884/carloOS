@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -10,16 +10,52 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const PAGE_URL = 'https://lizard.com/reviews/best-thermometers-hygrometers'
+
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best Reptile Thermometers & Hygrometers 2025',
   description: 'Compared on published accuracy specs and keeper-reported drift — accuracy rankings.',
-  url: 'https://lizard.com/reviews/best-thermometers-hygrometers',
+  url: PAGE_URL,
   imageUrl: '',
   authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
+
+// GEO: ItemList of the two recommended picks (the "Avoid" analog gauges are not
+// a recommended product and are excluded) + an editorial Product/Review per pick.
+// reviewRating maps each card's on-page disclosed editorial score (via
+// ScoreMethodology); name + reviewBody come only from this page's ReviewCard
+// content. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Reptile Thermometers & Hygrometers 2025',
+  items: [
+    { name: 'Govee H5053 Temperature & Humidity Sensor', url: `${PAGE_URL}#govee` },
+    { name: 'Inkbird IBS-TH2', url: `${PAGE_URL}#inkbird` },
+  ],
+})
+
+const products = [
+  buildProductSchema({
+    name: 'Govee H5053 Temperature & Humidity Sensor',
+    description: 'WiFi · App with push alerts · ±0.54°F accuracy · Data logging',
+    url: `${PAGE_URL}#govee`,
+    ratingValue: 9.5,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'Our top pick for serious keepers. Published ±0.54°F accuracy against reference standards puts it among the most accurate consumer devices, WiFi gives real-time monitoring with configurable push alerts, and 2 years of data logging lets you audit temperature gradients.',
+  }),
+  buildProductSchema({
+    name: 'Inkbird IBS-TH2',
+    description: 'Bluetooth · Good accuracy · Lower cost than Govee',
+    url: `${PAGE_URL}#inkbird`,
+    ratingValue: 8.8,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'Good accuracy (rated ±1°F by the manufacturer) at a lower price than the Govee. Bluetooth-only means you must be in range, so it suits keepers who check enclosures daily and do not need remote alerts; for tight temperature management, step up to the WiFi Govee.',
+  }),
+]
+
+const combined = combineSchemas(schema, itemList, ...products)
 
 
 const PICKS = [
@@ -31,7 +67,7 @@ const PICKS = [
 export default function BestThermometersPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combined} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
