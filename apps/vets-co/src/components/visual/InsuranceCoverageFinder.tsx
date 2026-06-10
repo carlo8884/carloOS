@@ -254,6 +254,7 @@ export function InsuranceCoverageFinder({ reviewsHref, campaignSku = 'insurance-
               <button
                 key={t}
                 type="button"
+                aria-pressed={petType === t}
                 onClick={() => onPetTypeChange(t)}
                 className={`flex-1 rounded border px-3 py-2 text-sm font-semibold capitalize transition ${
                   petType === t
@@ -383,7 +384,12 @@ export function InsuranceCoverageFinder({ reviewsHref, campaignSku = 'insurance-
       </div>
 
       {/* ── Carrier cards ──────────────────────────────────────────────── */}
-      <div className="mt-4 grid grid-cols-1 gap-4">
+      <div
+        className="mt-4 grid grid-cols-1 gap-4"
+        role="region"
+        aria-live="polite"
+        aria-label="Insurance carrier results"
+      >
         {result.carriers.map((c) => {
           const chips = result.matchedChips[c.slug] ?? []
           const reason = result.pinReason[c.slug]
