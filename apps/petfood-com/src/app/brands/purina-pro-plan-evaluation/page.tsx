@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,21 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page — the
+// OTC retail line only (the prescription-channel Veterinary Diets range is
+// excluded). QC §1.4: editorial Review only, never AggregateRating; the rating
+// mirrors the disclosed on-page editorial score for the retail line.
+const productSchema = buildProductSchema({
+  name: 'Purina Pro Plan (Retail Line)',
+  description:
+    'Over-the-counter retail line with feeding-trial substantiation on many diets, board-certified veterinary nutritionists on staff, company-owned manufacturing, and published peer-reviewed research. Prescription Veterinary Diets are a separate range, not covered here.',
+  reviewBody:
+    'One of the strongest scorers on the WSAVA selection criteria: nutritionists on staff, company-owned plants, published research, and many diets substantiated by AAFCO feeding trial. Confirm the specific formula and life-stage statement on the bag. Evaluation covers the OTC retail line, not the prescription range.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 9.0,
+})
+const pageSchema = combineSchemas(schema, productSchema)
 
 const SOURCES = [
     {
@@ -80,7 +97,7 @@ export default function PurinaProPlanEvaluationPage() {
         { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

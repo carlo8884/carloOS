@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +36,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored category picks on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; ratings reflect the
+// disclosed on-page editorial scores). ItemList captures the display order.
+const freezeDriedSchema = buildProductSchema({
+  name: 'Freeze-Dried Complete Diets',
+  description:
+    'Shelf-stable, minimally heated complete diets, usually rehydrated before feeding. Many are raw-based; prefer products with a validated kill step and a complete-and-balanced AAFCO statement for the life stage.',
+  reviewBody:
+    'Low-heat freeze-drying preserves most heat-sensitive nutrients; products are usually rehydrated before serving. Many are raw-based and carry raw-food handling considerations — prefer a validated kill step and a complete-and-balanced AAFCO statement. Energy-dense by dry weight.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.0,
+})
+const dehydratedSchema = buildProductSchema({
+  name: 'Dehydrated Complete Diets',
+  description:
+    'Warm-air dried complete diets, gently cooked or raw depending on temperature, rehydrated to serve. Confirm whether the product is a complete diet or a topper and check the calorie density.',
+  reviewBody:
+    'Warm-air dehydration is gentler than extrusion but applies more heat than freeze-drying; the base may be cooked or raw. Rehydrate per the manufacturer to restore moisture and aroma. Confirm complete-and-balanced versus topper, and check the kill-step practice.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 7.8,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Freeze-Dried and Dehydrated Options',
+  items: [
+    { name: 'Freeze-Dried Complete Diets', url: 'https://petfood.com/compare/freeze-dried-and-dehydrated#freeze-dried-complete' },
+    { name: 'Dehydrated Complete Diets', url: 'https://petfood.com/compare/freeze-dried-and-dehydrated#dehydrated-complete' },
+  ],
+})
+const pageSchema = combineSchemas(schema, itemListSchema, freezeDriedSchema, dehydratedSchema)
 
 const SOURCES = [
     {
@@ -81,7 +114,7 @@ export default function FreezeDriedAndDehydratedPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

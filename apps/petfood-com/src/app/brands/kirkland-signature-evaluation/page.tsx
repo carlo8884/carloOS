@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,20 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; the rating mirrors
+// the disclosed on-page editorial score).
+const productSchema = buildProductSchema({
+  name: 'Kirkland Signature Pet Food',
+  description:
+    'Premium-positioned, named-meat-forward store-brand diet at a notably lower price per pound. The main rubric weakness is thinner supply-chain transparency as a contract-manufactured store brand. Confirm the AAFCO statement and life stage on the specific bag.',
+  reviewBody:
+    'One of the strongest value options — premium-positioned, named-meat-forward formulas at a notably lower price per pound, useful for large dogs. Thinner sourcing and quality-control disclosure than brands that own their plants. Confirm the AAFCO statement and life stage on the bag.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.0,
+})
+const pageSchema = combineSchemas(schema, productSchema)
 
 const SOURCES = [
     {
@@ -81,7 +97,7 @@ export default function KirklandSignatureEvaluationPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
