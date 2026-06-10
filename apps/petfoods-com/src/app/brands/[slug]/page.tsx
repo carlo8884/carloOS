@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import {
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   ArticleLayout,
   ArticleByline,
   TableOfContents,
@@ -177,14 +176,6 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
 
   const faqItems: FAQItem[] = buildBrandFaq(brand)
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://petfoods.com/' },
-      { name: 'Brands', url: 'https://petfoods.com/brands' },
-      { name: brand.name, url: `https://petfoods.com/brands/${brand.slug}` },
-    ],
-  })
-
   return (
     <ArticleLayout
       siteId="petfoods-com"
@@ -252,10 +243,6 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="carloOS-article">
@@ -525,14 +512,6 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
   const reviewedQuestions = new Set(review.wsavaQuestionsAnswered.map((q) => q.question))
   const allQuestions: WsavaAnsweredQuestion['question'][] = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://petfoods.com/' },
-      { name: 'Brands', url: 'https://petfoods.com/brands' },
-      { name: review.brandName, url: `https://petfoods.com/brands/${review.slug}` },
-    ],
-  })
-
   const faqItems: FAQItem[] = [
     {
       question: `What is ${review.brandName}’s WSAVA compliance score?`,
@@ -641,10 +620,6 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="carloOS-article">
