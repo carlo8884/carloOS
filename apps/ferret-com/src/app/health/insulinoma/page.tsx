@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
