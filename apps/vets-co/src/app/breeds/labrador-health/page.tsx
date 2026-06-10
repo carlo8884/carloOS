@@ -27,7 +27,7 @@ export default function VetsLabradorHealthPage() {
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'Labrador Health', href: '/breeds/labrador-health' }]}
       schema={schema}
       sidebar={<>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Find an Orthopedic Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Find an Orthopedic Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' }, { label: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' }]} />
         <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-labrador" />
         <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}

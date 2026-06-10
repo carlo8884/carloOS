@@ -75,7 +75,7 @@ const schema = combineSchemas(breadcrumbSchema, healthItemListSchema)
 const GUIDES = [
   { category: 'Emergency', items: [{ title: '15 Signs Your Pet Needs Emergency Care', href: '/health/emergency-signs', badge: 'Must Read' }, { title: 'ASPCA Poison Control: 888-426-4435', href: 'tel:8884264435', badge: 'Save This' }] },
   { category: 'Breed Health', items: [{ title: 'Golden Retriever Health Guide', href: '/breeds/golden-retriever-health' }, { title: 'Labrador Retriever Health', href: '/breeds/labrador-health' }, { title: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }, { title: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }] },
-  { category: 'Finding Care', items: [{ title: 'Find a Veterinary Specialist', href: '/find-a-vet', badge: 'Directory' }, { title: 'Best Pet Telehealth 2025', href: '/telehealth' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
+  { category: 'Finding Care', items: [{ title: 'Find a Veterinary Specialist', href: '/find-a-vet', badge: 'Directory' }, { title: 'Best Pet Telehealth 2026', href: '/telehealth' }, { title: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' }] },
 ]
 
 export default function VetsHealthHubPage() {
