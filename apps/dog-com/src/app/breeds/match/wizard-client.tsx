@@ -4,10 +4,11 @@
  * Dog Breed Match wizard — client-side stepper UI.
  *
  * Pure client logic, no email gate, no analytics POST. Renders the question
- * stack one-at-a-time and surfaces the top-3 breed recommendations from
- * wizard-logic.ts when complete. Premium styling mirrors the /which-pet
- * wizard: SVG icons (no emoji), the orange #1-match card, a relative match %,
- * and a "View breed profile" CTA linking to /breeds/[slug].
+ * stack one-at-a-time and groups breeds into honest fit tiers from
+ * wizard-logic.ts when complete — NO ranked list, NO percentage. Premium
+ * styling mirrors the /which-pet wizard: SVG icons (no emoji), data-derived
+ * "why this may fit" bullets, a prominent caveat, and a per-card internal-link
+ * row (breed profile · health · pet insurance).
  */
 
 import { useMemo, useState } from 'react'
@@ -16,8 +17,9 @@ import {
   QUESTIONS,
   type Answers,
   type QuestionKey,
-  type BreedRecommendation,
-  getBreedRecommendations,
+  type BreedFit,
+  type BreedFitResults,
+  getBreedFits,
   isComplete,
   progressPercent,
 } from './wizard-logic'
@@ -50,6 +52,28 @@ function IconArrow({ className }: { className?: string }) {
   )
 }
 
+function IconHeart({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M10 16.5l-6-5.4A3.6 3.6 0 1 1 10 6a3.6 3.6 0 1 1 6 5.1l-6 5.4z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function IconShield({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M10 2.5l6 2v4.5c0 4-2.7 6.4-6 7.5-3.3-1.1-6-3.5-6-7.5V4.5l6-2z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M7.5 10l1.8 1.8L13 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function BreedMatchWizard() {
   const [answers, setAnswers] = useState<Answers>({})
   const [stepIdx, setStepIdx] = useState(0)
@@ -59,9 +83,9 @@ export function BreedMatchWizard() {
   const currentQuestion = QUESTIONS[stepIdx]
   const isLast = stepIdx === QUESTIONS.length - 1
 
-  const recommendations: BreedRecommendation[] = useMemo(() => {
-    if (!showResults) return []
-    return getBreedRecommendations(answers, 3)
+  const fitResults: BreedFitResults | null = useMemo(() => {
+    if (!showResults) return null
+    return getBreedFits(answers)
   }, [answers, showResults])
 
   function selectAnswer(key: QuestionKey, value: string) {
@@ -91,10 +115,10 @@ export function BreedMatchWizard() {
     }
   }
 
-  if (showResults) {
+  if (showResults && fitResults) {
     return (
       <ResultsView
-        recommendations={recommendations}
+        results={fitResults}
         onBack={goBack}
         onRestart={restart}
       />
@@ -182,14 +206,16 @@ export function BreedMatchWizard() {
 }
 
 function ResultsView({
-  recommendations,
+  results,
   onBack,
   onRestart,
 }: {
-  recommendations: BreedRecommendation[]
+  results: BreedFitResults
   onBack: () => void
   onRestart: () => void
 }) {
+  const { mayFit, closerLook, noStrongFit } = results
+
   return (
     <div>
       {/* Results header */}
@@ -197,23 +223,68 @@ function ResultsView({
         <div className="flex items-center gap-2 mb-3">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Your Top 3 Breed Matches
+            Breeds That May Fit Your Lifestyle
           </span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl font-bold leading-tight mb-3">
-          Based on your answers, here&apos;s what fits.
+          Based on your answers, here are breeds worth a look.
         </h2>
         <p className="text-white/70 text-sm leading-relaxed max-w-2xl">
-          Scores compare each breed against your lifestyle inputs using documented breed attributes and AKC + ASPCA owner-suitability guidance. Match percentage is relative to the best-fit breed for your answers — not an absolute score. Always meet a specific dog before committing.
+          These breeds are grouped — not ranked or scored — by how their documented attributes line up with your lifestyle inputs, using AKC and ASPCA owner-suitability guidance. There is no single &quot;best&quot; breed; temperament varies within every breed, so always meet a specific dog before committing.
         </p>
       </div>
 
-      {/* Recommendation cards */}
-      <div className="grid gap-5 mb-8">
-        {recommendations.map((rec, idx) => (
-          <BreedCard key={rec.slug} rec={rec} rank={idx + 1} />
-        ))}
-      </div>
+      {/* No-strong-fit note */}
+      {noStrongFit && (
+        <div className="rounded-xl border border-brand-border bg-brand-surface p-5 mb-6">
+          <p className="text-sm text-brand-text-mid leading-relaxed flex items-start gap-2.5">
+            <IconAlert className="w-4 h-4 text-brand-warning shrink-0 mt-0.5" />
+            <span>
+              No breed lined up cleanly with every answer. The breeds below are the closest fits — read each trade-off carefully, or change an answer to broaden the results.
+            </span>
+          </p>
+        </div>
+      )}
+
+      {/* May fit your lifestyle */}
+      {mayFit.length > 0 && (
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-1">
+            <IconCheck className="w-4 h-4 text-brand-primary shrink-0" />
+            <h3 className="font-display text-xl font-bold text-brand-dark leading-tight">
+              May fit your lifestyle
+            </h3>
+          </div>
+          <p className="text-xs text-brand-text-light mb-4 leading-relaxed">
+            Breeds whose documented attributes line up clearly with your answers.
+          </p>
+          <div className="grid gap-5">
+            {mayFit.map((fit) => (
+              <BreedCard key={fit.slug} fit={fit} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Worth a closer look */}
+      {closerLook.length > 0 && (
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-1">
+            <IconAlert className="w-4 h-4 text-brand-warning shrink-0" />
+            <h3 className="font-display text-xl font-bold text-brand-dark leading-tight">
+              Worth a closer look
+            </h3>
+          </div>
+          <p className="text-xs text-brand-text-light mb-4 leading-relaxed">
+            Partial fits — some attributes line up, but read the trade-off on each card before deciding.
+          </p>
+          <div className="grid gap-5">
+            {closerLook.map((fit) => (
+              <BreedCard key={fit.slug} fit={fit} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between pt-6 border-t border-brand-border">
@@ -236,40 +307,38 @@ function ResultsView({
   )
 }
 
-function BreedCard({ rec, rank }: { rec: BreedRecommendation; rank: number }) {
+function BreedCard({ fit }: { fit: BreedFit }) {
+  const isMayFit = fit.tier === 'may-fit'
   return (
     <article
       className={[
         'bg-brand-white border-2 rounded-xl p-5 sm:p-6',
-        rank === 1 ? 'border-brand-primary shadow-card-hover' : 'border-brand-border shadow-card',
+        isMayFit ? 'border-brand-primary shadow-card-hover' : 'border-brand-border shadow-card',
       ].join(' ')}
     >
       {/* Header */}
-      <div className="flex items-start justify-between gap-4 mb-4">
-        <div>
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
-            #{rank} match
-          </div>
-          <h3 className="font-display text-2xl font-bold text-brand-dark leading-tight">
-            {rec.name}
-          </h3>
-          <div className="text-xs text-brand-text-light mt-1">AKC {rec.group} group</div>
+      <div className="mb-4">
+        <div
+          className={[
+            'text-2xs font-bold tracking-eyebrow uppercase mb-1',
+            isMayFit ? 'text-brand-primary' : 'text-brand-text-mid',
+          ].join(' ')}
+        >
+          {isMayFit ? 'May fit your lifestyle' : 'Worth a closer look'}
         </div>
-        <div className="text-right shrink-0">
-          <div className="font-display text-3xl font-black text-brand-primary leading-none">
-            {rec.matchPercent}%
-          </div>
-          <div className="text-2xs text-brand-text-light uppercase tracking-wider mt-1">match</div>
-        </div>
+        <h4 className="font-display text-2xl font-bold text-brand-dark leading-tight">
+          {fit.name}
+        </h4>
+        <div className="text-xs text-brand-text-light mt-1">AKC {fit.group} group</div>
       </div>
 
-      {/* Why this fits */}
+      {/* Why this may fit */}
       <div className="mb-4">
         <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-mid mb-2">
-          Why this fits
+          Why this may fit
         </div>
         <ul className="space-y-2 list-none m-0 p-0">
-          {rec.fitBullets.map((b, i) => (
+          {fit.fitBullets.map((b, i) => (
             <li key={i} className="flex items-start gap-2.5 text-sm text-brand-text-mid leading-relaxed">
               <IconCheck className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
               <span>{b}</span>
@@ -285,18 +354,44 @@ function BreedCard({ rec, rank }: { rec: BreedRecommendation; rank: number }) {
         </div>
         <p className="text-sm text-brand-text-mid leading-relaxed flex items-start gap-2.5">
           <IconAlert className="w-4 h-4 text-brand-warning shrink-0 mt-0.5" />
-          <span>{rec.caveat}</span>
+          <span>{fit.caveat}</span>
         </p>
       </div>
 
-      {/* CTA */}
+      {/* Primary CTA — breed profile */}
       <Link
-        href={rec.href}
+        href={fit.href}
         className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white font-semibold text-sm px-5 py-3 rounded-lg no-underline hover:bg-brand-primary-dark transition-colors duration-150 min-h-[44px]"
       >
         View breed profile
         <IconArrow className="w-4 h-4" />
       </Link>
+
+      {/* Internal-link row — health + insurance research paths */}
+      <div className="mt-4 pt-4 border-t border-brand-border">
+        <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-mid mb-2">
+          Research further
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {fit.healthLinks.map((h) => (
+            <Link
+              key={h.href}
+              href={h.href}
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-dark bg-brand-surface border border-brand-border rounded-md px-3 py-1.5 no-underline hover:border-brand-primary hover:text-brand-primary transition-colors duration-150"
+            >
+              <IconHeart className="w-3.5 h-3.5 text-brand-warning shrink-0" />
+              {h.label}
+            </Link>
+          ))}
+          <Link
+            href={fit.insuranceHref}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-dark bg-brand-surface border border-brand-border rounded-md px-3 py-1.5 no-underline hover:border-brand-primary hover:text-brand-primary transition-colors duration-150"
+          >
+            <IconShield className="w-3.5 h-3.5 text-brand-primary shrink-0" />
+            Pet insurance
+          </Link>
+        </div>
+      </div>
     </article>
   )
 }

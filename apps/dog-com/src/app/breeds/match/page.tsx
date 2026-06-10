@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Breed Match — Which Breed Fits You?',
   description:
-    'Answer 7 quick questions about your home and lifestyle, get your top 3 dog breed matches with honest trade-offs. No email required.',
+    'Answer 7 quick questions about your home and lifestyle to see dog breeds that may fit, grouped into honest tiers with trade-offs. No email required.',
   path: '/breeds/match',
   type: 'website',
   category: 'Decision Wizard',
@@ -39,7 +39,7 @@ const webAppSchema = {
   operatingSystem: 'Any (web browser)',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   description:
-    'A 7-question decision wizard that recommends dog breeds based on home type, daily time, experience, activity level, household, grooming tolerance, and noise tolerance.',
+    'A 7-question decision wizard that groups dog breeds into honest fit tiers — "may fit your lifestyle" and "worth a closer look" — based on home type, daily time, experience, activity level, household, grooming tolerance, and noise tolerance. No ranking or match percentage.',
   author: { '@type': 'Organization', name: 'Dog.com Editorial' },
   publisher: { '@type': 'Organization', name: 'Dog.com', url: 'https://dog.com' },
   isAccessibleForFree: true,
@@ -75,12 +75,12 @@ const FAQS = [
   {
     question: 'How does the dog breed match quiz work?',
     answer:
-      'The quiz asks seven questions about your home type, how much time you have each day, your dog experience, your activity level, who shares your home, your grooming tolerance, and your noise tolerance. It then scores every breed in the Dog.com database against your answers using documented breed attributes (size, energy, shedding, grooming, kid- and dog-friendliness, and first-time-owner suitability) plus AKC and ASPCA owner-suitability guidance. Match percentages are relative to the best-fit breed for your specific answers, not an absolute score.',
+      'The quiz asks seven questions about your home type, how much time you have each day, your dog experience, your activity level, who shares your home, your grooming tolerance, and your noise tolerance. It then compares every breed in the Dog.com database against your answers using documented breed attributes (size, energy, shedding, grooming, kid- and dog-friendliness, and first-time-owner suitability) plus AKC and ASPCA owner-suitability guidance. Rather than ranking breeds or showing a match percentage, it groups them into honest fit tiers — breeds that may fit your lifestyle and breeds worth a closer look — so you weigh the trade-offs yourself.',
   },
   {
-    question: 'What is the best dog breed for a first-time owner in an apartment?',
+    question: 'Which dog breeds suit a first-time owner in an apartment?',
     answer:
-      'For first-time owners in apartments, the quiz tends to surface smaller, lower-energy, lower-shedding breeds that are documented as first-time-owner friendly. The exact top three depend on your other answers, especially how much daily time you have and your noise tolerance. The results page spells out the trade-offs for each breed so you can decide with full information.',
+      'For first-time owners in apartments, the quiz tends to surface smaller, lower-energy, lower-shedding breeds that are documented as first-time-owner friendly. Which breeds appear depends on your other answers, especially how much daily time you have and your noise tolerance. The results page spells out the trade-offs for each breed so you can decide with full information — there is no single best breed, only breeds that may fit your situation.',
   },
   {
     question: 'Does the quiz require my email or store my answers?',
@@ -145,7 +145,7 @@ export default function BreedMatchPage() {
         hero={{
           title: 'Which Dog Breed Fits You?',
           subtitle:
-            'A free 7-question wizard. Answer once and get three dog breeds ranked against your real home, schedule, and experience — with the trade-offs spelled out. No email, no signup.',
+            'A free 7-question wizard. Answer once and see dog breeds that may fit your real home, schedule, and experience — grouped into honest tiers with the trade-offs spelled out. No email, no signup.',
           category: 'Decision Wizard',
           authorName: 'Dog.com Editorial',
           publishedAt: 'June 7, 2026',
@@ -159,7 +159,7 @@ export default function BreedMatchPage() {
           The single biggest predictor of a happy dog relationship is choosing a breed whose needs match your real life — not the breed you saw in a movie. Energy level, size, grooming, and tolerance for noise are where most mismatches happen.
         </p>
         <p className="text-base leading-relaxed text-brand-text-mid mb-3">
-          This wizard scores {MATCHABLE_BREED_COUNT} breeds in the Dog.com database against seven questions about your home, time, experience, activity, household, grooming tolerance, and noise tolerance. Each result links straight to that breed&apos;s full profile so you can dig deeper. There is no email gate, and your answers never leave your browser.
+          This wizard compares {MATCHABLE_BREED_COUNT} breeds in the Dog.com database against seven questions about your home, time, experience, activity, household, grooming tolerance, and noise tolerance. Instead of a ranking or a match percentage, it groups breeds into two honest tiers — breeds that <em>may fit your lifestyle</em> and breeds <em>worth a closer look</em> — each with a trade-off and links to the breed&apos;s full profile, its common health reading, and pet-insurance guidance. There is no email gate, and your answers never leave your browser.
         </p>
         <p className="text-sm leading-relaxed text-brand-text-light mb-8">
           Built by Dog.com Editorial. Suitability framing follows{' '}
