@@ -4,58 +4,63 @@ _Started 2026-06-09 (overnight). Private working tracker. Real verified tasks on
 Operating rules: work until safe queue exhausted; narrow non-overlapping sub-agents; active PR backlog <5; if GitHub rate-limits merges → switch to read-only audits/handoffs/planning; no broad Depth / no `to-100`; no premium claims pre-pixel-review; don't ask Carlo for DNS/launch/spend/secrets/vendors/strategy unless truly required.
 
 ## A. Pixel-prep launch candidates
-- [x] 1. Ferret pixel-prep — **sub-agent running** (ac5b2cc1)
-- [x] 2. Lizard pixel-prep — **sub-agent running** (ae43cb55)
-- [x] 3. Dog re-check after trust fix — trust violation fixed + trust-guard hardened (shipped, gates green); Visual polish routed
-- [ ] 4. Vets re-check — pending Monetization funnel-404 fix landing
-- [—] 5. PetFood/Fish pixel sign-off — HELD until 51-key image differentiation solved (Visual)
+- [x] 1. Ferret — DONE. COO fix shipped (dead imports). Monetization routed (tools→starter-kit funnel gap). Launch-ready bar funnel wiring.
+- [x] 2. Lizard — DONE. COO fixes shipped (dedupe BreadcrumbList ×15 pages, soften reviews claim). Verified 2 false-positive "blockers" (acute buy boxes / microcopy) — clean, no action.
+- [x] 3. Dog — DONE earlier. Trust fix shipped + trust-guard hardened. Visual routed.
+- [ ] 4. Vets — pending Monetization funnel-404 fix landing.
+- [—] 5. PetFood/Fish — HELD until 51-key image differentiation solved.
 
-## B. Monetization launch checks (route — Monetization lane)
-- [ ] 6. Vets funnel-404 fix — verify when it lands (handoff sent: P0 `/pet-insurance/${slug}` 404)
-- [~] 7. Dog insurance/DNA/funnel paths — Dog prep PASS on /go routing + DNA/insurance template routes resolve
-- [ ] 8. Ferret starter-kit paths — Ferret agent verifying /ferret-starter-kit
-- [ ] 9. Lizard deficiency/husbandry CTAs + acute-removal — Lizard agent verifying §1.5 microcopy rule
-- [—] 10/11. PetFood compare / Fish tool→kit CTAs — held with image differentiation
+## B. Monetization launch checks (routed — Monetization lane)
+- [→] 6. Vets funnel-404 — routed (P0). Verify on landing.
+- [x] 7. Dog insurance/DNA/funnel paths — PASS (Dog prep: /go routing + DNA/insurance templates resolve).
+- [→] 8. Ferret starter-kit — exists+resolves; tools don't feed it (routed).
+- [x] 9. Lizard deficiency/husbandry CTAs + acute removal — VERIFIED COMPLIANT (acute = vet-referral only; deficiency = exact microcopy present).
+- [—] 10/11. PetFood/Fish CTAs — held with images.
 
 ## C. Trust/claim hygiene
-- [x] 12. Swept 6 candidates: best/#1/fastest/cheapest/tested/in-our-experience/years-of-practice/guaranteed/proven
-  - **Result: clean of COO-lane overclaims.** All "cheapest/guaranteed/proven" hits are calibrated (budgeting advice, AAFCO/label terms, clinical idiom "until proven otherwise"). "in our experience" = 0; "years of veterinary practice" = 0 (trust-guard now enforces).
-- [x] 13. COO-lane trust fix shipped — dog-symptoms-guide first-person clinical claim → third-person + trust-guard rule added.
-- [→] 14. Route Monetization residual: `dog-com/(funnels)/thanks/[magnet]/page.tsx:50` "best-overall" pick + "cheapest time to enroll" (funnel copy, not launch-blocking).
+- [x] 12. Swept 6 candidates — CLEAN of COO-lane overclaims (cheapest/guaranteed/proven all calibrated; in-our-experience/years-of-practice = 0).
+- [x] 13. COO-lane trust fixes shipped — Dog first-person clinical claim + trust-guard rule; Lizard reviews "tested by keepers" softened.
+- [→] 14. Routed Monetization residual: dog thanks/[magnet] "best-overall"/"cheapest time".
 
-## D. Visual/image (track — Visual lane)
-- [→] 15. Dog emoji→SVG handoff sent (2026-06-09-coo-to-visual-dog-polish.md)
-- [→] 16. Dog stale homepage breed photos handoff sent (same doc)
-- [→] 17. Fish/PetFood 51-key resync handoff sent (2026-06-09-coo-to-visual-resync-targets.md)
-- [x] 18. Not asking Carlo to rerun sync — waiting on Visual's targeted run plan.
+## D. Visual/image (tracked — Visual lane)
+- [→] 15/16. Dog emoji→SVG + stale breed photos — handoff sent.
+- [→] 17. Fish/PetFood 51-key resync — handoff sent.
+- [x] 18. Not asking Carlo to rerun sync — awaiting Visual's run plan.
 
 ## E. PR hygiene
-- [x] 19. Active backlog = 4 (<5): #364, #193, #575, #488
-- [ ] 20. Rebase stale active PRs — #193 mergeability TBD
-- [x] 21. Closed 9 superseded w/ reasons (#273/#267/#265/#250/#181/#236/#211/#194/#185)
-- [x] 22. Parked 5 Depth/scaffold (#611/#492/#328/#266/#161)
+- [x] 19. Active backlog = 4 (<5): #364, #193, #575, #488.
+- [ ] 20. #193 GEO-foundation — advance pending F28 GEO audit (confirm llms.txt still net-new).
+- [x] 21. Closed 9 superseded w/ reasons.
+- [x] 22. Parked 5 Depth/scaffold.
+- [x] GIT HYGIENE FIXED — identity set (Claude/noreply@anthropic.com); local main reset to clean trunk; on proper feature branch. Ends branch-leak pollution.
 
-## F. Non-launch idle-safe audits (when blocked)
-- [ ] 23. Saddle trust/CTA/disclosure
-- [ ] 24. Horses no-wagering/no-betting compliance
-- [ ] 25. PetFoods support-asset audit
-- [ ] 26. Ferrets support-asset audit
-- [ ] 27. Schema/breadcrumb/internal-link health (portfolio)
-- [ ] 28. robots/sitemap/llms.txt/GEO basics (ties to #193)
-- [ ] 29. Affiliate /go routing + bare-retailer-leak audit (portfolio)
-- [ ] 30. Mobile-risk sections → Visual handoffs
+## F. Non-launch idle-safe audits
+- [ ] 23. Saddle — running (with 25/26).
+- [x] 24. Horses no-wagering — COMPLIANT. 0 promotional betting items; /go allow-list equine-only. No action.
+- [ ] 25. PetFoods — running.
+- [ ] 26. Ferrets — running.
+- [ ] 27. Schema/breadcrumb/internal-link — partially covered (Lizard dup fixed); broader pass pending.
+- [ ] 28. robots/sitemap/llms.txt/GEO — running.
+- [x] 29. Affiliate /go routing + bare-retailer leaks — CLEAN portfolio-wide (14 apps, full /go coverage, 0 leaks).
+- [ ] 30. Mobile-risk → Visual handoffs — pending.
 
 ## Findings ledger (verified only)
-- F-01 [P0, Monetization] Vets funnel carrier CTA 404 — `/pet-insurance/${slug}` no route. (routed)
-- F-02 [P1, Monetization] Vets funnel hardcoded dead `dog.com` CTAs. (routed)
-- F-03 [Trust, COO, FIXED] Dog first-person clinical claim + trust-guard gap. (shipped)
-- F-04 [Visual] Dog 221 emoji in user copy; 4 synced breeds shown text-only. (routed)
-- F-05 [Monetization] Dog thanks/[magnet] "best-overall"/"cheapest time" funnel residual. (to route)
-- F-06 [Confirmed-OK] Vets /vets sample directory noindexed at every level + sitemap-excluded — not a defect.
+- F-01 [P0, Monetization, routed] Vets funnel carrier CTA 404 `/pet-insurance/${slug}`.
+- F-02 [P1, Monetization, routed] Vets funnel hardcoded dead dog.com CTAs.
+- F-03 [Trust, COO, FIXED] Dog first-person clinical claim + trust-guard gap.
+- F-04 [Visual, routed] Dog 221 emoji; 4 synced breeds shown text-only.
+- F-05 [Monetization, routed] Dog thanks/[magnet] "best-overall"/"cheapest time".
+- F-06 [OK] Vets /vets sample directory noindexed at every level — not a defect.
+- F-07 [Monetization, routed] Ferret tools (cost-calc, readiness-quiz) don't link to /ferret-starter-kit.
+- F-08 [Monetization, routed] Lizard UVB calc CTA not result-aware (low pri).
+- F-09 [Trust, COO, FIXED] Lizard health/[slug] duplicate BreadcrumbList ×15 pages.
+- F-10 [OK] Lizard acute pages buy-box-free + deficiency microcopy exact — agent false positives, verified clean.
+- F-11 [OK] Horses no-wagering compliant — 0 promotional betting.
+- F-12 [OK] Affiliate /go routing CLEAN portfolio-wide, 0 leaks, full coverage.
 
-## Next tasks (from findings, ranked: launch>revenue>trust>visual>buyer-readiness)
-1. Process Ferret + Lizard pixel-prep results; fix COO-lane, route others.
-2. Verify #193 GEO-foundation mergeability; advance if clean (launch GEO).
-3. Append F-05 to a consolidated Monetization route note.
-4. F27/F29 portfolio schema/breadcrumb/internal-link + /go leak audit (read-only sub-agent).
-5. F24 Horses no-wagering compliance audit (read-only).
+## Next tasks (ranked: launch>revenue>trust>visual>buyer-readiness)
+1. Process F28 GEO + F23/25/26 support-site audits; fix COO-lane, route others.
+2. Advance #193 GEO-foundation if F28 confirms llms.txt net-new + PR mergeable.
+3. F30 mobile-risk audit → Visual handoff.
+4. Re-check Vets when Monetization funnel-404 lands.
+5. Generate next-100 from findings once F23–F30 land.
