@@ -84,7 +84,7 @@ export const otcBrands: OtcBrand[] = [
     manufacturing: 'owned-facilities',
     // "does not return a Class I or Class II recall affecting U.S.-distributed product"
     recallPosture: 'No Class I or Class II FDA-CVM recall affecting U.S.-distributed product over the past decade (per the eval).',
-    formats: ['kibble'], // eval discusses "dry recipes" only
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // eval discusses "dry recipes" only
     priceBand: 'premium', // "~$0.13–$0.18 per 100 kcal... higher price point" / "premium grain-free"
     // "Brand named in 2019 update" (FDA CVM DCM dataset)
     grainFreeDcmContext: true,
@@ -106,7 +106,7 @@ export const otcBrands: OtcBrand[] = [
     aafcoPosture: 'formulated-to-meet', // "majority of dry SKUs... via the formulation pathway rather than via feeding trial"
     manufacturing: 'owned-facilities', // DogStar / NorthStar Kitchens
     recallPosture: 'No Class I or Class II FDA-CVM recall affecting U.S.-distributed product over the past decade (per the eval).',
-    formats: ['kibble'],
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—')
     priceBand: 'premium', // "~$0.08–$0.12 per 100 kcal", lower than Orijen but still premium grain-free segment
     grainFreeDcmContext: true, // "Brand named in 2019 update"
     monetizable: true,
@@ -129,7 +129,7 @@ export const otcBrands: OtcBrand[] = [
     manufacturing: 'owned-facilities', // "Purina owns and operates its manufacturing facilities rather than relying on anonymous co-packing"
     // "Purina has had recalls over the years... evaluated by cause, severity, and response rather than by count" — no specific frequency verdict stated
     recallPosture: 'Has had recalls over the years; the eval frames them as best judged by cause/severity/response, with FDA-CVM as the record. No specific frequency verdict stated.',
-    formats: ['kibble'], // eval describes life-stage / breed-size / performance diets; no wet/format detail to cite
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // eval describes life-stage / breed-size / performance diets; no wet/format detail to cite
     priceBand: 'premium', // ReviewCard price "$$ premium"
     grainFreeDcmContext: false, // eval does not flag Pro Plan in the DCM listing
     monetizable: true,
@@ -151,7 +151,7 @@ export const otcBrands: OtcBrand[] = [
     manufacturing: 'owned-facilities', // "Diamond Pet Foods manufactures Taste of the Wild in its own facilities"
     recallPosture:
       'Manufacturer (Diamond Pet Foods) was at the center of a major 2012 Salmonella recall affecting multiple Diamond-made brands; the eval flags this as material under its recall dimension.',
-    formats: ['kibble'], // eval describes dry grain-free recipes; no other format stated
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // eval describes dry grain-free recipes; no other format stated
     priceBand: 'mid', // ReviewCard price "$$ mid-tier", "mid-priced"
     grainFreeDcmContext: true, // "the pattern at the center of the DCM investigation"; "several grain-free brands in this category were named in the FDA's case reporting"
     monetizable: false, // grain-free-DCM column → CTA suppressed per build brief §8 (default-suppress on clinical ambiguity)
@@ -173,7 +173,7 @@ export const otcBrands: OtcBrand[] = [
     aafcoPosture: null, // eval directs owners to "confirm the AAFCO statement on the specific product"; does not state the brand's posture
     manufacturing: null, // "Manufacturing arrangements... differ and should be evaluated per brand" — not stated for Wellness specifically
     recallPosture: 'Has had recalls over the years (as most established brands have), per the eval; best assessed by cause/severity/response, with FDA-CVM as the record. No specific verdict stated.',
-    formats: ['kibble'], // eval references grain-inclusive and grain-free dry lines; no other format detail to cite
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // eval references grain-inclusive and grain-free dry lines; no other format detail to cite
     priceBand: 'premium', // ReviewCard price "$$ premium" / "premium natural-positioned"
     grainFreeDcmContext: false, // eval notes grain-free formulas "intersect the DCM question" generally but does not name the brand in the FDA listing
     monetizable: true,
@@ -193,9 +193,9 @@ export const otcBrands: OtcBrand[] = [
     aafcoPosture: null, // "confirm the AAFCO statement on the specific product" — brand posture not stated
     manufacturing: null, // not stated for Merrick specifically
     recallPosture: 'Has had recalls over the years (as most established brands have), per the eval; best assessed by cause/severity/response. No specific verdict stated.',
-    formats: ['kibble'], // grain-inclusive + grain-free dry lines referenced
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // grain-inclusive + grain-free dry lines referenced
     priceBand: 'premium', // ReviewCard price "$$ premium"
-    grainFreeDcmContext: false, // general grain-free DCM caution, not an FDA brand-name listing
+    grainFreeDcmContext: true, // Merrick IS named in the FDA 2019 16-brand list (per the site's own Blue Buffalo eval) — flag + suppress CTA for cross-page trust consistency
     monetizable: true,
     buyVendors: ['chewy-brand'],
     buySearchTerm: 'Merrick pet food',
@@ -215,7 +215,7 @@ export const otcBrands: OtcBrand[] = [
     manufacturing: 'co-manufactured', // "manufactured by a contract producer rather than by Costco itself; Diamond Pet Foods has been a known manufacturer"
     recallPosture:
       'Recall exposure follows the contract manufacturer (Diamond Pet Foods), whose record includes the major 2012 Salmonella recall; the store-brand model ties recall risk to that maker.',
-    formats: ['kibble'], // grain-inclusive + grain-free dry formulas referenced
+    formats: [], // source eval states no explicit format; nulled per source-traceability (renders '—') // grain-inclusive + grain-free dry formulas referenced
     priceBand: 'value', // ReviewCard price "$$ value tier", "premium value", "below name brands"
     grainFreeDcmContext: false, // eval notes the legume-heavy DCM question generally; does not name the brand in the FDA listing
     monetizable: true,
