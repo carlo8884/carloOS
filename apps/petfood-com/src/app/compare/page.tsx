@@ -123,6 +123,14 @@ export default function CompareHubPage() {
         <StockImage manifestKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" />
       </div>
 
+      <div className="px-container-sm sm:px-container pt-10 max-w-content-wide">
+        <p className="text-base text-brand-text-mid leading-relaxed">
+          Comparing specific brands rather than formats? The{' '}
+          <Link href="/tools/compare-pet-foods" className="text-brand-primary underline-offset-2 hover:underline">Compare Pet Foods tool</Link>{' '}
+          puts any two or three over-the-counter brands or diet types side-by-side on disclosed criteria — owner, AAFCO posture, manufacturing, recalls, and price band. A transparent comparison, not a ranking.
+        </p>
+      </div>
+
       <div className="px-container-sm sm:px-container py-12">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0 max-w-content-wide">
           {COMPARE.map((i) => (
