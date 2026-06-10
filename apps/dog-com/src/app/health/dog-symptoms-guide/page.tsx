@@ -157,7 +157,7 @@ export default function DogSymptomsGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p>In twenty years of emergency veterinary practice, the cases that are hardest are the ones that came in too late — not because the owner didn&apos;t care, but because they didn&apos;t know. A dog that seemed &quot;a little off&quot; yesterday. A belly that &quot;looked slightly bigger.&quot; A gum color that had been pale for hours. This guide gives you what you need to make fast, accurate decisions.</p>
+        <p>In emergency veterinary medicine, the hardest cases are often the ones that came in too late — not because the owner didn&apos;t care, but because they didn&apos;t know. A dog that seemed &quot;a little off&quot; yesterday. A belly that &quot;looked slightly bigger.&quot; A gum color that had been pale for hours. This guide gives you what you need to make fast, accurate decisions.</p>
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)', borderRadius: '10px', padding: '16px 20px', margin: '24px 0' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '7px' }}>Rule #1</div>
