@@ -8,6 +8,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { CompareTool } from './CompareTool'
 import { otcBrands, dietTypes } from '../../../data/otc-brands'
@@ -144,6 +145,7 @@ export default function ComparePetFoodsPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="compare-pet-foods"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

@@ -8,6 +8,7 @@ import {
   FAQAccordion,
   EmailCapture,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import PortionCalculator from './Calculator'
 
@@ -237,6 +238,8 @@ export default function PortionCalculatorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="petfood-com" contentType="tool" variant="footer" />
     </>
   )
 }
