@@ -36,6 +36,18 @@ const TOOLS = [
     desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size (small, medium, large, giant) and outputs a qualitative life-stage label.',
     tag: 'Life Stage',
   },
+  {
+    href: '/tools/puppy-weight-predictor',
+    title: 'Puppy Weight Predictor',
+    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves -- toy, small, medium, large, and giant breeds mature on different curves.',
+    tag: 'Puppy',
+  },
+  {
+    href: '/tools/dog-chocolate-toxicity-calculator',
+    title: 'Dog Chocolate Toxicity Calculator',
+    desc: 'My dog ate chocolate -- how much is dangerous? Estimate theobromine exposure by chocolate type, amount, and body weight against standard veterinary dose bands. Educational only: every result tells you to call your vet or poison control right now.',
+    tag: 'Health',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({

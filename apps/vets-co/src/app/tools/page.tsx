@@ -19,6 +19,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const TOOLS = [
   {
+    href: '/tools/pet-insurance-worth-it-calculator',
+    title: 'Is Pet Insurance Worth It? Calculator',
+    desc: 'A breakeven calculator: enter a quote and an expected-cost scenario to see the eligible vet-cost level at which a policy pays for itself — with honest framing on insurance as catastrophic-cost protection, not guaranteed savings.',
+    tag: 'Finance',
+  },
+  {
     href: '/tools/insurance-finder',
     title: 'Pet Insurance Coverage Finder',
     desc: 'Filter carriers by the coverage features you care about — exam fees, full dental, wellness, unlimited limits, 100% reimbursement — and compare options that may fit your priorities. No quotes, no rankings.',
@@ -80,7 +86,7 @@ export default function ToolsHub() {
         <div className="max-w-3xl mb-12">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s in the toolkit</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-            A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>which carriers even fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, <em>is this an ER right now or a same-day appointment</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
+            A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>is pet insurance even worth it for my pet</em>, <em>which carriers fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, <em>is this an ER right now or a same-day appointment</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed">
             They&apos;re free, do not require a sign-up, and do not collect or sell personal data. The insurance estimator is a pure-browser calculation — your quote inputs never leave the page.
@@ -106,6 +112,9 @@ export default function ToolsHub() {
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">How each tool is built</h2>
           <div className="space-y-5 text-base text-brand-text-mid leading-relaxed">
+            <p>
+              <strong>The &ldquo;is pet insurance worth it?&rdquo; calculator</strong> answers the decision question before the carrier question. It turns a quote — premium, deductible, reimbursement %, annual cap — into a single breakeven number: the eligible vet-cost level at which the policy reimburses exactly what it costs. It is honest about the result most owners find counterintuitive: in a typical year a policy does not pay for itself, because insurance is catastrophic-cost protection, not guaranteed savings. It never tells you to buy; it shows the math and points to the neutral comparison.
+            </p>
             <p>
               <strong>The coverage finder</strong> is a filter-and-group tool, not a ranking wizard. Each coverage priority — exam fees covered, full dental, a wellness add-on, an unlimited annual-limit option, alternative or behavioral coverage, prescription food, a 100&#37; reimbursement option — maps to a published policy attribute in our carrier registry. Select the features you care about and the finder narrows the list to the carriers that publish them, grouped by how many of your priorities each one covers. It never scores carriers, picks a winner, or quotes a price; absent fields are simply omitted. It pairs with the reimbursement estimator: the finder answers <em>which carriers</em>, the estimator answers <em>what a policy would reimburse</em>.
             </p>

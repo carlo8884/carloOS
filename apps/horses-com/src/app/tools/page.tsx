@@ -4,8 +4,8 @@ import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, Sch
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Horse Calculators & Tools — Body Condition Score | Horses.com',
-  description: 'Free horse-keeping calculators: Henneke body condition score (BCS) with feeding guidance per score, plus husbandry references for owners.',
+  title: 'Horse Calculators & Tools | Horses.com',
+  description: 'Free horse-keeping calculators: estimate weight from girth and length, plan daily hay and feed, and score body condition on the Henneke scale.',
   path: '/tools',
 })
 
@@ -17,6 +17,18 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 const TOOLS = [
+  {
+    href: '/tools/horse-weight-calculator',
+    title: 'Horse Weight Calculator',
+    desc: 'Estimate bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+    tag: 'Calculator',
+  },
+  {
+    href: '/tools/horse-feed-calculator',
+    title: 'Horse Feed & Hay Calculator',
+    desc: 'Estimate daily hay and feed from bodyweight, workload, and keeper type. Forage-first, using published NRC intake ranges, with a dry-matter vs. as-fed conversion.',
+    tag: 'Calculator',
+  },
   {
     href: '/tools/body-condition-score',
     title: 'Body Condition Score (Henneke)',
@@ -57,7 +69,7 @@ export default function ToolsHub() {
             Horse husbandry math, <span className="italic font-normal">at the rail.</span>
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Free, source-cited horse-keeping calculators. Body condition scoring on the standard Henneke scale, with feeding guidance and underlying-condition flags for owners.
+            Free, source-cited horse-keeping calculators. Estimate bodyweight from a tape measure, plan daily hay and feed forage-first, and score body condition on the standard Henneke scale.
           </p>
         </div>
       </section>
@@ -69,7 +81,7 @@ export default function ToolsHub() {
             Most horse-keeping decisions that go wrong start with a guess. Is this gelding genuinely overweight, or just heavy-coated for winter? Is the easy keeper drifting toward laminitis risk, or comfortably maintaining? Eyeballing a horse over the stall door is the least reliable way to answer those questions, because a familiar animal looks &ldquo;normal&rdquo; to the person who sees it every day. The calculators in this hub exist to replace that drift with a repeatable number you can track across seasons, hand to your veterinarian, and check against published reference standards.
           </p>
           <p className="text-base leading-relaxed text-brand-text-mid mb-4">
-            The cornerstone here is the <Link href="/tools/body-condition-score" className="text-brand-primary underline">Henneke body condition score</Link>, the 1&ndash;9 scale equine veterinarians and researchers have used since 1983 to standardize how fat cover is assessed. Rather than a single glance, it asks you to palpate and score six discrete regions &mdash; neck, withers, shoulder, ribs, loin, and tailhead &mdash; so that a long winter coat or a deceptive topline cannot skew the result. The tool returns the composite score with a plain-language condition narrative and feeding direction calibrated to where the horse sits on the scale.
+            The three calculators chain together. Start with the <Link href="/tools/horse-weight-calculator" className="text-brand-primary underline">horse weight calculator</Link>, which turns two tape measurements &mdash; heart girth and body length &mdash; into a bodyweight estimate using the published weight-tape formula. Carry that weight into the <Link href="/tools/horse-feed-calculator" className="text-brand-primary underline">feed &amp; hay calculator</Link> to set a daily forage target, then track whether the ration is working with the <Link href="/tools/body-condition-score" className="text-brand-primary underline">Henneke body condition score</Link>, the 1&ndash;9 scale equine veterinarians have used since 1983 to standardize how fat cover is assessed across six body regions.
           </p>
           <p className="text-base leading-relaxed text-brand-text-mid">
             Treat these tools as the measurement layer beneath the rest of the site, not a standalone novelty. A condition score earns its keep when it feeds a decision: a ration adjustment worked through the <Link href="/nutrition" className="text-brand-primary underline">nutrition reference</Link>, or a conversation about metabolic risk grounded in the <Link href="/health" className="text-brand-primary underline">health library</Link>. Every calculator here is source-cited, free, and built for owners and barn managers who would rather track a trend than trust a feeling.

@@ -133,7 +133,7 @@ export default function VetsPetInsurancePage() {
             </div>
 
             <CalloutBox variant="warning" title="Always read the policy fine print">
-              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary no-underline hover:underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios.
+              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary no-underline hover:underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios. Still deciding whether to buy at all? The <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary no-underline hover:underline">&ldquo;is pet insurance worth it?&rdquo; calculator</Link> shows the breakeven cost level at which a policy pays for itself.
             </CalloutBox>
 
             <ScoreMethodology />
@@ -192,6 +192,7 @@ export default function VetsPetInsurancePage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
+              { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'Pet Insurance Education Hub', href: '/insurance' },
               { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' },
               { label: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' },
