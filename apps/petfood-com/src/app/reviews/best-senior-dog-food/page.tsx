@@ -13,6 +13,7 @@ import {
   ArticleByline,
   StockImage,
   FAQAccordion,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 
@@ -164,6 +165,7 @@ export default function BestSeniorDogFoodPage() {
             subtitle="One-page printable label decoder, plus our independent analysis-led reviews as we publish them."
             source="best-senior-dog-food"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="brand" variant="sidebar" />
         </>
       }
     >
