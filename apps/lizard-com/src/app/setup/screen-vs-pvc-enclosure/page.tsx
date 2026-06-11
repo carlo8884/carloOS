@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Screen vs PVC vs Glass Reptile Enclosures | Lizard.com", description: "Screen, glass, and PVC reptile enclosures compared on humidity retention, heat efficiency, cost, and which species each suits best.", path: "/setup/screen-vs-pvc-enclosure", type: 'article' })
@@ -32,6 +32,7 @@ export default function SetupScreenVsPvcEnclosurePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Temperature Guide", href: "/setup/temperature-guide" }, { label: "Best Reptile Terrariums", href: "/reviews/best-reptile-terrariums" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-screen-vs-pvc-enclosure"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Enclosure Size Guide — Minimums by Species | Lizard.com", description: "How big a reptile enclosure should be, why bigger is better, the myth that snakes prefer cramped tanks, and minimum footprints for popular species.", path: "/setup/terrarium-size-guide", type: 'article' })
@@ -32,6 +32,7 @@ export default function SetupTerrariumSizeGuidePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Temperature Guide", href: "/setup/temperature-guide" }, { label: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Best Reptile Terrariums", href: "/reviews/best-reptile-terrariums" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-terrarium-size-guide"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

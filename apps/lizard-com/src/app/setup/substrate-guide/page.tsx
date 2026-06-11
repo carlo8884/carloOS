@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
@@ -22,6 +22,7 @@ export default function SubstrateGuidePage() {
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="setup-substrate" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
