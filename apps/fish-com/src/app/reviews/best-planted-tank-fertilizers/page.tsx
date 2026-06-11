@@ -41,6 +41,10 @@ export default function BestPlantedFertilizersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most low-to-medium-tech planted tanks the all-in-one <strong>Easy Green</strong> (Aquarium Co-Op) is our overall pick — simple dosing that covers macros and micros. For comprehensive trace elements, <strong>Seachem Flourish</strong>; for high-tech CO2-injected tanks, the high-dose <strong>NilocG Thrive</strong>. Heavy root feeders also benefit from <strong>Aquarium Co-Op Easy Root Tabs</strong> in the substrate.</p>
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Macro vs Micro Nutrients</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth. Micros (iron, manganese, zinc, boron, etc.) drive color, health, and enzyme function. Most all-in-one fertilizers cover both. High-tech CO2 setups often need additional macro dosing as plants consume nutrients faster. Low-tech tanks with fish waste often have adequate macros — micros are what's missing.</p>

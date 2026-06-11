@@ -37,6 +37,10 @@ export default function BestNanoTanksPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For a 5-gallon, the rimless all-in-one <strong>Fluval Spec V</strong> is our pick — planted-ready and ideal for a betta or shrimp. The most versatile and widely available 10-gallon is the <strong>Aqueon 10 Standard</strong>, and the <strong>Aqueon 20 Long</strong> is the best community starter thanks to its forgiving footprint. For saltwater, the <strong>Innovative Marine Nuvo 10</strong> is the best reef-ready nano. Bigger is more forgiving — go as large as budget allows.</p>
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bigger Is More Forgiving</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Smaller tanks are less stable — ammonia spikes faster, temperature swings are larger, and mistakes have less margin. A 10-gallon is significantly easier to maintain than a 5-gallon. A 20-gallon long is the ideal beginner tank size. If budget allows, go bigger.</p>

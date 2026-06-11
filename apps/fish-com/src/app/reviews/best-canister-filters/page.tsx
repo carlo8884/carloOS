@@ -36,6 +36,10 @@ export default function BestCanisterFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For 40–70 gallon tanks the <strong>Fluval 307</strong> is our overall pick — near-silent, with an AquaStop valve that lets you change media without disconnecting hoses. For maximum long-term reliability, the <strong>Eheim Classic 350</strong> is the pick — decades of track record. The <strong>Penn Plax Cascade 1000</strong> is the best-value budget canister for larger tanks.</p>
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" score={9.4} winner
