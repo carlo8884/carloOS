@@ -145,6 +145,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             title="Insurance references"
             links={[
               { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+              { label: 'Is Pet Insurance Worth It?', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'Pet Insurance Hub', href: '/pet-insurance' },
               { label: 'Find a Vet', href: '/find-a-vet' },
               { label: 'Emergency Triage Card', href: '/emergency-triage-card' },
