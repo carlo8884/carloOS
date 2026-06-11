@@ -35,6 +35,18 @@ jobs:
       - name: Run metadata-policy
         run: node scripts/ci/metadata-policy.mjs
 
+  sitemap-drift:
+    name: Sitemap drift (indexable routes present in sitemap.ts)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run sitemap-drift
+        run: node scripts/ci/sitemap-drift.mjs
+
   trust-guard:
     name: Trust-integrity guard (QC-STANDARDS.md §1)
     runs-on: ubuntu-latest
