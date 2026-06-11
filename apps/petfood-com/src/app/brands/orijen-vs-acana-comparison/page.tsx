@@ -160,6 +160,13 @@ export default function OrijenVsAcanaComparisonPage() {
           facilities, and distinct price tiers.
         </p>
 
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Orijen and Acana are two lines of the same parent (Champion Petfoods, now Mars), both among the more ingredient-transparent premium grain-free brands. Where they differ — animal-ingredient inclusion, price, and sub-line breadth — they map to owner preference rather than one being categorically superior. Both lack feeding-trial AAFCO substantiation on most SKUs and both are named in the FDA&apos;s 2019 grain-free DCM update (an association under investigation, not proven causation) — a point for owners of DCM-predisposed breeds to raise with a veterinarian.
+          </p>
+        </div>
+
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy either line"

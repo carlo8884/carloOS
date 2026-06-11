@@ -161,6 +161,14 @@ export default function PurinaProPlanEvaluationPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:brand-purina-pro-plan" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Purina Pro Plan — an independent five-dimension evaluation of the Nestle Purina premium line." />
         <p>Purina Pro Plan is the premium line of Nestle Purina PetCare, evaluated here against the PetFood.com five-dimension rubric: corporate context, ingredient sourcing and research, manufacturing, AAFCO substantiation, and recall history. The evaluation is independent and never influenced by any commercial relationship. Pro Plan is notable for the depth of nutrition research and feeding-trial substantiation behind it, which aligns with the WSAVA selection criteria. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On the published evidence, Purina Pro Plan is among the most WSAVA-aligned premium lines: board-certified nutritionists on staff, a substantial published research program, many diets substantiated by AAFCO feeding trials rather than formulation alone, and owned-and-operated manufacturing. Confirm the nutritional adequacy statement and life stage on the specific bag, since substantiation can vary by product.
+          </p>
+        </div>
+
         <h2 id="corporate">Corporate Context</h2>
         <p>Nestle Purina PetCare is one of the largest pet food companies in the world, a division of Nestle, with deep resources for research and manufacturing. Scale brings both advantages (research budgets, quality-control infrastructure, feeding-trial capacity) and the usual scrutiny that attaches to large corporate ownership. For evaluating a diet, the relevant corporate question is whether that scale is directed toward nutritional rigor — and Purina is among the manufacturers that most visibly invest in it.</p>
         <h2 id="research">Research and Nutritionists</h2>

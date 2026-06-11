@@ -143,6 +143,14 @@ export default function PrescriptionVsOtcDietsPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-prescription-vs-otc-diets" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Prescription versus over-the-counter diets — what the prescription requirement does and does not mean." />
         <p>Therapeutic diets, commonly called prescription diets, are foods formulated to manage specific diagnosed conditions and sold only with veterinary authorization. Despite the name, they are not drugs and the prescription is not a legal controlled-substance requirement; rather, manufacturers restrict them to veterinary channels because their correct use depends on diagnosis and monitoring. Over-the-counter wellness and even condition-themed foods are formulated to ordinary maintenance standards. See <a href="/diets">Condition-Specific Diets</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            The decision is driven by diagnosis, not marketing. Prescription (therapeutic) diets are not drugs — they are restricted to veterinary channels because their correct use depends on a diagnosis and monitoring, and some can harm an animal that does not have the target condition. For a diagnosed condition with a diet validated in that disease, the prescription diet used under veterinary direction is usually the right choice; for a healthy animal, an OTC complete-and-balanced diet is appropriate and a therapeutic diet is unnecessary. This is not medical advice.
+          </p>
+        </div>
+
         <h2 id="whatmeans">What Prescription Means Here</h2>
         <p>A prescription diet is authorized by a veterinarian for a patient with a diagnosed condition. The veterinary-channel restriction exists because these diets can be inappropriate or harmful for animals that do not have the target condition — a phosphorus-restricted renal diet, for example, is not suitable for a healthy growing animal. The authorization ties the diet to a diagnosis and to follow-up monitoring.</p>
         <h2 id="formulation">Formulation Differences</h2>

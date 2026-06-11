@@ -145,6 +145,14 @@ export default function RawVsCookedDietsPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-raw-vs-cooked-diets" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Raw versus cooked diets — the pathogen-safety evidence and a harm-reduction framing." />
         <p>Cooking transforms food in ways that matter nutritionally and microbiologically. Proponents of raw feeding argue that cooking destroys enzymes and nutrients and that raw is more natural; the veterinary professional bodies counter that cooking&apos;s pathogen-control benefit outweighs its costs and that the naturalness argument is overstated for domesticated animals. This page weighs the specific claims. For the full treatment, see the <a href="/guides/raw-pet-food-evaluation">Raw Pet Food Evaluation</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            The WSAVA, AVMA, AAHA, and FDA all caution against raw meat-based diets, chiefly on pathogen risk to pets and people and — for home-prepared raw — a high rate of nutritional imbalance. The popular &quot;raw retains beneficial enzymes&quot; claim is largely irrelevant, since dietary enzymes are denatured by stomach acid. A complete cooked commercial diet (or a raw diet properly formulated and validated against AAFCO profiles) avoids the imbalance problem. Owners who still choose raw should apply strict handling hygiene and use a balanced formulation.
+          </p>
+        </div>
+
         <h2 id="cooking">What Cooking Does</h2>
         <p>Heat denatures proteins (which can improve digestibility of some and reduce it for others), gelatinizes starch (making it digestible), destroys most pathogenic bacteria, inactivates certain anti-nutritional factors, and degrades some heat-sensitive vitamins (which is why cooked commercial diets are vitamin-supplemented). The claim that raw food retains beneficial enzymes is largely irrelevant: dietary enzymes are denatured by stomach acid and do not contribute meaningfully to the animal&apos;s own digestion.</p>
         <h2 id="pathogen">Pathogen Risk</h2>

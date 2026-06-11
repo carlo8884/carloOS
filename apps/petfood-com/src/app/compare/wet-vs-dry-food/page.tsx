@@ -141,6 +141,14 @@ export default function WetVsDryFoodPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-wet-vs-dry-food" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Wet versus dry food — comparing water content, cost, dental claims, and palatability." />
         <p>The defining difference between wet and dry food is water content: canned food is roughly 75 to 82 percent water, dry kibble about 6 to 12 percent. Almost every other practical difference flows from that, plus the manufacturing difference (extrusion requires starch; canning does not). Neither format is universally better; the right choice depends on the species, the individual animal, and the household. Nutrient comparisons between them must be done on a dry-matter basis. See <a href="/nutrition/dry-matter-basis-explained">Dry-Matter Basis Explained</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Neither format is universally better; for most healthy animals either one, if complete and balanced, supports good health. Wet food&apos;s main advantage is moisture — a genuine clinical benefit for cats and animals prone to urinary or kidney disease — while dry food is cheaper per calorie and more convenient. The dental-cleaning benefit of ordinary kibble is largely overstated, so don&apos;t choose dry food for that reason. Many owners successfully combine the two, counting total calories across both.
+          </p>
+        </div>
+
         <h2 id="moisture">The Core Difference — Moisture</h2>
         <p>The high moisture of canned food is its biggest functional advantage, especially for cats. Cats have a weak thirst drive and tend to under-hydrate on dry food, and increased dietary water supports urinary and kidney health. For cats with a history of urinary disease or kidney disease, the moisture of canned food is a genuine clinical benefit. See <a href="/nutrition/water-and-hydration">Water and Hydration</a> and <a href="/diets/urinary-tract-diets">Urinary and Bladder Stone Diets</a>.</p>
         <h2 id="calories">Calorie Density</h2>
