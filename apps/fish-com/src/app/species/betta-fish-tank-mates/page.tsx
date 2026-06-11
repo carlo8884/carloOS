@@ -25,7 +25,7 @@ export default function BettaTankMatesPage() {
             {['Other male bettas', 'Female bettas (outside breeding setup)', 'Fin-nipping fish (tiger barbs, serpae tetras)', 'Fish with flowing fins (fancy guppies)', 'Goldfish (temp incompatible)', 'Aggressive cichlids'].map(s => <li key={s} className="flex gap-2"><span className="text-brand-danger">✗</span>{s}</li>)}
           </ul>
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Mate Compatibility Checker', href: '/tools/tank-mate-compatibility-checker' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="species-betta-mates" />
       </>}
