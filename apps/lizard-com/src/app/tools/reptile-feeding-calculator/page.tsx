@@ -11,6 +11,7 @@ import {
   TableOfContents,
   RelatedLinks,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { ReptileFeedingCalculator } from './Calculator'
 
@@ -196,6 +197,7 @@ export default function ReptileFeedingCalculatorPage() {
             subtitle="Husbandry deep-dives and tool updates."
             source="feeding-calculator"
           />
+          <CrossPortfolioCard currentSite="lizard-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

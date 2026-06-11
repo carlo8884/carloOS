@@ -9,6 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { UvbDistanceCalculator } from '../../../components/visual/UvbDistanceCalculator'
 
@@ -169,6 +170,7 @@ export default function UvbDistanceCalculatorPage() {
             subtitle="Husbandry deep-dives and tool updates."
             source="uvb-calculator"
           />
+          <CrossPortfolioCard currentSite="lizard-com" contentType="tool" variant="sidebar" />
         </>
       }
     >
