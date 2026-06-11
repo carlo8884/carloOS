@@ -11,6 +11,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -357,6 +358,8 @@ export default function DogGestationCalculatorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }
