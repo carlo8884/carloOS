@@ -12,6 +12,7 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Beginner vs Advanced", href: "/species/beginner-vs-advanced-reptiles" }]}
       schema={schema}
       relatedLinks={[
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
         { title: 'Low-Maintenance Reptiles', href: '/species/low-maintenance-reptiles', category: 'Species' },
@@ -29,7 +30,7 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Which Reptile Is Right For You? Quiz", href: "/tools/reptile-match-quiz" }, { label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-beginner-vs-advanced-reptiles"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}

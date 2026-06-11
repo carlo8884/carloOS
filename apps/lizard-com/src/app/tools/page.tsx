@@ -41,6 +41,12 @@ const TOOLS = [
     desc: 'Target basking-surface, cool-side, and night-drop temperatures by species, plus a gradient check that compares your measured warm and cool readings against the targets.',
     tag: 'Heat',
   },
+  {
+    href: '/tools/reptile-match-quiz',
+    title: 'Which Reptile Is Right For You?',
+    desc: 'A beginner matcher quiz: answer six questions about space, handling, effort, activity, and diet, and get 2–3 beginner-appropriate species suggestions with reasons and care-guide links.',
+    tag: 'Beginner',
+  },
 ]
 
 const itemListSchema = {

@@ -12,6 +12,7 @@ export default function SpeciesBestBeginnerReptilesPage() {
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }]}
       schema={schema}
       relatedLinks={[
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
         { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
@@ -29,7 +30,7 @@ export default function SpeciesBestBeginnerReptilesPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Which Reptile Is Right For You? Quiz", href: "/tools/reptile-match-quiz" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-best-beginner-reptiles"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
