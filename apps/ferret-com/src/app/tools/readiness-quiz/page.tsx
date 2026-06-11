@@ -6,6 +6,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Quiz from './Quiz'
 
@@ -196,6 +197,8 @@ export default function ReadinessQuizPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="ferret-com" contentType="tool" variant="footer" />
     </>
   )
 }

@@ -7,6 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import CostCalculator from './Calculator'
 
@@ -171,6 +172,8 @@ export default function CostCalculatorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="ferret-com" contentType="tool" variant="footer" />
     </>
   )
 }
