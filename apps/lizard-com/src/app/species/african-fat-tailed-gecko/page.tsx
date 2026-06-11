@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "African Fat-Tailed Gecko Care — Leopard Gecko Cousin | Lizard.com", description: "African fat-tailed geckos are a docile, humidity-loving alternative to leopard geckos. Belly heat, a humid hide, insect diet, and tail-as-fat-store basics.", path: "/species/african-fat-tailed-gecko", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "African Fat-Tailed Gecko Care Guide", description: "Belly heat, humid hide, feeding, tail fat store, and complete care for Hemitheconyx caudicinctus.", url: "https://lizard.com/species/african-fat-tailed-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: "African Fat-Tailed Gecko Care Guide", description: "Belly heat, humid hide, feeding, tail fat store, and complete care for Hemitheconyx caudicinctus.", url: "https://lizard.com/species/african-fat-tailed-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How is an African fat-tailed gecko different from a leopard gecko?', answer: 'The husbandry is very similar — both are nocturnal, terrestrial, insectivorous, and famously docile — but the fat-tailed gecko needs higher humidity, around 50–60% ambient with a higher-humidity humid hide, reflecting its origins in the more humid scrub and riverbanks of West Africa. Retained shed from inadequate humidity is its most common health problem.' },
+  { question: 'What enclosure does an African fat-tailed gecko need?', answer: 'A 20-gallon long (roughly 30×12 inch footprint) is the minimum for a single adult, with larger always welcome — as a terrestrial species, floor space matters more than height. Provide at least three hides (warm, cool, and humid) plus a shallow water dish.' },
+  { question: 'Do African fat-tailed geckos need a heat lamp?', answer: 'No — they are nocturnal and thermoregulate via belly contact with warm substrate inside hides rather than basking. Set the warm hide floor to 88–92°F using a thermostat-controlled heat mat or deep heat projector, with a cool side around 72–78°F. Never run a heat mat without a thermostat. UVB is optional, though low-level UVB is increasingly recommended as beneficial.' },
+  { question: 'What do African fat-tailed geckos eat?', answer: 'They are strict insectivores: gut-loaded dubia roaches and crickets with prey no wider than the space between the eyes, dusted with calcium at every feeding and a multivitamin per schedule. Feed juveniles daily and adults every two to three days to prevent obesity.' },
+  { question: 'Why is my fat-tailed gecko’s tail getting thin?', answer: 'The thick tail is the fat reserve and an index of health — a plump tail signals good condition, while a thin, shrinking tail means the animal is mobilizing reserves and may be ill or underfed. Chronic wasting despite eating can indicate cryptosporidiosis, which is contagious and serious; isolate suspect animals and see a reptile-experienced veterinarian. With good care, the species lives 15–20 years.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function SpeciesAfricanFatTailedGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: "African Fat-Tailed Gecko Care Guide", subtitle: "Hemitheconyx caudicinctus is a ground-dwelling West African gecko closely related to the leopard gecko, with similar care but a need for higher humidity. Calm, slow-moving, and reaching 7 to 9 inches, the African fat-tailed gecko is an excellent docile beginner species whose thick tail, like the leopard gecko’s, is a vital fat reserve.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "African Fat-Tailed Gecko", href: "/species/african-fat-tailed-gecko" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
@@ -35,7 +47,7 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The African fat-tailed gecko is the leopard gecko’s humidity-loving cousin: a nocturnal, terrestrial, insectivorous gecko with the same forgiving temperament and similar husbandry, but adapted to the more humid scrub and riverbanks of West Africa. Slow, deliberate, and famously docile, fat-tails are one of the calmest geckos to handle and an ideal first reptile, with the single key difference from leopard geckos being their greater need for ambient and microclimate humidity."}</p>
           <h2>{"Enclosure"}</h2>
           <p>{"A single adult is comfortable in a 20-gallon long (or 30 by 12 inch footprint), with larger always welcome. As a terrestrial species, floor space matters more than height. Provide three hides at minimum: a warm hide, a cool hide, and a humid hide, plus a shallow water dish. A bioactive or naturalistic setup with solid or appropriately moisture-stable substrate works well and helps hold humidity."}</p>
@@ -68,6 +80,8 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
             <li>{"Reptiles Magazine, Hemitheconyx caudicinctus husbandry references."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>African Fat-Tailed Gecko — Setup Equipment</div>
@@ -79,5 +93,6 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

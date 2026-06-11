@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets.', path: '/species/frilled-dragon', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What enclosure does a frilled dragon need?', answer: 'A minimum of 4 feet wide × 2 feet deep × 4 feet tall — vertical space is non-negotiable for this arboreal species, which spends most of its time elevated in the upper third of the enclosure when structure is provided. Diagonal and vertical cork bark tubes, large branches, and sturdy live plants create the three-dimensional environment they require, and PVC or front-opening glass enclosures hold the 50–70% humidity better than all-screen setups.' },
+  { question: 'How hot should a frilled dragon’s basking spot be?', answer: '105–115°F on the basking surface — among the highest of any commonly kept lizard, reflecting the tropical savanna of northern Australia. This is essential for digestion, immune function, and behavior: a frilled dragon that cannot reach 105°F will be lethargic with reduced appetite. Measure with an infrared thermometer; ambient air thermometers do not capture surface temperature accurately.' },
+  { question: 'What do frilled dragons eat?', answer: 'Primarily insects: dubia roaches, black soldier fly larvae, hornworms, and silkworms, with superworms and mealworms as occasional treats only. Adults may take some leafy greens and occasional soft fruit, but plant matter should not exceed 15–20% of the diet. Dust feeders with calcium at every feeding for juveniles (every other for adults) and a multivitamin twice weekly; feed juveniles daily and adults every other day.' },
+  { question: 'Why does my frilled dragon flare its frill?', answer: 'The frill is a vascular skin membrane on elongated hyoid bones used for thermoregulation, communication between conspecifics, and the famous defensive threat display. A frilled dragon that threat-displays at its keeper is communicating discomfort, not aggression — the display is theatrical rather than dangerous. An animal that displays willingly in normal contexts is comfortable; one that never displays is often stressed or cold.' },
+  { question: 'Can frilled dragons be handled?', answer: 'Captive-bred juveniles handled gently and consistently from 6–8 weeks become remarkably calm, interactive adults; wild-caught animals rarely tame. Build positive associations rather than forcing interaction — tong-feed, then hand-feed, let the dragon climb onto you voluntarily, and keep early sessions around 5 minutes. Captive lifespan is 10–20 years.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function FrilledDragonPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Frilled Dragon', href: '/species/frilled-dragon' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
@@ -33,7 +45,7 @@ export default function FrilledDragonPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Frill — What It Means</h2>
         <p>The frill is a skin membrane supported by elongated hyoid bones that can be rapidly erected by muscular contraction. It is richly vascular and is used for: thermoregulation (angling toward the sun to absorb heat, or fully spreading to increase surface area for cooling), communication between conspecifics (territorial displays between males, courtship displays toward females), and the defensive threat display (full frill erection combined with open mouth, body flattening, bipedal stance, hissing — designed to appear larger and more threatening to a predator). In captivity, a frilled dragon that displays willingly is a comfortable, confident animal. A frilled dragon that never displays is often one that is stressed, cold, or in an environment that suppresses normal behavior.</p>
         <p>The defensive display is not dangerous to humans — it is theatrical rather than functional. A frilled dragon that threat-displays at its keeper is communicating discomfort, not aggression. Regular, gentle interaction from a young age produces adults that display rarely at humans. The display is more commonly seen toward their own reflections in glass, toward other lizards, and when encountering new objects in the enclosure.</p>
@@ -51,6 +63,8 @@ export default function FrilledDragonPage() {
 
         <h2>Handling — Gradual Trust Building</h2>
         <p>Wild-caught frilled dragons are very difficult to tame and spend considerable time in defensive displays. Captive-bred juveniles, handled gently and consistently from 6-8 weeks old, become remarkably calm and interactive adults. The key is not forcing interaction but building positive associations: offer food from tongs then from the hand, allow the dragon to climb onto you voluntarily rather than grabbing, and keep initial sessions very short (5 minutes). A well-socialized adult frilled dragon is a genuinely impressive animal — large, responsive, and active in a way that smaller lizards cannot match.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Frilled Dragon — Setup Equipment</div>
@@ -63,5 +77,6 @@ export default function FrilledDragonPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }
