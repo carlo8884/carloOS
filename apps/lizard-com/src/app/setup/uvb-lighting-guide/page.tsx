@@ -65,7 +65,7 @@ export default function UVBLightingGuidePage() {
           { label: 'By Species', href: '#species' },
         ]} />
         <RelatedLinks title="Related" links={[
-          { label: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs' },
+          { label: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs' },
           { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
           { label: 'Leopard Gecko Care', href: '/species/leopard-gecko' },
         ]} />

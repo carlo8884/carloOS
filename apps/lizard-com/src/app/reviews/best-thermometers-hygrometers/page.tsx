@@ -14,13 +14,13 @@ const PAGE_URL = 'https://lizard.com/reviews/best-thermometers-hygrometers'
 
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best Reptile Thermometers & Hygrometers 2025',
+  title: 'Best Reptile Thermometers & Hygrometers 2026',
   description: 'Compared on published accuracy specs and keeper-reported drift — accuracy rankings.',
   url: PAGE_URL,
   imageUrl: '',
   authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 // GEO: ItemList of the two recommended picks (the "Avoid" analog gauges are not
@@ -29,7 +29,7 @@ const schema = buildArticleSchema({
 // ScoreMethodology); name + reviewBody come only from this page's ReviewCard
 // content. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
-  name: 'Best Reptile Thermometers & Hygrometers 2025',
+  name: 'Best Reptile Thermometers & Hygrometers 2026',
   items: [
     { name: 'Govee H5053 Temperature & Humidity Sensor', url: `${PAGE_URL}#govee` },
     { name: 'Inkbird IBS-TH2', url: `${PAGE_URL}#inkbird` },
@@ -71,12 +71,12 @@ export default function BestThermometersPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Reptile Thermometers & Hygrometers 2025 — Ranked by Published Accuracy
+          Best Reptile Thermometers & Hygrometers 2026 — Ranked by Published Accuracy
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Inaccurate temperature readings kill reptiles. According to published accuracy specifications and aggregated keeper reports, we compared 7 leading thermometers. Here&apos;s what actually reads accurately.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · Updated June 2026 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -159,8 +159,8 @@ export default function BestThermometersPage() {
               <p className="text-xs leading-relaxed" style={{ color: 'rgba(238,240,228,0.6)' }}>Minimum 2 per enclosure: one at basking zone, one at cool end. Add a third inside any humid hide for species requiring high moisture. For complex enclosures (large bioactives, multi-zone setups), 4–5 sensors give a complete temperature map.</p>
             </div>
             <RelatedLinks title="Related" links={[
-              { label: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs' },
-              { label: 'Best Terrariums 2025', href: '/reviews/best-reptile-terrariums' },
+              { label: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs' },
+              { label: 'Best Terrariums 2026', href: '/reviews/best-reptile-terrariums' },
               { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
             ]} />
             <EmailCapture variant="sidebar" siteId="lizard-com"
