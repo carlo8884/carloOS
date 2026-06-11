@@ -385,44 +385,41 @@ export default function HomePage() {
                 key={path.href}
                 href={path.href}
                 className={[
-                  'group relative block rounded-xl overflow-hidden no-underline transition-all duration-200',
-                  'ring-1 min-h-[210px] sm:min-h-[250px]',
+                  'group flex flex-col rounded-xl overflow-hidden no-underline bg-brand-white transition-all duration-200',
+                  'ring-1',
                   path.tone === 'urgent'
-                    ? 'ring-brand-primary/60 hover:ring-brand-primary'
-                    : 'ring-white/10 hover:ring-white/30',
+                    ? 'ring-brand-primary/50 hover:ring-brand-primary'
+                    : 'ring-brand-border hover:ring-brand-primary/60',
                 ].join(' ')}
               >
-                {/* Background image (fills the tile) */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
+                {/* Photo on top — separated from the text so the copy is always
+                    readable (Carlo review 2026-06-11: text over the photo was
+                    unreadable, esp. over the bright kitchen shot). */}
+                <div className={`relative h-40 sm:h-44 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={path.manifestKey}
                     fallbackKey="dog-com:hero"
                     alt={path.imageAlt}
-                    aspect="3:4"
+                    aspect="4:3"
                     variant="inline"
                     subtleCredit
                   />
                 </div>
-                {/* Bottom-up scrim — keeps the label legible over any photo */}
-                <div
-                  aria-hidden="true"
-                  className={[
-                    'absolute inset-0 bg-gradient-to-t',
-                    path.tone === 'urgent' ? 'from-brand-primary/95 via-black/65 to-black/25' : 'from-black/92 via-black/62 to-black/25',
-                  ].join(' ')}
-                />
-                {/* Label content */}
-                <div className="relative z-10 flex flex-col justify-end min-h-[210px] sm:min-h-[250px] p-4">
-                  <div className="text-2xs font-bold tracking-eyebrow uppercase text-white/85 mb-1">
+                {/* Text on a solid surface — full contrast, always legible */}
+                <div className="flex flex-col flex-1 p-4">
+                  <div className={[
+                    'text-2xs font-bold tracking-eyebrow uppercase mb-1',
+                    path.tone === 'urgent' ? 'text-brand-primary' : 'text-brand-text-light',
+                  ].join(' ')}>
                     {path.eyebrow}
                   </div>
-                  <h2 className="font-display font-bold text-white text-sm sm:text-base leading-tight mb-1.5">
+                  <h2 className="font-display font-bold text-brand-dark text-base leading-tight mb-1.5">
                     {path.title}
                   </h2>
-                  <p className="text-xs text-white/70 leading-relaxed mb-2">
+                  <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
                     {path.desc}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-white group-hover:gap-2 transition-all">
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-brand-primary group-hover:gap-2 transition-all">
                     {path.cta}
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -451,31 +448,31 @@ export default function HomePage() {
       </div>
 
       {/* ── PUPPY LEAD-MAGNET BANNER (preserved) ───────────────────────── */}
-      <Link
-        href="/puppy-schedule"
-        className="block bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
-      >
-        <div className="flex items-center justify-between gap-6 flex-wrap">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-primary/15 text-brand-primary shrink-0" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M8 3v3M16 3v3M4 9h16M9 13h2M9 16h6" />
-              </svg>
-            </span>
-            <div>
-              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-0.5">Free for puppy owners</div>
-              <div className="text-sm sm:text-base text-white font-semibold">
-                Puppy Schedule, Weeks 8 to 16 — printable + 8-week email course
-              </div>
+      {/* Puppy lead-magnet — a real featured band with a photo, not a thin strip
+          (Carlo review 2026-06-11: "too small + needs a puppy picture"). */}
+      <section className="bg-brand-dark border-y border-brand-border px-container-sm sm:px-container py-8 sm:py-10">
+        <div className="max-w-container mx-auto">
+          <Link href="/puppy-schedule" className="group grid sm:grid-cols-[220px_1fr] gap-6 sm:gap-8 items-center no-underline">
+            <div className={`relative h-44 sm:h-40 rounded-xl overflow-hidden ring-1 ring-white/10 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
+              <StockImage manifestKey="dog-com:breed-labrador-retriever" fallbackKey="dog-com:hero" alt="A young puppy" aspect="4:3" variant="inline" subtleCredit />
             </div>
-          </div>
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary ml-auto sm:ml-0">
-            Get the schedule
-            <IconArrowRight className="w-3.5 h-3.5" />
-          </span>
+            <div>
+              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Free for puppy owners</div>
+              <h2 className="font-display font-bold text-white text-2xl sm:text-3xl leading-tight mb-2.5">
+                The Puppy First-Year Schedule
+              </h2>
+              <p className="text-sm sm:text-base text-white/65 leading-relaxed mb-5 max-w-2xl">
+                A printable week-by-week plan for weeks 8&ndash;16, plus a free 8-week email course &mdash;
+                vaccines, feeding, crate training, and the socialization windows that matter most.
+              </p>
+              <span className="inline-flex items-center gap-1.5 bg-brand-primary text-brand-white text-sm font-bold px-5 py-2.5 rounded-md group-hover:bg-brand-primary-dark transition-colors">
+                Get the free schedule
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </Link>
         </div>
-      </Link>
+      </section>
 
       {/* ── LIVE TOOL — "which dog is right for you?" wizard (premium gate 3) ── */}
       <section className="bg-brand-white px-container-sm sm:px-container py-section border-b border-brand-border">
@@ -495,7 +492,7 @@ export default function HomePage() {
           </p>
           {/* Two-column: the wizard is a contained column, not a full-bleed block,
               with supporting context beside it (Carlo layout review 2026-06-11). */}
-          <div className="grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10 items-start">
             <div className="min-w-0">
               <BreedMatchWizard />
             </div>
@@ -507,6 +504,27 @@ export default function HomePage() {
                   <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> The trade-offs spelled out: shedding, exercise, training difficulty, typical health risks.</li>
                   <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> No email, no signup — your answers stay in your browser.</li>
                 </ul>
+              </div>
+              {/* Box 3 (NEW, Carlo review): popular breed guides with photos —
+                  gives the sidebar visual interest + a clear purpose. */}
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Popular breed guides</div>
+                <div className="flex flex-col gap-3">
+                  {[
+                    { name: 'Golden Retriever', sub: 'Cancer · hip risk', href: '/breeds/golden-retriever', key: 'dog-com:category-breeds' },
+                    { name: 'Labrador Retriever', sub: 'Hip dysplasia · obesity', href: '/breeds/labrador-retriever', key: 'dog-com:breed-labrador-retriever' },
+                  ].map((b) => (
+                    <Link key={b.href} href={b.href} className="group flex items-center gap-3 no-underline">
+                      <div className={`relative w-14 h-14 rounded-lg overflow-hidden shrink-0 ring-1 ring-brand-border ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
+                        <StockImage manifestKey={b.key} fallbackKey="dog-com:hero" alt={b.name} aspect="1:1" variant="inline" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-brand-dark leading-tight group-hover:text-brand-primary transition-colors">{b.name}</div>
+                        <div className="text-2xs text-brand-text-light">{b.sub}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
               <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Prefer to browse?</div>
