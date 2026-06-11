@@ -64,7 +64,7 @@ const homeSchema = combineSchemas(
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
-  title: 'The independent reference for pet food.',
+  title: 'Pet Food Brand Reviews & Comparisons — Independent | PetFood.com',
   description:
     'Independent ingredient-and-brand reference for cat and dog food. AAFCO-anchored methodology, recall-tracked, WSAVA-aligned. No paid scores.',
   path: '/',
