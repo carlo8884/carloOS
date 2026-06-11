@@ -6,12 +6,17 @@ export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bes
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const bigBarkerSchema = buildProductSchema({ name: 'Big Barker 7" Orthopedic Dog Bed', description: 'Therapeutic memory foam bed for large and giant breeds — clinically shown to reduce joint pain.', url: 'https://bigbarker.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: 'Premium foam dog bed with removable washable cover for medium to large breeds.', url: 'https://casper.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema)
+// Furhaven and the Best Friends bolster are Quick Picks on this page but have
+// no scored ReviewCards yet, so their schemas carry no editorial rating
+// (per buildProductSchema contract).
+const furhavenSchema = buildProductSchema({ name: 'Furhaven Orthopedic Dog Bed', description: 'Budget orthopedic foam dog bed available in multiple sizes.', imageUrl: '', priceRange: '40-80' })
+const bestFriendsSchema = buildProductSchema({ name: 'Best Friends by Sheri OrthoComfort Bolster Bed', description: 'Donut-shape bolster dog bed with washable design, suited to dogs that prefer to curl up.', imageUrl: '' })
+const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema, furhavenSchema, bestFriendsSchema)
 const PICKS = [
   { label: 'Best Orthopedic', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker' },
   { label: 'Best Premium', name: 'Casper Dog Bed', subtitle: 'Washable cover · Durable foam · All sizes', href: '#casper' },
-  { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#furhaven' },
-  { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#bolster' },
+  { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#by-dog-type' },
+  { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#by-dog-type' },
 ]
 export default function BestDogBedsPage() {
   return (
@@ -57,7 +62,7 @@ export default function BestDogBedsPage() {
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
-            <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <div id="by-dog-type" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Dog Type</div>
               {[['Arthritic large breed', 'Big Barker — clinical evidence'], ['Large breed everyday', 'Casper or Big Barker'], ['Small/medium everyday', 'Casper or Furhaven'], ['Anxious dog', 'Bolster/donut style (Best Friends Sheri)'], ['Destructive chewer', 'Molly Mutt cover + insert (replaceable)'], ['Budget', 'Furhaven Orthopedic ($40–80)']].map(([t, r]) => (
                 <div key={t} className="py-2.5 border-b border-brand-border last:border-0">

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025 — Pulse, Dimming | Lizard.com', description: 'Every heat source needs a thermostat. Pulse proportional, dimming, and on-off thermostats ranked for reptile enclosures — Herpstat, Inkbird.', path: '/reviews/best-thermostats', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025', description: 'Pulse, dimming, and on-off reptile thermostats ranked.', url: 'https://lizard.com/reviews/best-thermostats', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2026 — Pulse, Dimming | Lizard.com', description: 'Every heat source needs a thermostat. Pulse proportional, dimming, and on-off thermostats ranked for reptile enclosures — Herpstat, Inkbird.', path: '/reviews/best-thermostats', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2026', description: 'Pulse, dimming, and on-off reptile thermostats ranked.', url: 'https://lizard.com/reviews/best-thermostats', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const herpstatSchema = buildProductSchema({ name: 'Spyder Robotics Herpstat 1', description: 'Pulse proportional reptile thermostat — tight thermoregulation for heat mats and radiant heat panels per manufacturer-published accuracy specs.', url: 'https://spyderrobotics.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const inkbirdSchema = buildProductSchema({ name: 'Inkbird ITC-306A Thermostat', description: 'Budget-friendly on-off reptile thermostat with probe — reliable for lower-wattage heat sources.', url: 'https://inkbird.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, herpstatSchema, inkbirdSchema)
@@ -15,13 +15,20 @@ const PICKS = [
   { label: 'Best Budget', name: 'Inkbird ITC-306A', subtitle: 'On/off · Reliable · Under $30', href: '#inkbird' },
 ]
 
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Reptile Thermostats 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://lizard.com/reviews/best-thermostats${p.href}` })),
+})
+
 export default function BestThermostatsPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://lizard.com/' }, { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' }, { name: 'Best Reptile Thermostats 2025', url: 'https://lizard.com/reviews/best-thermostats' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://lizard.com/' }, { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' }, { name: 'Best Reptile Thermostats 2026', url: 'https://lizard.com/reviews/best-thermostats' }] }))} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Safety Critical · May 2025</span>
-        <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Reptile Thermostats 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Safety Critical · Updated June 2026</span>
+        <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Reptile Thermostats 2026</h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Unthermostated heat mats have killed reptiles and caused fires. Every heat source in every enclosure needs a thermostat — this is not optional. Here are the best options by heat source type.</p>
       </div>
       <QuickPicks items={PICKS} />

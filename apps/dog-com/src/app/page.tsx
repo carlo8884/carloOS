@@ -226,6 +226,7 @@ const PRODUCT_GUIDES = [
   { title: 'Flea & tick prevention', desc: 'Oral vs. topical, by region, efficacy data, side-effect profiles.', href: '/reviews/best-flea-tick-prevention' },
   { title: 'Joint supplements', desc: 'Glucosamine, chondroitin, MSM, fish oil — what evidence says.', href: '/reviews/best-joint-supplements' },
   { title: 'Dental chews', desc: 'VOHC-accepted options vs. marketing. Per-day cost.', href: '/reviews/best-dental-chews' },
+  { title: 'Heartworm prevention', desc: 'Heartgard, Interceptor, Simparica Trio compared.', href: '/reviews/best-heartworm-prevention' },
 ]
 
 // ─── Inline SVG icons (replace emoji; 24px, stroke=currentColor) ─────────────

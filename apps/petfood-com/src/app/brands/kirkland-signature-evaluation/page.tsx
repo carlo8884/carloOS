@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
   buildProductSchema,
   combineSchemas,
   ArticleLayout,
@@ -48,7 +49,32 @@ const productSchema = buildProductSchema({
   reviewAuthorName: 'PetFood.com Editorial',
   ratingValue: 8.0,
 })
-const pageSchema = combineSchemas(schema, productSchema)
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Who actually makes Kirkland Signature pet food?',
+    answer:
+      'As a Costco store brand, Kirkland Signature pet food is manufactured by a contract producer rather than by Costco itself; Diamond Pet Foods has been a known manufacturer of certain Kirkland lines. The store brand inherits the contract manufacturer’s quality-control and recall record, which is why identifying the maker matters when evaluating it.',
+  },
+  {
+    question: 'Is Kirkland Signature comparable to premium name brands?',
+    answer:
+      'On price-to-formulation value, it is one of the stronger options: named-meat-forward, premium-positioned formulas at a notably lower price per pound. The main rubric weakness is transparency — contract manufacturer, sourcing, and quality-control disclosure are thinner than for brands that own their plants and publish research. That is a disclosure gap, not a quality verdict.',
+  },
+  {
+    question: 'Has Kirkland Signature pet food been recalled?',
+    answer:
+      'Because Kirkland pet food has been made by Diamond Pet Foods, its recall exposure is tied to that manufacturer’s record, including the major 2012 Salmonella recall that affected Diamond-made products. Recall history should be evaluated by cause, severity, and corrective response, with the FDA CVM Recalls and Withdrawals database as the source of record.',
+  },
+  {
+    question: 'Does the grain-free DCM question apply to Kirkland formulas?',
+    answer:
+      'Kirkland lines include both grain-inclusive and grain-free formulas. For the grain-free SKUs, the standard evaluation applies: check whether the formula is legume-heavy, since the legume-inclusive grain-free pattern is the one associated — though not proven causally — with the FDA diet-associated DCM investigation. Owners of DCM-predisposed breeds should raise the question with a veterinarian.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -109,6 +135,7 @@ export default function KirklandSignatureEvaluationPage() {
               { label: 'Transparency', href: '#transparency' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -175,6 +202,14 @@ export default function KirklandSignatureEvaluationPage() {
           ctaAffiliateProgram="amazon-brand"
           ctaAffiliateProduct="Kirkland%20Signature%20pet%20food"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -4,7 +4,7 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, combineSch
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics',
+  title: 'Best Reptile Terrariums 2026 — Zen Habitats, Animal Plastics',
   description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
@@ -14,7 +14,7 @@ const PAGE_URL = 'https://lizard.com/reviews/best-reptile-terrariums'
 
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best Reptile Terrariums 2025',
+  title: 'Best Reptile Terrariums 2026',
   description: 'Reptile terrariums compared and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
   url: PAGE_URL,
   imageUrl: '',
@@ -35,7 +35,7 @@ const PICKS = [
 // via ScoreMethodology); name + reviewBody are drawn only from the ReviewCard
 // content on this page. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
-  name: 'Best Reptile Terrariums 2025',
+  name: 'Best Reptile Terrariums 2026',
   items: [
     { name: 'Zen Habitats 4×2×2 Reptile Enclosure', url: `${PAGE_URL}#zen` },
     { name: 'Animal Plastics T8', url: `${PAGE_URL}#ap` },
@@ -88,16 +88,16 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          Editor Pick · May 2025
+          Editor Pick · June 2026
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Reptile Terrariums 2025 — PVC, Glass & Custom Enclosures Ranked
+          Best Reptile Terrariums 2026 — PVC, Glass & Custom Enclosures Ranked
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Comparison of 8 commonly-stocked enclosures on the factors that decide a keeper&apos;s daily life: temperature retention, humidity stability, ventilation, and build quality. Drawn from manufacturer specifications and consolidated keeper reports.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · Updated June 2026 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -234,7 +234,7 @@ export default function BestTerrariumsPage() {
               </div>
             </div>
             <RelatedLinks title="Related" links={[
-              { label: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs' },
+              { label: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs' },
               { label: 'Best Thermometers', href: '/reviews/best-thermometers-hygrometers' },
               { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
             ]} />

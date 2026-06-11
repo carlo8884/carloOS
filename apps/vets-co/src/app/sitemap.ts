@@ -95,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/symptoms', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/telehealth', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://vets.co/tools/insurance-finder', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/insurance-reimbursement-estimator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

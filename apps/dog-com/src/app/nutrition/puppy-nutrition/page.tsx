@@ -16,7 +16,7 @@ export default function PuppyNutritionPage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Puppy vs Adult Formula', href: '#formulas' }, { label: 'Large Breed Puppies — Critical Difference', href: '#large-breed' }, { label: 'Feeding Schedule by Age', href: '#schedule' }, { label: 'How Much to Feed', href: '#amount' }, { label: 'When to Switch to Adult', href: '#switch' }, { label: 'What Not to Feed', href: '#avoid' }]} />
-        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed Your Dog', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
+        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed Your Dog', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
         <RelatedLinks title="Planning Ahead for a New Puppy" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-puppy" />

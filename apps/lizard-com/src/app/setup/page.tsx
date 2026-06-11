@@ -13,9 +13,9 @@ const GUIDES = [
   { title: 'Screen vs PVC vs Glass', desc: 'Enclosure materials compared on humidity and heat retention', href: '/setup/screen-vs-pvc-enclosure' },
   { title: 'Drainage Layer Guide', desc: 'Building a false bottom for a bioactive vivarium', href: '/setup/drainage-layer-bioactive' },
   { title: 'Cleanup Crew Guide', desc: 'Isopods and springtails for a self-cleaning bioactive setup', href: '/setup/cleanup-crew-isopods-springtails' },
-  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra compared and ranked', href: '/reviews/best-reptile-terrariums', badge: 'Compared' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird, Zoo Med compared with published calibration data', href: '/reviews/best-thermometers-hygrometers', badge: 'Compared' },
-  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Compared' },
+  { title: 'Best Reptile Terrariums 2026', desc: 'Zen Habitats, Animal Plastics, Exo Terra compared and ranked', href: '/reviews/best-reptile-terrariums', badge: 'Compared' },
+  { title: 'Best Thermometers 2026', desc: 'Govee, Inkbird, Zoo Med compared with published calibration data', href: '/reviews/best-thermometers-hygrometers', badge: 'Compared' },
+  { title: 'Best UVB Bulbs 2026', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Compared' },
 ]
 
 export default function LizardSetupHubPage() {

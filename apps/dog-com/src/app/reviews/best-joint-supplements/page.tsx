@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Joint Supplements for Dogs 2025 — Cosequin | Dog.com',
+  title: 'Best Joint Supplements for Dogs 2026 — Cosequin | Dog.com',
   description: 'Evidence-graded joint supplements for dogs. Dasuquin, Cosequin DS, fish oil, and CBD ranked by the research',
   path: '/reviews/best-joint-supplements',
   category: 'Health Reviews',
@@ -14,13 +14,13 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Joint Supplements for Dogs 2025',
+  title: 'Best Joint Supplements for Dogs 2026',
   description: 'Dasuquin, Cosequin, fish oil ranked by evidence for canine joint disease.',
   url: 'https://dog.com/reviews/best-joint-supplements',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const PICKS = [
@@ -38,12 +38,12 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1, produc
 export default function BestJointSupplementsPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Joint Supplements for Dogs 2025', url: 'https://dog.com/reviews/best-joint-supplements' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Joint Supplements for Dogs 2026', url: 'https://dog.com/reviews/best-joint-supplements' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · June 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Joint Supplements for Dogs 2025
+          Best Joint Supplements for Dogs 2026
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The pet supplement market is full of products with minimal evidence. We graded each major joint supplement category by the actual research — what works, what&apos;s promising, and what&apos;s expensive placebo.

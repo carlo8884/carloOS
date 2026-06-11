@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,28 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Are breed-specific diets worth the extra cost?',
+    answer:
+      'Sometimes. Kibble shape tailored to a breed’s jaw and eating style, and evidence-supported targeting of a genuine breed predisposition, are real features. Much of the rest is size-based formulation repackaged with breed branding, and the same support is often available in a non-breed-labeled diet. A breed-specific diet is not worth a premium for the breed name alone.',
+  },
+  {
+    question: 'What do breed-specific diets actually change?',
+    answer:
+      'The substantive differences are kibble shape and size (for example, for brachycephalic breeds or fast eaters), calorie density matched to the breed’s size category, and condition-targeted additions such as taurine for breeds at DCM risk, joint support for large breeds, or skin-and-coat support. The actual nutrient differences versus a well-matched size-and-life-stage diet are often small.',
+  },
+  {
+    question: 'Is a size-based diet as good as a breed-specific one?',
+    answer:
+      'For most animals, yes. Much of what breed-specific diets deliver is actually size-based — small-breed energy density and kibble size, large- and giant-breed growth controls — which a good size-matched diet also provides. A quality diet matched to size, life stage, and any medical needs serves most animals as well as a breed-labeled one.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -76,7 +100,7 @@ export default function BreedSpecificDietsPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -87,6 +111,7 @@ export default function BreedSpecificDietsPage() {
               { label: 'Breed-Prevalent Conditions', href: '#conditions' },
               { label: 'The Marketing Layer', href: '#marketing' },
               { label: 'When It Is Worth It', href: '#worthit' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -162,6 +187,14 @@ export default function BreedSpecificDietsPage() {
             We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
           </p>
         </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -14,7 +14,7 @@ import { UvbDistanceCalculator } from '../components/visual/UvbDistanceCalculato
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Reptile Care, Source-First',
+  title: 'Lizard & Reptile Care Guides, Source-First',
   description:
     'Husbandry built on published research: species profiles, UVB measurements, Ferguson zones, ARAV-aligned health, and tested-gear reviews for reptile keepers.',
   path: '/',
@@ -150,7 +150,7 @@ const CATEGORIES: {
     icon: 'health',
     title: 'Health',
     desc: 'Sick-reptile signs, MBD, parasites, and when-to-call-an-ARAV-vet thresholds.',
-    href: '/health/metabolic-bone-disease',
+    href: '/health',
   },
   {
     icon: 'uvb',

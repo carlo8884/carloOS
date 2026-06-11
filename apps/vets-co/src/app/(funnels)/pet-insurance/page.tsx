@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildItemListSchema,
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
@@ -49,11 +50,21 @@ const TOP_CARRIERS = [
   { slug: 'lemonade', name: 'Lemonade Pet', vendor: 'lemonade' as const, blurb: 'A lower entry premium; app-first claims.', why: 'Recommended for budget-conscious owners.' },
 ]
 
+// ItemList mirrors the on-page carrier order so AI answer surfaces can
+// extract the ranking. Combined with the Article schema in one SchemaScript.
+const combinedSchema = combineSchemas(
+  schema,
+  buildItemListSchema({
+    name: 'Pet Insurance Carriers Vets.co Ranks Highest',
+    items: TOP_CARRIERS.map((c) => ({ name: c.name })),
+  }),
+)
+
 export default function VetsCoInsuranceHub() {
   return (
     <>
       <AffiliateDisclosure variant="inline" siteId="vets-co" />
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combinedSchema} />
 
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">

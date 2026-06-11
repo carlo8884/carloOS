@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,14 @@ const products = [
 
 const combined = combineSchemas(schema, med, itemList, ...products)
 
+// Near-top jump links — fed by the SAME three picks as the ItemList schema
+// above (same names, same anchors). Labels mirror each ReviewCard's badge.
+const QUICK_PICKS = [
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Starch-free · Lowest carb load', href: '#wysong-epigen-90' },
+  { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
+  { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
+]
+
 export default function BestFerretKibblePage() {
   return (
     <>
@@ -145,6 +153,8 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+
+          <QuickPicks items={QUICK_PICKS} />
 
           <h2 id="panel">Read the Panel First</h2>
           <p>

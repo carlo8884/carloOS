@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2026 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
 
 const REVIEWS = [
-  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Most Important' },
-  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: 'Setup' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird compared on accuracy — published calibration data', href: '/reviews/best-thermometers-hygrometers' },
-  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
-  { title: 'Best Reptile Thermostats 2025', desc: 'Pulse, dimming, and on-off thermostats ranked — Herpstat, Inkbird', href: '/reviews/best-thermostats' },
+  { title: 'Best UVB Bulbs 2026', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Most Important' },
+  { title: 'Best Reptile Terrariums 2026', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: 'Setup' },
+  { title: 'Best Thermometers 2026', desc: 'Govee, Inkbird compared on accuracy — published calibration data', href: '/reviews/best-thermometers-hygrometers' },
+  { title: 'Best Reptile Substrates 2026', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
+  { title: 'Best Reptile Thermostats 2026', desc: 'Pulse, dimming, and on-off thermostats ranked — Herpstat, Inkbird', href: '/reviews/best-thermostats' },
 ]
 
 export default function LizardReviewsPage() {

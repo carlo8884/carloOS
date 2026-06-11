@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,6 +21,21 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
+})
+
+// HowTo steps mirror the page's own sequence: reinforcer selection → timing →
+// marker → continuous reinforcement → intermittent reinforcement.
+const howToSchema = buildHowToSchema({
+  name: 'How to Train a Dog with Positive Reinforcement',
+  description: 'Choosing an effective reinforcer, timing rewards, charging a marker, and transitioning from continuous to intermittent reinforcement.',
+  url: 'https://dog.com/training/positive-reinforcement',
+  steps: [
+    { name: 'Choose a reinforcer that works for your dog', text: 'A reinforcer is defined by its effect on behavior — not by what you think the dog should value. Match reinforcer value to task difficulty: kibble is fine for new behaviors in a quiet room; high-value food (real meat, cheese) for high-distraction environments and recalls.', url: 'https://dog.com/training/positive-reinforcement#reinforcers' },
+    { name: 'Deliver the reward within 2 seconds', text: 'The reinforcer must be delivered within 2 seconds of the behavior to be associated with it. Reward the instant the dog achieves the position, then build duration separately.', url: 'https://dog.com/training/positive-reinforcement#timing' },
+    { name: 'Charge a marker (clicker or a word like "yes")', text: 'Click or say "yes", then immediately deliver a treat. Repeat 20–30 times in rapid succession, then test: click once and watch whether the dog looks for the treat. The marker lets you mark the exact moment of the behavior, then take 3–4 seconds to deliver the food.', url: 'https://dog.com/training/positive-reinforcement#markers' },
+    { name: 'Reward every correct response while the behavior is new', text: 'Use continuous reinforcement during initial learning — the most efficient way to create a new behavior pattern — and keep rewarding every correct response while generalizing in new contexts.', url: 'https://dog.com/training/positive-reinforcement#schedules' },
+    { name: 'Transition to intermittent reinforcement', text: 'Once the behavior is reliable in multiple contexts, reward unpredictably. Intermittent reinforcement produces behaviors that are more persistent and resistant to extinction than continuously reinforced behaviors.', url: 'https://dog.com/training/positive-reinforcement#schedules' },
+  ],
 })
 
 const FAQS = [
@@ -49,7 +64,7 @@ export default function PositiveReinforcementPage() {
         { name: 'Positive Reinforcement', href: '/training/positive-reinforcement' },
       ]}
       relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
-      schema={schema}
+      schema={combineSchemas(schema, howToSchema)}
       sidebar={<>
         <TableOfContents items={[
           { label: 'The Core Principle', href: '#principle' },

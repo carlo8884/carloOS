@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
   buildProductSchema,
   combineSchemas,
   ArticleLayout,
@@ -49,7 +50,32 @@ const productSchema = buildProductSchema({
   reviewAuthorName: 'PetFood.com Editorial',
   ratingValue: 9.0,
 })
-const pageSchema = combineSchemas(schema, productSchema)
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is Purina Pro Plan feeding-trial tested?',
+    answer:
+      'Many Pro Plan diets are substantiated by AAFCO feeding trials rather than formulation alone — the higher-evidence pathway and one of the WSAVA-favored signals. Substantiation can vary by product, so confirm the nutritional adequacy statement and life stage on the specific bag.',
+  },
+  {
+    question: 'Who makes Purina Pro Plan, and where is it manufactured?',
+    answer:
+      'Pro Plan is the premium line of Nestle Purina PetCare, a division of Nestle and one of the largest pet food companies in the world. Purina owns and operates its manufacturing facilities rather than relying on anonymous co-packing, which supports quality-control accountability under the WSAVA selection criteria.',
+  },
+  {
+    question: 'Is Purina Pro Plan the same as Pro Plan Veterinary Diets?',
+    answer:
+      'No. The Pro Plan retail line is sold over the counter, while Purina Pro Plan Veterinary Diets is a separate therapeutic range sold through veterinarians for diagnosed conditions. This evaluation covers the retail line only; therapeutic diets should be used under veterinary direction.',
+  },
+  {
+    question: 'Has Purina Pro Plan been recalled?',
+    answer:
+      'Like nearly every large manufacturer, Purina has had recalls over the years. Recall history is best evaluated by cause, severity, and corrective response rather than count alone, since a high-volume manufacturer naturally has more product subject to recall. The FDA CVM Recalls and Withdrawals database is the source of record.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -109,6 +135,7 @@ export default function PurinaProPlanEvaluationPage() {
               { label: 'AAFCO Posture', href: '#aafco' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -175,6 +202,14 @@ export default function PurinaProPlanEvaluationPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Purina%20Pro%20Plan"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
