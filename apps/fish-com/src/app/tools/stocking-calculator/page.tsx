@@ -196,7 +196,9 @@ export default function StockingCalculatorPage() {
           </table>
         </div>
         <p>
-          For specific species pairings, see our <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
+          For specific species pairings, run our{' '}
+          <Link href="/tools/tank-mate-compatibility-checker">tank mate compatibility checker</Link>, or see our{' '}
+          <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
           <Link href="/species/neon-tetra">neon tetra</Link> profile, and <Link href="/species/angelfish">angelfish</Link> profile.
         </p>
         <p>

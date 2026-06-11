@@ -103,6 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/tools/co2-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/heater-wattage-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/stocking-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://fish.com/tools/tank-mate-compatibility-checker', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/water-change-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/water-parameters', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
   ]

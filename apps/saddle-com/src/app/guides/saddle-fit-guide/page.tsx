@@ -28,11 +28,11 @@ export default function SaddleFitGuidePage() {
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },
-        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Saddle Fit Checker', href: '/tools/saddle-fit-checker', category: 'Tool' },
         { title: 'Tree Size Estimator', href: '/tools/tree-size-estimator', category: 'Tool' },
+        { title: 'Girth Size Calculator', href: '/tools/girth-size-calculator', category: 'Tool' },
         { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
         { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
-        { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
       ]}
       sidebar={<>
         <TableOfContents items={[
@@ -129,6 +129,7 @@ export default function SaddleFitGuidePage() {
           <li>When a young horse is growing rapidly (topline changes significantly in young horses)</li>
         </ul>
         <p>Look for a Certified Saddle Fitter (CSF, from the <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Society of Master Saddlers</a>) or a qualified independent fitter with verifiable credentials. Fitters employed by specific brands may have genuine expertise, but their conflict of interest in recommending their brand should be acknowledged.</p>
+        <p>Before you book, run the four checks above as a guided self-assessment with the <a href="/tools/saddle-fit-checker" className="text-brand-primary hover:underline">saddle fit checker</a> — it reads your answers into a likely-fits, check-these-signs, or poor-fit result and tells you what to show the fitter.</p>
       </div>
     </ArticleLayout>
   )

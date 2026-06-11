@@ -38,6 +38,12 @@ const TOOLS = [
     tag: 'Beginner essential',
   },
   {
+    href: '/tools/tank-mate-compatibility-checker',
+    title: 'Tank Mate Compatibility Checker',
+    desc: 'Pick two or more freshwater fish and get a Compatible / Caution / Not-recommended verdict per pair, with the reason — temperament, temperature, fin-nipping, and size.',
+    tag: 'Stocking',
+  },
+  {
     href: '/tools/heater-wattage-calculator',
     title: 'Heater Wattage Calculator',
     desc: 'Pick the right heater size for your tank, room temperature, and target water temperature. Includes redundancy recommendation.',

@@ -4,8 +4,8 @@ import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Saddle Calculators & Tools — Tree Size, Fit, Brand Match | Saddle.com',
-  description: 'Free saddle calculators: starting tree-size estimator from horse conformation, plus the printable 12-point saddle-fit checklist for try-on appointments.',
+  title: 'Saddle Calculators & Tools — Fit, Tree Size, Girth | Saddle.com',
+  description: 'Free saddle tools: saddle fit checker, starting tree-size estimator, girth size calculator, and the printable 12-point fit checklist for try-on appointments.',
   path: '/tools',
 })
 
@@ -18,10 +18,22 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const TOOLS = [
   {
+    href: '/tools/saddle-fit-checker',
+    title: 'Saddle Fit Checker',
+    desc: 'Guided self-assessment of six fit signs — wither clearance, panel contact, gullet, billet line, balance, and behaviour. Educational; a qualified fitter must verify on the horse.',
+    tag: 'Fit',
+  },
+  {
     href: '/tools/tree-size-estimator',
     title: 'Tree Size Estimator',
     desc: 'Starting English / Western tree-size estimate from horse type, withers profile, and back length. Estimator only — a qualified saddler must verify on the horse.',
     tag: 'Fit',
+  },
+  {
+    href: '/tools/girth-size-calculator',
+    title: 'Girth Size Calculator',
+    desc: 'Recommended girth length from saddle type and horse size, or from a measurement — in inches and centimetres, with a sizing chart.',
+    tag: 'Sizing',
   },
   {
     href: '/saddle-fit-checklist',
@@ -76,14 +88,25 @@ export default function ToolsHub() {
               likely to end in a costly return.
             </p>
             <p>
-              Start with the{' '}
+              If you already own the saddle, start with the{' '}
+              <Link href="/tools/saddle-fit-checker" className="text-brand-primary hover:underline">
+                saddle fit checker
+              </Link>
+              , a guided self-assessment that reads six fit signs — wither
+              clearance, panel contact, gullet, billet line, balance, and
+              behaviour — into a likely-fits, check-these-signs, or poor-fit
+              result. If you are shopping, start with the{' '}
               <Link href="/tools/tree-size-estimator" className="text-brand-primary hover:underline">
                 tree size estimator
               </Link>
               , which turns horse type, withers profile, and back length into a
               starting English or Western tree width — the single figure that
-              rules whole shelves of saddles in or out before you handle one. Take
-              its output to the{' '}
+              rules whole shelves of saddles in or out before you handle one. Size
+              the girth to match with the{' '}
+              <Link href="/tools/girth-size-calculator" className="text-brand-primary hover:underline">
+                girth size calculator
+              </Link>
+              , then take everything to the{' '}
               <Link href="/saddle-fit-checklist" className="text-brand-primary hover:underline">
                 12-point saddle fit checklist
               </Link>
