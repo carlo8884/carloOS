@@ -1,9 +1,34 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide', description: 'Osteosarcoma, DCM, GDV risk, and care for Irish Wolfhounds.', url: 'https://dog.com/breeds/irish-wolfhound', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide', description: 'Osteosarcoma, DCM, GDV risk, and care for Irish Wolfhounds.', url: 'https://dog.com/breeds/irish-wolfhound', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How long do Irish Wolfhounds live?',
+    answer: 'Irish Wolfhounds typically live 6–8 years — the shortest lifespan of any dog breed, with a median of 6.2–7.0 years in published studies. A significant percentage die between 4–6 years from osteosarcoma. Prospective owners should understand and accept this timeline before acquisition.',
+  },
+  {
+    question: 'How big does an Irish Wolfhound get?',
+    answer: 'The Irish Wolfhound is the tallest dog breed — males average 32–35 inches at the shoulder and weigh 120–180 lbs. The size has practical implications: vehicle space, food costs, and veterinary costs that scale with body weight.',
+  },
+  {
+    question: 'What health problems do Irish Wolfhounds have?',
+    answer: 'Osteosarcoma (bone cancer) is the most common cause of death, followed by dilated cardiomyopathy (DCM). Annual echocardiogram screening from age 3 is recommended for DCM, and any sudden single-limb lameness in a mature Wolfhound warrants urgent radiographs. Discuss a breed-appropriate screening plan with your veterinarian.',
+  },
+  {
+    question: 'Are Irish Wolfhounds good family dogs?',
+    answer: 'Irish Wolfhounds are gentle, quiet, and deeply affectionate with their families, and patient and careful with children. They are not guard dogs — they lack the territorial instinct of guarding breeds — and despite their size they are not high-energy dogs.',
+  },
+  {
+    question: 'How much exercise does an Irish Wolfhound need?',
+    answer: 'Moderate exercise — they are not the athletes their size implies. As sighthounds, they are built for short sprints rather than endurance work, and they spend most of their time in calm repose.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function IrishWolfhoundPage() {
   return (
@@ -11,7 +36,7 @@ export default function IrishWolfhoundPage() {
       hero={{ title: 'Irish Wolfhound Breed Guide', subtitle: 'The Irish Wolfhound stands as the tallest dog breed — males average 32-35 inches at the shoulder and weigh 120-180 lbs. They are gentle, quiet, and deeply affectionate. They are also the shortest-lived of any dog breed: the median lifespan is 6-7 years. Prospective owners must understand and accept this before acquisition.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Wolfhound', href: '/breeds/irish-wolfhound' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -45,6 +70,13 @@ export default function IrishWolfhoundPage() {
         <h2>Temperament — The Gentle Giant Reality</h2>
         <p>Irish Wolfhounds are famous for their mismatch between size and personality — the tallest dog in existence typically also has a gentle, quiet, low-intensity temperament. They are not guard dogs — they lack the territorial instinct that guard breeds have. They are not high-energy dogs despite their size — they are sighthounds, built for short sprints, and they spend most of their time in calm repose. They are profoundly affectionate with their families and patient with children.</p>
         <p>The size creates practical challenges: they require a vehicle that physically fits them, they cannot be left in small spaces, countertop access is automatic (they do not need to jump — they can eat off the counter standing flat), and the physical space of a 170-lb dog is impossible to ignore. Giant breed food costs are significant. Veterinary costs are dosed by weight — every procedure, medication, and surgery costs proportionally more. These are practical considerations, not reasons not to own one, but they should be anticipated.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )
