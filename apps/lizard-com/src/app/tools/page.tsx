@@ -29,6 +29,18 @@ const TOOLS = [
     desc: 'Compute recommended minimum enclosure dimensions, floor footprint, and volume from adult body length and locomotor habit. Includes a check-my-tank mode to compare an existing enclosure against the minimums.',
     tag: 'Housing',
   },
+  {
+    href: '/tools/reptile-feeding-calculator',
+    title: 'Reptile Feeding Calculator',
+    desc: 'How many crickets to feed a bearded dragon, leopard gecko, and more. Get prey type, count or portion, feeding frequency, and the feeder-size rule by species and life stage.',
+    tag: 'Feeding',
+  },
+  {
+    href: '/tools/basking-temperature-calculator',
+    title: 'Basking Temperature Calculator',
+    desc: 'Target basking-surface, cool-side, and night-drop temperatures by species, plus a gradient check that compares your measured warm and cool readings against the targets.',
+    tag: 'Heat',
+  },
 ]
 
 const itemListSchema = {

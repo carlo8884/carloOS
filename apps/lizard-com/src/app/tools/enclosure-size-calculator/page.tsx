@@ -96,6 +96,8 @@ export default function EnclosureSizeCalculatorPage() {
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
         { title: 'Screen vs PVC Enclosures', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
