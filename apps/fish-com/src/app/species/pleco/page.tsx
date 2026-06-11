@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pleco Care Guide — Bristlenose vs Common Pleco | Fish.com', description: 'Plecos: the common pleco grows to 24 inches and does not belong in most tanks. Bristlenose plecos stay at 5 inches and are ideal community fish.', path: '/species/pleco', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How big do common plecos get?',
+    answer:
+      'Common plecos (Hypostomus plecostomus) are sold as 2–3 inch juveniles but reach 18–24 inches as adults — a fish that size needs a tank of 125+ gallons and produces waste equivalent to a heavily stocked community tank. They also stop eating algae as adults, transitioning to a bottom-scavenging carnivore diet. They do not belong in a standard community tank.',
+    answerText:
+      '18-24 inches as adults, requiring 125+ gallons. They also stop eating algae as adults. Not appropriate for standard community tanks.',
+  },
+  {
+    question: 'Which pleco is best for a community tank?',
+    answer:
+      'The bristlenose pleco (Ancistrus sp.). Adults stay at 4–5 inches, eat algae heavily throughout their lives, are peaceful with all community fish, and are appropriate for tanks as small as 20 gallons. Males develop distinctive bristles on the snout at maturity, and pairs breed readily in planted tanks with driftwood.',
+    answerText:
+      'The bristlenose pleco — 4-5 inches as an adult, a lifelong algae eater, peaceful, and suitable for tanks as small as 20 gallons.',
+  },
+  {
+    question: 'Do plecos need driftwood?',
+    answer:
+      'Wood-specialist species like clown plecos and some Panaque species require it — they rasp cellulose from the wood with specialized teeth and may develop digestive issues without it. Bristlenose plecos benefit from driftwood as a grazing surface but are not as strictly dependent. Driftwood also anchors territory: a pleco with a hollow driftwood hide is far more secure than one in an open tank.',
+    answerText:
+      'Wood specialists (clown plecos, Panaque) require driftwood in their diet; bristlenose plecos benefit from it as a grazing surface and territory anchor.',
+  },
+  {
+    question: 'What should I feed a pleco?',
+    answer:
+      'Not just algae — relying on algae alone produces a starving fish that may start eating live plants. Feed sinking algae wafers, blanched vegetables (zucchini, cucumber, spinach, sweet potato) weighted to the bottom and removed after 24 hours, and a protein supplement such as frozen bloodworms or shrimp pellets 1–2 times weekly. Feed after lights out — plecos are nocturnal.',
+    answerText:
+      'Algae wafers, blanched vegetables removed within 24 hours, and protein 1-2 times weekly, fed after lights out. Algae alone is a starvation diet.',
+  },
+  {
+    question: 'Can I keep two plecos together?',
+    answer:
+      'Usually not. Plecos are peaceful toward other fish but territorial with their own kind — most species should be kept one per tank unless the tank is very large with multiple territory-defining structures such as caves and hollow driftwood.',
+    answerText:
+      'Generally one per tank — plecos are territorial with their own kind unless the tank is very large with multiple defined territories.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function PlecoPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Pleco Care Guide', subtitle: '"Pleco" encompasses hundreds of Loricariidae species ranging from 2-inch nano plecos to 24-inch commons. The fish stores sell mostly common plecos (Hypostomus plecostomus) as algae eaters for community tanks — but they grow to 24 inches and produce enormous waste. The bristlenose pleco (Ancistrus sp.) is what most community tanks actually need.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Pleco', href: '/species/pleco' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Bristlenose Pleco", href: "/species/bristlenose-pleco", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }, { title: "Aquarium Algae Control", href: "/setup/aquarium-algae-control", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -41,7 +86,7 @@ export default function PlecoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-pleco" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pleco in a home aquarium." priority />
         <h2>Common Pleco vs Bristlenose — The Critical Distinction</h2>
         <p><strong>Common pleco (Hypostomus plecostomus):</strong> Sold as juvenile algae eaters at 2–3 inches in virtually every fish store. Adults reach 18–24 inches. A 24-inch fish requires a tank of 125+ gallons minimum and produces waste equivalent to a heavily stocked community tank. They also stop eating algae as adults and transition primarily to a bottom-scavenging carnivore diet. The vast majority of common plecos purchased for community tanks are eventually surrendered to stores or left in tanks that cannot support them. <strong>Do not buy a common pleco for a standard community tank.</strong></p>
@@ -62,6 +107,16 @@ export default function PlecoPage() {
 
         <h2>L-Numbers — Understanding the System</h2>
         <p>Unidentified or newly discovered pleco species are assigned L-numbers (from Loricariidae) by aquarist publications pending formal scientific description. L046 (zebra pleco), L190 (royal pleco), L134 (leopard frog pleco), L066 (king tiger pleco) are popular examples. Some L-number plecos are scientifically described but retain their L-number in the hobby. L-number plecos vary enormously in size, diet, and temperament — research the specific L-number before purchasing.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Pleco — Tank Setup</div>
@@ -75,5 +130,6 @@ export default function PlecoPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }
