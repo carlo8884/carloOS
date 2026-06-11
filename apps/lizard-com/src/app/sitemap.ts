@@ -97,7 +97,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com/species/russian-tortoise', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/savannah-monitor', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/sulcata-tortoise', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://lizard.com/species/tegu', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/tokay-gecko', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/uromastyx', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/veiled-chameleon', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

@@ -1461,8 +1461,8 @@ export default function HomePage() {
             </li>
           </ul>
 
-          {/* "See all tools" link */}
-          <div style={{ marginTop: '28px' }}>
+          {/* "See all tools" + "Buyer guides" links */}
+          <div style={{ marginTop: '28px', display: 'flex', gap: '28px', flexWrap: 'wrap' }}>
             <Link
               href="/tools"
               style={{
@@ -1474,6 +1474,18 @@ export default function HomePage() {
               }}
             >
               All ferret tools &#x2192;
+            </Link>
+            <Link
+              href="/reviews"
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: 'var(--brand-amber)',
+                textDecoration: 'none',
+                letterSpacing: '0.01em',
+              }}
+            >
+              Gear buyer guides &#x2192;
             </Link>
           </div>
         </div>

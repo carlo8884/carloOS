@@ -159,7 +159,6 @@ export default function SpeciesIndexPage() {
         <Link key="mourning-gecko" href="/species/mourning-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mourning Gecko</Link>
         <Link key="nile-monitor" href="/species/nile-monitor" className="text-sm text-brand-primary no-underline hover:underline">Nile Monitor</Link>
         <Link key="savannah-monitor" href="/species/savannah-monitor" className="text-sm text-brand-primary no-underline hover:underline">Savannah Monitor</Link>
-        <Link key="tegu" href="/species/tegu" className="text-sm text-brand-primary no-underline hover:underline">Tegu (Overview)</Link>
         <Link key="western-hognose-snake" href="/species/western-hognose-snake" className="text-sm text-brand-primary no-underline hover:underline">Western Hognose Snake</Link>
         </div>
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4 mt-8">Choosing a Reptile</h2>
