@@ -162,12 +162,13 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
           <p className="text-brand-text-mid leading-relaxed mb-4">
             {b.recommendedReason}
           </p>
-          <Link
-            href={`/pet-insurance/${recommendedCarrier.slug}`}
-            className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
+          <a
+            href={`/go/${recommendedCarrier.vendor}/breed-${breed}-${state}`}
+            rel="sponsored noopener"
+            className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors no-underline"
           >
-            See {recommendedCarrier.name} details →
-          </Link>
+            See {recommendedCarrier.name}&apos;s plans →
+          </a>
         </section>
       )}
 
@@ -255,12 +256,13 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
                 <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
                   {c.tagline}
                 </p>
-                <Link
-                  href={`/pet-insurance/${c.slug}`}
+                <a
+                  href={`/go/${c.vendor}/breed-${breed}-${state}`}
+                  rel="sponsored noopener"
                   className="text-sm font-semibold text-brand-primary hover:underline"
                 >
-                  See {c.name} details →
-                </Link>
+                  Visit {c.name} →
+                </a>
               </div>
             ))}
           </div>
