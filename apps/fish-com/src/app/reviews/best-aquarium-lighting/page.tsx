@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -15,10 +15,17 @@ const PICKS = [
   { label: 'Best FOWLR', name: 'Nicrew Classic LED+', subtitle: 'Fish-only · Budget · Reliable', href: '#nicrew' },
 ]
 
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Aquarium Lights 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-lighting${p.href}` })),
+})
+
 export default function BestAquariumLightingPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Lights 2026', url: 'https://fish.com/reviews/best-aquarium-lighting' }] }))} />
+      <SchemaScript schema={combineSchemas(...schema, itemList, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Lights 2026', url: 'https://fish.com/reviews/best-aquarium-lighting' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>

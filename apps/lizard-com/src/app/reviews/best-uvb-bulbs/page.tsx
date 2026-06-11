@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
+  title: 'Best UVB Bulbs 2026 — Compared on Real UVI Output | Lizard.com',
   description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output',
+  title: 'Best UVB Bulbs 2026 — Compared on Real UVI Output',
   description: 'UVB bulbs for reptiles ranked using published Solarmeter 6.5 UVI data.',
   url: 'https://lizard.com/reviews/best-uvb-bulbs',
   imageUrl: '',
@@ -32,7 +32,19 @@ const PICKS = [
 
 const productSchema0 = buildProductSchema({ name: 'Arcadia T5 HO 12% Desert', description: 'T5 HO UVB bulb for Zone 4 desert reptiles, Solarmeter-tested.', url: 'https://arcadiareptile.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const productSchema1 = buildProductSchema({ name: 'Zoo Med T5 HO Reptisun 10.0', description: 'T5 HO UVB bulb for basking reptiles.', url: 'https://zoomed.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
+
+// GEO: ItemList of the ranked picks (the "Avoid" coil/compact entry is not a
+// recommended product and is excluded). Names + URLs come only from this
+// page's PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best UVB Bulbs 2026',
+  items: PICKS.filter((p) => p.label !== 'Avoid').map((p) => ({
+    name: p.name,
+    url: `https://lizard.com/reviews/best-uvb-bulbs${p.href}`,
+  })),
+})
+
+const allSchemas = combineSchemas(schema, itemList, productSchema0, productSchema1)
 
 export default function BestUVBBulbsPage() {
   return (
@@ -45,13 +57,13 @@ export default function BestUVBBulbsPage() {
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best UVB Bulbs 2025 — Ranked by Published UVI Output
+          Best UVB Bulbs 2026 — Ranked by Published UVI Output
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which are cross-checked against independent keeper-reported measurements.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>
-          Lizard.com Editorial · Updated May 2025 · Affiliate disclosure applies
+          Lizard.com Editorial · Updated June 2026 · Affiliate disclosure applies
         </p>
       </div>
 
