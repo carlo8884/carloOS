@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide — Hip Dysplasia, Bloat Risk | Dog.com', description: 'Bullmastiffs are quiet, loyal giant breed dogs. GDV/bloat risk, hip and elbow dysplasia, and cardiac screening are the primary health priorities.', path: '/breeds/bullmastiff', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide', description: 'Hip dysplasia, GDV risk, cardiac screening, and care for Bullmastiffs.', url: 'https://dog.com/breeds/bullmastiff', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide', description: 'Hip dysplasia, GDV risk, cardiac screening, and care for Bullmastiffs.', url: 'https://dog.com/breeds/bullmastiff', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How much exercise does a Bullmastiff need?', answer: 'Moderate exercise — about 45-60 minutes daily satisfies the breed\'s physical needs. Despite their 100-130 lb size, Bullmastiffs are not high-energy dogs; they are characteristically calm indoors and content to settle for long periods. Avoid forced running or jumping during growth (before 18 months) to protect developing joints.' },
+  { question: 'What health problems do Bullmastiffs have?', answer: 'The primary documented concerns are hip and elbow dysplasia (OFA clearances on both parents are the minimum expectation from breeders), gastric dilatation-volvulus (GDV/bloat) as a deep-chested breed, and elevated prevalence of cardiac conditions — specifically dilated cardiomyopathy and subaortic stenosis. Discuss prophylactic gastropexy at spay/neuter and a cardiac screening schedule with your veterinarian.' },
+  { question: 'How long do Bullmastiffs live?', answer: 'Bullmastiffs typically live 7-9 years, consistent with giant-breed lifespans generally. Lean body weight throughout life, joint support, and early detection of cardiac disease through annual auscultation are the management levers owners control — review them with your veterinarian.' },
+  { question: 'Do Bullmastiffs drool a lot?', answer: 'Yes — significantly, and it cannot be trained away because it is anatomy. The breed\'s jowl structure and loose lip anatomy produce drool at rest, during meals, after drinking, and during excitement. "Slobber cloths" are standard Bullmastiff owner equipment, and prospective owners uncomfortable with this should honestly consider a different breed.' },
+  { question: 'Are Bullmastiffs good family dogs?', answer: 'Bullmastiffs are characteristically calm, confident, and deeply loyal — gentle dogs that happen to be very large. They can be stubborn and selective about compliance, so early, consistent positive-reinforcement training from puppyhood is essential: a poorly trained 120-pound adult is a genuine management challenge because compliance cannot be physically compelled.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function BullmastiffPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bullmastiff Breed Guide', subtitle: 'The Bullmastiff was bred in 19th century England as the "Gamekeeper\'s Night Dog" — large and powerful enough to pin poachers but tractable enough to be controlled. The result is a breed that combines impressive size (100–130 lbs) with a surprisingly calm, low-energy temperament indoors. They are not the bouncing-off-walls giant most people expect.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bullmastiff', href: '/breeds/bullmastiff' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -50,7 +60,11 @@ export default function BullmastiffPage() {
 
         <h2>Temperament and Training</h2>
         <p>Bullmastiffs are characteristically calm, confident, and deeply loyal — described by their owners as "big, gentle dogs that just happen to be very large." They are not high-energy dogs despite their size; moderate daily exercise (45-60 minutes) satisfies their physical needs, and they are content to settle indoors for long periods. They can be stubborn — the same independent judgment that made them useful as working dogs makes them selective about compliance. Early, consistent positive reinforcement training from puppyhood establishes the patterns that make a 120-pound dog manageable. A poorly trained adult Bullmastiff is a genuine management challenge — their size means that compliance cannot be compelled physically.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -19,17 +21,43 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Pet Food Additives — Vitamins, Minerals, Flavors | PetFood.com',
-  description:
-    'What the long list of additives at the end of the ingredient panel means — vitamin and mineral premixes, palatants, emulsifiers, colors, and which to watch.',
-  url: 'https://petfood.com/ingredients/additives-and-supplements-on-labels',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Why does pet food have so many chemical-sounding ingredients at the end of the label?',
+    answer:
+      'Because the ingredient panel is ordered by weight, the additives present in tiny amounts cluster at the bottom. Most of that long tail is the vitamin and mineral premix that brings the food to AAFCO completeness, plus functional additives for palatability, texture, and preservation. The chemical names simply name the specific compound supplying each nutrient — a long additive tail is normal on a complete diet, and its absence would more likely indicate an incomplete product.',
+  },
+  {
+    question: 'What is animal digest in pet food?',
+    answer:
+      'Animal digest, despite the unappetizing name, is a flavor enhancer made from enzymatically treated animal tissue. It is a normal, safe additive used as a palatant — especially important for cats and for therapeutic diets that are otherwise less palatable. "Natural flavor" is a defined term covering these palatants.',
+  },
+  {
+    question: 'Are chelated minerals better than regular minerals?',
+    answer:
+      'Minerals listed as a proteinate, amino-acid complex, or chelate (such as zinc proteinate) are organic chelated forms, generally more bioavailable than inorganic mineral salts. Their presence indicates the manufacturer chose a more absorbable mineral source — a modest quality signal, not a red flag.',
+  },
+  {
+    question: 'Should I avoid artificial colors in pet food?',
+    answer:
+      'Artificial colors add no nutritional value and exist purely to make the food look appealing to the human buyer — the animal does not care about color. Colors are the one additive category an owner can reasonably prefer to avoid since they serve no purpose for the pet, though approved colors are not established as harmful at use levels. Many higher-end foods omit them.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Pet Food Additives — Vitamins, Minerals, Flavors | PetFood.com',
+    description:
+      'What the long list of additives at the end of the ingredient panel means — vitamin and mineral premixes, palatants, emulsifiers, colors, and which to watch.',
+    url: 'https://petfood.com/ingredients/additives-and-supplements-on-labels',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 const SOURCES = [
     {
@@ -89,6 +117,7 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
               { label: 'Palatants and Flavors', href: '#palatants' },
               { label: 'Emulsifiers and Texturizers', href: '#emulsifiers' },
               { label: 'Colors — Cosmetic Only', href: '#colors' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -119,7 +148,7 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <p>After the main ingredients, a complete pet food lists a long series of added vitamins, minerals, amino acids, and other additives. The chemical-sounding names can look concerning, but most are the supplement premix that brings the food to AAFCO completeness, plus functional additives for palatability, texture, and preservation. Understanding what each group does removes most of the alarm. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a> and <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="bottom">The Bottom of the Panel</h2>
         <p>Because the panel is ordered by weight, the additives present in tiny amounts cluster at the bottom. Their position reflects their small quantity, not low importance — many are essential nutrients added in milligram or microgram amounts. A long additive tail is normal and expected on a complete diet; its absence would more likely indicate an incomplete product. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a>.</p>
@@ -133,6 +162,39 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
         <p>Canned and some other foods include emulsifiers, gums (guar gum, carrageenan, xanthan gum), and humectants that control texture, moisture, and consistency. These are functional additives that keep the product stable and palatable. Carrageenan has drawn some debate, but it remains an approved additive; the evidence for harm at use levels in pet food is not established. Most texturizers are benign functional ingredients.</p>
         <h2 id="colors">Colors — Cosmetic Only</h2>
         <p>Artificial colors (dyes named with numbers, such as Red 40 or Yellow 5) and some natural colorants add no nutritional value and exist purely to make the food look appealing to the human buyer — the animal does not care about color. Colors are the one additive category an owner can reasonably prefer to avoid, since they serve no purpose for the pet, though approved colors are not established as harmful at use levels. Many higher-end foods omit artificial colors. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <h2 id="faq">Common Questions</h2>
+        <p><strong>Why does pet food have so many chemical-sounding ingredients at the end of the label?</strong></p>
+        <p>
+          Because the ingredient panel is ordered by weight, the additives present in tiny amounts
+          cluster at the bottom. Most of that long tail is the vitamin and mineral premix that
+          brings the food to AAFCO completeness, plus functional additives for palatability,
+          texture, and preservation. The chemical names simply name the specific compound supplying
+          each nutrient — a long additive tail is normal on a complete diet, and its absence would
+          more likely indicate an incomplete product.
+        </p>
+        <p><strong>What is animal digest in pet food?</strong></p>
+        <p>
+          Animal digest, despite the unappetizing name, is a flavor enhancer made from
+          enzymatically treated animal tissue. It is a normal, safe additive used as a palatant —
+          especially important for cats and for therapeutic diets that are otherwise less
+          palatable. &quot;Natural flavor&quot; is a defined term covering these palatants.
+        </p>
+        <p><strong>Are chelated minerals better than regular minerals?</strong></p>
+        <p>
+          Minerals listed as a proteinate, amino-acid complex, or chelate (such as zinc proteinate)
+          are organic chelated forms, generally more bioavailable than inorganic mineral salts.
+          Their presence indicates the manufacturer chose a more absorbable mineral source — a
+          modest quality signal, not a red flag.
+        </p>
+        <p><strong>Should I avoid artificial colors in pet food?</strong></p>
+        <p>
+          Artificial colors add no nutritional value and exist purely to make the food look
+          appealing to the human buyer — the animal does not care about color. Colors are the one
+          additive category an owner can reasonably prefer to avoid since they serve no purpose for
+          the pet, though approved colors are not established as harmful at use levels. Many
+          higher-end foods omit them.
+        </p>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

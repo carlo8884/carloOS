@@ -1,15 +1,40 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide — Hypoglycemia | Dog.com', description: 'Yorkshire Terriers have big personalities in a fragile body. Hypoglycemia in puppies, tracheal collapse from collar pressure.', path: '/breeds/yorkshire-terrier', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What health problems do Yorkshire Terriers have?',
+    answer: 'The documented breed concerns are hypoglycemia in puppies, tracheal collapse, early and severe dental disease, and a predisposition to congenital portosystemic shunts (abnormal blood vessels that bypass the liver, diagnosed by a bile acids test). Discuss a breed-appropriate screening and prevention plan with your veterinarian.',
+  },
+  {
+    question: 'Why do Yorkies need a harness instead of a collar?',
+    answer: 'The tracheal cartilage rings in Yorkies are often weaker than in larger dogs, predisposing them to tracheal collapse — and even light neck-collar pressure during walks can trigger or worsen it. Every Yorkie should wear a properly fitted harness, never a neck collar, from day one. The characteristic sign of tracheal collapse is a distinctive "goose honk" cough; raise it with your veterinarian if you hear it.',
+  },
+  {
+    question: 'How often should a Yorkie puppy eat?',
+    answer: 'Yorkie puppies must eat every 4–6 hours — their tiny body mass cannot store enough glycogen to maintain blood glucose between meals, and a missed meal, stress, or heavy activity can trigger a hypoglycemic episode (weakness, trembling, disorientation, collapse). If an episode is suspected, rub Karo syrup or honey on the gums immediately and get to a veterinarian — this is a genuine emergency.',
+  },
+  {
+    question: 'How long do Yorkshire Terriers live?',
+    answer: 'Yorkshire Terriers typically live 13–16 years. Standard adults weigh 4–7 lbs, and consistent dental care and weight management support their longevity.',
+  },
+  {
+    question: 'Do Yorkies have bad teeth?',
+    answer: 'Dental disease is a major breed issue — Yorkies consistently rank at the top of dental disease severity studies because 42 adult teeth erupt in a jaw too small to accommodate them. Daily toothbrushing from puppyhood, VOHC-approved dental chews, extraction of retained baby teeth at the spay/neuter appointment, and professional cleanings (typically annual from age 2–3) are the prevention plan to discuss with your veterinarian.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 export default function YorkiePage() {
   return (
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Yorkshire Terrier Breed Guide', subtitle: 'Yorkies pack terrier tenacity into a 4–7 lb body. They are bold, intelligent, and affectionate — and require specific health management for their small size. Hypoglycemia in puppies, tracheal damage from collars, and severe dental disease are the primary concerns every Yorkie owner should understand from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Dachshund Guide', href: '/breeds/dachshund', category: 'Breed Guide' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -51,6 +76,13 @@ export default function YorkiePage() {
 
         <h2>Harness — Not Optional</h2>
         <p>Every Yorkie should wear a harness, never a neck collar, for all walking and any situation where leash pressure might be applied. The tracheal and cervical spine vulnerability in this breed makes neck collar use a real injury risk. A harness distributes pressure across the chest instead. This applies to puppies from day one — get a properly fitting harness before bringing the puppy home.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

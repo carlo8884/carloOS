@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Pyotraumatic Dermatitis (Hot Spots) in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyotraumatic-dermatitis-in-dogs', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,16 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hot Spots in Dogs (Pyotraumatic Dermatitis) — Causes | Dog.com', description: 'Hot spots are acute moist dermatitis — a rapidly spreading bacterial skin infection triggered by self-trauma. How to treat, why shaving the area matters.', path: '/health/dog-hot-spots', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hot Spots in Dogs', description: 'Causes, shaving protocol, and treatment for canine pyotraumatic dermatitis (hot spots).', url: 'https://dog.com/health/dog-hot-spots', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hot Spots in Dogs', description: 'Causes, shaving protocol, and treatment for canine pyotraumatic dermatitis (hot spots).', url: 'https://dog.com/health/dog-hot-spots', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Hot Spots in Dogs', description: 'Pyotraumatic dermatitis — causes and treatment.', url: 'https://dog.com/health/dog-hot-spots', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'How do I treat a hot spot on my dog at home?', answer: 'The most important first step is shaving the hair over and well beyond the visible lesion — hot spots spread under the hair, and topical treatment is largely ineffective without shaving. Then clean gently with chlorhexidine 2% or dilute betadine, let it dry completely, and apply a drying/medicated veterinary spray. An e-collar is essential: if the dog can keep licking or scratching the spot, it will not heal regardless of treatment. If the lesion is moderate to severe, or not improving within 48 hours, see your veterinarian.' },
+  { question: 'Why does my dog keep getting hot spots?', answer: 'Recurring hot spots indicate an unaddressed underlying trigger. The most common: allergies (environmental, food, or flea allergy), inconsistent year-round flea prevention, ear infections that were never fully cleared (dogs scratch at the painful ear and create hot spots at the ear base — the most common location), coat matting, and compulsive licking from boredom or anxiety. Treating each hot spot without addressing the trigger guarantees recurrence — ask your veterinarian about an allergy workup or trigger investigation.' },
+  { question: 'How fast do hot spots spread?', answer: 'Very fast — a hot spot can grow from dime-sized to palm-sized within hours, and the true extent is often much larger than what is initially visible because the lesion spreads under the surrounding hair. This is why shaving frequently reveals a bigger wound than expected, and why same-day action (clipping, cleaning, blocking access) matters.' },
+  { question: 'Do hot spots on dogs need antibiotics?', answer: 'Sometimes. Moderate to severe hot spots — or any hot spot not improving within 48 hours of home care — need veterinary treatment, which may include clipping and cleaning under sedation, corticosteroids to rapidly reduce inflammation and itch, and systemic antibiotics if infection has spread beyond the superficial skin (signs: warmth, swelling, redness spreading beyond the wound, fever). The veterinarian will also look for the underlying trigger, since that determines whether it comes back.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogHotSpotsPage() {
   return (
@@ -54,6 +61,9 @@ export default function DogHotSpotsPage() {
 
           <h2>Preventing Recurrence</h2>
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

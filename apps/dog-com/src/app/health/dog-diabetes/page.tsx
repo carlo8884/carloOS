@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -11,9 +11,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the first signs of diabetes in dogs?', answer: 'The classic "four Ps": polyuria (urinating more), polydipsia (drinking more), polyphagia (eating more), and weight loss despite the increased appetite. Additional signs include rapidly developing cataracts (canine diabetics are uniquely prone to these, sometimes within weeks of diagnosis), recurring urinary tract infections, and lethargy. A dog drinking and urinating dramatically more while losing weight should be tested by a veterinarian promptly.' },
+  { question: 'Can dog diabetes be treated with pills instead of insulin?', answer: 'No. Dogs require insulin injections — oral antidiabetic medications used in human type 2 diabetes (metformin, glipizide) are not effective for canine diabetes. Canine diabetes is typically insulin-deficient, similar to human type 1, and oral medications work by mechanisms inadequate for that physiology. The standard treatment is twice-daily insulin (Vetsulin — the only FDA-approved insulin for dogs in the US — or human NPH insulin under veterinary guidance) given at consistent times with meals.' },
+  { question: 'What should I do if my diabetic dog will not eat?', answer: 'Do not give the usual insulin dose — insulin given without food risks dangerous hypoglycemia. Contact your veterinarian for instructions instead. Consistency is the dietary foundation for diabetic dogs: same food, same amount, same time as each insulin injection, because dietary changes alter glucose absorption and can destabilize previously controlled diabetes.' },
+  { question: 'What do I do if my diabetic dog is shaking, wobbly, or disoriented?', answer: 'Treat it as a hypoglycemia emergency, exactly as the page above describes: rub a tablespoon of Karo corn syrup or honey on the gums and inside the cheeks, then travel to the veterinarian immediately — this is life-threatening and requires IV dextrose. Never give anything by mouth to an unconscious or seizing dog; in that case go directly to emergency care. Every diabetic dog household should keep corn syrup or honey accessible and an emergency-vet number saved.' },
+  { question: 'How is a diabetic dog\'s blood sugar monitored?', answer: 'Several layers: glucose curves (serial measurements every 1–2 hours across a 12-hour dosing interval, used to set and adjust the insulin dose — never adjust insulin on your own), home glucometer checks on the ear margin or inner lip, continuous glucose monitors such as the FreeStyle Libre applied with veterinary guidance, and fructosamine bloodwork, which reflects average glucose over the prior 2–3 weeks (target 350–450 μmol/L in well-controlled dogs).' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogDiabetesPage() {
   return (
     <>
@@ -23,7 +31,7 @@ export default function DogDiabetesPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diabetes', href: '/health/dog-diabetes' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }]} />
+          <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Diabetes + Insurance</div>
@@ -64,6 +72,9 @@ export default function DogDiabetesPage() {
           </CalloutBox>
 
           <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have Karo corn syrup or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of Karo syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

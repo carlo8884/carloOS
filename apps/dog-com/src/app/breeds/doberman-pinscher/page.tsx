@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide — DCM Screening, vWD | Dog.com', description: 'Dobermans have the highest DCM rate of any breed (up to 58% by age 7). Annual Holter + echo is required.', path: '/breeds/doberman-pinscher', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide', description: 'DCM cardiac screening, von Willebrand disease, and Wobbler syndrome for Dobermans.', url: 'https://dog.com/breeds/doberman-pinscher', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide', description: 'DCM cardiac screening, von Willebrand disease, and Wobbler syndrome for Dobermans.', url: 'https://dog.com/breeds/doberman-pinscher', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What health problems do Doberman Pinschers have?', answer: 'The three documented breed priorities are dilated cardiomyopathy (DCM) — the highest prevalence of any breed studied, with 40-58% developing DCM by age 7 — von Willebrand disease (the most common inherited bleeding disorder in dogs, with up to 70% of Dobermans carrying at least one mutation copy), and Wobbler syndrome (cervical spinal cord compression). Discuss a breed-specific screening protocol with your veterinarian.' },
+  { question: 'What heart screening does a Doberman need?', answer: 'From age 3: an annual echocardiogram to detect structural changes, plus an annual 24-hour Holter monitor to detect ventricular premature contractions — the electrical warning that precedes DCM-related sudden death. This is the standard of care for the breed, not a precaution, because occult-phase DCM can cause sudden death with no prior signs. Your veterinarian and a cardiologist can set the right schedule.' },
+  { question: 'What is von Willebrand disease in Dobermans?', answer: 'An inherited deficiency of von Willebrand factor, a clotting protein. Type I — the form in Dobermans — is the mildest: affected dogs often live normally but may bleed excessively during surgery, trauma, or heat cycles. A DNA test determines clear, carrier, or affected status, and every Doberman should be tested before any elective surgery so your veterinarian can plan accordingly.' },
+  { question: 'How much exercise does a Doberman need?', answer: '1-2 hours of vigorous daily activity for young adults, plus mental work — obedience, scent work, or dog sports — for this highly intelligent working breed. Once any cardiac disease is detected, exercise should be moderated in consultation with the cardiologist, since strenuous activity with significant arrhythmias carries risk.' },
+  { question: 'How long do Dobermans live?', answer: 'Dobermans typically live 10-13 years, with cardiac disease the major variable — nearly all Dobermans develop DCM by age 10 in published studies. Early detection through annual echo and Holter screening, started at age 3 with your veterinarian, is the strongest lever owners have.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function DobermanPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +68,11 @@ export default function DobermanPage() {
 
         <h2>Exercise and Activity</h2>
         <p>Dobermans are high-energy working dogs that require significant daily exercise — 1–2 hours of vigorous activity for young adults. Mental stimulation (obedience training, scent work, protection sports) is as important as physical exercise for this highly intelligent breed. Without adequate mental and physical outlets, Dobermans develop destructive behaviors and anxiety. However: once DCM is detected, exercise should be moderated — strenuous activity in dogs with significant VPCs or structural cardiac disease carries risk of triggering arrhythmia. Discuss exercise parameters with the cardiologist once cardiac disease is identified.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

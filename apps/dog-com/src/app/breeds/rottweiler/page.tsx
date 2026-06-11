@@ -1,10 +1,35 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Rottweiler Breed Guide — Osteosarcoma Risk | Dog.com', description: 'Rottweilers have elevated osteosarcoma (bone cancer) and subaortic stenosis (SAS) rates. Annual cardiac screening and bone cancer awareness are essential.', path: '/breeds/rottweiler', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Rottweiler Breed Guide', description: 'Osteosarcoma risk, subaortic stenosis, hip dysplasia, and health screening for Rottweilers.', url: 'https://dog.com/breeds/rottweiler', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Rottweiler Breed Guide', description: 'Osteosarcoma risk, subaortic stenosis, hip dysplasia, and health screening for Rottweilers.', url: 'https://dog.com/breeds/rottweiler', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What health problems do Rottweilers have?',
+    answer: 'The documented breed concerns are osteosarcoma (bone cancer — one of the highest rates of any breed, exceeded only by giant breeds), subaortic stenosis (SAS — a heart condition detected as a murmur and confirmed by echocardiogram), and hip and elbow dysplasia. Cardiac auscultation at all wellness visits and OFA hip and elbow clearances on breeding dogs are the screening baseline — discuss a breed-appropriate plan with your veterinarian.',
+  },
+  {
+    question: 'Are Rottweilers good family dogs?',
+    answer: 'A Rottweiler that receives consistent structure, training, and socialization from early puppyhood is a reliable, trustworthy family companion. Without that foundation, the breed\'s power, confidence, and natural protective instincts can become management problems. Enrolling in a positive-reinforcement puppy class from 8 weeks and continuing through Canine Good Citizen certification is the recommended path.',
+  },
+  {
+    question: 'When should a Rottweiler be spayed or neutered?',
+    answer: 'Published research on Rottweilers found that dogs spayed or neutered before 1 year had a significantly higher osteosarcoma rate than intact dogs or those altered after 1 year. This is one reason many internists and oncologists recommend delaying spay/neuter in large breeds until 12–18 months. Discuss the timing with your veterinarian in the context of your household situation.',
+  },
+  {
+    question: 'How should Rottweilers be trained?',
+    answer: 'Positive reinforcement works extremely well — Rottweilers are highly motivated by food and praise and learn quickly. Dominance-based methods and physical correction are contraindicated: they damage the relationship and create unpredictable responses in a powerful breed.',
+  },
+  {
+    question: 'Why is limb lameness urgent in a Rottweiler?',
+    answer: 'Persistent single-limb lameness that does not improve with rest or NSAIDs in a Rottweiler should be radiographed within days, not weeks. Osteosarcoma metastasizes to the lungs early — often before limb signs are obvious — and early imaging is the difference between treatment options and palliative care. Contact your veterinarian promptly for any unremitting lameness.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function RottweilerPage() {
   return (
@@ -12,7 +37,7 @@ export default function RottweilerPage() {
       hero={{ title: 'Rottweiler Breed Guide', subtitle: 'One of the most powerful working breeds — Rottweilers excel as protection dogs, herders, search-and-rescue animals, and service dogs. Their loyalty and trainability make them exceptional in the right hands. Their significant health predispositions — particularly bone cancer — make informed ownership critical.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Rottweiler', href: '/breeds/rottweiler' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Doberman Pinscher Guide', href: '/breeds/doberman-pinscher', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -61,6 +86,13 @@ export default function RottweilerPage() {
 
         <h2>Early Spay/Neuter and Cancer Risk</h2>
         <p>Research on Rottweilers specifically has found associations between early spay/neuter (before 1 year) and increased risk of bone cancer and certain joint disorders. A published study found that Rottweilers spayed or neutered before 1 year had a significantly higher osteosarcoma rate than intact dogs or those altered after 1 year. This aligns with similar findings in other large breeds and is one reason many internists and oncologists recommend delaying spay/neuter in large breed dogs until 12–18 months. Discuss the timing with your veterinarian in the context of your specific household situation.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

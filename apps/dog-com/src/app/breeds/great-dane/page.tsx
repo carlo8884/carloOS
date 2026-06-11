@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Dane Breed Guide', description: 'GDV/bloat prevention, DCM cardiac disease, and nutrition for Great Danes.', url: 'https://dog.com/breeds/great-dane', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Dane Breed Guide', description: 'GDV/bloat prevention, DCM cardiac disease, and nutrition for Great Danes.', url: 'https://dog.com/breeds/great-dane', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How long do Great Danes live?', answer: 'Great Danes live 7-10 years, with the average closer to 8 — significantly shorter than most companion breeds, driven primarily by GDV/bloat and cardiac disease susceptibility. Prospective owners should weigh this honestly before acquiring one; many proceed knowing it, choosing quality of relationship over quantity of years.' },
+  { question: 'What health problems do Great Danes have?', answer: 'The primary documented risks are gastric dilatation-volvulus (GDV/bloat — the leading cause of death after cancer), dilated cardiomyopathy (often presenting with atrial fibrillation in this breed), Wobbler syndrome (cervical spinal cord compression, often appearing at 2-3 years), and developmental orthopedic disease during their extreme growth phase. Discuss gastropexy and an annual cardiac evaluation schedule with your veterinarian.' },
+  { question: 'What is bloat in Great Danes, and can it be prevented?', answer: 'GDV occurs when the deep, narrow chest allows the gas-filled stomach to rotate, trapping gas and cutting off blood supply — a surgical emergency measured in hours. Prophylactic gastropexy (tacking the stomach to the abdominal wall) at the time of spay/neuter prevents the fatal rotation and is the most impactful preventive measure available for the breed. Know the location of the nearest 24-hour emergency vet before you ever need it.' },
+  { question: 'What should I feed a Great Dane puppy?', answer: 'A giant-breed puppy formula, measured carefully, until 18-24 months. These formulas control calcium, phosphorus, and caloric density to slow growth — Danes grow from 1 lb to 100-200 lbs in under two years, and standard puppy food causes developmental orthopedic disease from uncontrolled rapid growth. Never supplement calcium in a growing giant-breed puppy; confirm the feeding plan with your veterinarian.' },
+  { question: 'How much exercise does a Great Dane need?', answer: 'Adults are not high-energy — a daily 30-45 minute walk satisfies most Great Danes, and they are characteristically calm indoors. Puppies are different: no forced, strenuous exercise until growth plates close around 18-24 months. Free yard play is fine; forced running and jumping risk growth plate injury.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function GreatDanePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Great Dane Breed Guide', subtitle: 'The largest dog breed — "Apollo of dogs." Great Danes are gentle giants with an unfortunately short lifespan of 7–10 years, driven primarily by their susceptibility to GDV/bloat and cardiac disease. Understanding these risks before acquiring a Great Dane changes how you manage their health from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Dane', href: '/breeds/great-dane' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Irish Wolfhound Guide', href: '/breeds/irish-wolfhound', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -54,7 +64,11 @@ export default function GreatDanePage() {
 
         <h2>Wobbler Syndrome (Cervical Spondylomyelopathy)</h2>
         <p>Great Danes, along with Dobermans, are the most commonly affected breeds for Wobbler syndrome — spinal cord compression at the cervical vertebrae causing the characteristic wobbly, ataxic gait. Develops typically in young adults (Danes often affected at 2–3 years — earlier than Dobermans). Management: anti-inflammatory therapy for mild cases, surgical decompression for progressive or severe cases, referral to a veterinary neurologist for diagnosis and treatment planning.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

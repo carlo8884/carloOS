@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -19,17 +21,43 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Whole Grains in Pet Food — Rice, Oats, Barley | PetFood.com',
-  description:
-    'What grains contribute to pet diets, digestibility of rice vs corn vs wheat, the gluten question, and why grain-inclusive is a sound default for most pets.',
-  url: 'https://petfood.com/ingredients/whole-grains-rice-oats-barley',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Are grains bad for dogs?',
+    answer:
+      'The evidence supports grains as functional, digestible ingredients suitable for most animals. Cooked and ground for pet food, grains supply digestible carbohydrate energy, fiber, some protein, and B-vitamins and minerals. The grain-free narrative cast grains as fillers and allergens, but grain avoidance is warranted only in the uncommon case of a confirmed grain allergy or a specific diagnosed enteropathy — not as a default.',
+  },
+  {
+    question: 'Is rice good for dogs with sensitive stomachs?',
+    answer:
+      'Rice is among the most digestible carbohydrate sources in pet food and is gentle on the gut, which is why it features in many gastrointestinal and sensitive-stomach diets — the classic bland diet pairs rice with a lean protein. Rice is hypoallergenic in the practical sense that it rarely triggers food allergy, making it a common choice for sensitive animals.',
+  },
+  {
+    question: 'Do dogs need a gluten-free diet?',
+    answer:
+      'Generally no. Gluten sensitivity is genuinely documented in a specific line of Irish Setters with a gluten-sensitive enteropathy, but it is rare across the general dog population, and most dogs and cats tolerate gluten-containing grains without issue. The human gluten-free trend does not translate to a general pet need. For the rare diagnosed case, gluten avoidance is appropriate.',
+  },
+  {
+    question: 'When should a dog avoid grain?',
+    answer:
+      'Grain avoidance is warranted in the uncommon case of a confirmed grain allergy or a specific diagnosed enteropathy, identified by elimination trial — not on suspicion alone. For most animals, a grain-inclusive diet from a reputable manufacturer is a sound, often preferable choice, particularly given the DCM signal associated with some legume-heavy grain-free formulas.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Whole Grains in Pet Food — Rice, Oats, Barley | PetFood.com',
+    description:
+      'What grains contribute to pet diets, digestibility of rice vs corn vs wheat, the gluten question, and why grain-inclusive is a sound default for most pets.',
+    url: 'https://petfood.com/ingredients/whole-grains-rice-oats-barley',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 const SOURCES = [
     {
@@ -84,6 +112,7 @@ export default function WholeGrainsRiceOatsBarleyPage() {
               { label: 'The Gluten Question', href: '#gluten' },
               { label: 'Whole vs Refined', href: '#wholerefined' },
               { label: 'When to Avoid Grain', href: '#avoid' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -114,7 +143,7 @@ export default function WholeGrainsRiceOatsBarleyPage() {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <p>Grains — rice, oats, barley, corn, wheat, sorghum — provide digestible carbohydrate energy, fiber, some protein, and B-vitamins and minerals in pet diets. Cooked and ground for pet food, they are well utilized by dogs and cats. The grain-free narrative cast grains as fillers and allergens, but the evidence supports grains as functional, digestible ingredients suitable for most animals. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
         <h2 id="contribute">What Grains Contribute</h2>
         <p>Grains supply the starch that, gelatinized in extrusion, both provides energy and binds kibble together. They also contribute fiber for digestive health, plant protein, essential fatty acids in some cases, and B-vitamins and minerals. As a digestible energy source in a complete diet, grains do real work. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
@@ -128,6 +157,40 @@ export default function WholeGrainsRiceOatsBarleyPage() {
         <p>Whole grains retain the bran and germ, supplying more fiber, B-vitamins, and minerals than refined grains, which are stripped to the starchy endosperm. Whole grains (brown rice, whole oats, barley) generally offer a better nutrient and fiber profile, though refined grains like white rice have a place in highly digestible therapeutic diets where low residue is the goal. The choice depends on the diet&apos;s purpose. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
         <h2 id="avoid">When to Avoid Grain</h2>
         <p>Grain avoidance is warranted in the uncommon case of a confirmed grain allergy or a specific diagnosed enteropathy, identified by elimination trial — not as a default. For most animals, a grain-inclusive diet from a reputable manufacturer is a sound, often preferable choice, particularly given the DCM signal associated with some legume-heavy grain-free formulas. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
+
+        <h2 id="faq">Common Questions</h2>
+        <p><strong>Are grains bad for dogs?</strong></p>
+        <p>
+          The evidence supports grains as functional, digestible ingredients suitable for most
+          animals. Cooked and ground for pet food, grains supply digestible carbohydrate energy,
+          fiber, some protein, and B-vitamins and minerals. The grain-free narrative cast grains
+          as fillers and allergens, but grain avoidance is warranted only in the uncommon case of
+          a confirmed grain allergy or a specific diagnosed enteropathy — not as a default.
+        </p>
+        <p><strong>Is rice good for dogs with sensitive stomachs?</strong></p>
+        <p>
+          Rice is among the most digestible carbohydrate sources in pet food and is gentle on the
+          gut, which is why it features in many gastrointestinal and sensitive-stomach diets —
+          the classic bland diet pairs rice with a lean protein. Rice is hypoallergenic in the
+          practical sense that it rarely triggers food allergy, making it a common choice for
+          sensitive animals.
+        </p>
+        <p><strong>Do dogs need a gluten-free diet?</strong></p>
+        <p>
+          Generally no. Gluten sensitivity is genuinely documented in a specific line of Irish
+          Setters with a gluten-sensitive enteropathy, but it is rare across the general dog
+          population, and most dogs and cats tolerate gluten-containing grains without issue. The
+          human gluten-free trend does not translate to a general pet need. For the rare
+          diagnosed case, gluten avoidance is appropriate.
+        </p>
+        <p><strong>When should a dog avoid grain?</strong></p>
+        <p>
+          Grain avoidance is warranted in the uncommon case of a confirmed grain allergy or a
+          specific diagnosed enteropathy, identified by elimination trial — not on suspicion
+          alone. For most animals, a grain-inclusive diet from a reputable manufacturer is a
+          sound, often preferable choice, particularly given the DCM signal associated with some
+          legume-heavy grain-free formulas.
+        </p>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Kidney Disease in Dogs -- IRIS Staging, SDMA | Dog.com', description: 'Canine CKD: IRIS staging, SDMA early detection, phosphorus restriction, and why 75% of kidney function is lost before creatinine rises.', path: '/health/dog-kidney-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Kidney Disease in Dogs', description: 'IRIS staging, SDMA, phosphorus restriction, and management of canine chronic kidney disease.', url: 'https://dog.com/health/dog-kidney-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Kidney Disease in Dogs', description: 'IRIS staging, SDMA, phosphorus restriction, and management of canine chronic kidney disease.', url: 'https://dog.com/health/dog-kidney-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Kidney Disease in Dogs', description: 'Chronic kidney disease -- IRIS staging, early detection, and management.', url: 'https://dog.com/health/dog-kidney-disease', authorName: 'Dog.com Editorial', lastReviewed: '2026-06-05' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the early signs of kidney disease in dogs?', answer: 'CKD is largely silent early — the kidneys have so much reserve that roughly 75% of function can be lost before creatinine rises on a standard blood panel. The signs owners eventually notice: increased drinking and urination, decreased appetite, weight loss, vomiting, lethargy, ammonia-smelling breath, and pale gums. Because clinical signs arrive late, annual blood panels that include SDMA for dogs over 7 are the appropriate way to catch CKD early — ask your veterinarian about adding it.' },
+  { question: 'What is SDMA testing and why does it matter?', answer: 'Symmetric dimethylarginine (SDMA) is a kidney biomarker that rises when approximately 25% of kidney function is lost — creatinine rises only after about 75% loss. That detection gap can represent years of potential intervention: a dog flagged by mildly elevated SDMA while creatinine is still normal can start phosphorus restriction, hydration optimization, and blood pressure monitoring with far more renal reserve left to protect.' },
+  { question: 'Can kidney disease in dogs be cured?', answer: 'Chronic kidney disease is managed, not cured — but progression can genuinely be slowed. The most evidence-supported interventions: dietary phosphorus restriction via a renal diet (started at IRIS Stage 2, before clinical signs, produces significantly better long-term outcomes than waiting), hydration support, and monitoring/management of blood pressure and proteinuria. Treatment decisions are individualized by your veterinarian using the IRIS staging system.' },
+  { question: 'What should a dog with kidney disease eat?', answer: 'A prescription renal diet (Hill\'s k/d, Royal Canin Renal, Purina NF) — phosphorus restriction is the single most evidence-supported dietary intervention in canine CKD, because high phosphorus intake accelerates renal mineralization and nephron loss. If diet alone cannot achieve the stage-specific phosphorus targets (common at Stage 3–4), the veterinarian adds intestinal phosphate binders given with meals. Wet food or water added to kibble also supports the hydration that CKD kidneys need.' },
+  { question: 'How often should a dog with CKD have bloodwork?', answer: 'Per the monitoring schedule on this page: Stage 1–2 every 3–6 months, Stage 3 every 3 months, and Stage 4 every 1–3 months depending on stability — each recheck covering bloodwork (creatinine, SDMA, phosphorus, BUN, electrolytes), urinalysis with UPC, and blood pressure. Hypertension is common in CKD and accelerates both renal and cardiac disease, so blood pressure checks are not optional extras. Your veterinarian sets the exact cadence for your dog.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogKidneyPage() {
   return (
     <>
@@ -16,7 +24,7 @@ export default function DogKidneyPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Related' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }]}
         contentType="health"
         sidebar={<>
-          <TableOfContents items={[{ label: 'IRIS Staging', href: '#iris' }, { label: 'SDMA Early Detection', href: '#sdma' }, { label: 'Phosphorus Restriction', href: '#phosphorus' }, { label: 'Hydration', href: '#hydration' }, { label: 'Monitoring', href: '#monitoring' }]} />
+          <TableOfContents items={[{ label: 'IRIS Staging', href: '#iris' }, { label: 'SDMA Early Detection', href: '#sdma' }, { label: 'Phosphorus Restriction', href: '#phosphorus' }, { label: 'Hydration', href: '#hydration' }, { label: 'Monitoring', href: '#monitoring' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mt-4">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of CKD</div>
             {['Increased drinking and urination', 'Decreased appetite', 'Weight loss', 'Vomiting (uremia)', 'Lethargy', 'Bad breath (ammonia odor)', 'Pale gums (anemia of CKD)'].map(s => (
@@ -83,6 +91,9 @@ export default function DogKidneyPage() {
 
           <h2 id="monitoring">Monitoring Frequency</h2>
           <p>Stage 1-2: every 3-6 months -- bloodwork (creatinine, SDMA, phosphorus, BUN, electrolytes), urinalysis with UPC, blood pressure. Stage 3: every 3 months. Stage 4: every 1-3 months depending on stability. Blood pressure monitoring is essential -- systemic hypertension is common in CKD and accelerates both renal and cardiac disease. When blood pressure is persistently elevated, the veterinarian may prescribe antihypertensive therapy (amlodipine is commonly used in dogs). Proteinuria (assessed via UPC ratio) is another parameter the veterinarian evaluates when deciding whether medications to reduce intraglomerular pressure -- such as ACE inhibitors -- are appropriate; these decisions are individualized based on staging, labs, and the dog's overall clinical picture.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList
             sources={[

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -28,9 +28,39 @@ const medicalSchema = buildMedicalWebPageSchema({
   description: 'Managing Golden Retriever cancer risk with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-07',
+  lastReviewed: '2026-06-11',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+
+const FAQS = [
+  {
+    question: 'How common is cancer in Golden Retrievers?',
+    answer:
+      'More than 60% of Golden Retrievers will develop cancer in their lifetime. The two cancers that kill most Goldens are hemangiosarcoma and lymphoma. Neither is currently curable, but both can be managed more effectively with earlier detection, and treatment meaningfully extends quality life — which is why proactive monitoring is the primary medical responsibility of Golden ownership.',
+  },
+  {
+    question: 'What cancer screening should a Golden Retriever have?',
+    answer:
+      'Annual wellness exams from year 1–5 with annual bloodwork from year 3; annual abdominal ultrasound added from age 6 (the most impactful change for hemangiosarcoma detection); and every-6-month visits from age 8, when Goldens change faster than annual monitoring captures. At home: monthly lymph node checks, gum color baseline awareness, body weight, and body condition scoring. Discuss the right schedule for your dog with your veterinarian.',
+  },
+  {
+    question: 'What are the emergency signs of hemangiosarcoma?',
+    answer:
+      'Sudden collapse, pale or white gums, a distended abdomen, and extreme lethargy. Hemangiosarcoma — a cancer of blood vessel cells, most commonly in the spleen, liver, and heart — often causes no symptoms until rupture. Sudden collapse with pale gums in a Golden is hemangiosarcoma until proven otherwise: go to an emergency vet immediately.',
+  },
+  {
+    question: 'How do I check my Golden Retriever for lymphoma at home?',
+    answer:
+      'Learn to check the lymph nodes monthly — at the jaw, shoulders, groin, and behind the knees. Lymphoma is usually detectable before crisis, and firm bilateral swelling of multiple nodes warrants veterinary evaluation within the week, not the month. With chemotherapy (CHOP protocol), remission rates run 60–90%, with median survival of 12–14 months with treatment.',
+  },
+  {
+    question: 'Is pet insurance worth it for a Golden Retriever?',
+    answer:
+      'With a 60%+ lifetime cancer rate, the expected-value calculation is unambiguous: hemangiosarcoma treatment runs $8,000–18,000 and lymphoma chemotherapy $5,000–15,000. The non-negotiable rule is to enroll before the first veterinary appointment — any condition noted in records before enrollment becomes an excluded pre-existing condition on most policies.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, faqSchema)
 
 export default function VetsGoldenRetrieverHealthPage() {
   return (
@@ -60,6 +90,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           { label: 'Monitoring Schedule', href: '#monitoring' },
           { label: 'When to Refer', href: '#specialist' },
           { label: 'Pet Insurance', href: '#insurance' },
+          { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Find an Oncologist', href: '/find-a-vet' },
@@ -117,6 +148,12 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
         <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fast claims processing per the carrier, no payout limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
     </>

@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure.', path: '/health/dog-heart-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heart Disease in Dogs', description: 'Mitral valve disease, DCM, murmur grading, and CHF management in dogs.', url: 'https://dog.com/health/dog-heart-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heart Disease in Dogs', description: 'Mitral valve disease, DCM, murmur grading, and CHF management in dogs.', url: 'https://dog.com/health/dog-heart-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Heart Disease in Dogs', description: 'MMVD, DCM, murmur grading, and congestive heart failure management.', url: 'https://dog.com/health/dog-heart-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'My dog has a heart murmur — how worried should I be?', answer: 'A murmur is a finding, not a diagnosis. Murmurs are graded I–VI by loudness, but grade does not linearly correlate with disease severity — a Grade IV murmur is not necessarily worse disease than a Grade III. Echocardiography (cardiac ultrasound) is the gold standard for assessing actual cardiac enlargement, regurgitation severity, and ventricular function. When a significant murmur is detected, ask your veterinarian about a cardiology referral for an echo — that is what turns the murmur into actionable information.' },
+  { question: 'What are the signs of congestive heart failure in dogs?', answer: 'Left-sided CHF (the most common form, from mitral valve disease): cough, particularly at night or at rest; increased resting respiratory rate — more than 30 breaths per minute while sleeping is abnormal; exercise intolerance; and lethargy. Right-sided CHF: abdominal distension from fluid (ascites), decreased appetite, and weight loss. Acute respiratory distress is an emergency requiring immediate veterinary treatment — do not wait with a dog struggling to breathe.' },
+  { question: 'What is the most common heart disease in dogs?', answer: 'Myxomatous mitral valve disease (MMVD) — approximately 75% of all canine cardiac cases. The mitral valve degenerates and leaks, the heart compensates by enlarging, and eventually congestive heart failure can develop. It is strongly breed-associated: Cavalier King Charles Spaniels (nearly 100% affected by age 10), Dachshunds, Miniature Poodles, Shih Tzus, Yorkies, Maltese, Cocker Spaniels, and Chihuahuas. Dilated cardiomyopathy (DCM) accounts for roughly another 10%, concentrated in Dobermans, Boxers, and giant breeds.' },
+  { question: 'When should a dog start pimobendan (Vetmedin)?', answer: 'Per current ACVIM guidelines, pimobendan is started when echocardiography confirms cardiac enlargement beyond specific thresholds (left atrium to aorta ratio of 1.6 or greater) — even before any CHF symptoms appear. The landmark EPIC trial (2016) showed this delays the onset of CHF by an average of 15 months. A murmur alone is not enough to make the decision; the echo measurement is. This is a prescribing decision for your veterinarian or cardiologist.' },
+  { question: 'How do I check my dog\'s breathing rate at home?', answer: 'Count breaths for one minute while the dog is sleeping or fully at rest — one rise and fall of the chest is one breath. Over 30 breaths per minute at rest is abnormal. For dogs diagnosed with heart disease, logging a weekly resting respiratory rate is one of the most effective home-monitoring tools: a sustained rise above the dog\'s usual baseline is an early warning of decompensation before visible distress, and a reason to call your veterinarian or cardiologist.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogHeartDiseasePage() {
   return (
@@ -16,7 +24,7 @@ export default function DogHeartDiseasePage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heart Disease', href: '/health/dog-heart-disease' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }]} />
+          <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }, { label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Heart Disease + Insurance</div>
@@ -81,6 +89,9 @@ export default function DogHeartDiseasePage() {
             <li><strong>Dietary sodium restriction:</strong> Reduces fluid retention — cardiac-specific diets (Hill's h/d, Royal Canin Cardiac) provide appropriate sodium levels.</li>
           </ul>
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList
             sources={[
