@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Are home-cooked diets healthier than commercial diets?',
+    answer:
+      'Not inherently. A properly formulated home-cooked diet is a legitimate choice, but analyses consistently find that the large majority of home-prepared recipes — including many published in books and online — fail to meet established nutrient requirements. The gap between a balanced and an unbalanced home diet is a board-certified veterinary nutritionist and a precise recipe followed exactly.',
+  },
+  {
+    question: 'Can I use a recipe from a book or website?',
+    answer:
+      'Analyses of home-prepared maintenance recipes consistently find a majority deficient in multiple essential nutrients, with calcium, several trace minerals, and certain vitamins most often inadequate. Popularity or a veterinarian byline does not guarantee a recipe is complete; a recipe formulated by a board-certified veterinary nutritionist or a reputable formulation service is the reliable route.',
+  },
+  {
+    question: 'Do home-cooked diets need supplements?',
+    answer:
+      'Essentially always. A balanced home-cooked diet requires a supplement to supply nutrients whole-food ingredients cannot provide in the right amounts — calcium being the most critical, plus a vitamin-and-mineral source and often specific additions like taurine for cats. Generic human multivitamins are not adequate substitutes; the formulating nutritionist specifies the exact product and dose.',
+  },
+  {
+    question: 'When is home cooking justified?',
+    answer:
+      'When an animal will not eat or cannot tolerate suitable commercial diets, when a combination of medical conditions is not addressed by any commercial therapeutic diet, or when an owner is committed to doing it properly through a veterinary nutritionist. It is not justified as a casual swap from commercial food based on a recipe found online.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -76,7 +105,7 @@ export default function HomeCookedVsCommercialPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -87,6 +116,7 @@ export default function HomeCookedVsCommercialPage() {
               { label: 'Doing It Correctly', href: '#correctly' },
               { label: 'Supplements Are Required', href: '#supplements' },
               { label: 'When It Is Justified', href: '#justified' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -164,6 +194,14 @@ export default function HomeCookedVsCommercialPage() {
             We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
           </p>
         </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is wet or dry food better for pets?',
+    answer:
+      'Neither is universally better. Dry food wins on cost per calorie, storage, and convenience; wet food wins on moisture, palatability, and satiety. The right choice depends on the species, the individual animal, and the household — and a combination of the two is a common, workable approach when total calories are counted across both.',
+  },
+  {
+    question: 'Does dry food clean pets’ teeth?',
+    answer:
+      'The claim is largely overstated. Most kibble shatters on contact and provides little mechanical cleaning, and dental disease is common in dry-fed animals. Specially designed dental kibbles with a larger, fibrous matrix — some carrying the Veterinary Oral Health Council (VOHC) seal — do have some plaque- and tartar-reducing effect, but ordinary kibble is not a substitute for dental care.',
+  },
+  {
+    question: 'Why is wet food often recommended for cats?',
+    answer:
+      'Cats have a weak thirst drive and tend to under-hydrate on dry food, and the roughly 75 to 82 percent water content of canned food supports urinary and kidney health. For cats with a history of urinary or kidney disease, the moisture of canned food is a genuine clinical benefit.',
+  },
+  {
+    question: 'Can I mix wet and dry food?',
+    answer:
+      'Yes. Many owners combine kibble for cost and convenience with canned food for hydration, palatability, and satiety. The key is to count total calories across both formats, reading the calorie statement on each product, since per-gram calorie density differs sharply between them.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -75,7 +104,7 @@ export default function WetVsDryFoodPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -86,6 +115,7 @@ export default function WetVsDryFoodPage() {
               { label: 'Cost and Convenience', href: '#cost' },
               { label: 'Palatability and Hydration', href: '#palatability' },
               { label: 'Choosing or Combining', href: '#choosing' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -160,6 +190,14 @@ export default function WetVsDryFoodPage() {
             We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
           </p>
         </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -31,6 +33,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Do veterinarians recommend raw diets?',
+    answer:
+      'The major professional bodies do not. The WSAVA, AVMA, AAHA, and FDA have all published statements cautioning against raw meat-based diets, principally on pathogen risk to pets and humans and, for home-prepared raw, the high rate of nutritional imbalance. This reflects a population-level risk assessment, not a claim that every raw-fed animal will become ill.',
+  },
+  {
+    question: 'Is raw food more digestible than cooked food?',
+    answer:
+      'Not inherently. Raw diets can be highly digestible, but cooking improves the availability of some nutrients (notably starch) while reducing others, and the claim that raw food retains beneficial enzymes is largely irrelevant — dietary enzymes are denatured by stomach acid. The decisive nutritional issue is usually whether the diet is complete and balanced, not raw versus cooked.',
+  },
+  {
+    question: 'What is the safest way to feed raw, if an owner chooses to?',
+    answer:
+      'Harm reduction: choose a commercial raw diet formulated to meet AAFCO profiles (ideally high-pressure-processed) rather than an unbalanced home recipe, or work with a board-certified veterinary nutritionist on a balanced formulation; handle the food with strict hygiene; and avoid raw feeding in households with immunocompromised members, young children, or pregnant people. These steps mitigate but do not eliminate the documented risks.',
+  },
+  {
+    question: 'Are home-prepared raw diets nutritionally complete?',
+    answer:
+      'Frequently not. Analyses have found widespread deficiencies and imbalances in home-prepared raw diets, particularly in the calcium-to-phosphorus ratio and several micronutrients. An all-meat raw diet without proper calcium balancing is a classic cause of skeletal disease.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -79,7 +108,7 @@ export default function RawVsCookedDietsPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -90,6 +119,7 @@ export default function RawVsCookedDietsPage() {
               { label: 'The Veterinary Consensus', href: '#consensus' },
               { label: 'Completeness and Balance', href: '#completeness' },
               { label: 'Harm Reduction', href: '#harmreduction' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -127,6 +157,14 @@ export default function RawVsCookedDietsPage() {
         <p>Home-prepared raw diets are frequently nutritionally incomplete — analyses have found widespread deficiencies and imbalances, particularly in calcium-to-phosphorus ratio and several micronutrients. An all-meat raw diet without proper calcium balancing is a classic cause of skeletal disease. A complete cooked commercial diet (or a properly formulated raw diet validated against AAFCO profiles) avoids this. See <a href="/compare/home-cooked-vs-commercial">Home-Cooked vs Commercial Diets</a> and <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="harmreduction">Harm Reduction</h2>
         <p>For owners who choose raw despite the consensus, harm reduction means: select a commercial raw diet formulated to meet AAFCO profiles (ideally HPP-treated) rather than an unbalanced home recipe, or work with a board-certified veterinary nutritionist on a balanced formulation; handle the food with strict hygiene; and avoid raw feeding in households with immunocompromised members, young children, or pregnant people. These steps mitigate but do not eliminate the documented risks. See the <a href="/guides/raw-pet-food-evaluation">Raw Pet Food Evaluation</a>.</p>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is canned food better than kibble for cats?',
+    answer:
+      'For many cats, canned food offers real advantages in hydration, carbohydrate, weight control, and urinary health, and is often the better default — especially for cats prone to obesity, diabetes, or urinary disease. Dry food remains acceptable for healthy cats when used with measured feeding and good water access, and a wet-and-dry combination is a reasonable middle ground.',
+  },
+  {
+    question: 'Why does moisture matter so much for cats?',
+    answer:
+      'Cats evolved to obtain most of their water from food and have a weak thirst drive, so cats on dry food often run chronically under-hydrated and produce concentrated urine. The increased water in canned food supports kidney and urinary health — both common problem areas in cats — and is the single strongest feline argument for wet food.',
+  },
+  {
+    question: 'Can canned food help a diabetic cat?',
+    answer:
+      'Low-carbohydrate diets — typically canned — improve glycemic control and can support diabetic remission in cats, and high-carbohydrate dry diets are implicated in feline obesity and diabetes. A cat with diagnosed diabetes needs its diet set and monitored by a veterinarian rather than self-selected.',
+  },
+  {
+    question: 'Is dry food bad for cats?',
+    answer:
+      'Not categorically. Dry food is acceptable for healthy cats with measured feeding and good water access, and it is cheaper and more convenient. The caution is population-level: modern indoor cats fed dry food face higher rates of obesity, diabetes, and urinary disease — problems to which diet format contributes — so the choice should weigh the individual cat’s health risks.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -76,7 +105,7 @@ export default function KibbleVsCannedForCatsPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -87,6 +116,7 @@ export default function KibbleVsCannedForCatsPage() {
               { label: 'Weight Control', href: '#weight' },
               { label: 'Urinary Health', href: '#urinary' },
               { label: 'The Practical Verdict', href: '#verdict' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -164,6 +194,14 @@ export default function KibbleVsCannedForCatsPage() {
             We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
           </p>
         </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
