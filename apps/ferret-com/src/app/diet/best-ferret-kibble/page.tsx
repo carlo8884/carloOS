@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -74,7 +74,36 @@ const products = [
   }),
 ]
 
-const combined = combineSchemas(schema, med, itemList, ...products)
+const FAQS = [
+  {
+    question: 'What is the best food for ferrets?',
+    answer:
+      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible (the published target is under 3%; premium starch-free formulas land in the low single digits). Read the panel, not the marketing on the front of the bag.',
+  },
+  {
+    question: 'How do I know how much carbohydrate is in ferret food?',
+    answer:
+      'Guaranteed-analysis labels rarely list carbohydrate, so you estimate it by difference: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15-30% carbohydrate by difference — a defect, not a feature, given the carbohydrate-insulinoma association discussed in the exotic-pet veterinary literature.',
+  },
+  {
+    question: 'Is "chicken meal" bad in ferret food?',
+    answer:
+      'No — "meal" is not a dirty word. Chicken meal is rendered, water-removed chicken and is actually more protein-dense by weight than fresh chicken, which is roughly 70% water. A panel reading "chicken, chicken meal, turkey meal, chicken fat" is a good sign. The red flags are grains or plant-protein concentrates (corn gluten meal, pea protein, soybean meal) at the top of the panel.',
+  },
+  {
+    question: 'Why does my ferret refuse new food?',
+    answer:
+      'Food fixation. Ferrets imprint on the textures and smells of food during their first six months and become reluctant to accept anything unfamiliar afterward. The defense is rotating among two or three acceptable brands from kithood. For an already-fixated ferret, transition over 7-14 days, mixing in an increasing proportion of the new kibble — and never let a ferret go without eating for an extended period during a transition, given how quickly ferrets can become hypoglycemic.',
+  },
+  {
+    question: 'Can ferrets eat "small animal" or "ferret and rabbit" food?',
+    answer:
+      'No. Rabbits are herbivores and ferrets are obligate carnivores — a food formulated for both is wrong for at least one of them. The same goes for formulas with added fruit, vegetables, or sweeteners (molasses, honey, cane sugar): ferrets do not digest plant matter, and added sugars stress pancreatic beta cells.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
 
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.
@@ -115,6 +144,7 @@ export default function BestFerretKibblePage() {
                 { label: 'Rotation & Food Fixation', href: '#rotation' },
                 { label: 'Transitioning Brands', href: '#transition' },
                 { label: 'Kibbles That Fit the Profile', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -150,7 +180,7 @@ export default function BestFerretKibblePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -281,6 +311,9 @@ export default function BestFerretKibblePage() {
             ctaAffiliateProgram="carniwhole"
             ctaAffiliateProduct="ferret-diet"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="sources">Sources</h2>
           <p>

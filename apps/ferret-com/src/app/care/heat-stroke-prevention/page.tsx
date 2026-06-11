@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'What temperature is too hot for a ferret?',
+    answer:
+      'Ferrets are comfortable broadly from the low-to-mid 60s up to the low 70s Fahrenheit (mid-teens to low 20s Celsius) and tolerate cold far better than heat. Risk begins climbing once ambient temperature passes the high 70s, and the upper 80s Fahrenheit (around 30 C and above) should be treated as actively dangerous — especially in high humidity, which blocks what little evaporative cooling the animal has. The temperature that matters is the temperature at the cage, not the thermostat across the house.',
+  },
+  {
+    question: 'Can ferrets sweat?',
+    answer:
+      'Effectively, no. Ferrets have very few functional sweat glands and pant far less effectively than dogs, so both main mammalian cooling routes are largely unavailable. Their dense fur traps heat and their compact bodies have limited surface area to shed it — thermoregulation built for cool burrows, not warm rooms. This is why exotic-mammal references describe heat stroke as a leading warm-weather emergency in pet ferrets, and one that is almost entirely a husbandry failure rather than bad luck.',
+  },
+  {
+    question: 'What are the signs of heat stroke in a ferret?',
+    answer:
+      'It escalates in stages. Early: seeking the coolest spot, stretching out flat instead of curling up, lethargy. Building: open-mouth breathing or panting, warm reddened ears and paw pads, thick or sticky saliva. Severe: rapid or labored breathing, weakness, vomiting, bright-red gums. Critical: collapse, tremors, unresponsiveness. A panting, flattened, lethargic ferret on a hot day is an emergency until proven otherwise — do not wait to see whether it improves.',
+  },
+  {
+    question: 'How do I cool down an overheated ferret?',
+    answer:
+      'Lower its temperature steadily, not with extreme cold. Move it to a cool, shaded, air-conditioned space; wet the fur with cool — not ice-cold — water, concentrating on the belly, paw pads, and ears; offer cool drinking water but never force water into a weak or unresponsive animal; and do not submerge it in ice water, which can cause shock. Then contact an exotics-capable veterinarian right away even if the ferret seems to recover — heat stroke causes internal organ damage that is not visible from the outside.',
+  },
+  {
+    question: 'How do I keep my ferret cool in summer?',
+    answer:
+      'Air conditioning is the gold standard — keeping the room reliably below the mid-70s Fahrenheit removes nearly all of the risk. Position the cage out of direct sun and away from exterior walls; add a frozen water bottle wrapped in thin cloth (the single most useful low-tech intervention) or a chilled ceramic tile; keep cool fresh water available with a backup source on hot days. Fans circulate cooled air but do not cool a non-sweating animal the way they cool you. Never leave a ferret in a parked car, even on a mild day.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -71,6 +101,7 @@ export default function HeatStrokePreventionPage() {
                 { label: 'Prevention Setup', href: '#prevention' },
                 { label: 'Emergency Cooling', href: '#emergency' },
                 { label: 'Higher-Risk Ferrets', href: '#risk' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -104,7 +135,7 @@ export default function HeatStrokePreventionPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -170,6 +201,9 @@ export default function HeatStrokePreventionPage() {
           <p>
             Some ferrets are less able to cope with heat and warrant extra caution: senior ferrets and those with the chronic conditions common in older animals (see <a href="/health/aging-ferret-care">aging ferret care</a>), overweight ferrets, very young kits, and any ferret already unwell or recovering from illness. For these animals, hold the environment cooler and watch more closely through warm spells.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

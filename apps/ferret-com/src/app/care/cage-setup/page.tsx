@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'What size cage does a ferret need?',
+    answer:
+      'The American Ferret Association recommends a minimum floor area of roughly 24 x 24 inches with at least 18 inches of height per ferret, with a strong preference for multi-level cages. In practice, most two-ferret households settle on a 36 x 24-inch or larger footprint with at least three levels. Bar spacing matters more than total size for safety: one inch or less for adults, half an inch or less for kits.',
+  },
+  {
+    question: 'Can ferrets live in a cage all the time?',
+    answer:
+      'No. Ferrets are not cage animals — the cage is the bedroom, not the house. The working minimum across exotic-pet veterinary literature and AFA owner-education materials is four hours of supervised out-of-cage time per day in a fully ferret-proofed space, with six to eight hours closer to ideal. The time does not have to be one block; two morning hours and two evening hours align well with the ferret’s crepuscular activity peaks.',
+  },
+  {
+    question: 'What bedding is safe for ferrets?',
+    answer:
+      'Enclosed fabric — sleep sacks, fleece tubes, covered hammocks, and machine-washable fleece liners cut to fit each level. Avoid loose bedding entirely: aromatic softwood shavings (cedar, untreated pine) release phenols that are documented respiratory irritants in small mammals, and ingested bedding is among the substrates implicated in GI foreign-body obstruction, one of the most common surgical presentations in pet ferrets.',
+  },
+  {
+    question: 'Are wire-floor cages bad for ferrets?',
+    answer:
+      'Yes. Ferret feet are not designed for grid flooring — bumblefoot and chronic foot abrasion are documented in the exotic-pet veterinary literature in ferrets housed on wire. The floor should be solid plastic or covered with a fitted fleece liner. Bare metal grid ramps are also a fall risk and should be covered.',
+  },
+  {
+    question: 'Where should the litter box go in a ferret cage?',
+    answer:
+      'On the lowest level, with food and water on a middle level — ferrets prefer not to eat next to where they eliminate. Use corner-shaped pans (one per cage level, plus one or two in each free-roam room), paper-pellet or non-aromatic wood-pellet litter, and never clumping clay (sodium bentonite is dangerous if ingested). Expect 80-90% reliability at best.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -78,6 +108,7 @@ export default function FerretCageSetupPage() {
                 { label: 'Ferret-Proofing the Home', href: '#ferret-proof' },
                 { label: 'Cage Picks', href: '#cage-picks' },
                 { label: 'Bedding Picks', href: '#bedding-picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -116,7 +147,7 @@ export default function FerretCageSetupPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -299,6 +330,9 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">

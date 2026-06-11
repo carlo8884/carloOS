@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
   {
@@ -43,7 +43,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -54,7 +54,42 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-05-28',
 })
-const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'What is insulinoma in ferrets?',
+    answer:
+      'Insulinoma is a functional tumor of the pancreatic beta cells — the cells that produce insulin. The tumor cells secrete insulin in an unregulated way, independent of the normal feedback loop, producing chronic, intermittent, often severe hypoglycemia. It is the most commonly diagnosed neoplasm in middle-aged and older domestic ferrets, typically appearing between roughly 3 and 7 years of age.',
+  },
+  {
+    question: 'What are the first signs of insulinoma in a ferret?',
+    answer:
+      'The early signs map cleanly onto "my ferret is getting older", which is why they are frequently missed: episodic lethargy after sleep or fasting, hindlimb weakness or wobbliness, pawing at the mouth with drooling, and "stargazing" vacant stares. Episodes are intermittent — a ferret can have a 30-second hypoglycemic episode in the morning and look normal at the vet that afternoon. Any otherwise-healthy ferret over 3 showing these signs after a fast should be screened with bloodwork by a veterinarian experienced with ferrets.',
+  },
+  {
+    question: 'How is insulinoma diagnosed in ferrets?',
+    answer:
+      'The diagnostic centerpiece is a fasting blood glucose after a controlled 3- to 4-hour in-clinic fast (longer fasts risk precipitating a crisis). A fasting glucose under 60 mg/dL in the absence of another explanation is considered diagnostic; normal ferret fasting glucose sits roughly between 90 and 125 mg/dL. A paired insulin-to-glucose ratio is the gold-standard biochemical confirmation. Ultrasound is used to screen for visible nodules and concurrent adrenal disease, but most insulinomas are too small to see — a negative scan does not rule out the diagnosis. This workup belongs with an exotic-animal veterinarian.',
+  },
+  {
+    question: 'How long can a ferret live with insulinoma?',
+    answer:
+      'Published case series in the exotic-pet veterinary literature report median survival on medical management in the range of 12-24 months from diagnosis, with substantial individual variation. Surgical cases report median disease-free intervals of roughly 6-18 months, with most ferrets eventually returning to medical management. Quality of life on appropriate management is generally good — most insulinoma ferrets continue to eat, play, and engage between episodes.',
+  },
+  {
+    question: 'Can diet prevent insulinoma in ferrets?',
+    answer:
+      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. The consistent recommendation from the American Ferret Association and exotic-pet veterinary references is to minimize dietary carbohydrate from kithood onward: a high-protein, low-carbohydrate diet and no sugary treats.',
+  },
+  {
+    question: 'Is a ferret hypoglycemic episode an emergency?',
+    answer:
+      'Collapse, seizure, or unresponsiveness is a medical emergency. Seizures lasting more than two minutes, recurrent crises within a single day, or any episode that does not resolve cleanly within 5-10 minutes are all reasons to be on the way to an emergency veterinary hospital — ideally one with exotic-mammal capability — rather than waiting at home. Crisis-level hypoglycemia warrants inpatient evaluation even if the ferret appears to recover. Every household with an insulinoma ferret should review the crisis response with their exotic-animal veterinarian in advance.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, faqSchema)
 
 export default function FerretInsulinomaPage() {
   return (
@@ -90,6 +125,7 @@ export default function FerretInsulinomaPage() {
                 { label: 'Emergency Crisis Protocol', href: '#emergency' },
                 { label: 'Prognosis', href: '#prognosis' },
                 { label: 'Supportive Nutrition', href: '#supportive' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -147,7 +183,7 @@ export default function FerretInsulinomaPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -249,6 +285,9 @@ export default function FerretInsulinomaPage() {
           <p>
             A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
