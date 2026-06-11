@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed.', path: '/species/sulcata-tortoise', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide', description: 'Adult size reality, outdoor enclosure requirements, and long-term commitment for Centrochelys sulcata.', url: 'https://lizard.com/species/sulcata-tortoise', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide', description: 'Adult size reality, outdoor enclosure requirements, and long-term commitment for Centrochelys sulcata.', url: 'https://lizard.com/species/sulcata-tortoise', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How big do sulcata tortoises get?', answer: 'Hatchlings are 2–3 inches and fit in your palm; adults reach 18–30 inches and 100–200 lbs. The growth is steady and relentless: roughly 4–5 inches at one year, 8–10 inches at three years, 12–15 inches at five years, 18–24 inches and 50–80 lbs at ten years. The gap between the cute hatchling and the adult animal is the story of most sulcata acquisitions that end in surrender.' },
+  { question: 'Can a sulcata tortoise live indoors?', answer: 'Adults cannot be kept indoors. They require outdoor living in appropriate climates — USDA hardiness zones 9–11 as the baseline, or zones 7–8 with a heated night shelter. A single adult needs 100+ square feet with solid perimeter walls (concrete block, stone, or heavy wood — not chain-link, which they push through) extending 18–24 inches underground, because sulcatas dig and will tunnel under any barrier that does not go deep enough.' },
+  { question: 'What do sulcata tortoises eat?', answer: 'Primarily grasses and fibrous weeds — their digestive system is adapted for high-fiber, low-moisture, low-protein food. In captivity the staple is Bermuda grass, orchard grass hay, and dry native grasses, with occasional leafy greens such as collards, dandelion, and turnip greens. No fruit, no high-water-content vegetables, no protein. A large adult may consume 2–4 lbs of grass hay daily.' },
+  { question: 'Why are so many sulcata tortoises rehomed?', answer: 'Sulcatas are the most frequently surrendered reptile to rescue organizations in the US. The typical trajectory: a hatchling is purchased cheaply, kept indoors for 1–3 years, moved outdoors as it outgrows indoor housing, then surrendered at 5–15 years old when it is 20+ inches, destroying fencing, digging through landscaping, and consuming $50–100 of produce weekly. Many rescues are overwhelmed and refuse new sulcata surrenders.' },
+  { question: 'Should I get a sulcata or a Russian tortoise?', answer: 'A sulcata is appropriate only for keepers with permanent access to roughly half an acre of suitable outdoor land in a warm climate, the resources to build substantial fencing, and a credible plan for an animal that can outlive its keeper — the commitment runs 70+ years. For everyone else who wants a tortoise, the Russian tortoise is the recommended alternative: manageable size, similar personality, cold-tolerant, and appropriate for a much wider range of living situations.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function SulcataTortoisePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Sulcata Tortoise', href: '/species/sulcata-tortoise' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
@@ -50,6 +62,9 @@ export default function SulcataTortoisePage() {
         <h2>Who Sulcatas Are Appropriate For</h2>
         <p>Sulcatas are appropriate for: people who own or have permanent access to a minimum half-acre of appropriate outdoor land in a warm climate, have resources to build appropriate substantial fencing, can provide lifelong care or have a credible long-term plan for the animal's future, and have experience with large reptiles or are connecting with experienced mentors. They make genuinely spectacular animals for the right keeper — their longevity, impressive size, and the relationship that develops with a well-cared-for sulcata over decades are extraordinary. But the barriers to providing appropriate care are real and high.</p>
         <p>For people who want a tortoise but cannot meet sulcata requirements: Russian tortoises are the recommended alternative — manageable size, similar personality, cold-tolerant, and appropriate for a much wider range of living situations.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Sulcata Tortoise — Setup Equipment</div>
@@ -62,5 +77,6 @@ export default function SulcataTortoisePage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

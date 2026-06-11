@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide — Upturned Snout | Lizard.com", description: "Western hognose snakes are small, charismatic beginner snakes known for bluffing and playing dead. Care, feeding, the mild rear-fang concern, and morphs.", path: "/species/western-hognose-snake", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide", description: "Enclosure, belly heat, feeding, the mild rear-fanged venom question, and complete care for Heterodon nasicus.", url: "https://lizard.com/species/western-hognose-snake", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide", description: "Enclosure, belly heat, feeding, the mild rear-fanged venom question, and complete care for Heterodon nasicus.", url: "https://lizard.com/species/western-hognose-snake", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Are western hognose snakes venomous?', answer: 'Western hognoses are technically rear-fanged and produce a mild salivary toxin (a Duvernoy gland secretion) used to subdue amphibian prey, but they are not considered medically dangerous to humans and are widely kept as pets. Defensive bites are extremely rare because the species bluffs rather than bites. The rare reported reactions to a prolonged feeding-response bite are localized swelling and itching, comparable to an insect sting, and resolve on their own. Anyone with known allergies should take extra care, and feeding with tongs avoids hand-strikes.' },
+  { question: 'Why do hognose snakes play dead?', answer: 'It is the final act of a theatrical defensive bluff. A threatened hognose hisses, flattens its neck like a cobra, false-strikes with a closed mouth, and ultimately rolls over to feign death — going limp, gaping, and even emitting a musk. Hognose snakes almost never bite in defense, so hissing and hooding from a new or stressed animal should not be read as aggression.' },
+  { question: 'What do western hognose snakes eat?', answer: 'Frozen/thawed rodents, fed with tongs — never live prey, which can bite and injure the snake. Because their wild diet centers on amphibians, some individuals (hatchlings especially) are reluctant rodent feeders at first and may need scenting: rubbing a thawed pinkie with a frozen/thawed toad or tuna/anchovy juice, then gradually weaning onto unscented mice. A healthy adult takes an appropriately sized mouse every 5–7 days, reduced to every 7–10 days to prevent obesity, which this species is prone to.' },
+  { question: 'What size enclosure does a hognose snake need?', answer: 'An adult female is comfortable in a 20-gallon long (a 24×18-inch footprint); males, which stay under 24 inches, can live in slightly less. As a burrowing species, hognoses value floor area and a few inches of diggable substrate (aspen or sand-soil) over height. Provide a warm side of 88–92°F, a cool side of 72–78°F, two hides, a water bowl, and a secure lid — they are surprisingly strong nose-diggers at seams.' },
+  { question: 'How long do western hognose snakes live?', answer: 'A well-kept western hognose lives 15–20 years. Persistent food refusal with weight loss, open-mouth breathing, or any swelling warrants a reptile veterinarian — ideally an ARAV member clinic.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function SpeciesWesternHognoseSnakePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: "Western Hognose Snake Care Guide", subtitle: "Heterodon nasicus is a small, stout, upturned-snout colubrid famous for its theatrical defensive bluff: hissing, flattening the neck like a cobra, and ultimately rolling over to play dead. Females reach 24 to 36 inches, males 14 to 24. Their personality and manageable size have made them one of the most popular pet snakes of the last decade.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Western Hognose", href: "/species/western-hognose-snake" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
@@ -68,6 +80,9 @@ export default function SpeciesWesternHognoseSnakePage() {
             <li>{"Weinstein, S. A., et al., reviews of mildly venomous colubrid (Duvernoy gland) secretions."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Western Hognose — Setup Equipment</div>
@@ -79,5 +94,6 @@ export default function SpeciesWesternHognoseSnakePage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

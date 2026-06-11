@@ -1,14 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established.', path: '/species/blue-tongued-skink', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What do blue-tongued skinks eat?', answer: 'Blue-tongued skinks are true omnivores. A balanced captive diet is roughly 50% dark leafy greens and vegetables (collard greens, mustard greens, dandelion greens, butternut squash, sweet potato, bell pepper), 30% protein (whole prey insects such as dubia roaches, silkworms, and hornworms, or commercial omnivore diets, with occasional scrambled egg or lean cooked chicken), and 20% fruit (blueberries, mango, papaya, kiwi) as a supplement rather than a staple. Avoid spinach, avocado, and iceberg lettuce. Dust with calcium at every feeding and a multivitamin twice weekly. Feed adults every 2–3 days, juveniles daily.' },
+  { question: 'Are blue-tongued skinks good for beginners?', answer: 'They are a strong choice for adults wanting a larger, interactive lizard. They are big enough to handle comfortably without feeling fragile, are not climbers or escape artists, eat a varied omnivore diet that does not require maintaining live insect colonies, tolerate handling very well once established, and are robust enough to tolerate beginner mistakes that would be serious for more delicate species. The trade-off is commitment: a skink purchased at 2 years old will still be with you at 22.' },
+  { question: 'What size enclosure does a blue-tongued skink need?', answer: 'Adults need a 4×2×2-foot enclosure at minimum; PVC enclosures hold appropriate temperatures well. Because blue-tongued skinks are terrestrial burrowers, substrate depth matters more than height — 4–6 inches of coconut fiber, topsoil, or a bioactive mix supports the natural burrowing that helps them thermoregulate and feel secure. Target a basking surface of 100–110°F, warm-side ambient of 85–90°F, and a cool side of 75–80°F.' },
+  { question: 'How long do blue-tongued skinks live?', answer: 'With correct husbandry, 20–30 years. Their longevity, intelligence, and recognition of their keepers make them genuinely rewarding long-term pets rather than simple display animals.' },
+  { question: 'Do blue-tongued skinks need UVB?', answer: 'Yes — an Arcadia 6% T5 HO at appropriate distance is the standard recommendation. UVB supports vitamin D3 synthesis even though blue-tongued skinks can tolerate some dietary D3.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BlueTonguedSkinkPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Blue-Tongued Skink', href: '/species/blue-tongued-skink' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
@@ -57,6 +70,9 @@ export default function BlueTonguedSkinkPage() {
         <p><strong>Tiliqua scincoides scincoides (Eastern BTS / Australian):</strong> Wild-caught imports are not legally available in the US — US population is captive-bred. Typically the most docile personality and the most recommended for beginners. Northern BTS (T. s. intermedia) are the most commonly captive-bred in the US.</p>
         <p><strong>Tiliqua gigas (Indonesian/Merauke/Irian Jaya):</strong> Various Indonesian locality BTS legally imported. Generally slightly more variable in personality — some animals are more defensive initially than Australian species. All become manageable with consistent handling.</p>
         <p><strong>Pygmy blue-tongued skink (T. adelaidensis):</strong> Critically endangered, rarely captive-bred, entirely different care — not a practical pet option and their conservation status makes collecting inappropriate.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Blue Tongued Skink — Setup Equipment</div>
@@ -69,5 +85,6 @@ export default function BlueTonguedSkinkPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

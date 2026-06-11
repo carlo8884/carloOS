@@ -1,14 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Uromastyx Care Guide — High Heat, Seed Diet | Lizard.com', description: 'Uromastyx (spiny-tailed lizards) need extreme heat (120°F basking), a dry desert setup, and a primarily seed-based herbivore diet.', path: '/species/uromastyx', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What basking temperature do uromastyx need?', answer: 'A basking surface of 120–130°F, measured directly on the surface with an infrared thermometer rather than estimated from air temperature, with a warm-side ambient of 90–100°F — significantly hotter than most other reptile setups. Reaching those temperatures requires a high-wattage (100–150W) incandescent or halogen basking bulb over rock or slate; ceramic heat emitters provide ambient warmth but not the radiant surface heat this species needs. At lower basking temperatures uromastyx cannot properly thermoregulate, digest food, or maintain immune function.' },
+  { question: 'What do uromastyx eat?', answer: 'Uromastyx are primarily herbivorous with a strong preference for seeds and dry plant material. The staple that produces the best health outcomes is a mix of dry seeds and legumes (millet, lentils, split peas, dried beans) combined with daily dark leafy greens (collard, dandelion, turnip, and mustard greens). Avoid high-water-content vegetables such as cucumber, zucchini, and lettuce, and never feed insects or meat — uromastyx are not well-adapted to digest significant animal protein.' },
+  { question: 'Do uromastyx need a water bowl?', answer: 'Often not. Healthy, established adults rarely drink from standing water — seeds and greens provide sufficient moisture for their desert-adapted kidneys, and ambient humidity should stay under 30%. Juveniles and any animal that appears dehydrated should have a shallow water dish available 2–3 times weekly.' },
+  { question: 'Are uromastyx good pets?', answer: 'For a keeper who can meet the extreme heat requirement, yes — well-established uromastyx with regular gentle interaction become remarkably personable, learn to recognize their keepers, and respond to food cues. They are territorial (males especially) and should not be cohabitated except under very specific large-enclosure conditions. Plan for a 4×2×2-foot adult enclosure, burrow access (8+ inches of diggable substrate or artificial burrows), and a 15–25+ year lifespan.' },
+  { question: 'Which uromastyx species is best for a first-time keeper?', answer: 'U. geyri (Saharan, 10–13 inches) is often recommended for newcomers to the genus because of its docile temperament, and U. maliensis (Mali, 10–14 inches) is one of the hardier, more adaptable species. U. ornata (Ornate, 14–16 inches) is the most colorful and the most widely available, with males displaying vivid blue, green, and orange.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function UromastcyxPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Uromastyx', href: '/species/uromastyx' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
@@ -56,6 +69,9 @@ export default function UromastcyxPage() {
         <p><strong>U. ornata (Ornate uromastyx):</strong> The most colorful — males display vivid blue, green, and orange patterns. Native to Egypt and the Middle East. 14–16 inches. The most popular and widely available.</p>
         <p><strong>U. geyri (Saharan uromastyx):</strong> Yellow-orange coloration, slightly smaller at 10–13 inches. More docile temperament than ornata — often recommended for beginners to the species.</p>
         <p><strong>U. maliensis (Mali uromastyx):</strong> Dark base with yellow or red patterning. Robust and adaptable. 10–14 inches. One of the hardier species for beginners.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Uromastyx — Setup Equipment</div>
@@ -68,5 +84,6 @@ export default function UromastcyxPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }
