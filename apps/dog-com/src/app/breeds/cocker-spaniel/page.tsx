@@ -1,15 +1,26 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cocker Spaniel Guide — Ear Infections, Eye Conditions | Dog.com', description: 'Cocker Spaniels have the highest rate of ear infections of any breed — their ear structure creates a perfect warm, dark environment for yeast and bacteria.', path: '/breeds/cocker-spaniel', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Why do Cocker Spaniels get so many ear infections?', answer: 'American Cocker Spaniels have the highest rate of chronic ear infections of any breed — their long, pendulous, heavily feathered ear flaps create a warm, dark, poorly ventilated environment that promotes yeast and bacterial overgrowth, and the breed\'s allergy predisposition further inflames the ear canal. Monthly cleaning with a veterinary ear cleaner and drying the ears after swimming or bathing are essential maintenance.' },
+  { question: 'What health problems do Cocker Spaniels have?', answer: 'The documented breed predispositions are chronic ear infections, hereditary eye conditions (progressive retinal atrophy and hereditary cataracts — annual CAER exams and a prcd-PRA DNA test exist for breeding dogs), immune-mediated hemolytic anemia (IMHA), allergies, moderate hip dysplasia rates, and skin infections secondary to coat matting. Discuss a screening and prevention plan with your veterinarian.' },
+  { question: 'What are the emergency signs of IMHA in a Cocker Spaniel?', answer: 'Sudden extreme lethargy; pale, white, or yellow gums; rapid breathing at rest; weakness or collapse; and a yellow tint to the whites of the eyes. IMHA — where the immune system destroys the dog\'s own red blood cells — is a medical emergency, and Cocker owners should keep the nearest 24-hour veterinary clinic\'s number accessible.' },
+  { question: 'How often should a Cocker Spaniel be groomed?', answer: 'Professional grooming every 6-8 weeks plus at-home brushing every 2-3 days to prevent matting — mats trap moisture and lead to skin infections beneath them. The "puppy cut" (coat clipped short and even) dramatically reduces the maintenance burden and is the most practical choice for owners who cannot commit to frequent grooming.' },
+  { question: 'Are Cocker Spaniels good family dogs?', answer: 'Cocker Spaniels are gentle, affectionate companions — originally bred as hunting dogs for woodcock, now primarily family and show dogs. The ownership commitment is less about temperament than maintenance: consistent ear care, regular grooming, and attentiveness to the breed\'s eye and immune-system warning signs.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
+
 export default function CockerSpanielPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Cocker Spaniel Breed Guide', subtitle: 'The American Cocker Spaniel — originally bred as a hunting dog for woodcock, now primarily a companion and show dog. Gentle, affectionate, and beautiful, with a coat that requires significant maintenance and health predispositions that reward attentive owners who recognize the early warning signs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cocker Spaniel', href: '/breeds/cocker-spaniel' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Cavalier King Charles Guide', href: '/breeds/cavalier-king-charles', category: 'Breed Guide' }, { title: 'Beagle Guide', href: '/breeds/beagle', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -48,7 +59,11 @@ export default function CockerSpanielPage() {
 
         <h2>Grooming — The Ongoing Commitment</h2>
         <p>The Cocker Spaniel's beautiful coat requires significant maintenance or it becomes matted, which creates a warm, moisture-trapping environment that leads to skin infections (pyoderma) beneath the mats. Professional grooming every 6-8 weeks for trimming and maintenance. At-home brushing every 2-3 days prevents mat formation between professional appointments. The ears and chest feathering are the areas most prone to matting and require particular attention. The "puppy cut" (coat clipped short and even) dramatically reduces maintenance requirements while maintaining the breed's appearance — the most practical choice for owners who cannot commit to frequent grooming.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Akita Breed Guide — Same-Sex Aggression, Loyalty | Dog.com', description: 'Akitas are fiercely loyal to their family and potentially dangerous to other dogs. Same-sex aggression is strong in the breed.', path: '/breeds/akita', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Akita Breed Guide', description: 'Same-sex aggression, loyalty, health priorities, and care for Akitas.', url: 'https://dog.com/breeds/akita', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Akita Breed Guide', description: 'Same-sex aggression, loyalty, health priorities, and care for Akitas.', url: 'https://dog.com/breeds/akita', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Are Akitas good family dogs?', answer: 'Akitas form intense, exclusive bonds with their immediate family and are generally good with their own family\'s children under supervision. They can be deeply suspicious of strangers, and a well-socialized Akita that accepts visitors at home is not reliably accepting of strangers elsewhere. The breed requires experienced, committed ownership and is not recommended as a first dog.' },
+  { question: 'Are Akitas aggressive toward other dogs?', answer: 'Akitas are strongly same-sex aggressive — male to male and female to female. This is a deeply embedded breed characteristic, not a training issue that can be eliminated through socialization. The appropriate multi-dog configuration is opposite-sex pairs, with active management on leash around same-sex dogs of similar or larger size.' },
+  { question: 'How much exercise does an Akita need?', answer: 'Akitas have moderate exercise needs — about 45-60 minutes daily. They are a large breed (70-130 lbs) that does not require the multi-hour vigorous exercise of working herding breeds, but they do need consistent daily activity and structured management outdoors.' },
+  { question: 'What health problems do Akitas have?', answer: 'Documented breed-priority conditions include sebaceous adenitis (an immune-mediated skin condition), uveodermatological syndrome (an immune-mediated eye and skin condition that can threaten vision), and hypothyroidism, with annual thyroid testing recommended from age 3. As a deep-chested breed, Akitas also carry GDV (bloat) risk — discuss screening and prophylactic gastropexy timing with your veterinarian.' },
+  { question: 'How long do Akitas live?', answer: 'Akitas typically live 10-13 years. Lifespan varies with genetics, weight management, and how early breed-associated conditions such as hypothyroidism or sebaceous adenitis are identified and managed with your veterinarian.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function AkitaPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Akita Breed Guide', subtitle: "The Akita is a large Japanese spitz-type breed — national dog of Japan, subject of the famous Hachikō loyalty story, and a breed that demands experienced, committed ownership. They form intense bonds with their immediate family and can be deeply suspicious of strangers and dangerously aggressive toward other dogs of the same sex. The same loyalty that makes them extraordinary companions makes them a liability in the wrong hands.", category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Akita', href: '/breeds/akita' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Shiba Inu Guide', href: '/breeds/shiba-inu', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -42,7 +52,11 @@ export default function AkitaPage() {
         <p><strong>Sebaceous adenitis:</strong> An immune-mediated condition affecting the sebaceous glands — more common in Akitas than most breeds. The skin becomes dry, scaly, and the coat deteriorates as the oil-producing glands are destroyed. Management involves medicated shampoos, oil treatments, and immunosuppression in severe cases. OFA sebaceous adenitis registry screening of breeding dogs reduces prevalence.</p>
         <p><strong>Uveodermatological syndrome (Vogt-Koyanagi-Harada-like disease):</strong> An immune-mediated condition affecting both eyes and skin simultaneously — depigmentation of the skin and muzzle combined with uveitis (inflammation inside the eye) that can progress to blindness. More common in Akitas and Samoyeds than other breeds. Requires aggressive immunosuppression to preserve vision.</p>
         <p><strong>Hypothyroidism:</strong> Elevated prevalence in Akitas — annual thyroid testing recommended from age 3. GDV risk as a deep-chested breed — prophylactic gastropexy at spay/neuter discussion with veterinarian is appropriate.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

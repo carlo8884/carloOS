@@ -1,17 +1,25 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds', path: '/breeds/german-shepherd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What health problems do German Shepherds have?', answer: 'The four documented breed priorities are degenerative myelopathy (DM — GSDs are the most commonly affected breed), hip dysplasia, gastric dilatation-volvulus (GDV/bloat), and exocrine pancreatic insufficiency (EPI — again the most commonly affected breed). DNA testing identifies DM-at-risk dogs, OFA evaluation screens hips and elbows, and a serum TLI test diagnoses EPI. Build a screening plan with your veterinarian.' },
+  { question: 'How much exercise does a German Shepherd need?', answer: '1-2+ hours of vigorous exercise daily, paired with mental stimulation — GSDs excel at obedience, agility, Schutzhund, herding, and tracking. Without adequate physical and mental outlets, German Shepherds develop anxiety, destructive behavior, and excessive vocalization. Training and socialization should begin from day one.' },
+  { question: 'What is degenerative myelopathy in German Shepherds?', answer: 'DM is a progressive spinal cord disease causing gradual paralysis — often described as the canine equivalent of ALS. There is no cure; physical rehabilitation extends quality of life. A DNA test identifies at-risk dogs, and owners should watch for subtle gait changes from age 7 onward and raise them promptly with your veterinarian.' },
+  { question: 'Are German Shepherds prone to bloat?', answer: 'Yes — GDV risk is rated very high in the breed. The stomach fills with gas and twists, which is fatal within hours without emergency surgery. Signs are a distended abdomen with unproductive retching, restlessness, and drooling — go to an emergency vet immediately. Prophylactic gastropexy at the time of spay/neuter is worth discussing with your veterinarian.' },
+  { question: 'What is EPI in German Shepherds?', answer: 'Exocrine pancreatic insufficiency — the pancreas fails to produce digestive enzymes, and German Shepherds are the most commonly affected breed. The signature presentation is dramatic weight loss despite a ravenous appetite, with large-volume diarrhea. It is diagnosed with a serum TLI blood test and is manageable with enzyme supplementation prescribed by your veterinarian.' },
+]
 
 export default function GermanShepherdBreedPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'German Shepherd', url: 'https://dog.com/breeds/german-shepherd' } ] }))} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'German Shepherd', url: 'https://dog.com/breeds/german-shepherd' } ] }), buildFAQSchema({ questions: FAQS }))} />
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
         <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
           <StockImage manifestKey="dog-com:breed-german-shepherd" alt="German Shepherd" aspect="4:3" priority />
@@ -59,6 +67,9 @@ export default function GermanShepherdBreedPage() {
             <BreedHealthCard name="Exocrine Pancreatic Insufficiency (EPI)" riskLevel="high" description="Pancreas fails to produce digestive enzymes. Most commonly affected breed. Signs: dramatic weight loss despite ravenous appetite, large-volume diarrhea, coprophagia. Diagnosed with serum TLI test. Manageable with enzyme supplementation." />
             <h2>Exercise &amp; Training</h2>
             <p>GSDs require 1–2+ hours of vigorous exercise daily with mental stimulation. Excellent at obedience, agility, Schutzhund, herding, and tracking. Without adequate physical and mental outlets, GSDs develop anxiety, destructive behavior, and excessive vocalization. Begin training and socialization from day one.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Rottweiler', href: '/breeds/rottweiler' }, { label: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]} />
