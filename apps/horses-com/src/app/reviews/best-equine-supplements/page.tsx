@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -441,6 +441,7 @@ export default function BestEquineSupplementsPage() {
                 { label: 'Equine Dental Care', href: '/guides/equine-dental-care' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="gear" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"

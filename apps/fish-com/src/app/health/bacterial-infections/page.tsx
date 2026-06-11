@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -27,6 +27,7 @@ export default function BacterialInfectionsPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fin Rot', href: '/health/fin-rot' }, { label: 'Dropsy', href: '/health/dropsy-treatment' }, { label: 'Pop-Eye', href: '/health/pop-eye' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-bacterial-infections" />
       </>}
     >

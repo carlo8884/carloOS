@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
@@ -41,7 +41,8 @@ export default function HypothyroidismDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing Disease in Dogs', href: '/health/cushing-disease-dogs' }, { label: 'Weight Management', href: '/health/weight-management' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-hypothyroid-dogs" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

@@ -11,6 +11,7 @@ import {
   DropCap,
   StockImage,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -153,6 +154,7 @@ export default function FerretTrainingBondingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-training-bonding"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

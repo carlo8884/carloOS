@@ -13,6 +13,7 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -140,6 +141,7 @@ export default function FerretStressSignsPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-stress-signs"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Drainage Layer Guide — False Bottoms | Lizard.com", description: "How to build a drainage layer (false bottom) in a bioactive reptile enclosure, what materials to use, when you need one, and how to avoid a swamp.", path: "/setup/drainage-layer-bioactive", type: 'article' })
@@ -32,6 +32,7 @@ export default function SetupDrainageLayerBioactivePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-drainage-layer-bioactive"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

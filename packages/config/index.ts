@@ -1214,6 +1214,8 @@ export function themeToCSS(theme: SiteTheme): string {
 export type ContentType =
   | 'health'
   | 'nutrition'
+  | 'diet'
+  | 'behavior'
   | 'breed'
   | 'species'
   | 'condition'
@@ -1258,6 +1260,10 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   'dog-com:training': [
     { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Behavioral Specialists', blurb: 'When to consult a veterinary behaviorist for training-resistant issues.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-behavior' },
   ],
+  'dog-com:review': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored puppy, adult, senior, and large-breed nutrition to pair with any food pick.', cta: 'Read nutrition guides', href: 'https://petfood.com/life-stage' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Who makes each brand, where ingredients are sourced, and how they score on WSAVA criteria.', cta: 'See brand ratings', href: 'https://petfoods.com/brands' },
+  ],
 
   // ── vets-co ───────────────────────────────────────────
   'vets-co:medication': [
@@ -1268,6 +1274,10 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   ],
   'vets-co:breed': [
     { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', href: 'https://dog.com/breeds' },
+  ],
+  'vets-co:health': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Condition Guides', blurb: 'Golden Retriever, Labrador, Frenchie, German Shepherd — breed-specific hereditary conditions explained.', cta: 'Browse breed guides', href: 'https://dog.com/breeds' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Disease-Specific Nutrition', blurb: 'Renal, cardiac, hepatic, and diabetic diets — how food choices interact with a diagnosis.', cta: 'See condition diets', href: 'https://petfood.com/conditions' },
   ],
 
   // ── horses-com ────────────────────────────────────────
@@ -1296,10 +1306,16 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   'lizard-com:species': [
     { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Reptile Health Conditions', blurb: 'Cross-reference species-specific conditions with veterinary specialist guidance.', cta: 'Browse conditions', href: 'https://vets.co/specialists' },
   ],
+  'lizard-com:care': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic / Reptile Vet', blurb: 'ARAV-certified reptile veterinarians, what to expect at a visit, and how to prepare.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+  ],
 
   // ── fish-com ──────────────────────────────────────────
   'fish-com:equipment': [],  // Same-site reviews handle this; no fish sister site.
   'fish-com:species': [],
+  'fish-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Aquatic Vet', blurb: 'Aquatic and exotic-animal veterinarians — for when a fish needs more than a water change.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+  ],
 
   // ── petfood-com ───────────────────────────────────────
   'petfood-com:nutrition': [
@@ -1324,6 +1340,12 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   ],
   'ferret-com:care': [
     { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Adoption Directory', blurb: 'Find local shelters, rescues, and AEMV-certified exotic vets by state.', cta: 'Browse states', href: 'https://ferrets.com/states' },
+  ],
+  'ferret-com:diet': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading Pet Food Labels', blurb: 'AAFCO statements, guaranteed analysis, and ingredient lists — the same skills apply to ferret kibble.', cta: 'Learn to read labels', href: 'https://petfood.com/guides/reading-pet-food-labels' },
+  ],
+  'ferret-com:behavior': [
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'Ferret Legality by State', blurb: 'Ferrets are prohibited or regulated in California, Hawaii, and several cities — verify before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
   ],
 
   // ── ferrets-com ───────────────────────────────────────

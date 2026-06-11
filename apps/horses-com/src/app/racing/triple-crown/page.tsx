@@ -18,6 +18,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -144,6 +145,7 @@ export default function TripleCrownPage() {
                 { label: 'Great Racehorses', href: '/racing/great-racehorses' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"

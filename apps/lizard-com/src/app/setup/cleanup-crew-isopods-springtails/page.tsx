@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Cleanup Crew — Isopods & Springtails | Lizard.com", description: "How isopods and springtails keep a bioactive reptile enclosure clean, which species to use, how to seed and feed them, and when a cleanup crew fails.", path: "/setup/cleanup-crew-isopods-springtails", type: 'article' })
@@ -31,6 +31,7 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Drainage Layer Guide", href: "/setup/drainage-layer-bioactive" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Mourning Gecko Care", href: "/species/mourning-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-cleanup-crew-isopods-springtails"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

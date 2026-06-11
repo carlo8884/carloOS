@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
@@ -41,7 +41,8 @@ export default function EarInfectionsDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

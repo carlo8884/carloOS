@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -32,6 +32,7 @@ export default function FinRotPage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Ich Treatment', href: '/health/ich-treatment' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-fin-rot" />
       </>}
     >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -26,6 +26,7 @@ export default function DropsyPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Goldfish Care', href: '/species/goldfish' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-dropsy" />
       </>}
     >

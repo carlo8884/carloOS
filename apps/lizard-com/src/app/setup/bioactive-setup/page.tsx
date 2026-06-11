@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide — Substrate, CUC | Lizard.com', description: 'Bioactive vivariums use a living substrate, plants, and a cleanup crew (springtails + isopods) to self-maintain.', path: '/setup/bioactive-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -32,6 +32,7 @@ export default function BioactiveSetupPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Substrate Guide', href: '/setup/substrate-guide' }, { label: 'Crested Gecko Care', href: '/species/crested-gecko' }, { label: 'Day Gecko Care', href: '/species/day-gecko' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="setup-bioactive" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

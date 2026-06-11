@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -73,6 +73,7 @@ export default function UVBLightingGuidePage() {
           title="Free Care Sheets"
           subtitle="20 species — free for subscribers."
           source="uvb-lighting-guide" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

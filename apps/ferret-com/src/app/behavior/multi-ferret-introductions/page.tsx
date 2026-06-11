@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -133,6 +134,7 @@ export default function MultiFerretIntroductionsPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-multi-ferret-intro"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
