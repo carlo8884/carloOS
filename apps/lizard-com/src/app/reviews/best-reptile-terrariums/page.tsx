@@ -117,6 +117,10 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most terrestrial species the PVC <strong>Zen Habitats 4×2×2</strong> is our overall pick — excellent heat and humidity retention with flat-pack assembly. For the largest, most configurable build, the custom <strong>Animal Plastics T8</strong> (longer lead time). Arboreal species are best served by the glass <strong>Exo Terra 36×18×24</strong>, and the <strong>Repti Zoo 40 Gallon</strong> is the best budget starter glass terrarium.</p>
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="lizard-com" />
             <ReviewCard

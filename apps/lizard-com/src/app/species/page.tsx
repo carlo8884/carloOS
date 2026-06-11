@@ -151,11 +151,15 @@ export default function SpeciesIndexPage() {
         <Link key="argentine-black-and-white-tegu" href="/species/argentine-black-and-white-tegu" className="text-sm text-brand-primary no-underline hover:underline">Argentine Black and White Tegu</Link>
         <Link key="chinese-water-dragon" href="/species/chinese-water-dragon" className="text-sm text-brand-primary no-underline hover:underline">Chinese Water Dragon</Link>
         <Link key="fire-skink" href="/species/fire-skink" className="text-sm text-brand-primary no-underline hover:underline">Fire Skink</Link>
+        <Link key="gargoyle-gecko" href="/species/gargoyle-gecko" className="text-sm text-brand-primary no-underline hover:underline">Gargoyle Gecko</Link>
         <Link key="green-anole" href="/species/green-anole" className="text-sm text-brand-primary no-underline hover:underline">Green Anole</Link>
         <Link key="kenyan-sand-boa" href="/species/kenyan-sand-boa" className="text-sm text-brand-primary no-underline hover:underline">Kenyan Sand Boa</Link>
         <Link key="leachianus-gecko" href="/species/leachianus-gecko" className="text-sm text-brand-primary no-underline hover:underline">Leachianus Gecko</Link>
+        <Link key="mossy-leaf-tail-gecko" href="/species/mossy-leaf-tail-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mossy Leaf-Tail Gecko</Link>
         <Link key="mourning-gecko" href="/species/mourning-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mourning Gecko</Link>
         <Link key="nile-monitor" href="/species/nile-monitor" className="text-sm text-brand-primary no-underline hover:underline">Nile Monitor</Link>
+        <Link key="savannah-monitor" href="/species/savannah-monitor" className="text-sm text-brand-primary no-underline hover:underline">Savannah Monitor</Link>
+        <Link key="tegu" href="/species/tegu" className="text-sm text-brand-primary no-underline hover:underline">Tegu (Overview)</Link>
         <Link key="western-hognose-snake" href="/species/western-hognose-snake" className="text-sm text-brand-primary no-underline hover:underline">Western Hognose Snake</Link>
         </div>
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4 mt-8">Choosing a Reptile</h2>

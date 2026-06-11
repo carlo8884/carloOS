@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Kottelat, M. & Whitten, A.J. Freshwater Biodiversity in Asia. World Bank Technical Paper, 1996.", publisher: "World Bank" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Can white cloud mountain minnows live without a heater?',
+    answer:
+      'Yes. White clouds thrive at 60–72°F, a range that covers most unheated homes for much of the year in temperate climates, making them a correct choice for unheated indoor tanks, cooler rooms, and summer outdoor tubs. At tropical temperatures (78°F and up) they decline — shorter lifespan, weaker immune function, less color and activity — so they are not suitable tankmates for a heated tropical tank.',
+    answerText:
+      'Yes. White clouds thrive at 60-72F and suit unheated tanks. Above 78F they decline, so they are not suitable for heated tropical tanks.',
+  },
+  {
+    question: 'How many white cloud mountain minnows should I keep?',
+    answer:
+      'Keep a group of at least 8. They are schooling fish that are more active and colorful in numbers, and males in breeding condition display to each other with fins flared, intensifying their colors. Same-species colonies are especially active.',
+    answerText:
+      'Keep at least 8. They are schooling fish that are more active and colorful in groups, with males displaying to each other in breeding condition.',
+  },
+  {
+    question: 'What water parameters do white cloud mountain minnows need?',
+    answer:
+      'They are very adaptable to hardness and tolerate pH 6.0–8.0. Temperature is the key parameter: 60–72°F is preferred and 75°F should be treated as a maximum, since warmer water stresses them. In their preferred cool range they live 5–7 years.',
+    answerText:
+      'They tolerate pH 6.0-8.0 and are very adaptable. Temperature matters most: 60-72F preferred, 75F maximum. In cool water they live 5-7 years.',
+  },
+  {
+    question: 'Do white cloud mountain minnows breed easily?',
+    answer:
+      'Yes. They breed readily at cool temperatures without special intervention — eggs are scattered among plants and hatch in 2–3 days. Unlike many egg-scatterers, white clouds show little interest in eating their own eggs or fry in a densely planted tank, so a school in a well-planted, unheated tank often establishes a self-sustaining colony. Java moss and hornwort provide ideal spawning and fry refuge.',
+    answerText:
+      'Yes — they scatter eggs among plants that hatch in 2-3 days and rarely eat their own fry in dense planting, so a planted unheated tank often self-sustains a colony.',
+  },
+  {
+    question: 'What fish are compatible with white cloud mountain minnows?',
+    answer:
+      'Peaceful species of similar size that tolerate the same cool range: other white clouds, Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches, and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F and up, since the temperature mismatch harms one or both groups.',
+    answerText:
+      'Peaceful cool-water species: other white clouds, Corydoras aeneus and paleatus, hillstream loaches, and cool-tolerant danios. Avoid tropical fish needing 78F+.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function WhiteCloudPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'White Cloud Mountain Minnow', subtitle: 'Tanichthys albonubes — the "poor man\'s neon tetra," though the nickname sells them short. These 1.5-inch fish from the mountain streams of southern China are hardier than neons, tolerant of cold water that most tropical fish cannot handle, and in peak condition display iridescent red tails and a brilliant lateral stripe. They are the ideal fish for unheated indoor tanks.', category: 'Species Guide — Cold Water', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Zebra Danio", href: "/species/zebra-danio", category: "Species Guide" }, { title: "Celestial Pearl Danio", href: "/species/celestial-pearl-danio", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,7 @@ export default function WhiteCloudPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
@@ -51,6 +94,8 @@ export default function WhiteCloudPage() {
 
         <h2>Compatibility</h2>
         <p>Peaceful with all species of similar size that tolerate the same temperature range. Natural tankmates in the cold-water aquarium: other white clouds (same species colonies are especially active), Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches (love the same cool, oxygenated conditions), and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F+ — the temperature mismatch creates a chronic welfare problem for one or both species.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>White Cloud Mountain Minnow — Tank Setup</div>
@@ -64,5 +109,6 @@ export default function WhiteCloudPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

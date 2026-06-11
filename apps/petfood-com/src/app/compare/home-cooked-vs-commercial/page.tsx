@@ -143,6 +143,14 @@ export default function HomeCookedVsCommercialPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-home-cooked-vs-commercial" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Home-cooked versus commercial — balancing control against the risk of nutritional imbalance." />
         <p>Home-cooking lets owners control ingredients, accommodate preferences and some medical needs, and avoid commercial processing. The problem is not the concept but the execution: balancing a complete diet by hand is genuinely difficult, and study after study finds that the large majority of home-prepared recipes — including many published in books and online and even some from veterinarians without nutrition training — fail to meet established nutrient requirements. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            The problem with home-cooking is not the concept but the execution: the large majority of home-prepared recipes — including many published online and in books — fail to meet established nutrient requirements. A home-cooked diet can be a fine choice only if it is formulated by a board-certified veterinary nutritionist (or a reputable formulation service), individualized to the animal, followed precisely without ingredient substitution, and uses the specified supplements. For most owners, a complete-and-balanced commercial diet is the lower-risk default.
+          </p>
+        </div>
+
         <h2 id="appeal">The Appeal</h2>
         <p>Owners turn to home-cooking for control over ingredient quality, to manage picky eaters or food sensitivities, for animals with multiple conditions that no single commercial diet addresses, and out of distrust of commercial processing. These are understandable motivations, and a properly formulated home diet can be a fine choice — the issue is ensuring proper formulation.</p>
         <h2 id="imbalance">The Imbalance Problem</h2>

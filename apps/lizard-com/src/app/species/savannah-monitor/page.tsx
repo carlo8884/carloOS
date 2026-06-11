@@ -45,7 +45,7 @@ export default function SavannahMonitorPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Argentine Tegu Care', href: '/species/tegu' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Argentine Tegu Care', href: '/species/tegu' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }, { label: 'Reptile Laws by State', href: '/states' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-savannah-monitor" ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}

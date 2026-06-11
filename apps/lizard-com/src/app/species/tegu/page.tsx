@@ -45,7 +45,7 @@ export default function TeguPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Savannah Monitor Care', href: '/species/savannah-monitor' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Savannah Monitor Care', href: '/species/savannah-monitor' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Reptile Laws by State', href: '/states' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-tegu" ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}

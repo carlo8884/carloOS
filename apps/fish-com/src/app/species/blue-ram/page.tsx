@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Keenleyside, M.H.A. Diversity and Adaptation in Fish Behaviour. Springer-Verlag, 1979.", publisher: "Springer-Verlag" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0, 80-86°F). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What water parameters do German blue rams need?',
+    answer:
+      'Blue rams require soft, acidic, warm water: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are physiological requirements, not preferences — rams kept in hard, alkaline tap water (pH 7.5–8.0, GH 15+) show chronic stress and shortened lifespans. If your tap water is hard, mix it with RO/DI water to reach the target range.',
+    answerText:
+      'Blue rams need soft acidic water: pH 5.5-7.0 (ideally 6.0-6.8), GH under 8, and 80-86F. Hard alkaline tap water causes chronic stress and a shorter lifespan. Mix with RO/DI water if your tap is hard.',
+  },
+  {
+    question: 'What size tank do blue rams need?',
+    answer:
+      'A 20-gallon tank suits a single bonded pair, with dense planting and multiple visual barriers to manage the territoriality that appears during breeding. The well-planted layout lets a pair claim a spawning site while other tankmates keep their distance.',
+    answerText:
+      'A 20-gallon tank suits a single bonded pair, with dense planting and visual barriers to manage breeding-period territoriality.',
+  },
+  {
+    question: 'Why do blue rams need such warm water?',
+    answer:
+      'Their optimal range of 80–86°F is significantly warmer than the 72–78°F most community fish prefer, reflecting their native warm blackwater habitat in the Llanos of Venezuela and Colombia. Tankmates must also tolerate 80–82°F — cardinal tetras and Corydoras sterbai are classic matches, while neon tetras, platies, and mollies are stressed long-term at those temperatures.',
+    answerText:
+      'Their optimal range is 80-86F, warmer than the 72-78F most community fish prefer. Tankmates must tolerate 80-82F; cardinal tetras and Corydoras sterbai are classic matches.',
+  },
+  {
+    question: 'How long do German blue rams live?',
+    answer:
+      'In appropriate soft, acidic, warm water, blue rams live 3–4 years. Tank-bred rams kept in suboptimal conditions often last only 1–2 years. Most "rams die easily" experiences trace back to a water-chemistry mismatch rather than inherent fragility.',
+    answerText:
+      'In appropriate water, blue rams live 3-4 years; in suboptimal conditions, often only 1-2 years. Most early losses are water-chemistry mismatches.',
+  },
+  {
+    question: 'What do blue rams eat?',
+    answer:
+      'Blue rams are omnivores that prefer a varied, protein-rich diet. Offer small cichlid pellets, frozen bloodworms (excellent for conditioning), frozen brine shrimp, and frozen daphnia. Feed small amounts 2–3 times daily — rams have small stomachs and do not eat large volumes at once.',
+    answerText:
+      'Blue rams are omnivores preferring protein-rich variety: small cichlid pellets, frozen bloodworms, brine shrimp, and daphnia, fed in small amounts 2-3 times daily.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BlueRamPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'German Blue Ram Care Guide', subtitle: 'Mikrogeophagus ramirezi — one of the most spectacularly colored dwarf cichlids available. Electric blue body, brilliant yellow head, red eye, and flowing fins make blue rams stunning in a planted tank. They also require specific water conditions that most beginners cannot provide — and they die quickly when those conditions are wrong.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'German Blue Ram', href: '/species/blue-ram' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,7 @@ export default function BlueRamPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-blue-ram" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A blue ram cichlid in a home aquarium." priority />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
         <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
@@ -54,6 +97,8 @@ export default function BlueRamPage() {
 
         <h2>Breeding</h2>
         <p>A compatible pair in good condition in appropriate water conditions will spawn regularly — depositing eggs on a flat surface (broad leaf, flat stone, or directly on the substrate) in a cleared spawning site. Both parents guard the eggs and fry. Fry are tiny — fed infusoria or baby brine shrimp. Many first spawns fail as the pair learns parenting; experienced pairs are reliable parents. The challenge is fry survival in a community tank — other fish eat fry readily, and even the parents may eat fry if stressed.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Blue Ram — Tank Setup</div>
@@ -67,5 +112,6 @@ export default function BlueRamPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

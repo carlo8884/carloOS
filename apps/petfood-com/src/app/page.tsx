@@ -136,6 +136,15 @@ const ENTRY_TILES: Array<{
     flagship: true,
   },
   {
+    eyebrow: 'Analysis-Led Reviews',
+    title: 'Best Food Picks',
+    desc: 'Cat, senior dog, and puppy roundups ranked on AAFCO, protein, and taurine — not a shopping list.',
+    href: '/reviews',
+    // TODO(visual): dedicated petfood-com:reviews-hero key; using category-brands until then.
+    manifestKey: 'petfood-com:category-brands',
+    imageAlt: 'Pet food evaluated through a nutrition-analysis lens',
+  },
+  {
     eyebrow: 'Ingredient Risk',
     title: 'Grain-Free & DCM',
     desc: 'What the FDA CVM record actually says. Association, not causation.',
@@ -171,7 +180,7 @@ const TRUST_CLAIMS: Array<{ glyph: string; text: string }> = [
 // Strip StockImage's outer margins (it renders my-8 on both the <figure> and
 // the pending-sync placeholder <div>) so a photo fills a tile edge-to-edge.
 const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
-const FILL_TILE = `${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure>div]:h-full`
+const FILL_TILE = `${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full`
 
 export default function HomePage() {
   const year = new Date().getFullYear()

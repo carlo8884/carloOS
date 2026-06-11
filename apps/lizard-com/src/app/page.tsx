@@ -549,6 +549,18 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+
+          {/* Local-law reference — high-intent "is this reptile legal in my
+              state" entry point into the 50-state legality cluster. */}
+          <div className="mt-8">
+            <Link
+              href="/states"
+              className="font-body font-semibold text-sm no-underline"
+              style={{ color: 'var(--brand-primary)' }}
+            >
+              Reptile legality by state &mdash; check the law where you live &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 

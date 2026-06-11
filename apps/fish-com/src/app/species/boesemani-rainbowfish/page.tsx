@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Allen, G.R. & Cross, N.J. Rainbowfishes of Australia and Papua New Guinea. TFH Publications, 1982.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide — Blue-Orange Split | Fish.com', description: 'Boesemani rainbowfish are the most popular rainbowfish — vivid blue-purple front, orange-red rear. Locale-pure breeding matters.', path: '/species/boesemani-rainbowfish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Why does my Boesemani rainbowfish look so dull?',
+    answer:
+      'Boesemani sold in stores are frequently juvenile males with pale, washed-out color — the blue can appear gray and the orange yellowish. Full adult coloration takes 9–18 months and requires maturity, appropriate water chemistry (harder, alkaline water produces better blue), a high-quality diet with color-enhancing foods, social stimulation from a group, and low nitrate (under 20 ppm, since elevated nitrate consistently suppresses rainbowfish color).',
+    answerText:
+      'Store Boesemani are usually juveniles. Full color takes 9-18 months and needs maturity, harder alkaline water, good diet, a group for social stimulation, and nitrate under 20 ppm.',
+  },
+  {
+    question: 'What water parameters do Boesemani rainbowfish need?',
+    answer:
+      'Boesemani come from Lake Ajamaru in West Papua, a hard, alkaline lake (GH 14–20, pH 7.5–8.5). They show their best color and health at pH 7.2–8.0, GH 10–18, KH 6–10, and a temperature of 72–82°F. This makes them ideal for hard-water areas where soft-water species struggle, and the blue coloration in particular intensifies in harder, more alkaline water.',
+    answerText:
+      'Boesemani prefer hard alkaline water like their native Lake Ajamaru: pH 7.2-8.0, GH 10-18, KH 6-10, and 72-82F. Harder water intensifies their blue color.',
+  },
+  {
+    question: 'How many Boesemani rainbowfish should I keep together?',
+    answer:
+      'Keep a group of at least 8 — 10 to 12 is ideal. A mixed-sex group produces the most natural and engaging behavior, with males constantly displaying through fin-spreading, color intensification, and head-to-head posturing. A 2:3 female-to-male ratio reduces competition directed at individual females, and a male-only group also works since the display continues under male hierarchy competition.',
+    answerText:
+      'Keep at least 8, ideally 10-12. A mixed-sex group with a 2:3 female-to-male ratio gives the best display behavior; a male-only group also works.',
+  },
+  {
+    question: 'What size tank do Boesemani rainbowfish need?',
+    answer:
+      'A 55-gallon minimum for a group of 8–10. They are active, open-water swimmers reaching 3.5–4.5 inches and need horizontal swimming space. Dense planting along the back and sides provides refuge while keeping the central water column open for their schooling behavior.',
+    answerText:
+      'A 55-gallon minimum for a group of 8-10. They reach 3.5-4.5 inches and need horizontal swimming space with dense planting at the back and sides.',
+  },
+  {
+    question: 'What fish are compatible with Boesemani rainbowfish?',
+    answer:
+      'Other hard-water community fish: Corydoras paleatus (one of the few cories tolerating harder water), other rainbowfish species, hillstream loaches, and larger rasboras. They are not compatible with fish requiring soft, acidic water such as discus and most tetras.',
+    answerText:
+      'Compatible with hard-water fish: Corydoras paleatus, other rainbowfish, hillstream loaches, larger rasboras. Not compatible with soft-water species like discus or most tetras.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BoesemaniPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Boesemani Rainbowfish', subtitle: 'Melanotaenia boesemani — the flagship rainbowfish of the aquarium hobby, named after Dr. Marinus Boeseman who first described the species. The split-color pattern — vivid blue-purple on the anterior half, deep orange-red on the posterior — makes Boesemani one of the most photogenic fish in freshwater. Males in peak condition display to each other constantly, intensifying both colors.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Boesemani Rainbowfish', href: '/species/boesemani-rainbowfish' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Rainbow Fish", href: "/species/rainbow-fish", category: "Species Guide" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,7 @@ export default function BoesemaniPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-boesemani-rainbowfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A Boeseman’s rainbowfish in a home aquarium." priority />
         <h2>Color Development — Why Store Fish Look Different</h2>
         <p>Boesemani from fish stores are frequently juvenile males showing pale, washed-out versions of their adult colors — the blue may appear gray, the orange may appear yellowish, and the characteristic split may be barely defined. Full adult coloration in males takes 9–18 months to develop fully and requires: maturity, appropriate water chemistry (harder alkaline water produces better blue coloration), high-quality diet with color-enhancing foods, social stimulation (males displaying to each other and to females), and low nitrate (under 20 ppm — elevated nitrate consistently suppresses rainbowfish color). A Boesemani male in peak condition in ideal water, with a group of rivals and females, displaying with full intensity, is dramatically different from the same fish at 6 months in a fish store tank.</p>
@@ -49,6 +92,8 @@ export default function BoesemaniPage() {
 
         <h2>Conservation Note</h2>
         <p>Boesemani rainbowfish come from a very restricted native range — Lake Ajamaru and a few connected lakes in West Papua. Wild populations have declined due to aquarium collection pressure in the past (most current aquarium fish are captive-bred, significantly reducing wild collection). Responsible breeding by hobbyists maintains genetic diversity in captive populations and reduces pressure on wild stocks. When purchasing, captive-bred fish from reputable breeders are preferable to wild-caught imports.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Boesemani Rainbowfish — Tank Setup</div>
@@ -62,5 +107,6 @@ export default function BoesemaniPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

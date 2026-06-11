@@ -32,6 +32,10 @@ export default function BestBioactiveSubstratesPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For desert species the pre-bagged <strong>BioDude Terra Sahara</strong> is our top pick — proven for bearded dragons and other desert reptiles, ready to use out of the bag. <strong>Josh's Frogs BioBedding Desert</strong> is a well-tested clay/sand alternative. Keepers wanting the cheapest, most customizable route can mix their own <strong>DIY 60/30/10</strong> blend — it takes more research but costs the least.</p>
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">What Makes a Bioactive Substrate</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">A true bioactive substrate must: support beneficial microbial populations, retain enough moisture for the microbial layer without being waterlogged, allow burrowing behavior, and not compact to concrete over time. For desert species: drainage layer (hydroballs or gravel) under the substrate, plus a mix that stays aerated. For tropical: more organic content and moisture retention.</p>

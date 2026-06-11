@@ -178,6 +178,14 @@ export default function WellnessVsMerrickPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:brand-wellness-vs-merrick" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Wellness vs Merrick — two natural-positioned premium brands compared on formulation, AAFCO posture, and recalls." />
         <p>Wellness and Merrick are premium brands positioned on natural ingredients and recognizable whole foods, and both compete for the same buyer. This comparison evaluates them side by side on the PetFood.com five-dimension rubric, independent of any commercial relationship. A recurring theme is that both, despite an artisanal brand image, are owned by large corporations — a reminder that brand image and corporate reality often differ. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Wellness and Merrick are closely matched natural-positioned premium brands competing for the same buyer — and both, despite an artisanal image, are owned by large corporations (Merrick by Nestle Purina; Wellness within a large pet-nutrition holding company). Neither wins categorically on the rubric; judge the specific formula on its ingredient panel and AAFCO statement, not the natural framing. For grain-free formulas from either, the legume-inclusive DCM question applies.
+          </p>
+        </div>
+
         <h2 id="twobrands">Two Natural Brands</h2>
         <p>Both brands lean on natural and whole-ingredient marketing, with named meats, recognizable produce, and an emphasis on what they exclude (artificial colors, certain by-products). As covered elsewhere, natural is a narrowly defined AAFCO term and not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. The brands should be judged on substance, not the natural framing. See <a href="/myths/by-products-myth">The By-Products Myth</a>.</p>
         <h2 id="ownership">Corporate Ownership</h2>

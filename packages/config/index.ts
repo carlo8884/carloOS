@@ -945,6 +945,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Reviews', href: '/reviews' },
       { label: 'Compare Foods', href: '/compare' },
       { label: 'Brands', href: '/brands' },
       { label: 'Conditions', href: '/conditions' },
@@ -957,6 +958,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Browse',
         links: [
+          { label: 'Reviews', href: '/reviews' },
           { label: 'Compare Foods', href: '/compare' },
           { label: 'Brands', href: '/brands' },
           { label: 'Conditions', href: '/conditions' },

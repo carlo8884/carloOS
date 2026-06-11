@@ -161,6 +161,14 @@ export default function KirklandSignatureEvaluationPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:brand-kirkland-signature" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Kirkland Signature — Costco's store brand evaluated on value, the who-makes-it question, and recall exposure." />
         <p>Kirkland Signature is Costco&apos;s private-label brand, including a well-regarded pet food line evaluated here on the PetFood.com five-dimension rubric. Its standout feature is value — premium-positioned formulation at a notably lower price per pound than name-brand competitors. The store-brand model also raises the central question of who manufactures it and how much the supply chain is disclosed. The evaluation is independent and never influenced by any commercial relationship. See <a href="/tools/food-cost-calculator">Food Cost Calculator</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On price-to-formulation value, Kirkland Signature is one of the stronger options — named-meat-forward, premium-positioned formulas at a notably lower price per pound. Its main rubric weakness is transparency: as a contract-manufactured store brand (Diamond Pet Foods has made certain lines), sourcing and quality-control disclosure are thinner than for brands that own their plants and publish research. That is a disclosure gap, not a quality verdict.
+          </p>
+        </div>
+
         <h2 id="value">The Value Proposition</h2>
         <p>Kirkland Signature pet food is consistently priced below comparable premium name brands while offering named-meat-forward formulas, which makes it one of the strongest value options for cost-conscious owners who still want a premium-positioned diet. For large dogs especially, where food cost is significant, the per-calorie savings are meaningful. Value, however, is only one dimension — it must be weighed against transparency and substantiation. See the <a href="/tools/food-cost-calculator">Food Cost Calculator</a>.</p>
         <h2 id="whomakes">Who Makes It</h2>

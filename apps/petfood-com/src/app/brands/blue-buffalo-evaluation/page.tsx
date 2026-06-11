@@ -160,6 +160,13 @@ export default function BlueBuffaloEvaluationPage() {
           investigation. An honest evaluation has to engage all of that.
         </p>
 
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On the published evidence, Blue Buffalo is a mixed but not categorically unacceptable brand: above-average ingredient transparency, average AAFCO substantiation, a higher-than-peer recall frequency, and marketing claims that outrun the published evidence. Many individual SKUs are perfectly reasonable feeding choices. The decision should be made on the specific SKU and the individual animal&apos;s clinical context — not on the brand name alone.
+          </p>
+        </div>
+
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy Blue Buffalo"

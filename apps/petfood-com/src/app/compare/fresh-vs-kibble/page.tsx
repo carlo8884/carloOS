@@ -145,6 +145,14 @@ export default function FreshVsKibblePage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-fresh-vs-kibble" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Fresh versus kibble — comparing processing, cost, and the evidence behind the claims." />
         <p>Fresh pet food refers to gently cooked, minimally processed, usually refrigerated or frozen complete diets, often sold by subscription. The category positions itself against extruded kibble on the basis of lower-temperature cooking, recognizable whole ingredients, and higher moisture. The honest comparison separates the parts of that pitch supported by evidence from the parts that are marketing. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Fresh, gently cooked diets are promising — higher digestibility is plausible — but the strongest long-term health claims outrun the current independent evidence, and much of the supporting research is industry-funded. Fresh also costs several times more per calorie than kibble and needs refrigeration. Judge a fresh diet the way you would any other: AAFCO statement and life-stage match, feeding-trial substantiation, and manufacturing transparency. A well-formulated kibble or canned diet remains a sound choice.
+          </p>
+        </div>
+
         <h2 id="whatis">What Fresh Food Is</h2>
         <p>Fresh diets are cooked at lower temperatures than the high-heat extrusion used for kibble, then refrigerated or frozen, with moisture content far higher than dry food (closer to canned). They use whole, identifiable ingredients and avoid the shelf-stable preservatives kibble requires. Like all complete diets, they should be formulated to meet AAFCO nutrient profiles for the life stage.</p>
         <h2 id="processing">Processing Differences</h2>

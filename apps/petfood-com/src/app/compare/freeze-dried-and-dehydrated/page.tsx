@@ -151,6 +151,14 @@ export default function FreezeDriedAndDehydratedPage() {
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="petfood-com:compare-freeze-dried-and-dehydrated" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Freeze-dried versus dehydrated — two ways to remove water, and what each does to nutrients and safety." />
         <p>Freeze-drying and dehydration both remove water to make food shelf-stable, but by different methods and at different temperatures, and the starting material may be raw or cooked. The category includes complete diets meant to be the sole food and toppers meant only to enhance a complete diet. Because of this variety, the label and the AAFCO statement matter as much here as anywhere. See <a href="/compare/raw-vs-cooked-diets">Raw vs Cooked Diets</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Freeze-drying and dehydration both remove water for shelf stability, but freeze-drying uses less heat and better preserves heat-sensitive nutrients (at higher cost), while the starting material may be raw or cooked. Before buying, settle two questions that define the category: is the product raw or cooked (which sets the handling-safety profile), and is it a complete-and-balanced diet or a topper meant only to supplement a complete food? Check the AAFCO statement and the raw-vs-cooked label on the specific product.
+          </p>
+        </div>
+
         <h2 id="howmade">How They Are Made</h2>
         <p>Freeze-drying (lyophilization) freezes the food, then removes water by sublimation under vacuum at low temperature, preserving structure and most nutrients with minimal heat. Dehydration removes water using warm air, which is gentler than extrusion but applies more heat than freeze-drying. Both yield a lightweight, shelf-stable product that is usually rehydrated before feeding. Freeze-drying is more expensive and better at preserving heat-sensitive nutrients.</p>
         <h2 id="rawcooked">Raw vs Cooked Base</h2>

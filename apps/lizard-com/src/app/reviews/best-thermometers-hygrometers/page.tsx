@@ -85,6 +85,11 @@ export default function BestThermometersPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
+            <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>The <strong>Govee H5053</strong> is our overall pick — WiFi, app alerts, and roughly ±0.54°F accuracy. The Bluetooth <strong>Inkbird IBS-TH2</strong> is the best budget option with good accuracy at a lower cost. Skip the analog dial gauges sold in most pet stores — their ±10°F variance is unacceptable for reptile keeping.</p>
+            </div>
+
             <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why Accuracy Matters</div>
               <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>A thermometer that reads 10°F high means your bearded dragon&apos;s basking spot is actually 90°F when you think it&apos;s 100°F — significantly underheating for a species that needs 100–110°F basking temperatures. A thermometer that reads 10°F low means your enclosure is actually 120°F when you think you&apos;re at 110°F — potentially lethal. The analog dial gauges sold in most pet stores have ±10°F variance. That is unacceptable for reptile keeping.</p>

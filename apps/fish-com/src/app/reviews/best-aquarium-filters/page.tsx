@@ -72,6 +72,11 @@ export default function BestAquariumFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater tanks the <strong>AquaClear 70</strong> is our top hang-on-back pick — the largest media basket in its class, refillable (no proprietary cartridges), and quiet. For 40–70 gallon tanks needing higher biological capacity, the <strong>Fluval 307</strong> canister is the pick; for shrimp, breeding, and nano tanks, a <strong>Hikari Bacto-Surge</strong> sponge filter. The <strong>Aqueon QuietFlow 30</strong> is the best budget HOB.</p>
+            </div>
+
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Filter Type Guide</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">

@@ -75,6 +75,11 @@ export default function BestUVBBulbsPage() {
           <div>
             <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+            <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.75)' }}>For desert species the <strong>Arcadia T5 12% Desert</strong> is our top pick — the highest consistent UVI in this comparison. For shade-dwelling forest species, the <strong>Arcadia T5 6% Forest</strong>. The <strong>Zoo Med T5 HO 10.0</strong> is the best-value pick with strong output at a lower cost. Avoid coil/compact UVB bulbs — unreliable output and poor penetration. Use T5 HO fixtures throughout.</p>
+            </div>
+
             {/* Methodology */}
             <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Ranking Methodology</div>

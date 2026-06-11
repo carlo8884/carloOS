@@ -36,6 +36,10 @@ export default function BestAquariumLightingPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most planted tanks the budget <strong>Hygger 957</strong> is our overall pick — planted-capable PAR with seven programmable channels well under $60. Step up to the app-controlled <strong>Fluval Plant 3.0</strong> for high-tech planted tanks needing the best spectrum quality. For reef tanks the <strong>Kessil A360X</strong> is the pick; for fish-only/FOWLR setups, the budget <strong>Nicrew Classic LED+</strong>. PAR at the substrate is what matters — match it to your tank type.</p>
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">PAR — What Actually Matters</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine. Running CO2 with these high-PAR lights? Use the <Link href="/tools/co2-calculator" className="text-brand-primary no-underline hover:underline">CO2 calculator</Link> to set a safe drop-checker target.</p>

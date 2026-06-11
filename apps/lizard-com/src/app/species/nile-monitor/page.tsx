@@ -41,7 +41,7 @@ export default function SpeciesNileMonitorPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor Care", href: "/species/savannah-monitor" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor Care", href: "/species/savannah-monitor" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Laws by State", href: "/states" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-nile-monitor"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
