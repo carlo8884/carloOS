@@ -224,6 +224,7 @@ export default function BestPetInsurancePage() {
             </div>
 
             <RelatedLinks title="Related" links={[
+              { label: 'Pet Insurance by Breed', href: '/breeds/insurance' },
               { label: 'Golden Retriever Health', href: '/health/golden-retriever-health' },
               { label: 'French Bulldog Health', href: '/health/french-bulldog-health' },
               { label: 'Emergency Vet Signs', href: '/health/dog-symptoms-guide' },

@@ -32,6 +32,7 @@ export default function BoxerPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Boxer?', href: '/breeds/boxer/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Cherry Eye', href: '/health/cherry-eye' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
