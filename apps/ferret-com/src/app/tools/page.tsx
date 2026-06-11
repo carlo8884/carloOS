@@ -119,6 +119,24 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-5xl">
+          <div className="mb-4 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Once the tools point you toward a ferret</div>
+          <Link
+            href="/ferret-starter-kit"
+            className="group block rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6 transition hover:border-brand-primary"
+          >
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Starter Essentials</div>
+            <h2 className="mb-2 font-display text-2xl font-semibold text-brand-text-dark group-hover:text-brand-primary">Ferret Starter Essentials</h2>
+            <p className="text-sm leading-relaxed text-brand-text-mid">
+              The day-one setup list a new ferret needs: cage, bedding, litter, food and water bowls, and a
+              carrier. The natural next step after the readiness quiz scores a fit, the cost calculator gives
+              you a number, or the food evaluator settles which kibble to buy.
+            </p>
+          </Link>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl">
           <EmailCapture
