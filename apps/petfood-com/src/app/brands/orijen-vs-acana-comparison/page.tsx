@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,34 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+// FAQ schema mirroring the on-page "Common Buyer Questions" section below
+// (blue-buffalo-evaluation pattern: FAQ array + buildFAQSchema). Answers are
+// condensed from the rendered Q&As — same calibrated claims, no additions.
+const FAQ = [
+  {
+    question: 'Is Orijen "better" than Acana?',
+    answer:
+      'On animal-ingredient inclusion, Orijen is higher. On price, Acana is lower. On AAFCO pathway, recall history, manufacturing certification, and ingredient transparency, the two lines are substantively comparable. "Better" depends on which dimension the owner is optimizing for; we do not assign one line a higher overall score on the basis of animal inclusion alone.',
+  },
+  {
+    question: 'Are both lines "grain-free" in the sense the FDA investigated?',
+    answer:
+      'Most Orijen and Acana Heritage SKUs are grain-free with pulses (lentils, peas, chickpeas) as a meaningful carbohydrate source — the formulation attributes that drew FDA CVM attention. Acana’s Wholesome Grains sub-line is grain-inclusive and uses oats, sorghum, and millet in place of some of the pulse load; it is not in the same formulation category as the lines named in the 2019 update.',
+  },
+  {
+    question: 'If my dog is in a DCM-predisposed breed, should I feed either of these?',
+    answer:
+      'That is a veterinary question, not a question the bag or this page can answer. The FDA CVM investigation, the 2018-2022 cardiology literature, and current ACVIM-aligned clinical practice all support a conversation with a veterinarian before committing to a pulse-heavy grain-free formulation for a dog in a DCM-predisposed breed (Doberman, Boxer, Great Dane, Irish Wolfhound, Cocker Spaniel) or in the atypical-breed signal (Golden Retriever).',
+  },
+  {
+    question: 'Are Orijen and Acana the same food in different bags?',
+    answer:
+      'No. They share a manufacturer, a formulation team, and a U.S. production site, but the recipes are distinct, the animal-inclusion targets are distinct, the price tiers are distinct, and several Acana sub-lines (Singles, Wholesome Grains) have no Orijen counterpart. They are sibling product lines, not labeling variants of a single SKU.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -82,7 +112,7 @@ export default function OrijenVsAcanaComparisonPage() {
         { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

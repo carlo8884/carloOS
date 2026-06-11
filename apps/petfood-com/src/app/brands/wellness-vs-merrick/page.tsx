@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
   buildProductSchema,
   buildItemListSchema,
   combineSchemas,
@@ -65,7 +66,32 @@ const itemListSchema = buildItemListSchema({
     { name: 'Merrick', url: 'https://petfood.com/brands/wellness-vs-merrick#merrick-retail' },
   ],
 })
-const pageSchema = combineSchemas(schema, itemListSchema, wellnessSchema, merrickSchema)
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Who owns Wellness and Merrick?',
+    answer:
+      'Both are owned by large corporate parents despite their independent-artisan brand image: Merrick was acquired by Nestle Purina, and Wellness (Wellness Pet Company) sits within a large pet-nutrition holding company. Corporate ownership is neither inherently good nor bad; it matters insofar as it brings — or fails to bring — research and quality-control resources.',
+  },
+  {
+    question: 'Is Wellness or Merrick better?',
+    answer:
+      'On the published evidence, the two brands are substantively comparable on our five-dimension rubric: both are natural-positioned premium lines with named animal proteins early on the panel and both grain-inclusive and grain-free options. The meaningful comparison is at the formula level — judge the specific product on its ingredient panel and AAFCO substantiation statement rather than the brand image.',
+  },
+  {
+    question: 'Does "natural" on the bag mean higher quality?',
+    answer:
+      'No. "Natural" is a narrowly defined AAFCO term, not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. Both brands lean on natural and whole-ingredient framing; the substance is in the ingredient panel, the guaranteed analysis, and the AAFCO statement.',
+  },
+  {
+    question: 'Do the grain-free lines from these brands raise the DCM question?',
+    answer:
+      'Yes — as with all grain-free, the legume-inclusive formulas from either brand intersect the FDA diet-associated DCM investigation, which identified an association rather than proven causation. Owners of DCM-predisposed breeds should discuss a legume-heavy grain-free formula with a veterinarian; both brands also offer grain-inclusive lines.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, itemListSchema, wellnessSchema, merrickSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -126,6 +152,7 @@ export default function WellnessVsMerrickPage() {
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -213,6 +240,14 @@ export default function WellnessVsMerrickPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Merrick%20pet%20food"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

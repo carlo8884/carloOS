@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
   buildProductSchema,
   combineSchemas,
   ArticleLayout,
@@ -48,7 +49,32 @@ const productSchema = buildProductSchema({
   reviewAuthorName: 'PetFood.com Editorial',
   ratingValue: 7.0,
 })
-const pageSchema = combineSchemas(schema, productSchema)
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is Taste of the Wild linked to DCM?',
+    answer:
+      'Taste of the Wild is built on the grain-free, legume-inclusive formulation pattern at the center of the FDA CVM diet-associated dilated cardiomyopathy investigation. The investigation identified an association, not proven causation, and the mechanism remains unresolved. For owners of DCM-predisposed breeds, a legume-heavy grain-free diet is worth discussing with a veterinarian.',
+  },
+  {
+    question: 'Who makes Taste of the Wild?',
+    answer:
+      'Taste of the Wild is owned and manufactured by Diamond Pet Foods, a large privately held US manufacturer that produces many brands across its own facilities. The brand inherits the facilities’ quality-control track record, including the major 2012 Salmonella recall event at one Diamond facility.',
+  },
+  {
+    question: 'Is grain-free food healthier for my pet?',
+    answer:
+      'Grain-free is a marketing position, not a quality tier. It does not reduce allergy risk for most animals — grains are an uncommon allergen — and it is not the same as low-carbohydrate, since grain starch is simply replaced by legume and potato starch. The legume-inclusive grain-free pattern is also the one at the center of the FDA DCM investigation.',
+  },
+  {
+    question: 'Has Taste of the Wild been recalled?',
+    answer:
+      'The most significant event on the record is the 2012 Salmonella recall centered on its manufacturer, Diamond Pet Foods, which affected multiple brands made at one facility and sickened pets and people. Recalls should be judged by cause, severity, and corrective response; the FDA CVM Recalls and Withdrawals database holds the current record.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -109,6 +135,7 @@ export default function TasteOfTheWildEvaluationPage() {
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -174,6 +201,14 @@ export default function TasteOfTheWildEvaluationPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Taste%20of%20the%20Wild"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
