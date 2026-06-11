@@ -25,7 +25,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -261,6 +261,7 @@ export default function OttbSecondCareersHubPage() {
           ]}
         />
       </section>
+      <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />
     </>
   )
 }

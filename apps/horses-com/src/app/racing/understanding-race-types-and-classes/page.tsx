@@ -14,6 +14,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -141,6 +142,7 @@ export default function RaceTypesAndClassesPage() {
                 { label: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"

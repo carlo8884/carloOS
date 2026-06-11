@@ -18,6 +18,7 @@ import {
   combineSchemas,
   SchemaScript,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -207,6 +208,7 @@ export default function RacingGlossaryPage() {
           ctaText="Subscribe Free"
         />
       </div>
+      <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />
     </>
   )
 }

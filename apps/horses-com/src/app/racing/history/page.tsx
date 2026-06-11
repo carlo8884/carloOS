@@ -13,7 +13,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingHistorySpokes, racingHistoryGroupedByEra } from '@/data/racing-history'
 
@@ -181,6 +181,7 @@ export default function RacingHistoryHubPage() {
           ]}
         />
       </section>
+      <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />
     </>
   )
 }
