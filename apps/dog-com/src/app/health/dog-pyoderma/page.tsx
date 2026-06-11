@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Pyoderma in Dogs and Cats', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyoderma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
@@ -10,9 +10,16 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pyoderma in Dogs — Bacterial Skin Infections, Causes | Dog.com', description: 'Pyoderma (bacterial skin infection) is the most common skin disease in dogs. Surface, superficial, and deep pyoderma differ in treatment duration.', path: '/health/dog-pyoderma', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Pyoderma in Dogs', description: 'Bacterial skin infections — types, antibiotic treatment, and root cause identification.', url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What does pyoderma look like on a dog?', answer: 'It depends on the depth of infection. Superficial pyoderma — the most common form — shows papules (small bumps), pustules (pimple-like lesions), crusting, and epidermal collarettes: circular scaling patterns with central clearing that are the classic superficial pyoderma pattern. Surface pyoderma includes hot spots and skin fold infections. Deep pyoderma is more dramatic — nodules, draining tracts discharging fluid, ulcers, and tissue destruction. Any of these presentations should be examined by your veterinarian, since the depth determines the treatment.' },
+  { question: 'Why does my dog\'s skin infection keep coming back?', answer: 'Because pyoderma in most dogs is secondary, not a primary disease. A dog with recurring pyoderma almost always has an underlying condition priming the skin for infection — allergic skin disease accounts for the large majority of recurring cases, with food allergy, hypothyroidism, Cushing\'s disease, Demodex mites, and skin fold conformation as other causes. Treating each infection without working up the underlying cause guarantees recurrence. Ask your veterinarian about evaluation for allergy, thyroid function, and a skin scrape.' },
+  { question: 'How long does a dog need antibiotics for pyoderma?', answer: 'Longer than most owners expect, and the course is the veterinarian\'s call. Superficial pyoderma requires systemic antibiotics for a minimum of several weeks (3–6 on this page) — stopping when the skin merely looks better at 1–2 weeks causes relapse because the infection is not fully cleared. Deep pyoderma requires substantially longer (6–12+ weeks) and warrants culture and sensitivity testing first. Mild surface infections can sometimes be managed with topical treatment alone.' },
+  { question: 'What is MRSP and when is a culture needed?', answer: 'MRSP is methicillin-resistant Staphylococcus pseudintermedius — a growing concern, resistant to beta-lactam antibiotics including the cephalosporins commonly used first-line. Culture and sensitivity testing is essential before antibiotics in deep pyoderma, recurring pyoderma already treated multiple times, infections not responding to first-line drugs, and dogs with prior antibiotic exposure or veterinary-worker households. With MRSP, antibiotic selection must be guided by the sensitivity results.' },
+  { question: 'Do medicated shampoos actually help pyoderma?', answer: 'Yes — topical therapy is underutilized and effective. Chlorhexidine shampoo (2–4%, or chlorhexidine plus miconazole) used 2–3 times weekly during systemic antibiotic treatment reduces bacterial load, shortens treatment duration, and reduces relapse rates in clinical studies. The catch is contact time: chlorhexidine shampoos need about 10 minutes on the skin before rinsing to work. For mild surface and early superficial infections, topical therapy alone can be sufficient — your veterinarian can advise whether that applies to your dog.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogPyodermaPage() {
   return (
     <>
@@ -49,6 +56,9 @@ export default function DogPyodermaPage() {
 
           <h2>Topical Therapy — Underutilized and Effective</h2>
           <p>Topical antimicrobial therapy — medicated shampoos (chlorhexidine 2–4%, or chlorhexidine + miconazole), sprays, and wipes — significantly reduces bacterial load and supports systemic antibiotic treatment. Chlorhexidine shampoo used 2–3 times weekly during systemic antibiotic treatment shortens treatment duration and reduces relapse rates in clinical studies. In mild surface and early superficial pyoderma, topical therapy alone can be sufficient. The time investment of bathing (leave-on 10-minute contact time for chlorhexidine shampoos to work) limits compliance for many owners, but the efficacy is real.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Freshwater Shrimp Care — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA177", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks', path: '/species/cherry-shrimp', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What water parameters do cherry shrimp need?',
+    answer:
+      'Cherry shrimp tolerate a wide range — pH 6.5–8.0, GH 4–18, KH 2–10, and temperatures of 65–80°F. Standard community tank water works in most cases. The key requirements are an established, cycled tank with 0 ammonia and 0 nitrite, nitrate under 20 ppm, and the absence of copper. This wide tolerance is what separates them from soft-water Caridina species.',
+    answerText:
+      'pH 6.5-8.0, GH 4-18, KH 2-10, 65-80F, in a cycled tank with nitrate under 20 ppm and no copper. Standard community water usually works.',
+  },
+  {
+    question: 'Can I mix cherry shrimp with other Neocaridina colors?',
+    answer:
+      'No, not if you want to keep the colors. Cherry, blue dream, yellow, and orange rili shrimp are all the same species and interbreed freely — within a few generations the tank fills with drab, genetically mixed offspring in place of the pure-color varieties. Keep each Neocaridina color morph in its own tank.',
+    answerText:
+      'No — different Neocaridina color morphs interbreed freely and produce drab mixed offspring within a few generations. Keep one color morph per tank.',
+  },
+  {
+    question: 'How fast do cherry shrimp breed?',
+    answer:
+      'Readily, with no special intervention in an established tank. A berried female fans her eggs for 25–30 days before they hatch as fully formed miniature shrimp — there is no larval stage in freshwater. A starting colony of 10–15 shrimp in a 10-gallon tank typically reaches 50–100 within 3–4 months, given biofilm for the shrimplets, stable parameters, and no shrimp-eating fish.',
+    answerText:
+      'A berried female carries eggs 25-30 days; they hatch as miniature shrimp. A 10-15 shrimp starter colony typically reaches 50-100 in 3-4 months.',
+  },
+  {
+    question: 'What fish are safe with cherry shrimp?',
+    answer:
+      'The genuinely safe list is short: otocinclus, small peaceful corydoras (which sometimes eat shrimplets but rarely adults), tiny Boraras rasboras, and endlers livebearers. Most fish marketed as "shrimp safe" — larger tetras, guppies, dwarf gouramis, many bettas — eat shrimp or shrimplets. For a breeding colony, a species-only tank or the verified-safe list is the reliable approach.',
+    answerText:
+      'Otocinclus, small corydoras, Boraras rasboras, and endlers. Most other fish eat shrimplets; a species-only tank is the reliable choice for breeding.',
+  },
+  {
+    question: 'Why do cherry shrimp die during molting?',
+    answer:
+      'Low general hardness is the usual cause — at GH under 4, shrimp can fail to molt and are found curled or white afterward. Raising GH to 6–8 with a remineralizer such as Seachem Equilibrium addresses it, and a piece of cuttlebone left in the tank gives shrimp a free-choice calcium source that supports molting.',
+    answerText:
+      'Failed molts usually trace to GH under 4. Raise GH to 6-8 with a remineralizer and offer cuttlebone as a free-choice calcium source.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function CherryShrimpPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Cherry Shrimp Care Guide', subtitle: 'Neocaridina davidi — the cherry shrimp is the gateway invertebrate for most aquarists. Hardy, colorful, endlessly interesting to watch, and prolific breeders that establish self-sustaining colonies in established tanks. They clean glass, graze on biofilm, and add movement and color to any community setup.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Amano Shrimp", href: "/species/amano-shrimp", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -34,7 +79,7 @@ export default function CherryShrimpPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-cherry-shrimp" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry shrimp in a home aquarium." priority />
         <h2>Grades — What You're Paying For</h2>
         <p>Cherry shrimp are sold in grades based on color intensity and coverage. All grades are the same species (Neocaridina davidi) and have identical care requirements — grade is purely aesthetic and affects price, not ease of care. Low-grade "cherry" shrimp have pale, patchy red coloration with transparent areas. Higher grades have progressively more intense and solid red coloration, culminating in "Painted Fire Red" with solid, opaque red coloration throughout. Breeding higher-grade shrimp together tends to produce higher-grade offspring — but population grades drift toward lower grades without selective culling of pale individuals.</p>
@@ -54,6 +99,16 @@ export default function CherryShrimpPage() {
 
         <h2>Feeding</h2>
         <p>Cherry shrimp are primarily biofilm grazers — in an established planted tank with adequate biofilm, supplemental feeding may not be necessary. For regular feeding: sinking algae wafers (Hikari Crab Cuisine, Repashy Soilent Green), blanched vegetables (zucchini, spinach, cucumber weighted down), commercial shrimp food (Bacter AE promotes biofilm growth on substrate). Feed small amounts every 2-3 days — overfeeding fouls the water, which is more damaging to shrimp than underfeeding. Remove uneaten food within 24 hours.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cherry Shrimp — Tank Setup</div>
@@ -67,5 +122,6 @@ export default function CherryShrimpPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

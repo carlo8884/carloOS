@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Algae and Macrophytes in Freshwater Aquaria — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA161", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What algae do Amano shrimp actually eat?',
+    answer:
+      'They are particularly effective against the algae types other algae eaters ignore: thread and string algae, staghorn algae, black brush/beard algae (BBA), and general biofilm and surface algae. Otocinclus remain better for diatoms and spot algae on glass — Amanos win for hair and beard algae.',
+    answerText:
+      'Thread/string algae, staghorn, black beard algae, and biofilm — the types most other algae eaters ignore. Otocinclus are better for diatoms on glass.',
+  },
+  {
+    question: 'How many Amano shrimp do I need?',
+    answer:
+      'One per 5 gallons is the standard starting point for planted tanks with moderate algae, adjusted to the algae load. A single Amano in a 30-gallon tank makes no visible impact; eight in the same tank provide meaningful control, and temporarily doubling the population often produces rapid improvement in tanks with serious hair algae.',
+    answerText:
+      'One per 5 gallons as a starting point. Individuals make no visible impact — groups do the work.',
+  },
+  {
+    question: 'Why won’t my Amano shrimp breed?',
+    answer:
+      'Their eggs hatch as marine larvae that require saltwater (specific gravity 1.020–1.024) to survive before metamorphosing and returning to freshwater. In a standard freshwater aquarium, the larvae hatch and die immediately, so populations decline over time without replacement. Breeding them requires a dedicated saltwater larval rearing setup with phytoplankton feeding — an advanced project few hobbyists attempt.',
+    answerText:
+      'Their larvae are marine and die immediately in freshwater. Breeding requires a dedicated saltwater larval setup, so populations only persist via replacement.',
+  },
+  {
+    question: 'Are Amano shrimp safe with bettas and other fish?',
+    answer:
+      'At 2 inches they are far less vulnerable than cherry shrimp. They can coexist with peaceful bettas (individual temperament varies), corydoras, otocinclus, small tetras, and rasboras. Avoid angelfish, large cichlids, puffers, large gouramis, and invertebrate-hunting loaches such as clown loaches, and observe carefully during the first 24 hours after any introduction.',
+    answerText:
+      'Generally yes with peaceful community fish and many bettas. Avoid angelfish, large cichlids, puffers, and clown loaches.',
+  },
+  {
+    question: 'How long do Amano shrimp live?',
+    answer:
+      'Two to three years, at 65–78°F and pH 6.0–7.5. They are active daytime grazers, and they can climb filter intake tubes and tank edges — cover all access points on open-topped tanks to prevent escapes.',
+    answerText:
+      '2-3 years at 65-78F and pH 6.0-7.5. Cover open tank tops — they climb intake tubes and tank edges.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function AmanoShrimpPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Amano Shrimp Care Guide', subtitle: 'Caridina multidentata — named for Takashi Amano who popularized their use in aquascaping — are the most effective algae-eating invertebrates available for freshwater aquariums. At 2 inches, they tackle algae that smaller cherry shrimp and otocinclus ignore, and they do it visibly and actively in the foreground of the tank.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Amano Shrimp', href: '/species/amano-shrimp' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +78,7 @@ export default function AmanoShrimpPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-amano-shrimp" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An Amano shrimp in a home aquarium." priority />
         <h2>Why Amano Shrimp Are the Best Algae Eaters</h2>
         <p>In the planted aquarium and aquascaping community, Amano shrimp have a near-universal recommendation for algae control — specifically for the algae types that other commonly kept algae eaters ignore. They are particularly effective at: thread algae / string algae (long, hair-like green algae that wraps around plants), staghorn algae (short gray filaments on plant edges — often iron deficiency indicator), BBA (black brush/beard algae — notoriously difficult to eliminate), and general biofilm and surface algae. Otocinclus are better for diatoms and spot algae on glass; Amanos win for hair and beard algae.</p>
@@ -47,6 +92,16 @@ export default function AmanoShrimpPage() {
 
         <h2>Feeding and Behavior</h2>
         <p>Amanos are primarily algae and biofilm grazers but will accept supplemental food — algae wafers, blanched vegetables, and leftover food that sinks to the substrate. They are active during the day (unlike some shrimp that hide) and visibly forage across plants, substrate, and hardscape. A well-fed group of Amanos actively working through a planted tank is genuinely pleasing to observe — they are large enough to follow individually and their methodical grazing behavior is distinctive. Occasional "escape events" from open-topped tanks are possible — they can climb filter intake tubes and tank edges; cover all access points.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Amano Shrimp — Tank Setup</div>
@@ -60,5 +115,6 @@ export default function AmanoShrimpPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

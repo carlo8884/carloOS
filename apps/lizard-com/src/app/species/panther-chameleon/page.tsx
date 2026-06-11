@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide — Locale Colors | Lizard.com', description: 'Panther chameleons display stunning locale-specific colors. Arboreal, solitary, and stress-sensitive. Drip system required, no handling except necessity.', path: '/species/panther-chameleon', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide', description: 'Locale color varieties, drip watering, and stress management for Furcifer pardalis panther chameleons.', url: 'https://lizard.com/species/panther-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide', description: 'Locale color varieties, drip watering, and stress management for Furcifer pardalis panther chameleons.', url: 'https://lizard.com/species/panther-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What enclosure does a panther chameleon need?', answer: 'A screen enclosure — not glass — of at least 24×24×48 inches for adult males, taller if possible. Chameleons need maximum airflow, and glass enclosures create the stagnant, humid air conditions that cause respiratory infections even with a screen top. Pack the cage with live plants such as pothos, Ficus, and hibiscus for visual cover, perching structure, and humidity buffering.' },
+  { question: 'How do panther chameleons drink?', answer: 'By lapping water droplets from leaves — they do not recognize standing water in a bowl. A drip system (a commercial dripper or a bucket-and-airline setup) or manual misting 2–3 times daily is required, with an automated misting system providing the most consistent hydration. Sunken eyes and pulled-in casque flanges are emergency dehydration signs requiring immediate veterinary evaluation.' },
+  { question: 'How long do panther chameleons live?', answer: 'Males live 5–7 years; females 3–5 years. The difference is the metabolic cost of egg production — even unmated females produce infertile clutches, which shortens their lives. Males are generally the better choice for first-time chameleon keepers for this reason.' },
+  { question: 'Can panther chameleons be housed together?', answer: 'No. They are solitary by nature, and seeing other chameleons is a significant chronic stress source — alongside reflections in glass, frequent handling, and insufficient visual cover. Chronic stress suppresses immune function and causes anorexia faster in chameleons than in most reptiles. One chameleon per enclosure, always.' },
+  { question: 'What is a panther chameleon locale?', answer: 'The region of Madagascar the bloodline originates from, which determines genetically fixed color patterns — Ambilobe males are red/green or blue/red, Nosy Be males are brilliant turquoise blue, Ambanja males show blue-green with red bars. Breeding within locales maintains color integrity; mixing locales produces uncertain offspring coloration. Ask for the locale of both parents when buying.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function PantherChameleonPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Panther Chameleon Care Guide', subtitle: 'Furcifer pardalis — one of the most visually spectacular reptiles in the hobby. Males from different locales in Madagascar display dramatically different colors — Ambilobe males are red and green or blue and red; Nosy Be males are brilliant turquoise blue; Ambanja males show vivid blue-green with red bars. These are not pets in the traditional sense — they are living displays that require expert-level husbandry.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Panther Chameleon', href: '/species/panther-chameleon' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
@@ -37,7 +49,7 @@ export default function PantherChameleonPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Locale Color Varieties</h2>
         <p>Panther chameleons from different locales in Madagascar display distinct, genetically fixed color patterns. The locale is the region of origin — breeding within locales maintains color integrity. Mixing locales produces uncertain offspring coloration and is discouraged among serious breeders. When buying a panther chameleon, ask for the locale of both parents.</p>
         <div className="grid sm:grid-cols-2 gap-3 mb-6">
@@ -68,6 +80,8 @@ export default function PantherChameleonPage() {
 
         <h2>Lifespan — Female vs Male</h2>
         <p>Female panther chameleons have a significantly shorter lifespan than males — 3–5 years vs 5–7 years for males. This is directly related to egg production. Even unmated females produce infertile clutches — the metabolic cost of egg production shortens their lives. Some keepers use hormonal interventions to suppress egg production, but this is controversial and should only be done under veterinary guidance. Males, which do not bear the metabolic cost of egg production, live longer and are generally considered the better choice for first-time chameleon keepers.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Panther Chameleon — Setup Equipment</div>
@@ -80,5 +94,6 @@ export default function PantherChameleonPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/Specialties/Oncology', publisher: 'ACVIM Oncology' },
@@ -11,9 +11,16 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Cancer Treatment — Chemotherapy, Surgery, Radiation | Dog.com', description: 'How cancer is treated in dogs. Chemotherapy in dogs is different from human chemo — most dogs tolerate it well. Surgery, radiation, immunotherapy.', path: '/health/dog-cancer-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Cancer Treatment', description: 'Canine cancer treatment — chemotherapy, surgery, radiation, and palliative care.', url: 'https://dog.com/health/dog-cancer-treatment', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'Do dogs get as sick from chemotherapy as people do?', answer: 'No — and this is the most common misconception oncologists encounter. Human chemotherapy aims for cure and accepts significant short-term suffering; veterinary chemotherapy prioritizes quality of life. Approximately 75–80% of dogs on standard protocols experience no significant adverse effects; the 20–25% that do typically have mild, transient GI upset for 2–3 days. Severe effects requiring hospitalization occur in roughly 5% of dogs, and dogs do not lose their hair (double-coated breeds may thin slightly). Most treatments are outpatient — IV infusion, then home the same day.' },
+  { question: 'How much does cancer treatment for a dog cost?', answer: 'From the figures on this page: oncologist consultation $200–500, chemotherapy $200–1,500 per cycle, a radiation therapy course $8,000–20,000, and surgery $2,000–15,000+ depending on complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs — conditions documented before enrollment are excluded as pre-existing.' },
+  { question: 'How long can chemotherapy extend a dog\'s life?', answer: 'It depends on the cancer. Published protocol outcomes summarized here: lymphoma treated with CHOP achieves complete remission in 60–90% of cases with median remission of 10–14 months; hemangiosarcoma post-surgery doxorubicin extends survival from 1–2 months to 4–8 months; osteosarcoma post-amputation carboplatin or doxorubicin extends median survival from 3–5 months to 9–12 months. A veterinary oncologist can give realistic expected outcomes for your dog\'s specific tumor type and stage.' },
+  { question: 'Is choosing palliative care instead of chemotherapy giving up?', answer: 'No. Palliative care is a valid, compassionate treatment choice that prioritizes the dog\'s experience over extending life at any cost. The toolkit is real medicine: NSAIDs and gabapentin for pain, prednisone for lymphoma (1–4 months of remission while maintaining appetite and activity), palliative radiation for bone pain, and appetite and anti-nausea support throughout. Discuss the option openly with your veterinarian or oncologist — it is a standard part of the treatment conversation.' },
+  { question: 'Should my dog see a veterinary oncologist?', answer: 'Referral is appropriate whenever a cancer diagnosis is made. A board-certified oncologist (DACVIM Oncology) provides staging, treatment options with realistic expected outcomes, and clinical trial information. Many primary care veterinarians can then administer straightforward chemotherapy protocols after the oncologist establishes the plan — the specialist designs, the primary vet and owner implement with ongoing oversight.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogCancerTreatmentPage() {
   return (
@@ -24,7 +31,7 @@ export default function DogCancerTreatmentPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cancer Treatment', href: '/health/dog-cancer-treatment' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Cancer Warning Signs', href: '/health/dog-cancer-signs', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Related' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Chemotherapy', href: '#chemo' }, { label: 'Surgery', href: '#surgery' }, { label: 'Radiation', href: '#radiation' }, { label: 'Immunotherapy', href: '#immunotherapy' }, { label: 'Palliative Care', href: '#palliative' }, { label: 'The Oncologist Role', href: '#oncologist' }]} />
+          <TableOfContents items={[{ label: 'Chemotherapy', href: '#chemo' }, { label: 'Surgery', href: '#surgery' }, { label: 'Radiation', href: '#radiation' }, { label: 'Immunotherapy', href: '#immunotherapy' }, { label: 'Palliative Care', href: '#palliative' }, { label: 'The Oncologist Role', href: '#oncologist' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cancer Warning Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cancer + Insurance</div>
@@ -62,6 +69,9 @@ export default function DogCancerTreatmentPage() {
           <h2 id="oncologist">The Role of the Veterinary Oncologist</h2>
           <p>A board-certified veterinary oncologist (<a href="https://www.acvim.org/Specialties/Oncology" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVIM Oncology</a>) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
           <p>Cost reality: consultation with a veterinary oncologist: $200–500. Chemotherapy per cycle: $200–1,500 depending on protocol. Radiation therapy course: $8,000–20,000. Surgery: $2,000–15,000+ depending on procedure complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

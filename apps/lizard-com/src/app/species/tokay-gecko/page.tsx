@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide — Loud Calls, Biting | Lizard.com', description: 'Tokay geckos are the most aggressive commonly kept gecko. Their "to-KAY" call is heard at night. Taming protocol works — but takes patience.', path: '/species/tokay-gecko', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Do tokay geckos bite?', answer: 'Yes, and an adult tokay bite is significantly more painful than most gecko bites — they have powerful jaws, hold on rather than letting go, and rotate the head, causing lacerations. Do not pull your hand away (this worsens the injury); bring the animal near water or cover its eyes with a paper towel to encourage release. Thick leather gloves are appropriate during early handling sessions.' },
+  { question: 'Can tokay geckos be tamed?', answer: 'Often, but slowly. Wild-caught tokays rarely tame meaningfully, while captive-bred animals worked from juveniles with brief 2–3 minute hand-to-hand sessions and mealworm rewards become tractable adults. Some individuals tame in 6–8 weeks; others take months. Animals that never fully tame still make engaging display pets.' },
+  { question: 'How loud is a tokay gecko’s call?', answer: 'Loud enough to hear from across a room — the "to-KAY to-KAY" call is produced primarily at night and carries significantly, so a tokay in a bedroom is not compatible with light sleeping. They call during territorial defense, courtship, and general communication, and volume increases when the animal is stressed or stimulated.' },
+  { question: 'What enclosure does a tokay gecko need?', answer: 'A tall tropical enclosure around 20×20×30 inches with extensive vertical structure — vertically mounted cork bark tubes, large branches, and pothos or Ficus plants. Keep 60–80% humidity with twice-daily misting, an 80–90°F warm end and a 70–75°F cool side. As nocturnal geckos they need secure, enclosed daytime hides.' },
+  { question: 'How long do tokay geckos live?', answer: 'Ten to fifteen or more years in captivity. Feed adults primarily large dubia roaches and superworms, with calcium dust at every feeding and a multivitamin twice weekly.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function TokayGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Tokay Gecko', href: '/species/tokay-gecko' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
@@ -33,7 +45,7 @@ export default function TokayGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Bite — Honest Assessment</h2>
         <p>A tokay gecko bite from an adult is significantly more painful than most gecko bites. Tokays have powerful jaws relative to their size and they do not let go — a defensive tokay that bites will hold on and rotate its head, causing lacerations. The appropriate response: do not pull your hand away (this worsens the injury) — bring the animal near water or use a paper towel to cover its eyes to encourage release. Thick leather gloves provide protection during initial handling sessions until the animal settles.</p>
         <p>This is not shared to discourage tokay keeping — it is shared because owners who are caught off-guard by their first tokay bite sometimes react in ways that injure the animal or damage the taming relationship they have been building. Know what you are getting into, have appropriate protection, and you will be fine.</p>
@@ -47,6 +59,8 @@ export default function TokayGeckoPage() {
 
         <h2>Enclosure and Care</h2>
         <p>Tropical species requiring 60-80% humidity and warm temperatures (80-90°F warm end). Tall enclosure with lots of vertical structure — cork bark tubes mounted vertically, large branches, pothos and Ficus plants. Tokays are nocturnal and emerge at night to hunt; daytime hides should be secure and enclosed enough that the gecko feels truly hidden. Feed primarily large dubia roaches, superworms, and appropriately sized feeder mice for adults. Calcium dust every feeding; multivitamin 2× weekly. Misting twice daily maintains humidity and provides drinking water.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Tokay Gecko — Setup Equipment</div>
@@ -59,5 +73,6 @@ export default function TokayGeckoPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

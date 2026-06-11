@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Intervertebral Disk Disease in Dogs and Cats', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/intervertebral-disk-disease-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
@@ -10,9 +10,16 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'IVDD in Dogs — Intervertebral Disc Disease Signs | Dog.com', description: 'IVDD causes back pain to paralysis in chondrodystrophic dogs. The surgical window is 24-48 hours for best recovery. Signs, grades, and rehabilitation guide.', path: '/health/intervertebral-disc-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Intervertebral Disc Disease in Dogs', description: 'IVDD signs, grades, surgical indications, and rehabilitation.', url: 'https://dog.com/health/intervertebral-disc-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'Is IVDD in dogs an emergency?', answer: 'Any hind limb weakness, stumbling, inability to walk, dragging of the rear legs, or loss of bladder/bowel control in a Dachshund, Corgi, French Bulldog, or other chondrodystrophic breed requires emergency veterinary evaluation immediately — not in the morning, not after the weekend. The chance of neurological recovery with surgery falls significantly the longer the spinal cord is compressed; the window is roughly 24–48 hours, and a Grade 4 dog operated within 12 hours has an 85–90% chance of walking again versus a significantly lower rate at 72 hours. Call ahead while driving.' },
+  { question: 'Can IVDD be treated without surgery?', answer: 'Grade 1 IVDD — pain only, with a normal gait — can be managed conservatively: strict crate rest for 4–6 weeks plus veterinarian-prescribed NSAIDs, and approximately 80% of Grade 1 dogs improve. The catch is what "strict" means: in a crate except brief leashed toilet walks, no furniture, no stairs, no play. Insufficient restriction is the most common reason conservative management fails. If the dog is not improving or worsens at any point, reassess with a neurologist immediately. Grades 2 and above are surgical recommendations.' },
+  { question: 'What are the chances my dog walks again after IVDD surgery?', answer: 'By neurological grade, from this page: Grade 3 (non-ambulatory with voluntary movement) — 85–90% return to walking with urgent surgery. Grade 4 (paralysis with deep pain sensation intact) — 50–80% with prompt emergency surgery. Grade 5 (paralysis with loss of deep pain) carries a guarded prognosis and needs surgery within hours for any chance of recovery. Post-surgical rehabilitation — underwater treadmill, electrical stimulation, therapeutic exercise — measurably improves outcomes; recovery runs 2–8 weeks for Grades 2–3 and 3–6+ months for Grades 4–5.' },
+  { question: 'Which dog breeds are most at risk for IVDD?', answer: 'Chondrodystrophic breeds — dogs bred for shortened, bowed legs whose discs mineralize abnormally early: Dachshunds (the most affected), Corgis, Beagles, Basset Hounds, and French Bulldogs. These breeds get sudden Type I disc extrusions. Large non-chondrodystrophic breeds like German Shepherds and Labradors develop Type II IVDD — gradual disc protrusion that progresses more slowly, though the same neurological grades apply.' },
+  { question: 'How is IVDD diagnosed?', answer: 'MRI is the gold standard — it localizes the affected disc precisely, shows the degree of spinal cord compression, and is required for surgical planning. CT myelography is the alternative where MRI is unavailable. Plain X-rays can show narrowed disc spaces and mineralized discs but cannot visualize the cord compression itself, so a dog with neurological signs needs advanced imaging at a referral or emergency hospital.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function IVDDPage() {
   return (
     <>
@@ -67,6 +74,9 @@ export default function IVDDPage() {
 
           <h2>Rehabilitation After Surgery</h2>
           <p>Post-surgical rehabilitation significantly improves outcomes. Hydrotherapy (underwater treadmill — allows weight-bearing movement before the dog can walk on land), neuromuscular electrical stimulation, therapeutic exercises, and massage all contribute to faster recovery. A certified canine rehabilitation therapist (CCRP or CCRT) designs the protocol. Recovery timeline varies: Grade 2-3 dogs typically regain ambulation within 2–8 weeks post-surgery. Grade 4-5 dogs may take 3–6 months or longer. Bladder management (manual expression or catheterization for dogs that cannot urinate voluntarily) is a critical component of post-surgical care that owners must learn.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

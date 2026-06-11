@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Day Gecko Care Guide — Phelsuma Species, Vivarium | Lizard.com', description: 'Day geckos (Phelsuma) are vivid green display animals — they are not handling geckos. Giant day gecko, gold dust, and standing\'s guide.', path: '/species/day-gecko', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Day Gecko Care Guide', description: 'Species overview, bioactive vivarium, and care for Phelsuma day geckos.', url: 'https://lizard.com/species/day-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Day Gecko Care Guide', description: 'Species overview, bioactive vivarium, and care for Phelsuma day geckos.', url: 'https://lizard.com/species/day-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Can you handle day geckos?', answer: 'Generally no — day geckos are display animals, not handling animals. They are fast, stress easily when restrained, and their delicate skin and toe pads make safe holding difficult: handling attempts can cause dropped tails, lost grip, and skin abrasions. Giant day geckos (P. grandis) can become semi-tame through food-reward training, with some individuals approaching and accepting soft fruit from the hand — that is the realistic extent of interaction.' },
+  { question: 'What enclosure do day geckos need?', answer: 'A tall bioactive vivarium — 24×18×36 inches or larger for giant day geckos — planted with live tropical plants (pothos, bromeliads, Ficus, orchids), a springtail and isopod cleanup crew, and vertical structure such as bamboo poles and cork bark tubes. A misting system maintains the 60–80% tropical humidity with twice-daily misting, and bromeliads provide natural water cups and egg-laying sites.' },
+  { question: 'Do day geckos need UVB?', answer: 'Yes — they are strictly diurnal and require significant UVB exposure. Use an Arcadia 6% T5 HO for most Phelsuma species on a 12-hour year-round photoperiod, supplemented with full-spectrum LED grow lights for plant growth. The basking spot should reach 90–95°F on the surface with ambient temperatures of 78–82°F.' },
+  { question: 'What do day geckos eat?', answer: 'They are omnivores — gut-loaded dubia roaches and hornworms dusted with calcium and multivitamin as the primary protein, plus a commercial fruit-nectar mix such as Repashy or Pangea, which is more nutritionally complete than whole fruit. Mashed mango, papaya, or banana can be offered occasionally. Feed every other day.' },
+  { question: 'How do day geckos breed?', answer: 'Phelsuma lay 1–2 hard-shelled eggs glued to a surface — bamboo tubes, cork bark, bromeliad bases, or the vivarium glass — rather than buried in substrate. Eggs usually incubate at room temperature in the vivarium and hatch in 45–90 days depending on species and temperature. Hatchlings are fully independent immediately, but should be moved to a separate setup since adults may harass juveniles.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function DayGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Day Gecko Care Guide', subtitle: 'Phelsuma — the day geckos of Madagascar and surrounding Indian Ocean islands — are among the most visually spectacular lizards in captivity. Vivid emerald green marked with red, orange, and blue depending on species. They are diurnal (active during the day), fast, agile, and very much display animals rather than handling animals. Their beauty is for watching, not holding.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Day Gecko', href: '/species/day-gecko' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
@@ -35,7 +47,7 @@ export default function DayGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Display Animal — Setting Expectations</h2>
         <p>Day geckos are not handleable pets in the way leopard geckos or blue-tongued skinks are. They are fast, stress easily when restrained, and their delicate skin and toe pads make them difficult to hold safely — they can drop their tail, lose grip, and suffer skin abrasions from handling attempts. Even in long-term captivity, most day geckos do not become tolerant of handling. The appropriate mindset: day geckos are kept for the pleasure of observing them in a beautifully designed vivarium — a living display that is genuinely engaging to watch.</p>
         <p>Giant day geckos (P. grandis) become semi-tame with consistent, gentle training using food rewards — offering soft ripe fruit from tongs or fingers teaches the gecko to associate the human hand with positive things, and some individuals will approach and accept food from the hand. This is the extent of what most Phelsuma will tolerate, and it is genuinely rewarding to achieve.</p>
@@ -52,6 +64,8 @@ export default function DayGeckoPage() {
 
         <h2>Egg Laying and Breeding</h2>
         <p>Phelsuma lay 1–2 hard-shelled eggs that are glued to a surface — typically a bamboo tube, cork bark, bromeliad base, or the vivarium glass — rather than buried in substrate (unlike most gecko species). Eggs are incubated at room temperature in the vivarium in most cases; they tolerate temperature variation well. Incubation: 45–90 days depending on species and temperature. Hatchlings are fully independent immediately. Remove hatchlings to a separate setup if breeding intentionally — adults may harass juveniles.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Day Gecko — Setup Equipment</div>
@@ -64,5 +78,6 @@ export default function DayGeckoPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

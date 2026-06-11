@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
 const SOURCES = [
@@ -28,7 +28,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -38,7 +38,14 @@ const medicalSchema = buildMedicalWebPageSchema({
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+const FAQS = [
+  { question: 'Which dog symptoms are emergencies that cannot wait until morning?', answer: 'The eight emergency signs in this guide: difficulty or labored breathing; pale, white, blue, or grey gums; sudden collapse or inability to stand; a distended abdomen with retching (GDV/bloat until proven otherwise); a seizure lasting more than 2 minutes or multiple seizures in 24 hours; suspected poisoning or toxic ingestion; bleeding that does not stop with 5–10 minutes of firm continuous pressure; and eye injuries or sudden eye changes. Any of these means emergency veterinary care right now — and when in doubt, call your emergency clinic; most will advise over the phone whether to come in.' },
+  { question: 'What does it mean if my dog\'s gums are pale or white?', answer: 'Normal dog gums are bubble-gum pink and moist. Pale or white gums indicate shock or severe blood loss — often from a ruptured splenic mass (hemangiosarcoma) — and blue or grey gums indicate oxygen deprivation. Either color change is an emergency: go immediately. Check your dog\'s gums regularly while healthy so you know the individual baseline.' },
+  { question: 'My dog has a swollen belly and keeps retching — can I wait and see?', answer: 'No. A visibly bloated or hard belly combined with unproductive retching or restlessness — particularly in a large or deep-chested breed — is Gastric Dilatation-Volvulus (GDV/bloat) until proven otherwise, and GDV is fatal within hours without surgery. At-risk breeds include Great Danes, German Shepherds, Standard Poodles, Weimaraners, Goldens, and Labs. Go to the emergency vet immediately.' },
+  { question: 'What should I do if my dog ate something toxic?', answer: 'Call ASPCA Animal Poison Control (888-426-4435, available 24/7, consultation fee applies) and your emergency vet simultaneously. Do not wait for symptoms to appear — for many toxins, including xylitol, rat poison, and certain mushrooms, treatment is most effective before symptoms develop.' },
+  { question: 'When is vomiting or diarrhea urgent versus something to monitor?', answer: 'Per this guide\'s criteria: one episode in an otherwise normal dog can be monitored. More than 3 episodes in 24 hours, any blood (red or dark coffee-ground appearance), or a lethargic dog that is not eating means a vet visit today — hemorrhagic gastroenteritis can cause dangerous fluid loss within hours. If you are unsure, the triage tool on this site checks your dog\'s signs against these same criteria, and a phone call to your vet costs nothing.' },
+]
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogSymptomsGuidePage() {
   return (
@@ -76,7 +83,7 @@ export default function DogSymptomsGuidePage() {
             <div className="text-xs text-brand-text-light">ASPCA · 24/7</div>
           </div>
         </div>
-        <TableOfContents items={SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` }))} />
+        <TableOfContents items={[...SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` })), { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
@@ -155,6 +162,9 @@ export default function DogSymptomsGuidePage() {
             Find Your Nearest Emergency Vet →
           </Link>
         </div>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>
