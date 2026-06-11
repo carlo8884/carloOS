@@ -41,7 +41,7 @@ export default function SpeciesArgentineBlackAndWhiteTeguPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor", href: "/species/savannah-monitor" }, { label: "Tegu (overview)", href: "/species/tegu" }, { label: "Brumation Guide", href: "/husbandry/brumation-guide" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor", href: "/species/savannah-monitor" }, { label: "Tegu (overview)", href: "/species/tegu" }, { label: "Brumation Guide", href: "/husbandry/brumation-guide" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptile Laws by State", href: "/states" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-argentine-black-and-white-tegu"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
