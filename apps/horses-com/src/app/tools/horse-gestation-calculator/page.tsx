@@ -10,6 +10,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -146,6 +147,7 @@ export default function HorseGestationCalculatorPage() {
               { label: 'Choosing a Vet', href: '/ownership/choosing-a-vet' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

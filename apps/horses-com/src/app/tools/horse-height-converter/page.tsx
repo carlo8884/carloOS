@@ -10,6 +10,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -156,6 +157,7 @@ export default function HorseHeightConverterPage() {
               { label: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
