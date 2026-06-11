@@ -9,6 +9,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
 
@@ -262,6 +263,8 @@ export default function IsThisADogEmergencyPage() {
           </div>
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

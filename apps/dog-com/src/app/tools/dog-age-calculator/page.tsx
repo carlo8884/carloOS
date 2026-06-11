@@ -8,6 +8,7 @@ import {
   SchemaScript,
   FAQAccordion,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -240,6 +241,8 @@ export default function DogAgeCalculatorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

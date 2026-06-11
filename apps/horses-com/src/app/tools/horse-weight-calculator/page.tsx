@@ -10,6 +10,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -150,6 +151,7 @@ export default function HorseWeightCalculatorPage() {
               { label: 'Equine Health Hub', href: '/health' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

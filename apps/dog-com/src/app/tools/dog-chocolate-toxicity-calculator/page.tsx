@@ -9,6 +9,7 @@ import {
   SchemaScript,
   FAQAccordion,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import ToxicityMeter from './ToxicityMeter'
 
@@ -328,6 +329,9 @@ export default function DogChocolateToxicityCalculatorPage() {
           </div>
         </div>
       </section>
+
+      {/* Calm secondary resource — placed well below the poison-control banner */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

@@ -11,6 +11,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { GirthSizeCalculator } from './GirthSizeCalculator'
 
@@ -179,6 +180,7 @@ export default function GirthSizeCalculatorPage() {
             subtitle="Saddle-fit deep-dives. No spam."
             source="girth-size-calculator"
           />
+          <CrossPortfolioCard currentSite="saddle-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

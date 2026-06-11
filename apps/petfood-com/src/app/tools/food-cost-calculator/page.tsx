@@ -9,7 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure
+  AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { FoodCostCalculator } from '../../../components/visual/FoodCostCalculator'
 
@@ -150,6 +151,7 @@ export default function FoodCostCalculatorPage() {
             subtitle="Pet nutrition references and tool updates."
             source="food-cost-calculator"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

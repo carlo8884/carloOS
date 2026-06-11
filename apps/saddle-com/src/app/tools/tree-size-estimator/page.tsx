@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { TreeSizeEstimator } from '../../../components/visual/TreeSizeEstimator'
 
@@ -162,6 +163,7 @@ export default function TreeSizeEstimatorPage() {
             subtitle="Saddle-fit deep-dives. No spam."
             source="tree-size-estimator"
           />
+          <CrossPortfolioCard currentSite="saddle-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

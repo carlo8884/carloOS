@@ -9,6 +9,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { FerretFoodEvaluator } from '../../../components/visual/FerretFoodEvaluator'
 
@@ -150,6 +151,7 @@ export default function FerretFoodEvaluatorPage() {
             subtitle="Ferret care references and tool updates."
             source="food-evaluator"
           />
+          <CrossPortfolioCard currentSite="ferret-com" contentType="tool" variant="sidebar" />
         </>
       }
     

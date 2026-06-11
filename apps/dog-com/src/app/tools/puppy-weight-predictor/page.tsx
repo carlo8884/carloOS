@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Predictor from './Predictor'
 
@@ -334,6 +335,8 @@ export default function PuppyWeightPredictorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

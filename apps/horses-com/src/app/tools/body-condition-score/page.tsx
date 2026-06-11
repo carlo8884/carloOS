@@ -9,6 +9,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../../../components/visual/BodyConditionScoreCalculator'
 
@@ -167,6 +168,7 @@ export default function BodyConditionScorePage() {
               { label: 'Equine Supplements', href: '/reviews/best-equine-supplements' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

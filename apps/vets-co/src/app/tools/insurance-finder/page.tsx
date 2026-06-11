@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { InsuranceCoverageFinder } from '../../../components/visual/InsuranceCoverageFinder'
 
@@ -143,6 +144,7 @@ export default function InsuranceFinderPage() {
               { label: 'Find a Vet', href: '/find-a-vet' },
             ]}
           />
+          <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"

@@ -1230,6 +1230,7 @@ export type ContentType =
   | 'discipline'
   | 'review'
   | 'guide'
+  | 'tool'
 
 export interface CrossPortfolioRecommendation {
   siteId: SiteId
@@ -1264,6 +1265,10 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
     { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored puppy, adult, senior, and large-breed nutrition to pair with any food pick.', cta: 'Read nutrition guides', href: 'https://petfood.com/life-stage' },
     { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Who makes each brand, where ingredients are sourced, and how they score on WSAVA criteria.', cta: 'See brand ratings', href: 'https://petfoods.com/brands' },
   ],
+  'dog-com:tool': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Vet', blurb: 'When a number from a calculator needs a professional read, find a local veterinarian or specialist.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition', blurb: 'Turn a calorie or weight estimate into a real feeding plan with AAFCO-anchored life-stage guides.', cta: 'Read nutrition guides', href: 'https://petfood.com/life-stage' },
+  ],
 
   // ── vets-co ───────────────────────────────────────────
   'vets-co:medication': [
@@ -1274,6 +1279,9 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   ],
   'vets-co:breed': [
     { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', href: 'https://dog.com/breeds' },
+  ],
+  'vets-co:tool': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Compare Pet Insurance', blurb: 'Once you know your likely vet costs, compare plans that cover them — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', href: 'https://dog.com/reviews/best-pet-insurance' },
   ],
   'vets-co:health': [
     { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Condition Guides', blurb: 'Golden Retriever, Labrador, Frenchie, German Shepherd — breed-specific hereditary conditions explained.', cta: 'Browse breed guides', href: 'https://dog.com/breeds' },
@@ -1309,6 +1317,9 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   'lizard-com:care': [
     { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic / Reptile Vet', blurb: 'ARAV-certified reptile veterinarians, what to expect at a visit, and how to prepare.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
   ],
+  'lizard-com:tool': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Reptile Vet', blurb: 'A husbandry calculator gets the setup right; an ARAV-certified reptile vet handles the rest.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+  ],
 
   // ── fish-com ──────────────────────────────────────────
   'fish-com:equipment': [],  // Same-site reviews handle this; no fish sister site.
@@ -1320,6 +1331,9 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   // ── petfood-com ───────────────────────────────────────
   'petfood-com:nutrition': [
     { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Scorecards', blurb: 'Independent brand-by-brand WSAVA compliance reviews to pair with life-stage choice.', cta: 'See brand rankings', href: 'https://petfoods.com/brands' },
+  ],
+  'petfood-com:tool': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Once you know the portion or cost, see who makes the food well — brand-by-brand WSAVA scorecards.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
   ],
   'petfood-com:guide': [
     { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Independent Brand Reference', blurb: 'When you know what to feed, find out who makes it well.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
@@ -1346,6 +1360,10 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   ],
   'ferret-com:behavior': [
     { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'Ferret Legality by State', blurb: 'Ferrets are prohibited or regulated in California, Hawaii, and several cities — verify before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+  ],
+  'ferret-com:tool': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians for the ferret-specific care a calculator can\'t cover.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Before you budget for a ferret, confirm they\'re legal where you live.', cta: 'Check your state', href: 'https://ferrets.com/states' },
   ],
 
   // ── ferrets-com ───────────────────────────────────────
@@ -1380,6 +1398,12 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   // ── saddle-com (activate already-placed guide card) — equestrian sibling authority
   'saddle-com:guide': [
     { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', href: 'https://horses.com/tack' },
+  ],
+  'saddle-com:tool': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Horse Care & Ownership', blurb: 'A fit or girth measurement is half the picture — the horse-care side lives on Horses.com.', cta: 'Explore Horses.com', href: 'https://horses.com/ownership' },
+  ],
+  'horses-com:tool': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Tack', blurb: 'Weight and measurement in hand, get the tack right — saddle fit guides and brand reviews.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
   ],
 
   // ── dog-com guide spokes (general dog-owner guides → clinical + nutrition siblings)
