@@ -6,7 +6,10 @@ export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bes
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention for Dogs 2026', description: 'Bravecto, NexGard, and Simparica ranked by coverage and safety.', url: 'https://dog.com/reviews/best-flea-tick-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const bravecto = buildProductSchema({ name: 'Bravecto Chew for Dogs', description: '12-week oral flea and tick prevention — fluralaner isoxazoline class.', url: 'https://bravecto.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const nexgard = buildProductSchema({ name: 'NexGard Chew for Dogs', description: 'Monthly oral flea and tick prevention — afoxolaner isoxazoline class.', url: 'https://nexgard.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, bravecto, nexgard)
+// Simparica Trio is a Quick Pick on this page but has no scored ReviewCard yet,
+// so its schema carries no editorial rating (per buildProductSchema contract).
+const simparica = buildProductSchema({ name: 'Simparica Trio Chew for Dogs', description: 'Monthly oral combination prevention — fleas, ticks, heartworm, and intestinal parasites in a single isoxazoline-class chew.', imageUrl: '' })
+const allSchemas = combineSchemas(schema, bravecto, nexgard, simparica)
 const PICKS = [
   { label: 'Best Overall', name: 'Bravecto', subtitle: '12-week duration · Fewest doses · Broad tick coverage', href: '#bravecto' },
   { label: 'Best Monthly', name: 'NexGard', subtitle: 'Monthly · Established track record · Widely available', href: '#nexgard' },

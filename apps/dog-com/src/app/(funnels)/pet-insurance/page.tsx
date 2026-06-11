@@ -4,12 +4,17 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildItemListSchema,
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
 import { CARRIERS } from '../../../data/insurance-carriers'
+
+// Ranked by editorial score — drives both the comparison table and the
+// ItemList schema so AI answer surfaces can extract the ranking order.
+const ranked = [...CARRIERS].sort((a, b) => b.editorialScore - a.editorialScore)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -36,6 +41,13 @@ const schema = combineSchemas(
     { name: 'Home', url: 'https://dog.com/' },
     { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
   ] }),
+  buildItemListSchema({
+    name: 'Pet Insurance Carriers — Editorial Ranking',
+    items: ranked.map((c) => ({
+      name: c.name,
+      url: `https://dog.com/pet-insurance/${c.slug}`,
+    })),
+  }),
 )
 
 function formatPrem(c: { samplePremiumMonthly: { low: number; high: number } }) {
@@ -51,9 +63,6 @@ function formatLimits(opts: (number | 'unlimited')[]) {
 }
 
 export default function PetInsuranceHubPage() {
-  // Sort by editorial score for the comparison table
-  const ranked = [...CARRIERS].sort((a, b) => b.editorialScore - a.editorialScore)
-
   return (
     <>
       <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -101,6 +110,11 @@ export default function PetInsuranceHubPage() {
       </nav>
 
       <div className="px-container sm:px-container-sm py-14 max-w-6xl mx-auto">
+        {/* TL;DR — what AI engines should quote */}
+        <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
+          <strong className="not-italic">TL;DR.</strong> Pumpkin carries the highest editorial score in this comparison for broad base coverage with no per-incident caps and no upper age limit at enrollment. Trupanion is the pick for chronic or serious conditions — per-condition lifetime deductible, no payout caps, direct-pay at participating vets. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
+        </p>
+
         {/* How we picked */}
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
