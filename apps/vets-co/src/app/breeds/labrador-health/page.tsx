@@ -1,20 +1,50 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Labrador Retriever Health — Hip & Elbow Dysplasia | Vets.co', description: 'From a veterinarian\'s perspective: Labrador health priorities — OFA screening, weight management, exercise-induced collapse, and when to refer to a specialist.', path: '/breeds/labrador-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health',
   description: 'Hip dysplasia, EIC, and obesity management in Labradors.',
   url: 'https://vets.co/breeds/labrador-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-07',
+  lastReviewed: '2026-06-11',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+
+const FAQS = [
+  {
+    question: 'Why is my Labrador always hungry?',
+    answer:
+      'Many Labradors have a specific genetic mutation — a POMC gene deletion — that genuinely impairs the satiety signal, so the dog does not feel full normally. A 2016 Cell Metabolism study identified the deletion; roughly 23% of pet Labs carry it. This is not behavioral laziness or owner failure — a constantly hungry Lab is often biologically driven. The management answer is measured meals, no free-feeding, and portioning based on body condition score rather than appetite.',
+  },
+  {
+    question: 'What is exercise-induced collapse (EIC) in Labradors?',
+    answer:
+      'EIC is a genetic condition in which affected dogs collapse after 5–15 minutes of intense activity and recover within about 30 minutes. A DNA test classifies dogs as clear, carrier, or affected; carriers do not show symptoms. Most dogs are not seriously harmed by individual episodes, but severe episodes can be fatal, so affected dogs need managed exercise intensity — particularly avoiding intense sustained exertion in hot weather. Discuss testing with your veterinarian, especially before intense training programs.',
+  },
+  {
+    question: 'How do I know if my Labrador has hip dysplasia?',
+    answer:
+      'Watch for lameness (especially after exercise), reluctance to rise or climb stairs, an abnormal swaying or bunny-hopping gait, and joint swelling or pain on manipulation. Signs typically appear in young dogs (8 months to 2 years) and worsen with age. A veterinary evaluation with radiographs confirms the diagnosis; OFA screening is the standard for breeding dogs. Lean weight is the single most important modifier — every extra pound accelerates joint damage.',
+  },
+  {
+    question: 'What is a healthy weight for a Labrador?',
+    answer:
+      'The target is a body condition score of 4–5 out of 9: ribs you can feel without firm pressure, a visible waist from above, and an abdominal tuck from the side. The practical approach is to measure every meal, never free-feed, weigh the dog monthly on the same scale, and adjust portions based on BCS rather than appetite — the dog will always ask for more. Discuss prescription weight-loss diets with your veterinarian for dogs not losing on portion control alone.',
+  },
+  {
+    question: 'When should I get pet insurance for a Labrador?',
+    answer:
+      'Before the first veterinary visit. Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint — $7,000–14,000 bilateral — and these are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, faqSchema)
 
 export default function VetsLabradorHealthPage() {
   return (
@@ -33,7 +63,7 @@ export default function VetsLabradorHealthPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2>The Conditions I Monitor Most Closely</h2>
 
@@ -64,6 +94,12 @@ export default function VetsLabradorHealthPage() {
 
         <h2>Pet Insurance — Start Early</h2>
         <p>Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint. Bilateral (both hips): $7,000–14,000. Total hip replacement: $6,000–10,000 per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
+
+        <h2>FAQ</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
     </>
