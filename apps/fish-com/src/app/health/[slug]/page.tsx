@@ -27,6 +27,7 @@ import {
   RelatedLinks,
   FAQAccordion,
   CalloutBox,
+  CrossPortfolioCard,
   EmailCapture,
   ArticleByline,
 } from '@carloOS/ui'
@@ -265,6 +266,7 @@ export default async function DiseasePage({ params }: PageProps) {
               { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
             ]}
           />
+          <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="fish-com"
