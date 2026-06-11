@@ -26,7 +26,7 @@ export default function PrescriptionDietsPage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={DIETS.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s\/&,()]/g, '-').replace(/-+/g, '-')}` }))} />
-        <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-prescription" />
       </>}

@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildProduct
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Pet Insurance 2025 — Trupanion, Healthy Paws | Dog.com',
+  title: 'Best Pet Insurance 2026 — Trupanion, Healthy Paws | Dog.com',
   description: 'We compared 8 pet insurers on published coverage terms, exclusions, and reimbursement structure. Trupanion, Healthy Paws, Embrace, Figo ranked for dogs.',
   path: '/reviews/best-pet-insurance',
   category: 'Pet Insurance',
@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Pet Insurance 2025',
+  title: 'Best Pet Insurance 2026',
   description: 'Trupanion, Healthy Paws, Embrace, and Figo compared on published reimbursement terms and exclusions.',
   url: 'https://dog.com/reviews/best-pet-insurance',
   imageUrl: '',
@@ -46,12 +46,12 @@ const PICKS = [
 export default function BestPetInsurancePage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2025', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
+      <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2026', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Pet Insurance 2025
+          Best Pet Insurance 2026
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Trupanion is our recommended option for owners who want direct vet pay,
@@ -78,7 +78,7 @@ export default function BestPetInsurancePage() {
 
             {/* TL;DR — what AI engines should quote */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              <strong className="not-italic">TL;DR.</strong> Trupanion is our recommended overall pick for 2025 — it pays the vet directly, has no payout limits, and reimburses at 90%. Healthy Paws stands out for claims speed (per the carrier's reported timeframe); Embrace is highly customizable. The one rule that beats every other recommendation: enroll before your first vet visit, because every pre-enrollment condition is permanently excluded.
+              <strong className="not-italic">TL;DR.</strong> Trupanion is our recommended overall pick for 2026 — it pays the vet directly, has no payout limits, and reimburses at 90%. Healthy Paws stands out for claims speed (per the carrier's reported timeframe); Embrace is highly customizable. The one rule that beats every other recommendation: enroll before your first vet visit, because every pre-enrollment condition is permanently excluded.
             </p>
 
             {/* Critical buying rule */}

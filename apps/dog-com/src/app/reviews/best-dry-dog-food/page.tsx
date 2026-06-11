@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025 — Royal Canin, Hill\'s & Purina Ranked',
+  title: 'Best Dry Dog Food 2026 — Royal Canin, Hill\'s & Purina Ranked',
   description: 'We compared 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance using published specs. Royal Canin, Hill\'s, Purina ranked.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025',
+  title: 'Best Dry Dog Food 2026',
   description: 'Best dry dog foods ranked on ingredient quality, WSAVA compliance, and manufacturing standards.',
   url: 'https://dog.com/reviews/best-dry-dog-food',
   imageUrl: '',
@@ -37,7 +37,7 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1, produc
 export default function BestDogFoodPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2025', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2026', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
@@ -46,13 +46,13 @@ export default function BestDogFoodPage() {
         </span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best Dry Dog Food 2025
+          Best Dry Dog Food 2026
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
           The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
         <div className="text-xs text-white/30">
-          Updated May 2025 ·{' '}
+          Updated May 2026 ·{' '}
           <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
         </div>
       </div>
@@ -241,7 +241,7 @@ export default function BestDogFoodPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Reviews" links={[
-              { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' },
               { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' },
               { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
             ]} />
