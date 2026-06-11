@@ -292,7 +292,7 @@ export default function HomePage() {
             this absolute, full-height wrapper (the 'full-bleed' variant's
             w-screen/-ml-[50vw] transform fights an absolute parent). */}
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="dog-com:hero"
@@ -386,14 +386,14 @@ export default function HomePage() {
                 href={path.href}
                 className={[
                   'group relative block rounded-xl overflow-hidden no-underline transition-all duration-200',
-                  'ring-1 min-h-[180px] sm:min-h-[210px]',
+                  'ring-1 min-h-[210px] sm:min-h-[250px]',
                   path.tone === 'urgent'
                     ? 'ring-brand-primary/60 hover:ring-brand-primary'
                     : 'ring-white/10 hover:ring-white/30',
                 ].join(' ')}
               >
                 {/* Background image (fills the tile) */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage
                     manifestKey={path.manifestKey}
                     fallbackKey="dog-com:hero"
@@ -412,7 +412,7 @@ export default function HomePage() {
                   ].join(' ')}
                 />
                 {/* Label content */}
-                <div className="relative z-10 flex flex-col justify-end min-h-[180px] sm:min-h-[210px] p-4">
+                <div className="relative z-10 flex flex-col justify-end min-h-[210px] sm:min-h-[250px] p-4">
                   <div className="text-2xs font-bold tracking-eyebrow uppercase text-white/85 mb-1">
                     {path.eyebrow}
                   </div>

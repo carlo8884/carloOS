@@ -78,7 +78,7 @@ export default function DogCalorieCalculatorPage() {
       <SchemaScript schema={schema} />
 
       {/* Hero */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-10 sm:py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 30% 50%, rgba(30, 80, 160, 0.5) 0%, transparent 60%)' }}
@@ -92,12 +92,12 @@ export default function DogCalorieCalculatorPage() {
             </span>
           </div>
           <h1
-            className="font-display font-bold text-white tracking-tight leading-none mb-5"
-            style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
+            className="font-display font-bold text-white tracking-tight leading-none mb-4"
+            style={{ fontSize: 'clamp(30px, 4vw, 46px)' }}
           >
             Dog Calorie Calculator
           </h1>
-          <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
+          <p className="text-base text-white/60 leading-relaxed max-w-2xl">
             Estimate your dog&apos;s daily calorie needs using the standard RER formula and WSAVA/AAHA-style
             life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional
             cups/day if you enter your food&apos;s calorie density.
@@ -118,8 +118,8 @@ export default function DogCalorieCalculatorPage() {
       </nav>
 
       {/* Calculator */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-5xl">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
+        <div className="max-w-4xl">
           <Calculator />
         </div>
       </section>
