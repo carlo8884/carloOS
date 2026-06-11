@@ -235,7 +235,7 @@ export default function HomePage() {
             simply fills the parent (the 'full-bleed' variant's transform
             fights an absolute parent). */}
         <div
-          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
           style={{ position: 'absolute', inset: 0 }}
         >
           <StockImage
@@ -511,7 +511,7 @@ export default function HomePage() {
                 >
                   {/* Real hub photo fills the tile */}
                   <div
-                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
                     style={{ position: 'absolute', inset: 0 }}
                   >
                     <StockImage
@@ -670,7 +670,7 @@ export default function HomePage() {
                   }}
                 >
                   <div
-                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
                     style={{ position: 'absolute', inset: 0 }}
                   >
                     <StockImage
@@ -944,7 +944,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+              className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
               style={{ position: 'absolute', inset: 0 }}
             >
               <StockImage
