@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Pancreatitis in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-small-animals', publisher: 'Merck Vet Manual' },
@@ -10,9 +10,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pancreatitis in Dogs — High-Fat Triggers, Signs | Dog.com', description: 'Pancreatitis in dogs is often triggered by high-fat meals — holiday table scraps are the classic cause. Signs, hospitalization criteria.', path: '/health/pancreatitis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pancreatitis in Dogs', description: 'Triggers, signs, hospitalization, and low-fat diet management for canine pancreatitis.', url: 'https://dog.com/health/pancreatitis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pancreatitis in Dogs', description: 'Triggers, signs, hospitalization, and low-fat diet management for canine pancreatitis.', url: 'https://dog.com/health/pancreatitis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Canine pancreatitis — triggers, acute management, and long-term dietary management.', url: 'https://dog.com/health/pancreatitis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What triggers pancreatitis in dogs?', answer: 'The classic trigger is a high-fat meal — fatty table scraps like turkey skin, ham fat, or bacon, which is why emergency rooms see pancreatitis cases spike after Thanksgiving and Christmas. The fat content matters more than the quantity: a small piece of very fatty meat can trigger pancreatitis in a susceptible dog. Other risk factors on this page: garbage ingestion, corticosteroids, hypothyroidism, chronically high-fat diets, obesity, and breed predisposition (Miniature Schnauzers, Cocker Spaniels).' },
+  { question: 'What are the symptoms of pancreatitis in dogs?', answer: 'The classic acute presentation: repeated vomiting, abdominal pain — often the "prayer position" (front end down, rear end up), hunched posture, or yelping when the abdomen is touched — plus lethargy, loss of appetite, sometimes diarrhea and fever. Severe pancreatitis adds signs of shock (pale gums, rapid weak pulse) and jaundice. A dog vomiting 12–24 hours after a high-fat meal with abdominal pain fits the most common presentation and needs veterinary evaluation.' },
+  { question: 'How do vets diagnose pancreatitis in dogs?', answer: 'The key blood test is cPLI (canine pancreatic lipase immunoreactivity) — the in-clinic SNAP cPL gives a rapid yes/no answer, and the quantitative Spec cPL from a reference lab indicates severity. Abdominal ultrasound shows pancreatic enlargement, peripancreatic fluid, and inflammation, while CBC and chemistry assess severity and complications such as bile duct involvement or systemic effects on the kidneys.' },
+  { question: 'Does a dog with pancreatitis need to be hospitalized?', answer: 'Per the hospitalization criteria on this page: yes for any dog with significant vomiting and inability to keep water down, signs of dehydration, persistent abdominal pain, or systemic signs such as pale gums or weakness. IV fluid therapy is the most critical supportive treatment — it corrects dehydration and improves pancreatic perfusion — alongside anti-nausea medication (maropitant/Cerenia) and pain management. Mild cases may be managed outpatient at the veterinarian\'s discretion.' },
+  { question: 'What should a dog eat after pancreatitis?', answer: 'Prolonged fasting is no longer the standard — current evidence supports early enteral nutrition, with mild non-vomiting cases offered small amounts of bland, low-fat food 12–24 hours after symptoms stabilize (timing is case-specific; follow your veterinarian\'s plan). Long term, a dog that has had significant or recurrent pancreatitis should stay on a low-fat diet permanently — many need prescription low-fat diets (under ~8% fat dry matter), and fatty table scraps are permanently off-limits because dietary indiscretion is the most common trigger for recurrence.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function PancreatitisPage() {
   return (
     <>
@@ -50,6 +58,9 @@ export default function PancreatitisPage() {
 
           <h2>Long-Term Management — Low-Fat Diet for Life</h2>
           <p>A dog that has experienced significant pancreatitis — particularly if it has been recurrent — should be maintained on a low-fat diet permanently. The threshold for "low fat" varies by individual: some dogs do well on any commercial food with under 10% fat (dry matter basis); dogs with severe recurrent pancreatitis may need prescription low-fat diets (Hill's i/d Low Fat, Royal Canin Gastrointestinal Low Fat, Purina EN Gastroenteric Low Fat) with fat content under 8% DM. Human food, high-fat treats, fatty table scraps, and any food with over 15% DM fat is permanently off-limits for severely affected dogs. This is not optional — dietary indiscretion is the most common trigger for recurrence.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
