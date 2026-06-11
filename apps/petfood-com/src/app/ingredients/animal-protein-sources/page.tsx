@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -19,17 +21,48 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Animal Protein Sources in Pet Food — A Reference',
-  description:
-    'Reference page on animal and alternative protein sources in pet food, working from the AAFCO ingredient definitions through transparency, amino-acid completeness, and what each category means for cats vs dogs.',
-  url: 'https://petfood.com/ingredients/animal-protein-sources',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Is chicken meal bad for dogs?',
+    answer:
+      'No. A named meal like chicken meal is the rendered, dried product from a single named species — nutrient-dense (typically 60-70% crude protein on a dry-matter basis) and a more concentrated, more shelf-stable protein contribution than fresh meat. From a transparency perspective, named meals score at the top of the meal category on our rubric: the species is specified, AAFCO tissue inclusion rules apply, and the processing step is disclosed by the term "meal."',
+  },
+  {
+    question: 'What is the difference between "chicken" and "chicken meal" on a label?',
+    answer:
+      '"Chicken" is the wet, unrendered ingredient — roughly 65-75% water at the ingoing step, so its finished contribution to kibble is a small fraction of its position on the panel. "Chicken meal" is the rendered, dried version at roughly 8-10% moisture, so its finished contribution is closer to its ingoing weight. Neither is better in the abstract; they are different ingredients with different processing implications.',
+  },
+  {
+    question: 'Are by-products in pet food bad?',
+    answer:
+      'By-products are nutritionally meaningful — organ meats such as liver, kidney, and heart are dense sources of vitamin A, B-vitamins, iron, copper, and (in the case of heart) taurine, and both AAFCO and FDA formally recognize by-products as appropriate pet food ingredients. The criticism that holds up is transparency: a species-generic term like "poultry by-product meal" does not tell the owner which species it came from, which is why by-products score in the middle of our protein-source range rather than at the bottom.',
+  },
+  {
+    question: 'What does "poultry meal" mean compared to "chicken meal"?',
+    answer:
+      'A generic meal like "poultry meal" is a rendered product where the species is not named — the composition can be predominantly chicken, turkey, duck, or a mixed-species blend, and it can shift lot-to-lot. For owners managing suspected protein intolerance or running a veterinary elimination trial, generic meals are categorically unsuitable because the protein source is not known. The lower rubric score reflects this transparency loss, not a claim about nutrient density.',
+  },
+  {
+    question: 'Can cats eat plant-based protein?',
+    answer:
+      'Cats are obligate carnivores with high dietary requirements for taurine, methionine, cystine, and arginine, plus pre-formed retinol-form vitamin A and arachidonic acid — levels rarely met by plant-sourced ingredients alone. A cat food built predominantly on plant protein requires careful supplementation to meet AAFCO cat-food minima, and even then plant-protein digestibility is lower for cats than for dogs. Most veterinary nutritionists, and the WSAVA Global Nutrition Committee, recommend named animal proteins as a meaningful share of a cat food.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Animal Protein Sources in Pet Food — A Reference',
+    description:
+      'Reference page on animal and alternative protein sources in pet food, working from the AAFCO ingredient definitions through transparency, amino-acid completeness, and what each category means for cats vs dogs.',
+    url: 'https://petfood.com/ingredients/animal-protein-sources',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 const SOURCES = [
     {
@@ -103,6 +136,7 @@ export default function AnimalProteinSourcesPage() {
               { label: 'Insect Protein', href: '#insect' },
               { label: 'Cats vs Dogs', href: '#species' },
               { label: 'Reading the Label', href: '#label' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -134,7 +168,7 @@ export default function AnimalProteinSourcesPage() {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           A pet food label&apos;s ingredient panel is, by AAFCO rule, listed in descending order
           by ingoing weight before processing. That single rule is the source of most consumer
@@ -454,6 +488,55 @@ export default function AnimalProteinSourcesPage() {
             with a known novel protein or hydrolysate are the diagnostic standard.
           </li>
         </ol>
+
+        <h2 id="faq">Common Questions</h2>
+        <p><strong>Is chicken meal bad for dogs?</strong></p>
+        <p>
+          No. A named meal like chicken meal is the rendered, dried product from a single named
+          species — nutrient-dense (typically 60-70% crude protein on a dry-matter basis) and a
+          more concentrated, more shelf-stable protein contribution than fresh meat. From a
+          transparency perspective, named meals score at the top of the meal category on our
+          rubric: the species is specified, AAFCO tissue inclusion rules apply, and the processing
+          step is disclosed by the term &quot;meal.&quot;
+        </p>
+        <p><strong>What is the difference between &quot;chicken&quot; and &quot;chicken meal&quot; on a label?</strong></p>
+        <p>
+          &quot;Chicken&quot; is the wet, unrendered ingredient — roughly 65-75% water at the
+          ingoing step, so its finished contribution to kibble is a small fraction of its position
+          on the panel. &quot;Chicken meal&quot; is the rendered, dried version at roughly 8-10%
+          moisture, so its finished contribution is closer to its ingoing weight. Neither is
+          better in the abstract; they are different ingredients with different processing
+          implications.
+        </p>
+        <p><strong>Are by-products in pet food bad?</strong></p>
+        <p>
+          By-products are nutritionally meaningful — organ meats such as liver, kidney, and heart
+          are dense sources of vitamin A, B-vitamins, iron, copper, and (in the case of heart)
+          taurine, and both AAFCO and FDA formally recognize by-products as appropriate pet food
+          ingredients. The criticism that holds up is transparency: a species-generic term like
+          &quot;poultry by-product meal&quot; does not tell the owner which species it came from,
+          which is why by-products score in the middle of our protein-source range rather than at
+          the bottom.
+        </p>
+        <p><strong>What does &quot;poultry meal&quot; mean compared to &quot;chicken meal&quot;?</strong></p>
+        <p>
+          A generic meal like &quot;poultry meal&quot; is a rendered product where the species is
+          not named — the composition can be predominantly chicken, turkey, duck, or a
+          mixed-species blend, and it can shift lot-to-lot. For owners managing suspected protein
+          intolerance or running a veterinary elimination trial, generic meals are categorically
+          unsuitable because the protein source is not known. The lower rubric score reflects this
+          transparency loss, not a claim about nutrient density.
+        </p>
+        <p><strong>Can cats eat plant-based protein?</strong></p>
+        <p>
+          Cats are obligate carnivores with high dietary requirements for taurine, methionine,
+          cystine, and arginine, plus pre-formed retinol-form vitamin A and arachidonic acid —
+          levels rarely met by plant-sourced ingredients alone. A cat food built predominantly on
+          plant protein requires careful supplementation to meet AAFCO cat-food minima, and even
+          then plant-protein digestibility is lower for cats than for dogs. Most veterinary
+          nutritionists, and the WSAVA Global Nutrition Committee, recommend named animal proteins
+          as a meaningful share of a cat food.
+        </p>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
