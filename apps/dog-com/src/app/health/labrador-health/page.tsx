@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -19,6 +19,14 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const FAQS = [
+  { question: 'Why is my Labrador always hungry?', answer: 'It is biology, not bad manners. Cambridge researchers identified a mutation in the POMC gene — extremely common in the breed — that disrupts the brain\'s satiety signaling: affected Labs do not receive normal "I am full" signals after eating. That is not an excuse to overfeed; it is the explanation for why strict portion control matters more in Labs than in almost any other breed. Measure every meal, never free-feed, and count treats toward the daily total (maximum 10% of calories).' },
+  { question: 'Does keeping a Labrador lean really extend its life?', answer: 'Yes — by the most compelling dietary longevity data in canine medicine. The 2002 Purina Life Span Study found lean Labs lived 1.8 years longer than their slightly overweight littermates, and obesity — which affects over half of US Labs — accelerates joint disease, raises cancer and diabetes risk, and shortens lifespan by 2+ years. Aim for a body condition score of 4–5 out of 9, where the ribs are easily felt but not visible, and score monthly.' },
+  { question: 'What is Exercise-Induced Collapse (EIC) in Labradors?', answer: 'A genetic condition essentially unique to Labs and a few related breeds: after 5–20 minutes of strenuous activity, an affected dog loses hindlimb coordination and muscle tone and collapses, then recovers fully within 5–25 minutes and looks completely normal at rest. It is caused by a recessive DNM1 mutation — dogs with two copies are at risk; carriers do not collapse. There is no treatment; management is avoiding triggering exercise intensity. If your Lab has ever collapsed after hard exercise, ask your veterinarian about EIC DNA testing.' },
+  { question: 'How do I prevent ear infections in my Lab?', answer: 'Labs\' floppy ears trap moisture, and swimmers are at particular risk — ear infections are among the most common reasons Labs see the vet, and most are preventable. The routine on this page: check ears weekly, dry them thoroughly after every swim or bath, clean monthly with a veterinary ear cleaning solution (never cotton swabs into the canal), and have infections treated promptly — untreated infections progress and become harder to resolve. Chronic recurrences warrant cytology with your veterinarian to identify the organism.' },
+  { question: 'What health tests should a Labrador breeder provide?', answer: 'The minimum for a reputable Lab breeder, per this guide: OFA hip evaluation, OFA elbow evaluation, current annual CAER eye examination, OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test — with documentation, not verbal assurances. Coat color matters less than breeders imply; in any color, parental health testing is what predicts a healthy puppy.' },
+]
+
 const schema = combineSchemas(
   buildArticleSchema({
   siteId: 'dog-com',
@@ -28,7 +36,7 @@ const schema = combineSchemas(
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 }), buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health Guide',
   description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',
@@ -36,7 +44,7 @@ const schema = combineSchemas(
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
   medicalAudience: 'Caregiver',
-}),
+}), buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }),
 )
 
 export default function LabradorHealthPage() {
@@ -69,6 +77,7 @@ export default function LabradorHealthPage() {
           { label: 'Ear Infections', href: '#ears' },
           { label: 'Preventive Schedule', href: '#preventive' },
           { label: 'Choosing a Healthy Lab', href: '#choosing' },
+          { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Labrador Retriever Breed Profile', href: '/breeds/labrador-retriever' },
@@ -178,6 +187,9 @@ export default function LabradorHealthPage() {
         <p>Color matters less than breeders imply. The data suggesting chocolate Labs have shorter lifespans and more health issues likely reflects historic breeding practices in chocolate lines (less health testing) rather than coat color itself. In any color, what matters is health testing of the parents.</p>
 
         <p>Minimum health testing for a reputable Lab breeder: OFA hip evaluation, OFA elbow evaluation, CAER eye examination (current, annual), OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test. Request documentation for all of these — not verbal assurances. A breeder who cannot provide this documentation is not a reputable breeder regardless of how nice their website looks.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>

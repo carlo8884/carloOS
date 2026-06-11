@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -19,6 +19,14 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const FAQS = [
+  { question: 'What is degenerative myelopathy in German Shepherds?', answer: 'DM is a progressive spinal cord disease — the canine equivalent of ALS — that causes gradual paralysis beginning in the hindlimbs and advancing forward over months to years. German Shepherds are the most commonly affected breed, and the responsible SOD1 gene mutation is present at high frequency in the breed. There is no cure or disease-modifying treatment, but physical rehabilitation (underwater treadmill, range-of-motion work, assisted walking) significantly extends mobility and quality of life, and dog wheelchairs allow meaningful mobility after the hindlimbs fail.' },
+  { question: 'What are the early signs of DM in a German Shepherd?', answer: 'Progressive hindlimb weakness and wobbling, dragging of the rear feet — worn nails on the rear paws are a classic early clue — difficulty rising, and loss of hindlimb coordination. These typically appear from age 7 onward. Because early DM looks like several treatable conditions, a dog showing these signs should be evaluated by a veterinarian; DNA testing identifies whether a dog carries two copies of the SOD1 mutation (At Risk), one (Carrier), or none (Clear).' },
+  { question: 'Why are German Shepherds at high risk for bloat (GDV)?', answer: 'GSDs are among the deep-chested breeds at highest risk for gastric dilatation-volvulus — the stomach fills with gas and twists, cutting off its own blood supply. Without emergency surgery GDV is fatal within hours; it is the most time-critical emergency in veterinary medicine. If you see a distended, hard abdomen with unproductive retching, restlessness, or drooling: emergency vet immediately, no waiting. Prevention to discuss with your vet: prophylactic gastropexy (often done at spay/neuter) and feeding multiple small meals instead of one large one.' },
+  { question: 'Why is my German Shepherd losing weight despite eating ravenously?', answer: 'That combination — dramatic weight loss with a ravenous appetite, usually with chronic large-volume greasy yellow diarrhea — is the classic presentation of exocrine pancreatic insufficiency (EPI), and German Shepherds are by far the most affected breed. The pancreas stops producing digestive enzymes, so food passes through unabsorbed. Diagnosis is a serum TLI blood test (inexpensive and definitive); treatment is lifelong powdered pancreatic enzymes mixed into food. Appropriately treated dogs typically return to normal weight within weeks. Ask your veterinarian about TLI testing.' },
+  { question: 'What health testing should a German Shepherd breeder provide?', answer: 'Per this guide\'s preventive schedule: OFA certification for hips and elbows, DM DNA testing, and cardiac evaluation at minimum — with documentation, not verbal assurances. For the dog you already own: annual bloodwork from age 5 (catches EPI, hypothyroidism, and early organ changes), watching for DM signs from age 7+, lean body weight throughout life, and twice-yearly exams from age 8.' },
+]
+
 const schema = combineSchemas(
   buildArticleSchema({
   siteId: 'dog-com',
@@ -28,7 +36,7 @@ const schema = combineSchemas(
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 }), buildMedicalWebPageSchema({
   name: 'German Shepherd Health Guide',
   description: 'DM, hip dysplasia, bloat, EPI and preventive care for German Shepherds.',
@@ -36,7 +44,7 @@ const schema = combineSchemas(
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
   medicalAudience: 'Caregiver',
-}),
+}), buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }),
 )
 
 export default function GermanShepherdHealthPage() {
@@ -68,6 +76,7 @@ export default function GermanShepherdHealthPage() {
           { label: 'EPI', href: '#epi' },
           { label: 'Perianal Fistulas', href: '#perianal' },
           { label: 'Preventive Schedule', href: '#preventive' },
+          { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
@@ -140,6 +149,9 @@ export default function GermanShepherdHealthPage() {
           <li><strong>Maintain lean body weight throughout life</strong> — reduces joint disease progression dramatically</li>
           <li><strong>Twice-yearly exams from age 8</strong></li>
         </ul>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>

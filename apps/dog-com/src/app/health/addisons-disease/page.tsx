@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Hypoadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hypoadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,17 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Addison's Disease in Dogs — Vague Signs | Dog.com", description: "Addison's disease (hypoadrenocorticism) is the 'great imitator' — vague signs mimic many conditions. Addisonian crisis is life-threatening.", path: '/health/addisons-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Addison's Disease in Dogs", description: "Hypoadrenocorticism — diagnosis, Addisonian crisis management, and DOCP treatment.", url: 'https://dog.com/health/addisons-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Addison's Disease in Dogs", description: "Hypoadrenocorticism — diagnosis, Addisonian crisis management, and DOCP treatment.", url: 'https://dog.com/health/addisons-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: "Addison's Disease in Dogs", description: "Canine hypoadrenocorticism — signs, diagnosis, crisis management, and lifelong treatment.", url: 'https://dog.com/health/addisons-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: "What are the symptoms of Addison's disease in dogs?", answer: "The signs are genuinely non-specific, which is why Addison's is called 'the great imitator': intermittent vomiting, diarrhea, and appetite loss that waxes and wanes, weakness and lethargy that comes and goes, gradual weight loss, and a dog that is 'just not right.' A characteristic pattern is stress-induced GI illness followed by apparent recovery — a stressed dog crosses the crisis threshold its failing adrenals cannot meet, then seems improved when the stress passes. That pattern should prompt your veterinarian to run an electrolyte panel." },
+  { question: "What is an Addisonian crisis?", answer: "The life-threatening emergency form of the disease: acute collapse, profound weakness, a slow heart rate (from elevated potassium's effect on the heart), low blood pressure, and shock. The hyperkalemia can cause dangerous cardiac arrhythmias. Many dogs are first diagnosed this way — a dog that was intermittently unwell arrives in acute cardiovascular collapse. This is an immediate emergency-vet situation; hospital treatment is IV saline resuscitation, IV dexamethasone, and cardiac monitoring." },
+  { question: "How is Addison's disease in dogs diagnosed?", answer: "The classic laboratory clue is the electrolyte panel: elevated potassium (hyperkalemia) and low sodium (hyponatremia), with a sodium:potassium ratio below 27. Without that panel, the vague GI signs are easily treated empirically and the diagnosis missed for months. Confirmation is the ACTH stimulation test — in an Addisonian dog, cortisol fails to rise appropriately after ACTH injection. Dexamethasone is used during crisis stabilization specifically because it does not interfere with this test." },
+  { question: "What is the treatment for Addison's disease in dogs?", answer: "Lifelong hormone replacement, prescribed and dosed by a veterinarian. The two main options on this page: DOCP (Percorten-V), an injectable mineralocorticoid given roughly every 25–28 days plus a separate low-dose glucocorticoid such as prednisone; or fludrocortisone (Florinef), a daily oral tablet that covers both hormone types in many dogs. During stress (travel, boarding, illness, procedures) the glucocorticoid dose is temporarily increased — ask your veterinarian for a written stress-dosing protocol." },
+  { question: "What is the life expectancy of a dog with Addison's disease?", answer: "With appropriate treatment, normal. Addison's is one of the most manageable chronic conditions in veterinary medicine — treated dogs live full-quality lives with normal lifespans, and many owners describe their dogs as transformed once adequate hormone replacement is established. Annual rechecks with electrolyte monitoring keep the dosing appropriate as the dog ages." },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function AddisonsDiseaseePage() {
   return (
@@ -50,8 +58,11 @@ export default function AddisonsDiseaseePage() {
           <p><strong>Fludrocortisone (Florinef):</strong> Oral tablet daily. Provides both mineralocorticoid and some glucocorticoid activity. Easier for owners who struggle with injections. Some dogs require an additional low-dose prednisone supplement. Requires daily dosing compliance.</p>
           <p>During periods of stress (travel, veterinary procedures, illness, boarding), the glucocorticoid dose is temporarily increased ("stress dosing") to cover the increased demand. Ask your veterinarian for a written stress-dosing protocol — how much to give, and when — and keep oral prednisone on hand as they direct.</p>
 
-          <h2>Long-Term Prognosis</h2>
+          <h2 id="prognosis">Long-Term Prognosis</h2>
           <p>Addison's disease is one of the most manageable chronic conditions in veterinary medicine — with appropriate treatment, Addisonian dogs live normal, full-quality lives with normal lifespans. The majority of owners describe their dogs as transformed after diagnosis and treatment begins — the dog that had been intermittently unwell for months becomes consistently well, energetic, and normal once adequate hormone replacement is established. Annual rechecks with electrolyte monitoring ensure treatment is appropriately dosed as the dog ages.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
