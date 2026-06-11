@@ -60,7 +60,7 @@ export default function FleaTickPreventionPage() {
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
-            <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <div id="simparica" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Situation</div>
               {[['Best compliance (fewest doses)', 'Bravecto (12-week)'], ['History of seizures', 'Discuss alternatives with vet'], ['Heartworm + flea/tick combined', 'Simparica Trio or Revolution Plus'], ['Budget-conscious', 'Generic fluralaner (Bravecto generic)'], ['Cats in household', 'Check — dog isoxazolines toxic to cats']].map(([s, r]) => (
                 <div key={s} className="py-2.5 border-b border-brand-border last:border-0">

@@ -15,8 +15,8 @@ const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema, furhave
 const PICKS = [
   { label: 'Best Orthopedic', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker' },
   { label: 'Best Premium', name: 'Casper Dog Bed', subtitle: 'Washable cover · Durable foam · All sizes', href: '#casper' },
-  { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#furhaven' },
-  { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#bolster' },
+  { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#by-dog-type' },
+  { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#by-dog-type' },
 ]
 export default function BestDogBedsPage() {
   return (
@@ -62,7 +62,7 @@ export default function BestDogBedsPage() {
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
-            <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <div id="by-dog-type" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Dog Type</div>
               {[['Arthritic large breed', 'Big Barker — clinical evidence'], ['Large breed everyday', 'Casper or Big Barker'], ['Small/medium everyday', 'Casper or Furhaven'], ['Anxious dog', 'Bolster/donut style (Best Friends Sheri)'], ['Destructive chewer', 'Molly Mutt cover + insert (replaceable)'], ['Budget', 'Furhaven Orthopedic ($40–80)']].map(([t, r]) => (
                 <div key={t} className="py-2.5 border-b border-brand-border last:border-0">
