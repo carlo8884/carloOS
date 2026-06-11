@@ -126,8 +126,9 @@ export default function BodyConditionScorePage() {
       relatedLinks={[
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
+        { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
+        { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
         { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
-        { title: 'Feeding the Hard Keeper', href: '/nutrition/feeding-the-hard-keeper' },
         { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
       ]}
       hero={{

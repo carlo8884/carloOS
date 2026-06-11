@@ -26,6 +26,8 @@ export default function CrestedGeckoPage() {
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },

@@ -28,6 +28,8 @@ export default function LeopardGeckoPage() {
         relatedLinks={[
           { title: 'Species Library', href: '/species', category: 'Hub' },
           { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+          { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+          { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
           { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
           { title: 'Best Thermostats', href: '/reviews/best-thermostats', category: 'Reviews' },
           { title: 'African Fat-Tailed Gecko Care', href: '/species/african-fat-tailed-gecko', category: 'Species' },

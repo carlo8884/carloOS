@@ -35,6 +35,18 @@ const TOOLS = [
     desc: 'Score six body areas (neck, withers, shoulder, ribs, loin, tailhead) to compute the standard 1-9 Henneke BCS. Returns condition narrative and feeding guidance per score range.',
     tag: 'Husbandry',
   },
+  {
+    href: '/tools/horse-gestation-calculator',
+    title: 'Horse Gestation & Foaling Date Calculator',
+    desc: 'Estimate a mare’s foaling date from her breeding date using the ~340-day average gestation, with the early/late 320–362 day foaling window and an optional custom gestation length.',
+    tag: 'Breeding',
+  },
+  {
+    href: '/tools/horse-height-converter',
+    title: 'Horse Height Converter (Hands, Inches, cm)',
+    desc: 'Convert horse height between hands, inches, and centimetres. Handles the hands.inches notation correctly (15.2hh = 62 in = 157.5 cm) and flags the 14.2hh pony cutoff.',
+    tag: 'Converter',
+  },
 ]
 
 const itemListSchema = {
@@ -84,7 +96,7 @@ export default function ToolsHub() {
             The three calculators chain together. Start with the <Link href="/tools/horse-weight-calculator" className="text-brand-primary underline">horse weight calculator</Link>, which turns two tape measurements &mdash; heart girth and body length &mdash; into a bodyweight estimate using the published weight-tape formula. Carry that weight into the <Link href="/tools/horse-feed-calculator" className="text-brand-primary underline">feed &amp; hay calculator</Link> to set a daily forage target, then track whether the ration is working with the <Link href="/tools/body-condition-score" className="text-brand-primary underline">Henneke body condition score</Link>, the 1&ndash;9 scale equine veterinarians have used since 1983 to standardize how fat cover is assessed across six body regions.
           </p>
           <p className="text-base leading-relaxed text-brand-text-mid">
-            Treat these tools as the measurement layer beneath the rest of the site, not a standalone novelty. A condition score earns its keep when it feeds a decision: a ration adjustment worked through the <Link href="/nutrition" className="text-brand-primary underline">nutrition reference</Link>, or a conversation about metabolic risk grounded in the <Link href="/health" className="text-brand-primary underline">health library</Link>. Every calculator here is source-cited, free, and built for owners and barn managers who would rather track a trend than trust a feeling.
+            Treat these tools as the measurement layer beneath the rest of the site, not a standalone novelty. A condition score earns its keep when it feeds a decision: a ration adjustment worked through the <Link href="/nutrition" className="text-brand-primary underline">nutrition reference</Link>, or a conversation about metabolic risk grounded in the <Link href="/health" className="text-brand-primary underline">health library</Link>. Two more tools round out the set for buyers and breeders: the <Link href="/tools/horse-height-converter" className="text-brand-primary underline">height converter</Link> turns hands into inches and centimetres without the usual hands.inches confusion, and the <Link href="/tools/horse-gestation-calculator" className="text-brand-primary underline">gestation calculator</Link> projects a mare&rsquo;s foaling date from her breeding date. Every calculator here is source-cited, free, and built for owners and barn managers who would rather track a trend than trust a feeling.
           </p>
         </div>
       </section>

@@ -132,7 +132,9 @@ export default function UvbDistanceCalculatorPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Hub' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
         { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
         { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
         { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },

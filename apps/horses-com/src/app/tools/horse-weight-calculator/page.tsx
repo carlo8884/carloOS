@@ -111,8 +111,8 @@ export default function HorseWeightCalculatorPage() {
       relatedLinks={[
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
-        { title: 'Forage Basics', href: '/nutrition/forage-basics' },
-        { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
+        { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Weight Calculator',

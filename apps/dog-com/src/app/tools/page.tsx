@@ -48,6 +48,18 @@ const TOOLS = [
     desc: 'My dog ate chocolate -- how much is dangerous? Estimate theobromine exposure by chocolate type, amount, and body weight against standard veterinary dose bands. Educational only: every result tells you to call your vet or poison control right now.',
     tag: 'Health',
   },
+  {
+    href: '/tools/dog-gestation-calculator',
+    title: 'Dog Pregnancy & Whelping Calendar',
+    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the normal 58-68 day window -- with the typical ultrasound, X-ray, and temperature-drop checkpoints mapped onto your calendar. Breeding info, not a diagnosis.',
+    tag: 'Breeding',
+  },
+  {
+    href: '/tools/dog-ideal-weight-calculator',
+    title: 'Dog Ideal Weight Calculator',
+    desc: 'How much should my dog weigh? Get the healthy adult weight range by breed (AKC-standard) plus an estimated ideal weight from your dog\'s body condition score on the 9-point WSAVA scale. Every result defers a target weight to your veterinarian.',
+    tag: 'Nutrition',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
