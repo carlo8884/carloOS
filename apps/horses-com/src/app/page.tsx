@@ -389,12 +389,17 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR ──────────────────────────────────────────────── */}
+      {/* Lightened (2026-06-11, Carlo phone review): was bg-brand-dark; now a
+          warm cream band so the screen directly under the hero photo reads
+          bright, not like a second dark masthead. Text + dividers flipped to
+          dark/brand-border for contrast; check accent darkened to brass
+          (accent on light) so it stays legible. */}
       <div
         className="px-container-sm sm:px-container py-4"
         style={{
-          background: 'var(--brand-dark)',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-          borderBottom: '1px solid rgba(255,255,255,0.05)',
+          background: 'var(--brand-surface)',
+          borderTop: '1px solid var(--brand-border)',
+          borderBottom: '1px solid var(--brand-border)',
         }}
       >
         <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2">
@@ -402,12 +407,12 @@ export default function HomePage() {
             <span
               key={item}
               className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
-              style={{ color: 'rgba(255,255,255,0.78)' }}
+              style={{ color: 'var(--brand-text-mid)' }}
             >
               <span
                 aria-hidden="true"
                 className="mr-2"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: 'var(--brand-accent)' }}
               >
                 ✓
               </span>
@@ -416,7 +421,7 @@ export default function HomePage() {
                 <span
                   aria-hidden="true"
                   className="hidden sm:inline mx-5 h-3 w-px"
-                  style={{ background: 'rgba(255,255,255,0.18)' }}
+                  style={{ background: 'var(--brand-border)' }}
                 />
               )}
             </span>
@@ -752,17 +757,21 @@ export default function HomePage() {
       </section>
 
       {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      {/* Lightened (2026-06-11, Carlo phone review): was bg-brand-dark; now a
+          warm cream strip so the page ends bright rather than capped by a dark
+          footer band. Attribution text + Unsplash link preserved (QC §1, TOS),
+          recolored to dark/mid + brass for contrast on the light surface. */}
       <aside
         className="relative z-10 px-container-sm sm:px-container py-6"
         style={{
-          background: 'var(--brand-dark)',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
+          background: 'var(--brand-surface)',
+          borderTop: '1px solid var(--brand-border)',
         }}
         aria-label="Photo credits"
       >
         <p
           className="mx-auto max-w-container-wide font-body text-2xs uppercase tracking-eyebrow"
-          style={{ color: 'rgba(255,255,255,0.6)' }}
+          style={{ color: 'var(--brand-text-mid)' }}
         >
           Hero & cornerstone photography: contributors on{' '}
           <a
@@ -770,7 +779,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             target="_blank"
             className="underline"
-            style={{ color: 'var(--brand-accent-light)' }}
+            style={{ color: 'var(--brand-accent)' }}
           >
             Unsplash
           </a>
