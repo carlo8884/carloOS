@@ -440,6 +440,13 @@ export default function HomePage() {
           what to change — the standard vets and nutritionists use.
         </p>
         <BodyConditionScoreCalculator />
+        <p className="text-sm text-brand-text-mid mt-7 max-w-2xl leading-relaxed">
+          More free calculators: estimate bodyweight with the{' '}
+          <Link href="/tools/horse-weight-calculator" className="text-brand-primary underline">horse weight calculator</Link>,
+          plan daily hay with the{' '}
+          <Link href="/tools/horse-feed-calculator" className="text-brand-primary underline">feed &amp; hay calculator</Link>,
+          or browse the full <Link href="/tools" className="text-brand-primary underline">tools hub</Link>.
+        </p>
       </section>
 
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
