@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide — The Hardy Cory Catfish | Fish.com', description: "Bronze corydoras are the hardiest, most available cory catfish — peaceful bottom-dwelling schoolers that need a group of 6+, sand substrate, and sinking food.", path: '/species/bronze-corydoras', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide', description: 'School size, substrate, barbel care, and breeding for Corydoras aeneus.', url: 'https://fish.com/species/bronze-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide', description: 'School size, substrate, barbel care, and breeding for Corydoras aeneus.', url: 'https://fish.com/species/bronze-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How many bronze corydoras should I keep together?',
+    answer:
+      'Keep at least six; more is better. Corydoras are intensely social and a single cory is a stressed, withdrawn animal that hides constantly, while a school of eight forages confidently across the open substrate in broad daylight. Because they are small (2.5–3 inches), even a modest community tank can house a proper group.',
+    answerText:
+      'Keep at least six bronze corydoras; more is better. They are intensely social, and a lone cory hides and stresses while a group of eight forages confidently in daylight.',
+  },
+  {
+    question: 'What substrate is best for bronze corydoras?',
+    answer:
+      'Smooth sand is ideal. Corydoras feed by sifting substrate through their mouths and out their gills, using sensitive barbels to locate food. Sharp gravel abrades and erodes those barbels, which can become infected and disappear, crippling the fish’s ability to feed. If gravel is used it must be rounded and fine.',
+    answerText:
+      'Smooth sand is ideal because corydoras sift substrate to feed. Sharp gravel erodes their sensitive barbels, leading to infection and loss of feeding ability; any gravel must be rounded and fine.',
+  },
+  {
+    question: 'Why do my bronze corydoras dash to the surface?',
+    answer:
+      'Corydoras are facultative air-breathers: they periodically dart to the surface, gulp a bubble of air, and absorb oxygen through their highly vascularized intestine. This is completely normal behavior. However, if every cory is racing up constantly and gasping, it can signal poor water quality or low dissolved oxygen — interpret frequency in context.',
+    answerText:
+      'It is normal behavior — corydoras gulp air at the surface and absorb oxygen through their intestine. Constant gasping by all of them, though, can signal poor water quality or low oxygen.',
+  },
+  {
+    question: 'What do bronze corydoras eat?',
+    answer:
+      'Despite the "cleaner fish" reputation, corydoras are not scavengers that survive on leftovers — they require their own food. Offer sinking pellets, wafers, frozen bloodworms, and live or frozen foods, ideally after the lights dim. They also accept virtually any sinking food.',
+    answerText:
+      'Corydoras are not scavengers and need their own food: sinking pellets, wafers, frozen bloodworms, and live or frozen foods, ideally after lights-out.',
+  },
+  {
+    question: 'How long do bronze corydoras live?',
+    answer:
+      'Bronze corydoras live 5–10 years in good conditions. They are hardy but not indestructible — sensitive to nitrate accumulation and to the salt and copper-based medications sometimes used for scaled fish, so dose any treatments conservatively in a tank containing corydoras.',
+    answerText:
+      'Bronze corydoras live 5-10 years. They are hardy but sensitive to nitrate and to salt and copper medications, which should be dosed conservatively.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BronzeCorydorasPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Bronze Corydoras Care Guide', subtitle: "Corydoras aeneus — the bronze cory is the most widely kept and forgiving member of the beloved Corydoras genus. A peaceful, armored bottom-dweller with an endearing habit of darting to the surface for a gulp of air, it works the substrate of community tanks in cheerful, social groups. Bronze and albino forms are the two most common varieties in the trade.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bronze Corydoras', href: '/species/bronze-corydoras' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Panda Corydoras", href: "/species/panda-corydoras", category: "Species Guide" }, { title: "Kuhli Loach", href: "/species/kuhli-loach", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,7 @@ export default function BronzeCorydorasPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-bronze-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A bronze corydoras in a home aquarium." priority />
 
         <h2>The Beginner Cory</h2>
@@ -52,6 +95,8 @@ export default function BronzeCorydorasPage() {
 
         <h2>Feeding and Breeding</h2>
         <p>Despite their reputation as "cleaner fish," corydoras are not scavengers that survive on leftovers — they require their own food. Offer sinking pellets, wafers, frozen bloodworms, and live or frozen foods after the lights dim. To trigger breeding, condition a group well and perform a large, cooler water change to simulate the rainy season. Females deposit adhesive eggs onto glass and plants in the classic "T-position" embrace. Eggs hatch in three to five days, and fry are easy to raise on powdered foods and microworms.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Bronze Corydoras — Tank Setup</div>
@@ -64,5 +109,6 @@ export default function BronzeCorydorasPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
+    </>
   )
 }

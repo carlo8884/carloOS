@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide — The Pea Puffer | Fish.com', description: "Dwarf pea puffers are inch-long freshwater puffers with huge personalities. They need live or frozen snails to wear down their teeth and dislike most tankmates.", path: '/species/dwarf-puffer', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide', description: 'Diet, teeth, temperament, and care for Carinotetraodon travancoricus, the pea puffer.', url: 'https://fish.com/species/dwarf-puffer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide', description: 'Diet, teeth, temperament, and care for Carinotetraodon travancoricus, the pea puffer.', url: 'https://fish.com/species/dwarf-puffer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Are dwarf puffers truly freshwater fish?',
+    answer:
+      'Yes. The dwarf, pygmy, or pea puffer (Carinotetraodon travancoricus) is a true freshwater pufferfish that needs no salt — a distinction worth emphasizing, because most "puffers" in the trade are brackish or marine species sold to beginners by mistake. It is native to the rivers and lakes of Kerala in southwestern India and spends its whole life in fresh water.',
+    answerText:
+      'Yes. The pea puffer is a true freshwater species native to Kerala, India, and needs no salt, unlike most brackish or marine puffers sold in the trade.',
+  },
+  {
+    question: 'What do dwarf puffers eat, and why are snails important?',
+    answer:
+      'Pea puffers have a beak of fused teeth that grows continuously. In the wild they wear it down by crushing snails and other hard-shelled invertebrates; in the aquarium a soft-food-only diet lets the beak overgrow until the fish can no longer eat. Provide a steady supply of small live snails (ramshorn, bladder, pond) to grind the teeth, plus meaty frozen and live foods like bloodworms, blackworms, daphnia, and brine shrimp. They almost universally refuse flakes and pellets.',
+    answerText:
+      'Their beak grows continuously and must be worn down by crushing small live snails (ramshorn, bladder, pond). Supplement with frozen and live meaty foods; they refuse flakes and pellets.',
+  },
+  {
+    question: 'Can dwarf puffers live with other fish?',
+    answer:
+      'It is risky. Pea puffers are territorial and notorious fin-nippers that harass slow or long-finned tankmates and may fight among themselves. Many experienced keepers run species-only tanks. The two reliable approaches are a single puffer in a heavily planted five-gallon tank, or a small group in a larger, densely planted tank with broken sightlines and a female-skewed ratio (roughly two or three females per male).',
+    answerText:
+      'It is risky — they are fin-nippers and often kept in species-only tanks. Keep a single puffer in a planted 5-gallon, or a group in a larger planted tank with broken sightlines and more females than males.',
+  },
+  {
+    question: 'What size tank does a dwarf puffer need?',
+    answer:
+      'About 5 gallons for a single puffer and 10 or more gallons for a small group, in both cases heavily planted. A dense forest of plants is essential to break up territories, provide hunting cover, and reduce stress.',
+    answerText:
+      'About 5 gallons for one puffer and 10+ gallons for a small group, heavily planted to break up territories and provide cover.',
+  },
+  {
+    question: 'What water conditions do dwarf puffers need?',
+    answer:
+      'Keep them at 74–82°F and pH 7.0–7.8. They are sensitive to poor water quality, and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical.',
+    answerText:
+      'Keep dwarf puffers at 74-82F and pH 7.0-7.8. Their high-protein diet creates a heavy bioload, so use strong filtration, light stocking, and frequent water changes.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function DwarfPufferPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Dwarf Puffer Care Guide', subtitle: "Carinotetraodon travancoricus — the dwarf, pygmy, or pea puffer is the smallest pufferfish in the world at barely an inch long, and unlike most of its relatives it lives entirely in fresh water. What it lacks in size it makes up for in personality: it hunts with eerie intelligence, follows its keeper around the glass, and demands a specialized snail-based diet.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Dwarf Puffer', href: '/species/dwarf-puffer' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Puffer Fish", href: "/species/puffer-fish", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,7 @@ export default function DwarfPufferPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-dwarf-puffer" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A dwarf puffer in a home aquarium." priority />
 
         <h2>A Tiny Predator With a Big Personality</h2>
@@ -51,6 +94,8 @@ export default function DwarfPufferPage() {
 
         <h2>Tank Setup and Water Quality</h2>
         <p>A dense forest of plants is essential — it breaks up territories, provides hunting cover, and reduces stress. Pea puffers are sensitive to poor water quality and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical. Telling sex apart is possible in mature fish: males develop a dark belly stripe and wrinkle-like lines behind the eyes, while females are rounder and more heavily spotted. Their intelligence, hunting behavior, and color-shifting moods reward keepers willing to meet their demanding needs.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Puffer — Tank Setup</div>
@@ -63,5 +108,6 @@ export default function DwarfPufferPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
+    </>
   )
 }

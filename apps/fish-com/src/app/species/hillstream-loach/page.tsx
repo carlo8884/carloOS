@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -11,14 +11,56 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide — Fast Flow, High O2 | Fish.com', description: 'Hillstream loaches need very high water flow and oxygenation — they come from fast-moving streams.', path: '/species/hillstream-loach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide', description: 'Fast-flowing water requirements, algae diet, and care for hillstream loaches (Sewellia, Beaufortia, Gastromyzon).', url: 'https://fish.com/species/hillstream-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide', description: 'Fast-flowing water requirements, algae diet, and care for hillstream loaches (Sewellia, Beaufortia, Gastromyzon).', url: 'https://fish.com/species/hillstream-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How much water flow do hillstream loaches need?',
+    answer:
+      'A great deal. They come from fast-flowing streams and their flattened bodies and enlarged paired fins are adaptations for clinging to rocks in strong current. Aim for a turnover rate of 10–15× tank volume per hour, distributed across multiple flow sources — a powerhead or circulation pump combined with the filter return, and ideally a wavemaker — to create turbulent, randomized current. In a standard low-flow community tank they stress, refuse food, and die within weeks.',
+    answerText:
+      'A great deal — aim for 10-15x tank volume per hour from multiple flow sources (powerhead plus filter return, ideally a wavemaker). Low-flow community tanks kill them within weeks.',
+  },
+  {
+    question: 'What temperature do hillstream loaches need?',
+    answer:
+      'Cool water, 65–75°F. Warm water holds less oxygen, and hillstream loaches in warm, low-flow tanks develop fatal hypoxia. Keep them below 75°F and pair them only with tankmates that tolerate the same cooler range.',
+    answerText:
+      'Cool water, 65-75F. Warm water holds less oxygen and warm, low-flow tanks cause fatal hypoxia. Keep below 75F with cool-tolerant tankmates.',
+  },
+  {
+    question: 'What do hillstream loaches eat?',
+    answer:
+      'They are biofilm and algae grazers that scrape the microscopic layer of bacteria, algae, and detritus from rocks, glass, and substrate. Like otocinclus, they need a mature, algae-established tank — a new or recently cleaned tank starves them. Supplement with algae wafers, blanched zucchini and cucumber, spirulina-based sinking foods, and Repashy gel pressed onto rocks and glass, since they feed best on surface-attached food.',
+    answerText:
+      'They graze biofilm and algae from rocks and glass and need a mature, algae-established tank. Supplement with algae wafers, blanched veg, spirulina foods, and gel food pressed onto surfaces.',
+  },
+  {
+    question: 'How big do hillstream loaches get?',
+    answer:
+      'Depending on the species — common aquarium genera include Sewellia, Beaufortia, and Gastromyzon — they reach about 1.5 to 3 inches. They are an intermediate-level fish because of their strict flow, oxygen, temperature, and biofilm requirements rather than their size.',
+    answerText:
+      'Depending on species (Sewellia, Beaufortia, Gastromyzon), they reach about 1.5-3 inches. They are intermediate-level due to strict flow, oxygen, and temperature needs.',
+  },
+  {
+    question: 'What fish can live with hillstream loaches?',
+    answer:
+      'Only tankmates that tolerate high flow and cooler temperatures: white cloud mountain minnows (an ideal match), celestial pearl danios, small rasboras that prefer cooler water, and other hillstream loaches, which coexist peacefully with conspecifics in most cases. Avoid tropical community fish needing 78–82°F and avoid fin-nippers.',
+    answerText:
+      'Only cool-, high-flow-tolerant fish: white cloud mountain minnows, celestial pearl danios, cool-water rasboras, and other hillstream loaches. Avoid warm-water tropicals and fin-nippers.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function HillstreamLoachPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Hillstream Loach Care Guide', subtitle: 'Hillstream loaches — genera including Sewellia, Beaufortia, Gastromyzon, and Pseudogastromyzon — are among the most visually striking small fish available for the hobby. Flattened bodies, intricate spotted patterns, and the unique ability to cling to glass and rocks in high-flow environments make them fascinating. They also have strict requirements that match their natural habitat: fast-moving, highly oxygenated, cool streams.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Hillstream Loach', href: '/species/hillstream-loach' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }, { title: "Kuhli Loach", href: "/species/kuhli-loach", category: "Species Guide" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -35,7 +77,7 @@ export default function HillstreamLoachPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-hillstream-loach" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A hillstream loach in a home aquarium." priority />
         <h2>Water Flow — The Non-Negotiable</h2>
         <p>Hillstream loaches come from fast-flowing streams and rivers in Southeast and East Asia where water rushes over rocky substrates. Their body shape is evolutionary adaptation to high-flow environments — the flattened profile, enlarged paired fins, and mouth structure all allow them to cling to smooth rocks in strong current while grazing biofilm. In a standard low-to-moderate flow community tank, hillstream loaches stress, refuse food, and die within weeks. The flow requirement is not an enrichment preference — it is a physiological necessity.</p>
@@ -52,6 +94,8 @@ export default function HillstreamLoachPage() {
 
         <h2>Compatible Tankmates</h2>
         <p>Tankmates must be able to tolerate the high flow and cooler temperatures that hillstream loaches require. This limits options significantly: white cloud mountain minnows (ideal — same temperature range, active schoolers), celestial pearl danios (tolerate cooler water, beautiful contrast), small rasboras that prefer moderate-cool temperatures, and other hillstream loaches (they coexist peacefully with conspecifics in most cases). Avoid tropical community fish that require 78-82°F — the temperature compromise will harm one group or the other. Avoid fin-nippers and aggressive species that target the hillstream's flowing fins.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Hillstream Loach — Tank Setup</div>
@@ -65,5 +109,6 @@ export default function HillstreamLoachPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }
