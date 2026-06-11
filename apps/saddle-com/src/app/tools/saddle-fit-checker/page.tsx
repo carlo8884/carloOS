@@ -11,6 +11,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { SaddleFitChecker } from './SaddleFitChecker'
 
@@ -188,6 +189,7 @@ export default function SaddleFitCheckerPage() {
             subtitle="Saddle-fit deep-dives. No spam."
             source="saddle-fit-checker"
           />
+          <CrossPortfolioCard currentSite="saddle-com" contentType="tool" variant="sidebar" />
         </>
       }
     >
