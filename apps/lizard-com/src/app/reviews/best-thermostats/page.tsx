@@ -40,6 +40,10 @@ export default function BestThermostatsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="rounded-xl p-5 mb-8" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>The pulse-proportional <strong>Herpstat 1</strong> is our overall pick — ±0.2°F per its published spec, and suited to heat mats and radiant heat panels. For bulbs, CHE, and other radiant bulb heat sources that need dimming, the <strong>Vivarium Electronics VE-100</strong>. For low-wattage heat mats on a budget, the on/off <strong>Inkbird ITC-306A</strong> under $30. Match the thermostat type to your heat source.</p>
+            </div>
             <div className="rounded-xl p-5 mb-8" style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)' }}>
               <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#C84A2A' }}>Thermostat Types — Match to Heat Source</div>
               <div className="grid sm:grid-cols-3 gap-3 text-xs">
