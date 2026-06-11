@@ -165,5 +165,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/tools/horse-feed-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-gestation-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-height-converter', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/horse-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/horse-size-for-rider', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
