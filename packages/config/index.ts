@@ -1012,6 +1012,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Colors', href: '/colors' },
       { label: 'Diet', href: '/diet' },
       { label: 'Ownership', href: '/ownership' },
+      { label: 'Reviews', href: '/reviews' },
       { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
@@ -1027,6 +1028,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Diet', href: '/diet' },
           { label: 'Ownership', href: '/ownership' },
           { label: 'First-Year Schedule', href: '/first-year-schedule' },
+          { label: 'Reviews', href: '/reviews' },
           { label: 'Tools', href: '/tools' },
         ],
       },
