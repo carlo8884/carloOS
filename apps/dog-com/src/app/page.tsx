@@ -292,7 +292,7 @@ export default function HomePage() {
             this absolute, full-height wrapper (the 'full-bleed' variant's
             w-screen/-ml-[50vw] transform fights an absolute parent). */}
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}
         >
           <StockImage
             manifestKey="dog-com:hero"
@@ -372,14 +372,14 @@ export default function HomePage() {
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10 px-container-sm sm:px-container pt-12 pb-16">
+        <div className="relative z-10 max-w-container-wide mx-auto px-container-sm sm:px-container pt-12 pb-16">
           <div className="flex items-center gap-2.5 mb-5">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
               Where are you starting?
             </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {OWNER_PATHS.map((path) => (
               <Link
                 key={path.href}
@@ -393,7 +393,7 @@ export default function HomePage() {
                 ].join(' ')}
               >
                 {/* Background image (fills the tile) */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={path.manifestKey}
                     fallbackKey="dog-com:hero"
@@ -407,8 +407,8 @@ export default function HomePage() {
                 <div
                   aria-hidden="true"
                   className={[
-                    'absolute inset-0 bg-gradient-to-t to-transparent',
-                    path.tone === 'urgent' ? 'from-brand-primary/85 via-black/45' : 'from-black/85 via-black/30',
+                    'absolute inset-0 bg-gradient-to-t',
+                    path.tone === 'urgent' ? 'from-brand-primary/95 via-black/65 to-black/25' : 'from-black/92 via-black/62 to-black/25',
                   ].join(' ')}
                 />
                 {/* Label content */}
@@ -477,20 +477,46 @@ export default function HomePage() {
 
       {/* ── LIVE TOOL — "which dog is right for you?" wizard (premium gate 3) ── */}
       <section className="bg-brand-white px-container-sm sm:px-container py-section border-b border-brand-border">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Try it · Breed match wizard
-          </span>
+        <div className="max-w-container mx-auto">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Try it · Breed match wizard
+            </span>
+          </div>
+          <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
+            Which dog actually fits your life?
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-8 max-w-2xl leading-relaxed">
+            Answer a few questions about your home, time, and experience — get matched to breeds
+            that fit, with the trade-offs spelled out. No email required.
+          </p>
+          {/* Two-column: the wizard is a contained column, not a full-bleed block,
+              with supporting context beside it (Carlo layout review 2026-06-11). */}
+          <div className="grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-12 items-start">
+            <div className="min-w-0">
+              <BreedMatchWizard />
+            </div>
+            <aside className="flex flex-col gap-5 lg:sticky lg:top-24 lg:self-start">
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">What you&apos;ll get</div>
+                <ul className="flex flex-col gap-2.5 text-sm text-brand-text-mid leading-snug list-none p-0 m-0">
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> Breeds matched to your home, time, and experience — not the most popular ones.</li>
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> The trade-offs spelled out: shedding, exercise, training difficulty, typical health risks.</li>
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> No email, no signup — your answers stay in your browser.</li>
+                </ul>
+              </div>
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Prefer to browse?</div>
+                <div className="flex flex-col gap-2 text-sm font-semibold">
+                  <Link href="/breeds" className="text-brand-primary no-underline hover:underline">All breed guides →</Link>
+                  <Link href="/breeds/match" className="text-brand-primary no-underline hover:underline">Open the full wizard →</Link>
+                  <Link href="/tools/puppy-weight-predictor" className="text-brand-primary no-underline hover:underline">Puppy weight predictor →</Link>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
-        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
-          Which dog actually fits your life?
-        </h2>
-        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
-          Answer a few questions about your home, time, and experience — get matched to breeds
-          that fit, with the trade-offs spelled out. No email required.
-        </p>
-        <BreedMatchWizard />
       </section>
 
       {/* ── TOOLS & CALCULATORS ────────────────────────────────────────── */}
