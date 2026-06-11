@@ -434,18 +434,20 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR — softened (no "expert", no "reviewed") ──────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
-        {[
-          'Research-based health content',
-          '50+ breed profiles with hereditary risk data',
-          'Products compared, not paid placements',
-          'Editorial standards in public',
-        ].map((item, i) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
-            {i > 0 && <span className="text-brand-primary/30">·</span>}
-            {item}
-          </span>
-        ))}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3">
+        <div className="max-w-container mx-auto flex flex-wrap gap-x-6 gap-y-1.5 items-center">
+          {[
+            'Research-based health content',
+            '50+ breed profiles with hereditary risk data',
+            'Products compared, not paid placements',
+            'Editorial standards in public',
+          ].map((item, i) => (
+            <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
+              {i > 0 && <span className="text-brand-primary/30">·</span>}
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* ── PUPPY LEAD-MAGNET BANNER (preserved) ───────────────────────── */}
@@ -521,6 +523,7 @@ export default function HomePage() {
 
       {/* ── TOOLS & CALCULATORS ────────────────────────────────────────── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-center gap-2.5 mb-3">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -611,6 +614,7 @@ export default function HomePage() {
             </span>
           </Link>
         </div>
+        </div>
       </section>
 
       {/* ── BREED-SPECIFIC RISK CENTER — zero-placeholder treatment ───────
@@ -625,6 +629,7 @@ export default function HomePage() {
           tiles (QC §1). Promote the text breeds back to photo tiles once their
           keys sync. */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -723,10 +728,12 @@ export default function HomePage() {
           Browse all breeds
           <IconArrowRight className="w-3.5 h-3.5" />
         </Link>
+        </div>
       </section>
 
       {/* ── WHEN TO CALL THE VET (decision-tree CTAs) ──────────────────── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section text-white">
+        <div className="max-w-container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-12 items-center mb-8">
           {/* Symptom hero image */}
           <div className={`order-2 lg:order-1 rounded-xl overflow-hidden ring-1 ring-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.4)] ${FILL_IMAGE}`}>
@@ -776,10 +783,12 @@ export default function HomePage() {
           Find a vet near you
           <IconArrowRight />
         </Link>
+        </div>
       </section>
 
       {/* ── FOOD & WEIGHT TOOLS — with nutrition image ─────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -836,10 +845,12 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* ── PUPPY + TRAINING ── dark anchor section for contrast rhythm ── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -900,10 +911,12 @@ export default function HomePage() {
             </div>
           </Link>
         </div>
+        </div>
       </section>
 
       {/* ── INSURANCE & COST PLANNING — with product/compare image ─────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -963,6 +976,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* ── EMAIL CAPTURE — "This week for your dog" ───────────────────────
@@ -970,24 +984,27 @@ export default function HomePage() {
           so we don't ship an empty/inactive capture surface. */}
       {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
         <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
-          <EmailCapture
-            variant="section"
-            siteId="dog-com"
-            title="This week for your dog"
-            subtitle="One short Tuesday email: what to do this week (by life stage), one product worth the money, one trap to avoid."
-            source="homepage"
-            ctaText="Get the weekly"
-            perks={[
-              'By life stage (puppy / adult / senior)',
-              'Sourced — no paid placements',
-              'Unsubscribe anytime',
-            ]}
-          />
+          <div className="max-w-container mx-auto">
+            <EmailCapture
+              variant="section"
+              siteId="dog-com"
+              title="This week for your dog"
+              subtitle="One short Tuesday email: what to do this week (by life stage), one product worth the money, one trap to avoid."
+              source="homepage"
+              ctaText="Get the weekly"
+              perks={[
+                'By life stage (puppy / adult / senior)',
+                'Sourced — no paid placements',
+                'Unsubscribe anytime',
+              ]}
+            />
+          </div>
         </section>
       )}
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
+        <div className="max-w-container mx-auto">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -1015,6 +1032,7 @@ export default function HomePage() {
               FAQ →
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </>
