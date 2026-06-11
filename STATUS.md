@@ -3,7 +3,12 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-10 (COO launch-readiness work block — see "COO work block" below)
+**Last updated:** 2026-06-11 (COO revenue-activation + SEO/GEO night wave — PRs #688, #689)
+
+> **COO revenue-activation + SEO/GEO night wave (2026-06-11 — PRs #688 + #689 merged):**
+> **#688 (revenue):** Vets breed×state funnel carrier CTAs 404'd across ~2,912 pages (`/pet-insurance/${slug}` route never existed) — re-pointed to `/go/${vendor}/breed-${breed}-${state}` with disclosure. **Affiliate activation turnkey** shipped (`ops/handoffs/2026-06-11-coo-to-carlo-affiliate-activation-turnkey.md`): ranked account order (Amazon → Impact → ShareASale → CJ → Skimlinks) + per-site env-var lists + **Gap E1: `AFF_AMAZON_BRAND_TAG`/`AFF_CHEWY_BRAND_TAG` are separate vars carrying most product CTAs — set BOTH or CTAs earn $0**. Ferret food-evaluator + tools hub now funnel to `/ferret-starter-kit`. Revenue-path QA verdict: all 6 candidates revenue-path-complete (zero /go 404s, zero disclosure violations, zero clinical-page CTAs).
+> **#689 (SEO/GEO):** 36 indexable pages restored to sitemaps (all 3 new tools + 33-page horses racing cluster were crawl-invisible) + **new `scripts/ci/sitemap-drift.mjs` gate wired into QC workflow**. Stale 2025→2026 guide-year refresh on dog/lizard money pages. ItemList ×12 surfaces, Product (rating-less) on telehealth + 3 dog products, content-aware FAQPage ×~17 pages, HowTo ×2 training pages, TL;DR/verdict tables on funnels + grain-free. Link graph: ferret starter-kit first homepage inbound, heartworm de-orphaned, lizard health-hub routing, keyworded lizard/petfood homepage titles. Monetization handoff: vets funnel primary CTAs exit to dog.com (`2026-06-11-coo-to-monetization-vets-funnel-offdomain-cta.md`).
+> **Carlo unlock (no code needed):** Amazon Associates + Impact.com accounts → env vars per the turnkey doc = portfolio starts earning.
 
 > **COO launch-readiness work block (2026-06-10 — PR #364 omnibus):**
 > **4 product tools shipped + QA-verified** — Vets Insurance Coverage Finder (`/tools/insurance-finder`), Dog "Is this a dog emergency?" triage (`/tools/is-this-a-dog-emergency`), PetFood Compare Pet Foods (`/tools/compare-pet-foods`), Dog Breed Finder honesty refactor (killed `matchPercent`).
