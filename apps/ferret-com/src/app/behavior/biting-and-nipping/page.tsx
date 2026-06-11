@@ -11,6 +11,7 @@ import {
   DropCap,
   StockImage,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -137,6 +138,7 @@ export default function FerretBitingNippingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-biting-nipping"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

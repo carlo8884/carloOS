@@ -1214,6 +1214,8 @@ export function themeToCSS(theme: SiteTheme): string {
 export type ContentType =
   | 'health'
   | 'nutrition'
+  | 'diet'
+  | 'behavior'
   | 'breed'
   | 'species'
   | 'condition'

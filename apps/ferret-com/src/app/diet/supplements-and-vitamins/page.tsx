@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -82,6 +82,7 @@ export default function SupplementsAndVitaminsPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-supplements-and-vitamins"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       

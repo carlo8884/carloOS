@@ -13,6 +13,7 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -136,6 +137,7 @@ export default function LeashAndHarnessTrainingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-leash-harness"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

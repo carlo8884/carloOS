@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,6 +131,7 @@ export default function FerretDeadSleepPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-dead-sleep"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
