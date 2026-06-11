@@ -136,6 +136,15 @@ const ENTRY_TILES: Array<{
     flagship: true,
   },
   {
+    eyebrow: 'Analysis-Led Reviews',
+    title: 'Best Food Picks',
+    desc: 'Cat, senior dog, and puppy roundups ranked on AAFCO, protein, and taurine — not a shopping list.',
+    href: '/reviews',
+    // TODO(visual): dedicated petfood-com:reviews-hero key; using category-brands until then.
+    manifestKey: 'petfood-com:category-brands',
+    imageAlt: 'Pet food evaluated through a nutrition-analysis lens',
+  },
+  {
     eyebrow: 'Ingredient Risk',
     title: 'Grain-Free & DCM',
     desc: 'What the FDA CVM record actually says. Association, not causation.',
