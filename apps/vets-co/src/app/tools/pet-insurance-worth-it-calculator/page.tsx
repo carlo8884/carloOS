@@ -11,6 +11,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { PetInsuranceWorthItCalculator } from '../../../components/tools/PetInsuranceWorthItCalculator'
 
@@ -163,6 +164,7 @@ export default function PetInsuranceWorthItPage() {
               { label: 'Pet Insurance Education', href: '/insurance' },
             ]}
           />
+          <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"

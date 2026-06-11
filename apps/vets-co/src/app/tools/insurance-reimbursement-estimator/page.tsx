@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
 
@@ -151,6 +152,7 @@ export default function InsuranceReimbursementEstimatorPage() {
               { label: 'Emergency Triage Card', href: '/emergency-triage-card' },
             ]}
           />
+          <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"
