@@ -17,6 +17,7 @@ const GUIDES = [
   { category: 'The Basics', items: [{ title: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works', badge: 'Start Here' }, { title: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { title: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' }] },
   { category: 'Choosing & Timing', items: [{ title: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' }, { title: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { title: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }] },
   { category: 'Risk & Cost', items: [{ title: 'Breed-Specific Insurance Risk', href: '/insurance/breed-specific-risk' }, { title: 'Wellness Plans vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }] },
+  { category: 'Common Questions', items: [{ title: 'Pet Insurance Questions, Answered', href: '/insurance/questions', badge: 'Q&A Hub' }, { title: 'Is Pet Insurance Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { title: 'How Much Does Pet Insurance Cost?', href: '/insurance/questions/how-much-does-pet-insurance-cost' }] },
 ]
 
 const insuranceGuides = GUIDES.flatMap((s) => s.items)
