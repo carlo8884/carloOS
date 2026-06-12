@@ -64,6 +64,36 @@ export interface Breed {
   firstTimeOwnerFriendly: boolean
   groomingLevel: GroomingLevel
   knownGeneticTests?: string[]
+  /**
+   * Editorial breed × pet-insurance profile. Present ONLY for breeds with
+   * clear, well-documented hereditary cost drivers (peer-reviewed / OFA /
+   * breed-club / VCA literature). Drives the /breeds/<slug>/insurance spoke.
+   * Conditions are framed as PREDISPOSITIONS, not certainties (QC §1).
+   * Cost ranges are realistic US specialty/GP treatment bands, not invented.
+   * If a breed lacks defensible data, leave this undefined — no page is built.
+   */
+  insuranceProfile?: BreedInsuranceProfile
+}
+
+/** Honest, sourced risk framing for the breed × insurance spoke. */
+export type InsuranceRiskTier = 'higher' | 'average' | 'lower'
+
+export interface BreedInsuranceCondition {
+  /** Condition name as an owner would search it. */
+  name: string
+  /** Realistic US treatment cost band (GP + specialty). Range, not a point. */
+  typicalCostRange: string
+  /** One-line nuance: pre-existing exclusion risk, chronicity, bilateral, etc. */
+  note: string
+}
+
+export interface BreedInsuranceProfile {
+  /** 2–4 of the breed's best-documented hereditary cost drivers. */
+  topConditions: BreedInsuranceCondition[]
+  /** Honest tier relative to the average dog — not a scare label. */
+  riskTier: InsuranceRiskTier
+  /** Breed-specific enrollment-timing guidance (e.g. before BOAS/murmur shows). */
+  enrollmentNote: string
 }
 
 /**
@@ -2157,4 +2187,449 @@ export function groupBreedsBySize(): Record<SizeCategory, Breed[]> {
     out[breed.sizeCategory].push(breed)
   }
   return out
+}
+
+// ─────────────────────────────────────────────────────────────────────────
+// Breed × pet-insurance profiles (editorial spoke: /breeds/<slug>/insurance)
+//
+// Keyed by the breeds.ts slug. Present ONLY for breeds with clear,
+// well-documented hereditary cost drivers. Sources: OFA/CHIC prevalence data,
+// AKC parent-club priority panels, VCA/Merck veterinary references, and the
+// published veterinary literature (e.g. Cavalier MVD breed-club cardiology
+// guidance; brachycephalic BOAS literature; chondrodystrophic IVDD studies).
+//
+// Trust rules (QC §1):
+//   - Conditions are PREDISPOSITIONS, not certainties.
+//   - Cost ranges are realistic US GP/specialty bands — not invented, and
+//     deliberately given as ranges, not point figures.
+//   - No scaremongering, no "guaranteed", no superlatives.
+//   - If a breed's data is not defensible, it is NOT listed here.
+// ─────────────────────────────────────────────────────────────────────────
+const BREED_INSURANCE_PROFILES: Record<string, BreedInsuranceProfile> = {
+  'french-bulldog': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'BOAS, skin, and eye signs frequently appear young. A single vet note about noisy breathing or a scratched cornea before coverage starts can make that whole category a permanent exclusion — so enrolling before the first breathing complaint is the biggest factor in whether coverage actually helps.',
+    topConditions: [
+      {
+        name: 'BOAS (airway surgery — nares & soft palate)',
+        typicalCostRange: '$2,000–$6,000+',
+        note: 'Often needed young; counts as pre-existing if breathing signs predate coverage.',
+      },
+      {
+        name: 'IVDD (intervertebral disc disease)',
+        typicalCostRange: '$3,000–$8,000+ (surgery)',
+        note: 'Chondrodystrophic-breed risk; recurrence and related-site exclusions are common.',
+      },
+      {
+        name: 'Skin-fold & recurrent ear infections',
+        typicalCostRange: '$200–$600 per episode',
+        note: 'Chronic and recurring — the wellness-vs-illness coverage line matters here.',
+      },
+      {
+        name: 'Corneal ulcers / eye conditions',
+        typicalCostRange: '$300–$2,500',
+        note: 'Brachycephalic eye shape predisposes; some cases need surgery.',
+      },
+    ],
+  },
+  'cavalier-king-charles': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'This is the breed where "insure as a puppy" matters most. Mitral valve murmurs can appear relatively early, and once a murmur is on the record the lifelong cardiac costs are typically treated as pre-existing. The window to insure before a murmur is documented is narrow.',
+    topConditions: [
+      {
+        name: 'Myxomatous mitral valve disease (MVD)',
+        typicalCostRange: '$300–$1,500/yr ongoing + episodes',
+        note: 'Breed is reported far more likely than average; a murmur noted before coverage = exclusion.',
+      },
+      {
+        name: 'Syringomyelia / Chiari-like malformation',
+        typicalCostRange: '$2,000–$8,000+ (MRI + management)',
+        note: 'Neurological; diagnostics alone (MRI) are expensive.',
+      },
+      {
+        name: 'Hip dysplasia',
+        typicalCostRange: '$1,500–$6,000',
+        note: 'Orthopedic; watch for bilateral / related-site exclusion language.',
+      },
+      {
+        name: 'Hereditary eye conditions (retinal, cataract)',
+        typicalCostRange: '$300–$3,000',
+        note: 'Parent-club screening is relevant; some cases progress to surgery.',
+      },
+    ],
+  },
+  'golden-retriever': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Goldens carry one of the best-documented lifetime cancer burdens of any breed (the Morris Animal Foundation Golden Retriever Lifetime Study tracks this). Because cancer treatment can run into five figures, an annual-limit policy can be exhausted quickly — many Golden owners weigh an unlimited-annual-limit plan and enroll before any mass or lameness is recorded.',
+    topConditions: [
+      {
+        name: 'Cancer (hemangiosarcoma, lymphoma, mast cell)',
+        typicalCostRange: '$5,000–$20,000+ (work-up + treatment)',
+        note: 'High lifetime incidence in the breed; annual limits can be exhausted fast.',
+      },
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Orthopedic; bilateral surgeries possible — check related-site exclusions.',
+      },
+      {
+        name: 'Atopic dermatitis / chronic skin & ear disease',
+        typicalCostRange: '$200–$2,000/yr',
+        note: 'Lifelong management; allergy work-ups and medicated care add up.',
+      },
+      {
+        name: 'Hypothyroidism',
+        typicalCostRange: '$300–$800/yr',
+        note: 'Manageable but lifelong medication and monitoring once diagnosed.',
+      },
+    ],
+  },
+  'labrador-retriever': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Labs are large, active, and orthopedically busy — hip and elbow dysplasia and cranial cruciate ligament (CCL) tears are common. Because a CCL tear in one knee raises the odds of the other knee following, the way a policy handles bilateral/related conditions matters a lot for this breed. Enroll before any limp is in the record.',
+    topConditions: [
+      {
+        name: 'Cranial cruciate ligament (CCL) rupture',
+        typicalCostRange: '$3,500–$6,000 per knee (TPLO)',
+        note: 'Frequently bilateral over time — confirm the second knee is not excluded.',
+      },
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Orthopedic; OFA-tested parents lower but do not eliminate risk.',
+      },
+      {
+        name: 'Obesity-linked osteoarthritis',
+        typicalCostRange: '$200–$1,500/yr',
+        note: 'Lifelong management; weight control is the single biggest modifier.',
+      },
+      {
+        name: 'Exercise-induced collapse / laryngeal paralysis (older Labs)',
+        typicalCostRange: '$500–$5,000',
+        note: 'Diagnostics plus, in some cases, surgery for laryngeal paralysis.',
+      },
+    ],
+  },
+  'german-shepherd': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Two breed-defining risks shape coverage for a German Shepherd: hip/elbow dysplasia and degenerative myelopathy (DM), a progressive spinal-cord disease. DM care is supportive and long-running, so a policy without a per-condition or annual cap that gets exhausted matters. Enrolling before any gait change is noted is the key.',
+    topConditions: [
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Orthopedic; one of the most documented dysplasia breeds.',
+      },
+      {
+        name: 'Degenerative myelopathy (DM)',
+        typicalCostRange: '$1,000–$4,000+ over time (supportive)',
+        note: 'Progressive; care is long-running rather than a single procedure.',
+      },
+      {
+        name: 'Gastric dilatation-volvulus (bloat / GDV)',
+        typicalCostRange: '$2,000–$7,500 (emergency surgery)',
+        note: 'Deep-chested-breed emergency; minutes matter and costs are sudden.',
+      },
+      {
+        name: 'Exocrine pancreatic insufficiency (EPI)',
+        typicalCostRange: '$1,000–$3,000/yr (lifelong enzymes)',
+        note: 'Breed-associated; manageable but a permanent recurring cost.',
+      },
+    ],
+  },
+  bulldog: {
+    riskTier: 'higher',
+    enrollmentNote:
+      'The English Bulldog shares the brachycephalic airway, skin-fold, and eye risks of the French Bulldog, plus heavy orthopedic loading. Many of these signs are visible young, so the pre-existing line is unforgiving — enroll before the first breathing, skin, or joint note appears.',
+    topConditions: [
+      {
+        name: 'BOAS (brachycephalic airway syndrome)',
+        typicalCostRange: '$2,000–$6,000+ (surgery)',
+        note: 'Often needed young; pre-existing if signs predate coverage.',
+      },
+      {
+        name: 'Hip dysplasia & cruciate disease',
+        typicalCostRange: '$1,500–$6,000',
+        note: 'Heavy, low-slung build loads the joints; bilateral risk applies.',
+      },
+      {
+        name: 'Skin-fold dermatitis (face, tail pocket)',
+        typicalCostRange: '$200–$700 per episode',
+        note: 'Chronic and recurring; the illness-vs-wellness line matters.',
+      },
+      {
+        name: 'Cherry eye / entropion',
+        typicalCostRange: '$300–$1,500 per eye',
+        note: 'Often surgical; commonly seen young.',
+      },
+    ],
+  },
+  boxer: {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Boxers carry a notably high cancer burden plus a breed-specific heart condition, arrhythmogenic right ventricular cardiomyopathy (Boxer cardiomyopathy / ARVC). Both are expensive and can appear in mid-life, so enrolling before any mass, fainting episode, or arrhythmia is documented protects the most.',
+    topConditions: [
+      {
+        name: 'Cancer (mast cell tumors, lymphoma, brain)',
+        typicalCostRange: '$3,000–$15,000+',
+        note: 'High breed incidence; treatment can exhaust annual limits.',
+      },
+      {
+        name: 'Boxer cardiomyopathy (ARVC)',
+        typicalCostRange: '$1,000–$3,000/yr (monitoring + meds)',
+        note: 'Lifelong cardiology; a recorded arrhythmia before coverage is excluded.',
+      },
+      {
+        name: 'Hip dysplasia & cruciate disease',
+        typicalCostRange: '$1,500–$6,000',
+        note: 'Orthopedic; bilateral risk over time.',
+      },
+      {
+        name: 'Brachycephalic airway / heat intolerance',
+        typicalCostRange: '$1,500–$5,000 (if surgical)',
+        note: 'Moderately brachycephalic; airway grading is worth discussing.',
+      },
+    ],
+  },
+  dachshund: {
+    riskTier: 'higher',
+    enrollmentNote:
+      'The Dachshund is the textbook IVDD breed — its long-backed, chondrodystrophic build means intervertebral disc disease is the dominant cost driver, and episodes can recur at different spinal sites. Enroll before any back, neck, or hind-limb sign is recorded, and read the related-site exclusion language carefully.',
+    topConditions: [
+      {
+        name: 'IVDD (intervertebral disc disease)',
+        typicalCostRange: '$3,000–$8,000+ (surgery)',
+        note: 'The breed-defining risk; recurrence and related-site exclusions common.',
+      },
+      {
+        name: 'Patellar luxation',
+        typicalCostRange: '$1,500–$4,000 (surgical)',
+        note: 'Orthopedic; can be bilateral.',
+      },
+      {
+        name: 'Dental disease (small-breed crowding)',
+        typicalCostRange: '$400–$1,500 per cleaning/extractions',
+        note: 'Recurring; often a wellness-vs-illness coverage nuance.',
+      },
+      {
+        name: 'Progressive retinal atrophy / eye conditions',
+        typicalCostRange: '$300–$2,000',
+        note: 'Hereditary screening relevant in some lines.',
+      },
+    ],
+  },
+  rottweiler: {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Rottweilers combine a high cancer burden — including osteosarcoma, an aggressive bone cancer — with significant orthopedic risk. Osteosarcoma in particular is expensive and time-sensitive, so enrolling before any lameness or mass appears, ideally with a higher annual limit, is the prudent path.',
+    topConditions: [
+      {
+        name: 'Osteosarcoma & other cancers',
+        typicalCostRange: '$5,000–$15,000+',
+        note: 'Aggressive bone cancer over-represented in the breed; costs escalate fast.',
+      },
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Orthopedic; large frame loads the joints.',
+      },
+      {
+        name: 'Cranial cruciate ligament rupture',
+        typicalCostRange: '$3,500–$6,000 per knee',
+        note: 'Frequently bilateral — check related-site exclusions.',
+      },
+      {
+        name: 'Subaortic stenosis (heart)',
+        typicalCostRange: '$500–$3,000 (work-up + monitoring)',
+        note: 'Congenital cardiac risk; a recorded murmur before coverage is excluded.',
+      },
+    ],
+  },
+  'great-dane': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'For a giant breed like the Great Dane, gastric dilatation-volvulus (bloat) and dilated cardiomyopathy are the defining risks — both sudden, both expensive. Bloat is a true emergency where costs land all at once, so coverage in place before any episode, and before a heart murmur is noted, is what counts.',
+    topConditions: [
+      {
+        name: 'Gastric dilatation-volvulus (bloat / GDV)',
+        typicalCostRange: '$2,000–$7,500 (emergency surgery)',
+        note: 'Classic giant-breed emergency; costs are sudden and large.',
+      },
+      {
+        name: 'Dilated cardiomyopathy (DCM)',
+        typicalCostRange: '$1,000–$3,000/yr (cardiology + meds)',
+        note: 'Lifelong; a recorded murmur/arrhythmia before coverage is excluded.',
+      },
+      {
+        name: 'Hip dysplasia & developmental orthopedic disease',
+        typicalCostRange: '$1,500–$7,000',
+        note: 'Giant-frame growth issues; bilateral risk.',
+      },
+      {
+        name: 'Wobbler syndrome (cervical spondylomyelopathy)',
+        typicalCostRange: '$3,000–$8,000+ (if surgical)',
+        note: 'Neurological; diagnostics (MRI) alone are costly.',
+      },
+    ],
+  },
+  'bernese-mountain-dog': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'The Bernese Mountain Dog carries one of the highest cancer burdens of any breed, with histiocytic sarcoma notably over-represented, alongside giant-breed orthopedic risk. Because cancer treatment can run high and start in mid-life, enrolling early with a generous annual limit is the common-sense approach.',
+    topConditions: [
+      {
+        name: 'Cancer (histiocytic sarcoma, lymphoma, mast cell)',
+        typicalCostRange: '$5,000–$20,000+',
+        note: 'Very high breed incidence; treatment can exhaust annual limits.',
+      },
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Orthopedic; large frame and rapid growth contribute.',
+      },
+      {
+        name: 'Cruciate ligament disease',
+        typicalCostRange: '$3,500–$6,000 per knee',
+        note: 'Can be bilateral; check related-site exclusions.',
+      },
+      {
+        name: 'Degenerative / inflammatory joint disease',
+        typicalCostRange: '$200–$1,500/yr',
+        note: 'Lifelong management as the dog ages.',
+      },
+    ],
+  },
+  'doberman-pinscher': {
+    riskTier: 'higher',
+    enrollmentNote:
+      'Dilated cardiomyopathy (DCM) is the defining Doberman risk — the breed is strongly over-represented, and the disease can be silent until a sudden event. A von Willebrand bleeding-disorder predisposition compounds surgical risk. Coverage in place before any murmur, arrhythmia, or bleeding episode is recorded is the priority.',
+    topConditions: [
+      {
+        name: 'Dilated cardiomyopathy (DCM)',
+        typicalCostRange: '$1,000–$3,000/yr (cardiology, Holter, meds)',
+        note: 'Strongly breed-associated; a recorded abnormality before coverage is excluded.',
+      },
+      {
+        name: 'Von Willebrand disease (bleeding disorder)',
+        typicalCostRange: '$500–$3,000 (work-up + surgical management)',
+        note: 'Hereditary; raises the cost and risk of any surgery.',
+      },
+      {
+        name: 'Cervical spondylomyelopathy (Wobbler)',
+        typicalCostRange: '$3,000–$8,000+ (if surgical)',
+        note: 'Neurological; MRI diagnostics are expensive.',
+      },
+      {
+        name: 'Hip dysplasia',
+        typicalCostRange: '$1,500–$6,000',
+        note: 'Orthopedic; OFA-tested parents lower but do not eliminate risk.',
+      },
+    ],
+  },
+  'cocker-spaniel': {
+    riskTier: 'average',
+    enrollmentNote:
+      'The Cocker Spaniel\'s costs tend to be chronic rather than catastrophic — recurring ear infections and a range of hereditary eye conditions dominate. Because these often start young and recur, enrolling before the first ear or eye note keeps those categories from becoming pre-existing exclusions.',
+    topConditions: [
+      {
+        name: 'Chronic / recurrent otitis (ear infections)',
+        typicalCostRange: '$200–$800 per episode',
+        note: 'Heavy ears predispose; recurring care adds up and may be excluded if pre-existing.',
+      },
+      {
+        name: 'Hereditary eye disease (glaucoma, cataract, PRA, cherry eye)',
+        typicalCostRange: '$300–$3,000+',
+        note: 'Several breed-screened conditions; some need surgery.',
+      },
+      {
+        name: 'Autoimmune conditions (e.g. AIHA)',
+        typicalCostRange: '$2,000–$6,000 (crisis + management)',
+        note: 'Breed-associated; episodes are expensive and can recur.',
+      },
+      {
+        name: 'Patellar luxation / hip dysplasia',
+        typicalCostRange: '$1,500–$4,000',
+        note: 'Orthopedic; bilateral risk in some lines.',
+      },
+    ],
+  },
+  newfoundland: {
+    riskTier: 'higher',
+    enrollmentNote:
+      'A giant working breed, the Newfoundland faces subaortic stenosis (a congenital heart condition), giant-breed orthopedics, and bloat. The cardiac risk is congenital, so a murmur found at an early exam can become a permanent exclusion — enrolling as a puppy, before that first cardiac note, matters here.',
+    topConditions: [
+      {
+        name: 'Subaortic stenosis (SAS)',
+        typicalCostRange: '$500–$3,000+ (work-up, monitoring)',
+        note: 'Congenital cardiac risk; a murmur noted before coverage is excluded.',
+      },
+      {
+        name: 'Hip & elbow dysplasia',
+        typicalCostRange: '$1,500–$7,000 (surgical)',
+        note: 'Giant-frame orthopedic load; bilateral risk.',
+      },
+      {
+        name: 'Gastric dilatation-volvulus (bloat / GDV)',
+        typicalCostRange: '$2,000–$7,500 (emergency surgery)',
+        note: 'Deep-chested-breed emergency; sudden, large cost.',
+      },
+      {
+        name: 'Cystinuria (bladder stones)',
+        typicalCostRange: '$800–$3,000 (recurrent management)',
+        note: 'Breed-associated; can recur and need repeat treatment.',
+      },
+    ],
+  },
+  'boston-terrier': {
+    riskTier: 'average',
+    enrollmentNote:
+      'The Boston Terrier is a smaller brachycephalic breed: airway and eye issues, plus patellar luxation, are the main drivers. Many show young, so enrolling before the first breathing or eye note keeps the brachycephalic category from being excluded as pre-existing.',
+    topConditions: [
+      {
+        name: 'Brachycephalic airway syndrome (BOAS)',
+        typicalCostRange: '$1,500–$5,000 (if surgical)',
+        note: 'Milder than some flat-faced breeds but still a pre-existing-risk category.',
+      },
+      {
+        name: 'Corneal ulcers / eye conditions',
+        typicalCostRange: '$300–$2,500',
+        note: 'Prominent eyes predispose; some cases are surgical.',
+      },
+      {
+        name: 'Patellar luxation',
+        typicalCostRange: '$1,500–$4,000 (surgical)',
+        note: 'Orthopedic; can be bilateral.',
+      },
+      {
+        name: 'Hemivertebrae / spinal issues',
+        typicalCostRange: '$1,000–$6,000 (if symptomatic)',
+        note: 'Screw-tail-associated; most are incidental but some progress.',
+      },
+    ],
+  },
+}
+
+/**
+ * Slugs (in breeds.ts terms) that have an editorial breed × insurance spoke.
+ * Source of truth for generateStaticParams, the hub, and the sitemap list.
+ */
+export const BREED_INSURANCE_SLUGS: readonly string[] =
+  Object.keys(BREED_INSURANCE_PROFILES)
+
+/** Look up a breed's insurance profile by its breeds.ts slug. */
+export function getBreedInsuranceProfile(
+  slug: string,
+): BreedInsuranceProfile | undefined {
+  return BREED_INSURANCE_PROFILES[slug]
+}
+
+/** Breeds (full objects) that have an insurance spoke, in display order. */
+export function getBreedsWithInsuranceProfile(): Breed[] {
+  return BREED_INSURANCE_SLUGS.map((s) => getBreedBySlug(s)).filter(
+    (b): b is Breed => b !== undefined,
+  )
 }

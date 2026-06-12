@@ -194,6 +194,7 @@ export default function VetsPetInsurancePage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'Pet Insurance Education Hub', href: '/insurance' },
+              { label: 'Pet Insurance Questions, Answered', href: '/insurance/questions' },
               { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' },
               { label: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' },
               { label: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' },

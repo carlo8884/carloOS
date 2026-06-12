@@ -187,6 +187,7 @@ export default function GoldenRetrieverBreedPage() {
           </article>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Golden Retriever?', href: '/breeds/golden-retriever/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="Golden Retriever Health Deep-Dive" links={[
               { label: 'Golden Retriever Health Issues & Screenings', href: '/breeds/golden-retriever/health' },
             ]} />

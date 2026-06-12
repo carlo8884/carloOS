@@ -32,6 +32,18 @@ const TOOLS = [
     tag: 'Most popular',
   },
   {
+    href: '/tools/substrate-calculator',
+    title: 'Aquarium Substrate Calculator',
+    desc: 'How much gravel, sand, or aqua soil do you need? Enter tank length, width, and depth to get substrate volume in liters and weight in lbs and kg, plus a buy-10%-extra rule.',
+    tag: 'New tank setup',
+  },
+  {
+    href: '/tools/pond-volume-calculator',
+    title: 'Pond Volume Calculator',
+    desc: 'Koi or garden pond volume in gallons and liters. Rectangular, circular, and oval shapes, with an ~85% factor for irregular ponds.',
+    tag: 'Ponds',
+  },
+  {
     href: '/tools/stocking-calculator',
     title: 'Stocking Calculator',
     desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',

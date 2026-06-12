@@ -107,5 +107,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com/tools/enclosure-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://lizard.com/tools/reptile-feeding-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://lizard.com/tools/basking-temperature-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://lizard.com/tools/reptile-match-quiz', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

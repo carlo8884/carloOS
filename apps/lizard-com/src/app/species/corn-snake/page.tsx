@@ -24,6 +24,7 @@ export default function CornSnakePage() {
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corn Snake', href: '/species/corn-snake' }]}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
         { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
         { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },

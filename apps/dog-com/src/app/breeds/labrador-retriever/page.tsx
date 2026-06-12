@@ -46,6 +46,7 @@ export default function LabradorPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Labrador Retriever?', href: '/breeds/labrador-retriever/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Labrador Health Deep-Dive" links={[{ label: 'Labrador Retriever Health Issues & Screenings', href: '/breeds/labrador-retriever/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Labrador Feeding Guide', href: '/breeds/labrador-retriever/feeding' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
         <RelatedLinks title="Breed Comparisons" links={[

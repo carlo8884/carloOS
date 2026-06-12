@@ -59,6 +59,7 @@ export default function CostOfOwningPage() {
           { title: 'Boarding Options', href: '/ownership/boarding-options' },
           { title: 'Horse Insurance', href: '/ownership/horse-insurance' },
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         ]}
         hero={{
           title: "The Cost of Owning a Horse",
@@ -92,6 +93,7 @@ export default function CostOfOwningPage() {
               { label: "Boarding Options", href: "/ownership/boarding-options" },
               { label: "Horse Insurance", href: "/ownership/horse-insurance" },
               { label: "Leasing a Horse", href: "/ownership/leasing-a-horse" },
+              { label: "Cost of Ownership Calculator", href: "/tools/horse-cost-calculator" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />

@@ -27,6 +27,7 @@ export default function LeopardGeckoPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Leopard Gecko', href: '/species/leopard-gecko' }]}
         relatedLinks={[
           { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
           { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
           { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
           { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },

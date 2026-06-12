@@ -32,6 +32,7 @@ export default function CavalierPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Cavalier King Charles Spaniel?', href: '/breeds/cavalier-king-charles/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },

@@ -33,6 +33,7 @@ export default function BulldogPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Bulldog?', href: '/breeds/bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Bulldog Health Deep-Dive" links={[{ label: 'Bulldog Health Issues & Screenings', href: '/breeds/bulldog/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Feeding Guide', href: '/breeds/bulldog/feeding' }, { label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
         <RelatedLinks title="Breed Comparisons" links={[

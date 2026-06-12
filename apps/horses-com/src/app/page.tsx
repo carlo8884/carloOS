@@ -125,48 +125,104 @@ const CATEGORIES: {
   title: string
   desc: string
   href: string
+  /** Manifest cover photo (image+text card pattern). Always paired with a
+   *  fallbackKey so nothing renders a broken slot if the key hasn't synced. */
+  manifestKey: string
+  imageAlt: string
 }[] = [
   {
     icon: 'breeds',
     title: 'Breeds',
     desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.',
     href: '/breeds/quarter-horse',
+    manifestKey: 'horses-com:category-breeds',
+    imageAlt: 'A horse standing in profile, showing conformation',
   },
   {
     icon: 'health',
     title: 'Health',
     desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.',
     href: '/health/equine-ulcers',
+    manifestKey: 'horses-com:category-health',
+    imageAlt: 'A horse being examined as part of routine health care',
   },
   {
     icon: 'guides',
     title: 'Guides',
     desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.',
     href: '/guides/saddle-fit-basics',
+    manifestKey: 'horses-com:category-tack',
+    imageAlt: 'Tack and saddle fitting equipment',
   },
   {
     icon: 'supplements',
     title: 'Supplements',
     desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.',
     href: '/supplements/joint-supplements',
+    manifestKey: 'horses-com:supplement-joint',
+    imageAlt: 'A working sport horse, the focus of joint-supplement research',
   },
   {
     icon: 'reviews',
     title: 'Reviews',
     desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.',
     href: '/reviews/best-winter-horse-blankets',
+    manifestKey: 'horses-com:category-reviews',
+    imageAlt: 'Horse gear compared side by side',
   },
   {
     icon: 'roadmap',
     title: 'First-Horse Roadmap',
     desc: 'A free 90-day plan and 8-email course for the first-time owner.',
     href: '/first-horse-roadmap',
+    manifestKey: 'horses-com:category-ownership',
+    imageAlt: 'A first-time owner with their horse',
   },
   {
     icon: 'racing',
     title: 'Racing Intelligence',
     desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference -- disciplines, governance, and OTTB aftercare.',
     href: '/racing',
+    manifestKey: 'horses-com:category-disciplines',
+    imageAlt: 'Horses competing on a track',
+  },
+]
+
+// ── Featured / popular guides (NEW — image+text editorial band) ─────────────
+// Evergreen "popular on Horses.com" cards — NOT dated news (QC §1: no fake
+// timeliness). Each links to a real, verified existing route. Every card pairs
+// a manifest cover key with a fallbackKey so no broken image slot ever ships.
+const FEATURED_GUIDES: {
+  eyebrow: string
+  title: string
+  desc: string
+  href: string
+  manifestKey: string
+  imageAlt: string
+}[] = [
+  {
+    eyebrow: 'Ownership',
+    title: 'What a horse actually costs',
+    desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.',
+    href: '/ownership/cost-of-owning-a-horse',
+    manifestKey: 'horses-com:category-ownership',
+    imageAlt: 'A horse owner caring for their horse',
+  },
+  {
+    eyebrow: 'Free tool',
+    title: 'Estimate your horse’s weight',
+    desc: 'No livestock scale needed — heart-girth and body-length measurements give a working bodyweight for dosing and feeding.',
+    href: '/tools/horse-weight-calculator',
+    manifestKey: 'horses-com:tool-bcs-calculator',
+    imageAlt: 'Measuring a horse to estimate bodyweight',
+  },
+  {
+    eyebrow: 'Breed guide',
+    title: 'The American Quarter Horse',
+    desc: 'The most populous breed in the U.S. — registry, the 5-panel genetic test, and what to expect as a first-time owner.',
+    href: '/breeds/quarter-horse',
+    manifestKey: 'horses-com:featured-quarter-horse',
+    imageAlt: 'An American Quarter Horse and rider schooling',
   },
 ]
 
@@ -255,6 +311,12 @@ const TRUST_CLAIMS = [
   'Veterinarian-respectful',
 ]
 
+// Strip StockImage's outer margins (it renders my-8 on both the <figure> and
+// the pending-sync placeholder <div>) so it fills a tile edge-to-edge. Mirrors
+// the FILL_IMAGE override proven on the Dog.com homepage.
+const FILL_IMAGE =
+  '[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none'
+
 // ── Page ───────────────────────────────────────────────────────────────────
 
 const homeSchema = combineSchemas(
@@ -267,45 +329,45 @@ export default function HomePage() {
     <>
       <SchemaScript schema={homeSchema} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        {/* Hero photograph — image-first masthead. The manifest-managed hero
-            photo renders full-bleed BEHIND the headline band so the first
-            mobile screen leads with photography, not a flat text band.
-            Attribution stays present + linked (StockImage subtleCredit;
-            Unsplash/Pexels TOS, QC §1). */}
-        <div className="absolute inset-0 z-0">
+      {/* Carlo live review 2026-06-12: the hero photo was "hidden behind the
+          text" — a heavy full-image green/black wash washed the photograph out.
+          Fix mirrors the Dog.com hero: the photo fills the section (inline +
+          FILL_IMAGE, no letterboxing) and is CLEARLY visible; legibility comes
+          from a SMALLER bottom-anchored gradient over the lower ~half only, so
+          most of the photograph shows. subtleCredit keeps attribution present +
+          clickable (Unsplash/Pexels TOS, QC §1). */}
+      <section className="relative overflow-hidden bg-brand-dark min-h-[62vh] sm:min-h-[68vh] lg:min-h-[74vh]">
+        {/* Hero photograph — fills the section, first + dominant on every
+            breakpoint. */}
+        <div className={`absolute inset-0 z-0 ${FILL_IMAGE}`}>
           <StockImage
             manifestKey="horses-com:hero"
+            alt="A horse and rider at the start of the day"
             aspect="16:9"
-            variant="full-bleed"
+            variant="inline"
             priority
             subtleCredit
           />
         </div>
 
-        {/* Atmospheric overlays kept on top of photo for legibility and
-            cohesion with the deep green-black masthead. */}
+        {/* Bottom-anchored gradient ONLY — covers the lower ~half so the H1 +
+            CTAs stay legible while the top half of the photo shows clearly.
+            Warm brass wash kept low-opacity, corner-only, so it adds depth
+            without re-darkening the whole frame. */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 pointer-events-none z-[1]"
-          style={{
-            backgroundImage: [
-              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.20) 0%, transparent 55%)',
-              'linear-gradient(90deg, rgba(19,36,28,0.88) 0%, rgba(19,36,28,0.62) 45%, rgba(19,36,28,0.28) 100%)',
-              'linear-gradient(180deg, rgba(19,36,28,0.35) 0%, rgba(19,36,28,0.72) 100%)',
-            ].join(','),
-          }}
+          className="absolute inset-x-0 bottom-0 top-1/3 pointer-events-none z-[1] bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay z-[1]"
+          className="absolute inset-0 pointer-events-none z-[1] opacity-[0.18]"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 3px)',
+              'radial-gradient(ellipse 60% 55% at 22% 88%, rgba(182,136,48,0.30) 0%, transparent 60%)',
           }}
         />
 
-        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
+        <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[68vh] lg:min-h-[74vh] mx-auto max-w-container-wide w-full px-container-sm sm:px-container pt-20 pb-10 lg:pb-16">
           <div className="max-w-3xl">
             {/* Eyebrow — brass rule + tracking-eyebrow caps */}
             <div className="flex items-center gap-3 mb-6">
@@ -325,35 +387,36 @@ export default function HomePage() {
             {/* Headline — Playfair Display 700 */}
             <h1
               className="font-display font-bold text-white tracking-tight leading-[1.02] mb-6"
-              style={{ fontSize: 'clamp(48px, 7.5vw, 92px)' }}
+              style={{ fontSize: 'clamp(48px, 7.5vw, 92px)', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
             >
               Horses.com
             </h1>
 
             {/* Tagline — Playfair italic, brass-tinted, generous size */}
             <p
-              className="font-display italic mb-7"
+              className="font-display italic mb-6"
               style={{
                 color: 'var(--brand-accent-light)',
                 fontSize: 'clamp(22px, 2.4vw, 30px)',
                 lineHeight: 1.25,
                 maxWidth: '46rem',
+                textShadow: '0 1px 12px rgba(0,0,0,0.55)',
               }}
             >
               The reference for horse owners — across discipline lines.
             </p>
 
-            {/* Subtitle — 60-90 words establishing what the site is and is not */}
-            <p className="text-base lg:text-lg text-white/75 leading-relaxed max-w-2xl mb-9">
-              Horses.com is the category-defining knowledge hub for horse owners
-              across English, Western, trail, racing, eventing, and driving. Not
-              a magazine. Not a shop. Not a community forum. Every gear category,
-              every supplement, every common ailment — evaluated with the rigor a
-              veterinary textbook would apply, written for the owner who has to
-              make the decision at 7am before the farrier arrives. Where Practical
-              Horseman runs features and Dover sells product, Horses.com explains
-              what the product is, when it matters, and which discipline it
-              belongs to.
+            {/* Subtitle — tightened so the photograph carries the hero; the
+                full positioning statement lives in the editorial block below. */}
+            <p
+              className="text-base lg:text-lg text-white/85 leading-relaxed max-w-2xl mb-9"
+              style={{ textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}
+            >
+              The knowledge hub for owners across English, Western, trail,
+              racing, eventing, and driving. Every breed, supplement, and common
+              ailment — evaluated with the rigor a veterinary textbook would
+              apply, written for the decision you make at 7am before the farrier
+              arrives.
             </p>
 
             {/* CTAs — primary brass-on-dark, secondary text-arrow */}
@@ -429,29 +492,58 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ── */}
+      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ──────
+          Carlo live review 2026-06-12: the calculator ran "all across the
+          screen, no copy, nothing." Fixed to mirror the Dog.com wizard
+          section: a contained (max-w-container) two-column feature — the tool
+          on one side, supporting editorial copy + calculator links on the
+          other — so it reads as a designed feature, not a naked form. */}
       <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Try it · Henneke body condition score
-          </span>
+        <div className="max-w-container mx-auto">
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
+            {/* The live tool */}
+            <div className="min-w-0">
+              <BodyConditionScoreCalculator />
+            </div>
+
+            {/* Supporting editorial copy + related calculators */}
+            <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="w-6 h-0.5 bg-brand-primary" />
+                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                    Try it · Henneke body condition score
+                  </span>
+                </div>
+                <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+                  Is your horse the right weight?
+                </h2>
+                <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+                  Body condition is the single most useful daily check an owner can
+                  make. Carrying too little reserve points to dental, parasite, or
+                  feeding problems; carrying too much raises the risk of laminitis,
+                  equine metabolic syndrome, and joint strain.
+                </p>
+                <p className="text-sm text-brand-text-mid leading-relaxed">
+                  Score the six Henneke checkpoints — neck, withers, behind the
+                  shoulder, ribs, loin, and tailhead — and the tool returns the 1–9
+                  score vets and nutritionists use, with what to change next.
+                </p>
+              </div>
+
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
+                  More free calculators
+                </div>
+                <div className="flex flex-col gap-2 text-sm font-semibold">
+                  <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">Horse weight calculator →</Link>
+                  <Link href="/tools/horse-feed-calculator" className="text-brand-primary no-underline hover:underline">Feed &amp; hay calculator →</Link>
+                  <Link href="/tools" className="text-brand-primary no-underline hover:underline">Browse the tools hub →</Link>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
-        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
-          Is your horse the right weight?
-        </h2>
-        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
-          Score the six Henneke checkpoints and get the 1–9 body-condition score with
-          what to change — the standard vets and nutritionists use.
-        </p>
-        <BodyConditionScoreCalculator />
-        <p className="text-sm text-brand-text-mid mt-7 max-w-2xl leading-relaxed">
-          More free calculators: estimate bodyweight with the{' '}
-          <Link href="/tools/horse-weight-calculator" className="text-brand-primary underline">horse weight calculator</Link>,
-          plan daily hay with the{' '}
-          <Link href="/tools/horse-feed-calculator" className="text-brand-primary underline">feed &amp; hay calculator</Link>,
-          or browse the full <Link href="/tools" className="text-brand-primary underline">tools hub</Link>.
-        </p>
       </section>
 
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
@@ -528,47 +620,159 @@ export default function HomePage() {
             ))}
           </nav>
 
+          {/* Image+text cards (Carlo live review 2026-06-12: "needs pictures").
+              Photo on TOP via StockImage in a fixed-height fill wrapper; text on
+              a SOLID surface below so copy is always legible (Dog.com pattern).
+              Every card pairs a manifest key with fallbackKey="horses-com:hero"
+              so no broken slot ever ships. */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {CATEGORIES.map((cat) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="group block p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                className="group flex flex-col rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
                 style={{
                   background: 'var(--brand-white)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                <div
-                  className="mb-5 transition-colors"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  <CategoryIconSvg name={cat.icon} />
+                {/* Photo on top */}
+                <div className={`relative h-40 sm:h-44 ${FILL_IMAGE}`}>
+                  <StockImage
+                    manifestKey={cat.manifestKey}
+                    fallbackKey="horses-com:hero"
+                    alt={cat.imageAlt}
+                    aspect="4:3"
+                    variant="inline"
+                    subtleCredit
+                  />
                 </div>
-                <h3
-                  className="font-display font-bold text-xl leading-snug mb-2"
-                  style={{ color: 'var(--brand-text-dark)' }}
-                >
-                  {cat.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: 'var(--brand-text-mid)' }}
-                >
-                  {cat.desc}
-                </p>
-                <span
-                  className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  Read
-                  <span
-                    aria-hidden="true"
-                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                {/* Text on a solid surface */}
+                <div className="flex flex-col flex-1 p-6">
+                  <div
+                    className="mb-3 transition-colors"
+                    style={{ color: 'var(--brand-primary)' }}
                   >
-                    →
+                    <CategoryIconSvg name={cat.icon} />
+                  </div>
+                  <h3
+                    className="font-display font-bold text-xl leading-snug mb-2"
+                    style={{ color: 'var(--brand-text-dark)' }}
+                  >
+                    {cat.title}
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed mb-4"
+                    style={{ color: 'var(--brand-text-mid)' }}
+                  >
+                    {cat.desc}
+                  </p>
+                  <span
+                    className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                    style={{ color: 'var(--brand-primary)' }}
+                  >
+                    Read
+                    <span
+                      aria-hidden="true"
+                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
                   </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── POPULAR GUIDES — image+text editorial band (NEW) ─────────────
+          Carlo live review 2026-06-12: page felt "bland / needs content +
+          excitement." This band adds imagery + editorial life with 3 image+text
+          cards (Dog.com pattern) linking to REAL existing routes. Framed as
+          evergreen "popular guides," NOT dated news (QC §1: no fake
+          timeliness). Every card pairs a manifest key with fallbackKey. */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-white)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-accent)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-accent)' }}
+                >
+                  Popular on Horses.com
                 </span>
+              </div>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
+                Where owners start most
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {FEATURED_GUIDES.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="group flex flex-col rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                style={{
+                  background: 'var(--brand-surface)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                {/* Photo on top */}
+                <div className={`relative h-44 ${FILL_IMAGE}`}>
+                  <StockImage
+                    manifestKey={guide.manifestKey}
+                    fallbackKey="horses-com:hero"
+                    alt={guide.imageAlt}
+                    aspect="16:9"
+                    variant="inline"
+                    subtleCredit
+                  />
+                </div>
+                {/* Text on a solid surface */}
+                <div className="flex flex-col flex-1 p-6">
+                  <div
+                    className="text-2xs font-bold uppercase tracking-eyebrow mb-2"
+                    style={{ color: 'var(--brand-primary)' }}
+                  >
+                    {guide.eyebrow}
+                  </div>
+                  <h3
+                    className="font-display font-bold text-xl leading-snug mb-2"
+                    style={{ color: 'var(--brand-text-dark)' }}
+                  >
+                    {guide.title}
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed mb-4"
+                    style={{ color: 'var(--brand-text-mid)' }}
+                  >
+                    {guide.desc}
+                  </p>
+                  <span
+                    className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                    style={{ color: 'var(--brand-primary)' }}
+                  >
+                    Read
+                    <span
+                      aria-hidden="true"
+                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -578,7 +782,7 @@ export default function HomePage() {
       {/* ── FEATURED ARTICLES ──────────────────────────────────────── */}
       <section
         className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-white)' }}
+        style={{ background: 'var(--brand-surface)' }}
       >
         <div className="mx-auto max-w-container-wide">
           <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">

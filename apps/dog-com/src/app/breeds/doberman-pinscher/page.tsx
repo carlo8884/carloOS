@@ -32,6 +32,7 @@ export default function DobermanPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Doberman Pinscher?', href: '/breeds/doberman-pinscher/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'IVDD', href: '/health/intervertebral-disc-disease' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },
