@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Stirrups and Rider Safety — Types, Sizing, and Avoiding Being Dragged",
+  title: "Stirrups and Rider Safety — Types, Sizing, and Safety Features",
   description:
     "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing drag risk.",
   path: '/tack/stirrups-and-safety',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Stirrups and Rider Safety — Types, Sizing, and Avoiding Being Dragged",
+  title: "Stirrups and Rider Safety — Types, Sizing, and Safety Features",
   description:
     "Reference guide to stirrups and rider safety: how stirrups work, sizing to the foot, safety stirrup designs, breakaway features, and reducing drag risk.",
   url: 'https://horses.com/tack/stirrups-and-safety',

@@ -5,7 +5,7 @@ import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Tack and Gear Guides — Bits, Bridles, Girths, Boots, Helmets, and Rugs",
+  title: "Tack & Gear Guides — Bits, Bridles, Girths, Boots & Helmets",
   description:
     "Equine tack and gear references: bits and bridles, girths and cinches, saddle pads, stirrups and safety, blanket weights, halters, leg boots, and helmets.",
   path: '/tack',

@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Horse Boarding Options — Full, Pasture, Self-Care, and Keeping at Home",
+  title: "Horse Boarding Options — Full, Pasture, and Self-Care",
   description:
     "Reference guide to horse boarding: full-care, partial, pasture, and self-care board, keeping a horse at home, and choosing the right arrangement and facility.",
   path: '/ownership/boarding-options',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Horse Boarding Options — Full, Pasture, Self-Care, and Keeping at Home",
+  title: "Horse Boarding Options — Full, Pasture, and Self-Care",
   description:
     "Reference guide to horse boarding: full-care, partial, pasture, and self-care board, keeping a horse at home, and choosing the right arrangement and facility.",
   url: 'https://horses.com/ownership/boarding-options',

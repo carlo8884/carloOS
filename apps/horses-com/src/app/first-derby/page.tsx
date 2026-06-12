@@ -33,7 +33,7 @@ import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Your First Day at the Races: A Beginner&apos;s Derby Spectator Guide',
+  title: "Your First Day at the Races: A Beginner's Derby Spectator Guide",
   description:
     'A friendly, no-jargon spectator guide to enjoying the biggest day in racing: what you are watching, the traditions, and how the day unfolds. Not a betting guide',
   path: '/first-derby',
@@ -42,7 +42,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Your First Day at the Races: A Beginner&apos;s Derby Spectator Guide',
+  title: "Your First Day at the Races: A Beginner's Derby Spectator Guide",
   description:
     'A friendly, no-jargon guide to enjoying the biggest day in horse racing as a spectator: what you are watching, the traditions, how a race day unfolds, and how to get into the sport.',
   url: 'https://horses.com/first-derby',

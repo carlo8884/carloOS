@@ -4,7 +4,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Equine Vaccination Schedule — AAEP Core &amp; Risk-Based Vaccines',
+  title: 'Equine Vaccination Schedule — AAEP Core & Risk-Based Vaccines',
   description:
     'AAEP-aligned vaccination schedule for horses. Core vaccines (tetanus, EEE/WEE, West Nile, rabies) and risk-based vaccines by life stage and discipline.',
   path: '/guides/equine-vaccination-schedule',
