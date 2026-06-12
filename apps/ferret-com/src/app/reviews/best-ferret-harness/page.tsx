@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -257,9 +257,8 @@ export default function BestFerretHarnessPage() {
             unsupervised.
           </p>
           <ScoreMethodology />
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* MONETIZATION: buy-box slot — jacket / vest-style ferret harness. Non-clinical husbandry
-              product, buy-box permissible under QC §1.5; Monetization owns CTA + /go wiring. */}
           <ReviewCard
             id="jacket"
             badge="Best Escape Resistance"
@@ -280,12 +279,12 @@ export default function BestFerretHarnessPage() {
             pros={['Hardest style to back out of', 'Spreads pressure over a wide area', 'Kind to thin ferret skin', 'Often includes a back D-ring']}
             cons={['Requires an accurate body measurement', 'Slightly fussier to put on', 'Can be warm in heat unless mesh-panelled']}
             price="$$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-harness#picks"
-            editorial
+            ctaText="Find Ferret Vest Harness on Amazon"
+            ctaHref="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret-vest-harness"
           />
 
-          {/* MONETIZATION: buy-box slot — adjustable H-style ferret harness. */}
           <ReviewCard
             id="h-style"
             badge="Best Adjustability"
@@ -305,12 +304,12 @@ export default function BestFerretHarnessPage() {
             pros={['Highly adjustable for a no-neck body', 'Lightweight and quick to fit', 'Inexpensive', 'Widely available']}
             cons={['Easiest style to escape if left loose', 'Thin straps spread less pressure', 'Fit must be checked every outing']}
             price="$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-harness#picks"
-            editorial
+            ctaText="Find H-Style Ferret Harness on Amazon"
+            ctaHref="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret-h-style-harness"
           />
 
-          {/* MONETIZATION: buy-box slot — mesh H-harness with leash set. */}
           <ReviewCard
             id="mesh-h"
             badge="Entry / Bundle"
@@ -330,9 +329,10 @@ export default function BestFerretHarnessPage() {
             pros={['Breathable mesh for warm weather', 'Matched leash included', 'Affordable starter bundle', 'Lightweight']}
             cons={['Fewer adjustment points', 'Lighter buckles than a dedicated H', 'May be outgrown by an escape artist']}
             price="$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-harness#picks"
-            editorial
+            ctaText="Find Mesh Ferret Harness + Leash Set"
+            ctaHref="/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-best-ferret-harness"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret-mesh-harness-leash-set"
           />
 
           <h2 id="faq">FAQ</h2>

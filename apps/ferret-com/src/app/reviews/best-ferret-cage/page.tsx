@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -272,9 +272,8 @@ export default function BestFerretCagePage() {
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
           <ScoreMethodology />
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* MONETIZATION: buy-box slot — Ferret Nation / Critter Nation. Non-clinical husbandry
-              product, buy-box permissible under QC §1.5; Monetization owns CTA + /go wiring. */}
           <ReviewCard
             id="ferret-nation"
             badge="Best Overall"
@@ -295,12 +294,12 @@ export default function BestFerretCagePage() {
             pros={['Ferret-correct half-inch spacing', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
             cons={['Premium price', 'Heavy and large assembled', 'Wire shelves need covering']}
             price="$$$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-cage#picks"
-            editorial
+            ctaText="Find Ferret Nation / Critter Nation"
+            ctaHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret-nation-double-unit"
           />
 
-          {/* MONETIZATION: buy-box slot — Prevue Feisty Ferret. */}
           <ReviewCard
             id="prevue-feisty"
             badge="Best Value"
@@ -319,12 +318,12 @@ export default function BestFerretCagePage() {
             pros={['Purpose-built for ferrets', 'Several shelves and ramps included', 'Lower price than modular systems', 'Good single-or-pair footprint']}
             cons={['Smaller than a double modular unit', 'Wire shelves need covering', 'Not expandable']}
             price="$$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-cage#picks"
-            editorial
+            ctaText="Find Prevue Feisty Ferret Cage"
+            ctaHref="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="prevue-feisty-ferret-cage"
           />
 
-          {/* MONETIZATION: buy-box slot — Kaytee Multi-Level. */}
           <ReviewCard
             id="kaytee-multilevel"
             badge="Entry / Single Ferret"
@@ -343,9 +342,10 @@ export default function BestFerretCagePage() {
             pros={['Widely available', 'Affordable entry point', 'Multi-level layout', 'Good first cage for a single ferret']}
             cons={['Tighter footprint than the others', 'Confirm spacing per model', 'May be outgrown with a second ferret']}
             price="$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-cage#picks"
-            editorial
+            ctaText="Find Kaytee Multi-Level Ferret Home"
+            ctaHref="/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="kaytee-multi-level-ferret-home"
           />
 
           <h2 id="faq">FAQ</h2>
