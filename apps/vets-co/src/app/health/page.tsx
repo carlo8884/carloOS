@@ -93,6 +93,11 @@ export default function VetsHealthHubPage() {
         primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
       />
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
+        <span className="text-brand-text-mid font-medium">Health</span>
+      </nav>
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
       </div>

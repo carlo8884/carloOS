@@ -20,7 +20,7 @@ export default function HorseGroomingGuidePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Horse Grooming Guide', subtitle: 'Grooming is not cosmetic — it is the daily health inspection that keeps your horse safe to ride and allows you to detect developing problems before they become serious. A horse groomed correctly before riding is a horse whose tack area has been checked, whose feet have been picked, and whose skin has been assessed. This takes 20–30 minutes. Skipping it creates real risk.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
-        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Grooming', href: '/guides/horse-grooming-guide' }]}
+        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Horse Grooming', href: '/guides/horse-grooming-guide' }]}
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Hub' },
           { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },

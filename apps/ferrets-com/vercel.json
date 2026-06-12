@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=ferrets-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh ferrets-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh ferrets-com",
+  "github": {
+    "silent": true
+  }
 }

@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=saddle-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh saddle-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh saddle-com",
+  "github": {
+    "silent": true
+  }
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript, Breadcrumb } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Saddles by Discipline — Barrel, Roping, Trail | Saddle.com', description: 'Browse Western saddles by discipline — barrel racing, roping, trail, reining, and ranch. Discipline differences, top brands, and price ranges explained.', path: '/western' })
 
@@ -31,6 +31,7 @@ export default function WesternSaddlesPage() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: 'Home', href: '/' }, { name: 'Western Saddles', href: '/western' }]} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
