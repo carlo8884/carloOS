@@ -373,15 +373,26 @@ export default function IngredientsHubPage() {
                   )
                 }
 
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener"
+                      style={cardStyle}
+                    >
+                      {inner}
+                    </a>
+                  )
+                }
+
+                // Non-deep-dive, non-external: no page exists for this slug yet.
+                // Render as a non-interactive card to avoid 404 navigation.
                 return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}
-                    style={cardStyle}
-                  >
+                  <div key={item.name} style={cardStyle}>
                     {inner}
-                  </a>
+                  </div>
                 )
               })}
             </div>
