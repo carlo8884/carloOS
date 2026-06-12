@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, Breadcrumb } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -47,6 +47,7 @@ export default function ToolsHub() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: 'Home', href: '/' }, { name: 'Tools', href: '/tools' }]} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"

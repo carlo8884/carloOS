@@ -26,7 +26,7 @@ import { ADOPT_GUIDES } from '@/data/guides/adopt'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
-  title: 'Ferret Adoption & Rescue Hub — Regional Guides, Costs, How-To',
+  title: 'Ferret Adoption & Rescue Hub — Regional Guides | Ferrets.com',
   description:
     'How to adopt a ferret responsibly: regional guides for all four US regions, rescue-vs-breeder, the application process, real costs, and rehoming guidance.',
   path: '/adopt',

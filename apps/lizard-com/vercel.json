@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=lizard-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh lizard-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh lizard-com",
+  "github": {
+    "silent": true
+  }
 }

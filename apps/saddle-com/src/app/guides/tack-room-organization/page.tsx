@@ -9,7 +9,7 @@ export default function TackRoomPage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'Tack Room Organization', subtitle: 'A well-organized tack room is not just about aesthetics — it directly affects the longevity of leather equipment that represents thousands of dollars of investment, the efficiency of your barn routine, and the ease of identifying when something needs maintenance or replacement before it fails during a ride.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Room Organization', href: '/guides/tack-room-organization' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Tack Room Organization', href: '/guides/tack-room-organization' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },

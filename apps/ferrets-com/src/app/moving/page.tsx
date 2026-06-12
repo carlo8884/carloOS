@@ -22,7 +22,7 @@ import { MOVING_GUIDES } from '@/data/guides/moving'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
-  title: 'Moving With a Ferret — Ban States, Permits, Cross-Country & Abroad',
+  title: 'Moving With a Ferret — Ban States, Permits & Abroad | Ferrets.com',
   description:
     'Relocating with a ferret: ban-state moves, permit steps for Florida and Pennsylvania, the cross-country checklist, international moves, and finding a vet.',
   path: '/moving',

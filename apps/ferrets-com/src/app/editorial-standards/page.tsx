@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, Breadcrumb } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
@@ -13,11 +13,12 @@ export default function EditorialStandardsPage() {
   const lastUpdated = 'June 2026'
   return (
     <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
-      <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
-        <span>›</span>
-        <span className="text-brand-text-mid">Editorial Standards</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Editorial Standards', href: '/editorial-standards' },
+        ]}
+      />
 
       <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-2">Editorial Standards</h1>
       <p className="text-sm text-brand-text-light mb-10">Last updated: {lastUpdated}</p>

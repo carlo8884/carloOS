@@ -8,7 +8,7 @@ export default function HorseNutritionGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'Horse Nutrition Guide', subtitle: 'Horses evolved as continuous grazers — their digestive systems are designed for small, frequent meals of forage, not large grain meals twice daily. Modern horse management often inverts this, with consequences for health. Forage first, grain second, supplements third.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '18 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Nutrition', href: '/guides/horse-nutrition-guide' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Horse Nutrition', href: '/guides/horse-nutrition-guide' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },

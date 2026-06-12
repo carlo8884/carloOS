@@ -23,7 +23,7 @@ import { LEGALITY_GUIDES } from '@/data/guides/legality'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
-  title: 'Ferret Legality Topics — Bans, Permits, Travel, Renting & More',
+  title: 'Ferret Legality Topics — Bans, Permits, Travel & More | Ferrets.com',
   description:
     'Cross-cutting ferret-legality topics: where ferrets are illegal, why bans exist, city-vs-state law, rabies law, travel, renting, and service/ESA status.',
   path: '/legality',

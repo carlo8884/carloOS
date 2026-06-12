@@ -10,6 +10,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  Breadcrumb,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +95,7 @@ export default function SaddleFitChecklistPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: 'Home', href: '/' }, { name: 'Saddle Fit Checklist', href: '/saddle-fit-checklist' }]} />
 
       {/* HERO */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">

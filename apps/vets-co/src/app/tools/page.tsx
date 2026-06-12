@@ -78,6 +78,11 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
+        <span className="text-brand-text-mid font-medium">Tools</span>
+      </nav>
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="vets-co:tools-hero" aspect="16:9" variant="wide" priority />
       </div>
