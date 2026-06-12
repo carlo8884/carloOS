@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
+  buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
@@ -70,6 +71,30 @@ const softwareApplicationSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   publisher: { '@type': 'Organization', name: 'PetFood.com Editorial', url: 'https://petfood.com' },
 }
+
+const howToSchema = buildHowToSchema({
+  name: 'How to compare pet food brands side-by-side on disclosed criteria',
+  description: 'Use the comparison tool to place 2–3 over-the-counter pet food brands or diet types next to each other on corporate owner, AAFCO posture, manufacturing, recall posture, and price band.',
+  url: URL,
+  steps: [
+    {
+      name: 'Select 2–3 brands or diet types to compare',
+      text: 'Pick the over-the-counter brands or diet types you want to evaluate from the selection list. You can mix brands and diet types.',
+    },
+    {
+      name: 'Read each column against the disclosed criteria',
+      text: 'The tool displays corporate owner, AAFCO substantiation posture, manufacturing footprint, recall posture, available formats, and a descriptive price band for each selection. Every field is drawn from that entry\'s independent evaluation on PetFood.com.',
+    },
+    {
+      name: 'Follow the brand link to the full evaluation',
+      text: 'Click any brand name in the table header to reach its full independent evaluation, which cites primary sources including FDA CVM records, AAFCO\'s Official Publication, and the WSAVA Global Nutrition Guidelines.',
+    },
+    {
+      name: 'Use the result as input — not as a verdict',
+      text: 'This tool does not name a winner. Use the comparison to narrow your shortlist, then run candidates through the Food Cost Calculator and confirm the choice with your veterinarian for any medical or therapeutic diet.',
+    },
+  ],
+})
 
 const FAQS = [
   {
@@ -158,6 +183,10 @@ export default function ComparePetFoodsPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
 
         <p>

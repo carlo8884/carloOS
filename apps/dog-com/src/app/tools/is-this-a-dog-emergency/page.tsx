@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   buildMedicalWebPageSchema,
   combineSchemas,
   SchemaScript,
@@ -88,8 +89,32 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-10',
 })
 
+const howToSchema = buildHowToSchema({
+  name: 'How to assess whether your dog needs emergency care',
+  description: 'Use the symptom checklist to get a conservative urgency read — go now, same-day vet, or monitor closely — based on veterinary emergency-medicine criteria.',
+  url: 'https://dog.com/tools/is-this-a-dog-emergency',
+  steps: [
+    {
+      name: 'Check for immediately life-threatening signs first',
+      text: 'If your dog is struggling to breathe, has collapsed, is bleeding heavily, or you suspect poisoning, go to an emergency vet immediately without waiting for any tool. Call ASPCA Poison Control (888-426-4435) for suspected ingestion.',
+    },
+    {
+      name: 'Select every sign you are currently observing',
+      text: 'Work through the symptom checklist and check every sign you are seeing. The tool covers 15 well-defined signs drawn from veterinary emergency-medicine references.',
+    },
+    {
+      name: 'Read the urgency result',
+      text: 'The tool returns the most urgent result among your selections: "Go now" (possible life-threatening emergency — go immediately), "Same-day vet" (attention within 24 hours), or "Monitor closely" (a single mild episode, but still call your vet if it persists or worsens).',
+    },
+    {
+      name: 'Act on the result conservatively',
+      text: 'If you receive "Go now," go to an emergency clinic immediately. If anything worries you beyond what is listed, call your vet — absence from the list is never a reason to wait.',
+    },
+  ],
+})
+
 // Exactly ONE BreadcrumbList across the page.
-const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema)
+const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema)
 
 export default function IsThisADogEmergencyPage() {
   return (

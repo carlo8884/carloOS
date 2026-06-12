@@ -4,6 +4,7 @@ import {
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -71,7 +72,27 @@ const appSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }
 
-const schema = combineSchemas(breadcrumbSchema, appSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to convert a dog\'s age to human years',
+  description: 'Estimate a dog\'s equivalent human age using the AVMA/AAHA-style banded model based on life stage and size.',
+  url: 'https://dog.com/tools/dog-age-calculator',
+  steps: [
+    {
+      name: 'Enter your dog\'s age in years',
+      text: 'Type your dog\'s age in calendar years. The calculator handles ages from under one year through senior dogs.',
+    },
+    {
+      name: 'Select your dog\'s size class',
+      text: 'Choose Small (under 20 lb), Medium (20–50 lb), Large (50–90 lb), or Giant (over 90 lb). Size affects the human-year rate from year three onward.',
+    },
+    {
+      name: 'Read the human-year estimate and life stage',
+      text: 'The calculator returns the human-year equivalent using the banded model (year 1 = 15 human years, year 2 = 9 more, then 4–6 per year by size) and a life-stage label aligned with AVMA/AAHA frameworks.',
+    },
+  ],
+})
+
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 export default function DogAgeCalculatorPage() {
   return (

@@ -5,6 +5,7 @@ import {
   EmailCapture,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -92,7 +93,31 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-11',
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, articleSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to find a dog\'s healthy weight range and ideal weight',
+  description: 'Estimate the healthy adult weight range by breed and an ideal weight from the 9-point WSAVA body condition score using AKC-standard breed data.',
+  url: 'https://dog.com/tools/dog-ideal-weight-calculator',
+  steps: [
+    {
+      name: 'Select your dog\'s breed or size class',
+      text: 'Choose your dog\'s breed from the list to get the AKC-standard adult weight range for that breed. For mixed-breed or unlisted dogs, select the appropriate size class (toy, small, medium, large, or giant).',
+    },
+    {
+      name: 'Enter your dog\'s current weight',
+      text: 'Enter your dog\'s current body weight in pounds or kilograms.',
+    },
+    {
+      name: 'Enter your dog\'s body condition score',
+      text: 'Assess and enter your dog\'s body condition score on the 9-point WSAVA scale (4–5 is ideal). At an ideal score, ribs are easy to feel with light pressure, the waist is visible from above, and the belly tucks up from the side.',
+    },
+    {
+      name: 'Read the healthy range and estimated ideal weight',
+      text: 'The calculator returns the breed\'s healthy adult weight range and applies the standard BCS heuristic (each point above 5 ≈ 10% overweight) to estimate an individual ideal weight. Use this as a starting point; your veterinarian sets the final target.',
+    },
+  ],
+})
+
+const schema = combineSchemas(breadcrumbSchema, appSchema, articleSchema, howToSchema)
 
 export default function DogIdealWeightCalculatorPage() {
   return (

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
+  buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
@@ -72,6 +73,30 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 3, name: 'Tank Mate Compatibility Checker', item: URL },
   ],
 }
+
+const howToSchema = buildHowToSchema({
+  name: 'How to check freshwater fish tank mate compatibility',
+  description: 'Use the compatibility checker to get a Compatible, Caution, or Not-recommended verdict for each species pairing based on temperament, temperature, fin-nipping, size, and water hardness.',
+  url: URL,
+  steps: [
+    {
+      name: 'Select two or more fish species',
+      text: 'Choose the freshwater fish you are considering for your aquarium from the species list. The checker covers 20 common species.',
+    },
+    {
+      name: 'Review the per-pair verdict',
+      text: 'For every pairing you selected, the checker returns Compatible, Caution, or Not-recommended, with a short plain-English reason based on temperament, temperature range overlap, fin-nipping risk, adult size and predation, and water hardness.',
+    },
+    {
+      name: 'Treat Caution pairings as tank-size dependent',
+      text: 'A Caution verdict means the pairing can work under the right conditions — typically a larger, well-planted tank that gives fish space to establish territories or escape harassment. Follow the species profile links for the specific care context.',
+    },
+    {
+      name: 'Plan your stocking numbers',
+      text: 'After checking compatibility, use the Stocking Calculator to verify the total bioload for your tank size, and confirm school sizes for schooling species.',
+    },
+  ],
+})
 
 const FAQS = [
   {
@@ -165,6 +190,10 @@ export default function TankMateCompatibilityPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
         <ArticleByline
           siteName="Fish.com Editorial"

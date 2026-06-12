@@ -4,6 +4,7 @@ import {
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -71,7 +72,31 @@ const appSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }
 
-const schema = combineSchemas(breadcrumbSchema, appSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to calculate a dog\'s daily calorie needs',
+  description: 'Estimate daily calorie requirements (RER and MER) using the standard veterinary formula and WSAVA/AAHA-style life-stage factors.',
+  url: 'https://dog.com/tools/dog-calorie-calculator',
+  steps: [
+    {
+      name: 'Enter your dog\'s weight',
+      text: 'Enter your dog\'s body weight in pounds or kilograms. For weight-loss dogs, use the veterinarian-assessed target weight rather than the current weight.',
+    },
+    {
+      name: 'Select the life stage',
+      text: 'Choose the life stage that best fits your dog: neutered adult, intact adult, weight loss, active/working, puppy under 4 months, puppy 4–12 months, or senior. Each stage applies a different MER factor to the RER baseline.',
+    },
+    {
+      name: 'Read the kcal/day estimate',
+      text: 'The calculator computes RER (70 × weight_kg^0.75) and multiplies it by the life-stage MER factor to give kcal/day. For a cups-per-day estimate, also enter the kcal/cup from your food\'s label.',
+    },
+    {
+      name: 'Use as a starting point and monitor',
+      text: 'Feed near the estimate for 4–6 weeks, then adjust up or down by 10–20% based on your dog\'s body condition score. Confirm any significant calorie restriction with your veterinarian.',
+    },
+  ],
+})
+
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 export default function DogCalorieCalculatorPage() {
   return (

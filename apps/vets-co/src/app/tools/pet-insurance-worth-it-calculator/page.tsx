@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
   ArticleSourcesList,
@@ -44,6 +45,30 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: 'Tools', url: 'https://vets.co/tools' },
   { name: 'Is Pet Insurance Worth It?', url: URL },
 ])
+
+const howToSchema = buildHowToSchema({
+  name: 'How to calculate whether pet insurance pays for itself',
+  description: 'Use the breakeven calculator to find the eligible vet-cost level at which a specific pet insurance policy reimburses exactly what it costs in annual premium.',
+  url: URL,
+  steps: [
+    {
+      name: 'Gather the key numbers from a carrier quote',
+      text: 'Collect the monthly premium, annual deductible, reimbursement percentage (typically 70%, 80%, or 90%), and annual payout cap from the policy quote or sample policy document.',
+    },
+    {
+      name: 'Enter the policy terms into the calculator',
+      text: 'Input the monthly premium, annual deductible, reimbursement percentage, and annual payout cap. These are the four terms that determine how much the policy pays back at any given cost level.',
+    },
+    {
+      name: 'Select or enter an expected eligible-cost scenario',
+      text: 'Choose a preset scenario (healthy year, routine non-emergency, major incident, catastrophic) or enter your own expected annual eligible vet cost. Include only illness and accident costs — routine wellness is usually excluded by standard policies.',
+    },
+    {
+      name: 'Read the breakeven line',
+      text: 'The calculator returns the annual premium, the modeled reimbursement at the cost level you entered, and the breakeven eligible-cost threshold — the point at which the policy reimburses exactly what it costs. Below that threshold you pay more in premium than you receive; above it, the policy returns more than it costs.',
+    },
+  ],
+})
 
 const softwareApplicationSchema = {
   '@context': 'https://schema.org',
@@ -179,6 +204,10 @@ export default function PetInsuranceWorthItPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
 
         {/* GEO: extractable plain-language answer near the top. Calibrated, honest,

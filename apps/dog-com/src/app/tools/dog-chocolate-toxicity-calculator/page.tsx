@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   buildMedicalWebPageSchema,
   combineSchemas,
   SchemaScript,
@@ -101,8 +102,32 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-11',
 })
 
+const howToSchema = buildHowToSchema({
+  name: 'How to estimate theobromine exposure from chocolate ingestion',
+  description: 'Calculate an approximate theobromine dose in mg/kg from chocolate type, amount eaten, and dog body weight to share with a veterinarian or poison control.',
+  url: 'https://dog.com/tools/dog-chocolate-toxicity-calculator',
+  steps: [
+    {
+      name: 'Call your veterinarian or poison control first',
+      text: 'Before using the calculator, call your veterinarian or ASPCA Animal Poison Control (888-426-4435). Do not wait for symptoms — treatment is most effective before signs appear.',
+    },
+    {
+      name: 'Select the chocolate type',
+      text: 'Choose the type of chocolate your dog ate: white, milk, semisweet/dark chips, dark, unsweetened baking chocolate, or dry cocoa powder. Type matters because theobromine concentration varies from ~0.25 mg/oz (white) to ~737 mg/oz (dry cocoa powder).',
+    },
+    {
+      name: 'Enter the amount eaten and your dog\'s weight',
+      text: 'Enter the approximate amount of chocolate ingested (in ounces or grams) and your dog\'s body weight. The calculator multiplies amount × average theobromine per ounce, then divides by body weight in kg to give a dose in mg/kg.',
+    },
+    {
+      name: 'Share the mg/kg estimate with your vet or poison control',
+      text: 'Read the mg/kg estimate and the dose-band it falls into (no concern / mild signs possible / cardiac signs possible / severe signs possible), and relay this number to the professional you called in step 1.',
+    },
+  ],
+})
+
 // Exactly ONE BreadcrumbList across the page.
-const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, articleSchema)
+const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, articleSchema, howToSchema)
 
 const ASPCA = '888-426-4435'
 const PPH = '855-764-7661'
