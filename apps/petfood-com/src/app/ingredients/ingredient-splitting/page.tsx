@@ -44,22 +44,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Ingredient Splitting on Pet Food Labels Explained | PetFood.com',
-    description:
-      'How ingredient splitting manipulates the descending-weight ingredient order, worked examples, and how to read a label to see through the practice.',
-    url: 'https://petfood.com/ingredients/ingredient-splitting',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-01T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  speakable: true,
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -77,6 +61,24 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Ingredient Splitting on Pet Food Labels Explained | PetFood.com',
+    description:
+      'How ingredient splitting manipulates the descending-weight ingredient order, worked examples, and how to read a label to see through the practice.',
+    url: 'https://petfood.com/ingredients/ingredient-splitting',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  speakable: true,
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function IngredientSplittingPage() {
   return (

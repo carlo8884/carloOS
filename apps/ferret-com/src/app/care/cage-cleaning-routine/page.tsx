@@ -28,6 +28,21 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — husbandry, environmental hygiene, and toxicology chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — articles on ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — cage-care and cleaning guidance for ferret owners",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Cage Cleaning Routine',
@@ -38,6 +53,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -77,21 +94,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — husbandry, environmental hygiene, and toxicology chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — articles on ferret husbandry and environmental management",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — cage-care and cleaning guidance for ferret owners",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-]
 
 export default function FerretCageCleaningRoutinePage() {
   return (

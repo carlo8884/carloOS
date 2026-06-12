@@ -27,6 +27,29 @@ export const metadata: Metadata = buildMetadata({
   path: '/tools/reptile-match-quiz',
 })
 
+const SOURCES = [
+  {
+    label:
+      'Association of Reptilian and Amphibian Veterinarians (ARAV) — client husbandry and species-selection resources for new reptile keepers.',
+    url: 'https://arav.org',
+    publisher: 'ARAV',
+  },
+  {
+    label:
+      'Mader, D. R., & Divers, S. J. (eds.) (2014). Current Therapy in Reptile Medicine and Surgery (husbandry and species-care chapters).',
+    publisher: 'Saunders / Elsevier',
+  },
+  {
+    label:
+      'de Vosjoli, P. The Herpetoculture Library care-series — long-standing keeper references on beginner-suitable species (leopard gecko, crested gecko, corn snake, ball python).',
+    publisher: 'Advanced Vivarium Systems',
+  },
+  {
+    label:
+      'RSPCA and Reptile & Amphibian welfare guidance — provision of appropriate space, thermal gradient, and lighting as core selection criteria.',
+    publisher: 'RSPCA / welfare guidance',
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Which Reptile Is Right For You? A Beginner Matcher',
@@ -37,6 +60,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Lizard.com Editorial',
   publishedAt: '2026-06-11',
   modifiedAt: '2026-06-11',
+
+  citation: SOURCES,
 })
 
 const softwareApplicationSchema = {
@@ -104,29 +129,6 @@ const FAQS = [
   },
 ]
 
-const SOURCES = [
-  {
-    label:
-      'Association of Reptilian and Amphibian Veterinarians (ARAV) — client husbandry and species-selection resources for new reptile keepers.',
-    url: 'https://arav.org',
-    publisher: 'ARAV',
-  },
-  {
-    label:
-      'Mader, D. R., & Divers, S. J. (eds.) (2014). Current Therapy in Reptile Medicine and Surgery (husbandry and species-care chapters).',
-    publisher: 'Saunders / Elsevier',
-  },
-  {
-    label:
-      'de Vosjoli, P. The Herpetoculture Library care-series — long-standing keeper references on beginner-suitable species (leopard gecko, crested gecko, corn snake, ball python).',
-    publisher: 'Advanced Vivarium Systems',
-  },
-  {
-    label:
-      'RSPCA and Reptile & Amphibian welfare guidance — provision of appropriate space, thermal gradient, and lighting as core selection criteria.',
-    publisher: 'RSPCA / welfare guidance',
-  },
-]
 
 const schema = combineSchemas(articleSchema, softwareApplicationSchema, breadcrumbSchema)
 

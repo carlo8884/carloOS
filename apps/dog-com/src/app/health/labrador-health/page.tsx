@@ -37,6 +37,8 @@ const schema = combineSchemas(
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 }), buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health Guide',
   description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',

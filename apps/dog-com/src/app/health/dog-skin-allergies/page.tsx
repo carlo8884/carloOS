@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Skin Allergies — Environmental, Food | Dog.com', description: 'Dog skin allergies: environmental (atopy), food allergy, and flea allergy dermatitis. How to distinguish them, the correct diagnostic approach.', path: '/health/dog-skin-allergies', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Dog Skin Allergies', description: 'Environmental atopy, food allergy, and flea allergy dermatitis in dogs.', url: 'https://dog.com/health/dog-skin-allergies', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 

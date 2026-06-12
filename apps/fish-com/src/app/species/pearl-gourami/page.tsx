@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide — The Peaceful Centerpiece | Fish.com', description: "Pearl gouramis are among the most peaceful and beautiful gouramis — a labyrinth fish with pearlescent spotting. Needs surface access, calm tankmates.", path: '/species/pearl-gourami', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide', description: 'Temperament, tank size, labyrinth breathing, and care for Trichopodus leerii.', url: 'https://fish.com/species/pearl-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide', description: 'Temperament, tank size, labyrinth breathing, and care for Trichopodus leerii.', url: 'https://fish.com/species/pearl-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

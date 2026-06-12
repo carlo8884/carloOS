@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Endler, J.A. Natural Selection on Color Patterns in Poecilia reticulata. Evolution, 34(1), 76–91, 1980.", publisher: "Evolution" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide — The Nano Guppy | Fish.com", description: "Endler's livebearers are tiny, dazzling, prolific guppy relatives ideal for nano tanks. Easy to keep, easy to breed, and they hybridize freely with guppies.", path: '/species/endlers-livebearer', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide", description: "Care, hybridization, and breeding for Poecilia wingei, the Endler's livebearer.", url: 'https://fish.com/species/endlers-livebearer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide", description: "Care, hybridization, and breeding for Poecilia wingei, the Endler's livebearer.", url: 'https://fish.com/species/endlers-livebearer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

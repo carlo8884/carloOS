@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles — Emergency Care | Lizard.com", description: "Cloacal and organ prolapse in reptiles is a true emergency. Causes, why you must keep the tissue moist, what not to do, and immediate vet steps.", path: "/health/prolapse-first-aid", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles", description: "Causes, emergency first aid, and veterinary treatment of cloacal and organ prolapse in reptiles.", url: "https://lizard.com/health/prolapse-first-aid", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles", description: "Causes, emergency first aid, and veterinary treatment of cloacal and organ prolapse in reptiles.", url: "https://lizard.com/health/prolapse-first-aid", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthProlapseFirstAidPage() {
   return (

@@ -12,7 +12,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs — Signs, Emergency Response | Dog.com', description: 'Gastric dilatation-volvulus (GDV) kills within hours without surgery. Know the signs — unproductive retching, distended abdomen — and act immediately.', path: '/health/dog-bloat-gvd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'GDV (Bloat) in Dogs', description: 'Emergency signs and prevention for canine gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What are the first signs of bloat (GDV) in a dog?', answer: 'The most important early sign is unproductive retching — the dog repeatedly tries to vomit but brings up nothing, or only white foam. In approximate order, the other signs are: visible abdominal distension (hard, drum-like when tapped), extreme restlessness and inability to settle, excessive drooling, and pale or white gums (already a sign of shock). In a large or deep-chested breed, unproductive retching alone is reason to go to the emergency vet immediately — do not wait for the other signs.' },

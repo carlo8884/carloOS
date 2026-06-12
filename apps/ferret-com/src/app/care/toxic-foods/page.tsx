@@ -28,6 +28,31 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
+    url: "https://www.aspca.org/pet-care/animal-poison-control",
+    publisher: "ASPCA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret toxicology and emergency medicine",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Toxic Foods for Ferrets',
@@ -38,6 +63,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -77,31 +104,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
-    url: "https://www.aspca.org/pet-care/animal-poison-control",
-    publisher: "ASPCA",
-  },
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret toxicology and emergency medicine",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-]
 
 export default function FerretToxicFoodsPage() {
   return (

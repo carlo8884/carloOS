@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing.', path: '/health/dog-vaccinations-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const SOURCES = [
+  { label: 'WSAVA: Vaccination Guidelines for Dogs and Cats', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
+  { label: 'AAHA: Canine Vaccination Guidelines', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
+  { label: 'AVMA: Vaccinations for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations-your-pet', publisher: 'AVMA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Guide', description: 'Core and non-core vaccines, titer testing, and puppy schedule.', url: 'https://vets.co/health/dog-vaccinations-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'How often does an adult dog need the DA2PP vaccine?', answer: 'After the initial puppy series and the 12-month booster, adult dogs with documented vaccination history can receive DA2PP every 3 years. This reflects the duration of immunity studies for modern vaccines. Some dogs receive it more frequently based on lifestyle, boarding requirements, or owner preference — but the WSAVA guidelines support 3-year intervals for adult dogs with documented prior vaccination.' },
   { question: 'Can I vaccinate my puppy before 16 weeks and trust immunity?', answer: 'Puppies receive maternal antibodies through colostrum that interfere with vaccine response — this is why a series of vaccines is needed rather than a single dose. The timing of the last puppy vaccine (14–16 weeks) ensures it is given after maternal antibody levels have fallen enough to allow the puppy to mount its own immune response. Vaccines given only at 8 weeks may not confer lasting protection because maternal antibodies blocked the response. The 14-16 week final puppy dose is the critical one.' },
   { question: 'What is the difference between modified live and killed vaccines?', answer: 'Modified live vaccines (MLV) contain attenuated (weakened) live virus — they replicate briefly in the host, triggering a strong immune response similar to natural infection without causing disease. They provide more durable immunity with fewer doses than killed vaccines. Killed (inactivated) vaccines contain dead virus or viral components — safer in immunocompromised animals but generally require boosters and adjuvants to generate adequate immune response. DA2PP is available in both forms; rabies vaccines for dogs are typically killed.' },
-]
-const SOURCES = [
-  { label: 'WSAVA: Vaccination Guidelines for Dogs and Cats', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
-  { label: 'AAHA: Canine Vaccination Guidelines', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
-  { label: 'AVMA: Vaccinations for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations-your-pet', publisher: 'AVMA' },
 ]
 export default function DogVaccinationsGuidePage() {
   return (

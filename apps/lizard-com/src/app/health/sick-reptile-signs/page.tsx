@@ -26,6 +26,8 @@ const schema = combineSchemas(buildArticleSchema({
   authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
+
+  citation: SOURCES,
 }), buildMedicalWebPageSchema({ name: 'Sick Reptile Signs', description: '12 signs requiring veterinary care in reptiles — what to watch for.', url: 'https://lizard.com/health/sick-reptile-signs', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 
 const SIGNS = [

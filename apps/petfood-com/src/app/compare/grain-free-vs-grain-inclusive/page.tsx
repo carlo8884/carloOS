@@ -22,6 +22,28 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
 const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Grain-Free vs Grain-Inclusive Pet Food | PetFood.com',
@@ -33,6 +55,8 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 // Content-aware FAQ derived from the sections below — calibrated, sourced-tone
@@ -63,28 +87,6 @@ const FAQ = [
 
 const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
-const SOURCES = [
-    {
-      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
-      url: "https://www.aafco.org/resources/publications/",
-      publisher: "Association of American Feed Control Officials, 2025",
-    },
-    {
-      label: "Nutrient Requirements of Dogs and Cats",
-      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
-      publisher: "National Research Council, National Academies Press, 2006",
-    },
-    {
-      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
-      url: "https://wsava.org/committees/global-nutrition-committee/",
-      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
-    },
-    {
-      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
-      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
-      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
-    },
-]
 
 export default function GrainFreeVsGrainInclusivePage() {
   return (

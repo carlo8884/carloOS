@@ -13,6 +13,12 @@ export const metadata: Metadata = buildMetadata({
 
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-litter'
 
+const SOURCES = [
+  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
+  { label: 'Softwood bedding phenols and small-mammal respiratory irritation (review of the literature)', publisher: 'Laboratory-animal husbandry references' },
+  { label: 'Ferret litter and bedding guidance', publisher: 'American Ferret Association' },
+  { label: 'Clumping-litter ingestion hazard in small mammals', publisher: 'Exotic-mammal veterinary clinical references' },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
@@ -23,6 +29,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -106,12 +114,6 @@ const QUICK_PICKS = [
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
 
-const SOURCES = [
-  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
-  { label: 'Softwood bedding phenols and small-mammal respiratory irritation (review of the literature)', publisher: 'Laboratory-animal husbandry references' },
-  { label: 'Ferret litter and bedding guidance', publisher: 'American Ferret Association' },
-  { label: 'Clumping-litter ingestion hazard in small mammals', publisher: 'Exotic-mammal veterinary clinical references' },
-]
 
 export default function BestFerretLitterPage() {
   return (

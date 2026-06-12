@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Dodds, W.K. & Gudder, D.A. The Ecology of Cladophora. Journal of Phycology, 1992.", publisher: "Journal of Phycology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Algae Control — Identify and Beat Every Type | Fish.com', description: "How to identify and control aquarium algae: green spot, hair, black beard, diatoms, and cyanobacteria. Fix the root causes — light, nutrients, and CO2.", path: '/setup/aquarium-algae-control', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function AlgaeControlPage() {
   return (
     <ArticleLayout siteId="fish-com"

@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Feeding Cats vs Dogs — Practical Differences | PetFood.com',
-  description:
-    'How feeding routines differ between cats and dogs — meal patterns, food motivation, neophobia, free-feeding risks, and translating nutrition into daily practice.',
-  url: 'https://petfood.com/species/feeding-cats-vs-dogs-differences',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Feeding Cats vs Dogs — Practical Differences | PetFood.com',
+  description:
+    'How feeding routines differ between cats and dogs — meal patterns, food motivation, neophobia, free-feeding risks, and translating nutrition into daily practice.',
+  url: 'https://petfood.com/species/feeding-cats-vs-dogs-differences',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function FeedingCatsVsDogsDifferencesPage() {
   return (

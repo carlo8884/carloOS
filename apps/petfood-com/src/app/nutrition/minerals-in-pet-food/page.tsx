@@ -22,30 +22,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
-  description:
-    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
-  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
-  description:
-    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
-  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-06-01',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -63,6 +39,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
+  description:
+    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
+  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
+  description:
+    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
+  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function MineralsInPetFoodPage() {
   return (

@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'How Much to Feed a Dog — Calorie Math | PetFood.com',
-  description:
-    'How to calculate a dog feeding amount from resting energy requirement and activity factors, why bag guidelines overfeed, and how to adjust to body condition.',
-  url: 'https://petfood.com/feeding/how-much-to-feed-a-dog',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'How Much to Feed a Dog — Calorie Math | PetFood.com',
+  description:
+    'How to calculate a dog feeding amount from resting energy requirement and activity factors, why bag guidelines overfeed, and how to adjust to body condition.',
+  url: 'https://petfood.com/feeding/how-much-to-feed-a-dog',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function HowMuchToFeedADogPage() {
   return (

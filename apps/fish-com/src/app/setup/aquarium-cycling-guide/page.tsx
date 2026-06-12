@@ -24,6 +24,33 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Nitrification and the Aquarium Nitrogen Cycle",
+    url: "https://www.researchgate.net/publication/228393977",
+    publisher: "Aquacultural Engineering (peer-reviewed)",
+  },
+  {
+    label: "Nitrosomonas and Nitrospira in Biological Filters",
+    url: "https://aem.asm.org/content/67/12/5768",
+    publisher: "Applied and Environmental Microbiology",
+  },
+  {
+    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
+    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
+    publisher: "University of Arkansas Cooperative Extension",
+  },
+  {
+    label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
+    url: "https://srac.tamu.edu/serveFactSheet/140",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "Aquarium Water Chemistry: Ammonia, Nitrite, Nitrate",
+    url: "https://fisheries.org/docs/wp/Urban-Fisheries/Aquarium-Water-Chemistry.pdf",
+    publisher: "American Fisheries Society",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Aquarium Cycling Guide',
@@ -34,6 +61,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const howToSchema = buildHowToSchema({
@@ -128,33 +157,6 @@ const faqSchema = buildFAQSchema({
 
 const combinedSchema = combineSchemas(articleSchema, howToSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Nitrification and the Aquarium Nitrogen Cycle",
-    url: "https://www.researchgate.net/publication/228393977",
-    publisher: "Aquacultural Engineering (peer-reviewed)",
-  },
-  {
-    label: "Nitrosomonas and Nitrospira in Biological Filters",
-    url: "https://aem.asm.org/content/67/12/5768",
-    publisher: "Applied and Environmental Microbiology",
-  },
-  {
-    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
-    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
-    publisher: "University of Arkansas Cooperative Extension",
-  },
-  {
-    label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
-    url: "https://srac.tamu.edu/serveFactSheet/140",
-    publisher: "Southern Regional Aquaculture Center (SRAC)",
-  },
-  {
-    label: "Aquarium Water Chemistry: Ammonia, Nitrite, Nitrate",
-    url: "https://fisheries.org/docs/wp/Urban-Fisheries/Aquarium-Water-Chemistry.pdf",
-    publisher: "American Fisheries Society",
-  },
-]
 
 export default function CyclingGuidePage() {
   return (

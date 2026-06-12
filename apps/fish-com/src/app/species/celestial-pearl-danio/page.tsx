@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Roberts, T.R. The Celestial Pearl Danio, a new genus and species of colourful minute Cyprinid fish from Myanmar. Raffles Bulletin of Zoology, 2007.", publisher: "Raffles Bulletin of Zoology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio: Tank, Diet & Basics | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required.', path: '/species/celestial-pearl-danio', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

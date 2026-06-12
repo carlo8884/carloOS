@@ -49,34 +49,6 @@ const FAQ: FAQItem[] = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Best Puppy Food 2026 — Ranked on AAFCO Growth, Calcium Limits, and Breed Size',
-    description:
-      'Analysis-led puppy food roundup evaluating foods on the AAFCO growth nutritional-adequacy statement, large-breed calcium maximums and calcium-to-phosphorus ratios, calorie density, and the grain-free/DCM association framed as association not causation.',
-    url: 'https://petfood.com/reviews/best-puppy-food',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-11T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Best Puppy Food — Analysis-Led Picks 2026',
-    numberOfItems: 5,
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Best overall — AAFCO growth, feeding-trial-substantiated, balanced calcium' },
-      { '@type': 'ListItem', position: 2, name: 'Best for large-breed puppies — AAFCO growth including large-size dogs, controlled calcium' },
-      { '@type': 'ListItem', position: 3, name: 'Best for small-breed puppies — higher calorie density, small kibble' },
-      { '@type': 'ListItem', position: 4, name: 'Best all-life-stages — meets growth profile, family-pack flexibility' },
-      { '@type': 'ListItem', position: 5, name: 'Best value — complete AAFCO growth diet at a lower price band' },
-    ],
-  },
-  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
-)
-
 const SOURCES = [
   {
     label: 'Association of American Feed Control Officials. 2025 AAFCO Official Publication — Dog Food Nutrient Profiles, including the maximum calcium provision for growth of large-size dogs.',
@@ -107,6 +79,36 @@ const SOURCES = [
     publisher: 'American Animal Hospital Association',
   },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Best Puppy Food 2026 — Ranked on AAFCO Growth, Calcium Limits, and Breed Size',
+    description:
+      'Analysis-led puppy food roundup evaluating foods on the AAFCO growth nutritional-adequacy statement, large-breed calcium maximums and calcium-to-phosphorus ratios, calorie density, and the grain-free/DCM association framed as association not causation.',
+    url: 'https://petfood.com/reviews/best-puppy-food',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-11T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Best Puppy Food — Analysis-Led Picks 2026',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Best overall — AAFCO growth, feeding-trial-substantiated, balanced calcium' },
+      { '@type': 'ListItem', position: 2, name: 'Best for large-breed puppies — AAFCO growth including large-size dogs, controlled calcium' },
+      { '@type': 'ListItem', position: 3, name: 'Best for small-breed puppies — higher calorie density, small kibble' },
+      { '@type': 'ListItem', position: 4, name: 'Best all-life-stages — meets growth profile, family-pack flexibility' },
+      { '@type': 'ListItem', position: 5, name: 'Best value — complete AAFCO growth diet at a lower price band' },
+    ],
+  },
+  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
+)
+
 
 export default function BestPuppyFoodPage() {
   return (

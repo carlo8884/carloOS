@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'How to Choose a Pet Food — A Framework | PetFood.com',
-  description:
-    'A practical framework for choosing pet food — AAFCO substantiation, manufacturer transparency, the WSAVA questions, life-stage match, and ignoring marketing.',
-  url: 'https://petfood.com/guides/how-to-choose-a-pet-food',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'How to Choose a Pet Food — A Framework | PetFood.com',
+  description:
+    'A practical framework for choosing pet food — AAFCO substantiation, manufacturer transparency, the WSAVA questions, life-stage match, and ignoring marketing.',
+  url: 'https://petfood.com/guides/how-to-choose-a-pet-food',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function HowToChooseAPetFoodPage() {
   return (

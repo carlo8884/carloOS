@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Dog vs Cat Nutrition — Why They Differ | PetFood.com',
-  description:
-    'The core metabolic differences between dogs and cats — obligate carnivore vs facultative omnivore — and why a cat cannot live on dog food.',
-  url: 'https://petfood.com/species/dog-vs-cat-nutrition-overview',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Dog vs Cat Nutrition — Why They Differ | PetFood.com',
+  description:
+    'The core metabolic differences between dogs and cats — obligate carnivore vs facultative omnivore — and why a cat cannot live on dog food.',
+  url: 'https://petfood.com/species/dog-vs-cat-nutrition-overview',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function DogVsCatNutritionOverviewPage() {
   return (

@@ -28,6 +28,8 @@ const schema = combineSchemas(
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
+
+  citation: SOURCES,
 }), buildMedicalWebPageSchema({
   name: 'Senior Dog Care Guide',
   description: 'What changes after 7 and how to adapt care for maximum quality of life.',

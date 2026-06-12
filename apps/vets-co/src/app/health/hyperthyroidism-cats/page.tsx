@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hyperthyroidism in Cats — Signs & Treatment Options | Vets.co", description: "Feline hyperthyroidism causes weight loss with a ravenous appetite in older cats. Compare radioiodine, medication, diet, and surgery treatment options.", path: '/health/hyperthyroidism-cats', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Hyperthyroidism in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hyperthyroidism-cats', publisher: 'AVMA' },
+  { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/hyperthyroidism/', publisher: 'American Association of Feline Practitioners' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Hyperthyroidism in Cats', description: 'Clinical signs, diagnosis, and treatment of feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Is radioiodine treatment a cure for hyperthyroidism?", answer: "Radioiodine (I-131) therapy is considered the gold-standard treatment and is curative in the large majority of cats with a single injection. It selectively destroys overactive thyroid tissue while sparing normal tissue, requires no daily medication afterward, and avoids surgical and anesthetic risk. The trade-offs are upfront cost and a short hospital stay for radiation safety. It is the preferred option for many cats, though concurrent kidney disease can influence the decision and should be discussed with your veterinarian." },
   { question: "Why does my hyperthyroid cat eat constantly but lose weight?", answer: "Excess thyroid hormone dramatically increases the body's metabolic rate, so a hyperthyroid cat burns calories faster than it can take them in — producing the classic picture of a ravenous appetite alongside steady weight loss. Other common signs include increased thirst and urination, hyperactivity or restlessness, a poor or matted coat, increased vocalization, and sometimes vomiting or diarrhea. Because these signs overlap with other diseases of older cats, bloodwork measuring thyroid hormone (T4) confirms the diagnosis." },
   { question: "Can diet alone control hyperthyroidism?", answer: "An iodine-restricted therapeutic diet can control hyperthyroidism in some cats, but only if it is fed exclusively — no other food, treats, or outdoor hunting — which is difficult in multi-cat households and impossible for cats that go outdoors. It does not cure the disease and the long-term effects of severe iodine restriction are still debated. Diet is a reasonable option for cats that cannot undergo other treatments, but radioiodine and medication are more reliable for most cats." },
-]
-const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Hyperthyroidism in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hyperthyroidism-cats', publisher: 'AVMA' },
-  { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/hyperthyroidism/', publisher: 'American Association of Feline Practitioners' },
 ]
 export default function HyperthyroidismCatsPage() {
   return (

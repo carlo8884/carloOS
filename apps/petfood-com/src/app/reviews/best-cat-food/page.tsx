@@ -49,35 +49,6 @@ const FAQ: FAQItem[] = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Best Cat Food 2026 — Ranked on Protein, Taurine, and AAFCO Adequacy',
-    description:
-      'Analysis-led cat food roundup evaluating foods on animal-protein content, supplemented taurine, AAFCO cat nutritional-adequacy statements, and the wet-versus-dry hydration argument for obligate carnivores.',
-    url: 'https://petfood.com/reviews/best-cat-food',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-11T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Best Cat Food — Analysis-Led Picks 2026',
-    itemListOrder: 'https://schema.org/ItemListOrderDescending',
-    numberOfItems: 5,
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Best overall analysis profile — high-animal-protein canned diet, feeding-trial-substantiated' },
-      { '@type': 'ListItem', position: 2, name: 'Best for urinary/hydration concern — all-wet pate, high moisture' },
-      { '@type': 'ListItem', position: 3, name: 'Best dry option — high-protein, feeding-trial-substantiated kibble' },
-      { '@type': 'ListItem', position: 4, name: 'Best for kittens — AAFCO growth/all-life-stages, higher calorie density' },
-      { '@type': 'ListItem', position: 5, name: 'Best value — complete-and-balanced AAFCO cat diet at a lower price band' },
-    ],
-  },
-  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
-)
-
 const SOURCES = [
   {
     label: 'Nutrient Requirements of Dogs and Cats (2006)',
@@ -107,6 +78,37 @@ const SOURCES = [
     publisher: 'Cornell University College of Veterinary Medicine',
   },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Best Cat Food 2026 — Ranked on Protein, Taurine, and AAFCO Adequacy',
+    description:
+      'Analysis-led cat food roundup evaluating foods on animal-protein content, supplemented taurine, AAFCO cat nutritional-adequacy statements, and the wet-versus-dry hydration argument for obligate carnivores.',
+    url: 'https://petfood.com/reviews/best-cat-food',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-11T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Best Cat Food — Analysis-Led Picks 2026',
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Best overall analysis profile — high-animal-protein canned diet, feeding-trial-substantiated' },
+      { '@type': 'ListItem', position: 2, name: 'Best for urinary/hydration concern — all-wet pate, high moisture' },
+      { '@type': 'ListItem', position: 3, name: 'Best dry option — high-protein, feeding-trial-substantiated kibble' },
+      { '@type': 'ListItem', position: 4, name: 'Best for kittens — AAFCO growth/all-life-stages, higher calorie density' },
+      { '@type': 'ListItem', position: 5, name: 'Best value — complete-and-balanced AAFCO cat diet at a lower price band' },
+    ],
+  },
+  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
+)
+
 
 export default function BestCatFoodPage() {
   return (

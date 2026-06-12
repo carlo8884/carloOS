@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Anxiety — Types, Signs & Evidence-Based Treatment | Dog.com', description: 'Dog anxiety types: separation, noise phobia, and generalized. Signs, behavioral modification, and when medication makes a significant difference.', path: '/health/dog-anxiety', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Dog Anxiety', description: 'Types and treatment of anxiety in dogs.', url: 'https://dog.com/health/dog-anxiety', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'How can I tell if my dog has anxiety?', answer: 'The obvious signs — destruction, vocalization, house soiling — get recognized. The subtle chronic signs are frequently missed: yawning when not tired, lip-licking without food present, excessive panting at rest, inability to settle, constant hypervigilance, avoidance of eye contact, whale eye, weight loss, reduced play, and decreased interest in food. A dog that is "always on alert" or "never truly relaxes" may have chronic anxiety rather than a high-energy personality — and it is a treatable medical condition worth raising with your veterinarian.' },

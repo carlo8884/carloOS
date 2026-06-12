@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'How to Read a Pet Food Label — Anatomy of a Bag',
-  description:
-    'Reference guide to every panel on a commercial pet food bag — product-name rules, guaranteed analysis, ingredient list, AAFCO statement, caloric content, and feeding guidelines.',
-  url: 'https://petfood.com/guides/reading-pet-food-labels',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -55,6 +43,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'How to Read a Pet Food Label — Anatomy of a Bag',
+  description:
+    'Reference guide to every panel on a commercial pet food bag — product-name rules, guaranteed analysis, ingredient list, AAFCO statement, caloric content, and feeding guidelines.',
+  url: 'https://petfood.com/guides/reading-pet-food-labels',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function ReadingPetFoodLabelsPage() {
   return (

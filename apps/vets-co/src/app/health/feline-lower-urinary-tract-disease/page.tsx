@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Feline Lower Urinary Tract Disease', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/feline-lower-urinary-tract-disease', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
+  { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why is a blocked male cat an emergency?", answer: "A male cat that cannot urinate has a urethral obstruction — a life-threatening emergency. The blockage prevents the body from eliminating waste and potassium, causing the bladder to overfill and toxins and potassium to build up in the blood, which can stop the heart within 24 to 48 hours. A cat straining in the litter box and producing nothing, crying in pain, vomiting, or becoming lethargic needs emergency veterinary care immediately. Female cats block far less often due to their wider urethra, but any cat unable to urinate is an emergency." },
   { question: "What is feline idiopathic cystitis?", answer: "Feline idiopathic cystitis (FIC) is the most common cause of FLUTD signs, especially in younger cats, and means painful bladder inflammation with no identifiable infection or stones. It is strongly linked to stress, and flare-ups often follow changes in the household, conflict with other cats, or disruptions to routine. Management centers on reducing stress, increasing water intake, environmental enrichment, and sometimes diet changes, rather than antibiotics, since true bladder infections are actually uncommon in young cats." },
   { question: "How can I reduce my cat's risk of urinary problems?", answer: "Increasing water intake is the most powerful tool — feeding wet food, adding water fountains, and providing multiple clean water sources dilutes the urine and reduces crystal and stone formation. Equally important is reducing stress through a stable routine, plenty of clean litter boxes (a common guideline is one per cat plus one extra), vertical space, play, and minimizing conflict in multi-cat homes. Maintaining a healthy weight and feeding an appropriate diet recommended by your veterinarian also lowers risk." },
-]
-const SOURCES = [
-  { label: 'Merck Veterinary Manual: Feline Lower Urinary Tract Disease', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/feline-lower-urinary-tract-disease', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
-  { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
 ]
 export default function FLUTDPage() {
   return (

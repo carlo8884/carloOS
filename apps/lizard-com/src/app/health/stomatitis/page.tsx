@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot) — Signs, Causes | Lizard.com', description: 'Stomatitis (mouth rot) is a bacterial infection of the oral cavity in reptiles. Yellow-white exudate in the mouth, swollen gums, and difficulty eating.', path: '/health/stomatitis', type: 'article' })
-const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+}), buildMedicalWebPageSchema({ name: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function StomatitisPage() {
   return (
     <ArticleLayout siteId="lizard-com"

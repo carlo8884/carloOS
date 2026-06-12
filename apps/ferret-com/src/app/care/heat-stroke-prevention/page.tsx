@@ -11,6 +11,22 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Merck Veterinary Manual — heatstroke and hyperthermia in small mammals",
+    url: "https://www.merckvetmanual.com",
+    publisher: "Merck/MSD",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Heat Stroke Prevention',
@@ -21,6 +37,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const FAQS = [
@@ -54,22 +72,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Merck Veterinary Manual — heatstroke and hyperthermia in small mammals",
-    url: "https://www.merckvetmanual.com",
-    publisher: "Merck/MSD",
-  },
-]
 
 export default function HeatStrokePreventionPage() {
   return (

@@ -24,30 +24,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
-  description:
-    'How probiotics and prebiotics support the gut, the strain-specific evidence, why human probiotics are not interchangeable, viability and quality, and proper use.',
-  url: 'https://petfood.com/supplements/probiotics-for-pets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
-  description:
-    'How probiotics and prebiotics support the gut — strain-specific evidence, why human products differ, viability and quality, and proper use.',
-  url: 'https://petfood.com/supplements/probiotics-for-pets',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-06-01',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -65,6 +41,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
+  description:
+    'How probiotics and prebiotics support the gut, the strain-specific evidence, why human probiotics are not interchangeable, viability and quality, and proper use.',
+  url: 'https://petfood.com/supplements/probiotics-for-pets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
+  description:
+    'How probiotics and prebiotics support the gut — strain-specific evidence, why human products differ, viability and quality, and proper use.',
+  url: 'https://petfood.com/supplements/probiotics-for-pets',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function ProbioticsForPetsPage() {
   return (

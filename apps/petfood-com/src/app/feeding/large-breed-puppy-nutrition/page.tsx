@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Large-Breed Puppy Nutrition and the Calcium Ceiling | PetFood.com',
-  description:
-    'Why large-breed puppies need a specific diet, the calcium ceiling and developmental orthopedic disease, controlled growth rate, and reading the AAFCO statement.',
-  url: 'https://petfood.com/feeding/large-breed-puppy-nutrition',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Large-Breed Puppy Nutrition and the Calcium Ceiling | PetFood.com',
+  description:
+    'Why large-breed puppies need a specific diet, the calcium ceiling and developmental orthopedic disease, controlled growth rate, and reading the AAFCO statement.',
+  url: 'https://petfood.com/feeding/large-breed-puppy-nutrition',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function LargeBreedPuppyNutritionPage() {
   return (

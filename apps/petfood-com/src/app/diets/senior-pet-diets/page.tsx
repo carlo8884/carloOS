@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Senior Dog and Cat Diets — What Changes | PetFood.com',
-  description:
-    'What senior nutrition actually means without an AAFCO senior life stage, the energy and protein debate, supporting muscle mass, and tailoring to age-related disease.',
-  url: 'https://petfood.com/diets/senior-pet-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Senior Dog and Cat Diets — What Changes | PetFood.com',
+  description:
+    'What senior nutrition actually means without an AAFCO senior life stage, the energy and protein debate, supporting muscle mass, and tailoring to age-related disease.',
+  url: 'https://petfood.com/diets/senior-pet-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function SeniorPetDietsPage() {
   return (

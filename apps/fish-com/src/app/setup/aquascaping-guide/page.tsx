@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension, FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquascaping Guide — Layout, Hardscape & Composition | Fish.com', description: "Aquascaping fundamentals: the rule of thirds, golden ratio, iwagumi and nature-style layouts, hardscape selection, and foreground-to-background planting.", path: '/setup/aquascaping-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquascaping Guide', description: 'Composition principles, layout styles, hardscape, and planting structure for aquascaping.', url: 'https://fish.com/setup/aquascaping-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquascaping Guide', description: 'Composition principles, layout styles, hardscape, and planting structure for aquascaping.', url: 'https://fish.com/setup/aquascaping-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function AquascapingGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"

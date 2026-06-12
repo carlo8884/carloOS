@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Food Allergy and Elimination Diets for Pets | PetFood.com',
-  description:
-    'How cutaneous adverse food reactions are diagnosed, the elimination-diet trial, novel-protein vs hydrolyzed diets, and why over-the-counter limited-ingredient foods often fail.',
-  url: 'https://petfood.com/diets/food-allergy-and-elimination-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Food Allergy and Elimination Diets for Pets | PetFood.com',
+  description:
+    'How cutaneous adverse food reactions are diagnosed, the elimination-diet trial, novel-protein vs hydrolyzed diets, and why over-the-counter limited-ingredient foods often fail.',
+  url: 'https://petfood.com/diets/food-allergy-and-elimination-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function FoodAllergyAndEliminationDietsPage() {
   return (

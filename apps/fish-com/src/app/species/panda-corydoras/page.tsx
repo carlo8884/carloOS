@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Axenrot, T. & Kullander, S.O. Corydoras diphyes (Siluriformes: Callichthyidae), a new species from Paraguay. Ichthyological Explorations of Freshwaters, 2003.", publisher: "Ichthyological Explorations of Freshwaters" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide — The Cool-Water Cory | Fish.com', description: "Panda corydoras are a small, panda-marked cory catfish that prefers cooler water and pristine conditions. Keep a group of 6+ over soft sand.", path: '/species/panda-corydoras', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide', description: 'Temperature, group needs, water quality, and breeding for Corydoras panda.', url: 'https://fish.com/species/panda-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide', description: 'Temperature, group needs, water quality, and breeding for Corydoras panda.', url: 'https://fish.com/species/panda-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

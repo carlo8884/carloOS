@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVDC: Companion Animal Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
+  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
+  { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Veterinary Dental Cleaning Guide', description: 'Professional dental cleaning under anesthesia — grades, safety, and expectations.', url: 'https://vets.co/health/dental-cleaning-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Is anesthesia safe for older dogs?', answer: 'Anesthesia carries some risk for all patients, and risk increases with age and concurrent health conditions — but undertreated dental disease also carries significant risk (pain, systemic infection, quality of life decline). Modern veterinary anesthesia with pre-anesthetic bloodwork, IV catheter and fluids, monitoring of oxygen saturation, blood pressure, end-tidal CO2, and temperature, and dedicated anesthetic monitoring reduces anesthetic risk substantially. Most healthy senior dogs tolerate anesthesia well with appropriate protocols. The risk of anesthesia should be compared to the risk of leaving significant dental disease untreated.' },
   { question: 'What is anesthesia-free dentistry?', answer: 'Anesthesia-free dentistry (AFD) scrapes visible plaque from the visible tooth surface while the animal is awake and physically restrained. It cannot scale below the gumline (where periodontal disease occurs), cannot take dental radiographs to evaluate roots and bone, cannot probe periodontal pockets, and cannot extract teeth. The AVDC (American Veterinary Dental College), AAHA, and WSAVA all oppose anesthesia-free dentistry as it provides false assurance of dental health without addressing the subgingival disease that causes pain and tooth loss.' },
   { question: 'How often does my dog need dental cleanings?', answer: 'This depends on the individual dog\'s periodontal disease susceptibility, home care compliance, breed predisposition, and findings at each cleaning. Small breeds typically need cleanings more frequently — annually from age 2-3. Large breeds often go 18-24 months between cleanings with good home care. After any cleaning, the veterinarian grades the disease and recommends the next interval. Daily toothbrushing is the most effective intervention to extend intervals between professional cleanings.' },
-]
-const SOURCES = [
-  { label: 'AVDC: Companion Animal Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
-  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
-  { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
 ]
 export default function DentalCleaningGuidePage() {
   return (

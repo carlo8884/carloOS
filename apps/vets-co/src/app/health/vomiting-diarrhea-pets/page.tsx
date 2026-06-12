@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/gastrointestinal-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Vomiting and Diarrhea in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vomiting-and-diarrhea', publisher: 'AVMA' },
+  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Vomiting and Diarrhea in Pets', description: 'Causes and warning signs of vomiting and diarrhea in dogs and cats.', url: 'https://vets.co/health/vomiting-diarrhea-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "When should vomiting or diarrhea prompt a vet visit?", answer: "Seek veterinary care if vomiting or diarrhea is frequent or persistent, contains blood, or is accompanied by lethargy, loss of appetite, a painful or swollen abdomen, repeated unproductive retching, signs of dehydration, or known ingestion of a toxin or foreign object. Very young, very old, or chronically ill pets, and small breeds prone to rapid dehydration, warrant a lower threshold for care. A single episode in an otherwise bright, active pet that is still eating and drinking can often be monitored briefly, but worsening or additional signs change that." },
   { question: "What can I do at home for mild cases?", answer: "For a single mild episode in an otherwise healthy adult pet that remains bright and hydrated, supportive home care under veterinary guidance may be appropriate: ensuring access to water to prevent dehydration and, if advised by your veterinarian, a short period of a bland, easily digestible diet before gradually returning to normal food. Avoid giving human medications, which can be toxic. If signs persist beyond a day, worsen, or are joined by other symptoms, stop home care and contact your veterinarian." },
   { question: "Why is dehydration the main concern?", answer: "Both vomiting and diarrhea cause fluid and electrolyte loss, and pets — especially small, young, old, or already-ill ones — can become dehydrated quickly. Dehydration compounds the original problem and can become dangerous on its own. Signs include lethargy, dry or tacky gums, sunken eyes, and loss of skin elasticity. Because dehydration can escalate faster than the underlying cause, persistent vomiting or diarrhea, or any signs of dehydration, are key reasons to seek prompt veterinary care, where fluids can be given safely." },
-]
-const SOURCES = [
-  { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/gastrointestinal-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Vomiting and Diarrhea in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vomiting-and-diarrhea', publisher: 'AVMA' },
-  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
 export default function VomitingDiarrheaPage() {
   return (

@@ -19,19 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Are Pet Food By-Products Bad? — The Myth | PetFood.com',
-  description:
-    'What AAFCO by-products actually are, why the floor-sweepings framing is wrong, the real transparency concern, and how organ meats are nutritionally valuable.',
-  url: 'https://petfood.com/myths/by-products-myth',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-  speakable: true,
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +41,21 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Are Pet Food By-Products Bad? — The Myth | PetFood.com',
+  description:
+    'What AAFCO by-products actually are, why the floor-sweepings framing is wrong, the real transparency concern, and how organ meats are nutritionally valuable.',
+  url: 'https://petfood.com/myths/by-products-myth',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+  speakable: true,
+
+  citation: SOURCES,
+})
+
 
 export default function ByProductsMythPage() {
   return (

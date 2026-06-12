@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide — The Pea Puffer | Fish.com', description: "Dwarf pea puffers are inch-long freshwater puffers with huge personalities. They need live or frozen snails to wear down their teeth and dislike most tankmates.", path: '/species/dwarf-puffer', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide', description: 'Diet, teeth, temperament, and care for Carinotetraodon travancoricus, the pea puffer.', url: 'https://fish.com/species/dwarf-puffer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide', description: 'Diet, teeth, temperament, and care for Carinotetraodon travancoricus, the pea puffer.', url: 'https://fish.com/species/dwarf-puffer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

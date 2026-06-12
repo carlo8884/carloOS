@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Periodontal Disease in Dogs & Cats — Dental Health | Vets.co", description: "Periodontal disease affects most pets by age 3. Learn how dental disease harms the whole body, the signs, and how professional cleaning and home care help.", path: '/health/periodontal-disease-pets', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVDC: Nomenclature — Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
+  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-configuration/', publisher: 'AAHA' },
+  { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why does my pet need anesthesia for a dental cleaning?", answer: "A thorough, safe dental cleaning requires anesthesia because the most important work happens below the gumline — where disease actually lives — and involves probing each tooth, taking dental X-rays, and scaling under the gums, none of which an awake pet will tolerate. Anesthesia-free dentistry only scrapes visible tartar off the crown, leaving the disease beneath untouched and creating a false sense of health. Modern anesthesia with pre-operative bloodwork and monitoring is very safe for the vast majority of pets, and the diagnostic and treatment quality it allows is far superior." },
   { question: "Can dental disease affect the rest of the body?", answer: "Yes. Advanced periodontal disease is not just a mouth problem — the chronic infection and inflammation can affect the whole body, and severe dental disease has been associated with changes in the kidneys, liver, and heart. Locally, untreated disease causes painful tooth root abscesses, bone loss in the jaw, and oral-nasal fistulas. The pain alone significantly affects quality of life, even though pets rarely show it openly. Treating dental disease often produces a noticeable improvement in a pet's energy and comfort." },
   { question: "What is the best way to prevent dental disease at home?", answer: "Daily tooth brushing with a pet-safe toothpaste is the gold standard — it mechanically removes plaque before it hardens into tartar, which is the root of the problem. Most pets can be trained to accept brushing with patience and gradual introduction. When brushing is not possible, products carrying the Veterinary Oral Health Council (VOHC) seal — certain dental diets, chews, and water additives — have demonstrated effectiveness. Home care slows disease but does not replace professional cleanings, which remain necessary periodically." },
-]
-const SOURCES = [
-  { label: 'AVDC: Nomenclature — Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
-  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-configuration/', publisher: 'AAHA' },
-  { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
 export default function PeriodontalDiseasePage() {
   return (

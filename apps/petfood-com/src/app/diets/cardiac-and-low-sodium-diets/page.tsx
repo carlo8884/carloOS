@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Cardiac (Heart) and Low-Sodium Diets for Pets | PetFood.com',
-  description:
-    'How diet supports heart disease — sodium restriction by disease stage, protein and muscle preservation, taurine, omega-3s, and maintaining appetite.',
-  url: 'https://petfood.com/diets/cardiac-and-low-sodium-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Cardiac (Heart) and Low-Sodium Diets for Pets | PetFood.com',
+  description:
+    'How diet supports heart disease — sodium restriction by disease stage, protein and muscle preservation, taurine, omega-3s, and maintaining appetite.',
+  url: 'https://petfood.com/diets/cardiac-and-low-sodium-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function CardiacAndLowSodiumDietsPage() {
   return (

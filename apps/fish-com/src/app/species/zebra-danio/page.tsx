@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Engeszer, R.E. et al. Timing and Location of Zebrafish (Danio rerio) Spawning. Copeia, 2007.", publisher: "Copeia" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Zebra Danio Care Guide — The Hardy Cycling Fish | Fish.com', description: "Zebra danios are among the hardiest beginner fish — fast, active schoolers that tolerate a wide range. School of 6+, cooler water, secure lid.", path: '/species/zebra-danio', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Zebra Danio Care Guide', description: 'School size, temperament, tank requirements, and breeding for Danio rerio.', url: 'https://fish.com/species/zebra-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Zebra Danio Care Guide', description: 'School size, temperament, tank requirements, and breeding for Danio rerio.', url: 'https://fish.com/species/zebra-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

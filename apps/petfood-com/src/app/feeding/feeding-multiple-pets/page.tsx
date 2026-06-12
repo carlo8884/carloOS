@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Feeding Multiple Pets in One Household | PetFood.com',
-  description:
-    'How to feed multi-pet households with different needs, preventing food stealing, feeding dogs and cats separately, and managing therapeutic diets in a group.',
-  url: 'https://petfood.com/feeding/feeding-multiple-pets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Feeding Multiple Pets in One Household | PetFood.com',
+  description:
+    'How to feed multi-pet households with different needs, preventing food stealing, feeding dogs and cats separately, and managing therapeutic diets in a group.',
+  url: 'https://petfood.com/feeding/feeding-multiple-pets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function FeedingMultiplePetsPage() {
   return (

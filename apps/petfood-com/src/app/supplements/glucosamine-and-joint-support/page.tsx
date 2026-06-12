@@ -24,30 +24,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
-  description:
-    'What the evidence really shows for glucosamine, chondroitin, and green-lipped mussel, the supplement-regulation gap, quality concerns, and realistic expectations.',
-  url: 'https://petfood.com/supplements/glucosamine-and-joint-support',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
-  description:
-    'What the evidence shows for glucosamine, chondroitin, and green-lipped mussel — the regulation gap, quality concerns, and realistic expectations.',
-  url: 'https://petfood.com/supplements/glucosamine-and-joint-support',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-06-01',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -65,6 +41,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
+  description:
+    'What the evidence really shows for glucosamine, chondroitin, and green-lipped mussel, the supplement-regulation gap, quality concerns, and realistic expectations.',
+  url: 'https://petfood.com/supplements/glucosamine-and-joint-support',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
+  description:
+    'What the evidence shows for glucosamine, chondroitin, and green-lipped mussel — the regulation gap, quality concerns, and realistic expectations.',
+  url: 'https://petfood.com/supplements/glucosamine-and-joint-support',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function GlucosamineAndJointSupportPage() {
   return (

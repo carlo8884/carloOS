@@ -11,19 +11,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'ferret-com',
-  title: 'Traveling With a Ferret and Choosing a Carrier',
-  description:
-    'Carrier selection, car safety, temperature and hydration on the road, stress reduction, and the realities of air travel with a ferret.',
-  url: 'https://ferret.com/care/travel-and-carriers',
-  imageUrl: '',
-  authorName: 'Ferret.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-const combined = combineSchemas(schema)
-
 const SOURCES = [
   {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry",
@@ -40,6 +27,21 @@ const SOURCES = [
     publisher: "AEMV",
   },
 ]
+const schema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Traveling With a Ferret and Choosing a Carrier',
+  description:
+    'Carrier selection, car safety, temperature and hydration on the road, stress reduction, and the realities of air travel with a ferret.',
+  url: 'https://ferret.com/care/travel-and-carriers',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+const combined = combineSchemas(schema)
+
 
 export default function TravelAndCarriersPage() {
   return (

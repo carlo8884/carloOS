@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Novaes, J.L.C. et al. Age, growth and mortality of the oscar cichlid, Astronotus ocellatus, in the middle Solimoes River. Fisheries Research, 2004.", publisher: "Fisheries Research" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Oscar Fish Care Guide — Large Tank, Personality | Fish.com', description: 'Oscars are the most personable large cichlid. They recognize owners, beg for food, and rearrange their tank. 75+ gallons required, high protein diet.', path: '/species/oscar', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Oscar Fish Care Guide', description: 'Large tank requirements, personality, HITH disease, and feeding for Oscar cichlids.', url: 'https://fish.com/species/oscar', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Oscar Fish Care Guide', description: 'Large tank requirements, personality, HITH disease, and feeding for Oscar cichlids.', url: 'https://fish.com/species/oscar', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

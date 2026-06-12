@@ -29,6 +29,8 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 const DISEASES = [

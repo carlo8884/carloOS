@@ -44,21 +44,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Legumes in Pet Food — Peas, Lentils, Chickpeas | PetFood.com',
-    description:
-      'Why legumes rose with grain-free, their nutrient profile and protein contribution, the DCM investigation link, and how to read pulse-heavy ingredient panels.',
-    url: 'https://petfood.com/ingredients/legumes-peas-and-lentils',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-01T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -81,6 +66,23 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Legumes in Pet Food — Peas, Lentils, Chickpeas | PetFood.com',
+    description:
+      'Why legumes rose with grain-free, their nutrient profile and protein contribution, the DCM investigation link, and how to read pulse-heavy ingredient panels.',
+    url: 'https://petfood.com/ingredients/legumes-peas-and-lentils',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function LegumesPeasAndLentilsPage() {
   return (

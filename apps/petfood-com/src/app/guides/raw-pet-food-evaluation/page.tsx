@@ -41,21 +41,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Evaluating Raw Pet Food — A Reference',
-    description:
-      'Reference page on commercial and home-prepared raw pet food — the category landscape, HPP treatment, pathogen risk, the WSAVA / AVMA / AAHA / FDA CVM positions, and a harm-reduction approach for owners who decide to feed raw despite the veterinary consensus.',
-    url: 'https://petfood.com/guides/raw-pet-food-evaluation',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-05-29T00:00:00Z',
-    modifiedAt: '2026-05-29T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
@@ -89,6 +74,23 @@ const SOURCES = [
       label: "Freeman LM, Chandler ML, Hamper BA, Weeth LP. Current knowledge about the risks and benefits of raw meat-based diets for dogs and cats. Journal of the American Veterinary Medical Association (2013), 243(11):1549-1558.",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Evaluating Raw Pet Food — A Reference',
+    description:
+      'Reference page on commercial and home-prepared raw pet food — the category landscape, HPP treatment, pathogen risk, the WSAVA / AVMA / AAHA / FDA CVM positions, and a harm-reduction approach for owners who decide to feed raw despite the veterinary consensus.',
+    url: 'https://petfood.com/guides/raw-pet-food-evaluation',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function RawPetFoodEvaluationPage() {
   return (

@@ -27,6 +27,27 @@ export const metadata: Metadata = buildMetadata({
   path: '/tools/pet-insurance-worth-it-calculator',
 })
 
+const SOURCES = [
+  {
+    label: 'State of the Industry Report — aggregate premium, claim, and policy-count data for North America',
+    url: 'https://naphia.org/state-of-the-industry/',
+    publisher: 'NAPHIA (North American Pet Health Insurance Association)',
+  },
+  {
+    label: 'Pet Insurance Model Act and annual pet-insurance market reports',
+    url: 'https://content.naic.org/',
+    publisher: 'NAIC (National Association of Insurance Commissioners)',
+  },
+  {
+    label: 'Consumer guidance on whether and how to buy pet insurance',
+    url: 'https://www.consumerfinance.gov/',
+    publisher: 'U.S. Consumer Financial Protection Bureau',
+  },
+  {
+    label: 'Carrier-published Sample Policies and Schedules of Benefits, recorded by the editorial team',
+    publisher: 'Vets.co Editorial',
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Is Pet Insurance Worth It? A Breakeven Calculator',
@@ -37,6 +58,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-06-11',
   modifiedAt: '2026-06-11',
+
+  citation: SOURCES,
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema([
@@ -68,27 +91,6 @@ const softwareApplicationSchema = {
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
 
-const SOURCES = [
-  {
-    label: 'State of the Industry Report — aggregate premium, claim, and policy-count data for North America',
-    url: 'https://naphia.org/state-of-the-industry/',
-    publisher: 'NAPHIA (North American Pet Health Insurance Association)',
-  },
-  {
-    label: 'Pet Insurance Model Act and annual pet-insurance market reports',
-    url: 'https://content.naic.org/',
-    publisher: 'NAIC (National Association of Insurance Commissioners)',
-  },
-  {
-    label: 'Consumer guidance on whether and how to buy pet insurance',
-    url: 'https://www.consumerfinance.gov/',
-    publisher: 'U.S. Consumer Financial Protection Bureau',
-  },
-  {
-    label: 'Carrier-published Sample Policies and Schedules of Benefits, recorded by the editorial team',
-    publisher: 'Vets.co Editorial',
-  },
-]
 
 const FAQS = [
   {

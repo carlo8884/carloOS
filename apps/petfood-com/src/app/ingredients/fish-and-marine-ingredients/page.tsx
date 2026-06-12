@@ -44,21 +44,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Fish and Marine Ingredients in Pet Food | PetFood.com',
-    description:
-      'Salmon, whitefish, fish meal, and fish oil in pet diets, the omega-3 benefit, the thiamine and mercury considerations, and sustainability and sourcing.',
-    url: 'https://petfood.com/ingredients/fish-and-marine-ingredients',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-01T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -76,6 +61,23 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Fish and Marine Ingredients in Pet Food | PetFood.com',
+    description:
+      'Salmon, whitefish, fish meal, and fish oil in pet diets, the omega-3 benefit, the thiamine and mercury considerations, and sustainability and sourcing.',
+    url: 'https://petfood.com/ingredients/fish-and-marine-ingredients',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function FishAndMarineIngredientsPage() {
   return (

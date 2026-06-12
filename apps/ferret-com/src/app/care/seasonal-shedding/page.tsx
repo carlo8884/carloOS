@@ -28,6 +28,25 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, photoperiod biology, and adrenal-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret integument, seasonal coat change, and GI obstruction",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret hair loss, adrenal disease, and trichobezoar obstruction",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — grooming and seasonal-care owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Seasonal Shedding',
@@ -38,6 +57,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -77,25 +98,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, photoperiod biology, and adrenal-disease chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret integument, seasonal coat change, and GI obstruction",
-    publisher: "Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — clinical reports on ferret hair loss, adrenal disease, and trichobezoar obstruction",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — grooming and seasonal-care owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-]
 
 export default function FerretSeasonalSheddingPage() {
   return (

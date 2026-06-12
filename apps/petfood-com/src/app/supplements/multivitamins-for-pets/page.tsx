@@ -22,30 +22,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Do Pets Need Multivitamins? — The Evidence | PetFood.com',
-  description:
-    'Why animals on complete diets rarely need a multivitamin, the over-supplementation risk for fat-soluble vitamins, when supplementation is justified, and quality.',
-  url: 'https://petfood.com/supplements/multivitamins-for-pets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Do Pets Need Multivitamins? — The Evidence | PetFood.com',
-  description:
-    'Why pets on complete diets rarely need a multivitamin — the over-supplementation risk for fat-soluble vitamins, when it is justified, and quality.',
-  url: 'https://petfood.com/supplements/multivitamins-for-pets',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-06-01',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -63,6 +39,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Do Pets Need Multivitamins? — The Evidence | PetFood.com',
+  description:
+    'Why animals on complete diets rarely need a multivitamin, the over-supplementation risk for fat-soluble vitamins, when supplementation is justified, and quality.',
+  url: 'https://petfood.com/supplements/multivitamins-for-pets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Do Pets Need Multivitamins? — The Evidence | PetFood.com',
+  description:
+    'Why pets on complete diets rarely need a multivitamin — the over-supplementation risk for fat-soluble vitamins, when it is justified, and quality.',
+  url: 'https://petfood.com/supplements/multivitamins-for-pets',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function MultivitaminsForPetsPage() {
   return (

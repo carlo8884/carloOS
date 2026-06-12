@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide — The Small Algae Eater | Fish.com', description: "Bristlenose plecos stay under 5 inches, eat algae, and suit tanks the common pleco outgrows. Needs driftwood, vegetables, and a male's signature bristles.", path: '/species/bristlenose-pleco', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide', description: 'Adult size, diet, driftwood requirement, and breeding for Ancistrus species.', url: 'https://fish.com/species/bristlenose-pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide', description: 'Adult size, diet, driftwood requirement, and breeding for Ancistrus species.', url: 'https://fish.com/species/bristlenose-pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

@@ -116,6 +116,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11',
   modifiedAt: '2026-06-11',
+
+  citation: SOURCES,
 })
 
 const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)

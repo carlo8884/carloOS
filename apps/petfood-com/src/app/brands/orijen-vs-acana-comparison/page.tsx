@@ -24,6 +24,30 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+    {
+      label: "Champion Petfoods. Transparency Reports, White Papers, and per-SKU ingredient panels published on the Orijen and Acana consumer sites. Treat as manufacturer-published material; verify against third-party sources where possible.",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+    {
+      label: "Mars Petcare. Public communications on the 2022 acquisition of Champion Petfoods.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements; SQF (Safe Quality Food) Level 2 scheme documentation.",
+    },
+    {
+      label: "Federal court records, multi-district litigation against Champion Petfoods (2018 filings and subsequent rulings). Cited as public-record litigation context; allegations were contested and the cases were substantially dismissed at the federal level.",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+]
 const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Orijen vs Acana — Same Parent, Different Lines',
@@ -34,6 +58,8 @@ const schema = buildArticleSchema({
   authorName: 'PetFood.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 // FAQ schema mirroring the on-page "Common Buyer Questions" section below
@@ -64,30 +90,6 @@ const FAQ = [
 
 const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
-const SOURCES = [
-    {
-      label: "Champion Petfoods. Transparency Reports, White Papers, and per-SKU ingredient panels published on the Orijen and Acana consumer sites. Treat as manufacturer-published material; verify against third-party sources where possible.",
-    },
-    {
-      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
-      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
-      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
-    },
-    {
-      label: "Mars Petcare. Public communications on the 2022 acquisition of Champion Petfoods.",
-    },
-    {
-      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements; SQF (Safe Quality Food) Level 2 scheme documentation.",
-    },
-    {
-      label: "Federal court records, multi-district litigation against Champion Petfoods (2018 filings and subsequent rulings). Cited as public-record litigation context; allegations were contested and the cases were substantially dismissed at the federal level.",
-    },
-    {
-      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
-      url: "https://www.aafco.org/resources/publications/",
-      publisher: "Association of American Feed Control Officials, 2025",
-    },
-]
 
 export default function OrijenVsAcanaComparisonPage() {
   return (

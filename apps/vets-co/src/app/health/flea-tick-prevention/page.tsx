@@ -3,19 +3,21 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Flea & Tick Prevention for Pets — A Complete Guide | Vets.co", description: "Fleas and ticks cause more than itching — they spread serious disease. Learn how prevention works, why year-round control matters, and how to choose products.", path: '/health/flea-tick-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/fleas-and-your-pet', publisher: 'AVMA' },
+  { label: 'Companion Animal Parasite Council: Fleas', url: 'https://capcvet.org/guidelines/fleas/', publisher: 'CAPC' },
+  { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
+  { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/pets.html', publisher: 'CDC' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Flea and Tick Prevention for Pets', description: 'How parasite prevention works and the diseases it prevents.', url: 'https://vets.co/health/flea-tick-prevention', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why do vets recommend year-round prevention?", answer: "Fleas and ticks are active in more conditions and seasons than many owners expect, and a single warm spell can sustain them; fleas can also survive indoors year-round. Year-round prevention avoids gaps that allow infestations to establish or disease to be transmitted, and it is far easier than treating an established flea infestation, which involves the home environment as well as the pet. Many products also cover other parasites. The American Heartworm Society and veterinary guidance generally favor consistent, year-round protection over seasonal use." },
   { question: "Are over-the-counter products as good as prescription ones?", answer: "Effectiveness and safety vary widely, and the right product depends on your pet's species, weight, health, and risk. Some over-the-counter products are effective and others are not, and importantly, some products safe for dogs are highly toxic to cats. Because of these differences — and because dosing must match the individual pet — it is best to choose a flea and tick product on your veterinarian's recommendation rather than by guesswork. Never use a dog product on a cat without veterinary direction." },
   { question: "What diseases do fleas and ticks spread?", answer: "Beyond itching and allergic skin disease, fleas can transmit tapeworms and, in some regions, bacterial infections, and heavy infestations can cause dangerous anemia in small or young pets. Ticks transmit a range of serious illnesses including Lyme disease, anaplasmosis, ehrlichiosis, and others depending on region and tick species, some of which also affect people. Preventing these parasites therefore protects against far more than discomfort — it is genuine protection against potentially serious, sometimes zoonotic, disease." },
-]
-const SOURCES = [
-  { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/fleas-and-your-pet', publisher: 'AVMA' },
-  { label: 'Companion Animal Parasite Council: Fleas', url: 'https://capcvet.org/guidelines/fleas/', publisher: 'CAPC' },
-  { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
-  { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/pets.html', publisher: 'CDC' },
 ]
 export default function FleaTickPage() {
   return (

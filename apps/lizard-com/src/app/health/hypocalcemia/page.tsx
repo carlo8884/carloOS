@@ -11,7 +11,9 @@ const SOURCES = [
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) in reptiles causes tremors, tetany, and seizures. Emergency calcium gluconate by injection. How to distinguish from MBD.', path: '/health/hypocalcemia', type: 'article' })
 
-const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles', description: 'Emergency recognition, distinction from chronic MBD, treatment, and prevention of acute hypocalcemia in captive reptiles.', url: 'https://lizard.com/health/hypocalcemia', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles', description: 'Emergency recognition, distinction from chronic MBD, treatment, and prevention of acute hypocalcemia in captive reptiles.', url: 'https://lizard.com/health/hypocalcemia', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const medSchema = buildMedicalWebPageSchema({ name: 'Hypocalcemia in Reptiles', description: 'Acute hypocalcemia in reptiles — recognition, distinction from MBD, emergency treatment, and prevention.', url: 'https://lizard.com/health/hypocalcemia', authorName: 'Lizard.com Editorial', lastReviewed: '2026-05-28' })
 

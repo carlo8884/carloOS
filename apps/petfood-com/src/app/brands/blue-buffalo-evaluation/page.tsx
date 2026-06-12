@@ -42,21 +42,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Blue Buffalo — An Independent Evaluation',
-    description:
-      "Independent evaluation of Blue Buffalo against the PetFood.com five-dimension scoring rubric — corporate context (General Mills 2018 acquisition), product lines, LifeSource Bits, recall history per FDA CVM, the 2018-2019 grain-free DCM investigation listing, and manufacturing footprint.",
-    url: 'https://petfood.com/brands/blue-buffalo-evaluation',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-05-29T00:00:00Z',
-    modifiedAt: '2026-05-29T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
@@ -84,6 +69,23 @@ const SOURCES = [
       label: "Adin D, DeFrancesco TC, Keene B, et al. Published peer-reviewed cardiology literature on diet-associated dilated cardiomyopathy in dogs (2018-2024) — see our grain-free and DCM page for the citation set.",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Blue Buffalo — An Independent Evaluation',
+    description:
+      "Independent evaluation of Blue Buffalo against the PetFood.com five-dimension scoring rubric — corporate context (General Mills 2018 acquisition), product lines, LifeSource Bits, recall history per FDA CVM, the 2018-2019 grain-free DCM investigation listing, and manufacturing footprint.",
+    url: 'https://petfood.com/brands/blue-buffalo-evaluation',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function BlueBuffaloEvaluationPage() {
   return (

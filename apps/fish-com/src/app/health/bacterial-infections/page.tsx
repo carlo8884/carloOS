@@ -11,7 +11,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish — Signs & Treatment | Fish.com', description: "How to recognize and treat bacterial infections in fish: ulcers, red streaks, septicemia, and mouth fungus. Why water quality is almost always the root cause.", path: '/health/bacterial-infections', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish', description: 'Signs, causes, and treatment of gram-negative bacterial infections in aquarium fish.', url: 'https://fish.com/health/bacterial-infections', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish', description: 'Signs, causes, and treatment of gram-negative bacterial infections in aquarium fish.', url: 'https://fish.com/health/bacterial-infections', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true ,
+  citation: SOURCES,
+})
 export default function BacterialInfectionsPage() {
   return (
     <ArticleLayout siteId="fish-com"

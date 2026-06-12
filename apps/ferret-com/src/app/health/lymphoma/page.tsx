@@ -62,6 +62,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const medSchema = buildMedicalWebPageSchema({

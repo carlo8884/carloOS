@@ -64,6 +64,8 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 const medSchema = buildMedicalWebPageSchema({

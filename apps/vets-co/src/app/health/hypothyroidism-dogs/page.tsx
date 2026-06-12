@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Hypothyroidism in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hypothyroidism-dogs', publisher: 'AVMA' },
+  { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Clinical signs, testing, and treatment of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Is hypothyroidism in dogs treatable?", answer: "Yes — hypothyroidism is one of the most treatable chronic diseases in dogs. Treatment is a daily oral thyroid hormone replacement, and the dose is determined and adjusted by your veterinarian based on follow-up blood levels. Most dogs respond dramatically: energy and activity return within a few weeks, and skin and coat changes resolve over a few months. The medication is inexpensive and given for life, with periodic bloodwork to keep the dose correct." },
   { question: "Does hypothyroidism cause weight gain even when eating normally?", answer: "Yes. Thyroid hormone sets the body's metabolic rate, so an underactive thyroid slows metabolism and leads to weight gain despite no increase — or even a decrease — in food intake. This is a hallmark of the disease, alongside lethargy, a dull or thinning coat, skin darkening, recurrent ear or skin infections, and cold intolerance. Because these signs come on gradually and overlap with normal aging, the condition is often missed until bloodwork is done." },
   { question: "Can other illnesses cause a falsely low thyroid result?", answer: "Yes — this is an important diagnostic pitfall. Many unrelated illnesses, as well as certain medications, can lower thyroid hormone levels temporarily without true hypothyroidism, a phenomenon called euthyroid sick syndrome. For this reason veterinarians avoid diagnosing hypothyroidism in a sick dog and may run a fuller thyroid panel that includes free T4 and TSH to confirm the diagnosis before committing a dog to lifelong treatment." },
-]
-const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Hypothyroidism in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hypothyroidism-dogs', publisher: 'AVMA' },
-  { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
 ]
 export default function HypothyroidismDogsPage() {
   return (

@@ -31,6 +31,30 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and substrate-safety chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and behaviour issues",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner guidance on litter training, realistic expectations, and substrate safety",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and substrate-related complications",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on clumping-clay ingestion and substrate complications in small mammals",
+    publisher: "Elsevier",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Litter Training',
@@ -41,6 +65,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -80,30 +106,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and substrate-safety chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and behaviour issues",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — owner guidance on litter training, realistic expectations, and substrate safety",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and substrate-related complications",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — case reports on clumping-clay ingestion and substrate complications in small mammals",
-    publisher: "Elsevier",
-  },
-]
 
 export default function FerretLitterTrainingPage() {
   return (

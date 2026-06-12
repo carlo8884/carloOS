@@ -11,6 +11,22 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — social behaviour and infectious-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret social behavior and disease-transmission clinician resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Introducing a Second Ferret',
@@ -21,6 +37,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const FAQS = [
@@ -54,22 +72,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner-education materials",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — social behaviour and infectious-disease chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret social behavior and disease-transmission clinician resources",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-]
 
 export default function IntroducingSecondFerretPage() {
   return (

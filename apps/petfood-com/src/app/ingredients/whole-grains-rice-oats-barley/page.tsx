@@ -44,21 +44,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Whole Grains in Pet Food — Rice, Oats, Barley | PetFood.com',
-    description:
-      'What grains contribute to pet diets, digestibility of rice vs corn vs wheat, the gluten question, and why grain-inclusive is a sound default for most pets.',
-    url: 'https://petfood.com/ingredients/whole-grains-rice-oats-barley',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-01T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -76,6 +61,23 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Whole Grains in Pet Food — Rice, Oats, Barley | PetFood.com',
+    description:
+      'What grains contribute to pet diets, digestibility of rice vs corn vs wheat, the gluten question, and why grain-inclusive is a sound default for most pets.',
+    url: 'https://petfood.com/ingredients/whole-grains-rice-oats-barley',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-01T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function WholeGrainsRiceOatsBarleyPage() {
   return (

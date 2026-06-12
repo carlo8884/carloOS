@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'How PetFood.com Scores — Methodology v1.0',
-  description:
-    'Published rubric used to score pet food brands and formulas on PetFood.com. Versioned, citation-anchored, and re-runnable on demand.',
-  url: 'https://petfood.com/guides/methodology',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
@@ -53,6 +41,20 @@ const SOURCES = [
       label: "American College of Veterinary Nutrition (ACVN) Diplomate directory; European College of Veterinary and Comparative Nutrition (ECVCN) Diplomate directory.",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'How PetFood.com Scores — Methodology v1.0',
+  description:
+    'Published rubric used to score pet food brands and formulas on PetFood.com. Versioned, citation-anchored, and re-runnable on demand.',
+  url: 'https://petfood.com/guides/methodology',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function MethodologyPage() {
   return (

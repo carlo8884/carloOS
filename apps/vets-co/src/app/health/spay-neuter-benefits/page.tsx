@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Spay & Neuter — Benefits, Timing | Vets.co', description: 'Spay and neuter benefits, optimal timing, and why the answer is more nuanced for large breeds. Pyometra prevention, cancer risk reduction.', path: '/health/spay-neuter-benefits', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVMA: Spaying and Neutering Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-dog-and-cat/reproductive-physiology-of-the-dog', publisher: 'Merck Vet Manual' },
+  { label: 'Hart BL et al. Front Vet Sci 2020 — Neutering and Health Outcomes', url: 'https://www.frontiersin.org/articles/10.3389/fvets.2020.00388/full', publisher: 'Frontiers in Veterinary Science' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Does neutering cause obesity in dogs?', answer: 'Neutering reduces resting metabolic rate by approximately 20-30%. Dogs on the same diet after neutering will gain weight unless portion is reduced. Neutering causes weight gain only if food intake is not adjusted — the surgery itself does not cause obesity. Reduce food by 20-25% after spay/neuter and monitor body condition monthly.' },
   { question: 'Does early spay/neuter stunt growth?', answer: 'Early spay/neuter removes the sex hormones that signal growth plate closure. The growth plates remain open longer, resulting in slightly taller dogs with longer limbs. This is generally not clinically significant in small breeds. For large breeds, earlier plate closure may have orthopedic benefits — which is one reason many orthopedic specialists recommend waiting until 12-18 months for large breeds.' },
   { question: 'Can I spay my dog while she is in heat?', answer: 'Spaying during estrus (heat) is more technically complex due to increased blood supply to the reproductive tract but is performed routinely. Most surgeons prefer to wait 8-12 weeks after the end of the heat cycle when possible. Emergency situations (pyometra, unwanted pregnancy) may require surgery regardless of cycle status.' },
-]
-const SOURCES = [
-  { label: 'AVMA: Spaying and Neutering Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-dog-and-cat/reproductive-physiology-of-the-dog', publisher: 'Merck Vet Manual' },
-  { label: 'Hart BL et al. Front Vet Sci 2020 — Neutering and Health Outcomes', url: 'https://www.frontiersin.org/articles/10.3389/fvets.2020.00388/full', publisher: 'Frontiers in Veterinary Science' },
 ]
 export default function SpayNeuterPage() {
   return (

@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Abscesses in Reptiles — Caseous Pus & Treatment | Lizard.com", description: "Reptile abscesses form firm, cheese-like pus that the body cannot drain on its own. Why they need surgical removal, common causes, and prevention.", path: "/health/abscess-treatment", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in Reptiles", description: "Why reptile abscesses are solid (caseous), how they form, why they need surgical removal, and prevention.", url: "https://lizard.com/health/abscess-treatment", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in Reptiles", description: "Why reptile abscesses are solid (caseous), how they form, why they need surgical removal, and prevention.", url: "https://lizard.com/health/abscess-treatment", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthAbscessTreatmentPage() {
   return (
