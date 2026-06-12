@@ -7,7 +7,7 @@ export default function BitSelectionGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'Bit Selection Guide', subtitle: 'The right bit communicates clearly with the horse. The wrong bit causes pain, resistance, and training problems that are often misidentified as behavioral issues. Bit selection starts with horse anatomy and goes from there.', category: 'Equipment Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Bit Selection', href: '/guides/bit-selection-guide' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Bit Selection', href: '/guides/bit-selection-guide' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },

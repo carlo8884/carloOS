@@ -7,7 +7,7 @@ export default function BuyingFirstHorsePage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'Buying Your First Horse', subtitle: 'The purchase price is the smallest expense of horse ownership. The monthly cost of keeping a horse is significant and ongoing for the animal\'s 25–35 year lifespan. Understanding the true cost before acquisition — and getting a veterinary pre-purchase examination — are the two most important steps in responsible first-horse purchase.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Buying First Horse', href: '/guides/buying-first-horse' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Buying First Horse', href: '/guides/buying-first-horse' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },
