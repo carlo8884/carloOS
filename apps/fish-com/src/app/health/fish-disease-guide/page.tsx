@@ -28,6 +28,7 @@ const schema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
+  speakable: true,
 })
 
 const DISEASES = [

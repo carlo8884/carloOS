@@ -29,6 +29,7 @@ const schema = buildArticleSchema({
   authorName: 'PetFood.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+  speakable: true,
 })
 
 const SOURCES = [

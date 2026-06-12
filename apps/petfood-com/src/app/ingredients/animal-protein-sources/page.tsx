@@ -60,6 +60,7 @@ const schema = combineSchemas(
     authorName: 'PetFood.com Editorial',
     publishedAt: '2026-05-29T00:00:00Z',
     modifiedAt: '2026-06-11T00:00:00Z',
+  speakable: true,
   }),
   buildFAQSchema({ questions: FAQ }),
 )

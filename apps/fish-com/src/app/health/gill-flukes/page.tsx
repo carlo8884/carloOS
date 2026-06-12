@@ -11,7 +11,7 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Gill Flukes | Fish.com', description: 'Flukes (Gyrodactylus, Dactylogyrus) cause flashing, rapid breathing, and clamped fins. Praziquantel is the treatment', path: '/health/gill-flukes', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Gill Flukes and Body Flukes in Fish', description: 'Signs, praziquantel treatment, and quarantine protocol for Gyrodactylus and Dactylogyrus flukes.', url: 'https://fish.com/health/gill-flukes', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Gill Flukes and Body Flukes in Fish', description: 'Signs, praziquantel treatment, and quarantine protocol for Gyrodactylus and Dactylogyrus flukes.', url: 'https://fish.com/health/gill-flukes', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true })
 export default function FlukesPage() {
   return (
     <ArticleLayout siteId="fish-com"

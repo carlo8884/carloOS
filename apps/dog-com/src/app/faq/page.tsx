@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -92,11 +92,14 @@ const FAQ_SECTIONS = [
   },
 ]
 
-const faqSchema = buildFAQSchema({
-  questions: FAQ_SECTIONS.flatMap((section) =>
-    section.items.map((item) => ({ question: item.question, answer: item.answer })),
-  ),
-})
+const faqSchema = {
+  ...buildFAQSchema({
+    questions: FAQ_SECTIONS.flatMap((section) =>
+      section.items.map((item) => ({ question: item.question, answer: item.answer })),
+    ),
+  }),
+  ...buildSpeakableSpec(['#faq-content']),
+}
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
@@ -134,7 +137,7 @@ export default function FAQPage() {
       </nav>
 
       {/* FAQ sections */}
-      <div className="px-container-sm sm:px-container py-14 max-w-content-wide mx-auto">
+      <div id="faq-content" className="px-container-sm sm:px-container py-14 max-w-content-wide mx-auto">
         {FAQ_SECTIONS.map((section) => (
           <div key={section.heading} className="mb-12">
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-5 pb-3 border-b border-brand-border">

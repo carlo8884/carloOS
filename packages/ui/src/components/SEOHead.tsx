@@ -105,6 +105,42 @@ export function buildMetadata(params: BuildMetadataParams): Metadata {
 // Return objects — rendered via <SchemaScript> component
 // ─────────────────────────────────────────────
 
+// ─────────────────────────────────────────────
+// SPEAKABLE SPECIFICATION
+// Add a SpeakableSpecification onto Article / FAQPage / WebPage schema to
+// signal to voice assistants and AI answer surfaces which content region
+// contains the extractable answer. The stable `.carloOS-article` selector
+// wraps every article body rendered via ArticleLayout. Use only on pages
+// that carry a genuine concise answer or FAQ — not on listing/nav pages.
+//
+// Usage:
+//   // Option A — flag on buildArticleSchema / buildFAQSchema:
+//   buildArticleSchema({ ..., speakable: true })
+//
+//   // Option B — spread onto any existing schema object:
+//   const schema = { ...buildArticleSchema({...}), ...buildSpeakableSpec() }
+// ─────────────────────────────────────────────
+
+/**
+ * Returns a partial schema fragment `{ speakable: [SpeakableSpecification] }`
+ * targeting the stable `.carloOS-article` CSS selector (the <article> body
+ * emitted by ArticleLayout). Optionally pass custom selectors to override.
+ *
+ * Spread this onto an existing Article/FAQPage/WebPage schema object, or pass
+ * `speakable: true` to the individual schema builders that accept that flag.
+ */
+export function buildSpeakableSpec(cssSelectors?: string[]) {
+  const selectors = cssSelectors ?? ['.carloOS-article']
+  return {
+    speakable: [
+      {
+        '@type': 'SpeakableSpecification',
+        cssSelector: selectors,
+      },
+    ],
+  }
+}
+
 interface ArticleSchemaParams {
   siteId: SiteId
   title: string
@@ -114,6 +150,12 @@ interface ArticleSchemaParams {
   authorName: string
   publishedAt: string
   modifiedAt: string
+  /**
+   * When true, adds a SpeakableSpecification targeting `.carloOS-article`.
+   * Use on Q&A spokes and FAQ-bearing guides where the article body
+   * opens with a concise extractable answer (e.g. a CalloutBox "short answer").
+   */
+  speakable?: boolean
 }
 
 export function buildArticleSchema(params: ArticleSchemaParams) {
@@ -137,11 +179,18 @@ export function buildArticleSchema(params: ArticleSchemaParams) {
       url: config.theme.siteUrl,
     },
     mainEntityOfPage: params.url,
+    ...(params.speakable ? buildSpeakableSpec() : {}),
   }
 }
 
 interface FAQSchemaParams {
   questions: Array<{ question: string; answer: string }>
+  /**
+   * When true, adds a SpeakableSpecification targeting `.carloOS-article`.
+   * Use on standalone FAQ hub pages where the FAQAccordion is the primary
+   * content and sits inside the `.carloOS-article` wrapper.
+   */
+  speakable?: boolean
 }
 
 export function buildFAQSchema(params: FAQSchemaParams) {
@@ -156,6 +205,7 @@ export function buildFAQSchema(params: FAQSchemaParams) {
         text: q.answer,
       },
     })),
+    ...(params.speakable ? buildSpeakableSpec() : {}),
   }
 }
 
