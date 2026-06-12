@@ -160,7 +160,6 @@ export default function RescuesDirectoryPage() {
       <Breadcrumb
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Directory', href: '/directory/rescues' },
           { name: 'Rescues', href: '/directory/rescues' },
         ]}
       />
