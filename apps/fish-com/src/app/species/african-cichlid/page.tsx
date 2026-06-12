@@ -8,7 +8,6 @@ import { StockImage,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'African Cichlid', url: 'https://fish.com/species/african-cichlid' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function AfricanCichlidPage() {
   return (
@@ -195,7 +186,7 @@ export default function AfricanCichlidPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
-        <StockImage manifestKey="fish-com:species-african-cichlid" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             African rift-lake cichlids from Lakes Malawi, Tanganyika, and

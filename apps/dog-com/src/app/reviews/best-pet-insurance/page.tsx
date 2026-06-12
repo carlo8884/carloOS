@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Pet Insurance 2025 — Trupanion, Healthy Paws | Dog.com',
-  description: 'We compared 8 pet insurance companies on actual payout rates, exclusions, and what vets recommend. Trupanion, Healthy Paws, Embrace, and Figo ranked for dogs.',
+  title: 'Best Pet Insurance 2026 — Trupanion, Healthy Paws | Dog.com',
+  description: 'We compared 8 pet insurers on published coverage terms, exclusions, and reimbursement structure. Trupanion, Healthy Paws, Embrace, Figo ranked for dogs.',
   path: '/reviews/best-pet-insurance',
   category: 'Pet Insurance',
   type: 'article',
@@ -14,8 +14,8 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Pet Insurance 2025',
-  description: 'Trupanion, Healthy Paws, Embrace, and Figo compared on payout rates and exclusions.',
+  title: 'Best Pet Insurance 2026',
+  description: 'Trupanion, Healthy Paws, Embrace, and Figo compared on published reimbursement terms and exclusions.',
   url: 'https://dog.com/reviews/best-pet-insurance',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -26,39 +26,39 @@ const articleSchema = buildArticleSchema({
 const FAQS = [
   { question: 'When should I enroll my dog in pet insurance?', answer: 'Enroll before your first veterinary visit — ideally within the first week of bringing your dog home. Any condition noted in veterinary records before enrollment becomes a pre-existing condition and is permanently excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. The younger and healthier the dog at enrollment, the broader the coverage.', answerText: '' },
   { question: 'Is pet insurance worth it?', answer: 'For most dog owners, yes — particularly for breeds with known health predispositions. The expected value calculation depends on your breed, your financial situation, and your willingness to treat serious illness. Emergency surgeries ($3,000–8,000), specialist care ($2,000–15,000), and cancer treatment ($5,000–20,000) are common costs that insurance converts to a predictable monthly expense. For breeds like Golden Retrievers (60%+ lifetime cancer rate), Frenchies (BOAS surgery likely), or Labradors (hip dysplasia common), the math strongly favors insurance.', answerText: '' },
-  { question: 'What does pet insurance not cover?', answer: 'All major insurers exclude: pre-existing conditions (anything documented before enrollment), preventive care (vaccines, annual exams, flea/tick prevention) unless you add a wellness rider, elective procedures, breeding costs, and experimental treatments. Many also exclude breed-specific conditions if the breed is known to be predisposed — this is why reading the policy before purchasing matters. Trupanion and Healthy Paws have notably fewer exclusions than budget insurers.', answerText: '' },
+  { question: 'What does pet insurance not cover?', answer: 'All major insurers exclude: pre-existing conditions (anything documented before enrollment), preventive care (vaccines, annual exams, flea/tick prevention) unless you add a wellness rider, elective procedures, breeding costs, and experimental treatments. Many also exclude breed-specific conditions if the breed is known to be predisposed — this is why reading the policy before purchasing matters. Based on their published coverage terms, Trupanion and Healthy Paws tend to carry fewer exclusions than many budget insurers.', answerText: '' },
   { question: 'What reimbursement percentage should I choose?', answer: '90% reimbursement is the right choice for most owners. The difference in premium between 80% and 90% is usually $10–20/month — far less than the $100s difference in a large claim. At 90% with a $200 deductible, a $10,000 emergency costs you approximately $1,200 out of pocket. At 80%, that same claim costs $2,200. Pay slightly more monthly for 90%.', answerText: '' },
   { question: 'What is a per-incident vs annual deductible?', answer: 'Annual deductible: you pay the deductible once per policy year, then all claims are covered at your reimbursement rate for the rest of the year. Per-incident deductible: you pay the deductible every time a new condition or incident occurs. Annual deductibles are better for dogs with multiple health issues in a year. Trupanion uses per-incident; most others use annual.', answerText: '' },
 ]
 
 const trupanionSchema = buildProductSchema({ name: 'Trupanion Pet Insurance', description: 'Pays vet directly, no payout limits, 90% reimbursement, per-incident deductible.', url: 'https://trupanion.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1, priceRange: '40-120' })
-const healthyPawsSchema = buildProductSchema({ name: 'Healthy Paws Pet Insurance', description: 'Fastest claims in category, no annual limits, annual deductible, 2-day claim processing.', url: 'https://healthypawspetinsurance.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1, priceRange: '30-100' })
-const embraceSchema = buildProductSchema({ name: 'Embrace Pet Insurance', description: 'Most customizable plans, diminishing deductible, wellness add-on available.', url: 'https://embracepetinsurance.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1, priceRange: '35-110' })
+const healthyPawsSchema = buildProductSchema({ name: 'Healthy Paws Pet Insurance', description: 'Fast claims processing (commonly ~2 business days per the carrier), no annual limits, annual deductible.', url: 'https://healthypawspetinsurance.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1, priceRange: '30-100' })
+const embraceSchema = buildProductSchema({ name: 'Embrace Pet Insurance', description: 'Highly customizable plans, diminishing deductible, wellness add-on available.', url: 'https://embracepetinsurance.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1, priceRange: '35-110' })
 const combinedSchema = combineSchemas(articleSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
   { label: 'Best Overall', name: 'Trupanion', subtitle: 'Direct vet pay · No payout limits · 90%', href: '#trupanion' },
-  { label: 'Fastest Claims', name: 'Healthy Paws', subtitle: 'Best claims experience · No annual limits', href: '#healthy-paws' },
-  { label: 'Most Customizable', name: 'Embrace', subtitle: 'Flexible deductible · Diminishing deductible', href: '#embrace' },
+  { label: 'Fast Claims', name: 'Healthy Paws', subtitle: 'Fast claims processing per the carrier · No annual limits', href: '#healthy-paws' },
+  { label: 'Highly Customizable', name: 'Embrace', subtitle: 'Flexible deductible · Diminishing deductible', href: '#embrace' },
   { label: 'Best Budget', name: 'Figo', subtitle: 'Lower premiums · 100% reimbursement option', href: '#figo' },
 ]
 
 export default function BestPetInsurancePage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2025', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
+      <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2026', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Pet Insurance 2025
+          Best Pet Insurance 2026
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          Trupanion is our top overall pick for pet insurance in 2025 — direct vet pay,
-          no payout limits, and 90% reimbursement. Healthy Paws wins on claims speed
-          (2-day processing) and Embrace offers the most customizable plans. We compared
-          8 insurers on actual payout rates, fine-print exclusions, and real claims
-          experience rather than marketing promises. The single most important rule:
+          Trupanion is our recommended option for owners who want direct vet pay,
+          no payout limits, and 90% reimbursement. Healthy Paws stands out for claims speed
+          (the carrier reports ~2-day processing) and Embrace offers highly customizable plans.
+          We compared 8 insurers on published coverage terms, fine-print exclusions, and reported
+          claims experience rather than marketing promises. The single most important rule:
           enroll before the first vet visit — any earlier condition is permanently excluded.
         </p>
       </div>
@@ -78,7 +78,7 @@ export default function BestPetInsurancePage() {
 
             {/* TL;DR — what AI engines should quote */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              <strong className="not-italic">TL;DR.</strong> Trupanion is our top pet insurance pick for 2025 — it pays the vet directly, has no payout limits, and reimburses at 90%. Healthy Paws wins on claims speed; Embrace is the most customizable. The one rule that beats every other recommendation: enroll before your first vet visit, because every pre-enrollment condition is permanently excluded.
+              <strong className="not-italic">TL;DR.</strong> Trupanion is our recommended overall pick for 2026 — it pays the vet directly, has no payout limits, and reimburses at 90%. Healthy Paws stands out for claims speed (per the carrier's reported timeframe); Embrace is highly customizable. The one rule that beats every other recommendation: enroll before your first vet visit, because every pre-enrollment condition is permanently excluded.
             </p>
 
             {/* Critical buying rule */}
@@ -95,11 +95,11 @@ export default function BestPetInsurancePage() {
               id="trupanion"
               badge="Best Overall"
               name="Trupanion"
-              subtitle="Pays vet directly · No payout limits ever · 90% reimbursement · Per-incident deductible"
+              subtitle="Pays vet directly · No annual or lifetime payout limits · 90% reimbursement · Per-incident deductible"
               score={9.4}
               winner
               description={<div>
-                <p>Trupanion is widely cited by veterinarians for its direct-pay model — because their payment model is designed around actual veterinary economics. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
+                <p>Trupanion is known for its direct-pay model, which is built around the way veterinary billing works. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
                 <p>The per-incident deductible ($0–$1,000, your choice) applies once per condition, not per year. A dog with an ongoing condition like allergies pays the deductible once — then Trupanion covers 90% of all related costs indefinitely. Their underwriting is strict on pre-existing conditions but transparent. Monthly premiums are higher than budget competitors; the extra cost is worth it for the claims experience.</p>
               </div>}
               specs={[
@@ -122,23 +122,23 @@ export default function BestPetInsurancePage() {
 
             <ReviewCard
               id="healthy-paws"
-              badge="Fastest Claims"
+              badge="Fast Claims"
               name="Healthy Paws"
-              subtitle="Claims paid in days · No annual limits · Simple flat-rate plans"
+              subtitle="Fast claims processing per the carrier · No annual limits · Simple flat-rate plans"
               score={9.2}
               description={<div>
-                <p>Healthy Paws has the best claims processing speed of the carriers compared on this page — most claims resolved within 2 business days via their mobile app. No annual or lifetime limits. Simple plan structure (choose deductible and reimbursement percentage, done). Consistently strong member-satisfaction reputation among policyholders.</p>
+                <p>Healthy Paws is among the faster carriers compared on this page for claims processing — the carrier reports most claims resolved within ~2 business days via its mobile app. No annual or lifetime limits. Simple plan structure (choose deductible and reimbursement percentage, done). A strong member-satisfaction reputation among policyholders.</p>
                 <p>Unlike Trupanion, Healthy Paws reimburses you rather than paying the vet directly — meaning you pay the full bill upfront and get reimbursed, which matters for very large unexpected bills. Their annual deductible means once you've met it, all claims that year are covered at your reimbursement rate — better for dogs with multiple conditions in a year.</p>
               </div>}
               specs={[
                 { label: 'Reimbursement', value: '70–90% (your choice)', highlight: 'good' },
                 { label: 'Annual Limit', value: 'None — unlimited', highlight: 'good' },
-                { label: 'Claims Speed', value: '2 business days typical', highlight: 'good' },
+                { label: 'Claims Speed', value: '~2 business days (per carrier)', highlight: 'good' },
                 { label: 'Deductible Type', value: 'Annual ($100–$500)' },
                 { label: 'Payment', value: 'Reimburses you (not vet direct)' },
                 { label: 'Price Range', value: '$30–100/month' },
               ]}
-              pros={['Fastest claims in category', 'No annual or lifetime limits', 'Annual deductible favors multiple conditions per year', 'Highly rated by policyholders', 'Simple plan structure']}
+              pros={['Among the faster carriers compared here for claims processing (per the carrier)', 'No annual or lifetime limits', 'Annual deductible favors multiple conditions per year', 'Strong policyholder satisfaction reputation', 'Simple plan structure']}
               cons={['Reimburses you, not vet — float required for large bills', 'No 24/7 vet helpline', 'No wellness add-on available']}
               price="$30–100/month"
               ctaText="Get Healthy Paws Quote →"
@@ -149,11 +149,11 @@ export default function BestPetInsurancePage() {
 
             <ReviewCard
               id="embrace"
-              badge="Most Customizable"
+              badge="Highly Customizable"
               name="Embrace Pet Insurance"
               subtitle="Diminishing deductible · Wellness add-on · Broad hereditary coverage"
               score={8.9}
-              description={<p>Embrace offers the most customizable plan structure — deductible from $100 to $1,000, reimbursement from 70–90%, annual limits from $5,000 to unlimited. The standout feature is the diminishing deductible: your annual deductible decreases by $50 for every year you don't receive a claim payment. Over time, long-term healthy dogs see their effective deductible approach zero. The Wellness Rewards add-on covers preventive care (vaccines, annual exams, flea prevention) as a separate reimbursable allowance — useful for owners who want a single place for all pet health spending.</p>}
+              description={<p>Embrace offers a highly customizable plan structure — deductible from $100 to $1,000, reimbursement from 70–90%, annual limits from $5,000 to unlimited. The standout feature is the diminishing deductible: your annual deductible decreases by $50 for every year you don't receive a claim payment. Over time, long-term healthy dogs see their effective deductible approach zero. The Wellness Rewards add-on covers preventive care (vaccines, annual exams, flea prevention) as a separate reimbursable allowance — useful for owners who want a single place for all pet health spending.</p>}
               specs={[
                 { label: 'Reimbursement', value: '70–90% (flexible)', highlight: 'good' },
                 { label: 'Diminishing Deductible', value: '-$50/yr no-claim', highlight: 'good' },
@@ -161,7 +161,7 @@ export default function BestPetInsurancePage() {
                 { label: 'Annual Limit', value: '$5,000–unlimited' },
                 { label: 'Deductible Type', value: 'Annual' },
               ]}
-              pros={['Most flexible plan customization', 'Diminishing deductible rewards healthy dogs', 'Wellness coverage available', 'Covers hereditary and orthopedic conditions', '24/7 vet helpline included']}
+              pros={['Highly flexible plan customization', 'Diminishing deductible rewards healthy dogs', 'Wellness coverage available', 'Covers hereditary and orthopedic conditions', '24/7 vet helpline included']}
               cons={['Complex plan options can be confusing', 'Claims take longer than Healthy Paws', 'Premiums increase more steeply with age']}
               price="$35–110/month"
               ctaText="Get Embrace Quote →"
@@ -176,15 +176,15 @@ export default function BestPetInsurancePage() {
               name="Figo Pet Insurance"
               subtitle="100% reimbursement option · Cloud-based claims · Competitive premiums"
               score={8.5}
-              description={<p>Figo offers the most competitive premiums of the insurers we recommend — and is the only provider offering a 100% reimbursement option (after deductible). The Pet Cloud mobile app handles claims and policy management cleanly. Veterinary exam fees are covered, which some competitors exclude. The trade-off for lower premiums is a lower annual limit on standard plans ($10,000 or $14,000 on most plans) compared to the unlimited coverage from Trupanion and Healthy Paws — for many owners, $10,000 annual limit is adequate; for breeds facing $20,000+ treatment scenarios (cancer, multiple orthopedic surgeries), go with unlimited.</p>}
+              description={<p>Figo offers among the most competitive premiums of the insurers we recommend — and is one of the few providers offering a 100% reimbursement option (after deductible). The Pet Cloud mobile app handles claims and policy management cleanly. Veterinary exam fees are covered, which some competitors exclude. The trade-off for lower premiums is a lower annual limit on standard plans ($10,000 or $14,000 on most plans) compared to the unlimited coverage from Trupanion and Healthy Paws — for many owners, $10,000 annual limit is adequate; for breeds facing $20,000+ treatment scenarios (cancer, multiple orthopedic surgeries), go with unlimited.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 100%', highlight: 'good' },
-                { label: 'Price', value: 'Most competitive premiums', highlight: 'good' },
+                { label: 'Price', value: 'Among the most competitive premiums', highlight: 'good' },
                 { label: 'Annual Limit', value: '$10,000–$14,000 (standard)' },
                 { label: 'Exam Fees', value: 'Covered', highlight: 'good' },
                 { label: 'Claims', value: 'Cloud-based mobile app' },
               ]}
-              pros={['Lowest premiums of recommended options', '100% reimbursement available', 'Exam fees covered', 'Good mobile app experience']}
+              pros={['Among the lowest premiums of recommended options', '100% reimbursement available', 'Exam fees covered', 'Good mobile app experience']}
               cons={['Annual limits lower than Trupanion/Healthy Paws', 'Not ideal for breeds with very high-cost condition risk']}
               price="$25–80/month"
               ctaText="Get Figo Quote →"
@@ -224,6 +224,7 @@ export default function BestPetInsurancePage() {
             </div>
 
             <RelatedLinks title="Related" links={[
+              { label: 'Pet Insurance by Breed', href: '/breeds/insurance' },
               { label: 'Golden Retriever Health', href: '/health/golden-retriever-health' },
               { label: 'French Bulldog Health', href: '/health/french-bulldog-health' },
               { label: 'Emergency Vet Signs', href: '/health/dog-symptoms-guide' },
@@ -232,6 +233,7 @@ export default function BestPetInsurancePage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

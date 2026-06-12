@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Green Anole Care Guide — Bioactive Arboreal Lizard | Lizard.com", description: "Green anoles are tiny diurnal arboreal lizards needing UVB, daily misting, and a planted vertical enclosure. Why they are not a throwaway beginner pet.", path: "/species/green-anole", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Green Anole Care Guide", description: "UVB, misting, planted vertical enclosure, feeding, and complete care for Anolis carolinensis, the green anole.", url: "https://lizard.com/species/green-anole", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Green Anole Care Guide", description: "UVB, misting, planted vertical enclosure, feeding, and complete care for Anolis carolinensis, the green anole.", url: "https://lizard.com/species/green-anole", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Are green anoles good pets for beginners?', answer: 'Their low purchase price creates a persistent myth that they are an easy, disposable beginner reptile. In reality, green anoles need UVB lighting, 60–70% humidity from daily misting, live insect prey, and a tall planted enclosure to live out their natural 4–7 year span. They are fast, delicate, and prone to stress, which is why they suit keepers who treat them as a planted-vivarium display species rather than a hands-on pet. Chain-store anoles are also usually wild-caught and acclimate poorly compared to captive-bred stock.' },
+  { question: 'Do green anoles need UVB lighting?', answer: 'Yes — UVB is required for this diurnal species (Ferguson Zone 2–3). Metabolic bone disease from missing or expired UVB and inadequate calcium is the most common preventable killer of captive anoles. Pair UVB with calcium dusting and a multivitamin per schedule, and target a basking surface of 85–90°F.' },
+  { question: 'What do green anoles eat?', answer: 'Small live insects: appropriately sized crickets, fruit flies, small dubia nymphs, and occasional waxworms as a treat. Prey should be no longer than the width of the anole’s head. Feed adults every other day and juveniles daily, gut-loading all feeders for at least 24 hours and dusting with calcium. Anoles rarely drink from standing water — they lap misting droplets from leaves, so daily misting is their hydration, not just humidity control.' },
+  { question: 'Why is my green anole brown instead of green?', answer: 'Green anoles shift color between bright green and brown. Sustained brown coloration combined with hiding and not eating is a stress signal; a content anole basks openly and shows green. Check temperatures, humidity, cover density, and tankmates — and never house two males together, as fighting and chronic stress result.' },
+  { question: 'Can you handle a green anole?', answer: 'They are not a handling species. Anoles are quick, easily stressed, and may drop their tail (autotomy) if grabbed. Observe them in a well-planted vivarium instead — they reward the keeper with natural display behavior such as push-up displays and dewlap extensions from males.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function SpeciesGreenAnolePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Green Anole Care Guide", subtitle: "Anolis carolinensis is a small (5 to 8 inch) diurnal, arboreal lizard native to the southeastern United States, able to shift color from bright green to brown. Often sold cheaply as a beginner or class pet, it actually needs UVB, high humidity, live insect prey, and a tall planted enclosure to thrive, and is best kept as a display animal rather than a handling pet.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Green Anole Care Guide", subtitle: "Anolis carolinensis is a small (5 to 8 inch) diurnal, arboreal lizard native to the southeastern United States, able to shift color from bright green to brown. Often sold cheaply as a beginner or class pet, it actually needs UVB, high humidity, live insect prey, and a tall planted enclosure to thrive, and is best kept as a display animal rather than a handling pet.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Green Anole", href: "/species/green-anole" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
@@ -65,6 +77,10 @@ export default function SpeciesGreenAnolePage() {
             <li>{"Baines, F. M., et al., Ferguson Zone UV-index guidance for reptile lighting."}</li>
             <li>{"Reptiles Magazine, Anolis carolinensis husbandry references."}</li>
           </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Green Anole — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse tall planted enclosures, UVB, basking bulbs, thermostats, foggers, and substrate sized for green anole care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -75,5 +91,6 @@ export default function SpeciesGreenAnolePage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

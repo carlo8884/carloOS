@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -31,6 +35,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is wet or dry food better for pets?',
+    answer:
+      'Neither is universally better. Dry food wins on cost per calorie, storage, and convenience; wet food wins on moisture, palatability, and satiety. The right choice depends on the species, the individual animal, and the household — and a combination of the two is a common, workable approach when total calories are counted across both.',
+  },
+  {
+    question: 'Does dry food clean pets’ teeth?',
+    answer:
+      'The claim is largely overstated. Most kibble shatters on contact and provides little mechanical cleaning, and dental disease is common in dry-fed animals. Specially designed dental kibbles with a larger, fibrous matrix — some carrying the Veterinary Oral Health Council (VOHC) seal — do have some plaque- and tartar-reducing effect, but ordinary kibble is not a substitute for dental care.',
+  },
+  {
+    question: 'Why is wet food often recommended for cats?',
+    answer:
+      'Cats have a weak thirst drive and tend to under-hydrate on dry food, and the roughly 75 to 82 percent water content of canned food supports urinary and kidney health. For cats with a history of urinary or kidney disease, the moisture of canned food is a genuine clinical benefit.',
+  },
+  {
+    question: 'Can I mix wet and dry food?',
+    answer:
+      'Yes. Many owners combine kibble for cost and convenience with canned food for hydration, palatability, and satiety. The key is to count total calories across both formats, reading the calorie statement on each product, since per-gram calorie density differs sharply between them.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -73,7 +104,7 @@ export default function WetVsDryFoodPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -84,6 +115,7 @@ export default function WetVsDryFoodPage() {
               { label: 'Cost and Convenience', href: '#cost' },
               { label: 'Palatability and Hydration', href: '#palatability' },
               { label: 'Choosing or Combining', href: '#choosing' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -107,8 +139,16 @@ export default function WetVsDryFoodPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:compare-wet-vs-dry-food" priority aspect="16:9" variant="wide" caption="Wet versus dry food — comparing water content, cost, dental claims, and palatability." />
+        <StockImage manifestKey="petfood-com:compare-wet-vs-dry-food" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Wet versus dry food — comparing water content, cost, dental claims, and palatability." />
         <p>The defining difference between wet and dry food is water content: canned food is roughly 75 to 82 percent water, dry kibble about 6 to 12 percent. Almost every other practical difference flows from that, plus the manufacturing difference (extrusion requires starch; canning does not). Neither format is universally better; the right choice depends on the species, the individual animal, and the household. Nutrient comparisons between them must be done on a dry-matter basis. See <a href="/nutrition/dry-matter-basis-explained">Dry-Matter Basis Explained</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Neither format is universally better; for most healthy animals either one, if complete and balanced, supports good health. Wet food&apos;s main advantage is moisture — a genuine clinical benefit for cats and animals prone to urinary or kidney disease — while dry food is cheaper per calorie and more convenient. The dental-cleaning benefit of ordinary kibble is largely overstated, so don&apos;t choose dry food for that reason. Many owners successfully combine the two, counting total calories across both.
+          </p>
+        </div>
+
         <h2 id="moisture">The Core Difference — Moisture</h2>
         <p>The high moisture of canned food is its biggest functional advantage, especially for cats. Cats have a weak thirst drive and tend to under-hydrate on dry food, and increased dietary water supports urinary and kidney health. For cats with a history of urinary disease or kidney disease, the moisture of canned food is a genuine clinical benefit. See <a href="/nutrition/water-and-hydration">Water and Hydration</a> and <a href="/diets/urinary-tract-diets">Urinary and Bladder Stone Diets</a>.</p>
         <h2 id="calories">Calorie Density</h2>
@@ -121,6 +161,51 @@ export default function WetVsDryFoodPage() {
         <p>Canned food is typically more palatable due to its aroma, texture, and higher fat and protein, which makes it valuable for sick, inappetent, or senior animals that need encouragement to eat, and for cats recovering from illness. Its hydration benefit reinforces this in animals that need more water. For a picky or convalescing animal, the palatability of wet food can be the deciding factor.</p>
         <h2 id="choosing">Choosing or Combining</h2>
         <p>Many owners successfully combine the two: kibble for cost and convenience, with canned food added for hydration, palatability, and satiety. A combination captures several of each format&apos;s advantages, provided total calories are counted across both. For most healthy animals either format, if complete and balanced, supports good health; the choice can be made on the individual&apos;s needs and the household&apos;s practicality. See <a href="/feeding/how-much-to-feed-a-cat">How Much to Feed a Cat</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shopping for either format
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop wet and dry complete diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            Both formats work when the food is complete and balanced for the life stage. Compare
+            picks with our independent <Link href="/brands">brand evaluations</Link>, then search the
+            category at a major retailer. The search links below surface complete wet and dry diets;
+            confirm the AAFCO statement and life-stage match on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20wet%20and%20dry%20cat%20and%20dog%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20wet%20dry%20pet%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

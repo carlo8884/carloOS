@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Retained Eye C
 export default function HealthRetainedEyeCapsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Retained Eye Caps (Retained Spectacles)", subtitle: "Snakes and many geckos have a clear protective scale, the spectacle or eye cap, covering each eye, which is normally shed with the rest of the skin. When it is retained, layers of old spectacle build up over the eye, impairing vision and risking infection. Retained eye caps are almost always a humidity problem and must never be forcibly peeled off.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
+      hero={{ title: "Retained Eye Caps (Retained Spectacles)", subtitle: "Snakes and many geckos have a clear protective scale, the spectacle or eye cap, covering each eye, which is normally shed with the rest of the skin. When it is retained, layers of old spectacle build up over the eye, impairing vision and risking infection. Retained eye caps are almost always a humidity problem and must never be forcibly peeled off.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Retained Eye Caps", href: "/health/retained-eye-caps" }]}
       schema={schema}
       relatedLinks={[

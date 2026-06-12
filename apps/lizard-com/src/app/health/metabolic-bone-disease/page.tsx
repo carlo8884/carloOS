@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -14,7 +14,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function MBDPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Metabolic Bone Disease (MBD)', subtitle: 'Nutritional secondary hyperparathyroidism — the formal name for MBD — is the most common nutritional disease in captive reptiles and one of the most preventable. It is entirely a husbandry failure: inadequate UVB, inadequate calcium supplementation, or an imbalanced calcium-to-phosphorus ratio in the diet. Every MBD case represents a solvable husbandry problem.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Metabolic Bone Disease (MBD)', subtitle: 'Nutritional secondary hyperparathyroidism — the formal name for MBD — is the most common nutritional disease in captive reptiles and one of the most preventable. It is entirely a husbandry failure: inadequate UVB, inadequate calcium supplementation, or an imbalanced calcium-to-phosphorus ratio in the diet. Every MBD case represents a solvable husbandry problem.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]}
       schema={schema}
       relatedLinks={[
@@ -65,6 +65,8 @@ export default function MBDPage() {
 
         <h2>Prevention Protocol</h2>
         <p>For diurnal lizards on an insect diet: Arcadia T5 12% (desert species) or 6% (forest species) UVB tube, replaced every 12 months (output degrades before appearance fails). Calcium carbonate (no D3) dusted on all feeder insects at every feeding for juveniles, every other feeding for adults. Calcium with D3 once weekly for adult indoor animals (backup D3 source). Multivitamin dusting 2× weekly. Feeder insects gut-loaded with calcium-rich foods (collard greens, endive, escarole, commercial gut-load) for minimum 24 hours before feeding.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Calcium + UVB Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>MBD prevention is calcium-with-correct-UVB. Browse calcium supplements (Repashy Calcium Plus, Rep-Cal) and UVB bulbs (Arcadia, Zoo Med). This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

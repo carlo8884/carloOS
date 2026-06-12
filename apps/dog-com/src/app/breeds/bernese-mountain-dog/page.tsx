@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bernese Mountain Dog Guide — Cancer, 7-Year Lifespan | Dog.com', description: 'Berners have the shortest lifespan of any breed (~7 years). Cancer causes ~50% of deaths, with histiocytic sarcoma a breed-specific malignancy.', path: '/breeds/bernese-mountain-dog', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bernese Mountain Dog Breed Guide', description: 'Cancer, histiocytic sarcoma, lifespan, and health screening for Bernese Mountain Dogs.', url: 'https://dog.com/breeds/bernese-mountain-dog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bernese Mountain Dog Breed Guide', description: 'Cancer, histiocytic sarcoma, lifespan, and health screening for Bernese Mountain Dogs.', url: 'https://dog.com/breeds/bernese-mountain-dog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How long do Bernese Mountain Dogs live?', answer: 'The average Bernese Mountain Dog lifespan is 7-8 years — among the shortest of any purebred. Some lines specifically bred for longevity produce dogs reaching 9-10 years at higher rates, so asking a breeder about lifespans across several generations of their lines is meaningful due diligence.' },
+  { question: 'What health problems do Bernese Mountain Dogs have?', answer: 'Cancer accounts for roughly 50% of Berner deaths. Histiocytic sarcoma is dramatically overrepresented in the breed, alongside elevated rates of mast cell tumors, lymphoma, and osteosarcoma. Hip and elbow dysplasia are also common. Every new lump on a Berner warrants a fine needle aspirate, and annual exams with lymph node palpation from age 5 are appropriate — build a surveillance plan with your veterinarian.' },
+  { question: 'Are Bernese Mountain Dogs good family dogs?', answer: 'Temperamentally, yes — Berners are characteristically gentle, loyal, and calm, and they are among the most loved family breeds. The main considerations are their size (70-115 lbs), high joint-disease rates that require lean weight management, and the breed\'s short, cancer-prone lifespan, which prospective owners should understand before committing.' },
+  { question: 'Why do so many Bernese Mountain Dogs get cancer?', answer: 'The genetic basis is still being studied. The breed\'s founder effect — a small founding population in Switzerland — likely concentrates cancer-predisposing genetic variants, producing the multi-cancer predisposition behind the roughly 50% cancer mortality rate. The Bernese Mountain Dog Club of America funds ongoing breed health research into histiocytic sarcoma genetics.' },
+  { question: 'Is pet insurance worth it for a Bernese Mountain Dog?', answer: 'Given the breed\'s documented cancer predisposition, the cost-benefit calculation is strongly positive — a histiocytic sarcoma workup and treatment can cost $5,000-20,000. Insurance should be purchased before any condition develops, ideally before 8 weeks of age, and compared specifically on cancer, specialist, and oncology coverage.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function BerneseMountainDogPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bernese Mountain Dog Breed Guide', subtitle: 'Gentle, devoted, and extraordinarily beautiful — Bernese Mountain Dogs are among the most loved family breeds. They are also among the shortest-lived and most cancer-prone. The average lifespan is 7–8 years. Approximately 50% die from cancer. This is not meant to discourage ownership — it is information every prospective Berner owner deserves to have before falling in love.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bernese Mountain Dog', href: '/breeds/bernese-mountain-dog' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -22,6 +32,7 @@ export default function BerneseMountainDogPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Bernese Mountain Dog?', href: '/breeds/bernese-mountain-dog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
@@ -51,7 +62,11 @@ export default function BerneseMountainDogPage() {
 
         <h2>Pet Insurance — Get It at 8 Weeks</h2>
         <p>Pet insurance for Bernese Mountain Dogs should be purchased before the dog is 8 weeks old — ideally before any wellness visit that might create a pre-existing condition record. Given the breed's cancer predisposition and short lifespan, the cost-benefit calculation on pet insurance is strongly positive. A histiocytic sarcoma workup, treatment, and oncology visits can cost $5,000–20,000. Insurance that covers this — purchased before any condition develops — changes the financial reality of managing a breed-specific cancer. Compare policies specifically for cancer coverage, specialist referral coverage, and oncology treatment limits.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

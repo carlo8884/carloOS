@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2026 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
@@ -61,9 +61,9 @@ export default function BestHeartwormPreventionPage() {
               editorial
             />
             <ReviewCard id="simparica" badge="Best All-in-One" name="Simparica Trio" subtitle="Sarolaner + moxidectin + pyrantel · HW + fleas + ticks + intestinal parasites" score={9.5}
-              description={<p>Simparica Trio is the most complete single monthly chew available — covering heartworm, 5 tick species, fleas (98% kill within 3 hours), roundworm, and hookworm. For most dogs in tick-endemic areas that would otherwise need both a heartworm preventive and a flea/tick product, Simparica Trio replaces two separate monthly products with one. The moxidectin heartworm component is among the strongest available. Note: moxidectin requires caution in MDR1-positive herding breeds at high doses — discuss with your vet for collies, shelties, and Australian Shepherds.</p>}
+              description={<p>Simparica Trio is among the most complete single monthly chews available — covering heartworm, 5 tick species, fleas (98% kill within 3 hours per labeled data), roundworm, and hookworm. For most dogs in tick-endemic areas that would otherwise need both a heartworm preventive and a flea/tick product, Simparica Trio replaces two separate monthly products with one. The moxidectin heartworm component is among the strongest available. Note: moxidectin requires caution in MDR1-positive herding breeds at high doses — discuss with your vet for collies, shelties, and Australian Shepherds.</p>}
               specs={[{ label: 'Spectrum', value: 'HW + fleas + 5 tick species + GI', highlight: 'good' }, { label: 'Flea kill speed', value: '98% within 3 hours', highlight: 'good' }, { label: 'Replaces', value: 'Flea/tick + HW preventive both' }, { label: 'MDR1 note', value: 'Discuss with vet for herding breeds' }]}
-              pros={['Replaces two separate monthly products', 'Fastest flea kill tested', 'Broadest tick species coverage', 'One chew covers everything']}
+              pros={['Replaces two separate monthly products', 'Rapid flea kill per labeled data (98% in 3 hours)', 'Broad tick species coverage', 'One chew covers HW, fleas, ticks, and GI parasites']}
               cons={['MDR1 caution for herding breeds', 'Most expensive per dose', 'Not necessary if flea/tick prevention not needed']}
               price="$50–80 / 3-month supply"
               ctaText="Ask Your Vet →"
@@ -96,6 +96,7 @@ export default function BestHeartwormPreventionPage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

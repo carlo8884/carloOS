@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -150,6 +150,10 @@ export default function GuidesHubPage() {
           source="guides-hub"
         />
       </section>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="footer" />
+      </div>
     </>
   </>
   )

@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeding Frozen
 export default function HealthFeedingFrozenThawedRodentsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeding Frozen-Thawed Rodents", subtitle: "Frozen-thawed feeding, offering rodents that were humanely pre-killed, frozen, and then thawed and warmed, is the standard, safest way to feed pet snakes. It eliminates the real risk of a live rodent injuring or killing your snake, is more convenient and humane, and most captive-bred snakes take it readily. This guide covers why, how to thaw and offer prey safely, and what to do with a reluctant feeder.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeding Frozen-Thawed Rodents", subtitle: "Frozen-thawed feeding, offering rodents that were humanely pre-killed, frozen, and then thawed and warmed, is the standard, safest way to feed pet snakes. It eliminates the real risk of a live rodent injuring or killing your snake, is more convenient and humane, and most captive-bred snakes take it readily. This guide covers why, how to thaw and offer prey safely, and what to do with a reluctant feeder.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Feeding Frozen-Thawed Rodents", href: "/health/feeding-frozen-thawed-rodents" }]}
       schema={schema}
       relatedLinks={[

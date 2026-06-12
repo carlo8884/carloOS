@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Pyrenees Breed Guide', description: 'Livestock guardian instincts, GDV risk, hip dysplasia, and containment for Great Pyrenees.', url: 'https://dog.com/breeds/great-pyrenees', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Pyrenees Breed Guide', description: 'Livestock guardian instincts, GDV risk, hip dysplasia, and containment for Great Pyrenees.', url: 'https://dog.com/breeds/great-pyrenees', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Do Great Pyrenees bark a lot?', answer: 'Yes — barking, particularly at night, is a bred-in trait, not a training failure. The breed was selected for generations to bark to deter predators, with activity peaking at night. The most effective management is bringing the dog inside at night; "quiet" cues help but will not eliminate the breed-typical urge. Suburban owners with close neighbors should weigh this honestly before acquisition.' },
+  { question: 'What health problems do Great Pyrenees have?', answer: 'The two documented priorities are gastric dilatation-volvulus (GDV/bloat) — as a deep-chested giant breed, prophylactic gastropexy at spay/neuter is strongly recommended — and hip and elbow dysplasia, compounded by the breed\'s 85-115 lb body weight. OFA clearances on both parents and lifelong lean weight are the foundations; discuss gastropexy timing and joint management with your veterinarian.' },
+  { question: 'Can a Great Pyrenees be let off leash?', answer: 'No — the breed is not off-leash reliable. Pyrs were bred for thousands of years to patrol territory and make independent decisions without human direction, so recall reliably loses to whatever the dog judges more important. Containment requires a 6-foot solid fence with anti-climb measures, secured gates, and dig protection at the base; electric fencing alone is generally insufficient.' },
+  { question: 'Are Great Pyrenees good family dogs?', answer: 'Temperamentally they are gentle, calm, and devoted to their family. The challenges are managerial rather than behavioral: nocturnal barking, serious containment requirements, and high independence. They do best with owners who understand livestock guardian heritage — ideally on acreage — rather than in dense suburban settings.' },
+  { question: 'How long do Great Pyrenees live?', answer: 'Great Pyrenees typically live 10-12 years — long for a giant breed. Maintaining lean body weight (the most critical joint-disease intervention) and addressing GDV risk with prophylactic gastropexy are the management decisions most likely to support a full lifespan; review both with your veterinarian.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function GreatPyreneesPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Great Pyrenees Breed Guide', subtitle: 'Majestic, gentle, and deeply independent — Great Pyrenees were bred for thousands of years to guard livestock in remote mountain terrain without human supervision. The traits that made them exceptional livestock guardian dogs (LGDs) — independence, territorial behavior, nighttime activity, loud barking — are the same traits that make them challenging household pets without appropriate management.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Pyrenees', href: '/breeds/great-pyrenees' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Bernese Mountain Dog Guide', href: '/breeds/bernese-mountain-dog', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Training: Excessive Barking', href: '/training/excessive-barking', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -53,7 +63,11 @@ export default function GreatPyreneesPage() {
         <h2>Barking — Managing a Trait, Not a Behavior Problem</h2>
         <p>Great Pyrenees bark. They were selected for generations on the basis of their willingness to bark to deter predators and alert handlers. They are particularly active at night, when their ancestral predator activity peaked. Nighttime barking is not a training failure — it is a breed characteristic. Management approaches: bring the dog inside at night (most effective — removes the trigger of outdoor sounds and respects neighbors), white noise machines, anti-bark devices as a last resort, and ensuring adequate exercise to reduce overall arousal level. Training "quiet" commands provides some management tool, but will not prevent the breed-typical urge to bark.</p>
         <p>Prospective Great Pyrenees owners in suburban neighborhoods with close neighbors should carefully consider whether the breed's barking tendency is compatible with their living situation before acquisition.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

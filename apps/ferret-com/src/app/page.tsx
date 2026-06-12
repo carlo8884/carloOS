@@ -171,6 +171,17 @@ const ROADMAP_CARD = {
     '52-week structured calendar — vaccines, neuter timing, dental onset, the insulinoma watch window.',
 }
 
+// Ferret Starter Kit — premium TEXT card alongside the first-year-schedule
+// feature. Plain internal link to the curated shopping-list page (no /go,
+// no disclosure needed here; disclosures live on the kit page itself).
+const STARTER_KIT_CARD = {
+  href: '/ferret-starter-kit',
+  eyebrow: 'Starter Kit',
+  title: 'Ferret Starter Kit',
+  description:
+    'The complete first-ferret shopping list — cage, diet, litter, and enrichment — organized so nothing gets missed.',
+}
+
 // ── Featured articles ───────────────────────────────────────────────────────
 
 const FEATURED_ARTICLES = [
@@ -224,7 +235,7 @@ export default function HomePage() {
             simply fills the parent (the 'full-bleed' variant's transform
             fights an absolute parent). */}
         <div
-          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
           style={{ position: 'absolute', inset: 0 }}
         >
           <StockImage
@@ -500,7 +511,7 @@ export default function HomePage() {
                 >
                   {/* Real hub photo fills the tile */}
                   <div
-                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
                     style={{ position: 'absolute', inset: 0 }}
                   >
                     <StockImage
@@ -627,7 +638,7 @@ export default function HomePage() {
                 margin: 0,
               }}
             >
-              Four pillars of ferret keeping
+              The pillars of ferret keeping
             </h2>
           </header>
 
@@ -659,7 +670,7 @@ export default function HomePage() {
                   }}
                 >
                   <div
-                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
                     style={{ position: 'absolute', inset: 0 }}
                   >
                     <StockImage
@@ -799,6 +810,73 @@ export default function HomePage() {
                 </span>
               </Link>
             </li>
+
+            {/* Ferret Starter Kit — premium TEXT card (plain internal link;
+                styled identically to the First-Year Schedule card) */}
+            <li>
+              <Link
+                href={STARTER_KIT_CARD.href}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  minHeight: '300px',
+                  padding: '28px 26px',
+                  background: 'var(--brand-surface)',
+                  border: '1px solid var(--brand-border)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.22s ease',
+                }}
+              >
+                <span
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '3px',
+                    background: 'var(--brand-amber)',
+                    opacity: 0.85,
+                  }}
+                />
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber-dark)',
+                    marginBottom: '10px',
+                  }}
+                >
+                  {STARTER_KIT_CARD.eyebrow}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'var(--brand-text-dark)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {STARTER_KIT_CARD.title}
+                </div>
+                <p style={{ fontSize: '0.9375rem', lineHeight: 1.55, color: 'var(--brand-text-mid)', margin: '0 0 16px', flex: 1 }}>
+                  {STARTER_KIT_CARD.description}
+                </p>
+                <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--brand-primary)', letterSpacing: '0.01em' }}>
+                  Build the kit &rarr;
+                </span>
+              </Link>
+            </li>
           </ul>
         </div>
       </section>
@@ -866,7 +944,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+              className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
               style={{ position: 'absolute', inset: 0 }}
             >
               <StockImage
@@ -1303,10 +1381,88 @@ export default function HomePage() {
                 </span>
               </Link>
             </li>
+
+            {/* Card 4 — Find an Exotic Vet (health directory) */}
+            <li>
+              <Link
+                href="/find-an-exotic-vet"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '28px 26px',
+                  background: 'rgba(251, 245, 232, 0.05)',
+                  border: '1px solid rgba(201, 157, 95, 0.18)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'background 0.22s ease, border-color 0.22s ease',
+                }}
+              >
+                <div
+                  aria-hidden
+                  style={{ marginBottom: '18px', lineHeight: 1, color: 'var(--brand-amber)' }}
+                >
+                  {/* Map-pin icon */}
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  Health directory
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'rgba(251, 245, 232, 0.97)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  Find an Exotic Vet
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.55,
+                    color: 'rgba(251, 245, 232, 0.55)',
+                    margin: '0 0 18px',
+                    flex: 1,
+                  }}
+                >
+                  Most general practices do not see ferrets. Locate a ferret-experienced
+                  exotic-animal veterinarian before you need one &mdash; ideally during the
+                  first weeks of ownership, not mid-emergency.
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-amber)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  Find a vet near you &#x2192;
+                </span>
+              </Link>
+            </li>
           </ul>
 
-          {/* "See all tools" link */}
-          <div style={{ marginTop: '28px' }}>
+          {/* "See all tools" + "Buyer guides" links */}
+          <div style={{ marginTop: '28px', display: 'flex', gap: '28px', flexWrap: 'wrap' }}>
             <Link
               href="/tools"
               style={{
@@ -1318,6 +1474,18 @@ export default function HomePage() {
               }}
             >
               All ferret tools &#x2192;
+            </Link>
+            <Link
+              href="/reviews"
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: 'var(--brand-amber)',
+                textDecoration: 'none',
+                letterSpacing: '0.01em',
+              }}
+            >
+              Gear buyer guides &#x2192;
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -31,7 +31,37 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'Can ferrets eat raw meat?',
+    answer:
+      'Yes — a correctly formulated raw or whole-prey diet is the closest match to what a ferret evolved to eat, supplying animal protein and fat in the right proportions with essentially no plant carbohydrate. The qualifier matters: the benefits belong to a well-formulated raw diet, and a poorly assembled one (most commonly all muscle meat with no bone, which is calcium-deficient) can be worse than a good commercial kibble. Confirm calcium and taurine adequacy with a veterinarian familiar with ferrets before committing to raw as a sole diet.',
+  },
+  {
+    question: 'What is the frankenprey ratio for ferrets?',
+    answer:
+      'Approximately 80% muscle meat, 10% raw edible bone, and 10% organ — with the organ portion split roughly half liver and half other secreting organ (kidney, spleen, pancreas). The two ratios that matter most: enough edible bone (the calcium source) and not over-feeding liver (excess vitamin A is a real risk). Variety across protein sources helps cover the micronutrient spread.',
+  },
+  {
+    question: 'How long should I freeze raw meat before feeding it to a ferret?',
+    answer:
+      'Freeze whole prey and raw components for at least 30 days before feeding to reduce parasite risk. Thaw in the refrigerator — never on the counter at room temperature — and discard anything left uneaten for more than a short period. Keep dedicated containers and utensils for raw food and clean them as you would after handling raw chicken for yourself.',
+  },
+  {
+    question: 'Is raw feeding safe for households with kids or elderly members?',
+    answer:
+      'It carries real risk that needs managing. Raw products carry documented contamination rates for Salmonella, Listeria, and Campylobacter, which can be shed in a ferret’s feces and saliva and reach immunocompromised, elderly, pregnant, or very young household members — the reason the AVMA maintains a cautionary policy on raw animal-source protein. Harm reduction: source from HPP or batch-tested suppliers, use a dedicated cutting board and utensils, wash hands thoroughly, and clean feeding areas promptly.',
+  },
+  {
+    question: 'How do I switch a kibble-fed ferret to raw?',
+    answer:
+      'Gradually — ferrets imprint on food early, and a kibble-raised adult may not recognize raw meat as food at first. Warm the meat slightly to release aroma, offer small pieces alongside the familiar diet, and consider a meat-based gravy or a smear on the lips to trigger interest. Never let a ferret skip meals for long during a transition; ferrets can become hypoglycemic quickly.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, faqSchema)
 
 export default function RawFeedingGuidePage() {
   return (
@@ -65,6 +95,7 @@ export default function RawFeedingGuidePage() {
                 { label: 'Food-Safety Harm Reduction', href: '#safety' },
                 { label: 'Transitioning a Ferret', href: '#transition' },
                 { label: 'Sourcing Whole Prey', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -84,6 +115,7 @@ export default function RawFeedingGuidePage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-raw-feeding-guide"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -98,7 +130,7 @@ export default function RawFeedingGuidePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -167,6 +199,9 @@ export default function RawFeedingGuidePage() {
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="sources">Sources</h2>
           <p>

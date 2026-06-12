@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -11,9 +11,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals.', path: '/health/dog-cancer-signs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: '12 Warning Signs of Cancer in Dogs', description: 'Cancer warning signs and early detection for dogs.', url: 'https://dog.com/health/dog-cancer-signs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the most common warning signs of cancer in dogs?', answer: 'The signs veterinary oncologists ask about: any new lump or bump, unexplained progressive weight loss, a wound or sore that does not heal within 2–3 weeks, bleeding or discharge from any body opening, a new offensive odor, difficulty eating or swallowing, loss of stamina, persistent lameness, difficulty breathing/urinating/defecating, enlarged lymph nodes, abdominal distension, and changes in urination or defecation habits. None of these confirms cancer — they are the signals that warrant a prompt veterinary examination.' },
+  { question: 'Should I worry about a new lump on my dog?', answer: 'Do not take a wait-and-see approach. Fine needle aspiration (FNA) is a quick, inexpensive procedure that identifies the cell type of most masses, and it is standard of care before deciding to watch or remove a lump. The reason: mast cell tumors — one of the most common and potentially dangerous dog cancers — can look completely benign externally. Ask your veterinarian to aspirate any new mass.' },
+  { question: 'When is a possible cancer sign an emergency?', answer: 'The page above lists these as ER-now situations: sudden abdominal distension (especially with pale gums, weakness, or collapse — this can mean a bleeding splenic mass, common in Golden Retrievers, Labs, and German Shepherds), acute respiratory distress, profuse bleeding from any orifice, or sudden collapse. Go to a 24/7 veterinary ER immediately rather than waiting for an appointment.' },
+  { question: 'How common is cancer in dogs?', answer: 'Cancer is the leading cause of death in dogs over 10 years of age — approximately 50% of dogs over 10 will develop cancer, per Morris Animal Foundation cohort data. That is why early-detection habits matter: annual or biannual wellness exams that include lymph node palpation, abdominal palpation, and oral examination, plus owner vigilance for the 12 signs on this page.' },
+  { question: 'Where do I check my dog\'s lymph nodes?', answer: 'The peripheral lymph nodes that owners can learn to feel are under the jaw (submandibular), in front of the shoulders (prescapular), behind the knees, and in the groin. Enlarged lymph nodes are the most easily detected sign of lymphoma, one of the most common cancers in dogs. Have your veterinarian assess the nodes at every wellness visit and show you how to palpate the submandibular and prescapular nodes at home — and report any enlargement promptly.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 const SIGNS = [
   { sign: 'Any new lump or bump — aspirate immediately', detail: 'Do not take a wait-and-see approach with new masses. Fine needle aspiration (FNA) is a quick, inexpensive procedure that identifies the cell type of most masses. Mast cell tumors — one of the most common and potentially dangerous dog cancers — can look benign externally. FNA before deciding to watch or remove is standard of care.' },
   { sign: 'Unexplained weight loss', detail: 'Progressive weight loss not explained by reduced calorie intake is a systemic warning sign. Cancer cells consume energy; paraneoplastic syndromes can alter metabolism. Unintended weight loss of more than 10% of body weight warrants investigation.' },
@@ -65,6 +73,9 @@ export default function DogCancerSignsPage() {
               </div>
             </div>
           ))}
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

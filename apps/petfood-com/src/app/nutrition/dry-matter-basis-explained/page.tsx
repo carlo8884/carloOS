@@ -107,6 +107,7 @@ export default function DryMatterBasisExplainedPage() {
               { label: 'Carbohydrates in Pet Food', href: '/nutrition/carbohydrates-in-pet-food' },
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture

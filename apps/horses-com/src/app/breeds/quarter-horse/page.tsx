@@ -46,6 +46,7 @@ export default function QuarterHorseBreedPage() {
           { title: 'Disciplines Hub', href: '/disciplines' },
           { title: 'Reining', href: '/disciplines/reining' },
           { title: 'Barrel Racing', href: '/disciplines/barrel-racing' },
+          { title: 'Quarter Horse Racing', href: '/racing/quarter-horse-racing' },
         ]}
         hero={{
           title: 'American Quarter Horse',

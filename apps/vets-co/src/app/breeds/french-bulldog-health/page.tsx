@@ -1,20 +1,50 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. This guide explains BOAS surgery, IVDD risk, skin fold management.', path: '/breeds/french-bulldog-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'French Bulldog Health',
   description: 'BOAS, IVDD, and heat stroke risk in French Bulldogs.',
   url: 'https://vets.co/breeds/french-bulldog-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-07',
+  lastReviewed: '2026-06-11',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+
+const FAQS = [
+  {
+    question: 'Why does my French Bulldog snore and breathe so loudly?',
+    answer:
+      'Noisy breathing at rest and snoring are core signs of BOAS — brachycephalic obstructive airway syndrome, the anatomical consequence of breeding for extreme flat-faced features. Stenotic nares, an elongated soft palate, a hypoplastic trachea, and everted laryngeal saccules collectively obstruct airflow, and most French Bulldogs have some degree of BOAS. Many live in a state of chronic respiratory compromise that owners normalize because it has always been present. A BOAS grading assessment by a specialist is worth discussing with your veterinarian.',
+  },
+  {
+    question: 'Does my French Bulldog need BOAS surgery?',
+    answer:
+      'That depends on the BOAS grade (0–III), assigned by a specialist assessment. For Grade II–III dogs, surgical correction — nostril widening, soft palate shortening, saccule removal — is strongly worth considering, and surgery before age 2 produces the best outcomes because the tissues have undergone less secondary remodeling. Weight management is also critical, since every pound of extra weight makes breathing harder. Discuss a grading assessment with your veterinarian or a soft tissue surgery specialist.',
+  },
+  {
+    question: 'What temperature is too hot for a French Bulldog?',
+    answer:
+      'French Bulldogs cannot thermoregulate effectively because BOAS impairs panting, the primary canine cooling mechanism — heat stroke can occur at ambient temperatures where other breeds are comfortable. Limit outdoor time in temperatures above 70°F, particularly if humid; walk in early morning or after sunset in summer; and never leave a Frenchie in a car, even briefly. If heat stroke is suspected, wet the dog with cool (not cold) water, use a fan, and get to an emergency vet immediately.',
+  },
+  {
+    question: 'What are the signs of IVDD in a French Bulldog?',
+    answer:
+      'Sudden pain (crying out, hunched posture, reluctance to move), weakness or a wobbly gait in the hindlimbs, dragging rear legs, and loss of bladder or bowel control — the last of these is an emergency. Surgical decompression within 24 hours of onset gives the best neurological recovery prognosis, so a Frenchie that loses hind limb function needs an emergency vet immediately, not a wait-and-see approach.',
+  },
+  {
+    question: 'When should I get pet insurance for a French Bulldog?',
+    answer:
+      'Before any symptoms develop, before the first veterinary visit. Several insurers have breed exclusions for BOAS-related conditions if the dog is enrolled after symptoms appear, and BOAS surgery ($2,500–5,000) and IVDD decompression ($5,000–10,000) are common outcomes in this breed within the first 5 years — not rare worst-case scenarios.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, faqSchema)
 
 export default function VetsFrenchBulldogHealthPage() {
   return (
@@ -27,13 +57,13 @@ export default function VetsFrenchBulldogHealthPage() {
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }]}
       schema={schema}
       sidebar={<>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
         <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-french-bulldog" />
         <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
@@ -58,6 +88,12 @@ export default function VetsFrenchBulldogHealthPage() {
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>
         <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years. Insurance with no breed exclusions for brachycephalic conditions (Trupanion, Healthy Paws) and enrollment before symptoms appear is the difference between being able to treat these conditions and facing impossible decisions. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
+
+        <h2>FAQ</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
     </>

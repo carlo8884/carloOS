@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Overview of Diarrhea in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diarrhea-in-small-animals/overview-of-diarrhea-in-small-animals', publisher: 'Merck Vet Manual' },
@@ -10,9 +10,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care.', path: '/health/dog-diarrhea', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What can I give my dog for diarrhea at home?', answer: 'For an otherwise healthy adult dog with mild acute diarrhea (no blood, eating, alert, no vomiting, no known toxin or foreign body), home care for 24–48 hours is reasonable: a bland diet of boiled white chicken breast and plain white rice (50/50 by volume, small portions every 4–6 hours), a veterinary probiotic such as FortiFlora, and constant access to fresh water. Do not give human anti-diarrheal medications without veterinary guidance. If the diarrhea has not improved after 48 hours of home care, see your veterinarian.' },
+  { question: 'When should I take my dog to the vet for diarrhea?', answer: 'Do not wait with: blood in the stool (red or black/tarry), concurrent lethargy or vomiting, a puppy or senior dog (less physiological reserve), known or suspected ingestion of a foreign object or toxin, diarrhea that has not improved after 48 hours of home care, or pale/white gums. These presentations require examination, diagnostics, and likely IV fluids rather than home monitoring.' },
+  { question: 'Why is there blood in my dog\'s stool?', answer: 'It depends on the appearance. Bright red blood (hematochezia), often with mucus, straining, and frequent small amounts, points to the large intestine (colitis). Dark brown-black "tarry" stool (melena) is digested blood and indicates upper GI bleeding — a more concerning finding. Either way, blood in the stool is on this page\'s see-the-vet-now list: have the dog examined rather than continuing home treatment.' },
+  { question: 'How long does dog diarrhea usually last?', answer: 'Most acute cases in otherwise healthy adult dogs — typically from dietary indiscretion, mild enteritis, or stress colitis — resolve within 2–5 days with supportive care. Diarrhea lasting more than 2–3 weeks, or recurring frequently, is chronic and needs veterinary investigation (fecal testing, bloodwork, dietary elimination trial) rather than repeated symptomatic treatment.' },
+  { question: 'Can I give my dog Imodium or Pepto-Bismol?', answer: 'Not without veterinary direction. Pepto-Bismol contains salicylate (aspirin-related). Imodium (loperamide) is contraindicated in MDR1-positive herding breeds and should only be used under veterinary direction. If the diarrhea is severe enough that you are reaching for medication, that is a reason to call your veterinarian.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogDiarrheaPage() {
   return (
     <>
@@ -29,6 +37,7 @@ export default function DogDiarrheaPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diarrhea" />
         </>}
@@ -55,6 +64,9 @@ export default function DogDiarrheaPage() {
 
           <h2>Diagnostic Workup for Chronic Diarrhea</h2>
           <p>For recurring or chronic diarrhea: fecal examination (parasites — Giardia is commonly missed with standard flotation, requires specific antigen testing), fecal culture, serum TLI (trypsin-like immunoreactivity — screens for EPI), cobalamin and folate (malabsorption markers), and dietary elimination trial (rules out food-responsive diarrhea, which is common and frequently the diagnosis). Endoscopy and intestinal biopsy are reserved for cases where less invasive workup is inconclusive.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

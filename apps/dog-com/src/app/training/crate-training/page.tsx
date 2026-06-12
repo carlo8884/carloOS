@@ -34,7 +34,7 @@ export default function CrateTrainingPage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Crate Train', href: '#why' }, { label: 'Right Crate Size', href: '#size' }, { label: 'Introduction Protocol', href: '#intro' }, { label: 'Duration Guidelines', href: '#duration' }, { label: 'Night Training', href: '#night' }, { label: 'Common Problems', href: '#problems' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'House Training Guide', href: '/training/house-training' }, { label: 'Best Dog Crates 2025', href: '/reviews/best-dog-crates' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'House Training Guide', href: '/training/house-training' }, { label: 'Best Dog Crates 2026', href: '/reviews/best-dog-crates' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-crate" />
       </>}

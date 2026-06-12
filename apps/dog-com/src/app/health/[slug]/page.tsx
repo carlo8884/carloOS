@@ -574,7 +574,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               </div>
               <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
                 Diagnostics and ongoing treatment for {disease.name.toLowerCase()} add up.
-                Pet insurance is cheapest while a dog is young and healthy — pre-existing
+                Pet insurance premiums are typically lowest while a dog is young and healthy — pre-existing
                 conditions are universally excluded.
               </p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />

@@ -14,6 +14,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -21,6 +22,8 @@ import {
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
+import Link from 'next/link'
+import { raceTypeSpokes } from '@/data/race-types'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -112,10 +115,21 @@ export default function RaceTypesAndClassesPage() {
                 { label: 'Allowance Races', href: '#allowance' },
                 { label: 'Stakes Races', href: '#stakes' },
                 { label: 'Graded Stakes', href: '#graded' },
+                { label: 'The Race Classes in Depth', href: '#in-depth' },
                 { label: 'Weight and Conditions', href: '#weight' },
                 { label: 'The Racing Secretary', href: '#secretary' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'References', href: '#references' },
+              ]}
+            />
+            <RelatedLinks
+              title="Each Class In Depth"
+              links={[
+                { label: 'Maiden Races', href: '/racing/race-types/maiden-races' },
+                { label: 'Claiming Races', href: '/racing/race-types/claiming-races' },
+                { label: 'Allowance Races', href: '/racing/race-types/allowance-races' },
+                { label: 'Stakes Races', href: '/racing/race-types/stakes-races' },
+                { label: 'Graded Stakes Races', href: '/racing/race-types/graded-stakes-races' },
               ]}
             />
             <RelatedLinks
@@ -128,6 +142,7 @@ export default function RaceTypesAndClassesPage() {
                 { label: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"
@@ -146,6 +161,20 @@ export default function RaceTypesAndClassesPage() {
             reviewedBy="Editorial team"
           />
 
+          <div className="not-prose my-6 p-5 bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Race Types Hub
+            </div>
+            <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
+              This page is the narrative overview of how the class system fits
+              together. For the full Race Types hub — a card index linking every
+              individual class reference — see{' '}
+              <Link href="/racing/race-types" className="text-brand-primary font-semibold no-underline hover:underline">
+                Race Types &amp; Classes
+              </Link>
+              .
+            </p>
+          </div>
 
           <h2 id="why">Why a Class Structure Exists</h2>
           <p>Horse racing&apos;s class system exists to create competitive conditions that allow horses of broadly similar ability and experience to compete against each other. Without such a structure, races would be dominated by the best horses, and owners of less distinguished horses would have no competitive outlet. The class structure creates a spectrum of opportunities from entry-level maiden races through the highest-quality stakes events, allowing horses to compete at an appropriate level while providing a pathway for talented horses to advance.</p>
@@ -176,6 +205,29 @@ export default function RaceTypesAndClassesPage() {
           <p>Within the stakes category, the American Graded Stakes Committee -- an entity affiliated with The Jockey Club -- annually evaluates stakes races and assigns grades of I, II, or III based on the quality of horses that have historically competed in each race. The classification is retrospective: it reflects the caliber of horses that have previously run in the race, providing a consistent benchmark of quality across different tracks and years.</p>
           <p>A <strong>Grade I</strong> stakes is a championship-level event attracting the best horses in a given division or at a given distance. The Kentucky Derby, Belmont Stakes, Preakness Stakes, Breeders&apos; Cup Classic, and other major national races carry Grade I status. <strong>Grade II</strong> and <strong>Grade III</strong> stakes are also high-quality events but with a slightly less elite historical field. Internationally, the IFHA&apos;s Pattern Race system provides equivalent classifications, allowing cross-border comparisons of race quality.</p>
           <p>Below graded stakes, there are numerous ungraded or listed stakes races that serve as important competitive events at the regional or track level. The full graded stakes schedule is published annually by the American Graded Stakes Committee and is a standard reference for racing participants and researchers.</p>
+
+          <h2 id="in-depth">The Race Classes in Depth</h2>
+          <p>The sections above summarise the main race classes. Each class also has its own dedicated reference that goes deeper -- the mechanics, the terminology, and how horses move through the claiming, allowance, and stakes ladder. These remain strictly educational explainers of what each class means; none offers wagering guidance.</p>
+          <ul className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-3 list-none p-0 my-6">
+            {raceTypeSpokes.map((spoke) => (
+              <li key={spoke.slug}>
+                <Link
+                  href={`/racing/race-types/${spoke.slug}`}
+                  className="block py-3 px-4 rounded-md border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                >
+                  <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-1">
+                    {spoke.kicker}
+                  </span>
+                  <span className="block font-display font-bold text-brand-dark text-base leading-tight mb-1">
+                    {spoke.title}
+                  </span>
+                  <span className="block text-xs text-brand-text-mid">
+                    {spoke.description}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <h2 id="weight">Weight and Conditions</h2>
           <p>Weight is a fundamental variable in race conditions. The weight a horse carries -- jockey plus saddle plus lead weights if needed -- is adjusted in various ways to account for competitive differences. In allowance races, horses earn weight allowances based on their earnings or win record. In handicap races, an official assigns different weights to different horses based on an assessment of their relative ability, with better horses carrying more weight. In weight-for-age conditions, different weights are assigned based on the horse&apos;s age, reflecting the developmental advantage of older horses over younger ones at certain times of the season.</p>

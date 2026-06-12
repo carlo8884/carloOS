@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -22,17 +24,48 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Grain-Free Dog Food and DCM — The FDA CVM Record',
-  description:
-    'Reference summary of the FDA CVM investigation into grain-free diets and atypical dilated cardiomyopathy in dogs, the BEG hypothesis, taurine status, and the current state of evidence.',
-  url: 'https://petfood.com/ingredients/grain-free-dcm-risk',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-06-05T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Does grain-free dog food cause heart disease?',
+    answer:
+      'The FDA CVM investigation describes an association in its case-report dataset, not proven causation. The 2018 notice reported DCM cases in atypical breeds eating diets containing peas, lentils, other legume seeds, or potatoes as main ingredients, many labeled grain-free — and the agency has not, as of its most recent updates, declared grain-free diets safe or unsafe. The mechanism remains unresolved and the investigation remains open.',
+  },
+  {
+    question: 'What did the FDA actually find about grain-free diets and DCM?',
+    answer:
+      "Per the FDA CVM's June 2019 update, the agency had received reports involving 524 dogs with DCM between January 2014 and April 2019. More than 90% of affected dogs had been eating a grain-free diet, and more than 90% of the identified diets contained peas and/or lentils. The FDA was explicit that the brand names it disclosed appeared disproportionately in case reports but that the listing did not establish causation and was not a regulatory finding against any brand.",
+  },
+  {
+    question: 'Should I stop feeding my dog grain-free food?',
+    answer:
+      "That is a conversation for your veterinarian, who can assess breed risk and clinical context. For dogs in established DCM-predisposed breeds (Doberman Pinscher, Boxer, Great Dane, Irish Wolfhound, Cocker Spaniel) and atypical-signal breeds (Golden Retriever in particular), the conversation should include the published association between pulse-heavy grain-free diets and atypical-breed DCM, and whether the formula uses pulse ingredients as its primary carbohydrate sources. The FDA's own position is that individual dietary choices should be made in conversation with a veterinarian.",
+  },
+  {
+    question: 'Is taurine deficiency the cause of diet-associated DCM?',
+    answer:
+      'The evidence suggests taurine deficiency is one mechanism, but not the only one. Early case reports found a substantial minority of affected atypical-breed dogs taurine-deficient at diagnosis, but subsequent series — including the 2019 JAVMA report by Adin and colleagues — found taurine deficiency in only a portion of affected dogs, with the rest taurine-normal at diagnosis. Veterinary cardiology working groups continue to treat the mechanism as unresolved.',
+  },
+  {
+    question: 'Does "grain-free" mean more meat or fewer carbohydrates?',
+    answer:
+      'No. "Grain-free" is a labeling claim, not a health claim — it means the absence of cereal grains like corn, wheat, rice, oats, and barley. In most grain-free formulas the carbohydrate fraction is supplied by peas, lentils, chickpeas, potatoes, sweet potatoes, or tapioca — the same ingredients implicated in the FDA investigation. A grain-free formula is not, on that basis alone, lower in carbohydrate or higher in protein than a grain-inclusive formula at the same price point.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Grain-Free Dog Food and DCM — The FDA CVM Record',
+    description:
+      'Reference summary of the FDA CVM investigation into grain-free diets and atypical dilated cardiomyopathy in dogs, the BEG hypothesis, taurine status, and the current state of evidence.',
+    url: 'https://petfood.com/ingredients/grain-free-dcm-risk',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-28T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 export default function GrainFreeDCMRiskPage() {
   return (
@@ -72,6 +105,7 @@ export default function GrainFreeDCMRiskPage() {
               { label: 'What "Grain-Free" Actually Means', href: '#meaning' },
               { label: 'When Grain-Free Is Appropriate', href: '#appropriate' },
               { label: 'What to Discuss with a Vet', href: '#vet' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -83,6 +117,14 @@ export default function GrainFreeDCMRiskPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
+            ]}
+          />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
@@ -99,7 +141,7 @@ export default function GrainFreeDCMRiskPage() {
         <ArticleByline
           siteName="PetFood.com Editorial"
           publishedAt="2026-05-28T00:00:00Z"
-          updatedAt="2026-06-05T00:00:00Z"
+          updatedAt="2026-06-11T00:00:00Z"
           reviewedBy="Editorial team"
         />
 
@@ -360,6 +402,54 @@ export default function GrainFreeDCMRiskPage() {
           score deduction; it is a disclosure, so an owner choosing the formula does so with the
           FDA record in view. Brand-level scores are determined by the published rubric and not
           by categorical grain-free status.
+        </p>
+
+        <h2 id="faq">Common Questions</h2>
+        <p><strong>Does grain-free dog food cause heart disease?</strong></p>
+        <p>
+          The FDA CVM investigation describes an association in its case-report dataset, not
+          proven causation. The 2018 notice reported DCM cases in atypical breeds eating diets
+          containing peas, lentils, other legume seeds, or potatoes as main ingredients, many
+          labeled grain-free — and the agency has not, as of its most recent updates, declared
+          grain-free diets safe or unsafe. The mechanism remains unresolved and the investigation
+          remains open.
+        </p>
+        <p><strong>What did the FDA actually find about grain-free diets and DCM?</strong></p>
+        <p>
+          Per the FDA CVM&apos;s June 2019 update, the agency had received reports involving 524
+          dogs with DCM between January 2014 and April 2019. More than 90% of affected dogs had
+          been eating a grain-free diet, and more than 90% of the identified diets contained peas
+          and/or lentils. The FDA was explicit that the brand names it disclosed appeared
+          disproportionately in case reports but that the listing did not establish causation and
+          was not a regulatory finding against any brand.
+        </p>
+        <p><strong>Should I stop feeding my dog grain-free food?</strong></p>
+        <p>
+          That is a conversation for your veterinarian, who can assess breed risk and clinical
+          context. For dogs in established DCM-predisposed breeds (Doberman Pinscher, Boxer,
+          Great Dane, Irish Wolfhound, Cocker Spaniel) and atypical-signal breeds (Golden
+          Retriever in particular), the conversation should include the published association
+          between pulse-heavy grain-free diets and atypical-breed DCM, and whether the formula
+          uses pulse ingredients as its primary carbohydrate sources. The FDA&apos;s own position
+          is that individual dietary choices should be made in conversation with a veterinarian.
+        </p>
+        <p><strong>Is taurine deficiency the cause of diet-associated DCM?</strong></p>
+        <p>
+          The evidence suggests taurine deficiency is one mechanism, but not the only one. Early
+          case reports found a substantial minority of affected atypical-breed dogs
+          taurine-deficient at diagnosis, but subsequent series — including the 2019 JAVMA report
+          by Adin and colleagues — found taurine deficiency in only a portion of affected dogs,
+          with the rest taurine-normal at diagnosis. Veterinary cardiology working groups continue
+          to treat the mechanism as unresolved.
+        </p>
+        <p><strong>Does &quot;grain-free&quot; mean more meat or fewer carbohydrates?</strong></p>
+        <p>
+          No. &quot;Grain-free&quot; is a labeling claim, not a health claim — it means the
+          absence of cereal grains like corn, wheat, rice, oats, and barley. In most grain-free
+          formulas the carbohydrate fraction is supplied by peas, lentils, chickpeas, potatoes,
+          sweet potatoes, or tapioca — the same ingredients implicated in the FDA investigation.
+          A grain-free formula is not, on that basis alone, lower in carbohydrate or higher in
+          protein than a grain-inclusive formula at the same price point.
         </p>
 
         <ArticleSourcesList

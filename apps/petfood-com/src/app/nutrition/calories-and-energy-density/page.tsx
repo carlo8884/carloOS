@@ -113,6 +113,7 @@ export default function CaloriesAndEnergyDensityPage() {
               { label: 'How Much to Feed Your Dog', href: '/feeding/how-much-to-feed-a-dog' },
               { label: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
               { label: 'Dietary Fat and Essential Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture

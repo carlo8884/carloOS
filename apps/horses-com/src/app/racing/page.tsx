@@ -71,6 +71,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Discipline',
   },
   {
+    slug: 'racing-for-newcomers',
+    title: 'Racing for Newcomers',
+    tagline:
+      'New to the sport? Start here: how to read a race card, what a day at the races is like, and how racing silks help you follow a horse. A spectator\'s guide, not a betting one.',
+    authorities: 'Educational Reference',
+    category: 'For Newcomers',
+  },
+  {
     slug: 'understanding-race-types-and-classes',
     title: 'Race Types & Classes Explained',
     tagline:
@@ -95,6 +103,22 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'History & Reference',
   },
   {
+    slug: 'great-racehorses',
+    title: 'Great Racehorses',
+    tagline:
+      'Heritage career profiles of the legends: Secretariat, Man o\' War, Seabiscuit, Citation, American Pharoah, and Justify -- their records, connections, and legacy.',
+    authorities: 'National Museum of Racing',
+    category: 'History & Reference',
+  },
+  {
+    slug: 'venues',
+    title: 'Iconic Racetracks',
+    tagline:
+      'Educational venue guides to the historic homes of American racing: Churchill Downs, Pimlico, Belmont Park, Saratoga, and Keeneland -- history, architecture, and tradition.',
+    authorities: 'Venue Guides',
+    category: 'History & Reference',
+  },
+  {
     slug: 'glossary',
     title: 'Horse Racing Glossary',
     tagline:
@@ -108,6 +132,14 @@ const RACING_SPOKES: RacingCard[] = [
     tagline:
       'OTTB retraining and rehoming: the welfare ecosystem, the Thoroughbred Aftercare Alliance, and what second careers look like.',
     authorities: 'Thoroughbred Aftercare Alliance',
+    category: 'Welfare & Aftercare',
+  },
+  {
+    slug: 'ottb-second-careers',
+    title: 'OTTB Second Careers',
+    tagline:
+      'How off-track Thoroughbreds transition by discipline: aptitude, the letdown-to-restart arc, and realistic retraining timelines for eventing, jumping, dressage, and pleasure.',
+    authorities: 'Retired Racehorse Project',
     category: 'Welfare & Aftercare',
   },
   {
@@ -234,6 +266,11 @@ export default function RacingHubPage() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { label: 'Racing History', href: '/racing/history' },
+              { label: 'Your First Day at the Races', href: '/first-derby' },
+              { label: 'Race Types & Classes', href: '/racing/race-types' },
+              { label: 'Racing Roles', href: '/racing/racing-roles' },
+              { label: 'Bloodstock & Breeding', href: '/bloodstock' },
               { label: 'Disciplines', href: '/disciplines' },
               { label: 'Breeds', href: '/breeds' },
               { label: 'Health', href: '/health' },

@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata , SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 import { BrandMasthead } from '../components/BrandMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,11 +65,17 @@ const sections: Section[] = [
   },
 ]
 
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'petfoods-com', name: 'PetFoods.com', url: 'https://petfoods.com' }),
+  buildWebSiteSchema({ siteId: 'petfoods-com', name: 'PetFoods.com', url: 'https://petfoods.com' }),
+)
+
 export default function HomePage() {
   const year = new Date().getFullYear()
 
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       <BrandMasthead
         eyebrow="The Pet Food Catalog"
         title="PetFoods.com"

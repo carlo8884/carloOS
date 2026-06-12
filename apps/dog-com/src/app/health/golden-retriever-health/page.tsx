@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -28,7 +28,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -38,7 +38,14 @@ const medicalSchema = buildMedicalWebPageSchema({
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+const FAQS = [
+  { question: 'What percentage of Golden Retrievers get cancer?', answer: 'Over 60% of Golden Retrievers develop cancer in their lifetime, compared to approximately 25% of all dogs — the defining health challenge of the breed and the primary reason their lifespan trails similar-sized dogs. The most common cancers in Goldens are hemangiosarcoma, lymphoma, osteosarcoma, and mast cell tumors. This is documented by the Morris Animal Foundation\'s Golden Retriever Lifetime Study, the largest dog health study ever conducted, tracking over 3,000 Goldens since 2012.' },
+  { question: 'What are the signs of hemangiosarcoma in a Golden Retriever?', answer: 'Often none until crisis — that is what makes it dangerous. Hemangiosarcoma typically causes no symptoms until the tumor ruptures and bleeds internally: sudden collapse or weakness, pale or white gums, a distended abdomen, rapid breathing, and extreme lethargy. A Golden that was completely normal can collapse from hemorrhagic shock within hours; that presentation is an emergency. The best current screening is an annual abdominal ultrasound from age 6–7, which can catch splenic tumors before rupture.' },
+  { question: 'How do I check my Golden Retriever for lymphoma?', answer: 'Learn to feel the lymph nodes monthly from middle age: under the jaw, in front of the shoulders, in the groin, and behind the knees. Lymphoma typically presents as painless, firm, enlarged nodes, often in several locations at once. Swollen nodes that persist more than 2 weeks warrant veterinary evaluation. Caught and treated with CHOP chemotherapy, 60–90% of dogs achieve remission with median survival of 12–14 months — and some live significantly longer.' },
+  { question: 'What health screening schedule should a Golden Retriever follow?', answer: 'From the schedule on this page: annual wellness exams and bloodwork from age 3; from age 6–7, an annual abdominal ultrasound (hemangiosarcoma screening), cardiac auscultation, full bloodwork including T4, and dental evaluation; from age 8+, a full exam with bloodwork and urinalysis every 6 months, plus annual abdominal ultrasound and chest X-rays, with an echocardiogram if a murmur is present. The intensified senior schedule exists because early detection is what changes cancer outcomes.' },
+  { question: 'Is pet insurance worth it for a Golden Retriever?', answer: 'The financial case is stronger for Goldens than almost any breed: a 60%+ lifetime cancer rate against real treatment costs of $8,000–25,000. The single most important rule is to enroll before the first vet visit — any condition documented before enrollment is excluded as pre-existing for life (a murmur noted at the first puppy exam becomes a permanent cardiac exclusion in most policies). Choose a policy without per-incident caps, since hemangiosarcoma treatment alone runs $5,000–12,000.' },
+]
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function GoldenRetrieverHealthPage() {
   return (
@@ -74,6 +81,7 @@ export default function GoldenRetrieverHealthPage() {
             { label: 'Hypothyroidism', href: '#thyroid' },
             { label: 'Preventive Care Schedule', href: '#preventive' },
             { label: 'Insurance Recommendation', href: '#insurance' },
+            { label: 'FAQ', href: '#faq' },
           ]} />
           <RelatedLinks title="Related" links={[
             { label: 'Golden Retriever Breed Profile', href: '/breeds/golden-retriever' },
@@ -208,7 +216,7 @@ export default function GoldenRetrieverHealthPage() {
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
 
-        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fastest claims, no limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
+        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fast claims processing per the carrier, no payout limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
           <Link href="/reviews/best-pet-insurance"
@@ -217,6 +225,8 @@ export default function GoldenRetrieverHealthPage() {
           </Link>
         </div>
 
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>

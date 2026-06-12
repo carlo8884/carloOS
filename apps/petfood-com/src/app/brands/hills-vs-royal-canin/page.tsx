@@ -158,7 +158,7 @@ export default function HillsVsRoyalCaninPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:brand-hills-vs-royal-canin" priority aspect="16:9" variant="wide" caption="Hill's vs Royal Canin — a side-by-side reference comparison of the two largest veterinary therapeutic diet brands." />
+        <StockImage manifestKey="petfood-com:brand-hills-vs-royal-canin" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Hill's vs Royal Canin — a side-by-side reference comparison of the two largest veterinary therapeutic diet brands." />
         <p>
           Hill&apos;s Pet Nutrition and Royal Canin are the two largest companies in the U.S.
           veterinary therapeutic diet channel. They are the two brands a small-animal clinician is
@@ -171,6 +171,13 @@ export default function HillsVsRoyalCaninPage() {
           specifics, condition-specific therapeutic options, and the clinician&apos;s personal
           experience.
         </p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Neither brand wins this comparison on the available evidence. Hill&apos;s and Royal Canin are substantively comparable on manufacturing, board-certified nutritionist staffing, AAFCO substantiation, and recall transparency — the criteria WSAVA-aligned clinicians weight most. Both have non-trivial but non-recurring recall history. Differences are most meaningful within specific therapeutic indications and are best adjudicated by a treating veterinarian case by case. Either brand is a defensible choice in most clinical contexts.
+          </p>
+        </div>
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox

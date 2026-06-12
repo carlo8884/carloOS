@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -31,6 +35,33 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Are home-cooked diets healthier than commercial diets?',
+    answer:
+      'Not inherently. A properly formulated home-cooked diet is a legitimate choice, but analyses consistently find that the large majority of home-prepared recipes — including many published in books and online — fail to meet established nutrient requirements. The gap between a balanced and an unbalanced home diet is a board-certified veterinary nutritionist and a precise recipe followed exactly.',
+  },
+  {
+    question: 'Can I use a recipe from a book or website?',
+    answer:
+      'Analyses of home-prepared maintenance recipes consistently find a majority deficient in multiple essential nutrients, with calcium, several trace minerals, and certain vitamins most often inadequate. Popularity or a veterinarian byline does not guarantee a recipe is complete; a recipe formulated by a board-certified veterinary nutritionist or a reputable formulation service is the reliable route.',
+  },
+  {
+    question: 'Do home-cooked diets need supplements?',
+    answer:
+      'Essentially always. A balanced home-cooked diet requires a supplement to supply nutrients whole-food ingredients cannot provide in the right amounts — calcium being the most critical, plus a vitamin-and-mineral source and often specific additions like taurine for cats. Generic human multivitamins are not adequate substitutes; the formulating nutritionist specifies the exact product and dose.',
+  },
+  {
+    question: 'When is home cooking justified?',
+    answer:
+      'When an animal will not eat or cannot tolerate suitable commercial diets, when a combination of medical conditions is not addressed by any commercial therapeutic diet, or when an owner is committed to doing it properly through a veterinary nutritionist. It is not justified as a casual swap from commercial food based on a recipe found online.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -74,7 +105,7 @@ export default function HomeCookedVsCommercialPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -85,6 +116,7 @@ export default function HomeCookedVsCommercialPage() {
               { label: 'Doing It Correctly', href: '#correctly' },
               { label: 'Supplements Are Required', href: '#supplements' },
               { label: 'When It Is Justified', href: '#justified' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -109,8 +141,16 @@ export default function HomeCookedVsCommercialPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:compare-home-cooked-vs-commercial" priority aspect="16:9" variant="wide" caption="Home-cooked versus commercial — balancing control against the risk of nutritional imbalance." />
+        <StockImage manifestKey="petfood-com:compare-home-cooked-vs-commercial" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Home-cooked versus commercial — balancing control against the risk of nutritional imbalance." />
         <p>Home-cooking lets owners control ingredients, accommodate preferences and some medical needs, and avoid commercial processing. The problem is not the concept but the execution: balancing a complete diet by hand is genuinely difficult, and study after study finds that the large majority of home-prepared recipes — including many published in books and online and even some from veterinarians without nutrition training — fail to meet established nutrient requirements. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            The problem with home-cooking is not the concept but the execution: the large majority of home-prepared recipes — including many published online and in books — fail to meet established nutrient requirements. A home-cooked diet can be a fine choice only if it is formulated by a board-certified veterinary nutritionist (or a reputable formulation service), individualized to the animal, followed precisely without ingredient substitution, and uses the specified supplements. For most owners, a complete-and-balanced commercial diet is the lower-risk default.
+          </p>
+        </div>
+
         <h2 id="appeal">The Appeal</h2>
         <p>Owners turn to home-cooking for control over ingredient quality, to manage picky eaters or food sensitivities, for animals with multiple conditions that no single commercial diet addresses, and out of distrust of commercial processing. These are understandable motivations, and a properly formulated home diet can be a fine choice — the issue is ensuring proper formulation.</p>
         <h2 id="imbalance">The Imbalance Problem</h2>
@@ -123,6 +163,53 @@ export default function HomeCookedVsCommercialPage() {
         <p>A balanced home-cooked diet essentially always requires a supplement to supply nutrients that whole-food ingredients cannot provide in the right amounts — calcium being the most critical, plus a vitamin-and-mineral source and often specific additions like taurine for cats. Generic human multivitamins are not adequate substitutes. The formulating nutritionist specifies the exact supplement and dose. See <a href="/supplements/multivitamins-for-pets">Multivitamins for Pets</a>.</p>
         <h2 id="justified">When It Is Justified</h2>
         <p>Home-cooking is justified when an animal will not eat or cannot tolerate suitable commercial diets, when a combination of medical conditions is not addressed by any commercial therapeutic diet, or when an owner is committed to it and willing to do it properly through a veterinary nutritionist. It is not justified as a casual swap from commercial food based on a recipe found online. Done right it is excellent; done casually it is a common cause of preventable nutritional disease. See <a href="/compare/fresh-vs-kibble">Fresh vs Kibble</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The reliable default
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop complete, balanced commercial diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most households, a complete-and-balanced commercial diet is the dependable way to
+            meet nutrient requirements without the imbalance risk of an unsupervised home recipe.
+            Compare options with our independent <Link href="/brands">brand evaluations</Link>, then
+            search the category below and confirm the AAFCO complete-and-balanced statement for the
+            life stage. A genuinely needed home diet should be formulated by a board-certified
+            veterinary nutritionist, not assembled from a recipe online.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20balanced%20pet%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20dog%20cat%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

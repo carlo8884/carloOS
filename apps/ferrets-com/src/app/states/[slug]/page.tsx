@@ -30,7 +30,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
@@ -237,14 +236,6 @@ export default async function StateLegalityPage({
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'States', url: 'https://ferrets.com/states' },
-      { name: state.name, url: pageUrl },
-    ],
-  })
-
   // Place schema — describes the state as a jurisdiction this page covers.
   const placeSchema: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -263,7 +254,6 @@ export default async function StateLegalityPage({
 
   const schema = combineSchemas(
     articleSchema,
-    breadcrumbSchema,
     placeSchema,
     faqSchema,
   )

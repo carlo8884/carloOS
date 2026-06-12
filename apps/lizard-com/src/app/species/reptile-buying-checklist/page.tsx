@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Buying Checklist — Before You Buy | Lizard.com", description: "A pre-purchase reptile checklist: research the species, set up before buying, choose captive-bred, check health signs, and plan quarantine.", path: "/species/reptile-buying-checklist", type: 'article' })
@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Buying
 export default function SpeciesReptileBuyingChecklistPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]}
       schema={schema}
       relatedLinks={[
@@ -67,7 +67,8 @@ export default function SpeciesReptileBuyingChecklistPage() {
           <h2>{"6. Be Honest About the Commitment"}</h2>
           <p>{"Finally, confirm you can meet the species’ needs for its full lifespan, including its adult size, decades-long lifespan for many species, ongoing costs, and the space and time required. Many reptiles are surrendered or neglected because an impulse purchase outgrew the keeper’s expectations. If, after working through this checklist, you are confident and prepared, you are far more likely to give the animal a long, healthy life and to enjoy keeping it."}</p>
 
-          <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
             <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Set Up Before the Animal Comes Home</div>
             <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Step 2 of the checklist is to have the enclosure running and stable before you buy. Browse enclosures, heating, lighting, and substrate to get the build dialed in early. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the guidance above.</p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

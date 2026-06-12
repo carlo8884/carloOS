@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +37,61 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored brands compared on this
+// page (QC §1.4 — editorial Review only, never AggregateRating; ratings mirror
+// the disclosed on-page editorial scores). ItemList captures the display order.
+const wellnessSchema = buildProductSchema({
+  name: 'Wellness',
+  description:
+    'Premium natural-positioned brand with named animal proteins early on the panel and grain-inclusive and grain-free lines, owned by a large pet-nutrition holding company. Evaluate the specific formula on its AAFCO substantiation pathway and ingredient panel.',
+  reviewBody:
+    'Premium natural-positioned brand, named-meat-forward, with grain-inclusive and grain-free lines under a large pet-nutrition holding company despite the artisan image. Judge the specific formula on its AAFCO substantiation and panel; grain-free formulas intersect the DCM question.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.2,
+})
+const merrickSchema = buildProductSchema({
+  name: 'Merrick',
+  description:
+    'Premium whole-food natural brand with recognizable produce and named meats, acquired by Nestle Purina, which can bring research and quality-control resources behind the natural branding. Judge the specific formula on its panel and AAFCO statement.',
+  reviewBody:
+    'Premium whole-food natural brand under Nestle Purina, which can bring research and quality-control resources behind the natural branding. Judge the specific formula on its panel and AAFCO statement; treat grain-free legume-heavy recipes with the DCM caution.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.2,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Wellness vs Merrick',
+  items: [
+    { name: 'Wellness', url: 'https://petfood.com/brands/wellness-vs-merrick#wellness-retail' },
+    { name: 'Merrick', url: 'https://petfood.com/brands/wellness-vs-merrick#merrick-retail' },
+  ],
+})
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Who owns Wellness and Merrick?',
+    answer:
+      'Both are owned by large corporate parents despite their independent-artisan brand image: Merrick was acquired by Nestle Purina, and Wellness (Wellness Pet Company) sits within a large pet-nutrition holding company. Corporate ownership is neither inherently good nor bad; it matters insofar as it brings — or fails to bring — research and quality-control resources.',
+  },
+  {
+    question: 'Is Wellness or Merrick better?',
+    answer:
+      'On the published evidence, the two brands are substantively comparable on our five-dimension rubric: both are natural-positioned premium lines with named animal proteins early on the panel and both grain-inclusive and grain-free options. The meaningful comparison is at the formula level — judge the specific product on its ingredient panel and AAFCO substantiation statement rather than the brand image.',
+  },
+  {
+    question: 'Does "natural" on the bag mean higher quality?',
+    answer:
+      'No. "Natural" is a narrowly defined AAFCO term, not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. Both brands lean on natural and whole-ingredient framing; the substance is in the ingredient panel, the guaranteed analysis, and the AAFCO statement.',
+  },
+  {
+    question: 'Do the grain-free lines from these brands raise the DCM question?',
+    answer:
+      'Yes — as with all grain-free, the legume-inclusive formulas from either brand intersect the FDA diet-associated DCM investigation, which identified an association rather than proven causation. Owners of DCM-predisposed breeds should discuss a legume-heavy grain-free formula with a veterinarian; both brands also offer grain-inclusive lines.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, itemListSchema, wellnessSchema, merrickSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -81,7 +140,7 @@ export default function WellnessVsMerrickPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -93,6 +152,7 @@ export default function WellnessVsMerrickPage() {
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -116,8 +176,16 @@ export default function WellnessVsMerrickPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:brand-wellness-vs-merrick" priority aspect="16:9" variant="wide" caption="Wellness vs Merrick — two natural-positioned premium brands compared on formulation, AAFCO posture, and recalls." />
+        <StockImage manifestKey="petfood-com:brand-wellness-vs-merrick" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Wellness vs Merrick — two natural-positioned premium brands compared on formulation, AAFCO posture, and recalls." />
         <p>Wellness and Merrick are premium brands positioned on natural ingredients and recognizable whole foods, and both compete for the same buyer. This comparison evaluates them side by side on the PetFood.com five-dimension rubric, independent of any commercial relationship. A recurring theme is that both, despite an artisanal brand image, are owned by large corporations — a reminder that brand image and corporate reality often differ. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Wellness and Merrick are closely matched natural-positioned premium brands competing for the same buyer — and both, despite an artisanal image, are owned by large corporations (Merrick by Nestle Purina; Wellness within a large pet-nutrition holding company). Neither wins categorically on the rubric; judge the specific formula on its ingredient panel and AAFCO statement, not the natural framing. For grain-free formulas from either, the legume-inclusive DCM question applies.
+          </p>
+        </div>
+
         <h2 id="twobrands">Two Natural Brands</h2>
         <p>Both brands lean on natural and whole-ingredient marketing, with named meats, recognizable produce, and an emphasis on what they exclude (artificial colors, certain by-products). As covered elsewhere, natural is a narrowly defined AAFCO term and not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. The brands should be judged on substance, not the natural framing. See <a href="/myths/by-products-myth">The By-Products Myth</a>.</p>
         <h2 id="ownership">Corporate Ownership</h2>
@@ -180,6 +248,14 @@ export default function WellnessVsMerrickPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Merrick%20pet%20food"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

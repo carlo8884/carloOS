@@ -10,7 +10,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,14 +48,6 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://vets.co/' },
-    { name: 'Breed Health', url: 'https://vets.co/breeds' },
-    { name: 'Siberian Husky Health', url: PAGE_URL },
-  ],
-})
-
 const FAQS = [
   {
     question: 'Are Siberian Huskies really at higher risk for eye disease?',
@@ -91,7 +82,6 @@ const combinedSchema = combineSchemas(
   articleSchema,
   medicalSchema,
   faqSchema,
-  breadcrumbSchema,
 )
 
 export default function VetsHuskyHealthPage() {
@@ -293,7 +283,7 @@ export default function VetsHuskyHealthPage() {
             hypothyroid dog (suspect myxedema coma). Do not wait until morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             The single highest-yield screening test in this breed is an annual eye exam by a board-certified
             veterinary ophthalmologist with submission to the OFA / CAER registry. One visit covers

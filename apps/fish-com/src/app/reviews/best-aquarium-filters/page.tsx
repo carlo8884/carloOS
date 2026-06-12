@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Best Aquarium Filters 2026',
-  description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
+  description: 'HOB, canister, and sponge filters compared on published biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -33,10 +33,26 @@ const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', d
 const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Aquarium Filters 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-filters${p.href}` })),
+})
+
+// FAQ content derived from this page's comparison criteria and type guide only.
+const FAQS = [
+  { question: 'What is the difference between HOB, canister, and sponge filters?', answer: 'Hang-on-back (HOB) filters suit 10–75 gallon tanks and are the easiest to maintain — the most common choice for beginners and intermediate keepers. Canister filters suit 50+ gallon tanks with superior biological capacity and near-silent operation, at a higher price and a more involved cleaning day. Sponge filters are best for nano tanks, breeding setups, and shrimp tanks: excellent biological surface area, gentle flow, and safe for fry and invertebrates.' },
+  { question: 'How often should I clean an aquarium filter?', answer: 'It depends on the type. An HOB like the AquaClear 70 needs a monthly media rinse and a quarterly impeller cleaning, or flow drops noticeably. A canister like the Fluval 307 typically goes 3–6 months between cleanings because the larger media volume takes longer to clog. Sponge filters get a monthly squeeze — always in old tank water, never tap water, which kills the beneficial bacteria the filter exists to house.' },
+  { question: 'Which filter is best for a shrimp or breeding tank?', answer: 'A sponge filter. There is no intake that can pull in shrimp or fry, the air-driven flow is gentle enough for low-flow species, and the sponge itself provides excellent biological surface area. That combination is why sponge filters are also the standard choice for hospital and quarantine tanks.' },
+  { question: 'How were these aquarium filters compared?', answer: 'The filters in this comparison were ranked on biological filtration capacity, real-world flow rate, noise level, ease of maintenance, and long-term reliability, drawing on manufacturer-published specs and aggregated keeper reports. Affiliate links appear on this page, but rankings are independent of commissions.' },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answer })) })
+
 export default function BestAquariumFiltersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Filters 2026', url: 'https://fish.com/reviews/best-aquarium-filters' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, faqSchema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Filters 2026', url: 'https://fish.com/reviews/best-aquarium-filters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editor Pick · June 2026</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
@@ -56,6 +72,11 @@ export default function BestAquariumFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater tanks the <strong>AquaClear 70</strong> is our top hang-on-back pick — the largest media basket in its class, refillable (no proprietary cartridges), and quiet. For 40–70 gallon tanks needing higher biological capacity, the <strong>Fluval 307</strong> canister is the pick; for shrimp, breeding, and nano tanks, a <strong>Hikari Bacto-Surge</strong> sponge filter. The <strong>Aqueon QuietFlow 30</strong> is the best budget HOB.</p>
+            </div>
+
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Filter Type Guide</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
@@ -157,7 +178,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
                 { label: 'Availability', value: 'Every pet store', highlight: 'good' },
               ]}
-              pros={['Lowest price of HOBs tested', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
+              pros={['Lowest price of the HOBs in this comparison', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
               ctaText="Shop Aqueon QuietFlow →"
@@ -165,6 +186,9 @@ export default function BestAquariumFiltersPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-quietflow-30"
             />
+
+            <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

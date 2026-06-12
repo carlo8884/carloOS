@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Cleanup Crew — Isopods & Springtails | Lizard.com", description: "How isopods and springtails keep a bioactive reptile enclosure clean, which species to use, how to seed and feed them, and when a cleanup crew fails.", path: "/setup/cleanup-crew-isopods-springtails", type: 'article' })
@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Bioactive Clea
 export default function SetupCleanupCrewIsopodsSpringtailsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }]}
       schema={schema}
       relatedLinks={[
@@ -31,6 +31,7 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Drainage Layer Guide", href: "/setup/drainage-layer-bioactive" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Mourning Gecko Care", href: "/species/mourning-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-cleanup-crew-isopods-springtails"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

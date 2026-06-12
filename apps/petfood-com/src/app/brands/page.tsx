@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -151,6 +151,9 @@ export default function BrandsHubPage() {
         <p className="text-base text-brand-text-mid leading-relaxed">
           Start with the Hill&#x2019;s vs Royal Canin page if your veterinarian has recommended a therapeutic diet — those two brands dominate the veterinary-channel prescription segment and the evaluation explains the clinical evidence and practical differences. Start with the Purina Pro Plan evaluation if you are selecting a mainstream adult or performance diet and want the most evidence-backed independent summary available.
         </p>
+        <p className="text-base text-brand-text-mid leading-relaxed mt-4">
+          To put any two or three of these brands next to each other on disclosed criteria — owner, AAFCO posture, manufacturing, recalls, and price band — use the <Link href="/tools/compare-pet-foods" className="text-brand-primary underline-offset-2 hover:underline">Compare Pet Foods tool</Link>. It is a transparent comparison, not a ranking.
+        </p>
       </div>
 
       <div className="px-container-sm sm:px-container py-12">
@@ -190,6 +193,10 @@ export default function BrandsHubPage() {
           source="brands-hub"
         />
       </section>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <CrossPortfolioCard currentSite="petfood-com" contentType="brand" variant="footer" />
+      </div>
     </>
   </>
   )

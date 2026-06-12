@@ -1,18 +1,34 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching.', path: '/species/crested-gecko', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide', description: 'MRP diet, floppy tail prevention, and care for Correlophus ciliatus crested geckos.', url: 'https://lizard.com/species/crested-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide', description: 'MRP diet, floppy tail prevention, and care for Correlophus ciliatus crested geckos.', url: 'https://lizard.com/species/crested-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Do crested geckos need a heat lamp?', answer: 'No — a basking lamp is not required and is in fact contraindicated. Crested geckos come from New Caledonia’s cool highland forests, and their optimal range of 72–78°F matches the room temperature of most North American homes. Temperatures above 82°F cause heat stress, and sustained temperatures above 85°F are lethal. In cooler homes, a ceramic heat emitter on a thermostat can hold the enclosure at 68°F+ in winter, but often even that is unnecessary. A natural day/night cycle with cooler nights (68–70°F) is ideal.' },
+  { question: 'What do crested geckos eat?', answer: 'The staple is a meal replacement powder (MRP) such as Pangea Fruit Mix or Repashy Crested Gecko Diet, mixed with water to a thick paste. These complete diets provide the calcium, vitamins, and protein needed for long-term health, and many crested geckos thrive on MRP alone. Offer fresh MRP every other day and remove uneaten portions within 24–48 hours. Live insects (dubia roaches, crickets) 2–4 times monthly add enrichment and natural hunting behavior rather than being a necessity.' },
+  { question: 'Do crested gecko tails grow back?', answer: 'No. Crested geckos can drop their tails as a predator defense (autotomy), but unlike many gecko species they do not regenerate them — a tailless crested gecko is tailless permanently. This does not affect health, longevity, or quality of life. Avoid the situations that stress a gecko into dropping: rough handling, grabbing the tail, and housing with other geckos outside supervised breeding.' },
+  { question: 'What size enclosure does a crested gecko need?', answer: 'A 12×12×18-inch tall, arboreal-oriented enclosure suits an adult. Vertical structure matters: cork bark and branches angled so the gecko can sleep right-side up help prevent floppy tail syndrome, which develops when a gecko repeatedly sleeps inverted on the glass with its tail folded over its back.' },
+  { question: 'How long do crested geckos live?', answer: 'A well-kept crested gecko lives 15–20 years. The main preventable risk is heat — sustained temperatures above 85°F are the most common cause of avoidable death in this species, so a thermometer with high-temperature alerts and a plan for summer heat are worthwhile.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function CrestedGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Crested Gecko', href: '/species/crested-gecko' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
@@ -60,6 +76,10 @@ export default function CrestedGeckoPage() {
 
         <h2>Tail Autotomy — No Regrowth in Cresties</h2>
         <p>Crested geckos can drop their tails as a predator defense — tail autotomy. Unlike many gecko species, crested geckos do not regenerate their tails after dropping them. A tailless crested gecko (called a "frogbutt") is permanent. This does not affect health, longevity, or quality of life — tailless crested geckos live full, normal lives. However, it does affect value if the animal is to be sold. Avoid situations that stress the gecko into tail drop: rough handling, being grabbed by the tail, loud noises, and encounters with aggressive tankmates (crested geckos should be housed individually except during supervised breeding).</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Crested Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for crested gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
@@ -71,5 +91,6 @@ export default function CrestedGeckoPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

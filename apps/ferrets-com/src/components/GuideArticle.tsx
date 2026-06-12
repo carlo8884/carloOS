@@ -18,7 +18,6 @@ import type { ReactNode } from 'react'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
@@ -109,13 +108,6 @@ export function GuideArticle({
     modifiedAt: now,
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbs.map((b) => ({
-      name: b.name,
-      url: `https://ferrets.com${b.href === '/' ? '' : b.href}`,
-    })),
-  })
-
   const faqSchema =
     faqs && faqs.length > 0
       ? buildFAQSchema({
@@ -128,8 +120,8 @@ export function GuideArticle({
       : null
 
   const schema = faqSchema
-    ? combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
-    : combineSchemas(articleSchema, breadcrumbSchema)
+    ? combineSchemas(articleSchema, faqSchema)
+    : articleSchema
 
   const tocItems = sections.map((s) => ({
     label: s.heading,

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -19,17 +21,48 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Preservatives in Pet Food — What the Label Actually Means',
-  description:
-    'Reference page on preservatives in commercial pet food — the synthetic antioxidants (BHA, BHT, ethoxyquin), the natural alternatives (mixed tocopherols, rosemary extract), the underlying fat-oxidation toxicology, and how to read "naturally preserved" claims honestly.',
-  url: 'https://petfood.com/ingredients/preservatives-pet-food',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Are BHA and BHT dangerous in pet food?',
+    answer:
+      'BHA and BHT are effective antioxidants at low concentrations (typically 0.01-0.02% of finished product), with decades of regulatory approval from FDA CVM and analogous regulators. IARC classifies BHA as Group 2B (possibly carcinogenic to humans) based on forestomach tumors in rats — an anatomical structure not present in humans, dogs, or cats — and the translation of that finding to dogs and cats at approved use concentrations has not been demonstrated. Owners who prefer to avoid them for precautionary reasons have well-developed natural alternatives, but the categorical framing of BHA and BHT as dangerous at use concentrations is not supported by the regulatory toxicology record.',
+  },
+  {
+    question: 'Is ethoxyquin banned in pet food?',
+    answer:
+      'Not in the United States. The European Commission suspended ethoxyquin\'s authorization for EU animal feed in 2017 pending re-evaluation of impurity data, and EFSA re-evaluation is ongoing. In the U.S., ethoxyquin remains approved by FDA CVM at specified concentration limits, though most U.S. premium brands have voluntarily moved away from it. Where it still appears is most often as a carryover from fish meal preserved at the rendering source, which is not always disclosed on the consumer label.',
+  },
+  {
+    question: 'Why does pet food need preservatives at all?',
+    answer:
+      'Pet food contains fat, and fat oxidizes. Oxidation produces rancidity, destroys fat-soluble vitamins (A, D, E, K) and essential fatty acids, and generates secondary lipid oxidation products with documented toxicity. For a dry kibble with a 12-18 month expected shelf life, oxidation control is not optional — the choice for a manufacturer is not whether to use a preservative system but which one.',
+  },
+  {
+    question: 'What does "naturally preserved" actually mean?',
+    answer:
+      'AAFCO and FDA require disclosure of preservatives added by the pet food manufacturer, but not, in general, preservatives added at the rendering step by the supplier of meal or fat if the carryover is below specified thresholds. A bag marketed as "naturally preserved with mixed tocopherols" may therefore contain trace concentrations of synthetic preservatives introduced at the rendering plant. Owners for whom this matters can ask the manufacturer whether any meal or fat ingredient carries over synthetic preservatives and what the supplier-verification procedure is.',
+  },
+  {
+    question: 'Do natural preservatives mean a shorter shelf life?',
+    answer:
+      'Yes, typically. Synthetic systems (BHA, BHT, ethoxyquin) generally support 15-24 months of functional shelf life under retail conditions, while natural systems (mixed tocopherols, rosemary extract, citric acid) typically support 6-12 months. Brands using natural systems print tighter best-by dates and often use oxygen-barrier packaging. Consumers buying naturally-preserved food should check the best-by date and plan purchase frequency accordingly.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Preservatives in Pet Food — What the Label Actually Means',
+    description:
+      'Reference page on preservatives in commercial pet food — the synthetic antioxidants (BHA, BHT, ethoxyquin), the natural alternatives (mixed tocopherols, rosemary extract), the underlying fat-oxidation toxicology, and how to read "naturally preserved" claims honestly.',
+    url: 'https://petfood.com/ingredients/preservatives-pet-food',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 const SOURCES = [
     {
@@ -104,6 +137,7 @@ export default function PreservativesPetFoodPage() {
               { label: 'Shelf Life Trade-Off', href: '#shelf' },
               { label: '"Naturally Preserved" Claims', href: '#naturally' },
               { label: 'How to Read the Label', href: '#label' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -113,6 +147,14 @@ export default function PreservativesPetFoodPage() {
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
+            ]}
+          />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Blue Buffalo — Independent Evaluation', href: '/brands/blue-buffalo-evaluation' },
+              { label: 'Compare Food Types', href: '/compare' },
             ]}
           />
           <EmailCapture
@@ -126,7 +168,7 @@ export default function PreservativesPetFoodPage() {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           Pet food contains fat — typically 8-20% of dry kibble on a dry-matter basis — and fat
           oxidizes in the presence of oxygen, heat, light, and trace metals. Oxidation produces
@@ -387,6 +429,56 @@ export default function PreservativesPetFoodPage() {
             a signal of supply-chain seriousness. The absence of an answer is also a signal.
           </li>
         </ol>
+
+        <h2 id="faq">Common Questions</h2>
+        <p><strong>Are BHA and BHT dangerous in pet food?</strong></p>
+        <p>
+          BHA and BHT are effective antioxidants at low concentrations (typically 0.01-0.02% of
+          finished product), with decades of regulatory approval from FDA CVM and analogous
+          regulators. IARC classifies BHA as Group 2B (possibly carcinogenic to humans) based on
+          forestomach tumors in rats — an anatomical structure not present in humans, dogs, or
+          cats — and the translation of that finding to dogs and cats at approved use
+          concentrations has not been demonstrated. Owners who prefer to avoid them for
+          precautionary reasons have well-developed natural alternatives, but the categorical
+          framing of BHA and BHT as dangerous at use concentrations is not supported by the
+          regulatory toxicology record.
+        </p>
+        <p><strong>Is ethoxyquin banned in pet food?</strong></p>
+        <p>
+          Not in the United States. The European Commission suspended ethoxyquin&apos;s
+          authorization for EU animal feed in 2017 pending re-evaluation of impurity data, and
+          EFSA re-evaluation is ongoing. In the U.S., ethoxyquin remains approved by FDA CVM at
+          specified concentration limits, though most U.S. premium brands have voluntarily moved
+          away from it. Where it still appears is most often as a carryover from fish meal
+          preserved at the rendering source, which is not always disclosed on the consumer label.
+        </p>
+        <p><strong>Why does pet food need preservatives at all?</strong></p>
+        <p>
+          Pet food contains fat, and fat oxidizes. Oxidation produces rancidity, destroys
+          fat-soluble vitamins (A, D, E, K) and essential fatty acids, and generates secondary
+          lipid oxidation products with documented toxicity. For a dry kibble with a 12-18 month
+          expected shelf life, oxidation control is not optional — the choice for a manufacturer
+          is not whether to use a preservative system but which one.
+        </p>
+        <p><strong>What does &quot;naturally preserved&quot; actually mean?</strong></p>
+        <p>
+          AAFCO and FDA require disclosure of preservatives added by the pet food manufacturer,
+          but not, in general, preservatives added at the rendering step by the supplier of meal
+          or fat if the carryover is below specified thresholds. A bag marketed as
+          &quot;naturally preserved with mixed tocopherols&quot; may therefore contain trace
+          concentrations of synthetic preservatives introduced at the rendering plant. Owners for
+          whom this matters can ask the manufacturer whether any meal or fat ingredient carries
+          over synthetic preservatives and what the supplier-verification procedure is.
+        </p>
+        <p><strong>Do natural preservatives mean a shorter shelf life?</strong></p>
+        <p>
+          Yes, typically. Synthetic systems (BHA, BHT, ethoxyquin) generally support 15-24 months
+          of functional shelf life under retail conditions, while natural systems (mixed
+          tocopherols, rosemary extract, citric acid) typically support 6-12 months. Brands using
+          natural systems print tighter best-by dates and often use oxygen-barrier packaging.
+          Consumers buying naturally-preserved food should check the best-by date and plan
+          purchase frequency accordingly.
+        </p>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

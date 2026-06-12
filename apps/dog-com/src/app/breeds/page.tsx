@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
@@ -173,6 +173,48 @@ export default async function BreedsPage() {
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
 
+      {/* Breed-match wizard — prominent on-brand entry CTA. Surfaces the
+          /breeds/match decision wizard at the top of the hub (previously
+          reachable only via direct URL). Mirrors the hub's card idiom:
+          brand accent, paw glyph, IconArrowRight, hover lift. */}
+      <div className="px-container-sm sm:px-container pt-10">
+        <Link
+          href="/breeds/match"
+          className="group relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 overflow-hidden rounded-xl bg-brand-dark text-white p-6 sm:p-7 no-underline hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-30 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(ellipse at 85% 50%, rgba(232,98,42,0.45) 0%, transparent 60%)',
+            }}
+          />
+          <span className="relative flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-brand-primary/20 text-brand-primary" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="26" height="26" fill="currentColor">
+              <ellipse cx="20" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="44" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="11" cy="36" rx="5.4" ry="6.8" />
+              <ellipse cx="53" cy="36" rx="5.4" ry="6.8" />
+              <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
+            </svg>
+          </span>
+          <div className="relative flex-1">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">Decision wizard</div>
+            <div className="font-display font-bold text-lg sm:text-xl leading-tight mb-1">
+              Find your match — breed-match wizard
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed max-w-xl">
+              Answer 7 quick questions about your home and lifestyle and get your top 3 breed matches, with honest trade-offs. No email required.
+            </p>
+          </div>
+          <span className="relative inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary group-hover:gap-2.5 transition-all whitespace-nowrap">
+            Start the wizard
+            <IconArrowRight className="w-4 h-4" />
+          </span>
+        </Link>
+      </div>
+
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
         <div className="flex items-center justify-between mb-8">
@@ -198,11 +240,12 @@ export default async function BreedsPage() {
                 className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
               >
                 {/* Always render StockImage. For breeds whose per-breed key
-                    isn't synced yet, StockImage falls back to its branded paw
-                    placeholder — no emoji, no dashed/grey box. */}
+                    isn't synced yet, fall back to the real breeds-category photo
+                    (not the branded paw placeholder) so every tile shows a dog. */}
                 <div className={`overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={manifestKey ?? `dog-com:breed-${breed.slug}`}
+                    fallbackKey="dog-com:category-breeds"
                     alt={breed.common_name}
                     aspect="4:3"
                   />
@@ -306,6 +349,7 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>
   )

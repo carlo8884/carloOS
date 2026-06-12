@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,34 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+// FAQ schema mirroring the on-page "Common Buyer Questions" section below
+// (blue-buffalo-evaluation pattern: FAQ array + buildFAQSchema). Answers are
+// condensed from the rendered Q&As — same calibrated claims, no additions.
+const FAQ = [
+  {
+    question: 'Is Orijen "better" than Acana?',
+    answer:
+      'On animal-ingredient inclusion, Orijen is higher. On price, Acana is lower. On AAFCO pathway, recall history, manufacturing certification, and ingredient transparency, the two lines are substantively comparable. "Better" depends on which dimension the owner is optimizing for; we do not assign one line a higher overall score on the basis of animal inclusion alone.',
+  },
+  {
+    question: 'Are both lines "grain-free" in the sense the FDA investigated?',
+    answer:
+      'Most Orijen and Acana Heritage SKUs are grain-free with pulses (lentils, peas, chickpeas) as a meaningful carbohydrate source — the formulation attributes that drew FDA CVM attention. Acana’s Wholesome Grains sub-line is grain-inclusive and uses oats, sorghum, and millet in place of some of the pulse load; it is not in the same formulation category as the lines named in the 2019 update.',
+  },
+  {
+    question: 'If my dog is in a DCM-predisposed breed, should I feed either of these?',
+    answer:
+      'That is a veterinary question, not a question the bag or this page can answer. The FDA CVM investigation, the 2018-2022 cardiology literature, and current ACVIM-aligned clinical practice all support a conversation with a veterinarian before committing to a pulse-heavy grain-free formulation for a dog in a DCM-predisposed breed (Doberman, Boxer, Great Dane, Irish Wolfhound, Cocker Spaniel) or in the atypical-breed signal (Golden Retriever).',
+  },
+  {
+    question: 'Are Orijen and Acana the same food in different bags?',
+    answer:
+      'No. They share a manufacturer, a formulation team, and a U.S. production site, but the recipes are distinct, the animal-inclusion targets are distinct, the price tiers are distinct, and several Acana sub-lines (Singles, Wholesome Grains) have no Orijen counterpart. They are sibling product lines, not labeling variants of a single SKU.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -82,7 +112,7 @@ export default function OrijenVsAcanaComparisonPage() {
         { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -120,7 +150,7 @@ export default function OrijenVsAcanaComparisonPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:brand-orijen-vs-acana" priority aspect="16:9" variant="wide" caption="Orijen vs Acana — both Champion Petfoods lines compared on ingredients, sourcing, recalls, and price." />
+        <StockImage manifestKey="petfood-com:brand-orijen-vs-acana" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Orijen vs Acana — both Champion Petfoods lines compared on ingredients, sourcing, recalls, and price." />
         <p>
           The two brands sit close together in the premium grain-free category and are frequently
           cross-shopped. Because they share a parent (Champion Petfoods, headquartered in Edmonton,
@@ -129,6 +159,13 @@ export default function OrijenVsAcanaComparisonPage() {
           two product lines with distinct ingredient inclusion targets, distinct manufacturing
           facilities, and distinct price tiers.
         </p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Orijen and Acana are two lines of the same parent (Champion Petfoods, now Mars), both among the more ingredient-transparent premium grain-free brands. Where they differ — animal-ingredient inclusion, price, and sub-line breadth — they map to owner preference rather than one being categorically superior. Both lack feeding-trial AAFCO substantiation on most SKUs and both are named in the FDA&apos;s 2019 grain-free DCM update (an association under investigation, not proven causation) — a point for owners of DCM-predisposed breeds to raise with a veterinarian.
+          </p>
+        </div>
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox

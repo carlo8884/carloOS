@@ -3,8 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
@@ -21,6 +19,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     'A directory of ferret rescues by US state, plus the case for rescue adoption, red and green flags, and AFA shelter accreditation criteria.',
   path: '/directory/rescues',
+  noIndex: true, // placeholder rescues directory (Coming soon Q3 2026) - not indexed until states activate
   type: 'website',
 })
 
@@ -149,15 +148,7 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Directory', url: 'https://ferrets.com/directory/rescues' },
-    { name: 'Rescues', url: 'https://ferrets.com/directory/rescues' },
-  ],
-})
-
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = faqSchema
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 

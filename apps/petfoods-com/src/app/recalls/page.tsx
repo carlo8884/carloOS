@@ -372,6 +372,12 @@ export default function RecallsHubPage() {
             or under-fortification, thiamine deficiency, mineral imbalance).
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="brand"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

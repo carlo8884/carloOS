@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +36,45 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; the rating mirrors
+// the disclosed on-page editorial score).
+const productSchema = buildProductSchema({
+  name: 'Taste of the Wild',
+  description:
+    'Mid-priced grain-free line using novel proteins (bison, venison, fish) with legume- and potato-based carbohydrate, manufactured by Diamond Pet Foods. The legume-inclusive grain-free pattern intersects the FDA diet-associated DCM question — an open question, not a proven cause.',
+  reviewBody:
+    'Popular mid-priced grain-free line with novel proteins; the legume-inclusive formulation is also the pattern at the center of the FDA diet-associated DCM investigation, which remains an open question. Made by Diamond Pet Foods, whose record includes the major 2012 Salmonella recall. Worth a veterinary conversation for at-risk dogs.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 7.0,
+})
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is Taste of the Wild linked to DCM?',
+    answer:
+      'Taste of the Wild is built on the grain-free, legume-inclusive formulation pattern at the center of the FDA CVM diet-associated dilated cardiomyopathy investigation. The investigation identified an association, not proven causation, and the mechanism remains unresolved. For owners of DCM-predisposed breeds, a legume-heavy grain-free diet is worth discussing with a veterinarian.',
+  },
+  {
+    question: 'Who makes Taste of the Wild?',
+    answer:
+      'Taste of the Wild is owned and manufactured by Diamond Pet Foods, a large privately held US manufacturer that produces many brands across its own facilities. The brand inherits the facilities’ quality-control track record, including the major 2012 Salmonella recall event at one Diamond facility.',
+  },
+  {
+    question: 'Is grain-free food healthier for my pet?',
+    answer:
+      'Grain-free is a marketing position, not a quality tier. It does not reduce allergy risk for most animals — grains are an uncommon allergen — and it is not the same as low-carbohydrate, since grain starch is simply replaced by legume and potato starch. The legume-inclusive grain-free pattern is also the one at the center of the FDA DCM investigation.',
+  },
+  {
+    question: 'Has Taste of the Wild been recalled?',
+    answer:
+      'The most significant event on the record is the 2012 Salmonella recall centered on its manufacturer, Diamond Pet Foods, which affected multiple brands made at one facility and sickened pets and people. Recalls should be judged by cause, severity, and corrective response; the FDA CVM Recalls and Withdrawals database holds the current record.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -81,7 +123,7 @@ export default function TasteOfTheWildEvaluationPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -93,6 +135,7 @@ export default function TasteOfTheWildEvaluationPage() {
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -116,8 +159,16 @@ export default function TasteOfTheWildEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:brand-taste-of-the-wild" priority aspect="16:9" variant="wide" caption="Taste of the Wild — a grain-free line made by Diamond Pet Foods, evaluated on the DCM question and recall context." />
+        <StockImage manifestKey="petfood-com:brand-taste-of-the-wild" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Taste of the Wild — a grain-free line made by Diamond Pet Foods, evaluated on the DCM question and recall context." />
         <p>Taste of the Wild is a grain-free, ancestral-themed line made by Diamond Pet Foods, evaluated here against the PetFood.com five-dimension rubric. It is a popular mid-priced option whose grain-free, legume-inclusive positioning intersects with two important issues on our rubric: the FDA DCM investigation and the manufacturer&apos;s recall history. The evaluation is independent and never influenced by any commercial relationship. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Taste of the Wild is a popular mid-priced, grain-free line made by Diamond Pet Foods. Two rubric issues stand out: its legume-inclusive grain-free formulation is the pattern associated — not proven causally — with diet-associated DCM in the FDA investigation, and its contract manufacturer carries a significant recall history. Owners of DCM-predisposed breeds should discuss a legume-heavy grain-free diet with a veterinarian, and outside a confirmed grain allergy there is no general health advantage to grain-free.
+          </p>
+        </div>
+
         <h2 id="corporate">Corporate Context</h2>
         <p>Taste of the Wild is owned and manufactured by Diamond Pet Foods, a large privately held US manufacturer that produces many brands across its facilities. Diamond&apos;s scale gives manufacturing capacity, but its corporate history includes a significant recall event (discussed below) that bears on the manufacturing and recall dimensions of our rubric. Corporate context here is mixed: substantial scale, with a recall record that warrants attention.</p>
         <h2 id="grainfree">Grain-Free Positioning</h2>
@@ -158,6 +209,14 @@ export default function TasteOfTheWildEvaluationPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Taste%20of%20the%20Wild"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -15,6 +15,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -109,6 +110,8 @@ export default function RacehorseTrainingPage() {
               items={[
                 { label: 'The Training Stable', href: '#stable' },
                 { label: 'The Trainer\'s Role', href: '#trainer' },
+                { label: 'The Backstretch Team', href: '#team' },
+                { label: 'Bringing a Young Horse to the Races', href: '#breaking' },
                 { label: 'Daily Training Routine', href: '#routine' },
                 { label: 'Works and Exercise Types', href: '#works' },
                 { label: 'Conditioning Principles', href: '#conditioning' },
@@ -125,11 +128,13 @@ export default function RacehorseTrainingPage() {
                 { label: 'Horse Racing Hub', href: '/racing' },
                 { label: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
                 { label: 'OTTB Aftercare', href: '/racing/off-track-thoroughbred-aftercare' },
+                { label: 'The People of Racing', href: '/racing/the-people-of-racing' },
                 { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
                 { label: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
                 { label: 'Equine Health', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"
@@ -157,6 +162,14 @@ export default function RacehorseTrainingPage() {
           <p>The trainer is the central figure in a racehorse&apos;s preparation. Trainers hold state licenses that give them the authority to enter horses in races and that make them legally responsible for the horse&apos;s condition and medication status on race day. This responsibility is significant: under racing regulations, trainers are the responsible party if a horse tests positive for a prohibited substance, regardless of who administered it or when.</p>
           <p>Practically, the trainer designs the training program for each horse in the stable, drawing on the horse&apos;s physical progress, workout times, health status, and the race schedule available at the track. Trainers decide when a horse is ready to work, how far and how fast to work it, and which races to target. They communicate regularly with owners about their horse&apos;s condition and progress. They oversee the stable staff and ensure that the horses receive appropriate daily care. They work with the stable veterinarian and farrier to address health and hoof issues as they arise.</p>
 
+          <h2 id="team">The Backstretch Team</h2>
+          <p>A trainer cannot prepare a stable of horses alone. The work is carried out by a team of specialized staff, collectively known as the backstretch team after the stable area of the racetrack where they are based. <strong>Exercise riders</strong> ride the horses in their morning gallops and timed works, and because they are aboard the horse at speed every day, the feedback they give the trainer -- how a horse felt, whether it took hold or backed off, whether anything seemed amiss -- is a primary input into training decisions. <strong>Grooms</strong> provide the daily hands-on care of a set string of horses and are usually the first to notice a change in appetite, attitude, or soundness. <strong>Hot walkers</strong> cool horses out after exercise, and <strong>pony riders</strong> accompany horses to the track and to the gate to keep them settled.</p>
+          <p>The close, repeated observation this team provides is one of the most important safeguards in racehorse welfare: a developing problem is very often spotted in the barn long before it would show in a horse&apos;s performance. The full range of roles in a racing operation -- including these backstretch positions and the raceday officials who govern competition -- is set out in the <a href="/racing/the-people-of-racing">people of racing reference</a>.</p>
+
+          <h2 id="breaking">Bringing a Young Horse to the Races</h2>
+          <p>A racehorse&apos;s education begins well before it ever appears in a race. Young Thoroughbreds are typically &quot;broken&quot; -- introduced to tack, to carrying a rider, and to basic responses -- as yearlings or early two-year-olds, often at a farm before they ship to a training track. This early education is gradual and foundational: accepting a saddle and bridle, learning to go forward calmly under a rider, and becoming comfortable in the company of other horses on a training surface.</p>
+          <p>From there the young horse progresses through increasing demands -- walking and jogging, then galloping, then faster timed works -- as its body matures and its fitness builds. A central milestone is <strong>gate training</strong>: the horse is taught to enter the starting gate calmly, stand quietly in the confined space, and break cleanly when the gate opens. In North American racing a horse must be approved by the starter as gate-ready before it can run, so schooling at the gate is a prerequisite to a racing debut, not an optional refinement. Only when a young horse is fit, educated, and gate-approved is it ready to be entered in its first race, typically a maiden event for horses that have not yet won.</p>
+
           <h2 id="routine">Daily Training Routine</h2>
           <p>The daily routine in a racing stable follows an early-morning schedule driven by the training hours allocated on the racetrack. The track typically opens for training in the pre-dawn hours and closes for training by mid-morning, after which it is prepared for the afternoon&apos;s races or closed for maintenance. Horses are exercised during training hours, with the stable starting before dawn to complete the work before the track closes.</p>
           <p>Each horse in the stable has an individual plan for each day. Some days a horse gallops steadily to maintain fitness without the full intensity of a timed workout. Other days it may walk or jog only, providing a recovery day. On designated workout days, the horse is asked for a faster, timed effort over a specific distance. Grooms handle each horse multiple times daily: morning feed and care, post-exercise grooming and cooling out, afternoon care and feeding, and evening check.</p>
@@ -165,7 +178,7 @@ export default function RacehorseTrainingPage() {
           <h2 id="works">Works and Exercise Types</h2>
           <p>A <strong>gallop</strong> is a sustained run at below-race-pace speed, used for cardiovascular fitness maintenance and muscle development without the full physiological demand of a race or high-intensity work. Galloping distances and paces vary by the trainer&apos;s plan and the horse&apos;s stage of preparation.</p>
           <p>A <strong>work</strong> (also called a workout or breeze) is a faster, timed run over a defined distance. Works serve to sharpen a horse&apos;s fitness, confirm its readiness for race conditions, and calibrate the trainer&apos;s assessment of how the horse is progressing. Works are conducted under the observation of official clockers at the track and the times are published publicly through Equibase, making them part of the public record of a horse&apos;s preparation.</p>
-          <p>A <strong>breezing</strong> work is typically at or near race pace over a distance shorter than the horse&apos;s target race. A <strong>gate work</strong> involves breaking from the starting gate to practice the departure and develop the horse&apos;s gate behavior. Between works, horses typically have several gallop days and at least one or two lighter days per week to allow recovery.</p>
+          <p>A <strong>breezing</strong> work is typically at or near race pace over a distance shorter than the horse&apos;s target race, asking the horse for a controlled fast effort while reading how readily it produces speed. A <strong>gate work</strong> involves breaking from the starting gate to practice the departure and develop the horse&apos;s gate behavior -- a routine part of a racehorse&apos;s ongoing preparation, not just its initial schooling, since a clean, calm break is fundamental to both safety and competitiveness. Between works, horses typically have several gallop days and at least one or two lighter days per week to allow recovery, and the trainer adjusts the balance of fast work, gallops, and rest according to how each horse is responding.</p>
 
           <h2 id="conditioning">Conditioning Principles</h2>
           <p>The physiological objective of racehorse conditioning is to maximize the horse&apos;s capacity to perform high-intensity exercise while minimizing the risk of injury. This involves developing cardiovascular efficiency, building the specific muscle groups used in racing, preparing tendons and ligaments for the stress of race-day effort, and ensuring that the horse&apos;s skeletal system is conditioned to handle the repeated impact forces of a racing campaign.</p>

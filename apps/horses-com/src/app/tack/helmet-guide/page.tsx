@@ -152,7 +152,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="troxel-spirit"
             badge="Best Value"
-            badgeEmoji="💲"
             name="Troxel Spirit"
             subtitle="ASTM/SEI-certified schooling helmet at an entry price"
             score={8.4}
@@ -178,7 +177,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="ovation-deluxe"
             badge="Best Mid-Range"
-            badgeEmoji="🎩"
             name="Ovation Deluxe Schooler"
             subtitle="Certified all-purpose helmet with broader fit range"
             score={8.6}
@@ -203,7 +201,6 @@ export default function HelmetGuidePage() {
           <ReviewCard
             id="charles-owen-ayr8"
             badge="Premium / Show"
-            badgeEmoji="🏆"
             name="Charles Owen AYR8 Plus"
             subtitle="Multi-standard certified show helmet"
             score={9.1}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -19,6 +19,14 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const FAQS = [
+  { question: 'What is BOAS in French Bulldogs?', answer: 'Brachycephalic Obstructive Airway Syndrome — the umbrella term for the airway abnormalities created by extreme flat-faced breeding: stenotic nares (narrow nostrils), an elongated soft palate partially blocking the airway, a hypoplastic (abnormally narrow) trachea, and everted laryngeal saccules. Together these restrict airflow at multiple levels. Many Frenchies with significant BOAS look "normal" to owners who have never seen the breed without it — which is why every French Bulldog should have a formal BOAS assessment by a veterinarian, not just a casual listen.' },
+  { question: 'Does my French Bulldog need BOAS surgery?', answer: 'That depends on the BOAS grade your veterinarian assigns. Surgery (widening the nares, shortening the soft palate, removing everted saccules) significantly improves quality of life for Grade 2–3 affected dogs, and pursuing it early matters — secondary airway changes worsen outcomes over time. Signs that warrant assessment: noisy breathing at rest, snoring, exercise intolerance, frequent overheating, and sleep apnea. Blue-tinged gums during exertion are an emergency.' },
+  { question: 'Why do French Bulldogs overheat so easily?', answer: 'Their compromised airway severely limits panting — the primary cooling mechanism in dogs — so heatstroke can develop in a Frenchie at temperatures that are comfortable for humans. The rules on this page: never leave a Frenchie in a car, limit outdoor activity in warm weather, keep summer walks before 8am or after 8pm, and always ensure access to a cool environment. Heatstroke is fatal if not treated immediately.' },
+  { question: 'Are French Bulldogs prone to back problems?', answer: 'Yes — Frenchies are chondrodystrophic, so their spinal discs degenerate early and herniate at much higher rates than other breeds (IVDD). Prevention: ramps or steps instead of jumping on and off furniture, lean body weight, and avoiding impact activities. Sudden-onset severe neurological signs — hindlimb weakness, a wobbly gait, inability to walk, or loss of bladder/bowel control — are a surgical emergency; recovery prognosis is significantly better when surgery happens within 24 hours.' },
+  { question: 'How do I choose a healthier French Bulldog puppy?', answer: 'Look for open, wide nostrils (actual visible holes, not pinched slits — nare width is the most visible indicator of airway health), BOAS assessment documentation on the breeding stock, OFA health testing (hips, patella, cardiac, and BOAS minimum), and a breeder who asks you questions about your living situation and commitment. Avoid the "extreme" look — maximally flat face, deeply furrowed skin, very small nostrils — which is associated with the worst health outcomes.' },
+]
+
 const schema = combineSchemas(
   buildArticleSchema({
   siteId: 'dog-com',
@@ -28,7 +36,7 @@ const schema = combineSchemas(
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 }), buildMedicalWebPageSchema({
   name: 'French Bulldog Health Guide',
   description: 'BOAS, IVDD, heat danger, skin folds — complete French Bulldog health guide.',
@@ -36,7 +44,7 @@ const schema = combineSchemas(
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
   medicalAudience: 'Caregiver',
-}),
+}), buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }),
 )
 
 export default function FrenchBulldogHealthPage() {
@@ -69,6 +77,7 @@ export default function FrenchBulldogHealthPage() {
           { label: 'Eye Conditions', href: '#eyes' },
           { label: 'Financial Reality', href: '#cost' },
           { label: 'Choosing a Healthier Frenchie', href: '#choosing' },
+          { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
@@ -147,6 +156,9 @@ export default function FrenchBulldogHealthPage() {
           <li><strong>The breeder asks you questions</strong> — a breeder who cares about their dogs wants to know your living situation, experience, and commitment</li>
           <li><strong>Avoid the &quot;extreme&quot; Frenchie look</strong> — maximally flat face, deeply furrowed skin, very small nostrils. These features are associated with the worst health outcomes.</li>
         </ul>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>

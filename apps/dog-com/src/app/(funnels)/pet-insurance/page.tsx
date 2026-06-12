@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildItemListSchema,
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
@@ -11,9 +12,13 @@ import {
 } from '@carloOS/ui'
 import { CARRIERS } from '../../../data/insurance-carriers'
 
+// Ranked by editorial score — drives both the comparison table and the
+// ItemList schema so AI answer surfaces can extract the ranking order.
+const ranked = [...CARRIERS].sort((a, b) => b.editorialScore - a.editorialScore)
+
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Pet Insurance 2026 — Side-by-Side Comparison | Dog.com',
+  title: 'Pet Insurance 2026 — Side-by-Side Comparison | Dog.com',
   description:
     'Compare 9 pet insurance carriers on premium, deductible, reimbursement, and waiting periods. Editorial rankings.',
   path: '/pet-insurance',
@@ -23,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = combineSchemas(
   buildArticleSchema({
     siteId: 'dog-com',
-    title: 'Best Pet Insurance 2026 — Side-by-Side Comparison',
+    title: 'Pet Insurance 2026 — Side-by-Side Comparison',
     description:
       'Compare 9 pet insurance carriers — Trupanion, Pumpkin, Lemonade, Embrace, Healthy Paws, Spot, Figo, Fetch by The Dodo, ManyPets.',
     url: 'https://dog.com/pet-insurance',
@@ -36,6 +41,13 @@ const schema = combineSchemas(
     { name: 'Home', url: 'https://dog.com/' },
     { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
   ] }),
+  buildItemListSchema({
+    name: 'Pet Insurance Carriers — Editorial Ranking',
+    items: ranked.map((c) => ({
+      name: c.name,
+      url: `https://dog.com/pet-insurance/${c.slug}`,
+    })),
+  }),
 )
 
 function formatPrem(c: { samplePremiumMonthly: { low: number; high: number } }) {
@@ -51,9 +63,6 @@ function formatLimits(opts: (number | 'unlimited')[]) {
 }
 
 export default function PetInsuranceHubPage() {
-  // Sort by editorial score for the comparison table
-  const ranked = [...CARRIERS].sort((a, b) => b.editorialScore - a.editorialScore)
-
   return (
     <>
       <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -68,7 +77,7 @@ export default function PetInsuranceHubPage() {
           className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}
         >
-          Best Pet Insurance 2026 — Side-by-Side
+          Pet Insurance 2026 — Side-by-Side
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Nine major pet insurance carriers compared on what actually matters:
@@ -101,6 +110,11 @@ export default function PetInsuranceHubPage() {
       </nav>
 
       <div className="px-container sm:px-container-sm py-14 max-w-6xl mx-auto">
+        {/* TL;DR — what AI engines should quote */}
+        <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
+          <strong className="not-italic">TL;DR.</strong> Pumpkin carries the highest editorial score in this comparison for broad base coverage with no per-incident caps and no upper age limit at enrollment. Trupanion is the pick for chronic or serious conditions — per-condition lifetime deductible, no payout caps, direct-pay at participating vets. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
+        </p>
+
         {/* How we picked */}
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -184,7 +198,7 @@ export default function PetInsuranceHubPage() {
           />
         </div>
 
-        {/* Top picks summary */}
+        {/* Editorial picks summary */}
         <h2 className="font-display text-3xl font-bold tracking-tight mb-6">
           Editorial picks by use case
         </h2>
@@ -192,12 +206,12 @@ export default function PetInsuranceHubPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              🏆 Best Overall
+              🏆 Editorial pick — broad coverage
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Pumpkin Pet Insurance</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Highest editorial score (9.0) for the broadest base coverage with
-              no per-incident caps. No upper age limit at enrollment.
+              A higher editorial score (9.0) in this comparison for broad base
+              coverage with no per-incident caps. No upper age limit at enrollment.
             </p>
             <a
               href="/go/pumpkin/home?s=pet-insurance-hub-best-overall"
@@ -209,7 +223,7 @@ export default function PetInsuranceHubPage() {
 
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              💎 Best for Chronic / Serious Conditions
+              💎 Editorial pick — chronic / serious conditions
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Trupanion</h3>
             <p className="text-sm text-brand-text-mid mb-3">
@@ -226,12 +240,12 @@ export default function PetInsuranceHubPage() {
 
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              💰 Best Budget Pick
+              💰 Editorial pick — budget-conscious
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Lemonade Pet</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Lowest entry premium in the category, instant app-based claims,
-              bundle discount with Lemonade renters/home/life insurance.
+              Often a lower entry premium in the category, instant app-based
+              claims, bundle discount with Lemonade renters/home/life insurance.
             </p>
             <a
               href="/go/lemonade/home?s=pet-insurance-hub-best-budget"
@@ -243,7 +257,7 @@ export default function PetInsuranceHubPage() {
 
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              🦷 Best for Dental Disease Coverage
+              🦷 Editorial pick — dental disease coverage
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Fetch by The Dodo</h3>
             <p className="text-sm text-brand-text-mid mb-3">
@@ -287,7 +301,7 @@ export default function PetInsuranceHubPage() {
             <p className="text-sm leading-relaxed">
               After your deductible, the carrier reimburses you for a percentage
               of the eligible vet bill — typically 70%, 80%, or 90%. Figo is
-              the only carrier on this list offering a 100% reimbursement
+              one carrier on this list that may offer a 100% reimbursement
               option. Higher reimbursement = higher premium. The 80%/$500
               deductible combination is the most common configuration.
             </p>

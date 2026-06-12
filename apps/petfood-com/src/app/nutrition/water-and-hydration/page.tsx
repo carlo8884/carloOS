@@ -108,6 +108,7 @@ export default function WaterAndHydrationPage() {
               { label: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
               { label: 'Urinary and Bladder Stone Diets', href: '/diets/urinary-tract-diets' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture

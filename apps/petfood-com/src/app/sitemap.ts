@@ -97,6 +97,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/nutrition/taurine-and-amino-acids', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/nutrition/vitamins-in-pet-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/nutrition/water-and-hydration', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://petfood.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://petfood.com/reviews/best-cat-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://petfood.com/reviews/best-puppy-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://petfood.com/reviews/best-senior-dog-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/species', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://petfood.com/species/are-dogs-carnivores-or-omnivores', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/species/cats-are-obligate-carnivores', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -109,6 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/supplements/probiotics-for-pets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/supplements/skin-and-coat-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://petfood.com/tools/compare-pet-foods', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/tools/food-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/tools/portion-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]

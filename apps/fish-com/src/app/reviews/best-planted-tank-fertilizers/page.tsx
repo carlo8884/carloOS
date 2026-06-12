@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026', description: 'Seachem Flourish, Easy Green, and NilocG ranked for planted aquariums.', url: 'https://fish.com/reviews/best-planted-tank-fertilizers', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -16,10 +16,17 @@ const PICKS = [
   { label: 'Best Root Tabs', name: 'Aquarium Co-Op Easy Root Tabs', subtitle: 'Heavy root feeders · Substrate nutrients', href: '#root-tabs' },
 ]
 
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Planted Tank Fertilizers 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}` })),
+})
+
 export default function BestPlantedFertilizersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Planted Tank Fertilizers 2026', url: 'https://fish.com/reviews/best-planted-tank-fertilizers' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Planted Tank Fertilizers 2026', url: 'https://fish.com/reviews/best-planted-tank-fertilizers' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
@@ -34,6 +41,10 @@ export default function BestPlantedFertilizersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most low-to-medium-tech planted tanks the all-in-one <strong>Easy Green</strong> (Aquarium Co-Op) is our overall pick — simple dosing that covers macros and micros. For comprehensive trace elements, <strong>Seachem Flourish</strong>; for high-tech CO2-injected tanks, the high-dose <strong>NilocG Thrive</strong>. Heavy root feeders also benefit from <strong>Aquarium Co-Op Easy Root Tabs</strong> in the substrate.</p>
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Macro vs Micro Nutrients</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth. Micros (iron, manganese, zinc, boron, etc.) drive color, health, and enzyme function. Most all-in-one fertilizers cover both. High-tech CO2 setups often need additional macro dosing as plants consume nutrients faster. Low-tech tanks with fish waste often have adequate macros — micros are what's missing.</p>

@@ -8,10 +8,11 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Beginner vs Ad
 export default function SpeciesBeginnerVsAdvancedReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Beginner vs Advanced Reptiles", subtitle: "Reptile care difficulty is not arbitrary; it comes from specific, identifiable factors. Size, husbandry precision, temperament, diet complexity, and how forgiving a species is of mistakes all add up to a difficulty tier. Understanding these factors lets you judge any species honestly, and explains why some cheap, widely sold reptiles are emphatically not beginner animals.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Beginner vs Advanced Reptiles", subtitle: "Reptile care difficulty is not arbitrary; it comes from specific, identifiable factors. Size, husbandry precision, temperament, diet complexity, and how forgiving a species is of mistakes all add up to a difficulty tier. Understanding these factors lets you judge any species honestly, and explains why some cheap, widely sold reptiles are emphatically not beginner animals.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Beginner vs Advanced", href: "/species/beginner-vs-advanced-reptiles" }]}
       schema={schema}
       relatedLinks={[
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
         { title: 'Low-Maintenance Reptiles', href: '/species/low-maintenance-reptiles', category: 'Species' },
@@ -29,7 +30,7 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Which Reptile Is Right For You? Quiz", href: "/tools/reptile-match-quiz" }, { label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-beginner-vs-advanced-reptiles"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}

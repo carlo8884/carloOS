@@ -358,7 +358,7 @@ export default function VetsHomePage() {
             FILL_IMAGE overrides so the photo fills this absolute full-height
             wrapper. */}
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="vets-co:hero"
@@ -535,7 +535,7 @@ export default function VetsHomePage() {
                 className={`group relative block rounded-md overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary hover:shadow-card-hover transition-all duration-300 ease-carloOS ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
               >
                 {/* Real photo fills the tile */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage
                     manifestKey={desk.manifestKey}
                     alt={desk.imageAlt}
@@ -710,7 +710,7 @@ export default function VetsHomePage() {
             href="/reviews/best-pet-insurance"
             className={`group relative block rounded-md overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-300 ease-carloOS min-h-[240px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
           >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
                 manifestKey="vets-co:insurance-hero"
                 alt="Insurance paperwork and a calculator on a desk"

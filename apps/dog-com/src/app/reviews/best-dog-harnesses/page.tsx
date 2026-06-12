@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -19,7 +19,7 @@ const PICKS = [
 export default function BestDogHarnessesPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Harnesses 2025', url: 'https://dog.com/reviews/best-dog-harnesses' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Harnesses 2026', url: 'https://dog.com/reviews/best-dog-harnesses' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2026</h1>
@@ -54,7 +54,7 @@ export default function BestDogHarnessesPage() {
             <ReviewCard id="ruffwear" badge="Best Outdoor" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated" score={9.2}
               description={<p>Ruffwear builds outdoor gear for dogs and the Front Range is their flagship harness — padded chest piece, aluminum V-ring at the back for normal walking, and a leash attachment loop at the front for pulling management. The padding is meaningful for long hiking days. Reflective trim for low-light visibility. Two leash attachment points allow switching between pulling management (front) and general walking (back). Built to last — Ruffwear gear is well-constructed with quality hardware. More expensive than the PetSafe Easy Walk but significantly more durable for active outdoor use.</p>}
               specs={[{ label: 'Clips', value: 'Front + back (two-clip)', highlight: 'good' }, { label: 'Padding', value: 'Padded chest and belly', highlight: 'good' }, { label: 'Durability', value: 'Outdoor/hiking rated', highlight: 'good' }, { label: 'Reflective', value: 'Yes' }]}
-              pros={['Two-clip versatility', 'Padded for long wear', 'Excellent build quality', 'Reflective trim', 'Best outdoor harness tested']}
+              pros={['Two-clip versatility', 'Padded for long wear', 'Strong build quality', 'Reflective trim', 'Top outdoor pick in this comparison']}
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
               ctaText="Shop Ruffwear Front Range →"
@@ -64,8 +64,8 @@ export default function BestDogHarnessesPage() {
             />
             <ReviewCard id="julius" badge="Best Escape-Proof" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches" score={9.0}
               description={<p>For dogs that back out of or destroy harnesses — the Julius-K9 IDC Powerharness is the industry standard for escape prevention and durability. Used by working dogs internationally. The chest and back straps are wide and padded, multiple adjustment points allow precise fit, and the hardware is rated for the forces a large dog can generate. The Velcro side patches accept custom ID patches. Not a no-pull harness (back clip only) — its value is durability and escape resistance, not pulling management. For escape-prone dogs used alongside leash training.</p>}
-              specs={[{ label: 'Escape resistance', value: 'Highest tested', highlight: 'good' }, { label: 'Construction', value: 'Heavy-duty, working-dog rated', highlight: 'good' }, { label: 'ID patches', value: 'Velcro — customizable' }, { label: 'Clip position', value: 'Back-clip only' }]}
-              pros={['Best escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}
+              specs={[{ label: 'Escape resistance', value: 'Among the strongest in class', highlight: 'good' }, { label: 'Construction', value: 'Heavy-duty, working-dog rated', highlight: 'good' }, { label: 'ID patches', value: 'Velcro — customizable' }, { label: 'Clip position', value: 'Back-clip only' }]}
+              pros={['Among the strongest escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
               ctaText="Shop Julius-K9 →"
@@ -89,6 +89,7 @@ export default function BestDogHarnessesPage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

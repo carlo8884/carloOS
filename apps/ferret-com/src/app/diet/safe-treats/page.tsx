@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -31,7 +31,37 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'What treats can ferrets have?',
+    answer:
+      'Almost every safe ferret treat is some form of plain animal protein: small pieces of cooked or freeze-dried meat (plain chicken, turkey, lamb, or beef — no seasoning, sauce, or salt), single-ingredient freeze-dried meat or organ treats, small amounts of cooked egg or a little raw yolk, and meat-based pastes or gravies in moderation. The reliable store rule: if it isn’t meat, it probably isn’t a ferret treat.',
+  },
+  {
+    question: 'Can ferrets eat fruit?',
+    answer:
+      'No. Ferrets are obligate carnivores with no nutritional use for sugar, and chronic sugar exposure is implicated in pancreatic beta-cell stress and elevated insulinoma risk. Grapes and raisins should be avoided entirely — beyond the sugar, they carry the nephrotoxicity concern documented in dogs.',
+  },
+  {
+    question: 'Are yogurt drops safe for ferrets?',
+    answer:
+      'No, despite being widely marketed as ferret treats. Adult ferrets are largely lactose-intolerant and yogurt drops are sugar-heavy. The same shelf-aisle caution applies to raisin treats, fruit-and-vegetable medleys, grain-based crunchy treats, and anything sweetened with molasses, honey, or cane sugar.',
+  },
+  {
+    question: 'What foods are toxic to ferrets?',
+    answer:
+      'The core list: chocolate, xylitol, onion, garlic, caffeine, alcohol, and grapes/raisins — the standard small-mammal toxin set applies to ferrets. These are actively dangerous, not merely inappropriate. If a ferret ingests any of these, contact a veterinarian familiar with ferrets — ideally an exotic-animal practice — immediately.',
+  },
+  {
+    question: 'How many treats can I give my ferret per day?',
+    answer:
+      'A few small pieces a day at most. Treats should be a small fraction of intake — the base diet supplies nearly all calories, and treats are for bonding and training, not nutrition. Never substitute treats for meals; ferrets can become hypoglycemic quickly, so treats sit on top of the base diet, not in place of it.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, faqSchema)
 
 export default function SafeTreatsPage() {
   return (
@@ -64,6 +94,7 @@ export default function SafeTreatsPage() {
                 { label: 'How Much, How Often', href: '#dosing' },
                 { label: 'Treats as Training Tools', href: '#training' },
                 { label: 'A Meat-Based Treat Pick', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -83,6 +114,7 @@ export default function SafeTreatsPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-safe-treats"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -97,7 +129,7 @@ export default function SafeTreatsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -171,6 +203,9 @@ export default function SafeTreatsPage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="freeze-dried-treats"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="sources">Sources</h2>
           <p>

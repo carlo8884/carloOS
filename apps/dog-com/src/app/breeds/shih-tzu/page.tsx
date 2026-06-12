@@ -1,15 +1,40 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide — Brachycephalic Health, Grooming | Dog.com', description: 'Shih Tzus are brachycephalic with prominent eyes prone to corneal injuries. Daily eye cleaning, professional grooming every 6-8 weeks.', path: '/breeds/shih-tzu', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What health problems do Shih Tzus have?',
+    answer: 'The documented breed concerns are brachycephalic obstructive airway syndrome (BOAS — from the flattened face), corneal injuries and ulcers (from their prominent, shallow-set eyes), early-onset dental disease (42 teeth in a compressed jaw), and a predisposition to renal dysplasia. Any eye squinting, tearing, or visible opacity warrants a same-day veterinary evaluation — corneal ulcers progress rapidly. Discuss breed-appropriate screening with your veterinarian.',
+  },
+  {
+    question: 'How much grooming does a Shih Tzu need?',
+    answer: 'Professional grooming every 6–8 weeks is the minimum — the coat grows continuously and mats rapidly. At-home brushing every 2–3 days prevents mat accumulation, and the "puppy cut" is the most practical everyday style for owners who cannot brush daily. Daily eye cleaning and drying of facial folds are also part of the routine to prevent skin fold dermatitis.',
+  },
+  {
+    question: 'Are Shih Tzus good family dogs?',
+    answer: 'Shih Tzus were bred as companion dogs for Chinese royalty and are adaptable, affectionate, friendly, and surprisingly sturdy for their 9–16 lb size. Their main requirements are the grooming commitment and awareness of their brachycephalic heat sensitivity.',
+  },
+  {
+    question: 'How much exercise does a Shih Tzu need?',
+    answer: 'Moderate exercise — around 20–30 minutes daily. As a brachycephalic breed they are heat sensitive, so warm-weather activity should be limited and supervised, and a lean body weight matters because obesity dramatically worsens airway compromise.',
+  },
+  {
+    question: 'How long do Shih Tzus live?',
+    answer: 'Shih Tzus typically live 10–18 years — a long-lived breed. Consistent dental care, weight management, and attention to their eye and airway needs support that longevity.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 export default function ShihTzuPage() {
   return (
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Shih Tzu Breed Guide', subtitle: 'Originally bred as companion dogs for Chinese royalty, Shih Tzus are adaptable, affectionate, and surprisingly sturdy for their size. Their flattened face and prominent eyes come with specific health management requirements that every Shih Tzu owner needs to understand.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shih Tzu', href: '/breeds/shih-tzu' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Cavalier King Charles Guide', href: '/breeds/cavalier-king-charles', category: 'Breed Guide' }, { title: 'Yorkshire Terrier Guide', href: '/breeds/yorkshire-terrier', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -49,6 +74,13 @@ export default function ShihTzuPage() {
 
         <h2>Renal Dysplasia — Know the Risk</h2>
         <p>Shih Tzus have a breed predisposition to renal dysplasia — a congenital developmental kidney abnormality. Affected dogs show signs of kidney disease at a young age (under 2 years): PU/PD, poor growth, vomiting. Not all Shih Tzus are affected — but the predisposition warrants including a urine specific gravity check in puppy wellness exams to catch early signs. Responsible breeders are aware of this condition.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

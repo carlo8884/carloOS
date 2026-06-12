@@ -516,6 +516,12 @@ export default function BrandsHubPage() {
             acquisition press releases) from the parent companies named above.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="brand"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

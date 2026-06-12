@@ -5,8 +5,8 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -26,8 +26,16 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
+
+const FAQS = [
+  { question: 'Are Golden Retrievers good family dogs?', answer: 'Yes — Goldens rate as exceptional with children and very friendly with strangers, and they are well-suited to first-time dog owners. They are gentle, tolerant, responsive to training, and highly social. The fit depends on the household: they need 1-2 hours of daily exercise and are not ideal for owners away 10+ hours a day.' },
+  { question: 'How much exercise does a Golden Retriever need?', answer: 'Adult Goldens need 1-2 hours of moderate-to-vigorous exercise daily — fetch, swimming, hiking, and trail running are breed favorites. They make excellent jogging companions from 18 months onward (avoid high-impact running before growth plates close). Mental exercise — training sessions, puzzle toys, scent work — matters as much as physical activity.' },
+  { question: 'What health problems do Golden Retrievers have?', answer: 'Cancer is the defining concern: roughly 60% of Goldens die of cancer per the Morris Animal Foundation Golden Retriever Lifetime Study, with hemangiosarcoma and lymphoma most common. Hip and elbow dysplasia, subvalvular aortic stenosis, and atopic dermatitis (skin allergies) are also documented breed risks. Annual abdominal ultrasound from age 6-7 is the best current hemangiosarcoma screening — discuss a monitoring plan with your veterinarian.' },
+  { question: 'How long do Golden Retrievers live?', answer: 'Golden Retrievers typically live 10-12 years. Adults weigh 55-75 lbs. Because cancer drives most breed mortality, early-detection habits — knowing where lymph nodes are, screening ultrasounds in senior years, and prompt veterinary evaluation of any new lump — meaningfully affect outcomes.' },
+  { question: 'Do Golden Retrievers shed a lot?', answer: 'Yes — the dense double coat sheds substantially year-round with heavier shedding in spring and fall. Weekly brushing is the minimum and 2-3 times weekly significantly reduces household shedding. Weekly ear checks also matter: floppy ears trap moisture and predispose Goldens to ear infections.' },
+]
 
 const SCORES = [
   { name: 'With Children', score: 5, label: 'Exceptional' },
@@ -41,7 +49,7 @@ const SCORES = [
 export default function GoldenRetrieverBreedPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'Golden Retriever', url: 'https://dog.com/breeds/golden-retriever' } ] }))} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'Golden Retriever', url: 'https://dog.com/breeds/golden-retriever' } ] }), buildFAQSchema({ questions: FAQS }))} />
 
       {/* Hero */}
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
@@ -173,9 +181,13 @@ export default function GoldenRetrieverBreedPage() {
               <li><strong>Not ideal for:</strong> Owners away 10+ hours daily, those who cannot commit to exercise</li>
               <li><strong>Financial reality:</strong> Between food, routine vet care, and the real possibility of cancer treatment, Golden ownership has significant long-term financial implications. Enroll pet insurance before any conditions develop.</li>
             </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </article>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Golden Retriever?', href: '/breeds/golden-retriever/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="Golden Retriever Health Deep-Dive" links={[
               { label: 'Golden Retriever Health Issues & Screenings', href: '/breeds/golden-retriever/health' },
             ]} />

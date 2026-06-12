@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Brumat
 export default function HusbandryBrumationGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Brumation Guide", subtitle: "Brumation is the reptilian analogue of hibernation: a seasonal period of dormancy triggered by cooling temperatures and shortening days during which metabolism slows, appetite stops, and activity drops sharply. Understanding it prevents two common mistakes, panicking over a healthy brumating animal and overlooking a sick one that only looks like it is brumating.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
+      hero={{ title: "Reptile Brumation Guide", subtitle: "Brumation is the reptilian analogue of hibernation: a seasonal period of dormancy triggered by cooling temperatures and shortening days during which metabolism slows, appetite stops, and activity drops sharply. Understanding it prevents two common mistakes, panicking over a healthy brumating animal and overlooking a sick one that only looks like it is brumating.", category: "Husbandry", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Brumation Guide", href: "/husbandry/brumation-guide" }]}
       schema={schema}
       relatedLinks={[

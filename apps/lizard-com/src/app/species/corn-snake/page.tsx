@@ -1,16 +1,30 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Corn Snake Care Guide — Morphs, Feeding | Lizard.com', description: 'Corn snakes are the best beginner snake. 100+ morphs from red wild-type to lavender. Frozen/thawed mice only — no live prey.', path: '/species/corn-snake', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Are corn snakes good for beginners?', answer: 'Corn snakes are a strong first snake: manageable adult size (4–5 feet, females slightly larger), docile temperament, and forgiving of the small mistakes beginning keepers make. Most individuals calm quickly with regular gentle handling — 10–15 minutes several times a week from a young age produces adults that emerge from their hides willingly and rarely bite defensively. Plan for the commitment: a well-cared-for corn snake lives 15–20 years.' },
+  { question: 'Should I feed my corn snake live or frozen mice?', answer: 'Frozen/thawed only — never live. A live mouse that is not immediately consumed will bite the snake, and mouse bites become infected. Thaw prey in warm water (not a microwave, which creates hot spots that burn mouth tissue) to room temperature or slightly warmer. To transition a reluctant snake from live to frozen, offer the thawed prey with tongs and wiggle it near the snake’s head to simulate movement — most snakes accept it readily.' },
+  { question: 'How often should a corn snake eat?', answer: 'Juveniles take pinky mice every 5–7 days; adults take adult mice or small rats every 7–14 days. Prey is appropriately sized when it creates a slight visible bulge after swallowing — roughly the width of the snake at its widest point. Avoid handling for 48–72 hours after feeding to reduce regurgitation risk.' },
+  { question: 'Can a corn snake escape its enclosure?', answer: 'Yes — corn snakes are among the most accomplished escape artists in the snake hobby. They actively probe enclosure edges for gaps, push inadequately secured lids, and can squeeze through a gap the width of their head. A secure setup needs a positively locking or clipping top (not a lid that just sits in place), no cord-entry gaps larger than a few millimeters, and regular inspection of seams. Front-opening enclosures with locks are inherently more secure than top-opening ones.' },
+  { question: 'How big do corn snakes get?', answer: 'Adults reach 4–5 feet, with females slightly larger than males. The minimum adult enclosure is 4×2×2 feet, with a basking surface of 85–90°F, a warm-side ambient of 78–82°F, and a cool side of 70–75°F.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function CornSnakePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corn Snake', href: '/species/corn-snake' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
         { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
         { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },
@@ -51,6 +65,10 @@ export default function CornSnakePage() {
 
         <h2>Handling and Temperament</h2>
         <p>Corn snakes are among the calmest and most handleable snakes in captivity. Most individuals calm quickly with regular, gentle handling — 10–15 minutes several times a week from a young age produces adults that emerge from their hides willingly and rarely bite defensively. Avoid handling for 48–72 hours after feeding (regurgitation risk during digestion) and during the blue phase of shedding (the snake is semi-blind and more defensive). Otherwise, corn snakes are excellent for both beginner and experienced handlers.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Corn Snake — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for corn snake care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
@@ -62,5 +80,6 @@ export default function CornSnakePage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

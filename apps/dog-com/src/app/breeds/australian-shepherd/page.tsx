@@ -1,15 +1,26 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts.', path: '/breeds/australian-shepherd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How much exercise does an Australian Shepherd need?', answer: 'Australian Shepherds need 1.5-2+ hours of vigorous activity daily — running, fetch, agility, disc work, or structured training that combines physical and mental effort. A 30-minute walk twice daily is insufficient. They were bred to work 10-hour days herding livestock in mountain terrain, and their exercise requirements reflect that heritage.' },
+  { question: 'What is the MDR1 gene mutation in Australian Shepherds?', answer: 'The MDR1 (ABCB1) mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in unaffected dogs, including ivermectin at higher parasite-treatment doses, loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs. A DNA test costs around $70 and provides lifelong information — your veterinarian must know the MDR1 status before prescribing affected medications.' },
+  { question: 'What health problems do Australian Shepherds have?', answer: 'Beyond the MDR1 drug-sensitivity mutation, documented breed concerns include epilepsy (onset typically 1-3 years), Collie Eye Anomaly, hereditary cataracts, and hip dysplasia at moderate prevalence. Responsible breeders DNA-test for CEA, run OFA CAER eye exams, and obtain OFA hip clearances. Discuss a screening plan for an individual dog with your veterinarian.' },
+  { question: 'Do Australian Shepherds herd children?', answer: 'The herding instinct commonly expresses in the household as circling, nipping at heels, intense staring, and chasing moving targets — including children, cats, and joggers. This is an ingrained behavioral pattern, not aggression. It can be significantly managed with early socialization, reliably trained "off" cues, structured play outlets, and supervision with young children, but it cannot be fully trained away.' },
+  { question: 'How long do Australian Shepherds live?', answer: 'Australian Shepherds typically live 12-15 years. Adults generally weigh 40-65 lbs. Lifespan in an individual dog varies with genetics, weight management, and how early breed-associated conditions are identified and managed with your veterinarian.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
+
 export default function AustralianShepherdPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Australian Shepherd Breed Guide', subtitle: 'Working herding dogs bred for intelligence, endurance, and problem-solving ability. In a family home with inadequate exercise and mental stimulation, these traits produce a dog that herds children, destroys furniture, and creates challenges. In an active home that channels the breed\'s capabilities appropriately, Aussies are extraordinary companions.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Australian Shepherd', href: '/breeds/australian-shepherd' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Border Collie Guide', href: '/breeds/border-collie', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -48,7 +59,11 @@ export default function AustralianShepherdPage() {
 
         <h2>Health Beyond MDR1</h2>
         <p>Epilepsy is more common in Australian Shepherds than most breeds — onset typically at 1–3 years. Collie Eye Anomaly (CEA) is a hereditary eye condition affecting the choroid — DNA test available. Multiple Ocular Anomalies (MOA/CEA) — most Australian Shepherd breeders test breeding stock. Hip dysplasia at moderate prevalence — OFA clearances on breeding dogs are appropriate. Hereditary cataracts — OFA CAER eye exam on breeding dogs. Nasal solar dermatitis ("Collie nose") in merle and heavily white-factored dogs.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

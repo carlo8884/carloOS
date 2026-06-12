@@ -5,7 +5,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   ArticleLayout,
   ArticleByline,
   TableOfContents,
@@ -1191,13 +1190,6 @@ export default async function IngredientPage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://petfoods.com${b.href}`,
-    })),
-  })
-
   // ArticleLayout takes one schema record (and injects it via SchemaScript).
   // FAQ + Breadcrumb schemas are emitted inline as additional <script> tags
   // below — same pattern as the brand template.
@@ -1267,10 +1259,6 @@ export default async function IngredientPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'AVMA: Behavior Problems in Pets — Anxiety and Fear', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-pets', publisher: 'AVMA' },
@@ -10,9 +10,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Anxiety — Types, Signs & Evidence-Based Treatment | Dog.com', description: 'Dog anxiety types: separation, noise phobia, and generalized. Signs, behavioral modification, and when medication makes a significant difference.', path: '/health/dog-anxiety', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Anxiety', description: 'Types and treatment of anxiety in dogs.', url: 'https://dog.com/health/dog-anxiety', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'How can I tell if my dog has anxiety?', answer: 'The obvious signs — destruction, vocalization, house soiling — get recognized. The subtle chronic signs are frequently missed: yawning when not tired, lip-licking without food present, excessive panting at rest, inability to settle, constant hypervigilance, avoidance of eye contact, whale eye, weight loss, reduced play, and decreased interest in food. A dog that is "always on alert" or "never truly relaxes" may have chronic anxiety rather than a high-energy personality — and it is a treatable medical condition worth raising with your veterinarian.' },
+  { question: 'How do I know if my dog has separation anxiety?', answer: 'True separation anxiety is distress specifically triggered by the departure of attachment figures — not boredom or insufficient exercise. The practical diagnostic step: video the first 30 minutes after you leave. Dogs with true separation anxiety typically begin distress behaviors (panting, pacing, whining, destruction at exit points like doors and windows) within 5–20 minutes of departure, while being fine when people are home.' },
+  { question: 'What can I give my dog for anxiety during fireworks or thunderstorms?', answer: 'Ask your veterinarian in advance for situational medication — trazodone, gabapentin, or Sileo (dexmedetomidine oromucosal gel, specifically approved for noise phobia). These work within 1–2 hours of an event. During events also provide a safe hiding space (a covered crate or closet — dogs self-select small dark spaces), white noise, and optionally a pressure wrap like a Thundershirt. The page suggests requesting a "noise phobia kit" from your vet before July 4th or storm season. Do not force the dog to "face" the noise — flooding makes phobia worse.' },
+  { question: 'Does anxiety medication for dogs actually work?', answer: 'For moderate to severe anxiety, medication is a tool, not a crutch — it reduces neurological arousal enough for learning to occur, because a severely anxious dog cannot engage with behavior modification while in panic. Fluoxetine is FDA-approved for separation anxiety in dogs (as Reconcile) and daily medications take 4–6 weeks to reach full effect; situational medications work within 1–2 hours. Medication alone without behavioral modification rarely produces lasting improvement — the combination is what works.' },
+  { question: 'Will my dog grow out of noise phobia?', answer: 'Unlikely — noise phobia typically worsens over time without treatment, because each exposure sensitizes the dog further. It is also a leading cause of dogs going missing around July 4th, when panicked dogs escape. Early intervention with management, desensitization, and situational medication prescribed by your veterinarian gives a much better outcome than waiting.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogAnxietyPage() {
   return (
     <>
@@ -22,7 +30,7 @@ export default function DogAnxietyPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Anxiety', href: '/health/dog-anxiety' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Seizures', href: '/health/dog-seizures', category: 'Dog Health' }, { title: 'Separation Anxiety Training', href: '/training/separation-anxiety', category: 'Training' }, { title: 'Dog Aggression Guide', href: '/training/dog-aggression', category: 'Training' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }]} />
+          <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
@@ -48,6 +56,9 @@ export default function DogAnxietyPage() {
 
           <h2 id="medication">When Medication Helps</h2>
           <p>Anxiety is a medical condition with neurobiological underpinnings. For moderate to severe anxiety, medication is not a shortcut or a crutch — it is a tool that reduces the neurological arousal enough to allow learning to occur. Without medication, a severely anxious dog may be unable to engage with behavioral modification at all. Daily medication (fluoxetine is <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for separation anxiety in dogs as Reconcile) takes 4–6 weeks to reach full effect. Situational medications (trazodone, gabapentin) work within 1–2 hours for acute events. Discuss both options with your veterinarian.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

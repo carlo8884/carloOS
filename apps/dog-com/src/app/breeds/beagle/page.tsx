@@ -1,19 +1,29 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Beagle Dog Breed Guide — Health, Training & Care | Dog.com', description: 'Complete Beagle guide. Nose-driven escape artists with specific health concerns — epilepsy, hypothyroidism, and obesity.', path: '/breeds/beagle', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Are Beagles good family dogs?', answer: 'Yes — Beagles are sturdy, friendly, pack-oriented dogs that coexist well with children, other dogs, and most people; they rate as excellent with kids. The trade-offs are vocality (they bark and howl — they were bred to alert hunters), a powerful scent drive, and a very high escape risk that requires a secure fenced yard.' },
+  { question: 'How much exercise does a Beagle need?', answer: 'A minimum of 30-60 minutes daily — nose work, leash walks, or fenced yard time. Mental stimulation matters just as much: snuffle mats, food puzzles, and structured scent-work classes address the Beagle\'s primary cognitive need. An under-stimulated Beagle becomes a destructive, vocal Beagle.' },
+  { question: 'What health problems do Beagles have?', answer: 'The documented breed predispositions are idiopathic epilepsy (first seizure typically between 1-5 years), hypothyroidism (manageable with daily levothyroxine once diagnosed by blood test), and obesity — Beagles are among the most obesity-prone breeds and should always be fed measured portions. Discuss screening and weight management with your veterinarian.' },
+  { question: 'Can Beagles be let off leash?', answer: 'Generally no. A Beagle\'s nose overrides recall training reliably — off-leash in an unfenced area, a Beagle that catches a scent trail can disappear. Use a leash at all times outdoors or a fenced yard with a 5+ foot fence, since Beagles will dig under or find gaps in lower fencing.' },
+  { question: 'How long do Beagles live?', answer: 'Beagles typically live 12-15 years. They are a small-to-medium breed (20-30 lbs). Keeping a Beagle lean is one of the most meaningful things an owner can do for longevity, given the breed\'s strong tendency toward obesity — review body condition with your veterinarian at annual visits.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function BeaglePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Beagle Breed Guide', subtitle: 'One of the most popular breeds in America — for good reason. Beagles are sturdy, friendly, and endlessly curious. They are also motivated by their nose in ways that require specific management strategies.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Beagle', href: '/breeds/beagle' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Dachshund Guide', href: '/breeds/dachshund', category: 'Breed Guide' }, { title: 'Cocker Spaniel Guide', href: '/breeds/cocker-spaniel', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Excessive Barking', href: '/training/excessive-barking', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -29,6 +39,7 @@ export default function BeaglePage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Beagle vs Basset Hound', href: '/compare/beagle-vs-basset-hound' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
@@ -58,7 +69,11 @@ export default function BeaglePage() {
 
         <h2>What to Ask Breeders</h2>
         <p>Ask about epilepsy in the line — any dogs that developed seizures, at what age, whether medicated. Ask about hip OFA clearances. Ask about hypothyroidism in the lines. Responsible Beagle breeders are aware of these predispositions and select against them.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

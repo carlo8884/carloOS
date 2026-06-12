@@ -286,7 +286,7 @@ export default function HomePage() {
       <section className="relative bg-brand-dark">
         {/* Full-bleed hero photo — fills this absolute, full-height wrapper. */}
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="fish-com:hero"
@@ -628,7 +628,7 @@ export default function HomePage() {
             href="/setup"
             className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[220px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
           >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
                 manifestKey="fish-com:category-setup"
                 alt="A planted freshwater aquarium with healthy aquascaping"
@@ -683,10 +683,20 @@ export default function HomePage() {
             <h2 className="font-display font-bold tracking-tight text-3xl italic mb-4 max-w-3xl">
               The cycle, the parameters, the emergencies.
             </h2>
-            <p className="text-base text-white/60 leading-relaxed">
+            <p className="text-base text-white/60 leading-relaxed mb-5">
               Most aquarium problems trace back to one of four water issues. Each guide covers what
               the readings mean, what causes them, and the specific action that fixes them.
             </p>
+            <div className="flex gap-5 flex-wrap">
+              <Link href="/water-parameters" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light no-underline hover:underline whitespace-nowrap">
+                Water chemistry reference
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link href="/health" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light no-underline hover:underline whitespace-nowrap">
+                All health &amp; disease guides
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -738,7 +748,7 @@ export default function HomePage() {
             href="/species"
             className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[260px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
           >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
                 manifestKey="fish-com:category-species"
                 alt="A vividly colored betta fish displaying its fins in a planted aquarium"
@@ -833,7 +843,7 @@ export default function HomePage() {
             href="/equipment"
             className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[220px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
           >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
                 manifestKey="fish-com:category-equipment"
                 alt="Aquarium filtration and heating equipment"
@@ -898,7 +908,7 @@ export default function HomePage() {
             href="/reviews"
             className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[220px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
           >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
                 manifestKey="fish-com:category-reviews"
                 alt="A discus fish in a well-maintained planted display aquarium"

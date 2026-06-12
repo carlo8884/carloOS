@@ -9,6 +9,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../../../components/visual/BodyConditionScoreCalculator'
 
@@ -124,9 +125,11 @@ export default function BodyConditionScorePage() {
     <ArticleLayout
       siteId="horses-com"
       relatedLinks={[
-        { title: 'Equine Health Hub', href: '/health', category: 'Tools' },
+        { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
+        { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
+        { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
+        { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
         { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
-        { title: 'Feeding the Hard Keeper', href: '/nutrition/feeding-the-hard-keeper' },
         { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
       ]}
       hero={{
@@ -165,6 +168,7 @@ export default function BodyConditionScorePage() {
               { label: 'Equine Supplements', href: '/reviews/best-equine-supplements' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
@@ -252,7 +256,7 @@ export default function BodyConditionScorePage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair regular BCS tracking with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link> for new owners and the <Link href="/supplements/joint-supplements">joint supplement reference</Link> for older horses.
+          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
         </p>
       </div>
     </ArticleLayout>

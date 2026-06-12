@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Enclosure Size Guide — Minimums by Species | Lizard.com", description: "How big a reptile enclosure should be, why bigger is better, the myth that snakes prefer cramped tanks, and minimum footprints for popular species.", path: "/setup/terrarium-size-guide", type: 'article' })
@@ -9,7 +9,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Enclos
 export default function SetupTerrariumSizeGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]}
       schema={schema}
       relatedLinks={[
@@ -32,6 +32,7 @@ export default function SetupTerrariumSizeGuidePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Temperature Guide", href: "/setup/temperature-guide" }, { label: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Best Reptile Terrariums", href: "/reviews/best-reptile-terrariums" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-setup-terrarium-size-guide"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

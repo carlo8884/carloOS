@@ -1,13 +1,46 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'German Shepherd Health — DM, Hip Dysplasia & GDV | Vets.co', description: 'German Shepherds have specific health predispositions: degenerative myelopathy, hip dysplasia, and GDV. This guide explains monitoring, screening.', path: '/breeds/german-shepherd-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What are the first signs of degenerative myelopathy in a German Shepherd?',
+    answer:
+      'Hind limb wobbling or weakness, crossing of the hind legs while walking, and knuckling (paws turning under) are the early signs. DM is a progressive neurological disease of the spinal cord — analogous to ALS in humans — that typically progresses to paralysis over 6–18 months. Any hind limb incoordination after age 5 warrants a workup with your veterinarian: neurological examination, MRI if indicated, and DNA confirmation. Almost all German Shepherds showing DM carry two copies of the SOD1 gene mutation.',
+  },
+  {
+    question: 'Is unproductive retching in a German Shepherd an emergency?',
+    answer:
+      'Yes. Unproductive retching — trying to vomit without producing anything — is a warning sign of GDV (gastric dilatation-volvulus, or bloat), in which the stomach fills with gas and twists, cutting off blood supply. Combined with a hard distended abdomen and extreme restlessness, it is the most time-critical emergency in the breed and is fatal without emergency surgery within hours. Go to an emergency vet immediately — a false alarm is far better than a missed GDV.',
+  },
+  {
+    question: 'Can bloat (GDV) be prevented in German Shepherds?',
+    answer:
+      'Risk can be reduced. Preventive gastropexy — surgically tacking the stomach — can be performed prophylactically during spay/neuter and prevents torsion; it is worth discussing with your veterinarian at the spay/neuter appointment. Feeding twice daily rather than once and avoiding exercise immediately after eating are also standard management steps in this predisposed breed.',
+  },
+  {
+    question: 'Why is my German Shepherd losing weight while eating more?',
+    answer:
+      'Weight loss despite a normal or increased appetite — especially with voluminous, pale, greasy, foul-smelling feces — is the classic picture of exocrine pancreatic insufficiency (EPI), in which the pancreas fails to produce sufficient digestive enzymes. EPI is highly manageable: once diagnosed by your veterinarian, daily pancreatic enzyme supplementation with every meal (often with folate and B12 supplementation) lets affected dogs live normal lifespans.',
+  },
+  {
+    question: 'Should I DNA-test my German Shepherd for degenerative myelopathy?',
+    answer:
+      'DNA testing identifies carriers and affected dogs, and all German Shepherds should be DNA-tested before breeding. For an affected dog, physical therapy (underwater treadmill, controlled exercise) significantly extends functional life, and wheelchairs maintain quality of life as paralysis progresses. Discuss testing and a management plan with your veterinarian.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchemaAll = combineSchemas(schema, faqSchema)
 
 export default function GSHealthPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchemaAll} />
     <ArticleLayout siteId="vets-co"
       hero={{ title: 'German Shepherd Health — A Veterinarian\'s Perspective', subtitle: 'German Shepherds are my most stoic patients — they mask pain remarkably well, which makes regular monitoring especially important. The breed predispositions are significant but manageable with early detection.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }]}
@@ -30,7 +63,14 @@ export default function GSHealthPage() {
         <h2>What I Watch for in My GSD Patients</h2>
         <p>Any hind limb incoordination after age 5: DM workup — neurological examination, MRI if indicated, DNA confirmation. Any episode of unproductive retching in a GSD: emergency evaluation — I would rather see a false alarm than miss a GDV. Gradual hind limb weakness in a young GSD (under 3): OFA radiographs, orthopedic evaluation.</p>
         <p>GSDs stoically mask pain. A GSD that is &quot;slowing down&quot; or &quot;getting old&quot; may be in significant orthopedic pain that is genuinely manageable with treatment. Do not attribute behavioral changes to age without a veterinary evaluation first.</p>
+
+        <h2>FAQ</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
+    </>
   )
 }

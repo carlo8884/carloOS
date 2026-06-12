@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide — The Peaceful Centerpiece | Fish.com', description: "Pearl gouramis are among the most peaceful and beautiful gouramis — a labyrinth fish with pearlescent spotting. Needs surface access, calm tankmates.", path: '/species/pearl-gourami', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide', description: 'Temperament, tank size, labyrinth breathing, and care for Trichopodus leerii.', url: 'https://fish.com/species/pearl-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide', description: 'Temperament, tank size, labyrinth breathing, and care for Trichopodus leerii.', url: 'https://fish.com/species/pearl-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What tank size do pearl gouramis need?',
+    answer:
+      'A 30-gallon tank is the practical minimum for a single adult, and a group needs 40 gallons or more. They show their best color in a planted tank with subdued lighting, dark substrate, and tannin-stained water, with some floating plants for security but open surface area left for air breathing.',
+    answerText:
+      '30 gallons minimum for a single adult; 40+ gallons for a group. Planted tanks with subdued lighting suit them best.',
+  },
+  {
+    question: 'Are pearl gouramis aggressive?',
+    answer:
+      'No — the pearl gourami is genuinely peaceful, a notable contrast to the often-aggressive dwarf and three-spot gouramis. It is somewhat timid when newly introduced. Two males in a smaller tank may squabble, though even that aggression is mild; keep one male with two or more females, or a single specimen as a centerpiece.',
+    answerText:
+      'No — among the most peaceful gouramis. Keep one male with two or more females, or a single fish; two males may squabble in smaller tanks.',
+  },
+  {
+    question: 'Why do pearl gouramis need surface access?',
+    answer:
+      'They are labyrinth fish that breathe atmospheric air directly from the surface. Unobstructed surface access is mandatory, and the air above the water should be warm and humid — a covered tank with a small air gap is ideal, because gulping chilled room air can damage the labyrinth organ. A surface fully packed with floating plants causes problems.',
+    answerText:
+      'They breathe atmospheric air through a labyrinth organ. Keep unobstructed surface access under a cover that traps warm, humid air.',
+  },
+  {
+    question: 'What are good tankmates for a pearl gourami?',
+    answer:
+      'Calm community fish: tetras, rasboras, corydoras, and peaceful livebearers. Avoid fin-nippers such as tiger barbs and overly active species such as large danios, which stress this slow, deliberate swimmer.',
+    answerText:
+      'Tetras, rasboras, corydoras, and peaceful livebearers. Avoid tiger barbs and very active fish like large danios.',
+  },
+  {
+    question: 'How do I tell a male pearl gourami from a female?',
+    answer:
+      'Males develop a vivid orange-to-red coloration across the throat and breast and a longer, more pointed dorsal fin, with the color intensifying dramatically during the breeding season. Females remain rounder-bodied with a plainer dorsal fin.',
+    answerText:
+      'Males have an orange-red throat and breast and a longer, pointed dorsal fin; females are rounder with a plainer dorsal.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function PearlGouramiPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Pearl Gourami Care Guide', subtitle: "Trichopodus leerii — the pearl gourami is widely regarded as the most beautiful and peaceful of the commonly available gouramis. A lattice of pearlescent spots over a soft brown body, a dark lateral line, and threadlike pelvic fins make it an ideal centerpiece for a calm community aquarium. Breeding males develop a striking orange-red breast.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Pearl Gourami', href: '/species/pearl-gourami' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Dwarf Gourami", href: "/species/dwarf-gourami", category: "Species Guide" }, { title: "Sparkling Gourami", href: "/species/sparkling-gourami", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,8 +78,8 @@ export default function PearlGouramiPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-pearl-gourami" aspect="16:9" variant="inline" caption="A pearl gourami in a home aquarium." priority />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-pearl-gourami" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pearl gourami in a home aquarium." priority />
 
         <h2>A Labyrinth Fish — Surface Access Is Mandatory</h2>
         <DropCap>Like its relatives the betta and dwarf gourami, the pearl gourami is an anabantoid — it possesses a labyrinth organ that allows it to breathe atmospheric air directly from the surface. This adaptation evolved in the warm, oxygen-poor, slow-moving waters of Southeast Asia, and it has a direct husbandry consequence: pearl gouramis must always have unobstructed access to the water surface. A tank packed to the rim with floating plants, or a tightly sealed lid with warm trapped air far colder than the water, can both cause problems. The air the fish gulps should be warm and humid, which is why a covered tank with a small air gap is ideal — chilled room air gulped at the surface can damage the labyrinth organ.</DropCap>
@@ -53,6 +98,16 @@ export default function PearlGouramiPage() {
 
         <h2>Bubble-Nest Breeding</h2>
         <p>Like bettas, pearl gouramis are bubble-nest builders. A conditioned male constructs a large floating nest, often anchored among floating plants, then entices the female beneath it. After a wrapping embrace the eggs float up into the nest, where the male tends them aggressively. The female should be removed after spawning. Fry hatch in two to three days and are tiny, requiring infusoria before they can take baby brine shrimp. Maintaining warm, humid air above the nest is critical, as the developing fry form their labyrinth organs in the first weeks of life.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Pearl Gourami — Tank Setup</div>
@@ -65,5 +120,6 @@ export default function PearlGouramiPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
+    </>
   )
 }

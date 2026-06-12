@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -31,7 +31,37 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'How much protein does a ferret need?',
+    answer:
+      'The commonly cited target is 32-40% protein on a dry-matter basis, animal-sourced and highly digestible. Quality matters as much as quantity: plant proteins (corn gluten meal, soy protein, pea protein) inflate a label’s crude-protein number while delivering an amino-acid profile ferrets utilize poorly. The first several ingredients should be named meats and meat meals. Kits and pregnant or lactating jills sit at the upper end of the range or above it.',
+  },
+  {
+    question: 'How much fat should be in ferret food?',
+    answer:
+      'The typical target is 18-22% on a dry-matter basis, animal-sourced. Fat is a ferret’s primary energy substrate — ferrets thrive on a relatively high-fat diet, self-regulate intake well, and graze many small meals a day. Active ferrets, growing kits, and underweight animals benefit from the upper end; sedentary or overweight ferrets may need the lower end with portion attention.',
+  },
+  {
+    question: 'Why is carbohydrate bad for ferrets?',
+    answer:
+      'Ferrets have a short gut (roughly five times body length, 3-4 hour transit) with no functional cecum, so they cannot use carbohydrate as a primary fuel — and beyond wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk: sustained carbohydrate intake drives repeated insulin secretion, thought over years to contribute to pancreatic beta-cell stress and tumor formation. The target is under 3%, ideally under 2%; many commercial "ferret" foods land at 15-30% by difference.',
+  },
+  {
+    question: 'Do ferrets need taurine?',
+    answer:
+      'Yes. Like cats, ferrets do not synthesize adequate taurine and require it from the diet. Reputable ferret and high-protein cat formulas supplement it; whole-prey diets supply it naturally through muscle and organ tissue. Long-term taurine deficiency is associated with dilated cardiomyopathy — one reason dog food, formulated without the taurine a carnivore needs, is inappropriate for ferrets.',
+  },
+  {
+    question: 'What does "dry-matter basis" mean on a ferret food label?',
+    answer:
+      'It means the nutrient percentages are calculated with water removed. Kibble labels report guaranteed analysis "as fed" (including moisture), so for dry kibble at 8-10% moisture an as-fed protein of roughly 36% corresponds to high-30s/low-40s dry-matter. For moist foods at 65-75% water the difference is dramatic, making as-fed comparisons across wet and dry foods meaningless. Carbohydrate is almost never printed — estimate it by subtracting protein, fat, moisture, ash, and fiber from 100.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, faqSchema)
 
 export default function ProteinAndFatRequirementsPage() {
   return (
@@ -65,6 +95,7 @@ export default function ProteinAndFatRequirementsPage() {
                 { label: 'Fiber & Ash', href: '#fiber' },
                 { label: 'Dry-Matter vs As-Fed', href: '#dry-matter' },
                 { label: 'A Diet That Hits the Window', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -84,6 +115,7 @@ export default function ProteinAndFatRequirementsPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-protein-and-fat-requirements"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -100,7 +132,7 @@ export default function ProteinAndFatRequirementsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -170,6 +202,9 @@ export default function ProteinAndFatRequirementsPage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="sources">Sources</h2>
           <p>

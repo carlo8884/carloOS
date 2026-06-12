@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Best Beginner Reptiles — Easiest Pets to Start | Lizard.com", description: "The best beginner reptiles ranked by how forgiving they are. Leopard gecko, crested gecko, corn snake, ball python, and more, with the honest caveats.", path: "/species/best-beginner-reptiles", type: 'article' })
@@ -8,10 +8,11 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Best Beginner 
 export default function SpeciesBestBeginnerReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Best Beginner Reptiles", subtitle: "Some reptiles tolerate a learning curve; others punish small mistakes. The best beginner species combine modest size, forgiving husbandry, hardiness, calm temperament, and wide availability of captive-bred stock. This guide ranks the genuinely beginner-friendly reptiles and, just as importantly, the honest caveats, because no reptile is truly low-maintenance.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Best Beginner Reptiles", subtitle: "Some reptiles tolerate a learning curve; others punish small mistakes. The best beginner species combine modest size, forgiving husbandry, hardiness, calm temperament, and wide availability of captive-bred stock. This guide ranks the genuinely beginner-friendly reptiles and, just as importantly, the honest caveats, because no reptile is truly low-maintenance.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }]}
       schema={schema}
       relatedLinks={[
+        { title: 'Which Reptile Is Right For You? (Quiz)', href: '/tools/reptile-match-quiz', category: 'Tools' },
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
         { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
@@ -29,7 +30,7 @@ export default function SpeciesBestBeginnerReptilesPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Which Reptile Is Right For You? Quiz", href: "/tools/reptile-match-quiz" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-best-beginner-reptiles"} ctaText="Download Free" />
         <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
@@ -58,7 +59,8 @@ export default function SpeciesBestBeginnerReptilesPage() {
           <h2>{"How to Choose Among Them"}</h2>
           <p>{"Pick based on what you want from the animal and what you can provide: a handleable lizard (bearded dragon), a low-equipment gecko (crested gecko), a forgiving first reptile overall (leopard gecko), or a beginner snake (corn snake). Match the species to your space, budget, and tolerance for the specific caveat, and always start with captive-bred stock from a reputable source. Use our reptile buying checklist before committing, and read the full care guide for whichever species you choose."}</p>
 
-          <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
             <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Outfitting a First Enclosure</div>
             <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Whichever beginner species you choose, the starter shortlist is the same: an appropriately sized enclosure, a heat source on a thermostat, UVB where the species needs it, and substrate. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences which species we recommend above.</p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

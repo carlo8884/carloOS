@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gout in Reptil
 export default function HealthGoutPreventionPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Gout in Reptiles", subtitle: "Gout in reptiles is the painful deposition of uric acid crystals in joints (articular gout) or around internal organs (visceral gout). It usually results from chronic dehydration or kidney dysfunction, often compounded by an inappropriately high-protein diet. Because the damage is frequently irreversible, prevention through hydration and correct diet matters far more than treatment.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Gout in Reptiles", subtitle: "Gout in reptiles is the painful deposition of uric acid crystals in joints (articular gout) or around internal organs (visceral gout). It usually results from chronic dehydration or kidney dysfunction, often compounded by an inappropriately high-protein diet. Because the damage is frequently irreversible, prevention through hydration and correct diet matters far more than treatment.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Gout", href: "/health/gout-prevention" }]}
       schema={schema}
       relatedLinks={[

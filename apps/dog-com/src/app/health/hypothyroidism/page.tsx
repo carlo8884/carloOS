@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs -- Weight Gain, Skin Changes | Dog.com', description: 'Hypothyroidism is the most common endocrine disorder in dogs. Weight gain without increased appetite, coat changes, and lethargy are the classic signs.', path: '/health/hypothyroidism', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', authorName: 'Dog.com Editorial', lastReviewed: '2026-06-05' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the signs of hypothyroidism in dogs?', answer: 'The textbook presentation is a middle-aged dog (most commonly 4–10 years) gaining weight despite no increase in food intake, with lethargy and exercise intolerance, and coat or skin changes — bilaterally symmetrical hair loss, a dull or brittle coat, thickened skin, and secondary skin infections. Other signs: cold intolerance (seeking warm spots), a slowed heart rate, facial puffiness (the "tragic face"), and mild anemia. Because these changes develop gradually and mimic normal aging, hypothyroidism is one of the most frequently overlooked diagnoses — a single blood panel can confirm or rule it out.' },
+  { question: 'How is hypothyroidism diagnosed in dogs?', answer: 'Total T4 (TT4) is the usual screening test — a low TT4 in a dog with appropriate clinical signs is strongly suggestive. But any sick dog can have a falsely low TT4 (euthyroid sick syndrome), so a low value in an ill dog should not be over-read. Free T4 by equilibrium dialysis (fT4ed) is the preferred confirmatory test, and an elevated cTSH combined with low fT4ed provides high diagnostic confidence. Testing is unreliable in dogs that are sick, on corticosteroids, or on phenobarbital — your veterinarian will confirm once the dog is stable.' },
+  { question: 'What is the treatment for hypothyroidism in dogs?', answer: 'Lifelong levothyroxine (synthetic T4 — veterinary brands include Soloxine and Thyro-Tabs), given once or twice daily at a dose your veterinarian determines from body weight and overall health. The response is one of the most rewarding in small animal medicine: improved energy within 2–4 weeks, visible coat improvement within 6–8 weeks, and weight loss over several months when combined with appropriate diet.' },
+  { question: 'Can I give my dog human thyroid medication like Synthroid?', answer: 'Not recommended. Human levothyroxine formulations differ in absorption characteristics from veterinary products, making dosing less predictable in dogs. Veterinary-specific levothyroxine gives the most consistent results — and the prescription, dose, and any substitution decisions belong with your veterinarian.' },
+  { question: 'How often does a dog on thyroid medication need monitoring?', answer: 'Per this page: a post-pill T4 level (drawn 4–6 hours after the morning pill) at 4–8 weeks after starting or adjusting the dose, then every 6 months once stable. The target is a T4 in the upper half of normal at that post-pill timing. Underdosing leaves the dog symptomatic; overdosing causes restlessness, increased appetite, weight loss, and a rapid heart rate. Dose adjustments are common in the first year, after which most dogs remain stable.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function HypothyroidismPage() {
   return (
     <>
@@ -28,7 +35,7 @@ export default function HypothyroidismPage() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Hypothyroidism is the most common endocrine disorder diagnosed in dogs, yet it is also one of the most frequently overlooked -- because its signs develop gradually and mirror the changes many owners attribute to normal middle age. Weight gain despite stable food intake, a coat that seems to have lost its shine, and a dog that seems perpetually tired are the hallmarks. A single blood panel can confirm or rule out the diagnosis, and once levothyroxine treatment begins, the transformation in energy, coat, and body condition is among the most rewarding recoveries in small animal medicine.</DropCap>
 
@@ -54,6 +61,9 @@ export default function HypothyroidismPage() {
           <p>Levothyroxine (synthetic T4 -- brand names include Soloxine, Thyro-Tabs, Nutri-Vet) is a veterinarian-prescribed medication given once or twice daily; the starting dose must be determined by a veterinarian based on the dog's body weight and overall health. Response to treatment is dramatic and rewarding -- most owners notice improved energy and attitude within 2-4 weeks, coat improvement within 6-8 weeks, and weight loss (combined with appropriate diet) over several months.</p>
           <p>Monitoring: post-pill T4 levels (measured 4-6 hours after morning pill) at 4-8 weeks after starting or dose-adjusting, then every 6 months once stable. The target is T4 in the upper half of the normal range at the 4-6 hour post-pill measurement. Underdosing leaves the dog symptomatic; overdosing causes signs of hyperthyroidism (restlessness, increased appetite, weight loss, rapid heart rate). Dose adjustments are common in the first year and then the dog typically remains stable.</p>
           <p>Human levothyroxine (Synthroid) is not recommended -- the formulation and absorption characteristics differ from veterinary products and dosing is less predictable in dogs. Use veterinary-specific levothyroxine products for the most consistent results.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList
             sources={[

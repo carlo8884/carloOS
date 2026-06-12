@@ -106,7 +106,7 @@ export default function VolumeCalculatorPage() {
         { name: 'Aquarium Volume Calculator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Heater Wattage Calculator", href: "/tools/heater-wattage-calculator", category: "Tools" }, { title: "Stocking Calculator", href: "/tools/stocking-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Heater Wattage Calculator", href: "/tools/heater-wattage-calculator", category: "Tools" }, { title: "Stocking Calculator", href: "/tools/stocking-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
       sidebar={
         <>
           <TableOfContents
@@ -121,6 +121,7 @@ export default function VolumeCalculatorPage() {
           <RelatedLinks
             title="Use your number for"
             links={[
+              { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator' },
               { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },

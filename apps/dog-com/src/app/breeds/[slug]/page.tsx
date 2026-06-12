@@ -46,6 +46,7 @@ import {
   Breeds,
   EXISTING_STATIC_BREED_SLUGS,
   getBreedBySlug,
+  getBreedInsuranceProfile,
   type Breed,
 } from '../../../data/breeds'
 import {
@@ -844,6 +845,19 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                     .replace(/\b\w/g, (c) => c.toUpperCase()),
                   href,
                 }))}
+              />
+            )}
+
+            {getBreedInsuranceProfile(breed.slug) && (
+              <RelatedLinks
+                title="Insurance for This Breed"
+                links={[
+                  {
+                    label: `Is pet insurance worth it for a ${breed.name}?`,
+                    href: `/breeds/${breed.slug}/insurance`,
+                  },
+                  { label: 'Pet insurance by breed', href: '/breeds/insurance' },
+                ]}
               />
             )}
 

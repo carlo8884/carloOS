@@ -1,18 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'English Bulldog Breed Guide — BOAS, Heat Risk & Health | Dog.com', description: 'English Bulldogs are brachycephalic — flat-faced breathing disorders, heat intolerance, and a list of structural health issues.', path: '/breeds/bulldog', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'English Bulldog Breed Guide', description: 'BOAS, hip dysplasia, heat intolerance, and structural health issues in English Bulldogs.', url: 'https://dog.com/breeds/bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'English Bulldog Breed Guide', description: 'BOAS, hip dysplasia, heat intolerance, and structural health issues in English Bulldogs.', url: 'https://dog.com/breeds/bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What health problems do English Bulldogs have?', answer: 'The breed\'s flat-faced conformation causes a cascade of issues: brachycephalic obstructive airway syndrome (BOAS) affecting most Bulldogs to some degree, very high heat stroke risk, and chronic skin fold infections. Many Bulldogs need surgical intervention for breathing, and cesarean section is nearly universal for whelping. Discuss BOAS assessment and a management plan with your veterinarian.' },
+  { question: 'How long do English Bulldogs live?', answer: 'English Bulldogs have a life expectancy of 8-10 years — lower than most breeds. Veterinary costs run significantly above average across that lifespan, which is why enrolling pet insurance before the first vet visit is strongly advised for this breed.' },
+  { question: 'Can English Bulldogs tolerate hot weather?', answer: 'No. The compacted airway prevents the effective panting that cools other dogs, and a Bulldog exercised at 80°F can develop fatal heat stroke within minutes. Survival guidelines: no walks above 75°F, no exercise above 70°F, never leave a Bulldog in a car, and treat heavy panting with distress or blue-tinged gums as an emergency.' },
+  { question: 'How much exercise does an English Bulldog need?', answer: 'Low to moderate — Bulldogs are limited by their airways. Exercise should be kept to cool parts of the day, with walks restricted to dawn and dusk in summer, and stopped at any sign of labored breathing. An air-conditioned environment is part of responsible Bulldog ownership, not a luxury.' },
+  { question: 'Do English Bulldogs need their skin folds cleaned?', answer: 'Yes — the deep facial, tail, and vulvar folds trap moisture and grow bacteria and yeast. Cleaning every 2-3 days with an antimicrobial wipe is routine maintenance. Redness, odor, head rubbing, or scooting suggest an active fold infection that needs veterinary treatment, and chronic cases may warrant surgical fold removal.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
 export default function BulldogPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'English Bulldog Breed Guide', subtitle: 'The English Bulldog\'s conformation — flat face, compacted airways, compact body, heavy skin folds — causes a cascade of health issues that are important to understand before acquiring one. They are affectionate dogs with significant veterinary costs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bulldog', href: '/breeds/bulldog' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,6 +33,7 @@ export default function BulldogPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Bulldog?', href: '/breeds/bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Bulldog Health Deep-Dive" links={[{ label: 'Bulldog Health Issues & Screenings', href: '/breeds/bulldog/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Feeding Guide', href: '/breeds/bulldog/feeding' }, { label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
@@ -51,7 +62,11 @@ export default function BulldogPage() {
         <CalloutBox variant="warning" title="Heat is the leading killer">
           A Bulldog exercised at 80°F can develop fatal heat stroke within 15 minutes. Air conditioning, walks restricted to dawn and dusk in summer, and never leaving a Bulldog in a car for any length of time are not preferences — they are survival measures. The breed&apos;s compacted airway prevents the panting that cools other dogs.
         </CalloutBox>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

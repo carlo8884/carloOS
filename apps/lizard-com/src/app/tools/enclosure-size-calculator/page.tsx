@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { EnclosureSizeCalculator } from './Calculator'
 
@@ -20,14 +20,6 @@ export const metadata: Metadata = buildMetadata({
   title: 'Reptile Enclosure Size Calculator | Lizard.com',
   description: 'Calculate recommended minimum enclosure dimensions from adult body length and locomotor habit. Outputs L x W x H, floor footprint, and volume in gallons.',
   path: '/tools/enclosure-size-calculator',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://lizard.com/' },
-    { name: 'Tools', url: 'https://lizard.com/tools' },
-    { name: 'Enclosure Size Calculator', url: URL },
-  ],
 })
 
 const appSchema = {
@@ -58,7 +50,7 @@ const appSchema = {
   },
 }
 
-const schema = combineSchemas(breadcrumbSchema, appSchema)
+const schema = appSchema
 
 const FAQS = [
   {
@@ -105,6 +97,8 @@ export default function EnclosureSizeCalculatorPage() {
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
         { title: 'Screen vs PVC Enclosures', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
@@ -137,6 +131,7 @@ export default function EnclosureSizeCalculatorPage() {
             subtitle="Husbandry deep-dives and tool updates."
             source="enclosure-calculator"
           />
+          <CrossPortfolioCard currentSite="lizard-com" contentType="tool" variant="sidebar" />
         </>
       }
     >
@@ -227,6 +222,7 @@ export default function EnclosureSizeCalculatorPage() {
           before committing to a build.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Shop Enclosures That Meet These Minimums</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Once you have your target dimensions, browse front-opening terrariums and PVC enclosures sized to hit them. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the dimensions calculated above.</p>

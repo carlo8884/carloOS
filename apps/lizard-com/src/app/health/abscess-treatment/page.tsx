@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in R
 export default function HealthAbscessTreatmentPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Abscesses in Reptiles", subtitle: "Abscesses in reptiles look and behave differently from those in mammals. Because reptile immune systems produce thick, cheese-like (caseous) pus rather than the liquid pus mammals form, a reptile abscess becomes a firm, walled-off lump that the body cannot reabsorb or drain on its own. That is why most reptile abscesses require surgical removal by a veterinarian rather than simple lancing.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
+      hero={{ title: "Abscesses in Reptiles", subtitle: "Abscesses in reptiles look and behave differently from those in mammals. Because reptile immune systems produce thick, cheese-like (caseous) pus rather than the liquid pus mammals form, a reptile abscess becomes a firm, walled-off lump that the body cannot reabsorb or drain on its own. That is why most reptile abscesses require surgical removal by a veterinarian rather than simple lancing.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Abscesses", href: "/health/abscess-treatment" }]}
       schema={schema}
       relatedLinks={[

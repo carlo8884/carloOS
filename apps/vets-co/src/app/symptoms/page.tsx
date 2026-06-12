@@ -5,8 +5,8 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  StockImage,
 } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 import { Symptoms, type Symptom, type UrgencyTier } from '../../data/symptoms'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,51 +125,23 @@ export default function SymptomsHubPage() {
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
-          Symptom Triage Library
-        </span>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl"
-          style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}
-        >
-          Pet Symptom Triage
-        </h1>
-        <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
-          When a pet symptom is ER NOW, when it is same-day vet, and when it is safe to monitor at
-          home. {dogCount} dog symptoms and {catCount} cat symptoms — sourced from{' '}
-          <a
-            href="https://avma.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-primary hover:underline"
-          >
-            AVMA
-          </a>
-          ,{' '}
-          <a
-            href="https://aaha.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-primary hover:underline"
-          >
-            AAHA
-          </a>
-          , and{' '}
-          <a
-            href="https://acvim.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-primary hover:underline"
-          >
-            ACVIM
-          </a>{' '}
-          guidance.
+      <HubMasthead
+        eyebrow="Symptom Triage Library"
+        title="Pet Symptom Triage"
+        intro={`When a pet symptom is ER now, when it is same-day vet, and when it is safe to monitor at home — ${dogCount} dog symptoms and ${catCount} cat symptoms, triaged by urgency.`}
+        manifestKey="vets-co:symptoms-hero"
+        fallbackKey="vets-co:hero"
+        imageAlt="A veterinarian examining a pet during a check-up"
+        primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
+        secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
+      />
+      <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
+        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">
+          Triage guidance drawn from current{' '}
+          <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>,{' '}
+          <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and{' '}
+          <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
         </p>
-      </div>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="vets-co:symptoms-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">

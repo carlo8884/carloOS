@@ -39,8 +39,8 @@ export async function generateMetadata({
   if (!b) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `Best Pet Insurance for ${b.breedName}s (2026)`,
-    description: `${b.breedName}s have ${b.keyConditions.length} hereditary conditions worth screening. Top carrier matches with sample premiums.`,
+    title: `Pet Insurance Options for ${b.breedName}s (2026)`,
+    description: `${b.breedName}s have ${b.keyConditions.length} hereditary conditions worth screening. Carrier comparisons with sample premiums.`,
     path: `/pet-insurance/breeds/${b.slug}`,
     type: 'article',
   })
@@ -152,7 +152,7 @@ export default async function BreedInsurancePage({
   const schema = combineSchemas(
     buildArticleSchema({
       siteId: 'dog-com',
-      title: `Best Pet Insurance for ${b.breedName}s (2026)`,
+      title: `Pet Insurance Options for ${b.breedName}s (2026)`,
       description: `Breed-specific pet insurance routing for ${b.breedName}s with hereditary risk match.`,
       url: `https://dog.com/pet-insurance/breeds/${b.slug}`,
       imageUrl: '',
@@ -169,7 +169,7 @@ export default async function BreedInsurancePage({
 
   const faqs = [
     {
-      question: `What's the best pet insurance for ${b.breedName}s?`,
+      question: `Which pet insurance is a good fit for ${b.breedName}s?`,
       answer: `${recommended.name} is our editorial pick for ${b.breedName}s. ${b.recommendedReason} See sample premiums of $${b.sampleMonthlyPremium[0]}–$${b.sampleMonthlyPremium[1]}/mo and full coverage details below.`,
     },
     {
@@ -182,7 +182,7 @@ export default async function BreedInsurancePage({
     },
     {
       question: `When should I enroll my ${b.breedName} in insurance?`,
-      answer: `As young as possible. Pre-existing conditions are universally excluded by every major carrier. ${b.orthopedicRisk === 'high' ? `${b.breedName}s have high orthopedic risk — choose a carrier with a short orthopedic waiting period (Pumpkin = 14 days vs. industry standard 6 months).` : ''} ${b.dentalRisk === 'high' ? `Dental disease is a high-frequency claim category — Fetch by The Dodo is the only carrier covering periodontal disease on its base plan.` : ''}`,
+      answer: `As young as possible. Pre-existing conditions are universally excluded by every major carrier. ${b.orthopedicRisk === 'high' ? `${b.breedName}s have high orthopedic risk — consider a carrier with a shorter orthopedic waiting period (Pumpkin lists 14 days, where many carriers list around 6 months).` : ''} ${b.dentalRisk === 'high' ? `Dental disease is a high-frequency claim category — Fetch by The Dodo is one carrier that may cover periodontal disease on its base plan.` : ''}`,
     },
   ]
 
@@ -199,7 +199,7 @@ export default async function BreedInsurancePage({
           className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}
         >
-          Best Pet Insurance for {b.breedName}s
+          Pet Insurance Options for {b.breedName}s
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           {b.breedName}s face {b.keyConditions.length} key hereditary

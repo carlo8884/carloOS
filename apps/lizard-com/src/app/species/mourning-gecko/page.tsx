@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide — Parthenogenetic Colony | Lizard.com", description: "Mourning geckos are tiny all-female parthenogenetic geckos kept in colonies. Bioactive nano vivariums, CGD plus insects, and why they clone themselves.", path: "/species/mourning-gecko", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide", description: "Colony housing, parthenogenesis, bioactive nano enclosure, diet, and care for Lepidodactylus lugubris.", url: "https://lizard.com/species/mourning-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide", description: "Colony housing, parthenogenesis, bioactive nano enclosure, diet, and care for Lepidodactylus lugubris.", url: "https://lizard.com/species/mourning-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Do mourning geckos need a male to breed?', answer: 'No — mourning geckos are parthenogenetic. Populations are all-female and females produce viable eggs and offspring by cloning, with no male required. This means even a small starting group will breed prolifically, so plan for colony expansion or rehoming from the outset.' },
+  { question: 'What enclosure does a mourning gecko colony need?', answer: 'A 12×12×18 inch front-opening terrarium suits a small colony of three to five geckos, with larger enclosures supporting more animals. They are arboreal, so prioritize vertical surfaces — cork bark, bamboo, branches, and broad-leaf live plants such as pothos. A bioactive substrate with springtails and isopods handles waste and supports egg-laying.' },
+  { question: 'What temperature and humidity do mourning geckos need?', answer: 'Ambient 72–80°F — comfortable room temperature in most homes — and 60–80% humidity maintained by misting once or twice daily. Misting is also part of hydration, since they drink droplets from misted surfaces. UVB is optional; a low-level bulb benefits these partly diurnal geckos and the live plants.' },
+  { question: 'What do mourning geckos eat?', answer: 'The same complete powdered gecko diets used for crested geckos, mixed with water and offered in shallow dishes several times a week, supplemented with tiny live feeders — flightless fruit flies, bean beetles, and pinhead crickets dusted with calcium. Their small size means feeders must be correspondingly small.' },
+  { question: 'Can you handle mourning geckos?', answer: 'They are a hands-off display species — fast, tiny, easily stressed, and quick to drop their tails. Their appeal is watching an active, social colony interact, chirp, and forage, mostly in the evening since they are nocturnal-to-crepuscular. With good care they live 8–10+ years.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function SpeciesMourningGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Mourning Gecko Care Guide", subtitle: "Lepidodactylus lugubris, the mourning gecko, is a tiny (3.5 to 4 inch) arboreal gecko famous for being parthenogenetic: populations are all-female and reproduce by cloning, no males required. Sociable, vocal, and easy to keep in bioactive colonies, they are an ideal nano-vivarium species, with the caveat that a single pair can quickly become a population.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Mourning Gecko Care Guide", subtitle: "Lepidodactylus lugubris, the mourning gecko, is a tiny (3.5 to 4 inch) arboreal gecko famous for being parthenogenetic: populations are all-female and reproduce by cloning, no males required. Sociable, vocal, and easy to keep in bioactive colonies, they are an ideal nano-vivarium species, with the caveat that a single pair can quickly become a population.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Mourning Gecko", href: "/species/mourning-gecko" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
@@ -35,7 +47,7 @@ export default function SpeciesMourningGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Mourning geckos are small, hardy, arboreal geckos found across the tropical Pacific and now popular in the reptile hobby for two unusual reasons: they are parthenogenetic, meaning females produce viable eggs and offspring without any male, and they are genuinely social, thriving in small colonies where they communicate with audible chirps. Their tiny size, room-temperature requirements, and tolerance of bioactive nano enclosures make them an outstanding low-cost, low-space first reptile, provided keepers understand they will breed prolifically."}</p>
           <h2>{"Parthenogenesis and Colony Housing"}</h2>
 
@@ -67,6 +79,9 @@ export default function SpeciesMourningGeckoPage() {
             <li>{"Peer-reviewed literature on parthenogenesis in Lepidodactylus lugubris."}</li>
             <li>{"Reptiles Magazine, mourning gecko colony husbandry references."}</li>
           </ul>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Mourning Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse planted nano enclosures, low-level UVB, foggers, thermostats, substrate, and complete gecko diet sized for mourning gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -77,5 +92,6 @@ export default function SpeciesMourningGeckoPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

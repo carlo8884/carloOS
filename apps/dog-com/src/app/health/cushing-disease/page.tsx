@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing\'s Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,17 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test", path: '/health/cushing-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Hyperadrenocorticism — diagnosis and treatment.", url: 'https://dog.com/health/cushing-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the symptoms of Cushing\'s disease in dogs?', answer: 'The classic presentation in a middle-aged or older dog: drinking and urinating dramatically more (PU/PD — sometimes needing to go out multiple times at night), a pot-bellied appearance (from liver enlargement and weakened abdominal muscles, not fat), bilateral symmetrical hair loss starting at the flanks, thin fragile skin, muscle weakness, increased appetite, excessive panting, and recurrent skin or urinary tract infections. The signs develop slowly over 1–2 years and are commonly mistaken for normal aging — which is why Cushing\'s is one of the most misdiagnosed conditions in older dogs.' },
+  { question: 'How do vets test for Cushing\'s disease?', answer: 'Routine bloodwork (elevated ALP, dilute urine, stress leukogram) is suggestive but cannot confirm Cushing\'s. The screening test is the urine cortisol:creatinine ratio collected at home — a normal result effectively rules Cushing\'s out. Confirmation usually uses the low-dose dexamethasone suppression test (LDDS), a day-long clinic test that also helps differentiate pituitary from adrenal disease, or the ACTH stimulation test. Abdominal ultrasound assesses adrenal size and symmetry.' },
+  { question: 'What is the difference between pituitary and adrenal Cushing\'s?', answer: 'Pituitary-dependent (PDH) accounts for 85–90% of cases: a small pituitary tumor produces excess ACTH that drives both adrenal glands to overproduce cortisol; treatment is medical (trilostane or mitotane). Adrenal-dependent (ADH) accounts for 10–15%: a tumor on one adrenal gland autonomously produces cortisol; treatment is surgical removal by a specialist. The LDDS test plus ultrasound (both adrenals enlarged in PDH; one enlarged and one atrophied in ADH) distinguishes them.' },
+  { question: 'What is the treatment for Cushing\'s disease in dogs?', answer: 'For pituitary-dependent disease, trilostane (Vetoryl) is the preferred medical treatment in most cases — a daily oral medication that blocks cortisol synthesis, taking effect within weeks. Mitotane is an older alternative. For adrenal tumors, surgical removal of the affected gland by a board-certified surgeon offers a high cure rate for adenomas. All medical management requires ongoing monitoring, and treatment selection is your veterinarian\'s call based on the type and the individual dog.' },
+  { question: 'Is trilostane dangerous for dogs?', answer: 'It requires respect and monitoring rather than fear. The primary risk is over-suppression of cortisol causing adrenal insufficiency (an Addisonian crisis) — signs are weakness, vomiting, and collapse, and it is a medical emergency. That is why ACTH stimulation testing is required 10–14 days after starting or changing the dose, then every 3 months once stable, and any time the dog seems ill. Owners of dogs on trilostane should also have an Addison\'s emergency kit prescribed. It is not a "set and forget" medication.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function CushingDiseasePage() {
   return (
@@ -24,7 +32,7 @@ export default function CushingDiseasePage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Cushing's Disease", href: '/health/cushing-disease' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Hypothyroidism', href: '/health/hypothyroidism', category: 'Dog Health' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Addison's Disease", href: '/health/addisons-disease', category: 'Dog Health' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Classic Signs', href: '#signs' }, { label: 'PDH vs ADH', href: '#types' }, { label: 'Diagnostic Tests', href: '#tests' }, { label: 'Treatment', href: '#treatment' }, { label: 'Monitoring', href: '#monitoring' }]} />
+          <TableOfContents items={[{ label: 'Classic Signs', href: '#signs' }, { label: 'PDH vs ADH', href: '#types' }, { label: 'Diagnostic Tests', href: '#tests' }, { label: 'Treatment', href: '#treatment' }, { label: 'Monitoring', href: '#monitoring' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Classic Signs</div>
             {['PU/PD (drinking/urinating excessively)', 'Pot-bellied appearance', 'Bilateral symmetrical hair loss', 'Thin, fragile skin', 'Muscle weakness/wasting', 'Increased appetite', 'Panting excessively', 'Recurrent skin/UTI infections'].map(s => (
@@ -64,6 +72,9 @@ export default function CushingDiseasePage() {
 
           <h2 id="monitoring">Monitoring on Trilostane</h2>
           <p>ACTH stimulation testing is required 10–14 days after starting or changing trilostane dose, then every 3 months once stable, and any time the dog shows signs of illness or weakness. Target post-ACTH cortisol: 1.45–5.4 μg/dL (lab-specific reference ranges may vary). Values below this indicate over-suppression — dose reduction. Values above this with persistent clinical signs indicate underdosing. Trilostane management requires commitment to regular monitoring — it is not a "set and forget" medication.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

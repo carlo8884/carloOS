@@ -30,6 +30,7 @@ import {
   combineSchemas,
   SchemaScript,
   StockImage,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { getSiteConfig } from '@carloOS/config'
 import {
@@ -420,6 +421,7 @@ export default function SymptomsHubPage() {
           </div>
         </section>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
     </>
   )
 }

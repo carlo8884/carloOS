@@ -81,7 +81,7 @@ export default function PessoaReviewPage() {
       </div>
 
       <QuickPicks items={PICKS} />
-      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Pessoa Saddle" }]} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Pessoa Saddle", href: "/reviews/pessoa-saddle-review" }]} />
 
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
@@ -102,12 +102,12 @@ export default function PessoaReviewPage() {
               score={9.2}
               winner
               description={<div>
-                <p>The Gen X Pro is the saddle that put Pessoa on the Olympic podium — ridden by multiple medalists across multiple Olympic cycles. The close-contact geometry is the most aggressive in production close-contact saddles: the forward flap angle places the rider&apos;s knee further forward than any competitor, and the minimal bulk between thigh and horse creates a feel of immediacy that serious jumping riders describe as transformative.</p>
+                <p>The Gen X Pro carries Pessoa&apos;s show-jumping pedigree — ridden by multiple Olympic medalists across multiple Olympic cycles. The close-contact geometry is among the most forward-cut in production close-contact saddles: the forward flap angle places the rider&apos;s knee well forward, and the minimal bulk between thigh and horse creates a feel of immediacy that serious jumping riders describe as transformative.</p>
                 <p>This is not a subtle difference. In a Gen X Pro, you feel the horse&apos;s impulsion and engagement through your thigh in a way that is muted in bulkier alternatives. For riders competing at any level from amateur to grand prix, the feedback quality is genuinely better. The tradeoff: this geometry is specifically optimized for jumping position. Extended flatwork sessions are less comfortable than in saddles with a more neutral flap angle.</p>
               </div>}
               specs={[
                 { label: 'Contact', value: 'Close contact', highlight: 'good' },
-                { label: 'Flap', value: 'Forward-cut (most aggressive)', highlight: 'good' },
+                { label: 'Flap', value: 'Forward-cut (among the most forward in class)', highlight: 'good' },
                 { label: 'Olympic Credentials', value: 'Documented Olympic riders', highlight: 'good' },
                 { label: 'Made In', value: 'Brazil' },
                 { label: 'Flatwork Use', value: 'Possible but not optimized', highlight: 'warn' },

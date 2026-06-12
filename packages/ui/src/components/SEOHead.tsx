@@ -184,36 +184,83 @@ export function buildBreadcrumbSchema(input: BreadcrumbSchemaInput) {
 interface ProductSchemaParams {
   name: string
   description: string
-  imageUrl: string
-  ratingValue: number
-  reviewCount: number
+  imageUrl?: string
+  /**
+   * The page's single disclosed editorial score, mapped to `review.reviewRating`
+   * on a 0–`bestRating` scale. OMIT entirely when the page does not display a
+   * real disclosed editorial score — never fabricate one (QC §1.4). When omitted,
+   * the Product carries an editorial `Review` with no numeric rating.
+   */
+  ratingValue?: number
+  /** Max of the editorial score scale actually shown on the page. Default 10. */
+  bestRating?: number
+  /** Retained for caller compatibility; intentionally unused (no AggregateRating). */
+  reviewCount?: number
+  /** Editorial verdict text drawn from the page's own ReviewCard content. */
+  reviewBody?: string
+  /** Review author org name, e.g. "Lizard.com Editorial". Default "Editorial team". */
+  reviewAuthorName?: string
   priceRange?: string
-  url: string
+  url?: string
 }
 
 export function buildProductSchema(params: ProductSchemaParams) {
   // The score is our single editorial assessment — represent it as a `Review`
   // (authored by the editorial team), NOT an `AggregateRating`. An aggregate
-  // rating implies multiple user reviews; emitting one with reviewCount:1 would
-  // misrepresent an editorial score as a user-review base (QC §1.4). `reviewCount`
-  // is retained in the params for caller compatibility but intentionally unused.
+  // rating implies multiple user reviews; emitting one would misrepresent an
+  // editorial score as a user-review base (QC §1.4). `reviewRating` is included
+  // ONLY when the caller passes a real, page-displayed editorial score; if
+  // `ratingValue` is omitted the Review carries no numeric rating at all.
+  const review: Record<string, unknown> = {
+    '@type': 'Review',
+    author: { '@type': 'Organization', name: params.reviewAuthorName ?? 'Editorial team' },
+    ...(params.reviewBody ? { reviewBody: params.reviewBody } : {}),
+    ...(params.ratingValue != null
+      ? {
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: params.ratingValue,
+            bestRating: params.bestRating ?? 10,
+          },
+        }
+      : {}),
+  }
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: params.name,
     description: params.description,
     ...(params.imageUrl ? { image: params.imageUrl } : {}),
-    url: params.url,
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: params.ratingValue,
-        bestRating: 10,
-      },
-      author: { '@type': 'Organization', name: 'Editorial team' },
-    },
+    ...(params.url ? { url: params.url } : {}),
+    review,
     ...(params.priceRange ? { offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', offerCount: 1, price: params.priceRange } } : {}),
+  }
+}
+
+// ─────────────────────────────────────────────
+// ITEMLIST SCHEMA (JSON-LD)
+// For ranked listicles — emits an ordered ItemList of the ranked picks so AI
+// answer surfaces can extract the ranking. Each entry is a ListItem with a
+// position and name; an optional url anchors it to the on-page section.
+// ─────────────────────────────────────────────
+
+interface ItemListSchemaParams {
+  /** Ranked picks in display order. Position is assigned by array order (1-based). */
+  items: Array<{ name: string; url?: string }>
+  name?: string
+}
+
+export function buildItemListSchema(params: ItemListSchemaParams) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    ...(params.name ? { name: params.name } : {}),
+    itemListElement: params.items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      ...(item.url ? { url: item.url } : {}),
+    })),
   }
 }
 

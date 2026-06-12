@@ -151,7 +151,6 @@ export default function HaltersLeadRopesPage() {
           <ReviewCard
             id="flat-nylon-halter"
             badge="Everyday"
-            badgeEmoji="🐴"
             name="Adjustable Flat Nylon Halter"
             subtitle="The inexpensive, durable barn workhorse"
             score={8.2}
@@ -176,7 +175,6 @@ export default function HaltersLeadRopesPage() {
           <ReviewCard
             id="breakaway-halter"
             badge="Safer Turnout"
-            badgeEmoji="🔓"
             name="Leather-Crown Breakaway Halter"
             subtitle="Designed to give way if the horse is caught"
             score={8.7}
@@ -202,7 +200,6 @@ export default function HaltersLeadRopesPage() {
           <ReviewCard
             id="cotton-lead-rope"
             badge="Lead Rope"
-            badgeEmoji="🪢"
             name="Cotton Lead Rope with Bull Snap"
             subtitle="Soft on the hands, strong at the clip"
             score={8.3}

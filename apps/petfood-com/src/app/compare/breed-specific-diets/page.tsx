@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -31,6 +35,28 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Content-aware FAQ derived from the sections below — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Are breed-specific diets worth the extra cost?',
+    answer:
+      'Sometimes. Kibble shape tailored to a breed’s jaw and eating style, and evidence-supported targeting of a genuine breed predisposition, are real features. Much of the rest is size-based formulation repackaged with breed branding, and the same support is often available in a non-breed-labeled diet. A breed-specific diet is not worth a premium for the breed name alone.',
+  },
+  {
+    question: 'What do breed-specific diets actually change?',
+    answer:
+      'The substantive differences are kibble shape and size (for example, for brachycephalic breeds or fast eaters), calorie density matched to the breed’s size category, and condition-targeted additions such as taurine for breeds at DCM risk, joint support for large breeds, or skin-and-coat support. The actual nutrient differences versus a well-matched size-and-life-stage diet are often small.',
+  },
+  {
+    question: 'Is a size-based diet as good as a breed-specific one?',
+    answer:
+      'For most animals, yes. Much of what breed-specific diets deliver is actually size-based — small-breed energy density and kibble size, large- and giant-breed growth controls — which a good size-matched diet also provides. A quality diet matched to size, life stage, and any medical needs serves most animals as well as a breed-labeled one.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -74,7 +100,7 @@ export default function BreedSpecificDietsPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -85,6 +111,7 @@ export default function BreedSpecificDietsPage() {
               { label: 'Breed-Prevalent Conditions', href: '#conditions' },
               { label: 'The Marketing Layer', href: '#marketing' },
               { label: 'When It Is Worth It', href: '#worthit' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -108,8 +135,16 @@ export default function BreedSpecificDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:compare-breed-specific-diets" priority aspect="16:9" variant="wide" caption="Breed-specific diets — where breed-tailored formulation is substance, and where it is marketing." />
+        <StockImage manifestKey="petfood-com:compare-breed-specific-diets" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Breed-specific diets — where breed-tailored formulation is substance, and where it is marketing." />
         <p>Breed-specific diets are formulated and marketed for individual breeds, implying a precision-tailored nutrition. Some of what they offer is genuinely useful — addressing the calorie needs, kibble preferences, and disease predispositions that do vary by breed and size. But much of the differentiation is size-based or cosmetic, and the breed-precise framing often outruns the actual formulation differences. The category is a mix of substance and marketing. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Breed-specific diets are a mix of substance and marketing. Kibble shape tailored to a breed&apos;s jaw and evidence-supported targeting of a genuine breed predisposition are real features; much of the rest is size-based formulation repackaged with breed branding, and the same support is usually available in a non-breed-labeled diet. A breed-specific diet is not worth a premium for the breed name alone.
+          </p>
+        </div>
+
         <h2 id="claim">What They Claim</h2>
         <p>Breed-specific lines claim to tailor nutrition to a breed&apos;s unique needs — energy level, body type, coat, and predisposition to certain conditions. The implication is that a generic diet cannot serve a specific breed as well. Some of this is real; much is a premium-positioning narrative built on features that are really about size category.</p>
         <h2 id="size">Size-Based Reality</h2>
@@ -122,6 +157,52 @@ export default function BreedSpecificDietsPage() {
         <p>Layered over the substantive features is a marketing premium: breed imagery, breed-precise naming, and the implication of bespoke formulation justify a higher price. The actual nutrient differences between a breed-specific diet and a well-matched size-and-life-stage diet are often small. As with all pet food, the regulated back of the bag and the manufacturer&apos;s substantiation matter more than the breed name on the front. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a>.</p>
         <h2 id="worthit">When It Is Worth It</h2>
         <p>A breed-specific diet is worth considering when its features address a real need for your animal — an appropriate kibble shape for a flat-faced breed, evidence-supported targeting of a genuine breed predisposition — and when it is otherwise a complete, well-substantiated diet from a transparent manufacturer. It is not worth a premium for breed branding alone. For most animals, a quality diet matched to size, life stage, and any medical needs serves as well. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            What usually matters more than the breed name
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop size- and life-stage-matched diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most animals, a complete diet matched to size and life stage serves as well as a
+            breed-labeled one, often for less. Compare options with our independent{' '}
+            <Link href="/brands">brand evaluations</Link>, then search the category below — small-,
+            large-, and giant-breed lines cover most of what breed-specific framing offers. Confirm
+            the AAFCO complete-and-balanced statement for the life stage on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/breed%20size%20life%20stage%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search size-matched diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/small%20large%20breed%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

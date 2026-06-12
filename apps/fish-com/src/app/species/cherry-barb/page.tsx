@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Kottelat, M. & Whitten, A.J. Freshwater Fishes of Western Indonesia and Sulawesi. Periplus, 1996.", publisher: "Periplus" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred.', path: '/species/cherry-barb', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Are cherry barbs fin-nippers like other barbs?',
+    answer:
+      'No — cherry barbs are the exception in a family with a reputation for aggression, deserved by tiger barbs, rosy barbs, and odessa barbs. Cherry barbs are peaceful with every species small enough not to eat them: they will not nip fins, harass smaller fish, or bother invertebrates, making them one of the few barbs suitable for tanks with guppies, bettas, neon tetras, and shrimp.',
+    answerText:
+      'No — unlike tiger or rosy barbs, cherry barbs do not nip fins or harass tankmates, and they are safe with guppies, bettas, neon tetras, and shrimp.',
+  },
+  {
+    question: 'How many cherry barbs should be kept together?',
+    answer:
+      'A minimum of eight, with 10–12 producing the group dynamics — males displaying to each other and to females, coordinated movement — that makes them worth keeping. In smaller numbers they are drab and reclusive. A 20-gallon tank is the working minimum for a school.',
+    answerText:
+      'Eight minimum; 10-12 is better, in a 20-gallon tank or larger. In smaller numbers they are drab and reclusive.',
+  },
+  {
+    question: 'Why is my male cherry barb not red?',
+    answer:
+      'Color is conditioning-dependent. Males develop intense red only when well-fed on a varied diet (quality flake plus frozen daphnia and baby brine shrimp 3–4 times weekly), in clean water, with hiding cover and some female presence to trigger coloration. Females are brown with a horizontal dark stripe — if your "faded male" has a stripe, it may simply be a female.',
+    answerText:
+      'Male red color depends on conditioning: varied diet with frozen foods 3-4 times weekly, clean water, and female presence. Females are brown with a stripe.',
+  },
+  {
+    question: 'What male-to-female ratio is best for cherry barbs?',
+    answer:
+      'A 2:1 female-to-male ratio reduces stress on females, since males pursue females during breeding. In a community tank a balanced mix such as 4 males and 6 females works well; a species tank with more females produces the best male coloration and behavior.',
+    answerText:
+      'About two females per male reduces stress on females; a mix like 4 males and 6 females works well in a community tank.',
+  },
+  {
+    question: 'How do cherry barbs breed?',
+    answer:
+      'Readily in the aquarium. Males flare and circle to court females, and eggs are scattered among fine-leaved plants — Java moss is the ideal spawning medium. Parents eat eggs and fry if not separated. Fry start on infusoria, then baby brine shrimp; a small setup with Java moss, a sponge filter, and a pair or trio produces regular fry with minimal management.',
+    answerText:
+      'Eggs are scattered in fine-leaved plants like Java moss; parents eat eggs if not removed. Fry take infusoria, then baby brine shrimp.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function CherryBarbPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Barb', href: '/species/cherry-barb' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,8 +78,8 @@ export default function CherryBarbPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-cherry-barb" aspect="16:9" variant="inline" caption="A cherry barb in a home aquarium." priority />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-cherry-barb" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry barb in a home aquarium." priority />
         <h2>Why Cherry Barbs Are Different From Other Barbs</h2>
         <p>The barb family has an undeserved reputation for aggression — deserved by tiger barbs (notorious fin-nippers), rosy barbs (semi-aggressive), and odessa barbs (males fight). Cherry barbs are the exception. They are peaceful with every species small enough to not eat them. They will not nip fins, harass smaller fish, or bother invertebrates. This makes them one of the few barbs appropriate for tanks with guppies, bettas, neon tetras, and shrimp.</p>
         <p>Cherry barbs are listed as vulnerable on the IUCN Red List — their native Sri Lankan stream habitats are under pressure from deforestation and agricultural runoff. All cherry barbs in the trade are commercially bred, but that wild population status is worth knowing.</p>
@@ -52,6 +97,16 @@ export default function CherryBarbPage() {
 
         <h2>Breeding</h2>
         <p>Cherry barbs breed readily in the aquarium. Males display (flaring, circling) to females and chase them through plants. Eggs are scattered among fine-leaved plants — Java moss is ideal as a spawning medium. Parents do not exhibit significant parental care and will eat eggs and fry if not removed. Fry are tiny — fed infusoria initially, then baby brine shrimp. A small breeding setup with Java moss, a sponge filter, and a pair or trio produces regular fry with minimal management.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cherry Barb — Tank Setup</div>
@@ -65,5 +120,6 @@ export default function CherryBarbPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

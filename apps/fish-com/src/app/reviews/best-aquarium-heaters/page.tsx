@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -42,10 +42,26 @@ const PICKS = [
   { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · Under $30', href: '#aqueon' },
 ]
 
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Aquarium Heaters 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-heaters${p.href}` })),
+})
+
+// FAQ content derived from this page's comparison criteria and sizing guidance only.
+const FAQS = [
+  { question: 'What size heater does my aquarium need?', answer: 'As a rule of thumb: 25–50W for a 5-gallon tank, 50–100W for 10–20 gallons, 100–150W for 30–40 gallons, 200–250W for 50–75 gallons, and 300W or more for 100+ gallons. Buy slightly above the minimum — an undersized heater running continuously at maximum output wears out faster. On larger tanks, two smaller heaters split across opposite ends also provide redundancy if one fails.' },
+  { question: 'Which aquarium heater is the most accurate?', answer: 'Per manufacturer-published specs, the Eheim Jager TruTemp and Cobalt Neo-Therm Pro both hold roughly ±0.5°F of the set point — the tightest tolerance among the heaters compared here. The Jager adds a recalibration dial to compensate for drift over time. Budget heaters like the Aqueon Pro run closer to ±1–1.5°F, which is acceptable for robust community fish but not for temperature-sensitive species such as discus or cardinal tetras.' },
+  { question: 'Do I still need a thermometer if my heater has a built-in thermostat?', answer: 'Yes. Every heater dial is an approximation, and even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer — set the heater, confirm with the thermometer, and adjust as needed. Check the temperature daily for the first week after installation, then weekly.' },
+  { question: 'How were these aquarium heaters ranked?', answer: 'The heaters in this comparison were ranked on manufacturer-published accuracy specs, safety features such as auto shut-off when removed from water, construction (glass versus shatterproof housings), and aggregated long-term keeper reports — not on hands-on lab testing. Affiliate links appear on this page, but rankings are independent of commissions.' },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answer })) })
+
 export default function BestHeatersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Heaters 2026', url: 'https://fish.com/reviews/best-aquarium-heaters' }] }))} />
+      <SchemaScript schema={combineSchemas(...schema, itemList, faqSchema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Heaters 2026', url: 'https://fish.com/reviews/best-aquarium-heaters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editorial Comparison · June 2026</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
@@ -65,6 +81,11 @@ export default function BestHeatersPage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The <strong>Eheim Jager</strong> is our overall pick — the tightest accuracy in this comparison and recalibratable to compensate for drift. The <strong>Cobalt Neo-Therm</strong> is the best slim flat-profile heater, the <strong>Hydor Inline</strong> the pick for canister setups that keep the heater out of the tank, and the shatterproof <strong>Aqueon Pro</strong> the best budget choice. Whichever you pick, always verify with a separate calibrated thermometer.</p>
+            </div>
 
             <CalloutBox variant="tip" title="Right-sizing wattage">
               Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer. Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link> to size for your tank volume and target temperature.
@@ -172,6 +193,9 @@ export default function BestHeatersPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-pro-heater"
             />
+
+            <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

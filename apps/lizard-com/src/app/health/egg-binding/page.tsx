@@ -14,7 +14,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function EggBindingPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Egg Binding in Reptiles (Dystocia)', subtitle: 'Dystocia — the inability to lay eggs normally — is one of the most common life-threatening emergencies in female reptiles. It affects all oviparous (egg-laying) species and can occur even in unmated females producing infertile clutches. It requires veterinary intervention — not waiting, not home remedies.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Egg Binding in Reptiles (Dystocia)', subtitle: 'Dystocia — the inability to lay eggs normally — is one of the most common life-threatening emergencies in female reptiles. It affects all oviparous (egg-laying) species and can occur even in unmated females producing infertile clutches. It requires veterinary intervention — not waiting, not home remedies.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Egg Binding', href: '/health/egg-binding' }]}
       schema={schema}
       relatedLinks={[

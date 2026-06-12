@@ -52,7 +52,7 @@ export async function generateMetadata({
   return buildMetadata({
     siteId: 'vets-co',
     title: `${b.breedName} Pet Insurance in ${s.name} | Vets.co`,
-    description: `Best pet insurance for ${b.breedName}s in ${s.name}. Breed-specific carrier picks, regulatory context, sample premiums.`,
+    description: `Pet insurance options for ${b.breedName}s in ${s.name}. Breed-specific carrier comparisons, regulatory context, sample premiums.`,
     path: `/pet-insurance/breeds/${breed}/${state}`,
     type: 'article',
     // IR F6 gate (dir-007): the 2,912 breed×state cross-product pages stay
@@ -154,7 +154,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
       {recommendedCarrier && (
         <section className="mt-10 border-l-4 border-brand-primary bg-brand-surface p-6 rounded-r-lg">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
-            Top pick for {b.breedName}s in {s.name}
+            Editorial option for {b.breedName}s in {s.name}
           </div>
           <div className="font-display text-2xl font-bold mb-2">
             {recommendedCarrier.name}
@@ -162,12 +162,13 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
           <p className="text-brand-text-mid leading-relaxed mb-4">
             {b.recommendedReason}
           </p>
-          <Link
-            href={`/pet-insurance/${recommendedCarrier.slug}`}
-            className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
+          <a
+            href={`/go/${recommendedCarrier.vendor}/breed-${breed}-${state}`}
+            rel="sponsored noopener"
+            className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors no-underline"
           >
-            See {recommendedCarrier.name} details →
-          </Link>
+            See {recommendedCarrier.name}&apos;s plans →
+          </a>
         </section>
       )}
 
@@ -255,12 +256,13 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
                 <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
                   {c.tagline}
                 </p>
-                <Link
-                  href={`/pet-insurance/${c.slug}`}
+                <a
+                  href={`/go/${c.vendor}/breed-${breed}-${state}`}
+                  rel="sponsored noopener"
                   className="text-sm font-semibold text-brand-primary hover:underline"
                 >
-                  See {c.name} details →
-                </Link>
+                  Visit {c.name} →
+                </a>
               </div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Engeszer, R.E. et al. Timing and Location of Zebrafish (Danio rerio) Spawning. Copeia, 2007.", publisher: "Copeia" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Zebra Danio Care Guide — The Hardy Cycling Fish | Fish.com', description: "Zebra danios are among the hardiest beginner fish — fast, active schoolers that tolerate a wide range. School of 6+, cooler water, secure lid.", path: '/species/zebra-danio', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Zebra Danio Care Guide', description: 'School size, temperament, tank requirements, and breeding for Danio rerio.', url: 'https://fish.com/species/zebra-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Zebra Danio Care Guide', description: 'School size, temperament, tank requirements, and breeding for Danio rerio.', url: 'https://fish.com/species/zebra-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How many zebra danios should be kept together?',
+    answer:
+      'At least six, with eight to ten producing better behavior. Kept singly or in pairs, zebra danios become stressed and frequently turn into relentless fin-nippers — much of the danio "aggression" reported by keepers stems from understocked groups. In a proper school, intra-group chasing replaces harassment of tankmates.',
+    answerText:
+      'At least six; eight to ten is better. Singly or in pairs they become stressed and often fin-nip. In a proper school, chasing stays within the group.',
+  },
+  {
+    question: 'Do zebra danios need a heater?',
+    answer:
+      'Often not. Zebra danios prefer cooler water than most tropical community fish — they thrive between 64 and 77°F and can be kept in an unheated room-temperature tank in many climates, alongside other temperate species such as white cloud mountain minnows. Avoid the high end of the tropical range long-term, as sustained warm temperatures shorten their lifespan.',
+    answerText:
+      'Often not. They thrive at 64-77F and suit unheated room-temperature tanks in many climates. Sustained warm temperatures shorten their lifespan.',
+  },
+  {
+    question: 'What tank size do zebra danios need?',
+    answer:
+      'A 10-gallon tank is the minimum, with a 20-gallon long ideal — these are fast, constantly moving fish that occupy the top and middle of the water column. A tight-fitting lid is non-negotiable: danios are exceptional jumpers that will leap through filter cutouts and uncovered feeding holes.',
+    answerText:
+      '10 gallons minimum, 20 long ideal. A tight-fitting lid is essential — danios are exceptional jumpers.',
+  },
+  {
+    question: 'Are zebra danios fin-nippers?',
+    answer:
+      'Mainly when understocked. In groups of six or more, chasing stays within the school. Their constant motion still makes them unsuitable tankmates for slow, long-finned fish such as bettas or fancy goldfish, whose fins they may nip and whose food they will outcompete.',
+    answerText:
+      'Mainly when understocked. In groups of 6+ chasing stays within the school, but avoid pairing them with slow, long-finned fish like bettas or fancy goldfish.',
+  },
+  {
+    question: 'How do zebra danios breed?',
+    answer:
+      'They are egg-scatterers and among the easiest egg-layers to breed. A well-conditioned group spawns at first light, scattering non-adhesive eggs that fall to the bottom. Because adults eagerly eat their own eggs, breeders use a layer of marbles or mesh on the tank floor. Eggs hatch in two to three days; fry need infusoria or liquid fry food until large enough for baby brine shrimp.',
+    answerText:
+      'Egg-scatterers that spawn at first light. Adults eat their own eggs, so breeders use marbles or mesh on the tank floor. Eggs hatch in 2-3 days.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function ZebraDanioPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Zebra Danio Care Guide', subtitle: "Danio rerio — the zebra danio is one of the toughest, most active fish in the freshwater hobby. Its horizontal blue-and-gold stripes, relentless energy, and tolerance of imperfect water quality have made it both a beginner staple and the most studied fish in biomedical research. A school of these fish turns the upper third of a tank into constant motion.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Zebra Danio', href: '/species/zebra-danio' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "White Cloud Mountain Minnow", href: "/species/white-cloud-mountain-minnow", category: "Species Guide" }, { title: "Cherry Barb", href: "/species/cherry-barb", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,8 +78,8 @@ export default function ZebraDanioPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-zebra-danio" aspect="16:9" variant="inline" caption="A zebra danio in a home aquarium." priority />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-zebra-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A zebra danio in a home aquarium." priority />
 
         <h2>The Toughest Beginner Fish — Within Reason</h2>
         <DropCap>The zebra danio earned its reputation for hardiness honestly. It tolerates a wide temperature band, adapts to most municipal water chemistry, and resists the stress-related disease that kills more delicate species. This is why it became the textbook recommendation for new aquarists and the standard model organism in genetics labs worldwide. But hardiness is frequently mistaken for invincibility. The widespread (and now discouraged) practice of using danios to "fishlessly" cycle a tank subjected these fish to lethal ammonia and nitrite — surviving such abuse is not the same as thriving. A danio kept properly in a cycled, appropriately sized school is a far more attractive and active animal than one that merely survived a cycle.</DropCap>
@@ -53,6 +98,16 @@ export default function ZebraDanioPage() {
 
         <h2>Breeding — The Lab Fish</h2>
         <p>Zebra danios are egg-scatterers and among the easiest egg-layers to breed. A well-conditioned group will spawn readily at first light, scattering non-adhesive eggs that fall to the bottom. Because the adults eagerly eat their own eggs, breeders use a layer of marbles or a mesh on the tank floor so eggs fall out of reach. Eggs hatch in two to three days; fry require infusoria or commercial liquid fry food until large enough for baby brine shrimp. Their transparent embryos and rapid development are exactly why Danio rerio became a cornerstone of developmental biology research.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Zebra Danio — Tank Setup</div>
@@ -65,5 +120,6 @@ export default function ZebraDanioPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

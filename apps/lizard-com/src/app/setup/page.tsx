@@ -5,17 +5,19 @@ import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, Ema
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Enclosure Setup Guide | Lizard.com', description: 'Complete reptile enclosure setup guides — temperatures, UVB lighting, humidity, substrate, and enrichment for all major species.', path: '/setup' })
 
 const GUIDES = [
-  { title: 'UVB Lighting Guide', desc: 'Ferguson Zones, T5 HO selection, distance tables, replacement schedule', href: '/setup/uvb-lighting-guide', badge: '☀️ Essential' },
+  { title: 'UVB Lighting Guide', desc: 'Ferguson Zones, T5 HO selection, distance tables, replacement schedule', href: '/setup/uvb-lighting-guide', badge: 'Essential' },
+  { title: 'Lighting Guide', desc: 'UVB, basking, and photoperiod — how the full lighting picture fits together', href: '/setup/lighting-guide' },
   { title: 'Temperature Setup Guide', desc: 'Gradient creation, thermostats, measuring correctly', href: '/setup/temperature-guide' },
   { title: 'Humidity Guide', desc: 'Species requirements, misting schedules, moist hides', href: '/setup/humidity-guide' },
   { title: 'Substrate Guide', desc: 'Bio-active, loose particle, tile — what works for each species', href: '/setup/substrate-guide' },
   { title: 'Enclosure Size Guide', desc: 'Minimum footprints by species and why bigger is better', href: '/setup/terrarium-size-guide' },
   { title: 'Screen vs PVC vs Glass', desc: 'Enclosure materials compared on humidity and heat retention', href: '/setup/screen-vs-pvc-enclosure' },
+  { title: 'Bioactive Setup Guide', desc: 'Living substrate, plants, and cleanup crew for a self-maintaining vivarium', href: '/setup/bioactive-setup' },
   { title: 'Drainage Layer Guide', desc: 'Building a false bottom for a bioactive vivarium', href: '/setup/drainage-layer-bioactive' },
   { title: 'Cleanup Crew Guide', desc: 'Isopods and springtails for a self-cleaning bioactive setup', href: '/setup/cleanup-crew-isopods-springtails' },
-  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra compared and ranked', href: '/reviews/best-reptile-terrariums', badge: '🏆 Compared' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird, Zoo Med compared with published calibration data', href: '/reviews/best-thermometers-hygrometers', badge: '🏆 Compared' },
-  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: '🏆 Compared' },
+  { title: 'Best Reptile Terrariums 2026', desc: 'Zen Habitats, Animal Plastics, Exo Terra compared and ranked', href: '/reviews/best-reptile-terrariums', badge: 'Compared' },
+  { title: 'Best Thermometers 2026', desc: 'Govee, Inkbird, Zoo Med compared with published calibration data', href: '/reviews/best-thermometers-hygrometers', badge: 'Compared' },
+  { title: 'Best UVB Bulbs 2026', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Compared' },
 ]
 
 export default function LizardSetupHubPage() {

@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2026 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
 
 const REVIEWS = [
-  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: '☀️ Most Important' },
-  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: '🏠 Setup' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird tested for accuracy — calibration data included', href: '/reviews/best-thermometers-hygrometers' },
-  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
-  { title: 'Best Reptile Thermostats 2025', desc: 'Pulse, dimming, and on-off thermostats ranked — Herpstat, Inkbird', href: '/reviews/best-thermostats' },
+  { title: 'Best UVB Bulbs 2026', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Most Important' },
+  { title: 'Best Reptile Terrariums 2026', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: 'Setup' },
+  { title: 'Best Thermometers 2026', desc: 'Govee, Inkbird compared on accuracy — published calibration data', href: '/reviews/best-thermometers-hygrometers' },
+  { title: 'Best Reptile Substrates 2026', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
+  { title: 'Best Reptile Thermostats 2026', desc: 'Pulse, dimming, and on-off thermostats ranked — Herpstat, Inkbird', href: '/reviews/best-thermostats' },
 ]
 
 export default function LizardReviewsPage() {
@@ -40,7 +40,7 @@ export default function LizardReviewsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment Reviews</span></div>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Reptile Equipment Reviews</h1>
-        <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Tested by experienced keepers with real data — not marketing copy.</p>
+        <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Ranked on published specs and documented husbandry needs — not marketing copy.</p>
       </div>
       <div className="relative z-10 px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="lizard-com:category-reviews" aspect="16:9" variant="wide" priority />

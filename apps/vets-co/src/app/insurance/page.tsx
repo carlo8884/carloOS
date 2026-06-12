@@ -17,6 +17,7 @@ const GUIDES = [
   { category: 'The Basics', items: [{ title: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works', badge: 'Start Here' }, { title: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { title: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' }] },
   { category: 'Choosing & Timing', items: [{ title: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' }, { title: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { title: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }] },
   { category: 'Risk & Cost', items: [{ title: 'Breed-Specific Insurance Risk', href: '/insurance/breed-specific-risk' }, { title: 'Wellness Plans vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }] },
+  { category: 'Common Questions', items: [{ title: 'Pet Insurance Questions, Answered', href: '/insurance/questions', badge: 'Q&A Hub' }, { title: 'Is Pet Insurance Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { title: 'How Much Does Pet Insurance Cost?', href: '/insurance/questions/how-much-does-pet-insurance-cost' }] },
 ]
 
 const insuranceGuides = GUIDES.flatMap((s) => s.items)
@@ -69,7 +70,7 @@ export default function VetsInsuranceHubPage() {
             For quick definitions of any term you hit along the way, see the <Link href="/glossary" className="text-brand-primary font-medium hover:underline">pet health &amp; insurance glossary</Link>.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed mt-4">
-            Ready to compare carriers? See our editorial comparison of the 11 major insurers: <Link href="/reviews/best-pet-insurance" className="text-brand-primary font-semibold hover:underline">Best Pet Insurance 2025 — How the 11 Major Carriers Compare</Link>.
+            Ready to compare carriers? See our editorial comparison of the 11 major insurers: <Link href="/reviews/best-pet-insurance" className="text-brand-primary font-semibold hover:underline">Best Pet Insurance 2026 — How the 11 Major Carriers Compare</Link>. To narrow the field by the coverage features you care about, start with the <Link href="/tools/insurance-finder" className="text-brand-primary font-semibold hover:underline">Pet Insurance Coverage Finder</Link> — it filters carriers to options that may fit your priorities (no quotes, no rankings). Still weighing whether to buy at all? The <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary font-semibold hover:underline">&ldquo;is pet insurance worth it?&rdquo; calculator</Link> turns a quote into a breakeven cost level and frames insurance honestly as catastrophic-cost protection.
           </p>
         </div>
       </div>
@@ -79,7 +80,7 @@ export default function VetsInsuranceHubPage() {
         <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
           <Link href="/reviews/best-pet-insurance" className="block bg-brand-dark rounded-xl p-6 no-underline hover:opacity-90 transition-opacity">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Carrier Comparison</div>
-            <div className="font-display font-bold text-white text-base leading-snug mb-2">Best Pet Insurance 2025 — 11 Carriers Compared</div>
+            <div className="font-display font-bold text-white text-base leading-snug mb-2">Best Pet Insurance 2026 — 11 Carriers Compared</div>
             <p className="text-sm text-white/60 m-0 leading-relaxed">Trupanion, Healthy Paws, Embrace, and 8 more — ranked on reimbursement model, claims speed, and policy terms by the Vets.co editorial team.</p>
           </Link>
           <Link href="/pet-insurance" className="block bg-brand-primary-pale border border-brand-primary rounded-xl p-6 no-underline hover:border-brand-primary-dark transition-colors">
