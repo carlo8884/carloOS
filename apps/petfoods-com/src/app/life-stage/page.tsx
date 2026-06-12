@@ -195,6 +195,7 @@ export default function LifeStageHubPage() {
               { label: 'TL;DR', href: '#tldr' },
               { label: 'AAFCO Life Stages — The Whole Picture', href: '#aafco-picture' },
               ...STAGES.map((s) => ({ label: s.title, href: `#${s.id}` })),
+              { label: 'How to Match a Life Stage to a Brand', href: '#how-to-match' },
               { label: 'FAQ', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
@@ -314,7 +315,7 @@ export default function LifeStageHubPage() {
           ))}
         </div>
 
-        <h2>How to Match a Life Stage to a Brand</h2>
+        <h2 id="how-to-match">How to Match a Life Stage to a Brand</h2>
         <p>
           The catalog approach is the same regardless of life stage: read the AAFCO statement on
           the bag (Step 1 — what life stage is this formula substantiated for?), read the
