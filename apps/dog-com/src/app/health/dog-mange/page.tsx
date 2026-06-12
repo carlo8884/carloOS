@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Mange in Dogs — Sarcoptic vs Demodectic, Treatment | Dog.com', description: 'Two types of mange in dogs: sarcoptic (scabies — highly contagious to humans) and demodectic (not contagious). Different causes, presentations, and treatments.', path: '/health/dog-mange', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Mange in Dogs', description: 'Sarcoptic and demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'Can humans catch mange from dogs?', answer: 'It depends on the type. Sarcoptic mange (scabies) is transmissible to humans — dog-origin mites tend to be self-limiting in human skin but cause significant itching and rash while they last, so anyone in contact with a diagnosed dog should monitor for symptoms and consult a physician if a rash develops. Demodectic mange is not contagious to humans or to other animals — Demodex canis is a normal inhabitant of dog skin that only causes disease when immune suppression lets it proliferate.' },

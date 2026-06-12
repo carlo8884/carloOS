@@ -22,30 +22,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Vitamins in Pet Food — Fat- and Water-Soluble | PetFood.com',
-  description:
-    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in dog and cat diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
-  url: 'https://petfood.com/nutrition/vitamins-in-pet-food',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-31T00:00:00Z',
-  modifiedAt: '2026-05-31T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Vitamins in Pet Food — Fat- and Water-Soluble | PetFood.com',
-  description:
-    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in dog and cat diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
-  url: 'https://petfood.com/nutrition/vitamins-in-pet-food',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-05-31',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -68,6 +44,32 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Vitamins in Pet Food — Fat- and Water-Soluble | PetFood.com',
+  description:
+    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in dog and cat diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
+  url: 'https://petfood.com/nutrition/vitamins-in-pet-food',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-05-31T00:00:00Z',
+  modifiedAt: '2026-05-31T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Vitamins in Pet Food — Fat- and Water-Soluble | PetFood.com',
+  description:
+    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in dog and cat diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
+  url: 'https://petfood.com/nutrition/vitamins-in-pet-food',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-05-31',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function VitaminsInPetFoodPage() {
   return (

@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog — Timing by Breed | Dog.com', description: 'The science on spay/neuter timing has changed. Large breeds benefit from waiting until 12-24 months. Reference guide to timing, benefits, risks.', path: '/health/spay-neuter-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog', description: 'Updated spay/neuter timing guidance by breed size — what the research shows.', url: 'https://dog.com/health/spay-neuter-guide', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog', description: 'Updated spay/neuter timing guidance by breed size — what the research shows.', url: 'https://dog.com/health/spay-neuter-guide', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const medSchema = buildMedicalWebPageSchema({ name: 'When to Spay or Neuter Your Dog', description: 'Spay/neuter timing by breed and size.', url: 'https://dog.com/health/spay-neuter-guide', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, medSchema)
 

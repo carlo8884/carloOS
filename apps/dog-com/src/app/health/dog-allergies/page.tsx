@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Atopic, Food, Contact | Dog.com', description: 'Three allergy types in dogs: atopic dermatitis, food allergy, contact allergy. Diagnostic ladder, treatment tiers, and when to refer to a dermatologist.', path: '/health/dog-allergies', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Atopic, food, and contact allergies in dogs — differential diagnosis, treatment ladder, and specialist referral.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Atopic, food, and contact allergies in dogs — differential diagnosis, treatment ladder, and specialist referral.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' ,
+  citation: SOURCES,
+})
 const medSchema = buildMedicalWebPageSchema({ name: 'Dog Allergies Guide', description: 'Atopic, food, and contact allergies in dogs: presentation, work-up, and management.', url: 'https://dog.com/health/dog-allergies', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
 const combined = combineSchemas(schema, medSchema)
 

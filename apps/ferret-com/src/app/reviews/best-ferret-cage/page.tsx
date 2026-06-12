@@ -13,6 +13,12 @@ export const metadata: Metadata = buildMetadata({
 
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-cage'
 
+const SOURCES = [
+  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
+  { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
+  { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
+  { label: 'Manufacturer product specifications (bar spacing, dimensions, pan depth)', publisher: 'Ferret Nation, Prevue Pet Products, Kaytee' },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
@@ -23,6 +29,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -110,12 +118,6 @@ const QUICK_PICKS = [
   { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
 
-const SOURCES = [
-  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
-  { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
-  { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
-  { label: 'Manufacturer product specifications (bar spacing, dimensions, pan depth)', publisher: 'Ferret Nation, Prevue Pet Products, Kaytee' },
-]
 
 export default function BestFerretCagePage() {
   return (

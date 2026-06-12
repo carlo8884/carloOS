@@ -11,6 +11,30 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret nutrition and endocrine disease",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "AVMA — policy on raw or undercooked animal-source protein in pet food",
+    url: "https://www.avma.org",
+    publisher: "American Veterinary Medical Association",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease",
+    publisher: "Elsevier",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Diet Basics',
@@ -21,6 +45,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const med = buildMedicalWebPageSchema({
@@ -68,30 +94,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, med, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret nutrition and endocrine disease",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "AVMA — policy on raw or undercooked animal-source protein in pet food",
-    url: "https://www.avma.org",
-    publisher: "American Veterinary Medical Association",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease",
-    publisher: "Elsevier",
-  },
-]
 
 export default function FerretDietBasicsPage() {
   return (

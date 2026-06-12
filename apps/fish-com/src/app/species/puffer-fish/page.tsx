@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Wager, R. & Unmack, P. Fishes of the Lake Eyre Catchment. Queensland Department of Primary Industries, 2000.", publisher: "QDPI" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared.', path: '/species/puffer-fish', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

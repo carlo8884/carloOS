@@ -29,6 +29,26 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Why Ferrets Bite and Nip',
@@ -40,6 +60,8 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 
@@ -69,26 +91,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
-    url: "https://avsab.org",
-    publisher: "AVSAB",
-  },
-]
 
 export default function FerretBitingNippingPage() {
   return (

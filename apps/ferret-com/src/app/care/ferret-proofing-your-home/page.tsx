@@ -11,6 +11,21 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret-Proofing Your Home',
@@ -21,6 +36,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const FAQS = [
@@ -54,21 +71,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-]
 
 export default function FerretProofingPage() {
   return (

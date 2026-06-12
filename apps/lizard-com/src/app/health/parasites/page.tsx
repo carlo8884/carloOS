@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Parasites — Mites, Pinworms & Coccidia | Lizard.com', description: 'Reptile parasites: mites (external), pinworms and coccidia (internal). Identification, treatment, and why quarantine prevents introduction.', path: '/health/parasites', type: 'article' })
-const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+}), buildMedicalWebPageSchema({ name: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function ParasitesPage() {
   return (
     <ArticleLayout siteId="lizard-com"

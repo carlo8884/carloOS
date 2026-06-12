@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Liver Disease in Dogs — ALT, ALP, Portosystemic Shunts | Dog.com', description: 'Liver disease in dogs ranges from reversible elevation of liver enzymes to cirrhosis and portosystemic shunts.', path: '/health/dog-liver-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Liver Disease in Dogs', description: 'ALT, ALP, portosystemic shunts, and dietary management for canine liver disease.', url: 'https://dog.com/health/dog-liver-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Liver Disease in Dogs', description: 'ALT, ALP, portosystemic shunts, and dietary management for canine liver disease.', url: 'https://dog.com/health/dog-liver-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Liver Disease in Dogs', description: 'Canine liver disease — enzyme interpretation, portosystemic shunts, and management.', url: 'https://dog.com/health/dog-liver-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'My dog has elevated ALT on bloodwork — how worried should I be?', answer: 'ALT is a liver-specific enzyme released when liver cells are damaged, but the degree matters. A mild elevation (1–3× the upper normal limit) can come from muscle damage, certain medications, or transient hepatocellular stress — not all ALT elevations indicate significant liver disease. A marked elevation (10× or more) indicates significant hepatocyte damage that needs investigation. The trend over time matters more than any single value, so your veterinarian will typically recheck and decide whether further workup is needed.' },

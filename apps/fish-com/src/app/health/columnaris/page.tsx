@@ -11,7 +11,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Columnaris in Fish — Saddle Patch, Mouth Rot | Fish.com', description: 'Columnaris (Flavobacterium columnare) causes cotton-like patches, saddle patches, and mouth rot in freshwater fish. Often mistaken for fungus', path: '/health/columnaris', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fish', description: 'Signs, misdiagnosis risks, and antibiotic treatment for Flavobacterium columnare (columnaris) in aquarium fish.', url: 'https://fish.com/health/columnaris', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fish', description: 'Signs, misdiagnosis risks, and antibiotic treatment for Flavobacterium columnare (columnaris) in aquarium fish.', url: 'https://fish.com/health/columnaris', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true ,
+  citation: SOURCES,
+})
 export default function ColumnarisguidePage() {
   return (
     <ArticleLayout siteId="fish-com"

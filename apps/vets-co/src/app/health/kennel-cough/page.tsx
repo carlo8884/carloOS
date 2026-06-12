@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kennel-cough', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-infectious-respiratory-disease', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of kennel cough.', url: 'https://vets.co/health/kennel-cough', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "What does kennel cough sound like?", answer: "The hallmark of kennel cough is a sudden, dry, hacking cough that many owners describe as a goose-like honk, often followed by a gag or retch that can bring up white foam — which owners sometimes mistake for vomiting. The cough is frequently triggered by excitement, exercise, or pressure on the throat (such as a collar pulling). The dog is usually otherwise bright and eating well. This distinctive honking cough in a recently socialized dog is highly suggestive of kennel cough." },
   { question: "Does kennel cough need antibiotics?", answer: "Often not. Many cases are caused by viruses or are mild and self-limiting, resolving on their own in one to three weeks with rest, much like a human cold. Antibiotics are reserved for cases where a bacterial component is suspected or the dog is more seriously affected, and the decision and any prescription are made by your veterinarian. Cough suppressants are sometimes used for comfort. The most important measures are rest, isolation from other dogs, and monitoring for signs that the illness is worsening." },
   { question: "When is kennel cough serious?", answer: "Most cases are mild, but kennel cough can be serious in puppies, senior dogs, and those with weakened immune systems or underlying heart or lung disease, where it can progress to pneumonia. Warning signs that warrant prompt veterinary care include lethargy, loss of appetite, fever, difficulty breathing, or a productive or worsening cough. Any dog that seems genuinely unwell rather than just coughing should be examined, as should any cough that persists beyond a couple of weeks or steadily worsens." },
-]
-const SOURCES = [
-  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kennel-cough', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-infectious-respiratory-disease', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
 export default function KennelCoughPage() {
   return (

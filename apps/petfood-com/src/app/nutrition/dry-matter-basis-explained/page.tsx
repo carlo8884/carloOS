@@ -22,30 +22,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Dry-Matter Basis — Comparing Wet and Dry Pet Food | PetFood.com',
-  description:
-    'Why guaranteed-analysis percentages mislead across formats, how to convert as-fed to dry-matter, and worked examples comparing canned and kibble protein.',
-  url: 'https://petfood.com/nutrition/dry-matter-basis-explained',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-31T00:00:00Z',
-  modifiedAt: '2026-05-31T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Dry-Matter Basis — Comparing Wet and Dry Pet Food | PetFood.com',
-  description:
-    'Why guaranteed-analysis percentages mislead across formats, how to convert as-fed to dry-matter, and worked examples comparing canned and kibble protein.',
-  url: 'https://petfood.com/nutrition/dry-matter-basis-explained',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-05-31',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -63,6 +39,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Dry-Matter Basis — Comparing Wet and Dry Pet Food | PetFood.com',
+  description:
+    'Why guaranteed-analysis percentages mislead across formats, how to convert as-fed to dry-matter, and worked examples comparing canned and kibble protein.',
+  url: 'https://petfood.com/nutrition/dry-matter-basis-explained',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-05-31T00:00:00Z',
+  modifiedAt: '2026-05-31T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Dry-Matter Basis — Comparing Wet and Dry Pet Food | PetFood.com',
+  description:
+    'Why guaranteed-analysis percentages mislead across formats, how to convert as-fed to dry-matter, and worked examples comparing canned and kibble protein.',
+  url: 'https://petfood.com/nutrition/dry-matter-basis-explained',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-05-31',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function DryMatterBasisExplainedPage() {
   return (

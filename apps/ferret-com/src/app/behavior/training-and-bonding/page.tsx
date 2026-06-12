@@ -29,6 +29,31 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and training chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret behaviour and welfare issues",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — behaviour, training, and bite-inhibition owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret behaviour and welfare assessment",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Training and Bonding',
@@ -39,6 +64,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -78,31 +105,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and training chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret behaviour and welfare issues",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — behaviour, training, and bite-inhibition owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret behaviour and welfare assessment",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-  {
-    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
-    url: "https://avsab.org",
-    publisher: "AVSAB",
-  },
-]
 
 export default function FerretTrainingBondingPage() {
   return (

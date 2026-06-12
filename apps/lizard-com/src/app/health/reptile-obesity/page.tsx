@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Obesity — Causes, Signs, Management | Lizard.com", description: "Obesity is one of the most common health problems in captive reptiles. How to recognize it, why it shortens lifespan, and how to safely manage weight.", path: "/health/reptile-obesity", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Obesity in Reptiles", description: "Recognizing, preventing, and managing obesity in captive reptiles through diet, feeding frequency, and enclosure design.", url: "https://lizard.com/health/reptile-obesity", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Obesity in Reptiles", description: "Recognizing, preventing, and managing obesity in captive reptiles through diet, feeding frequency, and enclosure design.", url: "https://lizard.com/health/reptile-obesity", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthReptileObesityPage() {
   return (

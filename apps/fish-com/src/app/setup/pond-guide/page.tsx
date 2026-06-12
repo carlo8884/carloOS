@@ -3,17 +3,6 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDis
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
-  { name: 'Determine size based on planned fish', text: 'Before digging: decide how many and what size fish you want at maturity. Koi need 250+ gallons per fish. Goldfish need 100+ gallons per fish. A 4-koi pond needs 1,000+ gallons minimum. Build larger than you think you need — you will want more fish.' },
-  { name: 'Choose location', text: 'Partial shade (3-5 hours daily) reduces algae growth while allowing enough light for plants. Avoid full sun in hot climates — water temperature above 85°F stresses fish. Avoid areas under trees — falling leaves decompose and cause ammonia spikes.' },
-  { name: 'Excavate with varying depth zones', text: 'Dig with a shelf zone (12-18 inches for plants) and a deeper central zone (3+ feet for fish safety and temperature stability). Deeper ponds stay cooler in summer and freeze less in winter. Include a gravity-fed drain at the deepest point if possible.' },
-  { name: 'Install EPDM rubber liner', text: '45 mil EPDM rubber liner is the industry standard — flexible, durable (20+ year lifespan), and fish-safe. Calculate liner size: pond length + 2× depth + 2 feet overlap, by width + 2× depth + 2 feet overlap. Lay underlayment first to protect liner from rocks.' },
-  { name: 'Install filtration system', text: 'Install a bottom drain (if included) plumbed to a settlement chamber or vortex, then to a biofilter, then pump back to pond. Size the pump for 1× pond volume per hour through filtration minimum. Install UV sterilizer after the biofilter for clear water.' },
-  { name: 'Cycle before adding fish', text: 'Fill pond and run filtration for 4-6 weeks before adding fish. Add beneficial bacteria (Fritz Fishless Cure, Microbe-Lift Nite-Out) and dose ammonia to cycle the biofilter. Test daily — when ammonia and nitrite both reach 0 after dosing, the cycle is complete.' },
-]})
-const combined = combineSchemas(schema, howTo)
-
 const SOURCES = [
   {
     label: "Koi (Cyprinus rubrofuscus) — Species Profile",
@@ -41,6 +30,19 @@ const SOURCES = [
     publisher: "Purdue University Extension",
   },
 ]
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
+const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
+  { name: 'Determine size based on planned fish', text: 'Before digging: decide how many and what size fish you want at maturity. Koi need 250+ gallons per fish. Goldfish need 100+ gallons per fish. A 4-koi pond needs 1,000+ gallons minimum. Build larger than you think you need — you will want more fish.' },
+  { name: 'Choose location', text: 'Partial shade (3-5 hours daily) reduces algae growth while allowing enough light for plants. Avoid full sun in hot climates — water temperature above 85°F stresses fish. Avoid areas under trees — falling leaves decompose and cause ammonia spikes.' },
+  { name: 'Excavate with varying depth zones', text: 'Dig with a shelf zone (12-18 inches for plants) and a deeper central zone (3+ feet for fish safety and temperature stability). Deeper ponds stay cooler in summer and freeze less in winter. Include a gravity-fed drain at the deepest point if possible.' },
+  { name: 'Install EPDM rubber liner', text: '45 mil EPDM rubber liner is the industry standard — flexible, durable (20+ year lifespan), and fish-safe. Calculate liner size: pond length + 2× depth + 2 feet overlap, by width + 2× depth + 2 feet overlap. Lay underlayment first to protect liner from rocks.' },
+  { name: 'Install filtration system', text: 'Install a bottom drain (if included) plumbed to a settlement chamber or vortex, then to a biofilter, then pump back to pond. Size the pump for 1× pond volume per hour through filtration minimum. Install UV sterilizer after the biofilter for clear water.' },
+  { name: 'Cycle before adding fish', text: 'Fill pond and run filtration for 4-6 weeks before adding fish. Add beneficial bacteria (Fritz Fishless Cure, Microbe-Lift Nite-Out) and dose ammonia to cycle the biofilter. Test daily — when ammonia and nitrite both reach 0 after dosing, the cycle is complete.' },
+]})
+const combined = combineSchemas(schema, howTo)
+
 
 export default function PondGuidePage() {
   return (

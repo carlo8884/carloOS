@@ -3,19 +3,21 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/global-pain-council-guidelines/', publisher: 'WSAVA' },
+  { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs/osteoarthritis-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
+  { label: 'AVMA: Osteoarthritis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/osteoarthritis-pets', publisher: 'AVMA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal management of canine osteoarthritis.', url: 'https://vets.co/health/arthritis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "What are the earliest signs of arthritis in dogs?", answer: "Arthritis develops gradually, so the earliest signs are subtle: slowness to rise after rest, stiffness that eases after the dog warms up, reluctance to jump onto the couch or into the car, hesitation on stairs, slowing on walks, and a quieter, less playful demeanor. Dogs rarely vocalize joint pain, so owners often misread these changes as simple aging. Because arthritis is progressive and irreversible, recognizing these early signs and starting management sooner preserves mobility longer." },
   { question: "Can I give my dog human pain relievers like ibuprofen?", answer: "No. Human anti-inflammatories such as ibuprofen, naproxen, and acetaminophen are toxic to dogs and can cause severe stomach ulcers, kidney failure, or death even at small doses. Dogs need veterinary anti-inflammatories formulated and dosed specifically for them, prescribed and monitored by your veterinarian. Never give any human pain medication to a dog without explicit veterinary direction — it is one of the most common causes of accidental poisoning." },
   { question: "Does weight really affect arthritis that much?", answer: "Weight is the single most powerful factor an owner controls. Every extra pound increases the mechanical load on already-damaged joints and, just as importantly, fat tissue produces inflammatory signals that worsen joint disease. Studies show overweight dogs that lose weight have measurably less lameness and pain. For many arthritic dogs, achieving a lean body condition reduces pain as much as adding a medication — and it is the foundation that everything else builds on." },
-]
-const SOURCES = [
-  { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/global-pain-council-guidelines/', publisher: 'WSAVA' },
-  { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs/osteoarthritis-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
-  { label: 'AVMA: Osteoarthritis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/osteoarthritis-pets', publisher: 'AVMA' },
 ]
 export default function ArthritisDogsPage() {
   return (

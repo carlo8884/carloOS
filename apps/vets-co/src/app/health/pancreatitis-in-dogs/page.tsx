@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pancreatitis in Dogs — Causes, Signs, Recovery | Vets.co", description: "Pancreatitis in dogs is a painful inflammation of the pancreas, often triggered by fatty food. Learn the warning signs, diagnosis, and recovery diet.", path: '/health/pancreatitis-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/exocrine-pancreatic-disease/pancreatitis-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Pancreatitis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/pancreatitis', publisher: 'AVMA' },
+  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Causes, signs, diagnosis, and management of pancreatitis in dogs.', url: 'https://vets.co/health/pancreatitis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Can a fatty meal really cause pancreatitis?", answer: "Yes — dietary indiscretion, especially a high-fat meal such as table scraps, bacon grease, or holiday leftovers, is one of the most commonly recognized triggers of acute pancreatitis in dogs. The fat stimulates the pancreas to release digestive enzymes, which in a susceptible dog can begin digesting the pancreas itself. This is why veterinarians advise against feeding fatty human food, particularly around holidays, and why breeds and individuals with a history of pancreatitis need strict lifelong low-fat diets." },
   { question: "How is pancreatitis diagnosed?", answer: "There is no single perfect test. Diagnosis combines the clinical picture (vomiting, abdominal pain, loss of appetite), a specific pancreatic blood test such as canine pancreatic lipase (cPLI/Spec cPL), and abdominal ultrasound, which can show an inflamed pancreas and surrounding changes. General bloodwork helps assess severity and rule out other causes. Because no test is definitive on its own, veterinarians weigh several findings together, and mild cases can be harder to confirm than severe ones." },
   { question: "Will my dog get pancreatitis again?", answer: "Some dogs have a single episode and recover fully, while others develop recurrent or chronic pancreatitis. Dogs that have had pancreatitis are at higher risk of future episodes, so prevention becomes a priority: a consistent low-fat diet, no fatty table scraps, weight control, and management of contributing conditions such as high blood triglycerides, diabetes, or Cushing disease. Lifelong dietary discipline is the most effective way to reduce recurrence." },
-]
-const SOURCES = [
-  { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/exocrine-pancreatic-disease/pancreatitis-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Pancreatitis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/pancreatitis', publisher: 'AVMA' },
-  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
 export default function PancreatitisPage() {
   return (

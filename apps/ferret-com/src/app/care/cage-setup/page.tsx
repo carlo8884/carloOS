@@ -11,6 +11,25 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Cage Setup',
@@ -21,6 +40,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const FAQS = [
@@ -54,25 +75,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries",
-    publisher: "Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and environmental management",
-    publisher: "Elsevier",
-  },
-]
 
 export default function FerretCageSetupPage() {
   return (

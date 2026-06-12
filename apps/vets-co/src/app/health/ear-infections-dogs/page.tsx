@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/ear-disorders/diseases-of-the-outer-ear/otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Ear Infections in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/ear-infections-dogs', publisher: 'AVMA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why does my dog keep getting ear infections?", answer: "Recurrent ear infections are almost always a symptom of an underlying problem rather than a standalone disease — most commonly allergies (environmental or food), which inflame the ear canal and create the warm, moist environment bacteria and yeast thrive in. Other contributors include the ear's anatomy in floppy-eared and hairy-eared breeds, moisture from swimming, excess wax, foreign material like grass awns, and underlying hormonal disease. Treating the infection without addressing the underlying cause leads to the frustrating cycle of repeated infections." },
   { question: "Can I use leftover ear medication or home remedies?", answer: "No. Using leftover or over-the-counter products can be harmful: if the eardrum is ruptured (which the infection itself can cause), certain cleaners and medications can damage hearing and balance. The type of organism — bacteria, yeast, or both — and the state of the eardrum determine which medication is safe and effective, and only an exam with otoscopy and often cytology can establish that. Vinegar and peroxide home remedies can worsen inflammation. Always have a veterinarian examine the ear before treating." },
   { question: "How can I prevent ear infections?", answer: "Prevention depends on the underlying cause. For allergic dogs, controlling the allergy is the key, often with veterinary guidance. General measures help too: drying the ears thoroughly after swimming or baths, routine cleaning with a veterinarian-recommended ear cleaner for dogs prone to wax buildup, and keeping up with any prescribed allergy management. Avoid over-cleaning healthy ears, which can cause irritation. If infections keep recurring despite these steps, a workup for allergies or hormonal disease is warranted." },
-]
-const SOURCES = [
-  { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
-  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/ear-disorders/diseases-of-the-outer-ear/otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Ear Infections in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/ear-infections-dogs', publisher: 'AVMA' },
 ]
 export default function EarInfectionsDogsPage() {
   return (

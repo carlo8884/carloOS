@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Parasites — Mites, Pinworms, Crypto | Lizard.com', description: 'External parasites (mites) and internal parasites (pinworms, coccidia, Cryptosporidium) in reptiles. Fecal testing, treatment.', path: '/health/parasites-guide', type: 'article' })
-const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+}), buildMedicalWebPageSchema({ name: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 
 export default function ParasiteGuidePage() {
   return (

@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Allen, G.R. & Cross, N.J. Rainbowfishes of Australia and Papua New Guinea. TFH Publications, 1982.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide — Blue-Orange Split | Fish.com', description: 'Boesemani rainbowfish are the most popular rainbowfish — vivid blue-purple front, orange-red rear. Locale-pure breeding matters.', path: '/species/boesemani-rainbowfish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

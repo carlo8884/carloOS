@@ -3,15 +3,17 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, Related
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Leptospirosis in Dogs — Zoonotic, Vaccine Recommended | Vets.co', description: 'Leptospirosis is a zoonotic bacterial disease from wildlife urine in water. Causes acute kidney and liver failure.', path: '/health/leptospirosis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
-const combined = combineSchemas(schema, med)
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Leptospirosis in Dogs', url: 'https://www.merckvetmanual.com/generalized-conditions/leptospirosis/leptospirosis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Leptospirosis', url: 'https://www.avma.org/resources-tools/animal-health-and-welfare/animal-health/leptospirosis', publisher: 'AVMA' },
   { label: 'CDC: Leptospirosis', url: 'https://www.cdc.gov/leptospirosis/index.html', publisher: 'CDC' },
   { label: 'WSAVA: Vaccination Guidelines (Leptospirosis)', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
 ]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+  citation: SOURCES,
+})
+const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const combined = combineSchemas(schema, med)
 export default function LeptospirosisPage() {
   return (
     <>

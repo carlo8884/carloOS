@@ -11,6 +11,17 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Nail Trimming',
@@ -21,6 +32,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const FAQS = [
@@ -54,17 +67,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-]
 
 export default function NailTrimmingPage() {
   return (

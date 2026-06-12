@@ -3,14 +3,16 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, Related
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
-const combined = combineSchemas(schema, med)
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Urinary Tract Infections in Dogs', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/urinary-tract-infections-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'ISCAID: Antimicrobial Use Guidelines for UTI in Dogs and Cats', url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15575', publisher: 'Journal of Veterinary Internal Medicine' },
   { label: 'AVMA: Urinary Tract Infections', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/urinary-tract-problems-dogs', publisher: 'AVMA' },
 ]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+  citation: SOURCES,
+})
+const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const combined = combineSchemas(schema, med)
 export default function UTIPage() {
   return (
     <>

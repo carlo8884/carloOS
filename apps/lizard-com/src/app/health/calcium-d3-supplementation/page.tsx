@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Calcium & D3 Supplementation for Reptiles | Lizard.com", description: "Supplementing reptiles with calcium, vitamin D3, and multivitamins: calcium with vs without D3, the UVB link, and avoiding over-supplementation.", path: "/health/calcium-d3-supplementation", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3 Supplementation for Reptiles", description: "How to use calcium, vitamin D3, and multivitamin supplements for reptiles, and how supplementation interacts with UVB.", url: "https://lizard.com/health/calcium-d3-supplementation", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3 Supplementation for Reptiles", description: "How to use calcium, vitamin D3, and multivitamin supplements for reptiles, and how supplementation interacts with UVB.", url: "https://lizard.com/health/calcium-d3-supplementation", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthCalciumD3SupplementationPage() {
   return (

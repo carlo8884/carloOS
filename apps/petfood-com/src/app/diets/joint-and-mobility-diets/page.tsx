@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Joint and Mobility Diets for Dogs and Cats | PetFood.com',
-  description:
-    'How mobility diets support osteoarthritis — the strong evidence for weight control and omega-3s, the weaker evidence for glucosamine, and what to expect.',
-  url: 'https://petfood.com/diets/joint-and-mobility-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Joint and Mobility Diets for Dogs and Cats | PetFood.com',
+  description:
+    'How mobility diets support osteoarthritis — the strong evidence for weight control and omega-3s, the weaker evidence for glucosamine, and what to expect.',
+  url: 'https://petfood.com/diets/joint-and-mobility-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function JointAndMobilityDietsPage() {
   return (

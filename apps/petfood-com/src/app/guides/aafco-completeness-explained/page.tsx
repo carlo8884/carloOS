@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'AAFCO Completeness Explained — Profiles vs Feeding Trials',
-  description:
-    'Reference guide to AAFCO nutritional adequacy statements, the formulation vs feeding-trial distinction, life-stage categories, and the regulatory limits of AAFCO oversight.',
-  url: 'https://petfood.com/guides/aafco-completeness-explained',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -52,6 +40,20 @@ const SOURCES = [
       publisher: "National Research Council, National Academies Press, 2006",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'AAFCO Completeness Explained — Profiles vs Feeding Trials',
+  description:
+    'Reference guide to AAFCO nutritional adequacy statements, the formulation vs feeding-trial distinction, life-stage categories, and the regulatory limits of AAFCO oversight.',
+  url: 'https://petfood.com/guides/aafco-completeness-explained',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function AafcoCompletenessExplainedPage() {
   return (

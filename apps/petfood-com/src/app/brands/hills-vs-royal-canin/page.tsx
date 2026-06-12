@@ -48,21 +48,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: "Hill's vs Royal Canin — Veterinary Channel Comparison",
-    description:
-      "Independent comparison of Hill's Pet Nutrition and Royal Canin — the two largest brands in the U.S. veterinary therapeutic channel — across corporate ownership, manufacturing transparency, recall history, AAFCO statement types, and prescription/therapeutic diet portfolios.",
-    url: 'https://petfood.com/brands/hills-vs-royal-canin',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-05-29T00:00:00Z',
-    modifiedAt: '2026-05-29T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
@@ -93,6 +78,23 @@ const SOURCES = [
       label: "FDA Food Safety Modernization Act (FSMA) and the Pet Food Safety Working Group recommendations following the 2007 melamine contamination episode.",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: "Hill's vs Royal Canin — Veterinary Channel Comparison",
+    description:
+      "Independent comparison of Hill's Pet Nutrition and Royal Canin — the two largest brands in the U.S. veterinary therapeutic channel — across corporate ownership, manufacturing transparency, recall history, AAFCO statement types, and prescription/therapeutic diet portfolios.",
+    url: 'https://petfood.com/brands/hills-vs-royal-canin',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function HillsVsRoyalCaninPage() {
   return (

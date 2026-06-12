@@ -3,16 +3,6 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDis
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', description: 'Step-by-step quarantine tank setup for new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', totalTime: 'P1D', steps: [
-  { name: 'Choose a dedicated container', text: 'A 10-20 gallon bare glass tank is ideal — sponge filter for biological filtration, a heater, a thermometer, and a single hide. No substrate. No decorations beyond one place to hide. Bare bottom tanks are easier to clean, easier to monitor for feces and abnormal waste, and allow full visibility of the fish.' },
-  { name: 'Run a seeded sponge filter', text: 'The most important element: a sponge filter seeded from your established display tank. Run a second sponge filter in your main tank at all times — when you need quarantine, move it to the QT. This eliminates the "QT tank needs to cycle" problem. Alternatively, seed with established tank water and biological media.' },
-  { name: 'Match water parameters', text: 'Match temperature, pH, and hardness as closely as possible to the fish\'s requirements and ideally to your display tank. Stress from parameter mismatch compounds immune suppression from shipping stress — minimize every stressor during quarantine.' },
-  { name: 'Observe for a minimum of 4 weeks', text: 'The 4-6 week minimum catches the vast majority of diseases with incubation periods shorter than display onset. Ich, velvet, columnaris, and most bacterial infections manifest within this window. Observe daily: eating normally, fins held erect, no spots or lesions, no flashing.' },
-  { name: 'Consider prophylactic treatment', text: 'Many experienced fishkeepers treat all new fish prophylactically for external parasites (praziquantel for flukes) and internal parasites (metronidazole + fenbendazole) during quarantine. This is particularly important for wild-caught fish. Discuss with your fish veterinarian or knowledgeable aquarium professional.' },
-]})
-const combined = combineSchemas(schema, howTo)
-
 const SOURCES = [
   {
     label: "Ichthyophthirius multifiliis (Ich): Biology, Pathology, and Control",
@@ -40,6 +30,18 @@ const SOURCES = [
     publisher: "University of Florida IFAS Extension",
   },
 ]
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
+const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', description: 'Step-by-step quarantine tank setup for new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', totalTime: 'P1D', steps: [
+  { name: 'Choose a dedicated container', text: 'A 10-20 gallon bare glass tank is ideal — sponge filter for biological filtration, a heater, a thermometer, and a single hide. No substrate. No decorations beyond one place to hide. Bare bottom tanks are easier to clean, easier to monitor for feces and abnormal waste, and allow full visibility of the fish.' },
+  { name: 'Run a seeded sponge filter', text: 'The most important element: a sponge filter seeded from your established display tank. Run a second sponge filter in your main tank at all times — when you need quarantine, move it to the QT. This eliminates the "QT tank needs to cycle" problem. Alternatively, seed with established tank water and biological media.' },
+  { name: 'Match water parameters', text: 'Match temperature, pH, and hardness as closely as possible to the fish\'s requirements and ideally to your display tank. Stress from parameter mismatch compounds immune suppression from shipping stress — minimize every stressor during quarantine.' },
+  { name: 'Observe for a minimum of 4 weeks', text: 'The 4-6 week minimum catches the vast majority of diseases with incubation periods shorter than display onset. Ich, velvet, columnaris, and most bacterial infections manifest within this window. Observe daily: eating normally, fins held erect, no spots or lesions, no flashing.' },
+  { name: 'Consider prophylactic treatment', text: 'Many experienced fishkeepers treat all new fish prophylactically for external parasites (praziquantel for flukes) and internal parasites (metronidazole + fenbendazole) during quarantine. This is particularly important for wild-caught fish. Discuss with your fish veterinarian or knowledgeable aquarium professional.' },
+]})
+const combined = combineSchemas(schema, howTo)
+
 
 export default function QuarantineGuidePage() {
   return (

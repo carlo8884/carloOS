@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Retained Eye Caps in Snakes & Geckos | Lizard.com", description: "Retained eye caps (retained spectacles) are a common shedding problem in snakes and geckos. Causes, why never to peel them, and safe removal.", path: "/health/retained-eye-caps", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Retained Eye Caps (Retained Spectacles)", description: "Causes, recognition, safe management, and prevention of retained eye caps (spectacles) in snakes and geckos.", url: "https://lizard.com/health/retained-eye-caps", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Retained Eye Caps (Retained Spectacles)", description: "Causes, recognition, safe management, and prevention of retained eye caps (spectacles) in snakes and geckos.", url: "https://lizard.com/health/retained-eye-caps", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthRetainedEyeCapsPage() {
   return (

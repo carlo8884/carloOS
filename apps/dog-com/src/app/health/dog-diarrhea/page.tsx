@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care.', path: '/health/dog-diarrhea', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What can I give my dog for diarrhea at home?', answer: 'For an otherwise healthy adult dog with mild acute diarrhea (no blood, eating, alert, no vomiting, no known toxin or foreign body), home care for 24–48 hours is reasonable: a bland diet of boiled white chicken breast and plain white rice (50/50 by volume, small portions every 4–6 hours), a veterinary probiotic such as FortiFlora, and constant access to fresh water. Do not give human anti-diarrheal medications without veterinary guidance. If the diarrhea has not improved after 48 hours of home care, see your veterinarian.' },

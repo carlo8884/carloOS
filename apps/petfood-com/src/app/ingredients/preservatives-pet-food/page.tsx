@@ -49,21 +49,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Preservatives in Pet Food — What the Label Actually Means',
-    description:
-      'Reference page on preservatives in commercial pet food — the synthetic antioxidants (BHA, BHT, ethoxyquin), the natural alternatives (mixed tocopherols, rosemary extract), the underlying fat-oxidation toxicology, and how to read "naturally preserved" claims honestly.',
-    url: 'https://petfood.com/ingredients/preservatives-pet-food',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-05-29T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "21 CFR §573 — Food Additives Permitted in Feed; Pet Food Ingredient Approvals",
@@ -97,6 +82,23 @@ const SOURCES = [
       label: "Lin C-Y, Carpenter DE, et al. Pet food oxidative stability literature; rendering- industry technical references on preservative system efficacy and shelf-life modeling.",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Preservatives in Pet Food — What the Label Actually Means',
+    description:
+      'Reference page on preservatives in commercial pet food — the synthetic antioxidants (BHA, BHT, ethoxyquin), the natural alternatives (mixed tocopherols, rosemary extract), the underlying fat-oxidation toxicology, and how to read "naturally preserved" claims honestly.',
+    url: 'https://petfood.com/ingredients/preservatives-pet-food',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function PreservativesPetFoodPage() {
   return (

@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles — Hypovitaminosis A | Lizard.com', description: 'Vitamin A deficiency (hypovitaminosis A) causes swollen eyes, retained shed, and respiratory symptoms in reptiles. Treatment: retinol supplementation', path: '/health/vitamin-a-deficiency', type: 'article' })
-const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+}), buildMedicalWebPageSchema({ name: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function VitAPage() {
   return (
     <ArticleLayout siteId="lizard-com"

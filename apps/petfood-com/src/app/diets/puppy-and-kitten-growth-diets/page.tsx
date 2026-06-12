@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Puppy and Kitten Growth Diet Requirements | PetFood.com',
-  description:
-    'Why growth diets differ from adult food — higher protein, fat, calcium, and DHA, the large-breed calcium ceiling, and the risks of feeding adult food to young animals.',
-  url: 'https://petfood.com/diets/puppy-and-kitten-growth-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -49,6 +37,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Puppy and Kitten Growth Diet Requirements | PetFood.com',
+  description:
+    'Why growth diets differ from adult food — higher protein, fat, calcium, and DHA, the large-breed calcium ceiling, and the risks of feeding adult food to young animals.',
+  url: 'https://petfood.com/diets/puppy-and-kitten-growth-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function PuppyAndKittenGrowthDietsPage() {
   return (

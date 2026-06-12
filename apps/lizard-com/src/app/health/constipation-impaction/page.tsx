@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Constipation & Impaction — Prevention | Lizard.com", description: "Reptile constipation and impaction differ in cause and danger. How to tell them apart, the role of substrate, heat, and hydration, and when it is an emergency.", path: "/health/constipation-impaction", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Constipation and Impaction in Reptiles", description: "Distinguishing reptile constipation from true impaction, causes, prevention via husbandry, and emergency signs.", url: "https://lizard.com/health/constipation-impaction", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Constipation and Impaction in Reptiles", description: "Distinguishing reptile constipation from true impaction, causes, prevention via husbandry, and emergency signs.", url: "https://lizard.com/health/constipation-impaction", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthConstipationImpactionPage() {
   return (

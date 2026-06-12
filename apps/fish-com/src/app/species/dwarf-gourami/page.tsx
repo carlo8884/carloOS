@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative.', path: '/species/dwarf-gourami', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

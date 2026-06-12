@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'The Pet Obesity Epidemic — Causes and Costs | PetFood.com',
-  description:
-    'How widespread pet obesity is, why it shortens lifespan and worsens disease, the feeding and behavioral causes, and the evidence that lean pets live longer.',
-  url: 'https://petfood.com/guides/pet-obesity-epidemic',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -49,6 +37,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'The Pet Obesity Epidemic — Causes and Costs | PetFood.com',
+  description:
+    'How widespread pet obesity is, why it shortens lifespan and worsens disease, the feeding and behavioral causes, and the evidence that lean pets live longer.',
+  url: 'https://petfood.com/guides/pet-obesity-epidemic',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function PetObesityEpidemicPage() {
   return (

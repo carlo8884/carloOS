@@ -19,19 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Pet Food Fillers — Is the Term Even Real? | PetFood.com',
-  description:
-    'Why filler is a marketing word with no regulatory meaning, how fiber and carbohydrate ingredients are functional, and how to evaluate ingredients on their role.',
-  url: 'https://petfood.com/myths/fillers-myth',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-  speakable: true,
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -49,6 +36,21 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Pet Food Fillers — Is the Term Even Real? | PetFood.com',
+  description:
+    'Why filler is a marketing word with no regulatory meaning, how fiber and carbohydrate ingredients are functional, and how to evaluate ingredients on their role.',
+  url: 'https://petfood.com/myths/fillers-myth',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+  speakable: true,
+
+  citation: SOURCES,
+})
+
 
 export default function FillersMythPage() {
   return (

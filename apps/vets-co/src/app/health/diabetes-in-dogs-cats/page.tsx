@@ -3,7 +3,16 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Diabetes Mellitus in Dogs & Cats — Signs, Management | Vets.co", description: "Diabetes mellitus in pets causes excessive thirst, urination, and weight loss. Insulin therapy, diet, and monitoring explained for dog and cat owners.", path: '/health/diabetes-in-dogs-cats', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'Rand JS et al. ISFM and AAFP Consensus Guidelines: Management of Feline Diabetes. J Feline Med Surg. 2013;15(10):905-913.', publisher: 'J Feline Med Surg' },
+  { label: 'Behrend E et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
+  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes', publisher: 'AVMA' },
+  { label: 'Gilor C et al. Continuous Glucose Monitoring in Cats with Diabetes. J Vet Intern Med. 2016;30(4):1207-1217.', publisher: 'JVIM' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Diabetes Mellitus in Dogs and Cats', description: 'Signs, diagnosis, insulin therapy, and monitoring of diabetes mellitus in pets.', url: 'https://vets.co/health/diabetes-in-dogs-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
@@ -12,13 +21,6 @@ const FAQS = [
   { question: "Why is my diabetic dog suddenly blind?", answer: "Cataracts are the most common complication of canine diabetes — the majority of diabetic dogs develop cataracts within a year of diagnosis, and onset can be rapid (over days to weeks). High blood glucose drives sorbitol accumulation in the lens, drawing in water and clouding the lens. Cataract surgery can restore vision in well-controlled diabetic dogs. Cats rarely develop diabetic cataracts. Sudden vision change in any diabetic pet warrants prompt veterinary evaluation." },
 ]
 
-const SOURCES = [
-  { label: 'Rand JS et al. ISFM and AAFP Consensus Guidelines: Management of Feline Diabetes. J Feline Med Surg. 2013;15(10):905-913.', publisher: 'J Feline Med Surg' },
-  { label: 'Behrend E et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
-  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes', publisher: 'AVMA' },
-  { label: 'Gilor C et al. Continuous Glucose Monitoring in Cats with Diabetes. J Vet Intern Med. 2016;30(4):1207-1217.', publisher: 'JVIM' },
-]
 
 export default function DiabetesPage() {
   return (

@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Hyperthyroidism Diet for Cats — Iodine Restriction | PetFood.com',
-  description:
-    'How iodine-restricted diets manage feline hyperthyroidism, how the diet works, its strict requirements, and where it fits among the treatment options.',
-  url: 'https://petfood.com/diets/hyperthyroid-cat-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Hyperthyroidism Diet for Cats — Iodine Restriction | PetFood.com',
+  description:
+    'How iodine-restricted diets manage feline hyperthyroidism, how the diet works, its strict requirements, and where it fits among the treatment options.',
+  url: 'https://petfood.com/diets/hyperthyroid-cat-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function HyperthyroidCatDietsPage() {
   return (

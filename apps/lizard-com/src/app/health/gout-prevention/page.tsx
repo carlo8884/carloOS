@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gout in Reptiles — Causes and Prevention | Lizard.com", description: "Gout in reptiles comes from uric acid buildup, usually chronic dehydration or excess protein. Signs, why it is often irreversible, and prevention.", path: "/health/gout-prevention", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gout in Reptiles", description: "Causes, signs, and prevention of articular and visceral gout in reptiles from dehydration and dietary factors.", url: "https://lizard.com/health/gout-prevention", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gout in Reptiles", description: "Causes, signs, and prevention of articular and visceral gout in reptiles from dehydration and dietary factors.", url: "https://lizard.com/health/gout-prevention", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthGoutPreventionPage() {
   return (

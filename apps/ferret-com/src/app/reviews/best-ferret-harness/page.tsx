@@ -13,6 +13,12 @@ export const metadata: Metadata = buildMetadata({
 
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-harness'
 
+const SOURCES = [
+  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
+  { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
+  { label: 'Small-mammal harness and restraint safety', publisher: 'Exotic-mammal veterinary husbandry references' },
+  { label: 'Manufacturer sizing charts and fit instructions', publisher: 'Ferret harness manufacturers' },
+]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Best Ferret Harness: Escape Prevention and Fit',
@@ -23,6 +29,8 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -106,12 +114,6 @@ const QUICK_PICKS = [
   { label: 'Entry / Bundle', name: 'Mesh H + Leash Set', subtitle: 'Breathable · Leash included', href: '#mesh-h' },
 ]
 
-const SOURCES = [
-  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
-  { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
-  { label: 'Small-mammal harness and restraint safety', publisher: 'Exotic-mammal veterinary husbandry references' },
-  { label: 'Manufacturer sizing charts and fit instructions', publisher: 'Ferret harness manufacturers' },
-]
 
 export default function BestFerretHarnessPage() {
   return (

@@ -31,6 +31,22 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — handling, husbandry, and outdoor-exposure chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — harness use and outdoor-safety owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Leash and Harness Training for Ferrets',
@@ -41,6 +57,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -70,22 +88,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — handling, husbandry, and outdoor-exposure chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — harness use and outdoor-safety owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-]
 
 export default function LeashAndHarnessTrainingPage() {
   return (

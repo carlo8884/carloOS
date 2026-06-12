@@ -11,7 +11,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Medicating Aquarium Fish — Hospital Tanks & Safe Dosing | Fish.com', description: "How to medicate aquarium fish safely: when to use a hospital tank, accurate dosing, protecting your filter, drug classes, and why medication is a last resort.", path: '/health/medicating-aquarium-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Medicating Aquarium Fish', description: 'Hospital tanks, accurate dosing, filter protection, and safe use of fish medications.', url: 'https://fish.com/health/medicating-aquarium-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Medicating Aquarium Fish', description: 'Hospital tanks, accurate dosing, filter protection, and safe use of fish medications.', url: 'https://fish.com/health/medicating-aquarium-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true ,
+  citation: SOURCES,
+})
 export default function MedicatingFishPage() {
   return (
     <ArticleLayout siteId="fish-com"

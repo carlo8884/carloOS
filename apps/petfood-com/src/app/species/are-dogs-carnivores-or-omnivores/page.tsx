@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Are Dogs Carnivores or Omnivores? — The Evidence | PetFood.com',
-  description:
-    'What domestication and starch-digestion genetics tell us about the canine diet, why dogs are facultative omnivores, and what this means for feeding.',
-  url: 'https://petfood.com/species/are-dogs-carnivores-or-omnivores',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Are Dogs Carnivores or Omnivores? — The Evidence | PetFood.com',
+  description:
+    'What domestication and starch-digestion genetics tell us about the canine diet, why dogs are facultative omnivores, and what this means for feeding.',
+  url: 'https://petfood.com/species/are-dogs-carnivores-or-omnivores',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function AreDogsCarnivoresOrOmnivoresPage() {
   return (

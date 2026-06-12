@@ -22,6 +22,23 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Prescription vs OTC Pet Diets — What Differs | PetFood.com',
@@ -32,6 +49,8 @@ const schema = buildArticleSchema({
   authorName: 'PetFood.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 // Content-aware FAQ derived from the sections below. Rx policy §1.5: this page
@@ -62,23 +81,6 @@ const FAQ = [
 
 const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
-const SOURCES = [
-    {
-      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
-      url: "https://www.aafco.org/resources/publications/",
-      publisher: "Association of American Feed Control Officials, 2025",
-    },
-    {
-      label: "Nutrient Requirements of Dogs and Cats",
-      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
-      publisher: "National Research Council, National Academies Press, 2006",
-    },
-    {
-      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
-      url: "https://wsava.org/committees/global-nutrition-committee/",
-      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
-    },
-]
 
 export default function PrescriptionVsOtcDietsPage() {
   return (

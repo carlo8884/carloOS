@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'What Obligate Carnivore Means for Cat Nutrition | PetFood.com',
-  description:
-    'What obligate carnivore means in practice for feline diets — the metabolic adaptations, the vegan-cat problem, and the dietary requirements that follow.',
-  url: 'https://petfood.com/species/cats-are-obligate-carnivores',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'What Obligate Carnivore Means for Cat Nutrition | PetFood.com',
+  description:
+    'What obligate carnivore means in practice for feline diets — the metabolic adaptations, the vegan-cat problem, and the dietary requirements that follow.',
+  url: 'https://petfood.com/species/cats-are-obligate-carnivores',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function CatsAreObligateCarnivoresPage() {
   return (

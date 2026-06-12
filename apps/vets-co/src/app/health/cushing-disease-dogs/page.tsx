@@ -3,10 +3,6 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-05' })
-const combined = combineSchemas(schema, med)
-
 const SOURCES = [
   { label: 'Behrend EN et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
   { label: 'Feldman EC, Nelson RW. Canine hyperadrenocorticism. In: Canine and Feline Endocrinology and Reproduction. 3rd ed. Saunders, 2004.', publisher: 'Saunders' },
@@ -14,6 +10,12 @@ const SOURCES = [
   { label: 'AVMA: Cushing\'s Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cushings-disease', publisher: 'AVMA' },
   { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', publisher: 'Vet Clin North Am' },
 ]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' ,
+  citation: SOURCES,
+})
+const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-05' })
+const combined = combineSchemas(schema, med)
+
 
 const FAQS = [
   { question: "How is Cushing's disease different from diabetes?", answer: "Both cause excessive thirst and urination (PU/PD), but Cushing's disease is driven by excess cortisol from an adrenal or pituitary tumor, while diabetes is a failure of glucose regulation from insulin deficiency or resistance. In Cushing's, blood glucose is usually normal or mildly elevated (cortisol is a glucose-raising hormone), but it is not the primary finding. The two conditions can co-occur: Cushing's is a recognized cause of insulin resistance that can trigger or worsen diabetes. Distinguishing and treating both simultaneously is a clinical challenge that requires specialist input." },

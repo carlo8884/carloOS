@@ -19,19 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Pet Food Marketing Terms — What They Really Mean | PetFood.com',
-  description:
-    'What natural, holistic, human-grade, premium, and gourmet actually mean on a pet food label — which are defined by AAFCO and which are unregulated.',
-  url: 'https://petfood.com/myths/marketing-terms-decoded',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-  speakable: true,
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +41,21 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Pet Food Marketing Terms — What They Really Mean | PetFood.com',
+  description:
+    'What natural, holistic, human-grade, premium, and gourmet actually mean on a pet food label — which are defined by AAFCO and which are unregulated.',
+  url: 'https://petfood.com/myths/marketing-terms-decoded',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+  speakable: true,
+
+  citation: SOURCES,
+})
+
 
 export default function MarketingTermsDecodedPage() {
   return (

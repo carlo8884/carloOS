@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs — Monthly Preventives | Dog.com', description: 'Heartworm disease is preventable and expensive to treat. Monthly preventives, annual testing, and what to do if your dog tests positive.', path: '/health/heartworm-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Heartworm Prevention for Dogs',

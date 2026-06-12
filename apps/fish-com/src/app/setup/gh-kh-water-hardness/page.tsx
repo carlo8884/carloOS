@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Alkalinity and Hardness in Fish Culture Ponds — Southern Regional Aquaculture Center, SRAC-462", url: "https://www.srac.tamu.edu/index.cfm/event/getFactSheet/whichfactsheet/137/", publisher: "SRAC" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'GH and KH Explained — Aquarium Water Hardness Guide | Fish.com', description: "What GH and KH mean, why they differ, and how they affect pH stability and fish health. How to raise, lower, and match hardness to your species.", path: '/setup/gh-kh-water-hardness', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'GH and KH Water Hardness Guide', description: 'General hardness, carbonate hardness, pH buffering, and matching hardness to fish.', url: 'https://fish.com/setup/gh-kh-water-hardness', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'GH and KH Water Hardness Guide', description: 'General hardness, carbonate hardness, pH buffering, and matching hardness to fish.', url: 'https://fish.com/setup/gh-kh-water-hardness', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function GhKhPage() {
   return (
     <ArticleLayout siteId="fish-com"

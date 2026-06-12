@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.', path: '/setup/water-chemistry-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function WaterChemistryGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"

@@ -11,19 +11,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'ferret-com',
-  title: 'Ferret Bedding and Litter Types',
-  description:
-    'Material-by-material comparison of ferret bedding and litter options, with the respiratory and foreign-body hazards behind the recommendations.',
-  url: 'https://ferret.com/care/bedding-and-litter-types',
-  imageUrl: '',
-  authorName: 'Ferret.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-const combined = combineSchemas(schema)
-
 const SOURCES = [
   {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters",
@@ -39,6 +26,21 @@ const SOURCES = [
     publisher: "AFA",
   },
 ]
+const schema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Bedding and Litter Types',
+  description:
+    'Material-by-material comparison of ferret bedding and litter options, with the respiratory and foreign-body hazards behind the recommendations.',
+  url: 'https://ferret.com/care/bedding-and-litter-types',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+const combined = combineSchemas(schema)
+
 
 export default function BeddingAndLitterTypesPage() {
   return (

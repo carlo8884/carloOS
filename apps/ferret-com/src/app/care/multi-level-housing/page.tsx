@@ -11,19 +11,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'ferret-com',
-  title: 'Multi-Level Ferret Housing',
-  description:
-    'Planning a vertical, multi-level ferret habitat: level spacing, ramp safety, zoning, and how to expand a cage without growing its footprint.',
-  url: 'https://ferret.com/care/multi-level-housing',
-  imageUrl: '',
-  authorName: 'Ferret.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-const combined = combineSchemas(schema)
-
 const SOURCES = [
   {
     label: "American Ferret Association (AFA) — cage sizing, level spacing, and out-of-cage time owner guidance",
@@ -39,6 +26,21 @@ const SOURCES = [
     publisher: "Elsevier",
   },
 ]
+const schema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Multi-Level Ferret Housing',
+  description:
+    'Planning a vertical, multi-level ferret habitat: level spacing, ramp safety, zoning, and how to expand a cage without growing its footprint.',
+  url: 'https://ferret.com/care/multi-level-housing',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+const combined = combineSchemas(schema)
+
 
 export default function MultiLevelHousingPage() {
   return (

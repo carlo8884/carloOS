@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Pet Treats and the 10 Percent Rule | PetFood.com',
-  description:
-    'Why treats should stay under 10 percent of daily calories, how treat calories sabotage diets, training-treat strategies, and safe and unsafe human foods.',
-  url: 'https://petfood.com/feeding/treats-and-the-ten-percent-rule',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Pet Treats and the 10 Percent Rule | PetFood.com',
+  description:
+    'Why treats should stay under 10 percent of daily calories, how treat calories sabotage diets, training-treat strategies, and safe and unsafe human foods.',
+  url: 'https://petfood.com/feeding/treats-and-the-ten-percent-rule',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function TreatsAndTheTenPercentRulePage() {
   return (

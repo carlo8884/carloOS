@@ -22,6 +22,28 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
 const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Raw vs Cooked Pet Diets — The Evidence | PetFood.com',
@@ -32,6 +54,8 @@ const schema = buildArticleSchema({
   authorName: 'PetFood.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 // Content-aware FAQ derived from the sections below — calibrated, sourced-tone
@@ -61,28 +85,6 @@ const FAQ = [
 
 const pageSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQ }))
 
-const SOURCES = [
-    {
-      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
-      url: "https://www.aafco.org/resources/publications/",
-      publisher: "Association of American Feed Control Officials, 2025",
-    },
-    {
-      label: "Nutrient Requirements of Dogs and Cats",
-      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
-      publisher: "National Research Council, National Academies Press, 2006",
-    },
-    {
-      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
-      url: "https://wsava.org/committees/global-nutrition-committee/",
-      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
-    },
-    {
-      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
-      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
-      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
-    },
-]
 
 export default function RawVsCookedDietsPage() {
   return (

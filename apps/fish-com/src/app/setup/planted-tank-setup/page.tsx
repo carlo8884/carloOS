@@ -3,17 +3,6 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDis
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com', description: 'How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.', path: '/setup/planted-tank-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const howTo = buildHowToSchema({ name: 'How to Set Up a Planted Aquarium', description: 'Step-by-step guide to setting up a planted freshwater aquarium.', url: 'https://fish.com/setup/planted-tank-setup', totalTime: 'P7D', steps: [
-  { name: 'Choose your approach: low-tech or high-tech', text: 'Low-tech: no CO2 injection, easy plants (Java fern, Anubias, crypts, hornwort). High-tech: pressurized CO2, high light, advanced fertilization, fast-growing stem plants and carpeting species. Start low-tech — it is easier to maintain and still beautiful.' },
-  { name: 'Select substrate', text: 'For low-tech: plain gravel or sand works for most easy plants. For high-tech or root-feeding plants: a nutrient-rich planted substrate (ADA Aqua Soil, Fluval Stratum, CaribSea Eco-Complete) provides iron and minerals roots need.' },
-  { name: 'Install filtration and lighting', text: 'Filter for 5-10x turnover (lower for heavily planted — plants need CO2 retention). Light intensity matched to plant choice: 15-30 PAR at substrate for low-light plants, 50-80+ PAR for carpeting plants and stem plants. Photoperiod: 8 hours maximum to start.' },
-  { name: 'Plant and fill', text: 'Plant foreground, midground, and background species before filling. Use tweezers for small plants. Fill slowly to avoid disturbing planting. Leave hardscape (rocks, driftwood) as your structure.' },
-  { name: 'Begin fertilization', text: 'Start fertilizing from day one for a high-tech setup. For low-tech, wait until plants show nutrient deficiency signs (yellowing, holes in leaves). Use Easy Green (Aquarium Co-Op) for low-tech; Estimative Index dosing or EI for high-tech.' },
-  { name: 'Cycle and add fish', text: 'Planted tanks cycle faster than bare tanks due to plant nutrient uptake. Test water — when ammonia and nitrite both read 0, the cycle is established. Add fish gradually over several weeks.' },
-]})
-const combined = combineSchemas(schema, howTo)
-
 const SOURCES = [
   {
     label: "Photosynthetically Active Radiation and Aquatic Plant Growth",
@@ -41,6 +30,19 @@ const SOURCES = [
     publisher: "University of Florida IFAS Extension",
   },
 ]
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
+const howTo = buildHowToSchema({ name: 'How to Set Up a Planted Aquarium', description: 'Step-by-step guide to setting up a planted freshwater aquarium.', url: 'https://fish.com/setup/planted-tank-setup', totalTime: 'P7D', steps: [
+  { name: 'Choose your approach: low-tech or high-tech', text: 'Low-tech: no CO2 injection, easy plants (Java fern, Anubias, crypts, hornwort). High-tech: pressurized CO2, high light, advanced fertilization, fast-growing stem plants and carpeting species. Start low-tech — it is easier to maintain and still beautiful.' },
+  { name: 'Select substrate', text: 'For low-tech: plain gravel or sand works for most easy plants. For high-tech or root-feeding plants: a nutrient-rich planted substrate (ADA Aqua Soil, Fluval Stratum, CaribSea Eco-Complete) provides iron and minerals roots need.' },
+  { name: 'Install filtration and lighting', text: 'Filter for 5-10x turnover (lower for heavily planted — plants need CO2 retention). Light intensity matched to plant choice: 15-30 PAR at substrate for low-light plants, 50-80+ PAR for carpeting plants and stem plants. Photoperiod: 8 hours maximum to start.' },
+  { name: 'Plant and fill', text: 'Plant foreground, midground, and background species before filling. Use tweezers for small plants. Fill slowly to avoid disturbing planting. Leave hardscape (rocks, driftwood) as your structure.' },
+  { name: 'Begin fertilization', text: 'Start fertilizing from day one for a high-tech setup. For low-tech, wait until plants show nutrient deficiency signs (yellowing, holes in leaves). Use Easy Green (Aquarium Co-Op) for low-tech; Estimative Index dosing or EI for high-tech.' },
+  { name: 'Cycle and add fish', text: 'Planted tanks cycle faster than bare tanks due to plant nutrient uptake. Test water — when ammonia and nitrite both read 0, the cycle is established. Add fish gradually over several weeks.' },
+]})
+const combined = combineSchemas(schema, howTo)
+
 
 export default function PlantedTankSetupPage() {
   return (

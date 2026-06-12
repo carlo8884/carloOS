@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Feeding Frequency and Schedules for Dogs and Cats | PetFood.com',
-  description:
-    'How often to feed dogs and cats by life stage, meal feeding vs free choice, the bloat consideration in dogs, and timing around medication and activity.',
-  url: 'https://petfood.com/feeding/feeding-frequency-and-schedules',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Feeding Frequency and Schedules for Dogs and Cats | PetFood.com',
+  description:
+    'How often to feed dogs and cats by life stage, meal feeding vs free choice, the bloat consideration in dogs, and timing around medication and activity.',
+  url: 'https://petfood.com/feeding/feeding-frequency-and-schedules',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function FeedingFrequencyAndSchedulesPage() {
   return (

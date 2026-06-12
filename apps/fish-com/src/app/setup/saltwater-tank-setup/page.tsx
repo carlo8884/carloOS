@@ -3,17 +3,6 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDis
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
-  { name: 'Choose FOWLR or reef', text: 'FOWLR (Fish Only With Live Rock) is significantly easier and cheaper. Reef tanks add corals and invertebrates requiring precise water chemistry and stronger lighting. Start with FOWLR unless you have marine experience.' },
-  { name: 'Mix saltwater to correct salinity', text: 'Use RO/DI water (reverse osmosis deionized — not tap water). Mix with marine salt mix (Instant Ocean, Red Sea). Target specific gravity 1.025 (or salinity 35 ppt) for most fish. Use a refractometer for accurate measurement.' },
-  { name: 'Add live rock', text: '1-1.5 lbs live rock per gallon of water volume. Live rock provides biological filtration surface and seeds the nitrogen cycle. Aquacultured rock is preferred over wild-caught for ecological reasons.' },
-  { name: 'Run the nitrogen cycle', text: 'Saltwater tanks take longer to cycle than freshwater — 4-8 weeks typical. Seed with bottled bacteria (Fritz Turbo Start, Dr. Tim\'s One & Only Marine). Test daily for ammonia, nitrite, and nitrate.' },
-  { name: 'Add a protein skimmer', text: 'A protein skimmer removes dissolved organic compounds before they break down into ammonia. Essential for most saltwater tanks. Size for 1.5-2x your tank volume.' },
-  { name: 'Add fish slowly', text: 'Saltwater fish are more sensitive to water quality changes than freshwater fish. Add one or two fish at a time, wait 2-4 weeks between additions. Quarantine all new fish for 4-6 weeks.' },
-]})
-const combined = combineSchemas(schema, howTo)
-
 const SOURCES = [
   {
     label: "Cryptocaryon irritans (Marine Ich) — Biology and Treatment",
@@ -41,6 +30,19 @@ const SOURCES = [
     publisher: "Aquaculture (peer-reviewed)",
   },
 ]
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+})
+const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
+  { name: 'Choose FOWLR or reef', text: 'FOWLR (Fish Only With Live Rock) is significantly easier and cheaper. Reef tanks add corals and invertebrates requiring precise water chemistry and stronger lighting. Start with FOWLR unless you have marine experience.' },
+  { name: 'Mix saltwater to correct salinity', text: 'Use RO/DI water (reverse osmosis deionized — not tap water). Mix with marine salt mix (Instant Ocean, Red Sea). Target specific gravity 1.025 (or salinity 35 ppt) for most fish. Use a refractometer for accurate measurement.' },
+  { name: 'Add live rock', text: '1-1.5 lbs live rock per gallon of water volume. Live rock provides biological filtration surface and seeds the nitrogen cycle. Aquacultured rock is preferred over wild-caught for ecological reasons.' },
+  { name: 'Run the nitrogen cycle', text: 'Saltwater tanks take longer to cycle than freshwater — 4-8 weeks typical. Seed with bottled bacteria (Fritz Turbo Start, Dr. Tim\'s One & Only Marine). Test daily for ammonia, nitrite, and nitrate.' },
+  { name: 'Add a protein skimmer', text: 'A protein skimmer removes dissolved organic compounds before they break down into ammonia. Essential for most saltwater tanks. Size for 1.5-2x your tank volume.' },
+  { name: 'Add fish slowly', text: 'Saltwater fish are more sensitive to water quality changes than freshwater fish. Add one or two fish at a time, wait 2-4 weeks between additions. Quarantine all new fish for 4-6 weeks.' },
+]})
+const combined = combineSchemas(schema, howTo)
+
 
 export default function SaltwaterTankSetupPage() {
   return (

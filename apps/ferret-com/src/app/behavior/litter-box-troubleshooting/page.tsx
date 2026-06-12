@@ -28,6 +28,22 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour and clinical chapters on elimination and disease",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — litter-training guidance and realistic compliance expectations",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret GI and urinary disease",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Litter Box Troubleshooting for Ferrets',
@@ -39,6 +55,8 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 
@@ -68,22 +86,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour and clinical chapters on elimination and disease",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — litter-training guidance and realistic compliance expectations",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret GI and urinary disease",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-]
 
 export default function LitterBoxTroubleshootingPage() {
   return (

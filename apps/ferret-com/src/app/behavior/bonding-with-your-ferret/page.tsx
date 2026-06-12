@@ -28,6 +28,26 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour and welfare chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — socialization and bonding owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement and trust-based handling",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Bonding With Your Ferret',
@@ -38,6 +58,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -67,26 +89,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour and welfare chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — socialization and bonding owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement and trust-based handling",
-    url: "https://avsab.org",
-    publisher: "AVSAB",
-  },
-]
 
 export default function FerretBondingPage() {
   return (

@@ -25,6 +25,23 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Fresh Pet Food vs Kibble — Comparison | PetFood.com',
@@ -36,6 +53,8 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
   speakable: true,
+
+  citation: SOURCES,
 })
 
 // Editorial Product/Review schema for the two scored fresh-food picks rendered
@@ -68,23 +87,6 @@ const itemListSchema = buildItemListSchema({
 })
 const pageSchema = combineSchemas(schema, itemListSchema, farmersDogSchema, ollieSchema)
 
-const SOURCES = [
-    {
-      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
-      url: "https://www.aafco.org/resources/publications/",
-      publisher: "Association of American Feed Control Officials, 2025",
-    },
-    {
-      label: "Nutrient Requirements of Dogs and Cats",
-      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
-      publisher: "National Research Council, National Academies Press, 2006",
-    },
-    {
-      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
-      url: "https://wsava.org/committees/global-nutrition-committee/",
-      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
-    },
-]
 
 export default function FreshVsKibblePage() {
   return (

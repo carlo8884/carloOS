@@ -49,34 +49,6 @@ const FAQ: FAQItem[] = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Best Senior Dog Food 2026 — Ranked on Protein, Calories, and Joint Nutrients',
-    description:
-      'Analysis-led senior dog food roundup evaluating foods on protein quality for aging muscle and renal load, calorie density, joint-support nutrients (EPA/DHA, glucosamine), and AAFCO adult-maintenance substantiation.',
-    url: 'https://petfood.com/reviews/best-senior-dog-food',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-06-11T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  }),
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Best Senior Dog Food — Analysis-Led Picks 2026',
-    numberOfItems: 5,
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Best overall — adequate high-quality protein, controlled calories, feeding-trial-substantiated' },
-      { '@type': 'ListItem', position: 2, name: 'Best for joint support — meaningful EPA/DHA levels' },
-      { '@type': 'ListItem', position: 3, name: 'Best for weight management — lower calorie density, higher fiber' },
-      { '@type': 'ListItem', position: 4, name: 'Best for picky or dental-limited seniors — wet/soft texture' },
-      { '@type': 'ListItem', position: 5, name: 'Best value — complete AAFCO adult-maintenance diet at a lower price band' },
-    ],
-  },
-  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
-)
-
 const SOURCES = [
   {
     label: 'Association of American Feed Control Officials. 2025 AAFCO Official Publication — Dog Food Nutrient Profiles and nutritional-adequacy substantiation procedures.',
@@ -106,6 +78,36 @@ const SOURCES = [
     publisher: 'National Academies of Sciences',
   },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Best Senior Dog Food 2026 — Ranked on Protein, Calories, and Joint Nutrients',
+    description:
+      'Analysis-led senior dog food roundup evaluating foods on protein quality for aging muscle and renal load, calorie density, joint-support nutrients (EPA/DHA, glucosamine), and AAFCO adult-maintenance substantiation.',
+    url: 'https://petfood.com/reviews/best-senior-dog-food',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-06-11T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  
+    citation: SOURCES,
+  }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Best Senior Dog Food — Analysis-Led Picks 2026',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Best overall — adequate high-quality protein, controlled calories, feeding-trial-substantiated' },
+      { '@type': 'ListItem', position: 2, name: 'Best for joint support — meaningful EPA/DHA levels' },
+      { '@type': 'ListItem', position: 3, name: 'Best for weight management — lower calorie density, higher fiber' },
+      { '@type': 'ListItem', position: 4, name: 'Best for picky or dental-limited seniors — wet/soft texture' },
+      { '@type': 'ListItem', position: 5, name: 'Best value — complete AAFCO adult-maintenance diet at a lower price band' },
+    ],
+  },
+  buildFAQSchema({ questions: FAQ.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) }),
+)
+
 
 export default function BestSeniorDogFoodPage() {
   return (

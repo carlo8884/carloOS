@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles — Wheezing | Lizard.com', description: 'Reptile respiratory infections: wheezing, mucus from nostrils, and open-mouth breathing. Almost always caused by incorrect temperatures or humidity.', path: '/health/respiratory-infection', type: 'article' })
-const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+  citation: SOURCES,
+}), buildMedicalWebPageSchema({ name: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function RespiratoryInfectionPage() {
   return (
     <ArticleLayout siteId="lizard-com"

@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Anxiety in Dogs — Separation, Noise & Treatment | Vets.co", description: "Canine anxiety, including separation and noise anxiety, is a real medical and behavioral condition. Learn the signs and the evidence-based approaches that help.", path: '/health/anxiety-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVMA: Behavior Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/behavioral-problems-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "How do I know if my dog has separation anxiety?", answer: "Separation anxiety shows as distress that occurs specifically when the dog is left alone or separated from a particular person. Common signs include destructive behavior focused on exit points, house soiling in an otherwise house-trained dog, excessive vocalizing, pacing, drooling, or attempts to escape — all happening shortly after departure and resolving on return. A telltale feature is that the behavior is tied to being alone, not boredom or lack of training. Video recording the dog when alone often confirms the pattern and helps the veterinary team tailor a plan." },
   { question: "Will my dog grow out of anxiety, or get worse?", answer: "Untreated anxiety more often worsens than resolves on its own, because each frightening experience can reinforce the fear. This is why early intervention matters. The good news is that anxiety is treatable: with a structured plan combining behavior modification and, when appropriate, veterinary-prescribed medication or other support, most dogs improve significantly. Waiting in the hope a dog will simply outgrow it can allow the problem to become more entrenched, so seeking guidance sooner generally leads to better outcomes." },
   { question: "Is medication necessary for canine anxiety?", answer: "Not always, but it can be an important part of treatment for moderate to severe anxiety. Behavior modification — desensitization, counter-conditioning, environmental management, and enrichment — is the foundation for all cases. For dogs whose anxiety is severe enough that they cannot learn while distressed, veterinarians may prescribe medication to lower the fear to a level where training can work, with the specific medication and dosing determined by your veterinarian. Medication is a tool that supports behavior work, not a replacement for it." },
-]
-const SOURCES = [
-  { label: 'AVMA: Behavior Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-dogs', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/behavioral-problems-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
 ]
 export default function AnxietyDogsPage() {
   return (

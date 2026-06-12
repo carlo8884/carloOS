@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Low-Tech Planted Tank — No CO2, Low Light, Low Effort | Fish.com', description: "How to run a thriving low-tech planted tank without pressurized CO2. Easy plants, modest light, light fertilization, and a slow, stable, beautiful balance.", path: '/setup/low-tech-planted-tank', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Low-Tech Planted Tank Guide', description: 'Running a planted aquarium without CO2 injection: easy plants, light, and fertilization.', url: 'https://fish.com/setup/low-tech-planted-tank', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Low-Tech Planted Tank Guide', description: 'Running a planted aquarium without CO2 injection: easy plants, light, and fertilization.', url: 'https://fish.com/setup/low-tech-planted-tank', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function LowTechPlantedTankPage() {
   return (
     <ArticleLayout siteId="fish-com"

@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Pet Food Recalls and FDA Oversight Explained | PetFood.com',
-  description:
-    'How pet food recalls work, the FDA CVM role, common recall causes (pathogens, vitamin D, aflatoxin), how to check the database, and what to do if affected.',
-  url: 'https://petfood.com/guides/pet-food-recalls-and-fda',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Pet Food Recalls and FDA Oversight Explained | PetFood.com',
+  description:
+    'How pet food recalls work, the FDA CVM role, common recall causes (pathogens, vitamin D, aflatoxin), how to check the database, and what to do if affected.',
+  url: 'https://petfood.com/guides/pet-food-recalls-and-fda',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function PetFoodRecallsAndFdaPage() {
   return (

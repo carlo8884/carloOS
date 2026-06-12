@@ -32,6 +32,30 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and dermatology",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease",
+    publisher: "Elsevier",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Bathing and Grooming',
@@ -42,6 +66,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -81,30 +107,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and dermatology",
-    publisher: "Elsevier",
-  },
-  {
-    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease",
-    publisher: "Elsevier",
-  },
-]
 
 export default function FerretBathingGroomingPage() {
   return (

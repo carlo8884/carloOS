@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Diabetic Diets for Dogs and Cats | PetFood.com',
-  description:
-    'How diet supports diabetes management — the species split between low-carb feline and high-fiber canine approaches, consistency, and the link to weight and remission.',
-  url: 'https://petfood.com/diets/diabetic-diets',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -54,6 +42,20 @@ const SOURCES = [
       publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Diabetic Diets for Dogs and Cats | PetFood.com',
+  description:
+    'How diet supports diabetes management — the species split between low-carb feline and high-fiber canine approaches, consistency, and the link to weight and remission.',
+  url: 'https://petfood.com/diets/diabetic-diets',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function DiabeticDietsPage() {
   return (

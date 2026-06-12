@@ -19,18 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'How to Use a Pet Calorie Calculator | PetFood.com',
-  description:
-    'How calorie calculators estimate daily energy needs, the inputs that matter, the limits of any formula, and how to translate the result into a real portion.',
-  url: 'https://petfood.com/feeding/calorie-calculator-guide',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -48,6 +36,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'How to Use a Pet Calorie Calculator | PetFood.com',
+  description:
+    'How calorie calculators estimate daily energy needs, the inputs that matter, the limits of any formula, and how to translate the result into a real portion.',
+  url: 'https://petfood.com/feeding/calorie-calculator-guide',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function CalorieCalculatorGuidePage() {
   return (

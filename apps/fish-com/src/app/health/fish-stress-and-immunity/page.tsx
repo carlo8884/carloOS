@@ -11,7 +11,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Stress and Immunity — The Root of Most Disease | Fish.com', description: "Why chronic stress is behind most aquarium fish disease. The sources of stress, how it suppresses the immune system, and how to build a low-stress tank.", path: '/health/fish-stress-and-immunity', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Stress and Immunity', description: 'How stress suppresses fish immunity and drives disease, and how to reduce it.', url: 'https://fish.com/health/fish-stress-and-immunity', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Stress and Immunity', description: 'How stress suppresses fish immunity and drives disease, and how to reduce it.', url: 'https://fish.com/health/fish-stress-and-immunity', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z', speakable: true ,
+  citation: SOURCES,
+})
 export default function FishStressPage() {
   return (
     <ArticleLayout siteId="fish-com"

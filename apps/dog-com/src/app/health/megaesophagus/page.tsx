@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Megaesophagus in Dogs — Upright Feeding, Bailey Chair | Dog.com', description: 'Megaesophagus causes regurgitation and life-threatening aspiration pneumonia.', path: '/health/megaesophagus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Megaesophagus in Dogs', description: 'Canine megaesophagus — management, upright feeding, and aspiration prevention.', url: 'https://dog.com/health/megaesophagus', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What is the difference between regurgitation and vomiting in dogs?', answer: 'Vomiting is active and forceful — the dog retches, the abdomen contracts, there is visible effort. Regurgitation is passive: food or fluid comes up without effort, often as a tube-shaped mass of undigested food (it never reached the stomach, so it retains its shape), and the dog may be surprised by it. This passive, effortless expulsion of undigested food is the hallmark of megaesophagus and esophageal disease generally — and the distinction matters diagnostically, so describe what you are seeing precisely to your veterinarian, or video an episode.' },

@@ -19,19 +19,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Are Limited-Ingredient Diets Hypoallergenic? | PetFood.com',
-  description:
-    'Why OTC limited-ingredient diets are not reliable allergy tools, the cross-contamination problem, the lack of a hypoallergenic definition, and what works instead.',
-  url: 'https://petfood.com/myths/limited-ingredient-diet-myth',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-  speakable: true,
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -49,6 +36,21 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Are Limited-Ingredient Diets Hypoallergenic? | PetFood.com',
+  description:
+    'Why OTC limited-ingredient diets are not reliable allergy tools, the cross-contamination problem, the lack of a hypoallergenic definition, and what works instead.',
+  url: 'https://petfood.com/myths/limited-ingredient-diet-myth',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+  speakable: true,
+
+  citation: SOURCES,
+})
+
 
 export default function LimitedIngredientDietMythPage() {
   return (

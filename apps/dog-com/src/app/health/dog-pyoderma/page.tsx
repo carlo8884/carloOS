@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pyoderma in Dogs — Bacterial Skin Infections, Causes | Dog.com', description: 'Pyoderma (bacterial skin infection) is the most common skin disease in dogs. Surface, superficial, and deep pyoderma differ in treatment duration.', path: '/health/dog-pyoderma', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Pyoderma in Dogs', description: 'Bacterial skin infections — types, antibiotic treatment, and root cause identification.', url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What does pyoderma look like on a dog?', answer: 'It depends on the depth of infection. Superficial pyoderma — the most common form — shows papules (small bumps), pustules (pimple-like lesions), crusting, and epidermal collarettes: circular scaling patterns with central clearing that are the classic superficial pyoderma pattern. Surface pyoderma includes hot spots and skin fold infections. Deep pyoderma is more dramatic — nodules, draining tracts discharging fluid, ulcers, and tissue destruction. Any of these presentations should be examined by your veterinarian, since the depth determines the treatment.' },

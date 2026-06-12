@@ -3,18 +3,20 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCa
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Parvovirus in Puppies — Signs, Treatment, Prevention | Vets.co", description: "Canine parvovirus is a contagious, life-threatening illness in unvaccinated puppies. Learn the signs, why it is an emergency, and how vaccination prevents it.", path: '/health/parvovirus-in-puppies', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const SOURCES = [
+  { label: 'AVMA: Canine Parvovirus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-parvovirus', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/generalized-conditions/canine-parvovirus/overview-of-canine-parvovirus', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Canine Vaccination Guidelines (DA2PP)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
+]
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why is parvo so dangerous for puppies?", answer: "Canine parvovirus attacks rapidly dividing cells, especially in the intestinal lining and bone marrow. It destroys the gut lining, causing severe bloody diarrhea and vomiting that lead to rapid, life-threatening dehydration, while also suppressing the immune system and allowing dangerous secondary infections. Puppies are most at risk because their immune systems are immature and they may not yet be fully vaccinated. Without prompt, intensive treatment, parvo is frequently fatal — but with aggressive supportive care, many puppies survive." },
   { question: "How is parvo treated?", answer: "There is no medication that kills the virus directly; treatment is intensive supportive care while the puppy's immune system fights it off. This typically means hospitalization with intravenous fluids to combat dehydration, anti-nausea medication, control of secondary bacterial infection, pain management, and nutritional support, with the specific medications and dosing determined by the veterinary team. Survival improves significantly with early, aggressive hospital care, which is why suspected parvo is an emergency requiring immediate veterinary attention." },
   { question: "Can parvo be prevented?", answer: "Yes — vaccination is highly effective and is the cornerstone of prevention. Puppies receive a series of vaccinations starting in early puppyhood, with boosters until they are old enough for full protection, because maternal antibodies can interfere with earlier doses. Until the series is complete, unvaccinated puppies should avoid areas where unvaccinated dogs may have been, since the virus is extremely hardy in the environment. Following the recommended vaccination schedule from your veterinarian is the single best protection against this deadly disease." },
-]
-const SOURCES = [
-  { label: 'AVMA: Canine Parvovirus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-parvovirus', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/generalized-conditions/canine-parvovirus/overview-of-canine-parvovirus', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Canine Vaccination Guidelines (DA2PP)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
 export default function ParvoPage() {
   return (

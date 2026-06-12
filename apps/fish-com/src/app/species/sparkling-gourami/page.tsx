@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide — The Croaking Nano Fish | Fish.com', description: "Sparkling gouramis are tiny labyrinth fish under 1.5 inches that audibly croak. Ideal for planted nano tanks with gentle flow and calm tankmates.", path: '/species/sparkling-gourami', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide', description: 'Care, croaking behavior, and breeding for Trichopsis pumila, the sparkling gourami.', url: 'https://fish.com/species/sparkling-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide', description: 'Care, croaking behavior, and breeding for Trichopsis pumila, the sparkling gourami.', url: 'https://fish.com/species/sparkling-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

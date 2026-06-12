@@ -141,6 +141,44 @@ export function buildSpeakableSpec(cssSelectors?: string[]) {
   }
 }
 
+// ─────────────────────────────────────────────
+// CITATION HELPER
+// Converts an on-page sources array (from ArticleSourcesList) into a
+// schema.org citation array of CreativeWork nodes. Only mirror sources that
+// are literally already displayed to the reader — never fabricate entries.
+// ─────────────────────────────────────────────
+
+/** A single source entry, mirrored from the visible <ArticleSourcesList>. */
+export interface ArticleSourceForCitation {
+  /** Human-readable citation label — same as ArticleSource.label */
+  label: string
+  /** Primary-source URL — same as ArticleSource.url */
+  url?: string
+  /** Publisher / journal short name — same as ArticleSource.publisher */
+  publisher?: string
+}
+
+/**
+ * Converts an on-page sources array into a schema.org `citation` array of
+ * `CreativeWork` nodes. Pass the SAME array already supplied to
+ * `<ArticleSourcesList sources={...} />` — this strictly mirrors existing
+ * on-page sources into structured data; it never adds sources not shown to
+ * the reader (QC-STANDARDS.md §1 / trust-bar rule).
+ */
+export function buildCitationArray(
+  sources: ArticleSourceForCitation[],
+): Array<Record<string, unknown>> {
+  return sources.map((s) => {
+    const entry: Record<string, unknown> = {
+      '@type': 'CreativeWork',
+      name: s.label,
+    }
+    if (s.url) entry.url = s.url
+    if (s.publisher) entry.publisher = s.publisher
+    return entry
+  })
+}
+
 interface ArticleSchemaParams {
   siteId: SiteId
   title: string
@@ -156,6 +194,13 @@ interface ArticleSchemaParams {
    * opens with a concise extractable answer (e.g. a CalloutBox "short answer").
    */
   speakable?: boolean
+  /**
+   * Mirror of the on-page <ArticleSourcesList> sources array.
+   * Pass the SAME array already supplied to the visible sources list.
+   * Only include sources that are literally displayed on the page.
+   * NEVER fabricate entries — this is a strict mirror of on-page content.
+   */
+  citation?: ArticleSourceForCitation[]
 }
 
 export function buildArticleSchema(params: ArticleSchemaParams) {
@@ -180,6 +225,9 @@ export function buildArticleSchema(params: ArticleSchemaParams) {
     },
     mainEntityOfPage: params.url,
     ...(params.speakable ? buildSpeakableSpec() : {}),
+    ...(params.citation && params.citation.length > 0
+      ? { citation: buildCitationArray(params.citation) }
+      : {}),
   }
 }
 
@@ -365,6 +413,13 @@ interface MedicalWebPageSchemaParams {
   authorName: string
   lastReviewed: string // ISO date
   medicalAudience?: 'Patient' | 'Caregiver' | 'Clinician'
+  /**
+   * Mirror of the on-page <ArticleSourcesList> sources array.
+   * Pass the SAME array already supplied to the visible sources list.
+   * Only include sources that are literally displayed on the page.
+   * NEVER fabricate entries — strict mirror only (QC-STANDARDS.md §1).
+   */
+  citation?: ArticleSourceForCitation[]
 }
 
 export function buildMedicalWebPageSchema(params: MedicalWebPageSchemaParams) {
@@ -381,6 +436,9 @@ export function buildMedicalWebPageSchema(params: MedicalWebPageSchemaParams) {
       audienceType: params.medicalAudience ?? 'Caregiver',
     },
     mainContentOfPage: { '@type': 'WebPageElement', cssSelector: '.carloOS-article' },
+    ...(params.citation && params.citation.length > 0
+      ? { citation: buildCitationArray(params.citation) }
+      : {}),
   }
 }
 

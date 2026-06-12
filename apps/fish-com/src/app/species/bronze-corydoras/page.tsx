@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide — The Hardy Cory Catfish | Fish.com', description: "Bronze corydoras are the hardiest, most available cory catfish — peaceful bottom-dwelling schoolers that need a group of 6+, sand substrate, and sinking food.", path: '/species/bronze-corydoras', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide', description: 'School size, substrate, barbel care, and breeding for Corydoras aeneus.', url: 'https://fish.com/species/bronze-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide', description: 'School size, substrate, barbel care, and breeding for Corydoras aeneus.', url: 'https://fish.com/species/bronze-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

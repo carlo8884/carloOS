@@ -49,22 +49,6 @@ const FAQ = [
   },
 ]
 
-const schema = combineSchemas(
-  buildArticleSchema({
-    siteId: 'petfood-com',
-    title: 'Animal Protein Sources in Pet Food — A Reference',
-    description:
-      'Reference page on animal and alternative protein sources in pet food, working from the AAFCO ingredient definitions through transparency, amino-acid completeness, and what each category means for cats vs dogs.',
-    url: 'https://petfood.com/ingredients/animal-protein-sources',
-    imageUrl: '',
-    authorName: 'PetFood.com Editorial',
-    publishedAt: '2026-05-29T00:00:00Z',
-    modifiedAt: '2026-06-11T00:00:00Z',
-  speakable: true,
-  }),
-  buildFAQSchema({ questions: FAQ }),
-)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -97,6 +81,24 @@ const SOURCES = [
       publisher: "Veterinary Dermatology, 2015",
     },
 ]
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Animal Protein Sources in Pet Food — A Reference',
+    description:
+      'Reference page on animal and alternative protein sources in pet food, working from the AAFCO ingredient definitions through transparency, amino-acid completeness, and what each category means for cats vs dogs.',
+    url: 'https://petfood.com/ingredients/animal-protein-sources',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-06-11T00:00:00Z',
+  speakable: true,
+  
+    citation: SOURCES,
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
+
 
 export default function AnimalProteinSourcesPage() {
   return (

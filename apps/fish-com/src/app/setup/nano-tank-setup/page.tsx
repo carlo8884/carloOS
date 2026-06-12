@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Nano Aquarium Setup Guide — Small Tanks Done Right | Fish.com', description: "How to set up a nano aquarium under 10 gallons. Stocking, stability, filtration, and the small-tank fish that actually thrive in compact setups.", path: '/setup/nano-tank-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Nano Aquarium Setup Guide', description: 'Stocking, stability, filtration, and species selection for nano tanks under 10 gallons.', url: 'https://fish.com/setup/nano-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Nano Aquarium Setup Guide', description: 'Stocking, stability, filtration, and species selection for nano tanks under 10 gallons.', url: 'https://fish.com/setup/nano-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 export default function NanoTankSetupPage() {
   return (
     <ArticleLayout siteId="fish-com"

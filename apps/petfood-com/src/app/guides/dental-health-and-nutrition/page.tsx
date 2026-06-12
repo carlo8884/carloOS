@@ -20,18 +20,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Dental Health and Diet for Dogs and Cats | PetFood.com',
-  description:
-    'Whether food cleans teeth, what dental diets and the VOHC seal actually do, the limits of kibble, and how nutrition fits into real dental care.',
-  url: 'https://petfood.com/guides/dental-health-and-nutrition',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -49,6 +37,20 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Dental Health and Diet for Dogs and Cats | PetFood.com',
+  description:
+    'Whether food cleans teeth, what dental diets and the VOHC seal actually do, the limits of kibble, and how nutrition fits into real dental care.',
+  url: 'https://petfood.com/guides/dental-health-and-nutrition',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
 
 export default function DentalHealthAndNutritionPage() {
   return (

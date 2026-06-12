@@ -31,6 +31,26 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret welfare and behaviour assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret welfare",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Ferret Association (AFA) — husbandry and welfare owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Signs of Stress in Ferrets',
@@ -41,6 +61,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 
@@ -70,26 +92,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-const SOURCES = [
-  {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and disease chapters",
-    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
-  },
-  {
-    label: "Journal of Exotic Pet Medicine — articles on ferret welfare and behaviour assessment",
-    publisher: "Elsevier",
-  },
-  {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret welfare",
-    url: "https://www.aemv.org",
-    publisher: "AEMV",
-  },
-  {
-    label: "American Ferret Association (AFA) — husbandry and welfare owner guidance",
-    url: "https://www.ferret.org",
-    publisher: "AFA",
-  },
-]
 
 export default function FerretStressSignsPage() {
   return (

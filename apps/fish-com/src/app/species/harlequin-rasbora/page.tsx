@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Kottelat, M. Nomenclatural status of the fish names created by Bleeker in Poissons de Borno. Electronic Journal of Ichthyology, 2013.", publisher: "Electronic Journal of Ichthyology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide — Best Community Schooler | Fish.com', description: 'Harlequin rasboras are the benchmark community schooling fish — copper-orange with a black triangular patch, peaceful, hardy, and spectacular in groups of 15+.', path: '/species/harlequin-rasbora', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide', description: 'School size, planted tank setup, and community compatibility for Trigonostigma heteromorpha.', url: 'https://fish.com/species/harlequin-rasbora', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide', description: 'School size, planted tank setup, and community compatibility for Trigonostigma heteromorpha.', url: 'https://fish.com/species/harlequin-rasbora', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

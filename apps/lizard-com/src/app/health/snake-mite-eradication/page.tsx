@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Snake Mites — Identification & Eradication | Lizard.com", description: "Snake mites (Ophionyssus natricis) are a common, fast-spreading external parasite. How to spot them, why quarantine matters, and the long road to eradication.", path: "/health/snake-mite-eradication", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites and Reptile Mites", description: "Identifying snake mites (Ophionyssus natricis), their life cycle, eradication strategy, and quarantine to prevent spread.", url: "https://lizard.com/health/snake-mite-eradication", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites and Reptile Mites", description: "Identifying snake mites (Ophionyssus natricis), their life cycle, eradication strategy, and quarantine to prevent spread.", url: "https://lizard.com/health/snake-mite-eradication", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthSnakeMiteEradicationPage() {
   return (

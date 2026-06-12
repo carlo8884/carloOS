@@ -22,30 +22,6 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const articleSchema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
-  description:
-    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
-  url: 'https://petfood.com/nutrition/antioxidants-and-functional-nutrients',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
-})
-
-const medicalSchema = buildMedicalWebPageSchema({
-  name: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
-  description:
-    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
-  url: 'https://petfood.com/nutrition/antioxidants-and-functional-nutrients',
-  authorName: 'PetFood.com Editorial',
-  lastReviewed: '2026-06-01',
-  medicalAudience: 'Caregiver',
-})
-
-const schema = combineSchemas(articleSchema, medicalSchema)
-
 const SOURCES = [
     {
       label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
@@ -63,6 +39,32 @@ const SOURCES = [
       publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
     },
 ]
+const articleSchema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
+  description:
+    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
+  url: 'https://petfood.com/nutrition/antioxidants-and-functional-nutrients',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+
+  citation: SOURCES,
+})
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
+  description:
+    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
+  url: 'https://petfood.com/nutrition/antioxidants-and-functional-nutrients',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
+
 
 export default function AntioxidantsAndFunctionalNutrientsPage() {
   return (

@@ -29,6 +29,8 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+
+  citation: SOURCES,
 })
 
 const medicalSchema = buildMedicalWebPageSchema({

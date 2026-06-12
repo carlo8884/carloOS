@@ -11,7 +11,9 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test", path: '/health/cushing-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Hyperadrenocorticism — diagnosis and treatment.", url: 'https://dog.com/health/cushing-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What are the symptoms of Cushing\'s disease in dogs?', answer: 'The classic presentation in a middle-aged or older dog: drinking and urinating dramatically more (PU/PD — sometimes needing to go out multiple times at night), a pot-bellied appearance (from liver enlargement and weakened abdominal muscles, not fat), bilateral symmetrical hair loss starting at the flanks, thin fragile skin, muscle weakness, increased appetite, excessive panting, and recurrent skin or urinary tract infections. The signs develop slowly over 1–2 years and are commonly mistaken for normal aging — which is why Cushing\'s is one of the most misdiagnosed conditions in older dogs.' },

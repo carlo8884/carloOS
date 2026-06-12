@@ -10,7 +10,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Anorexia — Why a Reptile Stops Eating | Lizard.com", description: "A reptile refusing food can be normal (brumation, shedding, breeding) or a sign of illness. A structured checklist to find the cause before it becomes serious.", path: "/health/anorexia-in-reptiles", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Anorexia in Reptiles (Food Refusal)", description: "A structured approach to reptile food refusal, distinguishing normal causes from illness and when to see a vet.", url: "https://lizard.com/health/anorexia-in-reptiles", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Anorexia in Reptiles (Food Refusal)", description: "A structured approach to reptile food refusal, distinguishing normal causes from illness and when to see a vet.", url: "https://lizard.com/health/anorexia-in-reptiles", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 export default function HealthAnorexiaInReptilesPage() {
   return (

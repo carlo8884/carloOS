@@ -10,7 +10,9 @@ const SOURCES = [
   { label: "Freshwater Shrimp Care — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA177", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks', path: '/species/cherry-shrimp', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 
 const FAQS = [
   {

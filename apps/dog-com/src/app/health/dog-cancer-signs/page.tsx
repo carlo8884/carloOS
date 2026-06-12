@@ -11,7 +11,9 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals.', path: '/health/dog-cancer-signs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+  citation: SOURCES,
+})
 const med = buildMedicalWebPageSchema({ name: '12 Warning Signs of Cancer in Dogs', description: 'Cancer warning signs and early detection for dogs.', url: 'https://dog.com/health/dog-cancer-signs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What are the most common warning signs of cancer in dogs?', answer: 'The signs veterinary oncologists ask about: any new lump or bump, unexplained progressive weight loss, a wound or sore that does not heal within 2–3 weeks, bleeding or discharge from any body opening, a new offensive odor, difficulty eating or swallowing, loss of stamina, persistent lameness, difficulty breathing/urinating/defecating, enlarged lymph nodes, abdominal distension, and changes in urination or defecation habits. None of these confirms cancer — they are the signals that warrant a prompt veterinary examination.' },
