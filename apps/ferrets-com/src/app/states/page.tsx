@@ -37,7 +37,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
-  title: 'Are Ferrets Legal? State-by-State Ferret Laws & Adoption Directory',
+  title: 'Are Ferrets Legal? State-by-State Ferret Laws | Ferrets.com',
   description:
     'A color-coded directory of US ferret laws for all 50 states and DC, with state-code citations, permit requirements, and AFA-affiliated adoption pointers.',
   path: '/states',
