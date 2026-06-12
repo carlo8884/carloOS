@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
+  combineSchemas,
   ArticleLayout,
   ArticleByline,
   TableOfContents,
@@ -27,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfoods-com',
   title: 'Pet Food Ingredients — A–Z Reference',
   description:
@@ -38,6 +39,45 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+// Dataset schema — this page presents an original, structured reference
+// catalog of common pet food ingredients grouped by AAFCO functional category.
+// Each record includes ingredient name, AAFCO definition / classification, and
+// disclosure notes. The annotation and compilation are original to this site.
+// Qualifies as a Dataset: tabular, primary-source, freely accessible.
+// No DOIs, invented dates, or fabricated credentials — QC §1.
+const datasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Pet Food Ingredients — AAFCO Reference Catalog',
+  description:
+    'Category-grouped reference catalog of common ingredients in US dog and cat food. Each record includes ingredient name, AAFCO functional category, Official Publication definition or classification, species disclosure level, and regulatory-context notes. Original compilation by PetFoods.com Editorial from the AAFCO 2025 Official Publication.',
+  url: 'https://petfoods.com/ingredients',
+  creator: {
+    '@type': 'Organization',
+    name: 'PetFoods.com Editorial',
+    url: 'https://petfoods.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'PetFoods.com',
+    url: 'https://petfoods.com',
+  },
+  isAccessibleForFree: true,
+  variableMeasured: [
+    'Ingredient name (as it appears on a US pet food label)',
+    'AAFCO functional category (protein, fat/oil, carbohydrate, preservative, vitamin/mineral, palatant)',
+    'AAFCO Official Publication definition or classification',
+    'Species disclosure level (named species, generic, or unspecified)',
+    'Regulatory or label-context notes',
+  ],
+  about: {
+    '@type': 'Thing',
+    name: 'Pet food ingredient definitions and AAFCO classifications',
+  },
+}
+
+const schema = combineSchemas(articleSchema, datasetSchema)
 
 // ─── Ingredient catalog ─────────────────────────────────────────────────────
 // Grouped by AAFCO functional category. Each entry has a short factual note —

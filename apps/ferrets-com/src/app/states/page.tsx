@@ -164,7 +164,47 @@ export default function StatesHubPage() {
       url: `https://ferrets.com/states/${s.slug}`,
     })),
   }
-  const schema = combineSchemas(faqSchema, itemListSchema)
+
+  // Dataset schema — this page presents an original, structured reference
+  // dataset of ferret-ownership legality across all 51 US jurisdictions (50
+  // states + DC). Each record cites the governing statute or administrative rule
+  // and is original to this site. Qualifies as a Dataset under schema.org:
+  // tabular, primary-source, original compilation, freely accessible.
+  // No DOIs, invented dates, or fabricated credentials — QC §1.
+  const datasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'US Ferret Ownership Legality — State-by-State Reference',
+    description:
+      'Structured reference dataset of ferret-ownership legal status for all 50 US states and the District of Columbia. Each record includes the governing statute citation, permit requirements where applicable, and known local restrictions. Compiled from public-record state codes.',
+    url: 'https://ferrets.com/states',
+    creator: {
+      '@type': 'Organization',
+      name: 'Ferrets.com Editorial',
+      url: 'https://ferrets.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Ferrets.com',
+      url: 'https://ferrets.com',
+    },
+    isAccessibleForFree: true,
+    variableMeasured: [
+      'State or jurisdiction name',
+      'Legal status (legal, requires-permit, restricted, or illegal)',
+      'Governing statute or administrative rule citation',
+      'Permit requirements (where applicable)',
+      'Known restricted cities within an otherwise-legal state',
+      'US Census region (Northeast, Midwest, South, West)',
+    ],
+    spatialCoverage: 'United States',
+    about: {
+      '@type': 'Thing',
+      name: 'Ferret ownership laws by US state',
+    },
+  }
+
+  const schema = combineSchemas(faqSchema, itemListSchema, datasetSchema)
 
   return (
     <>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  combineSchemas,
   ArticleLayout,
   ArticleByline,
   TableOfContents,
@@ -20,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfoods-com',
   title: 'Pet Food by Life Stage — Puppy, Adult, Senior, All Stages',
   description:
@@ -31,6 +32,49 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+// Dataset schema — this page presents an original, structured reference
+// dataset of AAFCO life-stage nutrient profiles for US dog and cat food.
+// Each record contains the official AAFCO statement, nutrient highlights
+// (protein/fat/Ca/P minima from the 2025 Official Publication), formulation
+// notes, and watch-outs. The compilation and annotation are original to this
+// site. Qualifies as a Dataset: tabular, primary-source, freely accessible.
+// No DOIs, invented dates, or fabricated credentials — QC §1.
+const datasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'AAFCO Pet Food Life-Stage Nutrient Profiles — Reference Catalog',
+  description:
+    'Structured reference catalog of AAFCO life-stage classifications for US dog and cat food (Growth, Adult Maintenance, All Life Stages, and the Senior marketing category). Each record includes the AAFCO official statement, key nutrient minima and maxima from the 2025 Official Publication, formulation notes, and common watch-outs for owners reading labels.',
+  url: 'https://petfoods.com/life-stage',
+  creator: {
+    '@type': 'Organization',
+    name: 'PetFoods.com Editorial',
+    url: 'https://petfoods.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'PetFoods.com',
+    url: 'https://petfoods.com',
+  },
+  isAccessibleForFree: true,
+  variableMeasured: [
+    'Life-stage classification title',
+    'AAFCO Official Publication nutritional adequacy statement (representative)',
+    'Target species and age group (who it is for)',
+    'Minimum crude protein — dry matter basis (AAFCO 2025 OP)',
+    'Minimum fat — dry matter basis (AAFCO 2025 OP)',
+    'Calcium and phosphorus minima and ratio range',
+    'Formulation substantiation notes',
+    'Owner label-reading watch-outs',
+  ],
+  about: {
+    '@type': 'Thing',
+    name: 'AAFCO pet food life-stage nutrient profiles',
+  },
+}
+
+const schema = combineSchemas(articleSchema, datasetSchema)
 
 // ─── Life stage catalog ─────────────────────────────────────────────────────
 
