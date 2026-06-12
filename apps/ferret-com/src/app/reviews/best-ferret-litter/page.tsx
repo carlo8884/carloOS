@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -256,9 +256,8 @@ export default function BestFerretLitterPage() {
             agents.
           </p>
           <ScoreMethodology />
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* MONETIZATION: buy-box slot — recycled paper pellet litter. Non-clinical husbandry
-              product, buy-box permissible under QC §1.5; Monetization owns CTA + /go wiring. */}
           <ReviewCard
             id="paper-pellet"
             badge="Best Overall"
@@ -279,12 +278,12 @@ export default function BestFerretLitterPage() {
             pros={['Very low dust', 'Fully non-clumping', 'Soft and well accepted', 'No ingestion or inhalation hazard', 'Widely available']}
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-litter#picks"
-            editorial
+            ctaText="Find Paper Pellet Litter on Chewy"
+            ctaHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="paper-pellet-litter"
           />
 
-          {/* MONETIZATION: buy-box slot — heat-treated compressed wood pellet litter. */}
           <ReviewCard
             id="wood-pellet"
             badge="Best for Odor"
@@ -304,12 +303,12 @@ export default function BestFerretLitterPage() {
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
             cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-litter#picks"
-            editorial
+            ctaText="Find Wood Pellet Litter on Amazon"
+            ctaHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="compressed-wood-pellet-litter"
           />
 
-          {/* MONETIZATION: buy-box slot — pelleted grass / plant-fiber litter. */}
           <ReviewCard
             id="grass-pellet"
             badge="Soft Alternative"
@@ -329,9 +328,10 @@ export default function BestFerretLitterPage() {
             pros={['Low dust', 'Non-clumping', 'Soft texture some ferrets prefer', 'Lighter tracking']}
             cons={['Moderate odor control', 'Breaks down faster when wet', 'May need more frequent changes']}
             price="$$"
-            ctaText="See current price"
-            ctaHref="/reviews/best-ferret-litter#picks"
-            editorial
+            ctaText="Find Grass Pellet Litter on Amazon"
+            ctaHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="grass-pellet-litter"
           />
 
           <h2 id="faq">FAQ</h2>
