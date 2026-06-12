@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=fish-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh fish-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh fish-com",
+  "github": {
+    "silent": true
+  }
 }

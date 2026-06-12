@@ -25,7 +25,7 @@ import { ACQUIRING_GUIDES, ACQUIRING_SLUGS } from '@/data/guides/acquiring'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
-  title: 'Acquiring a Ferret — Permits, Vaccination, Transport & Setup',
+  title: 'Acquiring a Ferret — Permits, Vaccination & Setup | Ferrets.com',
   description:
     'Getting a ferret the right way: pre-acquisition checklist, permits and licensing, vaccination and records, choosing a healthy ferret, transport, and supplies.',
   path: '/acquiring',

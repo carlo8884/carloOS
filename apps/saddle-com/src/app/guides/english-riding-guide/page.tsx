@@ -7,7 +7,7 @@ export default function EnglishRidingGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'English Riding Guide', subtitle: '"English riding" encompasses a broad family of equestrian disciplines — from the precise geometry of dressage to the athleticism of show jumping to the three-phase demands of eventing. What they share: a close-contact saddle, two-handed rein contact, and a riding position built around balance, following the horse\'s movement.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'English Riding Guide', href: '/guides/english-riding-guide' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'English Riding Guide', href: '/guides/english-riding-guide' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },

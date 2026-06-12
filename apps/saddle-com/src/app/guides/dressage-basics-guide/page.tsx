@@ -8,7 +8,7 @@ export default function DressageBasicsGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
       hero={{ title: 'Dressage Basics Guide', subtitle: 'Dressage — from the French "dresser," to train — is the art of riding and training horses in a way that develops the horse\'s natural athletic ability and willingness to perform. At its core, dressage is correct, harmonious horsemanship. Every English rider benefits from dressage principles regardless of their primary discipline.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Dressage Basics', href: '/guides/dressage-basics-guide' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Dressage Basics', href: '/guides/dressage-basics-guide' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },

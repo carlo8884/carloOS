@@ -16,7 +16,7 @@ const SPECIES = [
   { name: 'Gargoyle Gecko', sci: 'Rhacodactylus auriculatus', level: 'Beginner', zone: 'Zone 1', slug: 'gargoyle-gecko', img: 'lizard-com:species-thumb-gargoyle-gecko' },
   { name: 'Ball Python', sci: 'Python regius', level: 'Beginner', zone: 'Zone 2–3', slug: 'ball-python', img: 'lizard-com:species-thumb-ball-python' },
   { name: 'Corn Snake', sci: 'Pantherophis guttatus', level: 'Beginner', zone: 'Zone 2', slug: 'corn-snake', img: 'lizard-com:species-thumb-corn-snake' },
-  { name: 'Blue-Tongue Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongue-skink', img: 'lizard-com:species-thumb-blue-tongue-skink' },
+  { name: 'Blue-Tongued Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongued-skink', img: 'lizard-com:species-thumb-blue-tongue-skink' },
   { name: 'African Fat-Tailed Gecko', sci: 'Hemitheconyx caudicinctus', level: 'Beginner', zone: 'Zone 1', slug: 'african-fat-tailed-gecko', img: 'lizard-com:species-thumb-african-fat-tailed-gecko' },
   { name: 'Western Hognose', sci: 'Heterodon nasicus', level: 'Beginner', zone: 'Zone 1–2', slug: 'western-hognose-snake', img: 'lizard-com:species-thumb-western-hognose' },
   { name: 'Kenyan Sand Boa', sci: 'Gongylophis colubrinus', level: 'Beginner', zone: 'Zone 1', slug: 'kenyan-sand-boa', img: 'lizard-com:species-thumb-kenyan-sand-boa' },

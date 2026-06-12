@@ -6,6 +6,7 @@ import {
   combineSchemas,
   SchemaScript,
   EmailCapture,
+  Breadcrumb,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -258,6 +259,7 @@ export default function TackGlossaryPage() {
   return (
     <>
       <SchemaScript schema={schema} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: 'Home', href: '/' }, { name: 'Glossary', href: '/glossary' }]} />
 
       <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div

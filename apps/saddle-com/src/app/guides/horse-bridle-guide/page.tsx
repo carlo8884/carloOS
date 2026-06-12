@@ -91,7 +91,7 @@ export default function HorseBridleGuidePage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Guides', href: '/guides/saddle-fit-guide' },
+          { name: 'Guides', href: '/guides' },
           { name: 'Horse Bridle Guide', href: '/guides/horse-bridle-guide' },
         ]}
         relatedLinks={[

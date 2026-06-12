@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=vets-co",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh vets-co"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh vets-co",
+  "github": {
+    "silent": true
+  }
 }

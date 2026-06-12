@@ -20,7 +20,7 @@ export default function TackCleaningSchedulePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Tack Cleaning Schedule', subtitle: 'Leather is a living material that degrades without care and lasts decades with it. A consistent cleaning and conditioning schedule is the difference between tack that lasts 30 years and tack that fails in 5.', category: 'Leather Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
-        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' }]}
+        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' }]}
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Hub' },
           { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
