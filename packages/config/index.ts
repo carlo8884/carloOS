@@ -603,6 +603,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Tools & Guides',
         links: [
+          { label: 'All Tools & Calculators', href: '/tools' },
           { label: 'Compare Breeds', href: '/compare' },
           { label: 'Which Pet Quiz', href: '/which-pet' },
           { label: 'Puppy Schedule', href: '/puppy-schedule' },
