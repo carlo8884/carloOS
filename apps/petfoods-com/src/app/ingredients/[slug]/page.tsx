@@ -563,9 +563,9 @@ function buildIngredientFaq(ingredient: Ingredient): FAQItem[] {
       {
         question: 'What are the natural alternatives to BHA?',
         answer:
-          'Mixed tocopherols (natural vitamin E) and rosemary extract are the most common naturally-preserved options. They have a shorter functional shelf life than the synthetic phenolic preservatives but no regulatory concern. See the preservatives reference (/ingredients/preservatives-pet-food).',
+          'Mixed tocopherols (natural vitamin E) and rosemary extract are the most common naturally-preserved options. They have a shorter functional shelf life than the synthetic phenolic preservatives but no regulatory concern. See the mixed tocopherols and rosemary extract ingredient page (/ingredients/mixed-tocopherols-rosemary).',
         answerText:
-          'Mixed tocopherols and rosemary extract. Shorter functional shelf life than BHA/BHT, but no regulatory concern. See /ingredients/preservatives-pet-food.',
+          'Mixed tocopherols and rosemary extract. Shorter functional shelf life than BHA/BHT, but no regulatory concern. See /ingredients/mixed-tocopherols-rosemary.',
       },
       SHARED,
     ],
@@ -1242,7 +1242,7 @@ export default async function IngredientPage({ params }: PageProps) {
               { label: 'Label Glossary', href: '/glossary' },
               { label: 'Pet Food Recall Database', href: '/recalls' },
               ...(linkToPreservativesHub
-                ? [{ label: 'Preservatives in Pet Food — Editorial', href: '/ingredients/preservatives-pet-food' }]
+                ? [{ label: 'Mixed Tocopherols & Rosemary Extract', href: '/ingredients/mixed-tocopherols-rosemary' }]
                 : []),
             ]}
           />
@@ -1406,10 +1406,10 @@ export default async function IngredientPage({ params }: PageProps) {
             </CalloutBox>
             {linkToPreservativesHub && (
               <p>
-                For the full editorial record on synthetic preservatives in pet food — including the
-                FDA/AAFCO regulatory posture, the NTP toxicology classifications, and the natural
-                alternatives — see{' '}
-                <Link href="/ingredients/preservatives-pet-food">/ingredients/preservatives-pet-food</Link>.
+                For the natural-preservative alternatives — mixed tocopherols and rosemary extract —
+                see the{' '}
+                <Link href="/ingredients/mixed-tocopherols-rosemary">Mixed Tocopherols &amp; Rosemary Extract</Link>{' '}
+                ingredient page.
               </p>
             )}
           </>
