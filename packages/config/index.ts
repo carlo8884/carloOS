@@ -924,6 +924,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
           { label: 'Supplements', href: '/supplements' },
           { label: 'Reviews', href: '/reviews' },
+          { label: 'Data Partnerships', href: '/data' },
         ],
       },
     ],

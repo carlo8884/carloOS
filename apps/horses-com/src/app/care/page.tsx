@@ -5,7 +5,7 @@ import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Horse Care and Husbandry — Hooves, Pasture, Seasons, and Daily Routine",
+  title: "Horse Care and Husbandry — Hooves, Pasture, and Seasons",
   description:
     "Practical horse care references: hoof care and farrier schedule, grooming, blanketing, pasture and fencing, deworming, seasonal care, and transport.",
   path: '/care',
