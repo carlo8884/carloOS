@@ -4,7 +4,7 @@ import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, Sch
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Guides — Disease, Chemistry & Disease | Fish.com', description: 'Aquarium health guides — the nitrogen cycle, water chemistry, fish disease identification and treatment.', path: '/health' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Hub — Disease, Chemistry & Treatment | Fish.com', description: 'Aquarium fish health guides — the nitrogen cycle, water chemistry, disease identification, and treatment for common conditions.', path: '/health' })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
