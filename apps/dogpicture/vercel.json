@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=dogpicture",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh dogpicture"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh dogpicture",
+  "github": {
+    "silent": true
+  }
 }

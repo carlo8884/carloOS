@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=dog-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh dog-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh dog-com",
+  "github": {
+    "silent": true
+  }
 }
