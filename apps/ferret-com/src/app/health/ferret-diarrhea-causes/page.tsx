@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Diarrhea Causes', url: 'https://ferret.com/health/ferret-diarrhea-causes' },
-  ],
-})
 
 const FAQS = [
   {
@@ -116,7 +108,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretDiarrheaCausesPage() {
   return (
@@ -130,7 +122,6 @@ export default function FerretDiarrheaCausesPage() {
             "Loose stool in a ferret can mean a passing diet upset or the first sign of serious disease — and the two can look alike at the start. Because ferrets are small and dehydrate fast, knowing the common causes, reading the stool, and recognizing the danger signs is what keeps a minor episode from becoming a crisis.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

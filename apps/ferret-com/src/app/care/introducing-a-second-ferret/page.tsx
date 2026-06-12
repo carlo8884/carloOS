@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'Should I get a second ferret?',
+    answer:
+      'Usually yes. Ferrets are social animals, and a single ferret left alone for working hours is typically under-stimulated — often more demanding and more frustrated as a result. A bonded pair entertains itself, sleeps in a companionable pile, and engages in the wrestling play central to ferret behavior. For most keepers, two ferrets are not twice the work of one: the marginal effort is small and the welfare gain is large.',
+  },
+  {
+    question: 'Do I need to quarantine a new ferret?',
+    answer:
+      'Yes — commonly a couple of weeks, housed in a separate cage in a separate room before any contact. A new ferret can carry illness that is not yet visible. During quarantine: tend to the resident ferret first, wash hands (ideally change clothes) between handling the two, watch the newcomer for signs of illness, and schedule a veterinary check-up to confirm it is healthy and current on vaccinations before introductions. Skipping quarantine is the one shortcut that can cost you both ferrets.',
+  },
+  {
+    question: 'How do I introduce two ferrets to each other?',
+    answer:
+      'After quarantine, start with scent and visual familiarization — swap bedding or sleep sacks between cages and let them see each other through bars for a few days. First physical meetings happen on neutral ground neither ferret considers its own (a dry bathtub or unfamiliar playpen are common choices), kept short and supervised every second, with a towel ready to drop between them if needed. Lengthen sessions gradually, and only move to shared space once play is consistently friendly.',
+  },
+  {
+    question: 'Are my ferrets fighting or playing?',
+    answer:
+      'Normal ferret play looks startlingly rough — wrestling, chasing, pinning, scruff-grabbing, dramatic chatter. It is play if both ferrets keep coming back for more, take turns chasing, show dooking and the loose-limbed war dance, and no one is injured. It is real aggression if one ferret is clearly trying to flee and being pinned against its will, there is locked-on biting that breaks skin, or one is screaming in terror with raised fur and not re-engaging. When in doubt, separate and resume shorter neutral sessions later.',
+  },
+  {
+    question: 'How long does it take ferrets to bond?',
+    answer:
+      'Some pairs bond within days; others take several weeks of patient, repeated sessions — both are normal. The variables are temperament, age, and prior socialization: a young, well-socialized ferret often accepts a companion quickly, while an older only-pet may need more time. Let the ferrets set the pace and judge success by a calm, mutually engaged relationship, not a deadline.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -53,7 +83,6 @@ export default function IntroducingSecondFerretPage() {
             'Ferrets are social and most thrive with company, so adding a second ferret is usually a good decision. But ferrets play rough, and the introduction has to be managed — quarantine first for health, then a gradual, supervised bonding on neutral ground. Here is how to do it without confusing normal play for a fight.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -72,6 +101,7 @@ export default function IntroducingSecondFerretPage() {
                 { label: 'Play vs. Aggression', href: '#play-aggression' },
                 { label: 'Sharing a Cage', href: '#cage' },
                 { label: 'Realistic Timeline', href: '#timeline' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -105,7 +135,7 @@ export default function IntroducingSecondFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -172,6 +202,9 @@ export default function IntroducingSecondFerretPage() {
           <p>
             Some ferret pairs bond within days; others take several weeks of patient, repeated sessions. Both are normal. The variables are individual temperament, age, and prior socialization — a young, well-socialized ferret often accepts a companion quickly, while an older ferret long used to being an only pet may need more time. Let the ferrets set the pace, resist the urge to force shared space before the play is consistently friendly, and judge success by a calm, mutually engaged relationship rather than by hitting a deadline.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

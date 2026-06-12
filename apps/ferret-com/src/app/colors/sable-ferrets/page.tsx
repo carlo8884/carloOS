@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Sable Ferrets', url: 'https://ferret.com/colors/sable-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function SableFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function SableFerretsPage() {
             "If you close your eyes and picture a ferret, you are almost certainly picturing a sable: warm brown fur, a cream undercoat glowing through, and that unmistakable dark mask across the eyes. Sable is the most common ferret color and the one closest to the wild polecat ancestor. Here is everything that makes it the classic.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

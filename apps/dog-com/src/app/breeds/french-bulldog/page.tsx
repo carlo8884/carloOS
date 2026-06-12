@@ -1,17 +1,25 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What health problems do French Bulldogs have?', answer: 'French Bulldogs are one of the most medically complex breeds: brachycephalic airway syndrome (BOAS) affects most Frenchies to some degree, IVDD spinal disc disease risk is very high in this chondrodystrophic breed, heat intolerance is severe, and skin fold infections require daily preventive cleaning. Discuss BOAS grading and a management plan with your veterinarian.' },
+  { question: 'Can French Bulldogs tolerate heat?', answer: 'No. The compromised airway severely limits panting, and heatstroke can develop at temperatures that feel comfortable to humans. Never leave a Frenchie in a parked car, limit outdoor activity in warm weather, and walk only in cool morning and evening hours in summer. Frantic panting, blue or purple gums, or collapse is an emergency — cool the dog and transport to an ER immediately.' },
+  { question: 'How much exercise does a French Bulldog need?', answer: 'French Bulldogs are a low-exercise breed — their airways limit exertion. Short walks in cool hours and indoor play meet their needs. Avoid jumping on and off furniture: as a high-IVDD-risk breed, Frenchies should use ramps, stay lean, and avoid impact. Sudden neurological signs such as hind-limb weakness are a surgical emergency.' },
+  { question: 'How expensive is it to own a French Bulldog?', answer: 'Average veterinary costs significantly exceed most other breeds. Realistic lifetime medical costs for a Frenchie with typical challenges include BOAS surgery ($1,500-5,000), IVDD treatment ($5,000-8,000+ for surgery), and ongoing skin fold, ear, and eye care. Enrolling pet insurance at purchase — before the first vet visit — is essential, not optional, and policies should be compared specifically for BOAS and spinal coverage.' },
+  { question: 'Can French Bulldogs breed naturally?', answer: 'Generally no — French Bulldogs cannot be naturally bred or born without human intervention in most cases; artificial insemination and cesarean delivery are the norm. This is part of the breed\'s structural reality that prospective owners should understand before buying, alongside the breathing and spinal predispositions.' },
+]
 
 export default function FrenchBulldogBreedPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'French Bulldog', url: 'https://dog.com/breeds/french-bulldog' } ] }))} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'French Bulldog', url: 'https://dog.com/breeds/french-bulldog' } ] }), buildFAQSchema({ questions: FAQS }))} />
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
         <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
           <StockImage manifestKey="dog-com:breed-french-bulldog" alt="French Bulldog" aspect="4:3" priority />
@@ -63,8 +71,12 @@ export default function FrenchBulldogBreedPage() {
             <BreedHealthCard name="Skin Fold Infections" riskLevel="very-high" description="Facial folds, tail pocket, and body folds trap moisture and bacteria. Daily cleaning is non-negotiable maintenance. Veterinary treatment when infected. Severe cases may require surgical fold correction." />
             <h2>Financial Reality</h2>
             <p>Realistic lifetime medical costs for a Frenchie with typical challenges: BOAS surgery ($1,500–5,000), IVDD treatment ($5,000–8,000+ for surgery), ongoing skin fold management, regular ear and eye care. Enroll pet insurance before the first vet visit. Compare policies specifically for BOAS and spinal coverage.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a French Bulldog?', href: '/breeds/french-bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Bulldog', href: '/breeds/bulldog' }, { label: 'Poodle', href: '/breeds/poodle' }]} />
             <RelatedLinks title="French Bulldog Health Deep-Dive" links={[{ label: 'French Bulldog Health Issues & Screenings', href: '/breeds/french-bulldog/health' }]} />
             <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />

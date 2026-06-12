@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Stomach Ulcers', url: 'https://ferret.com/health/ferret-ulcers' },
-  ],
-})
 
 const FAQS = [
   {
@@ -111,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretUlcersPage() {
   return (
@@ -125,7 +117,6 @@ export default function FerretUlcersPage() {
             'Gastric ulcers are a common, painful, and under-recognized ferret problem — often driven by Helicobacter mustelae and easy to miss until the teeth-grinding and tarry stool appear. They rarely travel alone, which is why they are worth understanding.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

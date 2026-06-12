@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Cinnamon Ferrets', url: 'https://ferret.com/colors/cinnamon-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function CinnamonFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function CinnamonFerretsPage() {
             "Cinnamon is one of the prettiest and most argued-over ferret colors: a warm, reddish-brown coat that glows golden in the right light. It is also genuinely rare and famously hard to pin down, because the label gets used loosely. Here is what cinnamon really describes, and why even experts disagree about it.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

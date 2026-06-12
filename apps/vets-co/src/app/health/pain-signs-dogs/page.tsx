@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
@@ -32,7 +32,7 @@ export default function PainSignsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Signs', href: '/health/pain-signs-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -50,7 +50,8 @@ export default function PainSignsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-signs" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic "pain" behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog's normal.</p>

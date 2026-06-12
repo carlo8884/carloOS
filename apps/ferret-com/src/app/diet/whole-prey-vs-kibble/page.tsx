@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function WholePreyVsKibblePage() {
             'Almost every feeding question a ferret owner faces nests under one decision: do you feed a biologically appropriate raw or whole-prey diet, a high-quality commercial kibble, or a combination of the two? Each model has real advantages and real failure modes. This page compares them honestly rather than crowning a winner.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -86,6 +85,7 @@ export default function WholePreyVsKibblePage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-whole-prey-vs-kibble"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -169,7 +169,6 @@ export default function WholePreyVsKibblePage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Kibble Model"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Starch-free premium kibble — the lower-risk base diet"
             score={9.3}
@@ -194,7 +193,6 @@ export default function WholePreyVsKibblePage() {
           <ReviewCard
             id="frozen-feeder-prey"
             badge="Whole-Prey Model"
-            badgeEmoji="🧊"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey for the raw model or middle-path supplementation"
             score={8.4}

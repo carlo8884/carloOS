@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Seizures in Dogs — What to Do, Causes, Epilepsy | Vets.co", description: "A seizure is frightening but rarely an immediate emergency unless prolonged. Learn what to do during a seizure, common causes, and how epilepsy is managed.", path: '/health/seizures-in-dogs', type: 'article' })
@@ -21,7 +21,7 @@ export default function SeizuresPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Seizures in Dogs', subtitle: 'A seizure is one of the most frightening things an owner can witness, but knowing what to do — and what not to do — makes a real difference. Most single seizures are brief and not immediately life-threatening, though all warrant veterinary evaluation. Understanding the causes, the danger signs, and how epilepsy is managed helps you respond calmly and protect your dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Seizures in Dogs', subtitle: 'A seizure is one of the most frightening things an owner can witness, but knowing what to do — and what not to do — makes a real difference. Most single seizures are brief and not immediately life-threatening, though all warrant veterinary evaluation. Understanding the causes, the danger signs, and how epilepsy is managed helps you respond calmly and protect your dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Seizures', href: '/health/seizures-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function SeizuresPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

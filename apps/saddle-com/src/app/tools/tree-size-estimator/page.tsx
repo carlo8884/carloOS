@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { TreeSizeEstimator } from '../../../components/visual/TreeSizeEstimator'
 
@@ -128,8 +129,9 @@ export default function TreeSizeEstimatorPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Hub' },
+        { title: 'Saddle Fit Checker', href: '/tools/saddle-fit-checker', category: 'Tool' },
+        { title: 'Girth Size Calculator', href: '/tools/girth-size-calculator', category: 'Tool' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
-        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
         { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
       ]}
       sidebar={
@@ -147,11 +149,11 @@ export default function TreeSizeEstimatorPage() {
           <RelatedLinks
             title="Fit references"
             links={[
+              { label: 'Saddle Fit Checker', href: '/tools/saddle-fit-checker' },
+              { label: 'Girth Size Calculator', href: '/tools/girth-size-calculator' },
               { label: '12-Point Saddle Fit Checklist', href: '/saddle-fit-checklist' },
               { label: 'Saddle Fit by Discipline', href: '/fit' },
               { label: 'Saddle Brand Database', href: '/brands' },
-              { label: 'English Saddle Reviews', href: '/reviews/best-english-saddles' },
-              { label: 'Western Saddle Reviews', href: '/reviews/best-western-saddles' },
             ]}
           />
           <EmailCapture
@@ -161,6 +163,7 @@ export default function TreeSizeEstimatorPage() {
             subtitle="Saddle-fit deep-dives. No spam."
             source="tree-size-estimator"
           />
+          <CrossPortfolioCard currentSite="saddle-com" contentType="tool" variant="sidebar" />
         </>
       }
     >

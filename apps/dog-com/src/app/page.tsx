@@ -57,7 +57,7 @@ import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live decision wizard embedded on the homepage so the flagship's first
 // screens are a product you use, not links to tools (premium gate 3).
-import { WhichPetWizard } from './which-pet/wizard-client'
+import { BreedMatchWizard } from './breeds/match/wizard-client'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
@@ -226,6 +226,7 @@ const PRODUCT_GUIDES = [
   { title: 'Flea & tick prevention', desc: 'Oral vs. topical, by region, efficacy data, side-effect profiles.', href: '/reviews/best-flea-tick-prevention' },
   { title: 'Joint supplements', desc: 'Glucosamine, chondroitin, MSM, fish oil — what evidence says.', href: '/reviews/best-joint-supplements' },
   { title: 'Dental chews', desc: 'VOHC-accepted options vs. marketing. Per-day cost.', href: '/reviews/best-dental-chews' },
+  { title: 'Heartworm prevention', desc: 'Heartgard, Interceptor, Simparica Trio compared.', href: '/reviews/best-heartworm-prevention' },
 ]
 
 // ─── Inline SVG icons (replace emoji; 24px, stroke=currentColor) ─────────────
@@ -291,7 +292,7 @@ export default function HomePage() {
             this absolute, full-height wrapper (the 'full-bleed' variant's
             w-screen/-ml-[50vw] transform fights an absolute parent). */}
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}
         >
           <StockImage
             manifestKey="dog-com:hero"
@@ -371,56 +372,54 @@ export default function HomePage() {
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10 px-container-sm sm:px-container pt-12 pb-16">
+        <div className="relative z-10 max-w-container-wide mx-auto px-container-sm sm:px-container pt-12 pb-16">
           <div className="flex items-center gap-2.5 mb-5">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
               Where are you starting?
             </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {OWNER_PATHS.map((path) => (
               <Link
                 key={path.href}
                 href={path.href}
                 className={[
-                  'group relative block rounded-xl overflow-hidden no-underline transition-all duration-200',
-                  'ring-1 min-h-[180px] sm:min-h-[210px]',
+                  'group flex flex-col rounded-xl overflow-hidden no-underline bg-brand-white transition-all duration-200',
+                  'ring-1',
                   path.tone === 'urgent'
-                    ? 'ring-brand-primary/60 hover:ring-brand-primary'
-                    : 'ring-white/10 hover:ring-white/30',
+                    ? 'ring-brand-primary/50 hover:ring-brand-primary'
+                    : 'ring-brand-border hover:ring-brand-primary/60',
                 ].join(' ')}
               >
-                {/* Background image (fills the tile) */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+                {/* Photo on top — separated from the text so the copy is always
+                    readable (Carlo review 2026-06-11: text over the photo was
+                    unreadable, esp. over the bright kitchen shot). */}
+                <div className={`relative h-40 sm:h-44 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={path.manifestKey}
+                    fallbackKey="dog-com:hero"
                     alt={path.imageAlt}
-                    aspect="3:4"
+                    aspect="4:3"
                     variant="inline"
                     subtleCredit
                   />
                 </div>
-                {/* Bottom-up scrim — keeps the label legible over any photo */}
-                <div
-                  aria-hidden="true"
-                  className={[
-                    'absolute inset-0 bg-gradient-to-t to-transparent',
-                    path.tone === 'urgent' ? 'from-brand-primary/85 via-black/45' : 'from-black/85 via-black/30',
-                  ].join(' ')}
-                />
-                {/* Label content */}
-                <div className="relative z-10 flex flex-col justify-end min-h-[180px] sm:min-h-[210px] p-4">
-                  <div className="text-2xs font-bold tracking-eyebrow uppercase text-white/85 mb-1">
+                {/* Text on a solid surface — full contrast, always legible */}
+                <div className="flex flex-col flex-1 p-4">
+                  <div className={[
+                    'text-2xs font-bold tracking-eyebrow uppercase mb-1',
+                    path.tone === 'urgent' ? 'text-brand-primary' : 'text-brand-text-light',
+                  ].join(' ')}>
                     {path.eyebrow}
                   </div>
-                  <h2 className="font-display font-bold text-white text-sm sm:text-base leading-tight mb-1.5">
+                  <h2 className="font-display font-bold text-brand-dark text-base leading-tight mb-1.5">
                     {path.title}
                   </h2>
-                  <p className="text-xs text-white/70 leading-relaxed mb-2">
+                  <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
                     {path.desc}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-white group-hover:gap-2 transition-all">
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-brand-primary group-hover:gap-2 transition-all">
                     {path.cta}
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -432,67 +431,117 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR — softened (no "expert", no "reviewed") ──────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
-        {[
-          'Research-based health content',
-          '50+ breed profiles with hereditary risk data',
-          'Products compared, not paid placements',
-          'Editorial standards in public',
-        ].map((item, i) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
-            {i > 0 && <span className="text-brand-primary/30">·</span>}
-            {item}
-          </span>
-        ))}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3">
+        <div className="max-w-container mx-auto flex flex-wrap gap-x-6 gap-y-1.5 items-center">
+          {[
+            'Research-based health content',
+            '50+ breed profiles with hereditary risk data',
+            'Products compared, not paid placements',
+            'Editorial standards in public',
+          ].map((item, i) => (
+            <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
+              {i > 0 && <span className="text-brand-primary/30">·</span>}
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* ── PUPPY LEAD-MAGNET BANNER (preserved) ───────────────────────── */}
-      <Link
-        href="/puppy-schedule"
-        className="block bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
-      >
-        <div className="flex items-center justify-between gap-6 flex-wrap">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-primary/15 text-brand-primary shrink-0" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M8 3v3M16 3v3M4 9h16M9 13h2M9 16h6" />
-              </svg>
-            </span>
-            <div>
-              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-0.5">Free for puppy owners</div>
-              <div className="text-sm sm:text-base text-white font-semibold">
-                Puppy Schedule, Weeks 8 to 16 — printable + 8-week email course
-              </div>
+      {/* Puppy lead-magnet — a real featured band with a photo, not a thin strip
+          (Carlo review 2026-06-11: "too small + needs a puppy picture"). */}
+      <section className="bg-brand-dark border-y border-brand-border px-container-sm sm:px-container py-8 sm:py-10">
+        <div className="max-w-container mx-auto">
+          <Link href="/puppy-schedule" className="group grid sm:grid-cols-[220px_1fr] gap-6 sm:gap-8 items-center no-underline">
+            <div className={`relative h-44 sm:h-40 rounded-xl overflow-hidden ring-1 ring-white/10 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
+              <StockImage manifestKey="dog-com:breed-labrador-retriever" fallbackKey="dog-com:hero" alt="A young puppy" aspect="4:3" variant="inline" subtleCredit />
             </div>
-          </div>
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary ml-auto sm:ml-0">
-            Get the schedule
-            <IconArrowRight className="w-3.5 h-3.5" />
-          </span>
+            <div>
+              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Free for puppy owners</div>
+              <h2 className="font-display font-bold text-white text-2xl sm:text-3xl leading-tight mb-2.5">
+                The Puppy First-Year Schedule
+              </h2>
+              <p className="text-sm sm:text-base text-white/65 leading-relaxed mb-5 max-w-2xl">
+                A printable week-by-week plan for weeks 8&ndash;16, plus a free 8-week email course &mdash;
+                vaccines, feeding, crate training, and the socialization windows that matter most.
+              </p>
+              <span className="inline-flex items-center gap-1.5 bg-brand-primary text-brand-white text-sm font-bold px-5 py-2.5 rounded-md group-hover:bg-brand-primary-dark transition-colors">
+                Get the free schedule
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </Link>
         </div>
-      </Link>
+      </section>
 
       {/* ── LIVE TOOL — "which dog is right for you?" wizard (premium gate 3) ── */}
       <section className="bg-brand-white px-container-sm sm:px-container py-section border-b border-brand-border">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Try it · Breed match wizard
-          </span>
+        <div className="max-w-container mx-auto">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Try it · Breed match wizard
+            </span>
+          </div>
+          <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
+            Which dog actually fits your life?
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-8 max-w-2xl leading-relaxed">
+            Answer a few questions about your home, time, and experience — get matched to breeds
+            that fit, with the trade-offs spelled out. No email required.
+          </p>
+          {/* Two-column: the wizard is a contained column, not a full-bleed block,
+              with supporting context beside it (Carlo layout review 2026-06-11). */}
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10 items-start">
+            <div className="min-w-0">
+              <BreedMatchWizard />
+            </div>
+            <aside className="flex flex-col gap-5 lg:sticky lg:top-24 lg:self-start">
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">What you&apos;ll get</div>
+                <ul className="flex flex-col gap-2.5 text-sm text-brand-text-mid leading-snug list-none p-0 m-0">
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> Breeds matched to your home, time, and experience — not the most popular ones.</li>
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> The trade-offs spelled out: shedding, exercise, training difficulty, typical health risks.</li>
+                  <li className="flex gap-2"><span className="text-brand-primary font-bold">→</span> No email, no signup — your answers stay in your browser.</li>
+                </ul>
+              </div>
+              {/* Box 3 (NEW, Carlo review): popular breed guides with photos —
+                  gives the sidebar visual interest + a clear purpose. */}
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Popular breed guides</div>
+                <div className="flex flex-col gap-3">
+                  {[
+                    { name: 'Golden Retriever', sub: 'Cancer · hip risk', href: '/breeds/golden-retriever', key: 'dog-com:category-breeds' },
+                    { name: 'Labrador Retriever', sub: 'Hip dysplasia · obesity', href: '/breeds/labrador-retriever', key: 'dog-com:breed-labrador-retriever' },
+                  ].map((b) => (
+                    <Link key={b.href} href={b.href} className="group flex items-center gap-3 no-underline">
+                      <div className={`relative w-14 h-14 rounded-lg overflow-hidden shrink-0 ring-1 ring-brand-border ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
+                        <StockImage manifestKey={b.key} fallbackKey="dog-com:hero" alt={b.name} aspect="1:1" variant="inline" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-brand-dark leading-tight group-hover:text-brand-primary transition-colors">{b.name}</div>
+                        <div className="text-2xs text-brand-text-light">{b.sub}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Prefer to browse?</div>
+                <div className="flex flex-col gap-2 text-sm font-semibold">
+                  <Link href="/breeds" className="text-brand-primary no-underline hover:underline">All breed guides →</Link>
+                  <Link href="/breeds/match" className="text-brand-primary no-underline hover:underline">Open the full wizard →</Link>
+                  <Link href="/tools/puppy-weight-predictor" className="text-brand-primary no-underline hover:underline">Puppy weight predictor →</Link>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
-        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
-          Which dog actually fits your life?
-        </h2>
-        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
-          Answer a few questions about your home, time, and experience — get matched to breeds
-          that fit, with the trade-offs spelled out. No email required.
-        </p>
-        <WhichPetWizard />
       </section>
 
       {/* ── TOOLS & CALCULATORS ────────────────────────────────────────── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-center gap-2.5 mb-3">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -583,6 +632,7 @@ export default function HomePage() {
             </span>
           </Link>
         </div>
+        </div>
       </section>
 
       {/* ── BREED-SPECIFIC RISK CENTER — zero-placeholder treatment ───────
@@ -597,6 +647,7 @@ export default function HomePage() {
           tiles (QC §1). Promote the text breeds back to photo tiles once their
           keys sync. */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -612,10 +663,16 @@ export default function HomePage() {
               Hereditary conditions, screening tests by age, breed-specific nutrition, training tendencies.
             </p>
           </div>
-          <Link href="/breeds" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
-            All breeds
-            <IconArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <div className="flex items-center gap-5">
+            <Link href="/breeds/match" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+              Find your match
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link href="/breeds" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+              All breeds
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Two large photo-featured breeds (real photography only) */}
@@ -689,10 +746,12 @@ export default function HomePage() {
           Browse all breeds
           <IconArrowRight className="w-3.5 h-3.5" />
         </Link>
+        </div>
       </section>
 
       {/* ── WHEN TO CALL THE VET (decision-tree CTAs) ──────────────────── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section text-white">
+        <div className="max-w-container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-12 items-center mb-8">
           {/* Symptom hero image */}
           <div className={`order-2 lg:order-1 rounded-xl overflow-hidden ring-1 ring-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.4)] ${FILL_IMAGE}`}>
@@ -742,10 +801,12 @@ export default function HomePage() {
           Find a vet near you
           <IconArrowRight />
         </Link>
+        </div>
       </section>
 
       {/* ── FOOD & WEIGHT TOOLS — with nutrition image ─────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -802,10 +863,12 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* ── PUPPY + TRAINING ── dark anchor section for contrast rhythm ── */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -866,10 +929,12 @@ export default function HomePage() {
             </div>
           </Link>
         </div>
+        </div>
       </section>
 
       {/* ── INSURANCE & COST PLANNING — with product/compare image ─────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -883,7 +948,7 @@ export default function HomePage() {
             </h2>
             <p className="text-base text-brand-text-mid leading-relaxed mb-6 max-w-xl">
               The average emergency vet visit runs $1,500–$5,000. Chronic conditions like atopic dermatitis,
-              kidney disease, or arthritis can cost $300–$800/month long-term. Pet insurance is the cheapest
+              kidney disease, or arthritis can cost $300–$800/month long-term. Pet insurance is among the most cost-effective
               when your dog is young and healthy — and pre-existing conditions are universally excluded by
               every major carrier.
             </p>
@@ -929,6 +994,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* ── EMAIL CAPTURE — "This week for your dog" ───────────────────────
@@ -936,24 +1002,27 @@ export default function HomePage() {
           so we don't ship an empty/inactive capture surface. */}
       {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
         <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
-          <EmailCapture
-            variant="section"
-            siteId="dog-com"
-            title="This week for your dog"
-            subtitle="One short Tuesday email: what to do this week (by life stage), one product worth the money, one trap to avoid."
-            source="homepage"
-            ctaText="Get the weekly"
-            perks={[
-              'By life stage (puppy / adult / senior)',
-              'Sourced — no paid placements',
-              'Unsubscribe anytime',
-            ]}
-          />
+          <div className="max-w-container mx-auto">
+            <EmailCapture
+              variant="section"
+              siteId="dog-com"
+              title="This week for your dog"
+              subtitle="One short Tuesday email: what to do this week (by life stage), one product worth the money, one trap to avoid."
+              source="homepage"
+              ctaText="Get the weekly"
+              perks={[
+                'By life stage (puppy / adult / senior)',
+                'Sourced — no paid placements',
+                'Unsubscribe anytime',
+              ]}
+            />
+          </div>
         </section>
       )}
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
+        <div className="max-w-container mx-auto">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -981,6 +1050,7 @@ export default function HomePage() {
               FAQ →
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </>

@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -9,7 +12,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,6 +36,45 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; the rating mirrors
+// the disclosed on-page editorial score).
+const productSchema = buildProductSchema({
+  name: 'Kirkland Signature Pet Food',
+  description:
+    'Premium-positioned, named-meat-forward store-brand diet at a notably lower price per pound. The main rubric weakness is thinner supply-chain transparency as a contract-manufactured store brand. Confirm the AAFCO statement and life stage on the specific bag.',
+  reviewBody:
+    'One of the strongest value options — premium-positioned, named-meat-forward formulas at a notably lower price per pound, useful for large dogs. Thinner sourcing and quality-control disclosure than brands that own their plants. Confirm the AAFCO statement and life stage on the bag.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.0,
+})
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Who actually makes Kirkland Signature pet food?',
+    answer:
+      'As a Costco store brand, Kirkland Signature pet food is manufactured by a contract producer rather than by Costco itself; Diamond Pet Foods has been a known manufacturer of certain Kirkland lines. The store brand inherits the contract manufacturer’s quality-control and recall record, which is why identifying the maker matters when evaluating it.',
+  },
+  {
+    question: 'Is Kirkland Signature comparable to premium name brands?',
+    answer:
+      'On price-to-formulation value, it is one of the stronger options: named-meat-forward, premium-positioned formulas at a notably lower price per pound. The main rubric weakness is transparency — contract manufacturer, sourcing, and quality-control disclosure are thinner than for brands that own their plants and publish research. That is a disclosure gap, not a quality verdict.',
+  },
+  {
+    question: 'Has Kirkland Signature pet food been recalled?',
+    answer:
+      'Because Kirkland pet food has been made by Diamond Pet Foods, its recall exposure is tied to that manufacturer’s record, including the major 2012 Salmonella recall that affected Diamond-made products. Recall history should be evaluated by cause, severity, and corrective response, with the FDA CVM Recalls and Withdrawals database as the source of record.',
+  },
+  {
+    question: 'Does the grain-free DCM question apply to Kirkland formulas?',
+    answer:
+      'Kirkland lines include both grain-inclusive and grain-free formulas. For the grain-free SKUs, the standard evaluation applies: check whether the formula is legume-heavy, since the legume-inclusive grain-free pattern is the one associated — though not proven causally — with the FDA diet-associated DCM investigation. Owners of DCM-predisposed breeds should raise the question with a veterinarian.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -80,7 +123,7 @@ export default function KirklandSignatureEvaluationPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -92,6 +135,7 @@ export default function KirklandSignatureEvaluationPage() {
               { label: 'Transparency', href: '#transparency' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -115,7 +159,16 @@ export default function KirklandSignatureEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-kirkland-signature" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Kirkland Signature — Costco's store brand evaluated on value, the who-makes-it question, and recall exposure." />
         <p>Kirkland Signature is Costco&apos;s private-label brand, including a well-regarded pet food line evaluated here on the PetFood.com five-dimension rubric. Its standout feature is value — premium-positioned formulation at a notably lower price per pound than name-brand competitors. The store-brand model also raises the central question of who manufactures it and how much the supply chain is disclosed. The evaluation is independent and never influenced by any commercial relationship. See <a href="/tools/food-cost-calculator">Food Cost Calculator</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On price-to-formulation value, Kirkland Signature is one of the stronger options — named-meat-forward, premium-positioned formulas at a notably lower price per pound. Its main rubric weakness is transparency: as a contract-manufactured store brand (Diamond Pet Foods has made certain lines), sourcing and quality-control disclosure are thinner than for brands that own their plants and publish research. That is a disclosure gap, not a quality verdict.
+          </p>
+        </div>
+
         <h2 id="value">The Value Proposition</h2>
         <p>Kirkland Signature pet food is consistently priced below comparable premium name brands while offering named-meat-forward formulas, which makes it one of the strongest value options for cost-conscious owners who still want a premium-positioned diet. For large dogs especially, where food cost is significant, the per-calorie savings are meaningful. Value, however, is only one dimension — it must be weighed against transparency and substantiation. See the <a href="/tools/food-cost-calculator">Food Cost Calculator</a>.</p>
         <h2 id="whomakes">Who Makes It</h2>
@@ -157,6 +210,14 @@ export default function KirklandSignatureEvaluationPage() {
           ctaAffiliateProgram="amazon-brand"
           ctaAffiliateProduct="Kirkland%20Signature%20pet%20food"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

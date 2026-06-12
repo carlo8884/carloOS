@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, Breadcrumb, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { SchemaScript } from '@carloOS/ui'
 import { SADDLE_BRANDS } from '@/data/saddle-brands'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,13 +10,6 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Saddle brand reference — Stübben, Pessoa, Bates, Wintec, County, Custom, Antares, Billy Cook, Circle Y, Reinsman. Models, fit, price, warranty.',
   path: '/brands',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://saddle.com/' },
-    { name: 'Brands', url: 'https://saddle.com/brands' },
-  ],
 })
 
 const ENGLISH = SADDLE_BRANDS.filter((b) => b.discipline.startsWith('English'))
@@ -37,7 +30,7 @@ const brandListSchema = {
   })),
 }
 
-const schema = combineSchemas(breadcrumbSchema, brandListSchema)
+const schema = brandListSchema
 
 function priceTier(lo: number) {
   if (lo >= 4500) return 'Premium / bespoke'
@@ -139,6 +132,9 @@ export default function BrandsHubPage() {
           ctaText="Get Free Guide"
           perks={['📋 Brand comparison', '💰 Market pricing']}
         />
+      </div>
+      <div className="px-container-sm sm:px-container py-10">
+        <CrossPortfolioCard currentSite="saddle-com" contentType="brand" variant="footer" />
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -39,7 +39,6 @@ export default function UVBLightingGuidePage() {
         subtitle: 'UVB is not optional for most reptile species. It is the difference between metabolic bone disease and skeletal health. This guide covers everything from Ferguson Zones to bulb selection to the replacement schedule most keepers miss.',
         category: 'Setup Guide',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '13 min',
       }}
@@ -66,7 +65,7 @@ export default function UVBLightingGuidePage() {
           { label: 'By Species', href: '#species' },
         ]} />
         <RelatedLinks title="Related" links={[
-          { label: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs' },
+          { label: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs' },
           { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
           { label: 'Leopard Gecko Care', href: '/species/leopard-gecko' },
         ]} />
@@ -74,6 +73,7 @@ export default function UVBLightingGuidePage() {
           title="Free Care Sheets"
           subtitle="20 species — free for subscribers."
           source="uvb-lighting-guide" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="care" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

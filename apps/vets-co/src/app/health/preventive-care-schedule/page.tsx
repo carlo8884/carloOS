@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+.', path: '/health/preventive-care-schedule', type: 'article' })
@@ -17,7 +17,7 @@ export default function PreventiveCareSchedulePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Preventive Care Schedule', subtitle: 'Preventive care is the most cost-effective investment in a dog\'s health. Catching conditions early — before clinical signs develop — allows more treatment options, better outcomes, and lower total cost of care over the dog\'s lifetime.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Dog Preventive Care Schedule', subtitle: 'Preventive care is the most cost-effective investment in a dog\'s health. Catching conditions early — before clinical signs develop — allows more treatment options, better outcomes, and lower total cost of care over the dog\'s lifetime.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Preventive Care', href: '/health/preventive-care-schedule' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -28,7 +28,8 @@ export default function PreventiveCareSchedulePage() {
         sidebar={<>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-preventive-care" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>

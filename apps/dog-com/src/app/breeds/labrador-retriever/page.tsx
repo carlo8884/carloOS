@@ -1,16 +1,41 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, StockImage, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Labrador Retriever Guide — POMC Gene, Hip Dysplasia | Dog.com', description: 'Labradors have a specific genetic mutation (POMC) causing food obsession and obesity. Hip and elbow dysplasia common. One of the most trainable breeds', path: '/breeds/labrador-retriever', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Labrador Retriever Breed Guide', description: 'POMC gene food obsession, hip dysplasia, elbow dysplasia, and exercise for Labradors.', url: 'https://dog.com/breeds/labrador-retriever', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Labrador Retriever Breed Guide', description: 'POMC gene food obsession, hip dysplasia, elbow dysplasia, and exercise for Labradors.', url: 'https://dog.com/breeds/labrador-retriever', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How much exercise does a Labrador Retriever need?',
+    answer: 'Adult Labradors need 60–90 minutes of vigorous exercise daily — a 30-minute walk is inadequate for a breed developed to retrieve waterfowl all day. Swimming is ideal because it provides vigorous full-body exercise without joint impact. For puppies, avoid forced running and repetitive jumping until growth plates close at approximately 12–18 months.',
+  },
+  {
+    question: 'Why are Labradors always hungry?',
+    answer: 'A 2016 study in Cell Metabolism identified a mutation in the POMC gene associated with increased appetite and obesity in Labradors — approximately 23% of pet Labradors carry at least one copy. Affected dogs genuinely do not feel full the way other dogs do, which is why measured meals, no free-feeding, and counted treats are essential management tools rather than suggestions.',
+  },
+  {
+    question: 'What health problems do Labrador Retrievers have?',
+    answer: 'Labradors rank among the most commonly dysplastic large breeds for both hips and elbows, and their POMC-driven food motivation makes them strongly obesity-prone. OFA hip and elbow clearances on both sire and dam are the minimum baseline when buying from a breeder. Lean weight throughout life is the highest-impact modifiable factor — discuss joint and weight management with your veterinarian.',
+  },
+  {
+    question: 'How long do Labradors live?',
+    answer: 'Labradors typically live 10–12 years. Published population data shows chocolate Labradors have a shorter median lifespan (10.7 years) than black and yellow Labradors (12.1 years), likely related to gene pool effects from breeding for the recessive chocolate coloration.',
+  },
+  {
+    question: 'What is the difference between English and American Labs?',
+    answer: 'American (field-bred) Labradors are leaner, taller, and higher energy, bred for hunting and field work. English (show-bred) Labradors are stockier with a broader head and calmer temperament. Both have similar health profiles, though English types may have a higher obesity predisposition from their broader build. Choose based on lifestyle — an American Lab in a sedentary household is a challenging combination.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 export default function LabradorPage() {
   return (
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Labrador Retriever Breed Guide', subtitle: 'The most popular dog breed in the US for over 30 consecutive years. Labradors are working retrievers — bred for stamina, trainability, and a soft mouth. Their food motivation (which has a genetic basis) makes them among the most trainable dogs in existence, and among the most prone to obesity.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Labrador Retriever', href: '/breeds/labrador-retriever' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Golden Retriever Guide', href: '/breeds/golden-retriever', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'Best Dog Food Reviews', href: '/reviews', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -21,12 +46,14 @@ export default function LabradorPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Labrador Retriever?', href: '/breeds/labrador-retriever/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Labrador Health Deep-Dive" links={[{ label: 'Labrador Retriever Health Issues & Screenings', href: '/breeds/labrador-retriever/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Labrador Feeding Guide', href: '/breeds/labrador-retriever/feeding' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Golden Retriever vs Labrador Retriever', href: '/compare/golden-retriever-vs-labrador-retriever' },
           { label: 'Labrador Retriever vs German Shepherd', href: '/compare/labrador-retriever-vs-german-shepherd' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-lab" />
       </>}
@@ -56,6 +83,13 @@ export default function LabradorPage() {
         <h2>Colors and Types — English vs American Lab</h2>
         <p>Labradors come in three colors: black (most common), yellow (ranging from cream to fox red), and chocolate (the most recent color addition). Chocolate Labradors have a shorter median lifespan (10.7 years vs 12.1 years for blacks and yellows) based on published population data — likely related to smaller gene pool effects from breeding selection for the recessive chocolate coloration rather than a direct color-lifespan link.</p>
         <p>Two informal types: American (field-bred) Labradors — leaner, taller, higher energy, bred for hunting and field work. English (show-bred) Labradors — stockier, broader head, calmer temperament, heavier build. Both are Labradors and have similar health profiles, though English types may have higher obesity predisposition from their broader build. Choose based on lifestyle — an American Lab in a sedentary household is a challenging combination.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

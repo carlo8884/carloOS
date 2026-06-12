@@ -1,9 +1,22 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works', path: '/training/puppy-biting', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition', description: 'Normal vs concerning biting, bite inhibition protocol, and what doesn\'t work.', url: 'https://dog.com/training/puppy-biting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+
+// HowTo steps mirror "The Human Protocol" ordered list on this page.
+const howToSchema = buildHowToSchema({
+  name: 'How to Teach a Puppy Bite Inhibition',
+  description: 'The two-phase bite inhibition protocol: teach soft biting first, then progressively reduce acceptable pressure, with redirection and nap management.',
+  url: 'https://dog.com/training/puppy-biting',
+  steps: [
+    { name: 'Phase 1 — Teach soft biting', text: 'When the puppy bites at a normal play pressure, continue playing. When the puppy bites hard enough to hurt, say "ouch" calmly, withdraw your hand, and pause play for 30–60 seconds, then resume. The feedback is information, not punishment: hard bite = play ends. Repeat consistently.' },
+    { name: 'Phase 2 — Reduce acceptable pressure', text: 'Once the puppy is mostly biting softly, progressively lower the threshold — respond to softer and softer pressure until the puppy has learned not to put teeth on skin at all.' },
+    { name: 'Always provide alternatives', text: 'When the puppy tries to bite, redirect to an appropriate chew toy. Have toys in every room. The puppy needs to bite — give it something appropriate to bite.' },
+    { name: 'Watch for overtiredness', text: 'If biting escalates to unmanageable levels and the puppy has been awake for more than 90 minutes, it is overtired — crate for a nap. Overtired puppies cannot regulate themselves.' },
+  ],
+})
 
 export default function PuppyBitingPage() {
   return (
@@ -13,9 +26,10 @@ export default function PuppyBitingPage() {
       hero={{ title: 'Puppy Biting & Bite Inhibition', subtitle: 'Puppies explore the world with their mouths. Biting during play is completely normal. The goal is not "stop all biting immediately" — it is to teach bite inhibition: a soft mouth that can distinguish between play and real bite pressure.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Biting', href: '/training/puppy-biting' }]}
       relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }]}
-      schema={schema}
+      schema={combineSchemas(schema, howToSchema)}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }]} />
+        <RelatedLinks title="Planning Ahead for a New Puppy" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-biting" />
       </>}

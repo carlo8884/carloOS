@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide — Burrowing Snake | Lizard.com", description: "Kenyan sand boas are a beginner-friendly burrowing snake. Belly heat, deep aspen substrate, frozen/thawed mice, and why they spend most of their life buried.", path: "/species/kenyan-sand-boa", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide", description: "Substrate depth, belly heat, feeding, and complete care for Gongylophis colubrinus, the Kenyan sand boa.", url: "https://lizard.com/species/kenyan-sand-boa", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide", description: "Substrate depth, belly heat, feeding, and complete care for Gongylophis colubrinus, the Kenyan sand boa.", url: "https://lizard.com/species/kenyan-sand-boa", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How big do Kenyan sand boas get?', answer: 'They are one of the smallest commonly kept boas: females reach 24–32 inches, while males stay under 18. A single adult female is comfortable in a 20-gallon long (30×12 inches of floor space) and males do well in 10–15 gallons — floor area matters far more than height for a terrestrial burrower with no climbing instinct.' },
+  { question: 'Why is my sand boa always buried?', answer: 'That is normal and healthy. Kenyan sand boas are fossorial ambush predators that spend up to 90 percent of their life buried in 3–4 inches of aspen or sand-soil substrate, ambushing prey from below with only the eyes exposed. They surface mainly to feed and occasionally to thermoregulate at night, which is why they are best thought of as a low-maintenance pet rather than a display animal.' },
+  { question: 'What do Kenyan sand boas eat and how often?', answer: 'Frozen/thawed mice exclusively — live rodents can injure or kill a snake by biting and offer no welfare benefit. Prey roughly the width of the snake at its widest point is correct: pinkie mice for hatchlings every 5–7 days, adult mice for adult females every 10–14 days. Many sand boas prefer to strike prey wiggled with tongs at the substrate surface at dusk. Obesity from overfeeding a sedentary animal is the most common diet problem; reduce feeding frequency rather than prey size.' },
+  { question: 'What heating does a Kenyan sand boa need?', answer: 'They thermoregulate primarily through belly contact with warm substrate, similar to leopard geckos. Provide a 90–95°F warm zone at the substrate surface over one third of the floor and a 75–80°F cool side, with a night drop into the low 70s being fine. A thermostat-controlled heat mat under one end is the traditional method; an overhead deep heat projector on a thermostat is an excellent alternative. Never run any heat source without a thermostat. UVB is optional for this nocturnal burrower.' },
+  { question: 'Are Kenyan sand boas good beginner snakes?', answer: 'Yes — they combine small adult size, a docile disposition that rarely bites defensively, a 15–20 year lifespan, and an undemanding husbandry profile that tolerates the small errors beginners make. Keep handling sessions short (this is a secure-when-buried species), watch for feeding-response strikes if your hands smell of rodent, and wash hands before and after every interaction as a Salmonella precaution.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function SpeciesKenyanSandBoaPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Kenyan Sand Boa", href: "/species/kenyan-sand-boa" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
@@ -67,6 +79,10 @@ export default function SpeciesKenyanSandBoaPage() {
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV) member directory, arav.org."}</li>
             <li>{"Reptiles Magazine species husbandry references for Gongylophis colubrinus."}</li>
           </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Kenyan Sand Boa — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, under-tank heating, thermostats, deep aspen or sand substrate, and hides sized for Kenyan sand boa care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -77,5 +93,6 @@ export default function SpeciesKenyanSandBoaPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

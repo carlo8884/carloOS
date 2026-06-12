@@ -11,7 +11,8 @@ import {
   BuyBox,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -148,6 +149,7 @@ export default function BlueBuffaloEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-blue-buffalo" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Blue Buffalo — an independent, evidence-based brand evaluation." />
         <p>
           Blue Buffalo is one of the most-recognized brands in U.S. pet food, the largest brand
           in the &quot;wholesome natural&quot; segment as it emerged in the late 2000s and early
@@ -157,6 +159,13 @@ export default function BlueBuffaloEvaluationPage() {
           brands named in the FDA CVM&apos;s 27 June 2019 update on the grain-free DCM
           investigation. An honest evaluation has to engage all of that.
         </p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On the published evidence, Blue Buffalo is a mixed but not categorically unacceptable brand: above-average ingredient transparency, average AAFCO substantiation, a higher-than-peer recall frequency, and marketing claims that outrun the published evidence. Many individual SKUs are perfectly reasonable feeding choices. The decision should be made on the specific SKU and the individual animal&apos;s clinical context — not on the brand name alone.
+          </p>
+        </div>
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox

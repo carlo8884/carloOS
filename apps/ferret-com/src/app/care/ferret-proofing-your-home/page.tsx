@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'How do I ferret-proof a room?',
+    answer:
+      'Block, fill, or screen any opening wider than about one inch at floor level — and inspect at ferret eye height by getting down and looking along the floor line. Then remove crush hazards (recliners and sofa beds above all), clear soft rubber and foam objects and other ingestibles, secure carpet edges, cords, plants, and chemicals, and add safe enrichment. Most keepers fully proof one dedicated room rather than the whole house at once.',
+  },
+  {
+    question: 'How small a gap can a ferret fit through?',
+    answer:
+      'Any opening its skull fits through — the body deforms around the skeleton, so an opening that looks far too small is not. That is why the working gap rule is one inch at floor level, and why the highest-risk gaps are the ones invisible from standing height: appliance undersides, plumbing holes under sinks, cabinet kick-spaces, vents, and tears in box springs and upholstered furniture.',
+  },
+  {
+    question: 'Why are recliners dangerous for ferrets?',
+    answer:
+      'The reclining chair and sofa bed are the most-cited cause of preventable ferret death in keeper communities — a ferret asleep or hiding inside the mechanism is crushed when someone sits, reclines, or folds the furniture. The rule is absolute: lock recliners open, never operate a sofa bed with a ferret loose, or keep this furniture out of the free-roam room entirely.',
+  },
+  {
+    question: 'What household items do ferrets swallow?',
+    answer:
+      'Soft rubber and foam top the list — shoe soles, rubber bands, foam earplugs, erasers, cushion foam, rubber feet from electronics, latex — and ferrets chew and swallow these compulsively. Foreign-body gastrointestinal obstruction is one of the most common surgical emergencies in pet ferrets in the exotic-mammal literature. String, ribbon, and elastic are especially dangerous because they can cause a linear foreign body.',
+  },
+  {
+    question: 'Are houseplants poisonous to ferrets?',
+    answer:
+      'Many common ones are — lilies, pothos, philodendron, and dieffenbachia are frequent offenders toxic to small mammals. When in doubt, keep plants well out of reach or out of the room. The same caution applies to cleaning products, rodent and insect baits (designed to be eaten by small mammals and lethal), medications, and toxic human foods. If ingestion is suspected, contact a veterinarian familiar with ferrets immediately.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -52,7 +82,6 @@ export default function FerretProofingPage() {
             'A ferret will find every gap, every hazard, and every soft object in a room within its first hour loose. Ferret-proofing is not optional housekeeping — it is the precondition for the daily out-of-cage time a ferret must have. This is the room-by-room checklist.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}
@@ -71,6 +100,7 @@ export default function FerretProofingPage() {
                 { label: 'Ingestion Hazards', href: '#ingestion' },
                 { label: 'Toxic Plants & Chemicals', href: '#toxins' },
                 { label: 'Building a Safe Room', href: '#safe-room' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -104,7 +134,7 @@ export default function FerretProofingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -171,6 +201,9 @@ export default function FerretProofingPage() {
           <p>
             This dedicated room is what makes the daily out-of-cage time workable. Ferrets are not cage animals; they need several hours out every day, and a single thoroughly proofed room is far safer and easier to maintain than ad-hoc whole-house access. From there you can expand to additional proofed rooms as your confidence and the proofing grow.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

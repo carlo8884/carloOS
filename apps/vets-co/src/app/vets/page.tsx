@@ -56,7 +56,6 @@ export default function VetDirectoryHubPage() {
   const schema = combineSchemas(breadcrumbSchema, collectionPageSchema)
 
   const topCities = CITIES.slice(0, 12)
-  const populatedStateCount = STATES.filter((s) => s.vetCount > 0).length
 
   return (
     <>
@@ -116,26 +115,9 @@ export default function VetDirectoryHubPage() {
             Browse by Region
           </h2>
           <p className="text-sm text-brand-text-mid mb-6 max-w-3xl">
-            We cover all 50 states plus the District of Columbia. The visual map below will become
-            an interactive SVG selector once the verified data source is wired; for now it is a
-            placeholder anchor for the cluster.
+            We cover all 50 states plus the District of Columbia. Choose your state from the list
+            below to find local clinics, emergency hospitals, and specialists near you.
           </p>
-          <div
-            className="bg-brand-surface border-2 border-dashed border-brand-border rounded-2xl flex items-center justify-center"
-            style={{ minHeight: '220px' }}
-            role="img"
-            aria-label="USA map placeholder — interactive map renders here once verified directory data is wired."
-          >
-            <div className="text-center px-6 py-10">
-              <div className="text-3xl mb-2" aria-hidden>🗺️</div>
-              <div className="text-sm font-bold text-brand-dark mb-1">USA Map (Coming Soon)</div>
-              <p className="text-xs text-brand-text-light m-0 max-w-md">
-                Interactive state selector. Currently {populatedStateCount} state
-                {populatedStateCount === 1 ? '' : 's'} have sample listings; the remainder route to
-                a state hub with a &ldquo;directory pending&rdquo; message.
-              </p>
-            </div>
-          </div>
         </section>
 
         {/* All states */}

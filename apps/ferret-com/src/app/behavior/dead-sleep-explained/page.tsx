@@ -10,11 +10,11 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Dead Sleep Explained', url: 'https://ferret.com/behavior/dead-sleep-explained' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +65,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -102,7 +95,6 @@ export default function FerretDeadSleepPage() {
             "Sooner or later, nearly every ferret owner has the same heart-stopping moment: they find their ferret limp, floppy, and seemingly unresponsive — and assume the worst. Almost always, the ferret is simply in a very, very deep sleep. Here is why ferrets do this, and how to tell a normal deep sleep from a real emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -139,6 +131,7 @@ export default function FerretDeadSleepPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-dead-sleep"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

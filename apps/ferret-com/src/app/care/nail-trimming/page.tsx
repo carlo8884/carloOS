@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'How often should I trim my ferret’s nails?',
+    answer:
+      'Most ferrets need a trim roughly every one to two weeks. Ferret claws are non-retractable and grow continuously, and an indoor ferret has none of the digging and rough terrain that would wear them down. The better rule than a fixed interval: check weekly and trim when the nails have grown noticeably past the pad or start to curve.',
+  },
+  {
+    question: 'How do I trim ferret nails without cutting the quick?',
+    answer:
+      'Ferret nails are usually pale or translucent — hold the nail up to good light and the quick shows as a pink line down the center. Trim only the clear curved hook at the very end, beyond where the pink stops. When in doubt, take less: several small trims are far safer than one ambitious cut, and trimming a little more often keeps the quick from advancing down the nail.',
+  },
+  {
+    question: 'What is the trick to keeping a ferret still for nail trimming?',
+    answer:
+      'The distraction method: smear a small amount of a favorite lickable treat on the ferret’s belly while it lies on its back, then trim while it is busy licking. Favor a meat- or fat-based lickable rather than a sugary one — high-sugar treats are discouraged because of the carbohydrate-insulinoma concern — and keep the amount small. Most trims take under a minute this way.',
+  },
+  {
+    question: 'What do I do if my ferret’s nail bleeds after trimming?',
+    answer:
+      'A nicked quick happens to nearly everyone eventually and is not an emergency. Apply gentle pressure with a clean cloth, press a pinch of styptic powder (or cornstarch as a household substitute) onto the nail tip, keep the ferret quiet for a few minutes, and skip the rest of that trim. If bleeding will not stop despite pressure and styptic powder, or the nail looks injured beyond a simple nick, contact your veterinarian — ideally an exotics-capable clinic identified in advance.',
+  },
+  {
+    question: 'Can I use human nail clippers on a ferret?',
+    answer:
+      'They can work on the smallest nails but tend to crush rather than cleanly cut. The standard tool is a small clipper made for cats, kittens, or small dogs — scissor-style or small guillotine-style — which is the right scale for a ferret nail. Good lighting matters more than the clipper itself, because the whole technique depends on seeing the quick.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -48,7 +78,6 @@ export default function NailTrimmingPage() {
             'Ferret nails grow continuously and, indoors, never wear down enough on their own. Overgrown nails snag on fabric, curl into the pad, and catch in cage bars. Trimming is a basic, frequent grooming task — and with the right tool and the distraction trick keepers rely on, it takes under a minute.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -67,6 +96,7 @@ export default function NailTrimmingPage() {
                 { label: 'The Distraction Method', href: '#distraction' },
                 { label: 'Step by Step', href: '#steps' },
                 { label: 'If You Cut the Quick', href: '#cut-quick' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -105,7 +135,7 @@ export default function NailTrimmingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -170,6 +200,9 @@ export default function NailTrimmingPage() {
           <p>
             A single nicked quick needs only home first aid. If bleeding will not stop despite pressure and styptic powder, or the nail looks injured beyond a simple nick, contact your veterinarian — having an exotics-capable clinic identified in advance, as our <a href="/health/vet-visit-prep">vet visit prep</a> guide recommends, makes that call easy.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

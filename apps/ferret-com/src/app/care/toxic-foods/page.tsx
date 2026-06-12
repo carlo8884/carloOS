@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-29T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care/toxic-foods' },
-    { name: 'Toxic Foods', url: 'https://ferret.com/care/toxic-foods' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -124,7 +116,6 @@ export default function FerretToxicFoodsPage() {
             'Ferrets are obligate carnivores with a short gastrointestinal tract, a high metabolic rate, and a famously curious chewing habit. The combination means accidental ingestions are common and the toxicity profile for many household items is different from cats and dogs. A small chocolate dose that a 25 kg dog would shrug off can be a life-threatening exposure in a 1 kg ferret.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

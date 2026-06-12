@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,59 @@ const SOURCES = [
   { label: "Smartt, J. Goldfish Varieties and Genetics. Blackwell Science, 2001.", publisher: "Blackwell Science" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Goldfish Care Guide — Tank Size, Lifespan | Fish.com', description: 'Goldfish are not bowl fish. Common goldfish need 75+ gallons and can live 20+ years. Fancy goldfish have different needs than single-tail varieties.', path: '/species/goldfish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How long do goldfish actually live?',
+    answer:
+      'A common goldfish kept correctly — in an appropriately sized tank or pond with proper filtration — can live 20–25 years and grow to 12–14 inches. The "goldfish only live 3 years" belief persists because that is roughly how long goldfish survive in bowls; it reflects their conditions, not their natural lifespan.',
+    answerText:
+      'Common goldfish in proper tanks or ponds live 20-25 years and reach 12-14 inches. The 3-year figure reflects bowl conditions, not natural lifespan.',
+  },
+  {
+    question: 'What tank size do goldfish need?',
+    answer:
+      'Single-tail goldfish (common, comet, shubunkin) need a minimum of 30 gallons for the first fish plus 10 gallons per additional fish — and that is the minimum for juveniles. Adults need significantly more, or a pond; a well-filtered 75-gallon tank or 300+ gallon pond suits a small single-tail group. Fancy goldfish need 20+ gallons for the first fish and 10 gallons per additional fish.',
+    answerText:
+      'Single-tails: 30 gallons for the first fish plus 10 per additional, minimum for juveniles — adults need a 75-gallon tank or pond. Fancies: 20+ gallons for the first fish plus 10 per additional.',
+  },
+  {
+    question: 'Why can’t goldfish live in a bowl?',
+    answer:
+      'A 1-gallon bowl with a 4-inch fish has a toxically high fish-to-water ratio, no filtration (ammonia accumulates rapidly in standing water), and no nitrogen cycle (no beneficial bacteria to convert waste). Goldfish are heavy feeders with fast metabolisms and generate more ammonia per inch than most tropical fish, so bowls fail quickly and predictably.',
+    answerText:
+      'Bowls have too little water volume, no filtration, and no nitrogen cycle. Goldfish produce more ammonia per inch than most tropical fish, so ammonia accumulates rapidly.',
+  },
+  {
+    question: 'Can fancy goldfish live with common goldfish?',
+    answer:
+      'No. Single-tail varieties are fast and active and outcompete the slower, round-bodied fancy varieties for food. Fancies also prefer warmer water (65–72°F) while single-tails are cold tolerant. The two types should be housed separately.',
+    answerText:
+      'No. Fast single-tails outcompete slow fancy varieties for food, and fancies prefer warmer water (65-72F) than cold-tolerant single-tails.',
+  },
+  {
+    question: 'What should I feed my goldfish?',
+    answer:
+      'A high-quality goldfish pellet as the staple, supplemented with blanched vegetables (zucchini, spinach, peas — helpful for gut motility in fancy varieties prone to constipation) and gel food. Feed once or twice daily, only what they consume in 2 minutes — overfeeding is the most common husbandry mistake. Avoid cheap goldfish flakes as the primary diet, and stop feeding pond goldfish below 50°F.',
+    answerText:
+      'Quality goldfish pellet staple plus blanched vegetables and gel food. Feed once or twice daily, only what is eaten in 2 minutes. Stop feeding pond fish below 50F.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
+
 export default function GoldfishPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Goldfish Care Guide', subtitle: 'Carassius auratus — goldfish are among the most misunderstood fish in the hobby. A common goldfish kept correctly — in an appropriately sized tank or pond with proper filtration — can live 20–25 years and grow to 12–14 inches. The fish dying in bowls is not a reflection of their lifespan; it is a reflection of their conditions. Goldfish deserve better, and with correct care they deliver.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Goldfish Care Guide', subtitle: 'Carassius auratus — goldfish are among the most misunderstood fish in the hobby. A common goldfish kept correctly — in an appropriately sized tank or pond with proper filtration — can live 20–25 years and grow to 12–14 inches. The fish dying in bowls is not a reflection of their lifespan; it is a reflection of their conditions. Goldfish deserve better, and with correct care they deliver.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Goldfish', href: '/species/goldfish' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Koi", href: "/species/koi", category: "Species Guide" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -37,7 +83,7 @@ export default function GoldfishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-goldfish" aspect="16:9" variant="inline" caption="A goldfish (Carassius auratus) in a properly sized, filtered aquarium." priority />
+        <StockImage manifestKey="fish-com:species-goldfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A goldfish (Carassius auratus) in a properly sized, filtered aquarium." priority />
         <h2>The Bowl Myth — Why Goldfish Don't Belong in Bowls</h2>
         <p>Goldfish in bowls die quickly for predictable reasons: inadequate water volume (a 1-gallon bowl with a 4-inch fish has a toxically high fish-to-water ratio), no filtration (ammonia accumulates rapidly in standing water), and no nitrogen cycle (no beneficial bacteria to convert waste). A common goldfish produces significant waste — they are heavy feeders with fast metabolisms and generate more ammonia per inch than most tropical fish. The "goldfish only live 3 years" belief persists because that is roughly how long goldfish survive in bowls — it is not their natural lifespan.</p>
         <p>Correct housing: a common, comet, or shubunkin goldfish requires a minimum of 30 gallons for the first fish plus 10 gallons per additional fish — and this is the minimum for juveniles. Adults require significantly more, or a pond. A well-filtered 75-gallon tank or 300+ gallon pond allows a small group of single-tail goldfish to reach their full potential — beautiful, 12-inch animals that recognize their owners, swim actively, and live for two decades.</p>
@@ -52,6 +98,17 @@ export default function GoldfishPage() {
         <h2>Feeding — Quality Over Quantity</h2>
         <p>Goldfish are omnivores that will eat continuously if food is available — overfeeding is the most common husbandry mistake. Feed once or twice daily, only what they consume in 2 minutes. A high-quality goldfish pellet (Hikari Lionhead, Repashy Soilent Green, Northfin Goldfish) as the staple. Supplement with blanched vegetables (zucchini, spinach, peas — excellent for gut motility in fancy varieties prone to constipation) and gel food. Avoid cheap goldfish flakes as the primary diet — they break down rapidly and cloud the water.</p>
         <p>Feeding temperature matters: below 50°F, goldfish metabolism slows significantly. Reduce feeding at cooler temperatures and stop feeding below 50°F for goldfish in ponds preparing for winter dormancy — undigested food causes intestinal problems in cold-dormant fish.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Goldfish — Tank Setup</div>
@@ -65,5 +122,6 @@ export default function GoldfishPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

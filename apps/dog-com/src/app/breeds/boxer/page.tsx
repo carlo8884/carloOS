@@ -1,16 +1,27 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Boxer Breed Guide — Cancer Risk, Aortic Stenosis | Dog.com', description: 'Boxers have the highest cancer rate of any breed. Mast cell tumors, brain tumors, and heart disease (ARVC, SAS) are the primary concerns.', path: '/breeds/boxer', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Boxer Breed Guide', description: 'Cancer risk, cardiac disease, and health screening for Boxers.', url: 'https://dog.com/breeds/boxer', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Boxer Breed Guide', description: 'Cancer risk, cardiac disease, and health screening for Boxers.', url: 'https://dog.com/breeds/boxer', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What health problems do Boxers have?', answer: 'Boxers have the highest cancer incidence of any breed studied — mast cell tumors, brain tumors, lymphoma, and histiocytic sarcoma are the most significant types. The breed also carries two cardiac predispositions: arrhythmogenic right ventricular cardiomyopathy (ARVC, also called Boxer cardiomyopathy) and subvalvular aortic stenosis (SAS). Build a screening protocol with your veterinarian from young adulthood.' },
+  { question: 'What should I do if I find a lump on my Boxer?', answer: 'Have it aspirated promptly. Any new skin lesion on a Boxer warrants a fine-needle aspirate at the next available appointment — not watchful waiting — because mast cell tumors can look like harmless warts while being locally invasive. This single habit is the highest-yield cancer-detection intervention in the breed.' },
+  { question: 'What heart screening does a Boxer need?', answer: 'Annual cardiac auscultation from age 2, with cardiology referral if a murmur is detected, and an annual 24-hour Holter monitor from age 3 to detect the ventricular premature contractions associated with ARVC — which can cause sudden death before any other sign appears. Discuss the right schedule for an individual dog with your veterinarian or a veterinary cardiologist.' },
+  { question: 'Do Boxers tolerate heat?', answer: 'Poorly. Boxers are brachycephalic — the shortened muzzle compresses the airway, so they cannot pant as effectively as long-nosed breeds and are significantly more susceptible to heat stroke. In hot weather, limit exercise to early morning and evening, never leave a Boxer in a car, and treat collapse in heat as a veterinary emergency.' },
+  { question: 'How long do Boxers live?', answer: 'Boxers average 9-12 years, a shortened lifespan driven largely by the breed\'s cancer and cardiac predispositions — the average age of cancer death in Boxers is approximately 6-7 years. Consistent screening (annual skin checks, cardiac evaluation, prompt aspirates of new lumps) with your veterinarian gives the best odds of early detection.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
+
 export default function BoxerPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Boxer Breed Guide', subtitle: 'Playful, loyal, and perpetually puppy-like well into adulthood. Boxers are one of the most beloved family breeds — and one of the most health-compromised. They have the highest cancer rate of any breed, significant cardiac disease predisposition, and a shortened average lifespan of 9–12 years.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Boxer', href: '/breeds/boxer' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -21,6 +32,7 @@ export default function BoxerPage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Boxer?', href: '/breeds/boxer/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Cherry Eye', href: '/health/cherry-eye' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
@@ -63,7 +75,11 @@ export default function BoxerPage() {
           <li>MRI for any adult Boxer with new-onset seizures or behavioral change</li>
           <li>Pet insurance obtained as a puppy before conditions develop</li>
         </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

@@ -110,7 +110,7 @@ const FAQ_ITEMS = [
   {
     question: 'Sheepskin, gel, or memory foam for a half pad?',
     answer:
-      'Sheepskin (Mattes, Fleeceworks) conforms to the back, manages heat naturally through wool fiber, and is the gold standard for sensitive horses. Gel (Acavallo) is dense and works for impact absorption on hard ground but retains heat. Memory foam (ECOGOLD, ThinLine) absorbs shock without significant heat buildup and is the most-used FEI-level half pad category for show jumping and eventing. Peer-reviewed pressure mapping (Belock 2012) found that sheepskin and ECOGOLD-style memory-foam pads produced lower peak pressures than gel or thick foam pads in the same fit conditions.',
+      'Sheepskin (Mattes, Fleeceworks) conforms to the back, manages heat naturally through wool fiber, and is widely preferred for sensitive horses. Gel (Acavallo) is dense and works for impact absorption on hard ground but retains heat. Memory foam (ECOGOLD, ThinLine) absorbs shock without significant heat buildup and is the most-used FEI-level half pad category for show jumping and eventing. Peer-reviewed pressure mapping (Belock 2012) found that sheepskin and ECOGOLD-style memory-foam pads produced lower peak pressures than gel or thick foam pads in the same fit conditions.',
     answerText:
       'Sheepskin conforms and breathes (best for sensitive backs). Memory foam absorbs shock without heat buildup (best for jumping/eventing). Gel retains heat — use only for short, high-impact sessions.',
   },
@@ -307,7 +307,7 @@ export default function BestSaddlePadsPage() {
               score={9.0}
               description={
                 <p>
-                  Equine Comfort Products&apos; bamboo-charcoal pads combine a bamboo wicking top, a charcoal-infused mid-layer (naturally anti-microbial — reduces odor and skin-irritation organisms over months of school use), and a contoured cotton interior. The wicking outperforms standard cotton in summer testing and the pad maintains its shape well past the 12-month mark that most quilted cotton dressage squares fail at. The bound edges hold up to repeated machine washing without fraying.
+                  Equine Comfort Products&apos; bamboo-charcoal pads combine a bamboo wicking top, a charcoal-infused mid-layer (naturally anti-microbial — reduces odor and skin-irritation organisms over months of school use), and a contoured cotton interior. Bamboo fiber is reported to wick more effectively than standard cotton in hot conditions, and the pad maintains its shape well past the 12-month mark that most quilted cotton dressage squares fail at. The bound edges hold up to repeated machine washing without fraying.
                 </p>
               }
               specs={[

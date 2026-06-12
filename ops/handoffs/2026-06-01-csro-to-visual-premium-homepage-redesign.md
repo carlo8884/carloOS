@@ -41,10 +41,17 @@ identity, (6) one memorable signature element, (7) survives a Tier-1 buyer demo.
 - **PetFood/Lizard:** current CSS-only heroes are honest placeholders — the redesign should give them
   real on-brand heroes (ingredient/food for PetFood, reptile/habitat for Lizard), not stay CSS-only.
 
-## Blocked item
-- **Horses.com direction (racing-intelligence vs general-equine-authority)** is a CSRO/Carlo decision
-  in flight — CSRO recommends general-equine-authority with racing as a sub-vertical, pending Carlo's
-  confirm. **Hold Horses.com homepage direction until CSRO confirms;** do the other 7 first.
+## Horses.com — DECIDED (Carlo, 2026-06-01) — now unblocked
+**Hybrid: Horses.com = category-defining premium equine authority; Racing Intelligence = flagship
+vertical inside it** (`/racing`), surfaced but not the homepage identity.
+- Homepage identity: premium equine ownership + performance authority; audience = serious owners,
+  riders, buyers, breeders, trainers, equine pros.
+- Hero + visual direction: premium, athletic, intelligent, investment-grade — **NOT cute pet content.**
+- General content frames high-value decisions (buying, health, training, tack, nutrition, insurance,
+  bloodlines, performance), not generic encyclopedia entries.
+- Racing prominent, not buried; don't narrow the whole domain to racing.
+Full direction in `ops/csro/premium-domain-launch-bar.md`. Horses now joins the redesign pass with
+the other 7 — no longer held.
 
 ## COO posture
 COO is holding all content expansion on priority sites until your standard lands and is applied.

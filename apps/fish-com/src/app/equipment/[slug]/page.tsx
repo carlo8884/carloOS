@@ -30,7 +30,6 @@ import {
   EmailCapture,
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
   ArticleByline,
@@ -126,13 +125,6 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://fish.com${b.href}`,
-    })),
-  })
-
   const faqSchema = buildFAQSchema({
     questions: faqItems.map((f) => ({
       question: f.question,
@@ -143,7 +135,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
   // ArticleLayout will inject one schema via <SchemaScript>. combineSchemas
   // returns an array; SchemaScript serializes the array into one JSON-LD
   // <script> tag.
-  const allSchemas = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const allSchemas = combineSchemas(articleSchema, faqSchema)
 
   return (
     <ArticleLayout
@@ -153,7 +145,6 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         subtitle: category.whatItIs,
         category: 'Equipment Buyer Guide',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}

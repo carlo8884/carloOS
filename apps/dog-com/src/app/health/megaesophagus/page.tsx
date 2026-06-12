@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Megaesophagus in Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-esophagus-in-small-animals/megaesophagus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,16 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Megaesophagus in Dogs — Upright Feeding, Bailey Chair | Dog.com', description: 'Megaesophagus causes regurgitation and life-threatening aspiration pneumonia.', path: '/health/megaesophagus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Megaesophagus in Dogs', description: 'Canine megaesophagus — management, upright feeding, and aspiration prevention.', url: 'https://dog.com/health/megaesophagus', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What is the difference between regurgitation and vomiting in dogs?', answer: 'Vomiting is active and forceful — the dog retches, the abdomen contracts, there is visible effort. Regurgitation is passive: food or fluid comes up without effort, often as a tube-shaped mass of undigested food (it never reached the stomach, so it retains its shape), and the dog may be surprised by it. This passive, effortless expulsion of undigested food is the hallmark of megaesophagus and esophageal disease generally — and the distinction matters diagnostically, so describe what you are seeing precisely to your veterinarian, or video an episode.' },
+  { question: 'What is a Bailey chair and does my dog need one?', answer: 'A Bailey chair is a custom-built seat that holds the dog nearly vertical — like a "sitting bear" — during feeding and for 10–30 minutes afterward, letting gravity move food into the stomach that the dilated esophagus cannot push down itself. It is the most effective single intervention for megaesophagus and dramatically reduces regurgitation and aspiration in a properly sized chair. Chairs can be bought pre-made or built from plans shared by megaesophagus support groups; dogs introduced gradually typically accept them readily. For dogs with significant aspiration risk, upright feeding at every meal is non-negotiable.' },
+  { question: 'What is the biggest danger of megaesophagus in dogs?', answer: 'Aspiration pneumonia — regurgitated material inhaled into the lungs causes bacterial infection of lung tissue, and it is the primary cause of death and suffering in megaesophagus dogs. Watch for cough, exercise intolerance, fever, increased breathing rate or effort, and in severe cases blue-tinged gums. Aspiration pneumonia in a megaesophagus dog is a medical emergency requiring hospitalization, IV antibiotics, and oxygen therapy — go to an emergency veterinarian, do not wait. Every feeding modification in megaesophagus management exists to prevent this complication.' },
+  { question: 'What should I feed a dog with megaesophagus?', answer: 'Whatever consistency that individual dog transits with the least regurgitation — there is no universal answer. Some dogs do best with small meatballs of canned food, some with liquid slurry, others with soaked kibble or gel-forming foods; it takes experimentation and observation, ideally guided by your veterinarian. The one consistent rule on this page: avoid dry kibble in dogs with significant megaesophagus, because it does not transit reliably.' },
+  { question: 'What causes megaesophagus in dogs?', answer: 'It is either congenital — present from birth and noticed when puppies start solid food — or acquired later from neuromuscular disease. The most common acquired cause is myasthenia gravis, an immune-mediated condition of the neuromuscular junction; hypothyroidism, Addison\'s disease, and toxins are other causes. That is why testing for underlying causes — specifically the acetylcholine receptor antibody titer for myasthenia gravis — is essential in adult-onset cases: treating the underlying condition may resolve the megaesophagus.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function MegaesophagusPage() {
   return (
@@ -52,6 +59,9 @@ export default function MegaesophagusPage() {
 
           <h2>Causes and Diagnostics</h2>
           <p>Megaesophagus may be congenital (present from birth — diagnosed when puppies begin eating solid food) or acquired (develops later in life from neuromuscular disease). Acquired causes include myasthenia gravis (the most common cause of acquired megaesophagus in adult dogs — an immune-mediated condition affecting the neuromuscular junction), hypothyroidism, hypoadrenocorticism (Addison's disease), and toxin exposure. Thoracic radiographs show the dilated esophagus. Fluoroscopic swallow study (barium swallow) demonstrates the functional deficit. In acquired megaesophagus, testing for underlying causes — specifically acetylcholine receptor antibody titer for myasthenia gravis — is essential because treating the underlying condition may resolve the megaesophagus.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

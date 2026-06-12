@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Care Guides — Body Condition, Spay/Neuter Timing & More | Dog.com',
-  description: 'In-depth dog care guides covering body condition scoring, spay/neuter timing, and other foundational health topics every dog owner should understand.',
+  title: 'Dog Care Guides — Health, Vital Signs, First Aid & More | Dog.com',
+  description: 'In-depth dog care reference guides: body condition scoring, spay/neuter timing, home vital signs, microchipping, wellness exams, and first aid preparedness.',
   path: '/guides',
 })
 
@@ -29,6 +29,30 @@ const GUIDES = [
     desc: 'When to spay or neuter by breed, sex, and health risk profile. Updated recommendations from current research.',
     href: '/guides/dog-spay-neuter-timing',
     badge: 'Health Decision',
+  },
+  {
+    title: "How to Take a Dog's Temperature & Vital Signs at Home",
+    desc: 'Temperature, pulse, breathing rate, gum color and hydration — the normal reference ranges and the thresholds that mean call your vet.',
+    href: '/guides/how-to-take-dogs-temperature',
+    badge: 'Reference',
+  },
+  {
+    title: 'Dog Microchipping Explained',
+    desc: 'How microchips work, what they cost, ISO standards, the registration step most owners miss, and how chips differ from GPS trackers.',
+    href: '/guides/dog-microchipping',
+    badge: 'Foundational',
+  },
+  {
+    title: 'The Dog Wellness Exam — What to Expect',
+    desc: 'What happens at a wellness visit, how often to go by life stage, how to choose a veterinarian, and the questions to ask.',
+    href: '/guides/dog-wellness-exam',
+    badge: 'Reference',
+  },
+  {
+    title: 'Dog First Aid Kit & Emergency Preparedness',
+    desc: 'What to put in a canine first aid kit, the emergency numbers to save in advance, and how to be ready for a medical emergency.',
+    href: '/guides/dog-first-aid-kit',
+    badge: 'Reference',
   },
 ]
 
@@ -82,7 +106,9 @@ export default function GuidesHubPage() {
             Most everyday dog questions have quick answers. The decisions on this page do not. They are the foundational, evidence-dependent choices that shape a dog&apos;s long-term health: how to read body condition correctly, how to time a spay or neuter against the latest research, and how to weigh trade-offs where the &ldquo;right&rdquo; answer changes by breed, sex, and life stage. Each guide here is built to be a reference you return to, not a listicle you skim once.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-            The guides are written to work together. <Link href="/guides/dog-body-condition-score" className="text-brand-primary font-medium hover:underline">Dog body condition scoring</Link> gives you the 1&ndash;9 framework vets use to judge whether a dog is underweight, ideal, or carrying risk &mdash; the single most useful skill for catching weight problems before they become disease. From there, the <Link href="/guides/dog-spay-neuter-timing" className="text-brand-primary font-medium hover:underline">spay and neuter timing guide</Link> walks through what current evidence says about when to schedule the procedure, because the calculus differs sharply between a small companion breed and a large, slow-maturing one.
+            The guides are written to work together. <Link href="/guides/dog-body-condition-score" className="text-brand-primary font-medium hover:underline">Dog body condition scoring</Link> gives you the 1&ndash;9 framework vets use to judge whether a dog is underweight, ideal, or carrying risk &mdash; the single most useful skill for catching weight problems before they become disease. From there, the <Link href="/guides/dog-spay-neuter-timing" className="text-brand-primary font-medium hover:underline">spay and neuter timing guide</Link> walks through what current evidence says about when to schedule the procedure, because the calculus differs sharply between a small companion breed and a large, slow-maturing one.</p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Alongside those decisions are the hands-on skills every owner should have. Learn to <Link href="/guides/how-to-take-dogs-temperature" className="text-brand-primary font-medium hover:underline">take your dog&apos;s temperature and vital signs at home</Link> so you can tell your vet exactly what is happening, understand <Link href="/guides/dog-microchipping" className="text-brand-primary font-medium hover:underline">how microchipping works</Link> and why registration matters more than the implant, know <Link href="/guides/dog-wellness-exam" className="text-brand-primary font-medium hover:underline">what to expect at a wellness exam</Link> and how to choose a veterinarian, and build a <Link href="/guides/dog-first-aid-kit" className="text-brand-primary font-medium hover:underline">first aid kit and emergency plan</Link> before you ever need one.
           </p>
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 mt-8 leading-tight">Who this is for</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
@@ -117,6 +143,7 @@ export default function GuidesHubPage() {
           source="guides-hub" ctaText="Subscribe Free"
         />
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="footer" />
     </>
   </>
   )

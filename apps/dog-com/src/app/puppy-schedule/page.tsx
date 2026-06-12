@@ -140,7 +140,7 @@ export default function PuppySchedulePage() {
             and a body-handling checklist that helps vet visits go smoothly.
           </p>
 
-          <div className="bg-white border border-brand-border rounded-lg overflow-hidden">
+          <div className="bg-white border border-brand-border rounded-lg overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="bg-brand-primary-pale">
                 <tr>

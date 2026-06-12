@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
@@ -16,7 +16,7 @@ export default function DehydrationPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dehydration in Dogs', subtitle: 'Dehydration occurs when fluid loss exceeds fluid intake — from vomiting, diarrhea, heat exposure, inadequate water intake, or kidney disease. Mild dehydration can be managed at home; moderate to severe dehydration requires veterinary fluid therapy. Knowing which situation you are in is the key skill.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
+        hero={{ title: 'Dehydration in Dogs', subtitle: 'Dehydration occurs when fluid loss exceeds fluid intake — from vomiting, diarrhea, heat exposure, inadequate water intake, or kidney disease. Mild dehydration can be managed at home; moderate to severe dehydration requires veterinary fluid therapy. Knowing which situation you are in is the key skill.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '7 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Dehydration', href: '/health/dehydration-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -36,7 +36,8 @@ export default function DehydrationPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Vomiting and Diarrhea', href: '/health/vomiting-diarrhea-pets' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dehydration" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>The Skin Turgor Test</h2>

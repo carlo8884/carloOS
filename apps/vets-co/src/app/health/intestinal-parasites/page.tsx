@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms | Vets.co', description: 'Annual fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease.', path: '/health/intestinal-parasites', type: 'article' })
@@ -17,7 +17,7 @@ export default function IntestinalParasitesPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Annual fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Annual fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Intestinal Parasites', href: '/health/intestinal-parasites' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -37,7 +37,8 @@ export default function IntestinalParasitesPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm Prevention', href: '/health/heartworm-in-dogs' }, { label: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-parasites" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>Roundworms — The Most Common and Zoonotic</h2>

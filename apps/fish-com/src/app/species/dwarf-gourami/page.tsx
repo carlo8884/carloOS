@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative.', path: '/species/dwarf-gourami', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What is dwarf gourami disease (DGD)?',
+    answer:
+      'A systemic infection caused by Dwarf Gourami Iridovirus (DGIV) that has become endemic in the mass-farm operations supplying most of the trade — estimates suggest 22% or more of commercially produced dwarf gouramis carry the virus at purchase. There is no treatment and no cure. Infected fish may look healthy for months before showing color fading, body lesions, a swollen abdomen, and lethargy.',
+    answerText:
+      'An incurable iridovirus (DGIV) endemic in mass-farmed stock — an estimated 22%+ of commercial dwarf gouramis carry it. Signs: fading color, lesions, swollen abdomen, lethargy.',
+  },
+  {
+    question: 'Should I get a honey gourami instead?',
+    answer:
+      'For most keepers, yes. The honey gourami (Trichogaster chuna) is smaller at 1.5 inches, more peaceful, and far more disease-resistant — it rarely carries DGD. Males develop golden-yellow to orange coloration when comfortable; not as vivid as a dwarf gourami, but it is an excellent community centerpiece for 10–20 gallon planted tanks.',
+    answerText:
+      'The honey gourami is the hardier alternative — 1.5 inches, more peaceful, and rarely carries DGD. A good centerpiece for 10-20 gallon planted tanks.',
+  },
+  {
+    question: 'Can two male dwarf gouramis live together?',
+    answer:
+      'Not in most community tanks. Males are territorial toward other males of the same species — keep two together only in a tank of 30+ gallons with significant visual breaks. A single male, or a male-female pair, is the appropriate choice for most setups.',
+    answerText:
+      'Not in most tanks — males are territorial with each other. Two males need 30+ gallons with visual breaks; a single male or a pair suits most setups.',
+  },
+  {
+    question: 'What tank conditions do dwarf gouramis need?',
+    answer:
+      'Temperature of 76–82°F and pH 6.0–7.5, with calm water and no strong surface agitation. As labyrinth fish they breathe atmospheric air at the surface, so the tank needs a cover that keeps the air above the water warm and humid while leaving a gap for air access. Heavily planted tanks with floating plants such as frogbit or water lettuce suit them well.',
+    answerText:
+      '76-82F, pH 6.0-7.5, calm water, and a covered tank with warm humid air above the surface — they are labyrinth fish that breathe atmospheric air.',
+  },
+  {
+    question: 'Why is my gourami blowing bubbles at the surface?',
+    answer:
+      'He is building a bubble nest — a floating cluster of saliva-coated air bubbles anchored to floating plants or the tank edge. Nest building is a sign of a comfortable, well-conditioned male. During spawning, eggs are deposited in the nest and the male guards it; fry hatch in 24–36 hours and initially feed on infusoria.',
+    answerText:
+      'That is bubble nest building, a sign of a comfortable, well-conditioned male. Eggs are laid in the nest and fry hatch in 24-36 hours.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function DwarfGouramiPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Dwarf Gourami Care Guide', subtitle: 'Trichogaster lalius — the dwarf gourami\'s vivid coloration (powder blue and fiery orange in males) makes them one of the most sought-after community centerpiece fish. They are also, unfortunately, one of the most disease-prone fish widely sold in the hobby — primarily due to Dwarf Gourami Disease (DGD), a viral condition that has become endemic in mass-farmed dwarf gourami populations.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Dwarf Gourami Care Guide', subtitle: 'Trichogaster lalius — the dwarf gourami\'s vivid coloration (powder blue and fiery orange in males) makes them one of the most sought-after community centerpiece fish. They are also, unfortunately, one of the most disease-prone fish widely sold in the hobby — primarily due to Dwarf Gourami Disease (DGD), a viral condition that has become endemic in mass-farmed dwarf gourami populations.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Dwarf Gourami', href: '/species/dwarf-gourami' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Pearl Gourami", href: "/species/pearl-gourami", category: "Species Guide" }, { title: "Sparkling Gourami", href: "/species/sparkling-gourami", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -36,7 +81,8 @@ export default function DwarfGouramiPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-dwarf-gourami" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A dwarf gourami in a home aquarium." priority />
         <h2>Dwarf Gourami Disease (DGD) — The Critical Issue</h2>
         <p>Dwarf Gourami Disease is caused by Dwarf Gourami Iridovirus (DGIV) — a systemic viral infection that has become endemic in the mass-farm operations that supply most of the global aquarium trade with dwarf gouramis. Estimates suggest that 22% or more of commercially produced dwarf gouramis carry the virus at time of purchase. There is no treatment and no cure. Infected fish may appear healthy for months before showing signs: color fading, lesions on the body, swollen abdomen, lethargy, and eventually death.</p>
         <p>The practical implication: a significant percentage of dwarf gouramis purchased from pet stores will die from DGD within 6-18 months regardless of care quality. This is not a reflection of the keeper's skill — it is a supply chain problem. Fish purchased from specialty fish stores or breeders who source from DGD-free suppliers have much better outcomes. The alternative for those who want a similar look without the disease risk: the honey gourami.</p>
@@ -50,6 +96,16 @@ export default function DwarfGouramiPage() {
 
         <h2>Bubble Nest Building</h2>
         <p>Male gouramis build floating bubble nests at the water surface — a cluster of air bubbles coated in saliva, anchored to floating plants or the tank edge. Nest building is a sign of a comfortable, well-conditioned male. Eggs are deposited in the nest during spawning, and the male guards the nest aggressively (temporarily — remove the female after spawning to prevent harassment). Fry hatch in 24-36 hours and are very small — fed on infusoria initially. This behavior is one of the most interesting aspects of gourami keeping to observe even without intent to breed.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Gourami — Tank Setup</div>
@@ -63,5 +119,6 @@ export default function DwarfGouramiPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

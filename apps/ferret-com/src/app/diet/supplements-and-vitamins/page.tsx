@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function SupplementsAndVitaminsPage() {
             'The honest headline: a ferret on a complete, appropriate diet needs very few supplements, and several popular products do more for the owner’s peace of mind than for the ferret. This page sorts the genuinely useful from the redundant from the ones that warrant real caution.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -83,6 +82,7 @@ export default function SupplementsAndVitaminsPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-supplements-and-vitamins"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       

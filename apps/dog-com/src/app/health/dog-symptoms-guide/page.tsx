@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
 const SOURCES = [
   { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
   { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
@@ -27,76 +28,8 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-
-const SIGNS = [
-  {
-    num: '01', level: 'emergency' as const, title: 'Difficulty Breathing or Labored Breathing',
-    body: 'Open-mouth breathing in a dog at rest, exaggerated chest/belly movement, extended neck with elbows out, or blue/grey/white gum color indicates oxygen deprivation. This is the most urgent presentation in veterinary emergency medicine — tissue death begins within minutes. Do not wait for another symptom.',
-  },
-  {
-    num: '02', level: 'emergency' as const, title: 'Pale, White, Blue, or Grey Gums',
-    body: 'Normal dog gums are bubble-gum pink and moist. Pale or white gums indicate shock or severe blood loss — often from a ruptured splenic mass (hemangiosarcoma). Blue/grey gums indicate oxygen deprivation. Check gums regularly so you know your dog\'s baseline. If you\'re seeing white or blue, go immediately.',
-  },
-  {
-    num: '03', level: 'emergency' as const, title: 'Sudden Collapse or Inability to Stand',
-    body: 'A dog that collapses, cannot support its own weight, or falls repeatedly has something seriously wrong — cardiac event, internal bleeding, neurological emergency, or extreme pain. Do not assume it will pass.',
-  },
-  {
-    num: '04', level: 'emergency' as const, title: 'Distended Abdomen with Retching',
-    body: 'A belly that is visibly bloated or hard — particularly in a large or deep-chested breed — combined with retching or restlessness is Gastric Dilatation-Volvulus (GDV/Bloat) until proven otherwise. GDV is fatal within hours without surgery. At-risk breeds: Great Danes, German Shepherds, Standard Poodles, Weimaraners, Goldens, Labs.',
-  },
-  {
-    num: '05', level: 'emergency' as const, title: 'Seizure Lasting More Than 2 Minutes',
-    body: 'First seizure ever: go to emergency immediately. A known epileptic dog with a brief seizure: call your vet. Seizure lasting more than 2 minutes (status epilepticus) or multiple seizures in 24 hours: emergency. Prolonged seizures cause brain damage.',
-  },
-  {
-    num: '06', level: 'emergency' as const, title: 'Suspected Poisoning or Toxic Ingestion',
-    body: 'Call ASPCA Animal Poison Control (888-426-4435) and your emergency vet simultaneously. Do not wait for symptoms — for many toxins (xylitol, rat poison, certain mushrooms), treatment is most effective before symptoms appear.',
-  },
-  {
-    num: '07', level: 'emergency' as const, title: 'Uncontrolled Bleeding',
-    body: 'Wounds that do not stop bleeding with 5–10 minutes of firm continuous pressure. Deep lacerations, puncture wounds from animal bites, or wounds near major vessels. Apply pressure with clean cloth, keep it there, go.',
-  },
-  {
-    num: '08', level: 'emergency' as const, title: 'Eye Injuries or Sudden Eye Changes',
-    body: 'The eye is time-sensitive. Squinting with pawing at the eye, sudden cloudiness, redness with discharge, or any trauma to the eye area requires same-day care — hours can determine whether vision is preserved. Do not put anything in the eye and prevent pawing.',
-  },
-  {
-    num: '09', level: 'urgent' as const, title: 'Vomiting or Diarrhea with Blood',
-    body: 'One episode in an otherwise normal dog: monitor. More than 3 episodes in 24 hours, any blood (red or dark brown/coffee ground appearance), or a lethargic dog not eating: vet today. Hemorrhagic gastroenteritis can cause dangerous fluid loss within hours.',
-  },
-  {
-    num: '10', level: 'urgent' as const, title: 'Straining to Urinate or Not Urinating',
-    body: 'A dog repeatedly squatting/posturing to urinate with little or no output, crying while urinating, or producing blood-tinged urine needs same-day evaluation. A complete blockage is life-threatening within 24–48 hours.',
-  },
-  {
-    num: '11', level: 'urgent' as const, title: 'Sudden Limb Weakness or Paralysis',
-    body: 'Sudden hindlimb weakness, inability to walk, or dragging of rear feet: spinal cord injury (IVDD) until proven otherwise. Prognosis for recovery is significantly better when surgery is performed within 24 hours of severe onset.',
-  },
-  {
-    num: '12', level: 'urgent' as const, title: 'Head Tilt, Circling, or Loss of Balance',
-    body: 'Sudden head tilt, circling in one direction, falling to one side, or rapid involuntary eye movement (nystagmus) indicates vestibular disease. Requires same-day evaluation to distinguish peripheral (inner ear, often self-limiting) from central (brain, more serious).',
-  },
-  {
-    num: '13', level: 'urgent' as const, title: 'Swollen Lymph Nodes',
-    body: 'Lymph nodes you can feel under the jaw, in front of the shoulders, behind the knees, and in the groin. Bilateral firm swelling in multiple locations is the most common presentation of lymphoma. Evaluate within a few days — lymphoma treated early has more options.',
-  },
-  {
-    num: '14', level: 'urgent' as const, title: 'Complete Food Refusal with Other Changes',
-    body: 'Missing one meal in an otherwise normal dog: monitor. Complete refusal for 24+ hours with lethargy, vomiting, or behavioral changes: vet within 24 hours. The refusal matters less than what accompanies it.',
-  },
-  {
-    num: '15', level: 'urgent' as const, title: 'Unexplained Weight Loss',
-    body: 'A dog losing weight without dietary changes warrants investigation. In middle-aged and senior dogs, unexplained weight loss is often the earliest sign of cancer, diabetes, kidney disease, or GI conditions. Catching these early makes a real difference in outcome.',
-  },
-]
-
-const STYLES = {
-  emergency: { bg: 'rgba(200,74,42,0.05)', border: 'rgba(200,74,42,0.18)', numColor: '#C84A2A', badge: '🚨 Emergency', badgeColor: '#C84A2A', badgeBg: 'rgba(200,74,42,0.1)' },
-  urgent:    { bg: 'rgba(200,149,42,0.05)', border: 'rgba(200,149,42,0.15)', numColor: '#C8952A', badge: '⚠️ Urgent', badgeColor: '#C8952A', badgeBg: 'rgba(200,149,42,0.1)' },
-}
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: '15 Dog Symptoms That Need Immediate Vet Care',
@@ -105,7 +38,14 @@ const medicalSchema = buildMedicalWebPageSchema({
   authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
-const combinedSchemaAll = combineSchemas(schema, medicalSchema)
+const FAQS = [
+  { question: 'Which dog symptoms are emergencies that cannot wait until morning?', answer: 'The eight emergency signs in this guide: difficulty or labored breathing; pale, white, blue, or grey gums; sudden collapse or inability to stand; a distended abdomen with retching (GDV/bloat until proven otherwise); a seizure lasting more than 2 minutes or multiple seizures in 24 hours; suspected poisoning or toxic ingestion; bleeding that does not stop with 5–10 minutes of firm continuous pressure; and eye injuries or sudden eye changes. Any of these means emergency veterinary care right now — and when in doubt, call your emergency clinic; most will advise over the phone whether to come in.' },
+  { question: 'What does it mean if my dog\'s gums are pale or white?', answer: 'Normal dog gums are bubble-gum pink and moist. Pale or white gums indicate shock or severe blood loss — often from a ruptured splenic mass (hemangiosarcoma) — and blue or grey gums indicate oxygen deprivation. Either color change is an emergency: go immediately. Check your dog\'s gums regularly while healthy so you know the individual baseline.' },
+  { question: 'My dog has a swollen belly and keeps retching — can I wait and see?', answer: 'No. A visibly bloated or hard belly combined with unproductive retching or restlessness — particularly in a large or deep-chested breed — is Gastric Dilatation-Volvulus (GDV/bloat) until proven otherwise, and GDV is fatal within hours without surgery. At-risk breeds include Great Danes, German Shepherds, Standard Poodles, Weimaraners, Goldens, and Labs. Go to the emergency vet immediately.' },
+  { question: 'What should I do if my dog ate something toxic?', answer: 'Call ASPCA Animal Poison Control (888-426-4435, available 24/7, consultation fee applies) and your emergency vet simultaneously. Do not wait for symptoms to appear — for many toxins, including xylitol, rat poison, and certain mushrooms, treatment is most effective before symptoms develop.' },
+  { question: 'When is vomiting or diarrhea urgent versus something to monitor?', answer: 'Per this guide\'s criteria: one episode in an otherwise normal dog can be monitored. More than 3 episodes in 24 hours, any blood (red or dark coffee-ground appearance), or a lethargic dog that is not eating means a vet visit today — hemorrhagic gastroenteritis can cause dangerous fluid loss within hours. If you are unsure, the triage tool on this site checks your dog\'s signs against these same criteria, and a phone call to your vet costs nothing.' },
+]
+const combinedSchemaAll = combineSchemas(schema, medicalSchema, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogSymptomsGuidePage() {
   return (
@@ -143,8 +83,9 @@ export default function DogSymptomsGuidePage() {
             <div className="text-xs text-brand-text-light">ASPCA · 24/7</div>
           </div>
         </div>
-        <TableOfContents items={SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` }))} />
+        <TableOfContents items={[...SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` })), { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[
+          { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
@@ -157,12 +98,14 @@ export default function DogSymptomsGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p>In twenty years of emergency veterinary practice, the cases that are hardest are the ones that came in too late — not because the owner didn&apos;t care, but because they didn&apos;t know. A dog that seemed &quot;a little off&quot; yesterday. A belly that &quot;looked slightly bigger.&quot; A gum color that had been pale for hours. This guide gives you what you need to make fast, accurate decisions.</p>
+        <p>In emergency veterinary medicine, the hardest cases are often the ones that came in too late — not because the owner didn&apos;t care, but because they didn&apos;t know. A dog that seemed &quot;a little off&quot; yesterday. A belly that &quot;looked slightly bigger.&quot; A gum color that had been pale for hours. This guide gives you what you need to make fast, accurate decisions.</p>
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)', borderRadius: '10px', padding: '16px 20px', margin: '24px 0' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '7px' }}>Rule #1</div>
           <p style={{ fontSize: '15px', color: '#1A0E08', fontWeight: 500, margin: 0, lineHeight: 1.6 }}>When in doubt, call your emergency vet clinic. Most will advise over the phone whether you need to come in immediately. This call costs nothing and could be the most important one you make.</p>
         </div>
+
+        <p>Not sure how urgent the signs you&apos;re seeing are? Use the <Link href="/tools/is-this-a-dog-emergency">Is This a Dog Emergency? triage tool</Link> to check the symptoms against these same criteria and get a conservative urgency read. It does not diagnose — only a veterinarian can do that.</p>
 
         <h2>🚨 Emergency — Go Immediately</h2>
         <p>These symptoms require emergency veterinary care right now. Do not wait until morning.</p>
@@ -219,6 +162,9 @@ export default function DogSymptomsGuidePage() {
             Find Your Nearest Emergency Vet →
           </Link>
         </div>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
       </div>

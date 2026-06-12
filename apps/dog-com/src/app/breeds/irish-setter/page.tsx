@@ -1,15 +1,40 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Setter Breed Guide — Epilepsy, PRA | Dog.com', description: 'Irish Setters are exuberantly energetic sporting dogs. Progressive retinal atrophy (PRA) and epilepsy are the primary health concerns.', path: '/breeds/irish-setter', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How much exercise does an Irish Setter need?',
+    answer: 'Irish Setters need 90+ minutes of vigorous daily exercise — running, not just walking. They were bred for all-day upland bird hunting, and dog sports (agility, field trials, hunt tests) and off-leash running in safe areas suit them well. An under-exercised Irish Setter typically redirects that energy into destructive, hyperactive behavior.',
+  },
+  {
+    question: 'What health problems do Irish Setters have?',
+    answer: 'The primary documented concerns are progressive retinal atrophy (PRA — the rcd1 mutation was first identified in this breed, and DNA testing plus annual CAER eye exams are appropriate), an elevated prevalence of idiopathic epilepsy with typical onset between 1–5 years, and gluten-sensitive enteropathy. Discuss breed-appropriate screening with your veterinarian.',
+  },
+  {
+    question: 'How long do Irish Setters live?',
+    answer: 'Irish Setters typically live 11–15 years. Adults generally weigh 60–70 lbs, and their long, silky mahogany coat needs weekly grooming.',
+  },
+  {
+    question: 'Are Irish Setters easy to train?',
+    answer: 'They are trainable but famously slow to mature mentally — a 3-year-old Irish Setter often shows the impulse control of a much younger dog. This is a breed characteristic, not a training failure. Consistent, patient positive-reinforcement training from puppyhood works best, with the understanding that the calm adult stage may not arrive until age 3–4.',
+  },
+  {
+    question: 'Do Irish Setters need a gluten-free diet?',
+    answer: 'Only dogs affected by gluten-sensitive enteropathy — a documented Irish Setter-specific condition characterized in research at the University of Liverpool — genuinely require a gluten-free diet. Genetic testing is available, and affected dogs show poor growth, weight loss, and diarrhea on gluten-containing diets. This is distinct from general grain-free feeding trends; discuss testing and diet choices with your veterinarian.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 export default function IrishSetterPage() {
   return (
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Irish Setter Breed Guide', subtitle: 'The mahogany-red Irish Setter is one of the most instantly recognizable dog breeds — and one of the most energetic. Bred for all-day upland bird hunting across Irish terrain, they combine a beautiful flowing coat with an exuberance and energy level that requires an active household to channel properly.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Setter', href: '/breeds/irish-setter' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Irish Wolfhound Guide', href: '/breeds/irish-wolfhound', category: 'Breed Guide' }, { title: 'Vizsla Guide', href: '/breeds/vizsla', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -45,6 +70,13 @@ export default function IrishSetterPage() {
 
         <h2>Exercise Requirements</h2>
         <p>90+ minutes of vigorous daily exercise is the Irish Setter's requirement — and "vigorous" means running, not walking. They are built for all-day hunting across varied terrain. Dog sports (agility, field trials, hunt tests), off-leash running in safe areas, and consistent active engagement satisfy their needs. An under-exercised Irish Setter is a destructive, hyperactive Irish Setter — all that energy goes somewhere, and in an unstimulated environment it goes into furniture, landscaping, and anything else that provides an outlet.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

@@ -35,7 +35,6 @@ export default function FerretNamesPage() {
             'Naming a ferret is one of the small joys of bringing one home. Ferrets are mischievous, fast, and full of character, and the best names tend to capture that. This page offers themed ideas, a few principles for picking a name that fits, and an honest note on whether your ferret will ever actually answer to it.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '7 min',
         }}

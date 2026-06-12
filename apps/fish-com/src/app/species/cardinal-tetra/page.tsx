@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -8,7 +8,6 @@ import {
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Cardinal Tetra', url: 'https://fish.com/species/cardinal-tetra' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function CardinalTetraPage() {
   return (
@@ -116,7 +107,6 @@ export default function CardinalTetraPage() {
             'Paracheirodon axelrodi — the full-body red-and-blue cardinal tetra is widely considered the most visually striking schooling fish in the freshwater hobby. Unlike its smaller cousin the neon tetra, the cardinal carries red coloration the entire length of the body. It demands softer, warmer, more acidic water than the neon — and rewards correct conditions with a school display nothing else at its size matches.',
           category: 'Species Guide — Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
@@ -200,6 +190,7 @@ export default function CardinalTetraPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-cardinal-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cardinal tetra in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -8,7 +8,6 @@ import {
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Platy Fish', url: 'https://fish.com/species/platy-fish' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function PlatyPage() {
   return (
@@ -116,7 +107,6 @@ export default function PlatyPage() {
             'Xiphophorus maculatus — platies are among the most forgiving and broadly recommended fish in the freshwater hobby. They tolerate a wide range of water conditions, eat almost anything, coexist peacefully with virtually all community fish, and come in dozens of color and finnage varieties. The one consistent management challenge: they breed every four weeks and a starter tank turns into a population without intervention.',
           category: 'Species Guide — Beginner',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '11 min',
         }}
@@ -202,6 +192,7 @@ export default function PlatyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-platy-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Platies (Xiphophorus maculatus) are the textbook beginner

@@ -1,9 +1,34 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency.', path: '/breeds/siberian-husky', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Siberian Husky Breed Guide', description: 'Exercise requirements, escape prevention, eye conditions, and zinc deficiency in Siberian Huskies.', url: 'https://dog.com/breeds/siberian-husky', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Siberian Husky Breed Guide', description: 'Exercise requirements, escape prevention, eye conditions, and zinc deficiency in Siberian Huskies.', url: 'https://dog.com/breeds/siberian-husky', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How much exercise does a Siberian Husky need?',
+    answer: 'A minimum of 2 hours of vigorous exercise daily — running, hiking at pace, bikejoring, canicross, skijoring, or dog sports, not a leisurely walk. Huskies were bred to run 100+ miles per day pulling sleds. In warm climates, exercise must happen in early morning or evening: Huskies overheat quickly in temperatures above 70°F during vigorous activity.',
+  },
+  {
+    question: 'Why do Huskies escape, and what fencing do they need?',
+    answer: 'Huskies climb standard 4-foot fences, dig under fences, push through gates, and find small gaps — and a loose Husky runs rather than returning when called. Containment requirements: a 6-foot minimum fence with a coyote roller or overhang, a concrete footer or buried hardware cloth against digging, and self-closing, self-latching gates. Off-leash exercise should only happen in securely fenced areas.',
+  },
+  {
+    question: 'What health problems do Siberian Huskies have?',
+    answer: 'The documented breed concerns are hereditary eye conditions — cataracts, progressive retinal atrophy (prcd-PRA DNA test available), corneal dystrophy, and the rare but serious uveodermatologic syndrome — plus zinc-responsive dermatosis, a malabsorption syndrome causing crusting and hair loss around the face and footpads. Annual CAER eye exams by a boarded ophthalmologist are recommended; discuss screening with your veterinarian, and seek same-day evaluation for any signs of eye pain or sudden vision change.',
+  },
+  {
+    question: 'Do Huskies shed a lot?',
+    answer: 'Yes — the double coat sheds moderately year-round and dramatically twice yearly, when the undercoat releases in dense clumps over 2–4 weeks. Daily brushing during coat blows and weekly undercoat-tool grooming the rest of the year manage the volume. Huskies should never be shaved: the double coat insulates in both cold and heat, and a shaved Husky loses its temperature regulation.',
+  },
+  {
+    question: 'Are Huskies hard to train?',
+    answer: 'They are more challenging than breeds bred for close human partnership. Huskies were selected to make decisions independently on long sled runs — they learn commands readily but choose when to comply. High-value rewards, short sessions, and patience work; expecting Golden Retriever-style responsiveness does not. Their off-leash recall remains unreliable even with good training.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function SiberianHuskyPage() {
   return (
@@ -11,7 +36,7 @@ export default function SiberianHuskyPage() {
       hero={{ title: 'Siberian Husky Breed Guide', subtitle: 'Working sled dogs bred for endurance in arctic conditions — Huskies are beautiful, energetic, and frequently misunderstood as family pets. They are not low-maintenance dogs. They require extraordinary exercise, secure containment, and owners who understand that a Husky running loose is a Husky in danger.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Siberian Husky', href: '/breeds/siberian-husky' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Akita Guide', href: '/breeds/akita', category: 'Breed Guide' }, { title: 'Border Collie Guide', href: '/breeds/border-collie', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -55,6 +80,13 @@ export default function SiberianHuskyPage() {
 
         <h2>Shedding</h2>
         <p>Huskies have a double coat that sheds moderately year-round and dramatically twice yearly ("blowing coat" in spring and fall — when the undercoat releases in dense clumps over 2–4 weeks). During blow coat season, daily brushing is required to manage the volume. A FURminator or similar undercoat removal tool used weekly manages year-round shedding. Huskies should not be shaved — the double coat provides insulation in both cold and hot weather. A shaved Husky loses its temperature regulation mechanism and may actually overheat more easily than an intact-coated dog.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

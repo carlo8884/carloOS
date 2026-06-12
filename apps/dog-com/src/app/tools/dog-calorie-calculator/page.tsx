@@ -7,6 +7,8 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -77,7 +79,7 @@ export default function DogCalorieCalculatorPage() {
       <SchemaScript schema={schema} />
 
       {/* Hero */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-10 sm:py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 30% 50%, rgba(30, 80, 160, 0.5) 0%, transparent 60%)' }}
@@ -91,12 +93,12 @@ export default function DogCalorieCalculatorPage() {
             </span>
           </div>
           <h1
-            className="font-display font-bold text-white tracking-tight leading-none mb-5"
-            style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
+            className="font-display font-bold text-white tracking-tight leading-none mb-4"
+            style={{ fontSize: 'clamp(30px, 4vw, 46px)' }}
           >
             Dog Calorie Calculator
           </h1>
-          <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
+          <p className="text-base text-white/60 leading-relaxed max-w-2xl">
             Estimate your dog&apos;s daily calorie needs using the standard RER formula and WSAVA/AAHA-style
             life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional
             cups/day if you enter your food&apos;s calorie density.
@@ -117,9 +119,36 @@ export default function DogCalorieCalculatorPage() {
       </nav>
 
       {/* Calculator */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-5xl">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
+        <div className="max-w-4xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Result next-step — shop foods matched to the calorie estimate.
+          One tasteful, disclosed editorial path after the result. The
+          comparison hub is where commercial /go food links live; we route
+          there rather than putting a buy-box on a free tool. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Next step
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              Have your dog&apos;s daily calorie target? Foods vary widely in calorie
+              density (roughly 270–500 kcal/cup), so the right pick makes hitting that
+              number easier. Compare formulas matched to your dog&apos;s calorie needs and
+              life stage.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+            <Link
+              href="/reviews/best-dry-dog-food"
+              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Compare foods by calorie density →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -172,6 +201,32 @@ export default function DogCalorieCalculatorPage() {
         </div>
       </section>
 
+      {/* Related tools + reviews */}
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dog Age in Human Years Calculator', href: '/tools/dog-age-calculator', note: 'Convert calendar age to life-stage' },
+              { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food', note: 'WSAVA-ranked foods by calorie density' },
+              { label: 'Best Dog Food for Senior Dogs', href: '/reviews/best-dog-food-senior', note: 'Lower-calorie senior formulas' },
+              { label: 'Best Dog Food for Small Breeds', href: '/reviews/best-dog-food-small-breed', note: 'High-calorie-density small breed foods' },
+              { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
+              { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
+            ].map(item => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Email capture */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl">
@@ -184,6 +239,8 @@ export default function DogCalorieCalculatorPage() {
           />
         </div>
       </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

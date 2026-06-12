@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Mange in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/mange/overview-of-mange', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,17 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Mange in Dogs — Sarcoptic vs Demodectic, Treatment | Dog.com', description: 'Two types of mange in dogs: sarcoptic (scabies — highly contagious to humans) and demodectic (not contagious). Different causes, presentations, and treatments.', path: '/health/dog-mange', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Mange in Dogs', description: 'Sarcoptic and demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'Can humans catch mange from dogs?', answer: 'It depends on the type. Sarcoptic mange (scabies) is transmissible to humans — dog-origin mites tend to be self-limiting in human skin but cause significant itching and rash while they last, so anyone in contact with a diagnosed dog should monitor for symptoms and consult a physician if a rash develops. Demodectic mange is not contagious to humans or to other animals — Demodex canis is a normal inhabitant of dog skin that only causes disease when immune suppression lets it proliferate.' },
+  { question: 'What is the difference between sarcoptic and demodectic mange?', answer: 'Sarcoptic mange is caused by Sarcoptes scabiei, spreads by contact (wildlife, infected dogs, contaminated bedding), causes intense itching that starts at the ear margins, elbows, and belly, and is contagious to other animals and humans. Demodectic mange is caused by Demodex canis, is not contagious, tends to affect the face and feet or become generalized, and signals an immature (puppies) or compromised (adults) immune system. The distinction drives both treatment and household management.' },
+  { question: 'How is mange in dogs treated?', answer: 'Isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) are highly effective against both forms and are now the standard of care — sarcoptic cases often improve dramatically within 2–4 weeks. For sarcoptic mange, all dogs in the household must be treated simultaneously and bedding washed. For generalized demodectic mange, treatment continues until two consecutive negative skin scrapings, typically 3–6 months, with antibiotics for any secondary pyoderma. Your veterinarian selects the product and schedule.' },
+  { question: 'Can a negative skin scraping rule out mange?', answer: 'No. For sarcoptic mange, scraping sensitivity is low — mites are present in small numbers and frequently not found even in confirmed cases. A positive scraping confirms mange; a negative one does not rule it out. In many cases the diagnosis is made by response to treatment: if a dramatically itchy dog improves on antiparasitic therapy, sarcoptic mange was the likely cause.' },
+  { question: 'Why did my adult dog suddenly develop demodectic mange?', answer: 'Adult-onset generalized demodicosis — new generalized Demodex in any dog over 18 months — is a flag that something is suppressing the immune system. The page lists the causes that must be investigated: Cushing\'s disease, hypothyroidism, diabetes mellitus, neoplasia, or immunosuppressive medications. Treating the skin without finding the underlying cause results in treatment failure, so ask your veterinarian about a workup, not just mite treatment.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogMangePage() {
   return (
@@ -63,6 +71,9 @@ export default function DogMangePage() {
           <p><strong>Juvenile (localized) demodicosis:</strong> Small patches of hair loss, typically on the face and legs of puppies under 18 months. Often self-resolving as the immune system matures. Limited to fewer than 5 lesions. Monitor — often does not require treatment.</p>
           <p><strong>Generalized demodicosis:</strong> Extensive hair loss affecting the entire body, often with secondary bacterial infection (pyoderma). Can occur in juveniles or adults. In adult-onset generalized demodicosis — any dog over 18 months developing new generalized demodex — an underlying cause of immune suppression must be investigated: Cushing's disease, hypothyroidism, diabetes mellitus, neoplasia, immunosuppressive medications. Treating the skin without addressing the underlying cause results in treatment failure.</p>
           <p><strong>Treatment:</strong> Isoxazoline products (Bravecto, NexGard, Simparica) are highly effective — they have revolutionized demodectic mange treatment and are now the standard of care. Monthly or every-3-month dosing continues until two consecutive negative skin scrapings are achieved. Traditional treatments (amitraz dips, oral ivermectin) are still used in some cases. Secondary bacterial pyoderma requires concurrent antibiotic treatment. Treatment duration: typically 3–6 months for generalized cases.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

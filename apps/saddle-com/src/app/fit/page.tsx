@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { SchemaScript } from '@carloOS/ui'
 import { DISCIPLINE_FITS } from '@/data/fit-by-discipline'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,13 +10,6 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Discipline-specific saddle fit reference — dressage, hunter/jumper, eventing, western, endurance, close-contact. Fit checkpoints, problems, brands.',
   path: '/fit',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://saddle.com/' },
-    { name: 'Saddle Fit', url: 'https://saddle.com/fit' },
-  ],
 })
 
 const ENGLISH = DISCIPLINE_FITS.filter((d) => d.group === 'English')
@@ -35,7 +28,7 @@ const itemListSchema = {
   })),
 }
 
-const fitSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const fitSchema = itemListSchema
 
 export default function FitHubPage() {
   return (

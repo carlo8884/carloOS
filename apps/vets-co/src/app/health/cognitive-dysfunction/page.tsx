@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs — Dog Dementia Signs | Vets.co', description: 'CDS (dog dementia) affects 22% of dogs 9-11 years. Disorientation, sleep disruption, house soiling, and anxiety. Purina Bright Mind, Anipryl.', path: '/health/cognitive-dysfunction', type: 'article' })
@@ -16,7 +16,7 @@ export default function CognitiveDysfunctionPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+ (Madari et al., Appl Anim Behav Sci). Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+ (Madari et al., Appl Anim Behav Sci). Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -36,7 +36,8 @@ export default function CognitiveDysfunctionPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cds" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
@@ -49,7 +50,7 @@ export default function CognitiveDysfunctionPage() {
           <p>CDS shares pathological features with human Alzheimer's disease: accumulation of beta-amyloid plaques in the brain, oxidative damage to neurons, reduced brain glucose metabolism, and progressive neuronal loss. The frontal lobe and hippocampus are most affected — areas responsible for learning, memory, and executive function. Brain imaging (MRI) in affected dogs shows cerebral atrophy, ventricular enlargement, and white matter changes. The molecular similarity between canine CDS and human Alzheimer's has made dogs valuable natural models for Alzheimer's research, and vice versa — advances in human Alzheimer's research increasingly translate to canine CDS management.</p>
 
           <h2>Management — Multiple Approaches Combined</h2>
-          <p><strong>Purina Pro Plan Bright Mind (cognitive diet):</strong> The only commercial food with published clinical trial data for cognitive benefit in senior dogs. Enhanced botanical oils (medium-chain triglycerides) provide alternative fuel for neurons with reduced glucose metabolism. Trial data: dogs fed Bright Mind showed significant improvements on cognitive assessments versus control diet after 30 days. Not a cure — a supportive dietary intervention that slows progression and may improve function.</p>
+          <p><strong>Purina Pro Plan Bright Mind (cognitive diet):</strong> One of the few commercial foods with published clinical trial data for cognitive benefit in senior dogs. Enhanced botanical oils (medium-chain triglycerides) provide alternative fuel for neurons with reduced glucose metabolism. Trial data: dogs fed Bright Mind showed significant improvements on cognitive assessments versus control diet after 30 days. Not a cure — a supportive dietary intervention that slows progression and may improve function.</p>
           <p><strong>Anipryl (selegiline):</strong> <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for canine CDS. A monoamine oxidase B inhibitor that increases dopamine availability in the brain and may reduce oxidative damage. Dosing frequency and timing are determined by your veterinarian. Approximately 70% of dogs show some improvement in CDS signs within 30 days of starting. Not all dogs respond. Side effects are uncommon but include GI upset and restlessness. Has drug interactions — disclose all current medications before starting.</p>
           <p><strong>Omega-3 fatty acids (EPA/DHA):</strong> Anti-inflammatory effects in brain tissue. Supplementation at 20–40mg/kg EPA+DHA daily supports general brain health. Use Nordic Naturals Omega-3 Pet or a high-quality fish oil with documented EPA+DHA content.</p>
           <p><strong>Melatonin:</strong> For dogs with disrupted sleep-wake cycles, melatonin supplementation is sometimes used to help restore more normal nocturnal sleep and reduce nighttime restlessness. Appropriate dose and timing vary by the dog's weight and health status — ask your veterinarian before supplementing.</p>

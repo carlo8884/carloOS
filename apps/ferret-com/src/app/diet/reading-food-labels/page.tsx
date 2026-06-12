@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function ReadingFoodLabelsPage() {
             "The front of a ferret-food bag is marketing; the back is where the truth is. Learning to read the ingredient split and the guaranteed analysis — and to convert those numbers to a dry-matter basis — turns you from a shopper who trusts the label's claims into one who can judge a food in under a minute at the shelf.",
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -84,6 +83,7 @@ export default function ReadingFoodLabelsPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-reading-labels"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -215,7 +215,6 @@ export default function ReadingFoodLabelsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Clean Panel"
-            badgeEmoji="🔍"
             name="Wysong Epigen 90"
             subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
             score={9.1}

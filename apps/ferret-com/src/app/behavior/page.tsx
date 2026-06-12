@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -131,49 +132,15 @@ export default function BehaviorHubPage() {
     <>
       <SchemaScript schema={ferretBehaviorSchema} />
 
-      {/* Hero */}
-      <div
-        style={{
-          background: 'var(--brand-dark)',
-          padding: 'clamp(48px, 8vw, 80px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Behavior Reference
-            </span>
-          </div>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              fontWeight: 800,
-              color: 'var(--brand-primary-pale)',
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              margin: '0 0 16px',
-            }}
-          >
-            Ferret Behavior
-          </h1>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              fontWeight: 300,
-              color: 'rgba(251, 245, 232, 0.65)',
-              maxWidth: '600px',
-              lineHeight: 1.65,
-              margin: 0,
-            }}
-          >
-            Training, bonding, and enrichment references for domestic ferrets — from kit bite
-            inhibition through harness training, ferret-to-ferret introductions, and
-            multi-ferret group dynamics.
-          </p>
-        </div>
-      </div>
+      {/* Hero — image-first overlaid masthead (matches the homepage identity) */}
+      <HubHero
+        eyebrow="Behavior Reference"
+        title="Ferret Behavior"
+        intro="Training, bonding, and enrichment references for domestic ferrets — from kit bite inhibition through harness training, ferret-to-ferret introductions, and multi-ferret group dynamics."
+        manifestKey="ferret-com:behavior-hero"
+        imageAlt="Ferret behavior reference"
+        cta={{ href: '/behavior/training-and-bonding', label: 'Start with training & bonding' }}
+      />
 
       {/* Breadcrumb */}
       <nav
@@ -192,10 +159,6 @@ export default function BehaviorHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Behavior</span>
       </nav>
 
-      {/* Hero image */}
-      <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:behavior-hero" aspect="16:9" variant="wide" priority subtleCredit />
-      </div>
 
       {/* Featured behavior spokes — three photo-backed pillar articles */}
       <div

@@ -10,11 +10,11 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Litter Box Troubleshooting', url: 'https://ferret.com/behavior/litter-box-troubleshooting' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +65,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -103,7 +96,6 @@ export default function LitterBoxTroubleshootingPage() {
             'Ferrets are not cats. They never fully commit to a single box the way a tidy cat does, and an 80-90% hit rate is a realistic ceiling rather than a failure. When the miss rate climbs higher than that, the fix is almost always placement, cleaning, or litter choice — or, in a previously reliable adult, a medical change worth investigating.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -142,6 +134,7 @@ export default function LitterBoxTroubleshootingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-litter-troubleshooting"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

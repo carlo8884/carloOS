@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Canine Distemper', url: 'https://ferret.com/health/canine-distemper-in-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -111,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretCanineDistemperPage() {
   return (
@@ -125,7 +117,6 @@ export default function FerretCanineDistemperPage() {
             'Canine distemper is the single most important reason ferrets are vaccinated. In an unvaccinated ferret it is almost always fatal — and it can reach even a strictly indoor pet. This is preventable, and prevention is the whole story.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

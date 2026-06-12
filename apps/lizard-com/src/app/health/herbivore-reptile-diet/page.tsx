@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeding Herbiv
 export default function HealthHerbivoreReptileDietPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeding Herbivorous Reptiles", subtitle: "Herbivorous reptiles, including most tortoises, uromastyx, and largely plant-eating lizards, have digestive systems built for high-fiber, low-protein plant matter. Feeding them like omnivores, with too much protein, fruit, or the wrong greens, causes serious long-term disease. This guide covers building a correct herbivore diet around the right greens and plants, with attention to calcium balance and the foods to avoid.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeding Herbivorous Reptiles", subtitle: "Herbivorous reptiles, including most tortoises, uromastyx, and largely plant-eating lizards, have digestive systems built for high-fiber, low-protein plant matter. Feeding them like omnivores, with too much protein, fruit, or the wrong greens, causes serious long-term disease. This guide covers building a correct herbivore diet around the right greens and plants, with attention to calcium balance and the foods to avoid.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Herbivore Reptile Diet", href: "/health/herbivore-reptile-diet" }]}
       schema={schema}
       relatedLinks={[

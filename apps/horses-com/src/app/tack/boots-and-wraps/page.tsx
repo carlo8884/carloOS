@@ -149,7 +149,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="brushing-boots"
             badge="Everyday Protection"
-            badgeEmoji="🛡️"
             name="Synthetic Brushing / Splint Boots"
             subtitle="Impact and interference protection for schooling"
             score={8.5}
@@ -175,7 +174,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="bell-boots"
             badge="Overreach Protection"
-            badgeEmoji="🔔"
             name="Pull-On Bell Boots"
             subtitle="Protects the heel bulbs and shoes from overreaching"
             score={8.4}
@@ -200,7 +198,6 @@ export default function BootsWrapsPage() {
           <ReviewCard
             id="standing-wraps"
             badge="Stable Wraps"
-            badgeEmoji="🧵"
             name="Standing Wraps with Quilted Liners"
             subtitle="Stable bandaging — only with correct technique"
             score={8.0}

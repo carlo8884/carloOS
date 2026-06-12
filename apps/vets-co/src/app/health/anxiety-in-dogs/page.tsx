@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Anxiety in Dogs — Separation, Noise & Treatment | Vets.co", description: "Canine anxiety, including separation and noise anxiety, is a real medical and behavioral condition. Learn the signs and the evidence-based approaches that help.", path: '/health/anxiety-in-dogs', type: 'article' })
@@ -21,7 +21,7 @@ export default function AnxietyDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Anxiety in Dogs', subtitle: 'Anxiety is a genuine medical and behavioral condition in dogs, not simply misbehavior — and it causes real suffering. Separation anxiety, noise phobias, and generalized fear are common, often worsen if untreated, and respond well to a structured, evidence-based approach. Recognizing the signs and acting early gives the best chance of a calmer, happier dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Anxiety in Dogs', subtitle: 'Anxiety is a genuine medical and behavioral condition in dogs, not simply misbehavior — and it causes real suffering. Separation anxiety, noise phobias, and generalized fear are common, often worsen if untreated, and respond well to a structured, evidence-based approach. Recognizing the signs and acting early gives the best chance of a calmer, happier dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Anxiety', href: '/health/anxiety-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function AnxietyDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

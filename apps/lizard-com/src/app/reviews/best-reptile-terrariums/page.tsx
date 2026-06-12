@@ -1,20 +1,22 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics',
+  title: 'Best Reptile Terrariums 2026 — Zen Habitats, Animal Plastics',
   description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
 })
 
+const PAGE_URL = 'https://lizard.com/reviews/best-reptile-terrariums'
+
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best Reptile Terrariums 2025',
+  title: 'Best Reptile Terrariums 2026',
   description: 'Reptile terrariums compared and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
-  url: 'https://lizard.com/reviews/best-reptile-terrariums',
+  url: PAGE_URL,
   imageUrl: '',
   authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
@@ -22,29 +24,80 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best PVC', emoji: '🏆', name: 'Zen Habitats 4×2×2', subtitle: 'Best overall for most species', href: '#zen' },
-  { label: 'Best Custom', emoji: '⚙️', name: 'Animal Plastics T8', subtitle: 'Largest, most configurable', href: '#ap' },
-  { label: 'Best Glass', emoji: '🪟', name: 'Exo Terra 36×18×24', subtitle: 'Arboreal species standard', href: '#exo' },
-  { label: 'Best Budget', emoji: '💰', name: 'Repti Zoo 40 Gal', subtitle: 'Starter glass terrarium', href: '#reptizoo' },
+  { label: 'Best PVC', name: 'Zen Habitats 4×2×2', subtitle: 'Best overall for most species', href: '#zen' },
+  { label: 'Best Custom', name: 'Animal Plastics T8', subtitle: 'Largest, most configurable', href: '#ap' },
+  { label: 'Best Glass', name: 'Exo Terra 36×18×24', subtitle: 'Arboreal species standard', href: '#exo' },
+  { label: 'Best Budget', name: 'Repti Zoo 40 Gal', subtitle: 'Starter glass terrarium', href: '#reptizoo' },
 ]
+
+// GEO: ItemList of the ranked picks + an editorial Product/Review per pick.
+// reviewRating maps each card's on-page disclosed editorial score (0–10 scale,
+// via ScoreMethodology); name + reviewBody are drawn only from the ReviewCard
+// content on this page. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Reptile Terrariums 2026',
+  items: [
+    { name: 'Zen Habitats 4×2×2 Reptile Enclosure', url: `${PAGE_URL}#zen` },
+    { name: 'Animal Plastics T8', url: `${PAGE_URL}#ap` },
+    { name: 'Exo Terra 36×18×24', url: `${PAGE_URL}#exo` },
+    { name: 'REPTIZOO 40-Gallon Terrarium', url: `${PAGE_URL}#reptizoo` },
+  ],
+})
+
+const products = [
+  buildProductSchema({
+    name: 'Zen Habitats 4×2×2 Reptile Enclosure',
+    description: 'PVC · Flat-pack assembly · Front-opening · Best temperature retention',
+    url: `${PAGE_URL}#zen`,
+    ratingValue: 9.4,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'Our default recommendation for most terrestrial reptile species. PVC construction retains heat significantly better than glass, flat-pack shipping keeps prices lower, and front-opening doors reduce stress for the reptile.',
+  }),
+  buildProductSchema({
+    name: 'Animal Plastics T8',
+    description: 'HDPE plastic · Fully customizable · Maximum durability',
+    url: `${PAGE_URL}#ap`,
+    ratingValue: 9.1,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'The choice for keepers who need larger enclosures, custom configurations, or maximum durability. Nearly indestructible HDPE, easy to disinfect, and excellent heat retention; the tradeoff is a 6–10 week lead time and an industrial aesthetic.',
+  }),
+  buildProductSchema({
+    name: 'Exo Terra 36×18×24',
+    description: 'Front-opening glass · Full-screen top · Arboreal standard',
+    url: `${PAGE_URL}#exo`,
+    ratingValue: 8.8,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'The industry standard for arboreal species. Tall format prioritizes vertical space, the full-screen top allows UVB and heat from above, and the glass gives excellent visibility. Glass loses heat faster than PVC and it is not ideal for sustained high humidity.',
+  }),
+  buildProductSchema({
+    name: 'REPTIZOO 40-Gallon Terrarium',
+    description: 'Budget glass · Front-opening · Good starter option',
+    url: `${PAGE_URL}#reptizoo`,
+    ratingValue: 8.1,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'A functional front-opening glass terrarium well below Exo Terra pricing. Build quality is noticeably lower — less refined hinges and latches — but it works for starter setups; not our first recommendation for a committed long-term enclosure.',
+  }),
+]
+
+const combined = combineSchemas(schema, itemList, ...products)
 
 export default function BestTerrariumsPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combined} />
       <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Editor Pick · May 2025
+          Editor Pick · June 2026
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Reptile Terrariums 2025 — PVC, Glass & Custom Enclosures Ranked
+          Best Reptile Terrariums 2026 — PVC, Glass & Custom Enclosures Ranked
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Comparison of 8 commonly-stocked enclosures on the factors that decide a keeper&apos;s daily life: temperature retention, humidity stability, ventilation, and build quality. Drawn from manufacturer specifications and consolidated keeper reports.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · Updated June 2026 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -54,9 +107,9 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-5"
         style={{ background: '#0D1A0D', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="rounded-lg p-5" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Comparison Methodology</div>
           <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>
-            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
+            Each enclosure is compared on the same criteria — thermal performance with a standard heating setup (150W basking bulb + heat panel), manufacturer-stated dimensions and materials, and humidity retention with and without moist hides — drawing on manufacturer specifications and aggregated long-term keeper reports rather than an in-house test rig. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
           </p>
         </div>
       </div>
@@ -64,19 +117,22 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most terrestrial species the PVC <strong>Zen Habitats 4×2×2</strong> is our overall pick — excellent heat and humidity retention with flat-pack assembly. For the largest, most configurable build, the custom <strong>Animal Plastics T8</strong> (longer lead time). Arboreal species are best served by the glass <strong>Exo Terra 36×18×24</strong>, and the <strong>Repti Zoo 40 Gallon</strong> is the best budget starter glass terrarium.</p>
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="lizard-com" />
             <ReviewCard
               id="zen"
               badge="Best Overall PVC"
-              badgeEmoji="🏆"
               name="Zen Habitats 4×2×2 Reptile Enclosure"
               subtitle="PVC · Flat-pack assembly · Front-opening · Best temperature retention"
               score={9.4}
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zen Habitats has become the default recommendation for most terrestrial reptile species — bearded dragons, ball pythons, blue-tongue skinks, corn snakes — and for good reason. PVC construction retains heat significantly better than glass, reducing electricity costs and preventing temperature instability. In our tests, the Zen 4×2×2 maintained a 28°F gradient (105°F basking to 77°F cool side) with the same wattage that required significantly more in glass alternatives.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zen Habitats has become the default recommendation for most terrestrial reptile species — bearded dragons, ball pythons, blue-tongue skinks, corn snakes — and for good reason. PVC construction retains heat significantly better than glass, reducing electricity costs and preventing temperature instability. Per keeper reports and the maker's published thermal data, the Zen 4×2×2 holds roughly a 28°F gradient (about 105°F basking to 77°F cool side) at wattages that reportedly require significantly more in glass alternatives.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>Flat-pack shipping keeps prices lower than competitors. Assembly takes 30–45 minutes with no tools. Front-opening doors eliminate the stress of top-opening interaction (prey response in many reptiles). Multiple vent configurations available. Build quality is solid — hinges and magnetic latches hold up through repeated use.</p>
                 </div>
               }
@@ -101,7 +157,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="ap"
               badge="Best Custom / Large Scale"
-              badgeEmoji="⚙️"
               name="Animal Plastics T8"
               subtitle="HDPE plastic · Fully customizable · Maximum durability"
               score={9.1}
@@ -128,7 +183,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="exo"
               badge="Best Glass — Arboreal Species"
-              badgeEmoji="🪟"
               name="Exo Terra 36×18×24"
               subtitle="Front-opening glass · Full-screen top · Arboreal standard"
               score={8.8}
@@ -154,7 +208,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="reptizoo"
               badge="Best Budget Glass"
-              badgeEmoji="💰"
               name="REPTIZOO 40-Gallon Terrarium"
               subtitle="Budget glass · Front-opening · Good starter option"
               score={8.1}
@@ -185,7 +238,7 @@ export default function BestTerrariumsPage() {
               </div>
             </div>
             <RelatedLinks title="Related" links={[
-              { label: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs' },
+              { label: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs' },
               { label: 'Best Thermometers', href: '/reviews/best-thermometers-hygrometers' },
               { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
             ]} />

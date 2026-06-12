@@ -15,7 +15,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function ParasiteGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Reptile Parasites', subtitle: 'Parasites are ubiquitous in reptiles — wild-caught animals in particular carry parasite burdens as a normal feature of their biology. The question is not whether parasites are present but whether they are causing harm. Fecal testing of all new reptiles and annual fecal tests for established animals is the standard of care.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Parasites', subtitle: 'Parasites are ubiquitous in reptiles — wild-caught animals in particular carry parasite burdens as a normal feature of their biology. The question is not whether parasites are present but whether they are causing harm. Fecal testing of all new reptiles and annual fecal tests for established animals is the standard of care.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites-guide' }]}
       schema={schema}
       relatedLinks={[

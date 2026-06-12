@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -9,7 +12,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,6 +36,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored fresh-food picks rendered
+// on this page (QC §1.4 — editorial Review only, never AggregateRating; ratings
+// reflect the disclosed on-page editorial scores). ItemList captures the ranking.
+const farmersDogSchema = buildProductSchema({
+  name: "The Farmer's Dog",
+  description:
+    "Gently cooked, vet-formulated fresh dog food portioned to your dog's calorie needs; formulated to AAFCO profiles. Trade-offs: substantially higher cost per calorie than kibble and freezer space required.",
+  reviewBody:
+    "Direct-to-consumer fresh dog food, gently cooked from human-grade ingredients and portioned to calorie needs. Formulated to AAFCO profiles by a veterinary nutrition team. Premium cost per calorie and freezer space are the trade-offs.",
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.8,
+})
+const ollieSchema = buildProductSchema({
+  name: 'Ollie',
+  description:
+    'Direct-to-consumer fresh dog food with fresh-cooked and gently baked recipes, portioned by questionnaire and formulated to AAFCO profiles. Same fresh-category trade-offs: higher cost than kibble and storage logistics.',
+  reviewBody:
+    'Fresh and gently baked recipes, pre-portioned by profile questionnaire and formulated to AAFCO profiles. Confirm the AAFCO statement and life-stage match for the recipe chosen. Premium cost per calorie and storage logistics apply.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.3,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Fresh Food Options',
+  items: [
+    { name: "The Farmer's Dog", url: 'https://petfood.com/compare/fresh-vs-kibble#the-farmers-dog' },
+    { name: 'Ollie', url: 'https://petfood.com/compare/fresh-vs-kibble#ollie-fresh' },
+  ],
+})
+const pageSchema = combineSchemas(schema, itemListSchema, farmersDogSchema, ollieSchema)
 
 const SOURCES = [
     {
@@ -74,7 +108,7 @@ export default function FreshVsKibblePage() {
         { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -109,7 +143,16 @@ export default function FreshVsKibblePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-fresh-vs-kibble" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Fresh versus kibble — comparing processing, cost, and the evidence behind the claims." />
         <p>Fresh pet food refers to gently cooked, minimally processed, usually refrigerated or frozen complete diets, often sold by subscription. The category positions itself against extruded kibble on the basis of lower-temperature cooking, recognizable whole ingredients, and higher moisture. The honest comparison separates the parts of that pitch supported by evidence from the parts that are marketing. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Fresh, gently cooked diets are promising — higher digestibility is plausible — but the strongest long-term health claims outrun the current independent evidence, and much of the supporting research is industry-funded. Fresh also costs several times more per calorie than kibble and needs refrigeration. Judge a fresh diet the way you would any other: AAFCO statement and life-stage match, feeding-trial substantiation, and manufacturing transparency. A well-formulated kibble or canned diet remains a sound choice.
+          </p>
+        </div>
+
         <h2 id="whatis">What Fresh Food Is</h2>
         <p>Fresh diets are cooked at lower temperatures than the high-heat extrusion used for kibble, then refrigerated or frozen, with moisture content far higher than dry food (closer to canned). They use whole, identifiable ingredients and avoid the shelf-stable preservatives kibble requires. Like all complete diets, they should be formulated to meet AAFCO nutrient profiles for the life stage.</p>
         <h2 id="processing">Processing Differences</h2>

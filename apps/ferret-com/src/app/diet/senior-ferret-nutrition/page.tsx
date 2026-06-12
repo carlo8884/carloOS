@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function SeniorFerretNutritionPage() {
             'Ferrets are considered senior from around four to five years of age. The diet rarely needs a dramatic overhaul, but it does need closer attention: protein stays high, eating gets harder as teeth wear, and several age-related diseases reshape what and how a ferret should be fed.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -84,6 +83,7 @@ export default function SeniorFerretNutritionPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-senior-nutrition"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -217,7 +217,6 @@ export default function SeniorFerretNutritionPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Senior-Friendly Kibble"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
             score={9.0}

@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Fleas & Parasites', url: 'https://ferret.com/health/fleas-and-parasites' },
-  ],
-})
 
 const FAQS = [
   {
@@ -111,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretFleasParasitesPage() {
   return (
@@ -125,7 +117,6 @@ export default function FerretFleasParasitesPage() {
             'Fleas, mites, heartworm, and intestinal parasites all affect ferrets — and the ferret’s small size turns parasite control into a precision job where the wrong dog product can do real harm. Here is the landscape, and why every preventive is a veterinary decision.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

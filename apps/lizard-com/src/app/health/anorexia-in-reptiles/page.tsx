@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Anorexia in Re
 export default function HealthAnorexiaInReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Anorexia in Reptiles (Food Refusal)", subtitle: "A reptile that stops eating is one of the most common reasons keepers worry, and the cause ranges from completely normal (brumation, shedding, breeding season, a recent move) to genuinely serious illness. The skill is in working through the possibilities systematically, ruling out husbandry and natural cycles first, and knowing when food refusal crosses into a medical emergency.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Anorexia in Reptiles (Food Refusal)", subtitle: "A reptile that stops eating is one of the most common reasons keepers worry, and the cause ranges from completely normal (brumation, shedding, breeding season, a recent move) to genuinely serious illness. The skill is in working through the possibilities systematically, ruling out husbandry and natural cycles first, and knowing when food refusal crosses into a medical emergency.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Anorexia in Reptiles", href: "/health/anorexia-in-reptiles" }]}
       schema={schema}
       relatedLinks={[

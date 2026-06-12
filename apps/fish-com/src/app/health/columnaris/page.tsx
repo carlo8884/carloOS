@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fi
 export default function ColumnarisguidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Columnaris', href: '/health/columnaris' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Fin Rot", href: "/health/fin-rot", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }]}
@@ -26,6 +26,7 @@ export default function ColumnarisguidePage() {
           <div className="text-xs font-bold text-brand-dark">Treat with: Kanaplex or Furan-2</div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fin Rot', href: '/health/fin-rot' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-columnaris" />
       </>}
     >

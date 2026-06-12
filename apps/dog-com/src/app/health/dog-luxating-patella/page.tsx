@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
@@ -11,9 +11,16 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Luxating Patella in Dogs — Grades, Surgery | Dog.com', description: 'Luxating patella (slipping kneecap) is the most common orthopedic condition in small dogs. Grades 1-4, when surgery is needed.', path: '/health/dog-luxating-patella', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Luxating Patella in Dogs', description: 'Grades, surgical indications, and breed predisposition for luxating patella in dogs.', url: 'https://dog.com/health/dog-luxating-patella', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Luxating Patella in Dogs', description: 'Grades, surgical indications, and breed predisposition for luxating patella in dogs.', url: 'https://dog.com/health/dog-luxating-patella', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Luxating Patella in Dogs', description: 'Grading system, surgical indications, and treatment for patellar luxation.', url: 'https://dog.com/health/dog-luxating-patella', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'Why does my small dog skip on three legs for a few steps?', answer: 'That intermittent skipping gait — running on three legs briefly, then returning to normal — is the classic presentation of a luxating patella: the kneecap slips out of its groove (usually inward in small breeds), the dog carries the leg until the kneecap pops back, and then moves normally again. It is the most common orthopedic condition in small dogs. Have your veterinarian examine the knee — luxation is graded 1–4 on physical exam, and the grade guides what happens next.' },
+  { question: 'Does a luxating patella always need surgery?', answer: 'No. Grade 1 (the patella can be manually displaced but returns on its own, with minimal signs) is typically monitored with weight management rather than operated. Grade 2 is recommended for surgery when it causes clinical signs or progressive cartilage damage. Grade 3 is strongly recommended for surgery, and Grade 4 — a permanently luxated kneecap that cannot be replaced — requires complex surgical reconstruction. Your veterinarian or a surgeon assigns the grade and the recommendation.' },
+  { question: 'What does luxating patella surgery involve?', answer: 'Typically one or more procedures done together: trochlear recession (deepening the groove the kneecap sits in), tibial crest transposition (realigning the pull of the patellar tendon), and for severe cases corrective bone cuts (osteotomy) to address the underlying deformity. Recovery is 6–8 weeks of strict exercise restriction with controlled leash walks and rehabilitation. Prognosis is excellent for Grade 2–3 cases — most dogs return to normal or near-normal function. Grades 3–4 and large-breed cases belong with a board-certified surgeon (DACVS).' },
+  { question: 'How do I manage a Grade 1 luxating patella without surgery?', answer: 'Per this page: keep the dog at a lean body weight (less force across the joint with every step), use a joint supplement (glucosamine/chondroitin) and omega-3 fatty acids from fish oil, recheck with your veterinarian every 6 months to watch for progression, and reduce high-impact jumping and running during symptomatic flares while keeping low-impact activity like leash walks and swimming. If skipping becomes more frequent or lameness increases, revisit the surgery conversation.' },
+  { question: 'Which dog breeds get luxating patella?', answer: 'Toy and small breeds are most affected — Yorkshire Terriers, Pomeranians, Chihuahuas, Toy and Miniature Poodles, Maltese, Boston Terriers, Pekingese, Shih Tzus, and Bichon Frises — where the kneecap usually slips inward (medially) due to inherited conformation. Large breeds like German Shepherds, Labradors, and Golden Retrievers can develop the lateral (outward) form, which has different surgical implications and is frequently associated with cruciate ligament disease.' },
+]
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function LuxatingPatellaPage() {
   return (
@@ -64,6 +71,9 @@ export default function LuxatingPatellaPage() {
           <h2>Without Surgery — Grade 1 and Monitoring</h2>
           <p>Grade 1 luxating patella in a dog with minimal clinical signs does not necessarily require surgery. Management: maintain lean body weight (reduces force across the joint with every step), joint supplementation (Dasuquin Advanced — glucosamine and chondroitin), omega-3 fatty acids (EPA/DHA from fish oil — anti-inflammatory), and monitoring every 6 months to assess for progression. If the dog begins showing more frequent skipping, increased lameness, or significant cartilage wear (visible on radiograph), surgical intervention should be reconsidered.</p>
           <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

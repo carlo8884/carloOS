@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide — Largest Gecko | Lizard.com", description: "The New Caledonian giant gecko is the largest living gecko. Tall enclosures, moderate temps, a CGD-based diet, and why they must be housed alone.", path: "/species/leachianus-gecko", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide", description: "Enclosure, temperature, crested-gecko-diet feeding, solitary housing, and care for Rhacodactylus leachianus.", url: "https://lizard.com/species/leachianus-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide", description: "Enclosure, temperature, crested-gecko-diet feeding, solitary housing, and care for Rhacodactylus leachianus.", url: "https://lizard.com/species/leachianus-gecko", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How big do leachianus geckos get?', answer: 'Rhacodactylus leachianus is the largest gecko species alive today, reaching 12–14 inches with a heavy build, and often living well over 20 years. A single adult needs a tall enclosure of at least 18×18×36 inches with thick cork rounds, sturdy branches, and vertical hollows to wedge into during the day.' },
+  { question: 'Can leachianus geckos be housed together?', answer: 'No — adult leachies are highly territorial and must be housed individually outside supervised breeding. Bite injuries from inappropriate cohabitation are a common, avoidable health problem in this species.' },
+  { question: 'What temperatures do leachianus geckos need?', answer: 'Ambient temperatures of 72–78°F, never exceeding roughly 82°F — they come from a mild island climate and sustained high temperatures are stressful and can be fatal. In most homes they need no supplemental heat; cooling is often a bigger concern than heating. UVB is not required, though low-level UVB can be offered as enrichment.' },
+  { question: 'What do leachianus geckos eat?', answer: 'A complete powdered gecko diet (the same Pangea/Repashy-style products used for crested geckos) mixed to a paste and offered in a dish a few times per week, plus gut-loaded insects dusted with calcium once or twice weekly as enrichment — especially for growing or breeding animals. Adults eat readily and can become obese, so monitor body condition.' },
+  { question: 'Do leachianus geckos bite?', answer: 'They can, and their jaws are powerful — individual temperament ranges from docile to defensive. Treat them as a display and occasional-handling species: let the animal walk onto your hand rather than grabbing it, and keep sessions calm and brief. Many tolerate gentle handling well once they trust a keeper.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function SpeciesLeachianusGeckoPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Leachianus Gecko", href: "/species/leachianus-gecko" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
@@ -35,7 +47,7 @@ export default function SpeciesLeachianusGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Leachianus geckos are arboreal New Caledonian giants prized for their size, longevity (often well over 20 years), and the distinctive growling and barking vocalizations they use to defend territory. Like their crested and gargoyle gecko relatives, they thrive at room-ish temperatures, eat a convenient commercial powdered diet, and do not require UVB to survive, making them comparatively low-fuss for an animal of their impressive size. The one firm rule that beginners overlook is that adult leachies are highly territorial and must be housed individually outside supervised breeding."}</p>
           <h2>{"Why Leachies Must Be Housed Alone"}</h2>
 
@@ -68,6 +80,9 @@ export default function SpeciesLeachianusGeckoPage() {
             <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier)."}</li>
             <li>{"Pangea / Repashy complete gecko-diet formulation notes."}</li>
           </ul>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Leachianus Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse tall arboreal enclosures, low-level UVB, thermostats, foggers, substrate, and complete gecko diet sized for leachianus gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -78,5 +93,6 @@ export default function SpeciesLeachianusGeckoPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

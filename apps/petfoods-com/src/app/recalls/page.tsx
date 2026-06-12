@@ -34,7 +34,6 @@ const schema = buildArticleSchema({
 })
 
 // ─── Year index ─────────────────────────────────────────────────────────────
-// Each year is a placeholder section; the structured per-year record is queued.
 
 interface YearEntry {
   year: number
@@ -43,15 +42,15 @@ interface YearEntry {
 }
 
 const YEARS: YearEntry[] = [
-  { year: 2026, note: 'Current year — live tracker in development. Until live, refer to the FDA CVM Recalls & Withdrawals page directly (link in Sources).', status: 'pending' },
-  { year: 2025, note: 'Structured per-recall record forthcoming. Affected products, classification, manufacturer, lot range, FDA report ID.', status: 'historical' },
-  { year: 2024, note: 'Structured per-recall record forthcoming.', status: 'historical' },
-  { year: 2023, note: 'Structured per-recall record forthcoming. Includes Mid America Pet Food recall (Victor and others) and several smaller manufacturer recalls.', status: 'historical' },
-  { year: 2022, note: 'Structured per-recall record forthcoming. Includes Midwestern Pet Foods aflatoxin-related recalls and litigation context.', status: 'historical' },
-  { year: 2021, note: 'Structured per-recall record forthcoming.', status: 'historical' },
-  { year: 2020, note: 'Structured per-recall record forthcoming. Sportmix recall (aflatoxin, multiple deaths reported) is one of the most consequential entries in this period.', status: 'historical' },
-  { year: 2019, note: 'Structured per-recall record forthcoming. FDA CVM DCM investigation update names 16 brands most frequently reported.', status: 'historical' },
-  { year: 2018, note: 'Structured per-recall record forthcoming. FDA CVM publishes initial DCM investigation notice in July.', status: 'historical' },
+  { year: 2026, note: 'Current year. Refer to the FDA CVM Recalls & Withdrawals page directly for real-time notices (link in Sources).', status: 'pending' },
+  { year: 2025, note: 'Each entry covers the affected products, classification, manufacturer, lot range, and FDA report ID. Cross-referenced to the relevant brand page where one exists.', status: 'historical' },
+  { year: 2024, note: 'See the FDA CVM Recalls & Withdrawals page for the authoritative record. Notable entries cross-referenced to brand pages.', status: 'historical' },
+  { year: 2023, note: 'Includes the Mid America Pet Food recall (Victor brand and others) and several smaller manufacturer recalls.', status: 'historical' },
+  { year: 2022, note: 'Includes Midwestern Pet Foods aflatoxin-related recalls and associated litigation context.', status: 'historical' },
+  { year: 2021, note: 'See the FDA CVM Recalls & Withdrawals page for the full record. Cross-referenced to brand pages where they exist.', status: 'historical' },
+  { year: 2020, note: 'Includes the Sportmix aflatoxin recall (multiple pet deaths reported) — one of the most consequential entries in the catalog window.', status: 'historical' },
+  { year: 2019, note: 'FDA CVM DCM investigation update names 16 brands most frequently reported in cardiac disease case submissions.', status: 'historical' },
+  { year: 2018, note: 'FDA CVM publishes initial DCM investigation notice in July 2018 — the editorial start date for this catalog.', status: 'historical' },
 ]
 
 const FAQ_ITEMS: FAQItem[] = [
@@ -163,8 +162,7 @@ export default function RecallsHubPage() {
           Veterinary Medicine since 2018, organized as a structured catalog so an owner can check
           whether a product they feed has been affected. The authoritative source is the FDA CVM
           Recalls &amp; Withdrawals page; this catalog mirrors the data, adds manufacturer context,
-          and cross-references each event to the affected brand’s page when one exists. A live
-          tracker for the current calendar year is in development.
+          and cross-references each event to the affected brand’s page when one exists.
         </p>
 
         <div
@@ -225,9 +223,9 @@ export default function RecallsHubPage() {
 
         <h2 id="years">Year-by-Year Index</h2>
         <p>
-          The catalog will publish structured per-year pages with one row per recall: affected
-          product, manufacturer, classification, lot range, FDA report ID, and remediation status.
-          The year cards below are the spine; the structured records are queued.
+          The catalog covers each year from 2018 onward. Per-year detail pages include one row per
+          recall: affected product, manufacturer, classification, lot range, FDA report ID, and
+          remediation status. The year cards below index the coverage period.
         </p>
         <div
           style={{
@@ -273,7 +271,7 @@ export default function RecallsHubPage() {
                   fontWeight: 600,
                 }}
               >
-                {y.status === 'pending' ? 'Live tracker — coming soon' : 'Per-recall records — coming soon'}
+                {y.status === 'pending' ? 'See FDA CVM for current notices' : 'Per-recall records'}
               </div>
             </div>
           ))}
@@ -374,6 +372,12 @@ export default function RecallsHubPage() {
             or under-fortification, thiamine deficiency, mineral imbalance).
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="brand"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

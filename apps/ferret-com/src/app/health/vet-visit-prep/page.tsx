@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/vet-visit-prep' },
-    { name: 'Vet Visit Prep', url: 'https://ferret.com/health/vet-visit-prep' },
-  ],
-})
 
 const FAQS = [
   {
@@ -116,7 +108,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretVetVisitPrepPage() {
   return (
@@ -131,7 +123,6 @@ export default function FerretVetVisitPrepPage() {
             'A well-prepared ferret vet visit produces a better diagnostic picture, shorter appointments, and lower cost than the alternative. Most of the difference is in what you do at home before you walk through the door — finding the right clinic, choosing the right time to go, bringing the right information, and matching the visit to what is actually wrong.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

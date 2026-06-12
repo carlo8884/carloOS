@@ -3,8 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
@@ -12,6 +10,7 @@ import {
   CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { PageMasthead } from '@/components/PageMasthead'
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
@@ -61,14 +60,7 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Care Library', url: 'https://ferrets.com/care' },
-  ],
-})
-
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = faqSchema
 
 // ─── Category data ───────────────────────────────────────────────────────────
 
@@ -189,22 +181,15 @@ export default function CareHubPage() {
       />
 
       <div className="px-container-sm sm:px-container py-12 max-w-4xl mx-auto">
-        {/* ─── Header ─────────────────────────────────────────────────── */}
-        <header className="mb-10">
-          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Ferrets.com Library
-          </p>
-          <h1 className="font-display font-black text-brand-text-dark leading-tight tracking-tighter mb-5"
-              style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}>
-            Ferret Care Library
-          </h1>
-          <p className="text-lg text-brand-text-mid leading-relaxed">
-            A long-form reference for ferret owners. Diet, housing, hygiene,
-            enrichment, travel, multi-ferret households, and senior-ferret care
-            — grounded in the exotic-mammal veterinary literature and the
-            American Ferret Association&rsquo;s owner-facing guidance.
-          </p>
-        </header>
+        {/* ─── Masthead ───────────────────────────────────────────────── */}
+        <PageMasthead
+          eyebrow="Ferrets.com Library"
+          heading="Ferret Care Library"
+          dek="A long-form reference for ferret owners. Diet, housing, hygiene, enrichment, travel, multi-ferret households, and senior-ferret care — grounded in the exotic-mammal veterinary literature and the American Ferret Association's owner-facing guidance."
+          manifestKey="ferrets-com:care-masthead"
+          fallbackKey="ferrets-com:hero"
+          alt="A ferret resting in its enclosure"
+        />
 
         {/* ─── TL;DR ──────────────────────────────────────────────────── */}
         <aside

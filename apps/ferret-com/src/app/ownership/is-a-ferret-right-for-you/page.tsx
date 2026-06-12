@@ -45,7 +45,6 @@ export default function IsAFerretRightForYouPage() {
             'Ferrets are funny, affectionate, deeply interactive animals — and they are also demanding, sometimes smelly, expensive to keep well, and illegal in a few places. This is a candid self-assessment: not a sales pitch, but an honest set of questions to help you decide whether a ferret genuinely fits your life before you commit to six to ten years of one.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

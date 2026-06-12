@@ -160,7 +160,7 @@ export default function ReadingPetFoodLabelsPage() {
           the single most effective thing an owner can do at the shelf, because the rule applied to
           the name dictates how much of the named protein is actually in the bag.
         </p>
-        <div style={{ background: 'rgba(31,26,20,0.04)', border: '1px solid rgba(31,26,20,0.10)', borderRadius: '10px', padding: '18px 22px', margin: '20px 0' }}>
+        <div style={{ background: 'rgba(31,26,20,0.04)', border: '1px solid rgba(31,26,20,0.10)', borderRadius: '10px', padding: '18px 22px', margin: '20px 0', overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid rgba(31,26,20,0.18)' }}>

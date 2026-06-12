@@ -91,7 +91,7 @@ export default async function CarrierPage({
       question: `Does ${c.name} cover pre-existing conditions?`,
       answer:
         c.slug === 'manypets'
-          ? 'ManyPets is the only major carrier that covers curable pre-existing conditions after 18 symptom-free months. Chronic pre-existing conditions are not covered.'
+          ? 'ManyPets is one carrier that may cover curable pre-existing conditions after 18 symptom-free months. Chronic pre-existing conditions are not covered.'
           : `No major pet insurance carrier covers pre-existing conditions present before the policy start date. ${c.name} treats "curable" conditions as eligible after a cure-confirmation period (typically the condition must be symptom-free and untreated for a defined window).`,
     },
     {

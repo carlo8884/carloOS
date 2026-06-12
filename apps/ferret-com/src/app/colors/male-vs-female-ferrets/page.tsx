@@ -13,7 +13,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +38,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Male vs. Female Ferrets', url: 'https://ferret.com/colors/male-vs-female-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +63,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function MaleVsFemaleFerretsPage() {
   return (
@@ -85,7 +77,6 @@ export default function MaleVsFemaleFerretsPage() {
             "Should you get a male or a female ferret? It is one of the most common questions new owners ask — and the honest answer is that it matters less than most people expect. Here is the real rundown on hobs versus jills: the size difference, the temperament myth, and the one genuinely important health distinction.",
           category: 'Ferret Facts',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

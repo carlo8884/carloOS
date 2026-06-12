@@ -1,18 +1,33 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies.', path: '/species/ball-python', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How long can a ball python go without eating?', answer: 'Feeding refusals of 4–8 weeks are normal seasonal behavior for ball pythons — in the wild they may not eat for 3–6 months during dry season. A healthy adult that is maintaining or gaining weight can safely fast for 6 months or more. The combination to act on is refusal plus sustained weight loss, mucus discharge, respiratory sounds, or visible illness — that warrants veterinary evaluation. Weigh monthly on a digital kitchen scale so you have the data to tell a normal fast from an actual problem.' },
+  { question: 'What humidity does a ball python need?', answer: 'Target 60–80% ambient humidity, measured with a digital hygrometer at substrate level, rising to 80–90% inside a humid hide stocked with moist sphagnum moss. Inadequate humidity is the most common husbandry problem in ball python keeping and the most common cause of incomplete sheds and respiratory infections. PVC or glass enclosures with limited ventilation hold humidity far more reliably than screen-top tanks, and humidity-retaining substrate (coco fiber, organic topsoil, bioactive blends) outperforms paper, which requires constant misting.' },
+  { question: 'What size enclosure does an adult ball python need?', answer: 'Minimum 4×2 feet of floor space for an adult; a 4×2×2 front-opening PVC enclosure is the widely regarded ideal. Counter-intuitively, a huge open space stresses ball pythons — they are ambush predators that feel secure in snug, tight-fitting hides that touch their body on all sides. Whatever the enclosure, provide secure hides and the temperature gradient: hot spot 88–92°F at the surface, warm ambient 80–85°F, cool side 76–80°F.' },
+  { question: 'How big do ball pythons get?', answer: 'Adults reach 3–5 feet, with females larger than males — manageable for most keepers. The longer commitment is lifespan: a well-kept ball python lives 20–30 years.' },
+  { question: 'What do ball pythons eat?', answer: 'Frozen/thawed rats, offered every 7–14 days for adults. Refusals around shedding (the blue/opaque pre-shed phase), in late fall and winter, during female reproductive season, or after enclosure changes are common and expected. When a ball python refuses food, the first step is checking that temperatures and humidity are correct and asking what changed — not medication.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BallPythonPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ball Python', href: '/species/ball-python' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
         { title: 'Ball Python Morphs', href: '/species/ball-python-morphs', category: 'Species' },
@@ -58,6 +73,10 @@ export default function BallPythonPage() {
 
         <h2>Enclosure — Tub vs Tank vs PVC</h2>
         <p>Ball pythons do best in secure, humid, snug enclosures — not large open spaces. Counter-intuitively, a massive tank with lots of open space stresses ball pythons. They are ambush predators that feel secure in tight-fitting hides that touch their body on all sides. Three enclosure options: (1) Plastic tubs (the breeder standard — cheap, secure, hold humidity, easy to clean; aesthetically plain), (2) PVC enclosures (Reptile Sciences, Boamaster — expensive but retain humidity excellently and look good; recommended), (3) Glass tanks (poor humidity retention with screen tops; require partial screen covering). Minimum adult dimensions: 4×2 feet floor space. A 4×2×2 PVC with front-opening sliding doors is the widely regarded ideal adult ball python enclosure.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Ball Python — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for ball python care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
@@ -69,5 +88,6 @@ export default function BallPythonPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

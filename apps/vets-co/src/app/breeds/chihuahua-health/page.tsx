@@ -10,7 +10,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,14 +48,6 @@ const medicalSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://vets.co/' },
-    { name: 'Breed Health', url: 'https://vets.co/breeds' },
-    { name: 'Chihuahua Health', url: PAGE_URL },
-  ],
-})
-
 const FAQS = [
   {
     question: 'Is the soft spot (molera) on my Chihuahua\'s head dangerous?',
@@ -91,7 +82,6 @@ const combinedSchema = combineSchemas(
   articleSchema,
   medicalSchema,
   faqSchema,
-  breadcrumbSchema,
 )
 
 export default function VetsChihuahuaHealthPage() {
@@ -107,7 +97,7 @@ export default function VetsChihuahuaHealthPage() {
             'The world\'s smallest dog breed brings outsized longevity — and a focused cluster of orthopedic, neurologic, cardiac and dental predispositions that benefit from informed screening from puppyhood.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -281,7 +271,7 @@ export default function VetsChihuahuaHealthPage() {
             Chihuahuas decompensate fast — do not wait for morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             A Chihuahua well-puppy plan should include patellar palpation, careful skull and fontanelle
             assessment, full neurologic and cardiac auscultation, an ACVO eye examination, and a frank

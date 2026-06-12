@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Periodontal Disease in Dogs & Cats — Dental Health | Vets.co", description: "Periodontal disease affects most pets by age 3. Learn how dental disease harms the whole body, the signs, and how professional cleaning and home care help.", path: '/health/periodontal-disease-pets', type: 'article' })
@@ -21,7 +21,7 @@ export default function PeriodontalDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function PeriodontalDiseasePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dental Cleaning Guide', href: '/health/dental-cleaning-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-periodontal" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

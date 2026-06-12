@@ -21,13 +21,13 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   buildMedicalWebPageSchema,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
   CalloutBox,
+  CrossPortfolioCard,
   EmailCapture,
   ArticleByline,
 } from '@carloOS/ui'
@@ -222,16 +222,10 @@ export default async function DiseasePage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://fish.com${b.href}`,
-    })),
-  })
-
   // ArticleLayout injects one schema via SchemaScript; emit the FAQ +
-  // Breadcrumb + MedicalWebPage schemas inline below as additional <script>
-  // tags (same pattern as the petfoods ingredient template).
+  // MedicalWebPage schemas inline below as additional <script> tags. The
+  // canonical BreadcrumbList is emitted by ArticleLayout's <Breadcrumb> from
+  // the breadcrumbs prop (single source of truth).
 
   return (
     <ArticleLayout
@@ -241,7 +235,6 @@ export default async function DiseasePage({ params }: PageProps) {
         subtitle: `${disease.category} disease in ${disease.waterType.toLowerCase()} aquarium fish — symptoms, treatment, and prevention.`,
         category: 'Fish Health',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '7 min',
       }}
@@ -273,6 +266,7 @@ export default async function DiseasePage({ params }: PageProps) {
               { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
             ]}
           />
+          <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="fish-com"
@@ -290,10 +284,6 @@ export default async function DiseasePage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />

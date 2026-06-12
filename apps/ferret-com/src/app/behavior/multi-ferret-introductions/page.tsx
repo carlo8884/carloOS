@@ -10,11 +10,11 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Multi-Ferret Introductions', url: 'https://ferret.com/behavior/multi-ferret-introductions' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +65,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -103,7 +96,6 @@ export default function MultiFerretIntroductionsPage() {
             'Ferrets are social animals and most do better in pairs or small groups. But adding a ferret to your home is a staged process, not a one-day event: a quarantine period, neutral-ground meetings, and a tolerance for a startling amount of normal posturing. Rushed introductions are the ones that go wrong.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -142,6 +134,7 @@ export default function MultiFerretIntroductionsPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-multi-ferret-intro"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

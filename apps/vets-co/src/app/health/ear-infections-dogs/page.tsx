@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
@@ -21,7 +21,7 @@ export default function EarInfectionsDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Ear Infections in Dogs', subtitle: 'Ear infections are among the most common reasons dogs visit the veterinarian. A single infection is easily treated, but recurrent infections are a red flag for an underlying problem — usually allergies. Understanding why infections happen, and treating the root cause, is the difference between a one-time problem and a lifelong cycle.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Ear Infections in Dogs', subtitle: 'Ear infections are among the most common reasons dogs visit the veterinarian. A single infection is easily treated, but recurrent infections are a red flag for an underlying problem — usually allergies. Understanding why infections happen, and treating the root cause, is the difference between a one-time problem and a lifelong cycle.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Ear Infections', href: '/health/ear-infections-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function EarInfectionsDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

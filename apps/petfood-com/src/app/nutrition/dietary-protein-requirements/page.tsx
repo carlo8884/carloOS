@@ -95,6 +95,14 @@ export default function DietaryProteinRequirementsPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Orijen vs Acana — High-Protein Lines', href: '/brands/orijen-vs-acana-comparison' },
+              { label: 'Purina Pro Plan — Independent Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

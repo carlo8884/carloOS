@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -11,27 +11,107 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const PAGE_URL = 'https://ferret.com/diet/best-ferret-kibble'
+
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'How to Choose a Ferret Kibble',
   description:
     'A framework for evaluating commercial ferret kibble by ingredient panel and macronutrient profile, with the three quality tiers and the red flags to avoid.',
-  url: 'https://ferret.com/diet/best-ferret-kibble',
+  url: PAGE_URL,
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
   name: 'How to Choose a Ferret Kibble',
   description:
     'Guidance on selecting an appropriate commercial dry diet for domestic ferrets based on ingredient and macronutrient panels.',
-  url: 'https://ferret.com/diet/best-ferret-kibble',
+  url: PAGE_URL,
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+
+// GEO: ItemList of the three kibbles that fit the profile + an editorial
+// Product/Review per pick. reviewRating maps each card's on-page disclosed
+// editorial score (via ScoreMethodology); name + reviewBody come only from this
+// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Ferret Kibbles That Fit the Profile',
+  items: [
+    { name: 'Wysong Epigen 90', url: `${PAGE_URL}#wysong-epigen-90` },
+    { name: 'Marshall Premium Ferret Diet', url: `${PAGE_URL}#marshall-premium-diet` },
+    { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
+  ],
+})
+
+const products = [
+  buildProductSchema({
+    name: 'Wysong Epigen 90',
+    description: 'Starch-free, animal-first, lowest commercial carb load in wide ferret use',
+    url: `${PAGE_URL}#wysong-epigen-90`,
+    ratingValue: 9.3,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits — the default choice when insulinoma risk is the priority. Premium price and not always stocked in chain pet aisles.',
+  }),
+  buildProductSchema({
+    name: 'Marshall Premium Ferret Diet',
+    description: 'Ferret-specific formulation, widely stocked, in-range macros',
+    url: `${PAGE_URL}#marshall-premium-diet`,
+    ratingValue: 8.0,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets, with protein and fat in the working ferret range. The panel is imperfect (some plant protein) but acceptable for healthy adults, and it is the most likely appropriate brand to find on a chain shelf at short notice.',
+  }),
+  buildProductSchema({
+    name: 'Carniwhole Ferret Food',
+    description: 'Direct-to-consumer, published macros, subscription-shipped',
+    url: `${PAGE_URL}#carniwhole`,
+    ratingValue: 8.2,
+    reviewAuthorName: 'Ferret.com Editorial',
+    reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
+  }),
+]
+
+const FAQS = [
+  {
+    question: 'What is the best food for ferrets?',
+    answer:
+      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible (the published target is under 3%; premium starch-free formulas land in the low single digits). Read the panel, not the marketing on the front of the bag.',
+  },
+  {
+    question: 'How do I know how much carbohydrate is in ferret food?',
+    answer:
+      'Guaranteed-analysis labels rarely list carbohydrate, so you estimate it by difference: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15-30% carbohydrate by difference — a defect, not a feature, given the carbohydrate-insulinoma association discussed in the exotic-pet veterinary literature.',
+  },
+  {
+    question: 'Is "chicken meal" bad in ferret food?',
+    answer:
+      'No — "meal" is not a dirty word. Chicken meal is rendered, water-removed chicken and is actually more protein-dense by weight than fresh chicken, which is roughly 70% water. A panel reading "chicken, chicken meal, turkey meal, chicken fat" is a good sign. The red flags are grains or plant-protein concentrates (corn gluten meal, pea protein, soybean meal) at the top of the panel.',
+  },
+  {
+    question: 'Why does my ferret refuse new food?',
+    answer:
+      'Food fixation. Ferrets imprint on the textures and smells of food during their first six months and become reluctant to accept anything unfamiliar afterward. The defense is rotating among two or three acceptable brands from kithood. For an already-fixated ferret, transition over 7-14 days, mixing in an increasing proportion of the new kibble — and never let a ferret go without eating for an extended period during a transition, given how quickly ferrets can become hypoglycemic.',
+  },
+  {
+    question: 'Can ferrets eat "small animal" or "ferret and rabbit" food?',
+    answer:
+      'No. Rabbits are herbivores and ferrets are obligate carnivores — a food formulated for both is wrong for at least one of them. The same goes for formulas with added fruit, vegetables, or sweeteners (molasses, honey, cane sugar): ferrets do not digest plant matter, and added sugars stress pancreatic beta cells.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
+
+// Near-top jump links — fed by the SAME three picks as the ItemList schema
+// above (same names, same anchors). Labels mirror each ReviewCard's badge.
+const QUICK_PICKS = [
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Starch-free · Lowest carb load', href: '#wysong-epigen-90' },
+  { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
+  { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
+]
 
 export default function BestFerretKibblePage() {
   return (
@@ -45,7 +125,6 @@ export default function BestFerretKibblePage() {
             'Most of the work in feeding a ferret well is choosing the right dry food, then staying consistent. This page is a method, not a shopping list: how to read an ingredient panel, what macronutrient window to aim for, and the red flags that separate an appropriate formula from supermarket "ferret food" that exists only because owners keep buying it.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -65,6 +144,7 @@ export default function BestFerretKibblePage() {
                 { label: 'Rotation & Food Fixation', href: '#rotation' },
                 { label: 'Transitioning Brands', href: '#transition' },
                 { label: 'Kibbles That Fit the Profile', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -84,6 +164,7 @@ export default function BestFerretKibblePage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-best-ferret-kibble"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -100,9 +181,11 @@ export default function BestFerretKibblePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+
+          <QuickPicks items={QUICK_PICKS} />
 
           <h2 id="panel">Read the Panel First</h2>
           <p>
@@ -160,7 +243,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Starch-free, animal-first, lowest commercial carb load in wide ferret use"
             score={9.3}
@@ -186,7 +268,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Mid Tier"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, in-range macros"
             score={8.0}
@@ -211,7 +292,6 @@ export default function BestFerretKibblePage() {
           <ReviewCard
             id="carniwhole"
             badge="Direct-to-Consumer"
-            badgeEmoji="📦"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
             score={8.2}
@@ -232,6 +312,9 @@ export default function BestFerretKibblePage() {
             ctaAffiliateProgram="carniwhole"
             ctaAffiliateProduct="ferret-diet"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="sources">Sources</h2>
           <p>

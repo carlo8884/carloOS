@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -9,7 +12,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,6 +36,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored category picks on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; ratings reflect the
+// disclosed on-page editorial scores). ItemList captures the display order.
+const freezeDriedSchema = buildProductSchema({
+  name: 'Freeze-Dried Complete Diets',
+  description:
+    'Shelf-stable, minimally heated complete diets, usually rehydrated before feeding. Many are raw-based; prefer products with a validated kill step and a complete-and-balanced AAFCO statement for the life stage.',
+  reviewBody:
+    'Low-heat freeze-drying preserves most heat-sensitive nutrients; products are usually rehydrated before serving. Many are raw-based and carry raw-food handling considerations — prefer a validated kill step and a complete-and-balanced AAFCO statement. Energy-dense by dry weight.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.0,
+})
+const dehydratedSchema = buildProductSchema({
+  name: 'Dehydrated Complete Diets',
+  description:
+    'Warm-air dried complete diets, gently cooked or raw depending on temperature, rehydrated to serve. Confirm whether the product is a complete diet or a topper and check the calorie density.',
+  reviewBody:
+    'Warm-air dehydration is gentler than extrusion but applies more heat than freeze-drying; the base may be cooked or raw. Rehydrate per the manufacturer to restore moisture and aroma. Confirm complete-and-balanced versus topper, and check the kill-step practice.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 7.8,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Freeze-Dried and Dehydrated Options',
+  items: [
+    { name: 'Freeze-Dried Complete Diets', url: 'https://petfood.com/compare/freeze-dried-and-dehydrated#freeze-dried-complete' },
+    { name: 'Dehydrated Complete Diets', url: 'https://petfood.com/compare/freeze-dried-and-dehydrated#dehydrated-complete' },
+  ],
+})
+const pageSchema = combineSchemas(schema, itemListSchema, freezeDriedSchema, dehydratedSchema)
 
 const SOURCES = [
     {
@@ -80,7 +114,7 @@ export default function FreezeDriedAndDehydratedPage() {
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
         { title: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -115,7 +149,16 @@ export default function FreezeDriedAndDehydratedPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-freeze-dried-and-dehydrated" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Freeze-dried versus dehydrated — two ways to remove water, and what each does to nutrients and safety." />
         <p>Freeze-drying and dehydration both remove water to make food shelf-stable, but by different methods and at different temperatures, and the starting material may be raw or cooked. The category includes complete diets meant to be the sole food and toppers meant only to enhance a complete diet. Because of this variety, the label and the AAFCO statement matter as much here as anywhere. See <a href="/compare/raw-vs-cooked-diets">Raw vs Cooked Diets</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            Freeze-drying and dehydration both remove water for shelf stability, but freeze-drying uses less heat and better preserves heat-sensitive nutrients (at higher cost), while the starting material may be raw or cooked. Before buying, settle two questions that define the category: is the product raw or cooked (which sets the handling-safety profile), and is it a complete-and-balanced diet or a topper meant only to supplement a complete food? Check the AAFCO statement and the raw-vs-cooked label on the specific product.
+          </p>
+        </div>
+
         <h2 id="howmade">How They Are Made</h2>
         <p>Freeze-drying (lyophilization) freezes the food, then removes water by sublimation under vacuum at low temperature, preserving structure and most nutrients with minimal heat. Dehydration removes water using warm air, which is gentler than extrusion but applies more heat than freeze-drying. Both yield a lightweight, shelf-stable product that is usually rehydrated before feeding. Freeze-drying is more expensive and better at preserving heat-sensitive nutrients.</p>
         <h2 id="rawcooked">Raw vs Cooked Base</h2>

@@ -168,7 +168,6 @@ export default function CyclingGuidePage() {
             'The nitrogen cycle is the foundation of every aquarium. Without it, fish die within days of ammonia poisoning. With it, fish live for years in stable water. This guide walks through fishless and fish-in cycling, the right ammonia sources, a six-week test schedule, and what to do when a cycle stalls.',
           category: 'Tank Setup',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '15 min',
         }}

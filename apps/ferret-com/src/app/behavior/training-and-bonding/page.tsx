@@ -11,11 +11,11 @@ import {
   DropCap,
   StockImage,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +41,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior/training-and-bonding' },
-    { name: 'Training & Bonding', url: 'https://ferret.com/behavior/training-and-bonding' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +76,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -123,7 +116,6 @@ export default function FerretTrainingBondingPage() {
             'Ferrets are trainable. They are not as motivated by social approval as dogs, not as routine-bound as cats, and respond best to a mixture of food-reward operant conditioning and patient, consistent handling from kithood. The right framing: shape behaviour you want, work with instinct rather than against it, and never use punishment-based methods.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}
@@ -162,6 +154,7 @@ export default function FerretTrainingBondingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-training-bonding"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

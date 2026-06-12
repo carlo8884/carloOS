@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,59 @@ const SOURCES = [
   { label: "Loiselle, P.V. The Cichlid Aquarium. Tetra Press, 1985.", publisher: "Tetra Press" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Angelfish Care Guide — Cichlid Behavior, Tank Height | Fish.com', description: 'Angelfish are cichlids with cichlid behavior — pairs bond for life, defend territory, and may attack tankmates during breeding. Tall tanks required.', path: '/species/angelfish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Angelfish Care Guide', description: 'Cichlid behavior, bonding, territory, and tall tank requirements for freshwater angelfish.', url: 'https://fish.com/species/angelfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Angelfish Care Guide', description: 'Cichlid behavior, bonding, territory, and tall tank requirements for freshwater angelfish.', url: 'https://fish.com/species/angelfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'What tank size do angelfish need?',
+    answer:
+      'Tank height matters as much as volume because angelfish grow vertically — an adult may reach 6 inches fin tip to fin tip while being only 4 inches long. A standard 20-gallon "high" at 16 inches deep is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches of depth and a longer footprint is ideal for a pair or small group. Shallow tanks stunt growth and cause chronic stress.',
+    answerText:
+      'Height matters: 18 in minimum, 24 in preferred. A 55-gallon works; a 75-gallon is ideal for a pair or small group. Shallow tanks stunt growth.',
+  },
+  {
+    question: 'Can angelfish live with neon tetras?',
+    answer:
+      'No — despite the frequent recommendation. Adult angelfish are predatory toward anything small enough to fit in their mouth, and at adult size anything under 1 inch is prey. Angelfish predate neons in the wild and will eat them in the aquarium once large enough to catch them. Cardinal tetras are slightly larger and faster — better odds, but not guaranteed safe.',
+    answerText:
+      'No. Adult angelfish eat fish under 1 inch and predate neons in the wild. Cardinals are slightly safer but not guaranteed.',
+  },
+  {
+    question: 'How do you tell male and female angelfish apart?',
+    answer:
+      'Sexing angelfish is unreliable without observing spawning — there are no reliable visual differences. The standard approach is to purchase a group of 6 juveniles and let them pair naturally as they mature, then remove unpaired individuals once pairing is established to reduce aggression.',
+    answerText:
+      'You cannot reliably sex angelfish visually. Buy 6 juveniles, let pairs form naturally, then remove unpaired fish.',
+  },
+  {
+    question: 'Are angelfish aggressive?',
+    answer:
+      'They are cichlids, and bonded pairs defend a spawning site with genuine cichlid aggression — chasing, fin-nipping, and potentially injuring fish that enter the defended zone. This is normal behavior that cannot be trained away. Management: a tank large enough for other fish to retreat beyond the defended perimeter, a dedicated breeding tank for the pair, or relocating incompatible tankmates.',
+    answerText:
+      'Breeding pairs defend territory aggressively — normal cichlid behavior. Manage with a larger tank, a dedicated breeding tank, or by moving incompatible tankmates.',
+  },
+  {
+    question: 'How long do angelfish live?',
+    answer:
+      'Ten to fifteen years. They are healthiest and breed most reliably in conditions close to their native Amazon tributaries: warm (78–82°F), soft (GH 2–8), slightly acidic (pH 6.0–7.0) water.',
+    answerText:
+      '10-15 years. Healthiest in warm (78-82F), soft, slightly acidic water close to their Amazon origins.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
+
 export default function AngelfishPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Angelfish Care Guide', subtitle: 'Pterophyllum scalare — freshwater angelfish are cichlids, and understanding them as cichlids rather than as large decorative tetras unlocks their behavior. They bond in pairs, defend breeding territory aggressively, develop individual personalities, and form the strongest social hierarchies in a community tank. They are not passive community fish despite their graceful appearance.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Angelfish Care Guide', subtitle: 'Pterophyllum scalare — freshwater angelfish are cichlids, and understanding them as cichlids rather than as large decorative tetras unlocks their behavior. They bond in pairs, defend breeding territory aggressively, develop individual personalities, and form the strongest social hierarchies in a community tank. They are not passive community fish despite their graceful appearance.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Angelfish', href: '/species/angelfish' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -34,6 +80,7 @@ export default function AngelfishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-angelfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A freshwater angelfish in a home aquarium." priority />
         <h2>Tank Height — The Non-Negotiable</h2>
         <p>Angelfish grow vertically — their body is laterally compressed and their dorsal and ventral fins extend dramatically above and below. An adult angelfish may reach 6 inches in height (fin tip to fin tip) while being only 4 inches long. A standard 20-gallon "high" tank at 16 inches depth is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches and longer footprint is ideal for a small group or a pair. Shallow tanks stunt their growth, restrict their natural fin expression, and cause chronic stress. When buying angelfish, buy for the adult, not the juvenile.</p>
 
@@ -51,6 +98,17 @@ export default function AngelfishPage() {
 
         <h2>Strains and Varieties</h2>
         <p>Decades of selective breeding have produced many angelfish varieties beyond the wild-type silver with black bars: veil angels (extended fins), marble (random black and white pattern), koi (orange, white, and black), gold (solid yellow), black lace (black), platinum (solid white), zebra (extra bars), smoky (brown-gray tones), and others. Veil-tail varieties have the most dramatic fin extensions but are slower and more vulnerable to fin-nipping — avoid keeping them with even mildly nippy species. Wild-type angelfish are hardier and more vigorous spawners than many heavily selectively-bred strains.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Angelfish — Tank Setup</div>
@@ -64,5 +122,6 @@ export default function AngelfishPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

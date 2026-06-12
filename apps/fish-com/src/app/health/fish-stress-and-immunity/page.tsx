@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Stress and 
 export default function FishStressPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Fish Stress and Immunity', subtitle: "Most aquarium disease is not bad luck — it is the predictable result of stress. The pathogens that cause ich, fin rot, and bacterial infections are present in nearly every tank, kept in check by a healthy fish's immune system. When chronic stress suppresses that immunity, opportunistic disease follows. Understanding and minimizing stress is the most powerful preventive tool a fishkeeper has.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '9 min' }}
+      hero={{ title: 'Fish Stress and Immunity', subtitle: "Most aquarium disease is not bad luck — it is the predictable result of stress. The pathogens that cause ich, fin rot, and bacterial infections are present in nearly every tank, kept in check by a healthy fish's immune system. When chronic stress suppresses that immunity, opportunistic disease follows. Understanding and minimizing stress is the most powerful preventive tool a fishkeeper has.", category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Stress and Immunity', href: '/health/fish-stress-and-immunity' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
@@ -27,6 +27,7 @@ export default function FishStressPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Bacterial Infections', href: '/health/bacterial-infections' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-stress-immunity" />
       </>}
     >

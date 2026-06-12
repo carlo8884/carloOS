@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Spaying & Neutering', url: 'https://ferret.com/health/spaying-and-neutering' },
-  ],
-})
 
 const FAQS = [
   {
@@ -111,7 +103,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretSpayNeuterPage() {
   return (
@@ -125,7 +117,6 @@ export default function FerretSpayNeuterPage() {
             'For female ferrets, spaying is not optional cosmetic surgery — an unspayed jill left in heat can die of estrogen toxicity. The biology is unusual, the stakes are high, and the early-spay-neuter debate adds a real wrinkle worth understanding.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

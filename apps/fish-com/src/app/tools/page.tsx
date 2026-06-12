@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -20,42 +21,54 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const TOOLS = [
   {
     href: '/tools/aquarium-cycling-estimator',
-    icon: '🔬',
     title: 'Aquarium Cycling Time Estimator',
     desc: 'How long will a new tank take to cycle? Pick method (fishless ammonia / bottled bacteria / used media / fish-in) and temperature, get a phase-by-phase timeline.',
     tag: 'New tank setup',
   },
   {
     href: '/tools/aquarium-volume-calculator',
-    icon: '📏',
     title: 'Aquarium Volume Calculator',
     desc: 'Convert tank dimensions (L × W × H) to US gallons, UK gallons, and liters. Supports rectangular, bow-front, and cylindrical tanks.',
     tag: 'Most popular',
   },
   {
+    href: '/tools/substrate-calculator',
+    title: 'Aquarium Substrate Calculator',
+    desc: 'How much gravel, sand, or aqua soil do you need? Enter tank length, width, and depth to get substrate volume in liters and weight in lbs and kg, plus a buy-10%-extra rule.',
+    tag: 'New tank setup',
+  },
+  {
+    href: '/tools/pond-volume-calculator',
+    title: 'Pond Volume Calculator',
+    desc: 'Koi or garden pond volume in gallons and liters. Rectangular, circular, and oval shapes, with an ~85% factor for irregular ponds.',
+    tag: 'Ponds',
+  },
+  {
     href: '/tools/stocking-calculator',
-    icon: '🐠',
     title: 'Stocking Calculator',
     desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',
     tag: 'Beginner essential',
   },
   {
+    href: '/tools/tank-mate-compatibility-checker',
+    title: 'Tank Mate Compatibility Checker',
+    desc: 'Pick two or more freshwater fish and get a Compatible / Caution / Not-recommended verdict per pair, with the reason — temperament, temperature, fin-nipping, and size.',
+    tag: 'Stocking',
+  },
+  {
     href: '/tools/heater-wattage-calculator',
-    icon: '🔥',
     title: 'Heater Wattage Calculator',
     desc: 'Pick the right heater size for your tank, room temperature, and target water temperature. Includes redundancy recommendation.',
     tag: 'Equipment',
   },
   {
     href: '/tools/water-change-calculator',
-    icon: '💧',
     title: 'Water Change Calculator',
     desc: 'Calculate the % water change needed to bring nitrate or any parameter down to a target level. Includes dilution math.',
     tag: 'Maintenance',
   },
   {
     href: '/tools/co2-calculator',
-    icon: '🌿',
     title: 'CO2 Calculator (KH/pH)',
     desc: 'Estimate dissolved CO2 in ppm from carbonate hardness (KH) and pH. Essential for planted tanks running CO2 injection.',
     tag: 'Planted tanks',
@@ -89,31 +102,16 @@ export default function ToolsHub() {
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={itemListSchema} />
       <>
-      {/* HERO */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(14,107,138,0.5) 0%, transparent 60%)' }}
-          aria-hidden="true"
-        />
-        <div className="relative z-10 max-w-3xl">
-          <div className="flex items-center gap-2.5 mb-6">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Calculators &amp; Tools</span>
-          </div>
-          <h1 className="font-display font-bold text-white tracking-tight leading-none mb-5" style={{ fontSize: 'clamp(40px, 5.5vw, 64px)' }}>
-            Aquarium math, <span className="italic font-normal">done for you.</span>
-          </h1>
-          <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Free calculators built by aquarists for the questions everyone Googles: how many gallons is my tank, how many fish can I stock,
-            what wattage heater do I need, and how much CO2 is actually in my planted tank. Mobile-friendly and no signup.
-          </p>
-        </div>
-      </section>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:tools-hero" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:tools-hero"
+        alt="A planted freshwater aquarium with healthy aquascaping"
+        eyebrow="Calculators & Tools"
+        title="Aquarium math, done for you."
+        subtitle="Free calculators for the questions everyone Googles: how many gallons is my tank, how many fish can I stock, what wattage heater do I need, and how much CO2 is in my planted tank. Mobile-friendly, no signup."
+        primaryCta={{ href: '/tools/stocking-calculator', label: 'Check your stocking' }}
+        secondaryCta={{ href: '/tools/aquarium-volume-calculator', label: 'Calculate tank volume' }}
+      />
 
       {/* TOOLS GRID */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -125,7 +123,6 @@ export default function ToolsHub() {
               className="block bg-brand-white border border-brand-border rounded-lg p-6 no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-3xl">{tool.icon}</span>
                 <span className="text-2xs font-bold tracking-wider uppercase text-brand-primary bg-brand-primary-pale px-2 py-1 rounded-pill">
                   {tool.tag}
                 </span>
@@ -170,7 +167,7 @@ export default function ToolsHub() {
           subtitle="We're adding a new aquarium calculator or species tool every couple of weeks. Subscribe to be the first to use them."
           ctaText="Subscribe Free"
           source="tools-hub"
-          perks={['🧮 New calculators', '🐠 Species spotlights', '🧪 Water chemistry tips', '🚫 No spam']}
+          perks={['New calculators', 'Species spotlights', 'Water chemistry tips', 'No spam']}
         />
       </section>
     </>

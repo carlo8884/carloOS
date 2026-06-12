@@ -40,7 +40,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -75,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'GI Blockage', url: 'https://ferret.com/health/gastrointestinal-blockage' },
-  ],
-})
 
 const FAQS = [
   {
@@ -112,7 +104,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretGIBlockagePage() {
   return (
@@ -126,7 +118,6 @@ export default function FerretGIBlockagePage() {
             'Ferrets explore with their teeth, love rubber, and have an intestine narrow enough that a swallowed earplug can become a surgical emergency. GI obstruction is common, time-sensitive, and largely preventable with disciplined ferret-proofing.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

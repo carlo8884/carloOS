@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -91,7 +91,7 @@ export default function SpeciesIndexPage() {
               className="block rounded-xl overflow-hidden no-underline group"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
               <div className="relative h-36 overflow-hidden">
-                <StockImage manifestKey={s.img} alt={s.name} aspect="1:1" variant="inline" />
+                <StockImage manifestKey={s.img} fallbackKey="lizard-com:category-species" alt={s.name} aspect="1:1" variant="inline" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
               <div className="p-3">
@@ -110,8 +110,8 @@ export default function SpeciesIndexPage() {
         <div className="grid sm:grid-cols-3 gap-4">
           {[
             { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', desc: 'Ferguson Zones, bulb selection, distances' },
-            { title: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs', desc: 'Published Solarmeter 6.5 rankings' },
-            { title: 'Best Terrariums 2025', href: '/reviews/best-reptile-terrariums', desc: 'PVC vs glass, compared from keeper reports' },
+            { title: 'Best UVB Bulbs 2026', href: '/reviews/best-uvb-bulbs', desc: 'Published Solarmeter 6.5 rankings' },
+            { title: 'Best Terrariums 2026', href: '/reviews/best-reptile-terrariums', desc: 'PVC vs glass, compared from keeper reports' },
           ].map(link => (
             <Link key={link.href} href={link.href}
               className="block rounded-xl p-5 no-underline hover:-translate-y-1 transition-all duration-200"
@@ -151,11 +151,14 @@ export default function SpeciesIndexPage() {
         <Link key="argentine-black-and-white-tegu" href="/species/argentine-black-and-white-tegu" className="text-sm text-brand-primary no-underline hover:underline">Argentine Black and White Tegu</Link>
         <Link key="chinese-water-dragon" href="/species/chinese-water-dragon" className="text-sm text-brand-primary no-underline hover:underline">Chinese Water Dragon</Link>
         <Link key="fire-skink" href="/species/fire-skink" className="text-sm text-brand-primary no-underline hover:underline">Fire Skink</Link>
+        <Link key="gargoyle-gecko" href="/species/gargoyle-gecko" className="text-sm text-brand-primary no-underline hover:underline">Gargoyle Gecko</Link>
         <Link key="green-anole" href="/species/green-anole" className="text-sm text-brand-primary no-underline hover:underline">Green Anole</Link>
         <Link key="kenyan-sand-boa" href="/species/kenyan-sand-boa" className="text-sm text-brand-primary no-underline hover:underline">Kenyan Sand Boa</Link>
         <Link key="leachianus-gecko" href="/species/leachianus-gecko" className="text-sm text-brand-primary no-underline hover:underline">Leachianus Gecko</Link>
+        <Link key="mossy-leaf-tail-gecko" href="/species/mossy-leaf-tail-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mossy Leaf-Tail Gecko</Link>
         <Link key="mourning-gecko" href="/species/mourning-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mourning Gecko</Link>
         <Link key="nile-monitor" href="/species/nile-monitor" className="text-sm text-brand-primary no-underline hover:underline">Nile Monitor</Link>
+        <Link key="savannah-monitor" href="/species/savannah-monitor" className="text-sm text-brand-primary no-underline hover:underline">Savannah Monitor</Link>
         <Link key="western-hognose-snake" href="/species/western-hognose-snake" className="text-sm text-brand-primary no-underline hover:underline">Western Hognose Snake</Link>
         </div>
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4 mt-8">Choosing a Reptile</h2>
@@ -168,6 +171,8 @@ export default function SpeciesIndexPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="footer" />
 </>
   )
 }

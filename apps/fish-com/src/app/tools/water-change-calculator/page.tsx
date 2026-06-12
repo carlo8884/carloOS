@@ -98,7 +98,6 @@ export default function WaterChangeCalculatorPage() {
         subtitle: 'Find the exact % water change needed to bring nitrate, TDS, GH, or salinity down to a safe target. Includes multi-change planning for large reductions.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '💧',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}
@@ -178,7 +177,10 @@ export default function WaterChangeCalculatorPage() {
         <ul>
           <li><strong>Overfeeding.</strong> The most common cause. Cut to once a day, what fish finish in 30 seconds.</li>
           <li><strong>Overstocking.</strong> Use our <Link href="/tools/stocking-calculator">stocking calculator</Link> to check — most overstocked tanks are 2–3× over.</li>
-          <li><strong>Undersized filter.</strong> Bio-media volume matters more than flow rate. Upgrade to a canister or add a second filter.</li>
+          <li><strong>Undersized filter.</strong> Bio-media volume matters more than flow rate. Upgrade to a canister or add a second filter.
+            See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
+            <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for size-matched picks.
+          </li>
           <li><strong>Few or no live plants.</strong> Even low-light plants (anubias, java fern, amazon sword) consume nitrate as fertilizer.</li>
         </ul>
         <p>

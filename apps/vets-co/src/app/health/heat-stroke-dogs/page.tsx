@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -18,7 +18,7 @@ export default function HeatStrokePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Heat Stroke in Dogs', subtitle: 'Heat stroke is a life-threatening emergency where body temperature rises above the point where normal cellular function can be maintained. Brain damage begins at 106°F and is often irreversible. Dogs die from heat stroke every year — almost always preventably. Speed of recognition and first aid while transporting to the vet determines outcomes.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
+        hero={{ title: 'Heat Stroke in Dogs', subtitle: 'Heat stroke is a life-threatening emergency where body temperature rises above the point where normal cellular function can be maintained. Brain damage begins at 106°F and is often irreversible. Dogs die from heat stroke every year — almost always preventably. Speed of recognition and first aid while transporting to the vet determines outcomes.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heat Stroke', href: '/health/heat-stroke-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -37,7 +37,8 @@ export default function HeatStrokePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dehydration', href: '/health/dehydration-in-dogs' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-heat-stroke" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>The Car Problem — How It Happens</h2>

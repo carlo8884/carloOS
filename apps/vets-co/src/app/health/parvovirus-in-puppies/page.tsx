@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Parvovirus in Puppies — Signs, Treatment, Prevention | Vets.co", description: "Canine parvovirus is a contagious, life-threatening illness in unvaccinated puppies. Learn the signs, why it is an emergency, and how vaccination prevents it.", path: '/health/parvovirus-in-puppies', type: 'article' })
@@ -21,7 +21,7 @@ export default function ParvoPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Parvovirus in Puppies', subtitle: 'Canine parvovirus is one of the most serious infectious diseases a puppy can face — highly contagious, environmentally hardy, and frequently fatal without prompt intensive care. It is also almost entirely preventable through vaccination. Recognizing the signs early and acting immediately gives an affected puppy the best chance of survival.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Parvovirus in Puppies', subtitle: 'Canine parvovirus is one of the most serious infectious diseases a puppy can face — highly contagious, environmentally hardy, and frequently fatal without prompt intensive care. It is also almost entirely preventable through vaccination. Recognizing the signs early and acting immediately gives an affected puppy the best chance of survival.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Parvovirus', href: '/health/parvovirus-in-puppies' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function ParvoPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-parvo" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

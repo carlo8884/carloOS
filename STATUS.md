@@ -3,7 +3,28 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-01 evening (Carlo polish-pivot — phase 5: launch-quality polish, not launch-imminent; do NOT push DNS or other launch-ops items at the top of any queue)
+**Last updated:** 2026-06-11 (COO autonomous build sprint — PRs #688–#699, zero-click-search strategy)
+
+> **COO zero-click / AI-citation build sprint (2026-06-11 — PRs #694–#699 merged):**
+> Strategic context: research confirmed the zero-click shift is real (Ahrefs Feb-2026: AIO knocks #1 CTR 7.3%→1.6%; ~58–60% zero-click). Response = win the AI citation AND keep the high-intent interaction on-property.
+> **Layout (Carlo phone review, #694):** hero photo "black-bar" bug fixed on 5 sites (figure aspect-ratio forced height-only → photo now covers); Dog calorie-calc tightened; owner-path tiles enlarged. Visual Bot directive filed for portfolio brightness/mood (Horses too dark) — `ops/handoffs/2026-06-11-coo-to-visual-portfolio-brightness-flow.md`.
+> **Review hubs (#694, #695):** PetFood `/reviews` (best cat/senior-dog/puppy food, nutrition-analysis-led, differentiated from Dog.com) + Ferret `/reviews` (cage/litter/harness) — both with Monetization buy-box slots left for wiring. Dog `/guides` expanded 2→6 (vitals, microchipping, wellness exam, first-aid). Lizard tegu duplicate-content canonicalized.
+> **Tool layer — 17 new calculators (#696, #697, #698):** the click-and-cite surfaces AI can't answer in-SERP. Horses 1→5 (weight, feed, gestation, height converter), Dog →7 (puppy-weight, chocolate-toxicity [poison-control-first, educational], whelping calendar, ideal-weight), Vets →3 (insurance-worth-it breakeven), Lizard 2→6 (reptile feeding, basking temp), Saddle 1→3 (fit checker, girth), Fish →8 (tank-mate compatibility). Each GEO-built: extractable formula + worked example + FAQ schema + sources.
+> **Network moat (#699):** 6 missing cross-portfolio recommendation keys added + `CrossPortfolioCard` rendered on ~130 previously-"cold" pages (vets health, dog reviews, ferret diet/behavior, lizard setup, horses ownership/racing, fish health) — keeps users + crawlers in the 10-site network.
+> **Carlo unlock (unchanged):** Amazon + Impact.com accounts → env vars per the affiliate turnkey doc = revenue starts. Optional: AnswerThePublic/AlsoAsked ($50–100/mo) → hand COO exports → demand-ranked content.
+
+> **COO revenue-activation + SEO/GEO night wave (2026-06-11 — PRs #688 + #689 merged):**
+> **#688 (revenue):** Vets breed×state funnel carrier CTAs 404'd across ~2,912 pages (`/pet-insurance/${slug}` route never existed) — re-pointed to `/go/${vendor}/breed-${breed}-${state}` with disclosure. **Affiliate activation turnkey** shipped (`ops/handoffs/2026-06-11-coo-to-carlo-affiliate-activation-turnkey.md`): ranked account order (Amazon → Impact → ShareASale → CJ → Skimlinks) + per-site env-var lists + **Gap E1: `AFF_AMAZON_BRAND_TAG`/`AFF_CHEWY_BRAND_TAG` are separate vars carrying most product CTAs — set BOTH or CTAs earn $0**. Ferret food-evaluator + tools hub now funnel to `/ferret-starter-kit`. Revenue-path QA verdict: all 6 candidates revenue-path-complete (zero /go 404s, zero disclosure violations, zero clinical-page CTAs).
+> **#689 (SEO/GEO):** 36 indexable pages restored to sitemaps (all 3 new tools + 33-page horses racing cluster were crawl-invisible) + **new `scripts/ci/sitemap-drift.mjs` gate wired into QC workflow**. Stale 2025→2026 guide-year refresh on dog/lizard money pages. ItemList ×12 surfaces, Product (rating-less) on telehealth + 3 dog products, content-aware FAQPage ×~17 pages, HowTo ×2 training pages, TL;DR/verdict tables on funnels + grain-free. Link graph: ferret starter-kit first homepage inbound, heartworm de-orphaned, lizard health-hub routing, keyworded lizard/petfood homepage titles. Monetization handoff: vets funnel primary CTAs exit to dog.com (`2026-06-11-coo-to-monetization-vets-funnel-offdomain-cta.md`).
+> **Carlo unlock (no code needed):** Amazon Associates + Impact.com accounts → env vars per the turnkey doc = portfolio starts earning.
+> **FAQ/GEO waves (#691, #692 + follow-ups):** content-aware FAQPage schema rolled out portfolio-wide — Dog.com breeds 32/32 + health cluster, top species on Fish/Lizard, Ferret care/diet/health, PetFood ingredients 8/8, Vets breeds-health 9/9 — every answer sourced from on-page facts.
+
+> **COO launch-readiness work block (2026-06-10 — PR #364 omnibus):**
+> **4 product tools shipped + QA-verified** — Vets Insurance Coverage Finder (`/tools/insurance-finder`), Dog "Is this a dog emergency?" triage (`/tools/is-this-a-dog-emergency`), PetFood Compare Pet Foods (`/tools/compare-pet-foods`), Dog Breed Finder honesty refactor (killed `matchPercent`).
+> **GEO authority:** `llms.txt` ×6 launch candidates · homepage Org/WebSite schema ×10 sites · BreadcrumbList dedup ×5 templates · `ItemList`+editorial `Product`/`Review` schema ×9 review pages (no fake ratings, QC §1.4).
+> **Trust:** Dog first-person clinical-claim fix + `trust-guard` hardening · 5 carrier superlatives softened · Lizard/PetFoods/Ferrets dedup + noindex.
+> **All 6 audits** (trust · affiliate-leak 0/14 · no-wagering · GEO · mobile · orphan-link) clean or routed.
+> **Cohort-5 (Vets/Dog/Ferret/PetFood/Lizard) is now COO-clear.** Remaining gates: **Monetization** (Vets funnel-404, calc-CTAs, Ferret tools→starter-kit), **Visual** (imagery differentiation, Dog emoji→SVG, Lizard `/states` overflow), and the **deferred Carlo gates** (Impact.com activation, DNS, GA4) — now turnkey via `ops/handoffs/2026-06-09-coo-launch-execution-playbook.md`. See also the launch-readiness scorecard-v2, revenue-architecture, and acquirer-readiness handoffs (all 2026-06-09).
 
 ---
 

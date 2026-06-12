@@ -97,7 +97,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com/species/russian-tortoise', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/savannah-monitor', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/sulcata-tortoise', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://lizard.com/species/tegu', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/tokay-gecko', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/uromastyx', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/species/veiled-chameleon', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -106,5 +105,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://lizard.com/tools/uvb-distance-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://lizard.com/tools/enclosure-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://lizard.com/tools/reptile-feeding-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://lizard.com/tools/basking-temperature-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://lizard.com/tools/reptile-match-quiz', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

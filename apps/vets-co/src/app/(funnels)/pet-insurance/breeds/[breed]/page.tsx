@@ -33,8 +33,8 @@ export async function generateMetadata({
   if (!b) return {}
   return buildMetadata({
     siteId: 'vets-co',
-    title: `${b.breedName} Pet Insurance — Best Carriers by State | Vets.co`,
-    description: `Best pet insurance for ${b.breedName}s. Breed-specific carrier picks, hereditary conditions, sample premiums, state-by-state index.`,
+    title: `${b.breedName} Pet Insurance — Carrier Options by State | Vets.co`,
+    description: `Pet insurance options for ${b.breedName}s. Breed-specific carrier comparisons, hereditary conditions, sample premiums, state-by-state index.`,
     path: `/pet-insurance/breeds/${breed}`,
     type: 'article',
   })
@@ -50,7 +50,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
   const schema = combineSchemas(
     buildArticleSchema({
       siteId: 'vets-co',
-      title: `${b.breedName} Pet Insurance — Best Carriers`,
+      title: `${b.breedName} Pet Insurance — Carrier Options`,
       description: `Breed-specific pet insurance for ${b.breedName}s, including risk profile, recommended carrier, and a state-by-state index.`,
       url: `https://vets.co/pet-insurance/breeds/${breed}`,
       imageUrl: '',
@@ -87,21 +87,21 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
       </nav>
 
       <h1 className="font-display text-4xl md:text-5xl font-bold mb-3">
-        Best Pet Insurance for {b.breedName}s
+        Pet Insurance Options for {b.breedName}s
       </h1>
       <p className="text-lg text-brand-text-mid mb-6 leading-relaxed">
         {b.breedName}s carry {b.keyConditions.length} hereditary conditions
-        worth screening with the right insurance carrier. Below: our top pick,
-        the conditions that matter, and a state-by-state breakdown.
+        worth screening with the right insurance carrier. Below: our editorial
+        option, the conditions that matter, and a state-by-state breakdown.
       </p>
 
       <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
-      {/* ─── Top pick ─────────────────────────────────────────────────────── */}
+      {/* ─── Editorial option ─────────────────────────────────────────────── */}
       {recommended && (
         <section className="mt-10 border-l-4 border-brand-primary bg-brand-surface p-6 rounded-r-lg">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
-            Top pick for {b.breedName}s
+            Editorial option for {b.breedName}s
           </div>
           <div className="font-display text-2xl font-bold mb-2">
             {recommended.name}
@@ -111,7 +111,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href={`/pet-insurance/${recommended.slug}`}
+              href="/reviews/best-pet-insurance"
               className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
             >
               See {recommended.name} details →

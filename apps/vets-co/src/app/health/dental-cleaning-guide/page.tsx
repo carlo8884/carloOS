@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
@@ -21,7 +21,7 @@ export default function DentalCleaningGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Veterinary Dental Cleaning Guide', subtitle: 'Periodontal disease affects over 80% of dogs over age 3. Professional dental cleaning under anesthesia is the only way to address subgingival (below the gumline) disease — the part of dental disease that causes pain, tooth loss, and systemic infection. Crown scaling alone, whether done under anesthesia or not, does not treat periodontitis.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Veterinary Dental Cleaning Guide', subtitle: 'Periodontal disease affects over 80% of dogs over age 3. Professional dental cleaning under anesthesia is the only way to address subgingival (below the gumline) disease — the part of dental disease that causes pain, tooth loss, and systemic infection. Crown scaling alone, whether done under anesthesia or not, does not treat periodontitis.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Dental Cleaning', href: '/health/dental-cleaning-guide' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function DentalCleaningGuidePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dental-cleaning" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />

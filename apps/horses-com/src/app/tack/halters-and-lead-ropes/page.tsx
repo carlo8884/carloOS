@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -82,6 +82,7 @@ export default function HaltersLeadRopesPage() {
             { label: "Turnout Halter Dangers", href: "#turnout" },
             { label: "Lead Ropes", href: "#leads" },
             { label: "Tying Safely", href: "#tying" },
+            { label: "Halter and Lead Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -120,6 +121,8 @@ export default function HaltersLeadRopesPage() {
             <li><strong>Breakaway halters</strong> -- with a leather crownpiece or a breakable tab designed to give way if the horse is caught, for safer turnout.</li>
           </ul>
 
+          <StockImage manifestKey="horses-com:tack-halters" fallbackKey="horses-com:category-tack" aspect="16:9" />
+
           <h2 id="ropevsflat">Rope vs Flat Halters</h2>
           <p>Rope halters are thin and knotted, concentrating pressure on small points of the head, which makes them effective communication tools in skilled hands for groundwork and training. Flat (webbing or leather) halters spread pressure over a broader area and are gentler for everyday leading and tying. Rope halters are generally not left on or used for tying in the same way, because their thin material can cause injury under sudden force and many do not break. Match the halter to the task and the handler&apos;s skill.</p>
 
@@ -137,6 +140,86 @@ export default function HaltersLeadRopesPage() {
             <li><strong>Tie at the right height and length</strong> -- around wither height and short enough that the horse cannot get a leg over the rope.</li>
             <li><strong>Never tie by the bit or reins</strong> and never leave a tied horse unattended for long.</li>
           </ul>
+
+          <h2 id="picks">Halter and Lead Picks</h2>
+          <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="flat-nylon-halter"
+            badge="Everyday"
+            name="Adjustable Flat Nylon Halter"
+            subtitle="The inexpensive, durable barn workhorse"
+            score={8.2}
+            description={<>
+              <p>An adjustable flat nylon halter is the standard everyday halter: strong, washable, inexpensive, and available in every size from foal to draft. Its strength is the point for leading and tying in hand — but that same strength is why it should never be left on a turned-out horse (see the turnout section above).</p>
+              <p>Reasonable choice for: in-hand leading, grooming, and tying under supervision. Keep an adjustable throat and noseband for a correct fit.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Flat nylon webbing', highlight: 'good' },
+              { label: 'Fit', value: 'Adjustable crown and noseband' },
+              { label: 'Not for', value: 'Unsupervised turnout' },
+            ]}
+            pros={['Inexpensive and very durable', 'Washable, available in all sizes', 'Strong for in-hand handling']}
+            cons={['Does not break — unsafe for turnout', 'Hardware can rub if poorly fitted']}
+            price="$10–25"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/adjustable-nylon-halter?s=tack-halters"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="adjustable-nylon-halter"
+          />
+
+          <ReviewCard
+            id="breakaway-halter"
+            badge="Safer Turnout"
+            name="Leather-Crown Breakaway Halter"
+            subtitle="Designed to give way if the horse is caught"
+            score={8.7}
+            winner
+            description={<>
+              <p>A breakaway halter pairs a strong nylon body with a leather crownpiece or a breakable tab that gives way under force, so a horse that catches the halter on a post or hoof can free itself rather than panic and injure itself. It is the sensible compromise when a horse must be left haltered in turnout.</p>
+              <p>Most relevant for owners who need to leave a halter on for catching — a far safer choice than a fixed nylon halter in the field.</p>
+            </>}
+            specs={[
+              { label: 'Safety feature', value: 'Leather crown / breakable tab', highlight: 'good' },
+              { label: 'Body', value: 'Nylon or leather' },
+              { label: 'Best use case', value: 'Turnout where a halter is needed' },
+            ]}
+            pros={['Breaks under force to free a caught horse', 'Much safer than fixed nylon in turnout', 'Replaceable crownpieces on many models']}
+            cons={['Leather crown needs periodic replacement', 'Pricier than a plain nylon halter']}
+            price="$25–55"
+            ctaText="Compare at Dover Saddlery →"
+            ctaHref="/go/dover/leather-crown-breakaway-halter?s=tack-halters"
+            ctaAffiliateProgram="dover"
+            ctaAffiliateProduct="leather-crown-breakaway-halter"
+          />
+
+          <ReviewCard
+            id="cotton-lead-rope"
+            badge="Lead Rope"
+            name="Cotton Lead Rope with Bull Snap"
+            subtitle="Soft on the hands, strong at the clip"
+            score={8.3}
+            description={<>
+              <p>A soft cotton or poly lead rope with a strong trigger or bull snap is long enough to handle and tie safely and soft enough not to burn the hands. Fold the slack rather than wrapping it around your hand so a spooking horse cannot trap you (see the lead-rope section above).</p>
+              <p>Most relevant as the everyday lead for every halter in the barn; keep a spare on the stable door.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Cotton or soft poly' },
+              { label: 'Clip', value: 'Trigger or bull snap', highlight: 'good' },
+              { label: 'Handling', value: 'Fold slack, never wrap the hand' },
+            ]}
+            pros={['Soft enough to avoid rope burn', 'Strong, reliable snap', 'Long enough to tie safely']}
+            cons={['Cotton frays over years of use', 'Cheap snaps can fail — check the clip']}
+            price="$8–22"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="cotton-lead-rope-bull-snap"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

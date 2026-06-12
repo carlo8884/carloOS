@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -112,6 +113,12 @@ export default function FiberAndDigestiveHealthPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A high-fiber gastrointestinal pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Fiber is the indigestible carbohydrate fraction of the diet, and its functional effects depend on type. Gastrointestinal therapeutic diets manipulate fiber, fat, and ingredient digestibility to manage a wide range of digestive disorders. The same nutritional category can be tuned in opposite directions — a low-residue highly digestible diet for one problem, a high-fiber bulking diet for another — which is why GI diets are matched to the specific disorder.</p>
         <h2 id="fibertypes">Fiber Types — Soluble vs Insoluble</h2>
         <p>Insoluble fiber (cellulose, many vegetable fibers) adds bulk, speeds transit in constipation, and firms stool. Soluble and fermentable fibers (beet pulp, psyllium, inulin, fructooligosaccharides) absorb water, slow transit, and feed colonic bacteria that produce short-chain fatty acids nourishing the gut lining. Many GI diets use a blend tuned to the disorder. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>

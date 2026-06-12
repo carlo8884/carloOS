@@ -9,7 +9,7 @@
 
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage , SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
@@ -86,6 +86,11 @@ const SECTIONS: SectionCard[] = [
   },
 ]
 
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'ferrets-com', name: 'Ferrets.com', url: 'https://ferrets.com' }),
+  buildWebSiteSchema({ siteId: 'ferrets-com', name: 'Ferrets.com', url: 'https://ferrets.com' }),
+)
+
 export default function HomePage() {
   const year = new Date().getFullYear()
 
@@ -97,6 +102,27 @@ export default function HomePage() {
         padding: '96px 24px 64px',
       }}
     >
+      <SchemaScript schema={homeSchema} />
+      {/* ─── Masthead image ───────────────────────────────────────── */}
+      <div
+        style={{
+          borderRadius: '20px',
+          overflow: 'hidden',
+          border: '1px solid var(--brand-border)',
+          marginBottom: '40px',
+        }}
+      >
+        <StockImage
+          manifestKey="ferrets-com:home-masthead"
+          fallbackKey="ferrets-com:hero"
+          alt="Two ferrets exploring together"
+          aspect="16:9"
+          variant="full-bleed"
+          priority
+          subtleCredit
+        />
+      </div>
+
       {/* ─── Header ───────────────────────────────────────────────── */}
       <header style={{ textAlign: 'center', marginBottom: '56px' }}>
         <h1

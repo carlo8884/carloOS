@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -31,7 +31,42 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-05-28',
 })
-const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'What do ferrets eat?',
+    answer:
+      'Ferrets are strict obligate carnivores. The macronutrient profile cited in exotic-pet veterinary references is 32-40% animal-sourced protein and 18-22% animal-sourced fat on a dry-matter basis, with carbohydrate under 3% and fiber under 3%. The first 3-5 ingredients of any commercial diet should be named animal proteins or animal fats. Ferrets cannot derive useful energy from plants — their short gut (roughly 5x body length, with a 3-4 hour transit time) lacks the equipment to ferment plant material.',
+  },
+  {
+    question: 'Can ferrets eat cat food?',
+    answer:
+      'Mostly no. Many adult cat kibbles are too low in protein and too high in plant carbohydrate for a ferret. A high-protein, animal-first kitten formulation is a workable stop-gap, but it is not a long-term solution. Dog food is worse — its protein may be adequate but taurine is inadequate, and long-term feeding carries dilated-cardiomyopathy risk and other deficiencies.',
+  },
+  {
+    question: 'What foods are dangerous for ferrets?',
+    answer:
+      'Fruit of any kind (sugars stress pancreatic beta cells; grapes and raisins also carry the nephrotoxicity concern documented in dogs), vegetables, grains, dairy (adult ferrets are largely lactose-intolerant), plant-based or "vegan" pet diets, and the standard small-mammal toxin list: chocolate, xylitol, onion, garlic, and caffeine. Sugary "ferret treats" sweetened with molasses or honey are the highest-leverage items to eliminate.',
+  },
+  {
+    question: 'How often should a ferret eat?',
+    answer:
+      'Free-feeding is standard for adult ferrets — they self-regulate intake and graze 8-10 times a day. Restricted feeding schedules can precipitate hypoglycemic episodes in ferrets with subclinical insulinoma. Fresh water should be available at all times, ideally in a heavy ceramic bowl rather than relying solely on a sipper bottle.',
+  },
+  {
+    question: 'Is raw feeding safe for ferrets?',
+    answer:
+      'It is genuinely contested. Raw and whole-prey diets are biologically the closest match to the ferret’s evolved diet — naturally correct macros, excellent dental abrasion. But the AVMA policy on raw animal-source protein documents real contamination rates for Salmonella, Listeria, and Campylobacter, and home-formulated raw diets are frequently unbalanced (calcium-to-phosphorus ratio is the most-cited failure). Keepers committed to raw feeding should source HPP-treated or batch-tested product, handle it like raw chicken, and confirm calcium and taurine adequacy with a veterinarian familiar with ferrets.',
+  },
+  {
+    question: 'Why do ferrets get insulinoma from carbohydrates?',
+    answer:
+      'The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate load drives sustained insulin secretion, which over years contributes to beta-cell hyperplasia and eventually insulinoma — the most common neoplasm in middle-aged ferrets. The evidence is associational rather than experimentally established, but the recommendation is consistent across exotic-vet sources: minimize dietary carbohydrate from kithood onward.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, med, faqSchema)
 
 const SOURCES = [
   {
@@ -71,7 +106,6 @@ export default function FerretDietBasicsPage() {
             'Ferrets (Mustela putorius furo) are obligate carnivores with a short intestinal tract and rapid gut transit. They cannot derive useful energy from plants. Diet is the single largest controllable input on a ferret’s lifespan, and the biggest single mistake new owners make is feeding cat food, dog food, or a "premium" kibble that is actually high in plant carbohydrate.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -92,6 +126,7 @@ export default function FerretDietBasicsPage() {
                 { label: 'Carbs and Insulinoma', href: '#insulinoma-link' },
                 { label: 'Water and Treats', href: '#water' },
                 { label: 'Diet Picks', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -130,7 +165,7 @@ export default function FerretDietBasicsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -221,7 +256,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Animal-first, starch-free, grain-free"
             score={9.3}
@@ -247,7 +281,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Mid Tier"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
             score={8.0}
@@ -272,7 +305,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="carniwhole"
             badge="Direct-to-Consumer"
-            badgeEmoji="📦"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
             score={8.2}
@@ -293,6 +325,9 @@ export default function FerretDietBasicsPage() {
             ctaAffiliateProgram="carniwhole"
             ctaAffiliateProduct="ferret-diet"
           />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">

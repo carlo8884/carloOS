@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Silver Ferrets', url: 'https://ferret.com/colors/silver-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function SilverFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function SilverFerretsPage() {
             "Silver is the ferret color that refuses to hold still. White-tipped guard hairs scatter over a darker base to create a steely, frosted grey — and then the coat keeps changing, often whitening with every molt until some silvers barely resemble their kit selves. Here is what silver actually is, why it shifts, and how to tell it from the whites it can grow into.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

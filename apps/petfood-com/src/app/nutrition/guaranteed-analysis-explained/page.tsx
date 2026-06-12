@@ -115,6 +115,14 @@ export default function GuaranteedAnalysisExplainedPage() {
               { label: 'Dietary Protein Requirements', href: '/nutrition/dietary-protein-requirements' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

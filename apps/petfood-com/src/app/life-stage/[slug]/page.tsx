@@ -5,7 +5,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -317,13 +316,6 @@ export default async function LifeStagePage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://petfood.com${b.href}`,
-    })),
-  })
-
   return (
     <ArticleLayout
       siteId="petfood-com"
@@ -378,10 +370,6 @@ export default async function LifeStagePage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="carloOS-article">

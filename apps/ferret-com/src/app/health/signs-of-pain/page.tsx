@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Signs of Pain', url: 'https://ferret.com/health/signs-of-pain' },
-  ],
-})
 
 const FAQS = [
   {
@@ -116,7 +108,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretSignsOfPainPage() {
   return (
@@ -130,7 +122,6 @@ export default function FerretSignsOfPainPage() {
             "Ferrets are built to hide pain. As a small predator that is also potential prey, the ferret instinct is to mask weakness until discomfort is severe — which is exactly why owners need to read the subtle signs. Recognizing a hurting ferret early, and getting it to a vet, is one of the highest-leverage skills in ferret care.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

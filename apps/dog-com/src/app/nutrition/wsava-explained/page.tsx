@@ -46,7 +46,7 @@ export default function WSAVAExplainedPage() {
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[
-          { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' },
+          { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' },
           { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' },
           { label: 'Nutrition Hub', href: '/nutrition' },
         ]} />

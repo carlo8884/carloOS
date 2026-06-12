@@ -54,6 +54,15 @@ const manifest = manifestData as unknown as Record<string, ManifestEntry>
 
 export interface StockImageProps {
   manifestKey: string
+  /**
+   * Optional secondary manifest key. If `manifestKey` is not yet in the
+   * manifest (e.g. a per-breed slot that hasn't been synced), the component
+   * falls back to this key before the branded placeholder. Lets programmatic
+   * templates wire a specific-but-unsynced key while still showing a real,
+   * on-brand photo today (e.g. a category/hero image). Backward-compatible —
+   * omit it and behavior is unchanged.
+   */
+  fallbackKey?: string
   /** Overrides the manifest alt if provided */
   alt?: string
   /** Overrides the auto-generated caption if provided */
@@ -71,6 +80,7 @@ export interface StockImageProps {
 
 export function StockImage({
   manifestKey,
+  fallbackKey,
   alt,
   caption,
   aspect = '16:9',
@@ -78,7 +88,9 @@ export function StockImage({
   priority = false,
   subtleCredit = false,
 }: StockImageProps) {
-  const entry = manifest[manifestKey]
+  // Prefer the primary key; if it isn't synced yet, try the fallback key so
+  // the slot still renders a real, on-brand photo instead of the placeholder.
+  const entry = manifest[manifestKey] ?? (fallbackKey ? manifest[fallbackKey] : undefined)
 
   if (!entry) {
     // Not-found fallback. Instead of a flat surface box that reads as

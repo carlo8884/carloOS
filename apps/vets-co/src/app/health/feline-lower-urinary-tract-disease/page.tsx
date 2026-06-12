@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
@@ -21,7 +21,7 @@ export default function FLUTDPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Feline Lower Urinary Tract Disease (FLUTD)', subtitle: 'FLUTD is an umbrella term for several conditions that cause cats to strain, urinate frequently, and pass bloody urine. Most cases are uncomfortable but not immediately dangerous — with one critical exception: a male cat that cannot urinate is a life-threatening emergency requiring care within hours.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Feline Lower Urinary Tract Disease (FLUTD)', subtitle: 'FLUTD is an umbrella term for several conditions that cause cats to strain, urinate frequently, and pass bloody urine. Most cases are uncomfortable but not immediately dangerous — with one critical exception: a male cat that cannot urinate is a life-threatening emergency requiring care within hours.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'FLUTD', href: '/health/feline-lower-urinary-tract-disease' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function FLUTDPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }, { label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-flutd" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

@@ -1,15 +1,40 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended.', path: '/breeds/saint-bernard', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How big do Saint Bernards get?',
+    answer: 'Saint Bernards weigh 120–180+ lbs, with males larger than females. A puppy grows from roughly 1.5 lbs at birth to 100–130+ lbs in 18–24 months — among the most extreme growth rates of any commonly kept dog, which is why giant-breed puppy nutrition during that window is critical.',
+  },
+  {
+    question: 'How long do Saint Bernards live?',
+    answer: 'Saint Bernards typically live 8–10 years, a lifespan consistent with other giant breeds.',
+  },
+  {
+    question: 'What health problems do Saint Bernards have?',
+    answer: 'The two primary documented concerns are gastric dilatation-volvulus (GDV/bloat — Saint Bernards are among the highest-risk breeds, and prophylactic gastropexy at spay/neuter is one of the most impactful preventive options; discuss it with your veterinarian) and hip and elbow dysplasia, where their body weight compounds already predisposed joints. OFA or PennHIP evaluations on breeding dogs are essential baseline testing.',
+  },
+  {
+    question: 'Do Saint Bernards drool a lot?',
+    answer: 'Yes — continuously and in large volumes, particularly after eating, drinking, or activity. The drool is an anatomical feature of their loose, pendulous lips and cannot be reduced through feeding changes or training. Prospective owners who find the drool genuinely bothersome should consider a different breed.',
+  },
+  {
+    question: 'How much exercise does a Saint Bernard need?',
+    answer: 'Moderate, low-impact activity — daily 30–45 minute walks maintain cardiovascular health and healthy weight while protecting already-stressed joints. They were bred for cold Alpine work and tolerate heat poorly: exercise in temperatures above 75°F risks heat stroke, so warm-weather activity belongs in early morning or evening.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 export default function SaintBernardPage() {
   return (
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Saint Bernard Breed Guide', subtitle: 'The Alpine rescue dogs of the Great St. Bernard Pass — Saint Bernards are among the most massive dogs in existence, combining legendary gentleness with significant health considerations that prospective owners must understand before acquisition. At 120–180+ pounds, the decisions made about their health management have outsized consequences.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Saint Bernard', href: '/breeds/saint-bernard' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Bernese Mountain Dog Guide', href: '/breeds/bernese-mountain-dog', category: 'Breed Guide' }, { title: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', category: 'Reviews' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -49,6 +74,13 @@ export default function SaintBernardPage() {
 
         <h2>Exercise and Heat Management</h2>
         <p>Saint Bernards were bred for cold Alpine work — they have dense double coats and poor heat dissipation. Exercise in temperatures above 75°F risks heat stroke, which in a 150-lb dog is rapidly life-threatening. Exercise should happen in early morning or evening during warm months. They need moderate activity (daily 30-45 minute walks) to maintain cardiovascular health and healthy weight, but high-intensity or prolonged exercise is inappropriate — both for heat reasons and to protect already-stressed joints. A Saint Bernard that pants heavily at rest in warm weather needs to be moved to air conditioning immediately.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

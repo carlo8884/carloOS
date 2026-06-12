@@ -5,7 +5,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
@@ -133,15 +132,7 @@ export default async function StateVetDirectoryPage({
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'Find a Vet', url: 'https://ferrets.com/find-a-vet' },
-      { name: state.name, url: pageUrl },
-    ],
-  })
-
-  const schema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+  const schema = combineSchemas(articleSchema, faqSchema)
 
   return (
     <>

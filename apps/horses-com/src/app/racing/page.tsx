@@ -11,7 +11,8 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -70,6 +71,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Discipline',
   },
   {
+    slug: 'racing-for-newcomers',
+    title: 'Racing for Newcomers',
+    tagline:
+      'New to the sport? Start here: how to read a race card, what a day at the races is like, and how racing silks help you follow a horse. A spectator\'s guide, not a betting one.',
+    authorities: 'Educational Reference',
+    category: 'For Newcomers',
+  },
+  {
     slug: 'understanding-race-types-and-classes',
     title: 'Race Types & Classes Explained',
     tagline:
@@ -94,6 +103,22 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'History & Reference',
   },
   {
+    slug: 'great-racehorses',
+    title: 'Great Racehorses',
+    tagline:
+      'Heritage career profiles of the legends: Secretariat, Man o\' War, Seabiscuit, Citation, American Pharoah, and Justify -- their records, connections, and legacy.',
+    authorities: 'National Museum of Racing',
+    category: 'History & Reference',
+  },
+  {
+    slug: 'venues',
+    title: 'Iconic Racetracks',
+    tagline:
+      'Educational venue guides to the historic homes of American racing: Churchill Downs, Pimlico, Belmont Park, Saratoga, and Keeneland -- history, architecture, and tradition.',
+    authorities: 'Venue Guides',
+    category: 'History & Reference',
+  },
+  {
     slug: 'glossary',
     title: 'Horse Racing Glossary',
     tagline:
@@ -107,6 +132,14 @@ const RACING_SPOKES: RacingCard[] = [
     tagline:
       'OTTB retraining and rehoming: the welfare ecosystem, the Thoroughbred Aftercare Alliance, and what second careers look like.',
     authorities: 'Thoroughbred Aftercare Alliance',
+    category: 'Welfare & Aftercare',
+  },
+  {
+    slug: 'ottb-second-careers',
+    title: 'OTTB Second Careers',
+    tagline:
+      'How off-track Thoroughbreds transition by discipline: aptitude, the letdown-to-restart arc, and realistic retraining timelines for eventing, jumping, dressage, and pleasure.',
+    authorities: 'Retired Racehorse Project',
     category: 'Welfare & Aftercare',
   },
   {
@@ -148,30 +181,15 @@ export default function RacingHubPage() {
     <>
       <SchemaScript schema={schema} />
 
-      {/* ── HERO BAND ──────────────────────────────────────────────── */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Racing Intelligence
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Horse Racing
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Educational reference for the sport: the disciplines (flat, harness,
-          Quarter Horse, and jump racing), the marquee events (the Triple Crown
-          and the Breeders&apos; Cup), how race classes work, the people behind
-          a runner, OTTB aftercare, and a plain-language glossary. Not a betting
-          resource. Not a handicapping guide.
-        </p>
-      </div>
-
-      <StockImage manifestKey="horses-com:category-disciplines" aspect="16:9" variant="full-bleed" priority />
+      {/* ── PREMIUM MASTHEAD (image-first) ─────────────────────────── */}
+      <PremiumMasthead
+        manifestKey="horses-com:racing"
+        fallbackKey="horses-com:category-disciplines"
+        eyebrow="Racing Intelligence"
+        title="Horse Racing"
+        subtitle="Educational reference for the sport: the disciplines (flat, harness, Quarter Horse, and jump racing), the marquee events (the Triple Crown and the Breeders' Cup), how race classes work, the people behind a runner, OTTB aftercare, and a plain-language glossary. Not a betting resource. Not a handicapping guide."
+        alt="Thoroughbred racehorses on a turf track"
+      />
 
       {/* ── BREADCRUMB ─────────────────────────────────────────────── */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -248,6 +266,11 @@ export default function RacingHubPage() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { label: 'Racing History', href: '/racing/history' },
+              { label: 'Your First Day at the Races', href: '/first-derby' },
+              { label: 'Race Types & Classes', href: '/racing/race-types' },
+              { label: 'Racing Roles', href: '/racing/racing-roles' },
+              { label: 'Bloodstock & Breeding', href: '/bloodstock' },
               { label: 'Disciplines', href: '/disciplines' },
               { label: 'Breeds', href: '/breeds' },
               { label: 'Health', href: '/health' },

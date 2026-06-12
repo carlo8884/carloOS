@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-30T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Patterns', url: 'https://ferret.com/colors' },
-    { name: 'Chocolate Ferrets', url: 'https://ferret.com/colors/chocolate-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function ChocolateFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function ChocolateFerretsPage() {
             'Chocolate is the warm, approachable middle of the ferret palette — milk-chocolate guard hairs over a bright undercoat, with a soft brown nose and brown mask. It sits neatly between the cooler sable and the pale champagne, and it gets pleasantly muddled with cinnamon. Here is how to spot it.',
           category: 'Colors & Patterns',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

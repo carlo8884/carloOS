@@ -5,14 +5,14 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
+  title: 'Dog Breed Guide — 50+ Breeds Profiled',
+  description: 'Breed profiles for 50+ dog breeds. Temperament, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
 
@@ -62,6 +62,17 @@ function IconAlert({ className }: { className?: string }) {
 // Strip StockImage's outer margins so it fills a tile/masthead edge-to-edge.
 const FILL_IMAGE = "[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0"
 
+// Health-condition slugs render as readable names (varies per breed instead of
+// a flat "{n} known conditions" count). Known veterinary acronyms stay
+// upper-cased; everything else is title-cased.
+const CONDITION_ACRONYMS = new Set(['boas', 'ivdd', 'pra', 'dm', 'acl', 'dcm', 'pda'])
+function formatCondition(slug: string): string {
+  return slug
+    .split('-')
+    .map((w) => (CONDITION_ACRONYMS.has(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(' ')
+}
+
 const BREED_MANIFEST_KEYS: Record<string, string> = {
   'golden-retriever': 'dog-com:breed-golden-retriever',
   'labrador-retriever': 'dog-com:breed-labrador-retriever',
@@ -70,10 +81,6 @@ const BREED_MANIFEST_KEYS: Record<string, string> = {
   'beagle': 'dog-com:breed-beagle',
   'poodle': 'dog-com:breed-poodle',
 }
-
-// Size filters for UI
-const SIZE_FILTERS = ['All', 'Small', 'Medium', 'Large', 'Giant']
-const GROUP_FILTERS = ['All Groups', 'Sporting', 'Hound', 'Working', 'Terrier', 'Toy', 'Non-Sporting', 'Herding']
 
 export default async function BreedsPage() {
   let breeds: Array<{
@@ -114,9 +121,9 @@ export default async function BreedsPage() {
           bottom-up gradient scrim instead of sitting in an orphaned band below.
           Reuses the existing dog-com:category-breeds key (no new manifest
           entries). subtleCredit keeps photographer attribution present (QC §1). */}
-      <section className="relative bg-brand-dark">
+      <section className="relative bg-brand-dark min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh]">
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:!w-full [&_figure>div]:h-full [&_figure>div]:!w-full [&_figure>div]:!aspect-auto [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="dog-com:category-breeds"
@@ -139,7 +146,7 @@ export default async function BreedsPage() {
               'radial-gradient(ellipse at 25% 75%, rgba(232,98,42,0.35) 0%, transparent 60%)',
           }}
         />
-        <div className="relative z-10 flex flex-col justify-end min-h-[52vh] sm:min-h-[58vh] lg:min-h-[64vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
+        <div className="relative z-10 flex flex-col justify-end min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Encyclopedia</span>
@@ -154,7 +161,7 @@ export default async function BreedsPage() {
             className="text-lg font-light text-white/85 max-w-xl leading-relaxed"
             style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
           >
-            Research-based profiles for 200+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
+            Research-based profiles for 50+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
           </p>
         </div>
       </section>
@@ -165,6 +172,48 @@ export default async function BreedsPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
+
+      {/* Breed-match wizard — prominent on-brand entry CTA. Surfaces the
+          /breeds/match decision wizard at the top of the hub (previously
+          reachable only via direct URL). Mirrors the hub's card idiom:
+          brand accent, paw glyph, IconArrowRight, hover lift. */}
+      <div className="px-container-sm sm:px-container pt-10">
+        <Link
+          href="/breeds/match"
+          className="group relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 overflow-hidden rounded-xl bg-brand-dark text-white p-6 sm:p-7 no-underline hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-30 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(ellipse at 85% 50%, rgba(232,98,42,0.45) 0%, transparent 60%)',
+            }}
+          />
+          <span className="relative flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-brand-primary/20 text-brand-primary" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="26" height="26" fill="currentColor">
+              <ellipse cx="20" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="44" cy="22" rx="6.2" ry="8" />
+              <ellipse cx="11" cy="36" rx="5.4" ry="6.8" />
+              <ellipse cx="53" cy="36" rx="5.4" ry="6.8" />
+              <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
+            </svg>
+          </span>
+          <div className="relative flex-1">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">Decision wizard</div>
+            <div className="font-display font-bold text-lg sm:text-xl leading-tight mb-1">
+              Find your match — breed-match wizard
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed max-w-xl">
+              Answer 7 quick questions about your home and lifestyle and get your top 3 breed matches, with honest trade-offs. No email required.
+            </p>
+          </div>
+          <span className="relative inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary group-hover:gap-2.5 transition-all whitespace-nowrap">
+            Start the wizard
+            <IconArrowRight className="w-4 h-4" />
+          </span>
+        </Link>
+      </div>
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
@@ -191,11 +240,12 @@ export default async function BreedsPage() {
                 className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
               >
                 {/* Always render StockImage. For breeds whose per-breed key
-                    isn't synced yet, StockImage falls back to its branded paw
-                    placeholder — no emoji, no dashed/grey box. */}
+                    isn't synced yet, fall back to the real breeds-category photo
+                    (not the branded paw placeholder) so every tile shows a dog. */}
                 <div className={`overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={manifestKey ?? `dog-com:breed-${breed.slug}`}
+                    fallbackKey="dog-com:category-breeds"
                     alt={breed.common_name}
                     aspect="4:3"
                   />
@@ -208,9 +258,12 @@ export default async function BreedsPage() {
                     {String(careData.size ?? '')} · {String(careData.exercise_level ?? '')} exercise
                   </div>
                   {breed.health_conditions?.length > 0 && (
-                    <div className="flex items-center gap-1 text-2xs text-brand-danger font-medium">
-                      <IconAlert className="shrink-0" />
-                      {breed.health_conditions.length} known conditions
+                    <div className="flex items-center gap-1 text-2xs text-brand-text-light font-medium" title={`${breed.health_conditions.length} breed-associated health conditions profiled`}>
+                      <IconAlert className="shrink-0 text-brand-primary" />
+                      <span className="truncate">
+                        {breed.health_conditions.slice(0, 2).map(formatCondition).join(' · ')}
+                        {breed.health_conditions.length > 2 ? ` +${breed.health_conditions.length - 2}` : ''}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -235,8 +288,8 @@ export default async function BreedsPage() {
                 <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
               </svg>
             </span>
-            <div className="text-sm font-display font-bold text-brand-dark mb-1">200+ breeds</div>
-            <div className="text-xs text-brand-text-mid mb-2">More profiles added weekly</div>
+            <div className="text-sm font-display font-bold text-brand-dark mb-1">50+ breeds</div>
+            <div className="text-xs text-brand-text-mid mb-2">Growing profile library</div>
             <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-primary group-hover:gap-2 transition-all">
               Browse all
               <IconArrowRight className="w-3.5 h-3.5" />
@@ -296,6 +349,7 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>
   )

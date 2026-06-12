@@ -14,7 +14,7 @@ export default function ChoosingVetPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'How to Choose a Veterinarian', subtitle: 'Your veterinarian is your partner in your pet\'s health for years, so the choice is worth making deliberately. Accreditation, the quality of communication, the range of services, location, and emergency arrangements all factor in. This guide walks through the criteria that matter so you can find a clinic that fits both your pet and your needs.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'How to Choose a Veterinarian', subtitle: 'Your veterinarian is your partner in your pet\'s health for years, so the choice is worth making deliberately. Accreditation, the quality of communication, the range of services, location, and emergency arrangements all factor in. This guide walks through the criteria that matter so you can find a clinic that fits both your pet and your needs.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

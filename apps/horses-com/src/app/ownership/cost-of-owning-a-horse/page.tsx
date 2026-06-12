@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,6 +59,7 @@ export default function CostOfOwningPage() {
           { title: 'Boarding Options', href: '/ownership/boarding-options' },
           { title: 'Horse Insurance', href: '/ownership/horse-insurance' },
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         ]}
         hero={{
           title: "The Cost of Owning a Horse",
@@ -92,8 +93,10 @@ export default function CostOfOwningPage() {
               { label: "Boarding Options", href: "/ownership/boarding-options" },
               { label: "Horse Insurance", href: "/ownership/horse-insurance" },
               { label: "Leasing a Horse", href: "/ownership/leasing-a-horse" },
+              { label: "Cost of Ownership Calculator", href: "/tools/horse-cost-calculator" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

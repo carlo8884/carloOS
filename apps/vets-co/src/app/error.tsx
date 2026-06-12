@@ -6,7 +6,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-container-sm sm:px-container">
       <div className="text-center max-w-lg">
-        <div className="text-5xl mb-6">⚠️</div>
+        <div className="text-5xl mb-6 text-brand-warning" aria-hidden="true">!</div>
         <h2 className="font-display font-black text-brand-dark text-2xl tracking-tight mb-4">Something went wrong</h2>
         <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--brand-text-light)' }}>Try refreshing — if the problem persists, start from the homepage.</p>
         <div className="flex gap-3 justify-center">

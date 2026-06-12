@@ -1,24 +1,29 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const bigBarkerSchema = buildProductSchema({ name: 'Big Barker 7" Orthopedic Dog Bed', description: 'Therapeutic memory foam bed for large and giant breeds — clinically shown to reduce joint pain.', url: 'https://bigbarker.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: 'Premium foam dog bed with removable washable cover for medium to large breeds.', url: 'https://casper.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema)
+// Furhaven and the Best Friends bolster are Quick Picks on this page but have
+// no scored ReviewCards yet, so their schemas carry no editorial rating
+// (per buildProductSchema contract).
+const furhavenSchema = buildProductSchema({ name: 'Furhaven Orthopedic Dog Bed', description: 'Budget orthopedic foam dog bed available in multiple sizes.', imageUrl: '', priceRange: '40-80' })
+const bestFriendsSchema = buildProductSchema({ name: 'Best Friends by Sheri OrthoComfort Bolster Bed', description: 'Donut-shape bolster dog bed with washable design, suited to dogs that prefer to curl up.', imageUrl: '' })
+const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema, furhavenSchema, bestFriendsSchema)
 const PICKS = [
-  { label: 'Best Orthopedic', emoji: '🏆', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker' },
-  { label: 'Best Premium', emoji: '⭐', name: 'Casper Dog Bed', subtitle: 'Washable cover · Durable foam · All sizes', href: '#casper' },
-  { label: 'Best Budget', emoji: '💰', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#furhaven' },
-  { label: 'Best Bolster', emoji: '🛋️', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#bolster' },
+  { label: 'Best Orthopedic', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker' },
+  { label: 'Best Premium', name: 'Casper Dog Bed', subtitle: 'Washable cover · Durable foam · All sizes', href: '#casper' },
+  { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#by-dog-type' },
+  { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#by-dog-type' },
 ]
 export default function BestDogBedsPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Beds 2026', url: 'https://dog.com/reviews/best-dog-beds' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🛏️ Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Beds 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs sleep 12–14 hours a day. For large breeds and seniors with joint disease, the bed quality directly affects pain levels and mobility. Orthopedic foam is not a luxury for these dogs — it is a health investment.</p>
       </div>
@@ -33,10 +38,10 @@ export default function BestDogBedsPage() {
           <div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="big-barker" badge="Best Orthopedic" badgeEmoji="🏆" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
-              description={<p>Big Barker is the only dog bed with clinical research data behind it. A 2018 study in the American Journal of Veterinary Research found that large dogs with arthritis sleeping on Big Barker beds showed significant reductions in pain, stiffness, and lameness compared to dogs sleeping on standard beds. The 7-inch foam is American-manufactured and comes with a 10-year warranty against flattening — a meaningful commitment given most dog beds flatten within months. Built specifically for large and giant breeds (65 lbs+). The price ($279–399 depending on size) is substantial, but the clinical evidence and durability justify it for arthritic large breed dogs.</p>}
+            <ReviewCard id="big-barker" badge="Best Orthopedic" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
+              description={<p>Big Barker is among the few dog beds with published clinical research behind it. A 2018 manufacturer-funded study in the American Journal of Veterinary Research reported that large dogs with arthritis sleeping on Big Barker beds showed reductions in pain, stiffness, and lameness compared to dogs sleeping on standard beds. The 7-inch foam is American-manufactured and comes with a 10-year warranty against flattening — a meaningful commitment given most dog beds flatten within months. Built specifically for large and giant breeds (65 lbs+). The price ($279–399 depending on size) is substantial, but the clinical evidence and durability justify it for arthritic large breed dogs.</p>}
               specs={[{ label: 'Foam depth', value: '7 inches — therapeutic grade', highlight: 'good' }, { label: 'Clinical evidence', value: 'Published AJVR study', highlight: 'good' }, { label: 'Warranty', value: '10 years no-flatten', highlight: 'good' }, { label: 'Best for', value: 'Large/giant breeds, arthritis' }]}
-              pros={['Only bed with clinical arthritis trial data', '10-year no-flatten warranty', 'American-made foam', 'Significant pain/stiffness reduction in arthritic dogs']}
+              pros={['Among the few beds with a published arthritis trial', '10-year no-flatten warranty', 'American-made foam', 'Reported pain/stiffness reduction in arthritic dogs (manufacturer-funded study)']}
               cons={['Expensive ($279–399)', 'Cover is not machine washable (spot clean only)', 'Heavy — difficult to move']}
               price="$279–399"
               ctaText="Shop Big Barker →"
@@ -44,7 +49,7 @@ export default function BestDogBedsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="big+barker+orthopedic+dog+bed"
             />
-            <ReviewCard id="casper" badge="Best Premium" badgeEmoji="⭐" name="Casper Dog Bed" subtitle="Removable machine-washable cover · Durable foam · Memory foam top layer" score={9.1}
+            <ReviewCard id="casper" badge="Best Premium" name="Casper Dog Bed" subtitle="Removable machine-washable cover · Durable foam · Memory foam top layer" score={9.1}
               description={<p>Casper translated their human mattress expertise into a well-engineered dog bed. The removable zippered cover is fully machine-washable — a practical necessity for most dogs. The foam construction layers memory foam over a supportive base, providing pressure relief and joint support without the premium cost of Big Barker. Available in multiple sizes from small (for dogs up to 20 lbs) through large (up to 90 lbs). The foam quality is notably better than most beds in this price range — it does not flatten within the first few months of use. Good choice for medium to large breeds without severe arthritis who need a quality bed at a more accessible price.</p>}
               specs={[{ label: 'Cover', value: 'Removable, machine washable', highlight: 'good' }, { label: 'Foam', value: 'Memory foam over support base' }, { label: 'Sizes', value: 'Small through large' }, { label: 'Best for', value: 'Medium/large breeds, everyday use' }]}
               pros={['Machine washable cover', 'Good foam quality for price', 'Multiple size options', 'Reputable brand with warranty']}
@@ -57,7 +62,7 @@ export default function BestDogBedsPage() {
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
-            <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <div id="by-dog-type" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Dog Type</div>
               {[['Arthritic large breed', 'Big Barker — clinical evidence'], ['Large breed everyday', 'Casper or Big Barker'], ['Small/medium everyday', 'Casper or Furhaven'], ['Anxious dog', 'Bolster/donut style (Best Friends Sheri)'], ['Destructive chewer', 'Molly Mutt cover + insert (replaceable)'], ['Budget', 'Furhaven Orthopedic ($40–80)']].map(([t, r]) => (
                 <div key={t} className="py-2.5 border-b border-brand-border last:border-0">
@@ -71,6 +76,7 @@ export default function BestDogBedsPage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

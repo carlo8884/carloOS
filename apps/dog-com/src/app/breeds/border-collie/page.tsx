@@ -1,15 +1,26 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Border Collie Guide — Intelligence, MDR1 Gene | Dog.com', description: 'Border Collies are the most intelligent dog breed — and the most demanding. MDR1 drug sensitivity affects the breed.', path: '/breeds/border-collie', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Border Collie Breed Guide', description: 'Intelligence requirements, MDR1 gene, Collie Eye Anomaly, and exercise for Border Collies.', url: 'https://dog.com/breeds/border-collie', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Border Collie Breed Guide', description: 'Intelligence requirements, MDR1 gene, Collie Eye Anomaly, and exercise for Border Collies.', url: 'https://dog.com/breeds/border-collie', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'How much exercise does a Border Collie need?', answer: 'A minimum of 2 hours of vigorous exercise daily — running, fetch, hiking at pace, or structured dog sports. The most effective combination is physical exercise plus a structured mental task at the same time; agility training accomplishes both. Physical exercise alone leaves a Border Collie mentally unsatisfied, and training alone leaves it physically frustrated.' },
+  { question: 'Are Border Collies good family dogs?', answer: 'Border Collies belong in active households that can provide structured daily activity. An inadequately stimulated Border Collie invents work — obsessive ball-chasing, herding anything that moves (including children, cats, and cars), and repetitive behaviors that are difficult to extinguish once established. Families prepared for the breed\'s exercise and mental demands can do very well with one; inactive households generally cannot.' },
+  { question: 'What health problems do Border Collies have?', answer: 'The two documented concerns on the breed\'s screening panel are the MDR1 (ABCB1) drug-sensitivity mutation — which makes certain drugs, including higher-dose ivermectin and loperamide, dangerous in affected dogs — and Collie Eye Anomaly, a hereditary developmental eye abnormality. DNA tests exist for both; tell your veterinarian the dog\'s MDR1 status before any medication decision.' },
+  { question: 'What does "eye" mean in Border Collies?', answer: 'The "eye" is the breed\'s characteristic fixed, intense stare that precedes a controlled stalk — the mechanism Border Collies use to move livestock with body position rather than barking or biting. In the household the same behavior is directed at children, cats, bicycles, and cars, and is best managed by redirecting it into sanctioned outlets like fetch, disc, or herding trials.' },
+  { question: 'How long do Border Collies live?', answer: 'Border Collies typically live 12-15 years and weigh 30-55 lbs as adults. Individual lifespan varies with genetics and care — discuss MDR1 testing and eye screening with your veterinarian early so breed-associated issues are identified before they matter.' },
+]
+const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
+
 export default function BorderColliePage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Border Collie Breed Guide', subtitle: 'Ranked first in canine intelligence by virtually every behavioral assessment — Border Collies learn commands after fewer than 5 repetitions and obey them 95% of the time. This is not a breed for inactive households. A Border Collie without adequate mental and physical work becomes a behavioral problem in a way that few other breeds can match.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Border Collie', href: '/breeds/border-collie' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Australian Shepherd Guide', href: '/breeds/australian-shepherd', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
-      schema={schema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -24,6 +35,7 @@ export default function BorderColliePage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Border Collie vs Australian Shepherd', href: '/compare/border-collie-vs-australian-shepherd' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-border-collie" />
       </>}
@@ -49,7 +61,11 @@ export default function BorderColliePage() {
 
         <h2>The "Eye" — Herding Behavior</h2>
         <p>The Border Collie's herding instinct is expressed through "eye" — a fixed, intense stare that precedes a controlled stalk. Combined with the ability to move livestock with body position rather than barking and biting, this makes them exceptional working sheepdogs. In the household, the same behaviors apply to children, cats, bicycles, and cars. Management: redirect the herding impulse into sanctioned activities (fetch, disc, frisbee, herding trials), prevent unsupervised access to situations where the behavior creates problems, and provide appropriate outlets so the impulse has somewhere to go.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>
+    </>
   )
 }

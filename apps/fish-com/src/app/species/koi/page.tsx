@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,59 @@ const SOURCES = [
   { label: "Pond Fish Management — UF/IFAS Extension FA-9", url: "https://edis.ifas.ufl.edu/publication/FA009", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Koi Fish Care Guide — Pond Size, Filtration | Fish.com', description: 'Koi need 250+ gallons per fish, heavy pond filtration, and regular water changes. Kohaku, Taisho Sanke, Showa, and other varieties.', path: '/species/koi', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Can koi live in an aquarium?',
+    answer:
+      'No — koi are pond fish, not aquarium fish. They can reach 24–36 inches and live 25–35+ years, and their size, waste production, and behavioral needs require a purpose-built pond environment rather than a large aquarium.',
+    answerText:
+      'No. Koi reach 24-36 inches and live 25-35+ years; their size and waste production require a purpose-built pond.',
+  },
+  {
+    question: 'How big a pond do koi need?',
+    answer:
+      'The guideline of 250 gallons per koi is a conservative minimum; experienced keepers recommend 500–1,000 gallons per fish for high-quality water and optimal growth. A 1,000-gallon pond supports 4–5 small-to-medium koi sustainably; 2,500 gallons is the realistic minimum for a collection of 6–8. Depth of 3+ feet buffers temperature and deters predators.',
+    answerText:
+      '250 gallons per koi minimum (500-1,000 preferred). A 1,000-gallon pond supports 4-5 koi; 2,500 gallons for 6-8. Depth 3+ feet.',
+  },
+  {
+    question: 'How fast do koi grow?',
+    answer:
+      'A koi purchased at 6 inches will reach 18–24 inches within 3–5 years under good conditions. Overstocking degrades water quality, stunts growth, stresses fish, and leads to disease — adding more fish to an existing pond is the most common route to a koi health disaster.',
+    answerText:
+      'A 6-inch koi reaches 18-24 inches within 3-5 years under good conditions. Overstocking stunts growth and causes disease.',
+  },
+  {
+    question: 'When should I stop feeding koi?',
+    answer:
+      'Stop feeding below 50°F. Koi metabolize food slowly in cold water and undigested food causes health problems. Match the food to the season: high-protein pellets in summer (water above 65°F), wheat germ-based food in spring and fall, and nothing once the water drops below 50°F as they enter winter semi-dormancy.',
+    answerText:
+      'Stop feeding below 50F water temperature. Use high-protein food above 65F and wheat germ-based food in spring and fall.',
+  },
+  {
+    question: 'What are the main koi varieties?',
+    answer:
+      'The "Big 3" of traditional Japanese judging: Kohaku (white body with red pattern), Taisho Sanke (white base with red and black, no black on the head), and Showa (black base with red and white, black wrapping the body and head). Other popular varieties include Ogon (solid metallic), Asagi, Butterfly koi (long fins), and Doitsu (reduced scales).',
+    answerText:
+      'The Big 3: Kohaku (white with red), Taisho Sanke (white with red and black), Showa (black base with red and white). Also Ogon, Asagi, Butterfly, Doitsu.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
+
 export default function KoiPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Koi', href: '/species/koi' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Goldfish", href: "/species/goldfish", category: "Species Guide" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -34,6 +80,7 @@ export default function KoiPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-koi" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A koi in a home aquarium." priority />
         <h2>Pond Size — The Non-Negotiable</h2>
         <p>The most common koi husbandry mistake: underestimating pond size requirements. A single koi purchased at 6 inches will reach 18–24 inches within 3–5 years under good conditions. Koi produce substantial waste — ammonia load per fish is significantly higher than smaller pond fish. The guideline of 250 gallons per koi is a conservative minimum; experienced koi keepers recommend 500–1,000 gallons per fish for high-quality water conditions and optimal growth.</p>
         <p>A 1,000-gallon pond supports 4–5 small-to-medium koi sustainably. A 2,500-gallon pond is the realistic minimum for a serious koi collection of 6–8 fish. Overstocking degrades water quality, stunts growth, stresses fish, and leads to disease. The temptation to add more fish to an existing pond is the most common route to a koi health disaster.</p>
@@ -56,6 +103,17 @@ export default function KoiPage() {
         <h2>Feeding and Seasonal Management</h2>
         <p>Feed a quality koi pellet appropriate to water temperature: high-protein in summer (water above 65°F — fast metabolism), wheat germ-based in spring and fall (cooler temperatures — more digestible lower protein), stop feeding below 50°F. Koi metabolize food slowly in cold water and undigested food causes health problems. Feed only what koi consume in 5 minutes, twice daily in summer.</p>
         <p>In winter in cold climates: stop feeding below 50°F. Do not break ice aggressively in a pond with koi — the shock can be fatal. A pond deicer or aerator prevents ice formation while allowing beneficial gas exchange. Koi remain at the pond bottom in a semi-dormant state — do not disturb them.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Koi — Tank Setup</div>
@@ -69,5 +127,6 @@ export default function KoiPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

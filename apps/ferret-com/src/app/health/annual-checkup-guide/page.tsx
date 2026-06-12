@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health' },
-    { name: 'Annual Checkup Guide', url: 'https://ferret.com/health/annual-checkup-guide' },
-  ],
-})
 
 const FAQS = [
   {
@@ -116,7 +108,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretAnnualCheckupGuidePage() {
   return (
@@ -130,7 +122,6 @@ export default function FerretAnnualCheckupGuidePage() {
             "Ferrets pack a lot of disease into a short life, and most of the conditions that shorten it are far more treatable when caught early. The wellness exam is where early detection happens. Here is what a ferret checkup actually covers, how often to go at each life stage, and why the threshold shifts to twice a year once a ferret hits middle age.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

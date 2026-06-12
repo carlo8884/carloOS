@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Seasonal Shedding', url: 'https://ferret.com/care/seasonal-shedding' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -117,7 +109,6 @@ export default function FerretSeasonalSheddingPage() {
             "Ferrets blow their coat twice a year, driven by changing daylight rather than temperature. A spring shed drops the dense winter coat; an autumn shed builds it back. Knowing what a normal molt looks like — and which patterns of hair loss are not normal — is one of the more useful skills a ferret keeper develops.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

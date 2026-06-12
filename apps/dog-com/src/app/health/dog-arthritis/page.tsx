@@ -1,12 +1,20 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment | Dog.com', description: 'Arthritis affects 1 in 5 dogs. Signs owners miss, proven treatments (weight loss + NSAIDs + rehabilitation).', path: '/health/dog-arthritis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Diagnosis and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'What are the first signs of arthritis in dogs?', answer: 'Most arthritic dogs show subtle changes long before obvious limping: new reluctance to use stairs or jump onto furniture, stiffness after rest that improves with a few minutes of movement (the warming-up pattern), reduced walking pace or distance tolerance, difficulty rising from lying down, muscle loss over affected limbs, and behavioral changes such as irritability when touched. The key question is whether something has changed from the dog\'s normal baseline — age alone does not cause these changes; pain does. Raise any change with your veterinarian.' },
+  { question: 'Can I give my dog ibuprofen or Tylenol for arthritis pain?', answer: 'No. Ibuprofen, naproxen, and acetaminophen (Tylenol) are toxic to dogs at doses that are safe for humans — they cause gastrointestinal ulceration and acute kidney or liver injury. Aspirin has a narrow safety margin. Never give a human pain reliever to a dog. Call your veterinarian instead — veterinary NSAIDs (carprofen, meloxicam, grapiprant, deracoxib) are designed for canine physiology and are prescribed with appropriate monitoring.' },
+  { question: 'What is the most effective treatment for arthritis in dogs?', answer: 'In overweight dogs, weight loss is the single most impactful intervention — more effective than NSAIDs alone in multiple clinical studies, because each pound of excess weight adds roughly 4 pounds of force per step across affected joints. Beyond weight management, treatment is multimodal: veterinary NSAIDs, evidence-supported supplements (omega-3s, glucosamine/chondroitin), formal rehabilitation, and newer options like Librela. Your veterinarian builds the combination for the individual dog.' },
+  { question: 'Do joint supplements actually work for dogs?', answer: 'Some have reasonable evidence. Omega-3 fatty acids (EPA/DHA from fish or krill oil) are among the better-supported supplements in the published literature (Roush et al., JAVMA 2010), with effects building over 4–6 weeks — confirm dosing with your veterinarian. Glucosamine + chondroitin (e.g., Dasuquin) has moderate evidence, with most benefit in early-to-moderate arthritis. Green-lipped mussel combines both mechanisms. Supplements complement — they do not replace — weight management and prescribed treatment.' },
+  { question: 'What is Librela and which dogs is it for?', answer: 'Librela (bedinvetmab) is a monoclonal antibody that targets nerve growth factor (NGF), a key pain mediator in osteoarthritis. It is given as a monthly injection and was FDA approved in 2023; clinical trials showed significant improvement in pain and mobility scores with minimal side effects. It is a particularly meaningful option for dogs that cannot tolerate NSAIDs because of kidney or liver disease. Ask your veterinarian whether it fits your dog\'s situation.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogArthritisPage() {
   return (
@@ -18,7 +26,7 @@ export default function DogArthritisPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Best Joint Supplements', href: '/reviews/best-joint-supplements', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Newer Treatments: Librela (bedinvetmab)', href: '/health/dog-arthritis#newer', category: 'Dog Health' }]}
         contentType="health"
         sidebar={<>
-          <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }]} />
+          <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Health Hub', href: '/health' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Arthritis + Insurance</div>
@@ -64,8 +72,8 @@ export default function DogArthritisPage() {
           <p>Veterinary NSAIDs require a prescription and periodic blood monitoring (liver and kidney function) when used long-term. The monitoring is not excessive caution — NSAID-associated kidney and liver effects, while uncommon, are real and detectable before they become serious. Annual bloodwork is standard for dogs on chronic NSAIDs.</p>
 
           <h2 id="supplements">Supplements with Evidence</h2>
-          <p><strong>Omega-3 fatty acids (EPA/DHA):</strong> The strongest published evidence of any supplement (Roush et al., JAVMA 2010). Marine omega-3s (fish oil, krill oil) reduce inflammatory mediators in joint tissue. Dose: 20–55mg/kg combined EPA+DHA daily. Calculate from the actual EPA+DHA content on the label. Nordic Naturals Omega-3 Pet is a reliable formulation. Effect builds over 4–6 weeks.</p>
-          <p><strong>Glucosamine + chondroitin:</strong> Dasuquin Advanced (Nutramax) has the most research support in veterinary medicine. Provides building blocks for cartilage matrix. Evidence for symptom modification is moderate — most benefit seen in early-to-moderate arthritis. Allow 4–6 weeks for evaluation.</p>
+          <p><strong>Omega-3 fatty acids (EPA/DHA):</strong> Among the better-supported joint supplements in the published literature (Roush et al., JAVMA 2010). Marine omega-3s (fish oil, krill oil) reduce inflammatory mediators in joint tissue. Published therapeutic ranges for combined EPA+DHA fall around 20–55 mg/kg daily, but confirm the right dose for your dog with your veterinarian and calculate from the actual EPA+DHA content on the label. Nordic Naturals Omega-3 Pet is one reliable formulation. Effect builds over 4–6 weeks.</p>
+          <p><strong>Glucosamine + chondroitin:</strong> Dasuquin Advanced (Nutramax) is among the better-researched options in veterinary medicine. Provides building blocks for cartilage matrix. Evidence for symptom modification is moderate — most benefit seen in early-to-moderate arthritis. Allow 4–6 weeks for evaluation.</p>
           <p><strong>Green-lipped mussel (Perna canaliculus):</strong> Contains both omega-3s and glycosaminoglycans — dual mechanism. Some evidence for pain reduction and mobility improvement. Zesty Paws and 4CYTE are established veterinary products.</p>
 
           <h2 id="rehab">Rehabilitation and Physical Therapy</h2>
@@ -74,6 +82,9 @@ export default function DogArthritisPage() {
           <h2 id="newer">Newer Treatments</h2>
           <p><strong>Librela (bedinvetmab):</strong> A monoclonal antibody targeting nerve growth factor (NGF), a key pain mediator in osteoarthritis. Monthly injection. <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> approved in 2023. Clinical trials showed significant improvement in pain and mobility scores with minimal side effects. A meaningful advance — particularly for dogs that cannot tolerate NSAIDs due to kidney or liver disease.</p>
           <p><strong>Adequan (polysulfated glycosaminoglycan):</strong> Injectable — administered by injection twice weekly for 4 weeks, then monthly. Inhibits cartilage-degrading enzymes and may support cartilage repair. Used as a disease-modifying treatment in early arthritis.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList
             sources={[

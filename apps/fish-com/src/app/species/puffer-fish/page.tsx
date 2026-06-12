@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,58 @@ const SOURCES = [
   { label: "Wager, R. & Unmack, P. Fishes of the Lake Eyre Catchment. Queensland Department of Primary Industries, 2000.", publisher: "QDPI" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared.', path: '/species/puffer-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Why do puffer fish need snails?',
+    answer:
+      'Puffers have fused beak-like dental plates that grow continuously. In the wild, hard-shelled prey wears the beak down; in captivity, a puffer fed only soft foods develops an overgrown beak that eventually prevents it from closing its mouth or eating — painful and ultimately fatal without intervention. Snails are the gold standard hard food, alongside unshelled shrimp, clam on the half shell, and shell-on krill, fed at multiple feedings weekly.',
+    answerText:
+      'Their beak grows continuously and must be worn down by hard-shelled foods. Snails several times weekly prevent fatal beak overgrowth.',
+  },
+  {
+    question: 'Can puffer fish live in a community tank?',
+    answer:
+      'Generally no. Puffers bite — fins, scales, sometimes fatally — and the behavior is predatory instinct, not trainable away. Dwarf puffers can sometimes coexist with fast-moving fish such as danios in heavily planted tanks, but all other freshwater puffers are essentially incompatible with community fish and belong in species-only setups or with carefully researched companions.',
+    answerText:
+      'Generally no — they bite tankmates. Dwarf puffers sometimes work with fast fish in planted tanks; other puffers need species-only setups.',
+  },
+  {
+    question: 'What is the easiest puffer for beginners?',
+    answer:
+      'The dwarf (pea) puffer, Carinotetraodon travancoricus, at about 1 inch. It is true freshwater (no brackish water needed, unlike the figure 8 puffer) and manageable in a 10-gallon planted species tank with one male to 2–3 females. It is still a carnivore requiring live or frozen foods — bloodworms, daphnia, small snails — and will not accept dry food.',
+    answerText:
+      'The 1-inch dwarf (pea) puffer — true freshwater, manageable in a 10-gallon planted species tank. Requires live or frozen foods, not dry food.',
+  },
+  {
+    question: 'How big do fahaka puffers get?',
+    answer:
+      'Eighteen inches, requiring a 200+ gallon tank and strict species-only housing. They are also famous for their personality — long-term keepers describe individual recognition and interaction approaching that of dogs. Their bite can break skin and cause injury requiring medical attention.',
+    answerText:
+      '18 inches, needing 200+ gallons and species-only housing. Highly interactive, but their bite can break skin.',
+  },
+  {
+    question: 'What happens if a puffer’s beak overgrows?',
+    answer:
+      'An overgrown beak can be trimmed by a fish veterinarian under anesthesia (MS-222) — an uncomfortable but necessary procedure once diet management has failed. Prevention through regular hard-shelled foods is far preferable.',
+    answerText:
+      'A fish veterinarian can trim it under MS-222 anesthesia, but prevention with regular hard-shelled foods is far preferable.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 export default function PufferFishPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Puffer Fish', href: '/species/puffer-fish' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Dwarf Puffer", href: "/species/dwarf-puffer", category: "Species Guide" }, { title: "Saltwater Tank Setup", href: "/setup/saltwater-tank-setup", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -34,7 +79,8 @@ export default function PufferFishPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-puffer-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pufferfish in a home aquarium." priority />
         <h2>The Beak — Why It Matters</h2>
         <p>Puffer fish have fused beak-like teeth (technically a beak of dental plates) that grow continuously throughout their lives. In the wild, they grind snails, crustaceans, and other hard-shelled prey that naturally wear the beak to an appropriate length. In captivity, a puffer fed only soft foods (bloodworms, soft pellets) develops an overgrown beak — the upper and lower plates grow to the point where the fish cannot close its mouth or eat normally. This is painful and eventually fatal without intervention.</p>
         <p>Prevention: feed hard-shelled foods regularly — snails are the gold standard (trumpet snails, mystery snails, pond snails — puffers demolish them enthusiastically). Unshelled shrimp, clam on the half shell, and frozen krill with shells also help. The crunch is necessary. Every puffer diet should include hard foods at multiple feedings weekly. Overgrown beaks can be trimmed by a fish veterinarian under anesthesia (MS-222) — an uncomfortable but necessary procedure when diet management has failed.</p>
@@ -48,6 +94,16 @@ export default function PufferFishPage() {
 
         <h2>The Dwarf Puffer — The Entry Point</h2>
         <p>Carinotetraodon travancoricus (dwarf puffer / pea puffer) at 1 inch is the most accessible puffer for aquarists who want the personality in a more manageable package. They are true freshwater (no brackish needed unlike figure 8), manageable in a 10-gallon species tank for a small group (1 male to 2-3 females in a heavily planted setup), and some hobbyists successfully keep them with fast, robust community fish. They are carnivores requiring live or frozen foods (bloodworms, daphnia, small snails) and will not accept dry foods. Their beak care requirements are the same as larger species — snails regularly.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Puffer Fish — Tank Setup</div>
@@ -61,5 +117,6 @@ export default function PufferFishPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

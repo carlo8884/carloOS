@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Spay & Neuter — Benefits, Timing | Vets.co', description: 'Spay and neuter benefits, optimal timing, and why the answer is more nuanced for large breeds. Pyometra prevention, cancer risk reduction.', path: '/health/spay-neuter-benefits', type: 'article' })
@@ -21,7 +21,7 @@ export default function SpayNeuterPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Spay & Neuter', href: '/health/spay-neuter-benefits' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -38,7 +38,8 @@ export default function SpayNeuterPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>Benefits of Spaying (Females)</h2>

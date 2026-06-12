@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -112,6 +113,12 @@ export default function SeniorPetDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A senior pet-food bag photographed in clinical light"
+          eyebrow="Life-Stage Diet"
+          priority
+        />
         <p>Dogs and cats are generally considered senior in the last quarter to third of their expected lifespan — roughly 7 years and up for many dogs (earlier for giant breeds), and 10 to 11 years and up for cats, with cats over 15 sometimes termed geriatric. Aging brings real physiological changes, but the senior pet food category is unregulated, and a senior diet must be evaluated on its actual formulation, not its label claim.</p>
         <h2 id="noaafco">There Is No AAFCO Senior Stage</h2>
         <p>AAFCO recognizes growth, reproduction, adult maintenance, and all life stages — there is no senior or mature category. A food labeled senior is sold under the adult-maintenance designation, and its nutrient profile need only meet the adult-maintenance minimums. This means senior diets vary enormously: some are lower in calories, some higher in protein, some add joint or cognitive support, and some differ from the brand&apos;s adult food only in name. See <a href="/life-stage">Pet Food by Life Stage</a>.</p>

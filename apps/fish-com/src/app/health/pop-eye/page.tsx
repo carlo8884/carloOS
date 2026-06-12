@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pop-Eye in Fish 
 export default function PopEyePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Pop-Eye', href: '/health/pop-eye' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }]}
@@ -31,6 +31,7 @@ export default function PopEyePage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dropsy Treatment', href: '/health/dropsy-treatment' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-pop-eye" />
       </>}
     >

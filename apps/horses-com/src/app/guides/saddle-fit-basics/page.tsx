@@ -220,7 +220,6 @@ export default function SaddleFitBasicsPage() {
           <ReviewCard
             id="mattes-sheepskin-half-pad"
             badge="Half-Pad"
-            badgeEmoji="🐑"
             name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
             subtitle="Cushioning + correction-pocket shims for minor asymmetries"
             score={8.6}
@@ -245,7 +244,6 @@ export default function SaddleFitBasicsPage() {
           <ReviewCard
             id="all-purpose-saddle-pad"
             badge="Daily Pad"
-            badgeEmoji="🐎"
             name="Contoured All-Purpose Saddle Pad"
             subtitle="Standard daily-use saddle pad — contoured to the horse's back"
             score={8.0}

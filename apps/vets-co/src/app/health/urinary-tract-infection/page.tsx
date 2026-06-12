@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
@@ -16,7 +16,7 @@ export default function UTIPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
+        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -33,7 +33,8 @@ export default function UTIPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing\'s Disease', href: '/health/cushing-disease-dogs' }, { label: 'Diabetes in Dogs and Cats', href: '/health/diabetes-in-dogs-cats' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-uti" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>Diagnosis — Culture Before Antibiotics</h2>

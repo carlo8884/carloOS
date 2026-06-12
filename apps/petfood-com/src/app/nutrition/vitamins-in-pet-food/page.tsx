@@ -112,6 +112,7 @@ export default function VitaminsInPetFoodPage() {
               { label: 'Minerals in Pet Food', href: '/nutrition/minerals-in-pet-food' },
               { label: 'Multivitamins for Pets', href: '/supplements/multivitamins-for-pets' },
               { label: 'Dog vs Cat Nutrition', href: '/species/dog-vs-cat-nutrition-overview' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture

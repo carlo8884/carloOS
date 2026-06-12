@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -11,9 +11,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3 (AVDC/AAHA). Daily toothbrushing is the most effective intervention.', path: '/health/dog-dental-care', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Dental Care Guide', description: 'Daily brushing, VOHC products, and periodontal disease prevention for dogs.', url: 'https://dog.com/health/dog-dental-care', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Dental Care Guide', description: 'Daily brushing, VOHC products, and periodontal disease prevention for dogs.', url: 'https://dog.com/health/dog-dental-care', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Dental Care Guide', description: 'Toothbrushing, VOHC products, and professional dental cleaning for dogs.', url: 'https://dog.com/health/dog-dental-care', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'How often should I brush my dog\'s teeth?', answer: 'Daily. Daily toothbrushing is the gold standard of canine dental home care — veterinary dental literature (AVDC, WSAVA Global Dental Guidelines) consistently shows it produces significantly better outcomes than any other home intervention, because it physically disrupts plaque before it mineralizes into tartar. Focus on the outer tooth surfaces, especially the large carnassial teeth; the tongue naturally cleans the inner surfaces. A 30-second session covering all outer surfaces is the realistic daily target.' },
+  { question: 'Can I use human toothpaste on my dog?', answer: 'No — never use human fluoride toothpaste on a dog. Use an enzymatic veterinary toothpaste (such as CET Enzymatic), which comes in flavors dogs find appealing and continues its enzymatic action after brushing. Pairing it with a soft-bristled brush and a gradual 1–2 week desensitization process produces a dog that accepts — and often enjoys — brushing.' },
+  { question: 'Are dental chews as good as brushing?', answer: 'No — they are supplements, not substitutes. VOHC-accepted chews (Greenies, Whimzees) carry the Veterinary Oral Health Council seal because they have published evidence of plaque or tartar reduction, and they are meaningful additions to a brushing routine. Dental chews without the VOHC mark have no proven efficacy. In the effectiveness hierarchy on this page, daily brushing ranks first, then VOHC chews, then water additives, then dental diets.' },
+  { question: 'Do dogs really need professional dental cleanings?', answer: 'Yes. Home care slows periodontal disease and extends the interval between cleanings, but plaque becomes tartar at and below the gum line — areas a brush cannot reach. Professional cleaning under anesthesia with full-mouth radiographs is required annually or every 1–2 years depending on the dog\'s progression rate, even with excellent home care. Think of home care as maintaining the professional cleaning, not replacing it.' },
+  { question: 'How common is dental disease in dogs?', answer: 'Very — periodontal disease affects over 80% of dogs by age 3 (AVDC/AAHA). It is painful, contributes to systemic inflammation with implications for heart, kidney, and liver health, and is almost entirely preventable with daily brushing, VOHC-accepted adjuncts, and periodic professional cleaning. If your dog already has bad breath, visible tartar, or red gums, start with a veterinary dental assessment rather than home care alone.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogDentalCarePage() {
   return (
     <>
@@ -66,6 +74,9 @@ export default function DogDentalCarePage() {
 
           <h2>Why Professional Cleaning Is Still Necessary</h2>
           <p>Home dental care slows the progression of periodontal disease and extends the interval between professional cleanings — but it does not eliminate the need. Plaque becomes tartar (calculus) at the gum line and below it — in areas the brush cannot reach. Professional cleaning under anesthesia with full-mouth radiographs is required annually or every 1-2 years (depending on the dog's dental disease progression rate) even with excellent home care. Think of home care as maintaining the cleaning, not replacing it.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,6 @@ export default function KitVsAdultFeedingPage() {
             'The most consequential window in a ferret’s dietary life is its first six months. What a kit learns to recognize as food during that period shapes what it will accept for the rest of its life. This page walks through feeding from weaning through adulthood and into the senior years, and explains why early variety is the best insurance you can give.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -84,6 +83,7 @@ export default function KitVsAdultFeedingPage() {
               subtitle="Evidence-based ferret feeding, monthly."
               source="diet-kit-vs-adult-feeding"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
       
@@ -142,7 +142,6 @@ export default function KitVsAdultFeedingPage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Ferret-Specific Diet"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
             score={8.0}

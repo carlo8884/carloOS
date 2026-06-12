@@ -40,7 +40,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -75,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/dental-disease' },
-    { name: 'Dental Disease', url: 'https://ferret.com/health/dental-disease' },
-  ],
-})
 
 const FAQS = [
   {
@@ -117,7 +109,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretDentalDiseasePage() {
   return (
@@ -132,7 +124,6 @@ export default function FerretDentalDiseasePage() {
             'Dental disease is the most under-treated condition in pet ferrets. Tartar builds fast on kibble diets, periodontal disease is often clinically meaningful by age 2-3, and the consequences compound silently for years. The leverage of early home dental care is large.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -180,29 +181,13 @@ export default function HealthHubPage() {
     <>
       <SchemaScript schema={schema} />
 
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Health Reference
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Equine Health
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Evidence-based references on the equine health conditions owners and managers encounter
-          most often, citing AAEP guidelines, peer-reviewed equine medicine, and veterinary
-          clinical data.
-        </p>
-      </div>
-
-      {/* Hero image */}
-      <StockImage manifestKey="horses-com:category-health" aspect="16:9" variant="full-bleed" priority />
+      {/* Hero — image-first masthead (photo behind the title band) */}
+      <PremiumMasthead
+        manifestKey="horses-com:category-health"
+        eyebrow="Health Reference"
+        title="Equine Health"
+        subtitle="Evidence-based references on the equine health conditions owners and managers encounter most often, citing AAEP guidelines, peer-reviewed equine medicine, and veterinary clinical data."
+      />
 
       {/* Breadcrumb */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -270,6 +255,7 @@ export default function HealthHubPage() {
           ]}
         />
       </section>
+      <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="footer" />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,56 @@ const SOURCES = [
   { label: "Roberts, T.R. The Celestial Pearl Danio, a new genus and species of colourful minute Cyprinid fish from Myanmar. Raffles Bulletin of Zoology, 2007.", publisher: "Raffles Bulletin of Zoology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio: Tank, Diet & Basics | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required.', path: '/species/celestial-pearl-danio', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How many celestial pearl danios should I keep?',
+    answer:
+      'Keep at least 8, with 10–12 being ideal. In a group of 8–10 with roughly a 3:2 female-to-male ratio, males display near-constantly to each other and to females in tight, circling, fin-flared exchanges. In small numbers they are shy and show far less color and behavior.',
+    answerText:
+      'Keep at least 8 celestial pearl danios, ideally 10-12, with about a 3:2 female-to-male ratio. In small numbers they are shy and show less color.',
+  },
+  {
+    question: 'What size tank do celestial pearl danios need?',
+    answer:
+      'A 10-gallon tank is a suitable minimum. At about 1 inch they are a true nano fish, and a planted 10-gallon comfortably houses a group of 8–12 while also supporting periodic breeding.',
+    answerText:
+      'A 10-gallon planted tank is a suitable minimum. At about 1 inch they are a nano fish and a 10-gallon houses a group of 8-12.',
+  },
+  {
+    question: 'What water parameters do celestial pearl danios need?',
+    answer:
+      'They prefer soft, slightly acidic water — pH 6.5–7.5 and GH under 10 — with a temperature of 73–79°F. They are robust once established, adapt well to standard community parameters, and tolerate moderate hardness. Dark substrate and dense planting intensify their coloration dramatically.',
+    answerText:
+      'CPD prefer soft, slightly acidic water: pH 6.5-7.5, GH under 10, and 73-79F. They adapt well to community parameters; dark substrate and dense planting intensify their color.',
+  },
+  {
+    question: 'How can I tell male and female celestial pearl danios apart?',
+    answer:
+      'Males are significantly more colorful — the iridescent pearlescent spots are vivid and the fins are red-orange with bold black edges, especially during display. Females are rounder-bodied with less intense fin coloration.',
+    answerText:
+      'Males are more colorful with vivid pearlescent spots and red-orange, black-edged fins. Females are rounder-bodied with less intense fin color.',
+  },
+  {
+    question: 'Do celestial pearl danios breed in a community tank?',
+    answer:
+      'Yes. CPD breed readily among Java moss and fine-leaved plants, scattering eggs in the vegetation. Parents show mild interest in eating eggs, but in dense planting enough survive to produce periodic batches of fry. A planted 10-gallon colony self-sustains at a manageable level with no deliberate breeding intervention.',
+    answerText:
+      'Yes — CPD scatter eggs among Java moss and fine-leaved plants. In dense planting enough fry survive that a planted 10-gallon colony self-sustains without intervention.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function CPDPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Celestial Pearl Danio', href: '/species/celestial-pearl-danio' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +76,8 @@ export default function CPDPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-celestial-pearl-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A celestial pearl danio in a home aquarium." priority />
         <h2>Sexual Dimorphism and Display</h2>
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>
 
@@ -42,6 +86,8 @@ export default function CPDPage() {
 
         <h2>Breeding — Self-Sustaining in Planted Tanks</h2>
         <p>CPD breed readily among Java moss and fine-leaved plants. Eggs are scattered in vegetation; the parents show mild interest in eating eggs but in dense planting, enough survive to produce periodic batches of fry. Fry are tiny and feed initially on infusoria and micro-organisms naturally present in established planted tanks. A 10-gallon planted CPD colony will produce fry periodically without any deliberate breeding intervention — the population self-sustains at a manageable level.</p>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Celestial Pearl Danio — Tank Setup</div>
@@ -55,5 +101,6 @@ export default function CPDPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

@@ -13,11 +13,11 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -43,13 +43,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Digging & Burrowing', url: 'https://ferret.com/behavior/digging-and-burrowing' },
-  ],
-})
 
 const FAQS = [
   {
@@ -75,7 +68,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -105,7 +98,6 @@ export default function FerretDiggingBurrowingPage() {
             "If you have ever watched a ferret attack the corner of a rug with the focus of a tiny excavator, you have met one of the species' oldest instincts. Digging is not a behaviour problem — it is a feature. The job is not to eliminate it but to point it somewhere that doesn't cost you your carpet.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -144,6 +136,7 @@ export default function FerretDiggingBurrowingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-digging-burrowing"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
@@ -314,7 +307,6 @@ export default function FerretDiggingBurrowingPage() {
           <ReviewCard
             id="marshall-pop-n-play-dig"
             badge="Tunnel Set"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels sized for ferrets, machine washable, chainable"
             score={8.6}
@@ -340,7 +332,6 @@ export default function FerretDiggingBurrowingPage() {
           <ReviewCard
             id="ball-pit-fill-dig"
             badge="Dig Box Fill"
-            badgeEmoji="⚽"
             name="Ferret-Safe Ball Pit Balls"
             subtitle="Hollow plastic balls for a dig-box or ball pit — cheap, washable, ingest-safe"
             score={8.0}

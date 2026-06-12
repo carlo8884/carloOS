@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fin Rot in Fish'
 export default function FinRotPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Fin Rot in Fish', subtitle: 'Fin rot is the most common disease in aquarium fish — fraying, ragged, or deteriorating fins caused by bacterial or fungal infection of damaged fin tissue. Almost every case of fin rot is preventable. Water quality is both the cause and the treatment foundation.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Fin Rot in Fish', subtitle: 'Fin rot is the most common disease in aquarium fish — fraying, ragged, or deteriorating fins caused by bacterial or fungal infection of damaged fin tissue. Almost every case of fin rot is preventable. Water quality is both the cause and the treatment foundation.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Fin Rot', href: '/health/fin-rot' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }]}
@@ -32,6 +32,7 @@ export default function FinRotPage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Ich Treatment', href: '/health/ich-treatment' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-fin-rot" />
       </>}
     >

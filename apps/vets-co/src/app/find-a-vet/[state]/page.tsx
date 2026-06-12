@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { States } from '../../../data/states'
 
 interface PageProps {
@@ -228,7 +228,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
               <p className="text-xs text-brand-text-mid m-0 leading-relaxed">For non-emergency questions, a telehealth consult can save a trip — particularly useful in rural parts of {state.name} where the nearest GP is a drive away.</p>
             </Link>
           </div>
-          {/* future: <CrossPortfolioCard /> */}
+          <CrossPortfolioCard currentSite="vets-co" contentType="specialty" variant="inline" />
         </section>
 
         {/* FAQ */}

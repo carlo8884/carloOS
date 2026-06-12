@@ -137,13 +137,12 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="cosequin-asu"
               badge="Best Evidence (ASU)"
-              badgeEmoji="🏆"
               name="Nutramax Cosequin ASU Plus"
               subtitle="Avocado/Soybean Unsaponifiables + Glucosamine + Chondroitin"
               score={8.9}
               winner
               description={<>
-                <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU is the ingredient with the best peer-reviewed equine evidence. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
+                <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU has among the strongest peer-reviewed equine evidence of the common joint-supplement ingredients. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
                 <p>Reasonable choice for: an adult performance horse where joint maintenance is preventive rather than rescue, or an early-grade osteoarthritis horse used as part of a broader management plan that includes veterinary diagnosis. Not a replacement for intra-articular medication when synovitis or active osteoarthritis is documented.</p>
               </>}
               specs={[
@@ -164,7 +163,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="platinum-cj"
               badge="Best Comprehensive"
-              badgeEmoji="◎"
               name="Platinum Performance CJ"
               subtitle="Whole-system formula with joint-targeted CJ blend"
               score={9.0}
@@ -190,7 +188,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="smartflex"
               badge="Best Senior"
-              badgeEmoji="🐴"
               name="SmartPak SmartFlex Senior"
               subtitle="Glucosamine + chondroitin + MSM + HA at senior-targeted dosing"
               score={8.5}
@@ -216,7 +213,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="omega-3"
               badge="Reference Ingredient"
-              badgeEmoji="🐟"
               name="Marine-Source Omega-3 (DHA/EPA)"
               subtitle="Algal or fish-oil source — flax is not equivalent"
               score={8.6}

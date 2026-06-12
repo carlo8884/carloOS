@@ -64,7 +64,7 @@ const homeSchema = combineSchemas(
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
-  title: 'The independent reference for pet food.',
+  title: 'Pet Food Brand Reviews & Comparisons — Independent | PetFood.com',
   description:
     'Independent ingredient-and-brand reference for cat and dog food. AAFCO-anchored methodology, recall-tracked, WSAVA-aligned. No paid scores.',
   path: '/',
@@ -127,7 +127,7 @@ const ENTRY_TILES: Array<{
   flagship?: boolean
 }> = [
   {
-    eyebrow: 'BRAND_VS_BRAND',
+    eyebrow: 'Brand vs Brand',
     title: 'Orijen vs Acana',
     desc: 'Two lines, one manufacturer. Same rubric, recipe panels in mono.',
     href: '/brands/orijen-vs-acana-comparison',
@@ -136,7 +136,16 @@ const ENTRY_TILES: Array<{
     flagship: true,
   },
   {
-    eyebrow: 'INGREDIENT_RISK',
+    eyebrow: 'Analysis-Led Reviews',
+    title: 'Best Food Picks',
+    desc: 'Cat, senior dog, and puppy roundups ranked on AAFCO, protein, and taurine — not a shopping list.',
+    href: '/reviews',
+    // TODO(visual): dedicated petfood-com:reviews-hero key; using category-brands until then.
+    manifestKey: 'petfood-com:category-brands',
+    imageAlt: 'Pet food evaluated through a nutrition-analysis lens',
+  },
+  {
+    eyebrow: 'Ingredient Risk',
     title: 'Grain-Free & DCM',
     desc: 'What the FDA CVM record actually says. Association, not causation.',
     href: '/ingredients/grain-free-dcm-risk',
@@ -171,7 +180,7 @@ const TRUST_CLAIMS: Array<{ glyph: string; text: string }> = [
 // Strip StockImage's outer margins (it renders my-8 on both the <figure> and
 // the pending-sync placeholder <div>) so a photo fills a tile edge-to-edge.
 const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
-const FILL_TILE = `${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure>div]:h-full`
+const FILL_TILE = `${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full`
 
 export default function HomePage() {
   const year = new Date().getFullYear()
@@ -524,7 +533,7 @@ export default function HomePage() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="relative z-10 flex flex-col justify-end h-full min-h-[180px] p-5">
                   <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                    [THERAPEUTIC]
+                    [Therapeutic]
                   </p>
                   <div className="font-display font-semibold text-white text-lg leading-tight">
                     Prescription &amp; condition-specific diets
@@ -563,9 +572,6 @@ export default function HomePage() {
                         <div className="flex items-baseline gap-3 flex-wrap mb-1.5">
                           <span className="font-mono text-sm font-semibold text-brand-text-dark uppercase tracking-wider">
                             {dim.label}
-                          </span>
-                          <span className="font-mono text-2xs text-brand-text-light">
-                            [{dim.key}]
                           </span>
                         </div>
                         <p className="text-sm text-brand-text-mid leading-relaxed">
@@ -625,7 +631,7 @@ export default function HomePage() {
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               <div className="relative z-10 flex flex-col justify-end h-full min-h-[260px] p-6">
                 <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                  [MACRONUTRIENTS]
+                  [Macronutrients]
                 </p>
                 <div className="font-display font-semibold text-white text-2xl leading-tight mb-1.5">
                   Nutrition reference
@@ -654,7 +660,7 @@ export default function HomePage() {
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               <div className="relative z-10 flex flex-col justify-end h-full min-h-[260px] p-6">
                 <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                  [INGREDIENT_RISK]
+                  [Ingredient Risk]
                 </p>
                 <div className="font-display font-semibold text-white text-2xl leading-tight mb-1.5">
                   Ingredient reference
@@ -703,7 +709,7 @@ export default function HomePage() {
               meta="Cornerstone guide · 14-min read"
             />
             <GuideCard
-              eyebrow="LIFE_STAGE"
+              eyebrow="LIFE STAGE"
               title="Pet Food by Life Stage"
               desc="Seven deep-dives against AAFCO 2025 Chapter 6 nutrient profiles — puppy, kitten, adult, senior, and large-breed puppy, and what each label commits to."
               href="/life-stage"

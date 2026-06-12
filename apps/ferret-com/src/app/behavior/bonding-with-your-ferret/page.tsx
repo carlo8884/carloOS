@@ -10,11 +10,11 @@ import {
   ArticleByline,
   DropCap,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Bonding With Your Ferret', url: 'https://ferret.com/behavior/bonding-with-your-ferret' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +65,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -107,7 +100,6 @@ export default function FerretBondingPage() {
             "A bonded ferret is a joy: it seeks you out, naps on your lap, and greets you with the bouncy war dance. Getting there is mostly about patience, consistency, and working with a ferret's instincts rather than against them. Here is a practical, week-by-week plan for building real trust with a new, shy, or rescue ferret.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -145,6 +137,7 @@ export default function FerretBondingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-bonding"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hyperthyroidism in Cats — Signs & Treatment Options | Vets.co", description: "Feline hyperthyroidism causes weight loss with a ravenous appetite in older cats. Compare radioiodine, medication, diet, and surgery treatment options.", path: '/health/hyperthyroidism-cats', type: 'article' })
@@ -21,7 +21,7 @@ export default function HyperthyroidismCatsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Hyperthyroidism in Cats', subtitle: 'Hyperthyroidism is the most common hormonal disease of older cats, caused almost always by a benign overgrowth of the thyroid glands that floods the body with thyroid hormone. It is very treatable — often curable — and recognizing the signs early prevents the heart and kidney damage that uncontrolled disease causes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Hyperthyroidism in Cats', subtitle: 'Hyperthyroidism is the most common hormonal disease of older cats, caused almost always by a benign overgrowth of the thyroid glands that floods the body with thyroid hormone. It is very treatable — often curable — and recognizing the signs early prevents the heart and kidney damage that uncontrolled disease causes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hyperthyroidism in Cats', href: '/health/hyperthyroidism-cats' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function HyperthyroidismCatsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-hyperthyroid" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

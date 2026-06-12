@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { SchemaScript } from '@carloOS/ui'
 import { ACCESSORY_CATEGORIES } from '@/data/accessories'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,13 +10,6 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Saddle accessory buyer guides — stirrups, saddle pads, girths, bridles, reins, breastplates and cruppers. Types, fit, price ranges, top brands.',
   path: '/accessories',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://saddle.com/' },
-    { name: 'Accessories', url: 'https://saddle.com/accessories' },
-  ],
 })
 
 const itemListSchema = {
@@ -32,7 +25,7 @@ const itemListSchema = {
   })),
 }
 
-const accessoriesSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const accessoriesSchema = itemListSchema
 
 export default function AccessoriesHubPage() {
   return (

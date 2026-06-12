@@ -11,6 +11,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -121,6 +122,12 @@ export default function MultivitaminsForPetsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Pet multivitamin supplement tablets and chews"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>A complete and balanced commercial diet is formulated and supplemented to meet the AAFCO nutrient profiles, which means it already supplies all required vitamins and minerals in appropriate amounts and ratios. For a healthy animal on such a diet, a multivitamin is redundant at best and, because several nutrients are toxic in excess, potentially harmful. The supplement industry&apos;s framing of multivitamins as universal insurance is not supported. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a>.</p>
         <h2 id="complete">Complete Diets Already Cover It</h2>
         <p>The vitamin and mineral premix added to commercial food is calculated to meet requirements after accounting for processing losses and shelf-life decay. Adding a multivitamin on top stacks a second full dose of fat-soluble vitamins and minerals onto a diet already meeting the targets, with no benefit since the requirement is already met. More of a nutrient that is already adequate does not improve health. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>

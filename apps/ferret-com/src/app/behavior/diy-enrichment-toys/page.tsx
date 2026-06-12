@@ -13,11 +13,11 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -43,13 +43,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'DIY Enrichment Toys', url: 'https://ferret.com/behavior/diy-enrichment-toys' },
-  ],
-})
 
 const FAQS = [
   {
@@ -75,7 +68,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -105,7 +98,6 @@ export default function FerretDIYEnrichmentPage() {
             "Ferrets are relentlessly curious, easily bored, and absurdly easy to delight. You do not need an expensive shopping cart to keep one stimulated — a few cardboard boxes, a length of hose, and some household odds and ends go a remarkably long way. Here are safe, cheap, ferret-tested ideas, plus the safety rules that keep DIY fun from becoming a vet emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -144,6 +136,7 @@ export default function FerretDIYEnrichmentPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-diy-enrichment"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
@@ -319,7 +312,6 @@ export default function FerretDIYEnrichmentPage() {
           <ReviewCard
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
             score={8.6}
@@ -345,7 +337,6 @@ export default function FerretDIYEnrichmentPage() {
           <ReviewCard
             id="snuffle-mat-ferret"
             badge="Foraging"
-            badgeEmoji="🌿"
             name="Snuffle Mat (Dog/Small-Pet)"
             subtitle="Rubber-backed fabric mat with pockets for hiding treats — nose-work puzzle"
             score={7.8}

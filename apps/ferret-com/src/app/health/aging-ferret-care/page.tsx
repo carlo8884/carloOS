@@ -43,7 +43,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -78,13 +77,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/aging-ferret-care' },
-    { name: 'Aging Ferret Care', url: 'https://ferret.com/health/aging-ferret-care' },
-  ],
-})
 
 const FAQS = [
   {
@@ -120,7 +112,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretAgingPage() {
   return (
@@ -135,7 +127,6 @@ export default function FerretAgingPage() {
             'Ferrets live 5-8 years on average in captivity, sometimes 9-10. The last third of that lifespan — roughly age 4-5 onward — is when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}
@@ -578,7 +569,6 @@ export default function FerretAgingPage() {
           <ReviewCard
             id="floor-level-hammock"
             badge="Senior Comfort"
-            badgeEmoji="🛏️"
             name="Floor-Level Fleece Sleep Sack / Low Hammock"
             subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
             score={8.5}

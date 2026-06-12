@@ -55,10 +55,17 @@ const FORBIDDEN = [
   // allowNegated: skip when the line DENIES the claim ("No 'we tested' claims", "no in-house
   // bench testing") — disclaimers are honest and must not trip the guard.
   { pattern: /\bwe\s+(?:calibrated|tested|measured|benchmarked|bench-tested|ran|trialed|trialled)\b/i, allowNegated: true, reason: 'First-person hands-on testing claim ("we tested/calibrated/measured…") — QC §1 forbids hands-on claims' },
-  { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our calibration…") — QC §1' },
+  { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing|tests?|testing|trials?)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our tests", "our testing/trials…") — QC §1' },
   { pattern: /\bcalibration\s+testing\b/i, allowNegated: true, reason: '"calibration testing" implies a test we ran — QC §1' },
   { pattern: /\bNIST[\s-]?traceable\b/i, allowNegated: true, reason: '"NIST-traceable" testing claim — implies metrology we did not perform — QC §1' },
-  { pattern: /\b(?:heaters?|products?|units?|models?|items?)\s+tested\b/i, allowNegated: true, reason: '"N heaters/products tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
+  { pattern: /\b(?:heaters?|products?|units?|models?|items?|filters?|lights?|lighting|bulbs?|LEDs?|HOBs?|canisters?|thermostats?|thermometers?|hygrometers?|bowls?|pads?|blankets?|saddles?|crates?|harnesses?|substrates?|terrariums?)\s+tested\b(?!\s+(?:positive|negative))/i, allowNegated: true, reason: '"N <product> tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
+  { pattern: /\btested\s+for\s+(?:par|accuracy|output|durability|performance|flow(?:\s+rate)?|temperature\s+accuracy|biological\s+capacity)\b/i, allowNegated: true, reason: '"tested for <review metric>" implies hands-on testing — QC §1 (use "compared on"/"ranked by")' },
+  // First-person experiential clinical/credential claims in editorial voice.
+  // Caught live on dog-com dog-symptoms-guide ("In twenty years of emergency
+  // veterinary practice…") under a "Dog.com Editorial" byline — trust-guard had
+  // no pattern. allowNegated skips honest disclaimers. Attributed third-person
+  // ("Veterinarians with twenty years of experience report…") does not match.
+  { pattern: /\b(?:in|over|after|across|throughout|during)\s+(?:my\s+|more\s+than\s+|nearly\s+|almost\s+)?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty)\s*(?:\+|plus)?[\s-]*years?\s+(?:of|in|as\s+an?\s+)[^.<>]{0,45}?\b(?:veterinary|vet|clinical|emergency\s+medicine|practice|practicing|exam\s+room|the\s+clinic|surgery|surgical|chairside|on\s+the\s+floor)\b/i, allowNegated: true, reason: 'First-person experiential clinical claim ("in N years of veterinary practice…") — editorial voice cannot claim hands-on clinical tenure — QC §1' },
 
   // Uncredited stock photography (Unsplash/Pexels TOS + QC §1). Hardcoded CDN URLs render
   // images without photographer attribution. Use manifest-backed <StockImage manifestKey=...>
@@ -101,9 +108,12 @@ for (const file of files) {
   const lines = src.split('\n')
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
+    // Normalize HTML-escaped apostrophes so negation cues like "don&apos;t" /
+    // "haven&#39;t" in honest disclaimers are recognized (else allowNegated misses them).
+    const negLine = line.replace(/&apos;|&#39;|&#x27;/gi, "'")
     for (const rule of FORBIDDEN) {
       if (rule.pattern.test(line)) {
-        if (rule.allowNegated && NEGATION.test(line)) continue
+        if (rule.allowNegated && NEGATION.test(negLine)) continue
         hits.push({
           file: file.replace(ROOT + '/', ''),
           line: i + 1,

@@ -52,7 +52,6 @@ export default function MultiLevelHousingPage() {
             'Ferrets are vertical animals in a way most small mammals are not. They climb, they perch, and they sleep elevated. A multi-level cage buys you more usable habitat per square foot than any single-floor model — but only if the levels are spaced, ramped, and zoned correctly.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

@@ -45,7 +45,6 @@ export default function FerretsWithKidsPage() {
             'Ferrets can be wonderful family animals — playful, curious, and endlessly entertaining — but they are not a "starter pet" you hand to a small child and walk away from. They are quick, they nip when frightened or untrained, and they require an adult ultimately in charge. This page is an honest look at which households suit a ferret and how to set children and ferret up to do well together.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

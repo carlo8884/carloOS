@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -8,7 +8,6 @@ import {
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Molly Fish', url: 'https://fish.com/species/molly-fish' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function MollyPage() {
   return (
@@ -116,7 +107,6 @@ export default function MollyPage() {
             'Poecilia sphenops, P. latipinna, and P. velifera — mollies are livebearing fish from coastal and brackish waters of the Americas. They tolerate salt better than almost any common aquarium fish, come in dozens of color varieties including the dramatic sailfin form, and breed enthusiastically enough that population control is the central management challenge.',
           category: 'Species Guide — Beginner/Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
@@ -201,6 +191,7 @@ export default function MollyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-molly-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A molly in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Mollies (Poecilia sphenops, P. latipinna, P. velifera) are

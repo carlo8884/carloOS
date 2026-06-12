@@ -1,23 +1,37 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, TableOfContents, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide — Enclosure, UVB, Diet | Lizard.com', description: 'Complete bearded dragon care guide. 4x2x2 enclosure minimum, Arcadia 12% UVB required, calcium supplementation, diet ratios.', path: '/species/bearded-dragon', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What size enclosure does a bearded dragon need?', answer: 'The minimum adult enclosure is 4 feet long by 2 feet wide by 2 feet tall. A smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate — the basking surface should reach 100–110°F while the cool side stays meaningfully cooler. A juvenile can live in a 3x1.5x1.5 enclosure temporarily, but it will need the adult size within the first year, so buying the 4x2x2 from the start is the more economical path.' },
+  { question: 'Do bearded dragons need UVB lighting?', answer: 'Yes — UVB is non-negotiable for this species. Bearded dragons are Ferguson Zone 4 baskers that experience very high UV Index in open desert sun, which calls for the most powerful T5 HO UVB tubes available, such as the Arcadia 12% Desert or Zoo Med T5 HO 10.0, positioned roughly 12–14 inches from the basking surface. A bearded dragon kept without adequate UVB can develop metabolic bone disease within months. Replace the bulb on a 12-month schedule: UVB output declines well before the visible light fails.' },
+  { question: 'What do bearded dragons eat?', answer: 'The diet shifts dramatically with age. Juveniles (0–6 months) eat roughly 80% insects and 20% salad; sub-adults transition gradually; adults (18+ months) eat roughly 20–30% insects and 70–80% salad. Good salad staples are collard greens, mustard greens, dandelion greens, endive, and escarole. Dubia roaches, black soldier fly larvae, and gut-loaded crickets are the preferred feeder insects. Avoid spinach, iceberg lettuce, avocado, and rhubarb, and avoid feeding adults a primarily insect diet — it commonly leads to obesity and fatty liver disease.' },
+  { question: 'How long do bearded dragons live?', answer: 'With correct husbandry, captive bearded dragons typically live 10–15 years. The variables keepers control — adequate T5 HO UVB on a 12-month replacement schedule, an age-appropriate insect-to-salad ratio, calcium supplementation, and a proper 4x2x2 enclosure with a true thermal gradient — are the main factors separating animals that reach that range from those that do not.' },
+  { question: 'What basking temperature does a bearded dragon need?', answer: 'The basking surface should measure 100–110°F, checked with a temperature gun directly on the surface rather than estimated from air temperature. The cool side should sit in the high 70s to mid 80s°F so the dragon can thermoregulate. At night the enclosure can drop to around 65°F with no supplemental heat in most homes; use a ceramic heat emitter only if ambient temperature falls below that. Run the basking bulb on a dimming thermostat and avoid colored night lights, which interfere with sleep cycles.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function BeardedDragonPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout
       siteId="lizard-com"
       contentType="species"
-      hero={{ title: 'Bearded Dragon Care Guide', subtitle: 'Pogona vitticeps — the most popular pet lizard in the US. Intelligent, interactive, and demanding. Here\'s what proper husbandry actually looks like — not what the pet store told you.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
+      hero={{ title: 'Bearded Dragon Care Guide', subtitle: 'Pogona vitticeps — the most popular pet lizard in the US. Intelligent, interactive, and demanding. Here\'s what proper husbandry actually looks like — not what the pet store told you.', category: 'Species Guide', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '13 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bearded Dragon', href: '/species/bearded-dragon' }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Reptile Feeding Calculator', href: '/tools/reptile-feeding-calculator', category: 'Tools' },
+        { title: 'Basking Temperature Calculator', href: '/tools/basking-temperature-calculator', category: 'Tools' },
         { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
         { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Uromastyx Care Guide', href: '/species/uromastyx', category: 'Species' },
@@ -94,6 +108,10 @@ export default function BeardedDragonPage() {
           <li><strong>Atadenovirus (ADV/Star Gazing):</strong> Neurological disease causing star gazing (head bent back), seizure-like episodes — no cure, euthanasia humane in severe cases. DNA test available before purchase.</li>
           <li><strong>Brumation:</strong> Seasonal winter slowdown — reduced activity, reduced appetite, possible complete inactivity for weeks. Normal; do not force-feed. Maintain temperatures and water availability.</li>
         </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Bearded Dragon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for bearded dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
@@ -105,5 +123,6 @@ export default function BeardedDragonPage() {
 
       </div>
       </ArticleLayout>
+    </>
   )
 }

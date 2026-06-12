@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Tank 
 export default function BettaTankMatesPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Betta Fish Tank Mates', subtitle: 'The question "what can I put with my betta?" depends entirely on the individual fish. Some bettas are highly tolerant; others will attack anything that moves. No compatibility list is universal — every betta is an individual. This guide covers the safest options and explains how to test compatibility.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Betta Fish Tank Mates', subtitle: 'The question "what can I put with my betta?" depends entirely on the individual fish. Some bettas are highly tolerant; others will attack anything that moves. No compatibility list is universal — every betta is an individual. This guide covers the safest options and explains how to test compatibility.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }]}
@@ -25,13 +25,14 @@ export default function BettaTankMatesPage() {
             {['Other male bettas', 'Female bettas (outside breeding setup)', 'Fin-nipping fish (tiger barbs, serpae tetras)', 'Fish with flowing fins (fancy guppies)', 'Goldfish (temp incompatible)', 'Aggressive cichlids'].map(s => <li key={s} className="flex gap-2"><span className="text-brand-danger">✗</span>{s}</li>)}
           </ul>
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Mate Compatibility Checker', href: '/tools/tank-mate-compatibility-checker' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="species-betta-mates" />
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-betta-fish-tank-mates" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A betta fish community in a home aquarium." priority />
         <h2>Individual Variation — The Most Important Factor</h2>
         <p>Betta aggression varies enormously between individual fish. Some bettas live peacefully with a full community tank including other colorful fish. Others will attack, fin-nip, or kill fish that are typically considered "safe" companions. No compatibility guide can predict how a specific betta will behave — the individual fish's temperament is the determining factor. Always have a backup plan (a separate tank or divider) when introducing new tankmates to a betta.</p>
 

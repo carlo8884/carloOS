@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
@@ -21,7 +21,7 @@ export default function VomitingDiarrheaPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Vomiting and Diarrhea in Pets', subtitle: 'Vomiting and diarrhea are among the most common reasons pets see the veterinarian. Most episodes are mild and self-limiting, but some signal a serious problem — and the rapid dehydration they cause can become dangerous. Knowing which signs warrant watchful waiting and which require prompt care helps you respond appropriately for your dog or cat.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Vomiting and Diarrhea in Pets', subtitle: 'Vomiting and diarrhea are among the most common reasons pets see the veterinarian. Most episodes are mild and self-limiting, but some signal a serious problem — and the rapid dehydration they cause can become dangerous. Knowing which signs warrant watchful waiting and which require prompt care helps you respond appropriately for your dog or cat.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function VomitingDiarrheaPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-vomiting-diarrhea" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

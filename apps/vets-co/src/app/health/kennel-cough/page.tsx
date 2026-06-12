@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
@@ -21,7 +21,7 @@ export default function KennelCoughPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Kennel Cough in Dogs', subtitle: 'Kennel cough — more formally canine infectious respiratory disease — is a highly contagious infection of the airways that spreads easily wherever dogs gather. Most cases are mild and resolve on their own, but the distinctive honking cough is alarming to owners, and the illness can be serious in vulnerable dogs. Knowing the signs and when to worry helps you respond appropriately.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Kennel Cough in Dogs', subtitle: 'Kennel cough — more formally canine infectious respiratory disease — is a highly contagious infection of the airways that spreads easily wherever dogs gather. Most cases are mild and resolve on their own, but the distinctive honking cough is alarming to owners, and the illness can be serious in vulnerable dogs. Knowing the signs and when to worry helps you respond appropriately.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Kennel Cough', href: '/health/kennel-cough' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function KennelCoughPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Canine Influenza', href: '/health/canine-influenza' }, { label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-kennel-cough" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

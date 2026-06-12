@@ -13,11 +13,11 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -43,13 +43,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Leash & Harness Training', url: 'https://ferret.com/behavior/leash-and-harness-training' },
-  ],
-})
 
 const FAQS = [
   {
@@ -75,7 +68,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -106,7 +99,6 @@ export default function LeashAndHarnessTrainingPage() {
             'Walking a ferret outdoors is one of the most rewarding parts of ownership — and one of the easiest to get wrong. The whole exercise hinges on equipment choice and patience: the right harness, a careful fit, and an acclimation schedule that never rushes the ferret faster than it is comfortable going.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -145,6 +137,7 @@ export default function LeashAndHarnessTrainingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-leash-harness"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
@@ -319,7 +312,6 @@ export default function LeashAndHarnessTrainingPage() {
           <ReviewCard
             id="marshall-ferret-harness"
             badge="H-Style"
-            badgeEmoji="🦺"
             name="Marshall Ferret H-Style Harness & Leash Set"
             subtitle="Adjustable H-style harness sized for ferret bodies, with 6-ft leash included"
             score={8.7}
@@ -345,7 +337,6 @@ export default function LeashAndHarnessTrainingPage() {
           <ReviewCard
             id="ferret-vest-harness"
             badge="Vest-Style"
-            badgeEmoji="🛡️"
             name="Ferret Vest-Style Harness"
             subtitle="Wider-body vest harness, harder to back out of than an H-style"
             score={8.3}

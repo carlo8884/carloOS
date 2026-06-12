@@ -29,6 +29,12 @@ const TOOLS = [
     desc: 'Calculate daily caloric needs for dogs and cats using the standard RER/MER equations (WSAVA/AAHA-style). Enter weight and life stage; get kcal/day and optional cups/day from the food label.',
     tag: 'Nutrition',
   },
+  {
+    href: '/tools/compare-pet-foods',
+    title: 'Compare Pet Foods',
+    desc: 'Pick 2–3 over-the-counter brands or diet types and see them side-by-side on disclosed criteria — corporate owner, AAFCO posture, manufacturing, recalls, and price band. A transparent comparison, not a ranking.',
+    tag: 'Comparison',
+  },
 ]
 
 const itemListSchema = {

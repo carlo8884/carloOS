@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,6 +59,7 @@ export default function BuyingFirstHorsePage() {
           { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
           { title: 'Leasing a Horse', href: '/ownership/leasing-a-horse' },
           { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'Horse Size for Rider Calculator', href: '/tools/horse-size-for-rider', category: 'Tools' },
         ]}
         hero={{
           title: "Buying Your First Horse",
@@ -93,8 +94,10 @@ export default function BuyingFirstHorsePage() {
               { label: "Cost of Owning a Horse", href: "/ownership/cost-of-owning-a-horse" },
               { label: "Leasing a Horse", href: "/ownership/leasing-a-horse" },
               { label: "American Quarter Horse", href: "/breeds/quarter-horse" },
+              { label: "Horse Size for Rider Calculator", href: "/tools/horse-size-for-rider" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

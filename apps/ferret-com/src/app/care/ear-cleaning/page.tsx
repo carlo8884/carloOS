@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,9 +20,39 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-11T00:00:00Z',
 })
-const combined = combineSchemas(schema)
+
+const FAQS = [
+  {
+    question: 'Why is my ferret’s ear wax brown?',
+    answer:
+      'Because that is normal. Ferrets are naturally waxy-eared, and healthy ferret ear wax is typically reddish-brown to dark-brown in an amount that surprises owners used to dogs or cats. Brownish wax by itself is not a sign of disease. The warning signs are wax accompanied by a foul odor, a coffee-ground or crumbly black texture, redness or swelling, scabbing, or persistent head-shaking and scratching — those point to infection or ear mites and call for a veterinarian, not just a cleaning.',
+  },
+  {
+    question: 'How often should I clean my ferret’s ears?',
+    answer:
+      'Roughly every two to four weeks, adjusted to the individual — some ferrets are waxier than others. Many keepers fold ear cleaning into the same session as a nail trim. Over-cleaning is its own mistake: scrubbing too often or too aggressively irritates the canal and can strip the protective wax entirely, so more frequent is not better.',
+  },
+  {
+    question: 'What can I use to clean ferret ears?',
+    answer:
+      'A veterinary ear-cleaning solution formulated for ferrets or for cats and dogs — gentle and pH-appropriate for the canal — plus cotton balls or pads. Never use hydrogen peroxide, rubbing alcohol, or plain water in the ear, and never push a cotton swab into the ear canal: it packs wax deeper and risks damaging the eardrum. Swabs are for the visible outer ear only.',
+  },
+  {
+    question: 'How do I know if my ferret has ear mites?',
+    answer:
+      'The tell is texture and behavior. Mite debris tends to be dark, dry, and crumbly — often described as resembling coffee grounds — and comes with intense itching, head-shaking, and scratching, sometimes scabbing around the ears. Ordinary wax is smoother, uniformly reddish-brown, and not accompanied by frantic itchiness. Ear mites are a parasitic infestation requiring veterinary diagnosis and prescribed treatment; cleaning alone cannot resolve them, so leave the regimen to a veterinarian — ideally an exotics-capable clinic identified in advance.',
+  },
+  {
+    question: 'Can I use a cotton swab in my ferret’s ear?',
+    answer:
+      'Only on the visible outer folds of the ear, never down the canal. The safe routine: a few drops of ear solution (or a moistened cotton ball), a gentle massage at the base of the ear to loosen wax, then wipe what surfaces with a cotton ball — letting the ferret shake its head to bring more debris up where you can reach it. Clean only what you can see.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+
+const combined = combineSchemas(schema, faqSchema)
 
 const SOURCES = [
   {
@@ -53,7 +83,6 @@ export default function EarCleaningPage() {
             'Ferrets produce a lot of ear wax — normally a reddish-brown color that alarms first-time owners but is completely typical. Knowing what is normal, how to clean gently, and how to spot the difference between routine wax and ear mites keeps a minor grooming task from becoming a missed medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -72,6 +101,7 @@ export default function EarCleaningPage() {
                 { label: 'Step by Step', href: '#steps' },
                 { label: 'What Never to Do', href: '#never' },
                 { label: 'Ear Mites vs. Wax', href: '#mites' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -105,7 +135,7 @@ export default function EarCleaningPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
 
@@ -160,6 +190,9 @@ export default function EarCleaningPage() {
           <p>
             The important point is that ear mites are a parasitic infestation, not a hygiene failure, and they require a veterinary diagnosis and a prescribed treatment to clear. You cannot resolve mites with cleaning alone, and over-the-counter approaches are unreliable. If a ferret's ears look like coffee grounds or it is scratching and shaking its head persistently, that is a vet visit. This is exactly the kind of problem where having an exotics-capable clinic already identified — as our <a href="/health/vet-visit-prep">vet visit prep</a> guide recommends — saves time. Because mite treatment involves prescription medication and dosing, leave that decision and the regimen to the veterinarian rather than attempting it at home.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

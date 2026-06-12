@@ -46,7 +46,7 @@ export default function GrainFreeDCMPage() {
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[
-          { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' },
+          { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' },
           { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
           { label: 'Find a Cardiologist', href: '/find-a-vet' },
         ]} />

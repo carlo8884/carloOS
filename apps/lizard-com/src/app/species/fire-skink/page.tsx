@@ -1,16 +1,28 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { FAQAccordion, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Fire Skink Care Guide — Colorful Burrowing Skink | Lizard.com", description: "Fire skinks are vivid, hardy, burrowing West African lizards. Deep substrate, a humid warm enclosure, UVB, and an insect-based diet make them rewarding.", path: "/species/fire-skink", type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Fire Skink Care Guide", description: "Deep substrate, humidity, heat, UVB, feeding, and complete care for Lepidothyris fernandi, the fire skink.", url: "https://lizard.com/species/fire-skink", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: "Fire Skink Care Guide", description: "Deep substrate, humidity, heat, UVB, feeding, and complete care for Lepidothyris fernandi, the fire skink.", url: "https://lizard.com/species/fire-skink", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  { question: 'What enclosure does a fire skink need?', answer: 'A floor-focused enclosure of at least 36×18 inches for an adult — height matters less than ground space for this terrestrial burrower. Provide 4–6 inches of burrowable, slightly moist substrate, cork bark, leaf litter, hides at both temperature ends, and a water dish. A bioactive setup with live plants suits the species and helps hold humidity.' },
+  { question: 'Why does my fire skink hide all the time?', answer: 'Fire skinks are semi-fossorial forest-floor lizards that spend much of their time burrowed, and a shallow, sparse enclosure leaves them stressed and hidden. Counterintuitively, deep moist substrate and dense cover produce a more confident, visible animal that surfaces to bask and hunt. Allow new animals weeks to settle and feed reliably.' },
+  { question: 'What temperatures and humidity do fire skinks need?', answer: 'A basking surface of 95–100°F over a stable platform or flat rock, a cool side of 72–78°F, and 60–75% humidity, with the deeper substrate layers kept lightly damp. A low-to-moderate linear T5 UVB (Ferguson Zone 2) is recommended for this partly diurnal basker.' },
+  { question: 'What do fire skinks eat?', answer: 'They are insectivores with a strong appetite: a varied rotation of gut-loaded crickets, dubia roaches, and worms, with adults taking the occasional pinkie mouse for variety. Dust feeders with calcium and a multivitamin per schedule. Feed juveniles daily and adults every other day, adjusting for body condition — well-fed captives are prone to obesity.' },
+  { question: 'Can you handle a fire skink?', answer: 'They are fast and can be skittish, especially when newly acquired or wild-caught, and may drop their tail if grabbed. Many become tolerant of brief handling with consistent, calm, low-pressure interaction, but they are primarily a display species. With good care they live 15–20 years.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function SpeciesFireSkinkPage() {
   return (
+    <>
+    <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Fire Skink", href: "/species/fire-skink" }]}
-      schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
         { title: 'Blue-Tongued Skink Care', href: '/species/blue-tongued-skink', category: 'Species' },
@@ -35,7 +47,7 @@ export default function SpeciesFireSkinkPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Fire skinks are terrestrial, semi-fossorial forest-floor lizards from West and Central Africa, named for the fiery red and black coloration along their sides. They are hardy and undemanding once established, but their burrowing habit means a shallow, sparse enclosure leaves them stressed and hidden. Provide deep, slightly moist substrate and dense cover and a fire skink will become a confident, visible animal that surfaces to bask and hunt. Many in the trade are wild-caught, so captive-bred stock is worth seeking for hardiness."}</p>
           <h2>{"Enclosure and Substrate"}</h2>
           <p>{"An adult fire skink needs a floor-focused enclosure of at least 36 by 18 inches; height matters less than ground space for a terrestrial burrower. Furnish with cork bark, leaf litter, hides at both temperature ends, and a water dish. A bioactive setup with live plants suits the species and helps hold humidity."}</p>
@@ -67,6 +79,9 @@ export default function SpeciesFireSkinkPage() {
             <li>{"Reptiles Magazine, Lepidothyris fernandi husbandry references."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Fire Skink — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB, basking bulbs, thermostats, deep burrowing substrate, and hides sized for fire skink care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
@@ -77,5 +92,6 @@ export default function SpeciesFireSkinkPage() {
         </div>
       </div>
     </ArticleLayout>
+    </>
   )
 }

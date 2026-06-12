@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Vomiting in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/vomiting-in-small-animals/vomiting-in-small-animals', publisher: 'Merck Vet Manual' },
@@ -10,9 +10,17 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vomiting', description: 'Causes, home care, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
-const combined = combineSchemas(schema, med)
+const FAQS = [
+  { question: 'Why is my dog vomiting?', answer: 'The most common cause of acute vomiting is dietary indiscretion — the dog ate something it should not have (garbage, table scraps, foreign material). Gastritis and bilious vomiting syndrome are also common and usually self-limiting. But vomiting is also a sign of serious conditions — GDV, pancreatitis, toxin ingestion, intestinal obstruction, and parvovirus in unvaccinated puppies — so the pattern and accompanying signs matter. A single episode in an otherwise alert adult dog can usually be monitored at home for 24 hours; repeated vomiting, blood, or lethargy means contact your veterinarian.' },
+  { question: 'Why is my dog throwing up yellow bile in the morning?', answer: 'Vomiting yellow bile — bile without food — first thing in the morning or after a long gap between meals is typically bilious vomiting syndrome. Bile refluxes into the empty stomach overnight and irritates the stomach lining. It usually resolves with a small bedtime snack or more frequent feeding so the stomach is empty for less time. It is not generally serious, but it is worth discussing with your veterinarian if it persists.' },
+  { question: 'When should I take my dog to the vet for vomiting?', answer: 'Call or visit the vet the same day for multiple vomiting episodes over several hours, inability to keep water down, or mild lethargy. Go to the emergency vet immediately for any of the emergency signs this page lists: unproductive retching (especially in large breeds — a GDV sign), blood in the vomit, severe lethargy, vomiting after suspected foreign body ingestion, a distended abdomen, pale gums, a puppy that cannot keep anything down, or vomiting persisting beyond 24 hours.' },
+  { question: 'Is it an emergency if my dog is retching but nothing comes up?', answer: 'Yes — treat it as one. Unproductive retching, particularly in large or deep-chested breeds, is a hallmark sign of gastric dilatation-volvulus (GDV/bloat), which is fatal without emergency surgery. The page above lists unproductive retching as an emergency sign — go to the emergency veterinarian immediately rather than waiting to see if other signs develop.' },
+  { question: 'What is the difference between vomiting and regurgitation in dogs?', answer: 'Vomiting is active: abdominal contractions, retching, and nausea behavior beforehand (lip-licking, drooling, restlessness), with material coming from the stomach or upper small intestine. Regurgitation is passive: undigested food slides out without effort or retching, often tubular in shape. Regurgitation points to an esophageal problem (such as megaesophagus or esophageal obstruction) rather than gastric disease, and the diagnostic approach is entirely different — describe which one you are seeing to your veterinarian.' },
+]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 export default function DogVomitingPage() {
   return (
     <>
@@ -29,6 +37,7 @@ export default function DogVomitingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Pancreatitis', href: '/health/dog-symptoms-guide' }]} />
+          <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vomiting" />
         </>}
@@ -51,6 +60,9 @@ export default function DogVomitingPage() {
           <p><strong>Can monitor at home (24 hours):</strong> Single vomiting episode in an otherwise alert adult dog, no blood, no known foreign body ingestion, no concurrent diarrhea, eating normally afterward.</p>
           <p><strong>Call or go to vet same day:</strong> Multiple vomiting episodes over several hours, not keeping water down, mild lethargy.</p>
           <p><strong>Emergency — go immediately:</strong> Unproductive retching (especially large breeds — GDV), blood in vomit, severe lethargy, vomiting after foreign body ingestion, distended abdomen, pale gums, puppy that cannot keep anything down.</p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

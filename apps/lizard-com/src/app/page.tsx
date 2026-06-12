@@ -7,18 +7,23 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live UVB-distance tool embedded on the homepage — a calculator you use on
 // the first screens, not a link to one (premium gate 3).
 import { UvbDistanceCalculator } from '../components/visual/UvbDistanceCalculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Reptile Care, Source-First',
+  title: 'Lizard & Reptile Care Guides, Source-First',
   description:
     'Husbandry built on published research: species profiles, UVB measurements, Ferguson zones, ARAV-aligned health, and tested-gear reviews for reptile keepers.',
   path: '/',
 })
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'lizard-com', name: 'Lizard.com', url: 'https://lizard.com' }),
+  buildWebSiteSchema({ siteId: 'lizard-com', name: 'Lizard.com', url: 'https://lizard.com' }),
+)
 
 // ── Inline SVG icon set — restrained line illustration, no emoji ──────────
 
@@ -145,7 +150,7 @@ const CATEGORIES: {
     icon: 'health',
     title: 'Health',
     desc: 'Sick-reptile signs, MBD, parasites, and when-to-call-an-ARAV-vet thresholds.',
-    href: '/health/metabolic-bone-disease',
+    href: '/health',
   },
   {
     icon: 'uvb',
@@ -156,7 +161,7 @@ const CATEGORIES: {
   {
     icon: 'reviews',
     title: 'Reviews',
-    desc: 'UVB bulbs, thermostats, and terrariums tested on the same dimensions — no paid scores.',
+    desc: 'UVB bulbs, thermostats, and terrariums compared on the same dimensions — no paid scores.',
     href: '/reviews',
   },
   {
@@ -233,6 +238,7 @@ const TRUST_CLAIMS = [
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ background: 'var(--brand-dark)' }}>
         {/* Moody CSS-only environmental wash. Two radial pools (lime accent
@@ -265,12 +271,15 @@ export default function HomePage() {
           style={{ background: 'linear-gradient(90deg, transparent, rgba(154,209,64,0.35), transparent)' }}
         />
 
-        {/* Hero photo slot — manifest-managed StockImage renders below the hero
-            with photographer attribution. Desktop background removed per QC §1;
-            CSS gradients supply the dark-mode atmospheric wash on all viewports. */}
+        {/* Hero photo — manifest-managed, attributed StockImage (key is synced
+            in image-manifest.json). Mobile shows it image-first above the
+            headline; desktop places it alongside the copy. Dark-mode gradient
+            washes above keep the atmosphere; attribution rides as a subtle
+            corner credit per Unsplash/Pexels TOS (QC §1). */}
 
-        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
-          <div className="max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-16 lg:py-28">
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] gap-10 lg:gap-14 items-center">
+          <div className="max-w-3xl order-2 lg:order-1">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-7">
               <span
@@ -376,6 +385,27 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Image column — image-first on mobile (order-1), beside copy on
+              desktop. Synced, attributed key; rounded to sit cleanly on the
+              near-black field. */}
+          <div className="order-1 lg:order-2 w-full">
+            <div
+              className="rounded-xl overflow-hidden"
+              style={{ border: '1px solid var(--brand-border-strong)' }}
+            >
+              <StockImage
+                manifestKey="lizard-com:hero"
+                fallbackKey="lizard-com:category-species"
+                alt="A reptile in a naturalistic vivarium under field-guide lighting"
+                aspect="3:4"
+                variant="inline"
+                subtleCredit
+                priority
+              />
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -518,6 +548,18 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Local-law reference — high-intent "is this reptile legal in my
+              state" entry point into the 50-state legality cluster. */}
+          <div className="mt-8">
+            <Link
+              href="/states"
+              className="font-body font-semibold text-sm no-underline"
+              style={{ color: 'var(--brand-primary)' }}
+            >
+              Reptile legality by state &mdash; check the law where you live &rarr;
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
@@ -21,7 +21,7 @@ export default function HypothyroidismDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — an underactive thyroid gland — is among the most common hormonal diseases in dogs and one of the most rewarding to treat. The signs are easy to mistake for normal aging, but once recognized and confirmed, daily hormone replacement restores most dogs to full health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — an underactive thyroid gland — is among the most common hormonal diseases in dogs and one of the most rewarding to treat. The signs are easy to mistake for normal aging, but once recognized and confirmed, daily hormone replacement restores most dogs to full health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -41,7 +41,8 @@ export default function HypothyroidismDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing Disease in Dogs', href: '/health/cushing-disease-dogs' }, { label: 'Weight Management', href: '/health/weight-management' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-hypothyroid-dogs" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

@@ -1,24 +1,30 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2025 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2025', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums with AquaStop valve.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://eheim.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fluvalSchema, eheimSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval' },
-  { label: 'Most Reliable', emoji: '🔧', name: 'Eheim Classic 350', subtitle: 'German engineering · Runs forever', href: '#eheim' },
-  { label: 'Best Budget', emoji: '💰', name: 'Penn Plax Cascade 1000', subtitle: 'Good value · 100 gal · Lower cost', href: '#penn-plax' },
+  { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval' },
+  { label: 'Most Reliable', name: 'Eheim Classic 350', subtitle: 'German engineering · Runs forever', href: '#eheim' },
+  { label: 'Best Budget', name: 'Penn Plax Cascade 1000', subtitle: 'Good value · 100 gal · Lower cost', href: '#penn-plax' },
 ]
+// GEO: ItemList of the ranked picks. Names + URLs come only from this page's
+// PICKS. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Canister Filters 2026',
+  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-canister-filters${p.href}` })),
+})
 export default function BestCanisterFiltersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Canister Filters 2025', url: 'https://fish.com/reviews/best-canister-filters' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Canister Filters 2026', url: 'https://fish.com/reviews/best-canister-filters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">💧 Buyer's Guide</span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
+        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -30,9 +36,13 @@ export default function BestCanisterFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For 40–70 gallon tanks the <strong>Fluval 307</strong> is our overall pick — near-silent, with an AquaStop valve that lets you change media without disconnecting hoses. For maximum long-term reliability, the <strong>Eheim Classic 350</strong> is the pick — decades of track record. The <strong>Penn Plax Cascade 1000</strong> is the best-value budget canister for larger tanks.</p>
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="fluval" badge="Best Overall" badgeEmoji="🏆" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" score={9.4} winner
+            <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" score={9.4} winner
               description={<p>The Fluval 307 is the current benchmark for canister filters in the 40–70 gallon range — near-silent operation, excellent media capacity with 4 separated baskets (mechanical, chemical, biological staged properly), and the AquaStop valve that allows media changes without disconnecting hoses. The sound dampening is genuinely impressive compared to older canister filters — you have to get very close to hear it running. Setup is straightforward for a canister. Impeller design is efficient — flow rates are real-world accurate rather than inflated marketing numbers. Lid design seals reliably. 5-year warranty.</p>}
               specs={[{ label: 'Tank size', value: '40–70 gallons' }, { label: 'Flow rate', value: '303 GPH (actual)', highlight: 'good' }, { label: 'Noise', value: 'Near-silent', highlight: 'good' }, { label: 'AquaStop', value: 'Yes — media change without disconnect', highlight: 'good' }, { label: 'Warranty', value: '5 years' }]}
               pros={['Near-silent', 'AquaStop for easy maintenance', 'Excellent media capacity', '5-year warranty', 'Accurate flow rate']}
@@ -43,9 +53,9 @@ export default function BestCanisterFiltersPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
-            <ReviewCard id="eheim" badge="Most Reliable" badgeEmoji="🔧" name="Eheim Classic 350 (2215)" subtitle="German engineering · Runs for decades · Simple design · 40-92 gal" score={9.2}
-              description={<p>The Eheim Classic line has been running continuously in aquariums since the 1960s. The 2215 is not the most feature-rich or the quietest filter on the market — it is the most reliable. Simple impeller design, robust construction, and a track record measured in decades. Many hobbyists have Classic filters running continuously for 10–15+ years with only impeller replacement. The media basket system is less sophisticated than Fluval's staged baskets, but the Eheim's longevity and bulletproof reliability justify its continued popularity among serious hobbyists who have been burned by cheaper filters dying in year 3.</p>}
-              specs={[{ label: 'Tank size', value: '40–92 gallons' }, { label: 'Flow rate', value: '264 GPH' }, { label: 'Reliability', value: 'Best in class — decades of track record', highlight: 'good' }, { label: 'Noise', value: 'Quiet (not silent)' }]}
+            <ReviewCard id="eheim" badge="Most Reliable" name="Eheim Classic 350 (2215)" subtitle="German engineering · Runs for decades · Simple design · 40-92 gal" score={9.2}
+              description={<p>The Eheim Classic line has been running continuously in aquariums since the 1960s. The 2215 is not the most feature-rich or the quietest filter on the market, but it is widely regarded as among the most reliable — with one of the longest field track records in the category. Simple impeller design, robust construction, and a track record measured in decades. Many hobbyists have Classic filters running continuously for 10–15+ years with only impeller replacement. The media basket system is less sophisticated than Fluval's staged baskets, but the Eheim's longevity and bulletproof reliability justify its continued popularity among serious hobbyists who have been burned by cheaper filters dying in year 3.</p>}
+              specs={[{ label: 'Tank size', value: '40–92 gallons' }, { label: 'Flow rate', value: '264 GPH' }, { label: 'Reliability', value: 'Among the best — decades of track record', highlight: 'good' }, { label: 'Noise', value: 'Quiet (not silent)' }]}
               pros={['Legendary long-term reliability', 'Simple to maintain', 'German engineering quality', 'Runs for 10-15+ years']}
               cons={['Less sophisticated media separation than Fluval', 'Older design — no AquaStop', 'Slightly louder than Fluval 307']}
               price="$100–130"

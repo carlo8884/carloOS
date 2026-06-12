@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bacterial Infect
 export default function BacterialInfectionsPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Bacterial Infections in Fish', subtitle: "Bacterial infection is one of the most common — and most misunderstood — categories of fish illness. The great majority are caused by opportunistic gram-negative bacteria that are always present in aquarium water and only turn dangerous when a fish is stressed or injured, almost always by poor water quality. Understanding that distinction is the key to both treating and preventing them.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🦠', publishedAt: 'June 2026', readTime: '9 min' }}
+      hero={{ title: 'Bacterial Infections in Fish', subtitle: "Bacterial infection is one of the most common — and most misunderstood — categories of fish illness. The great majority are caused by opportunistic gram-negative bacteria that are always present in aquarium water and only turn dangerous when a fish is stressed or injured, almost always by poor water quality. Understanding that distinction is the key to both treating and preventing them.", category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Bacterial Infections', href: '/health/bacterial-infections' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fin Rot", href: "/health/fin-rot", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }]}
@@ -27,6 +27,7 @@ export default function BacterialInfectionsPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fin Rot', href: '/health/fin-rot' }, { label: 'Dropsy', href: '/health/dropsy-treatment' }, { label: 'Pop-Eye', href: '/health/pop-eye' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-bacterial-infections" />
       </>}
     >

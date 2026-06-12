@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, AffiliateDisclosure, ReviewCard, ScoreMethodology } from '@carloOS/ui'
+import { GuideMasthead } from '../../../components/GuideMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -74,6 +75,14 @@ export default function LeatherCareGuidePage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <GuideMasthead
+          manifestKey="saddle-com:guide-leather-care"
+          fallbackKey="saddle-com:category-restoration"
+          eyebrow="Care Guide"
+          standfirst="The habits that extend saddle life by decades — and the products marketed to riders that quietly destroy the leather they claim to protect."
+          alt="Leather conditioner being worked into a saddle"
+        />
+
         <DropCap>Across the equestrian craft and the published literature on leather care, the consistent picture is that almost every leather failure mode — cracked panels, stitching rot, delaminated seat leather, flap hardening — is preventable. These are not the inevitable consequences of use. They are the consequences of neglect, or of using the wrong products with good intentions.</DropCap>
         <p>This guide covers what actually matters: the correct cleaning and conditioning sequence, the products that genuinely work, and the products marketed to equestrians that quietly destroy the leather they claim to protect.</p>
 
@@ -113,7 +122,7 @@ export default function LeatherCareGuidePage() {
         <h2 id="avoid">Products to Avoid</h2>
         <ul>
           <li><strong>Mink oil</strong> — darkens leather significantly and over-softens it. Deteriorates stitching thread over time. Avoid.</li>
-          <li><strong>WD-40 / petroleum products</strong> — destroys the tanning, leaves leather greasy and structurally weakened. I have seen saddles made unrideable by this.</li>
+          <li><strong>WD-40 / petroleum products</strong> — destroys the tanning, leaves leather greasy and structurally weakened. A frequent cause of saddles rendered unrideable.</li>
           <li><strong>Olive oil or vegetable oils</strong> — go rancid inside the leather, cause mould, attract bacteria. Under no circumstances.</li>
           <li><strong>Washing-up liquid or dish soap</strong> — strips the natural oils completely. One-time use in an emergency (removing a specific stain) is survivable. Regular use destroys the leather.</li>
           <li><strong>Baby wipes</strong> — contain detergents, fragrances, and preservatives that are incompatible with leather. The convenience is not worth it.</li>
@@ -139,6 +148,65 @@ export default function LeatherCareGuidePage() {
         <h2 id="new">Breaking In a New Saddle</h2>
         <p>New saddles, particularly German-made leather saddles (Stubben, Passier), may feel stiff initially. The correct break-in process is patience combined with use — not aggressive conditioning. Applying excessive neatsfoot oil to speed softening is the single most common mistake with new saddles, and it consistently over-softens the leather before the tanning process has had a chance to marry the fibres to the rider&apos;s use pattern.</p>
         <p>For a new saddle: clean normally with glycerine soap, apply a modest amount of conditioner, and ride. Repeat the conditioning after the first few rides as the leather warms and opens. Within 20–30 rides, good leather will have softened naturally to a supple, rider-specific break-in. The result is far superior to forcing the process.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2 id="kit">The Leather-Care Kit</h2>
+        <p>
+          The two products this guide repeatedly points to — a glycerine saddle soap for the weekly clean
+          and a lanolin- or neatsfoot-based conditioner for the monthly feed. This is a documented-spec
+          comparison drawing on widely-stocked products in equestrian retail; this page does not claim
+          hands-on testing. Both are physical care supplies, not treatments.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="glycerine-saddle-soap"
+          badge="Weekly Clean"
+          badgeEmoji="🧼"
+          name="Glycerine Saddle Soap"
+          subtitle="The mild, leather-safe standard the cleaning sequence is built around"
+          score={9.0}
+          description={
+            <p>The &quot;Products That Work&quot; section names glycerine saddle soap (Carr &amp; Day &amp; Martin, Effax, Passier) as the standard for the weekly clean. Mild, effective, and compatible with all leather — and unlike &quot;all-in-one&quot; soap-and-conditioner products, it keeps the clean and the feed as separate steps, which the correct sequence requires. Choose a single-purpose glycerine bar or liquid, not a combined formula.</p>
+          }
+          specs={[
+            { label: 'Use', value: 'Weekly full clean', highlight: 'good' },
+            { label: 'Base', value: 'Glycerine', highlight: 'good' },
+            { label: 'Avoid', value: 'All-in-one soap + conditioner combos' },
+            { label: 'Lifespan', value: 'Many months per bar' },
+          ]}
+          pros={['Mild and compatible with all leather', 'Keeps cleaning and conditioning as separate steps', 'Inexpensive, long-lasting']}
+          cons={['Combined soap-and-conditioner versions break the correct sequence — avoid them']}
+          price="$10–20"
+          ctaText="Find glycerine saddle soap"
+          ctaHref="/go/amazon-brand/glycerine+saddle+soap+carr+day+martin?s=guides-leather-care-guide"
+          ctaAffiliateProgram="amazon"
+          ctaAffiliateProduct="glycerine-saddle-soap"
+        />
+        <ReviewCard
+          id="leather-conditioner"
+          badge="Monthly Feed"
+          badgeEmoji="🐴"
+          name="Lanolin / Neatsfoot Leather Conditioner"
+          subtitle="A sparingly-applied conditioner with a natural-oil base — not petroleum"
+          score={8.6}
+          description={
+            <p>For the monthly conditioning step, the guide calls for a lanolin- or neatsfoot-based conditioner (Leather Therapy, Effax Leather Balm, reputable balsams) rather than a petroleum-based product. Apply a thin, even coat and buff — the &quot;less is more&quot; rule prevents the over-conditioning that softens seat and panel leather to structural weakness. Pure neatsfoot oil (never &quot;compound&quot;) is the option for suppling new or very dry leather.</p>
+          }
+          specs={[
+            { label: 'Use', value: 'Monthly conditioning', highlight: 'good' },
+            { label: 'Base', value: 'Lanolin or pure neatsfoot', highlight: 'good' },
+            { label: 'Avoid', value: 'Petroleum / mink oil / compound neatsfoot' },
+            { label: 'Application', value: 'Thin coat, buff, do not over-apply' },
+          ]}
+          pros={['Natural-oil base feeds without sealing the surface', 'Restores suppleness to dry leather', 'A little goes a long way']}
+          cons={['Over-application softens leather to structural weakness — apply sparingly', 'Pure neatsfoot darkens leather permanently']}
+          price="$12–30"
+          ctaText="Find leather conditioner"
+          ctaHref="/go/amazon-brand/leather+therapy+saddle+conditioner?s=guides-leather-care-guide"
+          ctaAffiliateProgram="amazon"
+          ctaAffiliateProduct="leather-conditioner"
+        />
       </div>
     </ArticleLayout>
   )

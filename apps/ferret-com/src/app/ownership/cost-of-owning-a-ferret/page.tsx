@@ -45,7 +45,6 @@ export default function CostOfOwningAFerretPage() {
             'Ferrets are inexpensive to acquire and deceptively expensive to keep well. The animal itself is the smallest line on the budget; the cage, the food, and above all the veterinary care over a 6–10 year life are what add up. This page lays out startup and recurring costs honestly, including the surgery line item that catches most owners by surprise.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -149,6 +148,29 @@ export default function CostOfOwningAFerretPage() {
           <p>
             Over a 6–10 year lifespan, the recurring food and litter costs are real but modest; the veterinary costs are what dominate the lifetime total, and they are heavily back-loaded into the senior years when chronic disease becomes likely. A useful mental model: the cheapest year of ferret ownership is usually the first healthy adult year, and the most expensive years are the last ones. Budget so that a senior ferret's medical needs are a planning question, not a crisis.
           </p>
+
+          <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6">
+            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Ready to bring one home?</p>
+            <p className="mt-2 text-base font-semibold text-brand-text-dark">See the starter essentials</p>
+            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
+              Once the budget makes sense, the next step is the startup list itself. The ferret starter
+              essentials page turns the setup category above into the specific items a new ferret needs
+              before homecoming. Prefer the editorial version with no links? The{' '}
+              <a href="/ownership/ferret-supplies-checklist" className="text-brand-primary underline-offset-2 hover:underline">supplies checklist</a>{' '}
+              covers the same categories.
+            </p>
+            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
+              The starter essentials page includes affiliate links; we may earn a commission at no extra
+              cost to you, and we never accept payment for favorable placement.{' '}
+              <a href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">Disclosure</a>.
+            </p>
+            <a
+              href="/ferret-starter-kit"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
+            >
+              See the ferret starter essentials &rarr;
+            </a>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
@@ -10,13 +10,59 @@ const SOURCES = [
   { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure', path: '/species/neon-tetra', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'How many neon tetras should be kept together?',
+    answer:
+      'Ten is the working minimum; 15–20+ produces the best display. School cohesion increases with group size — larger schools move as a single organism and show the coordinated, flowing behavior that makes schooling fish visually compelling. Twenty neons in a densely planted 30-gallon with dark substrate is a dramatically different display than ten.',
+    answerText:
+      'Ten minimum; 15-20+ for the best display. School cohesion and coordinated movement increase with group size.',
+  },
+  {
+    question: 'Is neon tetra disease curable?',
+    answer:
+      'No. Neon tetra disease, caused by the microsporidian parasite Pleistophora hyphessobryconis, has no cure. Affected fish must be removed and humanely euthanized (clove oil overdose) so spores are not released into the tank as they die. Prevention is the only defense: rigorous 4-week quarantine of every new neon and purchasing from reputable sources.',
+    answerText:
+      'No. NTD (Pleistophora hyphessobryconis) has no cure. Remove and humanely euthanize affected fish; prevent with 4-week quarantine of all new neons.',
+  },
+  {
+    question: 'Why do neon tetras die soon after purchase?',
+    answer:
+      'The fish that die within days are almost always mass-farmed specimens stressed by overcrowded holding tanks, poor water quality in transit, exposure to mixed-source disease, and shipping temperature and chemistry swings. Wild-caught neons properly handled and quarantined are actually quite hardy. Quarantine new fish 4 weeks minimum and buy from quality sources rather than cheap bulk-lot stock.',
+    answerText:
+      'Early deaths trace to mass-farmed stock stressed by crowding, transit, and disease exposure. Quarantine 4 weeks and buy from quality sources; established neons are hardy.',
+  },
+  {
+    question: 'What is the difference between neon and cardinal tetras?',
+    answer:
+      'The cardinal tetra (Paracheirodon axelrodi) is larger — 2 inches versus 1.25 — and its red coloration extends the full length of the belly rather than only the posterior half. Cardinals are generally more vivid in large schools but more sensitive to water quality, prefer strictly soft acidic conditions, and cost more because they are predominantly wild-caught. Neons suit general community tanks with harder or more neutral water.',
+    answerText:
+      'Cardinals are larger (2 in vs 1.25 in) with red along the full belly, more vivid but more sensitive and costlier. Neons suit general community water better.',
+  },
+  {
+    question: 'How long do neon tetras live?',
+    answer:
+      'Five to ten years in good conditions. Long-term health depends on water quality maintenance: nitrate under 20 ppm, stable temperature and pH, and ammonia and nitrite at 0.',
+    answerText:
+      '5-10 years in good conditions: nitrate under 20 ppm, stable temperature and pH, ammonia and nitrite at 0.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
+
 export default function NeonTetraPage() {
   return (
+    <>
+      <SchemaScript schema={combinedSchema} />
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Neon Tetra', href: '/species/neon-tetra' }]}
-      schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -35,7 +81,7 @@ export default function NeonTetraPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
-        <StockImage manifestKey="fish-com:species-neon-tetra" aspect="16:9" variant="inline" caption="A school of neon tetras (Paracheirodon innesi) in a planted aquarium." priority />
+        <StockImage manifestKey="fish-com:species-neon-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A school of neon tetras (Paracheirodon innesi) in a planted aquarium." priority />
 
         <h2>Why Store Neons Die — And How to Prevent It</h2>
         <DropCap>Neon tetras have an undeserved reputation for being fragile. Wild-caught neons from the Amazon, properly handled and quarantined, are actually quite hardy. The fish that die within days of purchase are almost always mass-farmed specimens subjected to: overcrowded holding tanks, poor water quality in transit, exposure to multiple disease sources from mixed-source holding systems, and the compounded stress of temperature and chemistry changes during shipping. The solution is quarantine (4 weeks minimum in a separate tank before introducing to an established aquarium) and purchasing from quality sources — not cheap bulk-lot fish store stock.</DropCap>
@@ -55,6 +101,17 @@ export default function NeonTetraPage() {
 
         <h2>Neon vs Cardinal Tetra</h2>
         <p>The cardinal tetra (Paracheirodon axelrodi) is the neon's larger cousin — 2 inches versus 1.25 inches, with the red coloration extending the full length of the belly rather than only the posterior half as in neons. Cardinals are generally considered more vivid and more impressive in large schools, but they are more sensitive to water quality than neons and prefer more strictly soft, acidic conditions. Cardinals also tend to be more expensive as they are predominantly wild-caught rather than farm-raised. For planted blackwater setups targeting optimal display with slightly acidic soft water, cardinals are the upgrade. For general community tanks with harder or more neutral water, neons are more appropriate.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+            answerText: f.answerText,
+          }))}
+          includeSchema={false}
+          allowMultiple
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Neon Tetra — Tank Setup</div>
@@ -68,5 +125,6 @@ export default function NeonTetraPage() {
         <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
+    </>
   )
 }

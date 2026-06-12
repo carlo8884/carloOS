@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Albino Ferrets', url: 'https://ferret.com/colors/albino-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function AlbinoFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function AlbinoFerretsPage() {
             "With their pure white coats, pink noses, and striking red eyes, albino ferrets are among the most recognizable in the species. They are also one of the most misunderstood — surrounded by myths about blindness and fragility that mostly are not true. Here is the real story: the genetics, the history, and what (very little) special care they actually need.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

@@ -14,7 +14,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -40,13 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-30T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Patterns', url: 'https://ferret.com/colors' },
-    { name: 'Champagne Ferrets', url: 'https://ferret.com/colors/champagne-ferrets' },
-  ],
-})
 
 const FAQS = [
   {
@@ -72,7 +64,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function ChampagneFerretsPage() {
   return (
@@ -86,7 +78,6 @@ export default function ChampagneFerretsPage() {
             'Champagne is the soft-focus member of the ferret palette — a pale, milky-coffee dilution of the sable coat, with a faint shadow of a mask and a pinkish nose. Pretty, popular, and perpetually confused with its warm-brown neighbors. Here is how to recognize it and tell it apart.',
           category: 'Colors & Patterns',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

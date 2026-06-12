@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -9,7 +12,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,6 +36,46 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page — the
+// OTC retail line only (the prescription-channel Veterinary Diets range is
+// excluded). QC §1.4: editorial Review only, never AggregateRating; the rating
+// mirrors the disclosed on-page editorial score for the retail line.
+const productSchema = buildProductSchema({
+  name: 'Purina Pro Plan (Retail Line)',
+  description:
+    'Over-the-counter retail line with feeding-trial substantiation on many diets, board-certified veterinary nutritionists on staff, company-owned manufacturing, and published peer-reviewed research. Prescription Veterinary Diets are a separate range, not covered here.',
+  reviewBody:
+    'One of the strongest scorers on the WSAVA selection criteria: nutritionists on staff, company-owned plants, published research, and many diets substantiated by AAFCO feeding trial. Confirm the specific formula and life-stage statement on the bag. Evaluation covers the OTC retail line, not the prescription range.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 9.0,
+})
+// Content-aware FAQ derived from the sections above — calibrated, sourced-tone
+// answers only (QC §1: no clinical claims, no superlatives).
+const FAQ = [
+  {
+    question: 'Is Purina Pro Plan feeding-trial tested?',
+    answer:
+      'Many Pro Plan diets are substantiated by AAFCO feeding trials rather than formulation alone — the higher-evidence pathway and one of the WSAVA-favored signals. Substantiation can vary by product, so confirm the nutritional adequacy statement and life stage on the specific bag.',
+  },
+  {
+    question: 'Who makes Purina Pro Plan, and where is it manufactured?',
+    answer:
+      'Pro Plan is the premium line of Nestle Purina PetCare, a division of Nestle and one of the largest pet food companies in the world. Purina owns and operates its manufacturing facilities rather than relying on anonymous co-packing, which supports quality-control accountability under the WSAVA selection criteria.',
+  },
+  {
+    question: 'Is Purina Pro Plan the same as Pro Plan Veterinary Diets?',
+    answer:
+      'No. The Pro Plan retail line is sold over the counter, while Purina Pro Plan Veterinary Diets is a separate therapeutic range sold through veterinarians for diagnosed conditions. This evaluation covers the retail line only; therapeutic diets should be used under veterinary direction.',
+  },
+  {
+    question: 'Has Purina Pro Plan been recalled?',
+    answer:
+      'Like nearly every large manufacturer, Purina has had recalls over the years. Recall history is best evaluated by cause, severity, and corrective response rather than count alone, since a high-volume manufacturer naturally has more product subject to recall. The FDA CVM Recalls and Withdrawals database is the source of record.',
+  },
+]
+
+const pageSchema = combineSchemas(schema, productSchema, buildFAQSchema({ questions: FAQ }))
 
 const SOURCES = [
     {
@@ -79,7 +123,7 @@ export default function PurinaProPlanEvaluationPage() {
         { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents
@@ -91,6 +135,7 @@ export default function PurinaProPlanEvaluationPage() {
               { label: 'AAFCO Posture', href: '#aafco' },
               { label: 'Recall History', href: '#recall' },
               { label: 'Where to Buy', href: '#buy' },
+              { label: 'Common Questions', href: '#faq' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -114,7 +159,16 @@ export default function PurinaProPlanEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-purina-pro-plan" fallbackKey="petfood-com:category-brands" priority aspect="16:9" variant="wide" caption="Purina Pro Plan — an independent five-dimension evaluation of the Nestle Purina premium line." />
         <p>Purina Pro Plan is the premium line of Nestle Purina PetCare, evaluated here against the PetFood.com five-dimension rubric: corporate context, ingredient sourcing and research, manufacturing, AAFCO substantiation, and recall history. The evaluation is independent and never influenced by any commercial relationship. Pro Plan is notable for the depth of nutrition research and feeding-trial substantiation behind it, which aligns with the WSAVA selection criteria. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+
+        <div style={{ margin: '24px 0', padding: '18px 20px', borderRadius: '12px', border: '1px solid var(--brand-border)', borderLeft: '4px solid var(--brand-primary)', background: 'var(--brand-surface)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--brand-primary-dark)', marginBottom: '8px' }}>Bottom Line</div>
+          <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--brand-text-mid)' }}>
+            On the published evidence, Purina Pro Plan is among the most WSAVA-aligned premium lines: board-certified nutritionists on staff, a substantial published research program, many diets substantiated by AAFCO feeding trials rather than formulation alone, and owned-and-operated manufacturing. Confirm the nutritional adequacy statement and life stage on the specific bag, since substantiation can vary by product.
+          </p>
+        </div>
+
         <h2 id="corporate">Corporate Context</h2>
         <p>Nestle Purina PetCare is one of the largest pet food companies in the world, a division of Nestle, with deep resources for research and manufacturing. Scale brings both advantages (research budgets, quality-control infrastructure, feeding-trial capacity) and the usual scrutiny that attaches to large corporate ownership. For evaluating a diet, the relevant corporate question is whether that scale is directed toward nutritional rigor — and Purina is among the manufacturers that most visibly invest in it.</p>
         <h2 id="research">Research and Nutritionists</h2>
@@ -156,6 +210,14 @@ export default function PurinaProPlanEvaluationPage() {
           ctaAffiliateProgram="chewy-brand"
           ctaAffiliateProduct="Purina%20Pro%20Plan"
         />
+
+        <h2 id="faq">Common Questions</h2>
+        {FAQ.map((f) => (
+          <div key={f.question}>
+            <p><strong>{f.question}</strong></p>
+            <p>{f.answer}</p>
+          </div>
+        ))}
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

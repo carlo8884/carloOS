@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025 — Royal Canin, Hill\'s & Purina Ranked',
-  description: 'We evaluated 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance. Royal Canin, Hill\'s, Purina Pro Plan, and more — ranked.',
+  title: 'Best Dry Dog Food 2026 — Royal Canin, Hill\'s & Purina Ranked',
+  description: 'We compared 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance using published specs. Royal Canin, Hill\'s, Purina ranked.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025',
+  title: 'Best Dry Dog Food 2026',
   description: 'Best dry dog foods ranked on ingredient quality, WSAVA compliance, and manufacturing standards.',
   url: 'https://dog.com/reviews/best-dry-dog-food',
   imageUrl: '',
@@ -23,10 +23,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
-  { label: 'Best Value', emoji: '💰', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
-  { label: 'Prescription/Medical', emoji: '🩺', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
-  { label: 'Premium Natural', emoji: '🌿', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
+  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
+  { label: 'Best Value', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
+  { label: 'Prescription/Medical', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
+  { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Purina Pro Plan Adult Large Breed', description: 'WSAVA-compliant dry dog food with chicken as primary protein and 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
@@ -37,22 +37,22 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1, produc
 export default function BestDogFoodPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2025', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2026', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          🏆 Buyer's Guide
+          Buyer's Guide
         </span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best Dry Dog Food 2025
+          Best Dry Dog Food 2026
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
-          The dog food market is full of marketing. We cut through it: 12 foods evaluated on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.
+          The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
         <div className="text-xs text-white/30">
-          Updated May 2025 ·{' '}
+          Updated May 2026 ·{' '}
           <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
         </div>
       </div>
@@ -91,14 +91,13 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
-              badgeEmoji="🏆"
               name="Royal Canin"
               subtitle="WSAVA-compliant · Extensive research investment · Breed and life stage formulas"
               score={9.5}
               winner
               description={
                 <div>
-                  <p>Royal Canin is the most veterinary-recommended dog food brand globally — not because of marketing spend, but because of genuine investment in nutritional science. They employ over 600 scientists, conduct extensive feeding trials, and publish research. Their breed-specific formulas (Labrador, Golden Retriever, French Bulldog, German Shepherd) are genuinely differentiated for breed-specific nutritional needs and kibble geometry, not just marketing segmentation.</p>
+                  <p>Royal Canin is among the most widely veterinarian-recommended dog food brands — not because of marketing spend, but because of genuine investment in nutritional science. Per the company, they employ over 600 scientists, conduct extensive feeding trials, and publish research. Their breed-specific formulas (Labrador, Golden Retriever, French Bulldog, German Shepherd) are genuinely differentiated for breed-specific nutritional needs and kibble geometry, not just marketing segmentation.</p>
                   <p>Full WSAVA compliance: they employ board-certified veterinary nutritionists, conduct AAFCO feeding trials (not just formulation testing), and can answer detailed questions about ingredient sourcing and manufacturing. This level of transparency is the benchmark the rest of the industry should meet.</p>
                 </div>
               }
@@ -111,8 +110,8 @@ export default function BestDogFoodPage() {
                 { label: 'Price Point', value: 'Mid-premium' },
               ]}
               pros={[
-                'Most research-backed brand in the industry',
-                'Full WSAVA compliance — top-tier transparency',
+                'Among the most research-backed brands in the industry',
+                'Full WSAVA compliance — strong sourcing transparency',
                 'Breed-specific formulas with genuine nutritional differentiation',
                 'AAFCO feeding trials (not just formulation testing)',
                 'Widely available through vets, Chewy, Amazon',
@@ -134,13 +133,12 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="purina"
               badge="Best Value"
-              badgeEmoji="💰"
               name="Purina Pro Plan"
               subtitle="Science-backed · 400+ veterinary studies · Widely available"
               score={9.3}
               description={
                 <div>
-                  <p>Purina Pro Plan is the most common answer when you ask veterinarians what they feed their own dogs — not a paid endorsement, just a consistent observation. Purina invests more in nutritional research than almost any other pet food company, with over 400 published studies. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
+                  <p>Purina Pro Plan is frequently cited among the brands veterinarians choose for their own dogs — an anecdotal pattern, not a formal survey. Purina is among the larger investors in nutritional research in the pet food category, with over 400 published studies per the company. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
                   <p>Pro Plan specifically (not regular Purina) meets WSAVA guidelines and uses AAFCO feeding trials. The Sport, Sensitive Skin & Stomach, and Adult formulas are among the most evidence-backed dog foods available at their price point. Widely available, excellent palatability, consistent quality.</p>
                 </div>
               }
@@ -153,8 +151,8 @@ export default function BestDogFoodPage() {
                 { label: 'Price Point', value: 'Mid-range (great value)' },
               ]}
               pros={[
-                'Veterinarian\'s most common personal choice for their own dogs',
-                'Extensive research investment — 400+ studies',
+                'Frequently cited among vets\' choices for their own dogs (anecdotal)',
+                'Extensive research investment — 400+ studies per the company',
                 'Excellent palatability — picky eaters usually accept it',
                 'Strong value at price point',
               ]}
@@ -172,7 +170,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="hills"
               badge="Best for Medical Conditions"
-              badgeEmoji="🩺"
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
               score={9.0}
@@ -186,7 +183,7 @@ export default function BestDogFoodPage() {
                 { label: 'Vet Recommended', value: 'Widely used in veterinary practice', highlight: 'good' },
               ]}
               pros={[
-                'Most clinically studied prescription diet line',
+                'Among the most clinically studied prescription diet lines',
                 'Formulas for every major disease condition',
                 'Extensive feeding trial data',
                 'Strong dental health formula (t/d)',
@@ -207,7 +204,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="orijen"
               badge="Best Premium Natural"
-              badgeEmoji="🌿"
               name="Orijen"
               subtitle="High protein · Regional ingredients · Biologically appropriate"
               score={8.4}
@@ -245,7 +241,7 @@ export default function BestDogFoodPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Reviews" links={[
-              { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' },
               { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' },
               { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
             ]} />
@@ -256,6 +252,7 @@ export default function BestDogFoodPage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

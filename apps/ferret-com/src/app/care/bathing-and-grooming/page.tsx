@@ -19,7 +19,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -45,13 +44,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-29T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care/bathing-and-grooming' },
-    { name: 'Bathing and Grooming', url: 'https://ferret.com/care/bathing-and-grooming' },
-  ],
-})
 
 const FAQS = [
   {
@@ -87,7 +79,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -127,7 +119,6 @@ export default function FerretBathingGroomingPage() {
             'The defining feature of ferret grooming is that less is more. The musky smell new owners are trying to bathe away is produced by skin glands that respond to bathing by overproducing — the more you bathe, the worse it gets. The right routine is small, infrequent, and consistent: occasional bath, regular ear and nail care, daily teeth, and recognition of when the coat is signaling a medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '11 min',
         }}
@@ -534,7 +525,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="marshall-ferret-shampoo"
             badge="Shampoo Default"
-            badgeEmoji="🧴"
             name="Marshall Ferret Shampoo (Original / Fragrance-Free)"
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             score={8.5}
@@ -559,7 +549,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="pet-ear-cleaner"
             badge="Ear Care"
-            badgeEmoji="👂"
             name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
             subtitle="Gentle pet ear cleaner used in exotic-pet practice"
             score={8.4}
@@ -578,7 +567,6 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard
             id="pet-nail-kit"
             badge="Nail Care"
-            badgeEmoji="✂️"
             name="Small-Pet Nail Clippers + Styptic Powder"
             subtitle="Small clippers sized for ferret nails plus styptic for accidents"
             score={8.0}

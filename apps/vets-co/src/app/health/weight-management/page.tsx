@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -18,7 +18,7 @@ export default function WeightManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -38,7 +38,8 @@ export default function WeightManagementPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-weight-mgmt" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <h2>Body Condition Score — Assess Your Dog Accurately</h2>

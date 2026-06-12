@@ -13,11 +13,11 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -43,13 +43,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Stress Signs', url: 'https://ferret.com/behavior/stress-signs' },
-  ],
-})
 
 const FAQS = [
   {
@@ -75,7 +68,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -110,7 +103,6 @@ export default function FerretStressSignsPage() {
             "Ferrets are stoic little animals that often mask discomfort until it is significant. Learning to read the early, subtle signals of stress — and knowing which of them overlap with illness — lets you act before a small problem becomes a big one. Here is what to watch for and what it usually means.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -149,6 +141,7 @@ export default function FerretStressSignsPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-stress-signs"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       
@@ -323,7 +316,6 @@ export default function FerretStressSignsPage() {
           <ReviewCard
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
-            badgeEmoji="😴"
             name="Ferret Sleep Sack / Hammock"
             subtitle="Enclosed fleece sleeping pouch — quiet, dark, enclosed resting space"
             score={8.4}
@@ -348,7 +340,6 @@ export default function FerretStressSignsPage() {
           <ReviewCard
             id="ferret-tunnel-stress"
             badge="Enrichment"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
             score={8.6}

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Medicating Aquar
 export default function MedicatingFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Medicating Aquarium Fish', subtitle: "Reaching for medication is often a fishkeeper's first instinct at the sight of a sick fish, but careless dosing causes as many losses as the diseases it targets. Knowing when to medicate, where, how to dose accurately, and how to protect your biological filter turns medication from a gamble into a controlled treatment. This guide covers the principles of treating fish safely.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '💊', publishedAt: 'June 2026', readTime: '9 min' }}
+      hero={{ title: 'Medicating Aquarium Fish', subtitle: "Reaching for medication is often a fishkeeper's first instinct at the sight of a sick fish, but careless dosing causes as many losses as the diseases it targets. Knowing when to medicate, where, how to dose accurately, and how to protect your biological filter turns medication from a gamble into a controlled treatment. This guide covers the principles of treating fish safely.", category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Medicating Fish', href: '/health/medicating-aquarium-fish' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }]}
@@ -27,6 +27,7 @@ export default function MedicatingFishPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }, { label: 'Bacterial Infections', href: '/health/bacterial-infections' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-medicating-fish" />
       </>}
     >

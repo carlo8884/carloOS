@@ -39,7 +39,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -74,13 +73,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/lymphoma' },
-    { name: 'Lymphoma', url: 'https://ferret.com/health/lymphoma' },
-  ],
-})
 
 const FAQS = [
   {
@@ -116,7 +108,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretLymphomaPage() {
   return (
@@ -131,7 +123,6 @@ export default function FerretLymphomaPage() {
             'Lymphoma — neoplasia of the lymphocyte cell line — is one of the three most-common cancers in domestic ferrets and the most heterogeneous in presentation. Some ferrets are diagnosed because a lump appeared. Some because bloodwork looked wrong at a routine senior visit. Some because weight kept dropping despite a good appetite. Recognizing the pattern across a confusing clinical picture is what separates early diagnosis from late.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}

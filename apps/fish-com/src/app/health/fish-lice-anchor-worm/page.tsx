@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Lice and An
 export default function FishLicePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Fish Lice & Anchor Worm', subtitle: 'Fish lice (Argulus species) and anchor worm (Lernaea species) are macroscopic crustacean parasites visible to the naked eye on fish skin — a rare situation in fishkeeping where the parasite can actually be seen without magnification. Both enter aquariums and ponds from wild-caught fish, live food, or non-quarantined new additions.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Fish Lice & Anchor Worm', subtitle: 'Fish lice (Argulus species) and anchor worm (Lernaea species) are macroscopic crustacean parasites visible to the naked eye on fish skin — a rare situation in fishkeeping where the parasite can actually be seen without magnification. Both enter aquariums and ponds from wild-caught fish, live food, or non-quarantined new additions.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Fish Lice & Anchor Worm', href: '/health/fish-lice-anchor-worm' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Gill Flukes", href: "/health/gill-flukes", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }]}
@@ -32,6 +32,7 @@ export default function FishLicePage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }, { label: 'Koi Care Guide', href: '/species/koi' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-fish-lice" />
       </>}
     >

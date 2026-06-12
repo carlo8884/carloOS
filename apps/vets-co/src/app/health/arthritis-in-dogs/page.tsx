@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
@@ -22,7 +22,7 @@ export default function ArthritisDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '10 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Arthritis', href: '/health/arthritis-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -42,7 +42,8 @@ export default function ArthritisDogsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Weight Management', href: '/health/weight-management' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-arthritis" />
-        </>}
+                  <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
+</>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />

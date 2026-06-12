@@ -19,6 +19,12 @@ export const metadata: Metadata = buildMetadata({
 
 const TOOLS = [
   {
+    href: '/tools/is-this-a-dog-emergency',
+    title: 'Is This a Dog Emergency?',
+    desc: 'Check the signs you are seeing against veterinary emergency-medicine criteria and get a conservative urgency read -- go now, same-day vet, or monitor closely. A triage aid to help you decide how urgently to seek care, not a diagnosis.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
     desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
@@ -29,6 +35,30 @@ const TOOLS = [
     title: 'Dog Age in Human Years Calculator',
     desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size (small, medium, large, giant) and outputs a qualitative life-stage label.',
     tag: 'Life Stage',
+  },
+  {
+    href: '/tools/puppy-weight-predictor',
+    title: 'Puppy Weight Predictor',
+    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves -- toy, small, medium, large, and giant breeds mature on different curves.',
+    tag: 'Puppy',
+  },
+  {
+    href: '/tools/dog-chocolate-toxicity-calculator',
+    title: 'Dog Chocolate Toxicity Calculator',
+    desc: 'My dog ate chocolate -- how much is dangerous? Estimate theobromine exposure by chocolate type, amount, and body weight against standard veterinary dose bands. Educational only: every result tells you to call your vet or poison control right now.',
+    tag: 'Health',
+  },
+  {
+    href: '/tools/dog-gestation-calculator',
+    title: 'Dog Pregnancy & Whelping Calendar',
+    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the normal 58-68 day window -- with the typical ultrasound, X-ray, and temperature-drop checkpoints mapped onto your calendar. Breeding info, not a diagnosis.',
+    tag: 'Breeding',
+  },
+  {
+    href: '/tools/dog-ideal-weight-calculator',
+    title: 'Dog Ideal Weight Calculator',
+    desc: 'How much should my dog weigh? Get the healthy adult weight range by breed (AKC-standard) plus an estimated ideal weight from your dog\'s body condition score on the 9-point WSAVA scale. Every result defers a target weight to your veterinarian.',
+    tag: 'Nutrition',
   },
 ]
 

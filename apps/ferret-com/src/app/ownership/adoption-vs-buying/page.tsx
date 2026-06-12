@@ -45,7 +45,6 @@ export default function AdoptionVsBuyingPage() {
             'A ferret can come from a rescue, a breeder, or a pet store, and the choice shapes more than price — it affects health history, whether the ferret arrives already altered and descented, temperament, and what you can know about its background. This page compares the three honestly so you can decide what fits your situation.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

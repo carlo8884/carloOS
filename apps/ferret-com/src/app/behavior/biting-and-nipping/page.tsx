@@ -11,11 +11,11 @@ import {
   DropCap,
   StockImage,
   ArticleSourcesList,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +41,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Behavior', url: 'https://ferret.com/behavior' },
-    { name: 'Biting & Nipping', url: 'https://ferret.com/behavior/biting-and-nipping' },
-  ],
-})
 
 const FAQS = [
   {
@@ -73,7 +66,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -108,7 +101,6 @@ export default function FerretBitingNippingPage() {
             "Almost every new ferret owner gets a few sharp surprises in the first month. Good news: biting is one of the most fixable ferret behaviours, and almost none of it requires punishment. The trick is reading WHY the ferret is biting — play, teething, fear, or pain — because each one has a different answer.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -146,6 +138,7 @@ export default function FerretBitingNippingPage() {
               subtitle="Evidence-based ferret behavior, monthly."
               source="behavior-biting-nipping"
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
       

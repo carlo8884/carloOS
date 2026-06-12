@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Odor & Scent Control', url: 'https://ferret.com/care/odor-and-scent-control' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -113,7 +105,6 @@ export default function FerretOdorScentControlPage() {
             "Ferrets carry a natural musky scent, and the two things most new owners reach for — descenting and frequent baths — are the two least effective ways to manage it. The smell that fills a room is mostly husbandry, not biology, and the husbandry is very controllable. Here is where ferret odor actually comes from and what genuinely reduces it.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

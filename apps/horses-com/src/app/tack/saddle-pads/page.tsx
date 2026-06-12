@@ -149,7 +149,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="cotton-quilted-numnah"
             badge="Everyday English"
-            badgeEmoji="🐴"
             name="Quilted Cotton All-Purpose Pad"
             subtitle="Washable everyday numnah for schooling"
             score={8.3}
@@ -175,7 +174,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="sheepskin-half-pad"
             badge="Half Pad"
-            badgeEmoji="🐑"
             name="Sheepskin Half Pad"
             subtitle="Friction reduction and wicking under a fitting saddle"
             score={8.5}
@@ -200,7 +198,6 @@ export default function SaddlePadsPage() {
           <ReviewCard
             id="western-felt-pad"
             badge="Western"
-            badgeEmoji="🤠"
             name="Wool-Felt Western Pad"
             subtitle="Cushion and durability for heavier saddles and long rides"
             score={8.7}

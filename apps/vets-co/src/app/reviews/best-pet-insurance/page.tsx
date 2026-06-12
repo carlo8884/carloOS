@@ -34,7 +34,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const insurerListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Best Pet Insurance 2025 — Carrier Comparison',
+  name: 'Best Pet Insurance 2026 — Carrier Comparison',
   description: 'Pet insurance carriers compared on reimbursement model, payout speed, and policy terms. Editorial review by Vets.co.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   numberOfItems: 3,
@@ -57,7 +57,7 @@ const trupanionSchema = buildProductSchema({
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'Fast claims processing (~2 days average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
+  description: 'Fast claims processing (per the carrier\'s stated ~2-day average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
   url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
   imageUrl: '',
   ratingValue: 9.1,
@@ -67,6 +67,7 @@ const healthyPawsSchema = buildProductSchema({
 const embraceSchema = buildProductSchema({
   name: 'Embrace Pet Insurance',
   description: 'Wellness add-on available for routine and preventive care. Diminishing deductible, highly customizable plan structure.',
+  // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
   url: 'https://vets.co/reviews/best-pet-insurance#embrace',
   imageUrl: '',
   ratingValue: 8.8,
@@ -76,9 +77,9 @@ const embraceSchema = buildProductSchema({
 const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', emoji: '⚡', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
-  { label: 'Wellness Included', emoji: '📋', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
+  { label: 'Best Overall', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
+  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
+  { label: 'Wellness Included', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
 export default function VetsPetInsurancePage() {
@@ -97,8 +98,8 @@ export default function VetsPetInsurancePage() {
           Across the 11 major pet insurance carriers, Trupanion is the only one
           that pays the practice directly at checkout, eliminating the
           submit-and-wait reimbursement gap that strands owners with a $5,000
-          emergency bill. Healthy Paws delivers the fastest reimbursement (around
-          two days, no payout caps), and Embrace is the practical choice when
+          emergency bill. Healthy Paws is among the fastest for reimbursement (the
+          carrier cites an average of about two days, with no payout caps), and Embrace is the practical choice when
           routine wellness coverage matters. Enroll before any vet visit — every
           insurer permanently excludes conditions documented before the policy starts.
         </p>
@@ -132,11 +133,11 @@ export default function VetsPetInsurancePage() {
             </div>
 
             <CalloutBox variant="warning" title="Always read the policy fine print">
-              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary no-underline hover:underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios.
+              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary no-underline hover:underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios. Still deciding whether to buy at all? The <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary no-underline hover:underline">&ldquo;is pet insurance worth it?&rdquo; calculator</Link> shows the breakeven cost level at which a policy pays for itself.
             </CalloutBox>
 
             <ScoreMethodology />
-            <ReviewCard id="trupanion" badge="Best Overall" badgeEmoji="🏆" name="Trupanion" winner
+            <ReviewCard id="trupanion" badge="Best Overall" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
               score={9.4}
               description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts make them the standard recommendation for high-risk breeds.</p>}
@@ -154,7 +155,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" badgeEmoji="⚡" name="Healthy Paws"
+            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="~2 day claims processing · Strong customer satisfaction reputation"
               score={9.1}
               description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and average 2-day processing make the reimbursement experience notably smooth. No annual or per-incident limits. Slightly lower premiums than Trupanion at comparable coverage levels. Best for owners who prefer to pay the vet and be reimbursed quickly rather than wait for direct payment integration.</p>}
@@ -171,7 +172,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="embrace" badge="Wellness Included" badgeEmoji="📋" name="Embrace"
+            <ReviewCard id="embrace" badge="Wellness Included" name="Embrace"
               subtitle="Wellness add-on · Diminishing deductible · Customizable"
               score={8.8}
               description={<p>Embrace is the best choice for owners who want routine and preventive care covered alongside illness and accident insurance. Their wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Among the more customizable plan structures of the major insurers — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}
@@ -181,7 +182,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Reimbursement', value: '70–90%' },
                 { label: 'Ortho Waiting', value: '6 months', highlight: 'warn' },
               ]}
-              pros={['Only major insurer with wellness add-on', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
+              pros={['Wellness add-on covers routine and preventive care', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
               cons={['6-month orthopedic waiting period', 'More complex plan options']}
               price="$45–95/month + wellness add-on"
               ctaText="Get a Quote →" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance"
@@ -191,7 +192,9 @@ export default function VetsPetInsurancePage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
+              { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'Pet Insurance Education Hub', href: '/insurance' },
+              { label: 'Pet Insurance Questions, Answered', href: '/insurance/questions' },
               { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' },
               { label: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' },
               { label: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' },

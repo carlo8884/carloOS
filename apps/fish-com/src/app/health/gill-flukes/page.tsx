@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Gill Flukes and 
 export default function FlukesPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Gill Flukes and Body Flukes', subtitle: 'Monogenean flukes — microscopic flatworm parasites in the genus Gyrodactylus (body flukes) and Dactylogyrus (gill flukes) — are among the most common parasites in aquarium fish. They are invisible to the naked eye and cause signs indistinguishable from several other conditions. Praziquantel is the treatment and is also used prophylactically during quarantine.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Gill Flukes and Body Flukes', subtitle: 'Monogenean flukes — microscopic flatworm parasites in the genus Gyrodactylus (body flukes) and Dactylogyrus (gill flukes) — are among the most common parasites in aquarium fish. They are invisible to the naked eye and cause signs indistinguishable from several other conditions. Praziquantel is the treatment and is also used prophylactically during quarantine.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Gill Flukes', href: '/health/gill-flukes' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }, { title: "Fish Lice & Anchor Worm", href: "/health/fish-lice-anchor-worm", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }]}
@@ -32,6 +32,7 @@ export default function FlukesPage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Velvet Disease', href: '/health/velvet-disease' }]} />
+        <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-flukes" />
       </>}
     >

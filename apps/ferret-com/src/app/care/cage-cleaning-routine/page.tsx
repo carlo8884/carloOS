@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Cage Cleaning Routine', url: 'https://ferret.com/care/cage-cleaning-routine' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
@@ -113,7 +105,6 @@ export default function FerretCageCleaningRoutinePage() {
             "A clean cage is the single biggest lever on a ferret household's odor and on litter-training reliability — and it takes less effort with a routine than with sporadic blitzes. The trick is layering small daily tasks, a weekly reset, and a monthly deep clean, while leaving just enough familiar scent to keep litter habits intact.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

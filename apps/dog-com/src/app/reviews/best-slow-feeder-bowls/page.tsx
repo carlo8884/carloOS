@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -9,16 +9,16 @@ const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo B
 const allSchemas = combineSchemas(schema, outwardSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound' },
-  { label: 'Best Puzzle', emoji: '🧠', name: 'Northmate Green Interactive', subtitle: 'Grass-pattern · Scatter feeding · Enrichment', href: '#northmate' },
-  { label: 'Best for Large Breeds', emoji: '🐕', name: 'LickiMat Splash', subtitle: 'Spread food · Calm eating · Anti-anxiety', href: '#lickimat' },
-  { label: 'Best Budget', emoji: '💰', name: 'Gorilla Grip Slow Feeder', subtitle: 'Non-slip base · Under $15', href: '#gorilla' },
+  { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound' },
+  { label: 'Best Puzzle', name: 'Northmate Green Interactive', subtitle: 'Grass-pattern · Scatter feeding · Enrichment', href: '#northmate' },
+  { label: 'Best for Large Breeds', name: 'LickiMat Splash', subtitle: 'Spread food · Calm eating · Anti-anxiety', href: '#lickimat' },
+  { label: 'Best Budget', name: 'Gorilla Grip Slow Feeder', subtitle: 'Non-slip base · Under $15', href: '#gorilla' },
 ]
 
 export default function BestSlowFeederBowlsPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Slow Feeder Bowls for Dogs 2025', url: 'https://dog.com/reviews/best-slow-feeder-bowls' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Slow Feeder Bowls for Dogs 2026', url: 'https://dog.com/reviews/best-slow-feeder-bowls' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
@@ -39,10 +39,10 @@ export default function BestSlowFeederBowlsPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="outward-hound" badge="Best Overall" badgeEmoji="🏆" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" score={9.2} winner
-              description={<p>The Outward Hound Fun Feeder is the most widely sold slow feeder in the US and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
+            <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" score={9.2} winner
+              description={<p>The Outward Hound Fun Feeder is a widely used slow feeder and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
               specs={[{ label: 'Mealtime extension', value: '10x typical', highlight: 'good' }, { label: 'Sizes', value: '5 (mini to large breed)', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes — top rack', highlight: 'good' }, { label: 'Non-slip base', value: 'Yes' }]}
-              pros={['Best mealtime extension tested', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
+              pros={['Strong mealtime extension among bowls compared here', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
               ctaText="Shop Outward Hound →"
@@ -50,7 +50,7 @@ export default function BestSlowFeederBowlsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="outward+hound+fun+feeder"
             />
-            <ReviewCard id="northmate" badge="Best Puzzle Feeder" badgeEmoji="🧠" name="Northmate Green Interactive Feeder" subtitle="Grass-pattern scatter feeding · Mental enrichment · Works on floor" score={9.0}
+            <ReviewCard id="northmate" badge="Best Puzzle Feeder" name="Northmate Green Interactive Feeder" subtitle="Grass-pattern scatter feeding · Mental enrichment · Works on floor" score={9.0}
               description={<p>The Northmate Green mimics foraging by hiding kibble in a grass-like silicone mat. Dogs sniff and nose through the "grass" to find individual pieces — engaging natural foraging behavior while dramatically slowing eating. The enrichment value is higher than a simple maze bowl — dogs using the Northmate Green are more mentally tired after meals, which has a calming effect. Flat design means no tipping. Easy to rinse. The floor-level design works well for low-mobility senior dogs who cannot comfortably eat from a raised bowl.</p>}
               specs={[{ label: 'Design', value: 'Grass pattern scatter feeder', highlight: 'good' }, { label: 'Enrichment', value: 'High — foraging behavior', highlight: 'good' }, { label: 'Flat design', value: 'Cannot tip over', highlight: 'good' }, { label: 'Best for', value: 'Enrichment-focused feeding' }]}
               pros={['High enrichment value', 'Cannot tip over', 'Easy to clean', 'Works with wet food too', 'Calming effect from foraging']}
@@ -61,7 +61,7 @@ export default function BestSlowFeederBowlsPage() {
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="northmate+green+interactive+feeder"
             />
-            <ReviewCard id="lickimat" badge="Best for Anxiety" badgeEmoji="💆" name="LickiMat Splash" subtitle="Spread wet food · Licking reduces anxiety · Dishwasher safe" score={8.9}
+            <ReviewCard id="lickimat" badge="Best for Anxiety" name="LickiMat Splash" subtitle="Spread wet food · Licking reduces anxiety · Dishwasher safe" score={8.9}
               description={<p>LickiMats work differently from ridge bowls — wet food, peanut butter (xylitol-free), plain yogurt, or canned pumpkin is spread across the mat's textured surface. Dogs lick repeatedly to clean the mat. Licking is a natural stress-reducing behavior — it releases endorphins and has a measurably calming effect. LickiMat feeding before grooming, bath time, vet visits, or thunderstorms reduces anxiety significantly in many dogs. Not appropriate for kibble — designed for spreadable foods.</p>}
               specs={[{ label: 'Food type', value: 'Wet/spreadable only' }, { label: 'Anxiety reduction', value: 'Yes — licking is calming', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes', highlight: 'good' }, { label: 'Best use', value: 'Pre-stress events, meal enrichment' }]}
               pros={['Calming licking behavior', 'Dishwasher safe', 'Works for enrichment during stressful events', 'Freezable for longer duration']}
@@ -88,6 +88,7 @@ export default function BestSlowFeederBowlsPage() {
           </aside>
         </div>
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
     </>
   )
 }

@@ -1,9 +1,34 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry.', path: '/breeds/shiba-inu', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide', description: 'Temperament, prey drive, escape behavior, and care for Shiba Inus.', url: 'https://dog.com/breeds/shiba-inu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide', description: 'Temperament, prey drive, escape behavior, and care for Shiba Inus.', url: 'https://dog.com/breeds/shiba-inu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+
+const FAQS = [
+  {
+    question: 'Are Shiba Inus easy to train?',
+    answer: 'Shibas are intelligent — they understand what is being asked — but their independent, primitive-breed heritage means they may decide the reward is not sufficient motivation at a given moment. Positive reinforcement with high-value rewards and short, engaging sessions works far better than extended drilling, and harsh corrections produce a dog that shuts down rather than complies. Early socialization and training from 8–12 weeks matters.',
+  },
+  {
+    question: 'Can a Shiba Inu be off leash?',
+    answer: 'No — the leash requirement is a breed characteristic, not a training failure to fix. Shibas were bred to flush small game, their recall under prey drive is unreliable at best, and even a well-trained Shiba can lock onto a squirrel or cat and be gone. Securely fenced yards with 6-foot fencing (they are athletic, motivated climbers) and leash-only street and trail use are the appropriate management.',
+  },
+  {
+    question: 'What is the Shiba scream?',
+    answer: 'A high-pitched, dramatic vocalization Shibas produce when bathed, restrained for nail trims or veterinary procedures, or otherwise displeased. It sounds alarming — as though the dog is being injured — but it is the Shiba\'s dramatic protest against indignity, not pain. Knowing it exists before experiencing it in a veterinary waiting room reduces the stress considerably.',
+  },
+  {
+    question: 'What health problems do Shiba Inus have?',
+    answer: 'Shibas are a generally healthy primitive breed with a 12–16 year lifespan. The primary documented concerns are hip dysplasia (OFA clearances on parents recommended), progressive retinal atrophy (a DNA test is available), and glaucoma (annual CAER eye exam). Discuss breed-appropriate screening with your veterinarian.',
+  },
+  {
+    question: 'Do Shiba Inus shed?',
+    answer: 'Their dense double coat sheds heavily twice yearly in a 2–3 week "coat blow." Regular brushing with a slicker brush and undercoat rake during blows significantly reduces hair around the house. Between coat blows they are low-maintenance — their fastidious, self-grooming nature keeps them clean.',
+  },
+]
+const faqSchema = buildFAQSchema({ questions: FAQS })
+const combinedSchema = combineSchemas(schema, faqSchema)
 
 export default function ShibaInuPage() {
   return (
@@ -11,7 +36,7 @@ export default function ShibaInuPage() {
       hero={{ title: 'Shiba Inu Breed Guide', subtitle: 'The Shiba Inu is a Japanese hunting breed — small (17-23 lbs), compact, foxy-faced, and independent in a way that surprises owners who expected a small, friendly dog. Shibas are not Labradors in a different body. They are a primitive breed that has been shaped by thousands of years as an independent hunting dog, and their personality reflects that heritage in ways that delight experienced owners and frustrate unprepared ones.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shiba Inu', href: '/breeds/shiba-inu' }]}
       relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Akita Guide', href: '/breeds/akita', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }]}
-      schema={schema}
+      schema={combinedSchema}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,6 +48,7 @@ export default function ShibaInuPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }, { label: 'Resource Guarding', href: '/training/resource-guarding' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-shiba" />
       </>}
@@ -44,6 +70,13 @@ export default function ShibaInuPage() {
 
         <h2>Health and Grooming</h2>
         <p>Shibas are a generally healthy primitive breed with fewer genetic diseases than many selectively bred dogs. The primary health concerns: hip dysplasia (OFA clearances on parents recommended), progressive retinal atrophy (DNA test available), and glaucoma (CAER exam). Median lifespan of 12-16 years is excellent for a purebred dog. Their double coat is dense and sheds heavily twice yearly (the "coat blow" — massive, impressive shedding for 2-3 weeks). Regular brushing during coat blows with a slicker brush and undercoat rake significantly reduces the hair distributed through the house. Between coat blows, they are low-maintenance groomers — their fastidious nature keeps them clean.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema={false}
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )

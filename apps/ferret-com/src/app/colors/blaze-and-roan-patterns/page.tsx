@@ -13,7 +13,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,16 +38,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    {
-      name: 'Blaze & Roan Patterns',
-      url: 'https://ferret.com/colors/blaze-and-roan-patterns',
-    },
-  ],
-})
 
 const FAQS = [
   {
@@ -74,7 +63,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function BlazeAndRoanPatternsPage() {
   return (
@@ -88,7 +77,6 @@ export default function BlazeAndRoanPatternsPage() {
             "Two of the most commonly mislabeled ferret patterns sit side by side here: the blaze, a clean white stripe running up a colored head, and the roan, a salt-and-pepper mix of white and colored guard hairs across the body. They can appear separately or together, and one of them carries the same deafness flag as the panda. Here is how to read each.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

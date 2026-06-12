@@ -13,7 +13,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -39,13 +38,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
-    { name: 'Choosing a Healthy Ferret', url: 'https://ferret.com/colors/choosing-a-healthy-ferret' },
-  ],
-})
 
 const FAQS = [
   {
@@ -71,7 +63,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function ChoosingHealthyFerretPage() {
   return (
@@ -85,7 +77,6 @@ export default function ChoosingHealthyFerretPage() {
             "Picking the right ferret is part heart, part head. The heart part takes care of itself — ferrets are irresistible. The head part is this checklist: a calm, head-to-tail assessment of health and temperament that helps you bring home a sound, well-socialized companion and spot the red flags worth walking away from.",
           category: 'Ferret Facts',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

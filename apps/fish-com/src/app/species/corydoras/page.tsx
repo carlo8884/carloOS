@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -8,7 +8,6 @@ import {
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Corydoras', url: 'https://fish.com/species/corydoras' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function CorydorasPage() {
   return (
@@ -116,7 +107,6 @@ export default function CorydorasPage() {
             'Corydoras spp. — corydoras are the most widely kept bottom-dwelling fish in the freshwater hobby. Peaceful, active, fascinating to watch, and available across more than 170 described species ranging from the pygmy cory at 1 inch to the emerald catfish at 3.5 inches. One rule applies to all of them: groups of six or more of the same species, on smooth sand, in a peaceful community.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '13 min',
         }}
@@ -202,6 +192,7 @@ export default function CorydorasPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A corydoras catfish in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Corydoras catfish are peaceful South American bottom-dwellers
