@@ -31,6 +31,7 @@ import {
   RelatedLinks,
   SchemaScript,
   buildArticleSchema,
+  combineSchemas,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -152,6 +153,45 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
     modifiedAt: '2026-06-11T00:00:00Z',
   })
 
+  // Dataset schema — this page renders a genuine structured data table of the
+  // breed's top hereditary cost drivers, each row containing the condition name,
+  // a realistic US treatment cost range, and a coverage-context note. The data
+  // is sourced from OFA/CHIC prevalence data, AKC parent-club panels, and the
+  // published veterinary literature — original compilation for this breed.
+  // Conditions are framed as predispositions, not certainties (QC §1).
+  // No DOIs, invented dates, or fabricated credentials.
+  const datasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `${breed.name} Hereditary Health Cost Drivers — Pet Insurance Reference`,
+    description:
+      `Structured reference table of the top hereditary cost drivers for the ${breed.name} breed, ` +
+      `compiled from OFA/CHIC prevalence data, AKC parent-club guidance, and published veterinary literature. ` +
+      `Each record lists the condition name, a realistic US treatment cost range, and a coverage-context note ` +
+      `relevant to pet insurance enrollment. Conditions are predispositions, not certainties.`,
+    url: pageUrl,
+    creator: {
+      '@type': 'Organization',
+      name: 'Dog.com Editorial',
+      url: 'https://dog.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dog.com',
+      url: 'https://dog.com',
+    },
+    isAccessibleForFree: true,
+    variableMeasured: [
+      'Hereditary condition name',
+      'Typical US treatment cost range (general practice and specialty)',
+      'Pet insurance coverage context (pre-existing exclusion risk, chronicity, bilateral)',
+    ],
+    about: {
+      '@type': 'Thing',
+      name: `${breed.name} breed hereditary health conditions`,
+    },
+  }
+
   const relatedLinks = [
     { label: `${breed.name} Breed Guide`, href: `/breeds/${breed.slug}` },
     { label: 'Best Pet Insurance Compared', href: REVIEW_CTA },
@@ -160,7 +200,7 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
 
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={combineSchemas(articleSchema, datasetSchema)} />
 
       <Breadcrumb
         siteId="dog-com"
