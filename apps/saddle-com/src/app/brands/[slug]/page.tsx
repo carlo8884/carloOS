@@ -65,6 +65,36 @@ function disciplineShort(brand: SaddleBrand) {
   return 'English'
 }
 
+/**
+ * Returns a tracked CTA href for brands that lack a relatedReviewSlug.
+ *
+ * Priority order (per CSRO-approved P0 fix — audit #716):
+ *  1. Brands sold through Amazon → /go/amazon-brand/<search-term>
+ *     Uses the existing `amazon-brand` brand-search route registered in
+ *     affiliate-routes.ts (`https://amazon.com/s?k={sku}&tag=PLACEHOLDER`).
+ *  2. Fitter/rep-network brands (County, Custom Saddlery, Antares) with no
+ *     public affiliate program → /brands hub (internal fallback).
+ *     PENDING: if Carlo approves a dealer-locator affiliate deal for any of
+ *     these brands, add a vendor key to affiliate-routes.ts and update the
+ *     map below. Do NOT revert to brand.brandUrl without an affiliate route.
+ */
+function brandCtaHref(brand: SaddleBrand): string {
+  const amazonBrandSlugs: Record<string, string> = {
+    bates:          'bates-saddle',
+    wintec:         'wintec-saddle',
+    'billy-cook':   'billy-cook-saddle',
+    'circle-y':     'circle-y-saddle',
+    reinsman:       'reinsman-saddle',
+  }
+  if (amazonBrandSlugs[brand.slug]) {
+    return `/go/amazon-brand/${encodeURIComponent(amazonBrandSlugs[brand.slug])}`
+  }
+  // County, Custom Saddlery, Antares: fitter/rep-network only, no public
+  // affiliate program. Route internally to the /brands hub until a dealer-
+  // locator affiliate account is approved and a vendor key is registered.
+  return '/brands'
+}
+
 function compareTargets(current: SaddleBrand) {
   return SADDLE_BRANDS.filter(
     (b) =>
@@ -304,7 +334,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
             price={priceRangeLabel(brand)}
             priceNote="Confirm current pricing with the manufacturer dealer locator."
             ctaText={brand.relatedReviewSlug ? `Read full ${brand.name} review →` : `Find a ${brand.name} dealer →`}
-            ctaHref={brand.relatedReviewSlug ? `/reviews/${brand.relatedReviewSlug}` : brand.brandUrl}
+            ctaHref={brand.relatedReviewSlug ? `/reviews/${brand.relatedReviewSlug}` : brandCtaHref(brand)}
             ctaAffiliateProgram="brand-direct"
             ctaAffiliateProduct={brand.slug}
           />
