@@ -15,7 +15,7 @@ export default function MBDPage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Metabolic Bone Disease (MBD)', subtitle: 'Nutritional secondary hyperparathyroidism — the formal name for MBD — is the most common nutritional disease in captive reptiles and one of the most preventable. It is entirely a husbandry failure: inadequate UVB, inadequate calcium supplementation, or an imbalanced calcium-to-phosphorus ratio in the diet. Every MBD case represents a solvable husbandry problem.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health' }, { name: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },

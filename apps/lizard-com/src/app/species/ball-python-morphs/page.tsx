@@ -7,7 +7,7 @@ export default function BallPythonMorphsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Ball Python Morphs Guide', subtitle: 'Ball pythons have the most extensive morph library of any reptile species — over 400 recognized morphs as of 2025, with new combinations being produced constantly. Understanding the ~15 foundational mutations that generate most of this diversity is the key to navigating the morph world, understanding genetics, and predicting breeding outcomes.', category: 'Breed Guide', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species/ball-python' }, { name: 'Morphs', href: '/species/ball-python-morphs' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Morphs', href: '/species/ball-python-morphs' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },

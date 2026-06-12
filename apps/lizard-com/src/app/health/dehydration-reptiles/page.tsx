@@ -15,7 +15,7 @@ export default function ReptileDehydrationPage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Dehydration in Reptiles', subtitle: 'Dehydration is one of the most common health problems in captive reptiles — and one of the most frequently underestimated. Reptiles regulate water loss far more efficiently than mammals, which means they can become significantly dehydrated before showing obvious signs. By the time sunken eyes and wrinkled skin appear, dehydration is usually significant.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Dehydration', href: '/health/dehydration-reptiles' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health' }, { name: 'Dehydration', href: '/health/dehydration-reptiles' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },

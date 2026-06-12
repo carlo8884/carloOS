@@ -121,7 +121,7 @@ export default function FerretTrainingBondingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Behavior', href: '/behavior/training-and-bonding' },
+          { name: 'Behavior', href: '/behavior' },
           { name: 'Training & Bonding', href: '/behavior/training-and-bonding' },
         ]}
         sidebar={
