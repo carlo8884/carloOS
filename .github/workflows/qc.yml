@@ -59,6 +59,30 @@ jobs:
       - name: Run trust-guard
         run: node scripts/ci/trust-guard.mjs
 
+  orphan-check:
+    name: Orphan-page detector (report-only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run orphan-check
+        run: node scripts/ci/orphan-check.mjs
+
+  hub-spoke-check:
+    name: Hub→spoke reciprocity (report-only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run hub-spoke-check
+        run: node scripts/ci/hub-spoke-check.mjs
+
   vercel-ignore:
     name: Vercel build-cost wrapper (dir-014 regression)
     runs-on: ubuntu-latest
