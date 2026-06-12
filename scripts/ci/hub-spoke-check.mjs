@@ -47,7 +47,9 @@ const ROOT = process.cwd()
 // ─── ENFORCE flag ─────────────────────────────────────────────────────────
 // false = report findings but exit 0 (safe for PRs during initial rollout)
 // true  = exit 1 on any finding (flip after first clean-reviewed run on main)
-const ENFORCE = false
+// Flipped to enforcing 2026-06-12: main verified clean (0 findings) after the
+// breadcrumb-intermediate fixes in #715. The gate now hard-blocks regressions.
+const ENFORCE = true
 
 const APPS = [
   'dog-com',
