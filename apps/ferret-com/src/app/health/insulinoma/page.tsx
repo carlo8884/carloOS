@@ -44,6 +44,7 @@ const schema = buildArticleSchema({
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-06-11T00:00:00Z',
+  speakable: true,
 })
 
 const med = buildMedicalWebPageSchema({

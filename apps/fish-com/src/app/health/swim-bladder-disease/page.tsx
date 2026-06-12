@@ -10,7 +10,7 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish — Causes, Pea Treatment | Fish.com', description: 'Swim bladder problems cause floating, sinking, or listing. Constipation is the most common cause in fancy goldfish. The fasting and pea protocol', path: '/health/swim-bladder-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish', description: 'Causes, constipation treatment, and prognosis for swim bladder disorders in aquarium fish.', url: 'https://fish.com/health/swim-bladder-disease', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish', description: 'Causes, constipation treatment, and prognosis for swim bladder disorders in aquarium fish.', url: 'https://fish.com/health/swim-bladder-disease', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true })
 export default function SwimBladderPage() {
   return (
     <ArticleLayout siteId="fish-com"
