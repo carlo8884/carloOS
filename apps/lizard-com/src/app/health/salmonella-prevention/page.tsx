@@ -15,7 +15,7 @@ export default function SalmonellaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Salmonella & Reptiles', subtitle: 'All reptiles — regardless of species, cleanliness of their enclosure, or how healthy they appear — naturally carry Salmonella bacteria in their GI tract. This is not a disease they have; it is part of their normal flora. For healthy adults, the infection risk with basic precautions is low. For at-risk groups, reptile contact requires careful management.', category: 'Reptile Health & Safety', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Salmonella Prevention', href: '/health/salmonella-prevention' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health' }, { name: 'Salmonella Prevention', href: '/health/salmonella-prevention' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },

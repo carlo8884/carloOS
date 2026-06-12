@@ -14,7 +14,7 @@ export default function ThermalBurnsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: 'Thermal Burns in Reptiles', subtitle: 'Thermal burns are one of the most common reptile injuries seen in veterinary practice and almost entirely preventable. The two main culprits: heated rocks (reptiles cannot detect conductive heat until burned) and loose heat lamps positioned too close or not properly secured. Burns are painful, slow to heal, and frequently become infected.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Thermal Burns', href: '/health/thermal-burns' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health' }, { name: 'Thermal Burns', href: '/health/thermal-burns' }]}
       schema={schema}
       relatedLinks={[
         { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
