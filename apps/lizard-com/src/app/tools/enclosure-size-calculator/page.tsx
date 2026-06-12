@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
+  buildHowToSchema,
+  combineSchemas,
   SchemaScript,
   ArticleLayout,
   FAQAccordion,
@@ -50,7 +52,31 @@ const appSchema = {
   },
 }
 
-const schema = appSchema
+const howToSchema = buildHowToSchema({
+  name: 'How to calculate minimum reptile enclosure dimensions',
+  description: 'Calculate recommended minimum enclosure length, width, and height from adult body length and locomotor habit using standard keeper-literature multipliers.',
+  url: 'https://lizard.com/tools/enclosure-size-calculator',
+  steps: [
+    {
+      name: 'Find the expected adult total body length',
+      text: 'Look up the expected adult total body length (nose-tip to tail-tip) for your species in the species care sheet or the Lizard.com species library. Use adult size, not current juvenile length.',
+    },
+    {
+      name: 'Select the locomotor habit',
+      text: 'Choose Terrestrial (ground-dwelling — prioritizes floor area: 2L x 1L x 1L), Semi-arboreal (uses both levels: 1.5L x 1L x 1.5L), or Arboreal (primarily climbs — prioritizes height: 1L x 1L x 2L).',
+    },
+    {
+      name: 'Read the minimum dimensions, footprint, and volume',
+      text: 'The calculator outputs recommended minimum L x W x H in inches and cm, the floor footprint in sq ft, and the volume in US gallons for comparison against commercially available tank sizes.',
+    },
+    {
+      name: 'Verify against the species care sheet',
+      text: 'Compare the result against your species\' published care sheet — some species have stricter requirements. These multipliers produce a minimum, not an ideal; a larger enclosure is almost always better.',
+    },
+  ],
+})
+
+const schema = combineSchemas(appSchema, howToSchema)
 
 const FAQS = [
   {

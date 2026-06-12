@@ -4,6 +4,7 @@ import {
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -61,7 +62,31 @@ const appSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }
 
-const combinedSchema = combineSchemas(breadcrumbSchema, appSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to estimate the cost of owning a ferret',
+  description: 'Calculate one-time setup costs, annual recurring costs, and a lifetime total for ferret ownership by entering your number of ferrets and local price estimates.',
+  url: 'https://ferret.com/tools/cost-calculator',
+  steps: [
+    {
+      name: 'Enter the number of ferrets',
+      text: 'Enter how many ferrets you plan to keep. The cage and initial setup costs are shared across the group; per-ferret costs (acquisition, initial vet care, food, litter, routine vet) scale by this number.',
+    },
+    {
+      name: 'Review and adjust the one-time setup costs',
+      text: 'Review the cage, bedding, litter box, food and water equipment, and initial vet visit estimates. Swap in your actual local prices for a more accurate total.',
+    },
+    {
+      name: 'Review and adjust the annual recurring costs',
+      text: 'Review the food, litter, annual vet, and supplies estimates. Adjust for your local prices and the specific diet and care plan you intend to use.',
+    },
+    {
+      name: 'Read the totals and add an emergency fund',
+      text: 'The calculator returns one-time setup, yearly recurring, and a lifetime estimate. Add a separate emergency reserve for adrenal disease, insulinoma, or gastrointestinal blockage treatment — these are common in ferrets and frequently cost four figures per episode.',
+    },
+  ],
+})
+
+const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 export default function CostCalculatorPage() {
   return (

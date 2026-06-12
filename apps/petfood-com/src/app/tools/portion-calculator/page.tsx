@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -50,7 +51,31 @@ const appSchema = {
   publisher: { '@type': 'Organization', name: 'PetFood.com Editorial', url: 'https://petfood.com' },
 }
 
-const schema = combineSchemas(breadcrumbSchema, appSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to calculate your pet\'s daily portion using RER and MER',
+  description: 'Estimate daily caloric needs (RER and MER) for dogs and cats from body weight and life stage using the standard WSAVA/AAHA-style veterinary nutrition framework.',
+  url: 'https://petfood.com/tools/portion-calculator',
+  steps: [
+    {
+      name: 'Select species (dog or cat)',
+      text: 'Choose dog or cat — the two species have different available life stages and different MER factors (cats have an obese-prone factor; dogs have an active/working factor).',
+    },
+    {
+      name: 'Enter body weight',
+      text: 'Enter your pet\'s body weight in pounds or kilograms. For a weight-loss pet, use the veterinarian-assessed target weight, not current weight.',
+    },
+    {
+      name: 'Select the life stage',
+      text: 'Choose the life stage that best fits: neutered adult, intact adult, weight loss, kitten/puppy, senior, or (for cats) obese-prone. Each stage applies a different MER factor to the RER baseline.',
+    },
+    {
+      name: 'Read kcal/day; optionally enter kcal/cup for a cups estimate',
+      text: 'The calculator outputs RER (70 × weight_kg^0.75) and MER (life-stage factor × RER) in kcal/day. If you enter the kcal/cup from your food\'s label, you also get a cups-per-day estimate. Use MER as a starting point and adjust over 2–4 weeks based on body condition.',
+    },
+  ],
+})
+
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 const FAQS = [
   {

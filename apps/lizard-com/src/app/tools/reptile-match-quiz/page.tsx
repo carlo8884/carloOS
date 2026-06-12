@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   ArticleLayout,
@@ -128,7 +129,31 @@ const SOURCES = [
   },
 ]
 
-const schema = combineSchemas(articleSchema, softwareApplicationSchema, breadcrumbSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to find the right beginner reptile for your situation',
+  description: 'Answer six questions about experience, space, handling preference, setup effort, activity preference, and diet comfort to get 2–3 recommended beginner-appropriate species.',
+  url: URL,
+  steps: [
+    {
+      name: 'Answer the experience and space questions',
+      text: 'Indicate your reptile-keeping experience level and the size of the enclosure you can realistically fit. These two factors most strongly filter which species are appropriate.',
+    },
+    {
+      name: 'Select your handling and activity preferences',
+      text: 'Choose how much you want to handle your reptile and whether you prefer a diurnal (daytime-active) or nocturnal species. These preferences narrow the match to species that suit your daily routine.',
+    },
+    {
+      name: 'Set your setup effort and diet comfort',
+      text: 'Indicate how complex a setup you are willing to manage and your comfort with the feeding method (live insects, frozen-thawed rodents, or prepared diet). Some species need simpler husbandry than others.',
+    },
+    {
+      name: 'Read your matched species and follow the care guides',
+      text: 'The quiz returns 2–3 beginner-appropriate species that best fit your answers, each with a short reason it matches. Follow the care-guide link for each result before deciding — individual animals vary and full husbandry context matters.',
+    },
+  ],
+})
+
+const schema = combineSchemas(articleSchema, softwareApplicationSchema, breadcrumbSchema, howToSchema)
 
 export default function ReptileMatchQuizPage() {
   return (

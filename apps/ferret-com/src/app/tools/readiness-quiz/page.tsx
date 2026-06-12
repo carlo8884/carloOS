@@ -4,6 +4,7 @@ import {
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   CrossPortfolioCard,
@@ -36,7 +37,27 @@ const appSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }
 
-const combinedSchema = combineSchemas(breadcrumbSchema, appSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to assess your readiness to own a ferret',
+  description: 'Answer ten scored questions about legality, daily time, budget, housing, and long-term commitment to get a calibrated readiness tier and plain-English next steps.',
+  url: 'https://ferret.com/tools/readiness-quiz',
+  steps: [
+    {
+      name: 'Check ferret legality in your location',
+      text: 'Before the quiz, verify that ferrets are legal where you live. They are prohibited in California and Hawaii, banned in New York City, and restricted in a number of other jurisdictions.',
+    },
+    {
+      name: 'Answer all ten questions honestly',
+      text: 'Work through the ten questions covering legality, daily out-of-cage time (ferrets need at least 3–4 hours per day), housing situation, existing pets, budget for setup and emergencies, odor tolerance, vet access, and long-term commitment horizon.',
+    },
+    {
+      name: 'Read your readiness tier and next steps',
+      text: 'The quiz returns one of four tiers: Strong fit, Fit with preparation, Not quite yet, or Significant barriers present. Each tier includes a plain-English explanation and targeted next steps toward responsible ownership.',
+    },
+  ],
+})
+
+const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 export default function ReadinessQuizPage() {
   return (

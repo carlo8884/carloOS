@@ -5,6 +5,7 @@ import {
   EmailCapture,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildHowToSchema,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
@@ -92,7 +93,31 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-11',
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, articleSchema)
+const howToSchema = buildHowToSchema({
+  name: 'How to predict a puppy\'s adult weight',
+  description: 'Estimate adult weight from current age and weight using the growth-percentage method and published size-class growth curves.',
+  url: 'https://dog.com/tools/puppy-weight-predictor',
+  steps: [
+    {
+      name: 'Select the puppy\'s expected adult size class',
+      text: 'Choose the size class that matches the expected adult size: Toy (under ~12 lb), Small (~12–25 lb), Medium (~25–50 lb), Large (~50–100 lb), or Giant (over ~100 lb). For mixed breeds, use the parents\' sizes as a guide or run two adjacent size classes.',
+    },
+    {
+      name: 'Enter the puppy\'s current age',
+      text: 'Enter the puppy\'s current age in weeks or months. Predictions made before about 8 weeks are the least reliable.',
+    },
+    {
+      name: 'Enter the puppy\'s current weight',
+      text: 'Enter the puppy\'s current body weight in pounds or kilograms.',
+    },
+    {
+      name: 'Read the adult weight estimate range',
+      text: 'The calculator divides current weight by the typical growth fraction at the current age for the selected size class, then widens the result into a planning range. For example, a large-breed puppy at 20 lb at 14 weeks (typically 35% of adult weight) predicts a range of roughly 49–66 lb.',
+    },
+  ],
+})
+
+const schema = combineSchemas(breadcrumbSchema, appSchema, articleSchema, howToSchema)
 
 export default function PuppyWeightPredictorPage() {
   return (
