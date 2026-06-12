@@ -53,7 +53,9 @@ const ROOT = process.cwd()
 // ─── ENFORCE flag ──────────────────────────────────────────────────────────
 // false = report findings but exit 0 (safe for PRs during initial rollout)
 // true  = exit 1 on genuine orphans (flip this after first clean run on main)
-const ENFORCE = false
+// Flipped to enforcing 2026-06-12: main verified clean (0 orphans across 10 sites)
+// over many PRs since rollout. The gate now hard-blocks new orphan pages.
+const ENFORCE = true
 
 const APPS = [
   'dog-com',
