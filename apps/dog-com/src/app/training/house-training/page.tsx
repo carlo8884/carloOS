@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'House Training Guide — The Schedule Method That Works | Dog.com', description: 'Complete house training guide for puppies and adult dogs. The schedule method, accident protocol, common mistakes.', path: '/training/house-training', type: 'article' })
@@ -59,6 +59,21 @@ export default function HouseTrainingPage() {
         <h2 id="accidents">Accident Protocol</h2>
         <p>If you catch the puppy in the act: a calm, neutral "ah-ah" or clap to interrupt, then immediately take outside. If they finish outside, reward. Never yell, never rub the puppy&apos;s nose in it, never physical punishment — none of these work and all of them damage the relationship and trust required for effective training.</p>
         <p>If you find the accident after the fact: clean it up quietly and completely with an enzymatic cleaner (Nature&apos;s Miracle, Simple Solution) that eliminates the scent residue — regular cleaners leave residue that dogs can smell even when humans cannot, which marks the spot as a bathroom. Do not react to the puppy. There is no teaching opportunity after the fact; the puppy does not connect your current reaction to something that happened minutes or hours ago.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide</div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Enzymatic cleaners break down the proteins in pet waste that standard cleaners miss. This is the single most important supply for house training — without it, the scent marker remains and the spot becomes a repeat target.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/go/amazon-brand/enzymatic+pet+odor+cleaner+natures+miracle?s=training-house" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+              Shop Enzymatic Cleaners on Amazon →
+            </a>
+            <a href="/go/chewy-brand/natures+miracle+pet+stain+odor+remover?s=training-house" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+              Shop on Chewy →
+            </a>
+          </div>
+        </div>
 
         <h2 id="reinforce">Reinforcing Outside Elimination</h2>
         <p>Reward immediately after the puppy finishes eliminating outside — not when you go back inside, not later. The reward must be immediate (within 2–3 seconds) for the association to form correctly. Use high-value treats (not kibble) at this stage. Praise enthusiastically. Over time, the pattern of going outside, eliminating, and receiving a reward becomes automatic.</p>

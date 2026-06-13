@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -103,7 +103,23 @@ export default function SeparationAnxietyPage() {
         <p>If your camera shows a dog that settles after you leave but has destruction or nuisance behavior during the absence, this is a management and enrichment problem — not anxiety.</p>
         <ul>
           <li><strong>Increase physical exercise</strong> before departures — a tired dog is a calmer dog. A 30–45 minute walk before leaving changes what the rest of the day looks like.</li>
-          <li><strong>Provide enrichment</strong> that lasts: stuffed frozen Kongs (fill with food, freeze overnight), snuffle mats, long-lasting chews (bully sticks, tendons). These replace the dog&apos;s decision to find their own entertainment.</li>
+          <li><strong>Provide enrichment</strong> that lasts: stuffed frozen Kongs (fill with food, freeze overnight), snuffle mats, long-lasting chews (bully sticks, tendons). These replace the dog&apos;s decision to find their own entertainment.
+
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+            <div className="my-4 p-4 border border-brand-border rounded-xl bg-brand-surface">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Buyer&apos;s Guide — Enrichment Supplies</div>
+              <p className="text-sm text-brand-text-mid mb-3 leading-relaxed">A Kong stuffed with kibble or peanut butter and frozen overnight can keep most dogs occupied for 15–30 minutes. Rotate chews and toys to maintain novelty.</p>
+              <div className="flex flex-wrap gap-2">
+                <a href="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+                  Shop Kong Toys on Amazon →
+                </a>
+                <a href="/go/chewy-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+                  Shop Snuffle Mats on Chewy →
+                </a>
+              </div>
+            </div>
+          </li>
           <li><strong>Crate when unsupervised</strong> — removes access to everything the dog can destroy and creates a predictable management structure while the dog builds a calm unsupervised habit.</li>
           <li><strong>Rotate enrichment</strong> — novelty matters. The same Kong every day becomes less interesting. Rotate chews, food types, and enrichment toys.</li>
           <li><strong>Gradually increase unsupervised freedom</strong> as the habit of calm behavior is established — start with one low-risk room, expand over weeks as reliability increases.</li>

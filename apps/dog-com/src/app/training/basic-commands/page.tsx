@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -145,6 +145,21 @@ export default function BasicCommandsPage() {
         <div style={{ background: 'var(--brand-primary-pale)', borderLeft: '4px solid var(--brand-primary)', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '8px' }}>Session Length</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Keep sessions short: 3–5 minutes for puppies, 5–10 minutes for adult dogs. Multiple short sessions daily produce faster results than one long session. Always end on success — finish with something the dog does well, reward generously, and stop before either of you loses focus.</p>
+        </div>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Training Supplies</div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Soft, small, high-value treats (pea-sized pieces) work best for basic command training — they can be delivered quickly and don&apos;t interrupt focus. A treat pouch keeps rewards immediately accessible during sessions.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/go/amazon-brand/soft+small+dog+training+treats?s=training-basic-commands" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+              Shop Training Treats on Amazon →
+            </a>
+            <a href="/go/chewy-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+              Shop Treat Pouches on Chewy →
+            </a>
+          </div>
         </div>
 
         {COMMANDS.map(cmd => (

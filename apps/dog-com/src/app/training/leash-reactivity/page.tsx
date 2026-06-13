@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,7 +106,23 @@ export default function LeashReactivityPage() {
         <ul>
           <li><strong>Walk at low-traffic times and places:</strong> Early morning, quiet streets, parks during off-peak hours. Reduce trigger exposure between training sessions.</li>
           <li><strong>Cross the street before you need to:</strong> Move away from triggers before your dog notices or before you reach threshold distance. You are not avoiding — you are managing.</li>
-          <li><strong>Use a no-pull harness for control:</strong> A front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) provides better physical control and reduces pulling without the aversive impact of a choke chain or prong collar.</li>
+          <li><strong>Use a no-pull harness for control:</strong> A front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) provides better physical control and reduces pulling without the aversive impact of a choke chain or prong collar.
+
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+            <div className="my-4 p-4 border border-brand-border rounded-xl bg-brand-surface">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Buyer&apos;s Guide — No-Pull Harnesses</div>
+              <p className="text-sm text-brand-text-mid mb-3 leading-relaxed">A front-clip harness gives you immediate control during counter-conditioning sessions without adding aversive pressure. Both the PetSafe Easy Walk and Ruffwear Front Range are widely used by trainers working on reactivity.</p>
+              <div className="flex flex-wrap gap-2">
+                <a href="/go/amazon-brand/petsafe+easy+walk+front+clip+harness?s=training-leash-reactivity" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+                  Shop No-Pull Harnesses on Amazon →
+                </a>
+                <a href="/go/chewy-brand/ruffwear+front+range+harness?s=training-leash-reactivity" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+                  Shop on Chewy →
+                </a>
+              </div>
+            </div>
+          </li>
           <li><strong>Emergency U-turn:</strong> If you encounter a trigger suddenly and cannot create enough distance: turn 180°, move quickly in the opposite direction, then feed when the dog is moving with you. Avoid yelling, jerking the leash, or any aversive response — these increase arousal and worsen reactivity.</li>
           <li><strong>&quot;Look at that&quot; (LAT) cue:</strong> Once your dog can see a trigger below threshold, you can add a cue: &quot;look at that&quot; as they notice the dog, followed by marking when they look at you. This puts the orienting response on cue and is useful for warning you about incoming triggers.</li>
         </ul>
