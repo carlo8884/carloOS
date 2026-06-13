@@ -161,9 +161,9 @@ export default function GrainConcentratesPage() {
             pros={['Consistent nutrient delivery per serving', 'More balanced than plain grain', 'Widely available']}
             cons={['Shortchanges nutrients if underfed', 'Must be split into small meals', 'Overkill for idle horses — use a balancer instead']}
             price="$20–50 per 50 lb"
-            ctaText="Compare at SmartPak →"
-            ctaHref="/go/smartpak/complete-horse-feed-pellet?s=nutrition-grain-and-concentrates"
-            ctaAffiliateProgram="smartpak"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates"
+            ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="complete-horse-feed"
           />
 

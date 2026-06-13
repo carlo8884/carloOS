@@ -160,9 +160,9 @@ export default function PerformanceFeedingPage() {
             pros={['Dense energy without starch spike', 'Cool energy -- suits excitable horses', 'Supports condition through hard work']}
             cons={['Introduce gradually to avoid loose droppings', 'Not a complete feed', 'High-fat supplements can go rancid -- choose stabilized form']}
             price="$25–50 per 25–40 lb"
-            ctaText="Compare at Riding Warehouse →"
-            ctaHref="/go/ridingwarehouse/horse-fat-supplement-rice-bran?s=nutrition-performance-horse"
-            ctaAffiliateProgram="ridingwarehouse"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+fat+supplement?s=nutrition-performance-horse"
+            ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="horse-fat-supplement"
           />
 

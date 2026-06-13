@@ -184,9 +184,9 @@ export default function BeetPulpPage() {
             pros={['Convenient to store and measure', 'Same fiber benefits as shreds', 'Suits horses that prefer pellet texture']}
             cons={['Longer soaking time than shreds', 'Must still be fully soaked', 'Check for molasses if low-sugar diet needed']}
             price="$18–32 per 40–50 lb"
-            ctaText="Compare at SmartPak →"
-            ctaHref="/go/smartpak/beet-pulp-pellets?s=nutrition-beet-pulp"
-            ctaAffiliateProgram="smartpak"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"
+            ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="beet-pulp-pellets"
           />
 

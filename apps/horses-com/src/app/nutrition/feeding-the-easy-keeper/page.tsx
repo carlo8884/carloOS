@@ -164,9 +164,9 @@ export default function EasyKeeperPage() {
             pros={['Prevents ulcer-causing long fasts on restriction', 'Extends eating time naturally', 'Inexpensive and durable']}
             cons={['Horse must be introduced gradually', 'Some horses figure out faster methods', 'Hole size selection matters']}
             price="$20–40"
-            ctaText="Compare at Riding Warehouse →"
-            ctaHref="/go/ridingwarehouse/small-hole-slow-feeder-hay-net?s=nutrition-easy-keeper"
-            ctaAffiliateProgram="ridingwarehouse"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper"
+            ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="slow-feeder-hay-net"
           />
 

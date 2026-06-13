@@ -193,9 +193,9 @@ export default function HardKeeperPage() {
             pros={['Energy from fat and fiber, not starch', 'Reduces gut-upset risk vs. grain', 'Suited to horses sensitive to starch']}
             cons={['More expensive per calorie than plain grain', 'Must still be fed in small meals', 'Pair with adequate forage']}
             price="$35–70 per 50 lb"
-            ctaText="Compare at SmartPak →"
-            ctaHref="/go/smartpak/high-fat-low-starch-horse-feed?s=nutrition-hard-keeper"
-            ctaAffiliateProgram="smartpak"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/high+fat+low+starch+horse+feed?s=nutrition-hard-keeper"
+            ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="high-fat-horse-feed"
           />
 
