@@ -186,9 +186,42 @@ export default function BestSeniorDogFoodPage() {
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
 
-        {/* MONETIZATION: buy-box slot — top-of-page senior-dog-food picks CTA. Non-clinical
-            adult-maintenance diets are buy-box-eligible under QC §1.5.b. Monetization Bot owns
-            the BuyBox component, /go affiliate routes, and disclosure copy. Do not invent routes. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop senior dog food
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Find senior dog food at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            The picks above are described by the analysis profile they must meet — adequate high-quality
+            protein, controlled calorie density, meaningful EPA/DHA, and a valid AAFCO adult-maintenance
+            statement. Search the category below, then confirm the AAFCO statement and life-stage match
+            on the specific product before buying.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/senior%20dog%20food%20complete%20balanced?s=reviews-best-senior-dog-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search senior dog food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/senior%20dog%20food%20complete%20balanced?s=reviews-best-senior-dog-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="senior-label">The &quot;senior&quot; label is not an AAFCO life stage</h2>
         <p>
@@ -328,9 +361,41 @@ export default function BestSeniorDogFoodPage() {
           </li>
         </ul>
 
-        {/* MONETIZATION: buy-box slot — per-pick retailer CTAs for the five picks above.
-            Non-clinical adult-maintenance diets are buy-box-eligible under QC §1.5.b.
-            Monetization Bot to wire BuyBox + /go routes + disclosure. Do not invent routes here. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop the picks
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Search the picks at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            All five picks above are non-clinical adult-maintenance diets (QC §1.5.b eligible). Confirm
+            the AAFCO adult-maintenance statement, confirm the product is not a therapeutic or Rx diet,
+            and check the life-stage match on the specific label before buying.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/senior%20dog%20food%20adult%20maintenance?s=reviews-best-senior-dog-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search senior dog food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/senior%20dog%20food%20adult%20maintenance?s=reviews-best-senior-dog-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="table">Comparison table — the criteria at a glance</h2>
         <div style={{ overflowX: 'auto', margin: '20px 0' }}>
