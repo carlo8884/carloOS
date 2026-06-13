@@ -139,6 +139,30 @@ const CALCULATORS = [
     why: 'UVB falls off as inverse-square of distance; glass blocks the 290–320 nm band entirely.',
   },
   {
+    id: 'dog · dog-ideal-weight-calculator',
+    file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/Calculator.tsx',
+    mustInclude: [{ re: /\/\s*\(1\s*\+\s*0\.1\s*\*\s*\(score\s*-\s*5\)\)/, label: 'ideal ≈ current / (1 + 0.10·(BCS−5))' }],
+    why: 'Standard WSAVA body-condition heuristic: each BCS point above ideal (5/9) ≈ 10% over ideal body weight.',
+  },
+  {
+    id: 'fish · water-change-calculator',
+    file: 'apps/fish-com/src/app/tools/water-change-calculator/Calculator.tsx',
+    mustInclude: [{ re: /\(c\s*-\s*t\)\s*\/\s*\(c\s*-\s*s\)/, label: 'dilution fraction = (current−target)/(current−source)' }],
+    why: 'Single-change dilution: fraction to replace = (current−target)/(current−sourceLevel).',
+  },
+  {
+    id: 'horses · horse-height-converter',
+    file: 'apps/horses-com/src/app/tools/horse-height-converter/Calculator.tsx',
+    mustInclude: [{ re: /hands\s*\*\s*4\s*\+\s*extraInches/, label: 'inches = hands × 4 + extra (hands.inches notation)' }],
+    why: '1 hand = 4 inches; height in hands is hands.inches notation, not decimal (15.2hh = 62 in).',
+  },
+  {
+    id: 'vets · pet-insurance-worth-it-calculator',
+    file: 'apps/vets-co/src/components/tools/PetInsuranceWorthItCalculator.tsx',
+    mustInclude: [{ re: /deductible\s*\+\s*annualPremium\s*\/\s*pct/, label: 'breakeven X = deductible + annualPremium/pct' }],
+    why: 'Solving max(0,X−deductible)·pct = annualPremium for the eligible-cost level where the policy pays for itself.',
+  },
+  {
     id: 'vets · insurance-reimbursement-estimator',
     file: 'apps/vets-co/src/components/visual/InsuranceReimbursementEstimator.tsx',
     mustInclude: [
