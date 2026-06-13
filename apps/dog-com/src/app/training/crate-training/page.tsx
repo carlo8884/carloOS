@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Crate Training Guide — How to Make the Crate a Good Place | Dog.com', description: 'Step-by-step crate training guide. Introduction protocol, how long is too long, night training, and how to use the crate without it feeling like punishment.', path: '/training/crate-training', type: 'article' })
@@ -47,6 +47,22 @@ export default function CrateTrainingPage() {
 
         <h2 id="size">Correct Crate Size</h2>
         <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows. See our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide</div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Not sure which crate to buy? A wire crate with a divider panel is the right starting point for most puppies. For escape artists, step up to a heavy-duty aluminum option.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/go/amazon-brand/midwest+icrate+dog+crate+with+divider?s=training-crate" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+              Shop Wire Crates on Amazon →
+            </a>
+            <a href="/go/chewy-brand/dog+crate+with+divider?s=training-crate" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+              Shop on Chewy →
+            </a>
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">See our full <a href="/reviews/best-dog-crates" className="text-brand-primary hover:underline no-underline">Best Dog Crates 2026</a> guide for side-by-side comparisons.</p>
+        </div>
 
         <h2 id="intro">Introduction Protocol</h2>
         <p>Rushing crate introduction creates anxiety. A slow, positive introduction builds a dog that chooses to go in the crate voluntarily.</p>

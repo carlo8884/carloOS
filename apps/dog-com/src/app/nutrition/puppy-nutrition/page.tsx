@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food.', path: '/nutrition/puppy-nutrition', type: 'article' })
@@ -27,6 +27,22 @@ export default function PuppyNutritionPage() {
         <h2 id="formulas">Puppy Formula vs Adult Food</h2>
         <p>Puppy formulas are nutritionally distinct from adult formulas in ways that matter. Puppies require more protein, more fat, more calories per pound of body weight, and a different calcium-to-phosphorus ratio than adults. Feeding adult food to a growing puppy is not ideal and can result in nutrient deficiencies that affect development. Conversely, feeding adult food with appropriate supplementation is not a substitute — the ratio adjustments in puppy-specific formulas are designed for the requirements of growth.</p>
         <p>Choose a puppy food with an <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Puppy Food</div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Look for an AAFCO statement that says &ldquo;growth&rdquo; or &ldquo;all life stages.&rdquo; Large breed puppies need a formula explicitly labeled for large breeds. Purina Pro Plan, Royal Canin, and Hill&apos;s Science Diet all have board-certified veterinary nutritionists on staff.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+              Shop Puppy Food on Chewy →
+            </a>
+            <a href="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+              Shop on Amazon →
+            </a>
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a></p>
+        </div>
 
         <h2 id="large-breed">Large Breed Puppies — A Critical Difference</h2>
         <p>The most important nutritional distinction in puppy feeding: <strong>large and giant breed puppies (expected adult weight over 50 lbs) must eat a large breed puppy formula.</strong> This is not a marketing preference — it is a clinically meaningful distinction.</p>

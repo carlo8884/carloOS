@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Loose Leash Walking — Stop Pulling for Good | Dog.com', description: 'How to teach a dog to walk on a loose leash. The stop-and-wait method, the 180-degree turn, and why punishment-based corrections make pulling worse.', path: '/training/loose-leash-walking', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Loose Leash Walking', description: 'Stop pulling with the stop-and-wait and 180-degree turn methods.', url: 'https://dog.com/training/loose-leash-walking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -44,6 +44,22 @@ export default function LooseLeashPage() {
           <p><strong>Front-clip harness (PetSafe Easy Walk):</strong> The leash attaches at the chest — when the dog pulls, they are redirected sideways rather than forward. Does not cause pain. Significantly reduces pulling in most dogs from day one while training is ongoing.</p>
           <p><strong>Head halter (Gentle Leader, Halti):</strong> Controls the head, which controls direction. Very effective at stopping pulling. Requires careful introduction (dogs often resist at first) and should not be used with a sudden jerk — only gentle guidance.</p>
           <p>Avoid: choke chains, prong collars, shock collars. These apply pain to stop pulling but do not teach the dog what to do instead, and are associated with increased anxiety and reactivity on leash.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide</div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A front-clip no-pull harness is the most practical tool while loose-leash training is in progress — it reduces pulling mechanics immediately without aversive pressure. The PetSafe Easy Walk and Ruffwear Front Range are both widely used.</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+                Shop No-Pull Harnesses on Amazon →
+              </a>
+              <a href="/go/chewy-brand/petsafe+easy+walk+harness?s=training-loose-leash" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+                Shop on Chewy →
+              </a>
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">See our full <a href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline no-underline">Best Dog Harnesses 2026</a> guide for side-by-side comparisons.</p>
+          </div>
 
           <h2 id="mistakes">Most Common Mistakes</h2>
           <ul>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
@@ -86,6 +86,22 @@ export default function PuppySchedulePage() {
           </table>
         </div>
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', fontStyle: 'italic' }}>Adjust timing to your actual schedule. The pattern matters more than exact times.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Puppy Essentials</div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A few supplies make the schedule significantly easier to run: a wire crate with divider panel (for safe nap space), an age-appropriate puppy food, and high-value training treats.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/go/amazon-brand/wire+dog+crate+with+divider+panel+puppy?s=training-puppy-schedule" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
+              Shop Puppy Crates on Amazon →
+            </a>
+            <a href="/go/chewy-brand/puppy+training+treats+small+soft?s=training-puppy-schedule" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
+              Shop Training Treats on Chewy →
+            </a>
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a> · <a href="/reviews/best-dog-crates" className="text-brand-primary hover:underline no-underline">Best Dog Crates 2026</a></p>
+        </div>
 
         <h2 id="socialization">The Critical Socialization Window — 8 to 16 Weeks</h2>
         <p>Between 8 and 16 weeks, puppies have a developmental window during which novel experiences are processed with minimal fear response. Positive exposure to people, dogs, environments, sounds, and handling during this window creates an adult dog with broad confidence. The window closes around 16 weeks — it does not disappear, but the brain&apos;s plasticity for accepting novel stimuli as normal decreases significantly.</p>
