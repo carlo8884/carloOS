@@ -83,10 +83,19 @@ for (const app of readdirSync(APPS_DIR, { withFileTypes: true })) {
     }
 
     // class 3 — page carries affiliate links but NO visible FTC disclosure (QC §3.2)
-    // "affiliate-bearing" = has a /go link, a ReviewCard CTA, or an affiliate program ref.
+    // "affiliate-bearing" = points a CTA at a /go route OR an external URL, or
+    // references an affiliate program. An INTERNAL informational CTA (e.g.
+    // ctaHref="/find-a-vet" on a clinical/medicated page that deliberately does
+    // NOT monetize) is NOT affiliate-bearing — flagging it penalizes the exact
+    // compliant behavior we want, so ctaHref only counts when it targets /go or
+    // an external host.
     const isPage = /\/page\.[tj]sx?$/.test(file)
-    const hasAffiliate = /\/go\/[a-z0-9-]+\/|ctaAffiliateProgram|ctaHref=/.test(src)
-    const hasDisclosure = /AffiliateDisclosure|affiliate disclosure|FTC|"as an? .*associate"|earn(s)? a commission/i.test(src)
+    const hasAffiliate = /\/go\/[a-z0-9-]+\/|ctaAffiliateProgram|ctaHref=["'](?:https?:\/\/|\/go\/)/.test(src)
+    // Disclosure may surface via the AffiliateDisclosure / DisclosureBanner
+    // components, an inline `disclosure=`/`disclosure:` prop on a buy-box, the
+    // word "FTC", Amazon-associate language, or any "earn … commission" phrasing
+    // (e.g. "earn an affiliate commission").
+    const hasDisclosure = /AffiliateDisclosure|DisclosureBanner|disclosure\s*[=:]|affiliate disclosure|FTC|as an? [^"']*associate|earns?\b[^.<]*\bcommission/i.test(src)
     if (isPage && hasAffiliate && !hasDisclosure) {
       // Footer-level disclosure may cover it; flag as a warning to review, not a hard fail.
       noDisclosure.push(`${rel}: affiliate-bearing page with no in-page AffiliateDisclosure (verify footer covers it — QC §3.2)`)
