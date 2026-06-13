@@ -30,6 +30,12 @@ const TOOLS = [
     tag: 'Nutrition',
   },
   {
+    href: '/tools/food-transition-calculator',
+    title: 'Food Transition Calculator',
+    desc: 'Switching foods? Enter the daily amount and pick a 7, 10, or 14-day window for a day-by-day old/new mixing schedule that avoids the upset stomach an abrupt change causes.',
+    tag: 'Feeding',
+  },
+  {
     href: '/tools/compare-pet-foods',
     title: 'Compare Pet Foods',
     desc: 'Pick 2–3 over-the-counter brands or diet types and see them side-by-side on disclosed criteria — corporate owner, AAFCO posture, manufacturing, recalls, and price band. A transparent comparison, not a ranking.',
