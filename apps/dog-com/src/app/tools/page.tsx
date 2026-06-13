@@ -60,6 +60,18 @@ const TOOLS = [
     desc: 'How much should my dog weigh? Get the healthy adult weight range by breed (AKC-standard) plus an estimated ideal weight from your dog\'s body condition score on the 9-point WSAVA scale. Every result defers a target weight to your veterinarian.',
     tag: 'Nutrition',
   },
+  {
+    href: '/tools/dog-crate-size-calculator',
+    title: 'Dog Crate Size Calculator',
+    desc: 'What size crate does my dog need? Enter your dog\'s length and standing height to get the minimum internal crate dimensions and the recommended standard crate size (18–48"), plus puppy divider guidance.',
+    tag: 'Gear',
+  },
+  {
+    href: '/tools/dog-water-intake-calculator',
+    title: 'Dog Water Intake Calculator',
+    desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — and the drinking changes (up or down) that are worth a vet call.',
+    tag: 'Health',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({

@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Bloodstock Basics -- The Business of Breeding & Selling Racehorses',
   description:
-    'A plain-English bloodstock reference: what bloodstock means, how Thoroughbred sales work, how to read a pedigree, and the role of the bloodstock agent. Educational, not investment advice.',
+    "A plain-English bloodstock reference: what the term means, how Thoroughbred sales work, reading a pedigree, and the bloodstock agent's role. Educational only.",
   path: '/racing/bloodstock',
   type: 'article',
 })

@@ -26,7 +26,7 @@ Cohort-5 = **Dog.com · Fish.com · Ferret.com · PetFood.com · Vets.co**. Each
 | ⏳ Then | Portfolio thin/duplicate-page audit script (`scripts/ci/thin-page-audit.mjs`) | S | Catches the "broad-but-shallow" risk pre-launch |
 | ⏳ Then | Cross-site duplicate-title audit extension to `metadata-policy.mjs` | XS | Same |
 | ⏳ Then | Hub → spoke link symmetry audit generalized from PR #305 | S | Compounding internal-link strength |
-| ⏳ Then | Tools/calculators acceptance pass on the rest of `/tools/*` (PR #305 wired 7) | S | Confirms tools "actually work" per launch-quality bar |
+| 🔶 Partial | Tools/calculators acceptance pass on the rest of `/tools/*` (PR #305 wired 7) | S | Confirms tools "actually work" per launch-quality bar. **Cohort-5 math-verified (2026-06-13):** Dog (chocolate-tox, calorie RER/MER, ideal-weight BCS, age, gestation, puppy-weight), Fish (volume, heater, water-change, pond, substrate, stocking, **CO2**), Vets (reimbursement-estimator, worth-it breakeven), PetFood (portion, food-cost) — all sound EXCEPT one bug **fixed**: Fish CO2 used the meq/L coefficient 12.839 against a dKH input → ~4.3× overestimate (4 dKH/6.8 pH read 81 ppm "Dangerous" vs. correct ~19 ppm "Healthy"); corrected to the standard `3 × dKH × 10^(7−pH)`. Remaining: Horses/Lizard/Saddle calculators. |
 
 When this drops below 5 items, COO files a CSRO handoff asking which polish gap to slot in next — not new content.
 

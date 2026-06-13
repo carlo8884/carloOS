@@ -128,6 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://petfood.com/tools/compare-pet-foods', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/tools/food-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://petfood.com/tools/food-transition-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/tools/portion-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

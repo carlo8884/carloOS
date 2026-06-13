@@ -7,6 +7,7 @@ import {
   buildHowToSchema,
   combineSchemas,
   SchemaScript,
+  FAQAccordion,
   CrossPortfolioCard,
 } from '@carloOS/ui'
 import Quiz from './Quiz'
@@ -58,6 +59,36 @@ const howToSchema = buildHowToSchema({
 })
 
 const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+
+// FAQ content is drawn entirely from facts already stated on this page
+// (legality, daily-time, emergency conditions, the four tiers, retakeability).
+const FAQS = [
+  {
+    question: 'Where are ferrets illegal to own?',
+    answer:
+      'Ferrets are illegal to keep in California and Hawaii, banned in New York City, and restricted or banned in a number of other US and international cities and counties. Legality is a hard constraint, so check it before anything else — see the ferret legality by state reference.',
+  },
+  {
+    question: 'How much daily time does a ferret need?',
+    answer:
+      'Ferrets need at least 3–4 hours of supervised out-of-cage time per day. The daily time commitment is one of the most common factors that determines whether ferret ownership goes well, so the quiz weights it accordingly.',
+  },
+  {
+    question: 'What does the readiness quiz score?',
+    answer:
+      'Ten questions cover legality, daily out-of-cage time, housing situation, existing pets, setup and emergency budget, odor tolerance, vet access, and long-term commitment horizon. Each is weighted by how frequently it drives rehoming or welfare problems, and the quiz returns one of four tiers: Strong fit, Fit with preparation, Not quite yet, or Significant barriers present.',
+  },
+  {
+    question: 'Why should I budget for a veterinary emergency?',
+    answer:
+      'Adrenal disease, insulinoma, and gastrointestinal blockages are common in pet ferrets, and treatment is not optional once they appear. The up-front setup cost is manageable; the harder part is having an emergency fund in place. The cost of owning a ferret guide and the cost calculator give you a concrete number to plan against.',
+  },
+  {
+    question: 'Can I retake the quiz?',
+    answer:
+      'Yes. The result is a starting point for honest self-assessment, not a verdict. Circumstances change — housing, budget, time, and vet access can all shift — and the quiz can be retaken as they do.',
+  },
+]
 
 export default function ReadinessQuizPage() {
   return (
@@ -204,6 +235,13 @@ export default function ReadinessQuizPage() {
             keepers whose circumstances changed; they arrive with personality and history, and adoption
             fees are almost always lower than breeder prices.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS} />
         </div>
       </section>
 

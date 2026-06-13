@@ -60,6 +60,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/breeds/labrador-retriever/insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/breeds/newfoundland/insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/breeds/rottweiler/insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    // Breed × health cluster — deep-dive spokes for the breeds in breed-health.ts.
+    // All 8 are static-folder breeds with their own /breeds/<breed>/health/page.tsx
+    // (static segments shadow the dynamic [slug]/health route, so they need shells).
+    { url: 'https://dog.com/breeds/beagle/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/bulldog/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/french-bulldog/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/german-shepherd/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/golden-retriever/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/labrador-retriever/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/poodle/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/breeds/yorkshire-terrier/health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/compare', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/compare/australian-shepherd-vs-australian-cattle-dog', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/compare/beagle-vs-basset-hound', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -205,6 +216,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/training/training-red-flags', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/tools/dog-calorie-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/dog-crate-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/dog-water-intake-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/is-this-a-dog-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/puppy-weight-predictor', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
