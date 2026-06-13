@@ -143,17 +143,19 @@ for (const p of pages) {
     /aria-label=['"]Breadcrumb['"]/.test(combined) ||
     /buildBreadcrumbSchema|['"]?@type['"]?\s*:\s*['"]BreadcrumbList['"]/.test(combined)
 
-  // Schema: any structured-data hook (incl. those in a delegated renderer).
-  // Hub/index pages carry ItemList / CollectionPage rather than Article schema
-  // (per CLAUDE.md §6 + the hub-spoke gate's hub definition), so those count as
-  // present — otherwise every authority hub is a false "missing schema".
-  const hasArticleSchema = /buildArticleSchema/.test(combined)
-  const hasMedSchema = /buildMedicalWebPageSchema/.test(combined)
-  const hasFaqSchema = /buildFAQSchema|FAQAccordion/.test(combined)
-  const hasProductSchema = /buildProductSchema/.test(combined)
-  const hasHowToSchema = /buildHowToSchema/.test(combined)
-  const hasListSchema = /['"]?@type['"]?\s*:\s*['"](?:ItemList|CollectionPage)['"]/.test(combined)
-  const hasAnySchema = hasArticleSchema || hasMedSchema || hasFaqSchema || hasProductSchema || hasHowToSchema || hasListSchema
+  // Schema: ANY structured data counts as present (incl. that in a delegated
+  // renderer). Enumerating a fixed type list under-credits the many legitimate
+  // JSON-LD types in use across the portfolio — Article, MedicalWebPage,
+  // FAQPage, Product, HowTo, ItemList/CollectionPage on hubs, DefinedTermSet on
+  // glossaries, WebPage/WebSite on data pages, WebApplication on tools, Dataset,
+  // etc. So a page "has schema" if it emits a <SchemaScript>, calls any
+  // build*Schema helper, or contains an inline JSON-LD "@type". Only pages with
+  // genuinely zero structured data are flagged (legal/utility stubs).
+  const hasAnySchema =
+    /\bSchemaScript\b/.test(combined) ||
+    /\bbuild[A-Z]\w*Schema\b/.test(combined) ||
+    /\bFAQAccordion\b/.test(combined) || // emits FAQPage schema internally
+    /['"]?@type['"]?\s*:\s*['"]/.test(combined)
 
   routes.push({
     file: p,
