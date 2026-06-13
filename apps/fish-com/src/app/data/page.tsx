@@ -41,6 +41,50 @@ const schema = combineSchemas(
       { name: 'Data Partnerships', url: PAGE_URL },
     ],
   }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DataCatalog',
+    name: 'Fish.com Editorial Datasets',
+    url: PAGE_URL,
+    description:
+      'Editorially-curated aquarium stocking-compatibility, water-parameter, and calculator-assumption datasets, assembled by the Fish.com editorial team from aquarium literature and cross-referenced with our water-chemistry guides.',
+    publisher: { '@type': 'Organization', name: 'Fish.com', url: SITE_URL },
+    dataset: [
+      {
+        '@type': 'Dataset',
+        name: 'Aquarium Stocking Compatibility Matrix',
+        description:
+          'Pairwise compatibility records across the species Fish.com covers, with notes on temperament, size mismatch, and water-parameter overlap.',
+        creator: { '@type': 'Organization', name: 'Fish.com Editorial' },
+        keywords: ['aquarium stocking', 'fish compatibility', 'tank mates', 'temperament'],
+        variableMeasured: ['pairwise compatibility', 'temperament', 'size mismatch', 'water-parameter overlap'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Water-Parameter Targets per Species',
+        description:
+          'Recommended temperature, pH, hardness (GH/KH), and salinity ranges for each species, cross-referenced with our cycling and water-chemistry guides.',
+        creator: { '@type': 'Organization', name: 'Fish.com Editorial' },
+        keywords: ['water parameters', 'aquarium pH', 'GH KH', 'salinity'],
+        variableMeasured: ['temperature', 'pH', 'hardness (GH/KH)', 'salinity'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Calculator Inputs and Assumptions',
+        description:
+          'The formula assumptions behind the tank-volume, stocking, heater-wattage, water-change, and CO2 calculators, including the published references they draw on.',
+        creator: { '@type': 'Organization', name: 'Fish.com Editorial' },
+        keywords: ['aquarium calculators', 'formula assumptions', 'heater wattage', 'CO2'],
+        variableMeasured: ['formula assumptions', 'published references'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+    ],
+  },
 )
 
 export default function DataPartnershipsPage() {

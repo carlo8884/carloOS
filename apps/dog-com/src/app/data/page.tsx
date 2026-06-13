@@ -41,6 +41,50 @@ const schema = combineSchemas(
       { name: 'Data Partnerships', url: PAGE_URL },
     ],
   }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DataCatalog',
+    name: 'Dog.com Editorial Datasets',
+    url: PAGE_URL,
+    description:
+      'Editorially-curated datasets on dog breeds, breed health, and owner-facing symptom triage, assembled by the Dog.com editorial team from veterinary references, breed registries, and consensus clinical guidelines.',
+    publisher: { '@type': 'Organization', name: 'Dog.com', url: SITE_URL },
+    dataset: [
+      {
+        '@type': 'Dataset',
+        name: 'Dog Breed Traits Dataset',
+        description:
+          'Structured records for each breed covering size, coat, temperament, exercise needs, and life expectancy, sourced from breed-club references and veterinary literature.',
+        creator: { '@type': 'Organization', name: 'Dog.com Editorial' },
+        keywords: ['dog breeds', 'breed traits', 'temperament', 'life expectancy'],
+        variableMeasured: ['size', 'coat', 'temperament', 'exercise needs', 'life expectancy'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Dog Breed Health Risks Dataset',
+        description:
+          'Common hereditary and breed-predisposed conditions per breed, with severity notes and references to underlying guidance (OFA, breed-club recommendations, peer-reviewed literature).',
+        creator: { '@type': 'Organization', name: 'Dog.com Editorial' },
+        keywords: ['breed health', 'hereditary conditions', 'canine genetics', 'OFA'],
+        variableMeasured: ['breed-predisposed conditions', 'severity', 'source references'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Dog Symptom Triage Taxonomy',
+        description:
+          "The controlled vocabulary powering Dog.com's symptom guides — owner-facing symptom names, severity tiers, and the conditions they map to.",
+        creator: { '@type': 'Organization', name: 'Dog.com Editorial' },
+        keywords: ['symptom triage', 'controlled vocabulary', 'veterinary taxonomy'],
+        variableMeasured: ['symptom names', 'severity tiers', 'condition mappings'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+    ],
+  },
 )
 
 export default function DataPartnershipsPage() {
