@@ -68,6 +68,16 @@ export default function Page() {
             <li>Narrow the field by the features you care about with the <a href="/tools/insurance-finder">pet insurance coverage finder</a>.</li>
           </ul>
 
+          <div className="my-6 rounded-lg border border-brand-primary/30 bg-brand-primary-pale p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Ready to Compare Plans?</div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 mt-0">
+              Once you know which costs vaccines fall into, comparing carriers on wellness add-ons, premiums, and limits is the practical next step. Our editorial comparison covers how the 11 major carriers structure their wellness options — no enrollment required to read it.
+            </p>
+            <a href="/reviews/best-pet-insurance" className="inline-block rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90 transition-opacity">
+              Compare Pet Insurance Plans &rarr;
+            </a>
+          </div>
+
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
