@@ -170,7 +170,26 @@ export default function DogCrateSizeCalculatorPage() {
             estimates the adult size to buy for.
           </p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
-          {/* Monetization lane: a /go crate buy-box CTA can be wired here. */}
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-crate-size"
+              rel="sponsored nofollow noopener noreferrer"
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white no-underline transition-colors hover:bg-brand-primary-dark"
+            >
+              Browse crates on Amazon
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <Link
+              href="/reviews/best-dog-crates"
+              className="inline-flex items-center rounded-lg border border-brand-border px-4 py-2.5 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-surface"
+            >
+              Read our crate reviews
+            </Link>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We may earn a commission if you buy through the Amazon link — at no extra cost to you, and we never rank by commission. A wire crate with a divider panel fits most of the sizes above.
+          </p>
         </div>
       </section>
 
