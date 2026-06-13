@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function HardKeeperPage() {
             { label: "Fat and Super-Fibers", href: "#fat" },
             { label: "Feeding Management", href: "#management" },
             { label: "Monitoring", href: "#monitoring" },
+            { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,7 +110,7 @@ export default function HardKeeperPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -142,6 +143,62 @@ export default function HardKeeperPage() {
           <h2 id="monitoring">Monitoring</h2>
           <p>Track condition objectively with body condition scoring and a weigh tape, recorded over time, rather than relying on the eye. Weight gain in horses is slow, so give a new regimen weeks before judging it, and keep coordinating with your veterinarian -- a hard keeper that still will not gain on a good plan needs further investigation rather than ever-larger grain meals.</p>
 
+          <h2 id="picks">Product Picks — Calorie Supports for Hard Keepers</h2>
+          <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="stabilized-rice-bran"
+            badge="Fat-Based Calorie Source"
+            name="Stabilized Rice Bran Supplement"
+            subtitle="High-fat, low-starch calorie addition for hard-keeper horses"
+            score={8.6}
+            winner
+            description={<>
+              <p>Stabilized rice bran is one of the most popular fat-based calorie additions for hard-keeper horses in the US. It supplies dense, slow-burning energy from fat rather than starch, making it a &ldquo;cool&rdquo; calorie source that supports condition gain without the excitability and gut-upset risks of large grain meals. Stabilized to prevent rancidity; introduced gradually alongside existing feed.</p>
+              <p>General nutrition support for: hard keepers needing safe extra calories without adding high starch. Not a replacement for forage or a complete diet; use as part of a plan built with your vet or nutritionist.</p>
+            </>}
+            specs={[
+              { label: 'Energy source', value: 'Fat (rice bran oil)', highlight: 'good' },
+              { label: 'Starch level', value: 'Low — safe calorie addition' },
+              { label: 'Best use case', value: 'Hard keepers needing condition without excitability' },
+            ]}
+            pros={['Dense, slow-burning calories', 'Low starch — gut-safe', 'Widely available', 'Palatable addition to existing feed']}
+            cons={['Not a complete feed — use alongside forage and balancer', 'Introduce gradually', 'Some horses find the fat off-putting initially']}
+            price="$25–45 per 25–30 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+supplement?s=nutrition-hard-keeper"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="stabilized-rice-bran"
+          />
+
+          <ReviewCard
+            id="high-fat-feed"
+            badge="High-Fat Performance Feed"
+            name="High-Fat Low-Starch Horse Feed"
+            subtitle="Complete concentrate for horses needing energy without high grain"
+            score={8.4}
+            description={<>
+              <p>High-fat, low-starch horse feeds are formulated to deliver concentrated energy through fat and highly digestible fiber rather than large amounts of cereal grain. They suit hard keepers and performance horses where adding starch-based calories would risk gut upset, ulcers, or excitability. Match the feeding rate to the horse and always maintain adequate forage alongside; build the full plan with a veterinarian or nutritionist.</p>
+              <p>General nutrition support for: horses that need more energy than forage alone provides, fed in small, frequent meals according to the manufacturer&apos;s directions.</p>
+            </>}
+            specs={[
+              { label: 'Profile', value: 'High fat, low NSC (non-structural carbohydrate)', highlight: 'good' },
+              { label: 'Feed rate', value: 'Per label; split into multiple small meals' },
+              { label: 'Best use case', value: 'Hard keepers and horses needing safe extra energy' },
+            ]}
+            pros={['Energy from fat and fiber, not starch', 'Reduces gut-upset risk vs. grain', 'Suited to horses sensitive to starch']}
+            cons={['More expensive per calorie than plain grain', 'Must still be fed in small meals', 'Pair with adequate forage']}
+            price="$35–70 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/high+fat+low+starch+horse+feed?s=nutrition-hard-keeper"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="high-fat-horse-feed"
+          />
+
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
@@ -149,7 +206,7 @@ export default function HardKeeperPage() {
           <ol className="text-sm text-brand-text-mid">
             <li>National Research Council. Nutrient Requirements of Horses, 6th ed., National Academies Press, 2007.</li>
             <li>Geor RJ, Harris PA, Coenen M (eds). Equine Applied and Clinical Nutrition, Elsevier, 2013.</li>
-            <li>American Association of Equine Practitioners. “Body Condition and Weight Management” owner resources. aaep.org.</li>
+            <li>American Association of Equine Practitioners. "Body Condition and Weight Management" owner resources. aaep.org.</li>
           </ol>
         </div>
       </ArticleLayout>

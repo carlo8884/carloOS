@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function EasyKeeperPage() {
             { label: "Slow Feeding", href: "#slow" },
             { label: "Balancing Nutrients", href: "#balancer" },
             { label: "Exercise and Monitoring", href: "#exercise" },
+            { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,7 +110,7 @@ export default function EasyKeeperPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -137,13 +138,69 @@ export default function EasyKeeperPage() {
           <h2 id="exercise">Exercise and Monitoring</h2>
           <p>When the horse is sound, exercise both burns calories and improves insulin sensitivity, making it a powerful ally in weight management. Combine the dietary plan with regular work suited to the horse&apos;s fitness. Track progress objectively with body condition scoring and a weigh tape rather than the eye, which adapts to a fat horse over time; score regularly with the body-condition tool. Crash dieting is dangerous in horses, so aim for steady, gradual loss under veterinary guidance.</p>
 
+          <h2 id="picks">Product Picks — Slow-Feed and Weight-Management Supports</h2>
+          <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="slow-feeder-hay-net"
+            badge="Slow-Feed Management"
+            name="Small-Hole Slow-Feeder Hay Net"
+            subtitle="Extends eating time to prevent long fasts on a restricted ration"
+            score={8.7}
+            winner
+            description={<>
+              <p>Small-hole slow-feeder hay nets are one of the most practically useful tools for managing easy keepers. By making the horse work slightly harder for each bite, they can extend a measured hay ration from one or two hours of eating to six or more, preventing the long fasts that cause ulcers and stress behaviors in a calorie-restricted horse. The horse stays occupied and trickle-feeding while total intake remains controlled. A straightforward, inexpensive general management aid.</p>
+              <p>General management tool for: easy keepers and any horse on a calorie-restricted forage ration that needs feeding time spread out to prevent gut fasts. Not a medical device or treatment.</p>
+            </>}
+            specs={[
+              { label: 'Hole size', value: '1.5–2 in (small hole) for controlled intake', highlight: 'good' },
+              { label: 'Purpose', value: 'Extends eating time; prevents long fasts' },
+              { label: 'Best use case', value: 'Easy keepers, calorie-restricted horses' },
+            ]}
+            pros={['Prevents ulcer-causing long fasts on restriction', 'Extends eating time naturally', 'Inexpensive and durable']}
+            cons={['Horse must be introduced gradually', 'Some horses figure out faster methods', 'Hole size selection matters']}
+            price="$20–40"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="slow-feeder-hay-net"
+          />
+
+          <ReviewCard
+            id="low-calorie-balancer"
+            badge="Nutrient Balance on Restriction"
+            name="Low-Calorie Ration Balancer"
+            subtitle="Fills vitamin and mineral gaps in a low-calorie easy-keeper diet"
+            score={8.6}
+            description={<>
+              <p>A low-calorie, low-sugar ration balancer supplies protein, vitamins, and minerals in a tiny daily serving -- exactly what an easy keeper on a restricted, soaked, or low-quality hay ration needs to stay nutritionally complete without adding calories. Look for a balancer labeled low-NSC (non-structural carbohydrate) or specifically formulated for easy keepers or metabolic horses. Feed at the label rate; choose appropriately for the forage type. Coordinate with your veterinarian, especially for insulin-dysregulated or PPID horses.</p>
+              <p>General nutrition support for: easy keepers and metabolic horses on forage-only or calorie-restricted diets needing balanced micronutrition in a low-calorie serving.</p>
+            </>}
+            specs={[
+              { label: 'Calories', value: 'Very low — tiny daily serving', highlight: 'good' },
+              { label: 'NSC', value: 'Low (sugar + starch controlled)', highlight: 'good' },
+              { label: 'Best use case', value: 'Easy keepers and metabolic horses on restricted forage diets' },
+            ]}
+            pros={['Fills nutrition gaps without calories', 'Low sugar and starch for metabolic horses', 'Small serving is economical']}
+            cons={['Use under veterinary guidance for metabolic horses', 'Not a calorie source for hard keepers', 'Match to forage type']}
+            price="$30–55 per 25–30 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="low-calorie-balancer"
+          />
+
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>Equine Endocrinology Group. EMS management recommendations, current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>Geor RJ. “Metabolic Predispositions to Laminitis in Horses and Ponies.” Journal of Equine Veterinary Science, 2008.</li>
+            <li>Geor RJ. "Metabolic Predispositions to Laminitis in Horses and Ponies." Journal of Equine Veterinary Science, 2008.</li>
             <li>National Research Council. Nutrient Requirements of Horses, 6th ed., National Academies Press, 2007.</li>
           </ol>
         </div>
