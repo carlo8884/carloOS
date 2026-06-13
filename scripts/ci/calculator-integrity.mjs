@@ -91,6 +91,21 @@ const CALCULATORS = [
     why: 'Same WSAVA/AAHA RER equation (dog + cat MER factors applied on top).',
   },
   {
+    id: 'petfood · food-transition-calculator',
+    file: 'apps/petfood-com/src/app/tools/food-transition-calculator/Calculator.tsx',
+    mustInclude: [{ re: /STEP_PCTS\s*=\s*\[0\.25,\s*0\.5,\s*0\.75,\s*1\.0\]/, label: 'four-step ramp 25→50→75→100% new food' }],
+    why: 'Standard gradual food-transition ramp: 25% → 50% → 75% → 100% new food across the window.',
+  },
+  {
+    id: 'dog · dog-crate-size-calculator',
+    file: 'apps/dog-com/src/app/tools/dog-crate-size-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /ADD_INCHES\s*=\s*4/, label: '+4 in headroom on each body measurement' },
+      { re: /c\.len\s*>=\s*minLength\s*&&\s*c\.height\s*>=\s*minHeight/, label: 'pick smallest crate meeting both minimums' },
+    ],
+    why: 'Crate must let the dog stand/turn/lie flat: add ~4 in to length+height, pick smallest standard crate clearing both.',
+  },
+  {
     id: 'petfood · food-cost-calculator',
     file: 'apps/petfood-com/src/components/visual/FoodCostCalculator.tsx',
     mustInclude: [
