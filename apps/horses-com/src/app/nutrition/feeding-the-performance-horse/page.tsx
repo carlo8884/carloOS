@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function PerformanceFeedingPage() {
             { label: "Protein and Electrolytes", href: "#protein" },
             { label: "Feeding Around Work", href: "#timing" },
             { label: "Avoiding Problems", href: "#problems" },
+            { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,7 +109,7 @@ export default function PerformanceFeedingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -132,6 +133,62 @@ export default function PerformanceFeedingPage() {
 
           <h2 id="problems">Avoiding Problems</h2>
           <p>High-grain diets fed to performance horses are linked to gastric ulcers (very common in competition horses), tying-up, hindgut acidosis, colic, and excitable, hard-to-handle behavior. The defenses are to keep forage central, prefer fat and fiber for added calories, limit starch per meal, feed consistently, and treat ulcers when present. A calm, well-fueled horse on a fiber-and-fat-based diet usually performs and recovers better than one fizzed up on grain.</p>
+
+          <h2 id="picks">Product Picks — General Nutrition Supports for Performance Horses</h2>
+          <p>A few widely-available general nutrition supports for performance horses -- fat-based calorie additions and a general conditioning supplement. These support the overall feeding plan described above; they are not treatments for lameness, disease, or diagnosed deficiencies. Build the full ration with your veterinarian or equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="performance-fat-supplement"
+            badge="Fat-Based Calorie Source"
+            name="Stabilized Rice Bran or High-Fat Supplement"
+            subtitle="Cool, dense calorie addition for hard-working horses"
+            score={8.6}
+            winner
+            description={<>
+              <p>Fat-based calorie supplements -- stabilized rice bran and comparable high-fat feeds -- add dense, slow-burning energy to a working horse&apos;s ration without the starch spike of additional grain. This &ldquo;cool&rdquo; energy supports sustained work and helps maintain condition through a hard season without the excitability and gut risks of high starch. Introduced gradually; used alongside adequate forage and a balanced diet. General nutrition support only -- not a therapeutic product.</p>
+              <p>Useful for: performance horses in sustained work needing more energy than forage alone provides, where adding starch is undesirable.</p>
+            </>}
+            specs={[
+              { label: 'Energy type', value: 'Fat (slow-burning, non-heating)', highlight: 'good' },
+              { label: 'Starch', value: 'Low' },
+              { label: 'Best use case', value: 'Sustained performance, endurance, condition maintenance' },
+            ]}
+            pros={['Dense energy without starch spike', 'Cool energy -- suits excitable horses', 'Supports condition through hard work']}
+            cons={['Introduce gradually to avoid loose droppings', 'Not a complete feed', 'High-fat supplements can go rancid -- choose stabilized form']}
+            price="$25–50 per 25–40 lb"
+            ctaText="Compare at Riding Warehouse →"
+            ctaHref="/go/ridingwarehouse/horse-fat-supplement-rice-bran?s=nutrition-performance-horse"
+            ctaAffiliateProgram="ridingwarehouse"
+            ctaAffiliateProduct="horse-fat-supplement"
+          />
+
+          <ReviewCard
+            id="performance-feed"
+            badge="Performance Complete Feed"
+            name="High-Performance Horse Feed"
+            subtitle="Formulated concentrate for horses with high energy demands"
+            score={8.4}
+            description={<>
+              <p>Performance-formulated horse feeds combine fat, fiber, and controlled starch with higher protein and targeted vitamins and minerals to support the demands of training and competition. They are designed to fill the energy and nutrient gap beyond what forage and a balancer can cover at high workloads. Feed at the label rate in multiple small meals; always pair with adequate forage and match the ration to the actual workload, not the label maximum. Build the full plan with your veterinarian or nutritionist.</p>
+              <p>General nutrition support for: horses in regular, demanding work -- show horses, eventers, endurance horses, and working horses under consistent training load.</p>
+            </>}
+            specs={[
+              { label: 'Profile', value: 'High energy, higher protein, controlled NSC', highlight: 'good' },
+              { label: 'Feed rule', value: 'Multiple small meals; match to workload' },
+              { label: 'Best use case', value: 'Regular demanding work; competition horses' },
+            ]}
+            pros={['Targeted nutrition for higher work demands', 'Consistent energy delivery', 'Formulated to reduce gut risk vs plain grain']}
+            cons={['Overfeeding a low-work horse causes fat and excitability', 'Must be split into small meals', 'Adjust promptly on rest days']}
+            price="$35–75 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/performance+horse+feed+high+fat?s=nutrition-performance-horse"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="performance-horse-feed"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

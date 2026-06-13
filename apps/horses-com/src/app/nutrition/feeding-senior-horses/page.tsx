@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function SeniorFeedingPage() {
             { label: "Protein and Condition", href: "#protein" },
             { label: "PPID and Metabolic Issues", href: "#ppid" },
             { label: "Practical Feeding", href: "#practical" },
+            { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,7 +110,7 @@ export default function SeniorFeedingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -137,12 +138,68 @@ export default function SeniorFeedingPage() {
             <li><strong>Monitor condition closely</strong> with body condition scoring, since a thick or PPID coat hides weight change.</li>
           </ul>
 
+          <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
+          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="senior-complete-feed"
+            badge="Senior Complete Feed"
+            name="Complete Senior Horse Feed"
+            subtitle="Hay-replacer-level complete feed for horses with dental decline"
+            score={8.7}
+            winner
+            description={<>
+              <p>Complete senior horse feeds are formulated to replace hay as well as concentrate -- intended to supply all forage and nutrient requirements in a soft, easily soaked form that a horse with poor teeth can eat. Fed at the full label rate, they provide fiber, protein, vitamins, and minerals without requiring the horse to chew long-stem hay. They are widely used as the primary ration for seniors that can no longer manage hay. Note: some senior feeds are higher in sugar and starch than ideal for PPID or insulin-dysregulated horses -- read the guaranteed analysis and confirm with your veterinarian for those horses.</p>
+              <p>General nutrition support for: senior horses with dental decline who can no longer effectively chew long-stem hay and need a chewable, soakable complete ration.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Complete feed (can replace hay)', highlight: 'good' },
+              { label: 'Form', value: 'Pellet — soaks into mash for poor-teeth horses' },
+              { label: 'Best use case', value: 'Seniors unable to chew hay; hard keepers with dental decline' },
+            ]}
+            pros={['Replaces hay for horses with severe dental wear', 'Soaks easily into palatable mash', 'Complete nutrition at full feed rate']}
+            cons={['Some brands higher in NSC — check for PPID horses', 'Expensive at full hay-replacement rate', 'Must be fed at label rate to deliver promised nutrition']}
+            price="$30–60 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="senior-complete-feed"
+          />
+
+          <ReviewCard
+            id="senior-topline-supplement"
+            badge="Topline and Condition"
+            name="Amino Acid / Topline Support Supplement"
+            subtitle="Quality protein support for aging horses losing topline on forage"
+            score={8.4}
+            description={<>
+              <p>Topline and amino-acid supplements for horses supply quality protein building blocks -- typically lysine, methionine, and threonine -- to support muscle maintenance and topline condition in horses that may be getting adequate calories but still losing topline due to age-related protein efficiency decline. They work alongside adequate forage and calories, not as a substitute for them. General nutrition support only -- loss of topline in a senior horse with PPID or other diagnosed disease needs veterinary attention, not just a supplement.</p>
+              <p>General nutrition support for: older horses losing topline despite adequate calorie intake, where protein quality in the forage is suspected to be a limiting factor.</p>
+            </>}
+            specs={[
+              { label: 'Focus', value: 'Lysine, methionine, and key amino acids', highlight: 'good' },
+              { label: 'Calories', value: 'Low — supplement serving' },
+              { label: 'Best use case', value: 'Topline support on forage-based senior diets' },
+            ]}
+            pros={['Amino-acid-targeted for topline', 'Low calorie load', 'Easy to add to existing feed']}
+            cons={['Not a substitute for calories if horse is genuinely underweight', 'Does not replace PPID diagnosis and treatment', 'Match to overall ration']}
+            price="$30–55 per 5–10 lb"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/senior-topline-amino-acid-supplement?s=nutrition-senior-horses"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="senior-topline-supplement"
+          />
+
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
-            <li>Ralston SL. “Feeding the Geriatric Horse.” Veterinary Clinics of North America: Equine Practice and related reviews.</li>
+            <li>Ralston SL. "Feeding the Geriatric Horse." Veterinary Clinics of North America: Equine Practice and related reviews.</li>
             <li>Equine Endocrinology Group. PPID recommendations, current edition. sites.tufts.edu/equineendogroup.</li>
             <li>National Research Council. Nutrient Requirements of Horses, 6th ed., National Academies Press, 2007.</li>
           </ol>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function GrainConcentratesPage() {
             { label: "Why Big Grain Meals Are Risky", href: "#risk" },
             { label: "Safe Feeding Rules", href: "#rules" },
             { label: "Reading the Feed Tag", href: "#tag" },
+            { label: "Feed Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,7 +109,7 @@ export default function GrainConcentratesPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -134,13 +135,69 @@ export default function GrainConcentratesPage() {
           <h2 id="tag">Reading the Feed Tag</h2>
           <p>Commercial feeds carry a guaranteed analysis and feeding directions. Look at the protein, fat, and fiber percentages, and -- important for metabolic and laminitis-prone horses -- the non-structural carbohydrate (NSC, the sugar plus starch). Crucially, the bag&apos;s feeding rate is calibrated to deliver the formulated nutrients only if you feed the recommended amount; feeding far less than directed shortchanges the horse on vitamins and minerals, which is exactly where a ration balancer fits instead. See the ration balancers guide.</p>
 
+          <h2 id="picks">Feed Picks — Safe Concentrates for Working Horses</h2>
+          <p>When concentrates are genuinely needed, formulated complete feeds offer more consistent nutrition and safer starch levels than plain cereal grain. These are general nutrition options for horses with real energy gaps -- working horses, hard keepers, and youngstock. Always feed in small, frequent meals, build forage first, and work with your veterinarian or nutritionist to confirm the ration is appropriate. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="complete-horse-feed"
+            badge="Working Horse / All-Round"
+            name="Formulated Complete Horse Feed (Pellet or Textured)"
+            subtitle="Balanced concentrate for horses needing more than forage provides"
+            score={8.5}
+            winner
+            description={<>
+              <p>Formulated complete feeds combine controlled amounts of grain with protein, vitamins, and minerals in a consistent ratio, offering more reliable nutrition per serving than plain oats or corn. The key is feeding at the label rate -- too little shortchanges vitamins and minerals, and the whole ration must be built around adequate forage. Split daily amounts into multiple small meals to keep starch per meal low. Match the feed to the horse&apos;s actual workload rather than over-feeding energy.</p>
+              <p>General nutrition support for: working horses, hard keepers, and broodmares that have a real energy gap forage alone cannot fill. Confirm the ration with your veterinarian or nutritionist.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Formulated pellet or textured feed', highlight: 'good' },
+              { label: 'Key rule', value: 'Feed at label rate; split into small meals' },
+              { label: 'Best use case', value: 'Performance, hard keeper, broodmare' },
+            ]}
+            pros={['Consistent nutrient delivery per serving', 'More balanced than plain grain', 'Widely available']}
+            cons={['Shortchanges nutrients if underfed', 'Must be split into small meals', 'Overkill for idle horses — use a balancer instead']}
+            price="$20–50 per 50 lb"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/complete-horse-feed-pellet?s=nutrition-grain-and-concentrates"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="complete-horse-feed"
+          />
+
+          <ReviewCard
+            id="low-starch-feed"
+            badge="Low-Starch Option"
+            name="Low-NSC / Senior Feed"
+            subtitle="Reduced-starch concentrate for metabolic, senior, or starch-sensitive horses"
+            score={8.3}
+            description={<>
+              <p>Low-NSC feeds are designed to deliver energy through fat and digestible fiber rather than starch and sugar -- a safer profile for older horses with dental decline, horses prone to tying-up, and metabolic horses that need more than a pure balancer but cannot tolerate high grain. Still fed at the label rate in small meals alongside forage. Build the full plan with your veterinarian or nutritionist, especially for metabolic or insulin-dysregulated horses.</p>
+              <p>Most relevant for seniors, horses with metabolic considerations, and horses sensitive to starch who still need more caloric support than a balancer alone.</p>
+            </>}
+            specs={[
+              { label: 'NSC', value: 'Low (sugar + starch controlled)', highlight: 'good' },
+              { label: 'Energy source', value: 'Fat and digestible fiber' },
+              { label: 'Best use case', value: 'Seniors, metabolic horses, starch-sensitive horses' },
+            ]}
+            pros={['Lower starch and sugar than standard feeds', 'Supports condition in sensitive horses', 'Often softens well for seniors']}
+            cons={['Use under veterinary or nutritionist guidance for metabolic horses', 'Not a replacement for forage', 'Higher cost per bag']}
+            price="$30–60 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="low-starch-horse-feed"
+          />
+
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>National Research Council. Nutrient Requirements of Horses, 6th ed., National Academies Press, 2007.</li>
-            <li>Potter GD, et al. “Digestion of Starch in the Small or Large Intestine of the Equine.” Journal of Animal Science and related work.</li>
+            <li>Potter GD, et al. "Digestion of Starch in the Small or Large Intestine of the Equine." Journal of Animal Science and related work.</li>
             <li>Geor RJ, Harris PA, Coenen M (eds). Equine Applied and Clinical Nutrition, Elsevier, 2013.</li>
           </ol>
         </div>

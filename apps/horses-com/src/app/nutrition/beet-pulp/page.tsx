@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function BeetPulpPage() {
             { label: "Soaking Beet Pulp", href: "#soaking" },
             { label: "Who It Suits", href: "#who" },
             { label: "Myths and Cautions", href: "#myths" },
+            { label: "Beet Pulp Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,7 +109,7 @@ export default function BeetPulpPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-06-13"
             reviewedBy="Editorial team"
           />
 
@@ -132,6 +133,62 @@ export default function BeetPulpPage() {
 
           <h2 id="myths">Myths and Cautions</h2>
           <p>Two myths persist. The first is that dry beet pulp commonly causes stomach rupture from swelling -- there is little real-world evidence of this, though soaking is still sensible practice and prevents choke from bolting. The second is that beet pulp is high in sugar -- the opposite is true once the molasses-free form is used, since the sugar has been extracted. Real cautions are to soak it to prevent choke, to introduce it gradually like any feed, to choose molasses-free for low-sugar diets, and to balance the overall ration (beet pulp is low in some minerals, so it complements rather than replaces a balanced diet).</p>
+
+          <h2 id="picks">Beet Pulp Picks</h2>
+          <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="beet-pulp-shreds-mf"
+            badge="Molasses-Free Shreds"
+            name="Molasses-Free Beet Pulp Shreds"
+            subtitle="Low-sugar super-fiber for hard keepers, seniors, and metabolic horses"
+            score={8.8}
+            winner
+            description={<>
+              <p>Molasses-free beet pulp shreds are the go-to form for horses on low-sugar diets -- the molasses coating is omitted so the natural low-sugar profile of the fiber is preserved, making it suitable for many easy keepers and metabolic horses as a calorie source. Shreds soak up quickly (about 30 minutes) into a palatable mash and are easy for seniors with worn teeth to eat. A very widely used general fiber supplement for adding safe condition-building calories without starch.</p>
+              <p>General nutrition support for: hard keepers needing safe extra calories, seniors that cannot chew hay, and metabolic horses where molasses-free is required. Not a complete feed; supplement a balanced ration.</p>
+            </>}
+            specs={[
+              { label: 'Form', value: 'Dried shreds (soak before feeding)', highlight: 'good' },
+              { label: 'Molasses', value: 'None — low sugar', highlight: 'good' },
+              { label: 'Best use case', value: 'Hard keepers, seniors, metabolic / low-sugar diets' },
+            ]}
+            pros={['Low sugar — suits metabolic horses', 'Soaks quickly into palatable mash', 'Safe calorie addition without starch', 'Good hydration vehicle']}
+            cons={['Must be soaked before feeding', 'Not a complete feed', 'Some horses initially reluctant']}
+            price="$18–35 per 40–50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="beet-pulp-shreds-mf"
+          />
+
+          <ReviewCard
+            id="beet-pulp-pellets"
+            badge="Pellet Format"
+            name="Beet Pulp Pellets"
+            subtitle="Convenient pellet form of beet pulp for horses on a super-fiber program"
+            score={8.4}
+            description={<>
+              <p>Beet pulp pellets deliver the same high-digestibility super-fiber as shreds in a denser, easier-to-store pellet form. They take longer to soak than shreds (typically 45 minutes to 1 hour to fully expand) but are convenient for stable management and travel. Available with or without molasses; choose molasses-free for horses on low-sugar protocols. Use as a fiber and calorie supplement alongside forage and a complete mineral source.</p>
+              <p>General nutrition support for: the same horses as shreds, particularly where storage convenience and consistent pellet-form serving matter.</p>
+            </>}
+            specs={[
+              { label: 'Form', value: 'Pellets (soak 45–60 min before feeding)' },
+              { label: 'Availability', value: 'With or without molasses' },
+              { label: 'Best use case', value: 'Hard keepers and seniors where pellet form is preferred' },
+            ]}
+            pros={['Convenient to store and measure', 'Same fiber benefits as shreds', 'Suits horses that prefer pellet texture']}
+            cons={['Longer soaking time than shreds', 'Must still be fully soaked', 'Check for molasses if low-sugar diet needed']}
+            price="$18–32 per 40–50 lb"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/beet-pulp-pellets?s=nutrition-beet-pulp"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="beet-pulp-pellets"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
