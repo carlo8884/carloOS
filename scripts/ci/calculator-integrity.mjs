@@ -91,6 +91,15 @@ const CALCULATORS = [
     why: 'Same WSAVA/AAHA RER equation (dog + cat MER factors applied on top).',
   },
   {
+    id: 'dog · dog-water-intake-calculator',
+    file: 'apps/dog-com/src/app/tools/dog-water-intake-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /OZ_LOW_PER_LB\s*=\s*0\.5/, label: 'low bound 0.5 oz water per lb/day' },
+      { re: /OZ_HIGH_PER_LB\s*=\s*1\.0/, label: 'high bound 1.0 oz water per lb/day' },
+    ],
+    why: 'Standard husbandry rule: dogs need ~0.5–1 oz of water per lb of body weight per day.',
+  },
+  {
     id: 'petfood · food-transition-calculator',
     file: 'apps/petfood-com/src/app/tools/food-transition-calculator/Calculator.tsx',
     mustInclude: [{ re: /STEP_PCTS\s*=\s*\[0\.25,\s*0\.5,\s*0\.75,\s*1\.0\]/, label: 'four-step ramp 25→50→75→100% new food' }],

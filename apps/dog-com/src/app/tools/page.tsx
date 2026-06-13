@@ -66,6 +66,12 @@ const TOOLS = [
     desc: 'What size crate does my dog need? Enter your dog\'s length and standing height to get the minimum internal crate dimensions and the recommended standard crate size (18–48"), plus puppy divider guidance.',
     tag: 'Gear',
   },
+  {
+    href: '/tools/dog-water-intake-calculator',
+    title: 'Dog Water Intake Calculator',
+    desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — and the drinking changes (up or down) that are worth a vet call.',
+    tag: 'Health',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({

@@ -217,6 +217,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/tools/dog-calorie-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-crate-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/dog-water-intake-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/is-this-a-dog-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/puppy-weight-predictor', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
