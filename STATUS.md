@@ -3,7 +3,13 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-11 (COO autonomous build sprint — PRs #688–#699, zero-click-search strategy)
+**Last updated:** 2026-06-13 (COO — monetization-depth wave + audit hardening + portfolio quality deep-verify)
+
+> **COO monetization-depth wave + launch-quality deep-verify (2026-06-13 — PRs #728–#735 merged):**
+> **Monetization-depth wave COMPLETE (4/4, owner-directed "Both"):** PetFood #728, Dog #729, Horses #730, Vets #731. Vendor-liveness discipline held — only Amazon earns now; Chewy resolves (earns on account approval); SmartPak/RidingWarehouse/insurance carriers pending → NOT wired. Caught + fixed the Horses agent's non-live SmartPak/RidingWarehouse slip before merge (swapped to live amazon-brand). Vets is internal lead-gen funnel to `/reviews/best-pet-insurance` (no direct vendor, no PLACEHOLDER). Carlo action items: set `AFF_AMAZON_BRAND_TAG`, approve Chewy → `AFF_CHEWY_BRAND_TAG`, un-pause Supabase, DNS flip — see `ops/handoffs/2026-06-13-coo-to-carlo-depth-wave-complete.md`.
+> **CI gate precision hardened (#732, #734, #735):** affiliate-link-integrity no longer false-flags compliant clinical pages (vet-referral CTAs) or genuinely-disclosed pages; polish-audit no longer false-flags redirect stubs, delegated-render shells (shared renderers like breed×insurance), schema-based breadcrumbs, or non-Article schema types (DefinedTermSet/WebPage/ItemList/etc.). The audits now tell the truth.
+> **Portfolio quality DEEP-VERIFIED (all 10 sites):** thin pages **0 across the entire portfolio**; breadcrumb + schema coverage complete on every real content/hub page; enforcing orphan-check + hub-spoke + link-check + trust-guard + metadata-policy all green. Remaining audit residue is exclusively legitimately-exempt pages (noindex `/admin`+`/dashboard`, `/legal/*`, Monetization `(funnels)`). The §8a COO-lane launch-quality bar is genuinely met on cohort-5 — verified, not assumed.
+> **Lane note:** COO recommends handing further monetization back to Monetization Bot (depth wave done) and returning to pure polish/maintain. The remaining launch gates are Visual (photography) + Carlo (affiliate env vars, Supabase, DNS). Dog.com stays go-ready.
 
 > **COO zero-click / AI-citation build sprint (2026-06-11 — PRs #694–#699 merged):**
 > Strategic context: research confirmed the zero-click shift is real (Ahrefs Feb-2026: AIO knocks #1 CTR 7.3%→1.6%; ~58–60% zero-click). Response = win the AI citation AND keep the high-intent interaction on-property.
