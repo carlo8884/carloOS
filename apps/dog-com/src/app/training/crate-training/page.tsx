@@ -46,7 +46,7 @@ export default function CrateTrainingPage() {
         <p>The crate should never be used as punishment. Sending a dog to their crate in anger changes the association from safe space to negative consequence. Instead, the crate should always be associated with good things — meals fed in the crate, high-value treats, rest after exercise.</p>
 
         <h2 id="size">Correct Crate Size</h2>
-        <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows. See our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
+        <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows. To turn your dog's measurements into an exact size, use the <a href="/tools/dog-crate-size-calculator">dog crate size calculator →</a>, then see our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

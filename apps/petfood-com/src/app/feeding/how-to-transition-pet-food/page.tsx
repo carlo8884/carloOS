@@ -120,6 +120,7 @@ export default function HowToTransitionPetFoodPage() {
           <li>Day 10 onward: 100 percent new food.</li>
           <li>Watch stool quality and appetite at each step; if signs of upset appear, hold at the current ratio until they resolve.</li>
         </ol>
+        <p>To get the exact cups or grams of old and new food for each step over a 7, 10, or 14-day window, use the <a href="/tools/food-transition-calculator">food transition calculator</a>.</p>
         <h2 id="slower">Slower Transitions</h2>
         <p>Animals with sensitive stomachs, a history of GI disease, or those switching to a markedly different diet (for example, kibble to raw or fresh, or to a high-fat performance food) benefit from a slower transition over two to three weeks. Cats, who can be more diet-conservative than dogs, also often do better with a slower change. The schedule is a default, not a rule — extend it as needed.</p>
         <h2 id="picky">Picky Eaters</h2>
