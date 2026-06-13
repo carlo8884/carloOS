@@ -131,11 +131,17 @@ for (const p of pages) {
   const h2 = (combined.match(/<h2/g) || []).length
   const h3 = (combined.match(/<h3/g) || []).length
 
-  // Breadcrumb: shared component OR inline aria-label nav OR breadcrumbs= prop
+  // Breadcrumb signal: visible component, inline aria-label nav, breadcrumbs=
+  // prop, OR a BreadcrumbList JSON-LD via buildBreadcrumbSchema. The portfolio
+  // convention is schema-based breadcrumbs (buildBreadcrumbSchema on the page +
+  // visible trail via shared layout/renderers) rather than an inline
+  // <Breadcrumb> in every page.tsx — so a page emitting BreadcrumbList has a
+  // breadcrumb signal and must not be flagged as missing.
   const hasBreadcrumb =
     /breadcrumbs=/.test(combined) ||
     /<Breadcrumb[\s/>]/.test(combined) || // tag may be followed by space, newline, / or >
-    /aria-label=['"]Breadcrumb['"]/.test(combined)
+    /aria-label=['"]Breadcrumb['"]/.test(combined) ||
+    /buildBreadcrumbSchema|['"]?@type['"]?\s*:\s*['"]BreadcrumbList['"]/.test(combined)
 
   // Schema: any structured-data hook (incl. those in a delegated renderer).
   // Hub/index pages carry ItemList / CollectionPage rather than Article schema
