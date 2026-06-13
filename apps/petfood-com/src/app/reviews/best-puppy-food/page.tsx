@@ -188,9 +188,41 @@ export default function BestPuppyFoodPage() {
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
 
-        {/* MONETIZATION: buy-box slot — top-of-page puppy-food picks CTA. Non-clinical growth
-            diets are buy-box-eligible under QC §1.5.b. Monetization Bot owns the BuyBox
-            component, /go affiliate routes, and disclosure copy. Do not invent routes here. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop puppy food
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Find puppy food at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            The picks above are described by the analysis profile they must meet. Before buying, confirm
+            the AAFCO growth statement and — for any puppy expected to reach 70 lb or more as an adult —
+            verify the statement includes the growth of large-size dogs.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/puppy%20food%20complete%20balanced%20growth?s=reviews-best-puppy-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search puppy food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/puppy%20food%20complete%20balanced%20growth?s=reviews-best-puppy-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="stakes">Why puppy food is higher-stakes than any other category</h2>
         <p>
@@ -332,9 +364,41 @@ export default function BestPuppyFoodPage() {
           </li>
         </ul>
 
-        {/* MONETIZATION: buy-box slot — per-pick retailer CTAs for the five picks above.
-            Non-clinical growth diets are buy-box-eligible under QC §1.5.b. Monetization Bot to
-            wire BuyBox + /go routes + disclosure. Do not invent routes here. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop the picks
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Search the picks at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            All five picks are non-clinical growth or all-life-stages diets (QC §1.5.b eligible). For
+            large-breed puppies, confirm the AAFCO statement includes the growth of large-size dogs before
+            purchasing. Never buy a therapeutic or Rx diet without veterinary guidance.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/puppy%20food%20aafco%20growth%20large%20small%20breed?s=reviews-best-puppy-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search puppy food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/puppy%20food%20aafco%20growth%20complete%20balanced?s=reviews-best-puppy-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="table">Comparison table — the criteria at a glance</h2>
         <div style={{ overflowX: 'auto', margin: '20px 0' }}>

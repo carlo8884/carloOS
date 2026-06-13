@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  AffiliateDisclosure,
   ArticleSourcesList,
   ArticleByline,
   StockImage
@@ -167,6 +169,45 @@ export default function RawVsCookedDietsPage() {
         <p>Home-prepared raw diets are frequently nutritionally incomplete — analyses have found widespread deficiencies and imbalances, particularly in calcium-to-phosphorus ratio and several micronutrients. An all-meat raw diet without proper calcium balancing is a classic cause of skeletal disease. A complete cooked commercial diet (or a properly formulated raw diet validated against AAFCO profiles) avoids this. See <a href="/compare/home-cooked-vs-commercial">Home-Cooked vs Commercial Diets</a> and <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="harmreduction">Harm Reduction</h2>
         <p>For owners who choose raw despite the consensus, harm reduction means: select a commercial raw diet formulated to meet AAFCO profiles (ideally HPP-treated) rather than an unbalanced home recipe, or work with a board-certified veterinary nutritionist on a balanced formulation; handle the food with strict hygiene; and avoid raw feeding in households with immunocompromised members, young children, or pregnant people. These steps mitigate but do not eliminate the documented risks. See the <a href="/guides/raw-pet-food-evaluation">Raw Pet Food Evaluation</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The lower-risk default
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop complete cooked commercial diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most households, a complete-and-balanced cooked commercial diet avoids the
+            pathogen-safety and nutritional-imbalance risks this page covers. Compare options with our
+            independent <Link href="/brands">brand evaluations</Link>, then search below and confirm
+            the AAFCO complete-and-balanced statement for the life stage. If you choose a commercial
+            raw diet, confirm it carries a validated kill step and an AAFCO complete-and-balanced
+            statement before buying.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20balanced%20cooked%20dog%20cat%20food?s=compare-raw-vs-cooked-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete cooked diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20cooked%20pet%20food?s=compare-raw-vs-cooked-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="faq">Common Questions</h2>
         {FAQ.map((f) => (

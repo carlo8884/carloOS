@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  AffiliateDisclosure,
   ArticleSourcesList,
   ArticleByline,
   StockImage
@@ -211,6 +213,45 @@ export default function GrainFreeVsGrainInclusivePage() {
         <p>Grain-free is genuinely appropriate in the uncommon case of a confirmed grain allergy diagnosed by elimination trial. Outside that specific situation, there is no general health advantage to grain-free, and the DCM association gives reason for caution about legume-heavy grain-free formulations in particular. A grain-inclusive diet from a reputable manufacturer is a sound default for most animals.</p>
         <h2 id="bottomline">The Bottom Line</h2>
         <p>Grain-free is a marketing position, not a quality tier. It does not reduce allergy risk for most animals, does not necessarily lower carbohydrate, and — in legume-heavy forms — has been associated with a heart-disease signal still under investigation. Choose a diet on its overall formulation, manufacturer transparency, and AAFCO substantiation rather than on the presence or absence of grain. See <a href="/myths">Pet Food Myths</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            What usually matters more than grain status
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop grain-inclusive complete diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most animals, a complete-and-balanced grain-inclusive diet from a reputable manufacturer
+            is a sound default. Compare options with our independent{' '}
+            <Link href="/brands">brand evaluations</Link>, then search the category below and confirm
+            the AAFCO complete-and-balanced statement for the life stage on the specific product.
+            A confirmed grain allergy diagnosed by elimination trial is the narrow case where
+            grain-free makes clinical sense — for any other reason, grain status is not the decision.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/grain%20inclusive%20complete%20balanced%20dog%20cat%20food?s=compare-grain-free-vs-grain-inclusive"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search grain-inclusive diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/grain%20inclusive%20complete%20balanced%20pet%20food?s=compare-grain-free-vs-grain-inclusive"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="faq">Common Questions</h2>
         {FAQ.map((f) => (

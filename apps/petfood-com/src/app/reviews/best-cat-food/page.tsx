@@ -189,10 +189,42 @@ export default function BestCatFoodPage() {
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
 
-        {/* MONETIZATION: buy-box slot — top-of-page cat-food picks CTA. Per QC §1.5.b
-            this is a non-clinical commercial category (complete-and-balanced maintenance
-            diets), so a buy-box is permissible here. Monetization Bot owns the BuyBox
-            component, /go affiliate routes, and disclosure copy. Do not invent routes. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop cat food
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Find cat food at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            The picks above are described by the analysis profile they must meet — animal-protein
+            content, supplemented taurine, and a valid AAFCO cat nutritional-adequacy statement.
+            Search the category below and confirm the AAFCO complete-and-balanced cat statement and
+            life-stage match on the specific product before buying.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/cat%20food%20complete%20balanced%20taurine?s=reviews-best-cat-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search cat food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/cat%20food%20complete%20balanced%20taurine?s=reviews-best-cat-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="why-cats">Why cat food has to be scored differently</h2>
         <p>
@@ -380,9 +412,43 @@ export default function BestCatFoodPage() {
           </li>
         </ul>
 
-        {/* MONETIZATION: buy-box slot — per-pick retailer CTAs for the five picks above.
-            Non-clinical maintenance/growth diets are buy-box-eligible under QC §1.5.b.
-            Monetization Bot to wire BuyBox + /go routes + disclosure. Do not invent routes here. */}
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shop the picks
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Search the picks at a major retailer
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            All five picks are non-clinical, complete-and-balanced maintenance or growth cat diets (QC
+            §1.5.b eligible). Confirm the AAFCO complete-and-balanced cat statement, confirm the product
+            is not a therapeutic or Rx diet, and check the life-stage match on the specific label before
+            buying. A cat with a diagnosed condition — urinary disease, kidney disease, diabetes — needs
+            a veterinarian-directed diet, not a self-selected food.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/cat%20food%20complete%20balanced%20aafco%20maintenance?s=reviews-best-cat-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search cat food on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/cat%20food%20complete%20balanced%20aafco?s=reviews-best-cat-food-picks"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <h2 id="table">Comparison table — the criteria at a glance</h2>
         <p>
