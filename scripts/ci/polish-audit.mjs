@@ -50,46 +50,110 @@ function walk(dir, ext, out = []) {
 
 const pages = walk(APP_DIR, 'page.tsx')
 
+// A redirect stub renders only a redirect() and declares no metadata — it is a
+// canonicalization artifact, not an indexable content page. The thin-page check
+// must skip these (orphan-check.mjs applies the same exclusion); otherwise every
+// canonical-redirect stub is a permanent false "thin page".
+function isRedirectStub(src) {
+  return (
+    /from\s+['"]next\/navigation['"]/.test(src) &&
+    /\bredirect\s*\(/.test(src) &&
+    !/buildMetadata\s*\(/.test(src)
+  )
+}
+
+// Resolve a relative import specifier from a page file to an on-disk file path.
+function resolveLocalImport(fromFile, spec) {
+  if (!spec.startsWith('.')) return null // only local relative imports
+  const base = path.resolve(path.dirname(fromFile), spec)
+  for (const cand of [`${base}.tsx`, `${base}.ts`, path.join(base, 'index.tsx'), path.join(base, 'index.ts')]) {
+    if (fs.existsSync(cand)) return cand
+  }
+  return null
+}
+
+// Many pages are thin SHELLS that delegate all content to a shared local
+// renderer (e.g. breeds/<breed>/insurance/page.tsx → <BreedInsuranceContent/>).
+// Counting only the page file massively undercounts these — the words, h2s and
+// schema live in the imported component. This folds the rendered local
+// component's content into the page's counts (one level deep, app-local only).
+function delegatedRenderSource(pageFile, src) {
+  // Map imported local symbol → resolved file (from `import { A, B } from './x'`
+  // and `import A from './x'`).
+  const importMap = new Map()
+  const importRe = /import\s+(?:(\w+)\s*,?\s*)?(?:\{([^}]*)\})?\s*from\s*['"]([^'"]+)['"]/g
+  let im
+  while ((im = importRe.exec(src)) !== null) {
+    const resolved = resolveLocalImport(pageFile, im[3])
+    if (!resolved) continue
+    if (im[1]) importMap.set(im[1], resolved)
+    if (im[2]) for (const name of im[2].split(',').map(s => s.trim().split(/\s+as\s+/).pop().trim()).filter(Boolean)) {
+      importMap.set(name, resolved)
+    }
+  }
+  if (importMap.size === 0) return ''
+  // Find rendered local components: <Name ...> where Name is a delegated import.
+  const seen = new Set()
+  let extra = ''
+  for (const m of src.matchAll(/<([A-Z]\w+)[\s/>]/g)) {
+    const name = m[1]
+    const file = importMap.get(name)
+    if (!file || seen.has(file)) continue
+    seen.add(file)
+    try { extra += '\n' + fs.readFileSync(file, 'utf8') } catch {}
+  }
+  return extra
+}
+
 const routes = []
 for (const p of pages) {
   const rel = p.slice(APP_DIR.length).replace(/\/page\.tsx$/, '') || '/'
   const route = rel.replace(/\/\([^)]+\)(?=\/|$)/g, '') || '/'
   const isDynamic = /\[/.test(route)
   const src = fs.readFileSync(p, 'utf8')
+  const redirectStub = isRedirectStub(src)
 
   const titleMatch = src.match(/title:\s*['"`]([^'"`]+)['"`]/) ||
                      src.match(/title:\s*`([^`]+)`/)
   const title = titleMatch ? titleMatch[1] : null
 
+  // Fold in any delegated render component so shell pages aren't undercounted.
+  const combined = src + delegatedRenderSource(p, src)
+
   // Strip noise for word count
-  let body = src
+  let body = combined
     .replace(/import[^\n]+\n/g, '')
     .replace(/className=['"`][^'"`]+['"`]/g, '')
     .replace(/style=\{[^}]+\}/g, '')
     .replace(/[#a-zA-Z]+-\d+/g, '')
   const words = body.split(/\s+/).filter(w => /[a-zA-Z]/.test(w) && w.length > 1).length
 
-  const h2 = (src.match(/<h2/g) || []).length
-  const h3 = (src.match(/<h3/g) || []).length
+  const h2 = (combined.match(/<h2/g) || []).length
+  const h3 = (combined.match(/<h3/g) || []).length
 
   // Breadcrumb: shared component OR inline aria-label nav OR breadcrumbs= prop
   const hasBreadcrumb =
-    /breadcrumbs=/.test(src) ||
-    /<Breadcrumb /.test(src) ||
-    /aria-label=['"]Breadcrumb['"]/.test(src)
+    /breadcrumbs=/.test(combined) ||
+    /<Breadcrumb[\s/>]/.test(combined) || // tag may be followed by space, newline, / or >
+    /aria-label=['"]Breadcrumb['"]/.test(combined)
 
-  // Schema: any structured-data hook
-  const hasArticleSchema = /buildArticleSchema/.test(src)
-  const hasMedSchema = /buildMedicalWebPageSchema/.test(src)
-  const hasFaqSchema = /buildFAQSchema|FAQAccordion/.test(src)
-  const hasProductSchema = /buildProductSchema/.test(src)
-  const hasHowToSchema = /buildHowToSchema/.test(src)
-  const hasAnySchema = hasArticleSchema || hasMedSchema || hasFaqSchema || hasProductSchema || hasHowToSchema
+  // Schema: any structured-data hook (incl. those in a delegated renderer).
+  // Hub/index pages carry ItemList / CollectionPage rather than Article schema
+  // (per CLAUDE.md §6 + the hub-spoke gate's hub definition), so those count as
+  // present — otherwise every authority hub is a false "missing schema".
+  const hasArticleSchema = /buildArticleSchema/.test(combined)
+  const hasMedSchema = /buildMedicalWebPageSchema/.test(combined)
+  const hasFaqSchema = /buildFAQSchema|FAQAccordion/.test(combined)
+  const hasProductSchema = /buildProductSchema/.test(combined)
+  const hasHowToSchema = /buildHowToSchema/.test(combined)
+  const hasListSchema = /['"]?@type['"]?\s*:\s*['"](?:ItemList|CollectionPage)['"]/.test(combined)
+  const hasAnySchema = hasArticleSchema || hasMedSchema || hasFaqSchema || hasProductSchema || hasHowToSchema || hasListSchema
 
   routes.push({
     file: p,
     route,
     isDynamic,
+    redirectStub,
     title,
     words,
     h2,
@@ -111,13 +175,14 @@ for (const f of walk(SRC_DIR, /\.tsx$/)) {
   }
 }
 
-// Findings
+// Findings — redirect stubs are canonicalization artifacts, never content
+// pages, so they are excluded from thin / breadcrumb / schema findings.
 const thin = routes
-  .filter(r => !r.isDynamic && r.route !== '/' && r.words < THIN_WORDS && r.h2 < THIN_H2S)
+  .filter(r => !r.isDynamic && !r.redirectStub && r.route !== '/' && r.words < THIN_WORDS && r.h2 < THIN_H2S)
   .sort((a, b) => a.words - b.words)
 
 const orphans = routes
-  .filter(r => !r.isDynamic && r.route !== '/' && !allHrefs.has(r.route))
+  .filter(r => !r.isDynamic && !r.redirectStub && r.route !== '/' && !allHrefs.has(r.route))
   .sort((a, b) => a.route.localeCompare(b.route))
 
 const titleMap = new Map()
@@ -129,11 +194,11 @@ for (const r of routes) {
 const dupTitles = [...titleMap.entries()].filter(([, v]) => v.length > 1)
 
 const noBreadcrumb = routes
-  .filter(r => !r.isDynamic && r.route !== '/' && !r.hasBreadcrumb)
+  .filter(r => !r.isDynamic && !r.redirectStub && r.route !== '/' && !r.hasBreadcrumb)
   .sort((a, b) => a.route.localeCompare(b.route))
 
 const noSchema = routes
-  .filter(r => !r.isDynamic && r.route !== '/' && !r.hasAnySchema)
+  .filter(r => !r.isDynamic && !r.redirectStub && r.route !== '/' && !r.hasAnySchema)
   .sort((a, b) => a.route.localeCompare(b.route))
 
 // Output: markdown report
