@@ -4,7 +4,10 @@ import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, ResultPanel } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
-// Classic planted-tank formula: CO2 (ppm) = 12.839 × KH(dKH) × 10^(7 - pH)
+// Classic planted-tank formula: CO2 (ppm) = 3 × KH(dKH) × 10^(7 - pH)
+// (The 3× coefficient is for KH in degrees/dKH — matches the standard CO2/pH/KH
+// reference chart, e.g. 4 dKH @ pH 6.6 → ~30 ppm. Do NOT use the 12.839 meq/L
+// coefficient here: the input is dKH, so that would overstate CO2 ~4.3×.)
 // Caveat: assumes only carbonate buffer. Phosphate buffers and discus buffers throw this off.
 
 function classifyCO2(ppm: number): { label: string; tone: 'low' | 'good' | 'high' | 'danger'; explainer: string } {
@@ -49,7 +52,7 @@ export default function CO2Calculator() {
     const phN = parseFloat(ph) || 0
     if (khN <= 0 || phN <= 0) return null
 
-    const ppm = 12.839 * khN * Math.pow(10, 7 - phN)
+    const ppm = 3 * khN * Math.pow(10, 7 - phN)
     const classification = classifyCO2(ppm)
     return { ppm, ...classification }
   }, [kh, ph])
