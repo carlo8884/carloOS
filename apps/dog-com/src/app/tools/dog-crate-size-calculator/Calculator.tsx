@@ -8,7 +8,7 @@
  * and the recommended standard crate size.
  *
  * Sizing rule (standard breeder/trainer guidance): a crate should let the dog
- * stand without ducking, turn around, and lie flat. Add ~4 inches to each body
+ * stand without ducking, turn around, and lie flat. Add ~2 inches to each body
  * measurement, then pick the smallest standard crate that meets both.
  *
  * Product-sizing / husbandry guidance only -- no clinical claims.
@@ -19,7 +19,11 @@ import { useMemo, useState } from 'react'
 type Unit = 'in' | 'cm'
 
 const IN_PER_CM = 1 / 2.54
-const ADD_INCHES = 4 // headroom + room to turn and stretch
+// Minimum clearance added to each body measurement. Standard guidance is
+// 2–4 inches; we use the 2-inch minimum so the recommended size lines up with
+// manufacturers' own weight-based crate charts (a +4 height margin systematically
+// bumps dogs one size larger than the chart). Output is labelled as the minimum.
+const ADD_INCHES = 2
 
 // Common manufacturer crate line (length x width x height, inches).
 const STANDARD_CRATES = [

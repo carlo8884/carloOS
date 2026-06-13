@@ -109,10 +109,10 @@ const CALCULATORS = [
     id: 'dog · dog-crate-size-calculator',
     file: 'apps/dog-com/src/app/tools/dog-crate-size-calculator/Calculator.tsx',
     mustInclude: [
-      { re: /ADD_INCHES\s*=\s*4/, label: '+4 in headroom on each body measurement' },
+      { re: /ADD_INCHES\s*=\s*2/, label: '+2 in minimum clearance on each body measurement' },
       { re: /c\.len\s*>=\s*minLength\s*&&\s*c\.height\s*>=\s*minHeight/, label: 'pick smallest crate meeting both minimums' },
     ],
-    why: 'Crate must let the dog stand/turn/lie flat: add ~4 in to length+height, pick smallest standard crate clearing both.',
+    why: 'Crate must let the dog stand/turn/lie flat: add ~2 in (standard 2–4 in, min) to length+height, pick smallest standard crate clearing both — aligns with manufacturer weight charts.',
   },
   {
     id: 'petfood · food-cost-calculator',

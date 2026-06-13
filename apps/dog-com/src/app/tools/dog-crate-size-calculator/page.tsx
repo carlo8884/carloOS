@@ -25,12 +25,12 @@ const FAQS = [
   {
     question: 'What size crate does my dog need?',
     answer:
-      'A crate should let your dog stand without ducking, turn around, and lie down fully stretched. The rule of thumb is to measure your dog from nose to the base of the tail and from the floor to the top of the head, then add about 4 inches to each. Pick the smallest standard crate (commonly 18, 22, 24, 30, 36, 42, or 48 inches long) that meets both numbers. A crate that is too small is uncomfortable; one that is far too big undermines house-training.',
+      'A crate should let your dog stand without ducking, turn around, and lie down fully stretched. The rule of thumb is to measure your dog from nose to the base of the tail and from the floor to the top of the head, then add 2 to 4 inches to each (we use the 2-inch minimum). Pick the smallest standard crate (commonly 18, 22, 24, 30, 36, 42, or 48 inches long) that meets both numbers. A crate that is too small is uncomfortable; one that is far too big undermines house-training.',
   },
   {
     question: 'How do I measure my dog for a crate?',
     answer:
-      'Two measurements. For length, measure from the tip of the nose to the base of the tail (where the tail meets the body — not the tail tip, or you will oversize the crate). For height, measure from the floor to the top of the head while the dog is sitting or standing tall, whichever is taller. Add roughly 4 inches to each for comfortable headroom and turning space.',
+      'Two measurements. For length, measure from the tip of the nose to the base of the tail (where the tail meets the body — not the tail tip, or you will oversize the crate). For height, measure from the floor to the top of the head while the dog is sitting or standing tall, whichever is taller. Add about 2 inches to each (2 to 4 inches is the usual range) for comfortable headroom and turning space.',
   },
   {
     question: 'What size crate for a puppy that is still growing?',
@@ -92,7 +92,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Add headroom',
-      text: 'Add about 4 inches to each measurement so the dog can stand without ducking, turn around, and lie flat.',
+      text: 'Add about 2 inches to each measurement (the standard 2 to 4-inch clearance) so the dog can stand without ducking, turn around, and lie flat.',
     },
     {
       name: 'Pick the standard crate size',
@@ -183,7 +183,7 @@ export default function DogCrateSizeCalculatorPage() {
             A correctly sized crate is one the dog can stand up in without ducking, turn around in,
             and lie down fully stretched. That is the standard set by breeders, trainers, and most
             airline kennel rules. Translate it to a number by measuring the dog nose-to-tail-base for
-            length and floor-to-head for height, then adding roughly four inches of headroom to each.
+            length and floor-to-head for height, then adding a couple of inches of headroom to each.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             Standard wire and plastic crates come in a fixed set of lengths — 18, 22, 24, 30, 36, 42,
