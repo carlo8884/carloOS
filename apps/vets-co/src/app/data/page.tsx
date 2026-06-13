@@ -41,6 +41,50 @@ const schema = combineSchemas(
       { name: 'Data Partnerships', url: PAGE_URL },
     ],
   }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DataCatalog',
+    name: 'Vets.co Editorial Datasets',
+    url: PAGE_URL,
+    description:
+      'Editorially-curated veterinary directory, pet insurance comparison, and specialty-taxonomy datasets, assembled by the Vets.co editorial team from state veterinary board registries, the AVMA directory, and published carrier policies.',
+    publisher: { '@type': 'Organization', name: 'Vets.co', url: SITE_URL },
+    dataset: [
+      {
+        '@type': 'Dataset',
+        name: 'Veterinary Practice Directory',
+        description:
+          'Practice listings with specialty, location, and verified-status flags, sourced from state veterinary board public registries and the American Veterinary Medical Association directory.',
+        creator: { '@type': 'Organization', name: 'Vets.co Editorial' },
+        keywords: ['veterinary directory', 'vet practices', 'AVMA', 'specialty'],
+        variableMeasured: ['specialty', 'location', 'verified status'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Pet Insurance Comparison Matrix',
+        description:
+          'Plan-by-plan attributes for the major U.S. pet insurance carriers, including coverage tiers, exclusions, waiting periods, deductible structures, and chronic-condition handling.',
+        creator: { '@type': 'Organization', name: 'Vets.co Editorial' },
+        keywords: ['pet insurance', 'coverage comparison', 'waiting periods', 'deductibles'],
+        variableMeasured: ['coverage tiers', 'exclusions', 'waiting periods', 'deductible structures', 'chronic-condition handling'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Veterinary Specialty Taxonomy',
+        description:
+          'The controlled vocabulary mapping board-certified veterinary specialties to the conditions and procedures Vets.co covers editorially.',
+        creator: { '@type': 'Organization', name: 'Vets.co Editorial' },
+        keywords: ['veterinary specialties', 'controlled vocabulary', 'board certification'],
+        variableMeasured: ['specialty names', 'mapped conditions', 'mapped procedures'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+    ],
+  },
 )
 
 export default function DataPartnershipsPage() {

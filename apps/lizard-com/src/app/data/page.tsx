@@ -41,6 +41,50 @@ const schema = combineSchemas(
       { name: 'Data Partnerships', url: PAGE_URL },
     ],
   }),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DataCatalog',
+    name: 'Lizard.com Editorial Datasets',
+    url: PAGE_URL,
+    description:
+      'Editorially-curated reptile state-legality, UVB lighting, and species-husbandry datasets, assembled by the Lizard.com editorial team from state codes, the Ferguson-zone framework, and herpetological husbandry references.',
+    publisher: { '@type': 'Organization', name: 'Lizard.com', url: SITE_URL },
+    dataset: [
+      {
+        '@type': 'Dataset',
+        name: 'Reptile State-Legality Matrix',
+        description:
+          'State-by-state regulatory status for the species Lizard.com covers, with citations to the relevant state codes and permit programs.',
+        creator: { '@type': 'Organization', name: 'Lizard.com Editorial' },
+        keywords: ['reptile legality', 'state regulations', 'permits', 'exotic pet law'],
+        variableMeasured: ['regulatory status', 'state code citations', 'permit programs'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'UVB Lighting Reference',
+        description:
+          'Ferguson-zone targets, recommended bulb classes, and distance/output guidance per species, cross-referenced with our enclosure setup guides.',
+        creator: { '@type': 'Organization', name: 'Lizard.com Editorial' },
+        keywords: ['UVB', 'Ferguson zone', 'reptile lighting', 'husbandry'],
+        variableMeasured: ['Ferguson-zone target', 'bulb class', 'distance/output guidance'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Dataset',
+        name: 'Species Husbandry Taxonomy',
+        description:
+          'Controlled vocabulary mapping species to recommended temperature gradients, humidity ranges, substrate types, and enclosure-size minimums.',
+        creator: { '@type': 'Organization', name: 'Lizard.com Editorial' },
+        keywords: ['reptile husbandry', 'temperature gradient', 'humidity', 'enclosure size'],
+        variableMeasured: ['temperature gradients', 'humidity ranges', 'substrate types', 'enclosure-size minimums'],
+        isAccessibleForFree: false,
+        url: PAGE_URL,
+      },
+    ],
+  },
 )
 
 export default function DataPartnershipsPage() {
