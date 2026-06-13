@@ -30,6 +30,12 @@ const TOOLS = [
     tag: 'Housing',
   },
   {
+    href: '/tools/reptile-cost-calculator',
+    title: 'Reptile Cost of Ownership Calculator',
+    desc: 'How much does a reptile cost to keep? Estimate one-time setup plus monthly and yearly running cost — electricity (computed from wattage), feeders, substrate, bulbs, and a vet fund — from editable species presets.',
+    tag: 'Budget',
+  },
+  {
     href: '/tools/reptile-feeding-calculator',
     title: 'Reptile Feeding Calculator',
     desc: 'How many crickets to feed a bearded dragon, leopard gecko, and more. Get prey type, count or portion, feeding frequency, and the feeder-size rule by species and life stage.',
