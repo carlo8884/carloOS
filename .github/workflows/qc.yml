@@ -95,6 +95,18 @@ jobs:
       - name: Run schema-validate
         run: node scripts/ci/schema-validate.mjs
 
+  calculator-integrity:
+    name: Calculator formula-constant integrity (tools-acceptance lock)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run calculator-integrity
+        run: node scripts/ci/calculator-integrity.mjs
+
   vercel-ignore:
     name: Vercel build-cost wrapper (dir-014 regression)
     runs-on: ubuntu-latest
