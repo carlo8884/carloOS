@@ -3,7 +3,13 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-13 (COO — monetization-depth wave + audit hardening + portfolio quality deep-verify)
+**Last updated:** 2026-06-13 (COO — tools-acceptance audit + GEO/CI hardening; monetization-depth wave; portfolio quality deep-verify)
+
+> **COO tools-acceptance + GEO/CI hardening block (2026-06-13 — branch `claude/happy-curie-AOZay`, pre-merge):**
+> Portfolio-wide calculator **math audit** — verified ~all interactive tools across the 10 sites (Dog, Fish, Vets, PetFood, Horses, Lizard, Saddle). **One real bug found + fixed:** Fish CO2 calculator used the meq/L coefficient `12.839` against a dKH input → ~4.3× overestimate (4 dKH/6.8 pH read 81 ppm "Dangerous" vs. correct ~19 ppm "Healthy"); corrected to the standard `3 × dKH × 10^(7−pH)`, now matching the canonical CO2/pH/KH chart at every point. All other calculators math-verified sound (RER `70·kg^0.75`, weight-tape 330/11900, inverse-square UVB, insurance reimbursement min/cap, etc.).
+> **Two new enforcing CI gates lock the audit in** (both negative-tested): `calculator-integrity.mjs` pins 14 calculators' golden formula constants (22 assertions; would have caught the CO2 bug), and `tool-schema-coverage.mjs` requires every production tool page (40) to carry the full SoftwareApplication + HowTo + FAQPage GEO stack. Both wired into the QC workflow.
+> **GEO gap closed:** Ferret readiness-quiz was the one production tool missing FAQ schema — added FAQ + FAQPage (grounded in on-page facts). Tool schema coverage now 100% across production. Also trimmed the Horses `/racing/bloodstock` over-length meta description (187→158). All gates green; tsc clean.
+> **Note:** this branch backs PR #737 (originally the breed×health cluster) — the above polish/CI work accumulated on it while the GitHub MCP token was expired; candidate for retitle or split once GitHub re-auth lands.
 
 > **COO monetization-depth wave + launch-quality deep-verify (2026-06-13 — PRs #728–#735 merged):**
 > **Monetization-depth wave COMPLETE (4/4, owner-directed "Both"):** PetFood #728, Dog #729, Horses #730, Vets #731. Vendor-liveness discipline held — only Amazon earns now; Chewy resolves (earns on account approval); SmartPak/RidingWarehouse/insurance carriers pending → NOT wired. Caught + fixed the Horses agent's non-live SmartPak/RidingWarehouse slip before merge (swapped to live amazon-brand). Vets is internal lead-gen funnel to `/reviews/best-pet-insurance` (no direct vendor, no PLACEHOLDER). Carlo action items: set `AFF_AMAZON_BRAND_TAG`, approve Chewy → `AFF_CHEWY_BRAND_TAG`, un-pause Supabase, DNS flip — see `ops/handoffs/2026-06-13-coo-to-carlo-depth-wave-complete.md`.
