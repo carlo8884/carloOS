@@ -24,6 +24,12 @@ const TOOLS = [
     tag: 'Calculator',
   },
   {
+    href: '/tools/horse-blanket-size-calculator',
+    title: 'Horse Blanket Size Calculator',
+    desc: 'What size blanket does your horse need? Measure chest to tail and get the standard US/UK blanket size, the approximate EU/cm equivalent, and a fit tip — because US sizing is that body measurement in inches.',
+    tag: 'Tack',
+  },
+  {
     href: '/tools/horse-feed-calculator',
     title: 'Horse Feed & Hay Calculator',
     desc: 'Estimate daily hay and feed from bodyweight, workload, and keeper type. Forage-first, using published NRC intake ranges, with a dry-matter vs. as-fed conversion.',
