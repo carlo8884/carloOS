@@ -65,6 +65,7 @@ export function ImageCard({
   subtleCredit = false,
 }: ImageCardProps) {
   const [loaded, setLoaded] = useState(false)
+  const [errored, setErrored] = useState(false)
 
   const containerClass = [
     'my-8',
@@ -109,12 +110,28 @@ export function ImageCard({
           }
           priority={priority}
           onLoadingComplete={() => setLoaded(true)}
+          onError={() => setErrored(true)}
           style={{
             objectFit: 'cover',
-            opacity: loaded ? 1 : 0,
+            opacity: loaded && !errored ? 1 : 0,
             transition: 'opacity 240ms ease-out',
           }}
         />
+
+        {/* Broken-image fallback. A dead or blocked image URL would otherwise
+            leave a raw blank surface box (the manifest occasionally carries a
+            removed Unsplash URL). Render an INTENTIONAL soft brand gradient so a
+            broken slot still looks designed rather than empty. */}
+        {errored && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(135deg, var(--brand-surface), var(--brand-primary-pale))',
+            }}
+          />
+        )}
 
         {/* Subtle-credit overlay — attribution stays present + clickable but
             unobtrusive in prime visual areas (hero, image-backed cards).
