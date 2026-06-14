@@ -79,7 +79,7 @@ export default function BestDogCratesPage() {
               score={9.3}
               winner
               description={
-                <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". At under $60 for most sizes, the value-to-quality ratio is unmatched in wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
+                <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". At under $60 for most sizes, the value-to-quality ratio is hard to beat among wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
               }
               specs={[
                 { label: 'Type', value: 'Wire, fold-flat' },

@@ -302,7 +302,7 @@ export default function VetProfilePage({ params }: PageProps) {
                 className="bg-brand-primary/40 text-white text-sm font-bold px-4 py-2.5 rounded-lg w-full cursor-not-allowed"
                 title="Booking is not active for sample listings. Real CTA wires when verified directory data is loaded."
               >
-                Book Appointment (coming soon)
+                Book Appointment
               </button>
               <p className="text-2xs text-brand-text-light italic mt-2 mb-0">
                 Booking activates with the verified directory data source.
