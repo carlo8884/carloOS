@@ -637,7 +637,7 @@ export default function HomePage() {
                 }}
               >
                 {/* Photo on top */}
-                <div className={`relative h-40 sm:h-44 ${FILL_IMAGE}`}>
+                <div className={`relative aspect-[4/3] ${FILL_IMAGE}`}>
                   <StockImage
                     manifestKey={cat.manifestKey}
                     fallbackKey="horses-com:hero"
@@ -730,7 +730,7 @@ export default function HomePage() {
                 }}
               >
                 {/* Photo on top */}
-                <div className={`relative h-44 ${FILL_IMAGE}`}>
+                <div className={`relative aspect-video ${FILL_IMAGE}`}>
                   <StockImage
                     manifestKey={guide.manifestKey}
                     fallbackKey="horses-com:hero"

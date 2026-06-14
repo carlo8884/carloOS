@@ -174,7 +174,7 @@ export function ArticleLayout({
       <div className="px-container sm:px-container-sm py-14">
         <div className={[
           'grid gap-14',
-          sidebar ? 'lg:grid-cols-[1fr_300px]' : 'max-w-content mx-auto',
+          sidebar ? 'lg:grid-cols-[1fr_300px] max-w-6xl mx-auto' : 'max-w-content mx-auto',
         ].join(' ')}>
 
           {/* Article body */}
