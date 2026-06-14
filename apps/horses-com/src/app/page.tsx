@@ -143,8 +143,8 @@ const CATEGORIES: {
     title: 'Health',
     desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.',
     href: '/health/equine-ulcers',
-    manifestKey: 'horses-com:category-health',
-    imageAlt: 'A horse being examined as part of routine health care',
+    manifestKey: 'horses-com:category-care',
+    imageAlt: 'A horse receiving routine care',
   },
   {
     icon: 'guides',
@@ -175,8 +175,8 @@ const CATEGORIES: {
     title: 'First-Horse Roadmap',
     desc: 'A free 90-day plan and 8-email course for the first-time owner.',
     href: '/first-horse-roadmap',
-    manifestKey: 'horses-com:category-ownership',
-    imageAlt: 'A first-time owner with their horse',
+    manifestKey: 'horses-com:featured-quarter-horse',
+    imageAlt: 'A horse — the start of the first-horse journey',
   },
   {
     icon: 'racing',
