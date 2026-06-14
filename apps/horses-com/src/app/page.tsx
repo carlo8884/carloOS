@@ -492,60 +492,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ──────
-          Carlo live review 2026-06-12: the calculator ran "all across the
-          screen, no copy, nothing." Fixed to mirror the Dog.com wizard
-          section: a contained (max-w-container) two-column feature — the tool
-          on one side, supporting editorial copy + calculator links on the
-          other — so it reads as a designed feature, not a naked form. */}
-      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
-        <div className="max-w-container mx-auto">
-          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
-            {/* The live tool */}
-            <div className="min-w-0">
-              <BodyConditionScoreCalculator />
-            </div>
-
-            {/* Supporting editorial copy + related calculators */}
-            <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
-              <div>
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="w-6 h-0.5 bg-brand-primary" />
-                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                    Try it · Henneke body condition score
-                  </span>
-                </div>
-                <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
-                  Is your horse the right weight?
-                </h2>
-                <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-                  Body condition is the single most useful daily check an owner can
-                  make. Carrying too little reserve points to dental, parasite, or
-                  feeding problems; carrying too much raises the risk of laminitis,
-                  equine metabolic syndrome, and joint strain.
-                </p>
-                <p className="text-sm text-brand-text-mid leading-relaxed">
-                  Score the six Henneke checkpoints — neck, withers, behind the
-                  shoulder, ribs, loin, and tailhead — and the tool returns the 1–9
-                  score vets and nutritionists use, with what to change next.
-                </p>
-              </div>
-
-              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
-                  More free calculators
-                </div>
-                <div className="flex flex-col gap-2 text-sm font-semibold">
-                  <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">Horse weight calculator →</Link>
-                  <Link href="/tools/horse-feed-calculator" className="text-brand-primary no-underline hover:underline">Feed &amp; hay calculator →</Link>
-                  <Link href="/tools" className="text-brand-primary no-underline hover:underline">Browse the tools hub →</Link>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
       <section
         className="px-container-sm sm:px-container py-section"
@@ -775,6 +721,60 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ──────
+          Carlo live review 2026-06-12: the calculator ran "all across the
+          screen, no copy, nothing." Fixed to mirror the Dog.com wizard
+          section: a contained (max-w-container) two-column feature — the tool
+          on one side, supporting editorial copy + calculator links on the
+          other — so it reads as a designed feature, not a naked form. */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
+        <div className="max-w-container mx-auto">
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
+            {/* The live tool */}
+            <div className="min-w-0">
+              <BodyConditionScoreCalculator />
+            </div>
+
+            {/* Supporting editorial copy + related calculators */}
+            <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="w-6 h-0.5 bg-brand-primary" />
+                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                    Try it · Henneke body condition score
+                  </span>
+                </div>
+                <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+                  Is your horse the right weight?
+                </h2>
+                <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+                  Body condition is the single most useful daily check an owner can
+                  make. Carrying too little reserve points to dental, parasite, or
+                  feeding problems; carrying too much raises the risk of laminitis,
+                  equine metabolic syndrome, and joint strain.
+                </p>
+                <p className="text-sm text-brand-text-mid leading-relaxed">
+                  Score the six Henneke checkpoints — neck, withers, behind the
+                  shoulder, ribs, loin, and tailhead — and the tool returns the 1–9
+                  score vets and nutritionists use, with what to change next.
+                </p>
+              </div>
+
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
+                  More free calculators
+                </div>
+                <div className="flex flex-col gap-2 text-sm font-semibold">
+                  <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">Horse weight calculator →</Link>
+                  <Link href="/tools/horse-feed-calculator" className="text-brand-primary no-underline hover:underline">Feed &amp; hay calculator →</Link>
+                  <Link href="/tools" className="text-brand-primary no-underline hover:underline">Browse the tools hub →</Link>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
