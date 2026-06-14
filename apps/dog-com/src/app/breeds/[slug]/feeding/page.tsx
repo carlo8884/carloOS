@@ -31,6 +31,7 @@ import {
   FAQAccordion,
   RelatedLinks,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import {
   BREED_FEEDING_PROFILES,
@@ -200,6 +201,7 @@ export default async function BreedFeedingPage({ params }: PageProps) {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey={`dog-com:breed-${slug}`} fallbackKey="dog-com:category-nutrition" alt={`A ${profile.breedName}`} aspect="16:9" />
         {/* MANDATORY: Veterinary consultation callout */}
         <CalloutBox
           variant="warning"

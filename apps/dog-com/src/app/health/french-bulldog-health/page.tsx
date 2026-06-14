@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -94,6 +94,7 @@ export default function FrenchBulldogHealthPage() {
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog in natural light" aspect="16:9" priority />
         <p>French Bulldogs have become one of the most registered breeds globally — a reflection of their genuine charm as companion dogs. They are adaptable, affectionate, low-exercise, and endlessly entertaining. They are also a breed whose extreme anatomy creates near-inevitable health problems that every owner must understand, budget for, and actively manage throughout the dog&apos;s life.</p>
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.15)', borderRadius: '10px', padding: '18px 22px', margin: '24px 0' }}>

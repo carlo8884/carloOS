@@ -30,6 +30,7 @@ import {
   EmailCapture,
   RelatedLinks,
   SchemaScript,
+  StockImage,
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
@@ -197,6 +198,13 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         publishedAt="2026-05-29T00:00:00Z"
         updatedAt="2026-05-29T00:00:00Z"
         reviewedBy="Editorial team"
+      />
+
+      <StockImage
+        manifestKey={`dog-com:breed-${record.slug}`}
+        fallbackKey="dog-com:category-health"
+        alt={`A ${record.breedName}`}
+        aspect="16:9"
       />
 
       {/* Mandatory top callout */}
