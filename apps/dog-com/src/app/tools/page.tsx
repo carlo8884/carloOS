@@ -73,6 +73,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/new-puppy-checklist',
+    title: 'New Puppy Checklist',
+    desc: 'What do you need for a new puppy? Pick life stage and adult size for a complete, prioritised essentials checklist — crate, food, bowls, bed, leash, parasite prevention — each linked to the right review or sizing tool.',
+    tag: 'New Owner',
+  },
+  {
     href: '/tools/dog-water-intake-calculator',
     title: 'Dog Water Intake Calculator',
     desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — and the drinking changes (up or down) that are worth a vet call.',
