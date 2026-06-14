@@ -52,7 +52,7 @@ export default function LizardSetupHubPage() {
         <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Complete setup guides for temperatures, UVB, humidity, and substrate — plus tested equipment recommendations.</p>
       </div>
       <div className="relative z-10 px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="lizard-com:category-setup" aspect="16:9" variant="wide" priority />
+        <StockImage manifestKey="lizard-com:category-builds" aspect="16:9" variant="wide" priority />
       </div>
       <div className="relative z-10 px-container-sm sm:px-container py-14">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
