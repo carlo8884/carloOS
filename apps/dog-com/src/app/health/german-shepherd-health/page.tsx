@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -93,6 +93,7 @@ export default function GermanShepherdHealthPage() {
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="dog-com:breed-german-shepherd" alt="A German Shepherd Dog in natural light" aspect="16:9" priority />
         <p>The German Shepherd Dog is among the world&apos;s most versatile working breeds — police dogs, military dogs, search and rescue, guide dogs, competitive sport. Their intelligence, drive, and loyalty are unmatched. They are also, structurally and genetically, one of the breeds most prone to serious degenerative conditions that owners must understand and actively manage.</p>
 
         <h2 id="dm">Degenerative Myelopathy (DM)</h2>
