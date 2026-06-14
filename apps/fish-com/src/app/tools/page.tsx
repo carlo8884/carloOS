@@ -62,6 +62,12 @@ const TOOLS = [
     tag: 'Equipment',
   },
   {
+    href: '/tools/fish-disease-symptom-checker',
+    title: 'Fish Disease Symptom Checker',
+    desc: 'Why is your fish sick? Tick the signs you see to find the conditions that match — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide. Starts with water-quality testing.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/aquarium-setup-builder',
     title: 'Aquarium Setup Builder',
     desc: 'What do you need to start a fish tank? Enter tank size and setup type for a complete, sized starter-kit checklist — filter, heater, light, substrate, test kit — with why each matters.',
