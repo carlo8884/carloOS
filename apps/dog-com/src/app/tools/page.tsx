@@ -67,6 +67,12 @@ const TOOLS = [
     tag: 'Gear',
   },
   {
+    href: '/tools/dog-body-condition-score',
+    title: 'Dog Body Condition Score',
+    desc: 'Is your dog under or overweight? Answer three hands-on checks — rib feel, waist from above, belly tuck from the side — to estimate your dog\'s body condition score on the 1–9 scale, with what to do next.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/dog-water-intake-calculator',
     title: 'Dog Water Intake Calculator',
     desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — and the drinking changes (up or down) that are worth a vet call.',
