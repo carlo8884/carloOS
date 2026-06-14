@@ -51,7 +51,7 @@ export default function AquariumSetupPage() {
       hero={{ title: 'Aquarium Setup Guide — Your First Tank, Done Right', subtitle: 'Most new tanks fail because of a single mistake: adding fish before the tank is cycled. This guide walks through every step in the correct order.', category: 'Setup Guide', publishedAt: 'May 2025', readTime: '12 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }]}
       schema={schema}
-      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Species Guides", href: "/species", category: "Species" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }, { title: "Equipment Reviews", href: "/reviews", category: "Reviews" }]}
+      relatedLinks={[{ title: "Aquarium Setup Builder", href: "/tools/aquarium-setup-builder", category: "Tools" }, { title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Species Guides", href: "/species", category: "Species" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }, { title: "Equipment Reviews", href: "/reviews", category: "Reviews" }]}
       sidebar={<>
         <TableOfContents items={[
           { label: '1. Choose Tank Size', href: '#size' },
