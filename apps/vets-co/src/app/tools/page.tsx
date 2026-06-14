@@ -19,6 +19,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const TOOLS = [
   {
+    href: '/tools/cat-age-calculator',
+    title: 'Cat Age Calculator',
+    desc: 'How old is your cat in human years? Convert cat years to human years with the standard veterinary chart and see your cat’s life stage — kitten, young adult, mature, or senior — and the care it needs.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/cat-body-condition-score',
     title: 'Cat Body Condition Score',
     desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 scale, with safe next steps.',

@@ -108,5 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/tools/pet-insurance-worth-it-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/insurance-reimbursement-estimator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/cat-body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://vets.co/tools/cat-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
