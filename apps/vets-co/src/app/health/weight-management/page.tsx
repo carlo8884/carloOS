@@ -23,6 +23,7 @@ export default function WeightManagementPage() {
         hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[
+          { title: 'Cat Body Condition Score Tool', href: '/tools/cat-body-condition-score', category: 'Tool' },
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
           { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
           { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
