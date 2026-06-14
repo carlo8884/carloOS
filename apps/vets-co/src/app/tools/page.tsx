@@ -19,6 +19,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const TOOLS = [
   {
+    href: '/tools/cat-body-condition-score',
+    title: 'Cat Body Condition Score',
+    desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 scale, with safe next steps.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/pet-insurance-worth-it-calculator',
     title: 'Is Pet Insurance Worth It? Calculator',
     desc: 'A breakeven calculator: enter a quote and an expected-cost scenario to see the eligible vet-cost level at which a policy pays for itself — with honest framing on insurance as catastrophic-cost protection, not guaranteed savings.',
