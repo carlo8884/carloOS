@@ -630,7 +630,7 @@ export default function HomePage() {
           >
             <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
-                manifestKey="fish-com:category-setup"
+                manifestKey="fish-com:category-planted"
                 alt="A planted freshwater aquarium with healthy aquascaping"
                 aspect="4:3"
                 subtleCredit
@@ -750,7 +750,7 @@ export default function HomePage() {
           >
             <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
-                manifestKey="fish-com:category-species"
+                manifestKey="fish-com:cornerstone-species-betta"
                 alt="A vividly colored betta fish displaying its fins in a planted aquarium"
                 aspect="4:3"
                 subtleCredit
@@ -910,8 +910,8 @@ export default function HomePage() {
           >
             <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
               <StockImage
-                manifestKey="fish-com:category-reviews"
-                alt="A discus fish in a well-maintained planted display aquarium"
+                manifestKey="fish-com:category-freshwater"
+                alt="A well-maintained freshwater display aquarium"
                 aspect="4:3"
                 subtleCredit
               />
