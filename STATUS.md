@@ -3,7 +3,19 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-14 (COO — tool-coverage build wave: 13 new tools across all sites; priority sites comprehensively tooled)
+**Last updated:** 2026-06-14 (COO — launch-readiness + dead-image polish wave: PRs #765–#769)
+
+> **COO launch-readiness + dead-image polish wave (2026-06-14 — PRs #765–#769 all merged):**
+> Owner-directed autonomous run + browser/Vercel-access discovery.
+> **Capability unlocked:** COO can reach all 10 Vercel projects + fetch live deployment HTML (structural QA self-serve); pixel-level visual taste still needs Carlo screenshots (image optimizer is SSO-gated).
+> **Root-caused Carlo's "missing pictures":** the image manifest carries **41 keys on the old bare-param Unsplash URL format** that goes dead (vs the fresh `ixid` format `sync-images.mjs` writes). Confirmed 404: `photo-1469820838967` (Horses). Concentrated in **ferret-com (21)** + **fish-com (6)**; **dog-com clean (0)**. Full per-site list: `ops/handoffs/2026-06-14-coo-to-carlo-visual-stale-image-audit.md` (#768).
+> **In-lane fixes shipped** (repoint dead keys → live, topically-matched keys; worst case = #764 gradient, best case real photo): **#767** Horses homepage (Health, First-Horse-Roadmap cards); **#769** Fish homepage (Setup→planted, Species→betta, Reviews→freshwater) + Lizard `/setup` heroes (→builds).
+> **Verified launch-image-clean:** Dog.com (0 stale) + Vets.co homepage (all-live keys; only `/health` hub hero stale).
+> **Launch runbook (#765):** `ops/handoffs/2026-06-14-coo-vets-launch-runbook.md` — Vets §8a gate status (all COO gates ✅), Carlo-only launch-day sequence, post-launch measurement plan; Dog follows same.
+> **Revenue QA → Monetization (#766):** Dog.com Rx review pages (flea/tick, heartworm) dead-end at `/find-a-vet`; routed to Monetization (clinical buy-box = their §8a lane) with a trust-safe path (Chewy Pharmacy / insurance cross-sell).
+> **Remaining = Carlo:** `node scripts/sync-images.mjs` (clears all 41 stale images at once) · affiliate env vars · GA4/GSC · DNS. Visual: Horses hero crop + card-size tuning (needs screenshots).
+
+> **COO tool-coverage build wave (2026-06-14 — PRs #737–#754 all merged):**
 
 > **COO tool-coverage build wave (2026-06-14 — PRs #737–#754 all merged):**
 > Owner-directed autonomous build push ("let's go"). Agent-mapped genuine high-intent gaps, each built launch-quality + trust-safe, each diligence-checked for duplication/fabrication before building. **13 new tools shipped this wave:** PetFood food-transition · Dog crate-size (revenue-wired) · Dog water-intake · Lizard reptile cost-of-ownership · Dog Body Condition Score · Cat Body Condition Score (Vets) · Fish aquarium setup builder · Dog new-puppy checklist · **Cat Age & Life-Stage (Vets)** · **Dog Exercise Needs Estimator** · **Fish Disease Symptom Checker** · **Horse Blanket Size Calculator** — plus the Fish CO2 calculator bug fix.
