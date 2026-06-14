@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -9,9 +9,17 @@ export const metadata: Metadata = buildMetadata({
   path: '/editorial-standards',
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://lizard.com/' },
+    { name: 'Editorial Standards', url: 'https://lizard.com/editorial-standards' },
+  ],
+})
+
 export default function EditorialStandardsPage() {
   return (
     <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
+      <SchemaScript schema={breadcrumbSchema} />
       <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
