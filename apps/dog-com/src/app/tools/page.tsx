@@ -73,6 +73,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/dog-exercise-calculator',
+    title: 'Dog Exercise Calculator',
+    desc: 'How much exercise does your dog need? Get a daily target by life stage and energy level — including the joint-safe 5-minute-per-month rule for puppies and low-impact senior guidance.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/new-puppy-checklist',
     title: 'New Puppy Checklist',
     desc: 'What do you need for a new puppy? Pick life stage and adult size for a complete, prioritised essentials checklist — crate, food, bowls, bed, leash, parasite prevention — each linked to the right review or sizing tool.',
