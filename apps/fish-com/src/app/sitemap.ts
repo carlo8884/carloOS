@@ -102,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/tools/aquarium-volume-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/co2-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/heater-wattage-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://fish.com/tools/aquarium-setup-builder', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/pond-volume-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/stocking-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/substrate-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },

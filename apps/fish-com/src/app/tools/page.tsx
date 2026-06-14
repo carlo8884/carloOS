@@ -62,6 +62,12 @@ const TOOLS = [
     tag: 'Equipment',
   },
   {
+    href: '/tools/aquarium-setup-builder',
+    title: 'Aquarium Setup Builder',
+    desc: 'What do you need to start a fish tank? Enter tank size and setup type for a complete, sized starter-kit checklist — filter, heater, light, substrate, test kit — with why each matters.',
+    tag: 'Beginner',
+  },
+  {
     href: '/tools/water-change-calculator',
     title: 'Water Change Calculator',
     desc: 'Calculate the % water change needed to bring nitrate or any parameter down to a target level. Includes dilution math.',
