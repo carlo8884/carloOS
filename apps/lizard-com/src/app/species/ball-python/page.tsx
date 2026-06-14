@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies.', path: '/species/ball-python', type: 'article' })
@@ -53,6 +53,7 @@ export default function BallPythonPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="lizard-com:species-ball-python" aspect="16:9" variant="inline" caption="A ball python (Python regius)." priority />
 
         <h2>Feeding Refusals — The Biggest Beginner Fear</h2>
         <DropCap>Ball pythons are notorious for feeding strikes — periods of weeks to months where they refuse food entirely. This behavior is normal and rooted in their biology: in the wild, West African ball pythons may not eat for 3–6 months during dry season when prey is scarce. A healthy, well-maintained adult ball python refusing food for 4–8 weeks is not cause for panic — it is normal seasonal behavior.</DropCap>
