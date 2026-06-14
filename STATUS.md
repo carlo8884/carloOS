@@ -3,7 +3,13 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-14 (COO — autonomous build run: #737 merged + dog/cat BCS tools, Lizard cost tool, Dataset schema, revenue/visual/ask strategy)
+**Last updated:** 2026-06-14 (COO — tool-coverage build wave: 13 new tools across all sites; priority sites comprehensively tooled)
+
+> **COO tool-coverage build wave (2026-06-14 — PRs #737–#754 all merged):**
+> Owner-directed autonomous build push ("let's go"). Agent-mapped genuine high-intent gaps, each built launch-quality + trust-safe, each diligence-checked for duplication/fabrication before building. **13 new tools shipped this wave:** PetFood food-transition · Dog crate-size (revenue-wired) · Dog water-intake · Lizard reptile cost-of-ownership · Dog Body Condition Score · Cat Body Condition Score (Vets) · Fish aquarium setup builder · Dog new-puppy checklist · **Cat Age & Life-Stage (Vets)** · **Dog Exercise Needs Estimator** · **Fish Disease Symptom Checker** · **Horse Blanket Size Calculator** — plus the Fish CO2 calculator bug fix.
+> **Deliberately SKIPPED on diligence** (filler/duplication/trust-risk per QC §1): Vets first-year timeline (duplicates `/health/preventive-care-schedule`), PetFood allergen matcher (no ingredient dataset) + supplement-dose (dosing-sensitive), Lizard setup-audit (overlaps existing check-modes), Dog vaccination tracker (clinical, duplicative).
+> **The 6 priority sites are now comprehensively tooled.** Every tool carries the SoftwareApplication+HowTo+FAQPage GEO stack (enforced by `tool-schema-coverage`) and defers to a vet where clinical. **2 enforcing CI gates** (`calculator-integrity` pins 21 calculators; `tool-schema-coverage`) + **`Dataset` schema** on the 4 `/data` pages also landed this wave.
+> **Remaining levers are NOT COO-lane** — Carlo: affiliate accounts + env vars (Impact / Amazon `AFF_AMAZON_TAG`+`AFF_AMAZON_BRAND_TAG` / Chewy), Supabase, DNS, `/ask` API key + spend cap. Visual Bot: photography / identity. COO lane is at launch-quality and comprehensively tooled.
 
 > **COO autonomous build run (2026-06-13 → 06-14 — PRs #737–#746 all merged):**
 > **#737 merged** (CSRO cleared it as non-Carlo-gated): breed×health cluster + **Fish CO2 calculator bug fix** + **2 enforcing CI gates** (`calculator-integrity` pins 21 calculators' constants; `tool-schema-coverage` requires SoftwareApplication+HowTo+FAQPage on every tool) + **3 tools** (PetFood food-transition, Dog crate-size [revenue-wired to Amazon `/go`], Dog water-intake).
