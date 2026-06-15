@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion, type FAQItem } from '@carloOS/ui'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
@@ -35,7 +35,35 @@ const itemListSchema = {
     url: `https://dog.com${item.href}`,
   })),
 }
-const healthSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+// FAQ — grounded only in facts present elsewhere on this page (the urgency
+// triage tiers, the conditions A–Z library, the breed health guides, and the
+// linked triage tool). Calibrated language; defers diagnosis/dosing to a vet.
+const FAQ_ITEMS: FAQItem[] = [
+  {
+    question: 'How do I know if my dog needs emergency care or can wait for a regular vet visit?',
+    answer:
+      'Every condition in this library is tagged with one of four urgency tiers. "ER now" means a true emergency — drive to an emergency hospital without waiting (examples include bloat/GDV and suspected poisoning). "Same-day" means your dog should be seen by a vet today. "Vet visit" means schedule a non-urgent appointment. "Monitor" means watch at home and book a visit if signs persist or worsen. When you are unsure, treat the more serious tier as the default and call your vet or an emergency line for guidance — these tiers are a triage starting point, not a substitute for a veterinary exam.',
+  },
+  {
+    question: 'What should I do first if I think my dog has been poisoned?',
+    answer:
+      'Suspected poisoning is an "ER now" situation. Call ASPCA Animal Poison Control at 888-426-4435, which is staffed by veterinary toxicologists 24/7 (a per-incident consultation fee applies), and contact your emergency vet at the same time. For many toxins, treatment is most effective before symptoms appear, so do not wait to see whether your dog seems affected.',
+  },
+  {
+    question: 'Are these health guides written or reviewed by a veterinarian?',
+    answer:
+      'These guides are produced by the Dog.com editorial team and draw on current published veterinary guidance — including ACVIM consensus statements, AAHA guidelines, OFA data, and the peer-reviewed veterinary literature. They are educational references, not personalized medical advice. Diagnosis, prescriptions, and dosing decisions should always come from a veterinarian who has examined your dog.',
+  },
+  {
+    question: 'Where should I start if my dog has a specific symptom rather than a known diagnosis?',
+    answer:
+      'Start with the "15 Dog Symptoms to Never Ignore" guide and the "Is This a Dog Emergency?" triage tool, both linked in the Emergency section above. From there, the Conditions A–Z browser lets you find the reference page for a specific disease, and the breed health guides cover the conditions most common in particular breeds. Each symptom and condition page links to the relevant next step.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQ_ITEMS.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })) })
+
+const healthSchema = combineSchemas(breadcrumbSchema, itemListSchema, faqSchema)
 
 // Strip StockImage's outer margins so it fills the masthead edge-to-edge.
 const FILL_IMAGE = "[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0"
@@ -203,6 +231,72 @@ export default function DogHealthHubPage() {
           </p>
         </div>
       </section>
+      {/* Extractable direct-answer block + urgency triage reference table.
+          Sits high on the page so AI answer surfaces and SERP snippets can lift
+          a self-contained summary. The triage tiers mirror the urgencyBadge()
+          system used throughout the Conditions A–Z browser below — same facts,
+          made extractable. */}
+      <section className="px-container-sm sm:px-container pt-12 pb-2">
+        <div className="max-w-3xl rounded-xl border border-brand-border bg-brand-primary-pale/60 p-6 sm:p-7">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            How to use this library
+          </div>
+          <p className="text-base text-brand-text-mid leading-relaxed m-0">
+            The Dog.com Health Library organizes {totalProgrammatic}+ canine conditions, breed-specific
+            health guides, and preventive-care references into one place. Every condition is tagged
+            with an urgency tier — <strong className="text-brand-dark">ER now</strong>,{' '}
+            <strong className="text-brand-dark">same-day</strong>,{' '}
+            <strong className="text-brand-dark">vet visit</strong>, or{' '}
+            <strong className="text-brand-dark">monitor</strong> — so you can tell at a glance how
+            quickly to act. If your dog is showing a worrying sign right now, start with the{' '}
+            <Link href="/health/dog-symptoms-guide" className="text-brand-primary font-semibold no-underline hover:underline">
+              symptoms-to-never-ignore guide
+            </Link>{' '}
+            or the{' '}
+            <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary font-semibold no-underline hover:underline">
+              emergency triage tool
+            </Link>. These references are educational and do not replace a veterinary exam.
+          </p>
+        </div>
+
+        <div className="max-w-3xl mt-6 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <caption className="text-left text-xs text-brand-text-light mb-2">
+              Urgency tiers used across every condition page in this library
+            </caption>
+            <thead>
+              <tr className="border-b-2 border-brand-border text-left">
+                <th className="py-2 pr-4 font-display font-bold text-brand-dark">Tier</th>
+                <th className="py-2 pr-4 font-display font-bold text-brand-dark">What it means</th>
+                <th className="py-2 font-display font-bold text-brand-dark">Typical action</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-brand-border">
+                <td className="py-3 pr-4"><span className="text-2xs font-bold tracking-eyebrow uppercase px-2 py-0.5 rounded bg-red-100 text-red-800 whitespace-nowrap">ER</span></td>
+                <td className="py-3 pr-4 text-brand-text-mid">Life-threatening; minutes-to-hours matter (e.g. bloat/GDV, suspected poisoning).</td>
+                <td className="py-3 text-brand-text-mid">Go to an emergency hospital now. Do not wait to see if it resolves.</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="py-3 pr-4"><span className="text-2xs font-bold tracking-eyebrow uppercase px-2 py-0.5 rounded bg-orange-100 text-orange-800 whitespace-nowrap">Same-day</span></td>
+                <td className="py-3 pr-4 text-brand-text-mid">Serious but not immediately fatal; should be assessed today.</td>
+                <td className="py-3 text-brand-text-mid">Call your vet for a same-day appointment.</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="py-3 pr-4"><span className="text-2xs font-bold tracking-eyebrow uppercase px-2 py-0.5 rounded bg-yellow-100 text-yellow-800 whitespace-nowrap">Vet visit</span></td>
+                <td className="py-3 pr-4 text-brand-text-mid">Needs professional evaluation but is not urgent.</td>
+                <td className="py-3 text-brand-text-mid">Schedule a routine appointment.</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4"><span className="text-2xs font-bold tracking-eyebrow uppercase px-2 py-0.5 rounded bg-green-100 text-green-800 whitespace-nowrap">Monitor</span></td>
+                <td className="py-3 pr-4 text-brand-text-mid">Often manageable at home in an otherwise-well dog.</td>
+                <td className="py-3 text-brand-text-mid">Watch closely; book a visit if signs persist or worsen.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container py-14">
         {SECTIONS.map(section => (
           <div key={section.category} className="mb-10">
@@ -324,6 +418,19 @@ export default function DogHealthHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      {/* FAQ — interactive accordion. FAQPage schema is already merged into
+          healthSchema above (combineSchemas), so includeSchema is false here to
+          avoid emitting duplicate FAQPage JSON-LD. */}
+      <section className="border-t border-brand-border px-container-sm sm:px-container py-12">
+        <h2 className="font-display font-bold text-brand-dark text-xl mb-5">
+          Frequently asked questions
+        </h2>
+        <div className="max-w-3xl">
+          <FAQAccordion items={FAQ_ITEMS} includeSchema={false} defaultOpenIndex={0} />
+        </div>
+      </section>
+
       <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
 </>
   </>
