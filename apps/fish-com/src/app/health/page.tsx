@@ -1,10 +1,21 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
+import { Diseases, RESERVED_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Hub — Disease, Chemistry & Treatment | Fish.com', description: 'Aquarium fish health guides — the nitrogen cycle, water chemistry, disease identification, and treatment for common conditions.', path: '/health' })
+
+// Programmatic disease reference catalog (the dynamic /health/[slug] pages),
+// excluding the hand-written one-off guides reserved at fixed slugs.
+const catalogDiseases = Diseases.filter(d => !RESERVED_HEALTH_SLUGS.has(d.slug))
+
+// Group the catalog by category for the hub's grouped index. Ordered so the
+// highest-traffic clusters (parasitic, bacterial, fungal) lead.
+const CATEGORY_ORDER: DiseaseCategory[] = ['Parasitic', 'Bacterial', 'Fungal', 'Viral', 'Environmental', 'Nutritional', 'Genetic']
+const catalogByCategory = CATEGORY_ORDER
+  .map(category => ({ category, items: catalogDiseases.filter(d => d.category === category) }))
+  .filter(group => group.items.length > 0)
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
@@ -23,16 +34,21 @@ const GUIDES = [
   { title: 'Tank Setup Guide', href: '/setup', desc: 'Step-by-step first aquarium setup' },
 ]
 
+const itemListEntries = [
+  ...GUIDES.map(g => ({ name: g.title, url: `https://fish.com${g.href}` })),
+  ...catalogDiseases.map(d => ({ name: d.name, url: `https://fish.com/health/${d.slug}` })),
+]
+
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Aquarium Health Guides',
-  numberOfItems: GUIDES.length,
-  itemListElement: GUIDES.map((g, i) => ({
+  name: 'Aquarium Fish Health & Disease Guides',
+  numberOfItems: itemListEntries.length,
+  itemListElement: itemListEntries.map((e, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    name: g.title,
-    url: `https://fish.com${g.href}`,
+    name: e.name,
+    url: e.url,
   })),
 }
 
@@ -91,10 +107,17 @@ export default function FishHealthPage() {
       {/* agent1-browse-all-end */}
       <section className="border-t border-brand-border bg-brand-white px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">Disease Reference Catalog</h2>
-        <p className="text-xs text-brand-text-light max-w-content-wide mb-4">25 common aquarium fish diseases with symptoms, diagnostic approach, treatment ladder, and prevention. Sourced from Noga, Roberts, WAVMA, UF/IFAS, and WOAH references.</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 max-w-content-wide">
-          {Diseases.filter(d => !RESERVED_HEALTH_SLUGS.has(d.slug)).map(d => (
-            <Link key={d.slug} href={`/health/${d.slug}`} className="text-sm text-brand-primary no-underline hover:underline">{d.name}</Link>
+        <p className="text-xs text-brand-text-light max-w-content-wide mb-4">{catalogDiseases.length} common aquarium fish diseases, grouped by cause, with symptoms, diagnostic approach, treatment ladder, and prevention. Sourced from Noga, Roberts, WAVMA, UF/IFAS, and WOAH references. Not sure what you are seeing? Start with the <Link href="/tools/fish-disease-symptom-checker" className="text-brand-primary no-underline hover:underline font-bold">fish disease symptom checker</Link> to narrow it down.</p>
+        <div className="max-w-content-wide space-y-6">
+          {catalogByCategory.map(group => (
+            <div key={group.category}>
+              <h3 className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{group.category} ({group.items.length})</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+                {group.items.map(d => (
+                  <Link key={d.slug} href={`/health/${d.slug}`} className="text-sm text-brand-primary no-underline hover:underline">{d.name}</Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>

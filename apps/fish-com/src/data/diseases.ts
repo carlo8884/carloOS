@@ -1,7 +1,7 @@
 /**
  * Fish disease reference data — Fish.com
  *
- * 25 common aquarium fish diseases, used by the dynamic route at
+ * 35 common aquarium fish diseases, used by the dynamic route at
  * /health/[slug]/page.tsx to render a long-tail SEO page per condition.
  *
  * Editorial posture:
@@ -1101,6 +1101,426 @@ export const Diseases: Disease[] = [
       'WAVMA Aquatic Veterinary Medical Reference — Buoyancy Disorders in Goldfish.',
     ],
     relatedSlugs: ['swim-bladder', 'fish-constipation', 'gas-bubble-disease'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 26. Cloudy Eye
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'cloudy-eye',
+    name: 'Cloudy Eye',
+    category: 'Bacterial',
+    waterType: 'Both',
+    contagious: false,
+    mortality: 'Low',
+    symptoms: [
+      'A milky, hazy, or opaque film over one or both eyes',
+      'Reduced responsiveness to food or movement on the affected side',
+      'Sometimes accompanied by a whitish sheen across the body (excess slime coat)',
+      'In bacterial cases, concurrent fin or skin reddening',
+    ],
+    causes: [
+      'Poor water quality — chronic ammonia, nitrite, or low-grade bacterial load is the most common trigger',
+      'Physical eye injury from netting, fighting, or sharp decor',
+      'Nutritional deficiency (particularly vitamin A) in chronic, bilateral presentations',
+      'Old age or cataract in some species, which is not treatable',
+    ],
+    diagnosticApproach: [
+      'Determine whether one eye (often trauma) or both (often water quality or systemic) is affected',
+      'Water-quality test — cloudy eye is frequently the first visible sign of a water problem',
+      'Distinguish a surface haze (corneal/external, often reversible) from a deep opacity (lens cataract, usually permanent)',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: correct water quality first; many cloudy-eye cases clear on water changes alone',
+      'Tier 2 — Supportive: aquarium salt at hobby-literature doses for tolerant species; varied vitamin-rich diet for nutritional cases',
+      'Tier 3 — Chemotherapeutic: broad-spectrum antibiotic only where a bacterial cause is evident and water quality is already corrected',
+      'Tier 4 — Veterinary referral for valuable specimens or a non-resolving deep opacity',
+    ],
+    preventionNote:
+      'Cloudy eye is usually a water-quality barometer rather than a primary disease. Keep ammonia and nitrite at 0, perform routine water changes, handle fish gently, and feed a varied diet. A surface haze from poor water typically clears once the environment is corrected; a deep lens opacity (cataract) generally does not.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Lewbart GA. Self-Assessment Color Review of Ornamental Fish. Manson Publishing, 2010.',
+      'WAVMA Aquatic Veterinary Medical Reference — Ophthalmic Disease in Fish.',
+    ],
+    relatedSlugs: ['popeye-exophthalmia', 'ammonia-poisoning', 'fin-rot-disease'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 27. Lymphocystis
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'lymphocystis',
+    name: 'Lymphocystis (Cauliflower Disease)',
+    scientificName: 'Lymphocystivirus (Iridoviridae)',
+    category: 'Viral',
+    waterType: 'Both',
+    contagious: true,
+    mortality: 'Low',
+    symptoms: [
+      'White to pinkish wart-like or cauliflower-like nodules on fins, mouth, and body',
+      'Clusters of grain-sized growths that enlarge slowly over weeks',
+      'Generally no impairment of feeding or behavior unless growths obstruct the mouth or gills',
+      'Self-limiting in most cases — nodules often regress on their own over weeks to months',
+    ],
+    causes: [
+      'Lymphocystis virus, an iridovirus that causes enormous enlargement of infected skin cells',
+      'Stress and poor water quality predispose fish and prolong the course',
+      'Transmission by contact with infected fish or shed virus, often slow within a tank',
+    ],
+    diagnosticApproach: [
+      'Visual identification of the characteristic cauliflower-like nodules — fairly distinctive',
+      'Differential against epistylis and external parasites (which are mobile or stalked) and against tumors',
+      'Histology confirms the grossly enlarged infected cells in uncertain cases',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: optimize water quality and reduce stress to support immune clearance',
+      'Tier 2 — Supportive: there is no specific antiviral; the disease is usually allowed to run its self-limiting course',
+      'Tier 3 — Surgical: a veterinarian may remove growths that obstruct the mouth, eye, or gill in severe cases',
+      'Tier 4 — Veterinary referral when growths impair function or fail to regress over an extended period',
+    ],
+    preventionNote:
+      'Lymphocystis is unsightly but usually harmless and self-resolving. Avoid the temptation to treat it with antibiotics or anti-parasite medication — neither works on a virus. Reduce stress, maintain good water quality, and quarantine new fish; most cases resolve without intervention.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Roberts RJ (ed). Fish Pathology. 4th ed. Wiley-Blackwell, 2012.',
+      'Yanong RPE. Viral Diseases of Ornamental Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['fish-pox-carp-pox', 'koi-herpesvirus-khv', 'epistylis'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 28. Costia (Slime Disease)
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'costia-slime-disease',
+    name: 'Costia (Slime Disease)',
+    scientificName: 'Ichthyobodo necator (formerly Costia necatrix)',
+    category: 'Parasitic',
+    waterType: 'Both',
+    contagious: true,
+    mortality: 'High',
+    symptoms: [
+      'A bluish-white or gray film of excess mucus over the skin (the "slime" appearance)',
+      'Flashing, lethargy, clamped fins, and rubbing against surfaces',
+      'Rapid breathing and surface gasping when gills are colonized',
+      'Rapid decline in weakened, crowded, or chilled fish',
+    ],
+    causes: [
+      'Ichthyobodo, a tiny flagellate parasite that is among the smallest aquarium ectoparasites',
+      'Proliferates on stressed, crowded, or chilled fish in poor water quality',
+      'Introduced with infected fish; often an opportunist on already-compromised stock',
+    ],
+    diagnosticApproach: [
+      'Skin or gill scrape under higher-power microscopy — the flickering, comma-shaped flagellate is small and easily missed',
+      'Excess mucus and flashing without visible spots points away from ich and velvet toward a microscopic ectoparasite',
+      'Differential against Chilodonella and Trichodina, which require the same microscopic confirmation',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: correct water quality and reduce crowding and chilling, which drive outbreaks',
+      'Tier 2 — Supportive: salt baths at hobby-literature doses help many freshwater species',
+      'Tier 3 — Chemotherapeutic: formalin or formalin/malachite green per aquaculture-extension protocol; raising temperature can help in tolerant species',
+      'Tier 4 — Veterinary referral for valuable stock or rapidly progressing gill involvement',
+    ],
+    preventionNote:
+      'Costia is an opportunist on stressed fish. Maintain warm, stable, clean water for the species kept, avoid overcrowding, and quarantine new arrivals. Because the parasite is microscopic, a skin scrape under the microscope is the only way to confirm it — treating blind for "slime disease" is unreliable.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Hoffman GL. Parasites of North American Freshwater Fishes. 2nd ed. Cornell University Press, 1999.',
+      'Yanong RPE. Flagellate Parasites of Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['chilodonella', 'trichodina', 'ich'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 29. Chilodonella
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'chilodonella',
+    name: 'Chilodonella',
+    scientificName: 'Chilodonella spp.',
+    category: 'Parasitic',
+    waterType: 'Freshwater',
+    contagious: true,
+    mortality: 'High',
+    symptoms: [
+      'A grayish-white film of excess mucus, similar in appearance to Costia',
+      'Flashing, clamped fins, lethargy, and loss of appetite',
+      'Labored breathing and surface gasping when the gills are heavily affected',
+      'Can cause sudden heavy losses in cool water and crowded systems',
+    ],
+    causes: [
+      'Chilodonella, a ciliated protozoan ectoparasite that thrives in cool, organically rich water',
+      'Outbreaks favored by low temperature, crowding, and high organic load',
+      'Introduced with infected fish; opportunistic on stressed or chilled stock',
+    ],
+    diagnosticApproach: [
+      'Skin or gill scrape microscopy — the heart- or saucer-shaped ciliate is identifiable to a trained eye',
+      'Excess mucus plus flashing without discrete spots suggests a microscopic ectoparasite rather than ich or velvet',
+      'Differential against Costia and Trichodina, which present similarly and require the same microscopy',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: reduce organic load, improve water quality, and address chilling and crowding',
+      'Tier 2 — Supportive: salt baths at hobby-literature doses for tolerant species',
+      'Tier 3 — Chemotherapeutic: formalin or potassium permanganate baths per aquaculture-extension protocol',
+      'Tier 4 — Veterinary referral for valuable stock or when gill involvement is advanced',
+    ],
+    preventionNote:
+      'Chilodonella is a cool-water opportunist. Keep the system clean and uncrowded, avoid chilling fish below their range, and quarantine new arrivals. As with the other microscopic ectoparasites, a skin scrape under the microscope is the reliable way to confirm it before treating.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Hoffman GL. Parasites of North American Freshwater Fishes. 2nd ed. Cornell University Press, 1999.',
+      'Roberts RJ (ed). Fish Pathology. 4th ed. Wiley-Blackwell, 2012.',
+    ],
+    relatedSlugs: ['costia-slime-disease', 'trichodina', 'bacterial-gill-disease'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 30. Trichodina
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'trichodina',
+    name: 'Trichodina',
+    scientificName: 'Trichodina spp.',
+    category: 'Parasitic',
+    waterType: 'Both',
+    contagious: true,
+    mortality: 'Moderate',
+    symptoms: [
+      'Excess mucus production giving the skin a dull, pale, or filmy look',
+      'Flashing and rubbing against surfaces, clamped fins',
+      'Irritated, frayed fins and reddened skin patches in heavier infestations',
+      'Gill irritation with increased respiration when gills are colonized',
+    ],
+    causes: [
+      'Trichodina, a disc-shaped ciliate ectoparasite that feeds on skin and gill surfaces',
+      'A classic indicator of poor water quality and high organic load — its presence often signals husbandry problems',
+      'Spreads in crowded systems and is introduced with infected fish',
+    ],
+    diagnosticApproach: [
+      'Skin or gill scrape microscopy — the rotating, disc-shaped ciliate with a ring of denticles is distinctive and often described as a "flying saucer"',
+      'Heavy Trichodina loads almost always accompany an environmental problem, so test water as part of the workup',
+      'Differential against Costia and Chilodonella, which share the excess-mucus presentation',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: improve water quality and reduce organic load — often the single most effective step',
+      'Tier 2 — Supportive: salt baths at hobby-literature doses for tolerant species',
+      'Tier 3 — Chemotherapeutic: formalin or potassium permanganate baths per aquaculture-extension protocol',
+      'Tier 4 — Veterinary referral for valuable stock or persistent infestations',
+    ],
+    preventionNote:
+      'Trichodina is widely regarded as a barometer of water quality — light numbers are tolerated by healthy fish, and heavy infestations point to an environmental fault. The most durable control is excellent husbandry: clean water, low organic load, sensible stocking, and quarantine of new fish.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Hoffman GL. Parasites of North American Freshwater Fishes. 2nd ed. Cornell University Press, 1999.',
+      'Yanong RPE. Ciliated Protozoan Parasites of Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['costia-slime-disease', 'chilodonella', 'ich'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 31. Epistylis
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'epistylis',
+    name: 'Epistylis (Red Sore / Stalked Ciliate)',
+    scientificName: 'Epistylis spp.',
+    category: 'Parasitic',
+    waterType: 'Both',
+    contagious: false,
+    mortality: 'Moderate',
+    symptoms: [
+      'Fuzzy white or off-white tufts on the skin, fins, or mouth, often mistaken for fungus',
+      'A reddened, ulcerated base beneath the tuft (distinguishing it from true fungus)',
+      'Growths that may have a slightly translucent or granular look compared with cottony fungus',
+      'Most common in pond fish such as koi and goldfish, especially on wounds',
+    ],
+    causes: [
+      'Epistylis, a stalked colonial ciliate that anchors to the skin surface and to existing wounds',
+      'High organic load and poor water quality drive proliferation',
+      'It feeds on bacteria in the water rather than on the fish directly, but its attachment damages tissue and opens the door to secondary bacterial infection',
+    ],
+    diagnosticApproach: [
+      'Wet-mount microscopy is the key step — Epistylis shows characteristic stalked, bell-shaped ciliates, whereas true fungus shows branching hyphae',
+      'The reddened, ulcerated base under the tuft is a useful gross clue that it is not Saprolegnia',
+      'Water-quality testing, since outbreaks track organic load',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: aggressive water-quality correction and reduction of organic load is central, since the parasite feeds on waterborne bacteria',
+      'Tier 2 — Supportive: salt baths at hobby-literature doses for tolerant species',
+      'Tier 3 — Chemotherapeutic: formalin or potassium permanganate baths per aquaculture-extension protocol; secondary bacterial ulcers may need separate antibiotic treatment',
+      'Tier 4 — Veterinary referral for valuable koi or refractory ulcerated cases',
+    ],
+    preventionNote:
+      'Epistylis is frequently misdiagnosed and treated as fungus, which fails. The defining check is a microscope: stalked ciliates rather than fungal hyphae. Because it thrives on waterborne bacteria, the most effective control is reducing organic load and maintaining excellent water quality, especially in ponds.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Hoffman GL. Parasites of North American Freshwater Fishes. 2nd ed. Cornell University Press, 1999.',
+      'Yanong RPE. Sessile Ciliate Infections of Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['saprolegnia-fungal-infection', 'mouth-fungus-columnaris', 'trichodina'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 32. Black Spot Disease
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'black-spot-disease',
+    name: 'Black Spot Disease (Diplopstomiasis)',
+    scientificName: 'Digenean trematode metacercariae (e.g. Neascus spp.)',
+    category: 'Parasitic',
+    waterType: 'Freshwater',
+    contagious: false,
+    mortality: 'Low',
+    symptoms: [
+      'Small black or dark-brown spots, like grains of pepper, scattered on the skin, fins, and sometimes the gills',
+      'Spots are flat and embedded rather than raised like ich or fuzzy like fungus',
+      'Usually little behavioral change; light infestations are mostly cosmetic',
+      'Mild flashing in some fish from skin irritation',
+    ],
+    causes: [
+      'Encysted larval stages (metacercariae) of digenean flukes whose life cycle involves snails and fish-eating birds',
+      'The dark spot is host pigment laid down around the encysted larva, not the parasite itself',
+      'Almost always introduced with wild-caught fish or pond fish exposed to the snail-and-bird life cycle; it cannot complete its life cycle in a closed indoor aquarium',
+    ],
+    diagnosticApproach: [
+      'Visual identification of flat, embedded black spots is usually sufficient',
+      'History — wild-caught or pond-sourced fish strongly supports the diagnosis',
+      'Differential against melanin spots (natural pigment) and against raised black growths',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: because the life cycle needs snails and birds, simply isolating affected fish in a closed tank breaks transmission; existing cysts then resolve slowly',
+      'Tier 2 — Supportive: good husbandry while the encysted larvae die off over weeks to months',
+      'Tier 3 — Chemotherapeutic: praziquantel is the cited anthelmintic for fluke stages, used per veterinary or aquaculture-extension protocol; many keepers simply wait the cysts out',
+      'Tier 4 — Snail and intermediate-host control in pond settings to prevent reinfection',
+    ],
+    preventionNote:
+      'Black spot disease is largely a wild-fish and pond phenomenon and is mostly cosmetic in the aquarium. Because the parasite needs a snail and a bird to complete its cycle, it cannot spread among fish in a closed indoor tank — quarantining new wild-caught fish and controlling snails in ponds is enough to prevent it establishing.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Hoffman GL. Parasites of North American Freshwater Fishes. 2nd ed. Cornell University Press, 1999.',
+      'Yanong RPE. Digenean Trematode Infections in Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['anchor-worm-fish-lice', 'gill-flukes', 'ich'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 33. Fish Pox (Carp Pox)
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'fish-pox-carp-pox',
+    name: 'Fish Pox (Carp Pox)',
+    scientificName: 'Cyprinid herpesvirus 1 (CyHV-1)',
+    category: 'Viral',
+    waterType: 'Freshwater',
+    contagious: true,
+    mortality: 'Low',
+    symptoms: [
+      'Smooth, waxy, milky-white to pinkish raised plaques on the skin and fins',
+      'Growths described as looking like drops of candle wax or paraffin on the fish',
+      'Generally no impairment of feeding or behavior; the plaques are mostly cosmetic',
+      'Lesions that wax and wane with the seasons, often regressing in warm water and returning when it cools',
+    ],
+    causes: [
+      'Cyprinid herpesvirus 1, a herpesvirus of carp, koi, goldfish, and related cyprinids',
+      'Cooler water temperatures favor the appearance of lesions; warmth often suppresses them',
+      'Stress and poor water quality predispose; survivors can carry the virus and show recurrent lesions',
+    ],
+    diagnosticApproach: [
+      'Visual identification of the smooth, waxy plaques is usually sufficient in cyprinids',
+      'Differential against lymphocystis (cauliflower-textured rather than waxy-smooth) and against true tumors',
+      'Histology or PCR at a specialty laboratory confirms uncertain cases',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: optimize water quality and reduce stress; warming the water within the species range often reduces lesions',
+      'Tier 2 — Supportive: no specific antiviral treatment exists; the condition is generally tolerated as cosmetic',
+      'Tier 3 — Veterinary referral only if growths obstruct function or there is diagnostic uncertainty',
+      'Tier 4 — Biosecurity: quarantine new cyprinids, since survivors can carry and transmit the virus',
+    ],
+    preventionNote:
+      'Carp pox is unsightly but usually harmless, and there is no cure — antibiotics and anti-parasite medications do nothing to a virus. Good water quality, warmth within the species range, and low stress keep lesions to a minimum. Quarantine new koi and goldfish, as carriers can pass the virus on.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Roberts RJ (ed). Fish Pathology. 4th ed. Wiley-Blackwell, 2012.',
+      'Yanong RPE. Viral Diseases of Ornamental Fish. UF/IFAS Extension.',
+    ],
+    relatedSlugs: ['lymphocystis', 'koi-herpesvirus-khv', 'anchor-worm-fish-lice'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 34. Clamped Fins
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'clamped-fins',
+    name: 'Clamped Fins',
+    category: 'Environmental',
+    waterType: 'Both',
+    contagious: false,
+    mortality: 'Low',
+    symptoms: [
+      'Fins held tightly folded against the body rather than spread open',
+      'A pinched, hunched, or generally "unhappy" posture',
+      'Often accompanied by lethargy, reduced appetite, and hiding',
+      'A general distress sign rather than a disease in itself — frequently the earliest clue something is wrong',
+    ],
+    causes: [
+      'Poor water quality — ammonia, nitrite, nitrate, or wrong pH and temperature is the most common cause',
+      'External parasites (ich, velvet, flukes, Costia) causing skin and gill irritation',
+      'Stress from aggression, transport, or an unsuitable environment',
+      'An early or general sign of many bacterial and parasitic diseases',
+    ],
+    diagnosticApproach: [
+      'Treat clamped fins as a symptom, not a diagnosis — test water quality first',
+      'Inspect closely for spots, excess mucus, fin damage, or rapid breathing that point to a specific disease',
+      'Review recent changes — new fish, water change, temperature swing, aggression — for the trigger',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: test and correct water quality and temperature; this resolves a large share of cases on its own',
+      'Tier 2 — Supportive: reduce stressors, address aggression, and ensure an appropriate habitat for the species',
+      'Tier 3 — Targeted: if a specific disease is found (parasite, bacterial infection), treat that condition using its own guide',
+      'Tier 4 — Veterinary referral if clamping persists with other systemic signs and no environmental cause is found',
+    ],
+    preventionNote:
+      'Clamped fins are the fish equivalent of a check-engine light: a non-specific distress sign that something in the environment or health of the fish is wrong. The first response is always to test the water, not to medicate. Stable, clean water, a suitable habitat, and low stress prevent the great majority of cases.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Lewbart GA. Self-Assessment Color Review of Ornamental Fish. Manson Publishing, 2010.',
+      'WAVMA Aquatic Veterinary Medical Reference — Behavioral and Environmental Stress Signs.',
+    ],
+    relatedSlugs: ['ammonia-poisoning', 'ich', 'fish-tuberculosis-mycobacterium'],
+  },
+  // ─────────────────────────────────────────────────────────────────
+  // 35. Red Pest / Hemorrhagic Septicemia (bacterial)
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'red-pest-septicemia',
+    name: 'Red Pest (Bacterial Hemorrhagic Septicemia)',
+    scientificName: 'Aeromonas spp., Pseudomonas spp. (opportunistic)',
+    category: 'Bacterial',
+    waterType: 'Both',
+    contagious: false,
+    mortality: 'High',
+    symptoms: [
+      'Red streaks or blotches in the fins, tail, and along the body — visible blood vessels and hemorrhage',
+      'Reddened, inflamed vent or belly; sometimes ulcers or open sores',
+      'Lethargy, loss of appetite, and rapid breathing as the infection becomes systemic',
+      'Can progress to dropsy, ulcers, or sudden death in severe cases',
+    ],
+    causes: [
+      'Opportunistic gram-negative bacteria (notably Aeromonas) that are ubiquitous in aquarium water',
+      'Almost always secondary to poor water quality, injury, or chronic stress that lowers host defenses',
+      'High organic load, ammonia, and overcrowding are the usual precipitating conditions',
+    ],
+    diagnosticApproach: [
+      'Visual identification of red streaking in normally clear fin tissue, distinct from the natural coloration of the fish',
+      'Water-quality testing — red-streak septicemia is a near-universal companion of a water-quality fault',
+      'Differential against ammonia burn (gill and skin reddening), velvet, and natural red pigmentation',
+    ],
+    treatmentTiers: [
+      'Tier 1 — Environmental: immediate water-quality correction is the foundation — most mild cases respond to clean water alone',
+      'Tier 2 — Supportive: aquarium salt at hobby-literature doses for tolerant species; quarantine affected fish to reduce tank stress',
+      'Tier 3 — Chemotherapeutic: broad-spectrum antibiotics (kanamycin, nitrofurazone, or medicated food) where legally available, for systemic or advancing cases',
+      'Tier 4 — Veterinary referral with culture-and-sensitivity for valuable stock or refractory infections',
+    ],
+    preventionNote:
+      'Bacterial hemorrhagic septicemia is overwhelmingly a downstream consequence of a water-quality or stress problem, not a primary infection. Prevention is upstream husbandry: a fully cycled tank, regular water changes, sensible stocking, gentle handling, and quarantine of new fish. Reaching for antibiotics before fixing the environment usually fails.',
+    citations: [
+      'Noga EJ. Fish Disease: Diagnosis and Treatment. 2nd ed. Wiley-Blackwell, 2010.',
+      'Yanong RPE. Use of Antibiotics in Ornamental Fish Aquaculture. UF/IFAS Extension Circular 84.',
+      'Roberts RJ (ed). Fish Pathology. 4th ed. Wiley-Blackwell, 2012.',
+    ],
+    relatedSlugs: ['dropsy', 'fin-rot-disease', 'ammonia-poisoning'],
   },
 ]
 
