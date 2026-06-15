@@ -157,5 +157,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfoods.com/legal/terms', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://petfoods.com/life-stage', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://petfoods.com/recalls', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://petfoods.com/recalls/how-pet-food-recalls-work', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
   ]
 }

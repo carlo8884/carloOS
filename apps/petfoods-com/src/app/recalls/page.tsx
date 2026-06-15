@@ -116,6 +116,7 @@ export default function RecallsHubPage() {
       ]}
       schema={schema}
       relatedLinks={[
+        { title: 'How Pet Food Recalls Work — And How to Check', href: '/recalls/how-pet-food-recalls-work', category: 'Guide' },
         { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
         { title: 'Brand Index & Reviews', href: '/brands', category: 'Reference' },
         { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
@@ -162,7 +163,13 @@ export default function RecallsHubPage() {
           Veterinary Medicine since 2018, organized as a structured catalog so an owner can check
           whether a product they feed has been affected. The authoritative source is the FDA CVM
           Recalls &amp; Withdrawals page; this catalog mirrors the data, adds manufacturer context,
-          and cross-references each event to the affected brand’s page when one exists.
+          and cross-references each event to the affected brand’s page when one exists. New here?
+          Start with{' '}
+          <a href="/recalls/how-pet-food-recalls-work">
+            How Pet Food Recalls Work — And How to Check
+          </a>{' '}
+          for the evergreen explainer on official sources, common causes, recall classes, and what
+          to do if your food is recalled.
         </p>
 
         <div
