@@ -17,12 +17,61 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildBreadcrumbSchema,
+  buildFAQSchema,
   combineSchemas,
+  FAQAccordion,
   SchemaScript,
   CalloutBox,
   StockImage,
 } from '@carloOS/ui'
-import { Specialties } from '../../data/specialties'
+import { Specialties, type Specialty } from '../../data/specialties'
+
+// Short credential label (e.g. "DACVIM (Cardiology)") parsed from the
+// board-certification org string, which always names the diplomate credential
+// in double quotes. Falls back to the leading college acronym.
+function credentialLabel(s: Specialty): string {
+  const quoted = s.boardCertificationOrg.match(/"([^"]+)"/)
+  if (quoted) return quoted[1]
+  return s.boardCertificationOrg.split(' ')[0]
+}
+
+// Initial-consultation cost for the reference table. The first entry in every
+// specialty's averageCostRanges is the initial consultation; we surface the
+// bare dollar band (stripping the "(typical US range)" label, which the table
+// caption already states once).
+function consultationCost(s: Specialty): string {
+  const first = s.averageCostRanges[0]?.range ?? ''
+  const match = first.match(/\$[\d,]+(?:[–-]\$?[\d,]+)?/)
+  return match ? match[0] : '—'
+}
+
+// Hub-level FAQs — grounded ONLY in facts already stated on this page and in
+// the per-specialty data (consultation cost ranges, board-certification
+// credentials, referral pathway, insurance coverage pattern). Calibrated
+// language; diagnostic and referral decisions always defer to the
+// veterinarian. See QC-STANDARDS.md §1.
+const HUB_FAQS = [
+  {
+    question: 'How much does a veterinary specialist visit cost?',
+    answer:
+      'An initial specialist consultation commonly runs about $150–500 in the United States, depending on the discipline — emergency and dentistry consultations tend to start lower, while most internal-medicine subspecialties start near $200–500. The consultation is only the entry point: advanced diagnostics (echocardiograms, MRI, CT, biopsy) and any procedure or surgery are billed separately and can reach several thousand dollars. The reference table on this page lists the typical initial-consultation range for each of the nine specialties. All figures are typical US ranges and are not guaranteed.',
+  },
+  {
+    question: 'Do I need a referral to see a veterinary specialist?',
+    answer:
+      'Most board-certified specialists prefer — and some require — a referral from your primary veterinarian, who transfers records, prior bloodwork, and imaging so the specialist does not duplicate testing. Some teaching hospitals and specialty practices accept owner-initiated appointments. For a true emergency (collapse, labored breathing, a vision-threatening eye, an open fracture), go to a 24-hour emergency hospital first; specialty referral can follow once your pet is stabilized.',
+  },
+  {
+    question: 'How do I confirm a veterinarian is actually board-certified?',
+    answer:
+      'Board certification means the veterinarian completed a multi-year residency and passed a specialty board exam administered by an AVMA-recognized college, and it is signaled by credential letters such as DACVIM, DACVD, DACVO, DACVECC, DACVS, or DAVDC. "Interest in" or "experience with" a specialty is not the same thing. Each college publishes a public directory of board-certified diplomates — confirm the practitioner appears in the directory linked on this page before assuming.',
+  },
+  {
+    question: 'Does pet insurance cover specialist care?',
+    answer:
+      'Most accident-and-illness pet insurance plans reimburse specialist consultations, advanced diagnostics, and chronic specialty medications once the policy is active and waiting periods have cleared — provided the condition is not pre-existing. The variables that matter most for specialty care are annual maximums (a multi-day ICU stay or a chemotherapy protocol can exhaust low-cap plans), per-condition caps, and bilateral-condition language. Pre-existing condition exclusions are universal, so enrolling before a specialist-level diagnosis is documented is what keeps specialty care covered.',
+  },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -60,7 +109,10 @@ export default function SpecialistsHubPage() {
       url: `https://vets.co/specialists/${s.slug}`,
     })),
   }
-  const combined = combineSchemas(breadcrumbSchema, itemListSchema)
+  const faqSchema = buildFAQSchema({
+    questions: HUB_FAQS.map((f) => ({ question: f.question, answer: f.answer })),
+  })
+  const combined = combineSchemas(breadcrumbSchema, itemListSchema, faqSchema)
 
   return (
     <>
@@ -98,6 +150,28 @@ export default function SpecialistsHubPage() {
       </div>
 
       <main className="px-container-sm sm:px-container py-12 max-w-5xl">
+        {/* Extractable direct-answer summary (TL;DR) for SERP + AI citation */}
+        <section className="bg-brand-dark rounded-xl p-6 mb-10">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The short answer
+          </div>
+          <p className="text-white/90 leading-relaxed m-0 text-base max-w-3xl">
+            A board-certified veterinary specialist has completed a multi-year residency and passed
+            a specialty board exam from an AVMA-recognized college, signaled by credential letters
+            like <strong>DACVIM, DACVD, DACVO, DACVECC, DACVS, or DAVDC</strong>. The nine
+            disciplines pet owners most commonly reach are{' '}
+            <strong>cardiology, oncology, dermatology, ophthalmology, neurology, dentistry,
+            internal medicine, orthopedic surgery, and emergency &amp; critical care</strong>. Most
+            specialists prefer a referral from your primary vet, who transfers records so testing
+            is not duplicated. An initial consultation commonly runs <strong>$150–500</strong>, with
+            advanced diagnostics and procedures billed separately and often reaching several
+            thousand dollars. Most accident-and-illness pet insurance plans reimburse specialist
+            care once the policy is active and waiting periods clear — but pre-existing conditions
+            are excluded. Verify any specialist in the relevant college&apos;s public directory.
+            All cost figures are typical US ranges and are not guaranteed.
+          </p>
+        </section>
+
         {/* Educational framing — top callout */}
         <CalloutBox variant="note" title="Educational — follow your vet's referral guidance">
           <p>
@@ -127,6 +201,61 @@ export default function SpecialistsHubPage() {
             specialist. The nine disciplines below are the most common reasons your primary vet
             may suggest one.
           </p>
+        </section>
+
+        {/* At-a-glance reference table — grounded in per-specialty data */}
+        <section className="mb-12">
+          <h2
+            className="font-display font-black text-brand-dark mb-2"
+            style={{ fontSize: 'clamp(18px, 2.4vw, 26px)' }}
+          >
+            Specialties at a glance
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-5 max-w-3xl leading-relaxed">
+            The board-certification credential, typical initial-consultation cost, and the most
+            common reason a primary vet refers, for each of the nine disciplines. Consultation
+            figures are typical US ranges for the first visit only — advanced diagnostics and any
+            procedure or surgery are billed separately. All figures are typical US ranges and are
+            not guaranteed.
+          </p>
+          <div className="overflow-x-auto border border-brand-border rounded-xl">
+            <table className="w-full text-sm border-collapse">
+              <caption className="sr-only">
+                Board-certified veterinary specialties with credential, typical initial
+                consultation cost, and the most common reason for referral
+              </caption>
+              <thead>
+                <tr className="bg-brand-surface text-left">
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border">
+                    Specialty
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border whitespace-nowrap">
+                    Board credential
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border whitespace-nowrap">
+                    Typical consult cost
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border">
+                    Most common reason to refer
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Specialties.map((s) => (
+                  <tr key={s.slug} className="border-b border-brand-border last:border-0 hover:bg-brand-surface/50">
+                    <th scope="row" className="p-3 font-medium text-left align-top">
+                      <Link href={`/specialists/${s.slug}`} className="text-brand-primary hover:underline no-underline">
+                        {s.shortName}
+                      </Link>
+                    </th>
+                    <td className="p-3 align-top text-brand-text-mid whitespace-nowrap">{credentialLabel(s)}</td>
+                    <td className="p-3 align-top text-brand-text-mid whitespace-nowrap">{consultationCost(s)}</td>
+                    <td className="p-3 align-top text-brand-text-light">{s.whenToSeeSummary}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         {/* Specialty grid */}
@@ -276,6 +405,36 @@ export default function SpecialistsHubPage() {
           <p className="text-xs text-brand-text-light italic mt-6 mb-0">
             Vets.co Editorial — sourced from cited references. This hub is educational and does
             not replace evaluation, diagnosis, or treatment by a licensed veterinarian.
+          </p>
+        </section>
+
+        {/* Hub FAQ — schema lives in the combined SchemaScript above */}
+        <section className="mt-12">
+          <h2
+            className="font-display font-black text-brand-dark mb-5"
+            style={{ fontSize: 'clamp(18px, 2.4vw, 26px)' }}
+          >
+            Common questions about veterinary specialists
+          </h2>
+          <FAQAccordion items={HUB_FAQS} includeSchema={false} />
+          <p className="text-xs text-brand-text-light mt-4 leading-relaxed max-w-3xl">
+            For the tests a specialist commonly orders, see the{' '}
+            <Link href="/diagnostics" className="text-brand-primary hover:underline">
+              pet diagnostic tests
+            </Link>{' '}
+            library. To understand how coverage handles specialty care, read{' '}
+            <Link href="/insurance/pre-existing-conditions" className="text-brand-primary hover:underline">
+              how pre-existing conditions are treated
+            </Link>{' '}
+            and{' '}
+            <Link href="/insurance/what-pet-insurance-covers" className="text-brand-primary hover:underline">
+              what pet insurance covers
+            </Link>
+            . To put a number on whether coverage pays off, try the{' '}
+            <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary hover:underline">
+              &ldquo;is pet insurance worth it?&rdquo; calculator
+            </Link>
+            .
           </p>
         </section>
       </main>
