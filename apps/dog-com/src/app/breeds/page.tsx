@@ -5,9 +5,9 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
-import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
+import { Breeds, groupBreedsByAKCGroup, groupBreedsBySize, type SizeCategory } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -38,7 +38,41 @@ const breedListSchema = {
   })),
 }
 
-const schema = combineSchemas(breadcrumbSchema, breedListSchema)
+// FAQ — grounded ONLY in facts present on this page (the breed data table,
+// the AKC-group browse list, and the cross-linked hubs). No fabricated
+// prevalence or numbers. Editorial voice; defers diagnostics to a vet.
+// Rendered statically below AND emitted as FAQPage schema (combined into the
+// server-rendered schema script so crawlers + AI surfaces see it without JS).
+const FAQ_ITEMS: Array<{ question: string; answer: string }> = [
+  {
+    question: 'How do I choose the right dog breed?',
+    answer:
+      'Start with the constraints that are hardest to change: your living space, how many hours of vigorous exercise you can give daily, whether anyone in the home is sensitive to shedding, and whether this is your first dog. Then narrow by size and energy — a Very High energy herding or sporting breed (Border Collie, Australian Shepherd, Belgian Malinois) needs a job and daily work, while a Low energy companion (Bulldog, Basset Hound, Mastiff) is far more forgiving of a quiet household. Use the at-a-glance table below to compare size, lifespan, energy, and shedding side by side, or answer seven questions in the breed-match wizard for a shortlist.',
+  },
+  {
+    question: 'What are the best dog breeds for first-time owners?',
+    answer:
+      'Several breeds in our profiles are flagged as first-time-owner-friendly — meaning forgiving temperament and a manageable training curve — including the Golden Retriever, Labrador Retriever, Cavalier King Charles Spaniel, Bichon Frise, Boston Terrier, and Havanese, among others. Breeds we do NOT flag as beginner-friendly are typically high-drive working or guardian breeds (German Shepherd, Belgian Malinois, Cane Corso, Siberian Husky) that demand experienced, consistent handling. First-time-owner suitability is a temperament-and-effort signal, not a guarantee — every individual dog varies.',
+  },
+  {
+    question: 'Which dog breeds shed the least?',
+    answer:
+      'Breeds profiled here with a Low shedding rating include the Poodle, Yorkshire Terrier, Shih Tzu, Maltese, Bichon Frise, Havanese, Vizsla, Weimaraner, and Portuguese Water Dog. Note that low-shedding is not the same as hypoallergenic: doodle crossbreeds (Goldendoodle, Labradoodle, Cockapoo, Maltipoo) are widely marketed as hypoallergenic, but that claim is not validated — coat type varies generation to generation, and no dog is truly allergen-free.',
+  },
+  {
+    question: 'How are these breed profiles sourced?',
+    answer:
+      'Each profile combines AKC breed-standard data (size, group, origin, temperament) with health guidance from OFA prevalence statistics, breed-parent-club priority panels, and veterinary references such as VCA and the Merck Veterinary Manual. Health conditions are listed as breed predispositions, not certainties, and we do not publish invented prevalence numbers. For any diagnosis, screening schedule, or treatment decision, consult your veterinarian — these pages are an editorial reference, not medical advice.',
+  },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQ_ITEMS })
+
+const schema = combineSchemas(breadcrumbSchema, breedListSchema, faqSchema)
+
+// Column order for the at-a-glance comparison table. Size order is the natural
+// Toy → Giant progression so the reference reads top-down by build.
+const SIZE_ORDER: SizeCategory[] = ['Toy', 'Small', 'Medium', 'Large', 'Giant']
 
 // ─── Inline SVG icons (replace emoji; match homepage idiom) ──────────────────
 
@@ -217,6 +251,64 @@ export default async function BreedsPage() {
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
+        {/* Direct-answer / TL;DR block — extractable summary for AI surfaces
+            (AI Overviews, ChatGPT, Perplexity, Claude) and a fast on-page
+            orientation for readers. Every claim here is grounded in the breed
+            data rendered below; no fabricated figures. */}
+        <section
+          aria-label="How to choose a dog breed — summary"
+          className="rounded-xl border border-brand-border bg-brand-primary-pale p-6 sm:p-7 mb-10 max-w-3xl"
+        >
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The short answer
+          </div>
+          <h2 className="font-display font-bold text-brand-dark text-xl mb-3 leading-snug">
+            How to choose a dog breed
+          </h2>
+          <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+            Match the breed to the constraints that are hardest to change first:
+            your living space, the hours of vigorous exercise you can give each
+            day, anyone&rsquo;s sensitivity to shedding, and whether this is your
+            first dog. A <strong className="text-brand-dark">Very High</strong>{' '}
+            energy herding or sporting breed needs daily work and a job;{' '}
+            a <strong className="text-brand-dark">Low</strong> energy companion
+            breed is far more forgiving of a quiet home. Use the{' '}
+            <Link href="#at-a-glance" className="text-brand-primary font-semibold no-underline hover:underline">
+              at-a-glance comparison table
+            </Link>{' '}
+            to weigh size, lifespan, energy, and shedding side by side.
+          </p>
+          <ul className="text-sm text-brand-text-mid leading-relaxed list-disc pl-5 space-y-1 mb-4">
+            <li>
+              <strong className="text-brand-dark">First dog?</strong> Favor
+              breeds flagged first-time-owner-friendly (forgiving temperament,
+              manageable training curve) over high-drive working or guardian
+              breeds.
+            </li>
+            <li>
+              <strong className="text-brand-dark">Shedding-sensitive home?</strong>{' '}
+              Look for a Low shedding rating — but treat &ldquo;hypoallergenic&rdquo;
+              doodle claims as marketing, not validated fact.
+            </li>
+            <li>
+              <strong className="text-brand-dark">Every profile</strong> lists
+              breed-associated health predispositions sourced from AKC, OFA, and
+              breed-club guidance — review them before you commit.
+            </li>
+          </ul>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <Link href="/breeds/match" className="font-bold text-brand-primary no-underline hover:underline flex items-center gap-1">
+              Take the breed-match wizard
+              <IconArrowRight className="w-4 h-4" />
+            </Link>
+            <span className="text-brand-text-light" aria-hidden="true">·</span>
+            <Link href="/compare" className="font-bold text-brand-primary no-underline hover:underline flex items-center gap-1">
+              Compare breeds side by side
+              <IconArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+
         <div className="flex items-center justify-between mb-8">
           <p className="text-sm text-brand-text-light">
             {breeds.length} breeds profiled
@@ -349,6 +441,169 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+
+      {/* At-a-glance comparison table — data-driven reference grid built from
+          the same breed source-of-truth as the cards above. Citation-magnet
+          structure for AI surfaces: a single scannable table of size, weight,
+          lifespan, energy, shedding, and first-time-owner suitability. No
+          fabricated values — every cell is a field already in the breed data. */}
+      <section
+        id="at-a-glance"
+        className="border-t border-brand-border px-container-sm sm:px-container py-12 scroll-mt-20"
+      >
+        <div className="flex items-center gap-2.5 mb-2">
+          <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Reference table
+          </span>
+        </div>
+        <h2 className="font-display font-bold text-brand-dark text-2xl mb-2">
+          Dog breeds at a glance
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-6 max-w-2xl">
+          Every profiled breed, grouped by size category, with the four traits
+          owners weigh most before choosing. Energy and shedding are from AKC
+          breed-standard guidance; lifespan ranges reflect breed-typical figures.
+          Tap any breed for the full profile, including health predispositions.
+        </p>
+        <div className="overflow-x-auto -mx-container-sm sm:mx-0">
+          <table className="w-full text-sm border-collapse min-w-[680px]">
+            <thead>
+              <tr className="border-b-2 border-brand-border text-left">
+                <th className="py-2 pr-4 font-display font-bold text-brand-dark">Breed</th>
+                <th className="py-2 px-3 font-display font-bold text-brand-dark">Size</th>
+                <th className="py-2 px-3 font-display font-bold text-brand-dark">Weight (lb)</th>
+                <th className="py-2 px-3 font-display font-bold text-brand-dark">Lifespan (yr)</th>
+                <th className="py-2 px-3 font-display font-bold text-brand-dark">Energy</th>
+                <th className="py-2 px-3 font-display font-bold text-brand-dark">Shedding</th>
+                <th className="py-2 pl-3 font-display font-bold text-brand-dark">First dog?</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(() => {
+                const bySize = groupBreedsBySize()
+                return SIZE_ORDER.flatMap((size) => {
+                  const group = bySize[size]
+                  if (!group || group.length === 0) return []
+                  const rows = [...group].sort((a, b) => a.name.localeCompare(b.name))
+                  return [
+                    <tr key={`hdr-${size}`} className="bg-brand-surface">
+                      <td
+                        colSpan={7}
+                        className="py-1.5 px-3 text-2xs font-bold tracking-eyebrow uppercase text-brand-text-mid"
+                      >
+                        {size} · {rows.length} breed{rows.length === 1 ? '' : 's'}
+                      </td>
+                    </tr>,
+                    ...rows.map((b) => (
+                      <tr
+                        key={b.slug}
+                        className="border-b border-brand-border hover:bg-brand-primary-pale/40 transition-colors"
+                      >
+                        <td className="py-2 pr-4">
+                          <Link
+                            href={`/breeds/${b.slug}`}
+                            className="font-semibold text-brand-primary no-underline hover:underline"
+                          >
+                            {b.name}
+                          </Link>
+                        </td>
+                        <td className="py-2 px-3 text-brand-text-mid">{b.sizeCategory}</td>
+                        <td className="py-2 px-3 text-brand-text-mid whitespace-nowrap">
+                          {b.weightRangeLb[0]}–{b.weightRangeLb[1]}
+                        </td>
+                        <td className="py-2 px-3 text-brand-text-mid whitespace-nowrap">
+                          {b.lifespanYears[0]}–{b.lifespanYears[1]}
+                        </td>
+                        <td className="py-2 px-3 text-brand-text-mid">{b.energyLevel}</td>
+                        <td className="py-2 px-3 text-brand-text-mid">
+                          {b.sheddingLevel === 'Hypoallergenic claim — not validated'
+                            ? 'Low (claim unverified)'
+                            : b.sheddingLevel}
+                        </td>
+                        <td className="py-2 pl-3 text-brand-text-mid">
+                          {b.firstTimeOwnerFriendly ? 'Yes' : 'Experienced'}
+                        </td>
+                      </tr>
+                    )),
+                  ]
+                })
+              })()}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-2xs text-brand-text-light mt-3 max-w-2xl">
+          &ldquo;First dog?&rdquo; reflects breed-typical temperament and training
+          demand, not a guarantee — every individual dog varies. Health
+          predispositions and screening guidance are on each breed&rsquo;s profile.
+        </p>
+      </section>
+
+      {/* FAQ — static, server-rendered for crawler visibility. Answers are
+          grounded only in on-page facts (the table + browse list + cross-links).
+          FAQPage schema is emitted in the combined server schema above, so the
+          accordion passes includeSchema={false} to avoid duplicate JSON-LD. */}
+      <section className="border-t border-brand-border px-container-sm sm:px-container py-12">
+        <h2 className="font-display font-bold text-brand-dark text-2xl mb-2">
+          Frequently asked questions
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-6 max-w-2xl">
+          Choosing a breed, narrowed to the questions owners ask most.
+        </p>
+        <div className="max-w-3xl">
+          <FAQAccordion items={FAQ_ITEMS} includeSchema={false} defaultOpenIndex={0} />
+        </div>
+
+        {/* Cross-links back into the cluster graph — keep internal-link equity
+            flowing between the breed hub and the health / triage hubs. */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mt-8">
+          <Link
+            href="/health"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              Health library
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Dog Health Library — condition references
+            </div>
+          </Link>
+          <Link
+            href="/symptoms"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-1.5">
+              Symptom triage
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Dog Symptoms A–Z — triage by urgency
+            </div>
+          </Link>
+          <Link
+            href="/conditions"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              Conditions
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Dog Conditions — reference by body system
+            </div>
+          </Link>
+          <Link
+            href="/breeds/match"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              Decision wizard
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Breed-match wizard — your top 3 in 7 questions
+            </div>
+          </Link>
+        </div>
+      </section>
+
       <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>
