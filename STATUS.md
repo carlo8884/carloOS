@@ -3,7 +3,20 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-15 (COO — programmatic food-safety platform: PRs #794–#796)
+**Last updated:** 2026-06-15 (COO — "Big Ten" programmatic-engine wave: PRs #798–#803)
+
+> **COO "Big Ten" programmatic-engine wave (2026-06-15 — PRs #798–#803 + capstone):**
+> Owner-directed ("go for the next Big Ten"). Parallel isolated-worktree agents on non-overlapping apps + COO-built marquee, every health verdict COO-reviewed against veterinary references before merge.
+> **New / extended programmatic engines (compounding, citation-structured):**
+> - **Vets.co "Can I Give My Dog ___?" human-medication safety engine** (#800) — 18 OTC/human meds, verdict (never / vet-dose-only / topical-ok); **never publishes a dose**; acetaminophen/ibuprofen/naproxen/pseudoephedrine flagged; MDR1/xylitol/cat-salicylate traps. COO-built. `/medications/can-i-give-my-dog/[med]`.
+> - **Ferret.com "Can Ferrets Eat ___?"** (#799) — 25 foods, obligate-carnivore/insulinoma/blockage framing → food-safety platform now **4 species** (dog/cat/horse/ferret).
+> - **Food-platform expansions:** Dog 29→**49** (#798), Cat 30→**41** (#803) — vet-accurate adds (cooked-only salmon/shrimp, wild-mushroom=never, liver/vit-A, spinach/oxalate).
+> - **Fish.com disease library** 25→**35** (#801) — extended existing engine (+10 diseases) + **fixed a real bug**: the programmatic `/health/[slug]` routes were absent from the sitemap.
+> - **Lizard.com species care sheets** 28→**34** (#802) — extended existing `/species` engine (+6: green iguana, CA kingsnake, pacman/White's tree frog, rosy boa, Jackson's chameleon) with accurate husbandry.
+> **QC catches (CI can't make these):** horse dairy/meat toxic→caution (prior wave); kept dog/cat xylitol-grape-macadamia precautionary not over-claimed; agents correctly chose EXTEND over duplicate for Fish/Lizard (avoiding canonicalization self-competition per §6); fixed a `contentType` type error + the fish sitemap gap.
+> **Capstone:** Monetization handoff for affiliate pairing on the high-intent engine pages (`ops/handoffs/2026-06-15-coo-to-monetization-bigten-engines.md`) — med engine = highest telehealth/find-a-vet lead-gen intent; toxic/emergency pages never get product CTAs.
+
+> **COO programmatic food-safety platform (2026-06-15 — PRs #794–#796):**
 
 > **COO programmatic food-safety platform (2026-06-15 — PRs #794–#796):**
 > Owner-directed ("do the next BIG things"). Built a **portfolio-wide "Can [species] Eat ___?" food-safety system** — one reusable data-model + generator architecture replicated across three sites, ~89 new compounding pages targeting one of the highest-volume pet query families.
