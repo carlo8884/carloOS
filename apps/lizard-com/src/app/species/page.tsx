@@ -29,6 +29,12 @@ const SPECIES = [
   { name: 'Argentine Tegu', sci: 'Salvator merianae', level: 'Advanced', zone: 'Zone 3–4', slug: 'argentine-black-and-white-tegu', img: 'lizard-com:species-thumb-argentine-tegu' },
   { name: 'Savannah Monitor', sci: 'Varanus exanthematicus', level: 'Advanced', zone: 'Zone 3–4', slug: 'savannah-monitor', img: 'lizard-com:species-thumb-savannah-monitor' },
   { name: 'Nile Monitor', sci: 'Varanus niloticus', level: 'Advanced', zone: 'Zone 3–4', slug: 'nile-monitor', img: 'lizard-com:species-thumb-nile-monitor' },
+  { name: 'California Kingsnake', sci: 'Lampropeltis californiae', level: 'Beginner', zone: 'Zone 1–2', slug: 'california-kingsnake', img: 'lizard-com:category-species' },
+  { name: 'Rosy Boa', sci: 'Lichanura trivirgata', level: 'Beginner', zone: 'Zone 1', slug: 'rosy-boa', img: 'lizard-com:category-species' },
+  { name: 'Pacman Frog', sci: 'Ceratophrys spp.', level: 'Beginner', zone: 'Zone 1', slug: 'pacman-frog', img: 'lizard-com:category-species' },
+  { name: "White's Tree Frog", sci: 'Litoria caerulea', level: 'Beginner', zone: 'Zone 1–2', slug: 'whites-tree-frog', img: 'lizard-com:category-species' },
+  { name: 'Green Iguana', sci: 'Iguana iguana', level: 'Advanced', zone: 'Zone 3–4', slug: 'green-iguana', img: 'lizard-com:category-species' },
+  { name: "Jackson's Chameleon", sci: 'Trioceros jacksonii', level: 'Advanced', zone: 'Zone 2–3', slug: 'jacksons-chameleon', img: 'lizard-com:category-species' },
 ]
 
 const LEVEL_COLORS = {
@@ -272,17 +278,23 @@ export default function SpeciesIndexPage() {
         <Link key="bearded-dragon" href="/species/bearded-dragon" className="text-sm text-brand-primary no-underline hover:underline">Bearded Dragon</Link>
         <Link key="blue-tongued-skink" href="/species/blue-tongued-skink" className="text-sm text-brand-primary no-underline hover:underline">Blue Tongued Skink</Link>
         <Link key="boa-constrictor" href="/species/boa-constrictor" className="text-sm text-brand-primary no-underline hover:underline">Boa Constrictor</Link>
+        <Link key="california-kingsnake" href="/species/california-kingsnake" className="text-sm text-brand-primary no-underline hover:underline">California Kingsnake</Link>
         <Link key="corn-snake" href="/species/corn-snake" className="text-sm text-brand-primary no-underline hover:underline">Corn Snake</Link>
         <Link key="crested-gecko" href="/species/crested-gecko" className="text-sm text-brand-primary no-underline hover:underline">Crested Gecko</Link>
         <Link key="day-gecko" href="/species/day-gecko" className="text-sm text-brand-primary no-underline hover:underline">Day Gecko</Link>
         <Link key="frilled-dragon" href="/species/frilled-dragon" className="text-sm text-brand-primary no-underline hover:underline">Frilled Dragon</Link>
+        <Link key="green-iguana" href="/species/green-iguana" className="text-sm text-brand-primary no-underline hover:underline">Green Iguana</Link>
+        <Link key="jacksons-chameleon" href="/species/jacksons-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Jackson's Chameleon</Link>
         <Link key="leopard-gecko" href="/species/leopard-gecko" className="text-sm text-brand-primary no-underline hover:underline">Leopard Gecko</Link>
+        <Link key="pacman-frog" href="/species/pacman-frog" className="text-sm text-brand-primary no-underline hover:underline">Pacman Frog</Link>
         <Link key="panther-chameleon" href="/species/panther-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Panther Chameleon</Link>
+        <Link key="rosy-boa" href="/species/rosy-boa" className="text-sm text-brand-primary no-underline hover:underline">Rosy Boa</Link>
         <Link key="russian-tortoise" href="/species/russian-tortoise" className="text-sm text-brand-primary no-underline hover:underline">Russian Tortoise</Link>
         <Link key="sulcata-tortoise" href="/species/sulcata-tortoise" className="text-sm text-brand-primary no-underline hover:underline">Sulcata Tortoise</Link>
         <Link key="tokay-gecko" href="/species/tokay-gecko" className="text-sm text-brand-primary no-underline hover:underline">Tokay Gecko</Link>
         <Link key="uromastyx" href="/species/uromastyx" className="text-sm text-brand-primary no-underline hover:underline">Uromastyx</Link>
         <Link key="veiled-chameleon" href="/species/veiled-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Veiled Chameleon</Link>
+        <Link key="whites-tree-frog" href="/species/whites-tree-frog" className="text-sm text-brand-primary no-underline hover:underline">White's Tree Frog</Link>
         <Link key="african-fat-tailed-gecko" href="/species/african-fat-tailed-gecko" className="text-sm text-brand-primary no-underline hover:underline">African Fat-Tailed Gecko</Link>
         <Link key="argentine-black-and-white-tegu" href="/species/argentine-black-and-white-tegu" className="text-sm text-brand-primary no-underline hover:underline">Argentine Black and White Tegu</Link>
         <Link key="chinese-water-dragon" href="/species/chinese-water-dragon" className="text-sm text-brand-primary no-underline hover:underline">Chinese Water Dragon</Link>
