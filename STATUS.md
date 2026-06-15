@@ -3,7 +3,16 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-15 (COO — cornerstone GEO depth campaign: PRs #771–#780, all 7 content sites)
+**Last updated:** 2026-06-15 (COO — search-trend GEO wave: PRs #786–#793)
+
+> **COO search-trend GEO wave (2026-06-15 — PRs #786–#793):**
+> Owner-directed ("research what people are searching, tell me what to build, then build"). Live web-trend research → ranked roadmap (`ops/handoffs/2026-06-15-coo-trend-opportunity-brief.md`) → built the wave. All trust-safe (QC §1: no fabricated stats — qualitative where unverifiable; "Editorial team" bylines; primary-source citations; vet-deferral; cat-painkiller safety warning). COO content-reviewed every agent-drafted page before merge (CI can't catch fabricated facts).
+> **Monetization readiness audit (#786):** read-only sweep — 0 affiliate leaks, 268 pages route via `/go`, 0 unmonetized review pages, 100% disclosure coverage. Revenue is one env-var-set from live.
+> **GLP-1 / "Ozempic for pets" cluster (first-mover GEO, no incumbent pet answer):** Dog.com `/nutrition/ozempic-for-dogs` (#787), PetFood.com `/feeding/ozempic-for-cats` (#788, cats-first per OKV-119 trial), PetFood.com `/feeding/glp1-style-pet-foods` debunk (#790) — cross-linked + tied into weight-management pages (#793).
+> **Cat Grimace Scale pain tool (#789):** Vets.co `/tools/cat-grimace-scale` — interactive assessor adapted from the validated Feline Grimace Scale (Evangelista 2019); "cat grimace scale" +679%. Full SoftwareApplication+HowTo+FAQPage stack.
+> **Dog.com trend cornerstones (#791):** fresh-vs-kibble (commercial, +86.5% category), dog DNA tests (~135k/mo), best-small-dogs-for-apartments. **Commercial pages routed to Monetization for affiliate wiring** (`ops/handoffs/2026-06-15-coo-to-monetization-trend-commercial-pages.md`).
+> **PetFoods.com evergreen recall reference (#792):** `/recalls/how-pet-food-recalls-work` — process-focused (FDA/AVMA-cited), recurring-traffic + citation magnet.
+> **Method:** 3 isolated-worktree content agents (non-overlapping apps, sitemap-by-hand to avoid the regenerator stripping curated dynamic routes) + COO-built marquee tool; all 7 gates green per PR.
 
 > **COO cornerstone GEO depth campaign (2026-06-15 — PRs #771–#780 all merged):**
 > Owner-directed autonomous sub-bot orchestration ("keep doing what you think is best"). Three parallel waves of depth sub-bots, each boxed to one site with hard QC §1 guardrails; COO trust-reviewed every clinical claim + reverted incomplete work before shipping.
