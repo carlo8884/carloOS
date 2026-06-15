@@ -3,11 +3,48 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildBreadcrumbSchema,
+  buildFAQSchema,
   combineSchemas,
+  FAQAccordion,
   SchemaScript,
   StockImage,
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
+
+// Hub-level FAQs — grounded ONLY in facts already stated on this page and in
+// the per-test data (typical cost ranges, turnaround, insurance coverage
+// pattern). Calibrated language; result interpretation always defers to the
+// veterinarian. See QC-STANDARDS.md §1.
+const HUB_FAQS = [
+  {
+    question: 'How much does a full pet diagnostic workup cost?',
+    answer:
+      'A complete workup — bloodwork plus urinalysis plus imaging plus cytology — commonly runs $300-2,000 in the United States, and complex referral workups can exceed that. Individual tests vary widely: an in-house urinalysis often starts near $40, while a board-certified echocardiogram or an advanced biopsy workup can reach $1,500 or more. The reference table on this page lists typical starting cost ranges per test. All figures are typical US ranges and are not guaranteed; your hospital, region, and case complexity determine the final cost.',
+  },
+  {
+    question: 'Does pet insurance cover diagnostic tests?',
+    answer:
+      'Most accident-and-illness pet insurance plans cover diagnostic tests ordered to investigate a new symptom or monitor an active illness, once the policy is active and the waiting periods have cleared. Routine wellness screening is typically covered only under a separate wellness add-on, and pre-existing conditions are excluded. Because exclusions apply from day one, enrolling before a chronic illness is diagnosed is what makes coverage useful when a workup is later needed.',
+  },
+  {
+    question: 'Which diagnostic test does my pet need first?',
+    answer:
+      'That is your veterinarian’s decision, based on the physical exam and history. As a general pattern, a sick or senior pet is usually screened first with first-line laboratory tests — a complete blood count, a chemistry panel, and a urinalysis — before moving to imaging (radiographs or ultrasound) or tissue sampling (cytology or biopsy) if those results or the exam point that way. Each test page explains when a veterinarian typically orders it.',
+  },
+  {
+    question: 'Can I interpret my pet’s test results myself?',
+    answer:
+      'No. The reference ranges, urgency tiers, and plain-language interpretations on these pages are educational only. A result means something only in the context of your pet’s history, physical exam, and any concurrent diagnostics — and your veterinarian’s interpretation supersedes any general guidance here. Use these pages to understand what a test measures and to ask better questions, not to self-diagnose.',
+  },
+]
+
+// Shortest typical starting cost figure per test, parsed from the first cost
+// band's label (e.g. "$50-100 ..." -> "$50-100"). Used for the reference table.
+function startingCost(d: Diagnostic): string {
+  const first = d.typicalCost[0]?.range ?? ''
+  const match = first.match(/\$[\d,]+(?:-[\d,]+)?/)
+  return match ? match[0] : '—'
+}
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -84,7 +121,10 @@ export default function DiagnosticsHubPage() {
       url: `https://vets.co/diagnostics/${d.slug}`,
     })),
   }
-  const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+  const faqSchema = buildFAQSchema({
+    questions: HUB_FAQS.map((f) => ({ question: f.question, answer: f.answer })),
+  })
+  const schema = combineSchemas(breadcrumbSchema, itemListSchema, faqSchema)
 
   return (
     <>
@@ -148,6 +188,26 @@ export default function DiagnosticsHubPage() {
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">
+        {/* Extractable direct-answer summary (TL;DR) for SERP + AI citation */}
+        <section className="bg-brand-dark rounded-xl p-6 mb-10">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The short answer
+          </div>
+          <p className="text-white/90 leading-relaxed m-0 text-base max-w-3xl">
+            Veterinary diagnostic tests fall into four groups: <strong>blood and urine
+            tests</strong> (the first-line screen for a sick or senior pet), <strong>imaging</strong>{' '}
+            (radiographs and ultrasound for structure and soft tissue), <strong>cardiac
+            imaging</strong> (echocardiography for the heart), and <strong>tissue sampling</strong>{' '}
+            (cytology and biopsy, the gold standard for diagnosing masses). A typical individual
+            test ranges from about $40 for an in-house urinalysis to $1,500+ for a specialist
+            echocardiogram or advanced biopsy workup, and a complete workup commonly runs
+            $300-2,000. Most accident-and-illness pet insurance plans reimburse diagnostics ordered
+            to investigate a symptom once the policy is active and waiting periods clear — but
+            pre-existing conditions are excluded. Result interpretation always belongs to your
+            veterinarian. All cost figures are typical US ranges and are not guaranteed.
+          </p>
+        </section>
+
         {/* Why we built this library */}
         <section className="bg-brand-primary/5 border-2 border-brand-primary/30 rounded-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -176,6 +236,59 @@ export default function DiagnosticsHubPage() {
             diagnostic costs once your policy is active and waiting periods are cleared.
             Pre-existing conditions are excluded, which is why enrollment timing matters.
           </p>
+        </section>
+
+        {/* At-a-glance comparison table — grounded in per-test data */}
+        <section className="mb-12">
+          <h2
+            className="font-display font-black text-brand-dark mb-2"
+            style={{ fontSize: 'clamp(18px, 2.4vw, 26px)' }}
+          >
+            Diagnostic tests at a glance
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-5 max-w-3xl leading-relaxed">
+            Typical starting cost and turnaround for each test. Starting figures reflect the
+            lowest-cost in-house option; reference-lab review, sedation, and bundled panels cost
+            more. All figures are typical US ranges and are not guaranteed.
+          </p>
+          <div className="overflow-x-auto border border-brand-border rounded-xl">
+            <table className="w-full text-sm border-collapse">
+              <caption className="sr-only">
+                Veterinary diagnostic tests with category, typical starting cost, and turnaround
+                time
+              </caption>
+              <thead>
+                <tr className="bg-brand-surface text-left">
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border">
+                    Test
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border">
+                    Category
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border whitespace-nowrap">
+                    Typical starting cost
+                  </th>
+                  <th scope="col" className="font-display font-bold text-brand-dark p-3 border-b border-brand-border">
+                    Turnaround
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Diagnostics.map((d) => (
+                  <tr key={d.slug} className="border-b border-brand-border last:border-0 hover:bg-brand-surface/50">
+                    <th scope="row" className="p-3 font-medium text-left align-top">
+                      <Link href={`/diagnostics/${d.slug}`} className="text-brand-primary hover:underline no-underline">
+                        {d.testName}
+                      </Link>
+                    </th>
+                    <td className="p-3 align-top text-brand-text-mid">{categoryLabel(d.category)}</td>
+                    <td className="p-3 align-top text-brand-text-mid whitespace-nowrap">{startingCost(d)}</td>
+                    <td className="p-3 align-top text-brand-text-light">{d.duration.split('.')[0]}.</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         {/* Grouped by category */}
@@ -227,6 +340,32 @@ export default function DiagnosticsHubPage() {
             educational. Your veterinarian interprets results in the context of your pet&apos;s
             history, physical exam, and any concurrent diagnostics — and that interpretation
             supersedes any general guidance here.
+          </p>
+        </section>
+
+        {/* Hub FAQ — schema lives in the combined SchemaScript above */}
+        <section className="mt-12">
+          <h2
+            className="font-display font-black text-brand-dark mb-5"
+            style={{ fontSize: 'clamp(18px, 2.4vw, 26px)' }}
+          >
+            Common questions about pet diagnostics
+          </h2>
+          <FAQAccordion items={HUB_FAQS} includeSchema={false} />
+          <p className="text-xs text-brand-text-light mt-4 leading-relaxed max-w-3xl">
+            For deeper coverage, see how diagnostic costs factor into{' '}
+            <Link href="/insurance/what-pet-insurance-covers" className="text-brand-primary hover:underline">
+              what pet insurance covers
+            </Link>{' '}
+            and{' '}
+            <Link href="/insurance/pre-existing-conditions" className="text-brand-primary hover:underline">
+              how pre-existing conditions are treated
+            </Link>
+            . To put a number on whether coverage pays off, try the{' '}
+            <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary hover:underline">
+              “is pet insurance worth it?” calculator
+            </Link>
+            .
           </p>
         </section>
 
