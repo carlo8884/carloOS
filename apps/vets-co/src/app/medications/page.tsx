@@ -152,6 +152,14 @@ export default function MedicationsHubPage() {
         <StockImage manifestKey="vets-co:medications-hero" aspect="16:9" variant="wide" priority />
       </div>
 
+      <div className="px-container-sm sm:px-container pt-8 max-w-6xl">
+        <a href="/medications/can-i-give-my-dog" className="block rounded-xl border-2 border-brand-primary/40 bg-brand-primary/5 p-5 no-underline hover:border-brand-primary transition">
+          <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Human &amp; OTC medicine safety</span>
+          <div className="font-display font-bold text-brand-dark text-lg mt-1">Can I give my dog Benadryl, Tylenol, aspirin…?</div>
+          <p className="text-sm text-brand-text-mid mt-1 mb-0">A safety check for human and over-the-counter medicines — which are toxic, which are vet-dose-only, and why we never publish a dose. →</p>
+        </a>
+      </div>
+
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">
         {/* Why we don't publish dosing */}
         <section className="bg-brand-primary/5 border-2 border-brand-primary/30 rounded-xl p-6 mb-10">
