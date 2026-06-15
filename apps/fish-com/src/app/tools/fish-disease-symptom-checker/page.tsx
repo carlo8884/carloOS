@@ -104,6 +104,7 @@ export default function FishDiseaseSymptomCheckerPage() {
       schema={howToSchema}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
+        { title: 'Disease Reference Library', href: '/health', category: 'Health' },
         { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', category: 'Health' },
         { title: 'Medicating Aquarium Fish', href: '/health/medicating-aquarium-fish', category: 'Health' },
         { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Health' },
@@ -121,6 +122,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           <RelatedLinks
             title="Disease & treatment"
             links={[
+              { label: 'Disease Reference Library', href: '/health' },
               { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' },
               { label: 'Medicating Aquarium Fish', href: '/health/medicating-aquarium-fish' },
               { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' },
@@ -146,7 +148,8 @@ export default function FishDiseaseSymptomCheckerPage() {
         <p>
           Tick the signs you can see on your fish. The tool ranks the conditions that fit and links each to a full
           guide. It is an educational aid that narrows the possibilities — not a diagnosis — because many fish
-          diseases share the same outward signs.
+          diseases share the same outward signs. To browse every condition directly, see the full{' '}
+          <a href="/health">aquarium disease reference library</a>.
         </p>
         <Calculator />
 
