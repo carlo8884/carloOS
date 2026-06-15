@@ -77,6 +77,8 @@ export default function WeightManagementDietsPage() {
       ]}
       relatedLinks={[
         { title: 'Diets Hub', href: '/diets' },
+        { title: 'Ozempic for Cats? GLP-1 Drugs', href: '/feeding/ozempic-for-cats' },
+        { title: "Do 'GLP-1-Style' Pet Foods Work?", href: '/feeding/glp1-style-pet-foods' },
         { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
         { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
       ]}
