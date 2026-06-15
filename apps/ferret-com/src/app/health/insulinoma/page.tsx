@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CalloutBox, DropCap, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
@@ -43,7 +43,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-06-15T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -85,6 +85,26 @@ const FAQS = [
       'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. The consistent recommendation from the American Ferret Association and exotic-pet veterinary references is to minimize dietary carbohydrate from kithood onward: a high-protein, low-carbohydrate diet and no sugary treats.',
   },
   {
+    question: 'What is the treatment ladder for ferret insulinoma?',
+    answer:
+      'Exotic-pet veterinary practice uses a stepped approach. Step 1 is diet management — frequent small meals of a high-protein, low-carbohydrate diet, no fasting, and no sugary treats. Step 2 is prednisolone (a glucocorticoid that promotes hepatic glucose production); it is the workhorse, and many medically-managed ferrets stay on it alone. Step 3 adds diazoxide, a direct inhibitor of insulin secretion, when prednisolone alone no longer holds glucose. Step 4 is surgical partial pancreatectomy with nodulectomy. All medications are veterinarian-prescribed and titrated against fasting glucose and clinical signs.',
+  },
+  {
+    question: 'Should a ferret with insulinoma have surgery or be managed with medication?',
+    answer:
+      'Both paths are legitimate and the choice depends on the individual ferret. Younger ferrets in good condition with a single clear diagnosis and no significant comorbidities are stronger surgical candidates. Older ferrets, ferrets with cardiac disease, or ferrets with metastatic disease at imaging are usually managed medically. Surgery does not cure insulinoma in most ferrets — microscopic disease remains and recurrence is the rule — but it materially extends the period of normal glucose and reduces or eliminates the need for medication for a meaningful interval. This decision belongs with an exotic-mammal veterinarian who can weigh age, comorbidities, surgical access, and owner budget.',
+  },
+  {
+    question: 'What is a normal blood glucose for a ferret, and what number means insulinoma?',
+    answer:
+      'Normal fasting blood glucose in ferrets sits roughly between 90 and 125 mg/dL (about 5.0-6.9 mmol/L). A fasting value under 60 mg/dL (3.3 mmol/L) in the absence of another explanation is considered diagnostic for insulinoma. Values between 60 and 90 mg/dL are equivocal and warrant a recheck after a controlled in-clinic fast or a paired insulin-to-glucose ratio. Reference ranges vary by laboratory, so any result should be interpreted by a veterinarian familiar with ferrets rather than against a fixed cutoff at home.',
+  },
+  {
+    question: 'Why does my ferret crash again after I give it sugar for low blood sugar?',
+    answer:
+      'Pure sugar produces a rebound. The ferret’s remaining functional beta cells respond to the glucose load with another insulin spike, and the crisis can recur within roughly 20-40 minutes. That is why oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, it should be offered a protein-and-fat meal, which is its primary metabolic substrate and stabilizes glucose for longer. Sugar buys minutes; protein buys the window to get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
+  },
+  {
     question: 'Is a ferret hypoglycemic episode an emergency?',
     answer:
       'Collapse, seizure, or unresponsiveness is a medical emergency. Seizures lasting more than two minutes, recurrent crises within a single day, or any episode that does not resolve cleanly within 5-10 minutes are all reasons to be on the way to an emergency veterinary hospital — ideally one with exotic-mammal capability — rather than waiting at home. Crisis-level hypoglycemia warrants inpatient evaluation even if the ferret appears to recover. Every household with an insulinoma ferret should review the crisis response with their exotic-animal veterinarian in advance.',
@@ -119,12 +139,15 @@ export default function FerretInsulinomaPage() {
           <>
             <TableOfContents
               items={[
+                { label: 'TL;DR', href: '#tldr' },
                 { label: 'What It Is', href: '#pathophys' },
                 { label: 'Who Gets It', href: '#epidemiology' },
                 { label: 'Clinical Signs', href: '#signs' },
+                { label: 'Quick Reference', href: '#quickref' },
                 { label: 'Diagnosis', href: '#diagnosis' },
                 { label: 'Staging', href: '#staging' },
                 { label: 'Treatment Ladder', href: '#treatment' },
+                { label: 'Treatment at a Glance', href: '#treatment-table' },
                 { label: 'Emergency Crisis Protocol', href: '#emergency' },
                 { label: 'Prognosis', href: '#prognosis' },
                 { label: 'Supportive Nutrition', href: '#supportive' },
@@ -135,8 +158,10 @@ export default function FerretInsulinomaPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
-                { label: 'Diet Basics', href: '/care/diet-basics' },
-                { label: 'Cage Setup', href: '/care/cage-setup' },
+                { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
+                { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+                { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+                { label: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
               ]}
             />
             <div className="bg-brand-dark rounded-lg p-5 mb-4">
@@ -174,6 +199,8 @@ export default function FerretInsulinomaPage() {
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Weight Management', href: '/diet/weight-management' },
         ]}
 >
@@ -186,9 +213,38 @@ export default function FerretInsulinomaPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-06-11"
+            updatedAt="2026-06-15"
             reviewedBy="Editorial team"
           />
+
+          <DropCap>
+            Insulinoma is the disease most ferret owners eventually learn the
+            name of. The early signs look exactly like an older ferret slowing
+            down — a wobbly back end, a spaced-out stare, a little drooling —
+            which is why it is so often caught late. The biochemistry, by
+            contrast, is unambiguous once it is looked for, and the treatment is
+            well-established. Recognizing it early is what changes the outlook.
+          </DropCap>
+
+          <h2 id="tldr">TL;DR</h2>
+          <p>
+            Insulinoma is a functional tumor of the pancreatic beta cells that
+            secretes insulin without regard to the normal feedback loop,
+            producing chronic, intermittent hypoglycemia. It is the most
+            commonly diagnosed neoplasm in middle-aged and older ferrets,
+            typically appearing between roughly 3 and 7 years of age. Classic
+            signs are episodic after a fast or long sleep: hindlimb weakness,
+            pawing at the mouth with drooling, vacant &quot;stargazing&quot;
+            stares, and — at the severe end — tremor, seizure, or collapse.
+            Diagnosis centers on a <strong>fasting blood glucose under
+            60&nbsp;mg/dL</strong> (normal fasting glucose is roughly
+            90&ndash;125&nbsp;mg/dL), confirmed where needed by a paired
+            insulin-to-glucose ratio. Treatment follows a ladder — diet, then
+            prednisolone, then diazoxide, then surgical partial pancreatectomy —
+            and a collapse or seizure is a medical emergency requiring immediate
+            care. This page is general clinical information; diagnosis and
+            dosing belong with a veterinarian experienced with ferrets.
+          </p>
 
           <h2 id="pathophys">What It Is</h2>
           <p>
@@ -219,8 +275,67 @@ export default function FerretInsulinomaPage() {
             <li><strong>Weight changes.</strong> Variable — some insulinoma ferrets gain weight (the anabolic effect of excess insulin), some lose weight, and many remain stable.</li>
           </ul>
           <p>
-            Many of these signs are intermittent. A ferret can have a 30-second hypoglycemic episode in the morning and look completely normal at the veterinary appointment that afternoon. This is why screening bloodwork is more sensitive than physical exam in early disease.
+            Many of these signs are intermittent. A ferret can have a 30-second hypoglycemic episode in the morning and look completely normal at the veterinary appointment that afternoon. This is why screening bloodwork is more sensitive than physical exam in early disease. Because adrenal disease shares the same 3-to-7-year age window, a ferret losing its back-end coordination and a ferret losing its tail-base fur can be the same animal — see <a href="/health/adrenal-disease">adrenal disease</a> for the parallel work-up.
           </p>
+
+          <h2 id="quickref">Quick Reference</h2>
+          <p>
+            A one-screen summary of the numbers and decision points discussed on this page. Every figure below is general clinical orientation, not a substitute for laboratory interpretation by a veterinarian familiar with ferrets — reference ranges vary by laboratory and by individual animal.
+          </p>
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-brand-surface border-b border-brand-border">
+                  <th className="text-left p-3 font-semibold">Item</th>
+                  <th className="text-left p-3 font-semibold">Range / Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Typical age of onset</td>
+                  <td className="p-3">3-7 years; cases reported earlier and later</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Sex predisposition</td>
+                  <td className="p-3">None consistently reported in the literature</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">First sign in most cases</td>
+                  <td className="p-3">Episodic hindlimb weakness or vacant staring after a fast or long sleep</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Normal fasting glucose</td>
+                  <td className="p-3">Roughly 90-125 mg/dL (≈5.0-6.9 mmol/L)</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Diagnostic glucose threshold</td>
+                  <td className="p-3">Under 60 mg/dL (3.3 mmol/L) fasted, absent another cause</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Equivocal range</td>
+                  <td className="p-3">60-90 mg/dL — recheck after a controlled fast or run insulin:glucose ratio</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Gold-standard confirmation</td>
+                  <td className="p-3">Elevated serum insulin paired with low glucose (insulin:glucose ratio)</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">First-line medication</td>
+                  <td className="p-3">Prednisolone (vet-prescribed, titrated to glucose and signs)</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">Median survival (medical)</td>
+                  <td className="p-3">~12-24 months from diagnosis; wide individual variation</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-medium">Urgency</td>
+                  <td className="p-3">
+                    Sub-acute for screening; collapse, seizure, or unresponsiveness is an emergency
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 id="diagnosis">Diagnosis</h2>
           <p>
@@ -257,6 +372,52 @@ export default function FerretInsulinomaPage() {
           </p>
           <p>
             <strong>Step 4 — Surgical partial pancreatectomy and nodulectomy.</strong> Exploratory laparotomy with removal of visible pancreatic nodules, partial pancreatectomy of the affected lobe, and biopsy/removal of any abnormal-appearing tissue. Surgery does not "cure" insulinoma in most ferrets — microscopic disease remains and recurrence is the rule rather than the exception — but it materially extends the period of normoglycemia and reduces or eliminates the need for medication for a meaningful interval. Should be performed by a veterinarian experienced in ferret abdominal surgery.
+          </p>
+
+          <h2 id="treatment-table">Treatment at a Glance</h2>
+          <p>
+            The four steps compared side by side. Steps are usually additive rather than sequential replacements — diet management continues underneath every medication, and a ferret on diazoxide is typically still on prednisolone. Dosing, escalation, and de-escalation are veterinary decisions.
+          </p>
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-brand-surface border-b border-brand-border">
+                  <th className="text-left p-3 font-semibold">Step</th>
+                  <th className="text-left p-3 font-semibold">What it is</th>
+                  <th className="text-left p-3 font-semibold">How it works</th>
+                  <th className="text-left p-3 font-semibold">Typical role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">1. Diet</td>
+                  <td className="p-3">Frequent small high-protein, low-carb meals; no fasting; no sugary treats</td>
+                  <td className="p-3">Reduces post-meal insulin demand and smooths glucose swings</td>
+                  <td className="p-3">Foundation for every case; some early ferrets stable on this alone</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">2. Prednisolone</td>
+                  <td className="p-3">Oral glucocorticoid, vet-prescribed and titrated</td>
+                  <td className="p-3">Promotes hepatic glucose production, countering excess insulin</td>
+                  <td className="p-3">Workhorse first-line drug; many ferrets stay on it alone</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 font-medium">3. Diazoxide</td>
+                  <td className="p-3">Oral drug added when prednisolone alone stops holding glucose</td>
+                  <td className="p-3">Directly inhibits insulin secretion from the tumor cells</td>
+                  <td className="p-3">Add-on; cost and availability are real barriers for some owners</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-medium">4. Surgery</td>
+                  <td className="p-3">Partial pancreatectomy and nodulectomy under general anesthesia</td>
+                  <td className="p-3">Removes visible tumor bulk; microscopic disease usually remains</td>
+                  <td className="p-3">Extends normoglycemia for an interval; best in younger, otherwise-healthy ferrets</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Anesthesia carries added weight in this disease: a fasted pre-surgical ferret is at risk of a hypoglycemic crisis on the table, so peri-operative glucose support is standard. See <a href="/health/anesthesia-and-surgery-risk">anesthesia and surgery risk in ferrets</a> for what an exotic surgical team manages around any ferret procedure.
           </p>
 
           <h2 id="emergency">Emergency Hypoglycemic Crisis Protocol</h2>
