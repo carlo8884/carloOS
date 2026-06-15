@@ -44,6 +44,12 @@ const FEEDING = [
       'Cats are the first species in GLP-1 weight-loss drug trials (OKV-119). What is real, why human Ozempic is unsafe for cats, and proven feline weight-loss methods.',
   },
   {
+    slug: 'glp1-style-pet-foods',
+    title: "Do 'GLP-1-Style' Pet Foods Work?",
+    description:
+      "'Ozempic-like' pet foods are foods, not drugs — no GLP-1 medication, no drug approval. What satiety ingredients can do and how to evaluate weight foods honestly.",
+  },
+  {
     slug: 'how-to-transition-pet-food',
     title: 'How to Transition Pet Food',
     description:

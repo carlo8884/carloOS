@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/feeding/feeding-frequency-and-schedules', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/feeding-multiple-pets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/food-storage-and-safety', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://petfood.com/feeding/glp1-style-pet-foods', lastModified: now, changeFrequency: 'weekly', priority: 0.75 },
     { url: 'https://petfood.com/feeding/how-much-to-feed-a-cat', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/how-much-to-feed-a-dog', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/how-to-transition-pet-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
