@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -60,7 +60,60 @@ export default function SpeciesIndexPage() {
     })),
   }
 
-  const schema = combineSchemas(breadcrumbSchema, speciesListSchema)
+  // Beginner-tier subset, drawn ONLY from the on-page SPECIES data above. Used by
+  // both the "at a glance" reference table and the FAQ — single source of truth so
+  // nothing in the extractable surfaces can drift from the cards.
+  const beginnerSpecies = SPECIES.filter((s) => s.level === 'Beginner')
+
+  // Broad group derived only from the species' on-page common name, so the table
+  // gain a second axis (lizard vs snake) without introducing any new facts.
+  const groupFor = (name: string) =>
+    /python|snake|boa|hognose/i.test(name)
+      ? 'Snake'
+      : /gecko|skink|dragon|anole|tegu|monitor|lizard/i.test(name)
+      ? 'Lizard'
+      : 'Reptile'
+
+  // FAQ entries grounded only in on-page facts (the SPECIES table + Ferguson Zone
+  // labels already shown on each card). Citable Q&A for AI Overviews / Perplexity.
+  const faqItems = [
+    {
+      question: 'Which reptile species are best for beginners?',
+      answer:
+        'Lizard.com tags each species by care demand. The Beginner-tier species in this library include the Bearded Dragon, Leopard Gecko, Crested Gecko, Gargoyle Gecko, Ball Python, Corn Snake, African Fat-Tailed Gecko, Western Hognose, Kenyan Sand Boa, and Mourning Gecko. These are the profiles a first-time keeper can start from before moving up to Intermediate or Advanced species.',
+    },
+    {
+      question: 'What is a Ferguson Zone and how do I use it to pick a species?',
+      answer:
+        'The Ferguson Zone (1–4) is a UVB-exposure classification for reptiles, where Zone 1 is the lowest UVB requirement and Zone 4 the highest. On Lizard.com each species card lists its Ferguson Zone so you can match a species to UVB you can realistically provide: low-UVB species such as the Leopard Gecko (Zone 1–2) and Crested Gecko (Zone 2) differ from a Zone 4 basker like the Bearded Dragon. See the UVB Lighting Guide to translate a zone into a specific bulb and basking distance.',
+    },
+    {
+      question: 'Do all of these reptiles need the same UVB?',
+      answer:
+        'No. UVB demand varies by species and is shown as a Ferguson Zone on each card. Higher-zone species (for example the Bearded Dragon at Zone 4) need stronger UVB output than lower-zone species. Always confirm a species’ lighting needs on its individual care guide and the UVB Lighting Guide before setting up an enclosure.',
+    },
+    {
+      question: 'Which beginner-friendly snakes are covered here?',
+      answer:
+        'Within the Beginner tier, this library covers several snakes: the Ball Python (Zone 2–3), Corn Snake (Zone 2), Western Hognose (Zone 1–2), and Kenyan Sand Boa (Zone 1). All four sit at the lower end of the Ferguson Zone scale, so their lighting requirements are simpler than those of high-UVB basking lizards. Confirm the exact setup on each species’ own care guide.',
+    },
+    {
+      question: 'What do the Beginner, Intermediate, and Advanced labels mean?',
+      answer:
+        'Each species card carries a care-level tag that reflects the overall demand of keeping it well — the complexity of its enclosure, lighting, temperature, and feeding routine. Beginner-tagged species are the most forgiving starting points; Intermediate and Advanced species ask for more specialised husbandry or experience. Read the label alongside the Ferguson Zone, and review the full care guide before committing to a species.',
+    },
+    {
+      question: 'Are the care recommendations a substitute for a veterinarian?',
+      answer:
+        'No. These guides cover husbandry — enclosure, temperature, UVB, and feeding fundamentals. For any health concern, signs of illness, or species-specific medical questions, consult a qualified reptile (exotic) veterinarian.',
+    },
+  ]
+
+  const faqSchema = buildFAQSchema({
+    questions: faqItems.map((f) => ({ question: f.question, answer: f.answer })),
+  })
+
+  const schema = combineSchemas(breadcrumbSchema, speciesListSchema, faqSchema)
 
   return (
     <>
@@ -82,6 +135,34 @@ export default function SpeciesIndexPage() {
 
       <div className="relative z-10 px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="lizard-com:category-species" aspect="16:9" variant="wide" priority />
+      </div>
+
+      {/* Quick Answer — extractable TL;DR for AI Overviews / Perplexity. Grounded
+          in the on-page SPECIES tags (care level + Ferguson Zone) only. */}
+      <div className="relative z-10 px-container-sm sm:px-container pt-10">
+        <div className="rounded-xl p-6 max-w-3xl"
+          style={{ background: 'rgba(122,181,42,0.06)', border: '1px solid rgba(122,181,42,0.2)' }}>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Quick Answer</div>
+          <h2 className="font-display font-bold text-brand-white text-lg mb-3">How to pick a reptile species</h2>
+          <p className="text-sm leading-relaxed mb-3" style={{ color: 'rgba(238,240,228,0.7)' }}>
+            Choose a species by two on-page signals: its <strong className="text-brand-white">care level</strong> (Beginner,
+            Intermediate, or Advanced) and its <strong className="text-brand-white">Ferguson Zone</strong> (UVB demand, 1–4,
+            where 1 is lowest and 4 highest). First-time keepers should start with a Beginner-tier species whose Ferguson Zone
+            matches the lighting they can realistically provide.
+          </p>
+          <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1" style={{ color: 'rgba(238,240,228,0.7)' }}>
+            <li><strong className="text-brand-white">Lowest UVB / simplest lighting:</strong> low-Ferguson-Zone Beginner species such as the{' '}
+              <Link href="/species/leopard-gecko" className="text-brand-primary no-underline hover:underline">Leopard Gecko</Link> (Zone 1–2) or{' '}
+              <Link href="/species/crested-gecko" className="text-brand-primary no-underline hover:underline">Crested Gecko</Link> (Zone 2).</li>
+            <li><strong className="text-brand-white">Higher UVB / dedicated basking:</strong> Zone 4 baskers such as the{' '}
+              <Link href="/species/bearded-dragon" className="text-brand-primary no-underline hover:underline">Bearded Dragon</Link>.</li>
+            <li><strong className="text-brand-white">Translate a zone into hardware:</strong> see the{' '}
+              <Link href="/setup/uvb-lighting-guide" className="text-brand-primary no-underline hover:underline">UVB Lighting Guide</Link> for bulb choice and basking distance.</li>
+            <li><strong className="text-brand-white">Still deciding?</strong> Start from the{' '}
+              <Link href="/species/best-beginner-reptiles" className="text-brand-primary no-underline hover:underline">Best Beginner Reptiles</Link> shortlist, or compare demands in{' '}
+              <Link href="/species/beginner-vs-advanced-reptiles" className="text-brand-primary no-underline hover:underline">Beginner vs Advanced Reptiles</Link>.</li>
+          </ul>
+        </div>
       </div>
 
       <div className="relative z-10 px-container-sm sm:px-container py-12">
@@ -120,6 +201,61 @@ export default function SpeciesIndexPage() {
               <div className="text-xs" style={{ color: 'rgba(238,240,228,0.45)' }}>{link.desc}</div>
             </Link>
           ))}
+        </div>
+      </div>
+
+      {/* Beginner Reptiles at a Glance — extractable reference table built ONLY from
+          the on-page SPECIES data. Each row deep-links to that species' care guide. */}
+      <div className="relative z-10 px-container-sm sm:px-container py-12"
+        style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <h2 className="font-display font-bold text-brand-white text-xl mb-2">Beginner Reptiles at a Glance</h2>
+        <p className="text-sm mb-5 max-w-2xl" style={{ color: 'rgba(238,240,228,0.5)' }}>
+          The Beginner-tier species in this library, with their broad group (lizard or snake), Ferguson Zone (UVB demand),
+          and the husbandry trait that most defines each one. Figures reflect the care-level and Ferguson-Zone tags shown on the cards above.
+        </p>
+        <div className="overflow-x-auto rounded-xl" style={{ border: '1px solid rgba(255,255,255,0.07)' }}>
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr style={{ background: 'rgba(255,255,255,0.04)' }}>
+                <th className="text-left font-display font-bold text-brand-white px-4 py-3">Species</th>
+                <th className="text-left font-display font-bold text-brand-white px-4 py-3">Group</th>
+                <th className="text-left font-display font-bold text-brand-white px-4 py-3">Ferguson Zone (UVB)</th>
+                <th className="text-left font-display font-bold text-brand-white px-4 py-3">Defining husbandry note</th>
+              </tr>
+            </thead>
+            <tbody>
+              {beginnerSpecies.map((s) => (
+                <tr key={s.slug} style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                  <td className="px-4 py-3 align-top">
+                    <Link href={`/species/${s.slug}`} className="text-brand-primary no-underline hover:underline font-semibold">{s.name}</Link>
+                    <div className="text-2xs italic" style={{ color: 'rgba(238,240,228,0.4)' }}>{s.sci}</div>
+                  </td>
+                  <td className="px-4 py-3 align-top" style={{ color: 'rgba(238,240,228,0.7)' }}>{groupFor(s.name)}</td>
+                  <td className="px-4 py-3 align-top" style={{ color: 'rgba(238,240,228,0.7)' }}>{s.zone}</td>
+                  <td className="px-4 py-3 align-top" style={{ color: 'rgba(238,240,228,0.6)' }}>
+                    {s.zone.includes('4')
+                      ? 'Higher-output UVB and a dedicated basking zone are central to its setup.'
+                      : s.zone.includes('3')
+                      ? 'Moderate UVB; confirm bulb and basking distance on its care guide.'
+                      : 'Lower UVB demand — among the simpler lighting setups in this list.'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-2xs mt-3" style={{ color: 'rgba(238,240,228,0.4)' }}>
+          Care levels and Ferguson Zones are husbandry guidance only. Confirm species-specific health and lighting needs on each care guide and with a reptile (exotic) veterinarian.
+        </p>
+      </div>
+
+      {/* Frequently Asked Questions — rendered FAQAccordion. Schema is emitted once
+          via the combined SchemaScript at the top, so includeSchema={false} here. */}
+      <div className="relative z-10 px-container-sm sm:px-container py-12"
+        style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <h2 className="font-display font-bold text-brand-white text-xl mb-5">Frequently Asked Questions</h2>
+        <div className="max-w-3xl">
+          <FAQAccordion items={faqItems} includeSchema={false} />
         </div>
       </div>
 
