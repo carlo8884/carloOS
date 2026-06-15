@@ -77,7 +77,7 @@ export const DOG_FOODS: FoodEntry[] = [
     risks: ['Acute kidney failure', 'No established safe dose — individual sensitivity varies'],
     symptoms: ['Vomiting (often within hours)', 'Lethargy and loss of appetite', 'Decreased or absent urination (a late, serious sign)'],
     whatToDo: 'Treat any amount as an emergency. Call ASPCA Poison Control (888-426-4435) or your vet right away — early decontamination greatly improves the outcome.',
-    related: ['raisins', 'chocolate', 'blueberries'],
+    related: ['onions', 'chocolate', 'blueberries'],
     sources: [ASPCA, PPH, MERCK],
   },
   {
@@ -87,7 +87,7 @@ export const DOG_FOODS: FoodEntry[] = [
     risks: ['Hemolytic anemia (red-blood-cell destruction)', 'Cumulative — repeated small amounts add up', 'Hidden in many human dishes, broths, and seasonings'],
     symptoms: ['Weakness, lethargy, pale gums', 'Rapid breathing or elevated heart rate', 'Reddish or brown urine', 'Vomiting (signs can be delayed several days)'],
     whatToDo: 'Call ASPCA Poison Control (888-426-4435) or your vet with the form and amount. Signs of anemia can take days to appear, so do not assume your dog is fine because it seems normal at first.',
-    related: ['garlic', 'chives'],
+    related: ['chocolate', 'xylitol'],
     sources: [ASPCA, PPH, VCA],
   },
   {
@@ -137,7 +137,7 @@ export const DOG_FOODS: FoodEntry[] = [
     risks: ['CNS depression — disorientation, collapse', 'Dangerously low body temperature and blood sugar', 'Respiratory depression at higher doses'],
     symptoms: ['Wobbliness, disorientation', 'Vomiting', 'Slow breathing', 'Collapse'],
     whatToDo: 'Call ASPCA Poison Control (888-426-4435) or an emergency vet immediately. Raw bread dough is a particular hazard and may need urgent treatment.',
-    related: ['bread-dough', 'chocolate'],
+    related: ['bread', 'chocolate'],
     sources: [ASPCA, PPH, MERCK],
   },
   {
@@ -172,7 +172,7 @@ export const DOG_FOODS: FoodEntry[] = [
     risks: ['Lactose intolerance — gas, diarrhea', 'High fat (pancreatitis) and salt', 'Flavored cheeses may contain toxic onion/garlic'],
     safePrep: 'Offer a small piece of plain, low-fat cheese; skip it if your dog gets loose stool.',
     quantity: 'A small cube or two as an occasional treat.',
-    related: ['yogurt', 'milk'],
+    related: ['yogurt', 'peanut-butter'],
     sources: [ASPCA, VCA],
   },
   {
@@ -204,7 +204,7 @@ export const DOG_FOODS: FoodEntry[] = [
     risks: ['Empty calories', 'RAW dough is an emergency (bloat + alcohol)', 'Add-ins like raisins, onion, or nuts can be toxic'],
     safePrep: 'Offer a small piece of plain, fully baked bread. Never give raw dough.',
     quantity: 'A small bite occasionally.',
-    related: ['bread-dough', 'rice', 'oatmeal'],
+    related: ['ham', 'rice', 'oatmeal'],
     sources: [ASPCA, VCA],
   },
   {
