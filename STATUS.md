@@ -3,7 +3,18 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-15 (COO — search-trend GEO wave: PRs #786–#793)
+**Last updated:** 2026-06-15 (COO — programmatic food-safety platform: PRs #794–#796)
+
+> **COO programmatic food-safety platform (2026-06-15 — PRs #794–#796):**
+> Owner-directed ("do the next BIG things"). Built a **portfolio-wide "Can [species] Eat ___?" food-safety system** — one reusable data-model + generator architecture replicated across three sites, ~89 new compounding pages targeting one of the highest-volume pet query families.
+> - **Dog.com `/nutrition/can-dogs-eat` (#794):** 30 foods. COO-authored data + engine.
+> - **PetFood.com `/feeding/can-cats-eat` (#795):** 30 foods, cat-specific toxicology (alliums worse, dairy/tuna/raw-fish cautions, obligate-carnivore framing).
+> - **Horses.com `/nutrition/can-horses-eat` (#796):** 29 foods, equine-distinct (avocado/nightshades/grass-clippings/ionophores toxic; colic/laminitis/choke framing).
+> **Architecture:** `src/data/foods.ts` (FoodEntry model + getRelatedFoods/foodFaqs/VERDICT_META helpers) → dynamic `[food]` generator (generateStaticParams, clamped metadata, Article + FAQPage schema, verdict-colored layout, ASPCA hotline on toxic pages) → A–Z hub (ItemList + FAQPage schema). Sitemaps import the food data and map routes by hand (regenerator must NOT run). **Extensible: a new food = one data entry.**
+> **QC (health-critical):** COO trust-reviewed EVERY verdict against veterinary toxicology before merge. Caught + downgraded dog/cat overstatements (xylitol/grapes/macadamia framed precautionary for cats, not fabricated feline thresholds) and **fixed horse dairy/meat from toxic→caution** (digestive-upset, not poison). No fabricated thresholds; vet-deferral + ASPCA 888-426-4435 throughout.
+> **Method:** dog engine COO-built; cat + horse via isolated-worktree agents against the reviewed pattern + COO-written species toxicology specs, every verdict COO-reviewed pre-merge.
+
+> **COO search-trend GEO wave (2026-06-15 — PRs #786–#793):**
 
 > **COO search-trend GEO wave (2026-06-15 — PRs #786–#793):**
 > Owner-directed ("research what people are searching, tell me what to build, then build"). Live web-trend research → ranked roadmap (`ops/handoffs/2026-06-15-coo-trend-opportunity-brief.md`) → built the wave. All trust-safe (QC §1: no fabricated stats — qualitative where unverifiable; "Editorial team" bylines; primary-source citations; vet-deferral; cat-painkiller safety warning). COO content-reviewed every agent-drafted page before merge (CI can't catch fabricated facts).
