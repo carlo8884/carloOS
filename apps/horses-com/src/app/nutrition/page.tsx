@@ -103,6 +103,13 @@ const ENTRIES = [
     description:
       "The most dangerous plants and trees, how poisoning happens, signs, and prevention.",
   },
+  {
+    slug: "can-horses-eat",
+    eyebrow: "Safety",
+    title: "Can Horses Eat…? (A–Z)",
+    description:
+      "Safe, caution, and toxic verdicts for common treats and hazards — apples, carrots, chocolate, avocado, grass clippings, and more.",
+  },
 ]
 
 const itemListSchema = {
