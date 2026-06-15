@@ -62,6 +62,13 @@ const DIET_CARDS: DietCard[] = [
       'What to reach for and what to skip. Meat-based treats, egg, the no-sugar rule, and the long list of marketed "ferret treats" that are quietly inappropriate.',
   },
   {
+    slug: 'can-ferrets-eat',
+    eyebrow: 'Food safety',
+    title: 'Can Ferrets Eat…?',
+    description:
+      'An A–Z safe/not-recommended/toxic checker for the foods owners ask about most — chocolate, onion, fruit, grains, chicken, and egg — framed for an obligate carnivore.',
+  },
+  {
     slug: 'supplements-and-vitamins',
     eyebrow: 'Supplements',
     title: 'Supplements & Vitamins',
