@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -55,6 +55,70 @@ const GUIDES = [
   },
 ]
 
+// Life-stage reference framework. General orientation only — exact targets vary
+// by individual dog and should be set with a veterinarian. Figures describe the
+// dominant nutritional priorities at each stage, not prescriptive numbers.
+const LIFE_STAGE_TABLE = [
+  {
+    stage: 'Puppy (growth)',
+    aafco: 'Growth / All Life Stages',
+    priority: 'Higher calorie density; controlled calcium for large breeds',
+    watch: 'Large-breed puppies need a large-breed-specific growth formula to slow bone growth and lower orthopedic risk',
+    guide: { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' },
+  },
+  {
+    stage: 'Adult (maintenance)',
+    aafco: 'Adult Maintenance',
+    priority: 'Calories matched to body condition; complete and balanced profile',
+    watch: 'Most healthy adults are fed twice daily; portion to a 4–5/9 body condition score',
+    guide: { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
+  },
+  {
+    stage: 'Senior',
+    aafco: 'Adult Maintenance (often lower-calorie)',
+    priority: 'Calorie control for slowing metabolism; protein generally maintained, not cut',
+    watch: 'Protein restriction is a clinical decision tied to a diagnosis (e.g. kidney disease) — not a default for age alone',
+    guide: { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
+  },
+  {
+    stage: 'Weight loss',
+    aafco: 'Adult Maintenance or veterinary therapeutic',
+    priority: 'Calorie restriction with maintained protein to preserve lean mass',
+    watch: 'Crash dieting can cause harm; reduce gradually under veterinary guidance',
+    guide: { label: 'Weight Management', href: '/nutrition/weight-management' },
+  },
+  {
+    stage: 'Clinical / prescription',
+    aafco: 'Veterinary therapeutic (Rx)',
+    priority: 'Formulated around a diagnosis — kidney, liver, urinary, GI, joint',
+    watch: 'Prescription diets are dispensed and monitored by a veterinarian, not chosen at the shelf',
+    guide: { label: 'Prescription Diets', href: '/nutrition/prescription-diets' },
+  },
+]
+
+const FAQS = [
+  {
+    question: 'What should I feed my dog?',
+    answer:
+      "For most healthy dogs, the strongest single signal is a complete-and-balanced commercial diet that meets the AAFCO nutritional adequacy standard for your dog's life stage and is made by a company that meets WSAVA selection guidelines (employs a qualified nutritionist, runs feeding trials, owns its manufacturing). Beyond that baseline, match calories to body condition rather than to the cup markings on the bag, keep treats to roughly 10% of daily calories, and let any medical condition — not breed marketing or trends — drive special diets. Your veterinarian is the right partner for individual targets.",
+  },
+  {
+    question: 'How do I know if a dog food is good quality?',
+    answer:
+      "Ingredient panels are weak quality signals on their own; the more reliable checks are the AAFCO nutritional adequacy statement (and whether it was met by formulation or by feeding trial), and whether the manufacturer satisfies the WSAVA selection criteria — a qualified nutritionist on staff, published research, and ownership of the production facility. Our WSAVA guide and food-label guide walk through how to read both, so you can judge a bag on substance rather than packaging claims like 'human-grade' or 'holistic,' which are not regulated nutrition terms.",
+  },
+  {
+    question: 'Is grain-free dog food bad for dogs?',
+    answer:
+      "Grain-free is not inherently harmful, but the FDA has investigated a possible association between certain grain-free, legume-heavy ('BEG') diets and a form of dilated cardiomyopathy (DCM) in dogs without a genetic predisposition. The relationship is not fully established and remains an area of active veterinary research. For most owners with no specific reason to avoid grains, the cautious default is a WSAVA-aligned diet from a manufacturer with strong nutritional oversight. Our grain-free DCM guide covers the current state of the evidence.",
+  },
+  {
+    question: 'How much should I feed my dog each day?',
+    answer:
+      "Feeding charts on the bag are starting estimates, not prescriptions — many dogs need less. A more individualized approach starts from resting energy requirement (the standard RER formula) and applies a life-stage and activity factor, then adjusts every few weeks based on body condition score. A dog you can feel but not see the ribs on, with a visible waist, is at a healthy weight regardless of what the bag says. Use the calorie calculator for a starting number and confirm the plan with your veterinarian.",
+  },
+]
+
 const ALL_NUTRITION_ITEMS = GUIDES.flatMap((s) => s.items)
 const itemListSchema = {
   '@context': 'https://schema.org',
@@ -69,7 +133,9 @@ const itemListSchema = {
   })),
 }
 
-const nutritionSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const faqSchema = buildFAQSchema({ questions: FAQS.map((f) => ({ question: f.question, answer: f.answer })) })
+
+const nutritionSchema = combineSchemas(breadcrumbSchema, itemListSchema, faqSchema)
 
 export default function NutritionHubPage() {
   return (
