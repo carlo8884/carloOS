@@ -91,7 +91,7 @@ export const FERRET_FOODS: FoodEntry[] = [
     risks: ['Hemolytic anemia (red-blood-cell destruction)', 'Cumulative — repeated small amounts add up', 'Hidden in baby food, broths, seasonings, and garlic supplements'],
     symptoms: ['Weakness, lethargy, pale gums', 'Rapid breathing or elevated heart rate', 'Reddish or brown urine', 'Vomiting (signs can be delayed days)'],
     whatToDo: 'Call your veterinarian or ASPCA Animal Poison Control (888-426-4435) with the form and amount. Anemia can take days to appear, so do not assume your ferret is fine because it seems normal at first.',
-    related: ['chocolate', 'xylitol', 'garlic-supplement'],
+    related: ['chocolate', 'xylitol', 'onion'],
     sources: [ASPCA, PPH, QC],
   },
   {
@@ -101,7 +101,7 @@ export const FERRET_FOODS: FoodEntry[] = [
     risks: ['Risk of severe hypoglycemia (dangerously low blood sugar)', 'Especially concerning in a species already prone to insulin disease', 'Hidden in "sugar-free" products — always check labels'],
     symptoms: ['Weakness, wobbliness, collapse', 'Vomiting', 'Tremors or seizures', 'Lethargy'],
     whatToDo: 'Treat as an emergency. Call your veterinarian or ASPCA Animal Poison Control (888-426-4435) immediately, and bring the product packaging so the xylitol amount can be assessed.',
-    related: ['chocolate', 'sugary-treats', 'insulinoma-and-sugar'],
+    related: ['chocolate', 'sugary-treats', 'banana'],
     sources: [ASPCA, PPH, QC],
   },
   {
@@ -141,7 +141,7 @@ export const FERRET_FOODS: FoodEntry[] = [
     risks: ['Choking and intestinal-obstruction hazard', 'Macadamia nuts are specifically toxic', 'Nut butters may contain xylitol', 'Indigestible plant fat and fiber'],
     symptoms: ['Gagging or choking', 'Vomiting, lethargy', 'Weakness or tremors (macadamia)', 'Signs of blockage: vomiting, no stool, distress'],
     whatToDo: 'If a ferret eats nuts or nut butter, call your veterinarian or ASPCA Animal Poison Control (888-426-4435), and note whether macadamias or xylitol-containing butter were involved.',
-    related: ['gastrointestinal-blockage', 'xylitol', 'sugary-treats'],
+    related: ['vegetables', 'xylitol', 'sugary-treats'],
     sources: [ASPCA, PPH, QC],
   },
 
@@ -165,7 +165,7 @@ export const FERRET_FOODS: FoodEntry[] = [
     safePrep: 'Best avoided. Do not use vegetables as treats or food toppers for ferrets.',
     quantity: 'None — choose a meat-based treat instead.',
     symptoms: ['Straining, no stool, vomiting, or lethargy (possible blockage)'],
-    related: ['gastrointestinal-blockage', 'grains', 'safe-meat-treats'],
+    related: ['vegetables', 'grains', 'safe-meat-treats'],
     sources: [QC, VCEAP],
   },
   {
