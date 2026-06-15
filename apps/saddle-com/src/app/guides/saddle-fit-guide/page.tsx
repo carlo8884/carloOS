@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, DropCap, ArticleByline } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, DropCap, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -10,13 +10,46 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'saddle-com', title: 'Saddle Fit Guide',
   description: 'The 4-point check for horse and rider, explained.',
   url: 'https://saddle.com/guides/saddle-fit-guide', imageUrl: '',
   authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+const faqItems = [
+  {
+    question: 'How much wither clearance should a saddle have?',
+    answer:
+      'Aim for 2–3 fingers of vertical clearance above the highest point of the wither, maintained along the entire length of the wither. Check it with the saddle girthed to normal working tension and no pad. Clearance at or near the withers (bridging) indicates a tree that is too narrow; 4+ fingers of clearance with the pommel dropping low indicates a tree that is too wide.',
+    answerText:
+      'Aim for 2–3 fingers of vertical clearance above the highest point of the wither, maintained along the entire length of the wither. Check it with the saddle girthed to normal working tension and no pad. Clearance at or near the withers (bridging) indicates a tree that is too narrow; 4+ fingers of clearance with the pommel dropping low indicates a tree that is too wide.',
+  },
+  {
+    question: 'How do I check the gullet for spinal clearance?',
+    answer:
+      'With a rider in the saddle at the normal working position, look from behind at the channel between the panels. You should see daylight through a consistent channel of at least 3 fingers width along the full gullet length, even under rider weight. Panels pressing toward the midline under weight indicate direct spinal pressure, which is a serious problem.',
+    answerText:
+      'With a rider in the saddle at the normal working position, look from behind at the channel between the panels. You should see daylight through a consistent channel of at least 3 fingers width along the full gullet length, even under rider weight. Panels pressing toward the midline under weight indicate direct spinal pressure, which is a serious problem.',
+  },
+  {
+    question: 'What are the signs a saddle does not fit?',
+    answer:
+      'From the horse: white hairs in the saddle area, muscle atrophy behind the shoulder, reluctance to stand for saddling, pinned ears when girthed, cold-backed behavior, reluctance to go forward, stiffness on one rein, or bucking at canter. From the saddle after use: uneven sweat patterns with dry pressure patches, uneven panel stuffing wear, and girth sores. Rule out fit-related pain before treating these as training problems.',
+    answerText:
+      'From the horse: white hairs in the saddle area, muscle atrophy behind the shoulder, reluctance to stand for saddling, pinned ears when girthed, cold-backed behavior, reluctance to go forward, stiffness on one rein, or bucking at canter. From the saddle after use: uneven sweat patterns with dry pressure patches, uneven panel stuffing wear, and girth sores. Rule out fit-related pain before treating these as training problems.',
+  },
+  {
+    question: 'How often should saddle fit be reassessed?',
+    answer:
+      'Reassess annually, and additionally any time you buy a new saddle (before it is used), after any significant change in the horse’s condition, fitness, or topline, after a return from injury or long-term rest, and during periods of rapid growth in young horses. Horses change shape with fitness, age, and season, so a saddle that fit correctly in the past may no longer fit.',
+    answerText:
+      'Reassess annually, and additionally any time you buy a new saddle (before it is used), after any significant change in the horse’s condition, fitness, or topline, after a return from injury or long-term rest, and during periods of rapid growth in young horses. Horses change shape with fitness, age, and season, so a saddle that fit correctly in the past may no longer fit.',
+  },
+]
+
+const schema = combineSchemas(articleSchema, buildFAQSchema({ questions: faqItems.map((f) => ({ question: f.question, answer: f.answerText })) }))
 
 export default function SaddleFitGuidePage() {
   return (
@@ -44,6 +77,7 @@ export default function SaddleFitGuidePage() {
           { label: 'Signs of Poor Fit', href: '#signs' },
           { label: 'Rider Fit', href: '#rider' },
           { label: 'When to Call a Fitter', href: '#fitter' },
+          { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Seat Size Guide', href: '/guides/seat-size-guide' },
@@ -71,6 +105,46 @@ export default function SaddleFitGuidePage() {
         <CalloutBox variant="tip" title="Owner tip">
           Check fit both <strong>statically and dynamically</strong>. A saddle that has adequate wither clearance with the horse standing still can still bridge the withers at trot. Have someone watch the saddle from the side as you ride at walk and trot before you commit to a fit verdict.
         </CalloutBox>
+
+        <h2 id="reference">The 4-Point Fit Check at a Glance</h2>
+        <p>Each check below has a defined correct standard and recognizable failure modes. Run all four with the saddle girthed to normal working tension, on a horse standing squarely, and confirm them again under a rider and in movement. Figures are conventional fitting reference points, not absolute rules — a qualified fitter confirms them in person.</p>
+        <div style={{ overflowX: 'auto' }}>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Check</th>
+                <th scope="col">What correct looks like</th>
+                <th scope="col">Too narrow / forward fault</th>
+                <th scope="col">Too wide / backward fault</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Wither clearance</strong></td>
+                <td>2–3 fingers above the highest point of the wither, maintained along its full length</td>
+                <td>Pommel close to or on the withers (bridging) — tree too narrow</td>
+                <td>4+ fingers with the pommel dropping low — tree too wide; saddle rocks</td>
+              </tr>
+              <tr>
+                <td><strong>2. Panel contact</strong></td>
+                <td>Even, consistent contact across the full panel length on both sides</td>
+                <td>Rock: contact in the middle, gaps front and rear (panel too straight)</td>
+                <td>Bridge: contact front and rear, gap in the middle (most common fault)</td>
+              </tr>
+              <tr>
+                <td><strong>3. Gullet / spinal clearance</strong></td>
+                <td>Daylight through a channel ≥3 fingers wide along the full gullet, under rider weight</td>
+                <td colSpan={2}>Panels press toward the midline under weight — direct spinal pressure (serious)</td>
+              </tr>
+              <tr>
+                <td><strong>4. Balance &amp; level</strong></td>
+                <td>Deepest seat point level or slightly below the pommel; cantle slightly higher than pommel</td>
+                <td>Tipped forward (cantle-high) — drives seat bones into the back</td>
+                <td>Tipped back (cantle-low) — throws rider onto the fork, raises wither pressure</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="why">Why Saddle Fit Is Non-Negotiable</h2>
         <p>The saddle is the interface between rider and horse — when it fits correctly, communication is clear and movement is free. When it fits poorly, every aid is distorted through a structure that is causing pain, restricting movement, or both.</p>
@@ -129,7 +203,10 @@ export default function SaddleFitGuidePage() {
           <li>When a young horse is growing rapidly (topline changes significantly in young horses)</li>
         </ul>
         <p>Look for a Certified Saddle Fitter (CSF, from the <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Society of Master Saddlers</a>) or a qualified independent fitter with verifiable credentials. Fitters employed by specific brands may have genuine expertise, but their conflict of interest in recommending their brand should be acknowledged.</p>
-        <p>Before you book, run the four checks above as a guided self-assessment with the <a href="/tools/saddle-fit-checker" className="text-brand-primary hover:underline">saddle fit checker</a> — it reads your answers into a likely-fits, check-these-signs, or poor-fit result and tells you what to show the fitter.</p>
+        <p>Before you book, run the four checks above as a guided self-assessment with the <a href="/tools/saddle-fit-checker" className="text-brand-primary hover:underline">saddle fit checker</a> — it reads your answers into a likely-fits, check-these-signs, or poor-fit result and tells you what to show the fitter. For discipline-specific checkpoints, see <a href="/fit" className="text-brand-primary hover:underline">saddle fit by discipline</a>, and for inspecting a saddle before purchase, the <a href="/guides/used-saddle-buying-guide" className="text-brand-primary hover:underline">used saddle buying guide</a>.</p>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+        <FAQAccordion items={faqItems} includeSchema={false} defaultOpenIndex={0} />
       </div>
     </ArticleLayout>
   )
