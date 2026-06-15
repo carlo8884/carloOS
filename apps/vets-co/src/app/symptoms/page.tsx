@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  FAQAccordion,
 } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 import { Symptoms, type Symptom, type UrgencyTier } from '../../data/symptoms'
@@ -71,6 +72,70 @@ const TIER_META: Record<UrgencyTier, TierMeta> = {
   },
 }
 
+// Urgency-tier reference table. Maps each of the four triage tiers used across
+// this library to what it means, how fast to act, and representative signs
+// drawn directly from the symptom entries below (e.g. swollen belly, pale gums,
+// straining to urinate, fast breathing are ER NOW entries in the data). Phrased
+// as "seek care," never as diagnosis or dosing. Extractable as a comparison
+// table for AI Overviews / Perplexity / ChatGPT citation (GEO).
+const TIER_REFERENCE: Array<{
+  tier: UrgencyTier
+  meaning: string
+  signs: string
+}> = [
+  {
+    tier: 'ER NOW',
+    meaning: 'Drive to the nearest open emergency hospital immediately; call ahead if you can.',
+    signs:
+      'A swollen, hard belly with unproductive retching (possible bloat/GDV), pale or white gums, a cat straining in the litter box and producing little or no urine, fast or labored breathing in a cat, head pressing, collapse, a seizure that will not stop, or known toxin ingestion.',
+  },
+  {
+    tier: 'Same-day vet',
+    meaning: 'Call your primary veterinarian today; urgent-care or telehealth is reasonable if they cannot fit you in.',
+    signs:
+      'Repeated vomiting or diarrhea, refusing food for more than a day, limping that still bears some weight, a painful or rapidly swelling eye, or sudden lethargy in an otherwise sick-appearing pet.',
+  },
+  {
+    tier: 'Schedule vet visit',
+    meaning: 'Book a routine appointment within the next few days.',
+    signs:
+      'A persistent but non-acute change — gradual weight loss, recurring mild itching, a small lump that is not growing quickly, bad breath, or a cough that is not affecting breathing.',
+  },
+  {
+    tier: 'Monitor at home',
+    meaning: 'Note the time, symptom, and trigger; re-check at 4–6 hours and again at 12 hours, and escalate if it worsens.',
+    signs:
+      'A single mild episode in a pet that is otherwise bright, eating, drinking, and behaving normally, with no red-flag signs from the tiers above.',
+  },
+]
+
+// FAQ answers are grounded strictly in facts already on this page (the tier
+// definitions, the ER triggers in the symptom data, and the sourcing note). No
+// new numbers, doses, or study claims are introduced. FAQAccordion emits the
+// FAQPage JSON-LD itself.
+const FAQS = [
+  {
+    question: 'How do I know if a pet symptom is an emergency?',
+    answer:
+      'Use the urgency tiers above. A swollen, hard belly with unproductive retching (possible bloat), pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, or known toxin ingestion are ER-now signs — go to the nearest open hospital and do not wait for a callback. Repeated vomiting, refusing food for more than a day, or limping are usually same-day concerns. Gradual or mild changes can wait for a routine appointment. When you are unsure, call a veterinarian rather than waiting.',
+  },
+  {
+    question: 'Is this symptom library a substitute for seeing a veterinarian?',
+    answer:
+      'No. These pages are educational. They explain what a symptom can mean, the red flags that make it urgent, the common causes, and the diagnostic steps a veterinarian typically follows — they do not diagnose your specific pet or provide dosing. Any diagnosis, prescription, or dose must come from a veterinarian who has examined your pet. Use these pages to decide how quickly to seek care and to prepare for the visit.',
+  },
+  {
+    question: 'What should I do if I think my pet swallowed something toxic?',
+    answer:
+      'Treat a suspected poisoning as an emergency. Contact the ASPCA Animal Poison Control Center at 888-426-4435, or your veterinarian or nearest emergency hospital, immediately. Do not wait for symptoms to appear, and do not induce vomiting unless a veterinarian or poison-control specialist tells you to. Poison-control hotlines may charge a consultation fee.',
+  },
+  {
+    question: 'How is the triage guidance in this library sourced?',
+    answer:
+      'The urgency tiers and red-flag thresholds draw on current guidance from veterinary bodies including the AVMA, AAHA, and ACVIM, with per-symptom citations on each page. Content is maintained by the Vets.co editorial team and written in calibrated, non-diagnostic language. We do not publish first-person clinical claims or fabricated credentials.',
+  },
+]
+
 function groupByTierAndSpecies(items: Symptom[]) {
   const byTier: Record<UrgencyTier, Symptom[]> = {
     'ER NOW': [],
@@ -109,6 +174,8 @@ export default function SymptomsHubPage() {
       url: `https://vets.co/symptoms/${s.slug}`,
     })),
   }
+  // FAQPage JSON-LD is emitted by <FAQAccordion> itself (see render below), so
+  // it is intentionally not combined here to avoid a duplicate FAQPage node.
   const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
@@ -143,6 +210,49 @@ export default function SymptomsHubPage() {
           <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
         </p>
       </div>
+
+      {/* Direct-answer / TL;DR block — extractable summary for AI Overviews,
+          Perplexity, and ChatGPT citation (GEO). Routes the reader straight to
+          the right depth of care, then into the cluster. */}
+      <section aria-labelledby="symptoms-tldr" className="px-container-sm sm:px-container py-8 bg-brand-primary-pale border-b border-brand-border">
+        <div className="max-w-3xl">
+          <h2 id="symptoms-tldr" className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The short version</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-3">
+            This library sorts {Symptoms.length} dog and cat symptoms into four urgency tiers so you can decide <strong className="text-brand-dark">how fast to act</strong>. The fastest read: <strong className="text-brand-dark">a swollen hard belly with unproductive retching, pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, or known toxin ingestion are ER-now signs</strong> — go to the nearest open hospital immediately. Repeated vomiting, refusing food for over a day, or limping usually warrant <strong className="text-brand-dark">same-day</strong> care. Gradual or mild changes can wait for a <strong className="text-brand-dark">routine</strong> appointment.
+          </p>
+          <p className="text-sm text-brand-text-light leading-relaxed">
+            These pages are educational and not a diagnosis. For suspected poisoning, call <a href="tel:8884264435" className="text-brand-primary hover:underline font-semibold">ASPCA Poison Control at 888-426-4435</a> or your veterinarian immediately. Review the <Link href="/health/emergency-signs" className="text-brand-primary hover:underline">emergency warning signs</Link>, keep a printable <Link href="/emergency-triage-card" className="text-brand-primary hover:underline">emergency triage card</Link> handy, or <Link href="/find-a-vet" className="text-brand-primary hover:underline">find a vet</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* Urgency-tier reference table — the four triage tiers, what each means,
+          and representative signs. Extractable comparison table (GEO). */}
+      <section aria-labelledby="symptoms-tiers" className="px-container-sm sm:px-container py-10 border-b border-brand-border">
+        <h2 id="symptoms-tiers" className="font-display text-xl font-bold text-brand-dark mb-2">The Four Urgency Tiers, at a Glance</h2>
+        <p className="text-sm text-brand-text-light max-w-3xl mb-5 leading-relaxed">Every symptom in this library is assigned one of four tiers. This table maps each tier to what it means and the kind of signs that fall under it. It is a guide, not a diagnosis — when in doubt, call a veterinarian.</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-border text-left">
+                <th scope="col" className="px-4 py-3 font-display font-bold text-brand-dark whitespace-nowrap">Tier</th>
+                <th scope="col" className="px-4 py-3 font-display font-bold text-brand-dark">What it means</th>
+                <th scope="col" className="px-4 py-3 font-display font-bold text-brand-dark">Representative signs</th>
+              </tr>
+            </thead>
+            <tbody>
+              {TIER_REFERENCE.map((row) => (
+                <tr key={row.tier} className="border-b border-brand-border align-top">
+                  <th scope="row" className="px-4 py-3 font-bold text-brand-dark whitespace-nowrap">{row.tier}</th>
+                  <td className="px-4 py-3 text-brand-text-mid leading-relaxed">{row.meaning}</td>
+                  <td className="px-4 py-3 text-brand-text-mid leading-relaxed">{row.signs}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-brand-text-light mt-4 max-w-3xl leading-relaxed">Related: <Link href="/health" className="text-brand-primary hover:underline">pet health library</Link> · <Link href="/diagnostics" className="text-brand-primary hover:underline">diagnostic tests explained</Link> · <Link href="/specialists" className="text-brand-primary hover:underline">when to see a specialist</Link>.</p>
+      </section>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">
         {/* Intro */}
@@ -265,6 +375,15 @@ export default function SymptomsHubPage() {
             </section>
           )
         })}
+
+        {/* FAQ — answers grounded only in on-page facts. FAQAccordion emits
+            the FAQPage JSON-LD. */}
+        <section aria-labelledby="symptoms-faq" className="mt-12 border-t border-brand-border pt-10">
+          <h2 id="symptoms-faq" className="font-display text-xl font-bold text-brand-dark mb-5">Frequently Asked Questions</h2>
+          <div className="max-w-3xl">
+            <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          </div>
+        </section>
 
         {/* Cross-portfolio callouts */}
         <section className="mt-12 grid sm:grid-cols-2 gap-4">
