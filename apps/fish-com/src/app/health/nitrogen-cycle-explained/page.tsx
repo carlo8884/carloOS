@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -11,9 +13,49 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol.', path: '/health/nitrogen-cycle-explained', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true ,
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z', speakable: true ,
   citation: SOURCES,
 })
+
+const FAQ_ITEMS: FAQItem[] = [
+  {
+    question: 'How do I know when my tank is fully cycled?',
+    answer:
+      'Add ammonia to 2 ppm and re-test 24 hours later. If both ammonia and nitrite read 0 ppm and nitrate has risen, the bacterial colonies are large enough to process a full ammonia load within a day and the cycle is complete. A single 0 reading on its own is not enough — it can be a temporary dip rather than an established colony, so wait for the 24-hour confirmation before adding fish.',
+    answerText:
+      'Add ammonia to 2 ppm and re-test 24 hours later. If both ammonia and nitrite read 0 ppm and nitrate has risen, the bacterial colonies are large enough to process a full ammonia load within a day and the cycle is complete. A single 0 reading on its own is not enough — it can be a temporary dip rather than an established colony, so wait for the 24-hour confirmation before adding fish.',
+  },
+  {
+    question: 'How long does it take to cycle a new aquarium?',
+    answer:
+      'Without a bacterial supplement, a fishless cycle typically takes 4–8 weeks, with warmer water (78–82°F) speeding colonization. Adding a bottled bacteria supplement typically shortens this to 2–4 weeks. Seeding the new filter with media, substrate, or decorations from an already-cycled tank is the fastest route — often 1–2 weeks — because the established bacteria transfer with the media.',
+    answerText:
+      'Without a bacterial supplement, a fishless cycle typically takes 4–8 weeks, with warmer water (78–82°F) speeding colonization. Adding a bottled bacteria supplement typically shortens this to 2–4 weeks. Seeding the new filter with media, substrate, or decorations from an already-cycled tank is the fastest route — often 1–2 weeks — because the established bacteria transfer with the media.',
+  },
+  {
+    question: 'Can I cycle a tank with fish already in it?',
+    answer:
+      'Fishless cycling is recommended because it grows the bacterial colonies without exposing fish to toxic ammonia and nitrite. Cycling with fish present means they are living in water that contains the same compounds that cause "new tank syndrome" — ammonia is harmful from roughly 0.25 ppm over time and nitrite is toxic at low concentrations too. If fish are already in the tank, the priority is keeping ammonia and nitrite low through frequent testing and water changes until the cycle establishes.',
+    answerText:
+      'Fishless cycling is recommended because it grows the bacterial colonies without exposing fish to toxic ammonia and nitrite. Cycling with fish present means they are living in water that contains the same compounds that cause "new tank syndrome" — ammonia is harmful from roughly 0.25 ppm over time and nitrite is toxic at low concentrations too. If fish are already in the tank, the priority is keeping ammonia and nitrite low through frequent testing and water changes until the cycle establishes.',
+  },
+  {
+    question: 'Why did my established tank suddenly show ammonia again?',
+    answer:
+      'This is usually a "mini-cycle" — a partial crash of the bacterial colony, which lives mostly in the filter media. Common triggers are rinsing filter media in chlorinated tap water, replacing all filter media at once, dosing antibiotics in the main tank, a long power outage that stops oxygenated flow for more than 4–6 hours, or adding too many fish at once so their combined waste outpaces the existing colony. Test ammonia and nitrite, do water changes to keep them low, and avoid the trigger while the colony recovers.',
+    answerText:
+      'This is usually a "mini-cycle" — a partial crash of the bacterial colony, which lives mostly in the filter media. Common triggers are rinsing filter media in chlorinated tap water, replacing all filter media at once, dosing antibiotics in the main tank, a long power outage that stops oxygenated flow for more than 4–6 hours, or adding too many fish at once so their combined waste outpaces the existing colony. Test ammonia and nitrite, do water changes to keep them low, and avoid the trigger while the colony recovers.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQ_ITEMS.map((f) => ({
+    question: f.question,
+    answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : ''),
+  })),
+})
+
+const schema = combineSchemas(articleSchema, faqSchema)
 
 export default function NitrogenCyclePage() {
   return (
@@ -24,7 +66,7 @@ export default function NitrogenCyclePage() {
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
-        <TableOfContents items={[{ label: 'What the Cycle Is', href: '#what' }, { label: 'The Three Stages', href: '#stages' }, { label: 'Fishless Cycling Protocol', href: '#cycling' }, { label: 'How Long It Takes', href: '#duration' }, { label: 'How to Know It\'s Done', href: '#done' }, { label: 'Mini-Cycles', href: '#mini-cycles' }]} />
+        <TableOfContents items={[{ label: 'Quick Answer', href: '#tldr' }, { label: 'What the Cycle Is', href: '#what' }, { label: 'The Three Stages', href: '#stages' }, { label: 'Fishless Cycling Protocol', href: '#cycling' }, { label: 'How Long It Takes', href: '#duration' }, { label: 'How to Know It\'s Done', href: '#done' }, { label: 'Mini-Cycles', href: '#mini-cycles' }, { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Water Chemistry Guide', href: '/water-parameters' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }]} />
         <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="nitrogen-cycle" />
@@ -32,6 +74,14 @@ export default function NitrogenCyclePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div id="tldr">
+          <CalloutBox variant="info" title="The short answer">
+            <p>The nitrogen cycle is the biological process that converts toxic fish waste into a far less toxic form: <strong>ammonia → nitrite → nitrate</strong>. Two groups of beneficial bacteria do the work, and they take roughly <strong>4–8 weeks</strong> to establish in a new tank (2–4 weeks with a bottled bacteria supplement, 1–2 weeks with seeded media from an established tank).</p>
+            <p style={{ marginBottom: 0 }}><strong>Cycle a tank before adding fish.</strong> The tank is safe only when an ammonia dose of 2 ppm is fully processed within 24 hours — ammonia and nitrite both reading 0 ppm while nitrate rises. Adding fish before that point is the main cause of "new tank syndrome."</p>
+          </CalloutBox>
+        </div>
+
         <h2 id="what">What the Nitrogen Cycle Is</h2>
         <p>Fish produce ammonia — through their gills, waste, and urine — continuously. Ammonia is acutely toxic: fish exposed to ammonia develop gill damage, immune suppression, neurological harm, and death at concentrations as low as 0.25 ppm over time, and 2+ ppm causes rapid mortality.</p>
         <p>The nitrogen cycle is the biological process by which ammonia is converted — first to nitrite (also toxic), then to nitrate (far less toxic at moderate levels) — by two groups of beneficial bacteria that colonize filter media and substrate. Without these bacteria, ammonia accumulates and kills fish. With them, a tank becomes self-regulating.</p>
@@ -46,6 +96,48 @@ export default function NitrogenCyclePage() {
         </ol>
         <p>The tank is safe for fish only when ammonia reads 0, nitrite reads 0, and nitrate is rising — this means all three populations have established and the cycle is self-sustaining.</p>
 
+        <figure style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+            <caption style={{ captionSide: 'bottom', fontSize: '12px', color: '#4a6573', textAlign: 'left', paddingTop: '8px' }}>Typical readings through a fishless cycle. Timing varies with temperature, bacterial supplement, and starting bioload.</caption>
+            <thead>
+              <tr style={{ background: '#f7fbfd', textAlign: 'left' }}>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Stage</th>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Typical window</th>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Ammonia (NH₃)</th>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Nitrite (NO₂⁻)</th>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Nitrate (NO₃⁻)</th>
+                <th style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Safe for fish?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}><strong>1. Ammonia spike</strong></td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Week 1–2</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Rising</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>0</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>0</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>No</td>
+              </tr>
+              <tr style={{ background: '#fafdff' }}>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}><strong>2. Nitrite spike</strong></td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Week 2–4</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Falling</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Rising</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>0–low</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>No</td>
+              </tr>
+              <tr>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}><strong>3. Cycle complete</strong></td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Week 4–8</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>0</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>0</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Rising</td>
+                <td style={{ border: '1px solid #d4e5ee', padding: '8px 10px' }}>Yes — after a 24h confirmation test</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
         <h2 id="cycling">Fishless Cycling Protocol</h2>
         <p>Fishless cycling grows the bacterial colonies without exposing fish to toxic water. The recommended method:</p>
         <ol>
@@ -59,10 +151,11 @@ export default function NitrogenCyclePage() {
 
         <h2 id="duration">How Long It Takes</h2>
         <ul>
-          <li><strong>Without bacterial supplement:</strong> 4–8 weeks typical. Warm water (78–82°F) speeds colonization.</li>
-          <li><strong>With bacterial supplement (Seachem Stability, Fritz Zyme 7):</strong> 2–4 weeks typical.</li>
-          <li><strong>With seeded media from an established tank:</strong> 1–2 weeks. The fastest method — get filter media, substrate, or decorations from a cycled tank and transfer to yours. The bacteria transfer with the media.</li>
+          <li><strong>Without bacterial supplement:</strong> 4–8 weeks typical. Warm water (78–82°F) speeds colonization, since the nitrifying bacteria are temperature-sensitive and slow markedly below the low 70s°F.</li>
+          <li><strong>With bacterial supplement (Seachem Stability, Fritz Zyme 7):</strong> 2–4 weeks typical. These products seed the tank with the same bacteria you would otherwise wait to grow, so they shorten — rather than skip — the colony-building phase.</li>
+          <li><strong>With seeded media from an established tank:</strong> 1–2 weeks. The fastest method — get filter media, substrate, or decorations from a cycled tank and transfer to yours. The bacteria transfer with the media. Keep seeded media wet and move it quickly; the colony begins to die once it loses oxygenated flow.</li>
         </ul>
+        <p>Several factors push the timeline toward the slow end of each range: cold water, low pH (the bacteria slow in acidic conditions), an undersized or intermittently running filter, and letting the ammonia source drop to 0 for days, which starves the colony mid-build. Stable warmth, steady filtration, and keeping the bacteria fed are what move a cycle toward the fast end. A surface-level ammonia reading of 0 reached early in week 2–3 is usually the first stage stalling, not the cycle finishing — only the 24-hour confirmation test settles it.</p>
 
         <h2 id="done">How to Know Cycling Is Complete</h2>
         <p>The definitive test: add ammonia to 2 ppm on day 1. Test again at 24 hours. If both ammonia AND nitrite read 0, and nitrate has risen — the cycle is complete. The bacteria are present in sufficient numbers to process the ammonia load within 24 hours.</p>
@@ -77,6 +170,12 @@ export default function NitrogenCyclePage() {
           <li><strong>Extended power outage:</strong> Bacteria need oxygenated water flow to survive. A filter off for more than 4–6 hours can crash the colony — test ammonia when power returns.</li>
           <li><strong>Adding too many fish too quickly:</strong> The ammonia produced by a large new population overwhelms the existing colony. Add fish gradually — 20–25% of intended stocking at a time, 2 weeks apart.</li>
         </ul>
+
+        <p>To watch a cycle in progress you need a kit that reads ammonia, nitrite, and nitrate — see our breakdown of the <Link href="/reviews/best-water-test-kits">best aquarium water test kits</Link>. For target ranges on every parameter once the tank is running, use the <Link href="/water-parameters">water parameters reference</Link>. If a tank that was running fine suddenly shows fish in distress, the <Link href="/health/new-tank-syndrome">new tank syndrome guide</Link> and the <Link href="/health/fish-disease-guide">fish disease guide</Link> help separate a chemistry crash from an actual pathogen. Setting up from scratch? Work through the full <Link href="/setup/aquarium-cycling-guide">aquarium cycling guide</Link> alongside this page.</p>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQ_ITEMS} />
+
         <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
