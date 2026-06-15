@@ -601,6 +601,17 @@ export default async function BreedsPage() {
               Breed-match wizard — your top 3 in 7 questions
             </div>
           </Link>
+          <Link
+            href="/breeds/best-small-dogs-for-apartments"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              Lifestyle guide
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Best Small Dog Breeds for Apartments
+            </div>
+          </Link>
         </div>
       </section>
 
