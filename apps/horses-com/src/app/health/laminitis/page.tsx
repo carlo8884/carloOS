@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -32,8 +32,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const combined = combineSchemas(articleSchema, medSchema)
-
 const FAQS = [
   {
     question: "What is the difference between laminitis and founder?",
@@ -64,6 +62,12 @@ const FAQS = [
       'Many horses recover and return to soundness, especially mild endocrinopathic cases caught early. Prognosis depends on coffin-bone displacement, cause, and intervention speed. Lifelong management of the underlying trigger is usually needed.',
   },
 ]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function LaminitisPage() {
   return (
@@ -139,6 +143,13 @@ export default function LaminitisPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+
+          <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 not-prose my-6">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The Short Answer</div>
+            <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
+              Laminitis is inflammation and failure of the laminae that suspend the coffin bone inside the hoof, and it is a veterinary emergency. Most field cases are <strong>endocrinopathic</strong> — driven by insulin dysregulation from equine metabolic syndrome or PPID (Cushing&apos;s), not by the older &ldquo;grain founder&rdquo; picture. The earliest owner-detectable warning is usually a <strong>bounding digital pulse</strong> with warm feet and a short, stiff gait, often before obvious lameness. If you suspect it, call a vet immediately, move the horse onto deep soft footing, stop grain and lush pasture, and do not force walking. Prognosis hinges on how fast the trigger is controlled and the foot is supported; many early endocrinopathic cases return to soundness, while severe coffin-bone rotation or sinking carries a guarded outlook. Prevention is mostly metabolic: keep at-risk horses lean, limit sugar and starch, and test and treat the underlying endocrine disease.
+            </p>
+          </div>
 
           <h2 id="what">What Is Laminitis</h2>
           <p>Inside the hoof capsule, the coffin bone (the third phalanx, or P3) is not resting on the sole; it is suspended from the inner hoof wall by interleaved sheets of tissue called the laminae. The epidermal laminae grow from the hoof wall and interlock with the dermal laminae attached to the bone, like two combs pushed together. This suspensory apparatus holds the entire bodyweight of the horse and transmits it to the ground through the hoof wall. Laminitis is the breakdown of that bond.</p>
