@@ -3,7 +3,14 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-14 (COO — launch-readiness + dead-image polish wave: PRs #765–#769)
+**Last updated:** 2026-06-15 (COO — cornerstone GEO depth campaign: PRs #771–#780, all 7 content sites)
+
+> **COO cornerstone GEO depth campaign (2026-06-15 — PRs #771–#780 all merged):**
+> Owner-directed autonomous sub-bot orchestration ("keep doing what you think is best"). Three parallel waves of depth sub-bots, each boxed to one site with hard QC §1 guardrails; COO trust-reviewed every clinical claim + reverted incomplete work before shipping.
+> **~17 cornerstone hubs/pillars deepened across all 7 content sites** — each thin link-grid/prose page turned into an AI-citation magnet (extractable TL;DR/direct-answer block + reference/comparison table + FAQ→FAQPage schema, all grounded in on-page facts):
+> - **Dog:** /training, /nutrition, /breeds, /health · **Vets:** /symptoms, /health, /diagnostics, /specialists · **PetFood:** dry-matter-basis, /diets · **Ferret:** insulinoma (+fixed dangling anchor) · **Fish:** nitrogen-cycle, gh-kh-water-hardness · **Horses:** /health, laminitis · **Lizard:** temperature-guide
+> **QC catches (verified, not rubber-stamped):** reverted a Lizard humidity-guide broken half-edit + a PetFood how-to-choose incomplete pass (FAQPage schema with no rendered FAQ / dangling TOC anchors); confirmed under-reported complete second pages (Dog /health, Vets /diagnostics, Fish gh-kh, Horses laminitis) compile + render + add zero fabricated numbers.
+> **Method note:** every clinical figure trust-checked (ASPCA hotline 888-426-4435, ferret glucose thresholds, dry-matter 17.9 ppm/degree, AAFCO/WSAVA framing); paced around GitHub API rate limits.
 
 > **COO launch-readiness + dead-image polish wave (2026-06-14 — PRs #765–#769 all merged):**
 > Owner-directed autonomous run + browser/Vercel-access discovery.
