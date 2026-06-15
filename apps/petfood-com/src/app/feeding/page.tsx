@@ -32,6 +32,12 @@ const FEEDING = [
       'Cats are easy to overfeed: they are small, the calorie differences between foods are large in relative terms, and free-choice grazing on energy-dense kibble drives the high rate...',
   },
   {
+    slug: 'can-cats-eat',
+    title: 'Can Cats Eat…? Food Safety Checker',
+    description:
+      'A vet-referenced safe/caution/toxic checker for 30 common human foods — onions, chocolate, tuna, milk, chicken, and more. Cats are obligate carnivores, so most human foods are occasional extras at best.',
+  },
+  {
     slug: 'body-condition-scoring',
     title: 'Body Condition Scoring',
     description:
