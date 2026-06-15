@@ -39,6 +39,7 @@ const GUIDES = [
   {
     category: 'What Dogs Can & Cannot Eat',
     items: [
+      { title: 'Can Dogs Eat…? Food Checker', desc: 'A–Z safe/caution/toxic checker for 30+ common foods', href: '/nutrition/can-dogs-eat', badge: '🆕 Checker' },
       { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
       { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
       { title: 'Dog Treats Guide', desc: 'Caloric budget (the 10% rule), dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
@@ -205,6 +206,7 @@ export default function NutritionHubPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Nutrition Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="can-dogs-eat" href="/nutrition/can-dogs-eat" className="text-sm text-brand-primary no-underline hover:underline">Can Dogs Eat…?</Link>
         <Link key="dog-dna-tests" href="/nutrition/dog-dna-tests" className="text-sm text-brand-primary no-underline hover:underline">Dog DNA Tests</Link>
         <Link key="dog-supplements" href="/nutrition/dog-supplements" className="text-sm text-brand-primary no-underline hover:underline">Dog Supplements</Link>
         <Link key="elimination-diet" href="/nutrition/elimination-diet" className="text-sm text-brand-primary no-underline hover:underline">Elimination Diet</Link>
