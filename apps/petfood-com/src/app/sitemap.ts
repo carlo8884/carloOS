@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/feeding/how-much-to-feed-a-cat', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/how-much-to-feed-a-dog', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/how-to-transition-pet-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://petfood.com/feeding/ozempic-for-cats', lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
     { url: 'https://petfood.com/feeding/large-breed-puppy-nutrition', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/feeding/treats-and-the-ten-percent-rule', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/glossary', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },

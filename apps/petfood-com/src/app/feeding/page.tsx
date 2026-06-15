@@ -38,6 +38,12 @@ const FEEDING = [
       'Body condition score is the single most useful tool an owner has for feeding decisions, and it requires no equipment beyond your hands and eyes.',
   },
   {
+    slug: 'ozempic-for-cats',
+    title: 'Ozempic for Cats? GLP-1 Weight-Loss Drugs',
+    description:
+      'Cats are the first species in GLP-1 weight-loss drug trials (OKV-119). What is real, why human Ozempic is unsafe for cats, and proven feline weight-loss methods.',
+  },
+  {
     slug: 'how-to-transition-pet-food',
     title: 'How to Transition Pet Food',
     description:
