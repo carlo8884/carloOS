@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -32,7 +32,42 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 
-const combined = combineSchemas(articleSchema, medSchema)
+const FAQS = [
+  {
+    question: 'What is the difference between ESGD and EGGD?',
+    answer:
+      'Equine Squamous Gastric Disease (ESGD) affects the upper, non-glandular squamous mucosa, which has no protective mucus layer. It is an acid-injury disease most strongly linked to intense exercise and intermittent feeding, and it responds well to acid suppression alone. Equine Glandular Gastric Disease (EGGD) affects the lower glandular mucosa and is better understood as a breakdown of mucosal defense than a simple acid problem. EGGD typically requires longer treatment, adjunctive mucosal protection, and removal of the underlying stressor.',
+    answerText:
+      'ESGD affects the upper non-glandular mucosa and is an acid-injury disease tied to intense exercise and intermittent feeding; it responds to acid suppression alone. EGGD affects the lower glandular mucosa, reflects a breakdown of mucosal defense, and usually needs longer treatment plus removal of the underlying stressor.',
+  },
+  {
+    question: 'How are equine gastric ulcers diagnosed?',
+    answer:
+      'Gastroscopy is the gold standard. A 3-meter endoscope is passed through the nostril into the stomach of a sedated, fasted horse to directly visualize and grade lesions in the squamous and glandular regions. Blood and fecal tests for ulcers have low sensitivity and specificity and should not substitute for gastroscopy — negative results do not rule out ulcers and positive results do not confirm location.',
+    answerText:
+      'Gastroscopy — direct visualization with a 3-meter endoscope in a sedated, fasted horse — is the gold standard for diagnosing and grading equine ulcers. Blood and fecal tests have low sensitivity and specificity and should not replace scoping.',
+  },
+  {
+    question: 'Does feeding alfalfa help horses with ulcers?',
+    answer:
+      'Alfalfa hay is genuinely protective against squamous (ESGD) ulcers. It is higher in calcium and protein than grass hay — both of which buffer gastric acid — and it stimulates more acid-buffering saliva. Feeding an alfalfa flake about 30 minutes before exercise, or replacing roughly 30 percent of the forage ration with alfalfa, reduces ESGD risk. Specific medication and ration decisions should be confirmed with your veterinarian.',
+    answerText:
+      'Yes. Alfalfa is protective against squamous ulcers because its higher calcium and protein buffer acid and it stimulates more saliva. An alfalfa flake before exercise, or replacing about 30 percent of forage with alfalfa, reduces ESGD risk.',
+  },
+  {
+    question: 'How long does ulcer treatment take?',
+    answer:
+      'The ECEIM consensus is to treat ESGD for a minimum of 28 days, then rescope and continue if not healed. EGGD typically requires 60 to 90 days and has lower healing rates even with combination therapy. Omeprazole is the pharmacologic foundation, but treatment without addressing the diet that produced the ulcers usually relapses. All dosing and medication choices must be determined by a veterinarian.',
+    answerText:
+      'ESGD is treated for a minimum of 28 days then rescoped; EGGD typically needs 60 to 90 days with lower healing rates. Omeprazole is the foundation, but treatment fails without fixing the underlying diet. Dosing must be set by a vet.',
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function EquineUlcersPage() {
   return (
@@ -64,6 +99,7 @@ export default function EquineUlcersPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
+            { label: 'Key Facts', href: '#key-facts' },
             { label: 'ESGD vs EGGD', href: '#esgd-vs-eggd' },
             { label: 'Prevalence by Discipline', href: '#prevalence' },
             { label: 'Risk Factors', href: '#risk' },
@@ -73,6 +109,7 @@ export default function EquineUlcersPage() {
             { label: 'Nutritional Management', href: '#nutrition' },
             { label: 'Supplements: Evidence Ladder', href: '#supplements' },
             { label: 'When to Call the Vet', href: '#call-vet' },
+            { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
           <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5">
@@ -108,6 +145,17 @@ export default function EquineUlcersPage() {
             reviewedBy="Editorial team"
           />
 
+          <div id="key-facts" className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 my-6 not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Key Facts — Equine Gastric Ulcers</div>
+            <ul className="text-sm text-brand-text-mid leading-relaxed m-0 pl-5">
+              <li><strong>EGUS is two diseases, not one.</strong> Squamous disease (ESGD) and glandular disease (EGGD) affect different regions of the stomach, have different causes, and respond differently to the same drug.</li>
+              <li><strong>It is overwhelmingly common in working horses.</strong> Prevalence in actively-training Thoroughbred racehorses approaches 80–90 percent; pastured horses on free-choice hay sit near 10 percent or lower.</li>
+              <li><strong>Forage restriction is the biggest modifiable cause.</strong> The equine stomach secretes acid continuously; going more than 4–6 hours without forage removes the saliva buffering that protects the squamous mucosa.</li>
+              <li><strong>Gastroscopy is the only reliable diagnosis.</strong> Blood and fecal tests have low sensitivity and specificity and cannot confirm location or rule ulcers out.</li>
+              <li><strong>Omeprazole plus a forage-first diet is the foundation.</strong> ESGD is treated for at least 28 days; EGGD typically needs 60–90 days and often combination therapy. All dosing must be set by a veterinarian.</li>
+            </ul>
+          </div>
+
           <h2 id="esgd-vs-eggd">ESGD vs EGGD — Two Diseases, Same Stomach</h2>
           <p>The equine stomach has two anatomically and functionally distinct regions, and the two regions develop ulcers for entirely different reasons. This is the single most important fact in EGUS management — &ldquo;ulcers&rdquo; is not one disease, and the right answer for one type can be the wrong answer for the other.</p>
 
@@ -116,6 +164,46 @@ export default function EquineUlcersPage() {
           <p><strong>Equine Glandular Gastric Disease (EGGD)</strong> affects the glandular mucosa of the lower stomach, which produces acid and is protected by a mucus-bicarbonate layer. EGGD is not a simple acid-injury disease — the lesions develop where mucosal defense has failed, not where acid has overwhelmed defense. The 2024 European College of Equine Internal Medicine (ECEIM) consensus statement explicitly reframes EGGD as a mucosal-defense breakdown more analogous to NSAID gastropathy or stress-induced ulceration in other species (Sykes BW et al., <em>Journal of Veterinary Internal Medicine</em>, 2024 consensus).</p>
 
           <p>The clinical implication: ESGD responds well to acid suppression alone; EGGD does not. EGGD often requires longer treatment courses, adjunctive mucosal protection (sucralfate, misoprostol), and crucially the identification and removal of the underlying mucosal-defense stressor (NSAID exposure, training-program intensity, social stress).</p>
+
+          <div className="overflow-x-auto rounded-lg border border-brand-border my-6 not-prose">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="py-3 px-4 font-bold text-brand-dark border-b border-brand-border whitespace-nowrap">Feature</th>
+                  <th className="py-3 px-4 font-bold text-brand-dark border-b border-brand-border">ESGD (Squamous)</th>
+                  <th className="py-3 px-4 font-bold text-brand-dark border-b border-brand-border">EGGD (Glandular)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="py-3 px-4 border-b border-brand-border font-semibold text-brand-dark">Region affected</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Upper, non-glandular mucosa (no protective mucus layer)</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Lower, glandular mucosa (mucus-bicarbonate protected)</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 border-b border-brand-border font-semibold text-brand-dark">Primary mechanism</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Acid injury — acid splashes onto unprotected mucosa</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Breakdown of mucosal defense, not simple acid overwhelm</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 border-b border-brand-border font-semibold text-brand-dark">Strongest risk factors</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Intense exercise, intermittent feeding, high-grain diets</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">NSAID exposure, training intensity, transport and social stress</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 border-b border-brand-border font-semibold text-brand-dark">Response to omeprazole alone</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Good — responds well to acid suppression</td>
+                  <td className="py-3 px-4 border-b border-brand-border text-brand-text-mid">Often insufficient — usually needs adjuncts plus stressor removal</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-brand-dark">Typical treatment course</td>
+                  <td className="py-3 px-4 text-brand-text-mid">Minimum 28 days, then rescope</td>
+                  <td className="py-3 px-4 text-brand-text-mid">Typically 60–90 days; lower healing rates</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-brand-text-mid">Comparison summarizes the on-page discussion; dosing and medication choices must be set by your veterinarian after gastroscopy.</p>
 
           <h2 id="prevalence">Prevalence by Discipline</h2>
           <p>Documented EGUS prevalence varies sharply with discipline, training intensity, and population studied. Key published rates:</p>
@@ -301,6 +389,11 @@ export default function EquineUlcersPage() {
           <p>Same-day veterinary attention is warranted for any of: a horse off feed for more than 12–24 hours, repeated or severe colic, signs of dehydration, fever, or marked behavioral change. EGUS itself is rarely a life-threatening acute event, but the differential diagnoses for the same signs — impaction colic, sand colic, gastric impaction, gastric rupture, intussusception — can be life-threatening and time-sensitive.</p>
 
           <p>Routine scheduling: gastroscopy is appropriate for any horse with chronic poor performance, unexplained weight loss, recurrent low-grade colic, or significant behavior change under saddle in the absence of an obvious lameness or tack-fit explanation.</p>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS} />
+
+          <p>For related reference material, see the <a href="/health">equine health hub</a>, the overlap with <a href="/health/colic">colic</a> (recurrent low-grade colic is a common ulcer sign), forage strategy in <a href="/nutrition/forage-basics">forage basics</a>, and meal sizing for working horses in <a href="/nutrition/feeding-the-performance-horse">feeding the performance horse</a>.</p>
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
