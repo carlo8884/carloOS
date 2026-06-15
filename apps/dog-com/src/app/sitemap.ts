@@ -166,6 +166,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/nutrition/feeding-frequency', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/grain-free-dcm-risk', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/how-much-to-feed', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/nutrition/ozempic-for-dogs', lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
     { url: 'https://dog.com/nutrition/prescription-diets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/puppy-nutrition', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/raw-diet-risks', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

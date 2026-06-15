@@ -50,6 +50,7 @@ const GUIDES = [
     items: [
       { title: 'Senior Dog Nutrition', desc: 'Metabolic slowdown, protein needs, kidney-supporting diets', href: '/health/senior-dog-care' },
       { title: 'Weight Management for Dogs', desc: 'Body condition scoring, calorie restriction, exercise', href: '/nutrition/weight-management' },
+      { title: 'Ozempic for Dogs? GLP-1 Drugs Explained', desc: 'What the GLP-1 weight-loss trend means for dogs — trials, risks, and what works now', href: '/nutrition/ozempic-for-dogs', badge: '🆕 New' },
       { title: 'Prescription Diets Explained', desc: 'Kidney, liver, urinary, joint — when prescription food matters', href: '/nutrition/prescription-diets' },
     ],
   },
@@ -208,6 +209,7 @@ export default function NutritionHubPage() {
         <Link key="feeding-frequency" href="/nutrition/feeding-frequency" className="text-sm text-brand-primary no-underline hover:underline">Feeding Frequency</Link>
         <Link key="grain-free-dcm-risk" href="/nutrition/grain-free-dcm-risk" className="text-sm text-brand-primary no-underline hover:underline">Grain Free DCM Risk</Link>
         <Link key="how-much-to-feed" href="/nutrition/how-much-to-feed" className="text-sm text-brand-primary no-underline hover:underline">How Much To Feed</Link>
+        <Link key="ozempic-for-dogs" href="/nutrition/ozempic-for-dogs" className="text-sm text-brand-primary no-underline hover:underline">Ozempic for Dogs</Link>
         <Link key="prescription-diets" href="/nutrition/prescription-diets" className="text-sm text-brand-primary no-underline hover:underline">Prescription Diets</Link>
         <Link key="puppy-nutrition" href="/nutrition/puppy-nutrition" className="text-sm text-brand-primary no-underline hover:underline">Puppy Nutrition</Link>
         <Link key="raw-diet-risks" href="/nutrition/raw-diet-risks" className="text-sm text-brand-primary no-underline hover:underline">Raw Diet Risks</Link>
