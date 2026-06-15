@@ -29,6 +29,7 @@ const REVIEWS = [
   { title: 'Best Dog Harnesses 2026', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses' },
   { title: 'Best Dog Food for Small Breeds 2026', desc: 'WSAVA-compliant small breed foods — Royal Canin, Purina Pro Plan, Hill\'s ranked', href: '/reviews/best-dog-food-small-breed' },
   { title: 'Best Heartworm Prevention for Dogs 2026', desc: 'Heartgard Plus, Interceptor Plus, Simparica Trio compared for heartworm prevention', href: '/reviews/best-heartworm-prevention' },
+  { title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', desc: 'A calibrated buyer\'s guide to fresh and gently-cooked food vs kibble and raw — cost, nutrition, safety, and how to judge a brand', href: '/reviews/fresh-dog-food-worth-it', badge: '🆕 New' },
 ]
 
 const itemListSchema = {
@@ -99,6 +100,7 @@ export default function DogReviewsPage() {
         <Link key="best-large-breed-dog-food" href="/reviews/best-large-breed-dog-food" className="text-sm text-brand-primary no-underline hover:underline">Best Large Breed Dog Food</Link>
         <Link key="best-pet-insurance" href="/reviews/best-pet-insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
         <Link key="best-slow-feeder-bowls" href="/reviews/best-slow-feeder-bowls" className="text-sm text-brand-primary no-underline hover:underline">Best Slow Feeder Bowls</Link>
+        <Link key="fresh-dog-food-worth-it" href="/reviews/fresh-dog-food-worth-it" className="text-sm text-brand-primary no-underline hover:underline">Fresh Dog Food Worth It</Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}

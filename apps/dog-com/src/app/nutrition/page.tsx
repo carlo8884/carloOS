@@ -51,6 +51,7 @@ const GUIDES = [
       { title: 'Senior Dog Nutrition', desc: 'Metabolic slowdown, protein needs, kidney-supporting diets', href: '/health/senior-dog-care' },
       { title: 'Weight Management for Dogs', desc: 'Body condition scoring, calorie restriction, exercise', href: '/nutrition/weight-management' },
       { title: 'Ozempic for Dogs? GLP-1 Drugs Explained', desc: 'What the GLP-1 weight-loss trend means for dogs — trials, risks, and what works now', href: '/nutrition/ozempic-for-dogs', badge: '🆕 New' },
+      { title: 'Dog DNA Tests: What They Tell You', desc: 'How DNA kits work, breed-ID accuracy, health-panel limits, and Embark vs Wisdom Panel', href: '/nutrition/dog-dna-tests', badge: '🆕 New' },
       { title: 'Prescription Diets Explained', desc: 'Kidney, liver, urinary, joint — when prescription food matters', href: '/nutrition/prescription-diets' },
     ],
   },
@@ -204,6 +205,7 @@ export default function NutritionHubPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Nutrition Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="dog-dna-tests" href="/nutrition/dog-dna-tests" className="text-sm text-brand-primary no-underline hover:underline">Dog DNA Tests</Link>
         <Link key="dog-supplements" href="/nutrition/dog-supplements" className="text-sm text-brand-primary no-underline hover:underline">Dog Supplements</Link>
         <Link key="elimination-diet" href="/nutrition/elimination-diet" className="text-sm text-brand-primary no-underline hover:underline">Elimination Diet</Link>
         <Link key="feeding-frequency" href="/nutrition/feeding-frequency" className="text-sm text-brand-primary no-underline hover:underline">Feeding Frequency</Link>

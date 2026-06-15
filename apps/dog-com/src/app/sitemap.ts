@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: 'https://dog.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
     { url: 'https://dog.com/breeds', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/breeds/best-small-dogs-for-apartments', lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
     { url: 'https://dog.com/breeds/akita', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/breeds/australian-shepherd', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/breeds/beagle', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -160,6 +161,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/legal/privacy-policy', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://dog.com/legal/terms', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://dog.com/nutrition', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/nutrition/dog-dna-tests', lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
     { url: 'https://dog.com/nutrition/dog-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/dog-treats-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/elimination-diet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -191,6 +193,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/reviews/best-dog-harnesses', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dry-dog-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-flea-tick-prevention', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/reviews/fresh-dog-food-worth-it', lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
     { url: 'https://dog.com/reviews/best-heartworm-prevention', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-joint-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-large-breed-dog-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
