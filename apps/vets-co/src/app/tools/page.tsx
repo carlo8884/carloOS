@@ -31,6 +31,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/cat-grimace-scale',
+    title: 'Cat Grimace Scale',
+    desc: 'Is your cat in pain? Score five facial action units — ears, eyes, muzzle, whiskers, head — using the framework of the validated Feline Grimace Scale for a 0–10 grimace total, with the ≈4/10 pain threshold and safe next steps.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/pet-insurance-worth-it-calculator',
     title: 'Is Pet Insurance Worth It? Calculator',
     desc: 'A breakeven calculator: enter a quote and an expected-cost scenario to see the eligible vet-cost level at which a policy pays for itself — with honest framing on insurance as catastrophic-cost protection, not guaranteed savings.',
