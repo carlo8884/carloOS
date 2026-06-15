@@ -169,7 +169,7 @@ export const HORSE_FOODS: FoodEntry[] = [
     sources: [ASPCA, MERCK],
   },
   {
-    slug: 'dairy', name: 'Dairy (Milk & Cheese)', aliases: ['milk', 'cheese', 'yogurt'], category: 'Animal Products', verdict: 'toxic',
+    slug: 'dairy', name: 'Dairy (Milk & Cheese)', aliases: ['milk', 'cheese', 'yogurt'], category: 'Animal Products', verdict: 'caution',
     shortAnswer: 'No. Adult horses should not be given dairy — they are herbivores and become lactose intolerant after weaning, so milk and cheese cause digestive upset.',
     detail: 'Horses are obligate herbivores with a hindgut built to ferment fiber, not to digest animal products. After weaning, horses lose most of their lactase, so milk, cheese, and yogurt are not digested properly and ferment in the gut, causing diarrhea and colic. Dairy offers nothing a horse needs and disrupts the carefully balanced microbial population of the hindgut. It does not belong in an equine diet.',
     risks: ['Lactose intolerance in adult horses -> diarrhea, colic', 'Disrupts the fiber-fermenting hindgut microbiome', 'No nutritional place in a herbivore diet'],
@@ -179,8 +179,8 @@ export const HORSE_FOODS: FoodEntry[] = [
     sources: [MERCK, AAEP],
   },
   {
-    slug: 'meat', name: 'Meat', aliases: ['ham', 'chicken', 'fish'], category: 'Animal Products', verdict: 'toxic',
-    shortAnswer: 'No. Horses are herbivores — their digestive system is not designed for meat, and it can cause serious digestive disturbance.',
+    slug: 'meat', name: 'Meat', aliases: ['ham', 'chicken', 'fish'], category: 'Animal Products', verdict: 'caution',
+    shortAnswer: 'No. Horses are herbivores — their digestive system is not designed for meat, which is inappropriate and can cause digestive disturbance.',
     detail: 'Horses are strict herbivores. Their teeth, stomach, and fiber-fermenting hindgut are built for plants, not animal protein, and they lack the digestive machinery to handle meat. Feeding meat can disrupt the hindgut microbiome and cause colic and other digestive problems, and it offers no benefit. Never feed meat or meat-containing products to a horse.',
     risks: ['No equine digestive pathway for animal protein', 'Disrupts the hindgut microbiome -> colic', 'Cured/salted meats add salt and fat the horse cannot use'],
     symptoms: ['Colic signs', 'Diarrhea or abnormal manure', 'Going off feed'],
