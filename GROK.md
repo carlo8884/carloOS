@@ -13,18 +13,20 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios).
 - PRs 813–815 merged. Production dog/fish/horses READY on main.
 - Closed truncated PR 816 instead of shipping a broken Fish homepage.
+- Fish HomeHero extract + page.tsx split (HomeHero / HomeTriage / HomeGuides) — on main; no more 50k page.tsx risk.
 
 ## Currently underway
-- PR: Fish HomeHero extract + Dog shell parity (`grok/fish-home-hero-extract-0830`). Homepage split so we never push a 50k page.tsx again.
+- None. Next hour: visual QA Fish hero vs Dog on production previews; Horses homepage polish if any residual dark/crop issues.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO.
 - Production: dog-com-carlo-tabibi-s-projects.vercel.app (and dog-com-three.vercel.app historically).
+- Fish + Horses same Vercel team pattern.
 
 ## Next planned priority
-1. Merge Fish HomeHero extract when QC is green.
-2. Visual check Fish hero vs Dog.
-3. Further Fish quality only where clearly weaker than Dog.
+1. Visual check Fish hero vs Dog (hero already image-first, matching pattern).
+2. Further Fish quality only where clearly weaker than Dog.
+3. Horses.com homepage polish if needed after screenshot pass.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
