@@ -74,6 +74,13 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 img { max-width: 100%; height: auto; display: block; }
 
+/* Next/Image fill heroes must ignore the height:auto rule above */
+img[style*='position:absolute'],
+img[style*='position: absolute'] {
+  max-width: none;
+  height: 100%;
+}
+
 :focus-visible {
   outline: 2px solid var(--brand-primary);
   outline-offset: 3px;
@@ -143,4 +150,20 @@ img { max-width: 100%; height: auto; display: block; }
 :root {
   --font-cormorant: Georgia, 'Times New Roman', serif;
   --font-inter: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Homepage hero: StockImage is 16:9 inside a tall masthead, which left a
+   dead dark slab on the right. Force the figure to fill the absolute layer. */
+main > section:first-of-type figure {
+  position: absolute !important;
+  inset: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+main > section:first-of-type figure > div {
+  height: 100% !important;
+  width: 100% !important;
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
 }
