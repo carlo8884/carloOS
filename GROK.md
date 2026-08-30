@@ -10,37 +10,28 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 ## Completed
 - Fish.com homepage hero cover (PR 809).
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
-- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
-- 2026-08-30 stabilize: Dog `/join/pro` syntax error fixed. Empty directory stubs noindexed. `/inquire` exists across the portfolio so footer links resolve.
-- Production dog-com READY on main (`dog-com-carlo-tabibi-s-projects.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
-- Fish and horses production READY on main.
-- PR 814 merged (trainer apply + trainers hub).
-- PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
-- 2026-08-30 hour-1: Dog `/join/pro` + `/trainers` shells re-confirmed complete on main (no fake bios, empty directory, noindex, InquireForm).
-- 2026-08-30 hour-2: Closed truncated PR #816. Clean branch `grok/fish-hero-parity-clean-0830` from main. Hero parity deltas prepared (min-h 62/70/78 + Dog FILL_IMAGE); full-file push blocked by tool payload limit this hour.
-- 2026-08-30 hour-3: Branch `grok/fish-hero-parity-clean-0830` exists but currently holds PLACEHOLDER (accidental). Local working copy has the correct 3 class deltas on full page.tsx. Payload limit still blocks full-file push via API tools. Next: land via smaller patch or external git when available.
-- 2026-08-30 hour-4: Re-verified exact 3 deltas vs dog-com on main. Local sparse checkout holds clean 4-line patch. Branches `grok/fish-hero-shell-parity-0830b` and `0830c` exist; do not merge (one holds truncated file). API create_or_update / push_files truncate or reject ~50k page.tsx. Dog /join/pro + /trainers still solid. Horses HomeHero + /inquire present. No DNS, no fake trainers, no for-sale banners, no sitemap regen.
-- 2026-08-30 hour-5: Local full page.tsx patched and verified (section + content min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]; absolute fill = Dog FILL_IMAGE classes). Branch `grok/fish-hero-parity-0830h5` created from main. API payload still blocks landing ~50k page.tsx. Dog `/join/pro` + `/trainers` + Horses `/inquire` re-confirmed present on main. No DNS, no fake trainers/DVMs, no for-sale banners, no sitemap regen.
+- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios).
+- PRs 813–815 merged. Production dog/fish/horses READY on main.
+- Closed truncated PR 816 instead of shipping a broken Fish homepage.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: 3 class deltas only. Section + content `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]`; absolute fill uses Dog’s `[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`. Do not merge PLACEHOLDER / truncated branches. Local patch ready; needs git credentials or tool payload increase to land.
+- PR: Fish HomeHero extract + Dog shell parity (`grok/fish-home-hero-extract-0830`). Homepage split so we never push a 50k page.tsx again.
 
 ## Test and deployment status
-- PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
 - Preview SSO-gated; production dog pages confirmed without SSO.
-- Production previews: dog-com-carlo-tabibi-s-projects.vercel.app · fish-com / horses-com same pattern on main.
+- Production: dog-com-carlo-tabibi-s-projects.vercel.app (and dog-com-three.vercel.app historically).
 
 ## Next planned priority
-1. Land Fish hero shell match (correct full page.tsx + 3 class deltas) — needs git push with credentials or tool payload increase; then merge.
-2. Horses `/inquire` consistency check if any drift.
-3. Further Fish quality only where clearly weaker than Dog — not a redesign.
+1. Merge Fish HomeHero extract when QC is green.
+2. Visual check Fish hero vs Dog.
+3. Further Fish quality only where clearly weaker than Dog.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
-2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG` (turbo.json warning only).
+2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG`.
 3. Optional: Chewy / Impact applications.
 4. Rotate any Vercel token that was ever pasted in a chat.
-5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on the dog-com Vercel project (already rendering on production HTML).
+5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on dog-com.
 
 ## Live policy
 - First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
