@@ -12,23 +12,23 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
 - 2026-08-30 stabilize: Dog `/join/pro` syntax error fixed. Empty directory stubs noindexed. `/inquire` exists across the portfolio so footer links resolve.
-- Production dog-com READY on main (`dog-com-three.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
+- Production dog-com READY on main (`dog-com-carlo-tabibi-s-projects.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
 - Fish and horses production READY on main.
 - PR 814 merged (trainer apply + trainers hub).
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 
 ## Currently underway
-- Next independent slice: Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
-- Visual review of Dog `/trainers` and `/join/pro` on production.
+- Fish.com hero shell parity with Dog: section `min-h-[62/70/78vh]` + Dog-matched FILL_IMAGE figure overrides (branch `grok/fish-hero-shell-match-dog`). No copy/color/CTA change.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
 - Preview SSO-gated; production dog pages confirmed without SSO.
 
 ## Next planned priority
-1. Fish.com visual quality catch-up (match Dog patterns where weaker).
+1. Land Fish hero shell match when branch content is green + PR checks pass.
 2. Confirm Dog `/join/pro` + `/trainers` shells look complete on production.
 3. Horses `/inquire` consistency check if any drift.
+4. Further Fish quality only where clearly weaker than Dog — not a redesign.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
