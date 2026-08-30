@@ -18,7 +18,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: section `min-h-[62/70/78vh]` + Dog-matched FILL_IMAGE figure overrides. Diff prepared (section min-h + absolute-fill + inner 62/70/78). Prior branch `grok/fish-hero-shell-match-dog` and trial branch hit placeholder-content issue on push; clean content restore + PR next hour. No copy/color/CTA change.
+- Fish.com hero shell parity with Dog: section `min-h-[62/70/78vh]` + Dog-matched FILL_IMAGE figure overrides. Branch `grok/fish-hero-shell-match-dog` — prior placeholder pushes cleaned partially; full verified page.tsx content must land before merge. No copy/color/CTA change.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
