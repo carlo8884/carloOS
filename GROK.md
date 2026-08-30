@@ -11,27 +11,28 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Fish.com homepage hero cover.
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios).
-- 2026-08-30 stabilize: Dog `/join/pro` syntax error (broken mailto JSX) was blocking every dog-com Vercel build + CI type-check. Footer `/inquire` now only renders on dog/fish/horses. Empty directory stubs are noindexed so sitemap-drift is clean.
+- 2026-08-30 stabilize: Dog `/join/pro` syntax error (broken mailto JSX) was blocking every dog-com Vercel build + CI type-check. Empty directory stubs are noindexed. `/inquire` exists across the portfolio so footer links resolve.
+- 2026-08-30 product: trainer apply form posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex. Horses.com H1 no longer just repeats the domain; primary CTA points at `/health`.
 
 ## Currently underway
-- Confirm dog-com Vercel production deploy is READY after this stabilize PR.
-- Then continue product work on Dog.com as flagship.
+- Confirm dog/fish/horses production deploys READY on main after stabilize + this trainer-apply PR.
+- Visually review /inquire, /trainers, /join/pro, and the three homepages on the new previews.
 
-## Test and deployment status (pre-fix)
-- dog-com latest main deploys: ERROR (`join/pro/page.tsx` Unexpected token). Last READY was the old inquire stub.
-- fish-com + horses-com: READY on inquire-card main.
-- CI `type-check` FAIL on dog-com; QC `sitemap-drift` + `link-check` FAIL.
+## Test and deployment status
+- PR 813 merged. Main production deploys were BUILDING at last check (stabilize + dashboard sync).
+- Branch `grok/dog-trainer-apply` is the next product PR.
 
 ## Next planned priority
-1. Land stabilize PR and confirm dog-com preview/production READY.
-2. Visually review /inquire + homepage on all three.
-3. Highest-value Dog.com product next (tools / trainers empty-state polish), not a redesign of the already-strong homepage.
+1. Land trainer-apply PR when required checks are green.
+2. Visually review flagship previews.
+3. Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
 2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG` (turbo.json warning only).
 3. Optional: Chewy / Impact applications.
 4. Rotate any Vercel token that was ever pasted in a chat.
+5. Paste `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` on the dog-com Vercel project when ready.
 
 ## Live policy
 - First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
