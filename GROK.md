@@ -20,9 +20,10 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - 2026-08-30 hour-2: Closed truncated PR #816. Clean branch `grok/fish-hero-parity-clean-0830` from main. Hero parity deltas prepared (min-h 62/70/78 + Dog FILL_IMAGE); full-file push blocked by tool payload limit this hour.
 - 2026-08-30 hour-3: Branch `grok/fish-hero-parity-clean-0830` exists but currently holds PLACEHOLDER (accidental). Local working copy has the correct 3 class deltas on full page.tsx. Payload limit still blocks full-file push via API tools. Next: land via smaller patch or external git when available.
 - 2026-08-30 hour-4: Re-verified exact 3 deltas vs dog-com on main. Local sparse checkout holds clean 4-line patch. Branches `grok/fish-hero-shell-parity-0830b` and `0830c` exist; do not merge (one holds truncated file). API create_or_update / push_files truncate or reject ~50k page.tsx. Dog /join/pro + /trainers still solid. Horses HomeHero + /inquire present. No DNS, no fake trainers, no for-sale banners, no sitemap regen.
+- 2026-08-30 hour-5: Local full page.tsx patched and verified (section + content min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]; absolute fill = Dog FILL_IMAGE classes). Branch `grok/fish-hero-parity-0830h5` created from main. API payload still blocks landing ~50k page.tsx. Dog `/join/pro` + `/trainers` + Horses `/inquire` re-confirmed present on main. No DNS, no fake trainers/DVMs, no for-sale banners, no sitemap regen.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: 3 class deltas only. Section + content `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]`; absolute fill uses Dog’s `[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`. Do not merge PLACEHOLDER / truncated branches.
+- Fish.com hero shell parity with Dog: 3 class deltas only. Section + content `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]`; absolute fill uses Dog’s `[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`. Do not merge PLACEHOLDER / truncated branches. Local patch ready; needs git credentials or tool payload increase to land.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
