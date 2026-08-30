@@ -16,21 +16,19 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Fish and horses production READY on main.
 - PR 814 merged (trainer apply + trainers hub).
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
-- 2026-08-30 (Grok): Fish.com hero shell matched Dog.com (section min-h + absolute-fill figure overrides) so photo area does not collapse before paint. Branch `grok/fish-hero-shell-match-dog`.
 
 ## Currently underway
-- Land Fish hero shell match when CI green.
-- Dog `/trainers` + `/join/pro` confirmed complete shells on main (empty directory + apply form, no fake listings).
+- Fish.com hero shell: section min-h + FILL_IMAGE figure overrides matched to Dog.com (this hour).
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
 - Preview SSO-gated; production dog pages confirmed without SSO.
-- Branch `grok/fish-hero-shell-match-dog` ready for PR.
 
 ## Next planned priority
-1. Merge Fish hero shell match; then further Fish visual catch-up only where clearly weaker than Dog.
-2. Horses homepage polish residual if any after PR 815.
-3. Shared footer inquire already consistent.
+1. Land Fish hero shell match (this PR) when green.
+2. Confirm Dog `/join/pro` + `/trainers` shells look complete on production.
+3. Horses `/inquire` consistency check if any drift.
+4. Further Fish quality only where clearly weaker than Dog — not a redesign.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
