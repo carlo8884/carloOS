@@ -59,10 +59,6 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           ))}
         </div>
 
-        {/* Affiliate disclosure — sits ABOVE the copyright bar so it is the
-            first visible disclosure when scrolling to the footer. Uses the
-            shared AffiliateDisclosure component (variant=footer) to keep the
-            copy and link target consistent across all 10 sites. */}
         {showAffiliateDisclosure && (
           <AffiliateDisclosure variant="footer" siteId={siteId} />
         )}
@@ -83,7 +79,6 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           </div>
         )}
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
           <span className="text-xs text-white/50">
             © {currentYear} {config.theme.siteName} — All rights reserved
@@ -94,6 +89,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: 'Disclosure', href: '/disclosure' },
               { label: 'Editorial Standards', href: '/editorial-standards' },
+              { label: 'Inquiries', href: '/inquire' },
             ].map((link) => (
               <Link
                 key={link.href}
