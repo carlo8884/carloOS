@@ -19,9 +19,10 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - 2026-08-30 hour-1: Dog `/join/pro` + `/trainers` shells re-confirmed complete on main (no fake bios, empty directory, noindex, InquireForm).
 - 2026-08-30 hour-2: Closed truncated PR #816. Clean branch `grok/fish-hero-parity-clean-0830` from main. Hero parity deltas prepared (min-h 62/70/78 + Dog FILL_IMAGE); full-file push blocked by tool payload limit this hour.
 - 2026-08-30 hour-3: Branch `grok/fish-hero-parity-clean-0830` exists but currently holds PLACEHOLDER (accidental). Local working copy has the correct 3 class deltas on full page.tsx. Payload limit still blocks full-file push via API tools. Next: land via smaller patch or external git when available.
+- 2026-08-30 hour-4: Re-verified exact 3 deltas vs dog-com on main. Local sparse checkout holds clean 4-line patch. Branches `grok/fish-hero-shell-parity-0830b` and `0830c` exist; do not merge (one holds truncated file). API create_or_update / push_files truncate or reject ~50k page.tsx. Dog /join/pro + /trainers still solid. Horses HomeHero + /inquire present. No DNS, no fake trainers, no for-sale banners, no sitemap regen.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: 3 class deltas only. Section + content `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]`; absolute fill uses Dog’s `[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`. Do not merge the PLACEHOLDER branch.
+- Fish.com hero shell parity with Dog: 3 class deltas only. Section + content `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]`; absolute fill uses Dog’s `[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`. Do not merge PLACEHOLDER / truncated branches.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
@@ -29,7 +30,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Production previews: dog-com-carlo-tabibi-s-projects.vercel.app · fish-com / horses-com same pattern on main.
 
 ## Next planned priority
-1. Land Fish hero shell match (correct full page.tsx + 3 class deltas) — avoid PLACEHOLDER branch; use local git or split if tool limit persists, then merge.
+1. Land Fish hero shell match (correct full page.tsx + 3 class deltas) — needs git push with credentials or tool payload increase; then merge.
 2. Horses `/inquire` consistency check if any drift.
 3. Further Fish quality only where clearly weaker than Dog — not a redesign.
 
