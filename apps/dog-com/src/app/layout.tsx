@@ -5,6 +5,7 @@ import { Nav, Footer, DisplayAds } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -89,7 +90,9 @@ export default function RootLayout({
 
         <main id="main-content" tabIndex={-1}>{children}</main>
 
-        <HomeEmailCapture />
+        <EmailCaptureGate>
+          <HomeEmailCapture />
+        </EmailCaptureGate>
 
         <Footer siteId="dog-com" showAffiliateDisclosure />
 
