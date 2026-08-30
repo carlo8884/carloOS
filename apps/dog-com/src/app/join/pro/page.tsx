@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout } from '@carloOS/ui'
 
 export const metadata: Metadata = {
@@ -10,25 +11,10 @@ export const metadata: Metadata = {
     path: '/join/pro',
     type: 'article',
   }),
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 }
 
-const inquireEmail = process.env.NEXT_PUBLIC_INQUIRE_EMAIL
-
 export default function JoinProPage() {
-  const subject = encodeURIComponent('Dog.com pro profile application')
-  const body = encodeURIComponent(
-    [
-      'Name:',
-      'Business name:',
-      'City / service area:',
-      'Trainer or breeder:',
-      'Website or Instagram:',
-      'Certifications (if any — do not invent):',
-      'Short description:',
-    ].join('\n'),
-  )
-
   return (
     <ArticleLayout
       siteId="dog-com"
@@ -42,7 +28,8 @@ export default function JoinProPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Join', href: '/join/pro' },
+        { name: 'Trainers', href: '/trainers' },
+        { name: 'Apply', href: '/join/pro' },
       ]}
     >
       <div className="carloOS-article">
@@ -58,20 +45,13 @@ export default function JoinProPage() {
           <li>A “verified by Dog.com” badge</li>
           <li>Guaranteed ranking in search</li>
         </ul>
-        {inquireEmail ? (
-          <p>
-            <a href={`mailto:${inquireEmail}?subject=${subject}&body=${body}`}<
-              Email your application
-            </a>
-          </p>
-        ) : (
-          <p>
-            Applications open as soon as an inbox is wired on this deployment
-            (<code>NEXT_PUBLIC_INQUIRE_EMAIL</code>). Until then, use the
-            registrant contact on the domain WHOIS record and put “pro
-            application” in the subject.
-          </p>
-        )}
+        <p>
+          Use the inquiry form and put “pro application” in the message, plus
+          your city, website or Instagram, and any real certifications you hold.
+        </p>
+        <p>
+          <Link href="/inquire">Send a pro application →</Link>
+        </p>
       </div>
     </ArticleLayout>
   )

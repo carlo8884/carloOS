@@ -89,7 +89,9 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: 'Disclosure', href: '/disclosure' },
               { label: 'Editorial Standards', href: '/editorial-standards' },
-              { label: 'Inquiries', href: '/inquire' },
+              ...(siteId === 'dog-com' || siteId === 'fish-com' || siteId === 'horses-com'
+                ? [{ label: 'Inquiries', href: '/inquire' }]
+                : []),
             ].map((link) => (
               <Link
                 key={link.href}

@@ -2,14 +2,17 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({
-  siteId: 'dog-com',
-  title: 'Dog trainers',
-  description:
-    'Claimed trainer directory on Dog.com. Profiles are submitted by the trainer. Dog.com does not certify or employ them.',
-  path: '/trainers',
-  type: 'website',
-})
+export const metadata: Metadata = {
+  ...buildMetadata({
+    siteId: 'dog-com',
+    title: 'Dog trainers',
+    description:
+      'Claimed trainer directory on Dog.com. Profiles are submitted by the trainer. Dog.com does not certify or employ them.',
+    path: '/trainers',
+    type: 'website',
+  }),
+  robots: { index: false, follow: false },
+}
 
 export default function TrainersIndexPage() {
   return (
