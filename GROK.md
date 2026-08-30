@@ -15,20 +15,20 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Production dog-com READY on main (`dog-com-three.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
 - Fish and horses production READY on main.
 - PR 814 merged (trainer apply + trainers hub).
-- Horses.com homepage H1 is now “The horse owner reference”; primary CTA and Health category card point at `/health`.
+- PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 
 ## Currently underway
-- Land Horses hero H1 PR when QC is green.
 - Next independent slice: Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
+- Visual review of Dog `/trainers` and `/join/pro` on production.
 
 ## Test and deployment status
-- PRs 813 and 814 merged. Dog/fish/horses production deploys READY on main.
+- PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
 - Preview SSO-gated; production dog pages confirmed without SSO.
 
 ## Next planned priority
-1. Merge Horses hero H1 when required checks are green.
-2. Visual review of Dog `/trainers` and `/join/pro` on production.
-3. Fish.com quality catch-up (targeted, not a redesign).
+1. Fish.com visual quality catch-up (match Dog patterns where weaker).
+2. Confirm Dog `/join/pro` + `/trainers` shells look complete on production.
+3. Horses `/inquire` consistency check if any drift.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
