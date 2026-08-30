@@ -8,7 +8,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - There is no Google Analytics connector. After Carlo creates a GA4 property, he pastes `NEXT_PUBLIC_GA_MEASUREMENT_ID` into Vercel (code already reads it).
 
 ## Completed
-- Fish.com homepage hero cover.
+- Fish.com homepage hero cover (PR 809).
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
 - 2026-08-30 stabilize: Dog `/join/pro` syntax error fixed. Empty directory stubs noindexed. `/inquire` exists across the portfolio so footer links resolve.
@@ -18,7 +18,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: section `min-h-[62/70/78vh]` + Dog-matched FILL_IMAGE figure overrides. Branch `grok/fish-hero-shell-match-dog` — prior placeholder pushes cleaned partially; full verified page.tsx content must land before merge. No copy/color/CTA change.
+- Fish.com hero shell parity with Dog: section `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]` + Dog-matched FILL_IMAGE figure overrides (`[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`). Verified full page.tsx built from main; branch `grok/fish-hero-shell-match-dog` needs clean full-file push before PR (prior partial pushes scrubbed). No copy/color/CTA change.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
