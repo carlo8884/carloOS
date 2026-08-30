@@ -37,6 +37,7 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 export { InquireForm } from './components/InquireForm'
+export { InquireOfferScreen } from './components/InquireOfferScreen'
 
 // Monetization primitives (Architect P2, S4, S5 — see MONETIZATION-ARCHITECT.md)
 // Note: AffiliateDisclosure is exported below in the editorial component
@@ -88,24 +89,15 @@ export type {
   AffiliateDisclosureVariant,
 } from './components/AffiliateDisclosure'
 
-// Cross-portfolio sister-site recommendations (restoring export shipped in PR #72,
-// lost in a later merge — re-export only; CrossPortfolioCard.tsx itself untouched).
 export { CrossPortfolioCard } from './components/CrossPortfolioCard'
 export type {
   CrossPortfolioCardProps,
   CrossPortfolioVariant,
 } from './components/CrossPortfolioCard'
 
-// Open Graph image template — consumed by each app's /api/og/route.tsx
-// via `new ImageResponse(<OgTemplate ... />, ...)` from edge runtime.
-// Carries the per-site palette + wordmark so route handlers stay
-// 12-line minimal.
 export { OgTemplate } from './og/OgTemplate'
 export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'
 
-// Visual primitive — affiliate "where to buy" buy-box. Drop-in replacement
-// for inline-styled <div><a rel="sponsored"> patterns on monetized
-// editorial pages. Per Visual Bot lane (bot-coordination.md §2).
 export { BuyBox } from './components/visual/BuyBox'
 export type {
   BuyBoxProps,
@@ -114,8 +106,5 @@ export type {
   BuyBoxVendorLink,
 } from './components/visual/BuyBox'
 
-// Apple touch icon template — consumed by each app's apple-icon.tsx
-// (App Router special filename). 180×180; iOS / iPadOS use this when
-// users pin the site to the home screen.
 export { AppleIconTemplate } from './og/AppleIconTemplate'
 export type { AppleIconTemplateProps, AppleIconSiteId } from './og/AppleIconTemplate'

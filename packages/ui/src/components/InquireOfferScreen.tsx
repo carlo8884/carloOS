@@ -1,13 +1,10 @@
 import { StockImage } from './StockImage'
 import { InquireForm } from './InquireForm'
-import type { SiteId } from '../config/sites'
 
 export function InquireOfferScreen({
-  siteId,
   siteName,
   heroKey,
 }: {
-  siteId: SiteId
   siteName: string
   heroKey: string
 }) {
@@ -24,7 +21,6 @@ export function InquireOfferScreen({
         </h1>
         <InquireForm siteName={siteName} />
       </div>
-      <span className="hidden">{siteId}</span>
     </section>
   )
 }
