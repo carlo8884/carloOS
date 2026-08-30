@@ -1,29 +1,27 @@
 # Grok operator lane (2026-08-29)
 
-Carlo asked Grok to take the build lane off the Claude bot fleet.
+Carlo asked Grok to act as CEO of the preview sites until next week. No custom DNS until Carlo is back.
 
 ## How we work
-- This chat (SuperGrok) is the owner. Do not spawn CSRO / IR / Visual / Racing sessions unless Carlo asks.
-- Grok Bot is optional overnight grind after a written ticket. Do not run two COOs.
-- Carlo owns Network Solutions, Efty, Stripe, Amazon/Chewy/Impact applications, and Vercel env secrets.
-- Grok owns code on `carlo8884/carloOS` and Vercel preview deploys.
+- This chat + the 24h hourly automation own the repo.
+- Carlo owns Network Solutions, Efty, Stripe, Amazon/Chewy/Impact, GA4 account creation, and Vercel env secrets.
+- There is no Google Analytics connector. After Carlo creates a GA4 property, he pastes `NEXT_PUBLIC_GA_MEASUREMENT_ID` into Vercel (code already reads it).
+
+## This weekend (Grok)
+1. Fish.com homepage visual (hero cover shipped).
+2. Quiet `/inquire` on dog, fish, horses (shipped).
+3. Dog.com Phase 0 directory: `/trainers` + `/join/pro` (no fake bios).
+4. Keep polishing those three apps only.
 
 ## Live policy
-- First flip: dog.com + vets.co only.
-- Do not attach the other eight custom domains until those two have DNS, GA4, and at least one AFF_* tag that is not empty.
-- Tier-A (dog.com, fish.com): no homepage "for sale" banner. Quiet `/inquire` only. `eftyUrl` stays unset on those two.
-- petfoods.com → 301 petfood.com; ferrets.com → 301 ferret.com when DNS is pointed.
+- First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
+- No homepage for-sale banners. `eftyUrl` unset on dog/fish.
+- No cold-email blasts to trainers/breeders.
 
-## Do not
-- Fake DVMs or first-person testing claims.
-- Numeric doses on vets.co.
-- Direct retailer links that bypass `/go`.
-- Product CTAs on toxic/emergency pages.
-- Run `scripts/regenerate-sitemaps.mjs` (strips hand-maintained blocks).
-- Merge June 2026 PRs without a fresh diff review.
-
-## First human sitting (Carlo)
-1. Rotate any Vercel token that was ever pasted in chat.
-2. Point dog.com and vets.co DNS at the matching Vercel projects.
-3. Set AFF_* and NEXT_PUBLIC_GA_MEASUREMENT_ID on those two projects.
-4. Set NEXT_PUBLIC_INQUIRE_EMAIL (or leave unset; /inquire still renders).
+## Carlo next week (human list)
+1. Pick the inquire inbox and set `NEXT_PUBLIC_INQUIRE_EMAIL` on dog-com, carlo-os-fish-com, horses-com.
+2. Create one GA4 property + 3 web streams; paste `NEXT_PUBLIC_GA_MEASUREMENT_ID` (same ID is fine at first).
+3. Open Amazon Associates; paste tag into `AFF_*` / existing Amazon env on dog-com first.
+4. Confirm Network Solutions login works; do not point DNS until Grok says the three homepages are ready.
+5. Optional: Chewy / Impact applications.
+6. Rotate any Vercel token that was ever pasted in a chat.
