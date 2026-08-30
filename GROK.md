@@ -11,20 +11,22 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Fish.com homepage hero cover.
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios).
-- 2026-08-30 stabilize: Dog `/join/pro` syntax error (broken mailto JSX) was blocking every dog-com Vercel build + CI type-check. Empty directory stubs are noindexed. `/inquire` exists across the portfolio so footer links resolve.
-- 2026-08-30 product: trainer apply form posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex. Horses.com H1 no longer just repeats the domain; primary CTA points at `/health`.
+- 2026-08-30 stabilize: Dog `/join/pro` syntax error fixed. Empty directory stubs noindexed. `/inquire` exists across the portfolio so footer links resolve.
+- 2026-08-30 product: trainer apply form posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
+- Production dog-com READY on main (`dog-com-three.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
+- Fish and horses production READY on main.
 
 ## Currently underway
-- Confirm dog/fish/horses production deploys READY on main after stabilize + this trainer-apply PR.
-- Visually review /inquire, /trainers, /join/pro, and the three homepages on the new previews.
+- Land PR 814 (trainer apply + trainers hub copy) when `verify` is green.
+- Next independent slice: Horses.com H1 still reads `Horses.com`; change it to a descriptive headline and point the primary CTA at `/health`.
 
 ## Test and deployment status
-- PR 813 merged. Main production deploys were BUILDING at last check (stabilize + dashboard sync).
-- Branch `grok/dog-trainer-apply` is the next product PR.
+- PR 813 merged. Dog/fish/horses production deploys READY.
+- PR 814: QC checks green; `verify` was still running at last operator check. Preview SSO-gated; production dog pages confirmed without SSO.
 
 ## Next planned priority
-1. Land trainer-apply PR when required checks are green.
-2. Visually review flagship previews.
+1. Merge PR 814 when required checks are green.
+2. Horses.com hero H1 + primary CTA (small, visual).
 3. Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
 
 ## Carlo-only blockers
@@ -32,7 +34,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG` (turbo.json warning only).
 3. Optional: Chewy / Impact applications.
 4. Rotate any Vercel token that was ever pasted in a chat.
-5. Paste `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` on the dog-com Vercel project when ready.
+5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on the dog-com Vercel project (already rendering on production HTML).
 
 ## Live policy
 - First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
