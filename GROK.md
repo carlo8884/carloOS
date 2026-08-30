@@ -10,24 +10,25 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 ## Completed
 - Fish.com homepage hero cover.
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
-- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios).
+- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
 - 2026-08-30 stabilize: Dog `/join/pro` syntax error fixed. Empty directory stubs noindexed. `/inquire` exists across the portfolio so footer links resolve.
-- 2026-08-30 product: trainer apply form posts to `/api/inquire` with subject `Pro application — Dog.com`. Directory stays empty + noindex.
 - Production dog-com READY on main (`dog-com-three.vercel.app`). `/inquire` form is live. GA4 `G-TZBPLTVLHQ` is on the production HTML.
 - Fish and horses production READY on main.
+- PR 814 merged (trainer apply + trainers hub).
+- Horses.com homepage H1 is now “The horse owner reference”; primary CTA and Health category card point at `/health`.
 
 ## Currently underway
-- Land PR 814 (trainer apply + trainers hub copy) when `verify` is green.
-- Next independent slice: Horses.com H1 still reads `Horses.com`; change it to a descriptive headline and point the primary CTA at `/health`.
+- Land Horses hero H1 PR when QC is green.
+- Next independent slice: Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
 
 ## Test and deployment status
-- PR 813 merged. Dog/fish/horses production deploys READY.
-- PR 814: QC checks green; `verify` was still running at last operator check. Preview SSO-gated; production dog pages confirmed without SSO.
+- PRs 813 and 814 merged. Dog/fish/horses production deploys READY on main.
+- Preview SSO-gated; production dog pages confirmed without SSO.
 
 ## Next planned priority
-1. Merge PR 814 when required checks are green.
-2. Horses.com hero H1 + primary CTA (small, visual).
-3. Fish.com quality catch-up only where a page is clearly weaker than Dog — not a homepage redesign.
+1. Merge Horses hero H1 when required checks are green.
+2. Visual review of Dog `/trainers` and `/join/pro` on production.
+3. Fish.com quality catch-up (targeted, not a redesign).
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
