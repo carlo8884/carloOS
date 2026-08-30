@@ -7,9 +7,17 @@ export function InquireForm({ siteName }: { siteName: string }) {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setStatus('sending')
     const form = e.currentTarget
     const data = Object.fromEntries(new FormData(form).entries())
+    if (data.company_website) {
+      setStatus('sent')
+      return
+    }
+    if (data.robot !== 'on') {
+      setStatus('error')
+      return
+    }
+    setStatus('sending')
     try {
       const res = await fetch('/api/inquire', {
         method: 'POST',
@@ -24,58 +32,39 @@ export function InquireForm({ siteName }: { siteName: string }) {
     }
   }
 
+  const field =
+    'w-full border-0 rounded-md px-3 py-3 text-sm text-slate-800 bg-white outline-none'
+
   if (status === 'sent') {
     return (
-      <p className="text-base leading-relaxed">
+      <p className="text-white text-center text-base py-8">
         Received. If the note is serious, you will get a reply.
       </p>
     )
   }
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4 max-w-xl">
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Name
-        <input name="name" required className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Organization
-        <input name="organization" className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Your email
-        <input name="email" type="email" required className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        What is this about
-        <select name="topic" className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white">
-          <option value="acquisition">Buying the domain or the operating site</option>
-          <option value="partnership">Partnership or licensing</option>
-          <option value="press">Press</option>
-          <option value="other">Something else</option>
-        </select>
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Intended use
-        <input name="intendedUse" className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Offer in USD (optional)
-        <input name="offer" inputMode="numeric" className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
-      </label>
-      <label className="flex flex-col gap-1 text-sm font-semibold">
-        Note
-        <textarea name="message" rows={5} required className="font-normal font-body border border-brand-border rounded-lg px-3 py-2.5 bg-brand-white" />
+    <form onSubmit={onSubmit} className="flex flex-col gap-3">
+      <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+      <input name="name" required placeholder="Name" className={field} />
+      <input name="email" type="email" required placeholder="Email" className={field} />
+      <input name="phone" type="tel" placeholder="Phone" className={field} />
+      <input name="offer" inputMode="numeric" placeholder="Offer (USD)" className={field} />
+      <textarea name="message" rows={4} required placeholder="Message" className={field} />
+      <label className="flex items-center gap-2 bg-white rounded-md px-3 py-3 text-sm text-slate-700">
+        <input name="robot" type="checkbox" required />
+        I&apos;m not a robot
       </label>
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="self-start bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded-lg border-0 cursor-pointer disabled:opacity-60"
+        className="w-full border-0 rounded-md py-3 font-bold text-sm uppercase tracking-wide text-white cursor-pointer disabled:opacity-60"
+        style={{ background: '#22c55e' }}
       >
-        {status === 'sending' ? 'Sending…' : 'Send'}
+        {status === 'sending' ? 'Sending…' : 'Send offer'}
       </button>
       {status === 'error' && (
-        <p className="text-sm text-brand-danger">Could not send. Try again in a minute.</p>
+        <p className="text-white text-sm text-center">Could not send. Tick the box and try again.</p>
       )}
     </form>
   )
