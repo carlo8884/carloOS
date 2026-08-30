@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     siteId: 'dog-com',
     title: 'Dog trainers',
     description:
-      'Claimed trainer directory on Dog.com. Profiles are submitted by the trainer. Dog.com does not certify or employ them.',
+      'Claimed trainer directory on Dog.com. The list starts empty on purpose. Profiles are submitted by the trainer. Dog.com does not certify or employ them.',
     path: '/trainers',
     type: 'website',
   }),
@@ -19,12 +19,12 @@ export default function TrainersIndexPage() {
     <ArticleLayout
       siteId="dog-com"
       hero={{
-        title: 'Trainers',
+        title: 'Find a dog trainer',
         subtitle:
-          'A claimed directory, not a certification board. Trainers apply and own their page. Dog.com does not book sessions or take a cut yet.',
+          'A claimed directory, not a certification board. Nobody is listed until they apply and we accept the page. Dog.com does not book sessions or take a cut yet.',
         category: 'Directory',
         publishedAt: 'August 2026',
-        readTime: '1 min',
+        readTime: '3 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -33,12 +33,40 @@ export default function TrainersIndexPage() {
     >
       <div className="carloOS-article">
         <p>
-          This list starts empty on purpose. We will not invent names, reviews,
-          or credentials to look busy.
+          This list is empty on purpose. Invented names, star ratings, and
+          “featured trainers” would cheapen the domain. When a trainer has a
+          page here, it will be a page they asked for.
         </p>
+
+        <h2>If you need a trainer now</h2>
         <p>
-          If you train dogs professionally and want a page on dog.com, apply.
-          Approval is manual.
+          Dog training is unregulated in the United States. Anyone can hang a
+          sign. Use the guides below before you pay anyone — listed here or not.
+        </p>
+        <ul>
+          <li>
+            <Link href="/training/trainer-credentials">Trainer credentials explained</Link>
+            {' — '}CPDT-KA, CBCC-KA, CAAB, DACVB, and what each is actually for.
+          </li>
+          <li>
+            <Link href="/training/training-red-flags">Training red flags</Link>
+            {' — '}dominance talk, shock as a first tool, guarantees, flooding.
+          </li>
+          <li>
+            <Link href="/training/positive-reinforcement">Positive reinforcement</Link>
+            {' — '}what force-free work looks like in a session.
+          </li>
+          <li>
+            <Link href="/training">Training library</Link>
+            {' — '}house training, leash work, reactivity, separation anxiety.
+          </li>
+        </ul>
+
+        <h2>If you train dogs for a living</h2>
+        <p>
+          Apply for a claimed page. Approval is manual. There is no fee and no
+          ranking auction. A page is a public profile on dog.com, not a booking
+          or payment product.
         </p>
         <p>
           <Link href="/join/pro">Apply for a trainer page →</Link>

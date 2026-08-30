@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, InquireForm } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
     siteId: 'dog-com',
-    title: 'Apply for a pro page',
+    title: 'Apply for a trainer page',
     description:
-      'Trainers and breeders can apply for a claimed profile on Dog.com. Not a marketplace booking tool yet.',
+      'Trainers can apply for a claimed profile on Dog.com. Not a marketplace booking tool yet. Approval is manual.',
     path: '/join/pro',
     type: 'article',
   }),
@@ -19,9 +19,9 @@ export default function JoinProPage() {
     <ArticleLayout
       siteId="dog-com"
       hero={{
-        title: 'Apply for a pro page',
+        title: 'Apply for a trainer page',
         subtitle:
-          'Claimed profile only. We do not verify you as a veterinarian or insurer. We do not process bookings or payments in this version.',
+          'Claimed profile only. We do not certify you, book your calendar, or process payments. Approval is manual.',
         category: 'Directory',
         publishedAt: 'August 2026',
         readTime: '2 min',
@@ -36,8 +36,8 @@ export default function JoinProPage() {
         <h2>What you get</h2>
         <ul>
           <li>A page on dog.com you can point clients to</li>
-          <li>Your service area and a contact path</li>
-          <li>The ability to update copy when we add accounts</li>
+          <li>Your service area and a contact path you control</li>
+          <li>The ability to update copy when accounts exist</li>
         </ul>
         <h2>What you do not get yet</h2>
         <ul>
@@ -46,11 +46,21 @@ export default function JoinProPage() {
           <li>Guaranteed ranking in search</li>
         </ul>
         <p>
-          Use the inquiry form and put “pro application” in the message, plus
-          your city, website or Instagram, and any real certifications you hold.
+          List credentials you actually hold. Do not invent reviews. If we cannot
+          tell where you work, the application sits.
         </p>
+
+        <h2>Application</h2>
+        <div className="not-prose max-w-md my-6">
+          <InquireForm siteName="Dog.com" intent="pro-application" variant="page" />
+        </div>
+
         <p>
-          <Link href="/inquire">Send a pro application →</Link>
+          Owners looking for help now should start with{' '}
+          <Link href="/training/trainer-credentials">credentials</Link>
+          {' '}and{' '}
+          <Link href="/training/training-red-flags">red flags</Link>
+          {', not this form.'}
         </p>
       </div>
     </ArticleLayout>
