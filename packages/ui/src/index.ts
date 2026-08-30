@@ -36,6 +36,7 @@ export {
 
 // Forms
 export { EmailCapture } from './components/EmailCapture'
+export { InquireForm } from './components/InquireForm'
 
 // Monetization primitives (Architect P2, S4, S5 — see MONETIZATION-ARCHITECT.md)
 // Note: AffiliateDisclosure is exported below in the editorial component
