@@ -17,16 +17,17 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - PR 814 merged (trainer apply + trainers hub).
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 - 2026-08-30 hour-1: Dog `/join/pro` + `/trainers` shells re-confirmed complete on main (no fake bios, empty directory, noindex, InquireForm).
+- 2026-08-30 hour-1: Draft PR #816 opened for Fish hero shell parity (min-h 62/70/78 + Dog FILL_IMAGE overrides). Full page body restore next hour.
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: section `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]` + Dog-matched FILL_IMAGE figure overrides. Branch `grok/fish-hero-parity-0830` has hero classes; full page.tsx body must be restored from main before PR (tool payload truncated once — next hour lands clean full-file commit).
+- Fish.com hero shell parity with Dog: section `min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]` + Dog-matched FILL_IMAGE figure overrides. Draft PR #816 on branch `grok/fish-hero-parity-0830b` — full page.tsx body must be restored from main before ready-for-review (tool payload truncated once).
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
 - Preview SSO-gated; production dog pages confirmed without SSO.
 
 ## Next planned priority
-1. Land Fish hero shell match (clean full page.tsx from main + 3 class deltas only).
+1. Land Fish hero shell match (clean full page.tsx from main + 3 class deltas only) — merge PR #816.
 2. Horses `/inquire` consistency check if any drift.
 3. Further Fish quality only where clearly weaker than Dog — not a redesign.
 
