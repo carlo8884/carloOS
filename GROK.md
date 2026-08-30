@@ -18,9 +18,10 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - PR 815 merged: Horses.com HomeHero extracted; H1 “The horse owner reference”; primary CTA + Health card → `/health`.
 - 2026-08-30 hour-1: Dog `/join/pro` + `/trainers` shells re-confirmed complete on main (no fake bios, empty directory, noindex, InquireForm).
 - 2026-08-30 hour-2: Closed truncated PR #816. Clean branch `grok/fish-hero-parity-clean-0830` from main. Hero parity deltas prepared (min-h 62/70/78 + Dog FILL_IMAGE); full-file push blocked by tool payload limit this hour.
+- 2026-08-30 hour-3: Fish hero shell parity deltas prepared and verified locally (section min-h 62/70/78, Dog FILL_IMAGE figure overrides, content min-h matched). Full ~50KB page.tsx push blocked again by tool payload limit. Branch `grok/fish-hero-parity-hour3b-0830` holds this status. Do not use broken branch `grok/fish-hero-parity-hour3-0830` (contains PLACEHOLDER page.tsx from failed push).
 
 ## Currently underway
-- Fish.com hero shell parity with Dog: 3 class deltas only on full page.tsx from main. Branch `grok/fish-hero-parity-clean-0830` exists. Do not use `grok/fish-hero-parity-0830b` or `grok/fish-hero-shell-match-0830`.
+- Land Fish hero shell parity: need local-git or split-commit path for the 3 class deltas on apps/fish-com/src/app/page.tsx. Diff is ready.
 
 ## Test and deployment status
 - PRs 813, 814, 815 merged. Dog/fish/horses production deploys READY on main.
@@ -28,7 +29,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Production previews: dog-com-carlo-tabibi-s-projects.vercel.app · fish-com / horses-com same pattern on main.
 
 ## Next planned priority
-1. Land Fish hero shell match (full page.tsx from main + 3 class deltas) — push via local git or split commit if tool limit persists, then merge.
+1. Land Fish hero shell match (3 class deltas) via local git push or Carlo merge of prepared diff.
 2. Horses `/inquire` consistency check if any drift.
 3. Further Fish quality only where clearly weaker than Dog — not a redesign.
 
