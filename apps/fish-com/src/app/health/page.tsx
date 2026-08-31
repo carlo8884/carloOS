@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { Diseases, RESERVED_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -79,9 +79,6 @@ export default function FishHealthPage() {
             </Link>
           ))}
         </div>
-      </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Water chemistry tips and fishkeeping guides every Thursday." source="health-hub" ctaText="Subscribe Free" perks={['Water chemistry', 'Species guides', 'No spam']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">

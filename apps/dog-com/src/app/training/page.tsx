@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -308,15 +308,6 @@ export default function TrainingHubPage() {
         </section>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section" siteId="dog-com"
-          title="Free Dog Training Tips"
-          subtitle="Science-based training guidance and behavior Q&A — every Tuesday."
-          source="training-hub" ctaText="Subscribe Free"
-          perks={['🐕 Positive methods only', '📚 Science-based', '🚫 No spam']}
-        />
-      </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Training Guides</h2>

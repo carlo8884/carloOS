@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -137,17 +137,6 @@ export default function ToolsHub() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="ferret-com"
-            variant="inline"
-            title="Ferret.com keeper letter"
-            subtitle="Ferret care references and tool updates. No spam."
-            source="tools-hub"
-          />
-        </div>
-      </section>
     </>
   )
 }

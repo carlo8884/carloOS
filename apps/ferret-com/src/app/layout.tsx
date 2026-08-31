@@ -5,6 +5,7 @@ import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
+import { EmailUnderHero } from '@carloOS/ui'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -78,11 +79,13 @@ export default function RootLayout({
 
         <Nav siteId="ferret-com" />
 
-        <main id="main-content" tabIndex={-1}>{children}</main>
-
+        <main id="main-content" tabIndex={-1}>{children}
         <EmailCaptureGate>
-          <HomeEmailCapture />
+          <EmailUnderHero>
+            <HomeEmailCapture />
+          </EmailUnderHero>
         </EmailCaptureGate>
+        </main>
 
         <Footer siteId="ferret-com" showAffiliateDisclosure />
 

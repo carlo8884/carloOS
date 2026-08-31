@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 import Link from 'next/link'
@@ -67,7 +67,6 @@ export default function AquariumSetupPage() {
           { label: 'Water Chemistry Guide', href: '/water-parameters' },
           { label: 'Betta Fish Care', href: '/species/betta-fish' },
         ]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-guide" />
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>

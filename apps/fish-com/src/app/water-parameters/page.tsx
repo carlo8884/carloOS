@@ -23,7 +23,6 @@ import {
   buildMetadata,
   buildFAQSchema,
   buildBreadcrumbSchema,
-  EmailCapture,
   FAQAccordion,
   CalloutBox,
 } from '@carloOS/ui'
@@ -517,17 +516,6 @@ export default function WaterParametersHubPage() {
         </p>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Water-chemistry references, species guides, and equipment picks every Thursday."
-          source="water-parameters-hub"
-          ctaText="Subscribe Free"
-          perks={['Water chemistry', 'Species guides', 'Equipment picks']}
-        />
-      </div>
     </>
   )
 }

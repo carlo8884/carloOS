@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -294,30 +294,6 @@ export default function CareHubPage() {
           ))}
         </ul>
       </div>
-
-      {/* Email Capture */}
-      <section
-        style={{
-          background: 'var(--brand-primary-pale)',
-          borderTop: '1px solid var(--brand-border)',
-          padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          title="The Ferret.com Care Library"
-          subtitle="New articles and updates on ferret diet, housing, and husbandry. No product pushes."
-          ctaText="Subscribe"
-          source="care-hub"
-          perks={[
-            'Evidence-based only',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
 
       <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="footer" />
     </>

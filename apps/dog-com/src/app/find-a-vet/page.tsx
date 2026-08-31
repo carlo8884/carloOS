@@ -6,7 +6,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata } from '@carloOS/ui'
 import { buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,6 +134,10 @@ export default function FindAVetPage() {
             className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors">
             Compare Pet Insurance →
           </Link>
+          <a href="https://vets.co/telehealth"
+            className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-6 py-3 rounded no-underline hover:border-white/40 transition-colors">
+            Talk to a vet tonight (not an ER) →
+          </a>
           <Link href="/health/dog-symptoms-guide"
             className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-6 py-3 rounded no-underline hover:border-white/40 transition-colors">
             Symptom Guide
@@ -190,15 +194,6 @@ export default function FindAVetPage() {
         />
       </div>
 
-      {/* Email */}
-      <div className="bg-brand-primary-pale px-container-sm sm:px-container py-12">
-        <EmailCapture variant="section" siteId="dog-com"
-          title="Free Dog Health Newsletter"
-          subtitle="Breed health guides and specialist Q&A — every Tuesday."
-          source="find-a-vet" ctaText="Subscribe Free"
-          perks={['✓ Research-based', '📬 Weekly', '🩺 Specialist advice']}
-        />
-      </div>
     </>
   )
 }

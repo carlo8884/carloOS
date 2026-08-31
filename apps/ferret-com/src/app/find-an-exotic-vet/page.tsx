@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -117,13 +116,6 @@ export default function FindAnExoticVetPage() {
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Ferret Health Hub', href: '/health' },
               ]}
-            />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Health Notes"
-              subtitle="Evidence-based ferret health, monthly."
-              source="find-an-exotic-vet"
             />
           </>
         }

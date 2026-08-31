@@ -45,7 +45,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, StockImage } from '@carloOS/ui'
 // Live insurance-reimbursement estimator embedded on the homepage so the
 // first screens are a tool you use, not a link to one (premium gate 3).
 import { InsuranceReimbursementEstimator } from '../components/visual/InsuranceReimbursementEstimator'
@@ -1150,30 +1150,7 @@ export default function VetsHomePage() {
         </div>
       </section>
 
-      {/* ── EMAIL CAPTURE — emergency triage card lead magnet ──────── */}
-      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
-      <section
-        className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <div className="mx-auto max-w-container">
-          <EmailCapture
-            variant="section"
-            siteId="vets-co"
-            title="The Emergency Triage Card"
-            subtitle="A one-page reference: the fifteen signs that mean drive to the ER, the four that mean call your vet by morning, and what to do in the car. Free for subscribers."
-            ctaText="Get the card"
-            source="homepage-triage-card"
-            perks={[
-              'One PDF, one page',
-              'Citation-anchored',
-              'No paid placements',
-              'Unsubscribe anytime',
-            ]}
-          />
-        </div>
-      </section>
-      )}
+      {/* Email capture lives under the hero via layout EmailUnderHero. Single capture. */}
 
       {/* ── PHOTO ATTRIBUTION — restrained credit, Unsplash hygiene ─── */}
       <aside

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -105,19 +105,6 @@ export default function SupplementsHubPage() {
         </ul>
       </div>
 
-      <section
-        className="px-container-sm sm:px-container py-12"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Reference"
-          subtitle="One email a week: a deep-dive on a breed, condition, or piece of gear. Citation-anchored."
-          ctaText="Subscribe"
-          source="supplements-hub"
-        />
-      </section>
     </>
   )
 }

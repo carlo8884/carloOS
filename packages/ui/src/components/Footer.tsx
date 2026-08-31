@@ -7,6 +7,14 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
+
+const LAUNCH_FOOTER: Partial<Record<SiteId, { moneyLabel: string; moneyHref: string }>> = {
+  'dog-com': { moneyLabel: 'Best dry dog food', moneyHref: '/reviews/best-dry-dog-food' },
+  'fish-com': { moneyLabel: 'Best water test kits', moneyHref: '/reviews/best-water-test-kits' },
+  'horses-com': { moneyLabel: 'Best equine supplements', moneyHref: '/reviews/best-equine-supplements' },
+  'vets-co': { moneyLabel: 'Best pet insurance', moneyHref: '/reviews/best-pet-insurance' },
+  'ferret-com': { moneyLabel: 'Best ferret cages', moneyHref: '/reviews/best-ferret-cage' },
+}
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { Logo } from './Logo'
 
@@ -77,6 +85,28 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               This domain is for sale →
             </a>
           </div>
+        )}
+
+        {LAUNCH_FOOTER[siteId] && (
+          <nav
+            aria-label="Launch links"
+            className="border-t border-white/10 pt-4 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm"
+          >
+            {[
+              { label: 'Home', href: '/' },
+              { label: 'Directory', href: '/' + 'directory' },
+              { label: 'Disclosure', href: '/disclosure' },
+              { label: LAUNCH_FOOTER[siteId]!.moneyLabel, href: LAUNCH_FOOTER[siteId]!.moneyHref },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-white/75 no-underline hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         )}
 
         <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">

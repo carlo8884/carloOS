@@ -776,6 +776,12 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               >
                 Find a vet on Vets.co →
               </a>
+              <a
+                href="https://vets.co/telehealth"
+                className="inline-block ml-3 text-sm font-semibold text-brand-primary no-underline hover:underline"
+              >
+                Non-emergency? Talk to a vet tonight →
+              </a>
             </p>
 
             {/* Recommended gear — bottom placement (reinforces commercial

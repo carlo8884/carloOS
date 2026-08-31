@@ -177,7 +177,7 @@ export default function FerretInsulinomaPage() {
                 symptoms appear.
               </p>
               <a
-                href="https://vets.co/pet-insurance"
+                href="https://vets.co/reviews/best-pet-insurance"
                 rel="noopener"
                 className="inline-block text-xs font-bold text-brand-primary hover:underline"
               >

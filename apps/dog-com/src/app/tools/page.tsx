@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  EmailCapture,
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
@@ -223,18 +222,6 @@ export default function ToolsHub() {
         </div>
       </section>
 
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com tool updates"
-            subtitle="New calculators and source-cited dog care references. No spam."
-            source="tools-hub"
-          />
-        </div>
-      </section>
     </>
   )
 }

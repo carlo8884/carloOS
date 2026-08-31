@@ -64,13 +64,14 @@ export function ReviewCard({
   price,
   priceNote,
   ctaText = 'Check Price →',
-  ctaHref = '#',
+  ctaHref,
   ctaAffiliateProgram,
   ctaAffiliateProduct,
   editorial,
   winner = false,
   id,
 }: ReviewCardProps) {
+  const href = ctaHref && ctaHref !== '#' ? ctaHref : undefined
   return (
     <div
       id={id}
@@ -170,7 +171,7 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || ctaHref) && (
+      {(price || href) && (
         <div className="flex items-end justify-between pt-5 border-t border-brand-border mt-2 gap-4 flex-wrap">
           {price && (
             <div>
@@ -184,9 +185,9 @@ export function ReviewCard({
             </div>
           )}
 
-          {ctaHref && (
+          {href && (
             <a
-              href={ctaHref}
+              href={href}
               className="inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
               data-program={editorial ? undefined : ctaAffiliateProgram}
               data-product={editorial ? undefined : ctaAffiliateProduct}
@@ -200,7 +201,7 @@ export function ReviewCard({
       )}
 
       {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
-      {ctaHref && !editorial && (
+      {href && !editorial && (
         <p className="text-2xs text-brand-text-light mt-2">
           We earn a commission if you purchase — no extra cost to you.
         </p>

@@ -138,8 +138,16 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     // Scoped to the telehealth SERVICE referral only — vets-co does NOT
     // register Chewy as a product/pharmacy retailer (policy §5: insurance
     // only on products). Destination is the Connect-with-a-Vet page.
+    // Empty /go/chewy 302s to Chewy home via the shared hop helper.
     name: 'Chewy Connect with a Vet (Telehealth)',
     template: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
+  'amazon-brand': {
+    // Search hop only. AFF_AMAZON_BRAND_TAG falls back to AFF_AMAZON_TAG.
+    // Empty /go/amazon-brand 302s to Amazon home — never 404.
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
     requiresSku: false,
   },
 

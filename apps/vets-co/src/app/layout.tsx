@@ -3,6 +3,7 @@ import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
+import { EmailUnderHero } from '@carloOS/ui'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -73,10 +74,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Do NOT re-add a top banner here.
         */}
 
-        <main>{children}</main>
+        <main>{children}
         <EmailCaptureGate>
-          <HomeEmailCapture />
+          <EmailUnderHero>
+            <HomeEmailCapture />
+          </EmailUnderHero>
         </EmailCaptureGate>
+        </main>
         <Footer siteId="vets-co" showAffiliateDisclosure />
       </body>
     </html>

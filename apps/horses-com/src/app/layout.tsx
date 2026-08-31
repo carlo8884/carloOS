@@ -4,6 +4,7 @@ import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
+import { EmailUnderHero } from '@carloOS/ui'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -84,11 +85,13 @@ export default function RootLayout({
         <Nav siteId="horses-com" />
 
         {/* Page content */}
-        <main>{children}</main>
-
+        <main>{children}
         <EmailCaptureGate>
-          <HomeEmailCapture />
+          <EmailUnderHero>
+            <HomeEmailCapture />
+          </EmailUnderHero>
         </EmailCaptureGate>
+        </main>
 
         {/* Shared Footer */}
         <Footer siteId="horses-com" showAffiliateDisclosure />

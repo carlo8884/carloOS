@@ -10,22 +10,12 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-base text-brand-text-light leading-relaxed mb-8">
-          This page doesn&apos;t exist or may have moved. Try searching for what you need, or start from one of our main sections.
+          This page doesn&apos;t exist or may have moved.
         </p>
-        <div className="flex gap-3 justify-center flex-wrap">
-          <Link href="/"
-            className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors">
-            ← Back to Home
-          </Link>
-          <Link href="/health"
-            className="inline-flex items-center border border-brand-border text-brand-dark font-semibold text-sm px-6 py-3 rounded no-underline hover:border-brand-primary transition-colors">
-            Dog Health Library
-          </Link>
-          <Link href="/breeds"
-            className="inline-flex items-center border border-brand-border text-brand-dark font-semibold text-sm px-6 py-3 rounded no-underline hover:border-brand-primary transition-colors">
-            Breed Guides
-          </Link>
-        </div>
+        <Link href="/reviews/best-dry-dog-food"
+          className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors">
+          See the best dry dog food →
+        </Link>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -135,17 +135,6 @@ export default function ToolsHub() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="horses-com"
-            variant="inline"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates. No spam."
-            source="tools-hub"
-          />
-        </div>
-      </section>
     </>
   )
 }

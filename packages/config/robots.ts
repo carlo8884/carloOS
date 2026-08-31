@@ -64,12 +64,12 @@ export function buildRobots(siteUrl: string, extraDisallow: string[] = []): Meta
   const rules: MetadataRoute.Robots['rules'] = [
     {
       userAgent: '*',
-      allow: '/',
+      allow: ['/', '/directory'],
       disallow: baseDisallow,
     },
     ...AI_CRAWLER_USER_AGENTS.map((userAgent) => ({
       userAgent,
-      allow: '/',
+      allow: ['/', '/directory'],
       disallow: baseDisallow,
     })),
   ]

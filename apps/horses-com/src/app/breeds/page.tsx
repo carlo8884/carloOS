@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
@@ -142,25 +142,6 @@ export default function BreedsIndexPage() {
         </div>
       </div>
 
-      <section
-        className="px-container-sm sm:px-container py-12"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Breed Reference"
-          subtitle="One email a week: a deep-dive on a single breed, discipline, or piece of gear. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
-          source="breeds-hub"
-          perks={[
-            'One email weekly',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
       <CrossPortfolioCard currentSite="horses-com" contentType="breed" variant="footer" />
     </>
   )

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -170,18 +170,6 @@ export default function ToolsHub() {
         </div>
       </section>
 
-      {/* EMAIL */}
-      <section className="bg-brand-primary-pale px-container-sm sm:px-container py-section">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="Get new calculators as we ship them"
-          subtitle="We're adding a new aquarium calculator or species tool every couple of weeks. Subscribe to be the first to use them."
-          ctaText="Subscribe Free"
-          source="tools-hub"
-          perks={['New calculators', 'Species spotlights', 'Water chemistry tips', 'No spam']}
-        />
-      </section>
     </>
   </>
   )

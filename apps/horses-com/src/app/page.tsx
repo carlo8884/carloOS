@@ -1,7 +1,7 @@
 /**
  * Horses.com Homepage — /
  * Hero lives in HomeHero so the H1 can change without touching the rest of the page.
- * Always-on email capture lives in layout (HomeEmailCapture) above footer.
+ * Email capture sits under the hero via layout EmailUnderHero (single capture).
  */
 
 import type { Metadata } from 'next'

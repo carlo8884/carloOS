@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -158,13 +158,6 @@ export default async function SpeciesIndexPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture variant="section" siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
-          source="species-index" ctaText="Subscribe Free"
-          perks={['Species spotlights', 'Water chemistry', 'Equipment picks']} />
-      </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Fish Species</h2>

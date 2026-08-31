@@ -7,6 +7,10 @@
   "exports": {
     ".": "./index.ts",
     "./tailwind": "./tailwind.preset.ts",
-    "./robots": "./robots.ts"
+    "./robots": "./robots.ts",
+    "./affiliate-hop": "./affiliate-hop.ts",
+    "./directory": "./directory.ts",
+    "./subscribe": "./subscribe.ts",
+    "./email-under-hero": "./email-under-hero.ts"
   }
 }

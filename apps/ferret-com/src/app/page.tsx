@@ -41,7 +41,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, StockImage } from '@carloOS/ui'
 // Live ferret food evaluator embedded on the homepage — score a food on the
 // first screens, not a link to a tool (premium gate 3).
 import { FerretFoodEvaluator } from '../components/visual/FerretFoodEvaluator'
@@ -1491,85 +1491,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          EMAIL CAPTURE — env-gated (no empty surface when backend is off)
-          ════════════════════════════════════════════════════════════════ */}
-      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
-      <section
-        style={{
-          background: 'var(--brand-white)',
-          padding: 'clamp(64px, 8vw, 96px) 24px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '640px',
-            margin: '0 auto',
-            textAlign: 'center',
-          }}
-        >
-          <div style={{ marginBottom: '14px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Free email course
-            </span>
-          </div>
-          <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)',
-              fontWeight: 800,
-              letterSpacing: '-0.015em',
-              color: 'var(--brand-text-dark)',
-              lineHeight: 1.15,
-              margin: '0 0 14px',
-            }}
-          >
-            The first-year schedule, in your inbox
-          </h2>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              lineHeight: 1.65,
-              color: 'var(--brand-text-mid)',
-              margin: '0 0 32px',
-            }}
-          >
-            A printable 52-week schedule plus an eight-email course covering
-            vaccines, neuter timing, dental onset, diet milestones, and the
-            insulinoma watch window. One signup. Free.
-          </p>
-          <div
-            style={{
-              background: 'var(--brand-surface)',
-              border: '1px solid var(--brand-border)',
-              borderRadius: '14px',
-              padding: '28px',
-            }}
-          >
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title=""
-              ctaText="Send me the schedule →"
-              placeholder="your@email.com"
-              source="homepage"
-            />
-            <p
-              style={{
-                fontSize: '0.75rem',
-                color: 'var(--brand-text-light)',
-                marginTop: '14px',
-                lineHeight: 1.5,
-              }}
-            >
-              One-click unsubscribe in every email. We do not sell or rent your
-              address.
-            </p>
-          </div>
-        </div>
-      </section>
-      )}
+      {/* Email capture lives under the hero via layout EmailUnderHero. Single capture. */}
 
       {/* ════════════════════════════════════════════════════════════════
           EDITORIAL FOOTER NOTE (above shared <Footer />)
