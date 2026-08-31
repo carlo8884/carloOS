@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
 // Cormorant Garamond — display serif. The italic is the magazine-cover
@@ -48,6 +50,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav siteId="fish-com" />
         <main>{children}</main>
+        <EmailCaptureGate>
+          <HomeEmailCapture />
+        </EmailCaptureGate>
         <Footer siteId="fish-com" showAffiliateDisclosure />
 
         {/* Mediavine Journey display ads — gated on
