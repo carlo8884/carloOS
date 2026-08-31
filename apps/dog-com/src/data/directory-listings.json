@@ -1,1 +1,2622 @@
-[]
+[
+  {
+    "slug": "american-canine-training-avondale-az-1996003534",
+    "display_name": "AMERICAN CANINE TRAINING",
+    "city": "Avondale",
+    "state": "AZ",
+    "category": "dog trainer",
+    "license_number": "1996003534",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "petsuites-of-america-llc-agoura-hills-ca-trf-000374",
+    "display_name": "PETSUITES OF AMERICA LLC",
+    "city": "Agoura Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "TRF.000374",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "birgit-hafermann-dog-training-berkeley-ca-bl-016813",
+    "display_name": "BIRGIT HAFERMANN DOG TRAINING",
+    "city": "Berkeley",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "BL-016813",
+    "source_url": "https://data.cityofberkeley.info/Finance/Business-Licenses/rwnf-bu3w",
+    "claimed": false
+  },
+  {
+    "slug": "teammates-in-training-llc-berkeley-ca-bl-022446",
+    "display_name": "TEAMMATES IN TRAINING LLC",
+    "city": "Berkeley",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "BL-022446",
+    "source_url": "https://data.cityofberkeley.info/Finance/Business-Licenses/rwnf-bu3w",
+    "claimed": false
+  },
+  {
+    "slug": "teixeira-training-berkeley-ca-bl-016529",
+    "display_name": "TEIXEIRA TRAINING",
+    "city": "Berkeley",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "BL-016529",
+    "source_url": "https://data.cityofberkeley.info/Finance/Business-Licenses/rwnf-bu3w",
+    "claimed": false
+  },
+  {
+    "slug": "all-things-possible-dog-training-bonita-ca-2019005829",
+    "display_name": "ALL THINGS POSSIBLE DOG TRAINING",
+    "city": "Bonita",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2019005829",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "ain-t-misbehavin-dog-training-inc-burbank-ca-0002918005-0001-4",
+    "display_name": "AIN'T MISBEHAVIN' DOG TRAINING INC",
+    "city": "Burbank",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002918005-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "k9-logic-dog-training-burbank-ca-0003014602-0001-6",
+    "display_name": "K9 LOGIC DOG TRAINING",
+    "city": "Burbank",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003014602-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "rmd-k9-dog-training-canoga-park-ca-0003007877-0001-6",
+    "display_name": "RMD K9 DOG TRAINING",
+    "city": "Canoga Park",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003007877-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "golden-coast-dog-training-carlsbad-ca-2022010814",
+    "display_name": "GOLDEN COAST DOG TRAINING",
+    "city": "Carlsbad",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2022010814",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "care-4-your-pet-dog-training-care-4-your-pet-chatsworth-ca-0000001379-0002-5",
+    "display_name": "CARE 4 YOUR PET DOG TRAINING, CARE 4 YOUR PET",
+    "city": "Chatsworth",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0000001379-0002-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "alpha-paws-dog-training-inc-encino-ca-0003355134-0001-4",
+    "display_name": "ALPHA PAWS DOG TRAINING INC",
+    "city": "Encino",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003355134-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "john-s-natural-dog-training-co-escondido-ca-1995005112",
+    "display_name": "JOHN'S NATURAL DOG TRAINING CO",
+    "city": "Escondido",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1995005112",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "total-k9-training-escondido-ca-2005009211",
+    "display_name": "TOTAL K9 TRAINING",
+    "city": "Escondido",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2005009211",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "uberdog-dynamic-pet-training-and-uberdog-escondido-ca-2014002254",
+    "display_name": "UBERDOG DYNAMIC PET TRAINING AND UBERDOG",
+    "city": "Escondido",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2014002254",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "born-free-dog-training-granada-hills-ca-0003529736-0001-3",
+    "display_name": "BORN FREE DOG TRAINING",
+    "city": "Granada Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003529736-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "j9-s-k9s-dog-training-inc-granada-hills-ca-0000129931-0001-1",
+    "display_name": "J9'S K9S DOG TRAINING INC",
+    "city": "Granada Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0000129931-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "your-best-companion-dog-training-and-behavior-granada-hills-ca-0003332188-0001-6",
+    "display_name": "YOUR BEST COMPANION DOG TRAINING AND BEHAVIOR",
+    "city": "Granada Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003332188-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "daniel-robinson-dog-training-la-canada-ca-0003131677-0001-1",
+    "display_name": "DANIEL ROBINSON DOG TRAINING",
+    "city": "La Canada",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003131677-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "sunny-side-dog-training-llc-lawndale-ca-0003304678-0001-9",
+    "display_name": "SUNNY SIDE DOG TRAINING LLC",
+    "city": "Lawndale",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003304678-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "paws-and-effect-dog-training-long-beach-ca-0003178052-0001-8",
+    "display_name": "PAWS AND EFFECT DOG TRAINING",
+    "city": "Long Beach",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003178052-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aim-high-dog-training-los-angeles-ca-0003588686-0001-4",
+    "display_name": "AIM HIGH DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003588686-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "amir-dog-training-los-angeles-ca-0002708943-0001-6",
+    "display_name": "AMIR DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002708943-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "arrow-custom-dog-training-and-services-los-angeles-ca-0003117989-0001-9",
+    "display_name": "ARROW CUSTOM DOG TRAINING AND SERVICES",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003117989-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "best-furry-friend-dog-training-llc-los-angeles-ca-0003458448-0001-8",
+    "display_name": "BEST FURRY FRIEND DOG TRAINING LLC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003458448-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "get-ready-dog-training-los-angeles-ca-0002784191-0001-1",
+    "display_name": "GET READY! DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002784191-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "happy-paws-dog-training-la-los-angeles-ca-0002751225-0001-1",
+    "display_name": "HAPPY PAWS DOG TRAINING LA",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002751225-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "jumpstart-dog-training-los-angeles-ca-0003248603-0001-0",
+    "display_name": "JUMPSTART DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003248603-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "lucky-dog-training-llc-los-angeles-ca-0003531724-0001-9",
+    "display_name": "LUCKY DOG TRAINING LLC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003531724-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "mo-chara-dog-training-los-angeles-ca-0003085770-0001-2",
+    "display_name": "MO CHARA DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003085770-0001-2",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "packdaddy-dog-training-los-angeles-ca-0003528131-0001-4",
+    "display_name": "PACKDADDY DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003528131-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "pawgress-pawgress-dog-training-los-angeles-ca-0003328697-0001-3",
+    "display_name": "PAWGRESS; PAWGRESS DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003328697-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "rebecca-setler-s-dog-obedience-training-service-los-angeles-ca-0003548407-0001-8",
+    "display_name": "REBECCA SETLER'S DOG OBEDIENCE TRAINING SERVICE",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003548407-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "reset-dog-training-network-inc-los-angeles-ca-0003123124-0001-6",
+    "display_name": "RESET DOG TRAINING NETWORK, INC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003123124-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "teacher-s-pet-dog-training-los-angeles-ca-0002711969-0001-6",
+    "display_name": "TEACHER'S PET DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002711969-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "the-ranch-dog-training-llc-los-angeles-ca-0003251120-0001-8",
+    "display_name": "THE RANCH DOG TRAINING LLC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003251120-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "woof-pack-dog-training-llc-los-angeles-ca-0003110411-0001-5",
+    "display_name": "WOOF PACK DOG TRAINING LLC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003110411-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "wuff-dog-training-los-angeles-ca-0003297169-0001-2",
+    "display_name": "WUFF DOG TRAINING",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003297169-0001-2",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "la-s-dog-trainer-n-hollywood-ca-0002570188-0001-3",
+    "display_name": "LA'S DOG TRAINER",
+    "city": "N Hollywood",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002570188-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "julie-sterling-dog-training-llc-newbury-park-ca-0002460931-0001-7",
+    "display_name": "JULIE STERLING DOG TRAINING LLC",
+    "city": "Newbury Park",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002460931-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "camp-canine-training-llc-north-hollywood-ca-0003514488-0001-3",
+    "display_name": "CAMP CANINE TRAINING LLC",
+    "city": "North Hollywood",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003514488-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "bobby-s-dog-training-northridge-ca-0002900612-0001-9",
+    "display_name": "BOBBY'S DOG TRAINING",
+    "city": "Northridge",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002900612-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "broda-dog-training-northridge-ca-0003426099-0001-4",
+    "display_name": "BRODA DOG TRAINING",
+    "city": "Northridge",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003426099-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "dog-town-dog-training-northridge-ca-0003058042-0001-6",
+    "display_name": "DOG TOWN DOG TRAINING",
+    "city": "Northridge",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003058042-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "the-captain-s-professional-dog-training-northridge-ca-0003028044-0001-6",
+    "display_name": "THE CAPTAIN'S PROFESSIONAL DOG TRAINING",
+    "city": "Northridge",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003028044-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "center-for-applied-animal-oakland-ca-bl-045460",
+    "display_name": "CENTER FOR APPLIED ANIMAL",
+    "city": "Oakland",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "BL-045460",
+    "source_url": "https://data.cityofberkeley.info/Finance/Business-Licenses/rwnf-bu3w",
+    "claimed": false
+  },
+  {
+    "slug": "pintar-dog-training-pacifica-ca-1152701",
+    "display_name": "Pintar Dog Training",
+    "city": "Pacifica",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1152701",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "dog-training-elite-west-la-sacramento-ca-0003414517-0001-6",
+    "display_name": "DOG TRAINING ELITE WEST LA",
+    "city": "Sacramento",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003414517-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "cameron-thompson-moore-s-k9-training-san-diego-ca-2005000643",
+    "display_name": "CAMERON THOMPSON MOORE'S K9 TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2005000643",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "complete-canine-professional-dog-training-san-diego-ca-1996013275",
+    "display_name": "COMPLETE CANINE PROFESSIONAL DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1996013275",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "dogmantics-dog-training-san-diego-ca-2011014629",
+    "display_name": "DOGMANTICS DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2011014629",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "lupa-k9-dog-training-llc-san-diego-ca-2020010479",
+    "display_name": "LUPA K9 DOG TRAINING LLC",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2020010479",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "mcmahon-dog-training-san-diego-ca-2023012320",
+    "display_name": "MCMAHON DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2023012320",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "peace-pups-dog-training-san-diego-ca-2024001102",
+    "display_name": "PEACE PUPS DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2024001102",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "performance-dog-training-san-diego-ca-2010001766",
+    "display_name": "PERFORMANCE DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2010001766",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "petiquette-dog-training-san-diego-ca-2026010402",
+    "display_name": "PETIQUETTE DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2026010402",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "starpup-dog-training-san-diego-ca-2022010774",
+    "display_name": "STARPUP DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2022010774",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "take-the-lead-dog-training-san-diego-ca-2003024916",
+    "display_name": "TAKE THE LEAD DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2003024916",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "wagyou-dog-training-san-diego-ca-2025016830",
+    "display_name": "WAGYOU DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2025016830",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "wen-s-waggin-tails-dog-training-san-diego-ca-2018017125",
+    "display_name": "WEN'S WAGGIN TAILS DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2018017125",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "who-s-walking-who-dog-training-san-diego-ca-2005015601",
+    "display_name": "WHO'S WALKING WHO? DOG TRAINING",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2005015601",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "bright-lights-dog-training-san-francisco-ca-0471607",
+    "display_name": "Bright Lights Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0471607",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "csm-dog-training-san-francisco-ca-1043379",
+    "display_name": "Csm Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1043379",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "dog-training-elite-san-francisco-san-francisco-ca-1178296",
+    "display_name": "Dog Training Elite - San Francisco",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1178296",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "furry-friends-dog-training-san-francisco-ca-1165408",
+    "display_name": "Furry Friends Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1165408",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "go-ask-alice-dog-training-san-francisco-ca-0421522",
+    "display_name": "Go Ask Alice Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0421522",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "go-fetch-dog-training-san-francisco-ca-0429691",
+    "display_name": "Go Fetch Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0429691",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "mel-s-dog-training-llc-san-francisco-ca-1180144",
+    "display_name": "Mel's Dog Training LLC",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "1180144",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "tracy-pore-dog-training-san-francisco-ca-0489368",
+    "display_name": "Tracy Pore Dog Training",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0489368",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "heart-mutt-dog-training-llc-sherman-oaks-ca-0003549273-0001-6",
+    "display_name": "HEART MUTT DOG TRAINING LLC",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003549273-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "k9-indigo-holistic-dog-training-llc-sherman-oaks-ca-0003070013-0001-4",
+    "display_name": "K9 - INDIGO HOLISTIC DOG TRAINING, LLC",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003070013-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "poochability-dog-training-sherman-oaks-ca-0002454830-0001-7",
+    "display_name": "POOCHABILITY DOG TRAINING",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002454830-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "practical-dog-training-sherman-oaks-ca-0000493871-0001-5",
+    "display_name": "PRACTICAL DOG TRAINING",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0000493871-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "pupscouts-dog-training-llc-sherman-oaks-ca-0003353977-0002-1",
+    "display_name": "PUPSCOUTS DOG TRAINING LLC",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003353977-0002-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "ben-dog-training-inc-sherwood-forest-ca-0003398904-0001-6",
+    "display_name": "BEN DOG TRAINING INC",
+    "city": "Sherwood Forest",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003398904-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "strategic-k9-training-spring-valley-ca-2021004699",
+    "display_name": "STRATEGIC K9 TRAINING",
+    "city": "Spring Valley",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "2021004699",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "bionic-dog-training-sylmar-ca-0003018410-0001-3",
+    "display_name": "BIONIC DOG TRAINING",
+    "city": "Sylmar",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003018410-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "bryan-casimiro-pet-training-sylmar-ca-0002856872-0001-7",
+    "display_name": "BRYAN CASIMIRO PET TRAINING",
+    "city": "Sylmar",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002856872-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "happy-go-luna-dog-training-sylmar-ca-0003524040-0001-6",
+    "display_name": "HAPPY GO LUNA DOG TRAINING",
+    "city": "Sylmar",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003524040-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "jim-canino-dog-training-sylmar-ca-0000386386-0001-1",
+    "display_name": "JIM CANINO DOG TRAINING",
+    "city": "Sylmar",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0000386386-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "pawsitive-hound-dog-training-llc-tarzana-ca-0003133812-0001-7",
+    "display_name": "PAWSITIVE HOUND DOG TRAINING, LLC",
+    "city": "Tarzana",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003133812-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "master-dog-training-topanga-ca-0002577906-0001-1",
+    "display_name": "MASTER DOG TRAINING",
+    "city": "Topanga",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002577906-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "pawsitive-solutions-dog-training-tujunga-ca-0002177861-0001-1",
+    "display_name": "PAWSITIVE SOLUTIONS DOG TRAINING",
+    "city": "Tujunga",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002177861-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "proud-paws-dog-training-tujunga-ca-0003190836-0001-9",
+    "display_name": "PROUD PAWS DOG TRAINING",
+    "city": "Tujunga",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003190836-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "roylance-dog-training-tujunga-ca-0002819535-0001-8",
+    "display_name": "ROYLANCE DOG TRAINING",
+    "city": "Tujunga",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0002819535-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "allie-petersen-dog-training-valencia-ca-0003543917-0001-6",
+    "display_name": "ALLIE PETERSEN DOG TRAINING",
+    "city": "Valencia",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003543917-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "camp-waggin-tails-caninestein-dog-training-van-nuys-ca-0000037623-0001-9",
+    "display_name": "CAMP WAGGIN' TAILS/CANINESTEIN DOG TRAINING",
+    "city": "Van Nuys",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0000037623-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "no-problem-dog-training-l-l-c-venice-ca-0003028140-0001-6",
+    "display_name": "NO PROBLEM! DOG TRAINING L.L.C.",
+    "city": "Venice",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003028140-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "infiniti-dog-training-west-hills-ca-0003504417-0001-7",
+    "display_name": "INFINITI DOG TRAINING",
+    "city": "West Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003504417-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "online-dog-training-university-inc-west-hills-ca-0003254764-0001-1",
+    "display_name": "ONLINE DOG TRAINING UNIVERSITY INC",
+    "city": "West Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003254764-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "chutzpaws-dog-training-llc-west-hollywood-ca-0003458388-0001-4",
+    "display_name": "CHUTZPAWS DOG TRAINING LLC",
+    "city": "West Hollywood",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003458388-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "lovebug-dog-training-club-llc-woodland-hills-ca-0003528486-0001-0",
+    "display_name": "LOVEBUG DOG TRAINING CLUB LLC",
+    "city": "Woodland Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003528486-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "mission-pawsitive-dog-training-woodland-hills-ca-0003353382-0001-5",
+    "display_name": "MISSION PAWSITIVE DOG TRAINING",
+    "city": "Woodland Hills",
+    "state": "CA",
+    "category": "dog trainer",
+    "license_number": "0003353382-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "hop-river-shepherds-andover-ct-trf-000361",
+    "display_name": "HOP RIVER SHEPHERDS",
+    "city": "Andover",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000361",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "hemlock-k9-training-avon-ct-trf-000373",
+    "display_name": "HEMLOCK K9 TRAINING",
+    "city": "Avon",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000373",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "outrider-dogs-avon-ct-trf-000385",
+    "display_name": "OUTRIDER DOGS",
+    "city": "Avon",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000385",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wholesome-animal-grocery-store-wags-avon-ct-trf-000368",
+    "display_name": "WHOLESOME ANIMAL GROCERY STORE (WAGS)",
+    "city": "Avon",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000368",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "country-clippers-bantam-ct-trf-000426",
+    "display_name": "COUNTRY CLIPPERS",
+    "city": "Bantam",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000426",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "connecticut-canine-services-bethany-ct-trf-000104",
+    "display_name": "CONNECTICUT CANINE SERVICES",
+    "city": "Bethany",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000104",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "blue-ribbon-boarding-kennel-bethlehem-ct-trf-000106",
+    "display_name": "BLUE RIBBON BOARDING KENNEL",
+    "city": "Bethlehem",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000106",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "camp-bow-wow-bloomfield-ct-trf-000338",
+    "display_name": "CAMP BOW WOW",
+    "city": "Bloomfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000338",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-good-dog-spot-bloomfield-ct-trf-000287",
+    "display_name": "THE GOOD DOG SPOT",
+    "city": "Bloomfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000287",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-simon-foundation-bloomfield-ct-trf-000107",
+    "display_name": "THE SIMON FOUNDATION",
+    "city": "Bloomfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000107",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dogs-by-the-dozen-llc-bozrah-ct-trf-000423",
+    "display_name": "DOGS BY THE DOZEN LLC",
+    "city": "Bozrah",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000423",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "camp-bow-wow-fairfield-trumbull-bridgeport-ct-trf-000427",
+    "display_name": "CAMP BOW WOW FAIRFIELD-TRUMBULL",
+    "city": "Bridgeport",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000427",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-balanced-k-9-bridgeport-ct-trf-000379",
+    "display_name": "THE BALANCED K-9",
+    "city": "Bridgeport",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000379",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "camp-canine-bristol-ct-trf-000110",
+    "display_name": "CAMP CANINE",
+    "city": "Bristol",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000110",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "martas-vineyard-canine-resort-brookfield-ct-trf-000358",
+    "display_name": "MARTAS VINEYARD CANINE RESORT",
+    "city": "Brookfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000358",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "ultimate-dog-spa-boutique-canaan-ct-trf-000389",
+    "display_name": "ULTIMATE DOG SPA & BOUTIQUE",
+    "city": "Canaan",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000389",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "little-river-canine-camp-canterbury-ct-trf-000371",
+    "display_name": "LITTLE RIVER CANINE CAMP",
+    "city": "Canterbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000371",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "quinebaug-kennels-canterbury-ct-trf-000116",
+    "display_name": "QUINEBAUG KENNELS",
+    "city": "Canterbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000116",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "roaring-brook-kennels-canton-ct-trf-000118",
+    "display_name": "ROARING BROOK KENNELS",
+    "city": "Canton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000118",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "paws-pet-resort-spa-cheshire-ct-trf-000437",
+    "display_name": "PAWS PET RESORT & SPA",
+    "city": "Cheshire",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000437",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-smartydog-center-for-canine-enrichment-cheshire-ct-trf-000121",
+    "display_name": "THE SMARTYDOG CENTER FOR CANINE ENRICHMENT",
+    "city": "Cheshire",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000121",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "central-k9-colchester-ct-trf-000381",
+    "display_name": "CENTRAL K9",
+    "city": "Colchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000381",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "gagnon-s-pet-resort-colchester-ct-trf-000377",
+    "display_name": "GAGNON'S PET RESORT",
+    "city": "Colchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000377",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "central-bark-danbury-ct-trf-000424",
+    "display_name": "CENTRAL BARK",
+    "city": "Danbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000424",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dawg-house-daycare-and-boarding-danbury-ct-trf-000414",
+    "display_name": "DAWG HOUSE DAYCARE AND BOARDING",
+    "city": "Danbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000414",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wags-doggie-daycamp-boarding-danbury-ct-trf-000331",
+    "display_name": "WAGS DOGGIE DAYCAMP & BOARDING",
+    "city": "Danbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000331",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "markover-kennels-danielson-ct-trf-000395",
+    "display_name": "MARKOVER KENNELS",
+    "city": "Danielson",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000395",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-perfect-pup-deep-river-ct-trf-000344",
+    "display_name": "THE PERFECT PUP",
+    "city": "Deep River",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000344",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-perfect-pup-dog-training-center-deep-river-ct-trf-000318",
+    "display_name": "THE PERFECT PUP DOG TRAINING CENTER",
+    "city": "Deep River",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000318",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "integrity-k9-training-durham-ct-trf-000309",
+    "display_name": "INTEGRITY K9 TRAINING",
+    "city": "Durham",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000309",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wiggles-pet-resort-durham-durham-ct-trf-000417",
+    "display_name": "WIGGLES PET RESORT DURHAM",
+    "city": "Durham",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000417",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "paws-n-heel-dog-training-center-east-hampton-ct-trf-000317",
+    "display_name": "PAWS-N-HEEL DOG TRAINING CENTER",
+    "city": "East Hampton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000317",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-ulti-mutt-academy-east-hampton-ct-trf-000413",
+    "display_name": "THE ULTI-MUTT ACADEMY",
+    "city": "East Hampton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000413",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dog-speak-east-windsor-ct-trf-000428",
+    "display_name": "DOG SPEAK",
+    "city": "East Windsor",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000428",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "mountain-lore-dog-grooming-training-ellington-ct-trf-000434",
+    "display_name": "MOUNTAIN LORE DOG GROOMING & TRAINING",
+    "city": "Ellington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000434",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "kanine-kollege-enfield-ct-trf-000386",
+    "display_name": "KANINE KOLLEGE",
+    "city": "Enfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000386",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "sand-road-animal-hospital-falls-village-ct-trf-000382",
+    "display_name": "SAND ROAD ANIMAL HOSPITAL",
+    "city": "Falls Village",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000382",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "elite-training-centers-glastonbury-ct-trf-000419",
+    "display_name": "ELITE TRAINING CENTERS",
+    "city": "Glastonbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000419",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "diamond-creek-kennels-goshen-ct-trf-000141",
+    "display_name": "DIAMOND CREEK KENNELS",
+    "city": "Goshen",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000141",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "stonehill-kennel-goshen-ct-trf-000274",
+    "display_name": "STONEHILL KENNEL",
+    "city": "Goshen",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000274",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "fun-play-bark-lodge-groton-ct-trf-000404",
+    "display_name": "FUN. PLAY. BARK. LODGE",
+    "city": "Groton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000404",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "abc-obedience-dog-training-guilford-ct-trf-000213",
+    "display_name": "ABC OBEDIENCE DOG TRAINING",
+    "city": "Guilford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000213",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-metro-pooch-guilford-ct-trf-000340",
+    "display_name": "THE METRO POOCH",
+    "city": "Guilford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000340",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "paws-n-effect-hamden-ct-trf-000143",
+    "display_name": "PAWS 'N EFFECT",
+    "city": "Hamden",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000143",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-barking-lot-hamden-ct-trf-000144",
+    "display_name": "THE BARKING LOT",
+    "city": "Hamden",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000144",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-agility-facility-ledyard-ct-trf-000369",
+    "display_name": "THE AGILITY FACILITY",
+    "city": "Ledyard",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000369",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "american-k-9-academy-lisbon-ct-trf-000147",
+    "display_name": "AMERICAN K 9 ACADEMY",
+    "city": "Lisbon",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000147",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "katalyst-kennels-litchfield-ct-trf-000367",
+    "display_name": "KATALYST KENNELS",
+    "city": "Litchfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000367",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "our-companions-domestic-animal-sanctuary-manchester-ct-trf-000240",
+    "display_name": "OUR COMPANIONS DOMESTIC ANIMAL SANCTUARY",
+    "city": "Manchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000240",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "tails-u-win-manchester-ct-trf-000150",
+    "display_name": "TAILS-U-WIN!",
+    "city": "Manchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000150",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-mellow-mutt-manchester-ct-trf-000224",
+    "display_name": "THE MELLOW MUTT",
+    "city": "Manchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000224",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "versatile-k9-manchester-ct-trf-000355",
+    "display_name": "VERSATILE K9",
+    "city": "Manchester",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000355",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wiggles-pet-resorts-ct-llc-middlebury-ct-trf-000429",
+    "display_name": "WIGGLES PET RESORTS CT LLC",
+    "city": "Middlebury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000429",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "bark-avenue-pethouse-llc-milford-ct-trf-000431",
+    "display_name": "BARK AVENUE PETHOUSE LLC",
+    "city": "Milford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000431",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "k-9-communication-milford-ct-trf-000158",
+    "display_name": "K-9 COMMUNICATION",
+    "city": "Milford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000158",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pet-hotel-of-milford-milford-ct-trf-000430",
+    "display_name": "PET HOTEL OF MILFORD",
+    "city": "Milford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000430",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "all-that-canine-monroe-ct-trf-000339",
+    "display_name": "ALL THAT CANINE",
+    "city": "Monroe",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000339",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-refined-canine-monroe-ct-trf-000264",
+    "display_name": "THE REFINED CANINE",
+    "city": "Monroe",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000264",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "know-better-do-better-dog-training-llc-mystic-ct-trf-000435",
+    "display_name": "KNOW BETTER DO BETTER DOG TRAINING LLC",
+    "city": "Mystic",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000435",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "henkel-kennel-vonwilhendorf-new-milford-ct-trf-000164",
+    "display_name": "HENKEL KENNEL - VONWILHENDORF",
+    "city": "New Milford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000164",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "valley-veterinary-hospital-new-milford-ct-trf-000328",
+    "display_name": "VALLEY VETERINARY HOSPITAL",
+    "city": "New Milford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000328",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "connecticut-k-9-education-center-newington-ct-trf-000352",
+    "display_name": "CONNECTICUT K-9 EDUCATION CENTER",
+    "city": "Newington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000352",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wagging-tails-pet-resort-spaw-newington-ct-trf-000408",
+    "display_name": "WAGGING TAILS PET RESORT + SPAW",
+    "city": "Newington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000408",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "cassio-kennels-newtown-ct-trf-000169",
+    "display_name": "CASSIO KENNELS",
+    "city": "Newtown",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000169",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "empire-state-k9-services-newtown-ct-trf-000364",
+    "display_name": "EMPIRE STATE K9 SERVICES",
+    "city": "Newtown",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000364",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pleasant-paws-pet-center-newtown-ct-trf-000342",
+    "display_name": "PLEASANT PAWS PET CENTER",
+    "city": "Newtown",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000342",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-exceptional-pet-newtown-ct-trf-000262",
+    "display_name": "THE EXCEPTIONAL PET",
+    "city": "Newtown",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000262",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "devil-dog-daycare-north-branford-ct-trf-000320",
+    "display_name": "DEVIL DOG DAYCARE",
+    "city": "North Branford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000320",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "hunky-hound-handlers-north-canaan-ct-trf-000402",
+    "display_name": "HUNKY HOUND HANDLERS",
+    "city": "North Canaan",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000402",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "canine-cadre-northford-ct-trf-000415",
+    "display_name": "CANINE CADRE",
+    "city": "Northford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000415",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dog-gone-smart-norwalk-ct-trf-000175",
+    "display_name": "DOG GONE SMART",
+    "city": "Norwalk",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000175",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-boarding-house-norwalk-ct-trf-000223",
+    "display_name": "THE BOARDING HOUSE",
+    "city": "Norwalk",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000223",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "norwichtown-pet-resort-and-spa-norwich-ct-trf-000383",
+    "display_name": "NORWICHTOWN PET RESORT AND SPA",
+    "city": "Norwich",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000383",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "all-bright-canines-llc-oakdale-ct-trf-000436",
+    "display_name": "ALL BRIGHT CANINES LLC",
+    "city": "Oakdale",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000436",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "paws-of-greenwich-canine-club-old-greenwich-ct-trf-000359",
+    "display_name": "PAWS OF GREENWICH CANINE CLUB",
+    "city": "Old Greenwich",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000359",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "obedience-dog-training-club-of-waterbury-inc-oxford-ct-trf-000179",
+    "display_name": "OBEDIENCE DOG TRAINING CLUB OF WATERBURY INC",
+    "city": "Oxford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000179",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "where-sit-happens-oxford-ct-trf-000393",
+    "display_name": "WHERE SIT HAPPENS",
+    "city": "Oxford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000393",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "woodland-kennel-oxford-ct-trf-000280",
+    "display_name": "WOODLAND KENNEL",
+    "city": "Oxford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000280",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "lucky-dog-pawcatuck-ct-trf-000410",
+    "display_name": "LUCKY DOG",
+    "city": "Pawcatuck",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000410",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-barker-s-lounge-at-anguilla-brook-farm-pawcatuck-ct-trf-000421",
+    "display_name": "THE BARKER'S LOUNGE AT ANGUILLA BROOK FARM",
+    "city": "Pawcatuck",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000421",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "nutmeg-farm-portland-ct-trf-000251",
+    "display_name": "NUTMEG FARM",
+    "city": "Portland",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000251",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "bark-and-soul-dog-prospect-ct-trf-000375",
+    "display_name": "BARK AND SOUL DOG",
+    "city": "Prospect",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000375",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "my-dog-training-center-putnam-ct-trf-000219",
+    "display_name": "MY DOG TRAINING CENTER",
+    "city": "Putnam",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000219",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "doggy-dojo-rocky-hill-ct-trf-000387",
+    "display_name": "DOGGY DOJO",
+    "city": "Rocky Hill",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000387",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pawsitive-approach-llc-shelton-ct-trf-000433",
+    "display_name": "PAWSITIVE APPROACH, LLC",
+    "city": "Shelton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000433",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pawsitive-reinforcement-training-simsbury-ct-trf-000324",
+    "display_name": "PAWSITIVE REINFORCEMENT TRAINING",
+    "city": "Simsbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000324",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "myk9-south-windham-ct-trf-000400",
+    "display_name": "MYK9",
+    "city": "South Windham",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000400",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "paw-play-southington-ct-trf-000190",
+    "display_name": "PAW PLAY",
+    "city": "Southington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000190",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-dog-palace-southington-ct-trf-000405",
+    "display_name": "THE DOG PALACE",
+    "city": "Southington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000405",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "bark-inn-kennels-stafford-springs-ct-trf-000399",
+    "display_name": "BARK INN KENNELS",
+    "city": "Stafford Springs",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000399",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "quail-ridge-kennels-stafford-springs-ct-trf-000310",
+    "display_name": "QUAIL RIDGE KENNELS",
+    "city": "Stafford Springs",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000310",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "203k9-training-services-stamford-ct-trf-000418",
+    "display_name": "203K9 TRAINING SERVICES",
+    "city": "Stamford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000418",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pets-a-go-go-stamford-ct-trf-000325",
+    "display_name": "PETS A GO GO",
+    "city": "Stamford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000325",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "room-for-paws-pet-resort-stamford-ct-trf-000362",
+    "display_name": "ROOM FOR PAWS PET RESORT",
+    "city": "Stamford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000362",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "spot-on-veterinary-hospital-and-hotel-stamford-ct-trf-000297",
+    "display_name": "SPOT ON VETERINARY HOSPITAL AND HOTEL",
+    "city": "Stamford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000297",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wagmore-stamford-ct-trf-000289",
+    "display_name": "WAGMORE",
+    "city": "Stamford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000289",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "my-dog-s-place-llc-stonington-ct-trf-000312",
+    "display_name": "MY DOG'S PLACE LLC",
+    "city": "Stonington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000312",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "rhodes-collar-stonington-ct-trf-000403",
+    "display_name": "RHODES COLLAR",
+    "city": "Stonington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000403",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wag-central-stratford-ct-trf-000288",
+    "display_name": "WAG CENTRAL",
+    "city": "Stratford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000288",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "morning-star-farm-pet-resort-thompson-ct-trf-000195",
+    "display_name": "MORNING STAR FARM PET RESORT",
+    "city": "Thompson",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000195",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "hidden-acres-kennel-tolland-ct-trf-000420",
+    "display_name": "HIDDEN ACRES KENNEL",
+    "city": "Tolland",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000420",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "k-9-connection-tolland-ct-trf-000196",
+    "display_name": "K-9 CONNECTION",
+    "city": "Tolland",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000196",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "tolland-tails-tolland-ct-trf-000346",
+    "display_name": "TOLLAND TAILS",
+    "city": "Tolland",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000346",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "happy-hound-daycare-torrington-ct-trf-000391",
+    "display_name": "HAPPY HOUND DAYCARE",
+    "city": "Torrington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000391",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "pet-degree-dog-training-center-trumbull-ct-trf-000199",
+    "display_name": "PET DEGREE DOG TRAINING CENTER",
+    "city": "Trumbull",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000199",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "ct-canine-solutions-union-ct-trf-000336",
+    "display_name": "CT  CANINE SOLUTIONS",
+    "city": "Union",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000336",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dog-essentials-vernon-rockville-ct-trf-000230",
+    "display_name": "DOG ESSENTIALS",
+    "city": "Vernon Rockville",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000230",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "the-crate-escape-wallingford-ct-trf-000329",
+    "display_name": "THE CRATE ESCAPE",
+    "city": "Wallingford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000329",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "k9-rehab-llc-watertown-ct-trf-000425",
+    "display_name": "K9 REHAB LLC",
+    "city": "Watertown",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000425",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "little-guild-of-saint-francis-for-the-welfare-of-animals-west-cornwall-ct-trf-00",
+    "display_name": "LITTLE GUILD OF SAINT FRANCIS FOR THE WELFARE OF ANIMALS",
+    "city": "West Cornwall",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000221",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "planet-bark-west-hartford-ct-trf-000273",
+    "display_name": "PLANET BARK",
+    "city": "West Hartford",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000273",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "canine-college-west-redding-ct-trf-000182",
+    "display_name": "CANINE COLLEGE",
+    "city": "West Redding",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000182",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "logically-canine-west-simsbury-ct-trf-000398",
+    "display_name": "LOGICALLY CANINE",
+    "city": "West Simsbury",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000398",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "spot-on-vet-westport-westport-ct-trf-000409",
+    "display_name": "SPOT ON VET WESTPORT",
+    "city": "Westport",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000409",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "townhouse-for-dogs-cats-westport-ct-trf-000411",
+    "display_name": "TOWNHOUSE FOR DOGS & CATS",
+    "city": "Westport",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000411",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wagtime-play-stay-wethersfield-ct-trf-000397",
+    "display_name": "WAGTIME PLAY & STAY",
+    "city": "Wethersfield",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000397",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "v3-gun-dogs-canine-academy-willimantic-ct-trf-000407",
+    "display_name": "V3 GUN DOGS & CANINE ACADEMY",
+    "city": "Willimantic",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000407",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "baywood-kennels-training-center-willington-ct-trf-000304",
+    "display_name": "BAYWOOD KENNELS TRAINING CENTER",
+    "city": "Willington",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000304",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "passage-east-kennels-wilton-ct-trf-000350",
+    "display_name": "PASSAGE EAST KENNELS",
+    "city": "Wilton",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000350",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "canine-academy-winsted-ct-trf-000209",
+    "display_name": "CANINE ACADEMY",
+    "city": "Winsted",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000209",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "educated-canines-assisting-with-disabilities-winsted-ct-trf-000432",
+    "display_name": "EDUCATED CANINES ASSISTING WITH DISABILITIES",
+    "city": "Winsted",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000432",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wagging-tails-pet-resort-spaw-wolcott-ct-trf-000422",
+    "display_name": "WAGGING TAILS PET RESORT & SPAW",
+    "city": "Wolcott",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000422",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "wolcott-veterinary-clinic-wolcott-ct-trf-000283",
+    "display_name": "WOLCOTT VETERINARY CLINIC",
+    "city": "Wolcott",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000283",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "happy-homes-dog-daycare-and-training-woodbridge-ct-trf-000302",
+    "display_name": "HAPPY HOMES DOG DAYCARE AND TRAINING",
+    "city": "Woodbridge",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000302",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "j-wells-kennels-woodstock-valley-ct-trf-000370",
+    "display_name": "J WELLS KENNELS",
+    "city": "Woodstock Valley",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000370",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "canine-cadre-yalesville-ct-trf-000200",
+    "display_name": "CANINE CADRE",
+    "city": "Yalesville",
+    "state": "CT",
+    "category": "dog trainer",
+    "license_number": "TRF.000200",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "spring-forward-dog-training-llc-bear-de-2023711895",
+    "display_name": "SPRING FORWARD DOG TRAINING LLC",
+    "city": "Bear",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2023711895",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "k-10-dog-training-lewes-de-2010601270",
+    "display_name": "K-10 DOG TRAINING",
+    "city": "Lewes",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2010601270",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "academy-of-dog-training-newark-de-2020101396",
+    "display_name": "ACADEMY OF DOG TRAINING &",
+    "city": "Newark",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2020101396",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "pepper-s-paws-dog-training-llc-rehoboth-beach-de-2021709785",
+    "display_name": "PEPPER'S PAWS DOG TRAINING, LLC",
+    "city": "Rehoboth Beach",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2021709785",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "del-dog-training-llc-wilmington-de-2020708650",
+    "display_name": "DEL DOG TRAINING LLC",
+    "city": "Wilmington",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2020708650",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "m-j-rimmer-dog-training-wilmington-de-2022710010",
+    "display_name": "M J RIMMER DOG TRAINING",
+    "city": "Wilmington",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2022710010",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "positive-results-dog-training-wilmington-de-2008603764",
+    "display_name": "POSITIVE RESULTS DOG TRAINING",
+    "city": "Wilmington",
+    "state": "DE",
+    "category": "dog trainer",
+    "license_number": "2008603764",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "all-phases-dog-training-chicago-il-1196080",
+    "display_name": "ALL PHASES DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1196080",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "call-of-the-wild-dog-training-chicago-il-33994",
+    "display_name": "CALL OF THE WILD DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "33994",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "canina-dog-training-chicago-il-2207836",
+    "display_name": "CANINA DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2207836",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "capricorn-dog-training-llc-chicago-il-2233252",
+    "display_name": "CAPRICORN DOG TRAINING, LLC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2233252",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "chicago-academy-of-dog-training-chicago-il-1678346",
+    "display_name": "CHICAGO ACADEMY OF DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1678346",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "chicago-academy-of-dog-training-inc-chicago-il-1817593",
+    "display_name": "CHICAGO ACADEMY OF DOG TRAINING, INC.",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1817593",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "copilot-dog-training-chicago-il-2988702",
+    "display_name": "COPILOT DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2988702",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "ducki-s-dog-training-chicago-il-2630998",
+    "display_name": "DUCKI'S DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2630998",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "dynamic-dogs-training-behavior-chicago-il-2185238",
+    "display_name": "Dynamic Dogs Training & Behavior",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2185238",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "fairytailz-dog-training-chicago-il-1910430",
+    "display_name": "FAIRYTAILZ DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1910430",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "forever-friends-dog-training-academy-chicago-il-1619444",
+    "display_name": "FOREVER FRIENDS DOG TRAINING ACADEMY",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1619444",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "found-chicago-boarding-and-training-center-chicago-il-2464840",
+    "display_name": "FOUND CHICAGO BOARDING AND TRAINING CENTER",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2464840",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "good-instincts-llc-always-faithful-dog-training-chicago-chicago-il-2602125",
+    "display_name": "Good Instincts, LLC / Always Faithful Dog Training Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2602125",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "k9-university-chicago-inc-chicago-il-2184891",
+    "display_name": "K9 UNIVERSITY CHICAGO, INC.",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2184891",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "kiki-yablon-dog-training-chicago-il-2776374",
+    "display_name": "Kiki Yablon Dog Training",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2776374",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "koven-dog-training-chicago-il-1804397",
+    "display_name": "KOVEN DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1804397",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "lineage-of-love-dog-training-llc-chicago-il-2948476",
+    "display_name": "LINEAGE OF LOVE DOG TRAINING, LLC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2948476",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "morgan-canine-academy-chicago-il-2184775",
+    "display_name": "MORGAN CANINE ACADEMY",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2184775",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "morgan-s-dogs-training-chicago-il-2184658",
+    "display_name": "MORGAN'S DOGS TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2184658",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "ozzilly-neighborhood-dog-training-chicago-il-2840199",
+    "display_name": "OZZILLY NEIGHBORHOOD DOG TRAINING",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2840199",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "sit-means-sit-chicago-il-1921277",
+    "display_name": "SIT MEANS SIT",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1921277",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "sit-means-sit-chicago-chicago-il-2364075",
+    "display_name": "Sit Means Sit Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2364075",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "urban-pooch-training-and-fitness-center-chicago-il-2398672",
+    "display_name": "URBAN POOCH TRAINING AND FITNESS CENTER",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "2398672",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "woodstock-dog-training-school-school-inc-chicago-il-1573703",
+    "display_name": "WOODSTOCK DOG TRAINING SCHOOL SCHOOL, INC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "dog trainer",
+    "license_number": "1573703",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+    "claimed": false
+  },
+  {
+    "slug": "concierge-k-9-training-llc-auburn-wa-0008659960782127",
+    "display_name": "CONCIERGE K-9 TRAINING LLC",
+    "city": "Auburn",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008659960782127",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "edamame-dog-training-bellevue-wa-0008910220808661",
+    "display_name": "EDAMAME DOG TRAINING",
+    "city": "Bellevue",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008910220808661",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "joyful-dog-training-co-llc-everett-wa-69740",
+    "display_name": "JOYFUL DOG TRAINING CO., LLC",
+    "city": "Everett",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "69740",
+    "source_url": "https://data.everettwa.gov/Economic-and-Cultural-Vitality/Licensed-Businesses-within-the-City-of-Everett/qvfa-2v26",
+    "claimed": false
+  },
+  {
+    "slug": "best-friends-pet-care-inc-kent-wa-trf-000184",
+    "display_name": "BEST FRIENDS PET CARE INC",
+    "city": "Kent",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "TRF.000184",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "dedication-dog-training-seatac-wa-0008527340768212",
+    "display_name": "DEDICATION DOG TRAINING",
+    "city": "Seatac",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008527340768212",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "ahimsa-praise-dog-training-llc-seattle-wa-0007871280699558",
+    "display_name": "AHIMSA PRAISE DOG TRAINING LLC",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0007871280699558",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "elliott-dog-training-behavior-seattle-wa-0008722820788757",
+    "display_name": "ELLIOTT DOG TRAINING & BEHAVIOR",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008722820788757",
+    "source_url": "https://data.seattle.gov/dataset/Seattle-Business-License/wmtg-dzy4",
+    "claimed": false
+  },
+  {
+    "slug": "great-dog-daycare-obedience-ctr-seattle-wa-0005412140544870",
+    "display_name": "GREAT DOG DAYCARE & OBEDIENCE CTR",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0005412140544870",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "out-and-about-dog-training-seattle-wa-0008901620807777",
+    "display_name": "OUT AND ABOUT DOG TRAINING",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008901620807777",
+    "source_url": "https://data.seattle.gov/dataset/Seattle-Business-License/wmtg-dzy4",
+    "claimed": false
+  },
+  {
+    "slug": "wags-dog-training-seattle-wa-0008648560780941",
+    "display_name": "WAGS DOG TRAINING",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008648560780941",
+    "source_url": "https://data.seattle.gov/dataset/Seattle-Business-License/wmtg-dzy4",
+    "claimed": false
+  },
+  {
+    "slug": "gabi-goyette-dog-training-llc-shoreline-wa-70558",
+    "display_name": "GABI GOYETTE DOG TRAINING LLC",
+    "city": "Shoreline",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "70558",
+    "source_url": "https://data.everettwa.gov/Economic-and-Cultural-Vitality/Licensed-Businesses-within-the-City-of-Everett/qvfa-2v26",
+    "claimed": false
+  },
+  {
+    "slug": "wondrous-tails-dog-training-spokane-wa-0008728290789351",
+    "display_name": "WONDROUS TAILS DOG TRAINING",
+    "city": "Spokane",
+    "state": "WA",
+    "category": "dog trainer",
+    "license_number": "0008728290789351",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  }
+]
