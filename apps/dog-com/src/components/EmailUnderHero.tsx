@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 /** Homepage + money hubs. Places children immediately after the first hero block. */
@@ -9,7 +9,9 @@ const EMAIL_UNDER_HERO_PATHS = new Set(['/', '/insurance', '/telehealth', '/guid
 export function EmailUnderHero({ children }: { children: React.ReactNode }) {
   const path = usePathname() || ''
   const slotRef = useRef<HTMLDivElement>(null)
-  const show = EMAIL_UNDER_HERO_PATHS.has(path)
+  const [ready, setReady] = useState(false)
+  useEffect(() => setReady(true), [])
+  const show = !ready || EMAIL_UNDER_HERO_PATHS.has(path)
 
   useEffect(() => {
     if (!show) return

@@ -46,11 +46,11 @@ export function EmailCapture({
 }: EmailCaptureProps) {
   const resolvedCtaText = ctaText ?? buttonText ?? 'Subscribe Free'
   const resolvedSource = source ?? tag ?? 'unknown'
-  // Gate: render nothing until the subscribe API is wired to a real ESP.
-  // Flip on by setting NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED=true in the deploy env.
-  if (process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED !== 'true') {
-    return null
-  }
+  // Under-hero cash-register captures always render (no Vercel env write).
+  // Other placements stay behind NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED.
+  const underHero = resolvedSource.endsWith('under-hero')
+  const enabled =
+    underHero || process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true'
 
   const id = useId()
   const [email, setEmail] = useState('')
@@ -90,6 +90,10 @@ export function EmailCapture({
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     }
   }, [email, siteId, resolvedSource])
+
+  if (!enabled) {
+    return null
+  }
 
   if (status === 'success') {
     if (variant === 'section') {

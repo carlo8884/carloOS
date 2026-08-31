@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 /** Homepage + money hubs. Places children immediately after the first hero block. */
@@ -13,7 +13,11 @@ export function isEmailUnderHeroPath(path: string): boolean {
 export function EmailUnderHero({ children }: { children: React.ReactNode }) {
   const path = usePathname() || ''
   const slotRef = useRef<HTMLDivElement>(null)
-  const show = isEmailUnderHeroPath(path)
+  // SSR + first hydrate: keep the form in the document (empty usePathname
+  // used to drop it). After mount, hide on non-hub paths.
+  const [ready, setReady] = useState(false)
+  useEffect(() => setReady(true), [])
+  const show = !ready || isEmailUnderHeroPath(path)
 
   useEffect(() => {
     if (!show) return
