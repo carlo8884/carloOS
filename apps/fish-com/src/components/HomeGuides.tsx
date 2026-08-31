@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { EmailCapture, StockImage } from '@carloOS/ui'
+import { StockImage } from '@carloOS/ui'
 import VolumeCalculator from '../app/tools/aquarium-volume-calculator/Calculator'
 import { IconArrowRight } from './HomeTriage'
 
@@ -242,18 +242,6 @@ export function HomeGuides() {
             </div>
           </Link>
         </div>
-      </section>
-
-      <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="One short email each week: what to check this week, one parameter to watch by season, one fix or upgrade worth your time."
-          source="homepage"
-          ctaText="Get the weekly"
-          perks={['Seasonal water-quality checks', 'No paid product placements', 'Unsubscribe anytime']}
-        />
       </section>
 
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
