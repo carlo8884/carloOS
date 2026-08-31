@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -89,14 +89,6 @@ export default function BreedsHubPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section" siteId="vets-co"
-          title="Pet Health Updates"
-          subtitle="Breed-specific health alerts and screening reminders from cited veterinary references."
-          source="breeds-hub" ctaText="Subscribe Free"
-        />
-      </div>
     </>
   </>
   )

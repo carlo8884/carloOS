@@ -2,7 +2,7 @@
 
 /**
  * CarloOS EmailCapture — newsletter signup form.
- * Submits to Next.js API route (/api/subscribe) which calls Mailchimp.
+ * Submits to /api/subscribe (FormSubmit via INQUIRE_EMAIL until Mailchimp).
  * Tracks GA4 signup event.
  * Three variants: inline, sidebar card, full-section.
  */
@@ -65,10 +65,19 @@ export function EmailCapture({
     setErrorMsg('')
 
     try {
+      const form = e.currentTarget
+      const honeypot = form instanceof HTMLFormElement
+        ? String(new FormData(form).get('company_website') || '')
+        : ''
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, siteId, source: resolvedSource }),
+        body: JSON.stringify({
+          email,
+          siteId,
+          source: resolvedSource,
+          company_website: honeypot,
+        }),
       })
 
       if (!res.ok) {
@@ -102,8 +111,8 @@ export function EmailCapture({
           <div className="inline-flex items-center gap-3 px-5 py-4 bg-brand-success/10 border border-brand-success/30 rounded-lg">
             <span className="text-2xl text-brand-success">✓</span>
             <div className="text-left">
-              <div className="font-semibold text-base text-brand-text-dark">You&apos;re subscribed!</div>
-              <div className="text-sm text-brand-text-mid mt-0.5">Check your inbox to confirm.</div>
+              <div className="font-semibold text-base text-brand-text-dark">You&apos;re on the list.</div>
+              <div className="text-sm text-brand-text-mid mt-0.5">We&apos;ll use this address for the notes. No confirmation email.</div>
             </div>
           </div>
         </div>
@@ -114,8 +123,8 @@ export function EmailCapture({
         <div className="flex items-center gap-3 text-brand-success">
           <span className="text-xl">✓</span>
           <div>
-            <div className="font-semibold text-sm">You&apos;re subscribed!</div>
-            <div className={variant === 'sidebar' ? 'text-xs text-white/55 mt-0.5' : 'text-xs text-brand-text-light mt-0.5'}>Check your inbox to confirm.</div>
+            <div className="font-semibold text-sm">You&apos;re on the list.</div>
+            <div className={variant === 'sidebar' ? 'text-xs text-white/55 mt-0.5' : 'text-xs text-brand-text-light mt-0.5'}>We&apos;ll use this address for the notes.</div>
           </div>
         </div>
       </div>
@@ -208,6 +217,7 @@ interface FormProps {
 function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, errorMsg, wrapClass, inputClass, btnClass }: FormProps) {
   return (
     <form onSubmit={onSubmit} noValidate>
+      <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <div className={wrapClass ?? ''}>
         <label htmlFor={id} className="sr-only">Email address</label>
         <input

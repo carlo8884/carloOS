@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -42,7 +44,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Nav siteId="fish-com" />
-        <main>{children}</main>
+        <main>
+          {children}
+          <EmailCaptureGate>
+            <EmailUnderHero excludePaths={['/', '/reviews']}>
+              <HomeEmailCapture />
+            </EmailUnderHero>
+          </EmailCaptureGate>
+        </main>
         <Footer siteId="fish-com" showAffiliateDisclosure />
         <DisplayAds config={displayAds} />
       </body>

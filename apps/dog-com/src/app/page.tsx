@@ -53,7 +53,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live decision wizard embedded on the homepage so the flagship's first
 // screens are a product you use, not links to tools (premium gate 3).
@@ -997,28 +997,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── EMAIL CAPTURE — "This week for your dog" ───────────────────────
-          Gated off until the email backend is live (matches the other sites)
-          so we don't ship an empty/inactive capture surface. */}
-      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
-        <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
-          <div className="max-w-container mx-auto">
-            <EmailCapture
-              variant="section"
-              siteId="dog-com"
-              title="This week for your dog"
-              subtitle="One short Tuesday email: what to do this week (by life stage), one product worth the money, one trap to avoid."
-              source="homepage"
-              ctaText="Get the weekly"
-              perks={[
-                'By life stage (puppy / adult / senior)',
-                'Sourced — no paid placements',
-                'Unsubscribe anytime',
-              ]}
-            />
-          </div>
-        </section>
-      )}
+      {/* Email capture sits under the hero via layout EmailUnderHero. */}
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">

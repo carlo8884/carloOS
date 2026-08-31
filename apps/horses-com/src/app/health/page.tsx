@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -395,26 +395,6 @@ export default function HealthHubPage() {
         </div>
       </div>
 
-      {/* Email Capture */}
-      <section
-        className="px-container-sm sm:px-container py-12"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Reference"
-          subtitle="One email a week: a deep-dive on a breed, condition, or piece of gear. Citation-anchored."
-          ctaText="Subscribe"
-          source="health-hub"
-          perks={[
-            'One email weekly',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
       <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="footer" />
     </>
   )

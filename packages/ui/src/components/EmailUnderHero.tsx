@@ -1,23 +1,28 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
+import { isEmailUnderHeroPath } from '../../../config/email-under-hero'
 
-/** Homepage + money hubs. Places children immediately after the first hero block. */
-export const EMAIL_UNDER_HERO_PATHS = ['/', '/insurance', '/telehealth', '/guides', '/reviews'] as const
+export {
+  EMAIL_UNDER_HERO_PATHS,
+  isEmailUnderHeroPath,
+  normalizeEmailUnderHeroPath,
+} from '../../../config/email-under-hero'
 
-export function isEmailUnderHeroPath(path: string): boolean {
-  return (EMAIL_UNDER_HERO_PATHS as readonly string[]).includes(path)
-}
-
-export function EmailUnderHero({ children }: { children: React.ReactNode }) {
-  const path = usePathname() || ''
+export function EmailUnderHero({
+  children,
+  excludePaths = [],
+}: {
+  children: React.ReactNode
+  /** Fish homepage + reviews hub already own their capture. */
+  excludePaths?: readonly string[]
+}) {
+  // Empty usePathname → treat as home so SSR keeps the input on `/`
+  // and fish can exclude `/` without a second homepage form.
+  const path = usePathname() || '/'
   const slotRef = useRef<HTMLDivElement>(null)
-  // SSR + first hydrate: keep the form in the document (empty usePathname
-  // used to drop it). After mount, hide on non-hub paths.
-  const [ready, setReady] = useState(false)
-  useEffect(() => setReady(true), [])
-  const show = !ready || isEmailUnderHeroPath(path)
+  const show = isEmailUnderHeroPath(path, excludePaths)
 
   useEffect(() => {
     if (!show) return

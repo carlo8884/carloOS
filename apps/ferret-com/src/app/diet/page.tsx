@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -395,29 +395,6 @@ export default function DietHubPage() {
         </ul>
       </div>
 
-      {/* Email Capture */}
-      <section
-        style={{
-          background: 'var(--brand-primary-pale)',
-          borderTop: '1px solid var(--brand-border)',
-          padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          title="The Ferret.com Nutrition Reference"
-          subtitle="New articles on ferret diet, feeding, and care. Cited. No product pushes."
-          ctaText="Subscribe"
-          source="diet-hub"
-          perks={[
-            'Evidence-based only',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
     </>
   )
 }

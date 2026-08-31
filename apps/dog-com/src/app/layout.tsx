@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer, DisplayAds } from '@carloOS/ui'
-import { buildMetadata } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, buildMetadata, EmailUnderHero } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
-import { EmailUnderHero } from '../components/EmailUnderHero'
 import './globals.css'
 
 const playfair = Playfair_Display({

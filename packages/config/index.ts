@@ -1456,3 +1456,8 @@ export {
   DIRECTORY_SITEMAP_DETAIL_CAP,
 } from './directory'
 export type { DirectoryListing, DirectoryPage } from './directory'
+export {
+  handleSubscribePost,
+  isValidSubscribeEmail,
+  parseSubscribeBody,
+} from './subscribe'

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, EmailCapture, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -514,30 +514,6 @@ export default function HealthHubPage() {
           Quick answers to the questions owners ask most. Each links into a deeper reference.
         </p>
         <FAQAccordion items={FAQS} includeSchema={false} />
-      </section>
-
-      {/* Email Capture */}
-      <section
-        style={{
-          background: 'var(--brand-primary-pale)',
-          borderTop: '1px solid var(--brand-border)',
-          padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          title="The Ferret.com Health Reference"
-          subtitle="New articles and updates on ferret health, diet, and care. Cited. No product pushes."
-          ctaText="Subscribe"
-          source="health-hub"
-          perks={[
-            'Evidence-based only',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
       </section>
 
       <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="footer" />
