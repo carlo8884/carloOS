@@ -1,11 +1,12 @@
 /**
  * Horses.com Homepage — /
  * Hero lives in HomeHero so the H1 can change without touching the rest of the page.
+ * Always-on email capture lives in layout (HomeEmailCapture) above footer.
  */
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+import { buildMetadata, StockImage, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../components/visual/BodyConditionScoreCalculator'
 import { HomeHero } from '../components/HomeHero'
 
@@ -506,18 +507,6 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-primary-pale)' }}>
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Reference"
-          subtitle="One email a week: a deep-dive on a single breed, condition, or piece of gear. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
-          source="homepage"
-          perks={['One email weekly', 'Citation-anchored', 'No paid placements', 'Unsubscribe anytime']}
-        />
       </section>
     </>
   )
