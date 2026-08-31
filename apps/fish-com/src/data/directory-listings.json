@@ -1698,5 +1698,4865 @@
     "license_number": "2000003062",
     "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
     "claimed": false
+  },
+  {
+    "slug": "top-hat-aquarium-inc-cutler-bay-fl-2019198",
+    "display_name": "TOP HAT AQUARIUM INC",
+    "city": "Cutler Bay",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "2019198",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "wilder-aquatics-llc-cutler-bay-fl-7693621",
+    "display_name": "WILDER AQUATICS LLC",
+    "city": "Cutler Bay",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7693621",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "oceans-reefs-and-aquariums-llc-fort-pierce-fl-36106051",
+    "display_name": "Oceans Reefs and Aquariums LLC",
+    "city": "Fort Pierce",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "36106051",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "green-leaf-aquariums-llc-gainesville-fl-34686",
+    "display_name": "GREEN LEAF AQUARIUMS, LLC",
+    "city": "Gainesville",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "34686",
+    "source_url": "https://data.cityofgainesville.org/Business-Economy/Active-and-Inactive-Businesses/hk2b-em59",
+    "claimed": false
+  },
+  {
+    "slug": "dream-aquarium-1-corp-hialeah-fl-7496260",
+    "display_name": "DREAM AQUARIUM 1 CORP",
+    "city": "Hialeah",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7496260",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "frank-aquariums-inc-hialeah-fl-7565466",
+    "display_name": "FRANK AQUARIUMS INC",
+    "city": "Hialeah",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7565466",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "guppy-tropical-fish-corp-hialeah-fl-7418528",
+    "display_name": "GUPPY TROPICAL FISH CORP",
+    "city": "Hialeah",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7418528",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "neptune-s-aquariums-llc-hialeah-fl-7569843",
+    "display_name": "NEPTUNE'S AQUARIUMS LLC",
+    "city": "Hialeah",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7569843",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "ruinemans-aquarium-inc-homestead-fl-2144426",
+    "display_name": "RUINEMANS AQUARIUM INC",
+    "city": "Homestead",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "2144426",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "waterbox-aquariums-llc-longwood-fl-67-2538",
+    "display_name": "WATERBOX AQUARIUMS LLC",
+    "city": "Longwood",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "67**2538",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-depot-corp-miami-fl-2368397",
+    "display_name": "AQUARIUM DEPOT CORP",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "2368397",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-mart-corp-miami-fl-5032016",
+    "display_name": "AQUARIUM MART CORP",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "5032016",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "aquariums-oceanview-inc-miami-fl-7625815",
+    "display_name": "AQUARIUMS & OCEANVIEW INC",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7625815",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "hydros-aquatics-miami-corp-miami-fl-7688528",
+    "display_name": "HYDROS AQUATICS MIAMI CORP",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7688528",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "miami-aquariums-miami-fl-7662073",
+    "display_name": "MIAMI AQUARIUMS",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7662073",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "poseidon-aquariums-inc-miami-fl-7543045",
+    "display_name": "POSEIDON AQUARIUMS INC",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7543045",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "reeftopia-aquariums-inc-miami-fl-6652243",
+    "display_name": "REEFTOPIA AQUARIUMS INC",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "6652243",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "vice-city-aquariums-more-llc-miami-fl-7615950",
+    "display_name": "VICE CITY AQUARIUMS & MORE LLC",
+    "city": "Miami",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7615950",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "great-ocean-aquariums-llc-miami-springs-fl-7456280",
+    "display_name": "GREAT OCEAN AQUARIUMS LLC",
+    "city": "Miami Springs",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7456280",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "top-shelf-aquatics-inc-orlando-fl-bus-1116298",
+    "display_name": "TOP SHELF AQUATICS INC",
+    "city": "Orlando",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "BUS-1116298",
+    "source_url": "https://data.cityoforlando.net/Permitting/Business-Tax-Receipts/7388-4re5",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-mart-corp-palmetto-bay-fl-7719892",
+    "display_name": "AQUARIUM MART CORP",
+    "city": "Palmetto Bay",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "7719892",
+    "source_url": "https://gisweb.miamidade.gov/GISSelfServices/Data/HTML/LocalBusinessTax.htm",
+    "claimed": false
+  },
+  {
+    "slug": "saltwaterfish-com-vero-beach-fl-67-4240",
+    "display_name": "SALTWATERFISH.COM",
+    "city": "Vero Beach",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "67**4240",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-outfitters-1-athens-ga-3689134",
+    "display_name": "AQUARIUM OUTFITTERS #1",
+    "city": "Athens",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3689134",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "classic-city-aquariums-athens-ga-3702025",
+    "display_name": "Classic City Aquariums",
+    "city": "Athens",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702025",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "marine-aquarium-mariculture-llc-atlanta-ga-3702618",
+    "display_name": "MARINE AQUARIUM MARICULTURE LLC",
+    "city": "Atlanta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702618",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-transhippers-inc-dba-tft-atlanta-ga-3702027",
+    "display_name": "TROPICAL FISH TRANSHIPPERS INC DBA TFT",
+    "city": "Atlanta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702027",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-h-aquatics-atlanta-ga-3702670",
+    "display_name": "Tropical H Aquatics",
+    "city": "Atlanta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702670",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "coral-cove-augusta-ga-3702485",
+    "display_name": "Coral Cove",
+    "city": "Augusta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702485",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "sadowski-aquatics-llc-columbus-ga-3702726",
+    "display_name": "Sadowski Aquatics, LLC",
+    "city": "Columbus",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702726",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "taste-of-the-sea-reef-llc-columbus-ga-3702776",
+    "display_name": "Taste of the Sea Reef, LLC",
+    "city": "Columbus",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702776",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "phytaquaria-conyers-ga-3702424",
+    "display_name": "Phytaquaria",
+    "city": "Conyers",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702424",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-junkie-douglasville-ga-3702691",
+    "display_name": "Aquarium Junkie",
+    "city": "Douglasville",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702691",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "atlanta-aquarium-duluth-ga-36103711",
+    "display_name": "ATLANTA AQUARIUM",
+    "city": "Duluth",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "36103711",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "submerged-aquatics-llc-folkston-ga-3701337",
+    "display_name": "Submerged Aquatics LLC",
+    "city": "Folkston",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3701337",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "riverstone-aquatics-glennville-ga-3702861",
+    "display_name": "Riverstone Aquatics",
+    "city": "Glennville",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702861",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "the-fish-bowl-more-griffin-ga-3700688",
+    "display_name": "The Fish Bowl & More",
+    "city": "Griffin",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3700688",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "salty-lagoon-aquatics-hephzibah-ga-3701243",
+    "display_name": "Salty Lagoon Aquatics",
+    "city": "Hephzibah",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3701243",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "fish-world-and-pet-shop-llc-hinesville-ga-3699424",
+    "display_name": "FISH WORLD AND PET SHOP, LLC",
+    "city": "Hinesville",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3699424",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "the-fish-bolz-jonesboro-ga-3702624",
+    "display_name": "The Fish Bolz",
+    "city": "Jonesboro",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702624",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "optimum-aquarium-kennesaw-ga-3689706",
+    "display_name": "OPTIMUM AQUARIUM",
+    "city": "Kennesaw",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3689706",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "nemo-aquarium-llc-lawrenceville-ga-3701187",
+    "display_name": "Nemo Aquarium LLC",
+    "city": "Lawrenceville",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3701187",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "squeaky-s-aquatics-llc-lawrenceville-ga-3702604",
+    "display_name": "Squeaky's Aquatics, LLC",
+    "city": "Lawrenceville",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702604",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "premier-aquatics-marietta-ga-36103927",
+    "display_name": "PREMIER AQUATICS",
+    "city": "Marietta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "36103927",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "tactical-aquatics-llc-marietta-ga-3702772",
+    "display_name": "Tactical Aquatics LLC",
+    "city": "Marietta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702772",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "amc-aquatics-llc-monticello-ga-3702445",
+    "display_name": "AMC Aquatics LLC",
+    "city": "Monticello",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702445",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "off-the-hook-marine-fish-peachtree-city-ga-36105957",
+    "display_name": "OFF THE HOOK MARINE FISH",
+    "city": "Peachtree City",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "36105957",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "coastal-aquarium-richmond-hill-ga-3696263",
+    "display_name": "COASTAL AQUARIUM",
+    "city": "Richmond Hill",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3696263",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-eden-llc-rincon-ga-3702286",
+    "display_name": "Aquarium Eden LLC",
+    "city": "Rincon",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702286",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "the-big-fish-store-roswell-ga-3702817",
+    "display_name": "The Big Fish Store",
+    "city": "Roswell",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702817",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-adventures-savannah-ga-3702574",
+    "display_name": "Aquatic Adventures",
+    "city": "Savannah",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702574",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "coral-ridge-llc-savannah-ga-3700808",
+    "display_name": "Coral Ridge LLC",
+    "city": "Savannah",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3700808",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquatics-inc-savannah-ga-3696110",
+    "display_name": "EXOTIC AQUATICS, INC.",
+    "city": "Savannah",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3696110",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "mystical-ponds-and-aquariums-llc-suwanee-ga-3701922",
+    "display_name": "Mystical Ponds and Aquariums LLC",
+    "city": "Suwanee",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3701922",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "oranda-aquarium-llc-suwanee-ga-3702567",
+    "display_name": "Oranda Aquarium LLC",
+    "city": "Suwanee",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702567",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "happy-little-fish-sylvania-ga-3700660",
+    "display_name": "Happy Little Fish",
+    "city": "Sylvania",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3700660",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-fish-valdosta-ga-369336",
+    "display_name": "EXOTIC FISH",
+    "city": "Valdosta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "369336",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "imperial-reef-llc-valdosta-ga-3702282",
+    "display_name": "Imperial Reef LLC",
+    "city": "Valdosta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702282",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "there-s-something-fishy-llc-valdosta-ga-3702741",
+    "display_name": "There's Something Fishy LLC",
+    "city": "Valdosta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3702741",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "copperfish-aquatics-llc-baton-rouge-la-00789528",
+    "display_name": "COPPERFISH AQUATICS LLC",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "category": "aquarium store",
+    "license_number": "00789528",
+    "source_url": "https://data.brla.gov/Business-and-Financial/Businesses-Registered-with-EBR-Parish/xw6s-bcqm",
+    "claimed": false
+  },
+  {
+    "slug": "red-stick-aquarium-supply-baton-rouge-la-00930319",
+    "display_name": "RED STICK AQUARIUM SUPPLY",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "category": "aquarium store",
+    "license_number": "00930319",
+    "source_url": "https://data.brla.gov/Business-and-Financial/Businesses-Registered-with-EBR-Parish/xw6s-bcqm",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-masters-new-orleans-la-102636783",
+    "display_name": "AQUARIUM MASTERS",
+    "city": "New Orleans",
+    "state": "LA",
+    "category": "aquarium store",
+    "license_number": "102636783",
+    "source_url": "https://data.nola.gov/Economy-and-Workforce/Occupational-Business-Licenses/hjcd-grvu",
+    "claimed": false
+  },
+  {
+    "slug": "coral-reef-pet-shop-inc-new-orleans-la-101068773",
+    "display_name": "CORAL REEF PET SHOP INC",
+    "city": "New Orleans",
+    "state": "LA",
+    "category": "aquarium store",
+    "license_number": "101068773",
+    "source_url": "https://data.nola.gov/Economy-and-Workforce/Occupational-Business-Licenses/hjcd-grvu",
+    "claimed": false
+  },
+  {
+    "slug": "bulk-reef-supply-golden-valley-mn-67-3236",
+    "display_name": "BULK REEF SUPPLY",
+    "city": "Golden Valley",
+    "state": "MN",
+    "category": "aquarium store",
+    "license_number": "67**3236",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-creations-and-maintenance-kansas-city-mo-1935355008",
+    "display_name": "AQUARIUM CREATIONS AND MAINTENANCE",
+    "city": "Kansas City",
+    "state": "MO",
+    "category": "aquarium store",
+    "license_number": "1935355008",
+    "source_url": "https://data.kcmo.org/d/pnm4-68wg",
+    "claimed": false
+  },
+  {
+    "slug": "shore-aquarium-services-inc-mays-landing-nj-85-4546",
+    "display_name": "SHORE AQUARIUM SERVICES INC",
+    "city": "Mays Landing",
+    "state": "NJ",
+    "category": "aquarium store",
+    "license_number": "85**4546",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquatech-aquariums-llc-ringwood-nj-84-1454",
+    "display_name": "AQUATECH AQUARIUMS LLC",
+    "city": "Ringwood",
+    "state": "NJ",
+    "category": "aquarium store",
+    "license_number": "84**1454",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "creative-aquariums-inc-bala-cynwyd-pa-46-7397",
+    "display_name": "CREATIVE AQUARIUMS INC",
+    "city": "Bala Cynwyd",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "46**7397",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquatech-tropical-fish-bensalem-pa-09-9114",
+    "display_name": "AQUATECH TROPICAL FISH",
+    "city": "Bensalem",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "09**9114",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-services-professionals-bernville-pa-67-1079",
+    "display_name": "AQUARIUM SERVICES PROFESSIONALS",
+    "city": "Bernville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**1079",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-solutions-blakeslee-pa-83-6432",
+    "display_name": "AQUARIUM SOLUTIONS",
+    "city": "Blakeslee",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "83**6432",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "complete-aquarium-services-clearville-pa-82-8676",
+    "display_name": "COMPLETE AQUARIUM SERVICES",
+    "city": "Clearville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "82**8676",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquaview-aquarium-rentals-coraopolis-pa-84-9769",
+    "display_name": "AQUAVIEW AQUARIUM RENTALS",
+    "city": "Coraopolis",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "84**9769",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-care-aquarium-services-dallas-pa-40-6088",
+    "display_name": "AQUATIC CARE AQUARIUM SERVICES",
+    "city": "Dallas",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "40**6088",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-design-studios-doylestown-pa-84-8888",
+    "display_name": "AQUARIUM DESIGN STUDIOS",
+    "city": "Doylestown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "84**8888",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "crazy-reefing-llc-elizabethtown-pa-95-4614",
+    "display_name": "CRAZY REEFING LLC",
+    "city": "Elizabethtown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "95**4614",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "buzz-n-bs-aquarium-pet-shop-erie-pa-86-1388",
+    "display_name": "BUZZ N BS AQUARIUM & PET SHOP",
+    "city": "Erie",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "86**1388",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "vladiscus-feasterville-trevose-pa-83-0423",
+    "display_name": "VLADISCUS",
+    "city": "Feasterville Trevose",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "83**0423",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "reef-geek-llc-germansville-pa-67-1128",
+    "display_name": "REEF GEEK LLC",
+    "city": "Germansville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**1128",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-environments-harrisburg-pa-83-9113",
+    "display_name": "AQUARIUM ENVIRONMENTS",
+    "city": "Harrisburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "83**9113",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "saltwater-aquarium-made-easy-highspire-pa-22-1868",
+    "display_name": "SALTWATER AQUARIUM MADE EASY",
+    "city": "Highspire",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "22**1868",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "raystown-music-aquarium-huntingdon-pa-82-1775",
+    "display_name": "RAYSTOWN MUSIC & AQUARIUM",
+    "city": "Huntingdon",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "82**1775",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "gittlers-aquarium-aviary-llc-johnstown-pa-67-3238",
+    "display_name": "GITTLERS AQUARIUM & AVIARY LLC",
+    "city": "Johnstown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**3238",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "central-penn-aquariums-lancaster-pa-83-1978",
+    "display_name": "CENTRAL PENN AQUARIUMS",
+    "city": "Lancaster",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "83**1978",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "hidden-reef-inc-levittown-pa-80-9283",
+    "display_name": "HIDDEN REEF INC",
+    "city": "Levittown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "80**9283",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-xpress-lewisberry-pa-67-9075",
+    "display_name": "AQUARIUM XPRESS",
+    "city": "Lewisberry",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**9075",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "kr-aquarium-reef-marietta-pa-67-1485",
+    "display_name": "KR AQUARIUM & REEF",
+    "city": "Marietta",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**1485",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "tri-state-aquariums-llc-mercersburg-pa-67-0860",
+    "display_name": "TRI STATE AQUARIUMS LLC",
+    "city": "Mercersburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**0860",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "that-fish-girl-aquarium-pond-serv-mifflinburg-pa-81-6394",
+    "display_name": "THAT FISH GIRL AQUARIUM & POND SERV",
+    "city": "Mifflinburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "81**6394",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "frank-s-saltwater-aquarium-maintena-milford-pa-67-1669",
+    "display_name": "FRANK'S SALTWATER AQUARIUM MAINTENA",
+    "city": "Milford",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**1669",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "elmers-aquarium-inc-monroeville-pa-02-1349",
+    "display_name": "ELMERS AQUARIUM INC",
+    "city": "Monroeville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "02**1349",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "amazonia-tropical-fish-llc-philadelphia-pa-67-2547",
+    "display_name": "AMAZONIA TROPICAL FISH LLC",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**2547",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "b-j-pets-aquariums-inc-philadelphia-pa-82-6667",
+    "display_name": "B & J PETS & AQUARIUMS INC",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "82**6667",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "philly-fish-coral-philadelphia-pa-85-8603",
+    "display_name": "PHILLY FISH & CORAL",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "85**8603",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "cuboid-nature-aquarium-pipersville-pa-67-4849",
+    "display_name": "CUBOID NATURE AQUARIUM",
+    "city": "Pipersville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**4849",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aqua-world-pet-super-center-pittsburgh-pa-82-3832",
+    "display_name": "AQUA WORLD PET SUPER CENTER",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "82**3832",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "jims-aquarium-service-pittsburgh-pa-67-7973",
+    "display_name": "JIMS AQUARIUM SERVICE",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**7973",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "keystone-cichlids-llc-reading-pa-67-2708",
+    "display_name": "KEYSTONE CICHLIDS LLC",
+    "city": "Reading",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**2708",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "unique-reef-imports-llc-reading-pa-95-7942",
+    "display_name": "UNIQUE REEF IMPORTS LLC",
+    "city": "Reading",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "95**7942",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "rogers-aquarium-sewickley-pa-02-9810",
+    "display_name": "ROGERS AQUARIUM",
+    "city": "Sewickley",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "02**9810",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "martin-s-aquarium-service-co-yardley-pa-83-8041",
+    "display_name": "MARTIN'S AQUARIUM SERVICE CO",
+    "city": "Yardley",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "83**8041",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "the-reef-gallery-zelienople-pa-67-3976",
+    "display_name": "THE REEF GALLERY",
+    "city": "Zelienople",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**3976",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "southern-aquatcs-lfs-roswell-ga-36106061",
+    "display_name": "SOUTHERN AQUATCS LFS",
+    "city": "Roswell",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "36106061",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "biota-aquariums-llc-fort-lauderdale-fl-0007343487",
+    "display_name": "Biota Aquariums, Llc",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "0007343487",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-international-ltd-allentown-pa-0000963416",
+    "display_name": "Aquarium International Ltd.",
+    "city": "Allentown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000963416",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-solution-llc-allentown-pa-0003199840",
+    "display_name": "Aquarium Solution Llc",
+    "city": "Allentown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003199840",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-supplystore-llc-bensalem-pa-0004220194",
+    "display_name": "Aquarium Supplystore Llc",
+    "city": "Bensalem",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004220194",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquatech-tropical-fish-environments-inc-bensalem-pa-0003114385",
+    "display_name": "Aquatech Tropical Fish Environments, Inc.",
+    "city": "Bensalem",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003114385",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "bensalem-tropical-fish-acquarium-inc-bensalem-pa-0002075648",
+    "display_name": "Bensalem Tropical Fish Acquarium, Inc.",
+    "city": "Bensalem",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002075648",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "lehigh-valley-aquarium-llc-bethlehem-pa-0003818062",
+    "display_name": "Lehigh Valley Aquarium Llc",
+    "city": "Bethlehem",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003818062",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "c-j-s-tropical-fish-and-pet-emporium-inc-blakeslee-pa-0000975864",
+    "display_name": "C J's Tropical Fish and Pet Emporium, Inc.",
+    "city": "Blakeslee",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000975864",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-systems-inc-bloomsburg-pa-0003058835",
+    "display_name": "Tropical Fish Systems, Inc.",
+    "city": "Bloomsburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003058835",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "seven-seas-aquarium-inc-brookhaven-pa-0000699748",
+    "display_name": "Seven Seas Aquarium, Inc.",
+    "city": "Brookhaven",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000699748",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "benders-tri-county-tropical-fish-inc-cherry-tree-pa-0004091715",
+    "display_name": "Benders Tri County Tropical Fish Inc.",
+    "city": "Cherry Tree",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004091715",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "ocean-image-aquariums-llc-chester-springs-pa-0003292727",
+    "display_name": "Ocean Image Aquariums Llc",
+    "city": "Chester Springs",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003292727",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "clear-aquarium-services-llc-collegeville-pa-0003570212",
+    "display_name": "Clear Aquarium Services Llc",
+    "city": "Collegeville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003570212",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "ellison-son-aquarium-business-inc-croydon-pa-0000109181",
+    "display_name": "Ellison & Son Aquarium Business, Inc.",
+    "city": "Croydon",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000109181",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "neptune-aquarium-company-doylestown-pa-0000248131",
+    "display_name": "Neptune Aquarium Company",
+    "city": "Doylestown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000248131",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-systems-unlimited-inc-east-greenville-pa-0002536912",
+    "display_name": "Aquarium Systems Unlimited, Inc.",
+    "city": "East Greenville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002536912",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "neptune-s-gardener-aquarium-service-llc-east-norriton-pa-0004162027",
+    "display_name": "Neptune's Gardener Aquarium Service Llc",
+    "city": "East Norriton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004162027",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-currents-inc-east-stroudsburg-pa-0002831521",
+    "display_name": "Aquarium Currents, Inc.",
+    "city": "East Stroudsburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002831521",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "d-d-reef-aquatics-llc-easton-pa-0014376513",
+    "display_name": "D&d Reef Aquatics Llc",
+    "city": "Easton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014376513",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-clear-aquariums-ownershift-llc-erie-pa-0014458108",
+    "display_name": "Crystal Clear Aquariums Ownershift Llc",
+    "city": "Erie",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014458108",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "discount-aquarium-inc-green-lane-pa-0000685184",
+    "display_name": "Discount Aquarium, Inc.",
+    "city": "Green Lane",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000685184",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "chuck-s-aquarium-house-inc-hanover-pa-0003654786",
+    "display_name": "Chuck's Aquarium House Inc",
+    "city": "Hanover",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003654786",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-clear-aquarium-service-inc-harrisburg-pa-0002909152",
+    "display_name": "Crystal Clear Aquarium Service, Inc.",
+    "city": "Harrisburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002909152",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "j-p-aquarium-pets-llc-havertown-pa-0003216326",
+    "display_name": "J P Aquarium & Pets, Llc",
+    "city": "Havertown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003216326",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "riverside-reef-aquatics-llc-hawley-pa-0013371775",
+    "display_name": "Riverside Reef Aquatics, Llc",
+    "city": "Hawley",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0013371775",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "luxury-aquarium-llc-hidden-valley-pa-0013889027",
+    "display_name": "Luxury Aquarium Llc",
+    "city": "Hidden Valley",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0013889027",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "green-acres-aquarium-detailing-llc-honesdale-pa-0014742691",
+    "display_name": "Green Acres Aquarium Detailing Llc",
+    "city": "Honesdale",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014742691",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aaa-aquariums-inc-horsham-pa-0003330071",
+    "display_name": "Aaa Aquariums, Inc.",
+    "city": "Horsham",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003330071",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "l2-aquariums-llc-hummelstown-pa-0006692707",
+    "display_name": "L2 Aquariums Llc",
+    "city": "Hummelstown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0006692707",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "sorber-aquarium-service-inc-hunlock-creek-pa-0001565450",
+    "display_name": "Sorber Aquarium Service, Inc.",
+    "city": "Hunlock Creek",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0001565450",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "martin-s-aquarium-inc-jenkintown-pa-0000220827",
+    "display_name": "Martin's Aquarium, Inc.",
+    "city": "Jenkintown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000220827",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "gittler-s-aquarium-inc-johnstown-pa-0002627765",
+    "display_name": "Gittler's Aquarium, Inc.",
+    "city": "Johnstown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002627765",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "more-than-fish-aquarium-and-pets-llc-lansdale-pa-0013855233",
+    "display_name": "More Than Fish Aquarium and Pets, Llc",
+    "city": "Lansdale",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0013855233",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "reef-to-rift-aquarium-store-llc-lansdale-pa-0007077000",
+    "display_name": "Reef to Rift Aquarium Store Llc",
+    "city": "Lansdale",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0007077000",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "abstract-aquariums-llc-levittown-pa-0003717653",
+    "display_name": "Abstract Aquariums, Llc",
+    "city": "Levittown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003717653",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "bob-s-wildlife-refuge-rehab-and-aquarium-inc-levittown-pa-0014404418",
+    "display_name": "Bob's Wildlife Refuge - Rehab and Aquarium Inc",
+    "city": "Levittown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014404418",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-life-corporation-media-pa-0000017019",
+    "display_name": "Aquarium Life Corporation",
+    "city": "Media",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000017019",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "creative-aquariums-inc-merion-pa-0002112834",
+    "display_name": "Creative Aquariums, Inc.",
+    "city": "Merion",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002112834",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-services-porfessionals-inc-mohnton-pa-0002936347",
+    "display_name": "Aquarium Services Porfessionals, Inc.",
+    "city": "Mohnton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002936347",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-services-inc-monroeville-pa-0004070553",
+    "display_name": "Aquarium Services, Inc.",
+    "city": "Monroeville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004070553",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "big-oak-aquarium-inc-morrisville-pa-0000726770",
+    "display_name": "Big-oak Aquarium, Inc.",
+    "city": "Morrisville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000726770",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "nescopeck-aquarium-llc-nescopeck-pa-0004315770",
+    "display_name": "Nescopeck Aquarium Llc",
+    "city": "Nescopeck",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004315770",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "american-aquariums-llc-new-castle-pa-0006432147",
+    "display_name": "American Aquariums, Llc",
+    "city": "New Castle",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0006432147",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "bucks-county-aquarium-pet-center-inc-newtown-pa-0002603166",
+    "display_name": "Bucks County Aquarium & Pet Center, Inc.",
+    "city": "Newtown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002603166",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "amadio-reef-aquariums-llc-d-b-a-a-r-a-llc-newtown-square-pa-0003810697",
+    "display_name": "Amadio Reef Aquariums, Llc, D/b/a (a. R. A., Llc)",
+    "city": "Newtown Square",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003810697",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "shore-aquarium-services-inc-north-huntingdon-pa-0004001158",
+    "display_name": "Shore Aquarium Services, Inc.",
+    "city": "North Huntingdon",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004001158",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "pittsburgh-tropical-fish-inc-north-versailles-pa-0000284967",
+    "display_name": "Pittsburgh Tropical Fish, Inc.",
+    "city": "North Versailles",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000284967",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-aquarium-inc-oxford-pa-0001508100",
+    "display_name": "Crystal Aquarium, Inc.",
+    "city": "Oxford",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0001508100",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "reefwood-aquariums-llc-perkasie-pa-0003291217",
+    "display_name": "Reefwood Aquariums Llc",
+    "city": "Perkasie",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003291217",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "alphabet-aquarium-inc-philadelphia-pa-0003730951",
+    "display_name": "Alphabet Aquarium, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003730951",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-city-inc-philadelphia-pa-0000619793",
+    "display_name": "Aquarium City, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000619793",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-concepts-inc-philadelphia-pa-0002091966",
+    "display_name": "Aquarium Concepts, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002091966",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-jamaican-inc-philadelphia-pa-0003096759",
+    "display_name": "Aquarium Jamaican, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003096759",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-unlimited-llc-philadelphia-pa-0003618175",
+    "display_name": "Aquarium Unlimited, Llc",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003618175",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "b-j-pets-ad-aquariums-inc-philadelphia-pa-0003048761",
+    "display_name": "B & J Pets Ad Aquariums Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003048761",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "g-e-aquarium-co-philadelphia-pa-0002955024",
+    "display_name": "G.e. Aquarium Co.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002955024",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "girard-aquarium-inc-philadelphia-pa-0000726778",
+    "display_name": "Girard Aquarium, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000726778",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "johns-corals-aquariums-inc-philadelphia-pa-0006988320",
+    "display_name": "Johns Corals Aquariums Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0006988320",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "martin-s-aquarium-bicycle-shop-inc-philadelphia-pa-0000716045",
+    "display_name": "Martin's Aquarium Bicycle Shop, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000716045",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "moby-dick-aquariums-co-philadelphia-pa-0000235391",
+    "display_name": "Moby Dick Aquariums Co.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000235391",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "singapore-aquarium-inc-philadelphia-pa-0000742568",
+    "display_name": "Singapore Aquarium, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000742568",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "splash-aquariums-llc-philadelphia-pa-0003841494",
+    "display_name": "Splash Aquariums Llc",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003841494",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "trade-winds-aquarium-pet-center-llc-philadelphia-pa-0003141507",
+    "display_name": "Trade Winds Aquarium & Pet Center, Llc",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003141507",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "a-b-oddball-pets-and-aquariums-llc-pittsburgh-pa-0003725233",
+    "display_name": "A & B Oddball Pets and Aquariums, Llc",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003725233",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-service-supply-inc-pittsburgh-pa-0000017022",
+    "display_name": "Aquarium Service & Supply, Inc.",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000017022",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "metro-brothers-tropical-fish-and-supply-inc-pittsburgh-pa-0000229829",
+    "display_name": "Metro Brothers Tropical Fish and Supply, Inc.",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000229829",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "ned-s-aquarium-supply-inc-pittsburgh-pa-0000247604",
+    "display_name": "Ned's Aquarium Supply Inc",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000247604",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "three-rivers-aquarium-limited-company-pittsburgh-pa-0007244098",
+    "display_name": "Three Rivers Aquarium Limited Company",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0007244098",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-aquatics-marine-equipment-co-inc-pittsburgh-pa-0002093063",
+    "display_name": "Tropical Aquatics & Marine Equipment Co., Inc.",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002093063",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "custom-aquarium-inc-plymouth-pa-0002671399",
+    "display_name": "Custom Aquarium, Inc.",
+    "city": "Plymouth",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002671399",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "albright-aquarium-maintenance-llc-quakertown-pa-0014608855",
+    "display_name": "Albright Aquarium Maintenance Llc",
+    "city": "Quakertown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014608855",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "deacon-blue-aquarium-inc-richboro-pa-0002647238",
+    "display_name": "Deacon Blue Aquarium, Inc.",
+    "city": "Richboro",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002647238",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-maintenance-and-necessities-llc-roaring-spring-pa-0004255444",
+    "display_name": "Aquarium Maintenance and Necessities, Llc",
+    "city": "Roaring Spring",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004255444",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "breedmore-aquarium-products-ltd-scranton-pa-0000616588",
+    "display_name": "Breedmore Aquarium Products, Ltd.",
+    "city": "Scranton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000616588",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "scranton-aquarium-llc-scranton-pa-0004255040",
+    "display_name": "Scranton Aquarium, Llc",
+    "city": "Scranton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004255040",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "the-fish-net-aquarium-inc-stowe-pa-0000123686",
+    "display_name": "The Fish Net Aquarium, Inc.",
+    "city": "Stowe",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000123686",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-zone-inc-valley-township-pa-0003012061",
+    "display_name": "Aquarium Zone, Inc.",
+    "city": "Valley Township",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003012061",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "natureland-aquarium-and-pet-center-ltd-warminster-pa-0001522490",
+    "display_name": "Natureland Aquarium and Pet Center, Ltd.",
+    "city": "Warminster",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0001522490",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "seven-star-tropical-fish-inc-warrington-pa-0002802307",
+    "display_name": "Seven Star Tropical Fish Inc.",
+    "city": "Warrington",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002802307",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "eco-aquariums-llc-washington-pa-0003786642",
+    "display_name": "Eco Aquariums Llc",
+    "city": "Washington",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003786642",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "treasure-island-tropical-fish-pet-center-inc-west-chester-pa-0002186418",
+    "display_name": "Treasure Island Tropical Fish & Pet Center, Inc.",
+    "city": "West Chester",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002186418",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "pleasant-hills-aquarium-and-pet-center-inc-west-mifflin-pa-0000749372",
+    "display_name": "Pleasant Hills Aquarium and Pet Center, Inc.",
+    "city": "West Mifflin",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000749372",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-clear-aquarium-service-llc-west-norriton-pa-0003913869",
+    "display_name": "Crystal Clear Aquarium Service, Llc",
+    "city": "West Norriton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003913869",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "captain-nemo-s-aquarium-superstore-llc-wyncote-pa-0003677116",
+    "display_name": "Captain Nemo's Aquarium Superstore, Llc",
+    "city": "Wyncote",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0003677116",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "harman-s-tropical-fish-inc-york-pa-0000153802",
+    "display_name": "Harman's Tropical Fish, Inc.",
+    "city": "York",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000153802",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "jawz-aquarium-llc-fort-lauderdale-fl-3853468",
+    "display_name": "JAWZ AQUARIUM LLC",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "3853468",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "via-aquarium-llc-leesburg-fl-4897376",
+    "display_name": "VIA AQUARIUM LLC",
+    "city": "Leesburg",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "4897376",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "paradise-aquarium-inc-middle-village-fl-2457651",
+    "display_name": "PARADISE AQUARIUM, INC.",
+    "city": "Middle Village",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "2457651",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "johns-corals-aquariums-inc-ridgewood-nj-6391540",
+    "display_name": "JOHNS CORALS & AQUARIUMS INC.",
+    "city": "Ridgewood",
+    "state": "NJ",
+    "category": "aquarium store",
+    "license_number": "6391540",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-clear-aquarium-services-llc-albany-ny-4135211",
+    "display_name": "CRYSTAL CLEAR AQUARIUM SERVICES, LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4135211",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "elite-aquariums-llc-albany-ny-3722539",
+    "display_name": "ELITE AQUARIUMS LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3722539",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "outten-aquarium-llc-albany-ny-6879582",
+    "display_name": "OUTTEN AQUARIUM LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6879582",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "r-c-reef-aquarium-llc-albany-ny-3798984",
+    "display_name": "R & C REEF AQUARIUM, LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3798984",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fb-aquarium-inc-amityville-ny-6706783",
+    "display_name": "FB AQUARIUM INC.",
+    "city": "Amityville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6706783",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-plants-and-aquarium-paradise-inc-astoria-ny-3023610",
+    "display_name": "EXOTIC PLANTS AND AQUARIUM PARADISE INC.",
+    "city": "Astoria",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3023610",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "zeus-aquarium-pet-supplies-inc-bayshore-ny-1228474",
+    "display_name": "ZEUS AQUARIUM & PET SUPPLIES, INC.",
+    "city": "Bayshore",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1228474",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquariums-pond-designs-corp-bayville-ny-4085139",
+    "display_name": "EXOTIC AQUARIUMS & POND DESIGNS CORP.",
+    "city": "Bayville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4085139",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "complete-aquarium-services-inc-bedford-hills-ny-2314304",
+    "display_name": "COMPLETE AQUARIUM SERVICES, INC.",
+    "city": "Bedford Hills",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2314304",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "3d-aquarium-solutions-llc-bellmore-ny-6365755",
+    "display_name": "3D AQUARIUM SOLUTIONS LLC",
+    "city": "Bellmore",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6365755",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-express-inc-bellmore-ny-2087317",
+    "display_name": "AQUARIUM EXPRESS INC.",
+    "city": "Bellmore",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2087317",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "salt-expert-aquariums-llc-bellmore-ny-4915465",
+    "display_name": "SALT EXPERT AQUARIUMS, LLC",
+    "city": "Bellmore",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4915465",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "captured-cove-aquariums-llc-binghamton-ny-5981879",
+    "display_name": "CAPTURED COVE AQUARIUMS LLC",
+    "city": "Binghamton",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5981879",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "pro-reef-aquatics-inc-blue-point-ny-5633651",
+    "display_name": "PRO REEF AQUATICS, INC.",
+    "city": "Blue Point",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5633651",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "li-aquarium-service-inc-bohemia-ny-5086661",
+    "display_name": "LI AQUARIUM SERVICE INC.",
+    "city": "Bohemia",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5086661",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "long-island-aquarium-service-llc-bohemia-ny-2977829",
+    "display_name": "LONG ISLAND AQUARIUM SERVICE, LLC",
+    "city": "Bohemia",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2977829",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "country-aquarium-marine-inc-brewster-ny-2190038",
+    "display_name": "COUNTRY AQUARIUM & MARINE, INC.",
+    "city": "Brewster",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2190038",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-tropical-fish-corp-bronx-ny-4532345",
+    "display_name": "AQUARIUM TROPICAL FISH CORP.",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4532345",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "blue-aquarium-llc-bronx-ny-3902628",
+    "display_name": "BLUE AQUARIUM LLC",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3902628",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "blue-aquarium-of-westchester-square-llc-bronx-ny-3948170",
+    "display_name": "BLUE AQUARIUM OF WESTCHESTER SQUARE LLC",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3948170",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "gun-hill-road-aquarium-inc-bronx-ny-3244879",
+    "display_name": "GUN HILL ROAD AQUARIUM, INC.",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3244879",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "m-p-tropical-fish-inc-bronx-ny-639845",
+    "display_name": "M & P TROPICAL FISH INC.",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "639845",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "the-aquarium-store-llc-bronx-ny-6606343",
+    "display_name": "THE AQUARIUM STORE LLC",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6606343",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "total-aquariums-inc-bronx-ny-1869862",
+    "display_name": "TOTAL AQUARIUMS INC.",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1869862",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "a-r-aquarium-inc-brooklyn-ny-5051611",
+    "display_name": "A R AQUARIUM INC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5051611",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "alfred-aquarium-inc-brooklyn-ny-5033309",
+    "display_name": "ALFRED AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5033309",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "alikhan-tropical-fish-llc-brooklyn-ny-3931564",
+    "display_name": "ALIKHAN TROPICAL FISH, LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3931564",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "all-access-aquarium-llc-brooklyn-ny-3969673",
+    "display_name": "ALL ACCESS AQUARIUM LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3969673",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "all-clean-aquarium-maintenance-inc-brooklyn-ny-6870141",
+    "display_name": "ALL CLEAN AQUARIUM MAINTENANCE INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6870141",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "amazing-aquarium-inc-brooklyn-ny-5015128",
+    "display_name": "AMAZING AQUARIUM INC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5015128",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "anchor-aquarium-service-inc-brooklyn-ny-3159767",
+    "display_name": "ANCHOR AQUARIUM SERVICE INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3159767",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-concept-and-design-of-new-york-llc-brooklyn-ny-5350200",
+    "display_name": "AQUARIUM CONCEPT AND DESIGN OF NEW YORK LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5350200",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-designs-and-servics-inc-brooklyn-ny-1390551",
+    "display_name": "AQUARIUM DESIGNS AND SERVICS, INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1390551",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-geeks-llc-brooklyn-ny-4563073",
+    "display_name": "AQUARIUM GEEKS LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4563073",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-pets-inc-brooklyn-ny-4358226",
+    "display_name": "AQUATIC PETS INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4358226",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "archer-fish-aquariums-inc-brooklyn-ny-4871844",
+    "display_name": "ARCHER FISH AQUARIUMS INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4871844",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "bay-parkway-aquarium-inc-brooklyn-ny-4655913",
+    "display_name": "BAY PARKWAY AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4655913",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "bedstuy-aquarium-inc-brooklyn-ny-7438201",
+    "display_name": "BEDSTUY AQUARIUM, INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7438201",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "carib-aquatic-aquarium-pet-services-llc-brooklyn-ny-5547509",
+    "display_name": "CARIB AQUATIC AQUARIUM & PET SERVICES LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5547509",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "city-aquarium-llc-brooklyn-ny-2784500",
+    "display_name": "CITY AQUARIUM LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2784500",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "creative-aquarium-nation-llc-brooklyn-ny-4358665",
+    "display_name": "CREATIVE AQUARIUM NATION LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4358665",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "diamond-aquarium-inc-brooklyn-ny-4688775",
+    "display_name": "DIAMOND AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4688775",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "distinguished-aquarium-design-inc-brooklyn-ny-3595815",
+    "display_name": "DISTINGUISHED AQUARIUM DESIGN INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3595815",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "dwayne-aquarium-maintenance-llc-brooklyn-ny-5982363",
+    "display_name": "DWAYNE AQUARIUM MAINTENANCE LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5982363",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-reef-aquatic-inc-brooklyn-ny-5715782",
+    "display_name": "EXOTIC REEF AQUATIC INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5715782",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fish-corals-aquariums-inc-brooklyn-ny-7479562",
+    "display_name": "FISH CORALS AQUARIUMS INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7479562",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "guyulin-aquarium-inc-brooklyn-ny-4564288",
+    "display_name": "GUYULIN AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4564288",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "long-hing-aquarium-inc-brooklyn-ny-4140108",
+    "display_name": "LONG HING AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4140108",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "majestik-aquariums-inc-brooklyn-ny-2973576",
+    "display_name": "MAJESTIK AQUARIUMS, INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2973576",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "new-lucky-fish-aquarium-pet-supplies-inc-brooklyn-ny-3958714",
+    "display_name": "NEW LUCKY FISH AQUARIUM & PET SUPPLIES INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3958714",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "ny-king-fish-aquarium-inc-brooklyn-ny-5541119",
+    "display_name": "NY KING FISH AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5541119",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "paradise-island-aquarium-inc-brooklyn-ny-5112768",
+    "display_name": "PARADISE ISLAND AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5112768",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "reef-river-aquarium-inc-brooklyn-ny-1226061",
+    "display_name": "REEF + RIVER AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1226061",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "regal-aquarium-inc-brooklyn-ny-4050844",
+    "display_name": "REGAL AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4050844",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "south-river-aquarium-inc-brooklyn-ny-5070204",
+    "display_name": "SOUTH RIVER AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5070204",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "t-r-aquarium-inc-brooklyn-ny-5452070",
+    "display_name": "T & R AQUARIUM INC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5452070",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "tamco-aquarium-supplies-inc-brooklyn-ny-3384946",
+    "display_name": "TAMCO AQUARIUM & SUPPLIES INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3384946",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "taso-aquariums-inc-brooklyn-ny-5558561",
+    "display_name": "TASO AQUARIUMS INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5558561",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "thousand-island-aquarium-inc-brooklyn-ny-4507937",
+    "display_name": "THOUSAND ISLAND AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4507937",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-corp-brooklyn-ny-4934041",
+    "display_name": "TROPICAL FISH CORP.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4934041",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "world-class-aquarium-inc-brooklyn-ny-1099556",
+    "display_name": "WORLD CLASS AQUARIUM, INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1099556",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "zen-aquariums-llc-brooklyn-ny-4699661",
+    "display_name": "ZEN AQUARIUMS LLC",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4699661",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "zen-fish-aquarium-inc-brooklyn-ny-3773889",
+    "display_name": "ZEN FISH & AQUARIUM INC.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3773889",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "onyx-aquariums-llc-buffalo-ny-5405264",
+    "display_name": "ONYX AQUARIUMS LLC",
+    "city": "Buffalo",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5405264",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "water-s-edge-aquarium-service-inc-buffalo-ny-2468972",
+    "display_name": "WATER'S EDGE AQUARIUM SERVICE, INC.",
+    "city": "Buffalo",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2468972",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "breeders-select-tropical-fish-llc-carmel-ny-7474974",
+    "display_name": "BREEDERS' SELECT TROPICAL FISH LLC",
+    "city": "Carmel",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7474974",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-theory-inc-centereach-ny-4138532",
+    "display_name": "AQUARIUM THEORY INC",
+    "city": "Centereach",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4138532",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "beital-s-aquariums-llc-chestnut-ridge-ny-5477384",
+    "display_name": "BEITAL'S AQUARIUMS, LLC",
+    "city": "Chestnut Ridge",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5477384",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "eddie-s-aquarium-centre-inc-cohoes-ny-371431",
+    "display_name": "EDDIE'S AQUARIUM CENTRE, INC.",
+    "city": "Cohoes",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "371431",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "blue-marlin-aquarium-design-inc-commack-ny-2405614",
+    "display_name": "BLUE MARLIN AQUARIUM DESIGN, INC.",
+    "city": "Commack",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2405614",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "debonair-aquarium-pet-corp-commack-ny-2924143",
+    "display_name": "DEBONAIR AQUARIUM & PET CORP.",
+    "city": "Commack",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2924143",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "sea-cove-aquarium-service-llc-congers-ny-4848773",
+    "display_name": "SEA COVE AQUARIUM SERVICE, LLC",
+    "city": "Congers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4848773",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-warehouse-inc-copiague-ny-3725133",
+    "display_name": "AQUARIUM WAREHOUSE INC",
+    "city": "Copiague",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3725133",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "deer-park-aquarium-and-pet-world-inc-dix-hills-ny-1320151",
+    "display_name": "DEER PARK AQUARIUM AND PET WORLD, INC.",
+    "city": "Dix Hills",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1320151",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "elegant-aquarium-exhibits-llc-e-setauket-ny-4401919",
+    "display_name": "ELEGANT AQUARIUM EXHIBITS, LLC",
+    "city": "E. Setauket",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4401919",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-care-services-llc-east-greenbush-ny-6440703",
+    "display_name": "AQUARIUM CARE SERVICES, LLC",
+    "city": "East Greenbush",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6440703",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "blaykes-aquarium-llc-east-greenbush-ny-6347235",
+    "display_name": "BLAYKES AQUARIUM LLC",
+    "city": "East Greenbush",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6347235",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "reef-shark-aquarium-inc-east-meadow-ny-6025654",
+    "display_name": "REEF SHARK AQUARIUM INC",
+    "city": "East Meadow",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6025654",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "island-aquariums-llc-east-northport-ny-7719289",
+    "display_name": "ISLAND AQUARIUMS LLC",
+    "city": "East Northport",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7719289",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "living-art-aquariums-llc-east-quogue-ny-4014931",
+    "display_name": "LIVING ART AQUARIUMS LLC",
+    "city": "East Quogue",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4014931",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "sky-fish-aquariums-and-ponds-inc-east-setauket-ny-4068225",
+    "display_name": "SKY FISH AQUARIUMS AND PONDS, INC.",
+    "city": "East Setauket",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4068225",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "h2o-aquarium-inc-elmhurst-ny-4368715",
+    "display_name": "H2O AQUARIUM INC.",
+    "city": "Elmhurst",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4368715",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "a-r-reptiles-and-aquariums-llc-elmsford-ny-5962866",
+    "display_name": "A & R REPTILES AND AQUARIUMS LLC",
+    "city": "Elmsford",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5962866",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "the-aquarium-people-llc-farmingdale-ny-5107564",
+    "display_name": "THE AQUARIUM PEOPLE LLC",
+    "city": "Farmingdale",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5107564",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "pete-s-aquarium-fish-inc-fishkill-ny-4727587",
+    "display_name": "PETE'S AQUARIUM FISH INC.",
+    "city": "Fishkill",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4727587",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "flushing-aquarium-inc-flushing-ny-6590441",
+    "display_name": "FLUSHING AQUARIUM INC.",
+    "city": "Flushing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6590441",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "khc-aquarium-inc-flushing-ny-4453322",
+    "display_name": "KHC AQUARIUM INC.",
+    "city": "Flushing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4453322",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "monster-aquarium-inc-flushing-ny-4421606",
+    "display_name": "MONSTER AQUARIUM INC.",
+    "city": "Flushing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4421606",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "new-york-reef-aquatic-inc-fresh-meadows-ny-3843912",
+    "display_name": "NEW YORK REEF AQUATIC INC.",
+    "city": "Fresh Meadows",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3843912",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "usa-reef-aquatics-llc-fresh-meadows-ny-5880477",
+    "display_name": "USA REEF AQUATICS LLC",
+    "city": "Fresh Meadows",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5880477",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "just-add-water-aquariums-llc-garnerville-ny-5892301",
+    "display_name": "JUST ADD WATER AQUARIUMS, LLC",
+    "city": "Garnerville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5892301",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "jm-tropical-aquarium-inc-glen-head-ny-5144917",
+    "display_name": "JM TROPICAL AQUARIUM INC.",
+    "city": "Glen Head",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5144917",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "ocean-wwave-aquarium-distributors-llc-glenmont-ny-6691582",
+    "display_name": "OCEAN WWAVE AQUARIUM DISTRIBUTORS LLC",
+    "city": "Glenmont",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6691582",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "age-of-aquariums-llc-great-neck-ny-3862576",
+    "display_name": "AGE OF AQUARIUMS LLC",
+    "city": "Great Neck",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3862576",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "northern-aquarium-inc-great-neck-ny-4986789",
+    "display_name": "NORTHERN AQUARIUM INC",
+    "city": "Great Neck",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4986789",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "esv-aquarium-products-inc-hicksville-ny-3357438",
+    "display_name": "ESV AQUARIUM PRODUCTS, INC.",
+    "city": "Hicksville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3357438",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "j-r-aquatic-and-reef-inc-hicksville-ny-5221886",
+    "display_name": "J.R. AQUATIC AND REEF INC.",
+    "city": "Hicksville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5221886",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-aquarium-at-hicksville-inc-hicksville-ny-196350",
+    "display_name": "TROPICAL AQUARIUM AT HICKSVILLE, INC.",
+    "city": "Hicksville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "196350",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "mid-hudson-aquarium-inc-high-falls-ny-2295723",
+    "display_name": "MID-HUDSON AQUARIUM INC.",
+    "city": "High Falls",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2295723",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-solutions-llc-hopewell-junction-ny-5466334",
+    "display_name": "AQUARIUM SOLUTIONS LLC",
+    "city": "Hopewell Junction",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5466334",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-guys-llc-huntington-ny-3815549",
+    "display_name": "TROPICAL FISH GUYS LLC",
+    "city": "Huntington",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3815549",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-designs-inc-huntington-station-ny-2986910",
+    "display_name": "AQUARIUM DESIGNS, INC.",
+    "city": "Huntington Station",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2986910",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "atlantis-aquarium-maintenance-inc-huntington-station-ny-2039331",
+    "display_name": "ATLANTIS AQUARIUM MAINTENANCE INC.",
+    "city": "Huntington Station",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2039331",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "billy-b-aquarium-inc-huntington-station-ny-318150",
+    "display_name": "BILLY B. AQUARIUM, INC.",
+    "city": "Huntington Station",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "318150",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fishlife-aquariums-llc-huntington-station-ny-4476458",
+    "display_name": "FISHLIFE AQUARIUMS LLC",
+    "city": "Huntington Station",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4476458",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquatics-and-exotics-pet-shop-llc-ilion-ny-5221972",
+    "display_name": "AQUATICS AND EXOTICS PET SHOP LLC",
+    "city": "Ilion",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5221972",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "sunlight-aquariums-inc-island-trees-ny-3323046",
+    "display_name": "SUNLIGHT AQUARIUMS INC.",
+    "city": "Island Trees",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3323046",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "american-aquarium-inc-jamaica-ny-4147160",
+    "display_name": "AMERICAN AQUARIUM INC.",
+    "city": "Jamaica",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4147160",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-safari-llc-jamaica-ny-7034021",
+    "display_name": "AQUARIUM SAFARI, LLC",
+    "city": "Jamaica",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7034021",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "wave-aquarium-llc-jamaica-ny-7191597",
+    "display_name": "WAVE AQUARIUM LLC",
+    "city": "Jamaica",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7191597",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "clearwater-aquarium-inc-jamestown-ny-4114775",
+    "display_name": "CLEARWATER AQUARIUM, INC.",
+    "city": "Jamestown",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4114775",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "c-s-aquarium-limited-liability-company-kings-park-ny-7278236",
+    "display_name": "C'S AQUARIUM LIMITED LIABILITY COMPANY",
+    "city": "Kings Park",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7278236",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "apm-aquarium-and-pond-maintenance-llc-kirkville-ny-5277801",
+    "display_name": "APM - AQUARIUM AND POND MAINTENANCE LLC",
+    "city": "Kirkville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5277801",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "river-and-reef-aquarium-solutions-llc-lagrange-ny-4194756",
+    "display_name": "RIVER AND REEF AQUARIUM SOLUTIONS LLC",
+    "city": "Lagrange",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4194756",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "mageme-aquarium-inc-long-beach-ny-992605",
+    "display_name": "MAGEME AQUARIUM, INC.",
+    "city": "Long Beach",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "992605",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "nya-aquariums-inc-long-island-city-ny-3098299",
+    "display_name": "NYA AQUARIUMS, INC.",
+    "city": "Long Island City",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3098299",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fanta-sea-aquarium-design-corp-lynbrook-ny-2242408",
+    "display_name": "FANTA-SEA AQUARIUM DESIGN CORP.",
+    "city": "Lynbrook",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2242408",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquariums-by-anthony-inc-mahopac-ny-3778898",
+    "display_name": "AQUARIUMS BY ANTHONY, INC.",
+    "city": "Mahopac",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3778898",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "s-and-t-aquariums-inc-massapequa-ny-2883767",
+    "display_name": "S AND T AQUARIUMS INC.",
+    "city": "Massapequa",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2883767",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-world-inc-massapequa-ny-4963448",
+    "display_name": "TROPICAL FISH WORLD, INC.",
+    "city": "Massapequa",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4963448",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "salt-air-aquariums-llc-mattituck-ny-7356585",
+    "display_name": "SALT AIR AQUARIUMS LLC",
+    "city": "Mattituck",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7356585",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "shore-aquarium-services-inc-mays-landing-ny-4039302",
+    "display_name": "SHORE AQUARIUM SERVICES, INC.",
+    "city": "Mays Landing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4039302",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-professionals-inc-miller-place-ny-2013730",
+    "display_name": "AQUARIUM PROFESSIONALS, INC.",
+    "city": "Miller Place",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2013730",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "pristine-marine-aquariums-inc-mineola-ny-4794015",
+    "display_name": "PRISTINE MARINE AQUARIUMS INC.",
+    "city": "Mineola",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4794015",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-design-northeast-inc-monroe-ny-3649654",
+    "display_name": "AQUARIUM DESIGN NORTHEAST INC",
+    "city": "Monroe",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3649654",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "superior-reef-aquatic-llc-monroe-ny-6019947",
+    "display_name": "SUPERIOR REEF AQUATIC LLC",
+    "city": "Monroe",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6019947",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "oz-reef-fish-inc-mount-kisco-ny-3865475",
+    "display_name": "OZ REEF & FISH INC.",
+    "city": "Mount Kisco",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3865475",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "maximum-reef-aquatics-inc-mount-vernon-ny-3987039",
+    "display_name": "MAXIMUM REEF AQUATICS INC.",
+    "city": "Mount Vernon",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3987039",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "maximum-reef-aquatics-jr-corp-mount-vernon-ny-4344911",
+    "display_name": "MAXIMUM REEF AQUATICS JR. CORP.",
+    "city": "Mount Vernon",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4344911",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "119-aquarium-inc-new-york-ny-5893678",
+    "display_name": "119 AQUARIUM INC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5893678",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aqua-reef-aquatics-inc-new-york-ny-6303479",
+    "display_name": "AQUA REEF AQUATICS INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6303479",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-creator-s-office-inc-new-york-ny-4849935",
+    "display_name": "AQUARIUM CREATOR'S OFFICE, INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4849935",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-design-metropolitan-llc-new-york-ny-3828531",
+    "display_name": "AQUARIUM DESIGN METROPOLITAN LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3828531",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarius-aquarium-inc-new-york-ny-2606717",
+    "display_name": "AQUARIUS AQUARIUM, INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2606717",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "bio-reef-boy-aquarium-services-corp-new-york-ny-5780733",
+    "display_name": "BIO REEF BOY AQUARIUM SERVICES CORP",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5780733",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "blue-ocean-aquarium-inc-new-york-ny-2674479",
+    "display_name": "BLUE OCEAN AQUARIUM INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2674479",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "creature-comforts-aquarium-and-pet-supplies-llc-new-york-ny-2767850",
+    "display_name": "CREATURE COMFORTS AQUARIUM AND PET SUPPLIES, LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2767850",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "eyezred-bettas-llc-new-york-ny-5984332",
+    "display_name": "EYEZRED BETTAS LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5984332",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "new-world-aquarium-inc-new-york-ny-1711875",
+    "display_name": "NEW WORLD AQUARIUM INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1711875",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "oceans-aquarium-nyc-llc-new-york-ny-5886409",
+    "display_name": "OCEANS AQUARIUM NYC LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5886409",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "pacific-aquarium-inc-new-york-ny-6608936",
+    "display_name": "PACIFIC AQUARIUM INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6608936",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "perfection-aquarium-creations-inc-new-york-ny-5147227",
+    "display_name": "PERFECTION AQUARIUM CREATIONS INC.",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5147227",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "times-square-aquarium-llc-new-york-ny-3833050",
+    "display_name": "TIMES SQUARE AQUARIUM LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3833050",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "us-aquariums-llc-new-york-ny-4278599",
+    "display_name": "US AQUARIUMS LLC",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4278599",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-innovations-llc-north-salem-ny-6722551",
+    "display_name": "AQUARIUM INNOVATIONS LLC",
+    "city": "North Salem",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6722551",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "c-j-aquarium-llc-north-salem-ny-4144672",
+    "display_name": "C & J AQUARIUM LLC",
+    "city": "North Salem",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4144672",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "advanced-marine-aquatics-inc-oakland-gardens-ny-4733252",
+    "display_name": "ADVANCED MARINE AQUATICS, INC.",
+    "city": "Oakland Gardens",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4733252",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "apm-aquarium-inc-oakland-gardens-ny-4024829",
+    "display_name": "APM AQUARIUM INC.",
+    "city": "Oakland Gardens",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4024829",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquariums-alive-l-l-c-old-bethpage-ny-3376824",
+    "display_name": "AQUARIUMS ALIVE L.L.C.",
+    "city": "Old Bethpage",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3376824",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "complete-aquarium-services-of-long-island-ltd-patchogue-ny-2693534",
+    "display_name": "COMPLETE AQUARIUM SERVICES OF LONG ISLAND LTD.",
+    "city": "Patchogue",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2693534",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "empire-aquarium-group-inc-plainview-ny-8000057",
+    "display_name": "EMPIRE AQUARIUM GROUP INC.",
+    "city": "Plainview",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "8000057",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-reef-aquariums-llc-putnam-valley-ny-3733922",
+    "display_name": "CRYSTAL REEF AQUARIUMS, LLC",
+    "city": "Putnam Valley",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3733922",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "supreme-reef-aquatics-llc-rego-park-ny-6803415",
+    "display_name": "SUPREME REEF AQUATICS LLC",
+    "city": "Rego Park",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6803415",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-world-pet-shop-aquarium-inc-rochester-ny-637318",
+    "display_name": "EXOTIC WORLD PET SHOP & AQUARIUM, INC.",
+    "city": "Rochester",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "637318",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "frank-s-aquarium-service-inc-rochester-ny-2589214",
+    "display_name": "FRANK'S AQUARIUM SERVICE, INC.",
+    "city": "Rochester",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2589214",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-technologies-ltd-rockville-centre-ny-1328658",
+    "display_name": "AQUARIUM TECHNOLOGIES, LTD.",
+    "city": "Rockville Centre",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1328658",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "brian-s-tropical-aquarium-pets-inc-rocky-point-ny-815092",
+    "display_name": "BRIAN'S TROPICAL AQUARIUM & PETS, INC.",
+    "city": "Rocky Point",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "815092",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "cuervo-s-aquarium-pond-care-inc-rocky-point-ny-4722581",
+    "display_name": "CUERVO'S AQUARIUM & POND CARE INC",
+    "city": "Rocky Point",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4722581",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "jb-exotic-aquarium-and-pet-supplies-inc-rosedale-ny-6367623",
+    "display_name": "JB EXOTIC AQUARIUM AND PET SUPPLIES INC.",
+    "city": "Rosedale",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6367623",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "union-aquarium-llc-schenectady-ny-4302307",
+    "display_name": "UNION AQUARIUM LLC",
+    "city": "Schenectady",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4302307",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "something-fishy-aquarium-sales-inc-scotia-ny-1150830",
+    "display_name": "SOMETHING FISHY AQUARIUM SALES, INC.",
+    "city": "Scotia",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1150830",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-marine-designs-inc-seaford-ny-3080113",
+    "display_name": "AQUATIC MARINE DESIGNS INC.",
+    "city": "Seaford",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3080113",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "happy-fish-aquatics-llc-sherrill-ny-7753023",
+    "display_name": "HAPPY FISH AQUATICS LLC",
+    "city": "Sherrill",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7753023",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fairmount-aquarium-water-gardens-llc-skaneateles-ny-2423994",
+    "display_name": "FAIRMOUNT AQUARIUM & WATER GARDENS, LLC",
+    "city": "Skaneateles",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2423994",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fantastic-pets-aquariums-inc-solay-ny-3483725",
+    "display_name": "FANTASTIC PETS & AQUARIUMS INC.",
+    "city": "Solay",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3483725",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "lzg-aquariums-llc-spring-valley-ny-5767660",
+    "display_name": "LZG AQUARIUMS LLC",
+    "city": "Spring Valley",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5767660",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "1st-class-aquarium-inc-staten-island-ny-5018868",
+    "display_name": "1ST CLASS AQUARIUM INC",
+    "city": "Staten Island",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5018868",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fishy-world-aquarium-pet-supplier-inc-staten-island-ny-5174902",
+    "display_name": "FISHY WORLD AQUARIUM & PET SUPPLIER INC",
+    "city": "Staten Island",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5174902",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "leave-it-to-us-aquariums-inc-staten-island-ny-5800598",
+    "display_name": "LEAVE IT TO US AQUARIUMS INC.",
+    "city": "Staten Island",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5800598",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "cichlid-aquatics-llc-stuyvesant-ny-7082247",
+    "display_name": "CICHLID AQUATICS LLC",
+    "city": "Stuyvesant",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7082247",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "mystic-blue-aquarium-llc-tonawanda-ny-4749018",
+    "display_name": "MYSTIC BLUE AQUARIUM, LLC",
+    "city": "Tonawanda",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4749018",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-plant-center-inc-valley-stream-ny-5814199",
+    "display_name": "AQUARIUM PLANT CENTER INC.",
+    "city": "Valley Stream",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5814199",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "crystal-clear-aquariums-inc-valley-stream-ny-1993264",
+    "display_name": "CRYSTAL CLEAR AQUARIUMS, INC.",
+    "city": "Valley Stream",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1993264",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "finnyas-finn-aquarium-inc-van-etten-ny-3016550",
+    "display_name": "FINNYAS FINN AQUARIUM, INC.",
+    "city": "Van Etten",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3016550",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "just-simply-aquariums-llc-victor-ny-5239067",
+    "display_name": "JUST SIMPLY AQUARIUMS LLC",
+    "city": "Victor",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5239067",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "the-coral-reef-aquarium-com-inc-west-babylon-ny-3998729",
+    "display_name": "THE CORAL REEF AQUARIUM.COM INC.",
+    "city": "West Babylon",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3998729",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "rockland-aquarium-service-ii-inc-west-nyack-ny-7257445",
+    "display_name": "ROCKLAND AQUARIUM SERVICE II INC.",
+    "city": "West Nyack",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7257445",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "rockland-aquarium-service-inc-west-nyack-ny-4772356",
+    "display_name": "ROCKLAND AQUARIUM SERVICE, INC.",
+    "city": "West Nyack",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4772356",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "kaveman-signature-aquariums-inc-westbury-ny-7789274",
+    "display_name": "KAVEMAN SIGNATURE AQUARIUMS, INC.",
+    "city": "Westbury",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7789274",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "natural-aquarium-company-llc-whitesboro-ny-7487193",
+    "display_name": "NATURAL AQUARIUM COMPANY LLC",
+    "city": "Whitesboro",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7487193",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "unisphere-aquarium-inc-woodmere-ny-185504",
+    "display_name": "UNISPHERE AQUARIUM, INC.",
+    "city": "Woodmere",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "185504",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "deep-sea-aquariums-inc-woodside-ny-3375634",
+    "display_name": "DEEP SEA AQUARIUMS INC",
+    "city": "Woodside",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3375634",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "h-l-acrylic-aquarium-inc-woodside-ny-3862381",
+    "display_name": "H & L ACRYLIC AQUARIUM INC.",
+    "city": "Woodside",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3862381",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-critter-warehouse-inc-yonkers-ny-4299084",
+    "display_name": "AQUARIUM & CRITTER WAREHOUSE INC.",
+    "city": "Yonkers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4299084",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquariums-unlimited-inc-yonkers-ny-2417760",
+    "display_name": "AQUARIUMS UNLIMITED INC.",
+    "city": "Yonkers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2417760",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "central-aquariums-corp-yonkers-ny-4565254",
+    "display_name": "CENTRAL AQUARIUMS CORP.",
+    "city": "Yonkers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4565254",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "prestige-aquarium-inc-yonkers-ny-5429129",
+    "display_name": "PRESTIGE AQUARIUM INC",
+    "city": "Yonkers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5429129",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "denver-aquarium-service-llc-arvada-co-20211253051",
+    "display_name": "Denver Aquarium Service LLC",
+    "city": "Arvada",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20211253051",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "colorado-aquarium-wholesale-llc-aurora-co-20211033573",
+    "display_name": "Colorado Aquarium Wholesale, LLC",
+    "city": "Aurora",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20211033573",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "summit-reef-aquariums-llc-aurora-co-20251975262",
+    "display_name": "SUMMIT REEF AQUARIUMS LLC",
+    "city": "Aurora",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20251975262",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "davy-jones-aquarium-services-l-l-c-black-hawk-co-20258415097",
+    "display_name": "Davy Jones Aquarium Services L.L.C",
+    "city": "Black Hawk",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20258415097",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "tidy-tank-aquarium-services-llc-centennial-co-20221684224",
+    "display_name": "Tidy Tank Aquarium Services LLC",
+    "city": "Centennial",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20221684224",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "atmosphere-aquariums-llc-craig-co-20151232077",
+    "display_name": "Atmosphere Aquariums, LLC",
+    "city": "Craig",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20151232077",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "aspen-reef-aquarium-llc-denver-co-20211954986",
+    "display_name": "Aspen Reef & Aquarium LLC",
+    "city": "Denver",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20211954986",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "integrated-aquarium-design-llc-denver-co-20258211999",
+    "display_name": "Integrated Aquarium Design LLC",
+    "city": "Denver",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20258211999",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "aquarius-aquarium-maintenance-llc-grand-junction-co-20171105415",
+    "display_name": "Aquarius Aquarium Maintenance, LLC",
+    "city": "Grand Junction",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20171105415",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "western-slope-aquatics-pets-inc-grand-junction-co-19971067159",
+    "display_name": "WESTERN SLOPE AQUATICS & PETS, INC.",
+    "city": "Grand Junction",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "19971067159",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "san-juan-aquarium-services-llc-montrose-co-20258129501",
+    "display_name": "San Juan Aquarium Services llc",
+    "city": "Montrose",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20258129501",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "all-seas-aquarium-service-llc-parker-co-20251791060",
+    "display_name": "All Seas Aquarium Service, LLC",
+    "city": "Parker",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20251791060",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "coral-fish-hawaii-inc-aiea-hi-82752-d1",
+    "display_name": "CORAL FISH HAWAII, INC.",
+    "city": "Aiea",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "82752 D1",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "hawaii-tropical-fish-gardens-inc-honomu-hi-264108-d1",
+    "display_name": "HAWAII TROPICAL FISH GARDENS, INC.",
+    "city": "Honomu",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "264108 D1",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "aloha-aquarium-l-l-c-kaneohe-hi-40325-c5",
+    "display_name": "ALOHA AQUARIUM L.L.C.",
+    "city": "Kaneohe",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "40325 C5",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "aloha-tropical-fish-kaneohe-hi-396718-zz",
+    "display_name": "ALOHA TROPICAL FISH",
+    "city": "Kaneohe",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "396718 ZZ",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "kauai-aquariums-supplies-and-services-kapa-a-hi-437862-zz",
+    "display_name": "KAUAI AQUARIUMS SUPPLIES AND SERVICES",
+    "city": "Kapa'A",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "437862 ZZ",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "hawaii-tropical-fish-company-kealakekua-hi-408091-zz",
+    "display_name": "HAWAII TROPICAL FISH COMPANY",
+    "city": "Kealakekua",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "408091 ZZ",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "natural-aquarium-maintenance-corvallis-or-251598893",
+    "display_name": "NATURAL AQUARIUM MAINTENANCE",
+    "city": "Corvallis",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "251598893",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "custom-aquariums-and-maintenance-inc-eagle-point-or-73298797",
+    "display_name": "CUSTOM AQUARIUMS AND MAINTENANCE, INC.",
+    "city": "Eagle Point",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "73298797",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-services-and-systems-llc-eugene-or-3195799",
+    "display_name": "AQUARIUM SERVICES AND SYSTEMS, LLC",
+    "city": "Eugene",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "3195799",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "pisces-nature-aquarium-supply-llc-eugene-or-174145590",
+    "display_name": "PISCES NATURE AQUARIUM SUPPLY LLC",
+    "city": "Eugene",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "174145590",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "the-aquarium-store-eugene-or-126580992",
+    "display_name": "THE AQUARIUM STORE",
+    "city": "Eugene",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "126580992",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "trippy-fish-aquatics-eugene-or-236406591",
+    "display_name": "TRIPPY FISH AQUATICS",
+    "city": "Eugene",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "236406591",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "eaton-aquariums-grants-pass-or-237220199",
+    "display_name": "EATON AQUARIUMS",
+    "city": "Grants Pass",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "237220199",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "nw-tropical-fish-wholesale-llc-gresham-or-151685295",
+    "display_name": "NW TROPICAL FISH WHOLESALE, LLC",
+    "city": "Gresham",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "151685295",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "portland-aquarium-maintenance-llc-hillsboro-or-257789397",
+    "display_name": "PORTLAND AQUARIUM MAINTENANCE LLC",
+    "city": "Hillsboro",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "257789397",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "hollywood-aquariums-lake-oswego-or-84275693",
+    "display_name": "HOLLYWOOD AQUARIUMS",
+    "city": "Lake Oswego",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "84275693",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-maintenance-pros-llc-portland-or-83774290",
+    "display_name": "AQUARIUM MAINTENANCE PROS LLC",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "83774290",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-services-of-oregon-llc-portland-or-128841095",
+    "display_name": "AQUARIUM SERVICES OF OREGON LLC.",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "128841095",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "boring-aquarium-design-llc-portland-or-247313497",
+    "display_name": "BORING AQUARIUM DESIGN LLC",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "247313497",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "bridge-city-aquarium-llc-portland-or-99455892",
+    "display_name": "BRIDGE CITY AQUARIUM LLC",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "99455892",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "the-ray-aquariums-llc-portland-or-253648498",
+    "display_name": "THE RAY AQUARIUMS, LLC",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "253648498",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "the-wet-spot-tropical-fish-portland-or-71341888",
+    "display_name": "THE WET SPOT TROPICAL FISH",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "71341888",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "all-things-aquariums-salem-or-116889197",
+    "display_name": "ALL THINGS AQUARIUMS",
+    "city": "Salem",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "116889197",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "black-coral-aquatics-llc-salem-or-227892999",
+    "display_name": "BLACK CORAL AQUATICS, LLC",
+    "city": "Salem",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "227892999",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "connors-aquarium-cleaning-llc-springfield-or-209029099",
+    "display_name": "CONNORS AQUARIUM CLEANING LLC",
+    "city": "Springfield",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "209029099",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "accent-aquarium-service-llc-wilsonville-or-17737891",
+    "display_name": "ACCENT AQUARIUM SERVICE, LLC",
+    "city": "Wilsonville",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "17737891",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "hub-city-koi-reptiles-crestview-fl-3702621",
+    "display_name": "Hub City Koi & Reptiles",
+    "city": "Crestview",
+    "state": "FL",
+    "category": "aquarium store",
+    "license_number": "3702621",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "kol-koi-inc-kennesaw-ga-3696465",
+    "display_name": "KOL KOI, INC",
+    "city": "Kennesaw",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "3696465",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "atlanta-koi-pond-marietta-ga-36102072",
+    "display_name": "ATLANTA KOI & POND",
+    "city": "Marietta",
+    "state": "GA",
+    "category": "aquarium store",
+    "license_number": "36102072",
+    "source_url": "https://forms.agr.georgia.gov/LicenseSearch",
+    "claimed": false
+  },
+  {
+    "slug": "queens-discus-house-inc-elmhurst-ny-3480055",
+    "display_name": "QUEENS DISCUS HOUSE INC.",
+    "city": "Elmhurst",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3480055",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "jamaica-fish-world-corp-jamaica-ny-5272538",
+    "display_name": "JAMAICA FISH WORLD CORP.",
+    "city": "Jamaica",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5272538",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "fish-world-ii-inc-richmond-hill-ny-2942260",
+    "display_name": "FISH WORLD II, INC.",
+    "city": "Richmond Hill",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2942260",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "santarem-discus-usa-llc-yonkers-ny-6290674",
+    "display_name": "SANTAREM DISCUS USA, LLC",
+    "city": "Yonkers",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6290674",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "atlantis-tropical-fish-hatchery-inc-highland-ny-1576814",
+    "display_name": "ATLANTIS TROPICAL FISH HATCHERY, INC.",
+    "city": "Highland",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "1576814",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "niagara-aquarium-co-inc-kenmore-ny-248463",
+    "display_name": "NIAGARA AQUARIUM CO. INC.",
+    "city": "Kenmore",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "248463",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquariumfishman-inc-flushing-ny-7151054",
+    "display_name": "AQUARIUMFISHMAN INC.",
+    "city": "Flushing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7151054",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "keystone-aquaria-llc-kingston-pa-0004110400",
+    "display_name": "Keystone Aquaria, Llc",
+    "city": "Kingston",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004110400",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "fish-world-ltd-villanova-pa-0000712763",
+    "display_name": "Fish World Ltd.",
+    "city": "Villanova",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000712763",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "mile-high-cichlid-enterprises-llc-aurora-co-20241187016",
+    "display_name": "mile high cichlid enterprises LLC",
+    "city": "Aurora",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20241187016",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "cosmic-aquarium-egypt-for-ornament-fishes-llc-co-denver-co-20261162560",
+    "display_name": "Cosmic Aquarium Egypt For Ornament Fishes LLC (CO)",
+    "city": "Denver",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20261162560",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "dencodiscus-denver-co-20201604078",
+    "display_name": "DenCOdiscus",
+    "city": "Denver",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20201604078",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
+  },
+  {
+    "slug": "dream-aquaria-beaverton-or-241111095",
+    "display_name": "DREAM AQUARIA",
+    "city": "Beaverton",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "241111095",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "the-cichlid-exchange-inc-portland-or-15613193",
+    "display_name": "THE CICHLID EXCHANGE, INC.",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "15613193",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "beautiful-betta-s-hawai-i-papaikou-hi-397666-zz",
+    "display_name": "BEAUTIFUL BETTA'S HAWAI`I",
+    "city": "Papaikou",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "397666 ZZ",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "marine-fish-hawaii-llc-aiea-hi-76409-c5",
+    "display_name": "MARINE FISH HAWAII, LLC",
+    "city": "Aiea",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "76409 C5",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "secret-garden-koi-llc-allison-park-pa-0014754244",
+    "display_name": "Secret Garden Koi Llc",
+    "city": "Allison Park",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014754244",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "planted-addiction-llc-brockway-pa-0014630023",
+    "display_name": "Planted Addiction Llc",
+    "city": "Brockway",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0014630023",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "bettas-r-us-llc-coatesville-pa-0007220859",
+    "display_name": "Bettas-r-us Llc",
+    "city": "Coatesville",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0007220859",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquatics-inc-downingtown-pa-0002652488",
+    "display_name": "Exotic Aquatics, Inc.",
+    "city": "Downingtown",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002652488",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "east-exotic-aquatics-llc-greensburg-pa-0007590499",
+    "display_name": "East Exotic Aquatics Llc",
+    "city": "Greensburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0007590499",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "kay-s-aquapet-inc-hazleton-pa-0000778092",
+    "display_name": "Kay's Aquapet, Inc.",
+    "city": "Hazleton",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000778092",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "central-penn-cichlid-and-supply-llc-lancaster-pa-0000573124",
+    "display_name": "Central Penn Cichlid and Supply, Llc",
+    "city": "Lancaster",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0000573124",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "momma-s-koi-llc-mifflinburg-pa-0013977941",
+    "display_name": "Momma's Koi, Llc",
+    "city": "Mifflinburg",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0013977941",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "willow-brook-koi-llc-narvon-pa-0015016861",
+    "display_name": "Willow Brook Koi Llc",
+    "city": "Narvon",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0015016861",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "the-reef-gallery-llc-new-castle-pa-0004304767",
+    "display_name": "The Reef Gallery, Llc",
+    "city": "New Castle",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0004304767",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-koi-and-other-fish-inc-philadelphia-pa-0002859668",
+    "display_name": "Exotic Koi and Other Fish, Inc.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002859668",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "the-reef-gallery-a-limited-liability-compnay-valencia-pa-0006832995",
+    "display_name": "The Reef Gallery, a Limited Liability Compnay",
+    "city": "Valencia",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0006832995",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "saltwater-shop-llc-warminster-pa-0006711265",
+    "display_name": "Saltwater Shop, Llc",
+    "city": "Warminster",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0006711265",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "millbrook-fancy-fish-and-koi-company-warrington-pa-0002649653",
+    "display_name": "Millbrook Fancy Fish and Koi Company",
+    "city": "Warrington",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "0002649653",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Registered-Businesses-in-PA-Current-by-County-Depa/xvd7-5r2c",
+    "claimed": false
+  },
+  {
+    "slug": "next-day-koi-inc-kernersville-nc-67-8862",
+    "display_name": "NEXT DAY KOI INC",
+    "city": "Kernersville",
+    "state": "NC",
+    "category": "aquarium store",
+    "license_number": "67**8862",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquatic-pets-more-berwick-pa-95-1402",
+    "display_name": "EXOTIC AQUATIC PETS & MORE",
+    "city": "Berwick",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "95**1402",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "allegany-koi-aquatics-llc-bradford-pa-67-8438",
+    "display_name": "ALLEGANY KOI &AQUATICS LLC",
+    "city": "Bradford",
+    "state": "PA",
+    "category": "aquarium store",
+    "license_number": "67**8438",
+    "source_url": "https://data.pa.gov/Licenses-Certificates/Sales-Use-Hotel-Occupancy-Tax-Licenses-and-Certifi/ugeq-ckxd",
+    "claimed": false
+  },
+  {
+    "slug": "aqua-pet-central-llc-albany-ny-6941313",
+    "display_name": "AQUA PET CENTRAL LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6941313",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "guppy-supply-llc-albany-ny-7998777",
+    "display_name": "GUPPY SUPPLY LLC",
+    "city": "Albany",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7998777",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "the-fish-bowl-pet-shop-inc-amityville-ny-2470506",
+    "display_name": "THE FISH BOWL PET SHOP, INC.",
+    "city": "Amityville",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2470506",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "acuario-maintenance-services-corp-bronx-ny-7530419",
+    "display_name": "ACUARIO MAINTENANCE SERVICES CORP.",
+    "city": "Bronx",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7530419",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "marksdiscus-corp-brooklyn-ny-3934620",
+    "display_name": "MARKSDISCUS, CORP.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3934620",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "kucielscichlids-llc-buffalo-ny-7964441",
+    "display_name": "KUCIELSCICHLIDS LLC",
+    "city": "Buffalo",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "7964441",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "long-island-koi-company-inc-east-northport-ny-2121104",
+    "display_name": "LONG ISLAND KOI COMPANY, INC.",
+    "city": "East Northport",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2121104",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "awe-aquatic-world-enterprises-inc-flushing-ny-2809613",
+    "display_name": "AWE AQUATIC WORLD ENTERPRISES, INC.",
+    "city": "Flushing",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2809613",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "dalewood-aqua-pet-inc-hartsdale-ny-282442",
+    "display_name": "DALEWOOD AQUA PET, INC.",
+    "city": "Hartsdale",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "282442",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "phillips-exotic-aquatics-llc-hempstead-ny-4551793",
+    "display_name": "PHILLIPS EXOTIC AQUATICS LLC",
+    "city": "Hempstead",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4551793",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "acuario-craftsman-inc-jackson-heights-ny-5158194",
+    "display_name": "ACUARIO CRAFTSMAN INC.",
+    "city": "Jackson Heights",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5158194",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-world-of-north-syracuse-inc-n-syracuse-ny-2778688",
+    "display_name": "AQUATIC WORLD OF NORTH SYRACUSE, INC.",
+    "city": "N Syracuse",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2778688",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "the-reef-shoppe-corporation-new-york-ny-4728010",
+    "display_name": "THE REEF SHOPPE CORPORATION",
+    "city": "New York",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4728010",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "legend-bonsai-koi-llc-newburgh-ny-5657794",
+    "display_name": "LEGEND BONSAI & KOI LLC",
+    "city": "Newburgh",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "5657794",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquatics-ltd-queensbury-ny-3090591",
+    "display_name": "EXOTIC AQUATICS, LTD.",
+    "city": "Queensbury",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3090591",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "e-j-fishworld-inc-richmond-hill-ny-3891974",
+    "display_name": "E & J FISHWORLD INC.",
+    "city": "Richmond Hill",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "3891974",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "jays-exotic-aquatics-llc-staten-island-ny-6619647",
+    "display_name": "JAYS EXOTIC AQUATICS LLC",
+    "city": "Staten Island",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6619647",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "garden-state-koi-aquatic-center-llc-warwick-ny-2248974",
+    "display_name": "GARDEN STATE KOI & AQUATIC CENTER LLC",
+    "city": "Warwick",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "2248974",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "long-island-koi-guy-inc-west-islip-ny-4669839",
+    "display_name": "LONG ISLAND KOI GUY, INC.",
+    "city": "West Islip",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "4669839",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "koi-pet-inc-whitestone-ny-6205084",
+    "display_name": "KOI PET INC.",
+    "city": "Whitestone",
+    "state": "NY",
+    "category": "aquarium store",
+    "license_number": "6205084",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aj-guppy-llc-aloha-or-45852498",
+    "display_name": "AJ GUPPY, LLC",
+    "city": "Aloha",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "45852498",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "jv-s-betta-house-llc-beaverton-or-211213590",
+    "display_name": "JV'S BETTA HOUSE LLC",
+    "city": "Beaverton",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "211213590",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "pnw-bettas-llc-corvallis-or-181714198",
+    "display_name": "PNW BETTAS LLC",
+    "city": "Corvallis",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "181714198",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "pisces-aquaria-eugene-or-238283196",
+    "display_name": "PISCES AQUARIA",
+    "city": "Eugene",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "238283196",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "saltwater-obsessions-pdx-inc-gresham-or-192722198",
+    "display_name": "SALTWATER OBSESSIONS - PDX, INC.",
+    "city": "Gresham",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "192722198",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "all-japan-koi-llc-hillsboro-or-67025396",
+    "display_name": "ALL JAPAN KOI, LLC",
+    "city": "Hillsboro",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "67025396",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "betta-s-cove-llc-lincoln-city-or-111112298",
+    "display_name": "BETTA'S COVE, LLC",
+    "city": "Lincoln City",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "111112298",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "fancy-fish-and-aquascapes-llc-lincoln-city-or-219947496",
+    "display_name": "FANCY FISH AND AQUASCAPES LLC",
+    "city": "Lincoln City",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "219947496",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "living-water-koi-llc-oregon-city-or-143081297",
+    "display_name": "LIVING WATER KOI LLC",
+    "city": "Oregon City",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "143081297",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "rising-sun-koi-portland-or-31013196",
+    "display_name": "RISING SUN KOI",
+    "city": "Portland",
+    "state": "OR",
+    "category": "aquarium store",
+    "license_number": "31013196",
+    "source_url": "https://data.oregon.gov/business/Active-Businesses-ALL/tckn-sxa6",
+    "claimed": false
+  },
+  {
+    "slug": "koifishesusa-incorporated-honolulu-hi-272539-d1",
+    "display_name": "KOIFISHESUSA INCORPORATED",
+    "city": "Honolulu",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "272539 D1",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "nikkei-koi-l-l-c-honolulu-hi-35925-c5",
+    "display_name": "NIKKEI KOI L.L.C.",
+    "city": "Honolulu",
+    "state": "HI",
+    "category": "aquarium store",
+    "license_number": "35925 C5",
+    "source_url": "https://data.honolulu.gov/Business/Hawaii-Business-Registration/9k54-ztb8",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-llc-mclean-va-4426579",
+    "display_name": "AQUARIUM LLC",
+    "city": "McLean",
+    "state": "VA",
+    "category": "aquarium store",
+    "license_number": "4426579",
+    "source_url": "https://data.ny.gov/Government-Finance/Active-Corporations-Beginning-1800/n9v6-gdp6",
+    "claimed": false
+  },
+  {
+    "slug": "aquaria-gk-llc-denver-co-20021138805",
+    "display_name": "AQUARIA GK LLC",
+    "city": "Denver",
+    "state": "CO",
+    "category": "aquarium store",
+    "license_number": "20021138805",
+    "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
+    "claimed": false
   }
 ]
