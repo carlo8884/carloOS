@@ -593,7 +593,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Reviews',
         links: [
           { label: 'Best Dog Food', href: '/reviews/best-dry-dog-food' },
-          { label: 'Pet Insurance', href: '/reviews/best-pet-insurance' },
+          { label: 'Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
           { label: 'Flea & Tick', href: '/reviews/best-flea-tick-prevention' },
           { label: 'Dog Beds', href: '/reviews/best-dog-beds' },
           { label: 'All Reviews', href: '/reviews' },

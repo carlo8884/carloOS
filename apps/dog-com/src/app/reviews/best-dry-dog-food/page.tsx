@@ -241,7 +241,7 @@ export default function BestDogFoodPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Reviews" links={[
-              { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance 2026', href: 'https://vets.co/reviews/best-pet-insurance' },
               { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' },
               { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
             ]} />

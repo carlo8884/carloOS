@@ -33,7 +33,7 @@ export default function GreatDanePage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Great Dane?', href: '/breeds/great-dane/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Great Dane vs Mastiff', href: '/compare/great-dane-vs-mastiff' },
         ]} />

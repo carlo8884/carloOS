@@ -69,7 +69,7 @@ export default function FleaTickPreventionPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Best Heartworm Prevention', href: '/reviews/best-heartworm-prevention' }, { label: 'Heartworm Prevention Guide', href: '/health/heartworm-prevention' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'Best Heartworm Prevention', href: '/reviews/best-heartworm-prevention' }, { label: 'Heartworm Prevention Guide', href: '/health/heartworm-prevention' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-flea-tick" />
           </aside>
         </div>

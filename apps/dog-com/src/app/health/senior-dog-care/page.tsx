@@ -104,7 +104,7 @@ export default function SeniorDogCarePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
           { label: 'Dog Dental Care', href: '/health/dog-dental-care' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />

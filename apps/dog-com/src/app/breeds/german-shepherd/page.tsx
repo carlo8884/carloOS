@@ -75,7 +75,7 @@ export default function GermanShepherdBreedPage() {
             <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a German Shepherd?', href: '/breeds/german-shepherd/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Rottweiler', href: '/breeds/rottweiler' }, { label: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]} />
             <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <RelatedLinks title="Breed Comparisons" links={[
               { label: 'German Shepherd vs Belgian Malinois', href: '/compare/german-shepherd-vs-belgian-malinois' },
               { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },

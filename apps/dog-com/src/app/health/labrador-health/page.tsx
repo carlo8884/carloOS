@@ -83,7 +83,7 @@ export default function LabradorHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Labrador Retriever Breed Profile', href: '/breeds/labrador-retriever' },
-          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
           { label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' },
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
         ]} />
@@ -96,7 +96,7 @@ export default function LabradorHealthPage() {
       relatedLinks={[
         { title: 'Labrador Breed Profile', href: '/breeds/labrador-retriever', category: 'Breed Guide' },
         { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Nutrition' },
-        { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Insurance' },
+        { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Insurance' },
       ]}
     >
       <div className="carloOS-article">

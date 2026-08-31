@@ -82,7 +82,7 @@ export default function GermanShepherdHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
           { label: 'Find a Neurologist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

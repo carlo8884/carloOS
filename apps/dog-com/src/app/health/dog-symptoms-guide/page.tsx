@@ -89,7 +89,7 @@ export default function DogSymptomsGuidePage() {
         <RelatedLinks title="Related Guides" links={[
           { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
-          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

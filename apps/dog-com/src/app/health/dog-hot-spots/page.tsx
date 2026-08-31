@@ -41,7 +41,7 @@ export default function DogHotSpotsPage() {
             <div className="text-2xs text-brand-text-light mt-2">Thick-coated breeds trap moisture — highest risk</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }]} />
-          <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hot-spots" />
         </>}

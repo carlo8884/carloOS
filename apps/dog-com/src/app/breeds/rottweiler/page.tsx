@@ -36,7 +36,7 @@ export default function RottweilerPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Rottweiler Breed Guide', subtitle: 'One of the most powerful working breeds — Rottweilers excel as protection dogs, herders, search-and-rescue animals, and service dogs. Their loyalty and trainability make them exceptional in the right hands. Their significant health predispositions — particularly bone cancer — make informed ownership critical.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Rottweiler', href: '/breeds/rottweiler' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Doberman Pinscher Guide', href: '/breeds/doberman-pinscher', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Doberman Pinscher Guide', href: '/breeds/doberman-pinscher', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={combinedSchema}
       contentType="breed"
       sidebar={<>
@@ -49,7 +49,7 @@ export default function RottweilerPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Rottweiler?', href: '/breeds/rottweiler/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },
           { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },

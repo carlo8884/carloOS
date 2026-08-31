@@ -116,7 +116,7 @@ function buildList(stage: Stage, size: Size): Item[] {
       detail: puppy
         ? 'Book a first wellness exam to start the vaccination and deworming schedule and confirm microchip details. Enrolling pet insurance while a puppy is young and healthy locks in cover before any condition becomes pre-existing and excluded.'
         : 'Book a wellness exam to establish a baseline and confirm the microchip and vaccination status. If you want insurance, enrolling sooner avoids more pre-existing exclusions later.',
-      links: [{ href: '/reviews/best-pet-insurance', label: 'Compare pet insurance' }],
+      links: [{ href: 'https://vets.co/reviews/best-pet-insurance', label: 'Compare pet insurance' }],
       essential: true,
     },
   ]
