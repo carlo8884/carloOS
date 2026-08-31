@@ -77,6 +77,13 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire — left alone.
   - Dog homepage still blanks to footer only on dog-com-three.vercel.app post-PR 834. Held per one-delta rule; no isolated safe additional fix this hour.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-08-31 ~15:01 PDT hour:** Live visual reconfirm (browser).
+  1. Fish.com homepage — hero image-first, teal wash, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` shells complete, no fake content — left alone (confirmed live).
+  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
+  4. Shared footer inquire — left alone.
+  - Dog homepage still blanks to footer only on dog-com-three.vercel.app (SSR full hero present in HTML; client blank). Held per one-delta rule; no isolated safe additional fix this hour.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
 - Dog homepage client still blanks after PR 834; isolate remaining hydration mismatch next hour if a clean one-line cause is found.
