@@ -1,22 +1,17 @@
 import { EmailCapture } from '@carloOS/ui'
 
-/** Always-on homepage capture — money-on-launch parity with Dog.com. */
 export function HomeEmailCapture() {
   return (
-    <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
+    <section className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-8">
       <div className="max-w-container mx-auto">
         <EmailCapture
           variant="section"
           siteId="fish-com"
-          title="This week for your tank"
-          subtitle="One short Tuesday email: what to check this week, one product worth the money, one water-chemistry trap to avoid."
-          source="homepage"
-          ctaText="Get the weekly"
-          perks={[
-            'By tank type (freshwater / planted / reef)',
-            'Sourced — no paid placements',
-            'Unsubscribe anytime',
-          ]}
+          title="Stocking and water-parameter notes"
+          subtitle="One short email: what to test this week, how many fish your tank can hold, one chemistry trap to skip."
+          source="homepage-under-hero"
+          ctaText="Send the tank notes"
+          perks={['Stocking math', 'Water-parameter checks', 'Unsubscribe anytime']}
         />
       </div>
     </section>

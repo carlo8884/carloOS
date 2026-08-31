@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { StockImage } from '@carloOS/ui'
+import { HomeEmailCapture } from './HomeEmailCapture'
 
 const HERO_FILL =
   '[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none'
@@ -14,6 +15,7 @@ function IconArrowRight({ className }: { className?: string }) {
 
 export function HomeHero() {
   return (
+    <>
     <section className="relative bg-brand-dark min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]">
       <div className={`absolute inset-0 ${HERO_FILL}`}>
         <StockImage
@@ -81,5 +83,7 @@ export function HomeHero() {
         </div>
       </div>
     </section>
+    <HomeEmailCapture />
+    </>
   )
 }
