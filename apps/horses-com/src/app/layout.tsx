@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -83,6 +85,10 @@ export default function RootLayout({
 
         {/* Page content */}
         <main>{children}</main>
+
+        <EmailCaptureGate>
+          <HomeEmailCapture />
+        </EmailCaptureGate>
 
         {/* Shared Footer */}
         <Footer siteId="horses-com" showAffiliateDisclosure />
