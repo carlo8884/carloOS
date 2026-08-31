@@ -18,20 +18,25 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - **2026-08-30 prior: Horses HomeHero shell parity** — min-h aligned to Dog/Fish approved pattern (62/70/78vh). No redesign, no DNS, no fake content, no sitemap regen.
 - **2026-08-30 prior: Fish.com always-on HomeEmailCapture** — parity with Dog (above footer, gated off /admin+/dashboard). Tank-focused copy. Money-on-launch without touching homepage body.
 - **2026-08-30 prior: PR 823 merged** — Horses.com always-on HomeEmailCapture parity with dog/fish. Horse-focused weekly copy. Page-level capture removed so single capture above footer. Gated off /admin+/dashboard. No redesign, no DNS, no fake content, no sitemap regen.
-- **2026-08-30 this hour: PR 827 merged** — Fish.com cash register: /go tags (no PLACEHOLDER) + stocking email capture under HomeHero (single capture only; leftover Weekly Tank stripped). Matches Dog cash-register pattern. No DNS, no fake content, no sitemap regen.
+- **2026-08-30 prior: PR 827 merged** — Fish.com cash register: /go tags (no PLACEHOLDER) + stocking email capture under HomeHero (single capture only; leftover Weekly Tank stripped). Matches Dog cash-register pattern. No DNS, no fake content, no sitemap regen.
+- **2026-08-30 this hour:** Visual QA + priority checklist reconfirm on main.
+  - Fish HomeHero: min-h 62/70/78vh, FILL pattern, teal wash, matches Dog shell (no class delta needed).
+  - Dog `/join/pro` + `/trainers`: complete shells, no fake bios, noindex, InquireForm intent pro-application.
+  - Horses `/inquire`: InquireOfferScreen consistent with dog/fish.
+  - Shared footer inquire already resolves. No for-sale banners. No sitemap regen.
 
 ## Currently underway
-- Confirm Fish + Horses production deploys healthy after cash-register merges. Light visual QA only if thin vs Dog.
+- None. Priority queue items 1–4 satisfied on main. Next real delta only if residual visual weakness appears vs Dog.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
 - Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Dog production READY on latest main (cash register). Fish production will pick up under-hero capture + /go on next successful main deploy. Horses already has always-on capture.
+- Dog / Fish / Horses production READY on latest main.
 
 ## Next planned priority
-1. Confirm Fish cash-register deploy healthy on carlo-os-fish-com.vercel.app.
-2. Light visual QA pass on Fish/Horses homepage only where clearly weaker than Dog — not a redesign.
-3. Shared footer inquire already exists; leave alone.
+1. Hold for residual visual QA only if Fish or Horses clearly weaker than Dog on production previews.
+2. Shared footer inquire already exists; leave alone.
+3. Do not regenerate sitemaps. Do not point DNS. Do not invent trainers/DVMs/doses or for-sale banners.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
