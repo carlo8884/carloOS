@@ -6,7 +6,7 @@ const FILL_IMAGE =
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden bg-brand-dark min-h-[62vh] sm:min-h-[68vh] lg:min-h-[74vh]">
+    <section className="relative overflow-hidden bg-brand-dark min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]">
       <div className={`absolute inset-0 z-0 ${FILL_IMAGE}`}>
         <StockImage
           manifestKey="horses-com:hero"
@@ -31,7 +31,7 @@ export function HomeHero() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[68vh] lg:min-h-[74vh] mx-auto max-w-container-wide w-full px-container-sm sm:px-container pt-20 pb-10 lg:pb-16">
+      <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh] mx-auto max-w-container-wide w-full px-container-sm sm:px-container pt-20 pb-10 lg:pb-16">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
             <span
