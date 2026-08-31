@@ -29,9 +29,16 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   - **Residual:** Dog.com homepage (dog-com-three.vercel.app) hits React hydration errors #418/#422 on client and blanks main content (footer-only view). SSR HTML contains full hero + sections. Fish + Horses heroes render despite same console noise.
   - `/join/pro`, `/trainers`, Horses/Fish `/inquire` OK.
   - Gmail connector scopes insufficient for send/draft; recap logged here + in chat.
+- **2026-08-31 current hour:** Priority checklist + visual QA reconfirm (no code delta).
+  1. Fish.com homepage visual quality: hero matches Dog pattern (min-h 62/70/78vh, image-first, teal wash). Live preview healthy.
+  2. Dog `/join/pro` + `/trainers` shells present and complete (no fake content).
+  3. Horses `/inquire` consistent; homepage polish already at parity.
+  4. Shared footer inquire exists — left alone.
+  - Dog homepage client hydration residual still present (SSR full, client blanks to footer). Root cause not yet isolated to a single safe one-line fix; held per one-delta rule.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
-- Residual Dog homepage hydration crash investigation (next real delta if fix is clean).
+- Residual Dog homepage hydration crash investigation (next real delta if fix is clean and isolated).
 - Otherwise hold per one-delta rule.
 
 ## Test and deployment status
