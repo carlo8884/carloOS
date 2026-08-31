@@ -133,26 +133,17 @@ export function ImageCard({
           />
         )}
 
-        {/* Subtle-credit overlay — attribution stays present + clickable but
-            unobtrusive in prime visual areas (hero, image-backed cards).
-            QC §1: never strip attribution, only make it visually quiet. */}
+        {/* Subtle-credit overlay — photographer name stays visible (QC §1).
+            Do not nest an <a> here: StockImage is often inside next/link,
+            and a>a is invalid HTML (React hydration #418/#422 blanks the tree).
+            Source URL remains on title when present. */}
         {subtleCredit && credit && (
           <span
             className="absolute bottom-1.5 right-2 text-[10px] leading-none text-white/55 z-10"
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.6)' }}
+            title={creditUrl || undefined}
           >
-            {creditUrl ? (
-              <a
-                href={creditUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="text-white/55 hover:text-white/90 no-underline"
-              >
-                {credit}
-              </a>
-            ) : (
-              credit
-            )}
+            {credit}
           </span>
         )}
       </div>

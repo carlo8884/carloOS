@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../data/diseases'
-import { directorySitemapEntries } from '@carloOS/config/directory'
+import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
 /**
@@ -8,8 +8,16 @@ import directoryListings from '../data/directory-listings.json'
  * additions (do NOT re-run regenerate-sitemaps.mjs — it strips the curated
  * dynamic-route block below: the programmatic /health/[slug] disease library).
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export function generateSitemaps() {
+  return directorySitemapIds(directoryListings)
+}
+
+export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
   const now = new Date()
+  if (id === 1) {
+    return directorySitemapEntries('https://fish.com', directoryListings, now)
+  }
 
   // Programmatic aquarium fish-disease library (dynamic /health/[slug] route).
   // Excludes the hand-written one-off guides reserved at fixed slugs.
@@ -126,6 +134,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/tools/tank-mate-compatibility-checker', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/water-change-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/water-parameters', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
-    ...directorySitemapEntries('https://fish.com', directoryListings, now),
   ]
 }

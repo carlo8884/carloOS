@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { FERRET_FOODS } from '../data/foods'
-import { directorySitemapEntries } from '@carloOS/config/directory'
+import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
 /**
@@ -8,8 +8,16 @@ import directoryListings from '../data/directory-listings.json'
  * additions (do NOT re-run regenerate-sitemaps.mjs — it strips the curated
  * dynamic-route block below: the can-ferrets-eat [food] food-safety pages).
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export function generateSitemaps() {
+  return directorySitemapIds(directoryListings)
+}
+
+export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
   const now = new Date()
+  if (id === 1) {
+    return directorySitemapEntries('https://ferret.com', directoryListings, now)
+  }
 
   // Programmatic "can ferrets eat ___?" food-safety pages (dynamic [food] route).
   const canFerretsEatRoutes: MetadataRoute.Sitemap = FERRET_FOODS.map((f) => ({
@@ -133,6 +141,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferret.com/tools/food-evaluator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/readiness-quiz', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    ...directorySitemapEntries('https://ferret.com', directoryListings, now),
   ]
 }

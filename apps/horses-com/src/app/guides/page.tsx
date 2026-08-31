@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +102,7 @@ export default function GuidesHubPage() {
         </ul>
       </div>
 
+      <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
       <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="footer" />
     </>
   )

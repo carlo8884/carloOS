@@ -37,7 +37,7 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 export { EmailUnderHero, isEmailUnderHeroPath } from './components/EmailUnderHero'
-export { DirectoryHub, DirectoryDetail } from './components/DirectoryHub'
+export { DirectoryHub, DirectoryDetail, DirectoryPlacesCta } from './components/DirectoryHub'
 export {
   directoryIndexMetadata,
   directoryDetailMetadata,

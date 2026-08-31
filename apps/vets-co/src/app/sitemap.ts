@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { PET_MEDS } from '../data/pet-meds'
-import { directorySitemapEntries } from '@carloOS/config/directory'
+import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
 /**
@@ -8,8 +8,16 @@ import directoryListings from '../data/directory-listings.json'
  * To refresh after adding/removing pages, re-run:
  *   node scripts/regenerate-sitemaps.mjs
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export function generateSitemaps() {
+  return directorySitemapIds(directoryListings)
+}
+
+export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
   const now = new Date()
+  if (id === 1) {
+    return directorySitemapEntries('https://vets.co', directoryListings, now)
+  }
 
   // Programmatic "can I give my dog ___?" human-medication-safety pages.
   const canIGiveRoutes: MetadataRoute.Sitemap = PET_MEDS.map((m) => ({
@@ -124,6 +132,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/tools/cat-body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/cat-grimace-scale', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/cat-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    ...directorySitemapEntries('https://vets.co', directoryListings, now),
   ]
 }

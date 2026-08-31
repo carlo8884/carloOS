@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {
+  DIRECTORY_FEATURED_MAX,
   directoryPlaces,
   type DirectoryListing,
   type DirectoryPage,
@@ -137,6 +138,67 @@ export function DirectoryHub({
         </>
       )}
     </div>
+  )
+}
+
+/** City/state hops from imported rows only. Hidden when the pack is empty. */
+export function DirectoryPlacesCta({
+  listings,
+  noun = 'licensed professionals',
+}: {
+  listings: DirectoryListing[]
+  noun?: string
+}) {
+  if (listings.length === 0) return null
+  const places = directoryPlaces(listings)
+  if (places.states.length === 0) return null
+  const topCities = [...places.cities]
+    .sort((a, b) => b.count - a.count || a.cityName.localeCompare(b.cityName))
+    .slice(0, DIRECTORY_FEATURED_MAX)
+
+  return (
+    <section className="px-container-sm sm:px-container py-10 border-t border-brand-border bg-brand-surface">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+          Browse {noun} by place
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-4">
+          City and state landings come from imported license-board rows. No invented listings.
+        </p>
+        <p className="mb-4">
+          <Link href="/directory" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
+            Open the full directory →
+          </Link>
+        </p>
+        <ul className="list-none m-0 p-0 flex flex-wrap gap-2 mb-4">
+          {places.states.map((state) => (
+            <li key={state.slug}>
+              <Link
+                href={`/directory/${state.slug}`}
+                className="inline-block border border-brand-border rounded px-3 py-1 text-sm no-underline text-brand-dark hover:border-brand-primary bg-brand-white"
+              >
+                {state.name}
+                <span className="text-brand-text-light ml-1">{state.count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {topCities.length > 0 && (
+          <ul className="list-none m-0 p-0 flex flex-wrap gap-2">
+            {topCities.map((city) => (
+              <li key={`${city.stateSlug}-${city.citySlug}`}>
+                <Link
+                  href={`/directory/${city.stateSlug}/${city.citySlug}`}
+                  className="inline-block border border-brand-border rounded px-3 py-1 text-sm no-underline text-brand-dark hover:border-brand-primary bg-brand-white"
+                >
+                  {city.cityName}, {city.stateName}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </section>
   )
 }
 

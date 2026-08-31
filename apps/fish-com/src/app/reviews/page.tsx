@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, combineSchemas, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -146,6 +147,7 @@ export default function FishReviewsPage() {
           ))}
         </div>
       </section>
+      <DirectoryPlacesCta listings={listings} noun="licensed aquarium professionals" />
     </>
   </>
   )

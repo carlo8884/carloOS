@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion, type FAQItem } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion, DirectoryPlacesCta, type FAQItem } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
@@ -427,6 +428,7 @@ export default function DogHealthHubPage() {
         </div>
       </section>
 
+      <DirectoryPlacesCta listings={listings} noun="licensed dog professionals" />
       <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
 </>
   </>

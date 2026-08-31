@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -244,6 +245,7 @@ export default function ReviewsHubPage() {
           ))}
         </ul>
       </div>
+      <DirectoryPlacesCta listings={listings} noun="licensed exotic-mammal professionals" />
 
     </>
   )

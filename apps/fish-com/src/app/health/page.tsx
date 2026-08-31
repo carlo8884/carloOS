@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { Diseases, RESERVED_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -118,6 +119,7 @@ export default function FishHealthPage() {
           ))}
         </div>
       </section>
+      <DirectoryPlacesCta listings={listings} noun="licensed aquarium professionals" />
 </>
   </>
   )

@@ -115,6 +115,7 @@ export default function FindAnExoticVetPage() {
                 { label: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Ferret Health Hub', href: '/health' },
+                { label: 'License-board directory', href: '/directory' },
               ]}
             />
           </>

@@ -66,6 +66,7 @@ export default function AquariumSetupPage() {
           { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
           { label: 'Water Chemistry Guide', href: '/water-parameters' },
           { label: 'Betta Fish Care', href: '/species/betta-fish' },
+          { label: 'Aquarium professional directory', href: '/directory' },
         ]} />
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
