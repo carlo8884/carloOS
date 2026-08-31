@@ -3,13 +3,9 @@ import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Nav, Footer, DisplayAds } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
-
-// ─── Fonts ──────────────────────────────────────────────────────────────────
-// Playfair Display — editorial display (headlines)
-// Source Sans 3 — body type
-// next/font/google self-hosts at build time and exposes the family via a
-// CSS variable that globals.css consumes (--font-playfair, --font-source-sans).
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -25,8 +21,6 @@ const sourceSans = Source_Sans_3({
   display: 'swap',
 })
 
-// ─── Metadata ───────────────────────────────────────────────────────────────
-
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret.com — A Reference for Ferret Owners',
@@ -36,11 +30,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'website',
 })
 
-// ─── GA4 Script ─────────────────────────────────────────────────────────────
-
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-
-// ─── Layout ─────────────────────────────────────────────────────────────────
 
 export default function RootLayout({
   children,
@@ -53,7 +43,6 @@ export default function RootLayout({
       className={`font-vars ${playfair.variable} ${sourceSans.variable}`}
     >
       <head>
-        {/* GA4 — only loads in production with a real ID */}
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>
             <script
@@ -80,7 +69,6 @@ export default function RootLayout({
         )}
       </head>
       <body>
-        {/* Skip-link — first focusable element; hidden until focused (WCAG 2.4.1) */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-brand-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
@@ -88,18 +76,16 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="ferret-com" />
 
-        {/* Page content */}
         <main id="main-content" tabIndex={-1}>{children}</main>
 
-        {/* Shared Footer */}
+        <EmailCaptureGate>
+          <HomeEmailCapture />
+        </EmailCaptureGate>
+
         <Footer siteId="ferret-com" showAffiliateDisclosure />
 
-        {/* Mediavine Journey display ads — gated on
-            NEXT_PUBLIC_MEDIAVINE_PUBLISHER_ID env var.
-            Per csro-dir-2026-W22-011. */}
         <DisplayAds config={displayAds} />
       </body>
     </html>
