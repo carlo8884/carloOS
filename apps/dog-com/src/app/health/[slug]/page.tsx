@@ -562,6 +562,12 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               >
                 Find a vet on Vets.co →
               </a>
+              <a
+                href="https://vets.co/telehealth"
+                className="inline-block mt-2 text-xs font-semibold text-brand-primary no-underline hover:underline"
+              >
+                Non-emergency? Talk to a vet tonight →
+              </a>
             </div>
 
             {/* Plan for the cost — pet-insurance comparison. Rendered for EVERY
