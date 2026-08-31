@@ -24,17 +24,23 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   - Dog `/join/pro` + `/trainers`: complete shells, no fake bios, noindex, InquireForm intent pro-application.
   - Horses `/inquire`: InquireOfferScreen consistent with dog/fish.
   - Shared footer inquire already resolves. No for-sale banners. No sitemap regen.
+- **2026-08-31 this hour:** Visual QA reconfirm.
+  - Priority 1–4 still satisfied on main.
+  - **Residual:** Dog.com homepage (dog-com-three.vercel.app) hits React hydration errors #418/#422 on client and blanks main content (footer-only view). SSR HTML contains full hero + sections. Fish + Horses heroes render despite same console noise.
+  - `/join/pro`, `/trainers`, Horses/Fish `/inquire` OK.
+  - Gmail connector scopes insufficient for send/draft; recap logged here + in chat.
 
 ## Currently underway
-- None. Priority queue items 1–4 satisfied on main. Next real delta only if residual visual weakness appears vs Dog.
+- Residual Dog homepage hydration crash investigation (next real delta if fix is clean).
+- Otherwise hold per one-delta rule.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
 - Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Dog / Fish / Horses production READY on latest main.
+- Dog / Fish / Horses production READY on latest main except Dog homepage client crash.
 
 ## Next planned priority
-1. Hold for residual visual QA only if Fish or Horses clearly weaker than Dog on production previews.
+1. Fix Dog homepage hydration mismatch if root cause is isolated and safe (no redesign, no DNS, no fake content, no sitemap regen).
 2. Shared footer inquire already exists; leave alone.
 3. Do not regenerate sitemaps. Do not point DNS. Do not invent trainers/DVMs/doses or for-sale banners.
 
@@ -44,6 +50,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 3. Optional: Chewy / Impact applications.
 4. Rotate any Vercel token that was ever pasted in a chat.
 5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on dog-com.
+6. Reconnect Gmail connector with send/draft scopes if email recaps required.
 
 ## Live policy
 - First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
