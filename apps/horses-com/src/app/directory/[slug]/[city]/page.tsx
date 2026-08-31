@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import { directoryCityMetadata, renderDirectoryCity } from '@carloOS/ui'
-import { listingsForCity } from '@carloOS/config/directory'
+import { directoryCityParams, listingsForCity } from '@carloOS/config/directory'
 import listings from '../../../../data/directory-listings.json'
 
-export const dynamic = 'force-dynamic'
+export function generateStaticParams() {
+  return directoryCityParams(listings)
+}
 
 export function generateMetadata({ params }: { params: { slug: string; city: string } }): Metadata {
   return directoryCityMetadata(

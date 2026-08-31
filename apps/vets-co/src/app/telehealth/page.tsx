@@ -84,6 +84,7 @@ export default function TelehealthPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When to Go to Emergency Instead</div>
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
               <Link href="/find-a-vet" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
+              <Link href="/directory" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
             </div>
           </aside>
         </div>

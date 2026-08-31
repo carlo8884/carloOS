@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Product Reviews — Honest Comparisons | Vets.co', description: 'Pet product reviews from a veterinarian\'s perspective. Pet insurance, telehealth services ranked using public payout data and insurer disclosures.', path: '/reviews' })
@@ -76,6 +77,7 @@ export default function VetsReviewsPage() {
           ))}
         </div>
       </div>
+      <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
   </>
   )

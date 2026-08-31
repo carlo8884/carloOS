@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { DOG_FOODS } from '../data/foods'
-import { directorySitemapEntries } from '@carloOS/config/directory'
+import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
 /**
@@ -8,8 +8,16 @@ import directoryListings from '../data/directory-listings.json'
  * additions (do NOT re-run regenerate-sitemaps.mjs — it strips the curated
  * dynamic-route blocks below: breed×insurance, breed×health, and can-dogs-eat).
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export function generateSitemaps() {
+  return directorySitemapIds(directoryListings)
+}
+
+export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
   const now = new Date()
+  if (id === 1) {
+    return directorySitemapEntries('https://dog.com', directoryListings, now)
+  }
 
   // Programmatic "can dogs eat ___?" food-safety pages (dynamic [food] route).
   const canDogsEatRoutes: MetadataRoute.Sitemap = DOG_FOODS.map((f) => ({
@@ -247,6 +255,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/tools/dog-ideal-weight-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/which-pet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/breeds/match', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
-    ...directorySitemapEntries('https://dog.com', directoryListings, now),
   ]
 }

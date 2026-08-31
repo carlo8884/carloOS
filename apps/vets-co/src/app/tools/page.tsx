@@ -165,6 +165,11 @@ export default function ToolsHub() {
           </p>
         </div>
       </section>
+      <p className="px-container-sm sm:px-container pb-10 text-sm">
+        <Link href="/directory" className="text-brand-primary font-semibold no-underline hover:underline">
+          License-board directory →
+        </Link>
+      </p>
 
     </>
   </>

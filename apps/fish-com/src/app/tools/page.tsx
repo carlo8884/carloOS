@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -169,6 +170,7 @@ export default function ToolsHub() {
           </p>
         </div>
       </section>
+      <DirectoryPlacesCta listings={listings} noun="licensed aquarium professionals" />
 
     </>
   </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -104,6 +105,7 @@ export default function SupplementsHubPage() {
           ))}
         </ul>
       </div>
+      <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
 
     </>
   )

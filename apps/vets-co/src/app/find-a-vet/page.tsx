@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 import { States, type CensusRegion } from '../../data/states'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
@@ -125,8 +126,16 @@ export default function FindAVetPage() {
               </div>
             )
           })}
+          <p className="text-sm text-brand-text-mid mt-6">
+            License-board stubs (when imported) live on the{' '}
+            <Link href="/directory" className="text-brand-primary font-semibold no-underline hover:underline">
+              Vets.co directory
+            </Link>
+            . No invented phone, email, or rating.
+          </p>
         </section>
       </div>
+      <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </div>
   </>
   )

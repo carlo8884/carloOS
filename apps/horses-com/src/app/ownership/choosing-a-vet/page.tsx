@@ -92,6 +92,7 @@ export default function ChoosingVetPage() {
               { label: "The Pre-Purchase Exam", href: "/ownership/pre-purchase-exam" },
               { label: "Vaccination Schedule", href: "/guides/equine-vaccination-schedule" },
               { label: "Equine Colic", href: "/health/colic" },
+              { label: "Equine professional directory", href: "/directory" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />

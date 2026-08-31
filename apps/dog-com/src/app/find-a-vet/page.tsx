@@ -6,8 +6,9 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, DirectoryPlacesCta } from '@carloOS/ui'
 import { buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -193,6 +194,7 @@ export default function FindAVetPage() {
           includeSchema={false}
         />
       </div>
+      <DirectoryPlacesCta listings={listings} noun="licensed dog professionals" />
 
     </>
   )

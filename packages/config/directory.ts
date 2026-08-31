@@ -226,6 +226,26 @@ export function directorySitemapEntries(
   return [...placeEntries, ...details]
 }
 
+/** Sitemap index ids: 0 = editorial, 1 = imported places + capped details. */
+export function directorySitemapIds(listings: DirectoryListing[]): { id: number }[] {
+  return listings.length > 0 ? [{ id: 0 }, { id: 1 }] : [{ id: 0 }]
+}
+
+/** State + listing slugs from imported rows only. Empty pack → no invented params. */
+export function directorySlugParams(listings: DirectoryListing[]): { slug: string }[] {
+  const states = directoryPlaces(listings).states.map((state) => ({ slug: state.slug }))
+  const details = listings.map((row) => ({ slug: row.slug }))
+  return [...states, ...details]
+}
+
+/** City landings from imported rows only. Empty pack → no invented params. */
+export function directoryCityParams(listings: DirectoryListing[]): { slug: string; city: string }[] {
+  return directoryPlaces(listings).cities.map((city) => ({
+    slug: city.stateSlug,
+    city: city.citySlug,
+  }))
+}
+
 const US_STATE_NAME_TO_ABBREV: Record<string, string> = {
   alabama: 'AL', alaska: 'AK', arizona: 'AZ', arkansas: 'AR', california: 'CA',
   colorado: 'CO', connecticut: 'CT', delaware: 'DE', florida: 'FL', georgia: 'GA',

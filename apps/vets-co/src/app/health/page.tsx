@@ -222,6 +222,11 @@ export default function VetsHealthHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <p className="px-container-sm sm:px-container pb-10 text-sm">
+        <Link href="/directory" className="text-brand-primary font-semibold no-underline hover:underline">
+          License-board directory →
+        </Link>
+      </p>
 </>
   </>
   )

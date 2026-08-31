@@ -6,6 +6,9 @@ import {
   listingsForState,
   listingsForCity,
   directoryPlaces,
+  directorySitemapIds,
+  directorySlugParams,
+  directoryCityParams,
   normalizeStateSlug,
   DIRECTORY_PAGE_SIZE,
   DIRECTORY_FEATURED_MAX,
@@ -117,5 +120,18 @@ describe('directory places', () => {
     const places = directoryPlaces(listings)
     assert.deepEqual(places.states.map((s) => s.slug).sort(), ['ny', 'tx'])
     assert.equal(places.cities.some((c) => c.stateSlug === 'tx' && c.citySlug === 'austin'), true)
+
+    assert.deepEqual(directorySitemapIds([]), [{ id: 0 }])
+    assert.deepEqual(directorySitemapIds(listings), [{ id: 0 }, { id: 1 }])
+    assert.deepEqual(directorySlugParams([]), [])
+    assert.deepEqual(directoryCityParams([]), [])
+    assert.deepEqual(
+      directoryCityParams(listings).sort((a, b) => a.city.localeCompare(b.city)),
+      [
+        { slug: 'ny', city: 'albany' },
+        { slug: 'tx', city: 'austin' },
+        { slug: 'tx', city: 'dallas' },
+      ],
+    )
   })
 })

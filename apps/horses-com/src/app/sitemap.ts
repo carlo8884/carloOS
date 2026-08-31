@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { HORSE_FOODS } from '../data/foods'
-import { directorySitemapEntries } from '@carloOS/config/directory'
+import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
 /**
@@ -8,8 +8,16 @@ import directoryListings from '../data/directory-listings.json'
  * additions (do NOT re-run regenerate-sitemaps.mjs — it strips the curated
  * dynamic-route block below: the can-horses-eat [food] food-safety pages).
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export function generateSitemaps() {
+  return directorySitemapIds(directoryListings)
+}
+
+export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
   const now = new Date()
+  if (id === 1) {
+    return directorySitemapEntries('https://horses.com', directoryListings, now)
+  }
 
   // Programmatic "can horses eat ___?" food-safety pages (dynamic [food] route).
   const canHorsesEatRoutes: MetadataRoute.Sitemap = HORSE_FOODS.map((f) => ({
@@ -183,6 +191,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/tools/horse-size-for-rider', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-weight-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
 { url: 'https://horses.com/tools/horse-blanket-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    ...directorySitemapEntries('https://horses.com', directoryListings, now),
   ]
 }
