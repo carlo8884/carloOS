@@ -2,13 +2,8 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
-import { HomeEmailCapture } from '../components/HomeEmailCapture'
-import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
-// Cormorant Garamond — display serif. The italic is the magazine-cover
-// treatment the aquarium-reference voice has always wanted. Used on hero
-// taglines, section H2s, and pull quotes.
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
@@ -17,8 +12,6 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
 })
 
-// Inter — body + UI sans. Carries water-chemistry tables, eyebrow caps,
-// equipment-review metadata, and every paragraph of body copy.
 const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
@@ -50,14 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav siteId="fish-com" />
         <main>{children}</main>
-        <EmailCaptureGate>
-          <HomeEmailCapture />
-        </EmailCaptureGate>
         <Footer siteId="fish-com" showAffiliateDisclosure />
-
-        {/* Mediavine Journey display ads — gated on
-            NEXT_PUBLIC_MEDIAVINE_PUBLISHER_ID env var.
-            Per csro-dir-2026-W22-011. */}
         <DisplayAds config={displayAds} />
       </body>
     </html>
