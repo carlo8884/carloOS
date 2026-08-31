@@ -18,7 +18,10 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@carloOS/ui": ["./packages/ui/src/index.ts"],
+      "@carloOS/ui/server": ["./packages/ui/src/server/affiliate-hop.ts"],
       "@carloOS/config": ["./packages/config/index.ts"],
+      "@carloOS/config/affiliate-hop": ["./packages/config/affiliate-hop.ts"],
+      "@carloOS/config/directory": ["./packages/config/directory.ts"],
       "@carloOS/db": ["./packages/db/src/index.ts"]
     }
   },

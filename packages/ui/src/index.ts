@@ -36,6 +36,15 @@ export {
 
 // Forms
 export { EmailCapture } from './components/EmailCapture'
+export { EmailUnderHero } from './components/EmailUnderHero'
+export { DirectoryHub, DirectoryDetail } from './components/DirectoryHub'
+export {
+  directoryIndexMetadata,
+  directoryDetailMetadata,
+  renderDirectoryIndex,
+  renderDirectoryDetail,
+  DIRECTORY_NOUN,
+} from './components/directory-page'
 export { InquireForm } from './components/InquireForm'
 export { InquireOfferScreen } from './components/InquireOfferScreen'
 

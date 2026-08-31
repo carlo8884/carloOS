@@ -91,4 +91,10 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
     requiresSku: true,
   },
+  chewy: {
+    // Empty /go/chewy must 302 to Chewy home (never 404). Search when sku present.
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: false,
+  },
 }

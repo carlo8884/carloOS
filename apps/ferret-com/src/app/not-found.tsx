@@ -14,30 +14,14 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-base text-brand-text-light leading-relaxed mb-8">
-          This page doesn&apos;t exist or has moved as the site has been
-          rebuilt. Try one of the main ferret-care sections, or search what
-          you need.
+          This page doesn&apos;t exist or has moved.
         </p>
-        <div className="flex gap-3 justify-center flex-wrap">
-          <Link
-            href="/"
-            className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors"
-          >
-            ← Back to Home
-          </Link>
-          <Link
-            href="/health"
-            className="inline-flex items-center border border-brand-border text-brand-dark font-semibold text-sm px-6 py-3 rounded no-underline hover:border-brand-primary transition-colors"
-          >
-            Ferret Health
-          </Link>
-          <Link
-            href="/care"
-            className="inline-flex items-center border border-brand-border text-brand-dark font-semibold text-sm px-6 py-3 rounded no-underline hover:border-brand-primary transition-colors"
-          >
-            Ferret Care
-          </Link>
-        </div>
+        <Link
+          href="/reviews/best-ferret-cage"
+          className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors"
+        >
+          See the best ferret cages →
+        </Link>
       </div>
     </div>
   )

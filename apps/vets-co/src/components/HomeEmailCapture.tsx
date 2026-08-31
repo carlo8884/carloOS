@@ -1,10 +1,10 @@
 import { EmailCapture } from '@carloOS/ui'
 
-/** Always-on capture. Affiliate hops already live via /go. */
+/** Homepage capture — sits under the hero. Hidden on /admin and /dashboard. */
 export function HomeEmailCapture() {
   return (
     <section
-      className="px-container-sm sm:px-container py-section"
+      className="px-container-sm sm:px-container py-8 border-b border-brand-border"
       style={{ background: 'var(--brand-primary-pale)' }}
     >
       <div className="mx-auto max-w-container">
@@ -12,9 +12,9 @@ export function HomeEmailCapture() {
           variant="section"
           siteId="vets-co"
           title="The Emergency Triage Card"
-          subtitle="A one-page reference: the fifteen signs that mean drive to the ER, the four that mean call your vet by morning, and what to do in the car. Free for subscribers."
-          ctaText="Get the card"
-          source="homepage-triage-card"
+          subtitle="One page: fifteen signs that mean drive to the ER, four that mean call your vet by morning, and what to do in the car. Free."
+          ctaText="Send the triage card"
+          source="homepage-under-hero"
           perks={[
             'One PDF, one page',
             'Citation-anchored',

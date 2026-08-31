@@ -1433,3 +1433,21 @@ export function getCrossPortfolioRecommendations(
   const recs = RECOMMENDATIONS[key] ?? []
   return recs.slice(0, limit)
 }
+
+export {
+  resolveAffiliateHop,
+  resolveTag,
+  stripPlaceholder,
+  partnerHome,
+} from './affiliate-hop'
+export type { HopResult } from './affiliate-hop'
+export {
+  parseDirectoryCsv,
+  paginateDirectory,
+  findListing,
+  directorySitemapEntries,
+  DIRECTORY_PAGE_SIZE,
+  DIRECTORY_FEATURED_MAX,
+  DIRECTORY_SITEMAP_DETAIL_CAP,
+} from './directory'
+export type { DirectoryListing, DirectoryPage } from './directory'
