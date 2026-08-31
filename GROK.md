@@ -43,6 +43,13 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire — left alone.
   - Dog homepage client still blanks to footer only (hydration #418/#422). Held — no isolated safe one-line fix this hour.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-08-31 06:00 PDT hour:** Live browser QA + priority checklist (this chat).
+  1. Fish.com homepage visual quality — hero image-first, teal wash, min-h 62/70/78vh, matches Dog shell. Healthy at carlo-os-fish-com.vercel.app. Under-hero stocking capture present.
+  2. Dog `/join/pro` + `/trainers` claimed-directory shells — complete, empty-on-purpose, no fake bios/trainers, noindex. Healthy.
+  3. Horses.com `/inquire` consistency + homepage polish — InquireOfferScreen + hero parity healthy at horses-com.vercel.app.
+  4. Shared footer inquire — left alone (exists).
+  - Residual: Dog homepage (dog-com-three.vercel.app) still client-blanks to footer (React #418/#422/#185/#327). SSR full. Held — no clean one-line fix isolated this hour.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
 - Residual Dog homepage hydration crash investigation (next real delta if fix is clean and isolated).
@@ -64,7 +71,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 3. Optional: Chewy / Impact applications.
 4. Rotate any Vercel token that was ever pasted in a chat.
 5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on dog-com.
-6. Reconnect Gmail connector with send/draft scopes if email recaps required.
+6. Gmail send/draft now available via connector — recaps will be emailed.
 
 ## Live policy
 - First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
