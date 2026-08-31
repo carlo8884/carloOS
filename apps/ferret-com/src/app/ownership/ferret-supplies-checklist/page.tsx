@@ -42,7 +42,7 @@ export default function FerretSuppliesChecklistPage() {
         hero={{
           title: 'Ferret Supplies Checklist',
           subtitle:
-            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Editorial reference only — no products, no links, just what to look for.',
+            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category hops go to the existing buyer guides — not invented SKUs.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -65,6 +65,7 @@ export default function FerretSuppliesChecklistPage() {
                 { label: 'Grooming', href: '#grooming' },
                 { label: 'Travel & Enrichment', href: '#travel' },
                 { label: 'What to Avoid', href: '#avoid' },
+                { label: 'Compare gear', href: '#compare' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -80,9 +81,10 @@ export default function FerretSuppliesChecklistPage() {
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
-              title="Ferret Owner Notes"
-              subtitle="Evidence-based ferret ownership, monthly."
-              source="ownership-ferret-supplies-checklist"
+              title="The first-year supply list"
+              subtitle="One note when the buyer guides add a new cage, litter, harness, or food comparison. No invented product list."
+              source="ownership-ferret-supplies-checklist-under-hero"
+              ctaText="Send the supply notes"
             />
           </>
         }
@@ -113,6 +115,10 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Secure latches or clips</strong> — many ferrets learn to open simple cage doors, so add clips if needed.</li>
             <li><strong>A ferret-proofed play area</strong> — not a purchase exactly, but plan the space (see <a href="/care/ferret-proofing-your-home">ferret-proofing your home</a>).</li>
           </ul>
+          <p>
+            Cage criteria and retailer hops live on the{' '}
+            <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not an invented SKU list.
+          </p>
 
           <h2 id="bedding">Bedding & Sleep</h2>
           <ul>
@@ -126,6 +132,9 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Litter pan</strong> — a high-backed corner pan suits a ferret&apos;s back-into-a-corner toileting habit.</li>
             <li><strong>Ferret-safe litter</strong> — paper-pellet or recycled-paper litter. <em>Avoid</em> clumping clay litters and pine/cedar shavings, which pose respiratory and ingestion risks (see <a href="/care/bedding-and-litter-types">bedding and litter types</a>).</li>
           </ul>
+          <p>
+            Dust, clumping risk, and retailer hops: <a href="/reviews/best-ferret-litter">best ferret litter</a>.
+          </p>
 
           <h2 id="food">Food & Water</h2>
           <ul>
@@ -133,6 +142,9 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Heavy, tip-proof food dish</strong> — ferrets dig and overturn light bowls.</li>
             <li><strong>Water bowl and/or bottle</strong> — many keepers offer both; a heavy bowl encourages better hydration, a bottle stays cleaner.</li>
           </ul>
+          <p>
+            Macronutrient window and retailer hops: <a href="/diet/best-ferret-kibble">best ferret food</a>.
+          </p>
 
           <h2 id="grooming">Grooming</h2>
           <ul>
@@ -149,6 +161,9 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Durable, solid toys</strong> — without small parts or soft foam/rubber that can be chewed off and swallowed (a serious blockage risk).</li>
             <li><strong>Dig boxes and puzzle enrichment</strong> — satisfy digging and foraging instincts (see <a href="/care/exercise-and-enrichment">exercise and enrichment</a>).</li>
           </ul>
+          <p>
+            Escape-proof fit and retailer hops: <a href="/reviews/best-ferret-harness">best ferret harness</a>.
+          </p>
 
           <h2 id="avoid">What to Avoid</h2>
           <ul>
@@ -157,6 +172,17 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Wire-floor-only cages</strong> — hard on ferret feet; cover or choose solid flooring.</li>
             <li><strong>Human toothpaste and human medications</strong> — never; toothpaste should be enzymatic pet paste only.</li>
             <li><strong>Sugary "ferret treats"</strong> — many marketed treats are high in sugar or carbohydrate and unsuitable for an obligate carnivore.</li>
+          </ul>
+
+          <h2 id="compare">Compare the gear that already has a buyer guide</h2>
+          <p>
+            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> hops — use those instead of a dead shop page:
+          </p>
+          <ul>
+            <li><a href="/reviews/best-ferret-cage">Best ferret cage</a></li>
+            <li><a href="/reviews/best-ferret-litter">Best ferret litter</a></li>
+            <li><a href="/reviews/best-ferret-harness">Best ferret harness</a></li>
+            <li><a href="/diet/best-ferret-kibble">Best ferret food</a></li>
           </ul>
 
           <h2 id="sources">Sources</h2>
