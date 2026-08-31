@@ -40,7 +40,8 @@ export interface DirectoryListing {
   category: string
   license_number: string
   source_url: string
-  claimed: false
+  /** Importer always writes false. JSON modules type this as boolean. */
+  claimed: boolean
 }
 
 export interface DirectoryPage {
