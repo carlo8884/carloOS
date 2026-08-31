@@ -36,6 +36,13 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire exists — left alone.
   - Dog homepage client hydration residual still present (SSR full, client blanks to footer). Root cause not yet isolated to a single safe one-line fix; held per one-delta rule.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-08-31 05:00 PDT hour:** Live visual reconfirm (browser).
+  1. Fish.com homepage — hero image-first, teal, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` shells on main — left alone (complete, no fake content).
+  3. Horses.com homepage + `/inquire` parity — healthy (horses-com.vercel.app).
+  4. Shared footer inquire — left alone.
+  - Dog homepage client still blanks to footer only (hydration #418/#422). Held — no isolated safe one-line fix this hour.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
 - Residual Dog homepage hydration crash investigation (next real delta if fix is clean and isolated).
