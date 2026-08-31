@@ -6558,5 +6558,145 @@
     "license_number": "20021138805",
     "source_url": "https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h",
     "claimed": false
+  },
+  {
+    "slug": "dexter-s-reef-lab-llc-west-chester-oh-09000591",
+    "display_name": "DEXTER'S REEF LAB, LLC",
+    "city": "West Chester",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "09000591",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "cincinnati-coral-and-aquarium-west-chester-oh-09083915",
+    "display_name": "CINCINNATI CORAL AND AQUARIUM",
+    "city": "West Chester",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "09083915",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "jurassic-aquatics-and-pets-inc-cleveland-oh-18495713",
+    "display_name": "JURASSIC AQUATICS AND PETS, INC.",
+    "city": "Cleveland",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "18495713",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "blue-fish-aquarium-llc-lyndhurst-oh-18507408",
+    "display_name": "BLUE FISH AQUARIUM LLC",
+    "city": "Lyndhurst",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "18507408",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "aquatics-exotics-inc-cincinnati-oh-31267723",
+    "display_name": "AQUATICS & EXOTICS INC",
+    "city": "Cincinnati",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "31267723",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-artisans-springdale-oh-31390886",
+    "display_name": "AQUARIUM ARTISANS",
+    "city": "Springdale",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "31390886",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "tank-mates-aquatics-inc-perry-oh-43000607",
+    "display_name": "TANK MATES AQUATICS INC",
+    "city": "Perry",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "43000607",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "classic-aquariums-llc-north-ridgeville-oh-47080979",
+    "display_name": "CLASSIC AQUARIUMS LLC",
+    "city": "North Ridgeville",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "47080979",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-world-of-sylvania-llc-sylvania-oh-48001661",
+    "display_name": "AQUARIUM WORLD OF SYLVANIA LLC",
+    "city": "Sylvania",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "48001661",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-world-llc-sylvania-oh-48483993",
+    "display_name": "AQUARIUM WORLD, LLC",
+    "city": "Sylvania",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "48483993",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "the-forgotten-reef-llc-marion-oh-51800012",
+    "display_name": "THE FORGOTTEN REEF LLC",
+    "city": "Marion",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "51800012",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "precision-aquatics-reefs-llc-valley-city-oh-52000971",
+    "display_name": "PRECISION AQUATICS & REEFS LLC",
+    "city": "Valley City",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "52000971",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "gerber-s-tropical-fish-inc-dayton-oh-57183925",
+    "display_name": "GERBER'S TROPICAL FISH, INC.",
+    "city": "Dayton",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "57183925",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
+  },
+  {
+    "slug": "ladyfish-aquatics-llp-trotwood-oh-57207085",
+    "display_name": "LADYFISH AQUATICS LLP",
+    "city": "Trotwood",
+    "state": "OH",
+    "category": "aquarium store",
+    "license_number": "57207085",
+    "source_url": "https://analytics.das.ohio.gov/t/TAXPUB/views/OhioActiveCountyVendorLicenseAccounts/ActiveSalesTaxAccounts",
+    "claimed": false
   }
 ]
