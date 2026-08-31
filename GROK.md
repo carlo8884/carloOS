@@ -1,46 +1,37 @@
 # Grok operator lane (2026-08-30)
 
-Carlo asked Grok to act as CEO of the preview sites until next week. No custom DNS until Carlo is back.
+Carlo asked Grok to act as CEO of the preview sites until he flips DNS. Going live is Carlo's call.
 
 ## How we work
 - This chat + the 24h hourly automation own the repo.
 - Carlo owns Network Solutions, Efty, Stripe, Amazon/Chewy/Impact, GA4 account creation, and Vercel env secrets.
-- There is no Google Analytics connector. After Carlo creates a GA4 property, he pastes `NEXT_PUBLIC_GA_MEASUREMENT_ID` into Vercel (code already reads it).
+- Code already reads `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `AFF_*_TAG`.
 
 ## Completed
-- Fish.com homepage hero cover (PR 809) + HomeHero extract (PR 817).
-- Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
-- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to InquireForm with intent pro-application. Directory empty + noindex.
-- PRs 813–815, 817–818 merged. Production dog/fish/horses READY on main.
-- Closed truncated PR 816 instead of shipping a broken Fish homepage.
-- **2026-08-30 prior hour: PR 818 merged** — Dog.com always-on HomeEmailCapture above footer (hidden on /admin + /dashboard). Money-on-launch without touching 56k homepage.
-- Confirmed: `/join/pro` + `/trainers` shells complete on main; horses `/inquire` matches dog/fish pattern (InquireOfferScreen).
-- **2026-08-30 prior: Horses HomeHero shell parity** — min-h aligned to Dog/Fish approved pattern (62/70/78vh). No redesign, no DNS, no fake content, no sitemap regen.
-- **2026-08-30 prior: Fish.com always-on HomeEmailCapture** — parity with Dog (above footer, gated off /admin+/dashboard). Tank-focused copy. Money-on-launch without touching homepage body.
-- **2026-08-30 this hour: PR 823 merged** — Horses.com always-on HomeEmailCapture parity with dog/fish. Horse-focused weekly copy. Page-level capture removed so single capture above footer. Gated off /admin+/dashboard. No redesign, no DNS, no fake content, no sitemap regen.
+- Fish HomeHero extract (PR 817).
+- Quiet `/inquire` on dog, fish, horses (email server-side).
+- Dog `/trainers` + `/join/pro` empty + noindex.
+- PRs 813–15, 817–18, 821–23 merged.
+- Money-on-launch email ungates: dog (818), fish (layout), horses (823), vets.co (821), ferret.com (822).
+- `/go/[vendor]/[sku]` hops live on dog, fish, horses, vets, ferret. Review CTAs already hop. Footer disclosure on.
+- Dog HomeHero extracted to `apps/dog-com/src/components/HomeHero.tsx` (this branch). Page.tsx wiring is a follow-up so we do not push a 56k file through the API.
 
 ## Currently underway
-- Next: confirm Horses (and Fish) production deploys healthy after this merge. Visual QA on horses homepage if any remaining thin spots vs Dog/Fish.
-
-## Test and deployment status
-- Preview SSO-gated; production dog pages confirmed without SSO historically.
-- Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Fish production READY on HomeHero extract commit; dog production READY on latest main.
-- Horses production will pick up always-on email capture on next successful main deploy.
+- Wire Dog `<HomeHero />` into `page.tsx` without a full-file rewrite.
+- Keep flagship pages launch-ready. No DNS until Carlo says so.
 
 ## Next planned priority
-1. Confirm Horses email-capture deploy healthy.
-2. Light visual QA pass on Fish homepage (hero already patched) only where clearly weaker than Dog — not a redesign.
-3. Shared footer inquire already exists; leave alone.
+1. Wire Dog HomeHero (small page.tsx swap only).
+2. Visual QA Fish/Horses only where weaker than Dog.
+3. More `/go` CTAs only on pages that still leak off-site without a hop.
 
 ## Carlo-only blockers
-1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
-2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG`.
-3. Optional: Chewy / Impact applications.
-4. Rotate any Vercel token that was ever pasted in a chat.
-5. Confirm `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on dog-com.
+1. Network Solutions — point dog.com when pages look right.
+2. `AFF_AMAZON_TAG` on the dog-com Vercel project.
+3. Optional Chewy / Impact.
+4. Rotate any Vercel token that was pasted in a chat.
+5. `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ` stays on dog-com.
 
 ## Live policy
-- First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
-- No homepage for-sale banners. `eftyUrl` unset on dog/fish.
-- No cold-email blasts to trainers/breeders.
+- Flip order when Carlo is ready: dog.com then fish.com then horses.com. vets.co after dog.
+- No homepage for-sale banners. No cold-email to trainers/breeders.
