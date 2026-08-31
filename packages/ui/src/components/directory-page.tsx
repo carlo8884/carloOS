@@ -2,8 +2,12 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { SiteId } from '@carloOS/config'
 import {
+  cityDisplayName,
   findListing,
+  listingsForCity,
+  listingsForState,
   paginateDirectory,
+  stateDisplayName,
   type DirectoryListing,
 } from '@carloOS/config/directory'
 import { buildMetadata } from './SEOHead'
@@ -93,7 +97,7 @@ export function renderDirectoryIndex(
           {copy.title}
         </h1>
       </header>
-      <DirectoryHub siteName={siteName} noun={copy.noun} page={page} />
+      <DirectoryHub siteName={siteName} noun={copy.noun} page={page} allListings={listings} />
     </>
   )
 }
@@ -107,4 +111,112 @@ export function renderDirectoryDetail(
   const listing = findListing(listings, slug)
   if (!listing) notFound()
   return <DirectoryDetail siteName={siteName} listing={listing} />
+}
+
+export function directoryStateMetadata(
+  siteId: SiteId,
+  stateSlug: string,
+  listings: DirectoryListing[],
+): Metadata {
+  const copy = DIRECTORY_NOUN[siteId]
+  const name = stateDisplayName(stateSlug)
+  return buildMetadata({
+    siteId,
+    title: `${name} ${copy.title}`.slice(0, 60),
+    description: `${listings.length} unclaimed license-board stubs in ${name}. No invented phone, email, or rating.`,
+    path: `/directory/${stateSlug}`,
+    type: 'website',
+    category: 'Directory',
+  })
+}
+
+export function directoryCityMetadata(
+  siteId: SiteId,
+  stateSlug: string,
+  city: string,
+  listings: DirectoryListing[],
+): Metadata {
+  const copy = DIRECTORY_NOUN[siteId]
+  const stateName = stateDisplayName(stateSlug)
+  const cityName = cityDisplayName(city)
+  return buildMetadata({
+    siteId,
+    title: `${cityName}, ${stateName} directory`.slice(0, 60),
+    description: `${listings.length} unclaimed ${copy.noun} stubs in ${cityName}, ${stateName}. No invented phone, email, or rating.`,
+    path: `/directory/${stateSlug}/${city}`,
+    type: 'website',
+    category: 'Directory',
+  })
+}
+
+export function directorySlugMetadata(
+  siteId: SiteId,
+  listings: DirectoryListing[],
+  slug: string,
+): Metadata {
+  const stateRows = listingsForState(listings, slug)
+  if (stateRows.length > 0) return directoryStateMetadata(siteId, slug, stateRows)
+  return directoryDetailMetadata(siteId, findListing(listings, slug))
+}
+
+export function renderDirectorySlug(
+  siteId: SiteId,
+  siteName: string,
+  listings: DirectoryListing[],
+  slug: string,
+  searchParams: { q?: string; page?: string },
+) {
+  const stateRows = listingsForState(listings, slug)
+  if (stateRows.length > 0) {
+    return renderDirectoryPlace(siteId, siteName, slug, undefined, stateRows, searchParams)
+  }
+  return renderDirectoryDetail(siteId, siteName, listings, slug)
+}
+
+export function renderDirectoryCity(
+  siteId: SiteId,
+  siteName: string,
+  listings: DirectoryListing[],
+  stateSlug: string,
+  city: string,
+  searchParams: { q?: string; page?: string },
+) {
+  const cityRows = listingsForCity(listings, stateSlug, city)
+  if (cityRows.length === 0) notFound()
+  return renderDirectoryPlace(siteId, siteName, stateSlug, city, cityRows, searchParams)
+}
+
+function renderDirectoryPlace(
+  siteId: SiteId,
+  siteName: string,
+  stateSlug: string,
+  city: string | undefined,
+  listings: DirectoryListing[],
+  searchParams: { q?: string; page?: string },
+) {
+  const copy = DIRECTORY_NOUN[siteId]
+  const stateName = stateDisplayName(stateSlug)
+  const cityName = city ? cityDisplayName(city) : ''
+  const title = city ? `${cityName}, ${stateName}` : stateName
+  const page = paginateDirectory(listings, searchParams.q || '', Number(searchParams.page) || 1)
+  return (
+    <>
+      <header className="px-container-sm sm:px-container pt-12 pb-2 max-w-5xl mx-auto">
+        <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+          Directory · {stateName}
+          {cityName ? ` · ${cityName}` : ''}
+        </p>
+        <h1 className="font-display font-bold text-brand-dark tracking-tight m-0" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
+          {copy.noun} in {title}
+        </h1>
+      </header>
+      <DirectoryHub
+        siteName={siteName}
+        noun={copy.noun}
+        page={page}
+        placePath={city ? `/directory/${stateSlug}/${city}` : `/directory/${stateSlug}`}
+        allListings={listings}
+      />
+    </>
+  )
 }

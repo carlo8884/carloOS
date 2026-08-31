@@ -93,6 +93,18 @@ export default function FishReviewsPage() {
         secondaryCta={{ href: '/tools/stocking-calculator', label: 'Size your tank first' }}
       />
 
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-8">
+        <EmailCapture
+          variant="section"
+          siteId="fish-com"
+          title="The Weekly Tank"
+          subtitle="Equipment picks, species spotlights, and fishkeeping tips every Thursday."
+          source="reviews-under-hero"
+          ctaText="Subscribe Free"
+          perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
+        />
+      </div>
+
       {/* REVIEWS GRID */}
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
@@ -121,19 +133,6 @@ export default function FishReviewsPage() {
             Read our editorial standards →
           </Link>
         </div>
-      </div>
-
-      {/* EMAIL */}
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Equipment picks, species spotlights, and fishkeeping tips every Thursday."
-          source="reviews-hub"
-          ctaText="Subscribe Free"
-          perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
-        />
       </div>
 
       {/* BROWSE ALL */}

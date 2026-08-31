@@ -1,6 +1,15 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { parseDirectoryCsv, paginateDirectory, DIRECTORY_PAGE_SIZE, DIRECTORY_FEATURED_MAX } from './directory'
+import {
+  parseDirectoryCsv,
+  paginateDirectory,
+  listingsForState,
+  listingsForCity,
+  directoryPlaces,
+  normalizeStateSlug,
+  DIRECTORY_PAGE_SIZE,
+  DIRECTORY_FEATURED_MAX,
+} from './directory'
 
 const HEADER = 'display_name,city,state,category,license_number,source_url,claimed'
 
@@ -58,5 +67,55 @@ describe('paginateDirectory', () => {
     assert.equal(page.listings.length, DIRECTORY_PAGE_SIZE)
     assert.equal(page.featured.length, DIRECTORY_FEATURED_MAX)
     assert.equal(page.totalPages, 2)
+  })
+})
+
+describe('directory places', () => {
+  const listings = [
+    {
+      slug: 'acme-austin-tx-1',
+      display_name: 'Acme Vet',
+      city: 'Austin',
+      state: 'TX',
+      category: 'vet',
+      license_number: 'TX-1',
+      source_url: 'https://example.com/1',
+      claimed: false as const,
+    },
+    {
+      slug: 'beta-dallas-texas-2',
+      display_name: 'Beta Vet',
+      city: 'Dallas',
+      state: 'Texas',
+      category: 'vet',
+      license_number: 'TX-2',
+      source_url: 'https://example.com/2',
+      claimed: false as const,
+    },
+    {
+      slug: 'gamma-albany-ny-3',
+      display_name: 'Gamma Vet',
+      city: 'Albany',
+      state: 'NY',
+      category: 'vet',
+      license_number: 'NY-3',
+      source_url: 'https://example.com/3',
+      claimed: false as const,
+    },
+  ]
+
+  it('normalizes full state names to two-letter slugs', () => {
+    assert.equal(normalizeStateSlug('Texas'), 'tx')
+    assert.equal(normalizeStateSlug('TX'), 'tx')
+  })
+
+  it('builds state and city landings from imported rows only', () => {
+    assert.equal(listingsForState(listings, 'tx').length, 2)
+    assert.equal(listingsForCity(listings, 'tx', 'austin').length, 1)
+    assert.equal(listingsForState(listings, 'or').length, 0)
+
+    const places = directoryPlaces(listings)
+    assert.deepEqual(places.states.map((s) => s.slug).sort(), ['ny', 'tx'])
+    assert.equal(places.cities.some((c) => c.stateSlug === 'tx' && c.citySlug === 'austin'), true)
   })
 })

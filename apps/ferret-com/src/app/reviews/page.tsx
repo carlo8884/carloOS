@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -245,29 +245,6 @@ export default function ReviewsHubPage() {
         </ul>
       </div>
 
-      {/* Email Capture */}
-      <section
-        style={{
-          background: 'var(--brand-primary-pale)',
-          borderTop: '1px solid var(--brand-border)',
-          padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          title="Ferret gear guides, as they publish"
-          subtitle="New buyer guides and care references for ferret owners. Cited. No paid placements."
-          ctaText="Subscribe"
-          source="reviews-hub"
-          perks={[
-            'Criteria-based, not hype',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
     </>
   )
 }

@@ -1,17 +1,26 @@
 import Link from 'next/link'
-import type { DirectoryListing, DirectoryPage } from '@carloOS/config/directory'
+import {
+  directoryPlaces,
+  type DirectoryListing,
+  type DirectoryPage,
+} from '@carloOS/config/directory'
 
 export function DirectoryHub({
   siteName,
   noun,
   page,
+  placePath = '/directory',
+  allListings,
 }: {
   siteName: string
   noun: string
   page: DirectoryPage
+  placePath?: string
+  allListings?: DirectoryListing[]
 }) {
   const empty = page.total === 0
   const featured = page.page === 1 && !page.query ? page.featured : []
+  const places = allListings && allListings.length > 0 ? directoryPlaces(allListings) : null
 
   return (
     <div className="px-container-sm sm:px-container py-12 max-w-5xl mx-auto">
@@ -22,7 +31,7 @@ export function DirectoryHub({
         employ anyone listed here.
       </p>
 
-      <form method="get" action="/directory" className="mb-10 flex flex-wrap gap-3">
+      <form method="get" action={placePath} className="mb-10 flex flex-wrap gap-3">
         <label className="sr-only" htmlFor="directory-q">
           Search {noun}
         </label>
@@ -41,6 +50,44 @@ export function DirectoryHub({
           Search
         </button>
       </form>
+
+      {places && places.states.length > 0 && placePath === '/directory' && (
+        <nav className="mb-10" aria-label="Browse by state">
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-3">Browse by state</h2>
+          <ul className="list-none m-0 p-0 flex flex-wrap gap-2">
+            {places.states.map((state) => (
+              <li key={state.slug}>
+                <Link
+                  href={`/directory/${state.slug}`}
+                  className="inline-block border border-brand-border rounded px-3 py-1 text-sm no-underline text-brand-dark hover:border-brand-primary"
+                >
+                  {state.name}
+                  <span className="text-brand-text-light ml-1">{state.count}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      {places && places.cities.length > 0 && placePath.split('/').filter(Boolean).length === 2 && (
+        <nav className="mb-10" aria-label="Browse by city">
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-3">Browse by city</h2>
+          <ul className="list-none m-0 p-0 flex flex-wrap gap-2">
+            {places.cities.map((city) => (
+              <li key={`${city.stateSlug}-${city.citySlug}`}>
+                <Link
+                  href={`/directory/${city.stateSlug}/${city.citySlug}`}
+                  className="inline-block border border-brand-border rounded px-3 py-1 text-sm no-underline text-brand-dark hover:border-brand-primary"
+                >
+                  {city.cityName}
+                  <span className="text-brand-text-light ml-1">{city.count}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
 
       {empty ? (
         <div className="border border-brand-border rounded-lg p-6 bg-brand-surface">
@@ -85,7 +132,7 @@ export function DirectoryHub({
                 </li>
               ))}
             </ul>
-            <Pagination page={page} />
+            <Pagination page={page} placePath={placePath} />
           </section>
         </>
       )}
@@ -158,7 +205,7 @@ function ListingLink({ row }: { row: DirectoryListing }) {
   )
 }
 
-function Pagination({ page }: { page: DirectoryPage }) {
+function Pagination({ page, placePath = '/directory' }: { page: DirectoryPage; placePath?: string }) {
   if (page.totalPages <= 1) return null
   const prev = page.page > 1 ? page.page - 1 : null
   const next = page.page < page.totalPages ? page.page + 1 : null
@@ -166,14 +213,14 @@ function Pagination({ page }: { page: DirectoryPage }) {
   return (
     <nav className="flex gap-4 mt-8 text-sm" aria-label="Directory pages">
       {prev ? (
-        <Link href={`/directory?page=${prev}${q}`} className="text-brand-primary no-underline hover:underline">
+        <Link href={`${placePath}?page=${prev}${q}`} className="text-brand-primary no-underline hover:underline">
           ← Previous
         </Link>
       ) : (
         <span className="text-brand-text-light">← Previous</span>
       )}
       {next ? (
-        <Link href={`/directory?page=${next}${q}`} className="text-brand-primary no-underline hover:underline">
+        <Link href={`${placePath}?page=${next}${q}`} className="text-brand-primary no-underline hover:underline">
           Next →
         </Link>
       ) : (

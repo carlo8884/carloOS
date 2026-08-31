@@ -200,13 +200,144 @@ export function directorySitemapEntries(
 ): Array<{ url: string; lastModified: Date; changeFrequency: 'weekly'; priority: number }> {
   const origin = siteUrl.replace(/\/$/, '')
   // Index URL is committed as a literal in each sitemap.ts (sitemap-drift).
-  // Details capped at 1k so a 46k vets pack does not dump into the index.
-  return listings.slice(0, DIRECTORY_SITEMAP_DETAIL_CAP).map((row) => ({
+  // Places come from imported rows only. Details capped at 1k.
+  const places = directoryPlaces(listings)
+  const placeEntries = [
+    ...places.states.map((state) => ({
+      url: `${origin}/directory/${state.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.55,
+    })),
+    ...places.cities.map((city) => ({
+      url: `${origin}/directory/${city.stateSlug}/${city.citySlug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    })),
+  ]
+  const details = listings.slice(0, DIRECTORY_SITEMAP_DETAIL_CAP).map((row) => ({
     url: `${origin}/directory/${row.slug}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.4,
   }))
+  return [...placeEntries, ...details]
+}
+
+const US_STATE_NAME_TO_ABBREV: Record<string, string> = {
+  alabama: 'AL', alaska: 'AK', arizona: 'AZ', arkansas: 'AR', california: 'CA',
+  colorado: 'CO', connecticut: 'CT', delaware: 'DE', florida: 'FL', georgia: 'GA',
+  hawaii: 'HI', idaho: 'ID', illinois: 'IL', indiana: 'IN', iowa: 'IA',
+  kansas: 'KS', kentucky: 'KY', louisiana: 'LA', maine: 'ME', maryland: 'MD',
+  massachusetts: 'MA', michigan: 'MI', minnesota: 'MN', mississippi: 'MS',
+  missouri: 'MO', montana: 'MT', nebraska: 'NE', nevada: 'NV', 'new hampshire': 'NH',
+  'new jersey': 'NJ', 'new mexico': 'NM', 'new york': 'NY', 'north carolina': 'NC',
+  'north dakota': 'ND', ohio: 'OH', oklahoma: 'OK', oregon: 'OR', pennsylvania: 'PA',
+  'rhode island': 'RI', 'south carolina': 'SC', 'south dakota': 'SD', tennessee: 'TN',
+  texas: 'TX', utah: 'UT', vermont: 'VT', virginia: 'VA', washington: 'WA',
+  'west virginia': 'WV', wisconsin: 'WI', wyoming: 'WY', 'district of columbia': 'DC',
+}
+
+const US_ABBREV_TO_NAME = Object.fromEntries(
+  Object.entries(US_STATE_NAME_TO_ABBREV).map(([name, abbr]) => [abbr, name]),
+)
+
+export function normalizeStateSlug(state: string): string {
+  const trimmed = state.trim()
+  if (!trimmed) return ''
+  if (/^[A-Za-z]{2}$/.test(trimmed)) return trimmed.toLowerCase()
+  const mapped = US_STATE_NAME_TO_ABBREV[trimmed.toLowerCase()]
+  if (mapped) return mapped.toLowerCase()
+  return trimmed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+}
+
+export function stateDisplayName(stateSlug: string): string {
+  const name = US_ABBREV_TO_NAME[stateSlug.toUpperCase()]
+  if (!name) return stateSlug.toUpperCase()
+  return name.replace(/\b\w/g, (ch) => ch.toUpperCase())
+}
+
+export function citySlug(city: string): string {
+  return city
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+export function cityDisplayName(city: string): string {
+  const slug = citySlug(city)
+  if (!slug) return city.trim()
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
+}
+
+export function listingsForState(listings: DirectoryListing[], state: string): DirectoryListing[] {
+  const want = normalizeStateSlug(state)
+  if (!want) return []
+  return listings.filter((row) => normalizeStateSlug(row.state) === want)
+}
+
+export function listingsForCity(
+  listings: DirectoryListing[],
+  state: string,
+  city: string,
+): DirectoryListing[] {
+  const wantCity = citySlug(city)
+  if (!wantCity) return []
+  return listingsForState(listings, state).filter((row) => citySlug(row.city) === wantCity)
+}
+
+export interface DirectoryStatePlace {
+  slug: string
+  name: string
+  count: number
+}
+
+export interface DirectoryCityPlace {
+  stateSlug: string
+  citySlug: string
+  cityName: string
+  stateName: string
+  count: number
+}
+
+export function directoryPlaces(listings: DirectoryListing[]): {
+  states: DirectoryStatePlace[]
+  cities: DirectoryCityPlace[]
+} {
+  const stateCounts = new Map<string, number>()
+  const cityCounts = new Map<string, { stateSlug: string; citySlug: string; count: number }>()
+
+  for (const row of listings) {
+    const s = normalizeStateSlug(row.state)
+    if (!s) continue
+    stateCounts.set(s, (stateCounts.get(s) || 0) + 1)
+    const c = citySlug(row.city)
+    if (!c) continue
+    const key = `${s}/${c}`
+    const existing = cityCounts.get(key)
+    if (existing) existing.count += 1
+    else cityCounts.set(key, { stateSlug: s, citySlug: c, count: 1 })
+  }
+
+  const states = [...stateCounts.entries()]
+    .map(([slug, count]) => ({ slug, name: stateDisplayName(slug), count }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const cities = [...cityCounts.values()]
+    .map((row) => ({
+      ...row,
+      cityName: cityDisplayName(row.citySlug),
+      stateName: stateDisplayName(row.stateSlug),
+    }))
+    .sort((a, b) => a.cityName.localeCompare(b.cityName) || a.stateName.localeCompare(b.stateName))
+
+  return { states, cities }
 }
 
 function splitCsvLine(line: string): string[] {

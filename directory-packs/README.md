@@ -37,4 +37,4 @@ Load order: ferret → fish → dog → horses → vets-co (vets in one idempote
 
 Output: `apps/<site>/src/data/directory-listings.json` (empty `[]` until a CSV exists).
 
-Public surface: `/directory` (≤12 featured + search, 50/page) and `/directory/[slug]`. Do not dump the pack on the site homepage.
+Public surface: `/directory` (≤12 featured + search, 50/page), listing stubs at `/directory/[slug]`, and city/state landings generated from imported rows only (`/directory/tx`, `/directory/tx/austin`). Empty pack → empty-state, no invented places. Do not dump the pack on the site homepage.

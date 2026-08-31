@@ -1,14 +1,19 @@
 import type { Metadata } from 'next'
-import { directoryDetailMetadata, renderDirectoryDetail } from '@carloOS/ui'
-import { findListing } from '@carloOS/config/directory'
+import { directorySlugMetadata, renderDirectorySlug } from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
 export const dynamic = 'force-dynamic'
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  return directoryDetailMetadata('dog-com', findListing(listings, params.slug))
+  return directorySlugMetadata('dog-com', listings, params.slug)
 }
 
-export default function DirectoryDetailPage({ params }: { params: { slug: string } }) {
-  return renderDirectoryDetail('dog-com', 'Dog.com', listings, params.slug)
+export default function DirectorySlugPage({
+  params,
+  searchParams,
+}: {
+  params: { slug: string }
+  searchParams: { q?: string; page?: string }
+}) {
+  return renderDirectorySlug('dog-com', 'Dog.com', listings, params.slug, searchParams)
 }

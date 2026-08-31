@@ -608,6 +608,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Which Pet Quiz', href: '/which-pet' },
           { label: 'Puppy Schedule', href: '/puppy-schedule' },
           { label: 'Care Guides', href: '/guides' },
+          { label: 'Directory', href: '/directory' },
         ],
       },
     ],
@@ -643,6 +644,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Telehealth Options', href: '/telehealth' },
           { label: 'Emergency Signs', href: '/health/emergency-signs' },
           { label: 'Emergency Triage Card', href: '/emergency-triage-card' },
+          { label: 'Directory', href: '/directory' },
         ],
       },
       {
@@ -750,6 +752,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'Aquarium Calculators', href: '/tools' },
           { label: 'Data Partnerships', href: '/data' },
+          { label: 'Directory', href: '/directory' },
         ],
       },
     ],
@@ -913,6 +916,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Health', href: '/health' },
           { label: 'Guides', href: '/guides' },
           { label: 'Tools', href: '/tools' },
+          { label: 'Directory', href: '/directory' },
         ],
       },
       {
@@ -1032,6 +1036,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'First-Year Schedule', href: '/first-year-schedule' },
           { label: 'Reviews', href: '/reviews' },
           { label: 'Tools', href: '/tools' },
+          { label: 'Directory', href: '/directory' },
         ],
       },
     ],
