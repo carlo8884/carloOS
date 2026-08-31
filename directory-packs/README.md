@@ -9,8 +9,8 @@ Chief of Staff drops the real files here. Overnight builder only ships the impor
 | File | Site | Expected rows (once present) |
 |---|---|---|
 | `ferret-national.csv` | ferret.com | 70 |
-| `fish-national.csv` | fish.com | 178 |
-| `dog-national.csv` | dog.com | 306 |
+| `fish-national.csv` | fish.com | 665 |
+| `dog-national.csv` | dog.com | 1368 |
 | `horses-national.csv` | horses.com | 1,648 |
 | `vets-co-national.csv` | vets.co | 46,796 |
 

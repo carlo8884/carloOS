@@ -26,8 +26,8 @@ export const DIRECTORY_SITE_BY_PACK: Record<(typeof DIRECTORY_PACK_FILES)[number
 
 export const DIRECTORY_LOAD_ORDER = [
   { pack: 'ferret-national.csv', expected: 70 },
-  { pack: 'fish-national.csv', expected: 178 },
-  { pack: 'dog-national.csv', expected: 306 },
+  { pack: 'fish-national.csv', expected: 665 },
+  { pack: 'dog-national.csv', expected: 1368 },
   { pack: 'horses-national.csv', expected: 1648 },
   { pack: 'vets-co-national.csv', expected: 46796 },
 ] as const
