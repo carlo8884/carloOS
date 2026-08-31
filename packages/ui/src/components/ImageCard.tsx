@@ -25,10 +25,10 @@ export interface ImageCardProps {
   caption?: string
   credit?: string
   /**
-   * When set, the credit text becomes a link to this URL — typically the
-   * source page where photographer attribution lives (Unsplash photo page,
-   * Wikimedia file page, etc.). Required by QC §1 when the credit string
-   * does not name the photographer directly.
+   * Source page for the photographer credit (Unsplash photo page, etc.).
+   * Exposed as the credit's `title` — never as a nested `<a>` (StockImage
+   * is often inside next/link; a>a blanks Dog.com on hydration).
+   * Attribution text itself stays visible (QC §1 / Unsplash TOS).
    */
   creditUrl?: string
   aspect?: ImageCardAspect
@@ -134,9 +134,11 @@ export function ImageCard({
         )}
 
         {/* Subtle-credit overlay — photographer name stays visible (QC §1).
-            Do not nest an <a> here: StockImage is often inside next/link,
-            and a>a is invalid HTML (React hydration #418/#422 blanks the tree).
-            Source URL remains on title when present. */}
+            Never emit an <a> from ImageCard: StockImage is often inside
+            next/link, and a>a is invalid HTML. The browser "repairs" the
+            outer anchor before React hydrates, which is React #418/#422
+            plus an insertBefore/removeChild storm that can blank the tree.
+            Source URL stays on title when present. */}
         {subtleCredit && credit && (
           <span
             className="absolute bottom-1.5 right-2 text-[10px] leading-none text-white/55 z-10"
@@ -150,25 +152,18 @@ export function ImageCard({
 
       {/* Caption (+ credit when NOT subtle) below the image. When subtleCredit
           is on, the credit moves to the overlay above and only the caption (if
-          any) renders here — keeping legacy behavior identical when false. */}
+          any) renders here — keeping legacy behavior identical when false.
+          Credit text is never an <a> (same reason as the overlay). */}
       {(caption || (credit && !subtleCredit)) && (
         <figcaption className="mt-3 text-sm italic text-brand-text-mid leading-snug px-1">
           {caption}
           {caption && credit && !subtleCredit && ' '}
           {credit && !subtleCredit && (
-            <span className="not-italic text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light ml-1">
-              {creditUrl ? (
-                <a
-                  href={creditUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-brand-text-light hover:text-brand-primary no-underline hover:underline"
-                >
-                  {credit}
-                </a>
-              ) : (
-                credit
-              )}
+            <span
+              className="not-italic text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light ml-1"
+              title={creditUrl || undefined}
+            >
+              {credit}
             </span>
           )}
         </figcaption>

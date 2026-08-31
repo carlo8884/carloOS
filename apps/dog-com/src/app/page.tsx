@@ -58,6 +58,7 @@ import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSche
 // Live decision wizard embedded on the homepage so the flagship's first
 // screens are a product you use, not links to tools (premium gate 3).
 import { BreedMatchWizard } from './breeds/match/wizard-client'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
@@ -363,6 +364,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* In-flow under-hero capture (Fish pattern). Do not rely on
+          EmailUnderHero's hero.after(slot) teleport on this page — moving a
+          React-owned node during hydration recovery is an insertBefore storm. */}
+      <HomeEmailCapture />
+
       {/* ── OWNER-PATH TILES — image-backed entry points (dark band) ────── */}
       <section className="bg-brand-dark relative overflow-hidden">
         <div
@@ -516,7 +522,7 @@ export default function HomePage() {
                   ].map((b) => (
                     <Link key={b.href} href={b.href} className="group flex items-center gap-3 no-underline">
                       <div className={`relative w-14 h-14 rounded-lg overflow-hidden shrink-0 ring-1 ring-brand-border ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
-                        <StockImage manifestKey={b.key} fallbackKey="dog-com:hero" alt={b.name} aspect="1:1" variant="inline" />
+                        <StockImage manifestKey={b.key} fallbackKey="dog-com:hero" alt={b.name} aspect="1:1" variant="inline" subtleCredit />
                       </div>
                       <div className="min-w-0">
                         <div className="text-sm font-bold text-brand-dark leading-tight group-hover:text-brand-primary transition-colors">{b.name}</div>
@@ -997,7 +1003,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Email capture sits under the hero via layout EmailUnderHero. */}
+      {/* Homepage email capture is in-flow under the hero (see above).
+          Other money hubs still use layout EmailUnderHero. */}
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
