@@ -1,1 +1,672 @@
-[]
+[
+  {
+    "slug": "ferret-dreams-rescue-adoption-denver-co-611555041",
+    "display_name": "Ferret Dreams Rescue & Adoption",
+    "city": "Denver",
+    "state": "CO",
+    "category": "ferret rescue",
+    "license_number": "611555041",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "fluffy-farms-ferret-sanctuary-lake-worth-fl-332059948",
+    "display_name": "Fluffy Farms Ferret Sanctuary",
+    "city": "Lake Worth",
+    "state": "FL",
+    "category": "ferret rescue",
+    "license_number": "332059948",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "god-s-little-clowns-ferret-sanctuary-inc-interlachen-fl-934144118",
+    "display_name": "God S Little Clowns Ferret Sanctuary Inc",
+    "city": "Interlachen",
+    "state": "FL",
+    "category": "ferret rescue",
+    "license_number": "934144118",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "navarre-ferret-rescue-navarre-fl-352464475",
+    "display_name": "Navarre Ferret Rescue",
+    "city": "Navarre",
+    "state": "FL",
+    "category": "ferret rescue",
+    "license_number": "352464475",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "risky-business-ferret-sanctuary-homosassa-fl-413760786",
+    "display_name": "Risky Business Ferret Sanctuary",
+    "city": "Homosassa",
+    "state": "FL",
+    "category": "ferret rescue",
+    "license_number": "413760786",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "second-chance-ferret-rescue-inc-holiday-fl-394296763",
+    "display_name": "Second Chance Ferret Rescue Inc",
+    "city": "Holiday",
+    "state": "FL",
+    "category": "ferret rescue",
+    "license_number": "394296763",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "kindness-matters-inc-acworth-ga-454482882",
+    "display_name": "Kindness Matters Inc",
+    "city": "Acworth",
+    "state": "GA",
+    "category": "ferret rescue",
+    "license_number": "454482882",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "floofy-5-ferret-rescue-inc-boise-id-415318759",
+    "display_name": "Floofy 5 Ferret Rescue Inc",
+    "city": "Boise",
+    "state": "ID",
+    "category": "ferret rescue",
+    "license_number": "415318759",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "zoos-ferret-sanctuary-n-f-p-kirkland-il-412060006",
+    "display_name": "Zoos Ferret Sanctuary N F P",
+    "city": "Kirkland",
+    "state": "IL",
+    "category": "ferret rescue",
+    "license_number": "412060006",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "five-points-ferret-refuge-indianapolis-in-900751884",
+    "display_name": "Five Points Ferret Refuge",
+    "city": "Indianapolis",
+    "state": "IN",
+    "category": "ferret rescue",
+    "license_number": "900751884",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "kentuckiana-ferret-haven-inc-louisville-ky-462169481",
+    "display_name": "Kentuckiana Ferret Haven Inc",
+    "city": "Louisville",
+    "state": "KY",
+    "category": "ferret rescue",
+    "license_number": "462169481",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "sephys-ferret-sanctuary-louisville-ky-461866014",
+    "display_name": "Sephys Ferret Sanctuary",
+    "city": "Louisville",
+    "state": "KY",
+    "category": "ferret rescue",
+    "license_number": "461866014",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferret-rescue-of-ma-stow-ma-413060157",
+    "display_name": "Ferret Rescue of MA",
+    "city": "Stow",
+    "state": "MA",
+    "category": "ferret rescue",
+    "license_number": "413060157",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "south-mississippi-ferret-rescue-biloxi-ms-393303603",
+    "display_name": "South Mississippi Ferret Rescue",
+    "city": "Biloxi",
+    "state": "MS",
+    "category": "ferret rescue",
+    "license_number": "393303603",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferret-guardian-rescue-haven-inc-hudson-nc-311685162",
+    "display_name": "Ferret Guardian Rescue Haven Inc",
+    "city": "Hudson",
+    "state": "NC",
+    "category": "ferret rescue",
+    "license_number": "311685162",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "4-lil-paws-ferret-shelter-inc-brentwood-nh-020480680",
+    "display_name": "4 Lil Paws Ferret Shelter Inc",
+    "city": "Brentwood",
+    "state": "NH",
+    "category": "ferret rescue",
+    "license_number": "020480680",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferrets-and-friends-sanctuary-sicklerville-nj-923928956",
+    "display_name": "Ferrets and Friends Sanctuary",
+    "city": "Sicklerville",
+    "state": "NJ",
+    "category": "ferret rescue",
+    "license_number": "923928956",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "angel-ferret-shelter-services-inc-las-vegas-nv-880392460",
+    "display_name": "Angel Ferret Shelter Services Inc",
+    "city": "Las Vegas",
+    "state": "NV",
+    "category": "ferret rescue",
+    "license_number": "880392460",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "friends-of-ferrets-rescue-inc-duanesburg-ny-394093425",
+    "display_name": "Friends of Ferrets Rescue Inc",
+    "city": "Duanesburg",
+    "state": "NY",
+    "category": "ferret rescue",
+    "license_number": "394093425",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "furever-ferrets-sanctuary-inc-east-rochester-ny-884078611",
+    "display_name": "Furever Ferrets Sanctuary Inc",
+    "city": "East Rochester",
+    "state": "NY",
+    "category": "ferret rescue",
+    "license_number": "884078611",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "lakeroad-ferret-farm-rescue-shelter-inc-naples-ny-421695576",
+    "display_name": "Lakeroad Ferret Farm Rescue-Shelter Inc",
+    "city": "Naples",
+    "state": "NY",
+    "category": "ferret rescue",
+    "license_number": "421695576",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo1.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferrets-unlimited-rescue-services-cleveland-oh-300509042",
+    "display_name": "Ferrets Unlimited Rescue Services",
+    "city": "Cleveland",
+    "state": "OH",
+    "category": "ferret rescue",
+    "license_number": "300509042",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "elis-ark-ferret-rescue-inc-blanchard-ok-333124034",
+    "display_name": "Elis Ark Ferret Rescue Inc",
+    "city": "Blanchard",
+    "state": "OK",
+    "category": "ferret rescue",
+    "license_number": "333124034",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "final-home-ferret-rescue-portland-or-393246227",
+    "display_name": "Final Home Ferret Rescue",
+    "city": "Portland",
+    "state": "OR",
+    "category": "ferret rescue",
+    "license_number": "393246227",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "willamette-valley-ferret-shelter-carlton-or-813276015",
+    "display_name": "Willamette Valley Ferret Shelter",
+    "city": "Carlton",
+    "state": "OR",
+    "category": "ferret rescue",
+    "license_number": "813276015",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "diane-bodofsky-last-chance-ferret-rescue-southampton-pa-232916085",
+    "display_name": "Diane Bodofsky Last Chance Ferret Rescue",
+    "city": "Southampton",
+    "state": "PA",
+    "category": "ferret rescue",
+    "license_number": "232916085",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "oxford-ferret-rescue-cecil-county-animal-rescue-fawn-grove-pa-141851472",
+    "display_name": "Oxford Ferret Rescue-Cecil County Animal Rescue",
+    "city": "Fawn Grove",
+    "state": "PA",
+    "category": "ferret rescue",
+    "license_number": "141851472",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "pennsylvania-ferret-rescue-association-inc-state-college-pa-934459470",
+    "display_name": "Pennsylvania Ferret Rescue Association Inc",
+    "city": "State College",
+    "state": "PA",
+    "category": "ferret rescue",
+    "license_number": "934459470",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "dooks-of-earl-ferret-sanctuary-inc-brownsville-tn-880945277",
+    "display_name": "Dooks of Earl Ferret Sanctuary Inc",
+    "city": "Brownsville",
+    "state": "TN",
+    "category": "ferret rescue",
+    "license_number": "880945277",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "flying-ferret-sanctuary-maryville-tn-993321544",
+    "display_name": "Flying Ferret Sanctuary",
+    "city": "Maryville",
+    "state": "TN",
+    "category": "ferret rescue",
+    "license_number": "993321544",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "austin-ferret-rescue-austin-tx-331970709",
+    "display_name": "Austin Ferret Rescue",
+    "city": "Austin",
+    "state": "TX",
+    "category": "ferret rescue",
+    "license_number": "331970709",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "the-texas-ferret-lovers-rescue-fate-tx-680619842",
+    "display_name": "The Texas Ferret Lovers Rescue",
+    "city": "Fate",
+    "state": "TX",
+    "category": "ferret rescue",
+    "license_number": "680619842",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "hamiltons-ferret-haven-cleveland-ut-831813158",
+    "display_name": "Hamiltons Ferret Haven",
+    "city": "Cleveland",
+    "state": "UT",
+    "category": "ferret rescue",
+    "license_number": "831813158",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferret-haven-by-the-sea-virginia-beach-va-541868845",
+    "display_name": "Ferret Haven By-The-Sea",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "category": "ferret rescue",
+    "license_number": "541868845",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "nirvana-ridge-ferret-rescue-brandy-station-va-352525389",
+    "display_name": "Nirvana Ridge Ferret Rescue",
+    "city": "Brandy Station",
+    "state": "VA",
+    "category": "ferret rescue",
+    "license_number": "352525389",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "sammys-clubhouse-spokane-ferret-rescue-and-education-spokane-valley-wa-461283083",
+    "display_name": "Sammys Clubhouse Spokane Ferret Rescue and Education",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "category": "ferret rescue",
+    "license_number": "461283083",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "ferret-underground-a-wisconsin-ferret-rescue-inc-tomah-wi-473764015",
+    "display_name": "Ferret Underground - A Wisconsin Ferret Rescue Inc",
+    "city": "Tomah",
+    "state": "WI",
+    "category": "ferret rescue",
+    "license_number": "473764015",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "friscos-friends-ferret-rescue-casper-wy-934791108",
+    "display_name": "Friscos Friends Ferret Rescue",
+    "city": "Casper",
+    "state": "WY",
+    "category": "ferret rescue",
+    "license_number": "934791108",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "saddies-mischief-makers-ferret-sanctury-cheyenne-wy-332111445",
+    "display_name": "Saddies Mischief Makers Ferret Sanctury",
+    "city": "Cheyenne",
+    "state": "WY",
+    "category": "ferret rescue",
+    "license_number": "332111445",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo3.csv",
+    "claimed": false
+  },
+  {
+    "slug": "st-melangell-small-mammal-sanctuary-batavia-oh-811329687",
+    "display_name": "St Melangell Small Mammal Sanctuary",
+    "city": "Batavia",
+    "state": "OH",
+    "category": "small mammal rescue",
+    "license_number": "811329687",
+    "source_url": "https://www.irs.gov/pub/irs-soi/eo2.csv",
+    "claimed": false
+  },
+  {
+    "slug": "bayshore-animal-hospital-avian-practice-birmingham-al-ve-0006238",
+    "display_name": "Bayshore Animal Hospital & Avian Practice",
+    "city": "Birmingham",
+    "state": "AL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0006238",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "avian-exotic-animal-hospital-san-diego-ca-4082",
+    "display_name": "Avian & Exotic Animal Hospital",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "4082",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "avian-exotic-animal-hospital-of-la-co-hawthorne-ca-2925",
+    "display_name": "Avian & Exotic Animal Hospital of La Co",
+    "city": "Hawthorne",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "2925",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "avian-exotic-clinic-of-monterey-del-rey-oaks-ca-6973",
+    "display_name": "Avian & Exotic Clinic of Monterey",
+    "city": "Del Rey Oaks",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "6973",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "avian-exotic-urgent-care-san-leandro-ca-40260",
+    "display_name": "Avian & Exotic Urgent Care",
+    "city": "San Leandro",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "40260",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "avian-and-exotic-animal-health-services-folsom-ca-39787",
+    "display_name": "Avian and Exotic Animal Health Services",
+    "city": "Folsom",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "39787",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "bay-area-bird-and-exotics-hospital-san-francisco-ca-5071",
+    "display_name": "Bay Area Bird and Exotics Hospital",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "5071",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "cat-and-exotic-care-veterinary-corp-pismo-beach-ca-5945",
+    "display_name": "Cat and Exotic Care Veterinary Corp.",
+    "city": "Pismo Beach",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "5945",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "clinical-avian-pathology-services-lincoln-ca-40320",
+    "display_name": "Clinical Avian Pathology Services",
+    "city": "Lincoln",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "40320",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "dr-sip-exotics-veterinary-house-calls-berkeley-ca-38661",
+    "display_name": "Dr. Sip Exotics Veterinary House Calls",
+    "city": "Berkeley",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "38661",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-animal-veterinary-center-pasadena-ca-6760",
+    "display_name": "Exotic Animal Veterinary Center",
+    "city": "Pasadena",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "6760",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-pet-clinic-of-santa-cruz-inc-scotts-valley-ca-38434",
+    "display_name": "Exotic Pet Clinic of Santa Cruz, Inc.",
+    "city": "Scotts Valley",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "38434",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "veterinary-wildlife-and-exotics-covina-ca-7409",
+    "display_name": "Veterinary Wildlife and Exotics",
+    "city": "Covina",
+    "state": "CA",
+    "category": "exotic veterinarian",
+    "license_number": "7409",
+    "source_url": "https://www.dca.ca.gov/consumers/public_info/index.html",
+    "claimed": false
+  },
+  {
+    "slug": "all-birds-cats-dogs-exotics-animal-clinic-north-palm-beach-fl-ve-0002550",
+    "display_name": "All Birds, Cats Dogs & Exotics Animal Clinic",
+    "city": "North Palm Beach",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0002550",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "all-birds-cats-dogs-and-exotics-animal-clinic-north-palm-beach-fl-ve-0007041",
+    "display_name": "All Birds, Cats, Dogs and Exotics Animal Clinic",
+    "city": "North Palm Beach",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0007041",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "animal-exotic-medical-center-lutz-fl-ve-0003605",
+    "display_name": "Animal & Exotic Medical Center",
+    "city": "Lutz",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0003605",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "avian-exotic-clinic-of-palm-city-palm-city-fl-ve-0005229",
+    "display_name": "Avian & Exotic Clinic of Palm City",
+    "city": "Palm City",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0005229",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "avian-and-animal-hospital-llc-largo-fl-ve-0006965",
+    "display_name": "Avian and Animal Hospital LLC",
+    "city": "Largo",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0006965",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "broward-avian-exotic-animal-clinic-deerfield-beach-fl-ve-0004271",
+    "display_name": "Broward Avian & Exotic Animal Clinic",
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0004271",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "broward-avian-exotic-animal-hospital-deerfield-beach-fl-ve-0007097",
+    "display_name": "Broward Avian & Exotic Animal Hospital",
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0007097",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-bird-hospital-inc-jacksonville-fl-ve-0003563",
+    "display_name": "Exotic Bird Hospital Inc",
+    "city": "Jacksonville",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0003563",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "feline-avian-exotic-aminal-hospital-dunedin-fl-ve-0002557",
+    "display_name": "Feline Avian & Exotic Aminal Hospital",
+    "city": "Dunedin",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0002557",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "livingston-animal-and-avian-hospital-lutz-fl-ve-0002067",
+    "display_name": "Livingston Animal and Avian Hospital",
+    "city": "Lutz",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0002067",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "medlin-exotic-animal-medical-services-fort-myers-fl-ve-0004849",
+    "display_name": "Medlin Exotic Animal Medical Services",
+    "city": "Fort Myers",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0004849",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "rainforest-clinic-for-birds-and-exotics-loxahatchee-fl-ve-0003139",
+    "display_name": "Rainforest Clinic for Birds and Exotics",
+    "city": "Loxahatchee",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0003139",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "south-florida-exotic-veterinary-services-llc-greenacres-fl-ve-0006392",
+    "display_name": "South Florida Exotic Veterinary Services LLC",
+    "city": "Greenacres",
+    "state": "FL",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0006392",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  },
+  {
+    "slug": "carevet-llc-dba-exotic-animal-hospital-of-orlando-clayton-mo-ve-0007381",
+    "display_name": "Carevet LLC DBA Exotic Animal Hospital of Orlando",
+    "city": "Clayton",
+    "state": "MO",
+    "category": "exotic veterinarian",
+    "license_number": "VE-0007381",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic26vt.csv",
+    "claimed": false
+  }
+]
