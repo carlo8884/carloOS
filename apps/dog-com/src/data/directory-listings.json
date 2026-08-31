@@ -13168,5 +13168,525 @@
     "license_number": "32102007617-2",
     "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
     "claimed": false
+  },
+  {
+    "slug": "anna-childs-k9-training-llc-swan-ia-511490",
+    "display_name": "ANNA CHILDS K9 TRAINING, LLC",
+    "city": "Swan",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "511490",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "bark-smart-dog-training-llc-ames-ia-840376",
+    "display_name": "BARK SMART DOG TRAINING LLC",
+    "city": "Ames",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "840376",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "better-together-dog-behavior-and-training-l-l-c-iowa-city-ia-865634",
+    "display_name": "BETTER TOGETHER DOG BEHAVIOR AND TRAINING, L.L.C.",
+    "city": "Iowa City",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "865634",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "black-dog-k9-training-llc-marshalltown-ia-852060",
+    "display_name": "BLACK DOG K9 TRAINING, LLC",
+    "city": "Marshalltown",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "852060",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "canine-connection-dog-training-llc-bettendorf-ia-792537",
+    "display_name": "CANINE CONNECTION DOG TRAINING, LLC",
+    "city": "Bettendorf",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "792537",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "canine-training-by-mystic-moon-inc-carlisle-ia-307694",
+    "display_name": "CANINE TRAINING BY MYSTIC MOON, INC",
+    "city": "Carlisle",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "307694",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "chasing-tails-dog-training-llc-bettendorf-ia-842574",
+    "display_name": "CHASING TAILS DOG TRAINING, LLC",
+    "city": "Bettendorf",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "842574",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "connected-canine-training-llc-fairfax-ia-824238",
+    "display_name": "CONNECTED CANINE TRAINING LLC",
+    "city": "Fairfax",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "824238",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "dog-training-elite-des-moines-llc-grinnell-ia-650536",
+    "display_name": "DOG TRAINING ELITE DES MOINES, LLC",
+    "city": "Grinnell",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "650536",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "dog-training-of-iowa-llc-coralville-ia-876991",
+    "display_name": "DOG TRAINING OF IOWA LLC",
+    "city": "Coralville",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "876991",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "dsm-dog-training-llc-urbandale-ia-616436",
+    "display_name": "DSM DOG TRAINING LLC",
+    "city": "Urbandale",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "616436",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "duty-bound-k9-training-llc-waterloo-ia-828228",
+    "display_name": "DUTY-BOUND K9 TRAINING LLC",
+    "city": "Waterloo",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "828228",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "frederick-family-dog-training-llc-johnston-ia-705368",
+    "display_name": "FREDERICK FAMILY DOG TRAINING LLC",
+    "city": "Johnston",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "705368",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "golden-heart-dog-training-llc-ankeny-ia-658380",
+    "display_name": "GOLDEN HEART DOG TRAINING, LLC",
+    "city": "Ankeny",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "658380",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "hackles-hide-k9-academy-llc-marion-ia-761391",
+    "display_name": "HACKLES & HIDE K9 ACADEMY, LLC",
+    "city": "Marion",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "761391",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "happy-acres-dog-training-llc-earlham-ia-492142",
+    "display_name": "HAPPY ACRES DOG TRAINING LLC",
+    "city": "Earlham",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "492142",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "happy-tails-dog-training-llc-iowa-city-ia-663167",
+    "display_name": "HAPPY TAILS DOG TRAINING LLC",
+    "city": "Iowa City",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "663167",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "imperial-canine-obedience-llc-ankeny-ia-680231",
+    "display_name": "IMPERIAL CANINE OBEDIENCE, LLC",
+    "city": "Ankeny",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "680231",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "inspirational-k9-training-llc-iowa-city-ia-800831",
+    "display_name": "INSPIRATIONAL K9 TRAINING, LLC",
+    "city": "Iowa City",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "800831",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "iowa-dog-trainers-llc-waterloo-ia-703492",
+    "display_name": "IOWA DOG TRAINERS LLC",
+    "city": "Waterloo",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "703492",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "k9-roots-dog-training-llc-davenport-ia-869366",
+    "display_name": "K9 ROOTS DOG TRAINING LLC",
+    "city": "Davenport",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "869366",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "kearney-dog-training-llc-cedar-rapids-ia-809335",
+    "display_name": "KEARNEY DOG TRAINING LLC",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "809335",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "king-s-creatures-animal-training-llc-cedar-rapids-ia-685902",
+    "display_name": "KING'S CREATURES ANIMAL TRAINING, LLC",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "685902",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "knox-canine-training-llc-des-moines-ia-534171",
+    "display_name": "KNOX CANINE TRAINING LLC",
+    "city": "Des Moines",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "534171",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "lifeline-k9-training-of-des-moines-llc-cumming-ia-849245",
+    "display_name": "LIFELINE K9 TRAINING OF DES MOINES LLC",
+    "city": "Cumming",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "849245",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "lingo-dog-training-llc-fairfield-ia-581316",
+    "display_name": "LINGO DOG TRAINING, LLC",
+    "city": "Fairfield",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "581316",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "loyal-start-dog-training-llc-cedar-falls-ia-525962",
+    "display_name": "LOYAL START DOG TRAINING, LLC",
+    "city": "Cedar Falls",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "525962",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "matteson-modern-dog-training-llc-eldridge-ia-797999",
+    "display_name": "MATTESON MODERN DOG TRAINING, LLC",
+    "city": "Eldridge",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "797999",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "nk9-dog-training-academy-llc-kelley-ia-684719",
+    "display_name": "NK9 DOG TRAINING ACADEMY LLC",
+    "city": "Kelley",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "684719",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "proactive-canine-training-llc-ankeny-ia-811551",
+    "display_name": "PROACTIVE CANINE TRAINING LLC",
+    "city": "Ankeny",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "811551",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "ridgeview-and-riverside-k9-training-llc-elkader-ia-854181",
+    "display_name": "RIDGEVIEW AND RIVERSIDE K9 TRAINING LLC",
+    "city": "Elkader",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "854181",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "riverside-canine-training-academy-llc-elkader-ia-825756",
+    "display_name": "RIVERSIDE CANINE TRAINING ACADEMY LLC",
+    "city": "Elkader",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "825756",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "serve-support-k9-academy-llc-burlington-ia-867944",
+    "display_name": "SERVE & SUPPORT K9 ACADEMY LLC",
+    "city": "Burlington",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "867944",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "sheila-williams-dog-training-llc-des-moines-ia-734840",
+    "display_name": "SHEILA WILLIAMS DOG TRAINING, LLC",
+    "city": "Des Moines",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "734840",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "stone-hollow-dog-training-inc-cascade-ia-349535",
+    "display_name": "STONE HOLLOW DOG TRAINING, INC.",
+    "city": "Cascade",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "349535",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "sunny-days-dog-training-llc-atlantic-ia-639376",
+    "display_name": "SUNNY DAYS DOG TRAINING, LLC",
+    "city": "Atlantic",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "639376",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "tails-of-excitement-dog-training-llc-west-des-moines-ia-632600",
+    "display_name": "TAILS OF EXCITEMENT DOG TRAINING LLC",
+    "city": "West Des Moines",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "632600",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "the-puppy-jake-canine-training-academy-llc-urbandale-ia-842283",
+    "display_name": "THE PUPPY JAKE CANINE TRAINING ACADEMY, LLC",
+    "city": "Urbandale",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "842283",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "unleashed-canine-academy-llc-bettendorf-ia-829098",
+    "display_name": "UNLEASHED CANINE ACADEMY, LLC",
+    "city": "Bettendorf",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "829098",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "wags-dog-training-llc-marshalltown-ia-879029",
+    "display_name": "WAGS DOG TRAINING LLC",
+    "city": "Marshalltown",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "879029",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "wild-free-dog-training-llc-cedar-rapids-ia-848888",
+    "display_name": "WILD & FREE DOG TRAINING LLC",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "category": "dog trainer",
+    "license_number": "848888",
+    "source_url": "https://data.iowa.gov/catalog/dataset/554",
+    "claimed": false
+  },
+  {
+    "slug": "alyeska-canine-trainers-of-south-anchorage-inc-anchorage-ak-38008d",
+    "display_name": "ALYESKA CANINE TRAINERS OF SOUTH ANCHORAGE, INC.",
+    "city": "Anchorage",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "38008D",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "alaska-dog-boarding-and-training-incorporated-palmer-ak-10000171",
+    "display_name": "Alaska Dog Boarding and Training, Incorporated",
+    "city": "Palmer",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10000171",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "dog-works-training-company-willow-ak-10012876",
+    "display_name": "Dog Works Training Company",
+    "city": "Willow",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10012876",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "pawsitive-dog-training-llc-north-pole-ak-10008691",
+    "display_name": "Pawsitive Dog Training LLC",
+    "city": "North Pole",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10008691",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "arctic-k9-academy-llc-anchorage-ak-10029287",
+    "display_name": "Arctic K9 Academy LLC",
+    "city": "Anchorage",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10029287",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "howling-peaks-dog-training-llc-anchorage-ak-10056973",
+    "display_name": "Howling Peaks Dog Training, LLC",
+    "city": "Anchorage",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10056973",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "newman-k9training-llc-wasilla-ak-10230166",
+    "display_name": "Newman_K9Training LLC",
+    "city": "Wasilla",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10230166",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "fml-dog-trainers-llc-kenai-ak-10304286",
+    "display_name": "FML Dog Trainers LLC",
+    "city": "Kenai",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10304286",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "good-start-puppy-dog-training-llc-anchorage-ak-10307201",
+    "display_name": "Good Start Puppy & Dog Training LLC",
+    "city": "Anchorage",
+    "state": "AK",
+    "category": "dog trainer",
+    "license_number": "10307201",
+    "source_url": "https://www.commerce.alaska.gov/cbp/main/DbDownload/CorporationsDownload",
+    "claimed": false
+  },
+  {
+    "slug": "dog-training-elite-baton-rouge-la-105058255",
+    "display_name": "DOG TRAINING ELITE",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "category": "dog trainer",
+    "license_number": "105058255",
+    "source_url": "https://data.nola.gov/d/hjcd-grvu",
+    "claimed": false
+  },
+  {
+    "slug": "ok-s-dog-training-service-baton-rouge-la-00068558",
+    "display_name": "OK'S DOG TRAINING SERVICE",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "category": "dog trainer",
+    "license_number": "00068558",
+    "source_url": "https://data.brla.gov/d/xw6s-bcqm",
+    "claimed": false
   }
 ]
