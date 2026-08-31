@@ -1,1 +1,1702 @@
-[]
+[
+  {
+    "slug": "the-aquarium-people-burbank-ca-0000130823-0001-0",
+    "display_name": "THE AQUARIUM PEOPLE",
+    "city": "Burbank",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000130823-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-city-canoga-park-ca-0000797665-0001-9",
+    "display_name": "AQUARIUM CITY",
+    "city": "Canoga Park",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000797665-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "blue-ocean-aquariums-canoga-park-ca-0002565529-0001-9",
+    "display_name": "BLUE OCEAN AQUARIUMS",
+    "city": "Canoga Park",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002565529-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "vivid-aquariums-inc-canoga-park-ca-0000039012-0001-6",
+    "display_name": "VIVID AQUARIUMS INC.",
+    "city": "Canoga Park",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000039012-0001-6",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-art-aquariums-carpinteria-ca-0002775385-0001-3",
+    "display_name": "AQUATIC ART AQUARIUMS",
+    "city": "Carpinteria",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002775385-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "nature-aquarium-culver-city-ca-0003097124-0001-4",
+    "display_name": "NATURE AQUARIUM",
+    "city": "Culver City",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003097124-0001-4",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-illusions-granada-hills-ca-0000559038-0001-1",
+    "display_name": "AQUATIC ILLUSIONS",
+    "city": "Granada Hills",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000559038-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "la-aquariums-granada-hills-ca-0003447059-0001-0",
+    "display_name": "LA AQUARIUMS",
+    "city": "Granada Hills",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003447059-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-plant-distributing-llc-los-angeles-ca-0003600722-0001-9",
+    "display_name": "AQUARIUM PLANT DISTRIBUTING LLC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003600722-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-world-los-angeles-ca-0002524506-0001-5",
+    "display_name": "AQUARIUM WORLD",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002524506-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "coral-reef-aquariums-inc-los-angeles-ca-0002005428-0001-1",
+    "display_name": "CORAL REEF AQUARIUMS INC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002005428-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "fumis-tropical-fish-los-angeles-ca-0000843281-0001-0",
+    "display_name": "FUMIS TROPICAL FISH",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000843281-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "huntercurrent-tides-aquariums-los-angeles-ca-0003348408-0001-1",
+    "display_name": "HUNTERCURRENT TIDES AQUARIUMS",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003348408-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "minh-s-tropical-fish-los-angeles-ca-0003451249-0001-5",
+    "display_name": "MINH'S TROPICAL FISH",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003451249-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "puravida-aquatic-los-angeles-ca-0000399788-0001-1",
+    "display_name": "PURAVIDA AQUATIC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000399788-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "tokyo-aquarium-los-angeles-ca-0003270078-0001-0",
+    "display_name": "TOKYO AQUARIUM",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003270078-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "tong-s-tropical-fish-pets-los-angeles-ca-0003425523-0001-5",
+    "display_name": "TONG'S TROPICAL FISH & PETS",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003425523-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "yo-s-tropical-fish-los-angeles-ca-0003518590-0001-8",
+    "display_name": "YO'S TROPICAL FISH",
+    "city": "Los Angeles",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003518590-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "above-seven-aquatics-north-hills-ca-0003504694-0001-9",
+    "display_name": "ABOVE SEVEN AQUATICS",
+    "city": "North Hills",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003504694-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "deep-blue-aquarium-and-service-inc-north-hollywood-ca-0002846739-0001-0",
+    "display_name": "DEEP BLUE AQUARIUM AND SERVICE INC",
+    "city": "North Hollywood",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002846739-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "tide-pool-aquatics-pacific-palisades-ca-0003059119-0001-2",
+    "display_name": "TIDE POOL AQUATICS",
+    "city": "Pacific Palisades",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003059119-0001-2",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "five-star-aquarium-services-palmdale-ca-0000602084-0001-3",
+    "display_name": "FIVE STAR AQUARIUM SERVICES",
+    "city": "Palmdale",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000602084-0001-3",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "nkr-aquatics-reseda-ca-0003350833-0001-1",
+    "display_name": "NKR AQUATICS",
+    "city": "Reseda",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003350833-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "blue-empire-reef-san-diego-ca-2026003695",
+    "display_name": "BLUE EMPIRE REEF",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "2026003695",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "pet-zone-tropical-fish-san-diego-ca-2018011117",
+    "display_name": "PET ZONE TROPICAL FISH",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "2018011117",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  },
+  {
+    "slug": "aqua-forest-aquarium-san-francisco-ca-0379420",
+    "display_name": "Aqua Forest Aquarium",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0379420",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-tek-san-francisco-ca-0479830",
+    "display_name": "Aquarium Tek",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0479830",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "assorted-aquatics-llc-san-francisco-ca-1171544",
+    "display_name": "Assorted Aquatics LLC",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "1171544",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "california-marine-aquariums-san-francisco-ca-0428788",
+    "display_name": "California Marine Aquariums",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0428788",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "fairy-lake-aquarium-san-francisco-ca-0936243",
+    "display_name": "Fairy Lake Aquarium",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0936243",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "ocean-aquarium-san-francisco-ca-0439137",
+    "display_name": "Ocean Aquarium",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0439137",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "seahorse-aquarium-san-francisco-ca-0459123",
+    "display_name": "Seahorse Aquarium",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0459123",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "sixth-ave-aquarium-san-francisco-ca-0460390",
+    "display_name": "Sixth Ave. Aquarium",
+    "city": "San Francisco",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0460390",
+    "source_url": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "claimed": false
+  },
+  {
+    "slug": "7-seas-tropical-fish-san-pedro-ca-0000725877-0001-9",
+    "display_name": "7 SEAS TROPICAL FISH",
+    "city": "San Pedro",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000725877-0001-9",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-village-valley-village-ca-0000277234-0001-1",
+    "display_name": "AQUARIUM VILLAGE",
+    "city": "Valley Village",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0000277234-0001-1",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "anderson-aquatics-van-nuys-ca-0002982896-0001-8",
+    "display_name": "ANDERSON AQUATICS",
+    "city": "Van Nuys",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002982896-0001-8",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "beyond-the-sea-aquariums-and-ponds-corp-van-nuys-ca-0003208004-0001-0",
+    "display_name": "BEYOND THE SEA AQUARIUMS AND PONDS CORP.",
+    "city": "Van Nuys",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003208004-0001-0",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "atlantis-aquarium-service-west-hills-ca-0003210519-0001-5",
+    "display_name": "ATLANTIS AQUARIUM SERVICE",
+    "city": "West Hills",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0003210519-0001-5",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "tannin-aquatics-woodland-hills-ca-0002878717-0001-7",
+    "display_name": "TANNIN AQUATICS",
+    "city": "Woodland Hills",
+    "state": "CA",
+    "category": "aquarium store",
+    "license_number": "0002878717-0001-7",
+    "source_url": "https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua",
+    "claimed": false
+  },
+  {
+    "slug": "emmons-tropical-fish-simsbury-ct-psf-000187",
+    "display_name": "EMMONS TROPICAL FISH",
+    "city": "Simsbury",
+    "state": "CT",
+    "category": "aquarium store",
+    "license_number": "PSF.000187",
+    "source_url": "https://data.ct.gov/Business/State-Licenses-and-Credentials/ngch-56tr",
+    "claimed": false
+  },
+  {
+    "slug": "greenbank-aquarium-wilmington-de-2026703591",
+    "display_name": "GREENBANK AQUARIUM",
+    "city": "Wilmington",
+    "state": "DE",
+    "category": "aquarium store",
+    "license_number": "2026703591",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "ord-aquatics-bensenville-il-079-15118",
+    "display_name": "ORD Aquatics",
+    "city": "Bensenville",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15118",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "sailfin-pet-shop-champaign-il-079-15171",
+    "display_name": "Sailfin Pet Shop",
+    "city": "Champaign",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15171",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "acuario-piscis-chicago-il-079-14005",
+    "display_name": "Acuario Piscis",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14005",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-oasis-llc-chicago-il-079-15122",
+    "display_name": "Aquatic Oasis LLC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15122",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-world-chicago-il-079-8507",
+    "display_name": "Aquatic World",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-8507",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "big-fish-aquarium-chicago-il-3086668",
+    "display_name": "BIG FISH AQUARIUM",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "3086668",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses-Current-Active/uupf-x98q",
+    "claimed": false
+  },
+  {
+    "slug": "blue-planet-aquarium-services-chicago-il-2841383",
+    "display_name": "BLUE PLANET AQUARIUM SERVICES",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "2841383",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses-Current-Active/uupf-x98q",
+    "claimed": false
+  },
+  {
+    "slug": "englewood-aquatics-pet-supply-llc-chicago-il-2882164",
+    "display_name": "ENGLEWOOD AQUATICS PET SUPPLY LLC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "2882164",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses-Current-Active/uupf-x98q",
+    "claimed": false
+  },
+  {
+    "slug": "golden-s-tropical-world-chicago-il-079-3937",
+    "display_name": "Golden's Tropical World",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-3937",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "hardy-aquatics-pets-chicago-il-2952544",
+    "display_name": "HARDY AQUATICS & PETS",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "2952544",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses-Current-Active/uupf-x98q",
+    "claimed": false
+  },
+  {
+    "slug": "ocean-city-aquariums-chicago-il-3026512",
+    "display_name": "OCEAN CITY AQUARIUMS",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "3026512",
+    "source_url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses-Current-Active/uupf-x98q",
+    "claimed": false
+  },
+  {
+    "slug": "ocean-design-aquarium-inc-chicago-il-079-14179",
+    "display_name": "Ocean Design Aquarium, INC",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14179",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "old-town-aquarium-chicago-il-079-8763",
+    "display_name": "Old Town Aquarium",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-8763",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "tank-it-easy-chicago-il-079-14801",
+    "display_name": "Tank It Easy",
+    "city": "Chicago",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14801",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "j-squared-aquatics-clinton-il-079-15164",
+    "display_name": "J Squared Aquatics",
+    "city": "Clinton",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15164",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-fish-guy-llc-creve-coeur-il-079-15169",
+    "display_name": "Exotic Fish Guy LLC",
+    "city": "Creve Coeur",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15169",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "fish-planet-deerfield-il-079-15195",
+    "display_name": "Fish Planet",
+    "city": "Deerfield",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15195",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "prism-bettas-dekalb-il-079-15097",
+    "display_name": "Prism Bettas",
+    "city": "Dekalb",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15097",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "somethin-fishy-fox-lake-llc-fox-lake-il-079-15179",
+    "display_name": "Somethin Fishy Fox Lake LLC",
+    "city": "Fox Lake",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15179",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "advanced-aquatics-frankfort-il-079-15196",
+    "display_name": "Advanced Aquatics",
+    "city": "Frankfort",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15196",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "custom-aquarium-services-grayslake-il-079-8732",
+    "display_name": "Custom Aquarium Services",
+    "city": "Grayslake",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-8732",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aqua-safari-inc-inverness-il-079-6882",
+    "display_name": "Aqua-Safari, Inc.",
+    "city": "Inverness",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-6882",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "midwest-tropical-fish-and-pets-llc-jerseyville-il-079-14373",
+    "display_name": "Midwest Tropical Fish and Pets llc",
+    "city": "Jerseyville",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14373",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "reefwise-lisle-il-079-15144",
+    "display_name": "Reefwise",
+    "city": "Lisle",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15144",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "datz-cichlids-and-reptiles-mchenry-il-079-15194",
+    "display_name": "Datz Cichlids and Reptiles",
+    "city": "McHenry",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15194",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "sho-tank-aquariums-mundelein-il-079-14939",
+    "display_name": "Sho Tank Aquariums",
+    "city": "Mundelein",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14939",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "blue-line-coral-naperville-il-079-15081",
+    "display_name": "Blue Line Coral",
+    "city": "Naperville",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15081",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "reef-plus-north-aurora-il-079-11152",
+    "display_name": "Reef Plus",
+    "city": "North Aurora",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-11152",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "a-aquatic-works-limited-northbrook-il-079-15050",
+    "display_name": "A Aquatic Works Limited",
+    "city": "Northbrook",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15050",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "king-louies-aquatics-pet-store-llc-northbrook-il-079-15187",
+    "display_name": "King Louies Aquatics Pet Store LLC",
+    "city": "Northbrook",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15187",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "reef-geeks-of-chicago-northbrook-il-079-15170",
+    "display_name": "Reef Geeks of Chicago",
+    "city": "Northbrook",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15170",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "chris-tropical-treasures-inc-northlake-il-079-8067",
+    "display_name": "Chris' Tropical Treasures, Inc.",
+    "city": "Northlake",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-8067",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "oak-park-natural-pet-fish-oak-park-il-079-15087",
+    "display_name": "Oak Park Natural Pet & Fish",
+    "city": "Oak Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15087",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-discus-llc-orland-park-il-079-14929",
+    "display_name": "Exotic Discus LLC",
+    "city": "Orland Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14929",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "nu-aqua-llc-orland-park-il-079-15158",
+    "display_name": "Nu Aqua LLC",
+    "city": "Orland Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15158",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "650-ocean-s-reef-inc-palatine-il-079-15137",
+    "display_name": "650 Ocean's Reef Inc.",
+    "city": "Palatine",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15137",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-obsessions-peoria-il-079-14186",
+    "display_name": "Aquarium Obsessions",
+    "city": "Peoria",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14186",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "lucy-s-tropical-fish-by-the-river-peoria-il-079-15186",
+    "display_name": "Lucy's Tropical Fish by the River",
+    "city": "Peoria",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15186",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "the-fish-geek-peoria-il-079-15142",
+    "display_name": "The Fish Geek",
+    "city": "Peoria",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15142",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "roe-aquarium-and-pet-co-rock-island-il-079-5254",
+    "display_name": "Roe Aquarium and Pet Co",
+    "city": "Rock Island",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-5254",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "beyond-the-reef-schaumburg-il-079-8904",
+    "display_name": "Beyond The Reef",
+    "city": "Schaumburg",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-8904",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "supreme-cichlid-shorewood-il-079-15174",
+    "display_name": "Supreme Cichlid",
+    "city": "Shorewood",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15174",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "natures-fins-and-foliage-springfield-il-079-15190",
+    "display_name": "Natures Fins and Foliage",
+    "city": "Springfield",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15190",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "the-fishman-pet-center-springfield-il-079-15181",
+    "display_name": "The Fishman Pet Center",
+    "city": "Springfield",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15181",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aquatica-tinley-park-tinley-park-il-079-15151",
+    "display_name": "Aquatica Tinley Park",
+    "city": "Tinley Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15151",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "nation-wide-aquatics-tinley-park-il-079-15157",
+    "display_name": "Nation Wide Aquatics",
+    "city": "Tinley Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-15157",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "rob-s-aquatics-tinley-park-il-079-14442",
+    "display_name": "Rob's Aquatics",
+    "city": "Tinley Park",
+    "state": "IL",
+    "category": "aquarium store",
+    "license_number": "079-14442",
+    "source_url": "https://apps.agr.illinois.gov/AEM/licenselist.php?facc=PETSHOP%20OPERATOR",
+    "claimed": false
+  },
+  {
+    "slug": "aj-aquatics-inc-amarillo-tx-32067200686-1",
+    "display_name": "AJ AQUATICS INC",
+    "city": "Amarillo",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32067200686-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "green-river-aquatics-llc-amarillo-tx-32076345795-1",
+    "display_name": "GREEN RIVER AQUATICS LLC",
+    "city": "Amarillo",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32076345795-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "down-south-reefing-angleton-tx-32105550142-1",
+    "display_name": "DOWN SOUTH REEFING",
+    "city": "Angleton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32105550142-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "champions-tropical-fish-room-arlington-tx-32057227830-3",
+    "display_name": "CHAMPIONS TROPICAL FISH ROOM",
+    "city": "Arlington",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32057227830-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "dfw-aquarium-supplies-arlington-tx-32007634937-1",
+    "display_name": "DFW AQUARIUM SUPPLIES",
+    "city": "Arlington",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32007634937-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "vibrant-aquariums-llc-aubrey-tx-32079705243-1",
+    "display_name": "VIBRANT AQUARIUMS, LLC",
+    "city": "Aubrey",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32079705243-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "river-city-aquatics-llc-austin-tx-32068735185-1",
+    "display_name": "RIVER CITY AQUATICS LLC",
+    "city": "Austin",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32068735185-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "duke-s-tropical-fish-azle-tx-32033821763-1",
+    "display_name": "DUKE'S TROPICAL FISH",
+    "city": "Azle",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32033821763-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "sea-squared-aquatics-belton-tx-32106004669-1",
+    "display_name": "SEA SQUARED AQUATICS",
+    "city": "Belton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32106004669-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "freshwater-aquariums-for-others-canton-tx-32056421780-2",
+    "display_name": "FRESHWATER AQUARIUMS FOR OTHERS",
+    "city": "Canton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32056421780-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "reds-reef-carrollton-tx-32066380679-1",
+    "display_name": "REDS REEF",
+    "city": "Carrollton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32066380679-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquariumstoredepot-cedar-park-tx-32056204236-1",
+    "display_name": "AQUARIUMSTOREDEPOT",
+    "city": "Cedar Park",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32056204236-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "tiny-aquatics-cedar-park-tx-32070254050-4",
+    "display_name": "TINY AQUATICS",
+    "city": "Cedar Park",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32070254050-4",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-shop-celina-tx-30117264850-4",
+    "display_name": "AQUARIUM SHOP",
+    "city": "Celina",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "30117264850-4",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "living-systems-aquatics-celina-tx-32104312379-1",
+    "display_name": "LIVING SYSTEMS AQUATICS",
+    "city": "Celina",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32104312379-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "dave-s-rare-aquarium-fish-cibolo-tx-32019109407-2",
+    "display_name": "DAVE'S RARE AQUARIUM FISH",
+    "city": "Cibolo",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32019109407-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-creations-conroe-tx-32006539541-1",
+    "display_name": "AQUARIUM CREATIONS",
+    "city": "Conroe",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32006539541-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "coastal-corals-and-aquatics-corpus-christi-tx-32107505771-1",
+    "display_name": "COASTAL CORALS AND AQUATICS",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32107505771-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "corpus-crispy-aquatics-llc-corpus-christi-tx-32105721966-1",
+    "display_name": "CORPUS CRISPY AQUATICS LLC",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32105721966-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "holy-reefs-llc-corpus-christi-tx-32096394690-1",
+    "display_name": "HOLY REEFS LLC",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32096394690-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "salty-aquatics-fish-corpus-christi-tx-32073516844-1",
+    "display_name": "SALTY AQUATICS & FISH",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32073516844-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "tropical-fish-haven-corpus-christi-tx-32047753994-1",
+    "display_name": "TROPICAL FISH HAVEN",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32047753994-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "professional-aquatic-supply-inc-dallas-tx-17521770887-5",
+    "display_name": "PROFESSIONAL AQUATIC SUPPLY INC",
+    "city": "Dallas",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "17521770887-5",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "fishman-aquarium-co-denton-tx-32049807335-1",
+    "display_name": "FISHMAN AQUARIUM CO",
+    "city": "Denton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32049807335-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "outer-limit-reef-exotics-llc-desoto-tx-32073946819-1",
+    "display_name": "OUTER LIMIT REEF & EXOTICS, LLC",
+    "city": "Desoto",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32073946819-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "killer-aquatic-el-cenizo-tx-32092221905-1",
+    "display_name": "KILLER AQUATIC",
+    "city": "El Cenizo",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32092221905-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "gm-reef-el-paso-tx-32030013141-1",
+    "display_name": "GM REEF",
+    "city": "El Paso",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32030013141-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "planet-reef-el-paso-tx-32039742146-2",
+    "display_name": "PLANET REEF",
+    "city": "El Paso",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32039742146-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "reef-juice-flower-mound-tx-32104593770-1",
+    "display_name": "REEF JUICE",
+    "city": "Flower Mound",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32104593770-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "binz-aquatics-llc-forney-tx-32100928624-1",
+    "display_name": "BINZ AQUATICS LLC",
+    "city": "Forney",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32100928624-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-dreams-fort-worth-tx-32085657834-1",
+    "display_name": "AQUATIC DREAMS",
+    "city": "Fort Worth",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32085657834-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "isaan-aquatics-granbury-tx-32103817485-1",
+    "display_name": "ISAAN AQUATICS",
+    "city": "Granbury",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32103817485-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "maraist-s-tropical-fish-groves-tx-32041082481-2",
+    "display_name": "MARAIST'S TROPICAL FISH",
+    "city": "Groves",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32041082481-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "bulios-aquatics-llc-haltom-city-tx-32103193226-1",
+    "display_name": "BULIOS AQUATICS LLC",
+    "city": "Haltom City",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32103193226-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "rift-to-reef-aquatics-llc-highland-village-tx-32025175095-3",
+    "display_name": "RIFT TO REEF AQUATICS, LLC",
+    "city": "Highland Village",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32025175095-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "360-aquatic-solutions-inc-houston-tx-32087404607-2",
+    "display_name": "360 AQUATIC SOLUTIONS INC",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32087404607-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "american-top-aquatic-llc-houston-tx-32062377588-2",
+    "display_name": "AMERICAN TOP AQUATIC LLC",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32062377588-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-plants-of-america-llc-houston-tx-32098470423-1",
+    "display_name": "AQUARIUM PLANTS OF AMERICA LLC",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32098470423-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "fish-reef-llc-houston-tx-32079423623-1",
+    "display_name": "FISH & REEF LLC",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32079423623-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "fjw-aquarium-houston-tx-32011216333-3",
+    "display_name": "FJW AQUARIUM",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32011216333-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "houston-aquatics-houston-tx-32010589714-6",
+    "display_name": "HOUSTON AQUATICS",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32010589714-6",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "nemo-friends-aquariums-houston-tx-32072351870-1",
+    "display_name": "NEMO & FRIENDS AQUARIUMS",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32072351870-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "ray-s-tropical-fish-llc-houston-tx-32063354149-1",
+    "display_name": "RAY'S TROPICAL FISH, LLC",
+    "city": "Houston",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32063354149-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "rehoboth-aquatics-humble-tx-32014463650-2",
+    "display_name": "REHOBOTH AQUATICS",
+    "city": "Humble",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32014463650-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "finessence-aquatics-irving-tx-32097138757-1",
+    "display_name": "FINESSENCE AQUATICS",
+    "city": "Irving",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32097138757-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "reef-juice-llc-irving-tx-32104417806-1",
+    "display_name": "REEF JUICE LLC",
+    "city": "Irving",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32104417806-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "american-aquatics-lubbock-tx-32066618318-1",
+    "display_name": "AMERICAN AQUATICS",
+    "city": "Lubbock",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32066618318-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "patriot-reef-aquatics-llc-magnolia-tx-32105983087-1",
+    "display_name": "PATRIOT REEF AQUATICS LLC",
+    "city": "Magnolia",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32105983087-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "the-reef-vault-llc-magnolia-tx-32098622833-1",
+    "display_name": "THE REEF VAULT LLC",
+    "city": "Magnolia",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32098622833-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-islands-llc-manvel-tx-32095110832-1",
+    "display_name": "AQUARIUM ISLANDS LLC",
+    "city": "Manvel",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32095110832-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "comanche-creek-aquatics-more-marble-falls-tx-32006787504-3",
+    "display_name": "COMANCHE CREEK AQUATICS & MORE",
+    "city": "Marble Falls",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32006787504-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "reef-valley-llc-mcallen-tx-32048747755-2",
+    "display_name": "REEF VALLEY, LLC",
+    "city": "Mcallen",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32048747755-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "north-texas-aquarium-llc-mckinney-tx-32043023806-6",
+    "display_name": "NORTH TEXAS AQUARIUM LLC",
+    "city": "Mckinney",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32043023806-6",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-technologies-midland-tx-32008904164-6",
+    "display_name": "AQUARIUM TECHNOLOGIES",
+    "city": "Midland",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32008904164-6",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "midlothian-reef-specialist-llc-midlothian-tx-32105523875-1",
+    "display_name": "MIDLOTHIAN REEF SPECIALIST LLC",
+    "city": "Midlothian",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32105523875-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "texas-aquatics-north-richland-hills-tx-32079039353-1",
+    "display_name": "TEXAS AQUATICS",
+    "city": "North Richland Hills",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32079039353-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "infinite-aquatics-pasadena-tx-32075255979-1",
+    "display_name": "INFINITE AQUATICS",
+    "city": "Pasadena",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32075255979-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "haus-of-reef-pharr-tx-32106510848-1",
+    "display_name": "HAUS OF REEF",
+    "city": "Pharr",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32106510848-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "exotic-aquatics-inc-plano-tx-32020094754-1",
+    "display_name": "EXOTIC AQUATICS INC",
+    "city": "Plano",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32020094754-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "tactical-reef-richardson-tx-32088434405-1",
+    "display_name": "TACTICAL REEF",
+    "city": "Richardson",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32088434405-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "limitless-aquatics-llc-richmond-tx-32072621025-1",
+    "display_name": "LIMITLESS AQUATICS, LLC",
+    "city": "Richmond",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32072621025-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "fin-da-mental-tropical-fish-rockwall-tx-32006092582-2",
+    "display_name": "FIN-DA-MENTAL TROPICAL FISH",
+    "city": "Rockwall",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32006092582-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "tiny-aquatics-l-l-c-round-rock-tx-32070254050-3",
+    "display_name": "TINY AQUATICS L.L.C.",
+    "city": "Round Rock",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32070254050-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "a-z-aquatic-llc-royse-city-tx-32069975038-1",
+    "display_name": "A-Z AQUATIC LLC",
+    "city": "Royse City",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32069975038-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquatic-edge-san-angelo-tx-32015543500-2",
+    "display_name": "AQUATIC EDGE",
+    "city": "San Angelo",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32015543500-2",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "dave-s-rare-aquarium-fish-san-antonio-tx-32019109407-1",
+    "display_name": "DAVE'S RARE AQUARIUM FISH",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32019109407-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "elegant-reef-san-antonio-tx-32053045863-1",
+    "display_name": "ELEGANT REEF",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32053045863-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "lone-star-aquariums-llc-san-antonio-tx-32091202427-1",
+    "display_name": "LONE STAR AQUARIUMS, LLC",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32091202427-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "papa-jim-s-tropical-fish-san-antonio-tx-32014497013-1",
+    "display_name": "PAPA JIM'S TROPICAL FISH",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32014497013-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "salty-fish-aquariums-san-antonio-tx-32051806720-1",
+    "display_name": "SALTY FISH AQUARIUMS",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32051806720-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "sea-hare-aquatics-san-antonio-tx-32080253431-1",
+    "display_name": "SEA HARE AQUATICS",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32080253431-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "southside-aquatics-san-antonio-tx-32014556677-1",
+    "display_name": "SOUTHSIDE AQUATICS",
+    "city": "San Antonio",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32014556677-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "doms-aquariums-san-marcos-tx-32106379350-1",
+    "display_name": "DOMS AQUARIUMS",
+    "city": "San Marcos",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32106379350-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "mah-aquatics-llc-seabrook-tx-32072794905-1",
+    "display_name": "MAH AQUATICS, LLC",
+    "city": "Seabrook",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32072794905-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "cerberus-aquatics-slaton-tx-32096680643-1",
+    "display_name": "CERBERUS AQUATICS",
+    "city": "Slaton",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32096680643-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "that-aquarium-place-spring-tx-32002897133-3",
+    "display_name": "THAT AQUARIUM PLACE",
+    "city": "Spring",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32002897133-3",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "frank-s-aquarium-products-springtown-tx-32078692814-1",
+    "display_name": "FRANK'S AQUARIUM PRODUCTS",
+    "city": "Springtown",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32078692814-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "north-waco-tropical-fish-waco-tx-32063713427-1",
+    "display_name": "NORTH WACO TROPICAL FISH",
+    "city": "Waco",
+    "state": "TX",
+    "category": "aquarium store",
+    "license_number": "32063713427-1",
+    "source_url": "https://data.texas.gov/Government-and-Taxes/Active-Sales-Tax-Permit-Holders/jrea-zgmq",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-co-op-edmonds-wa-2022705256",
+    "display_name": "AQUARIUM CO-OP",
+    "city": "Edmonds",
+    "state": "WA",
+    "category": "aquarium store",
+    "license_number": "2022705256",
+    "source_url": "https://data.delaware.gov/Licenses-and-Certifications/Delaware-Business-Licenses/5zy2-grhr",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-zen-seattle-wa-0007539280664814",
+    "display_name": "AQUARIUM ZEN",
+    "city": "Seattle",
+    "state": "WA",
+    "category": "aquarium store",
+    "license_number": "0007539280664814",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "aquarium-concepts-inc-shoreline-wa-0005319220534862",
+    "display_name": "AQUARIUM CONCEPTS INC",
+    "city": "Shoreline",
+    "state": "WA",
+    "category": "aquarium store",
+    "license_number": "0005319220534862",
+    "source_url": "https://data.seattle.gov/City-Administration/Active-Business-License-Tax-Certificate/wnbq-64tb",
+    "claimed": false
+  },
+  {
+    "slug": "western-aquatic-animal-veterinary-service-san-diego-ca-2000003062",
+    "display_name": "WESTERN AQUATIC ANIMAL VETERINARY SERVICE",
+    "city": "San Diego",
+    "state": "CA",
+    "category": "aquatic veterinarian",
+    "license_number": "2000003062",
+    "source_url": "https://data.sandiego.gov/datasets/business-tax-certificates/",
+    "claimed": false
+  }
+]
