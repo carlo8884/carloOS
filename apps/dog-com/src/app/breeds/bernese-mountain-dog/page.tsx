@@ -21,7 +21,7 @@ export default function BerneseMountainDogPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bernese Mountain Dog Breed Guide', subtitle: 'Gentle, devoted, and extraordinarily beautiful — Bernese Mountain Dogs are among the most loved family breeds. They are also among the shortest-lived and most cancer-prone. The average lifespan is 7–8 years. Approximately 50% die from cancer. This is not meant to discourage ownership — it is information every prospective Berner owner deserves to have before falling in love.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bernese Mountain Dog', href: '/breeds/bernese-mountain-dog' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +33,7 @@ export default function BerneseMountainDogPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Bernese Mountain Dog?', href: '/breeds/bernese-mountain-dog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
         ]} />

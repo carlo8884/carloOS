@@ -46,7 +46,7 @@ export default function YorkiePage() {
           ))}
         </div>
         <RelatedLinks title="Yorkie Health Deep-Dive" links={[{ label: 'Yorkshire Terrier Health Issues & Screenings', href: '/breeds/yorkshire-terrier/health' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Yorkie Feeding Guide', href: '/breeds/yorkshire-terrier/feeding' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Yorkie Feeding Guide', href: '/breeds/yorkshire-terrier/feeding' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Yorkshire Terrier vs Maltese', href: '/compare/yorkshire-terrier-vs-maltese' },
           { label: 'Pomeranian vs Yorkshire Terrier', href: '/compare/pomeranian-vs-yorkshire-terrier' },

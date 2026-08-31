@@ -48,7 +48,7 @@ export default function PoodlePage() {
           ))}
         </div>
         <RelatedLinks title="Poodle Health Deep-Dive" links={[{ label: 'Poodle Health Issues & Screenings', href: '/breeds/poodle/health' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Poodle Feeding Guide', href: '/breeds/poodle/feeding' }, { label: 'Goldendoodle Guide', href: '/breeds/golden-doodle' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Poodle Feeding Guide', href: '/breeds/poodle/feeding' }, { label: 'Goldendoodle Guide', href: '/breeds/golden-doodle' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Poodle vs Labradoodle', href: '/compare/poodle-vs-labradoodle' },
           { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },

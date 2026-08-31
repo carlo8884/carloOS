@@ -125,6 +125,15 @@ describe('directory places', () => {
     assert.deepEqual(directorySitemapIds(listings), [{ id: 0 }, { id: 1 }])
     assert.deepEqual(directorySlugParams([]), [])
     assert.deepEqual(directoryCityParams([]), [])
+
+    const slugs = directorySlugParams(listings).map((p) => p.slug).sort()
+    assert.deepEqual(slugs, [
+      'acme-austin-tx-1',
+      'beta-dallas-texas-2',
+      'gamma-albany-ny-3',
+      'ny',
+      'tx',
+    ])
     assert.deepEqual(
       directoryCityParams(listings).sort((a, b) => a.city.localeCompare(b.city)),
       [

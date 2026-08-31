@@ -79,7 +79,7 @@ export default function FrenchBulldogBreedPage() {
             <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a French Bulldog?', href: '/breeds/french-bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Bulldog', href: '/breeds/bulldog' }, { label: 'Poodle', href: '/breeds/poodle' }]} />
             <RelatedLinks title="French Bulldog Health Deep-Dive" links={[{ label: 'French Bulldog Health Issues & Screenings', href: '/breeds/french-bulldog/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <RelatedLinks title="Breed Comparisons" links={[
               { label: 'French Bulldog vs Bulldog', href: '/compare/french-bulldog-vs-bulldog' },
               { label: 'French Bulldog vs Boston Terrier', href: '/compare/french-bulldog-vs-boston-terrier' },

@@ -21,7 +21,7 @@ export default function DobermanPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +33,7 @@ export default function DobermanPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Doberman Pinscher?', href: '/breeds/doberman-pinscher/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'IVDD', href: '/health/intervertebral-disc-disease' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'IVDD', href: '/health/intervertebral-disc-disease' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },
         ]} />

@@ -194,7 +194,7 @@ export default function GoldenRetrieverBreedPage() {
             <RelatedLinks title="Health Resources" links={[
               { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
-              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },
             ]} />
             <RelatedLinks title="Related Breeds" links={[

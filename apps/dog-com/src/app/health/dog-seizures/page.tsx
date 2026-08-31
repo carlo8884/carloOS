@@ -42,7 +42,7 @@ export default function DogSeizuresPage() {
             </ul>
           </div>
           <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'FAQ', href: '#faq' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
         </>}

@@ -14,7 +14,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
+  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: 'https://vets.co/reviews/best-pet-insurance', badge: 'Most Important' },
   { title: 'Best Dry Dog Food 2026', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: 'Nutrition' },
   { title: 'Best Flea & Tick Prevention 2026', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: 'Prevention' },
   { title: 'Best Dog Beds 2026', desc: 'Orthopedic, elevated, and washable beds compared on foam quality, clinical data, and durability', href: '/reviews/best-dog-beds', badge: 'Comfort' },
@@ -42,7 +42,7 @@ const itemListSchema = {
     '@type': 'ListItem',
     position: i + 1,
     name: r.title,
-    url: `https://dog.com${r.href}`,
+    url: r.href.startsWith('http') ? r.href : `https://dog.com${r.href}`,
   })),
 }
 
@@ -96,7 +96,7 @@ export default function DogReviewsPage() {
         <Link key="best-heartworm-prevention" href="/reviews/best-heartworm-prevention" className="text-sm text-brand-primary no-underline hover:underline">Best Heartworm Prevention</Link>
         <Link key="best-joint-supplements" href="/reviews/best-joint-supplements" className="text-sm text-brand-primary no-underline hover:underline">Best Joint Supplements</Link>
         <Link key="best-large-breed-dog-food" href="/reviews/best-large-breed-dog-food" className="text-sm text-brand-primary no-underline hover:underline">Best Large Breed Dog Food</Link>
-        <Link key="best-pet-insurance" href="/reviews/best-pet-insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
+        <Link key="best-pet-insurance" href="https://vets.co/reviews/best-pet-insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
         <Link key="best-slow-feeder-bowls" href="/reviews/best-slow-feeder-bowls" className="text-sm text-brand-primary no-underline hover:underline">Best Slow Feeder Bowls</Link>
         <Link key="fresh-dog-food-worth-it" href="/reviews/fresh-dog-food-worth-it" className="text-sm text-brand-primary no-underline hover:underline">Fresh Dog Food Worth It</Link>
         </div>

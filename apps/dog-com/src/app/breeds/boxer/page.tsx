@@ -21,7 +21,7 @@ export default function BoxerPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Boxer Breed Guide', subtitle: 'Playful, loyal, and perpetually puppy-like well into adulthood. Boxers are one of the most beloved family breeds — and one of the most health-compromised. They have the highest cancer rate of any breed, significant cardiac disease predisposition, and a shortened average lifespan of 9–12 years.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Boxer', href: '/breeds/boxer' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -33,7 +33,7 @@ export default function BoxerPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Boxer?', href: '/breeds/boxer/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Cherry Eye', href: '/health/cherry-eye' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Cherry Eye', href: '/health/cherry-eye' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
         ]} />

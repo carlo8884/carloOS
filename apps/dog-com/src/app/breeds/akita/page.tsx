@@ -33,7 +33,7 @@ export default function AkitaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Sebaceous Adenitis', href: '/health/dog-skin-allergies' }]} />
-        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-akita" />
       </>}

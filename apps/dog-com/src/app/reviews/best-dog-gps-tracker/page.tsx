@@ -76,7 +76,7 @@ export default function BestGPSTrackerPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-gps" />
           </aside>
         </div>

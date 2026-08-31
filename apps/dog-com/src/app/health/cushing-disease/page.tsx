@@ -41,12 +41,12 @@ export default function CushingDiseasePage() {
               <div key={s} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{s}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Diabetes', href: '/health/dog-diabetes' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Diabetes', href: '/health/dog-diabetes' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cushing&apos;s + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cortisol control is lifelong</h3>
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane/mitotane, ACTH-stim recheck panels, endocrinology consults — typically runs $3,000-$8,000+ over the dog&apos;s lifetime. Insurance covers it if enrolled before diagnosis.</p>
-            <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+            <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />

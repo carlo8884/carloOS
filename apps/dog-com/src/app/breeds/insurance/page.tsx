@@ -182,7 +182,7 @@ export default function BreedInsuranceHubPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/reviews/best-pet-insurance"
+                  href="https://vets.co/reviews/best-pet-insurance"
                   className="inline-block bg-brand-primary text-white text-sm font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
                 >
                   Compare the best pet insurance →
@@ -207,7 +207,7 @@ export default function BreedInsuranceHubPage() {
             <RelatedLinks
               title="Related"
               links={[
-                { label: 'Best Pet Insurance Compared', href: '/reviews/best-pet-insurance' },
+                { label: 'Best Pet Insurance Compared', href: 'https://vets.co/reviews/best-pet-insurance' },
                 { label: 'All Dog Breeds', href: '/breeds' },
                 { label: 'Dog Health Conditions', href: '/conditions' },
               ]}

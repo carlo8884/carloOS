@@ -32,7 +32,7 @@ export default function DogLiverDiseasePage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Enzyme Interpretation', href: '#enzymes' }, { label: 'Hepatitis', href: '#hepatitis' }, { label: 'Portosystemic Shunts', href: '#shunts' }, { label: 'Cirrhosis', href: '#cirrhosis' }, { label: 'Dietary Management', href: '#diet' }, { label: 'FAQ', href: '#faq' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Pancreatitis', href: '/health/pancreatitis' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Pancreatitis', href: '/health/pancreatitis' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-liver" />
         </>}

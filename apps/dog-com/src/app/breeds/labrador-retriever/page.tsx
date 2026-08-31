@@ -53,7 +53,7 @@ export default function LabradorPage() {
           { label: 'Golden Retriever vs Labrador Retriever', href: '/compare/golden-retriever-vs-labrador-retriever' },
           { label: 'Labrador Retriever vs German Shepherd', href: '/compare/labrador-retriever-vs-german-shepherd' },
         ]} />
-        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-lab" />
       </>}

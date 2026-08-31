@@ -36,7 +36,7 @@ export default function CockerSpanielPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },
         ]} />
-        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cocker" />
       </>}

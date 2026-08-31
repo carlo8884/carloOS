@@ -43,7 +43,7 @@ export default function DogDentalCarePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-dental" />
         </>}

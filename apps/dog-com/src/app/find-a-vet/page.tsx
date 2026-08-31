@@ -131,7 +131,7 @@ export default function FindAVetPage() {
           When your dog needs more than a general vet can provide, board-certified specialists deliver the expertise to make a difference. Find the right specialist for your dog's condition below.
         </p>
         <div className="flex gap-4 flex-wrap">
-          <Link href="/reviews/best-pet-insurance"
+          <Link href="https://vets.co/reviews/best-pet-insurance"
             className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors">
             Compare Pet Insurance →
           </Link>

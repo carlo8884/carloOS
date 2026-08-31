@@ -40,7 +40,7 @@ export default function DogEarInfectionsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
         </>}

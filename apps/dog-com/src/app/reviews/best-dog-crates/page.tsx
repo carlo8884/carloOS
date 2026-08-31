@@ -196,7 +196,7 @@ export default function BestDogCratesPage() {
               { label: 'All Dog Reviews', href: '/reviews' },
               { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' },
               { label: 'Crate Training Guide', href: '/training' },
-              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"

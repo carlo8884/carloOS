@@ -183,7 +183,7 @@ export default function BestJointSupplementsPage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Dog Supplements Guide', href: '/nutrition/dog-supplements' },
               { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
-              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-joint-supplements" />
           </aside>

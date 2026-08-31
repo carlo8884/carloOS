@@ -39,7 +39,7 @@ export default function DogSkinAllergiesPage() {
               <div key={b} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{b}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-skin-allergies" />
         </>}

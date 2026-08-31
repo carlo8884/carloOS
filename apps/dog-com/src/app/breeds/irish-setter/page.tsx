@@ -45,7 +45,7 @@ export default function IrishSetterPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Seizures', href: '/health/dog-seizures' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Seizures', href: '/health/dog-seizures' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-irish-setter" />
       </>}

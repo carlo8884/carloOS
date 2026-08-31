@@ -214,7 +214,7 @@ export default function IsThisADogEmergencyPage() {
             </p>
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
-              href="/reviews/best-pet-insurance"
+              href="https://vets.co/reviews/best-pet-insurance"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
             >
               Compare pet insurance plans →

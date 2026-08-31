@@ -22,7 +22,7 @@ export default function BulldogPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'English Bulldog Breed Guide', subtitle: 'The English Bulldog\'s conformation — flat face, compacted airways, compact body, heavy skin folds — causes a cascade of health issues that are important to understand before acquiring one. They are affectionate dogs with significant veterinary costs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bulldog', href: '/breeds/bulldog' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -35,7 +35,7 @@ export default function BulldogPage() {
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Bulldog?', href: '/breeds/bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
         <RelatedLinks title="Bulldog Health Deep-Dive" links={[{ label: 'Bulldog Health Issues & Screenings', href: '/breeds/bulldog/health' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Feeding Guide', href: '/breeds/bulldog/feeding' }, { label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Feeding Guide', href: '/breeds/bulldog/feeding' }, { label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'French Bulldog vs Bulldog', href: '/compare/french-bulldog-vs-bulldog' },
         ]} />

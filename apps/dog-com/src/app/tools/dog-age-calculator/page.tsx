@@ -165,7 +165,7 @@ export default function DogAgeCalculatorPage() {
             </p>
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
-              href="/reviews/best-pet-insurance"
+              href="https://vets.co/reviews/best-pet-insurance"
               className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
             >
               Compare pet insurance →
@@ -233,7 +233,7 @@ export default function DogAgeCalculatorPage() {
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Estimate daily kcal needs by life stage' },
               { label: 'Best Senior Dog Food 2026', href: '/reviews/best-dog-food-senior', note: 'Nutrition for dogs 7+ years' },
               { label: 'Best Joint Supplements for Dogs', href: '/reviews/best-joint-supplements', note: 'Evidence-based options for senior joint health' },
-              { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance', note: 'Senior dogs cost more to insure — enroll early' },
+              { label: 'Best Pet Insurance 2026', href: 'https://vets.co/reviews/best-pet-insurance', note: 'Senior dogs cost more to insure — enroll early' },
               { label: 'Breed Profiles — Lifespan by Breed', href: '/breeds', note: 'Typical lifespans for 50+ breeds' },
               { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', note: 'When age-related symptoms need vet attention' },
             ].map(item => (

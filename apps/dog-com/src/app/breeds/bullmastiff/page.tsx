@@ -21,7 +21,7 @@ export default function BullmastiffPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Bullmastiff Breed Guide', subtitle: 'The Bullmastiff was bred in 19th century England as the "Gamekeeper\'s Night Dog" — large and powerful enough to pin poachers but tractable enough to be controlled. The result is a breed that combines impressive size (100–130 lbs) with a surprisingly calm, low-energy temperament indoors. They are not the bouncing-off-walls giant most people expect.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bullmastiff', href: '/breeds/bullmastiff' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
       contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

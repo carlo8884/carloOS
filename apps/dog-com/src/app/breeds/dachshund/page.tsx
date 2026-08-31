@@ -31,7 +31,7 @@ export default function DachshundPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Dachshund?', href: '/breeds/dachshund/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'IVDD Complete Guide', href: '/health/intervertebral-disc-disease' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'IVDD Complete Guide', href: '/health/intervertebral-disc-disease' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-dachshund" />
       </>}
