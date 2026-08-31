@@ -50,18 +50,24 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire — left alone.
   - Dog homepage client still blanks to footer only (hydration #418/#422/#185/#327). Held per one-delta rule; no isolated safe fix this hour.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-08-31 ~10:12 PDT hour:** Merged PR 834 (squash). Isolated ImageCard subtleCredit fix — nested anchor inside next/link was causing Dog homepage hydration #418/#422 and client blank-to-footer. Also DirectoryPlacesCta on money hubs (hidden when pack empty) + sitemap index editorial vs directory on five sites. All CI green. No DNS, no fake trainers/DVMs/doses, no for-sale banners, no regenerator.
+  1. Fish.com homepage — hero image-first, teal, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` shells complete, no fake content — left alone.
+  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
+  4. Shared footer inquire — left alone.
+  - Dog homepage residual addressed by PR 834; await Vercel redeploy to confirm client renders full content.
 
 ## Currently underway
-- Residual Dog homepage hydration crash investigation (next real delta if fix is clean and isolated).
+- Await Vercel production redeploy of PR 834 on dog-com-three; confirm Dog homepage client no longer blanks.
 - Otherwise hold per one-delta rule.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
 - Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Dog / Fish / Horses production READY on latest main except Dog homepage client crash.
+- Dog / Fish / Horses production READY on latest main; Dog homepage client fix shipped in PR 834 (pending redeploy).
 
 ## Next planned priority
-1. Fix Dog homepage hydration mismatch if root cause is isolated and safe (no redesign, no DNS, no fake content, no sitemap regen).
+1. Confirm Dog homepage client render after PR 834 redeploy (no redesign, no DNS, no fake content, no sitemap regen).
 2. Shared footer inquire already exists; leave alone.
 3. Do not regenerate sitemaps. Do not point DNS. Do not invent trainers/DVMs/doses or for-sale banners.
 
