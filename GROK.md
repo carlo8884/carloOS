@@ -11,24 +11,26 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Fish.com homepage hero cover (PR 809) + HomeHero extract (PR 817).
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
 - Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to InquireForm with intent pro-application. Directory empty + noindex.
-- PRs 813–815, 817 merged. Production dog/fish/horses READY on main.
+- PRs 813–815, 817–818 merged. Production dog/fish/horses READY on main.
 - Closed truncated PR 816 instead of shipping a broken Fish homepage.
-- **2026-08-30 hour: PR 818 merged** — Dog.com always-on HomeEmailCapture above footer (hidden on /admin + /dashboard). Money-on-launch without touching 56k homepage.
+- **2026-08-30 prior hour: PR 818 merged** — Dog.com always-on HomeEmailCapture above footer (hidden on /admin + /dashboard). Money-on-launch without touching 56k homepage.
 - Confirmed: `/join/pro` + `/trainers` shells complete on main; horses `/inquire` matches dog/fish pattern (InquireOfferScreen).
+- **2026-08-30 this hour: Horses HomeHero shell parity** — min-h aligned to Dog/Fish approved pattern (62/70/78vh). No redesign, no DNS, no fake content, no sitemap regen.
 
 ## Currently underway
-- None this hour. Next: visual QA Fish hero vs Dog on production previews (SSO-gated); Horses homepage polish only if residual dark/crop issues.
+- PR for Horses hero shell parity (this hour). Next: visual QA Fish hero vs Dog on production previews if needed; no further homepage redesign.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
-- Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` (dog live; fish deployment URL was 404 this check — may need redeploy).
-- PR 818 checks all green before merge.
+- Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app`
+- Fish production READY on HomeHero extract commit; dog production READY on latest main.
+- Horses production will pick up hero height on next successful main deploy.
 
 ## Next planned priority
-1. Visual check Fish hero vs Dog (hero already image-first, matching min-h 62/70/78 pattern).
-2. Further Fish quality only where clearly weaker than Dog — not a redesign.
-3. Horses.com homepage polish if needed after screenshot pass.
-4. Confirm fish-com Vercel production deployment is healthy.
+1. Merge Horses hero shell parity; confirm deploy.
+2. Visual check Fish hero vs Dog (already image-first, matching min-h).
+3. Further Fish quality only where clearly weaker than Dog — not a redesign.
+4. Confirm fish-com Vercel production deployment stays healthy.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
