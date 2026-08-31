@@ -34,8 +34,15 @@ export function EmailUnderHero({
       main?.firstElementChild
     const slot = slotRef.current
     if (!hero || !slot) return
-    if (hero.nextSibling !== slot) {
+    if (hero === slot || hero.contains(slot)) return
+    if (hero.nextSibling === slot) return
+    if (!hero.parentNode) return
+    // Never throw into React — a failed move (SPA teardown, repaired a>a
+    // tree) is why Dog's homepage used to blank. Leave the slot in place.
+    try {
       hero.after(slot)
+    } catch {
+      /* keep in-flow position */
     }
   }, [path, show])
 
