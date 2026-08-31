@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
+import { HomeEmailCapture } from '../components/HomeEmailCapture'
+import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -32,7 +34,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Find a Vet. Read the Guidelines.',
   description:
-    'Vets.co — find veterinary specialists, understand your pet\'s health, and compare pet insurance. Guides grounded in AVMA, AAHA, and ACVIM material.',
+    "Vets.co — find veterinary specialists, understand your pet's health, and compare pet insurance. Guides grounded in AVMA, AAHA, and ACVIM material.",
   path: '/',
   type: 'website',
 })
@@ -72,6 +74,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
 
         <main>{children}</main>
+        <EmailCaptureGate>
+          <HomeEmailCapture />
+        </EmailCaptureGate>
         <Footer siteId="vets-co" showAffiliateDisclosure />
       </body>
     </html>
