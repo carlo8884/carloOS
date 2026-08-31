@@ -17,10 +17,12 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Confirmed: `/join/pro` + `/trainers` shells complete on main; horses `/inquire` matches dog/fish pattern (InquireOfferScreen).
 - **2026-08-30 prior: Horses HomeHero shell parity** — min-h aligned to Dog/Fish approved pattern (62/70/78vh). No redesign, no DNS, no fake content, no sitemap regen.
 - **2026-08-30 prior: Fish.com always-on HomeEmailCapture** — parity with Dog (above footer, gated off /admin+/dashboard). Tank-focused copy. Money-on-launch without touching homepage body.
-- **2026-08-30 this hour: PR 823 merged** — Horses.com always-on HomeEmailCapture parity with dog/fish. Horse-focused weekly copy. Page-level capture removed so single capture above footer. Gated off /admin+/dashboard. No redesign, no DNS, no fake content, no sitemap regen.
+- **2026-08-30 prior: PR 823 merged** — Horses.com always-on HomeEmailCapture parity with dog/fish. Horse-focused weekly copy. Page-level capture removed so single capture above footer. Gated off /admin+/dashboard. No redesign, no DNS, no fake content, no sitemap regen.
+- **2026-08-30 this hour: PR 826 open** — Fish.com remove page-level EmailCapture from HomeGuides so only layout always-on remains (parity Dog/Horses). No redesign, no DNS, no fake content, no sitemap regen.
 
 ## Currently underway
-- Next: confirm Horses (and Fish) production deploys healthy after this merge. Visual QA on horses homepage if any remaining thin spots vs Dog/Fish.
+- Merge PR 826 when CI green. Confirm Fish production single-capture after merge.
+- Light visual QA remaining on Fish only if still weaker than Dog after this.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
@@ -29,9 +31,9 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 - Horses production will pick up always-on email capture on next successful main deploy.
 
 ## Next planned priority
-1. Confirm Horses email-capture deploy healthy.
-2. Light visual QA pass on Fish homepage (hero already patched) only where clearly weaker than Dog — not a redesign.
-3. Shared footer inquire already exists; leave alone.
+1. Merge PR 826 + confirm Fish single-capture deploy healthy.
+2. Shared footer inquire already exists; leave alone.
+3. No further homepage redesigns this weekend unless thin spots remain vs Dog.
 
 ## Carlo-only blockers
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
