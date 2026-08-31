@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { DirectoryPackEmpty } from '../../../components/DirectoryPackEmpty'
 import { States } from '../../../data/states'
 
 interface PageProps {
@@ -82,17 +83,18 @@ export default function StateVetFinderPage({ params }: PageProps) {
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
-          Veterinary Directory · {state.region}
+          State care guide · {state.region}
         </span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
           Find a Vet in {state.name}
         </h1>
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
-          {state.abbr} general practice vets, 24-hour emergency hospitals, and board-certified specialists — what to look for and how to choose.
+          How to choose a {state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. Not a live clinic list — the license-board pack is empty until imported.
         </p>
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-5xl">
+        <DirectoryPackEmpty />
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">TL;DR</div>

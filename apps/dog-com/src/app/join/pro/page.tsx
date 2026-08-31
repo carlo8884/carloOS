@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, InquireForm } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, InquireForm, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -62,6 +62,24 @@ export default function JoinProPage() {
           <Link href="/training/training-red-flags">red flags</Link>
           {', not this form.'}
         </p>
+
+        <h2>Owners: get a note when claimed pages exist</h2>
+        <p>
+          The form above is for trainers applying for a page. If you landed
+          here looking for a trainer, the claimed list is empty on purpose.
+          One email when accepted pages exist — no invented directory.
+        </p>
+        <div className="not-prose max-w-md my-6">
+          <EmailCapture
+            variant="section"
+            siteId="dog-com"
+            title="When claimed trainers have a page"
+            subtitle="Owners only. One email when an accepted trainer page exists. Use the application form if you train dogs."
+            source="join-pro-under-hero"
+            ctaText="Email me when trainers appear"
+            perks={['Not a booking tool', 'No invented trainers', 'Unsubscribe anytime']}
+          />
+        </div>
       </div>
     </ArticleLayout>
   )

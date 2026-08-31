@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -71,6 +71,24 @@ export default function TrainersIndexPage() {
         <p>
           <Link href="/join/pro">Apply for a trainer page →</Link>
         </p>
+
+        <h2>Get a note when claimed pages exist</h2>
+        <p>
+          This list will not be filled with invented names. Leave an email for
+          one note when a trainer in your area has an accepted page — not a
+          ranking, not a booking tool.
+        </p>
+        <div className="not-prose max-w-md my-6">
+          <EmailCapture
+            variant="section"
+            siteId="dog-com"
+            title="When claimed trainers have a page"
+            subtitle="One email when an accepted trainer page exists. No invented names, ratings, or featured spots."
+            source="trainers-under-hero"
+            ctaText="Email me when trainers appear"
+            perks={['Claimed pages only', 'No invented directory', 'Unsubscribe anytime']}
+          />
+        </div>
       </div>
     </ArticleLayout>
   )

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
+import { DirectoryPackEmpty } from '../../components/DirectoryPackEmpty'
 import { States, type CensusRegion } from '../../data/states'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
 
@@ -31,14 +32,14 @@ export default function FindAVetPage() {
       <SchemaScript schema={breadcrumbSchema} />
       <div>
       <HubMasthead
-        eyebrow="Veterinary Directory"
+        eyebrow="How to choose care"
         title="Find the Right Vet"
-        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each, and find care by state."
+        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides, not a live clinic list. The license-board pack is empty until a public source URL and license number are imported."
         manifestKey="vets-co:find-a-vet-hero"
         fallbackKey="vets-co:hero"
         imageAlt="The exterior entrance of a veterinary clinic building"
-        primaryCta={{ href: '#states', label: 'Find a vet by state' }}
-        secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs guide' }}
+        primaryCta={{ href: '#states', label: 'Browse state guides' }}
+        secondaryCta={{ href: '/directory', label: 'License directory' }}
       />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -56,6 +57,7 @@ export default function FindAVetPage() {
       </div>
 
       <div className="px-container-sm sm:px-container py-14 max-w-5xl">
+        <DirectoryPackEmpty />
         <section id="general" className="mb-16">
           <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Your General Practice Vet</h2>
           <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">Your primary care vet handles wellness exams, vaccinations, routine diagnostics, most medical conditions, and is your first call for any health concern. They will refer to a specialist when the situation requires it — that referral is a sign of good judgment, not a limitation. Build a relationship with a GP vet you trust before you need them urgently.</p>
@@ -110,7 +112,7 @@ export default function FindAVetPage() {
 
         <section id="states" className="mb-16">
           <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Find a Vet by State</h2>
-          <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">State-by-state guides to general practice, emergency, and board-certified specialty veterinary care across the U.S. Includes major metros, 24-hour emergency hospital coverage notes, and specialty referral pathways.</p>
+          <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">State-by-state how-to-choose guides — major metros, 24-hour emergency coverage notes, and specialty referral pathways. They are not a live list of licensed clinics. Use your state veterinary medical board and the specialty-college directories to verify a veterinarian.</p>
           {(['Northeast', 'Midwest', 'South', 'West'] as CensusRegion[]).map((region) => {
             const inRegion = States.filter((s) => s.region === region).sort((a, b) => a.name.localeCompare(b.name))
             return (
