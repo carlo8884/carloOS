@@ -98,18 +98,25 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire — left alone.
   - Dog homepage still blanks to footer only on dog-com-three.vercel.app (SSR full; client hydration #418/#422/#185/#327). No isolated safe one-line fix this hour. Held per one-delta rule.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-08-31 ~18:11 PDT hour:** Live visual reconfirm (browser).
+  1. Fish.com homepage — hero image-first, teal wash, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` shells complete, no fake content — left alone (confirmed live).
+  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
+  4. Shared footer inquire — left alone.
+  - **Dog homepage now renders full client content** on dog-com-three.vercel.app (hero + sections visible; prior blank-to-footer residual no longer observed this hour). No code delta; held per one-delta rule.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
-- Dog homepage client still blanks after PR 834; isolate remaining hydration mismatch next hour if a clean one-line cause is found.
-- Otherwise hold per one-delta rule.
+- Priority 1–4 satisfied. Dog homepage client render confirmed healthy this hour.
+- Hold per one-delta rule unless a new isolated safe improvement appears.
 
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
 - Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Dog / Fish / Horses production READY on latest main; Dog homepage client residual persists post-PR 834.
+- Dog / Fish / Horses production READY on latest main; Dog homepage client residual no longer observed ~18:11 PDT.
 
 ## Next planned priority
-1. Isolate remaining Dog homepage client blank after PR 834 (no redesign, no DNS, no fake content, no sitemap regen).
+1. Continue hourly visual QA; ship only if a clean one-delta improvement is isolated.
 2. Shared footer inquire already exists; leave alone.
 3. Do not regenerate sitemaps. Do not point DNS. Do not invent trainers/DVMs/doses or for-sale banners.
 
