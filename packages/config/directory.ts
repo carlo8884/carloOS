@@ -29,7 +29,7 @@ export const DIRECTORY_LOAD_ORDER = [
   { pack: 'fish-national.csv', expected: 665 },
   { pack: 'dog-national.csv', expected: 1368 },
   { pack: 'horses-national.csv', expected: 1648 },
-  { pack: 'vets-co-national.csv', expected: 46796 },
+  { pack: 'vets-co-national.csv', expected: 59741 },
 ] as const
 
 export interface DirectoryListing {
@@ -106,6 +106,7 @@ export function parseDirectoryCsv(csv: string): { listings: DirectoryListing[]; 
 
   const byLicense = new Map<string, DirectoryListing>()
   const byName = new Set<string>()
+  const usedSlugs = new Set<string>()
   let skipped = 0
 
   for (let i = 1; i < lines.length; i++) {
@@ -146,11 +147,12 @@ export function parseDirectoryCsv(csv: string): { listings: DirectoryListing[]; 
 
     let slug = listing.slug
     let n = 2
-    while ([...byLicense.values()].some((existing) => existing.slug === slug)) {
+    while (usedSlugs.has(slug)) {
       slug = `${listing.slug}-${n}`
       n += 1
     }
     listing.slug = slug
+    usedSlugs.add(slug)
 
     byLicense.set(licenseKey, listing)
     byName.add(nameKey)

@@ -10,7 +10,7 @@
  * Dedupe: (license_number,state) then (display_name,city,state).
  *
  * Load order once files exist: ferret 70, fish 665, dog 1368, horses 1648,
- * vets-co 46796. TX/NY in the vets pack were lookup-only — import only
+ * vets-co 59741. TX/NY in the vets pack were lookup-only — import only
  * what is in the CSV.
  *
  * Usage:

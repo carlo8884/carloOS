@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
 import { directoryCityMetadata, renderDirectoryCity } from '@carloOS/ui'
-import { directoryCityParams, listingsForCity } from '@carloOS/config/directory'
+import { listingsForCity } from '@carloOS/config/directory'
 import listings from '../../../../data/directory-listings.json'
 
+// City landings come from imported rows only (renderDirectoryCity 404s when
+// a city has 0 rows). ~8k city paths are generated on demand, not at build.
+export const dynamicParams = true
+export const revalidate = 86400
+
 export function generateStaticParams() {
-  return directoryCityParams(listings)
+  return []
 }
 
 export function generateMetadata({ params }: { params: { slug: string; city: string } }): Metadata {

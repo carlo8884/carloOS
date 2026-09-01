@@ -34,7 +34,7 @@ export default function FindAVetPage() {
       <HubMasthead
         eyebrow="How to choose care"
         title="Find the Right Vet"
-        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides, not a live clinic list. The license-board pack is empty until a public source URL and license number are imported."
+        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides. Imported state-board license stubs live on the Vets.co directory — unclaimed records, not a live clinic list."
         manifestKey="vets-co:find-a-vet-hero"
         fallbackKey="vets-co:hero"
         imageAlt="The exterior entrance of a veterinary clinic building"
@@ -112,7 +112,7 @@ export default function FindAVetPage() {
 
         <section id="states" className="mb-16">
           <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Find a Vet by State</h2>
-          <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">State-by-state how-to-choose guides — major metros, 24-hour emergency coverage notes, and specialty referral pathways. They are not a live list of licensed clinics. Use your state veterinary medical board and the specialty-college directories to verify a veterinarian.</p>
+          <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">State-by-state how-to-choose guides — major metros, 24-hour emergency coverage notes, and specialty referral pathways. They are not a live clinic list. License-board stubs, when a state is in the imported pack, are on the Vets.co directory. Use your state veterinary medical board and the specialty-college directories to verify a veterinarian.</p>
           {(['Northeast', 'Midwest', 'South', 'West'] as CensusRegion[]).map((region) => {
             const inRegion = States.filter((s) => s.region === region).sort((a, b) => a.name.localeCompare(b.name))
             return (
@@ -129,11 +129,11 @@ export default function FindAVetPage() {
             )
           })}
           <p className="text-sm text-brand-text-mid mt-6">
-            License-board stubs (when imported) live on the{' '}
+            Imported license-board stubs live on the{' '}
             <Link href="/directory" className="text-brand-primary font-semibold no-underline hover:underline">
               Vets.co directory
             </Link>
-            . No invented phone, email, or rating.
+            . States without imported rows stay empty on purpose. No invented phone, email, or rating.
           </p>
         </section>
       </div>

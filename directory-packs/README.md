@@ -12,7 +12,7 @@ Chief of Staff drops the real files here. Overnight builder only ships the impor
 | `fish-national.csv` | fish.com | 665 |
 | `dog-national.csv` | dog.com | 1368 |
 | `horses-national.csv` | horses.com | 1,648 |
-| `vets-co-national.csv` | vets.co | 46,796 |
+| `vets-co-national.csv` | vets.co | 59,741 |
 
 ## Required columns
 
