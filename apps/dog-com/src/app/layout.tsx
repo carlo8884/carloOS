@@ -90,7 +90,7 @@ export default function RootLayout({
         <main id="main-content" tabIndex={-1}>
           {children}
           <EmailCaptureGate>
-            <EmailUnderHero>
+            <EmailUnderHero excludePaths={['/']}>
               <HomeEmailCapture />
             </EmailUnderHero>
           </EmailCaptureGate>

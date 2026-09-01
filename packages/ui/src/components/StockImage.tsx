@@ -73,7 +73,8 @@ export interface StockImageProps {
   /**
    * Pass-through to ImageCard: render attribution as a subtle overlay in the
    * image corner instead of a figcaption line. For prime visual areas (hero,
-   * image-backed cards). Attribution stays present + linked. Default false.
+   * image-backed cards). Attribution stays present (QC §1); the source URL
+   * is on the credit's title, never a nested <a>. Default false.
    */
   subtleCredit?: boolean
 }
