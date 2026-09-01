@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { listingsForState, normalizeStateSlug } from '@carloOS/config/directory'
 import { DirectoryPackEmpty } from '../../../components/DirectoryPackEmpty'
 import { States } from '../../../data/states'
+import listings from '../../../data/directory-listings.json'
 
 interface PageProps {
   params: { state: string }
@@ -43,6 +45,10 @@ const FAQ_QUESTIONS = (stateName: string) => [
 export default function StateVetFinderPage({ params }: PageProps) {
   const state = States.find((x) => x.slug === params.state)
   if (!state) notFound()
+
+  const stateSlug = normalizeStateSlug(state.slug)
+  const stateListings = listingsForState(listings, stateSlug)
+  const hasImportedRows = stateListings.length > 0
 
   const url = `https://vets.co/find-a-vet/${state.slug}`
   const title = `Find a Vet in ${state.name}`
@@ -89,12 +95,44 @@ export default function StateVetFinderPage({ params }: PageProps) {
           Find a Vet in {state.name}
         </h1>
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
-          How to choose a {state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. Not a live clinic list — the license-board pack is empty until imported.
+          {hasImportedRows
+            ? `How to choose a ${state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. Unclaimed license-board stubs for ${state.name} are on the Vets.co directory.`
+            : `How to choose a ${state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. This page is a how-to-choose guide — no license-board listings are imported for ${state.name}.`}
         </p>
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-5xl">
         <DirectoryPackEmpty />
+        {hasImportedRows ? (
+          <div className="border border-brand-border rounded-xl p-6 bg-brand-surface mb-10">
+            <h2 className="font-display text-xl font-bold text-brand-dark mt-0 mb-2">
+              {state.name} license-board stubs
+            </h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              {stateListings.length.toLocaleString()} unclaimed veterinarian stubs are imported for {state.name}.
+              City landings appear only where the source listed a city. No phone, email, or rating is invented.
+            </p>
+            <p className="text-sm text-brand-text-mid m-0">
+              <Link href={`/directory/${stateSlug}`} className="text-brand-primary font-bold no-underline hover:underline">
+                Open the {state.name} directory
+              </Link>
+            </p>
+          </div>
+        ) : (
+          <div className="border border-brand-border rounded-xl p-6 bg-brand-surface mb-10">
+            <h2 className="font-display text-xl font-bold text-brand-dark mt-0 mb-2">
+              No imported listings for {state.name}
+            </h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+              The national license-board pack has no rows for {state.name}. This guide does not invent
+              clinic names or cities. Other states with imported stubs are on the{' '}
+              <Link href="/directory" className="text-brand-primary font-bold no-underline hover:underline">
+                Vets.co directory
+              </Link>
+              .
+            </p>
+          </div>
+        )}
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">TL;DR</div>
@@ -139,7 +177,9 @@ export default function StateVetFinderPage({ params }: PageProps) {
             ))}
           </div>
           <div className="mt-5 text-xs text-brand-text-light italic">
-            Vets.co does not maintain a real-time directory of individual practices. Use the resources below to find a verified, licensed veterinarian.
+            {hasImportedRows
+              ? `Editorial metro notes above are how-to-choose context, not extra listings. Imported stubs for ${state.name} are on the license directory.`
+              : `Vets.co does not invent a clinic list for ${state.name}. Use the resources below to find a verified, licensed veterinarian.`}
           </div>
         </section>
 

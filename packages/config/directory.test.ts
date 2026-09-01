@@ -38,6 +38,19 @@ describe('parseDirectoryCsv', () => {
     assert.equal(skipped, 2)
   })
 
+  it('suffixes colliding slugs without inventing rows', () => {
+    const csv = [
+      HEADER,
+      'Acme Vet,Austin,TX,vet,TX-1,https://example.com/a,false',
+      'Acme-Vet,Austin,TX,vet,TX_1,https://example.com/b,false',
+    ].join('\n')
+    const { listings, skipped } = parseDirectoryCsv(csv)
+    assert.equal(skipped, 0)
+    assert.equal(listings.length, 2)
+    assert.equal(listings[0].slug, 'acme-vet-austin-tx-tx-1')
+    assert.equal(listings[1].slug, 'acme-vet-austin-tx-tx-1-2')
+  })
+
   it('does not invent phone email or rating', () => {
     const csv = `${HEADER}\nAcme Vet,Austin,TX,vet,TX-1,https://example.com/a,false`
     const { listings } = parseDirectoryCsv(csv)
