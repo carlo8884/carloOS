@@ -157,7 +157,7 @@ export default function DogGlossaryPage() {
           title="Free Dog Health & Training Tips"
           subtitle="Plain-English guidance every Tuesday. No spam."
           source="glossary"
-          ctaText="Subscribe Free"
+          ctaText="Send the weekly notes"
         />
       </div>
     </>

@@ -8,6 +8,7 @@ import {
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
+import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config/affiliate-hop'
 import { CARRIERS, type CarrierProfile } from '../../../../data/insurance-carriers'
 
 type Answers = {
@@ -246,10 +247,10 @@ export default function QuizClient() {
 
             <div className="mb-10">
               <a
-              href={`/go/${result.top.vendor}/home?s=pet-insurance-quiz-result`}
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
-              Get a {result.top.name} quote →
+              Compare quotes on Vets.co →
             </a>
               <Link
                 href={`/pet-insurance/${result.top.slug}`}

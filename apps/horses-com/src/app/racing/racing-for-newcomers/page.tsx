@@ -186,7 +186,7 @@ export default function RacingForNewcomersHubPage() {
           siteId="horses-com"
           title="The Horses.com Reference"
           subtitle="One email a week: a deep-dive on a discipline, breed, or welfare topic. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the weekly notes"
           source="racing-for-newcomers-hub"
           perks={[
             'One email weekly',

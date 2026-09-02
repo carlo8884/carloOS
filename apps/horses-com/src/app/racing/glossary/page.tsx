@@ -205,7 +205,7 @@ export default function RacingGlossaryPage() {
           title="Equestrian Reference"
           subtitle="Citation-anchored equine reference articles, one email a week."
           source="racing-glossary"
-          ctaText="Subscribe Free"
+          ctaText="Send the weekly notes"
         />
       </div>
       <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />

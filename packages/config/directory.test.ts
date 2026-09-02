@@ -276,12 +276,14 @@ describe('directoryClaimPrefill', () => {
       prefill.message,
       'I claim listing birgit-hafermann-dog-training-berkeley-ca-bl-016813 (BIRGIT HAFERMANN DOG TRAINING, Berkeley CA).',
     )
+    assert.equal(prefill.listing, berkeley.slug)
     assert.equal(findListing([berkeley], berkeley.slug)?.slug, berkeley.slug)
   })
 
   it('returns empty defaults when slug is missing or unknown', () => {
-    assert.deepEqual(directoryClaimPrefill([berkeley], undefined), { city: '', message: '' })
-    assert.deepEqual(directoryClaimPrefill([berkeley], ''), { city: '', message: '' })
-    assert.deepEqual(directoryClaimPrefill([berkeley], 'not-a-real-listing'), { city: '', message: '' })
+    const empty = { city: '', message: '', listing: '' }
+    assert.deepEqual(directoryClaimPrefill([berkeley], undefined), empty)
+    assert.deepEqual(directoryClaimPrefill([berkeley], ''), empty)
+    assert.deepEqual(directoryClaimPrefill([berkeley], 'not-a-real-listing'), empty)
   })
 })

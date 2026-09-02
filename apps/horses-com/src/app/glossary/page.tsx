@@ -327,7 +327,7 @@ export default function EquestrianGlossaryPage() {
           title="Equestrian Reference"
           subtitle="Citation-anchored equine reference articles, one email a week."
           source="glossary"
-          ctaText="Subscribe Free"
+          ctaText="Send the weekly notes"
         />
       </div>
     </>

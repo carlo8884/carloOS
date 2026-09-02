@@ -11,6 +11,7 @@ import {
   EmailCapture,
   FAQAccordion,
 } from '@carloOS/ui'
+import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
 import {
   CARRIERS,
   getCarrierBySlug,
@@ -63,7 +64,7 @@ function RiskBadge({ level }: { level: 'high' | 'moderate' | 'low' }) {
 
 function CarrierCard({
   c,
-  source,
+  source: _source,
   variant,
   reason,
 }: {
@@ -117,12 +118,11 @@ function CarrierCard({
         </div>
       </div>
       <a
-        href={`/go/${c.vendor}/home?s=pet-insurance-breed-${source}-${variant}`}
-        rel="sponsored nofollow noopener"
-        target="_blank"
+        href={VETS_PET_INSURANCE_REVIEW}
+        rel="noopener"
         className={`inline-block ${variant === 'recommended' ? 'bg-brand-primary text-white' : 'bg-white text-brand-primary border border-brand-primary'} px-5 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90`}
       >
-        Get a {c.name} quote →
+        Compare quotes on Vets.co →
       </a>
       <Link
         href={`/pet-insurance/${c.slug}`}

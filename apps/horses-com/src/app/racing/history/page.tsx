@@ -171,7 +171,7 @@ export default function RacingHistoryHubPage() {
           siteId="horses-com"
           title="The Horses.com Reference"
           subtitle="One email a week: a deep-dive on a discipline, breed, or the history of the sport. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the weekly notes"
           source="racing-history-hub"
           perks={[
             'One email weekly',

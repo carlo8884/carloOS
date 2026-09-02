@@ -256,7 +256,7 @@ export default function DisciplinesIndexPage() {
           siteId="horses-com"
           title="The Horses.com Reference"
           subtitle="One email a week: a deep-dive on a single discipline, breed, or piece of gear. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the weekly notes"
           source="disciplines-hub"
           perks={[
             'One email weekly',

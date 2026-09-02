@@ -1,6 +1,13 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { resolveAffiliateHop, stripPlaceholder, resolveTag } from './affiliate-hop'
+import {
+  resolveAffiliateHop,
+  stripPlaceholder,
+  resolveTag,
+  isChewyHopLive,
+  visibleChewyHref,
+  VETS_PET_INSURANCE_REVIEW,
+} from './affiliate-hop'
 
 const routes = {
   amazon: {
@@ -75,5 +82,20 @@ describe('resolveAffiliateHop', () => {
   it('chewy-brand uses AFF_CHEWY_TAG fallback', () => {
     const tag = resolveTag('chewy-brand', { AFF_CHEWY_TAG: 'chewy-live' })
     assert.equal(tag.tag, 'chewy-live')
+  })
+
+  it('hides Chewy hrefs when the hop tag is empty', () => {
+    assert.equal(isChewyHopLive({}), false)
+    assert.equal(visibleChewyHref('/go/chewy-brand/ferret+cage', {}), undefined)
+    assert.equal(visibleChewyHref('#', { AFF_CHEWY_TAG: 'x' }), undefined)
+    assert.equal(
+      visibleChewyHref('/go/chewy-brand/ferret+cage', { AFF_CHEWY_BRAND_TAG: 'live' }),
+      '/go/chewy-brand/ferret+cage',
+    )
+    assert.equal(visibleChewyHref('/go/amazon-brand/ferret+cage', {}), '/go/amazon-brand/ferret+cage')
+  })
+
+  it('keeps Dog insurance quotes on the Vets.co review', () => {
+    assert.equal(VETS_PET_INSURANCE_REVIEW, 'https://vets.co/reviews/best-pet-insurance')
   })
 })

@@ -130,7 +130,7 @@ export default function EquipmentHubPage() {
           title="The Weekly Tank"
           subtitle="Equipment buyer guides, species spotlights, and fishkeeping tips every Thursday."
           source="equipment-hub"
-          ctaText="Subscribe Free"
+          ctaText="Send the tank notes"
           perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
         />
       </div>

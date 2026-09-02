@@ -44,7 +44,7 @@ export function EmailCapture({
   leadMagnet,
   perks,
 }: EmailCaptureProps) {
-  const resolvedCtaText = ctaText ?? buttonText ?? 'Subscribe Free'
+  const resolvedCtaText = ctaText ?? buttonText ?? 'Send the notes'
   const resolvedSource = source ?? tag ?? 'unknown'
   // Under-hero cash-register captures always render (no Vercel env write).
   // Other placements stay behind NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED.
@@ -237,7 +237,7 @@ function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, err
           disabled={status === 'loading'}
           className={btnClass}
         >
-          {status === 'loading' ? 'Subscribing...' : ctaText}
+          {status === 'loading' ? 'Sending…' : ctaText}
         </button>
       </div>
       {errorMsg && <p role="alert" className="text-xs text-brand-danger mt-1.5">{errorMsg}</p>}

@@ -251,7 +251,7 @@ export default function OttbSecondCareersHubPage() {
           siteId="horses-com"
           title="The Horses.com Reference"
           subtitle="One email a week: a deep-dive on a discipline, breed, or welfare topic. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the weekly notes"
           source="ottb-second-careers-hub"
           perks={[
             'One email weekly',

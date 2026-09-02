@@ -11,6 +11,7 @@ export function InquireForm({
   submitLabel,
   defaultCity,
   defaultMessage,
+  defaultListing,
 }: {
   siteName: string
   intent?: InquireIntent
@@ -18,6 +19,7 @@ export function InquireForm({
   submitLabel?: string
   defaultCity?: string
   defaultMessage?: string
+  defaultListing?: string
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const isPro = intent === 'pro-application'
@@ -67,6 +69,9 @@ export function InquireForm({
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-3">
       <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+      {isPro && defaultListing ? (
+        <input type="hidden" name="listing" value={defaultListing} />
+      ) : null}
       <input name="name" required placeholder={isPro ? 'Your name' : 'Name'} className={field} />
       <input name="email" type="email" required placeholder="Email" className={field} />
       <input name="phone" type="tel" placeholder="Phone" className={field} />

@@ -23,6 +23,7 @@ export async function POST(req: Request) {
     city: String(body.city || '').slice(0, 200),
     website: String(body.website || '').slice(0, 300),
     credentials: String(body.credentials || '').slice(0, 400),
+    listing: String(body.listing || '').slice(0, 200),
     message: String(body.message || '').slice(0, 4000),
     site: 'dog.com',
   }

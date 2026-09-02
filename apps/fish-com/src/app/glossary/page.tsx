@@ -154,7 +154,7 @@ export default function AquariumGlossaryPage() {
           title="The Weekly Tank"
           subtitle="Fishkeeping references and tool updates. No spam."
           source="glossary"
-          ctaText="Subscribe Free"
+          ctaText="Send the tank notes"
         />
       </div>
     </>
