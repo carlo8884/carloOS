@@ -1454,9 +1454,19 @@ export {
   directorySitemapIds,
   directorySlugParams,
   directoryCityParams,
+  directoryPlaceTitle,
+  directoryListingTitle,
+  directoryListingH1,
+  listingLocalBusinessJsonLd,
+  cityPlaceJsonLd,
+  cityLocalBusinessListJsonLd,
+  directoryStatePath,
+  directoryCityPath,
+  directoryListingPath,
   DIRECTORY_PAGE_SIZE,
   DIRECTORY_FEATURED_MAX,
   DIRECTORY_SITEMAP_DETAIL_CAP,
+  DIRECTORY_TITLE_MAX,
 } from './directory'
 export type { DirectoryListing, DirectoryPage } from './directory'
 export {

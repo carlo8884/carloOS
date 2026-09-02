@@ -15,8 +15,8 @@ export function generateSitemaps() {
 export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
   const id = Number(props?.id ?? 0)
   const now = new Date()
-  if (id === 1) {
-    return directorySitemapEntries('https://horses.com', directoryListings, now)
+  if (id >= 1) {
+    return directorySitemapEntries('https://horses.com', directoryListings, now, id)
   }
 
   // Programmatic "can horses eat ___?" food-safety pages (dynamic [food] route).

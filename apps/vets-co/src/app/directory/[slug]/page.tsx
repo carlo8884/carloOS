@@ -6,7 +6,7 @@ import listings from '../../../data/directory-listings.json'
 // 59,741 listing slugs would blow one generateStaticParams pass. Prerender
 // imported state hubs only; listing stubs resolve on demand (dynamicParams).
 export const dynamicParams = true
-export const revalidate = 86400
+export const dynamic = 'force-dynamic'
 
 export function generateStaticParams() {
   return directoryPlaces(listings).states.map((state) => ({ slug: state.slug }))

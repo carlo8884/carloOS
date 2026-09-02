@@ -40,4 +40,27 @@ if [ "$DOCS_ONLY" = true ]; then
   exit 0
 fi
 
+# @carloOS/ui and @carloOS/config have no `build` task, so turbo-ignore's
+# `^build` graph does not treat their source edits as app inputs. The five
+# earning directory sites must still rebuild. Other apps stay on turbo-ignore.
+EARNING_APPS="dog-com fish-com horses-com vets-co ferret-com"
+SHARED_CHANGED=false
+while IFS= read -r f; do
+  case "$f" in
+    packages/config/*|packages/ui/*)
+      SHARED_CHANGED=true
+      break
+      ;;
+  esac
+done <<< "$CHANGED"
+
+if [ "$SHARED_CHANGED" = true ]; then
+  for earning in $EARNING_APPS; do
+    if [ "$APP_NAME" = "$earning" ]; then
+      echo "vercel-ignore: packages/config or packages/ui changed → build ${APP_NAME}"
+      exit 1
+    fi
+  done
+fi
+
 exec npx turbo-ignore "$APP_NAME" --fallback="$BASE"

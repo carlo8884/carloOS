@@ -15,8 +15,9 @@ export function generateSitemaps() {
 export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
   const id = Number(props?.id ?? 0)
   const now = new Date()
-  if (id === 1) {
-    return directorySitemapEntries('https://vets.co', directoryListings, now)
+  // id 1 = city/state places; id >= 2 = every imported listing URL (sharded).
+  if (id >= 1) {
+    return directorySitemapEntries('https://vets.co', directoryListings, now, id)
   }
 
   // Programmatic "can I give my dog ___?" human-medication-safety pages.

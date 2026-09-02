@@ -7,11 +7,18 @@ import {
   listingsForCity,
   directoryPlaces,
   directorySitemapIds,
+  directorySitemapEntries,
   directorySlugParams,
   directoryCityParams,
+  directoryPlaceTitle,
+  directoryListingTitle,
+  directoryListingH1,
+  listingLocalBusinessJsonLd,
+  cityPlaceJsonLd,
   normalizeStateSlug,
   DIRECTORY_PAGE_SIZE,
   DIRECTORY_FEATURED_MAX,
+  DIRECTORY_SITEMAP_DETAIL_CAP,
 } from './directory'
 
 const HEADER = 'display_name,city,state,category,license_number,source_url,claimed'
@@ -135,7 +142,7 @@ describe('directory places', () => {
     assert.equal(places.cities.some((c) => c.stateSlug === 'tx' && c.citySlug === 'austin'), true)
 
     assert.deepEqual(directorySitemapIds([]), [{ id: 0 }])
-    assert.deepEqual(directorySitemapIds(listings), [{ id: 0 }, { id: 1 }])
+    assert.deepEqual(directorySitemapIds(listings), [{ id: 0 }, { id: 1 }, { id: 2 }])
     assert.deepEqual(directorySlugParams([]), [])
     assert.deepEqual(directoryCityParams([]), [])
 
@@ -155,5 +162,75 @@ describe('directory places', () => {
         { slug: 'tx', city: 'dallas' },
       ],
     )
+  })
+})
+
+describe('directory local SEO', () => {
+  const austin = {
+    slug: 'acme-austin-tx-1',
+    display_name: 'Acme Vet',
+    city: 'Austin',
+    state: 'TX',
+    category: 'vet',
+    license_number: 'TX-1',
+    source_url: 'https://example.com/1',
+    claimed: false as const,
+  }
+  const dallas = {
+    ...austin,
+    slug: 'beta-dallas-tx-2',
+    display_name: 'Beta Vet',
+    city: 'Dallas',
+    license_number: 'TX-2',
+  }
+
+  it('gives each city a unique title and H1 phrase', () => {
+    const austinTitle = directoryPlaceTitle('Vets', 'tx', 'austin')
+    const dallasTitle = directoryPlaceTitle('Vets', 'tx', 'dallas')
+    assert.equal(austinTitle, 'Vets in Austin, TX')
+    assert.equal(dallasTitle, 'Vets in Dallas, TX')
+    assert.notEqual(austinTitle, dallasTitle)
+    assert.notEqual(directoryListingTitle(austin, 'vet'), directoryListingTitle(dallas, 'vet'))
+    assert.ok(directoryListingH1(austin, 'vet').includes('Austin'))
+  })
+
+  it('emits LocalBusiness without invented phone email or rating', () => {
+    const schema = listingLocalBusinessJsonLd(austin, 'https://vets.co/directory/acme-austin-tx-1', [
+      'VeterinaryCare',
+      'LocalBusiness',
+    ])
+    assert.deepEqual(schema['@type'], ['VeterinaryCare', 'LocalBusiness'])
+    assert.equal(schema.name, 'Acme Vet')
+    assert.equal((schema.address as { addressLocality: string }).addressLocality, 'Austin')
+    assert.equal(schema.telephone, undefined)
+    assert.equal(schema.email, undefined)
+    assert.equal(schema.aggregateRating, undefined)
+    const place = cityPlaceJsonLd('austin', 'tx', 'https://vets.co/directory/tx/austin')
+    assert.equal(place['@type'], 'Place')
+  })
+
+  it('sitemaps include city URLs and listing slugs past the old 1k cap', () => {
+    const many = Array.from({ length: DIRECTORY_SITEMAP_DETAIL_CAP + 3 }, (_, i) => ({
+      slug: `n-${i}`,
+      display_name: `Name ${i}`,
+      city: i % 2 === 0 ? 'Austin' : 'Dallas',
+      state: 'TX',
+      category: 'vet',
+      license_number: `TX-${i}`,
+      source_url: `https://example.com/${i}`,
+      claimed: false as const,
+    }))
+    const ids = directorySitemapIds(many).map((row) => row.id)
+    assert.deepEqual(ids, [0, 1, 2, 3])
+
+    const places = directorySitemapEntries('https://vets.co', many, new Date('2026-09-02'), 1)
+    assert.ok(places.some((row) => row.url === 'https://vets.co/directory/tx/austin'))
+    assert.equal(places.some((row) => row.url.includes('/directory/n-')), false)
+
+    const firstShard = directorySitemapEntries('https://vets.co', many, new Date('2026-09-02'), 2)
+    const overflow = directorySitemapEntries('https://vets.co', many, new Date('2026-09-02'), 3)
+    assert.equal(firstShard.length, DIRECTORY_SITEMAP_DETAIL_CAP)
+    assert.equal(overflow.length, 3)
+    assert.equal(overflow[0].url, `https://vets.co/directory/n-${DIRECTORY_SITEMAP_DETAIL_CAP}`)
   })
 })

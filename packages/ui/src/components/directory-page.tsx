@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import type { SiteId } from '@carloOS/config'
+import { getSiteConfig, type SiteId } from '@carloOS/config'
 import {
   cityDisplayName,
+  cityLocalBusinessListJsonLd,
+  cityPlaceJsonLd,
+  directoryCityPath,
+  directoryListingTitle,
+  directoryPlaceTitle,
+  directoryStatePath,
   findListing,
   listingsForCity,
   listingsForState,
@@ -10,39 +16,64 @@ import {
   stateDisplayName,
   type DirectoryListing,
 } from '@carloOS/config/directory'
-import { buildMetadata } from './SEOHead'
+import { buildMetadata, SchemaScript } from './SEOHead'
 import { DirectoryDetail, DirectoryHub } from './DirectoryHub'
 
-export const DIRECTORY_NOUN: Record<string, { title: string; noun: string; description: string }> = {
+export const DIRECTORY_NOUN: Record<
+  string,
+  {
+    title: string
+    noun: string
+    seoNoun: string
+    seoNounPlural: string
+    description: string
+    schemaTypes: string[]
+  }
+> = {
   'dog-com': {
     title: 'Dog professional directory',
     noun: 'licensed dog professionals',
+    seoNoun: 'dog trainer',
+    seoNounPlural: 'Dog trainers',
     description:
       'Unclaimed license-board stubs for dog trainers and related professionals on Dog.com. No invented phone, email, or rating.',
+    schemaTypes: ['LocalBusiness'],
   },
   'fish-com': {
     title: 'Aquarium professional directory',
     noun: 'licensed aquarium professionals',
+    seoNoun: 'aquarium pro',
+    seoNounPlural: 'Aquarium professionals',
     description:
       'Unclaimed license-board stubs for aquarium and aquatic professionals on Fish.com. No invented phone, email, or rating.',
+    schemaTypes: ['LocalBusiness'],
   },
   'horses-com': {
     title: 'Equine professional directory',
     noun: 'licensed equine professionals',
+    seoNoun: 'equine pro',
+    seoNounPlural: 'Equine professionals',
     description:
       'Unclaimed license-board stubs for equine professionals on Horses.com. No invented phone, email, or rating.',
+    schemaTypes: ['LocalBusiness'],
   },
   'vets-co': {
     title: 'Veterinary license directory',
     noun: 'licensed veterinarians',
+    seoNoun: 'vet',
+    seoNounPlural: 'Vets',
     description:
       'Unclaimed state-board stubs for veterinarians on Vets.co. No invented phone, email, or rating.',
+    schemaTypes: ['VeterinaryCare', 'LocalBusiness'],
   },
   'ferret-com': {
     title: 'Exotic-mammal professional directory',
     noun: 'licensed exotic-mammal professionals',
+    seoNoun: 'exotic-mammal pro',
+    seoNounPlural: 'Exotic-mammal professionals',
     description:
       'Unclaimed license-board stubs for exotic-mammal professionals on Ferret.com. No invented phone, email, or rating.',
+    schemaTypes: ['LocalBusiness'],
   },
 }
 
@@ -73,8 +104,8 @@ export function directoryDetailMetadata(siteId: SiteId, listing: DirectoryListin
   const place = [listing.city, listing.state].filter(Boolean).join(', ')
   return buildMetadata({
     siteId,
-    title: `${listing.display_name}${place ? ` — ${place}` : ''} | ${copy.title}`,
-    description: `Unclaimed license stub for ${listing.display_name}${place ? ` in ${place}` : ''}. License ${listing.license_number}.`,
+    title: directoryListingTitle(listing, copy.seoNoun),
+    description: `Unclaimed license stub for ${listing.display_name}${place ? ` in ${place}` : ''}. License ${listing.license_number}.`.slice(0, 160),
     path: `/directory/${listing.slug}`,
     type: 'website',
     category: 'Directory',
@@ -110,7 +141,17 @@ export function renderDirectoryDetail(
 ) {
   const listing = findListing(listings, slug)
   if (!listing) notFound()
-  return <DirectoryDetail siteName={siteName} listing={listing} />
+  const copy = DIRECTORY_NOUN[siteId]
+  const siteUrl = getSiteConfig(siteId).theme.siteUrl.replace(/\/$/, '')
+  return (
+    <DirectoryDetail
+      siteName={siteName}
+      listing={listing}
+      siteUrl={siteUrl}
+      schemaTypes={copy.schemaTypes}
+      seoNoun={copy.seoNoun}
+    />
+  )
 }
 
 export function directoryStateMetadata(
@@ -122,9 +163,9 @@ export function directoryStateMetadata(
   const name = stateDisplayName(stateSlug)
   return buildMetadata({
     siteId,
-    title: `${name} ${copy.title}`.slice(0, 60),
-    description: `${listings.length} unclaimed license-board stubs in ${name}. No invented phone, email, or rating.`,
-    path: `/directory/${stateSlug}`,
+    title: directoryPlaceTitle(copy.seoNounPlural, stateSlug),
+    description: `${listings.length} unclaimed license-board stubs in ${name}. No invented phone, email, or rating.`.slice(0, 160),
+    path: directoryStatePath(stateSlug),
     type: 'website',
     category: 'Directory',
   })
@@ -141,9 +182,9 @@ export function directoryCityMetadata(
   const cityName = cityDisplayName(city)
   return buildMetadata({
     siteId,
-    title: `${cityName}, ${stateName} directory`.slice(0, 60),
-    description: `${listings.length} unclaimed ${copy.noun} stubs in ${cityName}, ${stateName}. No invented phone, email, or rating.`,
-    path: `/directory/${stateSlug}/${city}`,
+    title: directoryPlaceTitle(copy.seoNounPlural, stateSlug, city),
+    description: `${listings.length} unclaimed ${copy.noun} stubs in ${cityName}, ${stateName}. No invented phone, email, or rating.`.slice(0, 160),
+    path: directoryCityPath(stateSlug, city),
     type: 'website',
     category: 'Directory',
   })
@@ -197,24 +238,39 @@ function renderDirectoryPlace(
   const copy = DIRECTORY_NOUN[siteId]
   const stateName = stateDisplayName(stateSlug)
   const cityName = city ? cityDisplayName(city) : ''
-  const title = city ? `${cityName}, ${stateName}` : stateName
+  const heading = directoryPlaceTitle(copy.seoNounPlural, stateSlug, city)
   const page = paginateDirectory(listings, searchParams.q || '', Number(searchParams.page) || 1)
+  const siteUrl = getSiteConfig(siteId).theme.siteUrl.replace(/\/$/, '')
+  const placePath = city ? directoryCityPath(stateSlug, city) : directoryStatePath(stateSlug)
+  const pageUrl = `${siteUrl}${placePath}`
+  const schemas: Record<string, unknown>[] = [
+    cityLocalBusinessListJsonLd(
+      page.listings,
+      pageUrl,
+      heading,
+      siteUrl,
+      copy.schemaTypes,
+      listings.length,
+    ),
+  ]
+  if (city) schemas.unshift(cityPlaceJsonLd(city, stateSlug, pageUrl))
   return (
     <>
+      <SchemaScript schema={schemas} />
       <header className="px-container-sm sm:px-container pt-12 pb-2 max-w-5xl mx-auto">
         <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
           Directory · {stateName}
           {cityName ? ` · ${cityName}` : ''}
         </p>
         <h1 className="font-display font-bold text-brand-dark tracking-tight m-0" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
-          {copy.noun} in {title}
+          {heading}
         </h1>
       </header>
       <DirectoryHub
         siteName={siteName}
         noun={copy.noun}
         page={page}
-        placePath={city ? `/directory/${stateSlug}/${city}` : `/directory/${stateSlug}`}
+        placePath={placePath}
         allListings={listings}
       />
     </>
