@@ -8,11 +8,14 @@ import {
   directoryPlaces,
   directorySitemapIds,
   directorySitemapEntries,
+  buildSitemapIndexXml,
   directorySlugParams,
   directoryCityParams,
   directoryPlaceTitle,
   directoryListingTitle,
   directoryListingH1,
+  directoryCityPath,
+  directoryListingPath,
   listingLocalBusinessJsonLd,
   cityPlaceJsonLd,
   normalizeStateSlug,
@@ -184,6 +187,16 @@ describe('directory local SEO', () => {
     license_number: 'TX-2',
   }
 
+  it('city and listing canonical paths are not the homepage', () => {
+    assert.equal(directoryCityPath('az', 'avondale'), '/directory/az/avondale')
+    assert.equal(
+      directoryListingPath({ slug: 'american-canine-training-avondale-az-1996003534' }),
+      '/directory/american-canine-training-avondale-az-1996003534',
+    )
+    assert.notEqual(directoryCityPath('co', 'denver'), '/')
+    assert.notEqual(directoryListingPath(austin), '/')
+  })
+
   it('gives each city a unique title and H1 phrase', () => {
     const austinTitle = directoryPlaceTitle('Vets', 'tx', 'austin')
     const dallasTitle = directoryPlaceTitle('Vets', 'tx', 'dallas')
@@ -232,5 +245,12 @@ describe('directory local SEO', () => {
     assert.equal(firstShard.length, DIRECTORY_SITEMAP_DETAIL_CAP)
     assert.equal(overflow.length, 3)
     assert.equal(overflow[0].url, `https://vets.co/directory/n-${DIRECTORY_SITEMAP_DETAIL_CAP}`)
+
+    const index = buildSitemapIndexXml('https://vets.co', many)
+    assert.ok(index.includes('<sitemapindex'))
+    assert.ok(index.includes('https://vets.co/sitemap/0.xml'))
+    assert.ok(index.includes('https://vets.co/sitemap/1.xml'))
+    assert.ok(index.includes('https://vets.co/sitemap/3.xml'))
+    assert.equal(index.includes('https://vets.co/'), true)
   })
 })

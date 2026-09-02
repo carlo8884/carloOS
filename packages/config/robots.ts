@@ -10,9 +10,11 @@ import type { MetadataRoute } from 'next'
  *
  * Design:
  * 1. Open by default — `User-agent: *` allows `/`.
- * 2. Explicit allow blocks for major AI crawlers (GPTBot, ClaudeBot,
+ * 2. Explicit allow for `/directory` and sitemap index/shards so city and
+ *    listing URLs stay crawlable after generateSitemaps() sharding.
+ * 3. Explicit allow blocks for major AI crawlers (GPTBot, ClaudeBot,
  *    PerplexityBot, Google-Extended, etc.). Explicit consent + clarity.
- * 3. Disallow non-content surfaces (`/api/`, `/admin/`, `/dashboard/`,
+ * 4. Disallow non-content surfaces (`/api/`, `/admin/`, `/dashboard/`,
  *    `/go/`). The `/go/` redirect handlers shouldn't be in search/AI
  *    indexes (they redirect to vendor URLs — index pollution).
  */
@@ -61,15 +63,17 @@ export const DEFAULT_DISALLOW_PATHS = ['/api/', '/admin/', '/dashboard/', '/go/'
 export function buildRobots(siteUrl: string, extraDisallow: string[] = []): MetadataRoute.Robots {
   const baseDisallow = [...DEFAULT_DISALLOW_PATHS, ...extraDisallow]
 
+  const allow = ['/', '/directory', '/sitemap.xml', '/sitemap/']
+
   const rules: MetadataRoute.Robots['rules'] = [
     {
       userAgent: '*',
-      allow: ['/', '/directory'],
+      allow,
       disallow: baseDisallow,
     },
     ...AI_CRAWLER_USER_AGENTS.map((userAgent) => ({
       userAgent,
-      allow: ['/', '/directory'],
+      allow,
       disallow: baseDisallow,
     })),
   ]

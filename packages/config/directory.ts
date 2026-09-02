@@ -242,6 +242,28 @@ export function directorySitemapIds(listings: DirectoryListing[]): { id: number 
   return ids
 }
 
+/**
+ * Next 14 generateSitemaps() serves /sitemap/{id}.xml but 404s /sitemap.xml
+ * (verified on 843 production). Emit the index ourselves so robots + crawlers
+ * can find the city/listing shards.
+ */
+export function buildSitemapIndexXml(siteUrl: string, listings: DirectoryListing[]): string {
+  const origin = siteUrl.replace(/\/$/, '')
+  const locs = directorySitemapIds(listings)
+    .map((row) => `  <sitemap>\n    <loc>${origin}/sitemap/${row.id}.xml</loc>\n  </sitemap>`)
+    .join('\n')
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${locs}\n</sitemapindex>\n`
+}
+
+export function sitemapIndexResponse(siteUrl: string, listings: DirectoryListing[]): Response {
+  return new Response(buildSitemapIndexXml(siteUrl, listings), {
+    headers: {
+      'content-type': 'application/xml; charset=utf-8',
+      'cache-control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+    },
+  })
+}
+
 /** State + listing slugs from imported rows only. Empty pack → no invented params. */
 export function directorySlugParams(listings: DirectoryListing[]): { slug: string }[] {
   const states = directoryPlaces(listings).states.map((state) => ({ slug: state.slug }))
