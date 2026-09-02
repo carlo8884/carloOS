@@ -1,10 +1,18 @@
 import Link from 'next/link'
 import {
   DIRECTORY_FEATURED_MAX,
+  directoryCityPath,
+  directoryListingH1,
+  directoryListingPath,
   directoryPlaces,
+  directoryStatePath,
+  listingLocalBusinessJsonLd,
+  stateAbbrev,
+  stateDisplayName,
   type DirectoryListing,
   type DirectoryPage,
 } from '@carloOS/config/directory'
+import { SchemaScript } from './SEOHead'
 
 export function DirectoryHub({
   siteName,
@@ -205,17 +213,35 @@ export function DirectoryPlacesCta({
 export function DirectoryDetail({
   siteName,
   listing,
+  siteUrl,
+  schemaTypes = ['LocalBusiness'],
+  seoNoun = 'licensed professional',
 }: {
   siteName: string
   listing: DirectoryListing
+  siteUrl?: string
+  schemaTypes?: string[]
+  seoNoun?: string
 }) {
+  const origin = (siteUrl || '').replace(/\/$/, '')
+  const pageUrl = origin ? `${origin}${directoryListingPath(listing)}` : directoryListingPath(listing)
+  const cityHref = listing.city && listing.state ? directoryCityPath(listing.state, listing.city) : null
+  const stateHref = listing.state ? directoryStatePath(listing.state) : null
+  const cityLabel = listing.city
+    ? `${listing.city}, ${stateAbbrev(listing.state)}`
+    : listing.state
+      ? stateDisplayName(listing.state)
+      : ''
+  const schema = listingLocalBusinessJsonLd(listing, pageUrl, schemaTypes)
+
   return (
     <div className="px-container-sm sm:px-container py-12 max-w-3xl mx-auto">
+      <SchemaScript schema={schema} />
       <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
         Unclaimed stub · {listing.category || 'License record'}
       </p>
       <h1 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(28px, 4vw, 40px)' }}>
-        {listing.display_name}
+        {directoryListingH1(listing, seoNoun)}
       </h1>
       <p className="text-brand-text-mid mb-6">
         {[listing.city, listing.state].filter(Boolean).join(', ') || 'Location not in source file'}
@@ -241,11 +267,21 @@ export function DirectoryDetail({
       <p className="text-xs text-brand-text-light">
         No phone, email, or rating is published here. Those fields are omitted on purpose.
       </p>
-      <p className="mt-6">
-        <Link href="/directory" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
-          ← Back to directory
+      <nav className="mt-6 flex flex-col gap-2 text-sm" aria-label="Directory places">
+        {cityHref ? (
+          <Link href={cityHref} className="font-semibold text-brand-primary no-underline hover:underline">
+            ← {cityLabel} listings
+          </Link>
+        ) : null}
+        {stateHref ? (
+          <Link href={stateHref} className="font-semibold text-brand-primary no-underline hover:underline">
+            ← {stateDisplayName(listing.state)} directory
+          </Link>
+        ) : null}
+        <Link href="/directory" className="font-semibold text-brand-primary no-underline hover:underline">
+          ← Full directory
         </Link>
-      </p>
+      </nav>
     </div>
   )
 }

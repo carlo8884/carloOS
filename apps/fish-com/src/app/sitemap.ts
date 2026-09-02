@@ -15,8 +15,8 @@ export function generateSitemaps() {
 export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
   const id = Number(props?.id ?? 0)
   const now = new Date()
-  if (id === 1) {
-    return directorySitemapEntries('https://fish.com', directoryListings, now)
+  if (id >= 1) {
+    return directorySitemapEntries('https://fish.com', directoryListings, now, id)
   }
 
   // Programmatic aquarium fish-disease library (dynamic /health/[slug] route).

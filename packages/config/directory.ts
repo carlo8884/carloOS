@@ -6,7 +6,9 @@
 
 export const DIRECTORY_PAGE_SIZE = 50
 export const DIRECTORY_FEATURED_MAX = 12
-export const DIRECTORY_SITEMAP_DETAIL_CAP = 1000
+/** Listing URLs per sitemap shard (id ≥ 2). Places live on id 1. Under Google's 50k/file limit. */
+export const DIRECTORY_SITEMAP_DETAIL_CAP = 10000
+export const DIRECTORY_TITLE_MAX = 60
 
 export const DIRECTORY_PACK_FILES = [
   'ferret-national.csv',
@@ -200,37 +202,44 @@ export function directorySitemapEntries(
   siteUrl: string,
   listings: DirectoryListing[],
   now = new Date(),
+  sitemapId = 1,
 ): Array<{ url: string; lastModified: Date; changeFrequency: 'weekly'; priority: number }> {
   const origin = siteUrl.replace(/\/$/, '')
   // Index URL is committed as a literal in each sitemap.ts (sitemap-drift).
-  // Places come from imported rows only. Details capped at 1k.
-  const places = directoryPlaces(listings)
-  const placeEntries = [
-    ...places.states.map((state) => ({
-      url: `${origin}/directory/${state.slug}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.55,
-    })),
-    ...places.cities.map((city) => ({
-      url: `${origin}/directory/${city.stateSlug}/${city.citySlug}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    })),
-  ]
-  const details = listings.slice(0, DIRECTORY_SITEMAP_DETAIL_CAP).map((row) => ({
-    url: `${origin}/directory/${row.slug}`,
+  // id 1 = imported places only. id ≥ 2 = listing shards (all imported slugs).
+  if (sitemapId <= 1) {
+    const places = directoryPlaces(listings)
+    return [
+      ...places.states.map((state) => ({
+        url: `${origin}${directoryStatePath(state.slug)}`,
+        lastModified: now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.55,
+      })),
+      ...places.cities.map((city) => ({
+        url: `${origin}${directoryCityPath(city.stateSlug, city.citySlug)}`,
+        lastModified: now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.5,
+      })),
+    ]
+  }
+  const start = (sitemapId - 2) * DIRECTORY_SITEMAP_DETAIL_CAP
+  return listings.slice(start, start + DIRECTORY_SITEMAP_DETAIL_CAP).map((row) => ({
+    url: `${origin}${directoryListingPath(row)}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.4,
   }))
-  return [...placeEntries, ...details]
 }
 
-/** Sitemap index ids: 0 = editorial, 1 = imported places + capped details. */
+/** Sitemap index ids: 0 = editorial, 1 = places, 2+ = listing shards. */
 export function directorySitemapIds(listings: DirectoryListing[]): { id: number }[] {
-  return listings.length > 0 ? [{ id: 0 }, { id: 1 }] : [{ id: 0 }]
+  if (listings.length === 0) return [{ id: 0 }]
+  const shards = Math.max(1, Math.ceil(listings.length / DIRECTORY_SITEMAP_DETAIL_CAP))
+  const ids = [{ id: 0 }, { id: 1 }]
+  for (let i = 0; i < shards; i++) ids.push({ id: 2 + i })
+  return ids
 }
 
 /** State + listing slugs from imported rows only. Empty pack → no invented params. */
@@ -297,6 +306,124 @@ export function cityDisplayName(city: string): string {
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ')
+}
+
+export function stateAbbrev(state: string): string {
+  const slug = normalizeStateSlug(state)
+  return slug.length === 2 ? slug.toUpperCase() : stateDisplayName(slug)
+}
+
+export function directoryStatePath(state: string): string {
+  return `/directory/${normalizeStateSlug(state)}`
+}
+
+export function directoryCityPath(state: string, city: string): string {
+  return `/directory/${normalizeStateSlug(state)}/${citySlug(city)}`
+}
+
+export function directoryListingPath(listing: Pick<DirectoryListing, 'slug'>): string {
+  return `/directory/${listing.slug}`
+}
+
+/** Unique city/state title, e.g. "Vets in Austin, TX". Clamped to 60 before brand suffix. */
+export function directoryPlaceTitle(
+  nounPlural: string,
+  state: string,
+  city?: string,
+  max = DIRECTORY_TITLE_MAX,
+): string {
+  const place = city
+    ? `${cityDisplayName(city)}, ${stateAbbrev(state)}`
+    : stateDisplayName(state)
+  const title = `${nounPlural} in ${place}`
+  return title.length <= max ? title : title.slice(0, max).trimEnd()
+}
+
+/** Unique listing title, e.g. "Jane Smith — vet in Austin, TX". Keeps city+state when clamped. */
+export function directoryListingTitle(
+  listing: DirectoryListing,
+  noun: string,
+  max = DIRECTORY_TITLE_MAX,
+): string {
+  const place = [listing.city, stateAbbrev(listing.state)].filter(Boolean).join(', ')
+  const suffix = place ? ` — ${noun} in ${place}` : ` — ${noun}`
+  const name = listing.display_name.trim()
+  if ((name + suffix).length <= max) return name + suffix
+  const budget = max - suffix.length
+  if (budget >= 8) return `${name.slice(0, budget).trimEnd()}${suffix}`
+  return (name + suffix).slice(0, max).trimEnd()
+}
+
+export function directoryListingH1(listing: DirectoryListing, noun: string): string {
+  const place = [listing.city, stateAbbrev(listing.state)].filter(Boolean).join(', ')
+  return place ? `${listing.display_name} — ${noun} in ${place}` : `${listing.display_name} — ${noun}`
+}
+
+/** LocalBusiness JSON-LD from imported fields only. No phone, email, street, geo, or rating. */
+export function listingLocalBusinessJsonLd(
+  listing: DirectoryListing,
+  pageUrl: string,
+  types: string[] = ['LocalBusiness'],
+): Record<string, unknown> {
+  const address: Record<string, string> = {
+    '@type': 'PostalAddress',
+    addressCountry: 'US',
+  }
+  if (listing.city) address.addressLocality = listing.city
+  if (listing.state) address.addressRegion = stateAbbrev(listing.state)
+
+  const type = types.includes('LocalBusiness') ? types : ['LocalBusiness', ...types]
+  return {
+    '@context': 'https://schema.org',
+    '@type': type.length === 1 ? type[0] : type,
+    name: listing.display_name,
+    url: pageUrl,
+    address,
+    ...(listing.license_number ? { identifier: listing.license_number } : {}),
+  }
+}
+
+export function cityPlaceJsonLd(
+  city: string,
+  state: string,
+  pageUrl: string,
+): Record<string, unknown> {
+  const cityName = cityDisplayName(city)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: `${cityName}, ${stateDisplayName(state)}`,
+    url: pageUrl,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: cityName,
+      addressRegion: stateAbbrev(state),
+      addressCountry: 'US',
+    },
+  }
+}
+
+export function cityLocalBusinessListJsonLd(
+  listings: DirectoryListing[],
+  pageUrl: string,
+  name: string,
+  origin: string,
+  types: string[] = ['LocalBusiness'],
+  total = listings.length,
+): Record<string, unknown> {
+  const site = origin.replace(/\/$/, '')
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    url: pageUrl,
+    numberOfItems: total,
+    itemListElement: listings.map((row, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: listingLocalBusinessJsonLd(row, `${site}${directoryListingPath(row)}`, types),
+    })),
+  }
 }
 
 export function listingsForState(listings: DirectoryListing[], state: string): DirectoryListing[] {
