@@ -92,6 +92,24 @@ if (failed > 0) {
   process.exit(1)
 }
 
+const wrapper = execSync('cat scripts/vercel-ignore.sh', { encoding: 'utf8' })
+const earningLine = wrapper
+  .split('\n')
+  .find((line) => line.includes('EARNING_APPS='))
+if (
+  !earningLine ||
+  !['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'].every((app) =>
+    earningLine.includes(app),
+  )
+) {
+  console.error('FAIL: vercel-ignore.sh must force-build the five earning apps on shared package edits')
+  process.exit(1)
+}
+if (!wrapper.includes('packages/config/*|packages/ui/*')) {
+  console.error('FAIL: vercel-ignore.sh must treat packages/config and packages/ui as earning-app invalidators')
+  process.exit(1)
+}
+
 console.log(
   `## vercel-ignore: clean\n\nPASS: ${CASES.length} path cases match the wrapper's documented behavior.`,
 )
