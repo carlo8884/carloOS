@@ -20,6 +20,8 @@ type Size = 'small' | 'medium' | 'large'
 interface ItemLink {
   href: string
   label: string
+  /** Amazon shop hop — render as sponsored <a>, not an editorial Link. */
+  shop?: boolean
 }
 interface Item {
   name: string
@@ -35,6 +37,28 @@ function foodReview(stage: Stage, size: Size): ItemLink {
   return { href: '/reviews/best-dry-dog-food', label: 'Best dry dog foods' }
 }
 
+/** Sibling amazon-brand hops — only the four rows that already shop Amazon. */
+const SHOP_CRATE: ItemLink = {
+  href: '/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist',
+  label: 'Shop crates on Amazon',
+  shop: true,
+}
+const SHOP_HARNESS: ItemLink = {
+  href: '/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist',
+  label: 'Shop harnesses on Amazon',
+  shop: true,
+}
+const SHOP_PUPPY_FOOD: ItemLink = {
+  href: '/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-new-puppy-checklist',
+  label: 'Shop puppy food on Amazon',
+  shop: true,
+}
+const SHOP_SLOW_FEEDER: ItemLink = {
+  href: '/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist',
+  label: 'Shop slow feeders on Amazon',
+  shop: true,
+}
+
 function buildList(stage: Stage, size: Size): Item[] {
   const puppy = stage === 'puppy'
   const items: Item[] = [
@@ -43,14 +67,21 @@ function buildList(stage: Stage, size: Size): Item[] {
       detail: puppy
         ? 'A complete-and-balanced puppy food fuels growth — large-breed puppies specifically need a large-breed puppy formula with controlled calcium to protect developing joints.'
         : 'A complete-and-balanced adult maintenance food sized to your dog. Use the calorie calculator to set the daily amount and avoid the most common health problem — overfeeding.',
-      links: [foodReview(stage, size), { href: '/tools/dog-calorie-calculator', label: 'Calorie calculator' }],
+      links: [
+        foodReview(stage, size),
+        { href: '/tools/dog-calorie-calculator', label: 'Calorie calculator' },
+        ...(puppy ? [SHOP_PUPPY_FOOD] : []),
+      ],
       essential: true,
     },
     {
       name: 'Food & water bowls',
       detail:
         'Stainless steel or ceramic are easy to clean and do not harbour bacteria like scratched plastic. A slow-feeder bowl helps fast eaters and deep-chested breeds at risk of bloat.',
-      links: [{ href: '/reviews/best-slow-feeder-bowls', label: 'Best slow-feeder bowls' }],
+      links: [
+        { href: '/reviews/best-slow-feeder-bowls', label: 'Best slow-feeder bowls' },
+        SHOP_SLOW_FEEDER,
+      ],
       essential: true,
     },
     {
@@ -61,6 +92,7 @@ function buildList(stage: Stage, size: Size): Item[] {
       links: [
         { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
         { href: '/tools/dog-crate-size-calculator', label: 'Crate size calculator' },
+        SHOP_CRATE,
       ],
       essential: true,
     },
@@ -77,7 +109,10 @@ function buildList(stage: Stage, size: Size): Item[] {
       name: 'Collar, leash, harness & ID tag',
       detail:
         'A flat collar with an ID tag (legally required in many areas), a well-fitted harness for walks to protect the neck, and a standard 4–6 ft leash. A front-clip harness helps with pulling.',
-      links: [{ href: '/reviews/best-dog-harnesses', label: 'Best dog harnesses' }],
+      links: [
+        { href: '/reviews/best-dog-harnesses', label: 'Best dog harnesses' },
+        SHOP_HARNESS,
+      ],
       essential: true,
     },
     {
@@ -202,15 +237,27 @@ export default function NewPuppyChecklist() {
               <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{item.detail}</p>
               {item.links.length > 0 && (
                 <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1">
-                  {item.links.map((l) => (
-                    <Link
-                      key={l.href}
-                      href={l.href}
-                      className="text-xs font-semibold text-brand-primary underline-offset-2 hover:underline no-underline"
-                    >
-                      {l.label} →
-                    </Link>
-                  ))}
+                  {item.links.map((l) =>
+                    l.shop ? (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        rel="sponsored nofollow noopener noreferrer"
+                        target="_blank"
+                        className="text-xs font-semibold text-brand-primary underline-offset-2 hover:underline no-underline"
+                      >
+                        {l.label} →
+                      </a>
+                    ) : (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        className="text-xs font-semibold text-brand-primary underline-offset-2 hover:underline no-underline"
+                      >
+                        {l.label} →
+                      </Link>
+                    ),
+                  )}
                 </div>
               )}
             </li>
