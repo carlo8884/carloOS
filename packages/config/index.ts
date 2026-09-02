@@ -1452,6 +1452,8 @@ export {
   findListing,
   directorySitemapEntries,
   directorySitemapIds,
+  buildSitemapIndexXml,
+  sitemapIndexResponse,
   directorySlugParams,
   directoryCityParams,
   directoryPlaceTitle,
