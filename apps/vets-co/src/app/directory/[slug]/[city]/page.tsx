@@ -6,7 +6,7 @@ import listings from '../../../../data/directory-listings.json'
 // City landings come from imported rows only (renderDirectoryCity 404s when
 // a city has 0 rows). ~8k city paths are generated on demand, not at build.
 export const dynamicParams = true
-export const revalidate = 86400
+export const dynamic = 'force-dynamic'
 
 export function generateStaticParams() {
   return []
