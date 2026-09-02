@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
+import { isChewyHopLive } from '@carloOS/config/affiliate-hop'
 
 const LAUNCH_FOOTER: Partial<Record<SiteId, { moneyLabel: string; moneyHref: string }>> = {
   'dog-com': { moneyLabel: 'Best dry dog food', moneyHref: '/reviews/best-dry-dog-food' },
@@ -27,9 +28,13 @@ interface FooterProps {
 export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) {
   const config = getSiteConfig(siteId)
   const currentYear = new Date().getFullYear()
+  const hideEmptyChewy = !isChewyHopLive()
 
   return (
     <footer className="bg-brand-dark border-t border-white/10">
+      {hideEmptyChewy ? (
+        <style>{`a[href*="/go/chewy"]{display:none!important}`}</style>
+      ) : null}
       {/* Main grid */}
       <div className="px-container-sm sm:px-container py-16">
         <div className="mx-auto max-w-container-wide">

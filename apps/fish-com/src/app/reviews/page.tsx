@@ -101,7 +101,7 @@ export default function FishReviewsPage() {
           title="The Weekly Tank"
           subtitle="Equipment picks, species spotlights, and fishkeeping tips every Thursday."
           source="reviews-under-hero"
-          ctaText="Subscribe Free"
+          ctaText="Send the tank notes"
           perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
         />
       </div>

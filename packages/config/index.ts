@@ -1444,6 +1444,10 @@ export {
   resolveTag,
   stripPlaceholder,
   partnerHome,
+  isChewyHop,
+  isChewyHopLive,
+  visibleChewyHref,
+  VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 export type { HopResult } from './affiliate-hop'
 export {

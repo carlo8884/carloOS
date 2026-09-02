@@ -160,7 +160,7 @@ export default function BloodstockHubPage() {
           siteId="horses-com"
           title="The Horses.com Reference"
           subtitle="One email a week: a deep-dive on a discipline, breed, or the business of the sport. Citation-anchored. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the weekly notes"
           source="bloodstock-hub"
           perks={[
             'One email weekly',

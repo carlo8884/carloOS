@@ -383,7 +383,7 @@ export default function BehaviorHubPage() {
           siteId="ferret-com"
           title="The Ferret.com Reference"
           subtitle="New articles on ferret behavior, health, and care. Cited. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the first-year schedule"
           source="behavior-hub"
           perks={[
             'Evidence-based only',

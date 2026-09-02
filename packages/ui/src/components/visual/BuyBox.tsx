@@ -37,6 +37,7 @@
  */
 
 import type { ReactElement } from 'react'
+import { isChewyHop, visibleChewyHref } from '@carloOS/config/affiliate-hop'
 
 export type BuyBoxVendor = 'chewy' | 'amazon' | 'smartpak' | 'dover' | 'walmart' | 'other'
 
@@ -109,17 +110,25 @@ export function BuyBox({ label, brands, disclosure, secondaryDisclosure }: BuyBo
           <div key={brand.name}>
             <p className="mb-2 text-xs font-bold text-brand-text-dark">{brand.name}</p>
             <div className="flex flex-wrap gap-2">
-              {brand.vendors.map((v) => (
+              {brand.vendors.map((v) => {
+                const href = isChewyHop(v.vendor) || isChewyHop(v.href)
+                  ? visibleChewyHref(v.href)
+                  : v.href && v.href !== '#'
+                    ? v.href
+                    : undefined
+                if (!href) return null
+                return (
                 <a
-                  key={v.vendor + v.href}
-                  href={v.href}
+                  key={v.vendor + href}
+                  href={href}
                   rel="sponsored noopener"
                   aria-label={`Buy ${brand.name} on ${v.label ?? VENDOR_LABEL[v.vendor]}`}
                   className={`inline-flex items-center gap-1 rounded px-3 py-1.5 text-xs font-semibold no-underline transition ${VENDOR_CLASSES[v.vendor]}`}
                 >
                   {v.label ?? VENDOR_LABEL[v.vendor]} <span aria-hidden>→</span>
                 </a>
-              ))}
+                )
+              })}
             </div>
           </div>
         ))}

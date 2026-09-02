@@ -6,6 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
+import { isChewyHop, visibleChewyHref } from '@carloOS/config/affiliate-hop'
 
 interface Spec {
   label: string
@@ -71,7 +72,10 @@ export function ReviewCard({
   winner = false,
   id,
 }: ReviewCardProps) {
-  const href = ctaHref && ctaHref !== '#' ? ctaHref : undefined
+  const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
+  const chewyCta =
+    isChewyHop(ctaAffiliateProgram ?? '') || isChewyHop(rawHref ?? '')
+  const href = chewyCta ? visibleChewyHref(rawHref) : rawHref
   return (
     <div
       id={id}

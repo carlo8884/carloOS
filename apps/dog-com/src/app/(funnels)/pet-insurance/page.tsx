@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
+import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
 import { CARRIERS } from '../../../data/insurance-carriers'
 
 // Ranked by editorial score — drives both the comparison table and the
@@ -174,10 +175,10 @@ export default function PetInsuranceHubPage() {
                   <td className="py-3 pr-4 font-semibold">{c.editorialScore}</td>
                   <td className="py-3">
                     <a
-              href={`/go/${c.vendor}/home?s=pet-insurance-hub-table`}
-              rel="sponsored nofollow noopener" target="_blank" className="text-brand-primary font-semibold no-underline hover:underline whitespace-nowrap"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="text-brand-primary font-semibold no-underline hover:underline whitespace-nowrap"
             >
-              Get quote →
+              Compare →
             </a>
                   </td>
                 </tr>
@@ -214,10 +215,10 @@ export default function PetInsuranceHubPage() {
               coverage with no per-incident caps. No upper age limit at enrollment.
             </p>
             <a
-              href="/go/pumpkin/home?s=pet-insurance-hub-best-overall"
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
             >
-              Get a Pumpkin quote →
+              Compare quotes on Vets.co →
             </a>
           </div>
 
@@ -231,10 +232,10 @@ export default function PetInsuranceHubPage() {
               direct-pay to participating vets. Premium reflects coverage depth.
             </p>
             <a
-              href="/go/trupanion/home?s=pet-insurance-hub-best-chronic"
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
             >
-              Get a Trupanion quote →
+              Compare quotes on Vets.co →
             </a>
           </div>
 
@@ -248,10 +249,10 @@ export default function PetInsuranceHubPage() {
               claims, bundle discount with Lemonade renters/home/life insurance.
             </p>
             <a
-              href="/go/lemonade/home?s=pet-insurance-hub-best-budget"
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
             >
-              Get a Lemonade quote →
+              Compare quotes on Vets.co →
             </a>
           </div>
 
@@ -265,10 +266,10 @@ export default function PetInsuranceHubPage() {
               small dogs and brachycephalic breeds.
             </p>
             <a
-              href="/go/fetch/home?s=pet-insurance-hub-best-dental"
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
+              href={VETS_PET_INSURANCE_REVIEW}
+              rel="noopener" className="inline-block text-brand-primary font-semibold no-underline hover:underline"
             >
-              Get a Fetch quote →
+              Compare quotes on Vets.co →
             </a>
           </div>
         </div>

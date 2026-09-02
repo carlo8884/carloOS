@@ -202,14 +202,16 @@ export function findListing(listings: DirectoryListing[], slug: string): Directo
 export function directoryClaimPrefill(
   listings: DirectoryListing[],
   slug: string | undefined | null,
-): { city: string; message: string } {
+): { city: string; message: string; listing: string } {
+  const empty = { city: '', message: '', listing: '' }
   const key = typeof slug === 'string' ? slug.trim() : ''
-  if (!key) return { city: '', message: '' }
+  if (!key) return empty
   const listing = findListing(listings, key)
-  if (!listing) return { city: '', message: '' }
+  if (!listing) return empty
   return {
     city: [listing.city, listing.state].filter(Boolean).join(', '),
     message: `I claim listing ${listing.slug} (${listing.display_name}, ${listing.city} ${listing.state}).`,
+    listing: listing.slug,
   }
 }
 

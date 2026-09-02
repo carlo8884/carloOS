@@ -152,7 +152,7 @@ export default function VetsGlossaryPage() {
           title="Free Pet Health Tips"
           subtitle="Plain-English veterinary and insurance guidance. No spam."
           source="glossary"
-          ctaText="Subscribe Free"
+          ctaText="Send the triage card"
         />
       </div>
     </>

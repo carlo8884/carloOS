@@ -178,7 +178,7 @@ export default function FAQPage() {
         <EmailCapture variant="section" siteId="dog-com"
           title="Weekly Dog Health Tips"
           subtitle="Answers, breed spotlights, and health alerts — every Tuesday."
-          source="faq-page" ctaText="Subscribe Free"
+          source="faq-page" ctaText="Send the weekly notes"
           perks={['✓ Research-based', '📬 Every Tuesday', '🚫 No spam']}
         />
       </div>

@@ -306,7 +306,7 @@ export default function ColorsHubPage() {
           siteId="ferret-com"
           title="The Ferret.com Field Notes"
           subtitle="New color guides, care references, and health explainers. Cited. No product pushes."
-          ctaText="Subscribe"
+          ctaText="Send the first-year schedule"
           source="colors-hub"
           perks={[
             'Plain-English field guides',

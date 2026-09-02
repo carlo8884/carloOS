@@ -6,6 +6,7 @@ import {
   buildMetadata,
   AffiliateDisclosure
 } from '@carloOS/ui'
+import { isChewyHop, visibleChewyHref } from '@carloOS/config/affiliate-hop'
 
 /**
  * Lead-magnet thank-you page template.
@@ -29,7 +30,7 @@ interface MagnetContent {
   recommendations: {
     headline: string
     body: string
-    cta: { label: string; vendor: string; sku: string }
+    cta: { label: string; vendor?: string; sku?: string; href?: string }
   }[]
   nextReadingHref: string
   nextReadingLabel: string
@@ -47,8 +48,8 @@ const MAGNETS: Record<string, MagnetContent> = {
     recommendations: [
       {
         headline: 'A pet insurance policy before symptoms appear',
-        body: 'Puppyhood is the lowest-premium time to enroll in pet insurance and the best window to pre-empt hereditary exclusions before symptoms appear. Lemonade Pet is our budget-conscious option; Pumpkin is our overall editorial pick.',
-        cta: { label: 'Compare pet insurance →', vendor: 'lemonade', sku: 'home' },
+        body: 'Puppyhood is the lowest-premium time to enroll in pet insurance and the best window to pre-empt hereditary exclusions before symptoms appear. Compare carriers on Vets.co — we do not re-rank them here.',
+        cta: { label: 'Compare pet insurance →', href: 'https://vets.co/reviews/best-pet-insurance' },
       },
       {
         headline: 'A DNA test (especially for mixed-breed puppies)',
@@ -72,18 +73,18 @@ const MAGNETS: Record<string, MagnetContent> = {
     recommendations: [
       {
         headline: 'Take the 60-second quiz first',
-        body: "Most owners don't realize their priorities (budget vs. coverage vs. flexibility) until they answer 4 questions. The quiz routes you to the carrier that fits.",
-        cta: { label: 'Take the quiz →', vendor: 'lemonade', sku: 'home' },
+        body: "Most owners don't realize their priorities (budget vs. coverage vs. flexibility) until they answer 4 questions. The quiz routes you to the comparison that fits.",
+        cta: { label: 'Take the quiz →', href: '/pet-insurance/quiz' },
       },
       {
-        headline: 'Get a Pumpkin quote (our overall editorial pick)',
-        body: 'Pumpkin scored highest in our editorial review for comprehensive coverage and has no upper age limit at enrollment.',
-        cta: { label: 'Get a Pumpkin quote →', vendor: 'pumpkin', sku: 'home' },
+        headline: 'Compare quotes on Vets.co',
+        body: 'Side-by-side coverage, exclusions, and waiting periods. We do not re-rank Trupanion, Healthy Paws, or Embrace here.',
+        cta: { label: 'Compare pet insurance →', href: 'https://vets.co/reviews/best-pet-insurance' },
       },
       {
-        headline: 'Get a Lemonade quote (budget pick)',
-        body: 'Lemonade is the lowest-entry-premium credible carrier and has quote API integration for under-a-minute checkout.',
-        cta: { label: 'Get a Lemonade quote →', vendor: 'lemonade', sku: 'home' },
+        headline: 'See the Dog.com comparison table',
+        body: 'Editorial scores and sample premiums stay on Dog.com. Quote buttons go to the Vets.co review.',
+        cta: { label: 'Open the comparison →', href: '/pet-insurance' },
       },
     ],
     nextReadingHref: '/pet-insurance',
@@ -186,7 +187,14 @@ export default async function ThanksPage({
         </p>
 
         <div className="space-y-6 mb-12">
-          {m.recommendations.map((r, i) => (
+          {m.recommendations.map((r, i) => {
+            const rawHref =
+              r.cta.href ??
+              (r.cta.vendor && r.cta.sku
+                ? `/go/${r.cta.vendor}/${r.cta.sku}?s=thanks-${magnet}`
+                : undefined)
+            const href = rawHref && isChewyHop(rawHref) ? visibleChewyHref(rawHref) : rawHref
+            return (
             <div key={i} className="border border-brand-border rounded-xl p-6">
               <h3 className="font-display text-lg font-bold mb-2">
                 {r.headline}
@@ -194,14 +202,19 @@ export default async function ThanksPage({
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
                 {r.body}
               </p>
+              {href ? (
               <a
-              href={`/go/${r.cta.vendor}/${r.cta.sku}?s=thanks-${magnet}`}
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-5 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90"
+              href={href}
+              rel={r.cta.href ? 'noopener' : 'sponsored nofollow noopener'}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              className="inline-block bg-brand-primary text-white px-5 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90"
             >
               {r.cta.label}
             </a>
+              ) : null}
             </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-6">

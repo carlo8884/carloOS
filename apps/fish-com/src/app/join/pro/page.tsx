@@ -47,6 +47,7 @@ export default function JoinProPage({
             variant="page"
             defaultCity={prefill.city}
             defaultMessage={prefill.message}
+            defaultListing={prefill.listing}
           />
         </div>
 

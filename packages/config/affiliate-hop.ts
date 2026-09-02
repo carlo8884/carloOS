@@ -19,6 +19,32 @@ export const PARTNER_HOME: Record<string, string> = {
   'chewy-pharmacy': 'https://www.chewy.com',
 }
 
+/** Dog.com insurance Quote/Find CTAs go here. Do not re-rank carriers on Dog.com. */
+export const VETS_PET_INSURANCE_REVIEW = 'https://vets.co/reviews/best-pet-insurance'
+
+const CHEWY_TAG_KEYS = ['AFF_CHEWY_TAG', 'AFF_CHEWY_BRAND_TAG', 'AFF_CHEWY_PHARMACY_TAG'] as const
+
+export function isChewyHop(vendorOrHref: string): boolean {
+  return vendorOrHref.toLowerCase().includes('chewy')
+}
+
+/** True only when a Chewy tag is set. Empty hop → hide the button, never href="#". */
+export function isChewyHopLive(env: NodeJS.ProcessEnv = process.env): boolean {
+  return CHEWY_TAG_KEYS.some((key) => {
+    const value = env[key]
+    return typeof value === 'string' && value.length > 0
+  })
+}
+
+export function visibleChewyHref(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): string | undefined {
+  if (!href || href === '#') return undefined
+  if (isChewyHop(href) && !isChewyHopLive(env)) return undefined
+  return href
+}
+
 const DEFAULT_HOME = 'https://www.amazon.com'
 
 export function resolveTag(
