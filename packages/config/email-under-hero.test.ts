@@ -6,6 +6,8 @@ describe('isEmailUnderHeroPath', () => {
   it('matches money hubs and not random spokes', () => {
     assert.equal(isEmailUnderHeroPath('/health'), true)
     assert.equal(isEmailUnderHeroPath('/directory'), true)
+    assert.equal(isEmailUnderHeroPath('/directory/ca/berkeley'), false)
+    assert.equal(isEmailUnderHeroPath('/directory/birgit-hafermann-dog-training-berkeley-ca-bl-016813'), false)
     assert.equal(isEmailUnderHeroPath('/find-a-vet'), true)
     assert.equal(isEmailUnderHeroPath('/trainers'), false)
     assert.equal(isEmailUnderHeroPath('/join/pro'), false)

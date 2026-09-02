@@ -9,12 +9,17 @@ export async function POST(req: Request) {
   if (body.company_website) return NextResponse.json({ ok: true })
   if (body.robot !== 'on') return NextResponse.json({ ok: false }, { status: 400 })
 
+  const intent = String(body.intent || 'offer')
   const payload = {
-    _subject: 'Inquiry — Fish.com',
+    _subject: intent === 'pro-application' ? 'Pro application — Fish.com' : 'Inquiry — Fish.com',
+    intent,
     name: String(body.name || '').slice(0, 200),
     email: String(body.email || '').slice(0, 200),
     phone: String(body.phone || '').slice(0, 80),
     offer: String(body.offer || '').slice(0, 80),
+    city: String(body.city || '').slice(0, 200),
+    website: String(body.website || '').slice(0, 300),
+    credentials: String(body.credentials || '').slice(0, 400),
     message: String(body.message || '').slice(0, 4000),
     site: 'fish.com',
   }

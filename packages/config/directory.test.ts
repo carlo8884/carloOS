@@ -18,6 +18,8 @@ import {
   directoryListingPath,
   listingLocalBusinessJsonLd,
   cityPlaceJsonLd,
+  directoryClaimPrefill,
+  findListing,
   normalizeStateSlug,
   DIRECTORY_PAGE_SIZE,
   DIRECTORY_FEATURED_MAX,
@@ -252,5 +254,34 @@ describe('directory local SEO', () => {
     assert.ok(index.includes('https://vets.co/sitemap/1.xml'))
     assert.ok(index.includes('https://vets.co/sitemap/3.xml'))
     assert.equal(index.includes('https://vets.co/'), true)
+  })
+})
+
+describe('directoryClaimPrefill', () => {
+  const berkeley = {
+    slug: 'birgit-hafermann-dog-training-berkeley-ca-bl-016813',
+    display_name: 'BIRGIT HAFERMANN DOG TRAINING',
+    city: 'Berkeley',
+    state: 'CA',
+    category: 'dog trainer',
+    license_number: 'BL-016813',
+    source_url: 'https://example.com/bl',
+    claimed: false as const,
+  }
+
+  it('prefills city and claim message from an imported row', () => {
+    const prefill = directoryClaimPrefill([berkeley], berkeley.slug)
+    assert.equal(prefill.city, 'Berkeley, CA')
+    assert.equal(
+      prefill.message,
+      'I claim listing birgit-hafermann-dog-training-berkeley-ca-bl-016813 (BIRGIT HAFERMANN DOG TRAINING, Berkeley CA).',
+    )
+    assert.equal(findListing([berkeley], berkeley.slug)?.slug, berkeley.slug)
+  })
+
+  it('returns empty defaults when slug is missing or unknown', () => {
+    assert.deepEqual(directoryClaimPrefill([berkeley], undefined), { city: '', message: '' })
+    assert.deepEqual(directoryClaimPrefill([berkeley], ''), { city: '', message: '' })
+    assert.deepEqual(directoryClaimPrefill([berkeley], 'not-a-real-listing'), { city: '', message: '' })
   })
 })
