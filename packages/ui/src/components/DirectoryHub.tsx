@@ -12,6 +12,7 @@ import {
   type DirectoryListing,
   type DirectoryPage,
 } from '@carloOS/config/directory'
+import { EmailCapture } from './EmailCapture'
 import { SchemaScript } from './SEOHead'
 
 export function DirectoryHub({
@@ -20,12 +21,16 @@ export function DirectoryHub({
   page,
   placePath = '/directory',
   allListings,
+  siteId,
+  cityEmailTitle,
 }: {
   siteName: string
   noun: string
   page: DirectoryPage
   placePath?: string
   allListings?: DirectoryListing[]
+  siteId?: string
+  cityEmailTitle?: string
 }) {
   const empty = page.total === 0
   const featured = page.page === 1 && !page.query ? page.featured : []
@@ -39,6 +44,19 @@ export function DirectoryHub({
         email, or star rating is invented. {siteName} does not certify or
         employ anyone listed here.
       </p>
+
+      {siteId && cityEmailTitle ? (
+        <div className="mb-10">
+          <EmailCapture
+            variant="section"
+            siteId={siteId}
+            title={cityEmailTitle}
+            subtitle="We only email when someone claims a listing in this city. No newsletter."
+            ctaText="Email it to me"
+            source="directory-city-under-hero"
+          />
+        </div>
+      ) : null}
 
       <form method="get" action={placePath} className="mb-10 flex flex-wrap gap-3">
         <label className="sr-only" htmlFor="directory-q">
@@ -211,12 +229,14 @@ export function DirectoryPlacesCta({
 }
 
 export function DirectoryDetail({
+  siteId,
   siteName,
   listing,
   siteUrl,
   schemaTypes = ['LocalBusiness'],
   seoNoun = 'licensed professional',
 }: {
+  siteId?: string
   siteName: string
   listing: DirectoryListing
   siteUrl?: string
@@ -267,6 +287,28 @@ export function DirectoryDetail({
       <p className="text-xs text-brand-text-light">
         No phone, email, or rating is published here. Those fields are omitted on purpose.
       </p>
+      {!listing.claimed ? (
+        <p className="mt-6">
+          <Link
+            href={`/join/pro?listing=${encodeURIComponent(listing.slug)}`}
+            className="inline-block bg-brand-primary text-white text-sm font-bold px-4 py-2 rounded no-underline"
+          >
+            Claim this listing
+          </Link>
+        </p>
+      ) : null}
+      {siteId ? (
+        <div className="mt-8">
+          <EmailCapture
+            variant="section"
+            siteId={siteId}
+            title="Email me when this listing is claimed"
+            subtitle="We only email when someone claims a listing in this city. No newsletter."
+            ctaText="Email it to me"
+            source="directory-listing-under-hero"
+          />
+        </div>
+      ) : null}
       <nav className="mt-6 flex flex-col gap-2 text-sm" aria-label="Directory places">
         {cityHref ? (
           <Link href={cityHref} className="font-semibold text-brand-primary no-underline hover:underline">
@@ -289,17 +331,32 @@ export function DirectoryDetail({
 function ListingLink({ row }: { row: DirectoryListing }) {
   const place = [row.city, row.state].filter(Boolean).join(', ')
   return (
-    <Link
-      href={`/directory/${row.slug}`}
-      className="block border border-brand-border rounded-lg px-4 py-3 no-underline hover:border-brand-primary bg-brand-white"
-    >
-      <div className="font-semibold text-brand-dark">{row.display_name}</div>
-      <div className="text-xs text-brand-text-mid">
-        {place}
-        {row.category ? ` · ${row.category}` : ''}
-        {' · '}unclaimed
+    <div className="relative border border-brand-border rounded-lg px-4 py-3 bg-brand-white hover:border-brand-primary">
+      <Link
+        href={`/directory/${row.slug}`}
+        className="absolute inset-0 z-0 no-underline"
+        aria-label={row.display_name}
+      />
+      <div className="relative z-10 pointer-events-none">
+        <div className="font-semibold text-brand-dark">{row.display_name}</div>
+        <div className="text-xs text-brand-text-mid">
+          {place}
+          {row.category ? ` · ${row.category}` : ''}
+          {' · '}unclaimed
+          {!row.claimed ? (
+            <>
+              {' · '}
+              <Link
+                href={`/join/pro?listing=${encodeURIComponent(row.slug)}`}
+                className="pointer-events-auto relative z-10 text-brand-primary font-semibold no-underline hover:underline"
+              >
+                Claim this listing
+              </Link>
+            </>
+          ) : null}
+        </div>
       </div>
-    </Link>
+    </div>
   )
 }
 

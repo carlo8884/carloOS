@@ -28,6 +28,7 @@ export const DIRECTORY_NOUN: Record<
     seoNounPlural: string
     description: string
     schemaTypes: string[]
+    cityEmailTitle: string
   }
 > = {
   'dog-com': {
@@ -38,6 +39,7 @@ export const DIRECTORY_NOUN: Record<
     description:
       'Unclaimed license-board stubs for dog trainers and related professionals on Dog.com. No invented phone, email, or rating.',
     schemaTypes: ['LocalBusiness'],
+    cityEmailTitle: 'Email me when a claimed trainer in {city} has a page',
   },
   'fish-com': {
     title: 'Aquarium professional directory',
@@ -47,6 +49,7 @@ export const DIRECTORY_NOUN: Record<
     description:
       'Unclaimed license-board stubs for aquarium and aquatic professionals on Fish.com. No invented phone, email, or rating.',
     schemaTypes: ['LocalBusiness'],
+    cityEmailTitle: 'Email me when a claimed aquarium shop in {city} has a page',
   },
   'horses-com': {
     title: 'Equine professional directory',
@@ -56,6 +59,7 @@ export const DIRECTORY_NOUN: Record<
     description:
       'Unclaimed license-board stubs for equine professionals on Horses.com. No invented phone, email, or rating.',
     schemaTypes: ['LocalBusiness'],
+    cityEmailTitle: 'Email me when a claimed horse trainer in {city} has a page',
   },
   'vets-co': {
     title: 'Veterinary license directory',
@@ -65,6 +69,7 @@ export const DIRECTORY_NOUN: Record<
     description:
       'Unclaimed state-board stubs for veterinarians on Vets.co. No invented phone, email, or rating.',
     schemaTypes: ['VeterinaryCare', 'LocalBusiness'],
+    cityEmailTitle: 'Email me when a claimed clinic in {city} has a page',
   },
   'ferret-com': {
     title: 'Exotic-mammal professional directory',
@@ -74,6 +79,7 @@ export const DIRECTORY_NOUN: Record<
     description:
       'Unclaimed license-board stubs for exotic-mammal professionals on Ferret.com. No invented phone, email, or rating.',
     schemaTypes: ['LocalBusiness'],
+    cityEmailTitle: 'Email me when a claimed exotic vet in {city} has a page',
   },
 }
 
@@ -145,6 +151,7 @@ export function renderDirectoryDetail(
   const siteUrl = getSiteConfig(siteId).theme.siteUrl.replace(/\/$/, '')
   return (
     <DirectoryDetail
+      siteId={siteId}
       siteName={siteName}
       listing={listing}
       siteUrl={siteUrl}
@@ -272,6 +279,8 @@ function renderDirectoryPlace(
         page={page}
         placePath={placePath}
         allListings={listings}
+        siteId={siteId}
+        cityEmailTitle={city ? copy.cityEmailTitle.replace('{city}', cityName) : undefined}
       />
     </>
   )

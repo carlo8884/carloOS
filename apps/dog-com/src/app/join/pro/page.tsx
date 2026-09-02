@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { directoryClaimPrefill } from '@carloOS/config'
 import { buildMetadata, ArticleLayout, InquireForm, EmailCapture } from '@carloOS/ui'
+import listings from '../../../data/directory-listings.json'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -14,7 +16,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default function JoinProPage() {
+export default function JoinProPage({
+  searchParams,
+}: {
+  searchParams: { listing?: string }
+}) {
+  const prefill = directoryClaimPrefill(listings, searchParams.listing)
   return (
     <ArticleLayout
       siteId="dog-com"
@@ -52,7 +59,13 @@ export default function JoinProPage() {
 
         <h2>Application</h2>
         <div className="not-prose max-w-md my-6">
-          <InquireForm siteName="Dog.com" intent="pro-application" variant="page" />
+          <InquireForm
+            siteName="Dog.com"
+            intent="pro-application"
+            variant="page"
+            defaultCity={prefill.city}
+            defaultMessage={prefill.message}
+          />
         </div>
 
         <p>

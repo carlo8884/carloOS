@@ -198,6 +198,21 @@ export function findListing(listings: DirectoryListing[], slug: string): Directo
   return listings.find((row) => row.slug === slug)
 }
 
+/** Prefill /join/pro from an imported row. Missing or unknown slug → empty defaults. */
+export function directoryClaimPrefill(
+  listings: DirectoryListing[],
+  slug: string | undefined | null,
+): { city: string; message: string } {
+  const key = typeof slug === 'string' ? slug.trim() : ''
+  if (!key) return { city: '', message: '' }
+  const listing = findListing(listings, key)
+  if (!listing) return { city: '', message: '' }
+  return {
+    city: [listing.city, listing.state].filter(Boolean).join(', '),
+    message: `I claim listing ${listing.slug} (${listing.display_name}, ${listing.city} ${listing.state}).`,
+  }
+}
+
 export function directorySitemapEntries(
   siteUrl: string,
   listings: DirectoryListing[],

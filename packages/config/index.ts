@@ -1450,6 +1450,7 @@ export {
   parseDirectoryCsv,
   paginateDirectory,
   findListing,
+  directoryClaimPrefill,
   directorySitemapEntries,
   directorySitemapIds,
   buildSitemapIndexXml,

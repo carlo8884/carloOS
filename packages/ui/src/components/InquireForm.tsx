@@ -9,11 +9,15 @@ export function InquireForm({
   intent = 'offer',
   variant = 'card',
   submitLabel,
+  defaultCity,
+  defaultMessage,
 }: {
   siteName: string
   intent?: InquireIntent
   variant?: 'card' | 'page'
   submitLabel?: string
+  defaultCity?: string
+  defaultMessage?: string
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const isPro = intent === 'pro-application'
@@ -68,7 +72,13 @@ export function InquireForm({
       <input name="phone" type="tel" placeholder="Phone" className={field} />
       {isPro ? (
         <>
-          <input name="city" required placeholder="City and state" className={field} />
+          <input
+            name="city"
+            required
+            placeholder="City and state"
+            className={field}
+            defaultValue={defaultCity}
+          />
           <input name="website" placeholder="Website or Instagram" className={field} />
           <input name="credentials" placeholder="Credentials you actually hold (CPDT-KA, CBCC-KA, …)" className={field} />
           <textarea
@@ -77,6 +87,7 @@ export function InquireForm({
             required
             placeholder="Services, species or specialties, and how long you have trained professionally"
             className={field}
+            defaultValue={defaultMessage}
           />
         </>
       ) : (
