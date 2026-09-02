@@ -289,6 +289,13 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   4. Shared footer inquire — left alone.
   - Dog homepage full client render confirmed on dog-com-three.vercel.app (hero + body visible). Priority 1–4 satisfied. No code delta this hour; held per one-delta rule.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-09-02 ~14:01 PDT hour:** Live visual reconfirm (browser).
+  1. Fish.com homepage — hero image-first, teal wash, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` shells complete, no fake content — left alone (confirmed live).
+  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
+  4. Shared footer inquire — left alone.
+  - Dog homepage full client render confirmed on dog-com-three.vercel.app (hero + body visible). Priority 1–4 satisfied. No code delta this hour; held per one-delta rule.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 
 ## Currently underway
 - Priority 1–4 satisfied. Dog homepage client render confirmed healthy.
@@ -297,7 +304,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 ## Test and deployment status
 - Preview SSO-gated; production dog pages confirmed without SSO historically.
 - Production pattern: `*-com-carlo-tabibi-s-projects.vercel.app` / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-- Dog / Fish / Horses production READY on latest main; Dog homepage client residual resolved (confirmed ~18:11 PDT Aug 31 through ~11:21 PDT Sep 2).
+- Dog / Fish / Horses production READY on latest main; Dog homepage client residual resolved (confirmed ~18:11 PDT Aug 31 through ~14:01 PDT Sep 2).
 
 ## Next planned priority
 1. Continue hourly visual QA; ship only if a clean one-delta improvement is isolated.
@@ -305,6 +312,7 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
 3. Do not regenerate sitemaps. Do not point DNS. Do not invent trainers/DVMs/doses or for-sale banners.
 
 ## Carlo-only blockers
+
 1. Confirm Network Solutions login; do not point DNS until the three homepages are ready.
 2. Amazon Associates tag already on Vercel as `AFF_AMAZON_TAG`.
 3. Optional: Chewy / Impact applications.
