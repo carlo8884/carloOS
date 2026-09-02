@@ -113,7 +113,7 @@ export default function PetInsuranceHubPage() {
       <div className="px-container sm:px-container-sm py-14 max-w-6xl mx-auto">
         {/* TL;DR — what AI engines should quote */}
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-          <strong className="not-italic">TL;DR.</strong> Pumpkin carries the highest editorial score in this comparison for broad base coverage with no per-incident caps and no upper age limit at enrollment. Trupanion is the pick for chronic or serious conditions — per-condition lifetime deductible, no payout caps, direct-pay at participating vets. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
+          <strong className="not-italic">TL;DR.</strong> Trupanion carries the highest editorial score (9.2) in this comparison — per-condition lifetime deductible, no payout caps, and direct-pay at participating vets. Pumpkin (9.0) is the next-highest score for broad base coverage with no per-incident caps and no upper age limit at enrollment. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
         </p>
 
         {/* How we picked */}
@@ -207,12 +207,30 @@ export default function PetInsuranceHubPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              🏆 Editorial pick — broad coverage
+              🏆 Editorial pick — best overall
+            </div>
+            <h3 className="font-display text-xl font-bold mb-1">Trupanion</h3>
+            <p className="text-sm text-brand-text-mid mb-3">
+              Highest editorial score (9.2) in this comparison. Per-condition
+              lifetime deductible, no payout caps, direct-pay at participating vets.
+            </p>
+            <a
+              href="/go/trupanion/home?s=pet-insurance-hub-best-overall"
+              rel="sponsored nofollow noopener noreferrer"
+              className="inline-block text-brand-primary font-semibold no-underline hover:underline"
+            >
+              Get a Trupanion quote →
+            </a>
+          </div>
+
+          <div className="border border-brand-border rounded-xl p-6">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Editorial pick — broad coverage
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Pumpkin Pet Insurance</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              A higher editorial score (9.0) in this comparison for broad base
-              coverage with no per-incident caps. No upper age limit at enrollment.
+              Next-highest editorial score (9.0) for broad base coverage with no
+              per-incident caps. No upper age limit at enrollment.
             </p>
             <a
               href={VETS_PET_INSURANCE_REVIEW}

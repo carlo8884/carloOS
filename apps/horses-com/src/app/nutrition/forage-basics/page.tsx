@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -81,6 +81,7 @@ export default function ForageBasicsPage() {
             { label: "How the Hindgut Works", href: "#hindgut" },
             { label: "How Much Forage", href: "#howmuch" },
             { label: "Trickle Feeding", href: "#trickle" },
+            { label: "Hay Nets", href: "#hay-nets" },
             { label: "Forage Quality", href: "#quality" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -125,6 +126,31 @@ export default function ForageBasicsPage() {
 
           <h2 id="trickle">Trickle Feeding</h2>
           <p>Because the horse&apos;s stomach produces acid continuously whether or not it is eating, long gaps without forage leave acid splashing against an empty stomach -- a direct route to gastric ulcers. Trickle feeding (free-choice forage, or slow-feeder hay nets that extend a ration over many hours) keeps something in the stomach to buffer acid and matches the horse&apos;s natural feeding pattern. For easy keepers, slow feeders let you restrict calories without imposing long fasts.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ReviewCard
+            id="hay-nets"
+            badge="Trickle Feeding"
+            name="Slow-Feeder Hay Net"
+            subtitle="Extends a hay ration so the horse eats over many hours"
+            score={8.5}
+            description={<>
+              <p>Slow-feeder hay nets stretch a measured forage ration across the day, which keeps something in the stomach to buffer acid and matches the horse&apos;s natural trickle-feeding pattern. For easy keepers they also let you restrict calories without imposing long fasts. This is a general management aid, not a treatment. Confirm the ration with your veterinarian or equine nutritionist.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Slow-feeder hay net', highlight: 'good' },
+              { label: 'Purpose', value: 'Extend eating time; prevent long fasts' },
+              { label: 'Best use case', value: 'Trickle feeding and easy keepers' },
+            ]}
+            pros={['Keeps forage in front of the horse longer', 'Helps prevent ulcer-causing fasts', 'Useful on a measured ration']}
+            cons={['Introduce gradually', 'Hole size matters for intake rate', 'Not a substitute for adequate forage']}
+            price="$20–40"
+            ctaText="Search hay nets on Amazon →"
+            ctaHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="slow-feeder-hay-net"
+          />
 
           <h2 id="quality">Forage Quality</h2>
           <ul>

@@ -43,7 +43,7 @@ import {
 } from '../../../data/breeds'
 
 const SITE_URL = 'https://dog.com'
-const REVIEW_CTA = '/reviews/best-pet-insurance'
+const REVIEW_CTA = 'https://vets.co/reviews/best-pet-insurance'
 const FUNNEL_CTA = '/pet-insurance'
 
 /** Plain-English label for the honest risk tier. */
