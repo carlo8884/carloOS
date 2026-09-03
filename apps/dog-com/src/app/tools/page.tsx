@@ -32,7 +32,7 @@ const TOOLS = [
   {
     href: '/tools/dog-age-calculator',
     title: 'Dog Age in Human Years Calculator',
-    desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size (small, medium, large, giant) and outputs a qualitative life-stage label.',
+    desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size and a life-stage label, then shop by stage (puppy food / teething toys, adult dental chews, senior joint support, ID tag, leash).',
     tag: 'Life Stage',
   },
   {

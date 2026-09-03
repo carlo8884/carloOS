@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -70,6 +71,12 @@ const appSchema = {
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Converts dog age to human-year equivalent using an AVMA/AAHA-style banded model',
+    'Size-specific rates after year two (small, medium, large, giant)',
+    'Qualitative life-stage label: puppy, adolescent, adult, mature adult, senior',
+    'Shoppable life-stage kit via Amazon category searches',
+  ],
 }
 
 const howToSchema = buildHowToSchema({
@@ -139,10 +146,86 @@ export default function DogAgeCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Dog Age Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog-age checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the dog-age checklist — life-stage notes and the shoppable kit
+            (puppy food / teething toys, adult dental chews, senior joint support,
+            ID tag, leash) — so you can come back to the right stage without
+            re-running the estimate. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog-age checklist"
+            subtitle="Email the dog-age checklist — life-stage notes and the shoppable kit. No spam."
+            ctaText="Email my dog-age checklist"
+            source="tools-dog-age-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Calculator */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (life-stage kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="dog-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop by life stage
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that match the
+              life-stage label above — puppy food and teething toys, adult dental
+              chews, senior joint-support treats, an ID tag / collar, and a leash.
+              They are not a ranked product list, not invented inventory, and they
+              do not diagnose a health problem or set a care plan. Ask your
+              veterinarian which stage-appropriate products fit your dog. Dog.com
+              earns a commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+food?s=tools-dog-age"
+                amazonLabel="Browse puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+teething+toys?s=tools-dog-age"
+                amazonLabel="Browse puppy teething toys on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dental+chews+dog?s=tools-dog-age"
+                amazonLabel="Browse dental chews for dogs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/joint+support+dog+treats?s=tools-dog-age"
+                amazonLabel="Browse joint-support dog treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+id+tag+collar?s=tools-dog-age"
+                amazonLabel="Browse dog ID tags and collars on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+leash?s=tools-dog-age"
+                amazonLabel="Browse dog leashes on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -247,19 +330,6 @@ export default function DogAgeCalculatorPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com tool updates"
-            subtitle="New calculators and source-cited dog care references. No spam."
-            source="tools-dog-age-calculator"
-          />
         </div>
       </section>
 
