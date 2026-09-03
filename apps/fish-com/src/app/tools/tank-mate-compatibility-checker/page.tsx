@@ -10,6 +10,8 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Checker from './Checker'
 
@@ -58,7 +60,7 @@ const articleSchema = {
     'How aquarium tank mate compatibility is judged — temperament, temperature overlap, fin-nipping, adult size and predation, and water hardness — plus an interactive checker for common freshwater species.',
   url: URL,
   datePublished: '2026-06-11T00:00:00Z',
-  dateModified: '2026-06-11T00:00:00Z',
+  dateModified: '2026-09-03T00:00:00Z',
   author: { '@type': 'Organization', name: 'Fish.com Editorial' },
   publisher: { '@type': 'Organization', name: 'Fish.com', url: 'https://fish.com' },
   mainEntityOfPage: URL,
@@ -156,6 +158,7 @@ export default function TankMateCompatibilityPage() {
           <TableOfContents
             items={[
               { label: 'The checker', href: '#checker' },
+              { label: 'Shop a pairing kit', href: '#shop' },
               { label: 'Quick answer', href: '#answer' },
               { label: 'Common pairings', href: '#pairings' },
               { label: 'How compatibility is judged', href: '#methodology' },
@@ -167,17 +170,11 @@ export default function TankMateCompatibilityPage() {
             links={[
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' },
+              { label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' },
               { label: 'All Species Profiles', href: '/species' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
               { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
             ]}
-          />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Stocking tips, species spotlights, every Thursday."
-            source="tank-mate-checker"
           />
         </>
       }
@@ -198,9 +195,32 @@ export default function TankMateCompatibilityPage() {
         <ArticleByline
           siteName="Fish.com Editorial"
           publishedAt="2026-06-11T00:00:00Z"
-          updatedAt="2026-06-11T00:00:00Z"
+          updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Tank-mate pairing checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the tank-mate checklist — temperament, temperature overlap, fin-nipping,
+            and when to use a divider or quarantine tank — so you can plan a mix without
+            re-running the checker. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Tank-mate pairing checklist"
+            subtitle="Email the tank-mate checklist — pairing tips, divider vs quarantine, and what to test before adding mates. No spam."
+            ctaText="Email my tank-mate checklist"
+            source="tools-tank-mate-compatibility-under-hero"
+          />
+        </div>
 
         <h2 id="answer">The Quick Answer</h2>
         <p>
@@ -215,6 +235,68 @@ export default function TankMateCompatibilityPage() {
 
         <h2 id="checker">The Checker</h2>
         <Checker />
+
+        {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a pairing kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            Test the water before you add a new fish. If a pairing lands on Caution or Not
+            recommended, a tank divider or a small quarantine tank lets you separate fish
+            without tearing the display down; caves and hiding spots cut aggression in a
+            mix that can work. Same Amazon hops used with the{' '}
+            <Link
+              href="/setup/quarantine-tank-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              quarantine tank guide
+            </Link>
+            , the{' '}
+            <Link
+              href="/species/betta-fish-tank-mates"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              betta tank-mates guide
+            </Link>
+            , and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop aquarium tank dividers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop caves and hiding spots on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop species-appropriate fish food on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop aquarium test kits on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"
+              amazonLabel="Shop nets and acclimation kits on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="pairings">Common Tank Mate Pairings at a Glance</h2>
         <p>

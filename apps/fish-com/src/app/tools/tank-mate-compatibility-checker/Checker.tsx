@@ -300,17 +300,49 @@ export default function Checker() {
         </div>
       )}
 
-      {overall && (
+      {overall === 'compatible' && (
         <ResultCTA
-          heading="Set up a divider or quarantine tank for a risky mix"
+          heading="Give a compatible mix caves and hiding spots"
           blurb={
             <>
-              When a pairing lands on Caution, a tank divider or a small quarantine tank lets you separate fish fast if nipping or aggression starts.
+              Even peaceful pairings do better with visual breaks. Caves, plants, and
+              hiding spots cut line-of-sight aggression and give shy fish a place to
+              settle after you add them.
+            </>
+          }
+          query="aquarium decorations caves hiding spots"
+          cta="Browse aquarium hiding spots on Amazon"
+          source="tools-tank-mate-compatibility"
+        />
+      )}
+      {overall === 'caution' && (
+        <ResultCTA
+          heading="Keep a divider ready if nipping starts"
+          blurb={
+            <>
+              A Caution verdict usually means tank size, fin-nipping, or a parameter
+              compromise. A tank divider lets you split the display fast without
+              moving fish to a second setup.
             </>
           }
           query="aquarium tank divider"
           cta="Browse tank dividers on Amazon"
-          source="tools-tank-mate"
+          source="tools-tank-mate-compatibility"
+        />
+      )}
+      {overall === 'incompatible' && (
+        <ResultCTA
+          heading="House the risky fish in a quarantine tank"
+          blurb={
+            <>
+              A Not-recommended pairing should not share the display. A small hospital
+              / quarantine tank lets you keep the extra fish safely while you restock
+              the community.
+            </>
+          }
+          query="aquarium quarantine hospital tank"
+          cta="Browse quarantine tanks on Amazon"
+          source="tools-tank-mate-compatibility"
         />
       )}
     </div>
