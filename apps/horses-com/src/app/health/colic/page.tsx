@@ -98,6 +98,7 @@ export default function ColicPage() {
           { title: 'Equine Gastric Ulcers', href: '/health/equine-ulcers' },
           { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
         hero={{
           title: 'Equine Colic',
@@ -141,6 +142,7 @@ export default function ColicPage() {
               { label: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
               { label: 'Equine Dental Care', href: '/guides/equine-dental-care' },
               { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
@@ -217,7 +219,7 @@ export default function ColicPage() {
           <p>The single most useful piece of equipment for the owner during a colic episode is a watch and a notebook: time of onset, heart rate at intervals, time of last manure, time of last drink, current pain behavior. This information transforms the veterinary phone consultation from guesswork to triage.</p>
 
           <h2 id="emergency">When to Call the ER Vet</h2>
-          <p>Call your regular veterinarian at the first sign of colic. Call the emergency line and prepare for referral to a surgical hospital if any of the following are present:</p>
+          <p>Call your regular veterinarian at the first sign of colic. A conservative sign-list urgency read — go now, same-day, or monitor — lives on the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a>; it does not diagnose. Call the emergency line and prepare for referral to a surgical hospital if any of the following are present:</p>
 
           <ul>
             <li>Severe, unrelenting pain — repeated violent rolling, throwing self to the ground, inability to stand quietly.</li>

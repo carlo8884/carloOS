@@ -70,6 +70,7 @@ export default function ChokePage() {
           { title: 'Equine Colic', href: '/health/colic' },
           { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
         hero={{
           title: "Choke in Horses",
@@ -110,6 +111,7 @@ export default function ChokePage() {
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
               { label: "Beet Pulp Explained", href: "/nutrition/beet-pulp" },
               { label: "Equine Colic", href: "/health/colic" },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
@@ -146,7 +148,7 @@ export default function ChokePage() {
           </ul>
 
           <h2 id="emergency">Why It Is an Emergency</h2>
-          <p>Although the horse can usually breathe, choke is urgent for two reasons. First, feed and saliva backing up can be inhaled into the lungs (aspiration), leading to aspiration pneumonia. Second, a feed mass pressing against the esophageal wall can cause inflammation, ulceration, or even rupture if left in place, and repeated choke can scar and narrow the esophagus. The longer the obstruction persists, the higher these risks.</p>
+          <p>A conservative sign-list urgency read that includes choke lives on the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a>; it does not diagnose. Although the horse can usually breathe, choke is urgent for two reasons. First, feed and saliva backing up can be inhaled into the lungs (aspiration), leading to aspiration pneumonia. Second, a feed mass pressing against the esophageal wall can cause inflammation, ulceration, or even rupture if left in place, and repeated choke can scar and narrow the esophagus. The longer the obstruction persists, the higher these risks.</p>
 
           <h2 id="treatment">Treatment</h2>
           <p>Some mild chokes clear on their own within minutes once the horse stops eating and relaxes. Persistent choke requires a veterinarian, who typically sedates the horse (which lowers the head and relaxes the esophagus), passes a nasogastric tube, and gently lavages the obstruction clear with water. Sedation and muscle relaxants are used as the veterinarian judges. After a choke, soft or soaked feed and a watch for aspiration pneumonia are standard. Do not attempt to force feed or water during an active choke.</p>

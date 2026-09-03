@@ -135,6 +135,7 @@ export default function BodyConditionScorePage() {
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
         { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
         { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+        { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Body Condition Score Calculator',
@@ -171,6 +172,7 @@ export default function BodyConditionScorePage() {
               { label: 'Cost of Ownership Calculator', href: '/tools/horse-cost-calculator' },
               { label: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
               { label: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
@@ -328,7 +330,7 @@ export default function BodyConditionScorePage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. Fold the kit into the monthly budget with the <Link href="/tools/horse-cost-calculator">horse cost of ownership calculator</Link>. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
+          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. Fold the kit into the monthly budget with the <Link href="/tools/horse-cost-calculator">horse cost of ownership calculator</Link>. If a horse that was just scored suddenly looks painful or off, the <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a conservative triage aid — not a diagnosis. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
         </p>
       </div>
     </ArticleLayout>

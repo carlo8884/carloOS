@@ -508,6 +508,39 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge ferret-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'horses · is-this-a-horse-emergency',
+    file: 'apps/horses-com/src/app/tools/is-this-a-horse-emergency/TriageHelper.tsx',
+    mustInclude: [
+      { re: /hasEmergency = picked\.some\(\(s\) => s\.level === 'emergency'\)/, label: 'any emergency sign → go now' },
+      { re: /tier: 'go-now'/, label: 'go-now verdict kept' },
+      { re: /allMonitorEligible = picked\.every\(\(s\) => MONITOR_ELIGIBLE\.has\(s\.num\)\)/, label: 'monitor only if every selected sign is monitor-eligible' },
+      { re: /tier: 'same-day'/, label: 'same-day fallback when mixed/urgent' },
+      { re: /There is no "all clear" verdict/, label: 'no all-clear verdict (comment contract)' },
+      { re: /from '\.\.\/\.\.\/\.\.\/data\/horse-symptom-signs'/, label: 'signs imported from shared horse-symptom-signs (do not fork)' },
+    ],
+    why: 'Conservative horse triage: any emergency sign → go now; monitor only for 09/10 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
+  },
+  {
+    id: 'horses · is-this-a-horse-emergency hops',
+    file: 'apps/horses-com/src/app/tools/is-this-a-horse-emergency/page.tsx',
+    mustInclude: [
+      { re: /source="tools-is-this-a-horse-emergency-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse triage cheat sheet"/, label: 'concrete fridge-sheet offer, not Subscribe' },
+      { re: /amazon-brand\/equine\+first\+aid\+kit\?s=tools-is-this-a-horse-emergency/, label: 'equine first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+veterinary\+thermometer\?s=tools-is-this-a-horse-emergency/, label: 'digital veterinary thermometer search hop' },
+      { re: /amazon-brand\/vet\+wrap\+bandage\?s=tools-is-this-a-horse-emergency/, label: 'vet wrap bandage search hop' },
+      { re: /amazon-brand\/poultice\?s=tools-is-this-a-horse-emergency/, label: 'poultice search hop' },
+      { re: /amazon-brand\/horse\+electrolytes\?s=tools-is-this-a-horse-emergency/, label: 'horse electrolytes search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete fridge horse-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

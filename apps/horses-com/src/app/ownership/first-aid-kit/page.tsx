@@ -59,6 +59,7 @@ export default function FirstAidKitPage() {
           { title: 'Choosing an Equine Vet', href: '/ownership/choosing-a-vet' },
           { title: 'Equine Health Hub', href: '/health' },
           { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
         hero={{
           title: "Equine First-Aid Kit",
@@ -92,6 +93,7 @@ export default function FirstAidKitPage() {
               { label: "Equine Colic", href: "/health/colic" },
               { label: "Boots and Wraps", href: "/tack/boots-and-wraps" },
               { label: "Equine Lameness Basics", href: "/health/lameness-basics" },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
@@ -129,6 +131,7 @@ export default function FirstAidKitPage() {
           <p>Knowing a horse&apos;s normal vital signs transforms a phone call to the vet from guesswork into useful triage. The textbook resting ranges for an adult horse are roughly: temperature around 37.5 to 38.5 degrees Celsius (about 99 to 101 degrees Fahrenheit); heart rate around 28 to 44 beats per minute; and breathing around 8 to 16 breaths per minute, with gut sounds present in all four quadrants and pink, moist gums with a capillary refill under about two seconds. Learn your own horse&apos;s normal baseline, since individuals vary, and practice taking the vitals when the horse is healthy so you can do it calmly in an emergency.</p>
 
           <h2 id="when">When to Call the Vet</h2>
+          <p>For a conservative sign-list urgency read — go now, same-day, or monitor — use the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a>. It does not diagnose. Call the vet for:</p>
           <ul>
             <li>Heavy or spurting bleeding that will not stop with pressure.</li>
             <li>Severe or non-weight-bearing lameness, or a suspected fracture.</li>

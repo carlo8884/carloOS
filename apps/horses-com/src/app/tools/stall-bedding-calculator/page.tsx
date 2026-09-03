@@ -113,6 +113,7 @@ export default function StallBeddingCalculatorPage() {
       siteId="horses-com"
       relatedLinks={[
         { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
+        { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
         { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling', category: 'Care' },
         { title: 'Heaves (Equine Asthma)', href: '/health/heaves', category: 'Health' },
@@ -147,6 +148,7 @@ export default function StallBeddingCalculatorPage() {
             title="Horse tools & stall care"
             links={[
               { label: 'Cost of Ownership Calculator', href: '/tools/horse-cost-calculator' },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
               { label: 'Feed & Hay Calculator', href: '/tools/horse-feed-calculator' },
               { label: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
               { label: 'Heaves (Equine Asthma)', href: '/health/heaves' },
@@ -344,7 +346,9 @@ export default function StallBeddingCalculatorPage() {
           <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, and
           read{' '}
           <Link href="/care/turnout-vs-stabling">turnout versus stabling</Link> before you default
-          to a stalled life.
+          to a stalled life. If a stalled horse looks painful or off, the{' '}
+          <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a
+          conservative triage aid — not a diagnosis.
         </p>
       </div>
     </ArticleLayout>
