@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
@@ -27,11 +28,34 @@ export default function WellnessVsInsurancePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-wellness-vs" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Wellness vs insurance notes" subtitle="Email the wellness-vs-insurance checklist. No spam." ctaText="Email wellness tips" source="insurance-wellness-vs" />
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the distinction
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Wellness vs insurance notes
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the wellness-vs-insurance checklist — what a clinic plan budgets vs. what
+              accident-and-illness coverage actually pays — so you can decide without re-reading
+              the page. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Wellness vs insurance notes"
+              subtitle="Email the wellness-vs-insurance checklist — routine budget vs. catastrophe cover. No spam."
+              ctaText="Email wellness tips"
+              source="insurance-wellness-plans-vs-insurance-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="info" title="Different tools for different jobs">
             A wellness plan is a budgeting tool; insurance is risk protection. Confusing the two leads owners to buy a wellness plan expecting it to cover an emergency — which it does not — or to skip insurance because they assume routine-care savings are protection. They are complementary, not interchangeable.
@@ -100,6 +124,8 @@ export default function WellnessVsInsurancePage() {
             ctaAffiliateProgram="pumpkin"
             ctaAffiliateProduct="home"
           />
+
+          <InsuranceWellnessShop source="insurance-wellness-plans-vs-insurance" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

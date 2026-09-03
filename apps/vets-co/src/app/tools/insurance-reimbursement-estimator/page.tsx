@@ -9,8 +9,10 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
+import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 
 const URL = 'https://vets.co/tools/insurance-reimbursement-estimator'
 
@@ -156,8 +158,9 @@ export default function InsuranceReimbursementEstimatorPage() {
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"
-            title="Vets.co reference letter"
-            subtitle="Veterinary references for pet owners."
+            title="Reimbursement worksheet"
+            subtitle="Email the reimbursement notes so you can check a live quote. No spam."
+            ctaText="Email the insurance checklist"
             source="insurance-estimator"
           />
         </>
@@ -168,6 +171,29 @@ export default function InsuranceReimbursementEstimatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the worksheet
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Reimbursement worksheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the reimbursement notes — premium, deductible, reimbursement %, and net
+            benefit vs. paying out-of-pocket — so you can check a live quote without
+            re-running the math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Reimbursement worksheet"
+            subtitle="Email the reimbursement notes — premium, deductible, reimbursement %, net benefit. No spam."
+            ctaText="Email the insurance checklist"
+            source="tools-insurance-reimbursement-estimator-under-hero"
+          />
+        </div>
 
         <h2 id="estimator">The estimator</h2>
         <p>
@@ -182,6 +208,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             optional quote path is an affiliate /go link, disclosed subtly and
             framed as "run a live quote," never "buy the best." */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have an estimate — now check it against real policies.
@@ -211,6 +238,8 @@ export default function InsuranceReimbursementEstimatorPage() {
             </Link>
           </p>
         </div>
+
+        <InsuranceWellnessShop source="tools-insurance-reimbursement-estimator" />
 
         <h2 id="reading">How to read the numbers</h2>
         <ul>

@@ -11,6 +11,7 @@ import {
   CrossPortfolioCard,
 } from '@carloOS/ui'
 import { InsuranceCoverageFinder } from '../../../components/visual/InsuranceCoverageFinder'
+import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 
 const URL = 'https://vets.co/tools/insurance-finder'
 const REVIEWS_HREF = '/reviews/best-pet-insurance'
@@ -148,8 +149,9 @@ export default function InsuranceFinderPage() {
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"
-            title="Vets.co reference letter"
-            subtitle="Veterinary references for pet owners."
+            title="Coverage shortlist"
+            subtitle="Email the coverage priorities so you can compare published terms. No spam."
+            ctaText="Email the insurance checklist"
             source="insurance-finder"
           />
         </>
@@ -161,6 +163,28 @@ export default function InsuranceFinderPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the shortlist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Coverage-priority notes
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the coverage priorities — exam fees, dental, wellness add-on, unlimited
+            limit — so you can compare published terms without re-filtering. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Coverage-priority notes"
+            subtitle="Email the coverage priorities — exam fees, dental, wellness add-on, unlimited limit. No spam."
+            ctaText="Email the insurance checklist"
+            source="tools-insurance-finder-under-hero"
+          />
+        </div>
+
         <h2 id="finder">The finder</h2>
         <p>
           Pick your pet type and the coverage features that matter to you. The finder filters the major carriers
@@ -169,6 +193,8 @@ export default function InsuranceFinderPage() {
           ranking, a score, or a quote.
         </p>
         <InsuranceCoverageFinder reviewsHref={REVIEWS_HREF} campaignSku="insurance-finder" />
+
+        <InsuranceWellnessShop source="tools-insurance-finder" />
 
         <h2 id="how">How it works</h2>
         <p>
