@@ -8,25 +8,41 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import CostCalculator from './Calculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Cost Calculator — Setup, Yearly & Lifetime | Ferret.com',
+  title: 'Ferret Cost Calculator — Monthly & First-Year | Ferret.com',
   description:
-    'Estimate the real cost of owning a ferret: one-time setup, yearly costs, and a lifetime total — plus why to budget for adrenal, insulinoma, and blockage care.',
+    'Estimate monthly and first-year ferret costs from count, housing, and food style. Editable setup, food, litter, and vet — a planning range, not a quote.',
   path: '/tools/cost-calculator',
 })
 
 const FAQS = [
   {
-    question: 'How much does it cost to own a ferret?',
+    question: 'How much does a ferret cost per month?',
     answer:
-      'Ferret ownership has three cost layers: a one-time setup (cage, supplies, acquisition, and initial veterinary care), recurring costs (food, litter, supplies, and routine vet care), and unpredictable medical costs. Routine ownership commonly runs a few hundred dollars per year per ferret after setup, but the figure that catches owners off guard is illness care — adrenal disease, insulinoma, and gastrointestinal blockages are common in the breed and frequently cost four figures per episode. Use the calculator with your own local prices for an accurate plan.',
+      'After setup, routine ownership commonly runs a few dozen to a couple of hundred dollars per month per ferret, depending on food style, litter, and whether you carry exotic-pet insurance. High-protein kibble plus paper or wood-pellet litter is the lower starting point; whole-prey or raw feeding costs more. The calculator fills a starting monthly figure from the food-style preset — edit it to match your bag prices. Illness care is not in the monthly number.',
     answerText:
-      'Three layers: one-time setup, recurring yearly costs (food, litter, routine vet), and unpredictable illness care. Routine ownership is a few hundred dollars per year per ferret; illness can run four figures.',
+      'Routine monthly cost is food, litter, supplies, and a twelfth of annual vet — typically tens to low hundreds of dollars per ferret. Illness is budgeted separately.',
+  },
+  {
+    question: 'How much does a ferret cost in the first year?',
+    answer:
+      'First year is one-time setup (cage, acquisition, initial vet) plus twelve months of food, litter, supplies, and routine vet. A multi-level cage is the largest shared gear line. Two ferrets share the cage but double food, litter, and vet. The calculator adds those lines; it is a planning range, not a clinic or retailer quote.',
+    answerText:
+      'First year = shared cage/setup + per-ferret acquisition and initial vet + twelve months of food, litter, supplies, and routine vet. Edit every line.',
+  },
+  {
+    question: 'Does housing change the monthly number or only setup?',
+    answer:
+      'Housing mainly changes the one-time cage-and-setup line. A starter cage, a Critter Nation–class multi-level, and a room/playpen setup have different day-one prices; food and litter do not. Recurring costs scale with ferret count and food style, not with cage brand.',
+    answerText:
+      'Housing presets fill the one-time cage line. Monthly food and litter come from the food-style preset and ferret count.',
   },
   {
     question: 'Why should I budget extra for ferret health?',
@@ -44,27 +60,37 @@ const FAQS = [
   },
 ]
 
-const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: 'Ferret.com', url: 'https://ferret.com/' },
-  { name: 'Tools', url: 'https://ferret.com/tools' },
-  { name: 'Cost Calculator', url: 'https://ferret.com/tools/cost-calculator' },
-])
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Ferret.com', url: 'https://ferret.com/' },
+    { name: 'Tools', url: 'https://ferret.com/tools' },
+    { name: 'Cost Calculator', url: 'https://ferret.com/tools/cost-calculator' },
+  ],
+})
 
 const appSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebApplication',
+  '@type': 'SoftwareApplication',
   name: 'Ferret Cost Calculator',
   description:
-    'Estimate the one-time, yearly, and lifetime cost of ferret ownership, scaled by number of ferrets.',
+    'Free planner that estimates monthly and first-year ferret costs from ferret count, housing style, and food style, with editable setup and recurring lines.',
   url: 'https://ferret.com/tools/cost-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Housing presets (starter / multi-level / room-playpen)',
+    'Food-style presets (kibble / kibble+topper / whole-prey)',
+    'Monthly recurring and first-year totals',
+    'Illness care called out separately from routine cost',
+  ],
+  publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
 
 const howToSchema = buildHowToSchema({
-  name: 'How to estimate the cost of owning a ferret',
-  description: 'Calculate one-time setup costs, annual recurring costs, and a lifetime total for ferret ownership by entering your number of ferrets and local price estimates.',
+  name: 'How to estimate monthly and first-year ferret costs',
+  description:
+    'Pick ferret count, housing, and food style, then read the monthly and first-year totals. Edit any line to match local prices.',
   url: 'https://ferret.com/tools/cost-calculator',
   steps: [
     {
@@ -72,28 +98,28 @@ const howToSchema = buildHowToSchema({
       text: 'Enter how many ferrets you plan to keep. The cage and initial setup costs are shared across the group; per-ferret costs (acquisition, initial vet care, food, litter, routine vet) scale by this number.',
     },
     {
-      name: 'Review and adjust the one-time setup costs',
-      text: 'Review the cage, bedding, litter box, food and water equipment, and initial vet visit estimates. Swap in your actual local prices for a more accurate total.',
+      name: 'Pick housing and food style',
+      text: 'Choose a starter cage, a multi-level cage, or a room/playpen setup to fill the one-time cage line. Choose high-protein kibble, kibble plus toppers, or whole-prey/raw to fill the monthly food-and-litter line. Both are starting points you can edit.',
     },
     {
-      name: 'Review and adjust the annual recurring costs',
-      text: 'Review the food, litter, annual vet, and supplies estimates. Adjust for your local prices and the specific diet and care plan you intend to use.',
+      name: 'Review and adjust the line items',
+      text: 'Swap in your actual local prices for acquisition, initial vet, supplies, annual vet, and optional insurance.',
     },
     {
-      name: 'Read the totals and add an emergency fund',
-      text: 'The calculator returns one-time setup, yearly recurring, and a lifetime estimate. Add a separate emergency reserve for adrenal disease, insulinoma, or gastrointestinal blockage treatment — these are common in ferrets and frequently cost four figures per episode.',
+      name: 'Read monthly and first-year totals',
+      text: 'Monthly is twelve-month recurring averaged (food, litter, supplies, routine vet, insurance). First year is one-time setup plus those twelve months. Add a separate emergency reserve for adrenal disease, insulinoma, or blockage treatment.',
     },
   ],
 })
 
-const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 export default function CostCalculatorPage() {
   return (
     <>
-      <SchemaScript schema={combinedSchema} />
+      <SchemaScript schema={schema} />
 
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-10 sm:py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 30% 50%, rgba(110, 80, 50, 0.5) 0%, transparent 60%)' }}
@@ -102,63 +128,135 @@ export default function CostCalculatorPage() {
         <div className="relative z-10 max-w-3xl">
           <div className="flex items-center gap-2.5 mb-6">
             <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Calculators &amp; Tools</span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Calculators &amp; Tools
+            </span>
           </div>
           <h1
             className="font-display font-bold text-white tracking-tight leading-none mb-5"
-            style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
+            style={{ fontSize: 'clamp(34px, 5vw, 56px)' }}
           >
-            What a ferret actually costs.
+            Ferret Cost Calculator
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            A clear, editable estimate of one-time setup, yearly recurring costs, and the lifetime total —
-            scaled by how many ferrets you keep. The numbers are starting points; swap in your local prices.
+            What does a ferret cost per month and in year one? Pick ferret count, housing, and
+            food style, then edit the lines. A planning range — not a quote.
           </p>
         </div>
       </section>
 
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Ferret.com</Link>
+      <nav
+        aria-label="Breadcrumb"
+        className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"
+      >
+        <Link href="/" className="hover:text-brand-primary no-underline">
+          Ferret.com
+        </Link>
         <span>›</span>
-        <Link href="/tools" className="hover:text-brand-primary no-underline">Tools</Link>
+        <Link href="/tools" className="hover:text-brand-primary no-underline">
+          Tools
+        </Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Cost Calculator</span>
       </nav>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the number
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            First-year ferret budget worksheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the monthly and first-year estimate — setup, food, litter, and vet — so you can
+            shop the cage and the staple bags without re-running the math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="First-year ferret budget worksheet"
+            subtitle="Email the monthly and first-year estimate — setup, food, litter, and vet — so you can shop the setup list. No spam."
+            ctaText="Email the budget"
+            source="tools-cost-calculator-under-hero"
+          />
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-5xl">
           <CostCalculator />
         </div>
       </section>
 
+      {/* Money path — live amazon-brand search hops (food / litter / cage / accessories).
+          Reuses queries already shipped on ferret reviews + care + behavior.
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <div className="rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6 sm:p-7">
-            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Now that you have a number</p>
-            <h2 className="mt-2 font-display text-xl font-semibold text-brand-text-dark">
-              Turn the setup line into a shopping list
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
-              Most of the one-time figure above is the cage-and-setup category. The ferret starter
-              essentials list breaks that line into the specific items a new ferret needs on day one —
-              cage, bedding, litter, food and water, and a carrier — so you can buy the core well
-              instead of guessing.
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop the setup
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              The first-year number is mostly cage, food, and litter. Same Amazon hops used on the{' '}
+              <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
+                cage review
+              </Link>
+              , the{' '}
+              <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
+                litter review
+              </Link>
+              , and the{' '}
+              <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
+                kibble guide
+              </Link>
+              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to you.
             </p>
-            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
-              That page includes affiliate links; we may earn a commission at no extra cost to you, and
-              we never accept payment for favorable placement.{' '}
-              <Link href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">
-                Disclosure
-              </Link>.
-            </p>
-            <Link
-              href="/ferret-starter-kit"
-              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
-            >
-              See the ferret starter essentials
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
+                amazonLabel="Browse ferret food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cost-calculator"
+                amazonLabel="Browse wood pellet litter on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"
+                amazonLabel="Browse multi-level cages on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"
+                amazonLabel="Browse cage accessories on Amazon →"
+              />
+            </div>
           </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission. Empty Chewy buttons stay hidden.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
+            Size pans with the{' '}
+            <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
+              litter planner
+            </Link>
+            . Check a bag against published nutrient targets with the{' '}
+            <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">
+              food evaluator
+            </Link>
+            . The narrative ranges live on{' '}
+            <Link
+              href="/ownership/cost-of-owning-a-ferret"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              cost of owning a ferret
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -167,19 +265,34 @@ export default function CostCalculatorPage() {
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">How to use this</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The calculator separates the three things people conflate when they ask what a ferret costs: the
-            money you spend once to get set up, the money you spend every year to keep a ferret well, and the
-            money you should set aside for the conditions ferrets are prone to. The first two are predictable
-            and are what the totals reflect. The third is not optional but is impossible to schedule, which is
-            why it is called out separately rather than folded into a tidy monthly figure.
+            money you spend once to get set up, the money you spend every month to keep a ferret well, and the
+            money you should set aside for the conditions ferrets are prone to. Housing fills the shared cage
+            line. Food style fills the per-ferret food-and-litter line. First year is setup plus twelve months
+            of recurring. Illness is called out separately rather than folded into a tidy monthly figure.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For the narrative version of these numbers — what each line item typically covers and why — see the
-            in-depth <Link href="/ownership/cost-of-owning-a-ferret" className="text-brand-primary underline-offset-2 hover:underline">cost of owning a ferret</Link> guide.
-            If litter is driving the recurring number, the <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">litter planner</Link> sizes pans and 30 lb bags.
-            If a food cost is driving your recurring number, the <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> helps
-            you confirm you are paying for a food that actually meets ferret nutrient targets, and the <Link href="/diet" className="text-brand-primary underline-offset-2 hover:underline">diet</Link> reference
-            explains the targets themselves. For the health costs called out above, the <Link href="/health" className="text-brand-primary underline-offset-2 hover:underline">health</Link> section
-            covers the common conditions and what their management involves.
+            in-depth{' '}
+            <Link
+              href="/ownership/cost-of-owning-a-ferret"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              cost of owning a ferret
+            </Link>{' '}
+            guide. If litter is driving the recurring number, the{' '}
+            <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
+              litter planner
+            </Link>{' '}
+            sizes pans and 30 lb bags. If a food cost is driving your recurring number, the{' '}
+            <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">
+              Ferret Food Evaluator
+            </Link>{' '}
+            helps you confirm you are paying for a food that actually meets ferret nutrient targets. For the
+            health costs called out above, the{' '}
+            <Link href="/health" className="text-brand-primary underline-offset-2 hover:underline">
+              health
+            </Link>{' '}
+            section covers the common conditions and what their management involves.
           </p>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Common questions</h2>
@@ -187,15 +300,28 @@ export default function CostCalculatorPage() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
         <div className="max-w-2xl">
-          <EmailCapture
-            siteId="ferret-com"
-            variant="inline"
-            title="Ferret.com keeper letter"
-            subtitle="Ferret care references and tool updates. No spam."
-            source="tools-cost-calculator"
-          />
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
+              { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },
+              { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
+              { label: 'Best Ferret Litter', href: '/reviews/best-ferret-litter', note: 'Paper, wood, or grass — never clay' },
+              { label: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret', note: 'Narrative ranges behind the lines' },
+              { label: 'Ferret Starter Essentials', href: '/ferret-starter-kit', note: 'Day-one cage, litter, food, carrier' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

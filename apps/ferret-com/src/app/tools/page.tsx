@@ -19,7 +19,7 @@ const TOOLS = [
   {
     href: '/tools/cost-calculator',
     title: 'Ferret Cost Calculator',
-    desc: 'Estimate one-time setup, yearly recurring costs, and the lifetime total of ferret ownership — scaled by number of ferrets, with a separate prompt to budget for adrenal, insulinoma, and blockage care.',
+    desc: 'Estimate monthly and first-year ferret costs from ferret count, housing, and food style — plus a separate prompt to budget for adrenal, insulinoma, and blockage care.',
     tag: 'Budgeting',
   },
   {
