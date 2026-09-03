@@ -291,8 +291,8 @@ export default function CatAgeCalculatorPage() {
           kidney disease, thyroid disease, diabetes, and blood pressure once a cat is a senior. This page is a
           planning reference, not a diagnosis. The{' '}
           <Link href="/tools/cat-body-condition-score">cat body condition score</Link> tool pairs with this to track
-          weight, the <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> is an owner aid when you are
-          wondering about pain, and the <Link href="/health/senior-bloodwork-guide">senior bloodwork guide</Link>{' '}
+          weight,           the <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> is an owner aid when you are
+          watching for pain (observation kit, not a diagnosis), and the <Link href="/health/senior-bloodwork-guide">senior bloodwork guide</Link>{' '}
           covers what those screening tests look for. For a stable, non-emergency question, start at{' '}
           <Link href="/telehealth">telehealth</Link>.
         </p>

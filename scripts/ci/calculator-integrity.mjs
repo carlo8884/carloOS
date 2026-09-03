@@ -373,6 +373,42 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete BCS-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · cat-grimace-scale',
+    file: 'apps/vets-co/src/components/tools/CatGrimaceScale.tsx',
+    mustInclude: [
+      { re: /id: 'ears'/, label: 'ear-position action unit kept' },
+      { re: /id: 'orbital'/, label: 'orbital-tightening action unit kept' },
+      { re: /id: 'muzzle'/, label: 'muzzle-tension action unit kept' },
+      { re: /id: 'whiskers'/, label: 'whisker-position action unit kept' },
+      { re: /id: 'head'/, label: 'head-position action unit kept' },
+      { re: /const total = scores\.reduce\(\(a, b\) => a \+ b, 0\)/, label: 'grimace total = sum of five 0–2 scores' },
+      { re: /if \(total <= 1\)/, label: 'minimal-signs band ≤1' },
+      { re: /if \(total <= 3\)/, label: 'watch band ≤3 (below ≈4/10 threshold)' },
+      { re: /about 4 out of 10/, label: 'validated ≈4/10 analgesia threshold kept' },
+    ],
+    why: 'Existing Feline Grimace Scale (Evangelista 2019): five facial action units 0–2, total 0–10, ≈4/10 analgesia cut-off. Do not invent a new scale.',
+  },
+  {
+    id: 'vets · cat-grimace-scale hops',
+    file: 'apps/vets-co/src/app/tools/cat-grimace-scale/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cat-grimace-scale-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my grimace cheat sheet"/, label: 'concrete grimace-sheet offer, not Subscribe' },
+      { re: /amazon-brand\/soft\+cat\+carrier\?s=tools-cat-grimace-scale/, label: 'soft carrier search hop' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-cat-grimace-scale/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/calming\+pheromone\+diffuser\?s=tools-cat-grimace-scale/, label: 'calming pheromone diffuser search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-cat-grimace-scale/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/cat\+recovery\+bed\?s=tools-cat-grimace-scale/, label: 'cozy recovery bed search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete grimace-sheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

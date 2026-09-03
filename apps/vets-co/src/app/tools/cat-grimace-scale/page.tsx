@@ -9,6 +9,8 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -34,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-06-15T00:00:00Z',
-  modifiedAt: '2026-06-15T00:00:00Z',
+  modifiedAt: '2026-09-03T00:00:00Z',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -60,6 +62,7 @@ const softwareApplicationSchema = {
     'Estimated grimace total out of 10 with the ≈4/10 analgesia threshold',
     'Calibrated interpretation: minimal signs, some signs, or signs consistent with pain',
     'Safety guidance: never give human painkillers to cats; defer to a veterinarian',
+    'Shoppable observation kit via Amazon category searches (soft carrier, pet first-aid kit, calming pheromone diffuser, digital pet thermometer, cozy recovery bed)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -104,6 +107,11 @@ const FAQS = [
     answer:
       'It is most reliable for acute pain — after surgery, injury, or a dental problem — assessed on a calm, unprovoked cat, since handling and stress change the face. It is less suited to slow chronic pain. Use it as one input alongside behavior and your own knowledge of your cat, not as a standalone diagnosis.',
   },
+  {
+    question: 'Is the cat grimace scale a diagnosis or an emergency-triage tool?',
+    answer:
+      'No. It is a planning and observation reference only — an owner education aid adapted from the validated Feline Grimace Scale. It does not diagnose a condition, decide whether you need the ER, or replace a veterinarian. A high score is a reason to call your vet; a low score does not rule pain out. For a stable, non-emergency question, start with telehealth; for sudden collapse, trouble breathing, or trauma, go to an emergency hospital.',
+  },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
@@ -131,6 +139,7 @@ export default function CatGrimaceScalePage() {
           <TableOfContents
             items={[
               { label: 'The assessor', href: '#assessor' },
+              { label: 'Observation kit', href: '#cat-grimace-kit' },
               { label: 'How the scale works', href: '#how' },
               { label: 'What a high score means', href: '#high' },
               { label: 'Sources', href: '#sources' },
@@ -144,17 +153,12 @@ export default function CatGrimaceScalePage() {
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
               { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' },
+              { label: 'Insurance Coverage Finder', href: '/tools/insurance-finder' },
+              { label: 'Talk to a vet (telehealth)', href: '/telehealth' },
               { label: 'Find a Vet', href: '/find-a-vet' },
             ]}
           />
           <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="vets-co"
-            title="Vets.co reference letter"
-            subtitle="Veterinary references for pet owners."
-            source="cat-grimace-scale"
-          />
         </>
       }
     >
@@ -162,19 +166,123 @@ export default function CatGrimaceScalePage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the grimace chart
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Cat grimace-score cheat sheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the five-action-unit grimace cheat sheet (ears, eyes, muzzle,
+            whiskers, head) and the pain-watch recap so you can re-score later
+            without re-reading the descriptors. Planning / observation reference
+            only — not a diagnosis or emergency-triage substitute. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Cat grimace-score cheat sheet"
+            subtitle="Email the five-sign grimace cheat sheet and pain-watch recap. No spam."
+            ctaText="Email my grimace cheat sheet"
+            source="tools-cat-grimace-scale-under-hero"
+          />
+        </div>
+
         <h2 id="assessor">The assessor</h2>
         <p>
           Cats evolved to conceal pain, which is why owners so often miss it until a problem is
           advanced. Their faces, however, change in measurable ways when they hurt. Score the five
           facial action units below on a calm, unprovoked cat and the tool totals them on the
-          0–10 scale used by the validated Feline Grimace Scale. For life-stage
-          context — including senior screening — use the{' '}
+          0–10 scale used by the validated Feline Grimace Scale. This is a planning /
+          observation reference, not a diagnosis or an emergency-triage substitute.
+          For life-stage context — including senior screening — use the{' '}
           <Link href="/tools/cat-age-calculator">cat age calculator</Link>. For
           weight, the{' '}
           <Link href="/tools/cat-body-condition-score">cat body condition score</Link>{' '}
           is a wellness reference, not a diagnosis.
         </p>
         <CatGrimaceScale />
+
+        {/* Money path — live amazon-brand search hops (observation / comfort kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list, not a diagnosis. */}
+        <div id="cat-grimace-kit" className="mt-8 mb-8">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a pain-watch observation kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are soft recovery, comfort, and
+              observation items for a feline acute-pain watch — a soft carrier,
+              a pet first-aid kit, a calming pheromone diffuser, a digital pet
+              thermometer, and a cozy recovery bed. They are not a ranked
+              product list, not invented inventory, and they do not diagnose
+              pain or replace emergency triage. If your cat may be in pain,
+              contact a veterinarian; for a stable, non-emergency question,
+              start at telehealth. Vets.co earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale"
+                amazonLabel="Browse soft cat carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale"
+                amazonLabel="Browse calming pheromone diffusers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"
+                amazonLabel="Browse cozy recovery beds on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Planning ahead
+          </div>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Unexpected pain workups and ER visits are one of the cost drivers
+            pet insurance is built for. Comparing published coverage while a
+            cat is young and healthy matters because pre-existing conditions
+            are excluded. For a non-emergency question about comfort or
+            behavior, talk to a licensed vet on a screen rather than waiting
+            for a gap to become an ER visit.
+          </p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <Link
+              href="/tools/insurance-finder"
+              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Filter insurance coverage →
+            </Link>
+            <Link
+              href="/reviews/best-pet-insurance"
+              className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
+            >
+              Compare pet insurance →
+            </Link>
+            <Link
+              href="/telehealth"
+              className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+            >
+              Talk to a vet (telehealth) →
+            </Link>
+          </div>
+        </div>
 
         <h2 id="how">How the scale works</h2>
         <p>
@@ -204,6 +312,9 @@ export default function CatGrimaceScalePage() {
         <p>
           A low score is reassuring but not a clearance: because cats mask pain, and some pain is not
           facial, trust changes in appetite, hiding, grooming, mobility, and litter-box habits too.
+          This page is a planning / observation reference, not a diagnosis or an emergency-triage
+          substitute. For a stable, non-emergency question, start at{' '}
+          <Link href="/telehealth">telehealth</Link>.
         </p>
 
         <h2 id="sources">Sources</h2>

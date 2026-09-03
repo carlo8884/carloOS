@@ -197,7 +197,7 @@ export default function CatBodyConditionScorePage() {
           <Link href="/tools/cat-age-calculator">cat age calculator</Link> to match
           weight checks to AAFP/AAHA life stage, and the{' '}
           <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> if you are
-          also wondering about pain.
+          also watching for pain (observation kit, not a diagnosis).
         </p>
         <CatBodyConditionScore />
 
