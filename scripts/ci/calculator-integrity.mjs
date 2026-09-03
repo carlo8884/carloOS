@@ -248,6 +248,17 @@ const CALCULATORS = [
     why: 'Starter-kit planning figure: a 30 lb paper-pellet bag lasts one ferret ~6–8 weeks; pan rule is one per ferret plus one extra.',
   },
   {
+    id: 'ferret · cage-size-calculator',
+    file: 'apps/ferret-com/src/app/tools/cage-size-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /SQIN_PER_FERRET = 24 \* 24/, label: '4 sq ft (24×24 in) per ferret AFA floor' },
+      { re: /HEIGHT_PER_LEVEL_IN = 18/, label: '18 in height per level' },
+      { re: /PAIR_MIN_LENGTH_IN = 36/, label: '36 in preferred pair footprint length' },
+      { re: /neededSqIn = effectiveN \* SQIN_PER_FERRET/, label: 'needed floor = effective ferrets × 24×24' },
+    ],
+    why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

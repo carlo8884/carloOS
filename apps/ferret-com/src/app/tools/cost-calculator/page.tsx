@@ -244,6 +244,10 @@ export default function CostCalculatorPage() {
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
               litter planner
             </Link>
+            . Size the cage with the{' '}
+            <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              cage size calculator
+            </Link>
             . Check a bag against published nutrient targets with the{' '}
             <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">
               food evaluator
@@ -279,7 +283,11 @@ export default function CostCalculatorPage() {
             >
               cost of owning a ferret
             </Link>{' '}
-            guide. If litter is driving the recurring number, the{' '}
+            guide.             If the cage line is the unknown, the{' '}
+            <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              cage size calculator
+            </Link>{' '}
+            turns ferret count and levels into a minimum L × W × H. If litter is driving the recurring number, the{' '}
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
               litter planner
             </Link>{' '}
@@ -306,6 +314,7 @@ export default function CostCalculatorPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
+              { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
               { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
               { label: 'Best Ferret Litter', href: '/reviews/best-ferret-litter', note: 'Paper, wood, or grass — never clay' },

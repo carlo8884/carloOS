@@ -79,6 +79,7 @@ export default function MultiLevelHousingPage() {
               title="Related Guides"
               links={[
                 { label: 'Cage Setup', href: '/care/cage-setup' },
+                { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
                 { label: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
               ]}
@@ -97,6 +98,7 @@ export default function MultiLevelHousingPage() {
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
         ]}
@@ -114,7 +116,7 @@ export default function MultiLevelHousingPage() {
             A ferret evaluates a space in three dimensions. In the wild, the European polecat — the ancestor of the domestic ferret — moves through burrow systems, root tangles, and stacked cover, not open floor. That instinct survives in the pet: given a choice between a wide flat cage and a tall narrow one of equal volume, most ferrets use the tall one more completely, climbing between levels dozens of times a day.
           </p>
           <p>
-            This has a practical consequence. The American Ferret Association recommends a minimum of roughly 24 × 24 inches of floor with at least 18 inches of height per ferret, but strongly prefers multi-level designs because stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels offers far more functional territory than a single 36 × 24-inch floor — and it does so in the same amount of floor space, which is the binding constraint in most apartments and homes.
+            This has a practical consequence. The American Ferret Association recommends a minimum of roughly 24 × 24 inches of floor with at least 18 inches of height per ferret, but strongly prefers multi-level designs because stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels offers far more functional territory than a single 36 × 24-inch floor — and it does so in the same amount of floor space, which is the binding constraint in most apartments and homes. The <a href="/tools/cage-size-calculator">cage size calculator</a> turns those constants into an L × W × H for your headcount and level count.
           </p>
           <p>
             The right mental model is a small vertical apartment: a ground floor with the litter and access doors, a middle floor with food and water, and an upper floor of hammocks and sleep sacks where the ferret actually spends most of its sleeping hours. Each level does a job, and ramps connect them.

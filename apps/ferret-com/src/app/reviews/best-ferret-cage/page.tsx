@@ -157,6 +157,7 @@ export default function BestFerretCagePage() {
               title="Related Guides"
               links={[
                 { label: 'Cage Setup', href: '/care/cage-setup' },
+                { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
@@ -176,6 +177,7 @@ export default function BestFerretCagePage() {
         relatedLinks={[
           { title: 'Reviews Hub', href: '/reviews' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { title: 'Multi-Level Housing', href: '/care/multi-level-housing' },
           { title: 'Best Ferret Litter', href: '/reviews/best-ferret-litter' },
           { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },

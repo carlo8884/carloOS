@@ -191,11 +191,16 @@ export default function LitterPlannerPage() {
             <Link href="/care/litter-training" className="text-brand-primary underline-offset-2 hover:underline">
               litter-training guide
             </Link>{' '}
-            and the{' '}
+            and             the{' '}
             <Link href="/care/bedding-and-litter-types" className="text-brand-primary underline-offset-2 hover:underline">
               bedding and litter types
             </Link>{' '}
             page cover placement and materials. This planner only does the count and the bag math.
+            Size the cage those pans sit in with the{' '}
+            <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              cage size calculator
+            </Link>
+            .
           </p>
         </div>
       </section>
