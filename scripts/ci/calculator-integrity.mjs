@@ -213,6 +213,15 @@ const CALCULATORS = [
     ],
     why: 'Hobby filter-sizing rule: community freshwater turnover is 4–6 tank volumes per hour; GPH = gallons × band.',
   },
+  {
+    id: 'ferret · litter-planner',
+    file: 'apps/ferret-com/src/app/tools/litter-planner/Calculator.tsx',
+    mustInclude: [
+      { re: /WEEKS_PER_30LB_BAG = 7/, label: '30 lb bag lasts ~7 weeks per ferret (mid of 6–8)' },
+      { re: /const pans = n \+ PANS_EXTRA/, label: 'pans = ferrets + 1 extra' },
+    ],
+    why: 'Starter-kit planning figure: a 30 lb paper-pellet bag lasts one ferret ~6–8 weeks; pan rule is one per ferret plus one extra.',
+  },
 ]
 
 let failures = 0

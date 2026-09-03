@@ -28,6 +28,12 @@ const TOOLS = [
     desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment. Returns a calibrated readiness tier with plain-English next steps.',
     tag: 'Decision Tool',
   },
+  {
+    href: '/tools/litter-planner',
+    title: 'Ferret Litter Planner',
+    desc: 'How many pans and how many 30 lb bags? Enter ferret count for the one-per-ferret-plus-one pan rule and a monthly bag estimate. Paper pellet default — never clumping clay.',
+    tag: 'Husbandry',
+  },
 ]
 
 // Breadcrumb + ItemList so the tools hub is a citable product surface for AI

@@ -157,6 +157,7 @@ export default function BestFerretLitterPage() {
                 { label: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Reviews Hub', href: '/reviews' },
+                { label: 'Litter Planner', href: '/tools/litter-planner' },
               ]}
             />
             <EmailCapture
@@ -176,6 +177,7 @@ export default function BestFerretLitterPage() {
           { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
           { title: 'Best Ferret Cage', href: '/reviews/best-ferret-cage' },
           { title: 'Litter Box Troubleshooting', href: '/behavior/litter-box-troubleshooting' },
+          { title: 'Litter Planner', href: '/tools/litter-planner' },
         ]}
       >
         <div className="carloOS-article">

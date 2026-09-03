@@ -80,6 +80,7 @@ export default function BeddingAndLitterTypesPage() {
               links={[
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Litter Training', href: '/care/litter-training' },
+                { label: 'Litter Planner', href: '/tools/litter-planner' },
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
               ]}
             />
@@ -98,6 +99,7 @@ export default function BeddingAndLitterTypesPage() {
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
           { title: 'Litter Training', href: '/care/litter-training' },
+          { title: 'Litter Planner', href: '/tools/litter-planner' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
         ]}
 >

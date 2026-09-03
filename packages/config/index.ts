@@ -1038,6 +1038,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'First-Year Schedule', href: '/first-year-schedule' },
           { label: 'Reviews', href: '/reviews' },
           { label: 'Tools', href: '/tools' },
+          { label: 'Litter Planner', href: '/tools/litter-planner' },
           { label: 'Directory', href: '/directory' },
         ],
       },

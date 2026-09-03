@@ -151,6 +151,7 @@ export default function FerretLitterTrainingPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+                { label: 'Litter Planner', href: '/tools/litter-planner' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -170,6 +171,7 @@ export default function FerretLitterTrainingPage() {
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+          { title: 'Litter Planner', href: '/tools/litter-planner' },
         ]}
 >
         <div className="carloOS-article">
