@@ -9,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -16,35 +18,52 @@ const URL = 'https://fish.com/tools/water-change-calculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Aquarium Water Change Calculator — Nitrate & Dilution Math | Fish.com',
-  description: 'Calculate the % water change needed to lower nitrate, TDS, GH, or salinity to a safe target. Includes multi-change planning for large reductions.',
+  title: 'Aquarium Water Change Calculator',
+  description:
+    'How much water should you change? Enter tank gallons or liters, fill %, and change % for gallons to remove — plus weekly schedule tips by bioload.',
   path: '/tools/water-change-calculator',
 })
 
 const schema = buildHowToSchema({
   name: 'How to calculate an aquarium water change',
-  description: 'Use the dilution equation to figure out what percentage water change you need to reach a target nitrate, TDS, or hardness level.',
+  description:
+    'Multiply filled tank volume by the change percentage to get gallons or liters to remove and replace, then match temperature and dose dechlorinator.',
   url: URL,
   totalTime: 'PT2M',
   steps: [
-    { name: 'Test the parameter', text: 'Measure current nitrate, TDS, GH, or whatever parameter you\'re trying to reduce. Use a liquid test kit for accuracy.' },
-    { name: 'Measure source water', text: 'Test the same parameter in your tap or RO water. Most tap water reads 0 ppm nitrate but can have meaningful TDS or GH.' },
-    { name: 'Apply the dilution formula', text: 'Water change fraction = (current - target) / (current - source). Multiply by tank volume to get gallons to replace.' },
-    { name: 'Cap individual changes at 50%', text: 'Single water changes larger than 50% are stressful even with matched parameters. For larger reductions, spread across 2–4 changes 24–48 hours apart.' },
-    { name: 'Fix the cause for chronic problems', text: 'Recurring high nitrate means too much feeding, too much stocking, or too little filtration/plants. A water change is treatment, not cure.' },
+    {
+      name: 'Find filled volume',
+      text: 'Start with labeled tank gallons (or liters). If the tank is not full, multiply by current fill percent. Decor and substrate reduce net volume — when in doubt, use the volume calculator.',
+    },
+    {
+      name: 'Pick a change percent',
+      text: 'A standard community tank is 25% weekly. Heavy bioload (goldfish, large cichlids) is 30–50% weekly. Reef tanks usually do 10–15% with matched-salinity water. Cap a single change at 50%.',
+    },
+    {
+      name: 'Multiply filled volume by the percent',
+      text: 'Gallons to remove = filled gallons × (change % ÷ 100). A 40-gallon tank at 100% fill and 25% change is 10 gallons to siphon and replace.',
+    },
+    {
+      name: 'Match temperature and condition the new water',
+      text: 'New water should be within 2°F of the tank. Dose dechlorinator for any tap water before it touches the tank. Vacuum gravel while you siphon so waste leaves with the old water.',
+    },
+    {
+      name: 'Adjust frequency from bioload, not a calendar alone',
+      text: 'If nitrate climbs between weekly changes, increase volume or frequency — not both at once. Light planted tanks can stretch to 25% every 10–14 days if tests stay stable. This is maintenance math, not veterinary advice.',
+    },
   ],
 })
 
 const softwareApplicationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
+  '@type': 'WebApplication',
   name: 'Aquarium Water Change Calculator',
   url: URL,
   applicationCategory: 'UtilitiesApplication',
   applicationSubCategory: 'AquariumCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free interactive aquarium water change calculator. Uses the dilution equation to compute the percent water change required to bring nitrate, TDS, GH, or salinity down to a target value, with multi-change planning for large reductions.',
+    'Free interactive aquarium water change calculator. Inputs: tank gallons or liters, current fill percent, desired change percent, and an optional bioload note. Output: gallons and liters to remove and replace, plus educational weekly-schedule guidance.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: {
@@ -53,11 +72,11 @@ const softwareApplicationSchema = {
     priceCurrency: 'USD',
   },
   featureList: [
-    'Dilution formula: fraction = (current − target) / (current − source)',
-    'Accepts non-zero source-water values (tap water with nitrate, TDS, or GH)',
-    'Caps single changes at 50% and splits larger reductions across sessions',
-    'Salinity reduction mode with 0.001 SG per day reef guidance',
-    'Sustainable weekly-schedule guidance by tank type',
+    'Gallons or liters to remove = filled volume × change percent',
+    'US gallon / liter unit toggle',
+    'Fill-percent adjustment for tanks that are not full',
+    'Bioload schedule tips: planted, community, heavy, reef',
+    'Optional nitrate/TDS/GH/salinity dilution mode for target-parameter planning',
   ],
   publisher: {
     '@type': 'Organization',
@@ -68,24 +87,29 @@ const softwareApplicationSchema = {
 
 const FAQS = [
   {
-    question: 'How big a water change is safe?',
-    answer: 'Up to 50% in a single change is safe if you match temperature (within 2°F), dose dechlorinator, and parameters are close. Larger changes work but raise the risk of pH or osmotic shock. For very high nitrate (100+ ppm), bring it down over 3–4 changes of 30–40% each rather than one giant change.',
+    question: 'How much water should I change in my aquarium?',
+    answer:
+      'For most community freshwater tanks, 25% weekly is the usual maintenance band. Multiply tank gallons by 0.25 to get gallons to remove (a 40-gallon tank → 10 gallons). Heavily stocked or messy-fish tanks often need 30–50% weekly. Reef tanks typically do 10–15% with matched-salinity water. Cap a single change at 50% unless parameters are closely matched.',
   },
   {
     question: 'How often should I do water changes?',
-    answer: 'For most community tanks, 25% weekly maintains stable parameters. Heavily stocked tanks, planted tanks dosing fertilizers, or fry tanks may need 50% twice weekly. Lightly stocked, heavily planted, or low-tech tanks can stretch to 25% biweekly. Test nitrate — if it stays under 20 ppm, your schedule is fine.',
+    answer:
+      'Weekly is the default for a stocked community tank. Light, heavily planted tanks can stretch to 25% every 10–14 days if nitrate stays under about 20 ppm. Goldfish, large cichlids, fry tanks, and overfed tanks need more often — sometimes 25% twice a week. Test before you stretch the schedule. This is husbandry guidance, not veterinary advice.',
   },
   {
-    question: 'What if my tap water already has nitrate?',
-    answer: 'Tap water with measurable nitrate (some municipal water supplies hit 10–20 ppm) limits how low you can go with water changes alone. Solutions: an RO/DI unit to make pure source water, more live plants to consume nitrate biologically, or a denitrator (advanced setup). Our calculator accounts for source nitrate so the math stays honest.',
+    question: 'Do I need to match temperature and dechlorinate?',
+    answer:
+      'Yes. New water should be within about 2°F of the tank. Dose a dechlorinator (Seachem Prime, API Stress Coat) for any tap water before it goes in — chlorine and chloramine harm fish and the filter bacteria. For most weekly 25% changes you do not need to chase pH or GH unless you keep sensitive species or you are doing a very large change.',
   },
   {
-    question: 'Do I need to match pH and hardness when changing water?',
-    answer: 'Match temperature always. Match pH/GH only if you\'re doing very large changes (>50%) or keeping sensitive species (discus, German rams, soft-water shrimp). For most community tanks doing weekly 25% changes, fish adapt to small parameter drifts. Sudden large swings cause stress; gradual matches do not.',
+    question: 'When should I change more water, or change more often?',
+    answer:
+      'Increase volume or frequency — not both at once — when the tank is overstocked, overfed, lightly planted, or holding messy fish (goldfish, large cichlids). Also step up after a missed week, or when nitrate climbs between changes. Check stocking with the stocking calculator and filter flow with the filter GPH calculator before assuming the schedule is the only lever.',
   },
   {
-    question: 'How does the water change calculator handle salinity?',
-    answer: 'For salinity reduction, the calculator gives the % of tank water to replace with freshwater (or lower-salinity water) to hit your target. Always reduce salinity gradually for saltwater fish — drop no more than 0.001 SG per day for reef tanks.',
+    question: 'How do I use the calculator if I want to lower nitrate to a target?',
+    answer:
+      'Switch to the nitrate / parameter-target mode. Water-change fraction = (current − target) / (current − source). If tap water already has nitrate, a change alone cannot go below that source level. For large reductions, the tool splits the work into 50% changes spread over days.',
   },
 ]
 
@@ -95,10 +119,11 @@ export default function WaterChangeCalculatorPage() {
       siteId="fish-com"
       hero={{
         title: 'Aquarium Water Change Calculator',
-        subtitle: 'Find the exact % water change needed to bring nitrate, TDS, GH, or salinity down to a safe target. Includes multi-change planning for large reductions.',
+        subtitle:
+          'How much water should you siphon? Tank size, fill %, and change % in — gallons and liters to remove out, plus a weekly schedule tip by bioload.',
         category: 'Calculators',
         categoryHref: '/tools',
-        publishedAt: 'May 2026',
+        publishedAt: 'September 2026',
         readTime: '3 min',
       }}
       breadcrumbs={[
@@ -107,34 +132,35 @@ export default function WaterChangeCalculatorPage() {
         { name: 'Water Change Calculator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools', category: 'Tools' },
+        { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },
+        { title: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator', category: 'Tools' },
+        { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
+        { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' },
+        { title: 'Best Water Test Kits', href: '/reviews/best-water-test-kits', category: 'Reviews' },
+      ]}
       sidebar={
         <>
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'How dilution works', href: '#dilution' },
-              { label: 'Water-change schedule', href: '#schedule' },
-              { label: 'Fix chronic nitrate', href: '#chronic' },
+              { label: 'How the volume math works', href: '#volume-math' },
+              { label: 'When to change more often', href: '#more-often' },
               { label: 'FAQ', href: '#faq' },
             ]}
           />
           <RelatedLinks
             title="Related"
             links={[
-              { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
+              { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
+              { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+              { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
               { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
               { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
             ]}
-          />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Water-chemistry tips every Thursday."
-            source="water-change-calculator"
           />
         </>
       }
@@ -144,48 +170,110 @@ export default function WaterChangeCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline
+          siteName="Fish.com Editorial"
+          publishedAt="2026-05-01T00:00:00Z"
+          updatedAt="2026-09-03T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
-        <h2 id="dilution">How Dilution Works</h2>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop water-change gear
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A hose-to-sink changer (Python-style) or a gravel-vacuum siphon makes the weekly change
+            faster; a liquid kit tells you whether the schedule is actually working. Same Amazon hops
+            used on the{' '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary no-underline hover:underline">
+              water-test kit review
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/python+water+changer?s=tools-water-change-calculator"
+              amazonLabel="Shop Python water changer on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
+              amazonLabel="Shop gravel vacuums on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
+              amazonLabel="Shop API Master Test Kit on Amazon →"
+            />
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the math
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Water-change schedule notes
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Send the change math — weekly percent and gallons for your tank type. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Water-change schedule notes"
+            subtitle="Send the change math — weekly percent and gallons for your tank type. No spam."
+            source="tools-water-change-calculator"
+          />
+        </div>
+
+        <h2 id="volume-math">How the volume math works</h2>
         <p>
-          Every water change is a dilution. The fraction you replace ends up at source-water concentration, the fraction you leave stays at tank concentration.
-          The math is straightforward:
+          A water change is a percentage of the water that is actually in the tank, not the box
+          label. Filled volume = tank size × (fill % ÷ 100). Gallons to remove = filled volume ×
+          (change % ÷ 100). A 40-gallon tank filled to the rim at 25% is <strong>10 gallons</strong>{' '}
+          out and 10 gallons back in.
         </p>
-        <pre className="bg-brand-surface p-4 rounded text-sm overflow-x-auto">
-          fraction_to_change = (current − target) / (current − source)
-        </pre>
         <p>
-          If your nitrate is 60 ppm, you want 20 ppm, and your tap water has 0 ppm nitrate:{' '}
-          <strong>(60 − 20) / (60 − 0) = 0.667 = 67%</strong>. That&apos;s too large for one change — better to do two 50% changes 24 hours apart.
+          If you need net volume from length × width × height first, use the{' '}
+          <Link href="/tools/aquarium-volume-calculator">aquarium volume calculator</Link>. If the
+          tank is chronically dirty between weekly changes, the lever is usually stocking or
+          filtration — check the{' '}
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> and the{' '}
+          <Link href="/tools/filter-gph-calculator">filter GPH calculator</Link> before you double
+          the change percent.
         </p>
 
-        <h2 id="schedule">A Sustainable Water-Change Schedule</h2>
+        <h2 id="more-often">When to change more often</h2>
+        <p>These are husbandry flags, not disease diagnoses:</p>
         <ul>
-          <li><strong>Standard community tank:</strong> 25% weekly. Hits nitrate, replenishes trace minerals, removes dissolved organics.</li>
-          <li><strong>Heavily stocked or large fish:</strong> 30–50% weekly, sometimes 25% twice weekly.</li>
-          <li><strong>Heavily planted / low-tech:</strong> 25% every 10–14 days, monitor nitrate.</li>
-          <li><strong>Quarantine / hospital tank:</strong> 50% daily during active treatment; matched temperature and dechlorinated.</li>
-          <li><strong>Saltwater reef:</strong> 10–15% weekly with matched-salinity replacement water. Some advanced reefers do less if running ICP testing.</li>
-        </ul>
-
-        <h2 id="chronic">If You&apos;re Always Behind on Nitrate</h2>
-        <p>
-          A water change is symptom relief. If you need 50% twice a week to keep nitrate under control, the root cause is one of:
-        </p>
-        <ul>
-          <li><strong>Overfeeding.</strong> The most common cause. Cut to once a day, what fish finish in 30 seconds.</li>
-          <li><strong>Overstocking.</strong> Use our <Link href="/tools/stocking-calculator">stocking calculator</Link> to check — most overstocked tanks are 2–3× over.</li>
-          <li><strong>Undersized filter.</strong> Bio-media volume matters more than flow rate. Upgrade to a canister or add a second filter.
-            See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
-            <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for size-matched picks.
+          <li>
+            <strong>Heavy bioload.</strong> Goldfish, large cichlids, and overstocked community tanks
+            produce more waste than a 25% weekly change can export. Step to 30–50% weekly or 25%
+            twice weekly.
           </li>
-          <li><strong>Few or no live plants.</strong> Even low-light plants (anubias, java fern, amazon sword) consume nitrate as fertilizer.</li>
+          <li>
+            <strong>Overfeeding.</strong> The most common reason nitrate climbs. Cut to what fish
+            finish in 30 seconds, then keep the same change schedule for two weeks before changing
+            it again.
+          </li>
+          <li>
+            <strong>Few or no live plants.</strong> Plants consume nitrate. A bare-bottom or
+            plastic-plant tank usually needs the community schedule, not the planted stretch.
+          </li>
+          <li>
+            <strong>After a missed week.</strong> Do a normal 25–30% change, then resume the weekly
+            cadence. Do not “catch up” with a single 70% change.
+          </li>
         </ul>
         <p>
-          Test before water changes, not just after — that&apos;s how you know if your routine is actually working.
-          See our <Link href="/reviews/best-water-test-kits">test kit reviews</Link> for accurate liquid options.
+          Match temperature, dose dechlorinator, and vacuum the gravel while you siphon. For why
+          nitrate is the parameter most people track, see the{' '}
+          <Link href="/health/nitrogen-cycle-explained">nitrogen cycle</Link> and the{' '}
+          <Link href="/setup/water-chemistry-guide">water chemistry guide</Link>. Size the heater
+          for the same volume with the{' '}
+          <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link>.
         </p>
 
         <h2 id="faq">FAQ</h2>

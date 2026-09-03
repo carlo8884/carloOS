@@ -83,7 +83,7 @@ const TOOLS = [
   {
     href: '/tools/water-change-calculator',
     title: 'Water Change Calculator',
-    desc: 'Calculate the % water change needed to bring nitrate or any parameter down to a target level. Includes dilution math.',
+    desc: 'How many gallons to siphon? Tank size, fill %, and change % in — volume to remove plus a weekly schedule tip by bioload.',
     tag: 'Maintenance',
   },
   {
