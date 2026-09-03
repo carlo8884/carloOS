@@ -71,6 +71,7 @@ export default function IsAFerretRightForYouPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Readiness Quiz & Kit', href: '/tools/readiness-quiz' },
                 { label: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
                 { label: 'Legality by State', href: '/ownership/ferret-legality-by-state' },
                 { label: 'First-Week Checklist', href: '/ownership/first-week-checklist' },
@@ -89,6 +90,7 @@ export default function IsAFerretRightForYouPage() {
       
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Readiness Quiz & New-Owner Kit', href: '/tools/readiness-quiz' },
           { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
           { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
           { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
@@ -142,7 +144,7 @@ export default function IsAFerretRightForYouPage() {
             A ferret is likely a <strong>good fit</strong> if: you have daily time and want an interactive, hands-on pet; you can absorb significant vet costs; you tolerate a mild musky odor; ferrets are legal where you live; your household has no unprotected prey animals and any children are old enough to be taught gentle handling; and you are ready for a multi-year commitment.
           </p>
           <p>
-            A ferret is likely a <strong>poor fit</strong> if: you want a low-maintenance, cage-bound, or hands-off pet; a large vet bill would be financially impossible; you are sensitive to animal odor; you live somewhere ferrets are banned or your lease forbids them; you keep small prey animals you could not fully separate; or you are not certain you can commit for the animal&apos;s whole life. None of these make you a bad person — they just point to a different pet. When you are ready to proceed, the <a href="/ownership/first-week-checklist">first-week checklist</a> takes it from here.
+            A ferret is likely a <strong>poor fit</strong> if: you want a low-maintenance, cage-bound, or hands-off pet; a large vet bill would be financially impossible; you are sensitive to animal odor; you live somewhere ferrets are banned or your lease forbids them; you keep small prey animals you could not fully separate; or you are not certain you can commit for the animal&apos;s whole life. None of these make you a bad person — they just point to a different pet. Score the same factors in the <a href="/tools/readiness-quiz">readiness quiz</a>, then pack the day-one kit — or use the <a href="/ownership/first-week-checklist">first-week checklist</a> once a ferret is coming home.
           </p>
 
           <h2 id="sources">Sources</h2>

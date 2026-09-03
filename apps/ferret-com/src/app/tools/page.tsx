@@ -25,7 +25,7 @@ const TOOLS = [
   {
     href: '/tools/readiness-quiz',
     title: 'Ferret Ownership Readiness Quiz',
-    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment. Returns a calibrated readiness tier with plain-English next steps.',
+    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment — then a day-one kit checklist (cage, litter, food, hammock, dig box, carrier) with Amazon shop hops.',
     tag: 'Decision Tool',
   },
   {
@@ -106,7 +106,7 @@ export default function ToolsHub() {
             Ferrets are obligate carnivores with a punishingly short digestive tract, which makes them far less forgiving of the wrong diet than a dog or cat. The marketing on a bag rarely tells you what matters. What matters is the guaranteed analysis &mdash; the small panel of protein, fat, fiber, and ash percentages every label is required to print &mdash; and the first few ingredients. The trouble is that reading those numbers against published ferret nutrient targets is fiddly, and most owners have nothing to check them against in the pet-store aisle. That gap is exactly what this hub is built to close.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat.
+            The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat. The <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">readiness quiz</Link> scores whether a ferret fits your household, then packs a day-one kit.
           </p>
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Where it fits with the rest of the site</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
