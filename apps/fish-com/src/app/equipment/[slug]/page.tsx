@@ -151,7 +151,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={allSchemas as unknown as Record<string, unknown>}
-      relatedLinks={[{ title: 'Equipment Hub', href: '/equipment', category: 'Equipment' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }]}
+      relatedLinks={[{ title: 'Equipment Hub', href: '/equipment', category: 'Equipment' }, { title: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator', category: 'Tools' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
       sidebar={
         <>
           <RelatedLinks

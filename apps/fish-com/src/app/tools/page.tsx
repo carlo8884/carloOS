@@ -63,6 +63,12 @@ const TOOLS = [
     tag: 'Equipment',
   },
   {
+    href: '/tools/filter-gph-calculator',
+    title: 'Filter GPH Calculator',
+    desc: 'How much filter flow does your tank need? Enter gallons and tank style for a GPH turnover range — community, goldfish, cichlid, or reef — then buy one size up from the box rating.',
+    tag: 'Equipment',
+  },
+  {
     href: '/tools/fish-disease-symptom-checker',
     title: 'Fish Disease Symptom Checker',
     desc: 'Why is your fish sick? Tick the signs you see to find the conditions that match — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide. Starts with water-quality testing.',

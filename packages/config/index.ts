@@ -604,6 +604,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Tools & Guides',
         links: [
           { label: 'All Tools & Calculators', href: '/tools' },
+          { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget' },
           { label: 'Compare Breeds', href: '/compare' },
           { label: 'Which Pet Quiz', href: '/which-pet' },
           { label: 'Puppy Schedule', href: '/puppy-schedule' },
@@ -743,6 +744,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tank Volume', href: '/tools/aquarium-volume-calculator' },
           { label: 'Stocking', href: '/tools/stocking-calculator' },
           { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+          { label: 'Filter GPH', href: '/tools/filter-gph-calculator' },
           { label: 'Water Change', href: '/tools/water-change-calculator' },
           { label: 'CO2 (KH/pH)', href: '/tools/co2-calculator' },
         ],

@@ -612,6 +612,17 @@ export default async function BreedsPage() {
               Best Small Dog Breeds for Apartments
             </div>
           </Link>
+          <Link
+            href="/tools/puppy-first-year-budget"
+            className="block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors"
+          >
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              Tools
+            </div>
+            <div className="font-display font-semibold text-brand-dark text-sm">
+              Puppy first-year budget — size the year-one cost
+            </div>
+          </Link>
         </div>
       </section>
 

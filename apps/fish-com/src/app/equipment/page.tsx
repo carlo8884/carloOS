@@ -66,7 +66,7 @@ export default function EquipmentHubPage() {
         title="Aquarium Equipment — How to Choose"
         subtitle="Plain-English buyer guides for the six equipment categories that decide whether your tank survives its first six months — each one points you to ranked product picks."
         primaryCta={{ href: '/reviews', label: 'See ranked product picks' }}
-        secondaryCta={{ href: '/tools/heater-wattage-calculator', label: 'Size your heater' }}
+        secondaryCta={{ href: '/tools/filter-gph-calculator', label: 'Size your filter' }}
       />
 
       {/* BREADCRUMB */}
