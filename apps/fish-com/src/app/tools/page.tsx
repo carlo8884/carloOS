@@ -65,7 +65,7 @@ const TOOLS = [
   {
     href: '/tools/filter-gph-calculator',
     title: 'Filter GPH Calculator',
-    desc: 'How much filter flow does your tank need? Enter gallons and tank style for a GPH turnover range — community, goldfish, cichlid, or reef — then buy one size up from the box rating.',
+    desc: 'How much filter flow does your tank need? Enter gallons and tank style for a GPH turnover range — community, goldfish, cichlid, or reef — then shop a filter kit (AquaClear HOB, Fluval canister, media, sponge, powerhead).',
     tag: 'Equipment',
   },
   {

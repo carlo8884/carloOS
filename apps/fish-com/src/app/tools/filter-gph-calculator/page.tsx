@@ -10,6 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -139,6 +140,7 @@ export default function FilterGphCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop a filter kit', href: '#shop' },
               { label: 'Turnover by tank style', href: '#bands' },
               { label: 'Rated-for vs real GPH', href: '#rated' },
               { label: 'FAQ', href: '#faq' },
@@ -157,6 +159,13 @@ export default function FilterGphCalculatorPage() {
               { label: 'Equipment Guides', href: '/equipment' },
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="fish-com"
+            title="The Weekly Tank"
+            subtitle="Filter sizing, stocking, and equipment notes. No spam."
+            source="filter-gph-calculator"
+          />
         </>
       }
     >
@@ -171,17 +180,95 @@ export default function FilterGphCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the filter plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Filter GPH checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the turnover bands, rated-for vs real GPH notes, and the
+            shoppable filter kit (HOB, canister, media, sponge, powerhead)
+            so you can size without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Filter GPH checklist"
+            subtitle="Email the filter GPH checklist, turnover bands, and shoppable filter kit. No spam."
+            ctaText="Email my filter GPH checklist"
+            source="tools-filter-gph-calculator-under-hero"
+          />
+        </div>
+
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
+        {/* Money path — live amazon-brand search hops (HOB / canister / media /
+            sponge / powerhead). ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. HOB / canister / sponge queries match filter reviews
+            and the stocking calculator. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <EmailCapture
-          variant="inline"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Filter sizing, stocking, and equipment notes. No spam."
-          source="tools-filter-gph-calculator"
-        />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a filter kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            These Amazon category searches match the GPH range you just
+            calculated — an AquaClear HOB or Fluval canister (same queries as
+            the{' '}
+            <Link
+              href="/reviews/best-aquarium-filters"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              aquarium filter reviews
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-canister-filters"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              canister filter reviews
+            </Link>
+            ), replacement filter media, a sponge filter that doubles as a
+            prefilter (same query as the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            ), and a powerhead for reef or high-flow tanks. Buy one size up
+            from the box rating. They are not a ranked product list and not
+            invented inventory. Fish.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
+              amazonLabel="Shop AquaClear HOB filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator"
+              amazonLabel="Shop Fluval canister filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator"
+              amazonLabel="Shop filter media on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator"
+              amazonLabel="Shop sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"
+              amazonLabel="Shop aquarium powerheads on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="bands">Turnover by tank style</h2>
         <p>

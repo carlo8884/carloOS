@@ -330,6 +330,26 @@ const CALCULATORS = [
     why: 'Hobby filter-sizing rule: community freshwater turnover is 4–6 tank volumes per hour; GPH = gallons × band.',
   },
   {
+    id: 'fish · filter-gph-calculator hops',
+    file: 'apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-filter-gph-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my filter GPH checklist"/, label: 'concrete filter-GPH offer, not Subscribe' },
+      { re: /amazon-brand\/aquaclear\+70\+filter\?s=tools-filter-gph-calculator/, label: 'AquaClear HOB filter search hop (same query as filter reviews / stocking)' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=tools-filter-gph-calculator/, label: 'Fluval canister search hop (same query as canister reviews / stocking)' },
+      { re: /amazon-brand\/aquarium\+filter\+media\?s=tools-filter-gph-calculator/, label: 'filter media search hop' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=tools-filter-gph-calculator/, label: 'sponge / prefilter search hop (same query as cycling estimator)' },
+      { re: /amazon-brand\/aquarium\+powerhead\?s=tools-filter-gph-calculator/, label: 'powerhead search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete filter-GPH offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'ferret · cost-calculator',
     file: 'apps/ferret-com/src/app/tools/cost-calculator/Calculator.tsx',
     mustInclude: [
