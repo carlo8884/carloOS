@@ -50,7 +50,7 @@ const TOOLS = [
   {
     href: '/tools/dog-gestation-calculator',
     title: 'Dog Pregnancy & Whelping Calendar',
-    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the normal 58-68 day window -- with the typical ultrasound, X-ray, and temperature-drop checkpoints mapped onto your calendar. Breeding info, not a diagnosis.',
+    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the 58-68 day window -- then pack a whelping-kit checklist (box, pads, scale, thermometer, bulb syringe, towels). Breeding info, not a diagnosis.',
     tag: 'Breeding',
   },
   {
