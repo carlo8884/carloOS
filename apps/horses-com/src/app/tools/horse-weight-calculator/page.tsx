@@ -116,6 +116,7 @@ export default function HorseWeightCalculatorPage() {
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
         { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
+        { title: 'Horse Age Calculator', href: '/tools/horse-age-calculator', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
       hero={{
@@ -151,6 +152,7 @@ export default function HorseWeightCalculatorPage() {
               { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+              { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
               { label: 'Forage Basics', href: '/nutrition/forage-basics' },
               { label: 'Equine Health Hub', href: '/health' },
             ]}
@@ -332,7 +334,9 @@ export default function HorseWeightCalculatorPage() {
           <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, and
           track condition over time with the{' '}
           <Link href="/tools/body-condition-score">body condition score calculator</Link>.
-          If the horse looks painful or off after a weigh-in, the{' '}
+          Pair the weight with a life-stage label on the{' '}
+          <Link href="/tools/horse-age-calculator">horse age calculator</Link> — a planning
+          reference, not a diagnosis. If the horse looks painful or off after a weigh-in, the{' '}
           <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a
           conservative triage aid — not a diagnosis.
         </p>

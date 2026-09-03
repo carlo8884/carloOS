@@ -583,6 +583,48 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge horse-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'horses · horse-age-calculator',
+    file: 'apps/horses-com/src/app/tools/horse-age-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /if \(horse < 1\) return Math\.round\(horse \* 12\)/, label: 'year 1 = 12 human years (pro-rated foals)' },
+      { re: /if \(horse <= 5\) return Math\.round\(12 \+ \(horse - 1\) \* 5\)/, label: 'age 5 reaches 32 (12 + 4×5)' },
+      { re: /return Math\.round\(32 \+ \(horse - 5\) \* 2\.5\)/, label: '+2.5 human years per horse year after age 5' },
+      { re: /if \(horse < 5\)/, label: 'young through age 4 (1–5 band)' },
+      { re: /if \(horse < 15\)/, label: 'adult 5–14; senior 15+' },
+      { re: /label: 'Foal'/, label: 'foal life-stage label' },
+      { re: /label: 'Young'/, label: 'young life-stage label' },
+      { re: /label: 'Adult'/, label: 'adult life-stage label' },
+      { re: /label: 'Senior'/, label: 'senior life-stage label' },
+    ],
+    mustExclude: [
+      { re: /\*\s*7\b/, label: 'never multiply-by-seven in the formula' },
+    ],
+    why: 'Horse planning bands grounded in Horses.com senior-care copy: foal <1, young 1–5, adult 5–15, senior 15+. Human-year model is year 1 = 12, age 5 = 32, then +2.5/year — not ×7, not a diagnosis.',
+  },
+  {
+    id: 'horses · horse-age-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-age-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse life-stage notes"/, label: 'concrete life-stage offer, not Subscribe' },
+      { re: /amazon-brand\/horse\+feed\?s=tools-horse-age-calculator/, label: 'horse feed search hop' },
+      { re: /amazon-brand\/senior\+horse\+feed\?s=tools-horse-age-calculator/, label: 'senior horse feed search hop' },
+      { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-age-calculator/, label: 'weight tape search hop' },
+      { re: /amazon-brand\/horse\+fly\+mask\?s=tools-horse-age-calculator/, label: 'fly mask search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick\?s=tools-horse-age-calculator/, label: 'hoof pick search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /https:\/\/vets\.co\/telehealth/, label: 'non-ER talk-to-a-vet points at vets.co/telehealth' },
+      { re: /https:\/\/vets\.co\/reviews\/best-pet-insurance/, label: 'insurance CTA points at educational vets.co comparison' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+    ],
+    why: 'Money path: under-hero capture with a concrete life-stage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [
