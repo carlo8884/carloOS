@@ -83,6 +83,23 @@ const CALCULATORS = [
     why: 'Aquarium heater rule of thumb: ~3 watts per gallon for a 10°F lift, scaled linearly.',
   },
   {
+    id: 'fish · heater-wattage-calculator hops',
+    file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-heater-wattage-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my heater wattage checklist"/, label: 'concrete heater-wattage offer, not Subscribe' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=tools-heater-wattage-calculator/, label: 'Eheim Jager heater search hop (same query as heater reviews / stocking)' },
+      { re: /amazon-brand\/aqueon\+pro\+heater\?s=tools-heater-wattage-calculator/, label: 'Aqueon Pro heater search hop (same query as heater reviews)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete heater-wattage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · substrate-calculator',
     file: 'apps/fish-com/src/app/tools/substrate-calculator/Calculator.tsx',
     mustInclude: [{ re: /G_PER_LB\s*=\s*453\.592/, label: '453.592 g per lb' }],

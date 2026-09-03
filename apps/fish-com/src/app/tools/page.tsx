@@ -59,7 +59,7 @@ const TOOLS = [
   {
     href: '/tools/heater-wattage-calculator',
     title: 'Heater Wattage Calculator',
-    desc: 'Pick the right heater size for your tank, room temperature, and target water temperature. Includes redundancy recommendation.',
+    desc: 'Pick the right heater size for your tank, room temperature, and target water temperature — then shop a heater kit (Eheim Jager, Aqueon Pro) with a dual-heater split for tanks 40 gallons and up.',
     tag: 'Equipment',
   },
   {

@@ -10,6 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -59,6 +60,7 @@ const softwareApplicationSchema = {
     'Built-in 25% headroom for heater aging and cold snaps',
     'Dual-heater split recommendation for tanks 40 gallons and up',
     'External-controller guidance for sensitive species and large systems',
+    'Links to existing Amazon heater hops (Eheim Jager, Aqueon Pro)',
   ],
   publisher: {
     '@type': 'Organization',
@@ -114,6 +116,7 @@ export default function HeaterWattageCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop a heater kit', href: '#shop' },
               { label: 'Quick reference chart', href: '#chart' },
               { label: 'Why two heaters?', href: '#two-heaters' },
               { label: 'Controllers & safety', href: '#controllers' },
@@ -149,9 +152,69 @@ export default function HeaterWattageCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the heater plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Heater wattage checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the 3 W/gal rule, dual-heater split, controller notes, and the
+            shoppable heater kit (Eheim Jager, Aqueon Pro) so you can size
+            without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Heater wattage checklist"
+            subtitle="Email the heater wattage checklist, dual-heater split, and shoppable heater kit. No spam."
+            ctaText="Email my heater wattage checklist"
+            source="tools-heater-wattage-calculator-under-hero"
+          />
+        </div>
+
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (Eheim Jager / Aqueon Pro).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. Queries
+            match this page's prior hops and reviews/best-aquarium-heaters. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a heater kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            These Amazon category searches match the wattage you just calculated
+            — an Eheim Jager (best overall) or Aqueon Pro (budget), the same
+            queries as the{' '}
+            <Link
+              href="/reviews/best-aquarium-heaters"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              aquarium heater reviews
+            </Link>
+            . Buy the next size up from the chart, and on tanks 40 gallons and
+            up split into two smaller heaters. They are not a ranked product
+            list and not invented inventory. Fish.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty Chewy buttons
+            stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
+              amazonLabel="Shop Eheim Jager heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aqueon+pro+heater?s=tools-heater-wattage-calculator"
+              amazonLabel="Shop Aqueon Pro heaters on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="chart">Quick Reference — Wattage by Tank Size</h2>
         <p>Assuming a ~10°F lift (68°F room → 78°F tank) for a standard tropical setup with a glass lid:</p>
@@ -186,34 +249,6 @@ export default function HeaterWattageCalculatorPage() {
           <li><strong>Failed off</strong> — heater stops heating. A single heater means the tank cools to room temperature. With two heaters, the other keeps the tank within 2–4°F of target.</li>
         </ul>
         <p>The cost difference is marginal. The safety upside is enormous. For any tank you actually care about, run two.</p>
-
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
-          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Shop a sized heater</div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            After you have a wattage, browse the same Amazon heater hops used on the{' '}
-            <Link href="/reviews/best-aquarium-heaters" className="text-brand-primary no-underline hover:underline">
-              best aquarium heaters
-            </Link>{' '}
-            review — Eheim Jager (best overall) or Aqueon Pro (budget). Fish.com earns a commission on qualifying purchases at no extra cost to you.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
-              rel="sponsored noopener"
-              className="inline-flex items-center rounded-lg bg-brand-dark px-4 py-2.5 text-sm font-semibold text-white no-underline hover:opacity-90"
-            >
-              Shop Eheim Jager on Amazon →
-            </a>
-            <a
-              href="/go/amazon-brand/aqueon+pro+heater?s=tools-heater-wattage-calculator"
-              rel="sponsored noopener"
-              className="inline-flex items-center rounded-lg border border-brand-border px-4 py-2.5 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
-            >
-              Shop Aqueon Pro on Amazon →
-            </a>
-          </div>
-        </div>
 
         <h2 id="controllers">External Controllers</h2>
         <p>
