@@ -9,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -112,6 +114,7 @@ export default function VolumeCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop tanks and stands', href: '#shop' },
               { label: 'How to measure', href: '#measure' },
               { label: 'Net vs gross volume', href: '#net-vs-gross' },
               { label: 'Common tank sizes', href: '#sizes' },
@@ -130,13 +133,6 @@ export default function VolumeCalculatorPage() {
               { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="New calculators and species tools every Thursday."
-            source="volume-calculator"
-          />
         </>
       }
     >
@@ -145,9 +141,93 @@ export default function VolumeCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Tank size checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the tank-size checklist — net vs gross gallons, stand weight, substrate bags,
+            heater watts, and filter GPH — so you can shop without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Tank size checklist"
+            subtitle="Email the tank-size checklist — net vs gross gallons, stand weight, substrate, heater, and filter GPH. No spam."
+            ctaText="Email my tank size checklist"
+            source="tools-aquarium-volume-under-hero"
+          />
+        </div>
+
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop tanks and stands
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            Gallons set the glass or acrylic tank you buy, the stand that can hold the filled
+            weight, substrate bag count, heater watts, and a filter rated at or above that
+            volume. Same Amazon hops used with the{' '}
+            <Link
+              href="/tools/heater-wattage-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              heater wattage calculator
+            </Link>
+            , the{' '}
+            <Link
+              href="/tools/substrate-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              substrate calculator
+            </Link>
+            , and the{' '}
+            <Link
+              href="/reviews/best-aquarium-filters"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              aquarium filter review
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume"
+              amazonLabel="Shop glass tanks by gallon on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume"
+              amazonLabel="Shop acrylic tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume"
+              amazonLabel="Shop aquarium stands on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume"
+              amazonLabel="Shop substrate bags sized to volume on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"
+              amazonLabel="Shop heaters by tank size on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
+              amazonLabel="Shop filters sized to gallons on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="measure">How to Measure Your Tank</h2>
         <p>

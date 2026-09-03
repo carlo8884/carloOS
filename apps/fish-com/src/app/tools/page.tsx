@@ -29,7 +29,7 @@ const TOOLS = [
   {
     href: '/tools/aquarium-volume-calculator',
     title: 'Aquarium Volume Calculator',
-    desc: 'Convert tank dimensions (L × W × H) to US gallons, UK gallons, and liters. Supports rectangular, bow-front, and cylindrical tanks.',
+    desc: 'Convert tank dimensions (L × W × H) to US gallons, UK gallons, and liters — then size a glass or acrylic tank, stand, substrate, heater, and filter.',
     tag: 'Most popular',
   },
   {
