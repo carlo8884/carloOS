@@ -8,7 +8,9 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -66,6 +68,7 @@ const appSchema = {
     'lb and kg input',
     'Accounts for the diet/activity/temperature range',
     'Flags the drinking changes worth a veterinary call',
+    'Shoppable hydration kit via Amazon category searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -137,9 +140,79 @@ export default function DogWaterIntakeCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Water Intake Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Hydration checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the hydration checklist — daily water-tracking notes, the
+            shoppable kit (water bowl, fountain, travel bottle, measuring cup),
+            and the drinking changes worth a vet call — so you can measure
+            tomorrow without re-running the estimate. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Hydration checklist"
+            subtitle="Email the hydration checklist — water-tracking notes and the shoppable kit. No spam."
+            ctaText="Email my hydration checklist"
+            source="tools-dog-water-intake-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (hydration kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="dog-water-intake-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a hydration kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that make the
+              daily water range above easier to offer and track — a ceramic
+              water bowl, a pet water fountain, a travel water bottle, and a
+              measuring cup for the ounces and cups the calculator returns.
+              They are not a ranked product list, not invented inventory, and
+              they do not diagnose thirst or set a medical fluid plan. Fresh
+              water should always be available; a marked, lasting change in
+              drinking is worth a veterinary call. Dog.com earns a commission
+              on qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
+                amazonLabel="Browse ceramic pet water bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake"
+                amazonLabel="Browse dog water fountains on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+travel+water+bottle?s=tools-dog-water-intake"
+                amazonLabel="Browse dog travel water bottles on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"
+                amazonLabel="Browse kitchen measuring cups on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -175,18 +248,6 @@ export default function DogWaterIntakeCalculatorPage() {
             Frequently asked questions
           </h2>
           <FAQAccordion items={FAQS} />
-        </div>
-      </section>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com owner’s letter"
-            subtitle="Practical dog-care references and tool updates. No spam."
-            source="tools-dog-water-intake-calculator"
-          />
         </div>
       </section>
 

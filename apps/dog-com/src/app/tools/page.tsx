@@ -98,7 +98,7 @@ const TOOLS = [
   {
     href: '/tools/dog-water-intake-calculator',
     title: 'Dog Water Intake Calculator',
-    desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — and the drinking changes (up or down) that are worth a vet call.',
+    desc: 'How much water should my dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups — then shop a hydration kit (water bowl, fountain, travel bottle, measuring cup). A sustained jump or drop in drinking is worth a vet call.',
     tag: 'Health',
   },
 ]
