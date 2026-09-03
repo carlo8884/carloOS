@@ -170,7 +170,11 @@ export default function PuppyFirstYearBudgetPage() {
             <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
               new-puppy checklist
             </Link>{' '}
-            for what to buy, and the{' '}
+            for what to buy, the{' '}
+            <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
+              puppy weight predictor
+            </Link>{' '}
+            for adult size, and the{' '}
             <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               crate size calculator
             </Link>{' '}

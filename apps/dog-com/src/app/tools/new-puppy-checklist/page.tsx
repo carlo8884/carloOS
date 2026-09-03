@@ -277,6 +277,7 @@ export default function NewPuppyChecklistPage() {
               { label: 'Harness & Collar Size', href: '/tools/harness-collar-size', note: 'Fit the walk gear to neck and chest' },
               { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget', note: 'Crate, food, vet, and training ranges' },
               { label: 'Dog Age Calculator', href: '/tools/dog-age-calculator', note: 'Human-year estimate and life stage' },
+              { label: 'Puppy Weight Predictor', href: '/tools/puppy-weight-predictor', note: 'How big will the adult dog get?' },
               { label: 'Dog Ideal Weight Calculator', href: '/tools/dog-ideal-weight-calculator', note: 'Healthy adult weight range by breed' },
               { label: 'Puppy Schedule', href: '/training/puppy-schedule', note: 'Week-1 routine once the puppy is home' },
             ].map((item) => (
