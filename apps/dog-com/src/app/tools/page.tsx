@@ -44,7 +44,7 @@ const TOOLS = [
   {
     href: '/tools/dog-chocolate-toxicity-calculator',
     title: 'Dog Chocolate Toxicity Calculator',
-    desc: 'My dog ate chocolate -- how much is dangerous? Estimate theobromine exposure by chocolate type, amount, and body weight against standard veterinary dose bands. Educational only: every result tells you to call your vet or poison control right now.',
+    desc: 'My dog ate chocolate -- how much is dangerous? Estimate theobromine exposure by chocolate type, amount, and body weight against standard veterinary dose bands — then shop a chocolate-safety kit (first-aid, emergency kit, crate for quiet rest). Educational only: every result tells you to call your vet or poison control right now.',
     tag: 'Health',
   },
   {
