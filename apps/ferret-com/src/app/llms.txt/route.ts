@@ -26,8 +26,9 @@ export async function GET() {
 - [/diet](https://ferret.com/diet) — Obligate-carnivore feeding and food selection
 - [/behavior](https://ferret.com/behavior) — Training and bonding
 - [/ownership](https://ferret.com/ownership) — Cost, readiness, and getting-started guidance
-- [/tools](https://ferret.com/tools) — Emergency sign-list, age calculator, body-condition score, food evaluator, cost calculator, litter planner, cage size calculator
+- [/tools](https://ferret.com/tools) — Emergency sign-list, grimace / pain-face checklist, age calculator, body-condition score, food evaluator, cost calculator, litter planner, cage size calculator
 - [/tools/is-this-a-ferret-emergency](https://ferret.com/tools/is-this-a-ferret-emergency) — Conservative go-now / same-day / monitor ferret triage aid, not a diagnosis
+- [/tools/ferret-grimace-scale](https://ferret.com/tools/ferret-grimace-scale) — Ferret facial grimace / pain-face checklist (ears, eyes, nose, cheeks, whiskers); planning reference, not a diagnosis
 - [/tools/ferret-age-calculator](https://ferret.com/tools/ferret-age-calculator) — Ferret years to human-year estimate and kit / young adult / mature / senior label; planning reference, not a diagnosis
 - [/tools/ferret-body-condition-score](https://ferret.com/tools/ferret-body-condition-score) — 1–9 ferret body-condition planning score (rib/waist/belly); not a diagnosis
 - [/tools/cage-size-calculator](https://ferret.com/tools/cage-size-calculator) — Minimum L×W×H from ferret count, levels, and playtime

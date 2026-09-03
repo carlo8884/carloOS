@@ -372,6 +372,10 @@ export default function IsThisAFerretEmergencyPage() {
             <Link href="/find-an-exotic-vet" className="text-brand-primary underline-offset-2 hover:underline">
               find an exotic vet
             </Link>
+            . For a calm facial pain-watch that is not a diagnosis, use the{' '}
+            <Link href="/tools/ferret-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret grimace scale
+            </Link>
             .
           </p>
 
@@ -400,6 +404,7 @@ export default function IsThisAFerretEmergencyPage() {
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Size the emergency-fund line' },
               { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
               { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
+              { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the kit' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
             ].map((item) => (

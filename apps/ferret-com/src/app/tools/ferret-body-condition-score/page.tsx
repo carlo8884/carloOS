@@ -334,7 +334,11 @@ export default function FerretBodyConditionScorePage() {
             <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">
               ferret emergency sign-list
             </Link>{' '}
-            is a conservative urgency read — not a diagnosis.
+            is a conservative urgency read — not a diagnosis. For a facial pain-watch, the{' '}
+            <Link href="/tools/ferret-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret grimace scale
+            </Link>{' '}
+            is a planning reference, not a diagnosis.
           </p>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">
@@ -357,6 +361,7 @@ export default function FerretBodyConditionScorePage() {
               { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
+              { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
               { label: 'Aging Ferret Care', href: '/health/aging-ferret-care', note: 'Weekly grams and monthly body-condition checks' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
             ].map((item) => (
