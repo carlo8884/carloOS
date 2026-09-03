@@ -27,7 +27,7 @@ const TOOLS = [
   {
     href: '/tools/er-vs-clinic',
     title: 'ER vs Clinic vs Telehealth',
-    desc: 'Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on a screen? Select the signs. A setting chooser, not a diagnosis.',
+    desc: 'Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on a screen? Select the signs, then shop a pet emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A setting chooser, not a diagnosis.',
     tag: 'Triage',
   },
   {

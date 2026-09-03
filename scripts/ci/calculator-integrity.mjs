@@ -696,6 +696,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge cat-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · er-vs-clinic hops',
+    file: 'apps/vets-co/src/app/tools/er-vs-clinic/page.tsx',
+    mustInclude: [
+      { re: /source="tools-er-vs-clinic-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ER vs clinic cheat sheet"/, label: 'concrete ER-vs-clinic cheat-sheet offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-er-vs-clinic/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-er-vs-clinic/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=tools-er-vs-clinic/, label: 'soft pet carrier search hop' },
+      { re: /amazon-brand\/styptic\+powder\?s=tools-er-vs-clinic/, label: 'styptic powder search hop' },
+      { re: /amazon-brand\/wound\+care\+gauze\?s=tools-er-vs-clinic/, label: 'wound-care gauze search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete ER vs clinic cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'ferret · is-this-a-ferret-emergency',
     file: 'apps/ferret-com/src/app/tools/is-this-a-ferret-emergency/TriageHelper.tsx',
     mustInclude: [
