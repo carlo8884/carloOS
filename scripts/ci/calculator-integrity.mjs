@@ -443,6 +443,24 @@ const CALCULATORS = [
     why: 'Starter-kit planning figure: a 30 lb paper-pellet bag lasts one ferret ~6–8 weeks; pan rule is one per ferret plus one extra.',
   },
   {
+    id: 'ferret · litter-planner hops',
+    file: 'apps/ferret-com/src/app/tools/litter-planner/page.tsx',
+    mustInclude: [
+      { re: /source="tools-litter-planner-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my litter & pan plan"/, label: 'concrete litter-and-pan-plan offer, not Subscribe' },
+      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-litter-planner/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
+      { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=tools-litter-planner/, label: 'grass pellet litter search hop (same query as litter review)' },
+      { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-litter-planner/, label: 'corner litter pan search hop (same query as cage-size calculator)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete litter-and-pan-plan offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'ferret · cage-size-calculator',
     file: 'apps/ferret-com/src/app/tools/cage-size-calculator/Calculator.tsx',
     mustInclude: [

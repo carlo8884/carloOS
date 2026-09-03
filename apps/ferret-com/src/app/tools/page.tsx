@@ -55,7 +55,7 @@ const TOOLS = [
   {
     href: '/tools/litter-planner',
     title: 'Ferret Litter Planner',
-    desc: 'How many pans and how many 30 lb bags? Enter ferret count for the one-per-ferret-plus-one pan rule and a monthly bag estimate. Paper pellet default — never clumping clay.',
+    desc: 'How many pans and how many 30 lb bags? Enter ferret count for the one-per-ferret-plus-one pan rule and a monthly bag estimate. Paper pellet default — never clumping clay — then shop wood or grass pellet litter and a high-back corner pan via Amazon category searches.',
     tag: 'Husbandry',
   },
   {

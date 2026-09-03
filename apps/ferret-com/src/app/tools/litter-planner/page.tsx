@@ -147,32 +147,77 @@ export default function LitterPlannerPage() {
         <span className="text-brand-text-mid font-medium">Litter Planner</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Litter and pan plan
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the one-per-ferret-plus-one pan rule and the 30 lb bag cadence
+            so you can shop paper, wood, or grass pellets without re-running the
+            math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Litter and pan plan"
+            subtitle="Email the one-per-ferret-plus-one pan rule and the 30 lb bag cadence. No spam."
+            ctaText="Email my litter & pan plan"
+            source="tools-litter-planner-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
       </section>
 
+      {/* Money path — live amazon-brand search hops (wood / grass pellet / corner pan).
+          Wood + grass reuse the litter-review queries already on this page.
+          Corner pan reuses the cage-size calculator hop. ShopCtas hides empty
+          Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <div className="max-w-2xl rounded-lg border border-brand-border bg-brand-white p-6">
+        <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-          <p className="mt-3 mb-4 text-sm leading-relaxed text-brand-text-mid">
-            Same Amazon hops as the{' '}
-            <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
-              ferret litter review
-            </Link>
-            — heat-treated wood pellets or grass pellets. Paper-pellet (Yesterday&apos;s News class) is
-            the default type; shop the review for the criteria.
-          </p>
-          <ShopCtas
-            amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
-            amazonLabel="Browse wood pellet litter on Amazon →"
-          />
-          <div className="mt-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner"
-              amazonLabel="Browse grass pellet litter on Amazon →"
-            />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop the litter and pans
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              Same Amazon hops as the{' '}
+              <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
+                ferret litter review
+              </Link>
+              — heat-treated wood pellets or grass pellets — plus the high-back
+              corner pan hop already used on the{' '}
+              <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+                cage size calculator
+              </Link>
+              . Paper-pellet (Yesterday&apos;s News class) is the default type;
+              shop the review for the criteria. These are category searches, not
+              a ranked product list. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
+                amazonLabel="Browse wood pellet litter on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner"
+                amazonLabel="Browse grass pellet litter on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"
+                amazonLabel="Browse high-back corner pans on Amazon →"
+              />
+            </div>
           </div>
           <p className="mt-3 text-xs text-brand-text-light">
             We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
@@ -227,8 +272,9 @@ export default function LitterPlannerPage() {
           <EmailCapture
             siteId="ferret-com"
             variant="inline"
-            title="Ferret.com keeper letter"
-            subtitle="Litter, diet, and husbandry notes. No spam."
+            title="Litter and pan plan"
+            subtitle="Email the one-per-ferret-plus-one pan rule and the 30 lb bag cadence. No spam."
+            ctaText="Email my litter & pan plan"
             source="tools-litter-planner"
           />
         </div>
