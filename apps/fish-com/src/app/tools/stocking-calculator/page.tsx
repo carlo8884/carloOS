@@ -107,7 +107,7 @@ export default function StockingCalculatorPage() {
         { name: 'Stocking Calculator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Species Hub", href: "/species", category: "Species" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Species Hub", href: "/species", category: "Species" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={
         <>
           <TableOfContents
@@ -123,6 +123,7 @@ export default function StockingCalculatorPage() {
             title="Plan your tank"
             links={[
               { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
+              { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
               { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
               { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
@@ -207,6 +208,8 @@ export default function StockingCalculatorPage() {
           Once you know your stocking ceiling, filtration becomes the lever. Oversizing your filter is the single cheapest way to raise it.
           Size the flow first with the <Link href="/tools/filter-gph-calculator">filter GPH calculator</Link>, then
           plan the weekly siphon with the <Link href="/tools/water-change-calculator">water change calculator</Link>.
+          Bottom-dwellers (corydoras, loaches) need a sand or fine-gravel bed — size the bags with the{' '}
+          <Link href="/tools/substrate-calculator">substrate calculator</Link>.
           See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
           <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for picks by tank size.
           If your result is under 20 gallons, see our <Link href="/reviews/best-nano-tanks">nano tank reviews</Link> for

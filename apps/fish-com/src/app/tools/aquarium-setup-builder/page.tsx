@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildHowToSchema,
@@ -109,6 +110,7 @@ export default function AquariumSetupBuilderPage() {
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Aquarium Setup Guide', href: '/setup', category: 'Setup' },
         { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
+        { title: 'Substrate Calculator', href: '/tools/substrate-calculator', category: 'Tools' },
         { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' },
         { title: 'Best Water Test Kits', href: '/reviews/best-water-test-kits', category: 'Reviews' },
       ]}
@@ -126,6 +128,7 @@ export default function AquariumSetupBuilderPage() {
             links={[
               { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
               { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' },
+              { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
               { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
@@ -157,7 +160,9 @@ export default function AquariumSetupBuilderPage() {
         <h2 id="order">The order to do it in</h2>
         <p>
           Buy and assemble in this order: tank and stand first, then filter, heater, and light; add
-          substrate and décor; fill and dechlorinate; and only then begin the nitrogen cycle. The
+          substrate and décor (size the bags with the{' '}
+          <Link href="/tools/substrate-calculator">substrate calculator</Link>); fill and dechlorinate;
+          and only then begin the nitrogen cycle. The
           single biggest beginner mistake is adding fish on day one — a tank needs several weeks for
           its filter to grow the bacteria that make fish waste safe. Our{' '}
           <a href="/setup/aquarium-cycling-guide">cycling guide</a> and{' '}
