@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -48,11 +49,47 @@ function r1(n: number): string {
   return (Math.round(n * 10) / 10).toString()
 }
 
+const SHOP_SOURCE = 'tools-dog-water-intake'
+
+function resultShop(highOz: number): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  if (highOz <= 20) {
+    return {
+      heading: 'Track a small daily range with a travel bottle',
+      blurb:
+        'A small daily range is easier to measure on the go than to guess from a full bowl. A travel water bottle lets you offer a known volume and see what was actually drunk. This tool does not diagnose thirst or set a medical fluid plan — a marked, lasting change in drinking is still a reason to call your veterinarian.',
+      href: `/go/amazon-brand/dog+travel+water+bottle?s=${SHOP_SOURCE}`,
+      label: 'Browse dog travel water bottles on Amazon →',
+    }
+  }
+  if (highOz >= 64) {
+    return {
+      heading: 'Offer a larger daily range from a fountain',
+      blurb:
+        'A large daily range is easier to keep fresh when water is circulating. A pet water fountain is a husbandry station, not a treatment for polydipsia. This tool does not diagnose thirst or set a medical fluid plan — a marked, lasting increase or decrease in drinking is still a reason to call your veterinarian.',
+      href: `/go/amazon-brand/dog+water+fountain?s=${SHOP_SOURCE}`,
+      label: 'Browse dog water fountains on Amazon →',
+    }
+  }
+  return {
+    heading: 'Measure the daily range from a marked bowl',
+    blurb:
+      'The estimate is a typical daily range, not a quota to enforce. A heavy ceramic water bowl keeps fresh water available so you can see how much was offered versus what was left. Pair it with a measuring cup if you want the ounces and cups in numbers. This tool does not diagnose thirst — a marked, lasting change in drinking is worth a veterinary call.',
+    href: `/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=${SHOP_SOURCE}`,
+    label: 'Browse ceramic pet water bowls on Amazon →',
+  }
+}
+
 export default function DogWaterIntakeCalculator() {
   const [weight, setWeight] = useState<number>(40)
   const [unit, setUnit] = useState<Unit>('lb')
 
   const result = useMemo(() => compute(weight, unit), [weight, unit])
+  const shop = resultShop(result.highOz)
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -112,6 +149,18 @@ export default function DogWaterIntakeCalculator() {
           dry-kibble diet (canned food supplies a lot of water on its own). This is total water — what your
           dog drinks plus the moisture in its food.
         </p>
+      </div>
+
+      <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+        <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+          Next step
+        </p>
+        <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+          {shop.heading}
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
+        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
       </div>
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
