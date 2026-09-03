@@ -19,7 +19,7 @@ export default function WaterChemistryGuidePage() {
       hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]}
       schema={schema}
-      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Aquarium Water Parameters", href: "/water-parameters", category: "Water Chemistry" }, { title: "GH & KH Water Hardness", href: "/setup/gh-kh-water-hardness", category: "Tank Setup" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Best Water Test Kits", href: "/reviews/best-water-test-kits", category: "Reviews" }]}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Aquarium Water Parameters", href: "/water-parameters", category: "Water Chemistry" }, { title: "GH & KH Water Hardness", href: "/setup/gh-kh-water-hardness", category: "Tank Setup" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Water Test Kits", href: "/reviews/best-water-test-kits", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Reference</div>
@@ -30,7 +30,7 @@ export default function WaterChemistryGuidePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' }, { label: 'Water Change Calculator', href: '/tools/water-change-calculator' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping guides every Thursday." source="setup-water-chemistry" />
       </>}
     >

@@ -124,6 +124,7 @@ export default function StockingCalculatorPage() {
             links={[
               { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
               { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
+              { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
               { label: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' },
               { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
@@ -205,7 +206,8 @@ export default function StockingCalculatorPage() {
         <p>
           Once you know your stocking ceiling, filtration becomes the lever. Oversizing your filter is the single cheapest way to raise it.
           Size the flow first with the <Link href="/tools/filter-gph-calculator">filter GPH calculator</Link>, then
-          see our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
+          plan the weekly siphon with the <Link href="/tools/water-change-calculator">water change calculator</Link>.
+          See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
           <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for picks by tank size.
           If your result is under 20 gallons, see our <Link href="/reviews/best-nano-tanks">nano tank reviews</Link> for
           purpose-built setups that handle the tight stocking ceiling more reliably than standard tanks.

@@ -171,8 +171,12 @@ const CALCULATORS = [
   {
     id: 'fish · water-change-calculator',
     file: 'apps/fish-com/src/app/tools/water-change-calculator/Calculator.tsx',
-    mustInclude: [{ re: /\(c\s*-\s*t\)\s*\/\s*\(c\s*-\s*s\)/, label: 'dilution fraction = (current−target)/(current−source)' }],
-    why: 'Single-change dilution: fraction to replace = (current−target)/(current−sourceLevel).',
+    mustInclude: [
+      { re: /\(c\s*-\s*t\)\s*\/\s*\(c\s*-\s*s\)/, label: 'dilution fraction = (current−target)/(current−source)' },
+      { re: /const filled = tank \* \(fillPct \/ 100\)/, label: 'filled volume = tank × (fill% / 100)' },
+      { re: /const remove = filled \* \(changePct \/ 100\)/, label: 'remove = filled × (change% / 100)' },
+    ],
+    why: 'Volume mode: gallons to remove = filled volume × change percent. Dilution mode: fraction = (current−target)/(current−sourceLevel).',
   },
   {
     id: 'horses · horse-height-converter',

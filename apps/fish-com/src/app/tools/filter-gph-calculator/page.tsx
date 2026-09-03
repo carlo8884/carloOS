@@ -130,6 +130,7 @@ export default function FilterGphCalculatorPage() {
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },
         { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
+        { title: 'Water Change Calculator', href: '/tools/water-change-calculator', category: 'Tools' },
         { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' },
       ]}
       sidebar={
@@ -150,6 +151,7 @@ export default function FilterGphCalculatorPage() {
               { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+              { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Equipment Guides', href: '/equipment' },
             ]}
           />
@@ -220,9 +222,11 @@ export default function FilterGphCalculatorPage() {
         </div>
         <p>
           After you have a GPH number, check whether the stocking still fits —{' '}
-          <Link href="/tools/stocking-calculator">stocking calculator</Link> — and whether the heater
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> — whether the heater
           is sized for the same volume —{' '}
-          <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link>. For model
+          <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> — and how
+          many gallons the weekly siphon should be with the{' '}
+          <Link href="/tools/water-change-calculator">water change calculator</Link>. For model
           picks see{' '}
           <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
           <Link href="/reviews/best-nano-tanks">nano tank reviews</Link>.
