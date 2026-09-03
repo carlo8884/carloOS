@@ -11,6 +11,9 @@ import {
   FAQAccordion,
   ArticleSourcesList,
   CrossPortfolioCard,
+  EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import ToxicityMeter from './ToxicityMeter'
 
@@ -99,7 +102,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11',
-  modifiedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
 
   citation: SOURCES,
 })
@@ -214,6 +217,31 @@ export default function DogChocolateToxicityCalculatorPage() {
         </div>
       </section>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Chocolate-safety checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the chocolate-safety checklist — poison-control numbers, what to tell the
+            vet, and a shoppable safety kit (first-aid, emergency kit, crate for quiet rest).
+            Nothing on the list treats chocolate poisoning. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Chocolate-safety checklist"
+            subtitle="Email the chocolate-safety checklist — poison-control numbers, what to tell the vet, and the safety kit. No spam."
+            ctaText="Email my chocolate-safety checklist"
+            source="tools-chocolate-toxicity-under-hero"
+          />
+        </div>
+      </section>
+
       {/* GEO: extractable answer + theobromine table, ABOVE the tool */}
       <section className="px-container-sm sm:px-container pt-section">
         <div className="max-w-3xl">
@@ -286,6 +314,52 @@ export default function DogChocolateToxicityCalculatorPage() {
       <section className="px-container-sm sm:px-container py-section">
         <div className="max-w-4xl">
           <ToxicityMeter />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (safety kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          These hops do not treat or reverse chocolate poisoning. */}
+      <section id="chocolate-safety-kit" className="px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a chocolate-safety kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              After you have called your veterinarian or a poison-control hotline, these
+              Amazon category searches are cabinet and car items — a pet first-aid kit, a
+              pet emergency kit, a crate for quiet rest, and (vet-directed only) activated
+              charcoal or 3% hydrogen peroxide. They are not a ranked product list, not
+              invented inventory, and they do not treat or reverse chocolate poisoning.
+              Give charcoal or peroxide only if a veterinarian or poison-control specialist
+              tells you to. Dog.com earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/activated+charcoal+pet?s=tools-chocolate-toxicity"
+                amazonLabel="Browse activated charcoal for pets on Amazon (vet-directed) →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hydrogen+peroxide+3+percent+first+aid?s=tools-chocolate-toxicity"
+                amazonLabel="Browse 3% hydrogen peroxide first aid on Amazon (vet-directed) →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit+dog?s=tools-chocolate-toxicity"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+emergency+kit+dog+toxin?s=tools-chocolate-toxicity"
+                amazonLabel="Browse pet emergency / toxin kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+crate+for+recovery?s=tools-chocolate-toxicity"
+                amazonLabel="Browse recovery crates on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

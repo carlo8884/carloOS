@@ -15,6 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 type WeightUnit = 'lb' | 'kg'
 type AmountUnit = 'oz' | 'g'
@@ -122,6 +123,49 @@ function compute(
 
 const ASPCA = '888-426-4435'
 const PPH = '855-764-7661'
+const SHOP_SOURCE = 'tools-chocolate-toxicity'
+
+function resultShop(tier: Tier['key']): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  switch (tier) {
+    case 'severe':
+      return {
+        heading: 'Pack a pet first-aid kit for the clinic ride',
+        blurb:
+          'This estimate is in the severe range. Call your veterinarian or a poison-control hotline first. A pet first-aid kit belongs in the car for the trip — it does not treat chocolate poisoning.',
+        href: `/go/amazon-brand/pet+first+aid+kit+dog?s=${SHOP_SOURCE}`,
+        label: 'Browse pet first-aid kits on Amazon →',
+      }
+    case 'moderate':
+      return {
+        heading: 'Pack a pet emergency kit for the clinic ride',
+        blurb:
+          'Cardiac signs are possible at this dose. Call your veterinarian or a poison-control hotline first. A pet emergency kit is for the ride to the clinic — it does not treat chocolate poisoning.',
+        href: `/go/amazon-brand/pet+emergency+kit+dog+toxin?s=${SHOP_SOURCE}`,
+        label: 'Browse pet emergency / toxin kits on Amazon →',
+      }
+    case 'mild':
+      return {
+        heading: 'Keep a pet first-aid kit after you call',
+        blurb:
+          'GI signs are possible. Call poison control now even if your dog looks fine. A pet first-aid kit is a cabinet item after that call — not a treatment for chocolate poisoning.',
+        href: `/go/amazon-brand/pet+first+aid+kit+dog?s=${SHOP_SOURCE}`,
+        label: 'Browse pet first-aid kits on Amazon →',
+      }
+    default:
+      return {
+        heading: 'A crate for quiet rest while you wait on poison control',
+        blurb:
+          'The estimate is below the common-signs threshold — still call. A crate can keep a nauseous dog contained and quiet while you follow poison-control instructions. It does not treat chocolate poisoning.',
+        href: `/go/amazon-brand/dog+crate+for+recovery?s=${SHOP_SOURCE}`,
+        label: 'Browse recovery crates on Amazon →',
+      }
+  }
+}
 
 export default function ChocolateToxicityMeter() {
   const [typeIndex, setTypeIndex] = useState<number>(1) // milk chocolate default
@@ -139,6 +183,7 @@ export default function ChocolateToxicityMeter() {
     () => (isValid ? compute(type, amountNum, amountUnit, weightNum, weightUnit) : null),
     [isValid, type, amountNum, amountUnit, weightNum, weightUnit]
   )
+  const shop = result ? resultShop(result.tier.key) : null
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -321,6 +366,20 @@ export default function ChocolateToxicityMeter() {
           </div>
         )}
       </div>
+
+      {shop && (
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Next step
+          </p>
+          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+            {shop.heading}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
+        </div>
+      )}
 
       {/* Persistent not-a-diagnosis note */}
       <div className="mt-4 rounded-lg border border-brand-border bg-brand-white p-4">
