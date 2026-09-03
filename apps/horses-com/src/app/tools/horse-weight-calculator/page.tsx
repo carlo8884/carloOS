@@ -11,6 +11,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -56,7 +58,7 @@ const howToSchema = buildHowToSchema({
 
 const softwareApplicationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
+  '@type': 'WebApplication',
   name: 'Horse Weight Calculator',
   url: URL,
   applicationCategory: 'UtilitiesApplication',
@@ -152,13 +154,6 @@ export default function HorseWeightCalculatorPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="weight-calculator"
-          />
         </>
       }
     >
@@ -166,7 +161,7 @@ export default function HorseWeightCalculatorPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -192,6 +187,55 @@ export default function HorseWeightCalculatorPage() {
           kilograms. Switching the horse type swaps the published divisor.
         </p>
         <Calculator />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop weight tapes
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A dedicated equine weight tape (girth + length marks) is more repeatable than a
+            carpenter&rsquo;s tape. A soft measuring tape is the backup for body length. A livestock
+            barn scale is the check when the estimate has to be a true number — medication, sale
+            weight, or a clinical ration. Horses.com earns a commission on qualifying purchases at
+            no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator"
+              amazonLabel="Shop horse weight tapes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-weight-calculator"
+              amazonLabel="Shop horse measuring tapes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/livestock+barn+scale?s=tools-horse-weight-calculator"
+              amazonLabel="Shop livestock barn scales on Amazon →"
+            />
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the tape size
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Weight-tape size chart
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the tape size — girth, length, and the estimate — so the next weigh-in matches
+            the same marks. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Weight-tape size chart"
+            subtitle="Email the tape size — girth, length, and the estimate so you can re-measure next month. No spam."
+            ctaText="Email the tape size"
+            source="tools-horse-weight-calculator-under-hero"
+          />
+        </div>
 
         <h2 id="formula">The formula</h2>
         <p>The girth-and-length weight estimate (Carroll &amp; Huntington, 1988):</p>
