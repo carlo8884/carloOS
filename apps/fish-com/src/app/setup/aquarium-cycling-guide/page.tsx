@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -178,7 +179,13 @@ export default function CyclingGuidePage() {
           { name: 'Setup', href: '/setup' },
           { name: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' },
         ]}
-        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }, { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Fish Health' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }]}
+        relatedLinks={[
+          { title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' },
+          { title: 'Cycling Time Estimator', href: '/tools/aquarium-cycling-estimator', category: 'Tools' },
+          { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' },
+          { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Fish Health' },
+          { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' },
+        ]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -207,6 +214,7 @@ export default function CyclingGuidePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Cycling Time Estimator', href: '/tools/aquarium-cycling-estimator' },
                 { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' },
                 { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
                 { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
@@ -228,7 +236,11 @@ export default function CyclingGuidePage() {
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-            <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours.
+            <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours. Plan the calendar with the{' '}
+            <Link href="/tools/aquarium-cycling-estimator" className="text-brand-primary no-underline hover:underline">
+              aquarium cycling time estimator
+            </Link>
+            — then confirm with a liquid test kit, not the estimate.
           </p>
 
           <h2>How Does the Nitrogen Cycle Work?</h2>

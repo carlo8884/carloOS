@@ -9,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -122,12 +124,20 @@ export default function AquariumCyclingEstimatorPage() {
         { name: 'Cycling Estimator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools', category: 'Tools' },
+        { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' },
+        { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' },
+        { title: 'Aquarium Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tools' },
+        { title: 'Water Change Calculator', href: '/tools/water-change-calculator', category: 'Tools' },
+        { title: 'Best Water Test Kits', href: '/reviews/best-water-test-kits', category: 'Reviews' },
+      ]}
       sidebar={
         <>
           <TableOfContents
             items={[
               { label: 'The estimator', href: '#estimator' },
+              { label: 'Shop a cycling kit', href: '#shop' },
               { label: 'Method comparison', href: '#methods' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -137,20 +147,14 @@ export default function AquariumCyclingEstimatorPage() {
           <RelatedLinks
             title="Setup &amp; water"
             links={[
+              { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
+              { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
               { label: 'Water Parameters', href: '/water-parameters' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Aquarium Volume Calculator', href: '/tools/aquarium-volume-calculator' },
-              { label: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator' },
               { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
             ]}
-          />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Setup and water-chemistry tips every Thursday."
-            source="cycling-estimator"
           />
         </>
       }
@@ -160,13 +164,86 @@ export default function AquariumCyclingEstimatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline
+          siteName="Fish.com Editorial"
+          publishedAt="2026-05-01T00:00:00Z"
+          updatedAt="2026-09-03T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the timeline
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Aquarium cycling checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the fishless-cycle checklist — test-kit reads, ammonia dosing, and the 0/0
+            confirmation test — so you can track phases without re-running the estimator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Aquarium cycling checklist"
+            subtitle="Email the fishless-cycle checklist — test-kit reads, ammonia dosing, and the 0/0 confirmation test. No spam."
+            ctaText="Email my aquarium cycling checklist"
+            source="tools-aquarium-cycling-estimator-under-hero"
+          />
+        </div>
 
         <h2 id="estimator">The estimator</h2>
         <p>
           Choose your cycling method and tank temperature. The estimator returns a total cycle time, a typical range, and a four-phase timeline (ammonia rise → nitrite spike → nitrate appears → cycle complete).
         </p>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a cycling kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A liquid master kit is the only way to confirm 0 ppm ammonia and 0 ppm nitrite; bottled
+            nitrifiers and a measured ammonia source shorten a fishless cycle. Same Amazon hops used
+            on the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>{' '}
+            and the{' '}
+            <Link
+              href="/setup/aquarium-cycling-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              aquarium cycling guide
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
+              amazonLabel="Shop API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator"
+              amazonLabel="Shop bottled bacteria starter on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator"
+              amazonLabel="Shop fishless-cycling ammonia on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"
+              amazonLabel="Shop sponge filters on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="methods">Method comparison</h2>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
