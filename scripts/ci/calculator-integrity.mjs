@@ -309,6 +309,38 @@ const CALCULATORS = [
     why: 'Staged new-puppy checklist with sensible medium/8-week/indoor defaults; every gear hop is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · cat-age-calculator',
+    file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
+    mustInclude: [
+      { re: /if \(cat < 1\) return Math\.round\(cat \* 15\)/, label: 'year 1 = 15 human years (pro-rated under 1)' },
+      { re: /if \(cat <= 2\) return Math\.round\(15 \+ \(cat - 1\) \* 9\)/, label: 'year 2 reaches 24 (15 + 9)' },
+      { re: /return Math\.round\(24 \+ \(cat - 2\) \* 4\)/, label: '+4 human years per cat year after year 2' },
+      { re: /if \(cat < 7\)/, label: 'AAFP/AAHA young adult through age 6' },
+      { re: /if \(cat <= 10\)/, label: 'AAFP/AAHA mature adult 7–10' },
+    ],
+    why: 'Standard veterinary chart: year 1 = 15, year 2 = 24, then +4/year. AAFP/AAHA stages: kitten <1, young adult 1–6, mature 7–10, senior 11+.',
+  },
+  {
+    id: 'vets · cat-age-calculator hops',
+    file: 'apps/vets-co/src/app/tools/cat-age-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cat-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my life-stage notes"/, label: 'concrete life-stage offer, not Subscribe' },
+      { re: /amazon-brand\/kitten\+food\?s=tools-cat-age-calculator/, label: 'kitten food search hop' },
+      { re: /amazon-brand\/senior\+cat\+food\?s=tools-cat-age-calculator/, label: 'senior cat food search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-cat-age-calculator/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/cat\+carrier\?s=tools-cat-age-calculator/, label: 'carrier search hop' },
+      { re: /amazon-brand\/cat\+dental\?s=tools-cat-age-calculator/, label: 'dental search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete life-stage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

@@ -27,7 +27,7 @@ const TOOLS = [
   {
     href: '/tools/cat-age-calculator',
     title: 'Cat Age Calculator',
-    desc: 'How old is your cat in human years? Convert cat years to human years with the standard veterinary chart and see your cat’s life stage — kitten, young adult, mature, or senior — and the care it needs.',
+    desc: 'How old is your cat in human years? Convert cat years to human years with the standard veterinary chart and see your cat’s life stage — kitten, young adult, mature, or senior — then shop a life-stage kit (kitten food, senior food, digital pet scale, carrier, dental). Planning reference, not a diagnosis.',
     tag: 'Health',
   },
   {
