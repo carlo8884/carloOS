@@ -117,6 +117,7 @@ export default function HorseWeightCalculatorPage() {
         { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
         { title: 'Horse Age Calculator', href: '/tools/horse-age-calculator', category: 'Tools' },
+        { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
       hero={{
@@ -153,6 +154,7 @@ export default function HorseWeightCalculatorPage() {
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
               { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
               { label: 'Forage Basics', href: '/nutrition/forage-basics' },
               { label: 'Equine Health Hub', href: '/health' },
             ]}
@@ -338,7 +340,9 @@ export default function HorseWeightCalculatorPage() {
           <Link href="/tools/horse-age-calculator">horse age calculator</Link> — a planning
           reference, not a diagnosis. If the horse looks painful or off after a weigh-in, the{' '}
           <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a
-          conservative triage aid — not a diagnosis.
+          conservative triage aid — not a diagnosis. For a facial pain-watch, the{' '}
+          <Link href="/tools/horse-grimace-scale">horse grimace scale</Link> is a planning
+          reference, not a diagnosis.
         </p>
       </div>
     </ArticleLayout>

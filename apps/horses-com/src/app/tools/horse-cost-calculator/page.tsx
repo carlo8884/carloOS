@@ -133,6 +133,7 @@ export default function HorseCostCalculatorPage() {
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
         { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
         { title: 'Horse Age Calculator', href: '/tools/horse-age-calculator', category: 'Tools' },
+        { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Cost of Ownership Calculator',
@@ -172,6 +173,7 @@ export default function HorseCostCalculatorPage() {
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
               { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
               { label: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
             ]}
           />
@@ -396,7 +398,9 @@ export default function HorseCostCalculatorPage() {
           label (a planning reference, not a diagnosis). For a conservative urgency read
           before the next crisis, use the{' '}
           <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> — a
-          triage aid, not a diagnosis.
+          triage aid, not a diagnosis. For a facial pain-watch, the{' '}
+          <Link href="/tools/horse-grimace-scale">horse grimace scale</Link> is a planning
+          reference, not a diagnosis.
         </p>
 
         <CrossPortfolioCard currentSite="horses-com" contentType="tool" />

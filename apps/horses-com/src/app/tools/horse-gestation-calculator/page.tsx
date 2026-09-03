@@ -125,6 +125,7 @@ export default function HorseGestationCalculatorPage() {
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
         { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
         { title: 'Horse Age Calculator', href: '/tools/horse-age-calculator', category: 'Tools' },
+        { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Gestation & Foaling Date Calculator',
@@ -163,6 +164,7 @@ export default function HorseGestationCalculatorPage() {
               { label: 'Choosing a Vet', href: '/ownership/choosing-a-vet' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
               { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
@@ -373,7 +375,9 @@ export default function HorseGestationCalculatorPage() {
           young / adult / senior planning label — not a diagnosis. If a foaling-night sign
           looks urgent, the{' '}
           <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a
-          conservative triage aid — not a diagnosis.
+          conservative triage aid — not a diagnosis. For a facial pain-watch, the{' '}
+          <Link href="/tools/horse-grimace-scale">horse grimace scale</Link> is a planning
+          reference, not a diagnosis.
         </p>
       </div>
     </ArticleLayout>

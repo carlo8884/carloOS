@@ -331,7 +331,11 @@ export default function HorseAgeCalculatorPage() {
             <Link href="/tools/is-this-a-horse-emergency" className="text-brand-primary underline-offset-2 hover:underline">
               horse emergency sign-list
             </Link>{' '}
-            is a conservative urgency read — not a diagnosis. Breeders projecting a
+            is a conservative urgency read — not a diagnosis. For a facial pain-watch, the{' '}
+            <Link href="/tools/horse-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+              horse grimace scale
+            </Link>{' '}
+            is a planning reference, not a diagnosis. Breeders projecting a
             foal&apos;s arrival can use the{' '}
             <Link href="/tools/horse-gestation-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               gestation calculator
@@ -357,6 +361,7 @@ export default function HorseAgeCalculatorPage() {
               { label: 'Horse Cost Calculator', href: '/tools/horse-cost-calculator', note: 'Monthly and annual keeping cost' },
               { label: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', note: 'Foaling date from breeding date' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', note: 'Facial pain-watch for seniors and sore horses — not a diagnosis' },
               { label: 'Senior Horse Care', href: '/ownership/senior-horse-care', note: 'No fixed birthday — watch teeth, weight, joints' },
               { label: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses', note: 'Dental decline, senior feeds, PPID feeding' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
