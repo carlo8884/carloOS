@@ -56,7 +56,7 @@ const TOOLS = [
   {
     href: '/tools/horse-cost-calculator',
     title: 'Horse Cost of Ownership Calculator',
-    desc: 'Estimate the true monthly and annual cost of keeping a horse — board, feed, farrier, vet, dental, vaccines, insurance, and one-time startup — with an editable per-category breakdown using 2026 US ranges.',
+    desc: 'Estimate monthly and annual keeping costs — board, feed, farrier, vet, insurance — then pack a shoppable first-horse startup kit (halter, grooming, hoof pick, scoop, barn first-aid, fly mask).',
     tag: 'Budgeting',
   },
   {

@@ -13,8 +13,11 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import StartupKit from './StartupKit'
 
 const URL = 'https://horses.com/tools/horse-cost-calculator'
 
@@ -74,6 +77,7 @@ const softwareApplicationSchema = {
     'Board-type presets (full / partial / pasture / self-care) with 2026 US range guidance',
     'Farrier costed on a ~6-week cycle (~8.7 visits/year)',
     'Monthly and annual totals with a per-category breakdown table',
+    'Interactive first-horse startup kit with Amazon shop hops',
     'Estimates framed against large regional and individual variation',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
@@ -147,6 +151,7 @@ export default function HorseCostCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Startup kit', href: '#startup-kit' },
               { label: 'What goes into the cost', href: '#categories' },
               { label: 'How it works', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -161,16 +166,10 @@ export default function HorseCostCalculatorPage() {
               { label: 'Horse Insurance', href: '/ownership/horse-insurance' },
               { label: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
               { label: 'First Horse Roadmap', href: '/first-horse-roadmap' },
+              { label: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="cost-calculator"
-          />
         </>
       }
     >
@@ -178,7 +177,7 @@ export default function HorseCostCalculatorPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -186,6 +185,28 @@ export default function HorseCostCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the worksheet
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horse ownership cost checklist
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the horse budget worksheet — board, feed, farrier, vet, and the six-item
+            startup kit — so you can shop the first-horse basics without re-running the math.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horse ownership cost checklist"
+            subtitle="Email the horse budget worksheet — board, feed, farrier, vet, and the startup kit. No spam."
+            ctaText="Email my horse budget worksheet"
+            source="tools-horse-cost-calculator-under-hero"
+          />
+        </div>
 
         <p>
           <strong>The quick answer:</strong> for most US owners, keeping one horse costs roughly{' '}
@@ -206,6 +227,56 @@ export default function HorseCostCalculatorPage() {
           local quotes for the most accurate result.
         </p>
         <Calculator />
+
+        <h2 id="startup-kit">Startup kit checklist</h2>
+        <p>
+          Once you have a monthly number, pack the day-one kit that fills the one-time
+          tack line. The six-item list below is a husbandry starting point — halter and
+          lead, grooming kit, hoof pick, feed scoop or scale, barn first-aid kit, and a
+          fly mask — not a ranked product list and not a substitute for the tack your
+          barn or trainer specifies.
+        </p>
+        <StartupKit />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop the startup kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            The six-item list above is a husbandry starting point — halter and lead,
+            grooming kit, hoof pick, feed scoop, barn first-aid, fly mask — not a ranked
+            product list. Same Amazon search hops as the checklist rows. Horses.com earns
+            a commission on qualifying purchases at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
+              amazonLabel="Browse horse halters and leads on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+grooming+kit?s=tools-horse-cost-calculator"
+              amazonLabel="Browse horse grooming kits on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-horse-cost-calculator"
+              amazonLabel="Browse hoof picks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-cost-calculator"
+              amazonLabel="Browse feed scoops and scales on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+barn+first+aid+kit?s=tools-horse-cost-calculator"
+              amazonLabel="Browse barn first-aid kits on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+fly+mask?s=tools-horse-cost-calculator"
+              amazonLabel="Browse horse fly masks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="categories">What goes into the cost of a horse</h2>
         <p>
@@ -305,9 +376,12 @@ export default function HorseCostCalculatorPage() {
 
         <p className="mt-8 text-sm">
           Next: set a forage target with the{' '}
-          <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, and read the
+          <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, size bedding
+          with the{' '}
+          <Link href="/tools/stall-bedding-calculator">stall bedding calculator</Link>, and read the
           full <Link href="/ownership/cost-of-owning-a-horse">cost-of-owning-a-horse guide</Link> before you
-          buy.
+          buy. Everyday handling starts with{' '}
+          <Link href="/tack/halters-and-lead-ropes">halters and lead ropes</Link>.
         </p>
 
         <CrossPortfolioCard currentSite="horses-com" contentType="tool" />
