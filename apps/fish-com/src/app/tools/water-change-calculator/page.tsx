@@ -147,6 +147,7 @@ export default function WaterChangeCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop water-change gear', href: '#shop' },
               { label: 'How the volume math works', href: '#volume-math' },
               { label: 'When to change more often', href: '#more-often' },
               { label: 'FAQ', href: '#faq' },
@@ -166,6 +167,13 @@ export default function WaterChangeCalculatorPage() {
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="fish-com"
+            title="The Weekly Tank"
+            subtitle="Water-change math, test-kit notes, and equipment picks. No spam."
+            source="water-change-calculator"
+          />
         </>
       }
     >
@@ -180,22 +188,73 @@ export default function WaterChangeCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the change plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Water-change checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the weekly percent, gallons to siphon, dechlorinator note, and
+            the shoppable change kit (Python-style changer, gravel vacuum, Seachem
+            Prime, API test kit) so you can run the schedule without re-running
+            the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Water-change checklist"
+            subtitle="Email the water-change checklist, weekly percent, and shoppable change kit. No spam."
+            ctaText="Email my water-change checklist"
+            source="tools-water-change-calculator-under-hero"
+          />
+        </div>
+
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
+        {/* Money path — live amazon-brand search hops (Python changer / gravel
+            vacuum / Seachem Prime / API test kit). ShopCtas hides empty Chewy;
+            never href="#" or PLACEHOLDER. Python + gravel-vacuum queries already
+            live on this page / ResultCTA; Prime matches the disease-checker hop;
+            API kit matches the water-test review and stocking tool. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop water-change gear
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            A hose-to-sink changer (Python-style) or a gravel-vacuum siphon makes the weekly change
-            faster; a liquid kit tells you whether the schedule is actually working. Same Amazon hops
-            used on the{' '}
-            <Link href="/reviews/best-water-test-kits" className="text-brand-primary no-underline hover:underline">
+            These Amazon category searches match the gallons you just calculated
+            — a hose-to-sink Python-style changer or a gravel-vacuum siphon
+            (same queries this tool already used on the result CTA), Seachem
+            Prime dechlorinator (same query as the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease symptom checker
+            </Link>
+            ), and the API Freshwater Master Test Kit (same query as the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
               water-test kit review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            {' '}and the{' '}
+            <Link
+              href="/tools/stocking-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              stocking calculator
+            </Link>
+            ). Dose conditioner before new water touches the tank. They are not
+            a ranked product list and not invented inventory. Fish.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
@@ -205,6 +264,10 @@ export default function WaterChangeCalculatorPage() {
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
               amazonLabel="Shop gravel vacuums on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"
+              amazonLabel="Shop water conditioner / dechlorinator on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
