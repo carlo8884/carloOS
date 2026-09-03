@@ -15,6 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 type SizeCategory = 'small' | 'medium' | 'large' | 'giant'
 
@@ -49,6 +50,41 @@ function getLifeStage(dogAge: number, size: SizeCategory): string {
   return 'Adult'
 }
 
+const SHOP_SOURCE = 'tools-dog-age'
+
+function resultShop(lifeStage: string): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  if (lifeStage === 'Puppy' || lifeStage === 'Adolescent') {
+    return {
+      heading: 'Puppy-stage kit: food and teething toys',
+      blurb:
+        'A puppy or adolescent estimate is a life-stage label, not a feeding or chew plan. Puppy food and teething toys are husbandry starting points while teeth and growth are still changing. Ask your veterinarian which diet and chew style fit this dog — this tool does not recommend a brand or diagnose a dental problem.',
+      href: `/go/amazon-brand/puppy+food+teething+toys?s=${SHOP_SOURCE}`,
+      label: 'Browse puppy food and teething toys on Amazon →',
+    }
+  }
+  if (lifeStage === 'Senior') {
+    return {
+      heading: 'Senior-stage kit: joint-support treats',
+      blurb:
+        'A senior estimate is a planning label, not a diagnosis of arthritis or other age-related disease. Joint-support treats are a common husbandry item at this stage. Ask your veterinarian whether a joint supplement fits this dog and which ingredients to look for — this tool does not prescribe a product.',
+      href: `/go/amazon-brand/joint+support+dog+treats?s=${SHOP_SOURCE}`,
+      label: 'Browse joint-support dog treats on Amazon →',
+    }
+  }
+  return {
+    heading: 'Adult-stage kit: dental chews',
+    blurb:
+      'An adult or mature-adult estimate is a life-stage label, not a dental diagnosis. Dental chews are a common adult husbandry item; they do not replace brushing or a veterinary dental exam. Ask your veterinarian which chew size and texture are safe for this dog.',
+    href: `/go/amazon-brand/dental+chews+dog?s=${SHOP_SOURCE}`,
+    label: 'Browse dental chews for dogs on Amazon →',
+  }
+}
+
 export default function DogAgeCalculator() {
   const [ageStr, setAgeStr] = useState<string>('3')
   const [size, setSize]     = useState<SizeCategory>('medium')
@@ -59,6 +95,7 @@ export default function DogAgeCalculator() {
 
   const humanAge  = useMemo(() => computeHumanAge(dogAge, sizeOpt.perYear), [dogAge, sizeOpt])
   const lifeStage = useMemo(() => getLifeStage(dogAge, size),                [dogAge, size])
+  const shop = isValid ? resultShop(lifeStage) : null
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -166,6 +203,20 @@ export default function DogAgeCalculator() {
         Aging varies by breed, size, and individual health; smaller dogs generally age more slowly
         in later years. Not a substitute for veterinary assessment.
       </div>
+
+      {shop ? (
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Next step
+          </p>
+          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+            {shop.heading}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
+        </div>
+      ) : null}
 
       <p className="mt-4 text-xs text-brand-text-light">
         Formula: age&nbsp;&le;&nbsp;1&nbsp;yr: 15&nbsp;&times;&nbsp;dog-age;
