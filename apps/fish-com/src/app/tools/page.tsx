@@ -41,7 +41,7 @@ const TOOLS = [
   {
     href: '/tools/pond-volume-calculator',
     title: 'Pond Volume Calculator',
-    desc: 'Koi or garden pond volume in gallons and liters. Rectangular, circular, and oval shapes, with an ~85% factor for irregular ponds.',
+    desc: 'Koi or garden pond volume in gallons and liters. Rectangular, circular, and oval — then size a liner, pump, and filter kit.',
     tag: 'Ponds',
   },
   {
