@@ -398,6 +398,7 @@ export default function IsThisAHorseEmergencyPage() {
               { label: 'Choosing an Equine Vet', href: '/ownership/choosing-a-vet', note: 'Line up emergency cover before a crisis' },
               { label: 'Lameness Basics', href: '/health/lameness-basics', note: 'AAEP 0–5 grades and when to call' },
               { label: 'Horse Cost Calculator', href: '/tools/horse-cost-calculator', note: 'Size the emergency-fund line' },
+              { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator', note: 'Human-year estimate and foal / young / adult / senior label' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (

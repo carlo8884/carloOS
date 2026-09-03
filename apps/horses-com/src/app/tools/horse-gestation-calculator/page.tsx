@@ -124,6 +124,7 @@ export default function HorseGestationCalculatorPage() {
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
         { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
+        { title: 'Horse Age Calculator', href: '/tools/horse-age-calculator', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Gestation & Foaling Date Calculator',
@@ -161,6 +162,7 @@ export default function HorseGestationCalculatorPage() {
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Choosing a Vet', href: '/ownership/choosing-a-vet' },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+              { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
@@ -366,7 +368,10 @@ export default function HorseGestationCalculatorPage() {
           <Link href="/tools/horse-weight-calculator">horse weight calculator</Link>, and set a
           forage target with the{' '}
           <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link>.
-          If a foaling-night sign looks urgent, the{' '}
+          After the foal arrives, the{' '}
+          <Link href="/tools/horse-age-calculator">horse age calculator</Link> gives a foal /
+          young / adult / senior planning label — not a diagnosis. If a foaling-night sign
+          looks urgent, the{' '}
           <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a
           conservative triage aid — not a diagnosis.
         </p>

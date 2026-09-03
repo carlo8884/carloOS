@@ -184,6 +184,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/tack/stirrups-and-safety', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://horses.com/tools/body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/horse-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-feed-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-gestation-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
