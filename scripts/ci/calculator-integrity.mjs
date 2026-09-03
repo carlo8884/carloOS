@@ -269,6 +269,35 @@ const CALCULATORS = [
     why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
   },
   {
+    id: 'dog · puppy-weight-predictor',
+    file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
+    mustInclude: [
+      { re: /currentWeightLb \/ fraction/, label: 'adult ≈ current weight ÷ growth fraction' },
+      { re: /useState<number>\(3\)/, label: 'default Large size class (index 3)' },
+      { re: /useState<string>\('14'\)/, label: 'default age 14 weeks' },
+      { re: /useState<string>\('20'\)/, label: 'default current weight 20 lb' },
+      { re: /\{ weeks: 16, fraction: 0\.40 \}/, label: 'large 16 wk = 40% of adult weight' },
+      { re: /\{ weeks: 12, fraction: 0\.30 \}/, label: 'large 12 wk = 30% of adult weight (14 wk interpolates to 35%)' },
+    ],
+    why: 'Growth-percentage method: adult ≈ current ÷ fraction. Defaults match the on-page 20 lb / 14 wk large-breed worked example (20 ÷ 0.35 ≈ 57 lb). Large 16 wk is 40%, not the small-breed double-at-16-weeks shortcut.',
+  },
+  {
+    id: 'dog · puppy-weight-predictor hops',
+    file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/page.tsx',
+    mustInclude: [
+      { re: /source="tools-puppy-weight-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy growth notes"/, label: 'concrete puppy-growth offer, not Subscribe' },
+      { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-weight-predictor/, label: 'scale search hop (same query as ideal-weight tool)' },
+      { re: /amazon-brand\/puppy\+food\?s=tools-puppy-weight-predictor/, label: 'puppy food search hop' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-weight-predictor/, label: 'crate search hop (same query as crate-size tool)' },
+    ],
+    mustExclude: [
+      { re: /PLACEHOLDER/, label: 'placeholder ASIN or hop' },
+      { re: /href="#"/, label: 'dead hash link' },
+    ],
+    why: 'Money path: under-hero capture with a concrete growth offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or href="#".',
+  },
+  {
     id: 'dog · new-puppy-checklist',
     file: 'apps/dog-com/src/app/tools/new-puppy-checklist/Calculator.tsx',
     mustInclude: [

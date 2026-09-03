@@ -38,7 +38,7 @@ const TOOLS = [
   {
     href: '/tools/puppy-weight-predictor',
     title: 'Puppy Weight Predictor',
-    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves -- toy, small, medium, large, and giant breeds mature on different curves.',
+    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves, then shop a growth kit (scale, puppy food, crate with divider, slow feeder). Planning estimate, not a diagnosis.',
     tag: 'Puppy',
   },
   {

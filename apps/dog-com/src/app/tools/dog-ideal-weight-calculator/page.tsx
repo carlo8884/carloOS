@@ -412,6 +412,7 @@ export default function DogIdealWeightCalculatorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Puppy Weight Predictor', href: '/tools/puppy-weight-predictor', note: 'How big will a growing puppy get?' },
               { label: 'New Puppy Checklist', href: '/tools/new-puppy-checklist', note: 'First-week kit sized to the adult dog' },
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily calories, with a weight-loss factor' },
               { label: 'Body Condition Score Guide', href: '/guides/dog-body-condition-score', note: 'The hands-on 9-point assessment' },

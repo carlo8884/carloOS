@@ -191,6 +191,7 @@ function fmtRange(lowLb: number, highLb: number, unit: Unit): string {
 }
 
 export default function PuppyWeightPredictor() {
+  // Zero-input defaults match the on-page worked example (large, 14 wk, 20 lb).
   const [sizeIndex, setSizeIndex] = useState<number>(3) // default Large (most-searched)
   const [ageWeeks, setAgeWeeks] = useState<string>('14')
   const [weight, setWeight] = useState<string>('20')
@@ -352,11 +353,12 @@ export default function PuppyWeightPredictor() {
 
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
-        <span className="font-semibold">An estimate, not a guarantee.</span>{' '}
+        <span className="font-semibold">An estimate, not a diagnosis.</span>{' '}
         This uses the standard growth-percentage method (adult weight ≈ current weight ÷ the share of
         adult weight reached at the current age) with published size-class growth curves. Real puppies
         vary by breed, sex, nutrition, neuter timing, and individual genetics. Treat the range as a
-        planning guide, and ask your veterinarian to track growth against a body-condition curve.
+        planning guide — crate size, food, and first-year budget — not a growth-disorder screen.
+        Ask your veterinarian to track weight against a body-condition curve.
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">

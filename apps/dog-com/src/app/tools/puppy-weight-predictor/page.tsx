@@ -12,6 +12,7 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Predictor from './Predictor'
 
@@ -59,6 +60,13 @@ const FAQS = [
     answerText:
       'Estimate from the parents\' sizes, or use a breed/DNA test. If unsure, run two adjacent size classes and treat the combined span as the range. A vet growth chart over several visits is the best check.',
   },
+  {
+    question: 'Can this tool tell me if my puppy is growing too fast or too slowly?',
+    answer:
+      'No. This is a planning estimate from typical size-class growth fractions, not a growth-disorder screen and not a veterinary diagnosis. A puppy that sits well outside a published breed curve, loses weight, or has a sudden jump or stall in appetite should be checked by a veterinarian. Body condition (rib feel, waist, belly tuck) matters as much as the number on the scale — a heavy puppy can still be under-muscled, and a light puppy can still be in good condition.',
+    answerText:
+      'No. It is a planning range from typical growth fractions, not a diagnosis. Sudden stalls, weight loss, or a puppy far off a breed curve belong with a veterinarian. Body condition matters as much as scale weight.',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -79,6 +87,13 @@ const appSchema = {
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Adult-weight range from current age and weight using size-class growth fractions',
+    'Defaults to a 14-week, 20 lb large-breed example so the range is visible with zero extra input',
+    'Avoids the single "double at 16 weeks" shortcut that underestimates large and giant breeds',
+    'Shoppable growth kit via Amazon category searches (scale, puppy food, crate, slow feeder)',
+  ],
+  publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
 
 const articleSchema = buildArticleSchema({
@@ -90,7 +105,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11',
-  modifiedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
 
   citation: SOURCES,
 })
@@ -106,11 +121,11 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Enter the puppy\'s current age',
-      text: 'Enter the puppy\'s current age in weeks or months. Predictions made before about 8 weeks are the least reliable.',
+      text: 'Enter the puppy\'s current age in weeks or months. Predictions made before about 8 weeks are the least reliable. The tool defaults to 14 weeks so a range is visible immediately.',
     },
     {
       name: 'Enter the puppy\'s current weight',
-      text: 'Enter the puppy\'s current body weight in pounds or kilograms.',
+      text: 'Enter the puppy\'s current body weight in pounds or kilograms. The default 20 lb large-breed example matches the worked example on this page.',
     },
     {
       name: 'Read the adult weight estimate range',
@@ -166,6 +181,31 @@ export default function PuppyWeightPredictorPage() {
         <span className="text-brand-text-mid font-medium">Puppy Weight Predictor</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the growth notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Puppy growth planning notes
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the adult-size range recap, crate and food sizing notes, and the
+            shoppable growth kit (scale, puppy food, crate with divider, slow feeder)
+            so you can re-weigh next month without re-running the estimate. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Puppy growth planning notes"
+            subtitle="Email the adult-size range recap, crate and food sizing notes, and the shoppable growth kit. No spam."
+            ctaText="Email my puppy growth notes"
+            source="tools-puppy-weight-under-hero"
+          />
+        </div>
+      </section>
+
       {/* GEO: extractable answer + worked example, ABOVE the tool */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
@@ -190,7 +230,8 @@ export default function PuppyWeightPredictorPage() {
             </p>
             <p className="text-sm text-brand-text-light leading-relaxed m-0">
               The output is a <span className="font-semibold">range</span>, never a single guaranteed
-              number: breed, sex, nutrition, and individual genetics all shift the curve.
+              number: breed, sex, nutrition, and individual genetics all shift the curve. This is
+              husbandry planning, not a growth diagnosis.
             </p>
           </div>
         </div>
@@ -200,6 +241,58 @@ export default function PuppyWeightPredictorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Predictor />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (growth / weigh-in kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="puppy-growth-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a puppy growth kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that make an
+              adult-weight estimate repeatable — a digital kitchen / pet scale,
+              puppy food (including large-breed formulas when the adult dog
+              will be big), an adult-size wire crate with a divider, a slow
+              feeder, and a measuring tape / body-condition chart. They are
+              not a ranked product list, not invented inventory, and they do
+              not diagnose a growth problem or set a feeding plan. Ask your
+              veterinarian to plot weight on a growth chart. Dog.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse kitchen / pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse large-breed puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse slow-feeder bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"
+                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -261,15 +354,23 @@ export default function PuppyWeightPredictorPage() {
               Next step
             </div>
             <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-              Got an adult-weight estimate? A growing puppy&apos;s calorie needs change fast. Use the{' '}
+              Got an adult-weight estimate? Size the crate once to the adult dog with the{' '}
+              <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+                crate size calculator
+              </Link>
+              , pack the{' '}
+              <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+                new-puppy checklist
+              </Link>
+              , then use the{' '}
               <Link href="/tools/dog-calorie-calculator" className="text-brand-primary underline-offset-2 hover:underline">
                 dog calorie calculator
               </Link>{' '}
-              to size daily intake, read the{' '}
+              and the{' '}
               <Link href="/nutrition/puppy-nutrition" className="text-brand-primary underline-offset-2 hover:underline">
                 puppy nutrition guide
-              </Link>
-              , then compare large- and small-breed-appropriate puppy formulas.
+              </Link>{' '}
+              for feeding. Compare large- and small-breed-appropriate puppy formulas next.
             </p>
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
@@ -307,10 +408,14 @@ export default function PuppyWeightPredictorPage() {
               puppy nutrition guide
             </Link>{' '}
             and the{' '}
-            <Link href="/puppy-schedule" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href="/training/puppy-schedule" className="text-brand-primary underline-offset-2 hover:underline">
               puppy schedule
             </Link>
-            .
+            . Once the dog is adult, switch to the{' '}
+            <Link href="/tools/dog-ideal-weight-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              ideal weight calculator
+            </Link>{' '}
+            and a body-condition check rather than this growth curve.
           </p>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">
@@ -330,12 +435,14 @@ export default function PuppyWeightPredictorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: 'Dog Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator', note: 'Due date plus a packable whelping kit' },
+              { label: 'New Puppy Checklist', href: '/tools/new-puppy-checklist', note: 'Day-one kit sized to the adult dog' },
+              { label: 'Dog Crate Size Calculator', href: '/tools/dog-crate-size-calculator', note: 'Adult-size crate with a divider' },
+              { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget', note: 'Crate, food, vet, and training ranges' },
+              { label: 'Dog Ideal Weight Calculator', href: '/tools/dog-ideal-weight-calculator', note: 'Healthy adult weight once growth slows' },
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily calories for your growing puppy' },
-              { label: 'Dog Age in Human Years', href: '/tools/dog-age-calculator', note: 'Life-stage by size class' },
               { label: 'Puppy Nutrition Guide', href: '/nutrition/puppy-nutrition', note: 'How and what to feed a puppy' },
               { label: 'Best Puppy Food 2026', href: '/reviews/best-dog-food-for-puppies', note: 'Large- and small-breed formulas' },
-              { label: 'Puppy Schedule', href: '/puppy-schedule', note: 'Week-by-week first-year plan' },
+              { label: 'Dog Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator', note: 'Due date plus a packable whelping kit' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -347,19 +454,6 @@ export default function PuppyWeightPredictorPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com puppy &amp; tool updates"
-            subtitle="Research-based puppy care guidance and new tool announcements. No spam."
-            source="tools-puppy-weight-predictor"
-          />
         </div>
       </section>
 
