@@ -169,7 +169,10 @@ export default function CatGrimaceScalePage() {
           facial action units below on a calm, unprovoked cat and the tool totals them on the
           0–10 scale used by the validated Feline Grimace Scale. For life-stage
           context — including senior screening — use the{' '}
-          <Link href="/tools/cat-age-calculator">cat age calculator</Link>.
+          <Link href="/tools/cat-age-calculator">cat age calculator</Link>. For
+          weight, the{' '}
+          <Link href="/tools/cat-body-condition-score">cat body condition score</Link>{' '}
+          is a wellness reference, not a diagnosis.
         </p>
         <CatGrimaceScale />
 

@@ -8,6 +8,8 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -33,7 +35,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-06-14T00:00:00Z',
-  modifiedAt: '2026-06-14T00:00:00Z',
+  modifiedAt: '2026-09-03T00:00:00Z',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -59,6 +61,7 @@ const softwareApplicationSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal fat pad',
     'Primordial-pouch caveat (a normal belly flap mistaken for fat)',
     'Interpretation: underweight, ideal, overweight, obese, with safe next steps',
+    'Shoppable weight-management kit via Amazon category searches (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive cat toy)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -72,7 +75,7 @@ const howToSchema = buildHowToSchema({
     { name: 'Feel the ribs', text: 'Run both hands gently along the chest. At ideal condition you feel the ribs easily under a thin layer of fat.' },
     { name: 'Look from above', text: 'With the cat standing, look down. At ideal condition there is a visible waist behind the ribs.' },
     { name: 'Judge the belly from the side', text: 'Assess the firm abdominal fat pad — not the normal primordial pouch (a loose skin flap). At ideal there is only a minimal fat pad and a slight tuck.' },
-    { name: 'Combine into a score', text: 'Average the three checks to an estimated BCS of 1–9 (4–5 is ideal), then follow the interpretation and confirm with your veterinarian.' },
+    { name: 'Combine into a score', text: 'Average the three checks to an estimated BCS of 1–9 (4–5 is ideal), then follow the interpretation and confirm with your veterinarian. This is a planning / wellness reference, not a diagnosis.' },
   ],
 })
 
@@ -102,6 +105,11 @@ const FAQS = [
     answer:
       'They work together, but BCS is the better single measure because it judges the cat against its own frame rather than a breed average. Find your cat’s ideal weight at a BCS of 4–5, then track the scale against that target. A half-kilogram change is large for a cat, so regular weighing plus body condition scoring catches problems early.',
   },
+  {
+    question: 'Is this body-condition score a diagnosis?',
+    answer:
+      'No. It is a planning and wellness reference only. The WSAVA 1–9 scale helps you talk with your veterinarian about weight and a safe feeding plan; it does not diagnose a disease, set a calorie target, or replace an exam. Unexplained weight loss or gain in a cat belongs with a veterinarian — or start with telehealth when the cat is stable and this is not an emergency.',
+  },
 ]
 
 export default function CatBodyConditionScorePage() {
@@ -128,6 +136,7 @@ export default function CatBodyConditionScorePage() {
           <TableOfContents
             items={[
               { label: 'The assessor', href: '#assessor' },
+              { label: 'Weight-management kit', href: '#cat-bcs-kit' },
               { label: 'How it works', href: '#how' },
               { label: 'Safe weight loss in cats', href: '#safe' },
               { label: 'Sources', href: '#sources' },
@@ -138,20 +147,15 @@ export default function CatBodyConditionScorePage() {
             title="Weight & wellness"
             links={[
               { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator' },
+              { label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale' },
               { label: 'Weight Management', href: '/health/weight-management' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
               { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' },
-              { label: 'Find a Vet', href: '/tools/insurance-finder' },
+              { label: 'Insurance Coverage Finder', href: '/tools/insurance-finder' },
+              { label: 'Talk to a vet (telehealth)', href: '/telehealth' },
             ]}
           />
           <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="vets-co"
-            title="Vets.co reference letter"
-            subtitle="Veterinary references for pet owners."
-            source="cat-body-condition-score"
-          />
         </>
       }
     >
@@ -159,16 +163,122 @@ export default function CatBodyConditionScorePage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the BCS chart
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Cat BCS chart &amp; weight-management recap
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the 1–9 WSAVA BCS chart (rib feel, waist, abdominal fat pad)
+            and the weight-management recap so you can re-score next month
+            without re-reading the descriptors. Planning / wellness reference
+            only — not a diagnosis. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Cat BCS chart & weight-management recap"
+            subtitle="Email the 1–9 WSAVA BCS chart and weight-management recap. No spam."
+            ctaText="Email my BCS chart"
+            source="tools-cat-body-condition-score-under-hero"
+          />
+        </div>
+
         <h2 id="assessor">The assessor</h2>
         <p>
           Body condition scoring is how veterinarians judge whether a cat carries a healthy amount of
           fat, independent of breed or scale weight. Answer the three checks below — feel the ribs,
           look down at the waist, and judge the belly from the side — and the tool estimates a body
-          condition score from 1 to 9, where 4–5 is ideal. Pair it with the{' '}
+          condition score from 1 to 9, where 4–5 is ideal. This is a planning / wellness reference,
+          not a diagnosis. Pair it with the{' '}
           <Link href="/tools/cat-age-calculator">cat age calculator</Link> to match
-          weight checks to AAFP/AAHA life stage.
+          weight checks to AAFP/AAHA life stage, and the{' '}
+          <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> if you are
+          also wondering about pain.
         </p>
         <CatBodyConditionScore />
+
+        {/* Money path — live amazon-brand search hops (weight-management kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list, not a diagnosis. */}
+        <div id="cat-bcs-kit" className="mt-8 mb-8">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a weight-management kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that make a
+              body-condition score repeatable — a digital pet scale, a measuring
+              tape, weight-management cat food, a puzzle feeder, and an
+              interactive cat toy. They are not a ranked product list, not
+              invented inventory, and they do not diagnose a weight problem or
+              set a calorie target. Ask your veterinarian for a target weight
+              and a safe rate of change before cutting or adding calories.
+              Vets.co earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score"
+                amazonLabel="Browse digital pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/measuring+tape?s=tools-cat-body-condition-score"
+                amazonLabel="Browse measuring tapes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/weight+management+cat+food?s=tools-cat-body-condition-score"
+                amazonLabel="Browse weight-management cat food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puzzle+feeder?s=tools-cat-body-condition-score"
+                amazonLabel="Browse puzzle feeders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"
+                amazonLabel="Browse interactive cat toys on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Planning ahead
+          </div>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Weight-related disease (diabetes, arthritis, urinary disease) is
+            one of the cost drivers pet insurance is built for. Comparing
+            published coverage while a cat is young and healthy matters because
+            pre-existing conditions are excluded. For a non-emergency question
+            about weight or feeding, talk to a licensed vet on a screen rather
+            than waiting for a gap to become an ER visit.
+          </p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <Link
+              href="/tools/insurance-finder"
+              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Filter insurance coverage →
+            </Link>
+            <Link
+              href="/reviews/best-pet-insurance"
+              className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
+            >
+              Compare pet insurance →
+            </Link>
+            <Link
+              href="/telehealth"
+              className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+            >
+              Talk to a vet (telehealth) →
+            </Link>
+          </div>
+        </div>
 
         <h2 id="how">How it works</h2>
         <p>
@@ -192,7 +302,8 @@ export default function CatBodyConditionScorePage() {
           trigger <strong>hepatic lipidosis</strong> (fatty liver), a serious and sometimes fatal
           condition unique in its severity to cats. Your veterinarian will set a target weight and a
           measured daily calorie amount — often with a therapeutic diet — and re-check regularly. This
-          tool is a starting point to look and feel the right way, not a diagnosis or a diet plan.
+          tool is a planning / wellness reference, not a diagnosis or a diet plan. For a stable,
+          non-emergency question, start at <Link href="/telehealth">telehealth</Link>.
         </p>
 
         <h2 id="sources">Sources</h2>
