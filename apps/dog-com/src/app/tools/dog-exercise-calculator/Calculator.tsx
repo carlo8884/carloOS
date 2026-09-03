@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 type Stage = 'puppy' | 'adult' | 'senior'
 type Energy = 'low' | 'moderate' | 'high' | 'veryhigh'
@@ -22,6 +23,50 @@ const ENERGY_OPTIONS: { value: Energy; label: string; example: string; min: numb
   { value: 'high', label: 'High energy', example: 'e.g. Labrador, German Shepherd, sporting breeds', min: 60, max: 90 },
   { value: 'veryhigh', label: 'Very high / working', example: 'e.g. Border Collie, Husky, Malinois', min: 90, max: 120 },
 ]
+
+const SHOP_SOURCE = 'tools-dog-exercise'
+
+function resultShop(stage: Stage, energy: Energy): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  if (stage === 'puppy') {
+    return {
+      heading: 'Puppy-stage kit: Kong / stuffable toys',
+      blurb:
+        'A puppy exercise estimate is a joint-safe cap, not a fetch plan. Short structured walks plus free play beat long runs. A stuffable toy is indoor mental work while growth plates are still open. Ask your veterinarian before adding impact play — this tool does not prescribe a workout.',
+      href: `/go/amazon-brand/kong+classic+dog+toy+stuffable?s=${SHOP_SOURCE}`,
+      label: 'Browse Kong fetch / stuffable toys on Amazon →',
+    }
+  }
+  if (stage === 'senior') {
+    return {
+      heading: 'Senior-stage kit: a well-fitted harness',
+      blurb:
+        'A senior estimate is a low-impact range, not a diagnosis of arthritis or other age-related disease. A well-fitted harness is easier on the neck for shorter, more frequent walks. Ask your veterinarian how much walking this dog should do — this tool does not prescribe a product or a plan.',
+      href: `/go/amazon-brand/julius+k9+idc+powerharness?s=${SHOP_SOURCE}`,
+      label: 'Browse Julius-K9 harnesses on Amazon →',
+    }
+  }
+  if (energy === 'high' || energy === 'veryhigh') {
+    return {
+      heading: 'High-energy kit: fetch toys',
+      blurb:
+        'A high-energy estimate is a daily minutes range, not a sport prescription. Fetch toys and a well-fitted harness help burn that budget without inventing a training plan. Build fitness gradually and cut back in heat. Ask your veterinarian before ramping up work for an unfit dog.',
+      href: `/go/amazon-brand/dog+fetch+toys?s=${SHOP_SOURCE}`,
+      label: 'Browse dog fetch toys on Amazon →',
+    }
+  }
+  return {
+    heading: 'Adult-stage kit: a daily-walk leash',
+    blurb:
+      'A moderate or low-energy estimate is a daily minutes range, not a diagnosis. A sturdy leash is the starting husbandry item for that walk. Pair it with a fitted harness from the shop list below if your dog pulls. This tool does not recommend a brand.',
+    href: `/go/amazon-brand/dog+leash?s=${SHOP_SOURCE}`,
+    label: 'Browse dog leashes on Amazon →',
+  }
+}
 
 export default function DogExerciseCalculator() {
   const [stage, setStage] = useState<Stage>('adult')
@@ -54,6 +99,8 @@ export default function DogExerciseCalculator() {
       tone: 'good' as const,
     }
   }, [stage, months, energy])
+
+  const shop = resultShop(stage, energy)
 
   const Toggle = ({ value, current, onClick, children }: { value: string; current: string; onClick: () => void; children: React.ReactNode }) => (
     <button
@@ -124,6 +171,18 @@ export default function DogExerciseCalculator() {
           {result.headline}
         </p>
         <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.body}</p>
+      </div>
+
+      <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+        <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+          Next step
+        </p>
+        <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+          {shop.heading}
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
+        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
       </div>
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">

@@ -80,7 +80,7 @@ const TOOLS = [
   {
     href: '/tools/dog-exercise-calculator',
     title: 'Dog Exercise Calculator',
-    desc: 'How much exercise does your dog need? Get a daily target by life stage and energy level — including the joint-safe 5-minute-per-month rule for puppies and low-impact senior guidance.',
+    desc: 'How much exercise does your dog need? Get a daily target by life stage and energy level — including the joint-safe 5-minute-per-month rule for puppies and low-impact senior guidance — then shop walk gear (leash, harness, fetch toys, activity tracker).',
     tag: 'Health',
   },
   {
