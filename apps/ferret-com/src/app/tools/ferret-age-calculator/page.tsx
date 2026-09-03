@@ -313,11 +313,15 @@ export default function FerretAgeCalculatorPage() {
             <Link href="/diet/senior-ferret-nutrition" className="text-brand-primary underline-offset-2 hover:underline">
               senior ferret nutrition
             </Link>{' '}
-            once a ferret is senior. Pair the label with the{' '}
+            once a ferret is senior.             Pair the label with the{' '}
+            <Link href="/tools/ferret-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret body condition score
+            </Link>
+            , the{' '}
             <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">
               food evaluator
-            </Link>{' '}
-            and the{' '}
+            </Link>
+            , and the{' '}
             <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               cost calculator
             </Link>
@@ -345,6 +349,7 @@ export default function FerretAgeCalculatorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
               { label: 'Ferret Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
               { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },

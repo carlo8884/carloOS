@@ -291,9 +291,13 @@ export default function CageSizeCalculatorPage() {
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
               litter planner
             </Link>
-            . Match calendar age to a life-stage label with the{' '}
+            .             Match calendar age to a life-stage label with the{' '}
             <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               ferret age calculator
+            </Link>
+            . Score fat cover against the ferret&apos;s own frame with the{' '}
+            <Link href="/tools/ferret-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret body condition score
             </Link>
             .
           </p>
@@ -313,6 +317,7 @@ export default function CageSizeCalculatorPage() {
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
+              { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },

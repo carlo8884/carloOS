@@ -305,10 +305,14 @@ export default function CostCalculatorPage() {
             <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">
               ferret emergency sign-list
             </Link>{' '}
-            is a conservative urgency read — not a diagnosis. Match calendar age to a
+            is a conservative urgency read — not a diagnosis.             Match calendar age to a
             life-stage label with the{' '}
             <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               ferret age calculator
+            </Link>
+            . Score fat cover — not just the scale — with the{' '}
+            <Link href="/tools/ferret-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret body condition score
             </Link>
             .
           </p>
@@ -325,6 +329,7 @@ export default function CostCalculatorPage() {
             {[
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
+              { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
               { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
               { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },

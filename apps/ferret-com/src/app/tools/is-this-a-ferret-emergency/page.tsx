@@ -399,6 +399,7 @@ export default function IsThisAFerretEmergencyPage() {
               { label: 'Toxic Foods', href: '/care/toxic-foods', note: 'Chocolate, xylitol, ibuprofen, and more' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Size the emergency-fund line' },
               { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
+              { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the kit' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
             ].map((item) => (

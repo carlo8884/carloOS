@@ -70,6 +70,7 @@ export default function WeightManagementPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Kit vs Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
                 { label: 'Safe Treats', href: '/diet/safe-treats' },
@@ -89,6 +90,7 @@ export default function WeightManagementPage() {
       
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
           { title: 'Insulinoma', href: '/health/insulinoma' },
           { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -109,7 +111,7 @@ export default function WeightManagementPage() {
 
           <h2 id="bcs">Body-Condition Scoring</h2>
           <p>
-            More reliable than the scale alone is hands-on body-condition assessment. A ferret in good condition feels lean and muscular: you can feel the ribs and spine with a light covering of flesh over them, the body tapers to a defined waist behind the ribs, and there is no pendulous belly. In an underweight ferret the ribs, spine, and hip bones feel sharp and prominent with little muscle. In an overweight ferret the ribs are hard to feel under fat, the waist disappears, and the belly hangs. Because coat thickness hides a lot, run your hands along the body rather than judging by sight, especially during a coat change.
+            More reliable than the scale alone is hands-on body-condition assessment. A ferret in good condition feels lean and muscular: you can feel the ribs and spine with a light covering of flesh over them, the body tapers to a defined waist behind the ribs, and there is no pendulous belly. In an underweight ferret the ribs, spine, and hip bones feel sharp and prominent with little muscle. In an overweight ferret the ribs are hard to feel under fat, the waist disappears, and the belly hangs. Because coat thickness hides a lot, run your hands along the body rather than judging by sight, especially during a coat change. The <a href="/tools/ferret-body-condition-score">ferret body condition score</a> tool walks those three checks into a 1–9 planning number — a husbandry reference, not a diagnosis.
           </p>
 
           <h2 id="overweight">The Overweight Ferret</h2>
