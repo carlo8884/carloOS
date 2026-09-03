@@ -508,6 +508,48 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge ferret-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'ferret · ferret-age-calculator',
+    file: 'apps/ferret-com/src/app/tools/ferret-age-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /if \(ferret < 1\) return Math\.round\(ferret \* 15\)/, label: 'year 1 = 15 human years (pro-rated kits)' },
+      { re: /if \(ferret <= 2\) return Math\.round\(15 \+ \(ferret - 1\) \* 10\)/, label: 'year 2 reaches 25 (15 + 10)' },
+      { re: /return Math\.round\(25 \+ \(ferret - 2\) \* 8\)/, label: '+8 human years per ferret year after year 2' },
+      { re: /if \(ferret < 3\)/, label: 'young adult through age 2 (1–3 band)' },
+      { re: /if \(ferret < 5\)/, label: 'mature 3–4; senior 5+' },
+      { re: /label: 'Kit'/, label: 'kit life-stage label' },
+      { re: /label: 'Young adult'/, label: 'young-adult life-stage label' },
+      { re: /label: 'Mature'/, label: 'mature life-stage label' },
+      { re: /label: 'Senior'/, label: 'senior life-stage label' },
+    ],
+    mustExclude: [
+      { re: /\*\s*7\b/, label: 'never multiply-by-seven in the formula' },
+    ],
+    why: 'Ferret planning bands grounded in Ferret.com lifespan copy: kit <1, young adult 1–3, mature 3–5, senior 5+. Human-year model is year 1 = 15, year 2 = 25, then +8/year — not ×7, not a diagnosis.',
+  },
+  {
+    id: 'ferret · ferret-age-calculator hops',
+    file: 'apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-ferret-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret life-stage notes"/, label: 'concrete life-stage offer, not Subscribe' },
+      { re: /amazon-brand\/ferret\+food\?s=tools-ferret-age-calculator/, label: 'ferret food search hop' },
+      { re: /amazon-brand\/senior\+ferret\+food\?s=tools-ferret-age-calculator/, label: 'senior ferret food search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-ferret-age-calculator/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/ferret\+hammock\?s=tools-ferret-age-calculator/, label: 'ferret hammock search hop' },
+      { re: /amazon-brand\/ferret\+carrier\?s=tools-ferret-age-calculator/, label: 'ferret carrier search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /https:\/\/vets\.co\/telehealth/, label: 'non-ER talk-to-a-vet points at vets.co/telehealth' },
+      { re: /https:\/\/vets\.co\/reviews\/best-pet-insurance/, label: 'insurance CTA points at educational vets.co comparison' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+    ],
+    why: 'Money path: under-hero capture with a concrete life-stage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · is-this-a-horse-emergency',
     file: 'apps/horses-com/src/app/tools/is-this-a-horse-emergency/TriageHelper.tsx',
     mustInclude: [

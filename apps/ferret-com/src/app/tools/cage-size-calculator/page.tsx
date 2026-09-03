@@ -291,6 +291,10 @@ export default function CageSizeCalculatorPage() {
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
               litter planner
             </Link>
+            . Match calendar age to a life-stage label with the{' '}
+            <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret age calculator
+            </Link>
             .
           </p>
 
@@ -308,6 +312,7 @@ export default function CageSizeCalculatorPage() {
               { label: 'Multi-Level Housing', href: '/care/multi-level-housing', note: 'Ramps, zoning, and fall risk' },
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
+              { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },

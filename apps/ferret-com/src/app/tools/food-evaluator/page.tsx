@@ -138,6 +138,7 @@ export default function FerretFoodEvaluatorPage() {
           <RelatedLinks
             title="Ferret care"
             links={[
+              { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
               { label: 'First Year Schedule', href: '/first-year-schedule' },
               { label: 'Care Library', href: '/care' },
               { label: 'Behavior Library', href: '/behavior' },
@@ -160,6 +161,7 @@ export default function FerretFoodEvaluatorPage() {
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
         ]}
 >
       <div className="carloOS-article">
@@ -262,7 +264,7 @@ export default function FerretFoodEvaluatorPage() {
         </div>
 
         <p className="mt-8 text-sm">
-          For first-time keepers, pair the evaluator with the <Link href="/first-year-schedule">first-year care schedule</Link> and <Link href="/health">health library</Link>.
+          For first-time keepers, pair the evaluator with the <Link href="/first-year-schedule">first-year care schedule</Link>, the <Link href="/tools/ferret-age-calculator">ferret age calculator</Link> for a life-stage label, and the <Link href="/health">health library</Link>.
         </p>
       </div>
     </ArticleLayout>

@@ -144,5 +144,6 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/tools/litter-planner', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/cage-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/is-this-a-ferret-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://ferret.com/tools/ferret-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
