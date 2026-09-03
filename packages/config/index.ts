@@ -1044,6 +1044,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Cost Calculator', href: '/tools/cost-calculator' },
           { label: 'Litter Planner', href: '/tools/litter-planner' },
           { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
+          { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { label: 'Directory', href: '/directory' },
         ],
       },

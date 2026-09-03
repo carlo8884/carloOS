@@ -204,7 +204,11 @@ export default function LitterPlannerPage() {
             <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">
               readiness quiz
             </Link>{' '}
-            scores household fit and packs the day-one kit.
+            scores household fit and packs the day-one kit. If a sign looks urgent, the{' '}
+            <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret emergency sign-list
+            </Link>{' '}
+            is a conservative go-now / same-day / monitor read — a triage aid, not a diagnosis.
           </p>
         </div>
       </section>

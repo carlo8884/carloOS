@@ -280,7 +280,9 @@ export default function HealthHubPage() {
           </p>
           <p style={{ fontSize: '0.875rem', lineHeight: 1.55, color: 'var(--brand-text-mid)', margin: 0 }}>
             These references do not replace veterinary consultation, and ferrets should be seen by a vet with
-            exotic-mammal experience. If your general-practice vet does not treat ferrets, start with{' '}
+            exotic-mammal experience. If a sign is in front of you right now, use the{' '}
+            <Link href="/tools/is-this-a-ferret-emergency" className="amber-link" style={{ fontWeight: 600 }}>ferret emergency sign-list</Link>
+            {' '}— a triage aid, not a diagnosis. If your general-practice vet does not treat ferrets, start with{' '}
             <Link href="/find-an-exotic-vet" className="amber-link" style={{ fontWeight: 600 }}>how to find an exotic-pet vet</Link>.
           </p>
         </div>
