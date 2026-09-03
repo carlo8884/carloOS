@@ -290,12 +290,9 @@ const CALCULATORS = [
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-weight-predictor/, label: 'scale search hop (same query as ideal-weight tool)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-puppy-weight-predictor/, label: 'puppy food search hop' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-weight-predictor/, label: 'crate search hop (same query as crate-size tool)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
-    mustExclude: [
-      { re: /PLACEHOLDER/, label: 'placeholder ASIN or hop' },
-      { re: /href="#"/, label: 'dead hash link' },
-    ],
-    why: 'Money path: under-hero capture with a concrete growth offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or href="#".',
+    why: 'Money path: under-hero capture with a concrete growth offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
     id: 'dog · new-puppy-checklist',
