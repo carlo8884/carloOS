@@ -195,6 +195,24 @@ const CALCULATORS = [
     ],
     why: 'Standard annual-deductible model: reimburse = min(max(0,claims−deductible)×pct, annualCap).',
   },
+  {
+    id: 'dog · puppy-first-year-budget',
+    file: 'apps/dog-com/src/app/tools/puppy-first-year-budget/Calculator.tsx',
+    mustInclude: [
+      { re: /const foodYear = monthlyFood \* 12/, label: 'food year = monthlyFood × 12' },
+      { re: /crateAndGear: 180/, label: 'small-size crate-and-gear starting point $180' },
+    ],
+    why: 'First-year food is twelve months of the monthly food line; small-dog gear band starts at $180 as an editable US retail starting point.',
+  },
+  {
+    id: 'fish · filter-gph-calculator',
+    file: 'apps/fish-com/src/app/tools/filter-gph-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /const gphMin = gal \* band\.min/, label: 'GPH min = gallons × turnover min' },
+      { re: /community: \{[\s\S]*min: 4,[\s\S]*max: 6/, label: 'community turnover 4–6×' },
+    ],
+    why: 'Hobby filter-sizing rule: community freshwater turnover is 4–6 tank volumes per hour; GPH = gallons × band.',
+  },
 ]
 
 let failures = 0

@@ -92,6 +92,7 @@ function buildList(stage: Stage, size: Size): Item[] {
       links: [
         { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
         { href: '/tools/dog-crate-size-calculator', label: 'Crate size calculator' },
+        { href: '/tools/puppy-first-year-budget', label: 'First-year budget' },
         SHOP_CRATE,
       ],
       essential: true,

@@ -163,11 +163,15 @@ export default function DogCrateSizeCalculatorPage() {
             <Link href="/training" className="text-brand-primary underline-offset-2 hover:underline">
               training guides
             </Link>
-            , and if this is a new puppy, the{' '}
+            ,             and if this is a new puppy, the{' '}
             <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
               puppy weight predictor
             </Link>{' '}
-            estimates the adult size to buy for.
+            estimates the adult size to buy for. The{' '}
+            <Link href="/tools/puppy-first-year-budget" className="text-brand-primary underline-offset-2 hover:underline">
+              first-year budget planner
+            </Link>{' '}
+            puts a number on crate, food, and vet together.
           </p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="mt-3 flex flex-wrap gap-3">

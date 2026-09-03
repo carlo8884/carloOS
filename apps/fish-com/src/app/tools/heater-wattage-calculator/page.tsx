@@ -108,7 +108,7 @@ export default function HeaterWattageCalculatorPage() {
         { name: 'Heater Wattage Calculator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Filter GPH Calculator", href: "/tools/filter-gph-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
       sidebar={
         <>
           <TableOfContents
@@ -126,6 +126,7 @@ export default function HeaterWattageCalculatorPage() {
               { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' },
               { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
+              { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
               { label: 'Saltwater Tank Setup', href: '/setup/saltwater-tank-setup' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
             ]}
