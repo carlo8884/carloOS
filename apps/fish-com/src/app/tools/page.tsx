@@ -7,7 +7,7 @@ import { HubMasthead } from '../../components/HubMasthead'
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Aquarium Calculators — Volume, Stocking, Heater, CO2 | Fish.com',
-  description: 'Free aquarium calculators: tank volume in gallons or liters, stocking limits, heater wattage, water-change math, and CO2 from KH/pH. Built by aquarists.',
+  description: 'Free aquarium calculators: tank volume, stocking, heater wattage, water-change math, and planted-tank CO2 dosing. Built by aquarists.',
   path: '/tools',
 })
 
@@ -88,8 +88,8 @@ const TOOLS = [
   },
   {
     href: '/tools/co2-calculator',
-    title: 'CO2 Calculator (KH/pH)',
-    desc: 'Estimate dissolved CO2 in ppm from carbonate hardness (KH) and pH. Essential for planted tanks running CO2 injection.',
+    title: 'CO2 Calculator (dosing + KH/pH)',
+    desc: 'Size planted-tank CO2 from tank gallons, plant density, and pressurized vs liquid carbon — bubble rate, diffuser size, drop-checker range, plus KH/pH to ppm.',
     tag: 'Planted tanks',
   },
 ]
