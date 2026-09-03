@@ -341,6 +341,38 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete life-stage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · cat-body-condition-score',
+    file: 'apps/vets-co/src/components/tools/CatBodyConditionScore.tsx',
+    mustInclude: [
+      { re: /const bcs = Math\.min\(9, Math\.max\(1, Math\.round\(avg\)\)\)/, label: 'BCS = round(mean of 3 checks), clamped 1–9' },
+      { re: /if \(bcs <= 3\)/, label: 'underweight band ≤3' },
+      { re: /if \(bcs <= 5\)/, label: 'ideal band ≤5 (4–5 on WSAVA 9-point)' },
+      { re: /if \(bcs <= 7\)/, label: 'overweight band ≤7' },
+      { re: /primordial pouch/, label: 'primordial-pouch caveat kept (not invented scale)' },
+    ],
+    why: 'Existing WSAVA 9-point feline BCS: average rib/waist/belly checks, 4–5 ideal. Do not invent a new scale.',
+  },
+  {
+    id: 'vets · cat-body-condition-score hops',
+    file: 'apps/vets-co/src/app/tools/cat-body-condition-score/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cat-body-condition-score-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my BCS chart"/, label: 'concrete BCS-chart offer, not Subscribe' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-cat-body-condition-score/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/measuring\+tape\?s=tools-cat-body-condition-score/, label: 'measuring tape search hop' },
+      { re: /amazon-brand\/weight\+management\+cat\+food\?s=tools-cat-body-condition-score/, label: 'weight-management cat food search hop' },
+      { re: /amazon-brand\/puzzle\+feeder\?s=tools-cat-body-condition-score/, label: 'puzzle feeder search hop' },
+      { re: /amazon-brand\/interactive\+cat\+toy\?s=tools-cat-body-condition-score/, label: 'interactive cat toy search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete BCS-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

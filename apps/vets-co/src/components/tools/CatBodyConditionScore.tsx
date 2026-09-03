@@ -178,9 +178,9 @@ export default function CatBodyConditionScore() {
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        A guided estimate, not a diagnosis. Body condition scoring is a hands-on skill — your
-        veterinarian&apos;s assessment is the reference, and any unexplained weight change in a cat
-        should be checked promptly.
+        Planning / wellness reference only — not a diagnosis. Body condition scoring is a hands-on
+        skill — your veterinarian&apos;s assessment is the reference, and any unexplained weight
+        change in a cat should be checked promptly.
       </p>
     </div>
   )

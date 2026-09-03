@@ -33,7 +33,7 @@ const TOOLS = [
   {
     href: '/tools/cat-body-condition-score',
     title: 'Cat Body Condition Score',
-    desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 scale, with safe next steps.',
+    desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 WSAVA scale, then shop a weight-management kit (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive toy). Planning / wellness reference, not a diagnosis.',
     tag: 'Health',
   },
   {
