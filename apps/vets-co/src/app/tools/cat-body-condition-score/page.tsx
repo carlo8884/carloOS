@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -136,6 +137,7 @@ export default function CatBodyConditionScorePage() {
           <RelatedLinks
             title="Weight & wellness"
             links={[
+              { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator' },
               { label: 'Weight Management', href: '/health/weight-management' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
               { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' },
@@ -162,7 +164,9 @@ export default function CatBodyConditionScorePage() {
           Body condition scoring is how veterinarians judge whether a cat carries a healthy amount of
           fat, independent of breed or scale weight. Answer the three checks below — feel the ribs,
           look down at the waist, and judge the belly from the side — and the tool estimates a body
-          condition score from 1 to 9, where 4–5 is ideal.
+          condition score from 1 to 9, where 4–5 is ideal. Pair it with the{' '}
+          <Link href="/tools/cat-age-calculator">cat age calculator</Link> to match
+          weight checks to AAFP/AAHA life stage.
         </p>
         <CatBodyConditionScore />
 

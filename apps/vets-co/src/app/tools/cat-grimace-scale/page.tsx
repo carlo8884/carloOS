@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -139,6 +140,7 @@ export default function CatGrimaceScalePage() {
           <RelatedLinks
             title="Cat health"
             links={[
+              { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator' },
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
               { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' },
@@ -165,7 +167,9 @@ export default function CatGrimaceScalePage() {
           Cats evolved to conceal pain, which is why owners so often miss it until a problem is
           advanced. Their faces, however, change in measurable ways when they hurt. Score the five
           facial action units below on a calm, unprovoked cat and the tool totals them on the
-          0–10 scale used by the validated Feline Grimace Scale.
+          0–10 scale used by the validated Feline Grimace Scale. For life-stage
+          context — including senior screening — use the{' '}
+          <Link href="/tools/cat-age-calculator">cat age calculator</Link>.
         </p>
         <CatGrimaceScale />
 

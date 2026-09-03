@@ -109,9 +109,9 @@ export default function CatAgeCalculator() {
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        Human-equivalent ages use the standard veterinary chart (first year ≈ 15, second ≈ 24, then ≈ 4 per
-        year) and are an approximation — indoor cats often live well into their late teens. Life-stage care is
-        general guidance; your veterinarian tailors screening to your individual cat.
+        Planning / life-stage reference only — not a diagnosis. Human-equivalent ages use the standard
+        veterinary chart (first year ≈ 15, second ≈ 24, then ≈ 4 per year) and are an approximation.
+        Your veterinarian tailors screening to your individual cat.
       </p>
     </div>
   )
