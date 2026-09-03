@@ -9,6 +9,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   EmailCapture,
+  ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
 } from '@carloOS/ui'
@@ -93,6 +94,7 @@ const softwareApplicationSchema = {
     'Conservative ER / clinic / telehealth setting',
     'No all-clear result — mixed selections resolve upward',
     'Poison-control number when ingestion is selected',
+    'Shoppable pet emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -171,6 +173,33 @@ export default function ErVsClinicPage() {
         <span className="text-brand-text-mid font-medium">ER vs Clinic vs Telehealth</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fridge sheet
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            ER vs clinic cheat sheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the ER / clinic / telehealth recap plus a shoppable
+            emergency-prep kit (first-aid, thermometer, soft carrier, styptic
+            powder, wound-care gauze) so you can re-check the setting later
+            without re-running the list. A setting chooser, not a diagnosis.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="ER vs clinic cheat sheet"
+            subtitle="Email the ER / clinic / telehealth recap and emergency-prep kit. No spam."
+            ctaText="Email my ER vs clinic cheat sheet"
+            source="tools-er-vs-clinic-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="px-container-sm sm:px-container pt-section">
         <div className="max-w-5xl">
           <div
@@ -197,10 +226,56 @@ export default function ErVsClinicPage() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+      {/* Money path — live amazon-brand search hops (pet emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="pet-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a pet emergency-prep kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are cabinet and car items for
+              dog and cat emergency prep — a pet first-aid kit, a digital pet
+              thermometer, a soft pet carrier, styptic powder, and wound-care
+              gauze. They are not a ranked product list, not invented inventory,
+              and they do not diagnose, treat, or replace emergency care. If a
+              sign looks life-threatening, go to an emergency hospital now; this
+              kit is for planning ahead, not for waiting on a crisis. Vets.co
+              earns a commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-er-vs-clinic"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+pet+carrier?s=tools-er-vs-clinic"
+                amazonLabel="Browse soft pet carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/styptic+powder?s=tools-er-vs-clinic"
+                amazonLabel="Browse styptic powder on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wound+care+gauze?s=tools-er-vs-clinic"
+                amazonLabel="Browse wound-care gauze on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
               After the visit
             </div>
@@ -209,6 +284,7 @@ export default function ErVsClinicPage() {
               Once the pet is stable, the editorial insurance comparison explains how accident and
               illness policies treat those bills — it does not re-rank carriers for this page.
             </p>
+            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-pet-insurance"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
@@ -220,8 +296,9 @@ export default function ErVsClinicPage() {
             <EmailCapture
               siteId="vets-co"
               variant="inline"
-              title="Vets.co reference letter"
-              subtitle="Triage references and tool updates. No spam."
+              title="ER vs clinic cheat sheet"
+              subtitle="Email the ER / clinic / telehealth recap and emergency-prep kit. No spam."
+              ctaText="Email my ER vs clinic cheat sheet"
               source="tools-er-vs-clinic"
             />
           </div>
