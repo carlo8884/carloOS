@@ -65,8 +65,16 @@ const CALCULATORS = [
   {
     id: 'fish · pond-volume-calculator',
     file: 'apps/fish-com/src/app/tools/pond-volume-calculator/Calculator.tsx',
-    mustInclude: [{ re: /GAL_PER_FT3\s*=\s*7\.48/, label: '7.48 US gal per ft³' }],
-    why: '1 ft³ = 7.48052 US gallons.',
+    mustInclude: [
+      { re: /GAL_PER_FT3\s*=\s*7\.48052/, label: '7.48052 US gal per ft³' },
+      { re: /areaFt2 = lFt \* wFt/, label: 'rectangular area = L × W' },
+      { re: /Math\.PI \* Math\.pow\(lFt \/ 2, 2\)/, label: 'circular area = π·(d/2)²' },
+      { re: /Math\.PI \* \(lFt \/ 2\) \* \(wFt \/ 2\)/, label: 'oval area = π·(L/2)·(W/2)' },
+      { re: /volumeFt3 \* GAL_PER_FT3/, label: 'US gal = ft³ × 7.48052' },
+      { re: /10 \* 8 \* 2 \* 7\.48052 = 1196\.8832/, label: 'smoke: 10×8×2 ft rectangle ≈ 1197 US gal' },
+      { re: /Math\.PI \* \(10 \/ 2\) \*\* 2 \* 2 \* 7\.48052/, label: 'smoke: 10 ft diameter × 2 ft depth ≈ 1175 US gal' },
+    ],
+    why: '1 ft³ = 7.48052 US gallons. 10×8×2 ft rectangle = 160 ft³ × 7.48052 ≈ 1197 US gal; circular diameter×depth uses π·r² ≈ 1175 US gal.',
   },
   {
     id: 'fish · heater-wattage-calculator',
@@ -294,6 +302,20 @@ for (const calc of CALCULATORS) {
   for (const exc of calc.mustExclude || []) {
     checked++
     if (exc.re.test(src)) problems.push(`[regression] found forbidden form: ${exc.label}`)
+  }
+
+  if (calc.id === 'fish · pond-volume-calculator') {
+    const galMatch = src.match(/GAL_PER_FT3\s*=\s*([0-9.]+)/)
+    const gal = galMatch ? Number(galMatch[1]) : NaN
+    const rectGal = 10 * 8 * 2 * gal
+    const circGal = Math.PI * (10 / 2) ** 2 * 2 * gal
+    checked += 2
+    if (Math.round(rectGal) !== 1197) {
+      problems.push(`[smoke] 10×8×2 ft rectangle should be ≈1197 US gal, got ${Math.round(rectGal)}`)
+    }
+    if (Math.round(circGal) !== 1175) {
+      problems.push(`[smoke] 10 ft diameter × 2 ft depth circle should be ≈1175 US gal, got ${Math.round(circGal)}`)
+    }
   }
 
   if (problems.length) {
