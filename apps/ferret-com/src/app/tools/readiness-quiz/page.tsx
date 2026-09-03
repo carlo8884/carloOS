@@ -8,15 +8,18 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Quiz from './Quiz'
+import ReadinessKit from './ReadinessKit'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Is a Ferret Right for Me? Readiness Quiz | Ferret.com',
+  title: 'Ferret Readiness Quiz & New-Owner Kit | Ferret.com',
   description:
-    'Ten honest questions on legality, time, budget, housing, and commitment. Get a calibrated score and plain-English next steps for prospective ferret owners.',
+    'Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon hops for cage, litter, food, and carrier.',
   path: '/tools/readiness-quiz',
 })
 
@@ -28,19 +31,27 @@ const breadcrumbSchema = buildBreadcrumbSchema([
 
 const appSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebApplication',
+  '@type': 'SoftwareApplication',
   name: 'Ferret Ownership Readiness Quiz',
   description:
-    'A scored self-assessment quiz covering legality, time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment for prospective ferret owners.',
+    'A scored self-assessment plus a packable new-owner kit covering legality, time, budget, housing, and day-one supplies (cage, litter, food, hammock, dig box, carrier).',
   url: 'https://ferret.com/tools/readiness-quiz',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Ten scored questions on legality, time, budget, housing, and commitment',
+    'Four readiness tiers with plain-English next steps',
+    'Interactive new-owner kit checklist with Amazon shop hops',
+    'Day-one list: cage, litter, food, hammock, dig box, carrier',
+  ],
+  publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
 
 const howToSchema = buildHowToSchema({
   name: 'How to assess your readiness to own a ferret',
-  description: 'Answer ten scored questions about legality, daily time, budget, housing, and long-term commitment to get a calibrated readiness tier and plain-English next steps.',
+  description:
+    'Answer ten scored questions about legality, daily time, budget, housing, and long-term commitment, then pack a day-one kit before a ferret comes home.',
   url: 'https://ferret.com/tools/readiness-quiz',
   steps: [
     {
@@ -55,13 +66,17 @@ const howToSchema = buildHowToSchema({
       name: 'Read your readiness tier and next steps',
       text: 'The quiz returns one of four tiers: Strong fit, Fit with preparation, Not quite yet, or Significant barriers present. Each tier includes a plain-English explanation and targeted next steps toward responsible ownership.',
     },
+    {
+      name: 'Pack the new-owner kit',
+      text: 'If the result points toward bringing a ferret home, gather a multi-level cage, corner pans and pellet litter, a high-protein food, a hammock or sleep sack, a dig box, and a hard-sided carrier before arrival day.',
+    },
   ],
 })
 
 const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
 // FAQ content is drawn entirely from facts already stated on this page
-// (legality, daily-time, emergency conditions, the four tiers, retakeability).
+// (legality, daily-time, emergency conditions, the four tiers, the kit).
 const FAQS = [
   {
     question: 'Where are ferrets illegal to own?',
@@ -77,6 +92,11 @@ const FAQS = [
     question: 'What does the readiness quiz score?',
     answer:
       'Ten questions cover legality, daily out-of-cage time, housing situation, existing pets, setup and emergency budget, odor tolerance, vet access, and long-term commitment horizon. Each is weighted by how frequently it drives rehoming or welfare problems, and the quiz returns one of four tiers: Strong fit, Fit with preparation, Not quite yet, or Significant barriers present.',
+  },
+  {
+    question: 'What should be in a new ferret owner kit?',
+    answer:
+      'A typical day-one list is a multi-level cage, high-back corner pans and paper or wood-pellet litter (never clumping clay), a high-protein named-meat food, a fleece hammock or sleep sack, a dig box, and a hard-sided carrier for the ride home and vet trips. The interactive checklist on this page is a husbandry starting point — not a ranked product list.',
   },
   {
     question: 'Why should I budget for a veterinary emergency?',
@@ -114,8 +134,8 @@ export default function ReadinessQuizPage() {
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Ten honest questions about legality, daily time, budget, housing, and long-term commitment.
-            The quiz scores your answers and returns a plain-English readiness assessment with relevant
-            next steps.
+            Then pack a day-one kit — cage, litter, food, hammock, dig box, carrier — before a ferret
+            comes home.
           </p>
         </div>
       </section>
@@ -127,6 +147,30 @@ export default function ReadinessQuizPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Readiness Quiz</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ferret readiness checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the day-one kit — cage, litter, food, hammock, dig box, and carrier —
+            so you can shop the setup without re-running the quiz. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Ferret readiness checklist"
+            subtitle="Email the day-one kit — cage, litter, food, hammock, dig box, carrier. No spam."
+            ctaText="Email my ferret readiness checklist"
+            source="tools-readiness-quiz-under-hero"
+          />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl mb-8">
@@ -144,42 +188,97 @@ export default function ReadinessQuizPage() {
         </div>
       </section>
 
+      <section id="readiness-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">
+            New-owner readiness kit
+          </h2>
+          <p className="mb-6 text-base leading-relaxed text-brand-text-mid">
+            If the result points toward bringing a ferret home, have the core setup in place before
+            arrival. The six-item list below is a husbandry starting point — cage, litter, food,
+            hammock, dig box, carrier — not a ranked product list. Size the cage with the{' '}
+            <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              cage size calculator
+            </Link>
+            , pans with the{' '}
+            <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
+              litter planner
+            </Link>
+            , and a bag with the{' '}
+            <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">
+              food evaluator
+            </Link>
+            .
+          </p>
+          <ReadinessKit />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (cage / litter / food / carrier).
+          Reuses queries already shipped on ferret reviews + cage-size + cost calculator.
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <div className="rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6 sm:p-7">
-            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Scored a strong fit?</p>
-            <h2 className="mt-2 font-display text-xl font-semibold text-brand-text-dark">
-              Get the day-one essentials ready
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
-              If your result points toward bringing a ferret home, the next practical step is having the
-              core setup in place before arrival. The ferret starter essentials list covers what a new
-              ferret genuinely needs on day one — cage, bedding, litter, food and water, and a carrier.
-              Still on the fence? The{' '}
-              <Link href="/ownership/cost-of-owning-a-ferret" className="text-brand-primary underline-offset-2 hover:underline">
-                cost guide
-              </Link>{' '}
-              and{' '}
-              <Link href="/ownership/adoption-vs-buying" className="text-brand-primary underline-offset-2 hover:underline">
-                adoption vs. buying
-              </Link>{' '}
-              are the better next reads.
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop the kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              The six-item list above is a husbandry starting point — cage, litter, food, hammock,
+              dig box, carrier — not a ranked product list. Same Amazon hops used on the{' '}
+              <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
+                cage review
+              </Link>
+              , the{' '}
+              <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
+                litter review
+              </Link>
+              , and the{' '}
+              <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
+                kibble guide
+              </Link>
+              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to you.
             </p>
-            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
-              The essentials page includes affiliate links; we may earn a commission at no extra cost to
-              you, and we never accept payment for favorable placement.{' '}
-              <Link href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">
-                Disclosure
-              </Link>.
-            </p>
-            <Link
-              href="/ferret-starter-kit"
-              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
-            >
-              See the ferret starter essentials
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz"
+                amazonLabel="Browse multi-level cages on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
+                amazonLabel="Browse ferret food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz"
+                amazonLabel="Browse wood pellet litter on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
+                amazonLabel="Browse ferret carriers on Amazon →"
+              />
+            </div>
           </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission. Empty Chewy buttons stay hidden.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
+            Fold the kit into year-one cost with the{' '}
+            <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              cost calculator
+            </Link>
+            . The narrative decision guide is{' '}
+            <Link href="/ownership/is-a-ferret-right-for-you" className="text-brand-primary underline-offset-2 hover:underline">
+              is a ferret right for you
+            </Link>
+            . Day-by-day arrival steps live on the{' '}
+            <Link href="/ownership/first-week-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+              first-week checklist
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -245,15 +344,28 @@ export default function ReadinessQuizPage() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
         <div className="max-w-2xl">
-          <EmailCapture
-            siteId="ferret-com"
-            variant="inline"
-            title="Ferret.com keeper letter"
-            subtitle="Ferret care references and tool updates. No spam."
-            source="tools-readiness-quiz"
-          />
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
+              { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
+              { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
+              { label: 'Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },
+              { label: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you', note: 'Narrative decision guide behind the quiz' },
+              { label: 'First-Week Checklist', href: '/ownership/first-week-checklist', note: 'Day-by-day arrival steps after the kit' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

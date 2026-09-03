@@ -309,6 +309,7 @@ export default function CageSizeCalculatorPage() {
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
+              { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
               { label: 'Ferret Starter Essentials', href: '/ferret-starter-kit', note: 'Day-one cage, litter, food, carrier' },
             ].map((item) => (
               <Link

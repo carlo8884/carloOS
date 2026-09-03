@@ -154,6 +154,7 @@ const RESULT_TIERS: ResultTier[] = [
       'Consider adopting from a shelter or rescue before purchasing from a breeder.',
     ],
     links: [
+      { text: 'New-owner readiness kit', href: '#readiness-kit' },
       { text: 'Ferret legality by state', href: '/ownership/ferret-legality-by-state' },
       { text: 'Cost of owning a ferret', href: '/ownership/cost-of-owning-a-ferret' },
       { text: 'Adoption vs. buying', href: '/ownership/adoption-vs-buying' },
@@ -173,6 +174,7 @@ const RESULT_TIERS: ResultTier[] = [
       'If other-pet compatibility is the gap, read the ferrets-and-other-pets guide carefully before any introductions.',
     ],
     links: [
+      { text: 'New-owner readiness kit', href: '#readiness-kit' },
       { text: 'Cost of owning a ferret', href: '/ownership/cost-of-owning-a-ferret' },
       { text: 'Ferret insurance basics', href: '/ownership/ferret-insurance-basics' },
       { text: 'Ferrets and other pets', href: '/ownership/ferrets-and-other-pets' },

@@ -318,6 +318,7 @@ export default function CostCalculatorPage() {
               { label: 'Ferret Food Evaluator', href: '/tools/food-evaluator', note: 'Score a bag against nutrient targets' },
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
               { label: 'Best Ferret Litter', href: '/reviews/best-ferret-litter', note: 'Paper, wood, or grass — never clay' },
+              { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
               { label: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret', note: 'Narrative ranges behind the lines' },
               { label: 'Ferret Starter Essentials', href: '/ferret-starter-kit', note: 'Day-one cage, litter, food, carrier' },
             ].map((item) => (

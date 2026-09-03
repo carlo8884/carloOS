@@ -200,7 +200,11 @@ export default function LitterPlannerPage() {
             <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               cage size calculator
             </Link>
-            .
+            . Still deciding whether a ferret fits? The{' '}
+            <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">
+              readiness quiz
+            </Link>{' '}
+            scores household fit and packs the day-one kit.
           </p>
         </div>
       </section>
