@@ -24,6 +24,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { Breeds } from '../../../data/breeds'
 
 type Unit = 'lb' | 'kg'
@@ -96,6 +97,50 @@ function bcsEstimate(currentLb: number, score: number): BcsResult {
   return { idealLb, deltaLb: currentLb - idealLb, band: opt.band }
 }
 
+const SHOP_SOURCE = 'tools-dog-ideal-weight'
+
+function resultShop(band: BcsResult['band'] | null): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  if (band === 'under') {
+    return {
+      heading: 'Weigh meals while you book the vet',
+      blurb:
+        'An under-ideal estimate is a reason to call your veterinarian before adding calories — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
+      href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
+      label: 'Browse kitchen / pet scales on Amazon →',
+    }
+  }
+  if (band === 'over') {
+    return {
+      heading: 'Measure portions before you change the bowl',
+      blurb:
+        'An over-ideal estimate is a starting observation, not a diet plan. A portion-control food scale is how you record what is actually in the bowl so your veterinarian can set calories and a safe rate of loss. This tool does not diagnose a weight problem or set a target weight.',
+      href: `/go/amazon-brand/portion+control+food+scale+dog?s=${SHOP_SOURCE}`,
+      label: 'Browse portion-control food scales on Amazon →',
+    }
+  }
+  if (band === 'ideal') {
+    return {
+      heading: 'Keep the routine with a measured feeder',
+      blurb:
+        'An ideal BCS is a feeding-and-exercise routine that is already working. An elevated slow-feeder bowl helps you keep portions consistent without speeding through the meal. Re-check weight and BCS every month or two, and let your veterinarian set any target if the score drifts.',
+      href: `/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=${SHOP_SOURCE}`,
+      label: 'Browse elevated slow-feeder bowls on Amazon →',
+    }
+  }
+  return {
+    heading: 'Weigh with a digital scale, then score BCS',
+    blurb:
+      'A breed range is a starting band, not a target your veterinarian set. A digital kitchen / pet scale is how you record current weight and meals so the BCS estimate is based on a real number. Ask your veterinarian for a target weight — this tool does not diagnose a weight problem.',
+    href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
+    label: 'Browse kitchen / pet scales on Amazon →',
+  }
+}
+
 export default function DogIdealWeightCalculator() {
   // -1 = "Mixed / not listed" → use size fallback
   const [breedSlug, setBreedSlug] = useState<string>('labrador-retriever')
@@ -120,6 +165,7 @@ export default function DogIdealWeightCalculator() {
     () => (currentLb > 0 && bcsNum != null ? bcsEstimate(currentLb, bcsNum) : null),
     [currentLb, bcsNum]
   )
+  const shop = resultShop(bcsResult?.band ?? null)
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -298,6 +344,18 @@ export default function DogIdealWeightCalculator() {
         Healthy weight depends on frame, sex, age, and muscle, so two dogs of the same breed can sit
         at different points in the range. Your veterinarian can set a target weight for your
         individual dog and rule out a medical cause for weight change.
+      </div>
+
+      <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+        <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+          Next step
+        </p>
+        <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+          {shop.heading}
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
+        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
