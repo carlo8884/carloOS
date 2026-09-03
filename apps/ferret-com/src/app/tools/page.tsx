@@ -37,7 +37,7 @@ const TOOLS = [
   {
     href: '/tools/food-evaluator',
     title: 'Ferret Food Evaluator',
-    desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes.',
+    desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes, then shop high-protein ferret kibble, freeze-dried raw treats, and salmon oil via Amazon category searches.',
     tag: 'Nutrition',
   },
   {
