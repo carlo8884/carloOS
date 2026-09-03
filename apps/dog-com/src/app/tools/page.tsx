@@ -20,7 +20,7 @@ const TOOLS = [
   {
     href: '/tools/is-this-a-dog-emergency',
     title: 'Is This a Dog Emergency?',
-    desc: 'Check the signs you are seeing against veterinary emergency-medicine criteria and get a conservative urgency read -- go now, same-day vet, or monitor closely. A triage aid to help you decide how urgently to seek care, not a diagnosis.',
+    desc: 'Check the signs you are seeing against veterinary emergency-medicine criteria and get a conservative urgency read -- go now, same-day vet, or monitor closely. Email a fridge triage cheat sheet, then shop an emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, tick remover). A triage aid, not a diagnosis.',
     tag: 'Health',
   },
   {

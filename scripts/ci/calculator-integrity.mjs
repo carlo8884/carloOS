@@ -409,6 +409,39 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete grimace-sheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · is-this-a-dog-emergency',
+    file: 'apps/dog-com/src/app/tools/is-this-a-dog-emergency/TriageHelper.tsx',
+    mustInclude: [
+      { re: /hasEmergency = picked\.some\(\(s\) => s\.level === 'emergency'\)/, label: 'any emergency sign → go now' },
+      { re: /tier: 'go-now'/, label: 'go-now verdict kept' },
+      { re: /allMonitorEligible = picked\.every\(\(s\) => MONITOR_ELIGIBLE\.has\(s\.num\)\)/, label: 'monitor only if every selected sign is monitor-eligible' },
+      { re: /tier: 'same-day'/, label: 'same-day fallback when mixed/urgent' },
+      { re: /There is no "all clear" verdict/, label: 'no all-clear verdict (comment contract)' },
+      { re: /from '\.\.\/\.\.\/\.\.\/data\/dog-symptom-signs'/, label: 'signs imported from shared dog-symptom-signs (do not fork)' },
+    ],
+    why: 'Existing conservative triage: any emergency sign → go now; monitor only for 09/14 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
+  },
+  {
+    id: 'dog · is-this-a-dog-emergency hops',
+    file: 'apps/dog-com/src/app/tools/is-this-a-dog-emergency/page.tsx',
+    mustInclude: [
+      { re: /source="tools-is-this-a-dog-emergency-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my triage cheat sheet"/, label: 'concrete fridge-sheet offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-is-this-a-dog-emergency/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-is-this-a-dog-emergency/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/soft\+dog\+carrier\?s=tools-is-this-a-dog-emergency/, label: 'soft carrier search hop' },
+      { re: /amazon-brand\/styptic\+powder\?s=tools-is-this-a-dog-emergency/, label: 'styptic powder search hop' },
+      { re: /amazon-brand\/tick\+remover\?s=tools-is-this-a-dog-emergency/, label: 'tick remover search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete fridge-sheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

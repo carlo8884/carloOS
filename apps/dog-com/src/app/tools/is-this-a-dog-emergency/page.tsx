@@ -11,6 +11,8 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  EmailCapture,
+  ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
 
@@ -78,6 +80,12 @@ const appSchema = {
   applicationCategory: 'HealthApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Conservative urgency read: go now, same-day vet, or monitor closely',
+    '15 signs drawn from veterinary emergency-medicine criteria',
+    'Always rounds toward more care; no all-clear result',
+    'Shoppable emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft carrier, styptic powder, tick remover)',
+  ],
 }
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -161,6 +169,33 @@ export default function IsThisADogEmergencyPage() {
         <span className="text-brand-text-mid font-medium">Is This a Dog Emergency?</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fridge sheet
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog emergency-signs triage cheat sheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the fridge triage cheat sheet — the go-now / same-day / monitor
+            recap plus a shoppable emergency-prep kit (first-aid, thermometer,
+            soft carrier, styptic powder, tick remover) — so you can re-check
+            signs later without re-reading the list. A triage aid, not a
+            diagnosis. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog emergency-signs triage cheat sheet"
+            subtitle="Email the fridge triage cheat sheet and emergency-signs recap. No spam."
+            ctaText="Email my triage cheat sheet"
+            source="tools-is-this-a-dog-emergency-under-hero"
+          />
+        </div>
+      </section>
+
       {/* PERSISTENT TOP BANNER — renders above the checklist on every state */}
       <section className="px-container-sm sm:px-container pt-section">
         <div className="max-w-5xl">
@@ -199,9 +234,56 @@ export default function IsThisADogEmergencyPage() {
         </div>
       </section>
 
-      {/* Calm, non-emergency footer — insurance CTA with disclosure.
+      {/* Money path — live amazon-brand search hops (emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="dog-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a dog emergency-prep kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are cabinet and car items for
+              emergency prep — a pet first-aid kit, a digital pet thermometer,
+              a soft carrier, styptic powder, and a tick remover. They are not
+              a ranked product list, not invented inventory, and they do not
+              diagnose, treat, or replace emergency care. If a sign looks
+              life-threatening, go to an emergency vet now; this kit is for
+              planning ahead, not for waiting on a crisis. Dog.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-dog-emergency"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-dog-emergency"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+dog+carrier?s=tools-is-this-a-dog-emergency"
+                amazonLabel="Browse soft dog carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/styptic+powder?s=tools-is-this-a-dog-emergency"
+                amazonLabel="Browse styptic powder on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/tick+remover?s=tools-is-this-a-dog-emergency"
+                amazonLabel="Browse tick removers on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calm, non-emergency footer — insurance + non-ER telehealth.
           Deliberately AFTER the tool, never inside/above a verdict. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <div className="rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -210,15 +292,25 @@ export default function IsThisADogEmergencyPage() {
             <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
               Emergency and surgical care is among the most expensive a dog owner faces. Once things have
               settled, comparing pet insurance can protect against the cost of the next one — many plans cover
-              accidents and emergencies.
+              accidents and emergencies. For a stable, non-emergency question — not collapse, not trouble
+              breathing, not uncontrolled bleeding — talk to a licensed vet on a screen rather than waiting
+              for a gap to become an ER visit.
             </p>
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
-            <Link
-              href="https://vets.co/reviews/best-pet-insurance"
-              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
-            >
-              Compare pet insurance plans →
-            </Link>
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <Link
+                href="https://vets.co/reviews/best-pet-insurance"
+                className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Compare pet insurance plans →
+              </Link>
+              <a
+                href="https://vets.co/telehealth"
+                className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+              >
+                Talk to a vet (telehealth) →
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -245,7 +337,21 @@ export default function IsThisADogEmergencyPage() {
             >
               15 dog symptoms you should never ignore
             </Link>{' '}
-            guide. To find emergency care near you, use{' '}
+            guide. If the sign is chocolate, use the{' '}
+            <Link
+              href="/tools/dog-chocolate-toxicity-calculator"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              chocolate-toxicity calculator
+            </Link>
+            . For what to pack before you need it, see the{' '}
+            <Link
+              href="/guides/dog-first-aid-kit"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              dog first-aid kit guide
+            </Link>
+            . To find emergency care near you, use{' '}
             <Link href="/find-a-vet" className="text-brand-primary underline-offset-2 hover:underline">
               find a vet
             </Link>
@@ -270,11 +376,13 @@ export default function IsThisADogEmergencyPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: '15 Dog Symptoms You Should Never Ignore', href: '/health/dog-symptoms-guide', note: 'The full guide behind this tool' },
+              { label: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator', note: 'Theobromine dose bands + safety kit' },
+              { label: 'Dog First-Aid Kit Guide', href: '/guides/dog-first-aid-kit', note: 'What to pack before you need it' },
+              { label: 'How to Take a Dog\'s Temperature', href: '/guides/how-to-take-dogs-temperature', note: 'Baseline vitals for the phone call' },
               { label: 'Find an Emergency Vet', href: '/find-a-vet', note: 'Locate 24/7 care near you' },
               { label: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', note: 'A true surgical emergency' },
               { label: 'Dog Vomiting Guide', href: '/health/dog-vomiting', note: 'When vomiting needs a vet' },
               { label: 'Dog Seizures', href: '/health/dog-seizures', note: 'First seizure vs. known epilepsy' },
-              { label: 'Dog Health Hub', href: '/health', note: 'All conditions and symptoms A–Z' },
             ].map((item) => (
               <Link
                 key={item.href}
