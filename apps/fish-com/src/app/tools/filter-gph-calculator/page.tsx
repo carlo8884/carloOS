@@ -131,6 +131,7 @@ export default function FilterGphCalculatorPage() {
         { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },
         { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
         { title: 'Water Change Calculator', href: '/tools/water-change-calculator', category: 'Tools' },
+        { title: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder', category: 'Tools' },
         { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' },
       ]}
       sidebar={
@@ -151,6 +152,7 @@ export default function FilterGphCalculatorPage() {
               { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+              { label: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder' },
               { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Equipment Guides', href: '/equipment' },
             ]}
@@ -229,7 +231,9 @@ export default function FilterGphCalculatorPage() {
           <Link href="/tools/water-change-calculator">water change calculator</Link>. For model
           picks see{' '}
           <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
-          <Link href="/reviews/best-nano-tanks">nano tank reviews</Link>.
+          <Link href="/reviews/best-nano-tanks">nano tank reviews</Link>. Building the rest of
+          the kit? Start with the{' '}
+          <Link href="/tools/aquarium-setup-builder">aquarium setup builder</Link>.
         </p>
 
         <h2 id="rated">Rated-for vs real GPH</h2>

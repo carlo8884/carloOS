@@ -9,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -109,6 +111,7 @@ export default function AquariumSetupBuilderPage() {
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Aquarium Setup Guide', href: '/setup', category: 'Setup' },
+        { title: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator', category: 'Tools' },
         { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
         { title: 'Substrate Calculator', href: '/tools/substrate-calculator', category: 'Tools' },
         { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' },
@@ -119,6 +122,7 @@ export default function AquariumSetupBuilderPage() {
           <TableOfContents
             items={[
               { label: 'The builder', href: '#builder' },
+              { label: 'Shop the starter kit', href: '#shop' },
               { label: 'The order to do it in', href: '#order' },
               { label: 'FAQ', href: '#faq' },
             ]}
@@ -128,25 +132,41 @@ export default function AquariumSetupBuilderPage() {
             links={[
               { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
               { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' },
+              { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
               { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
               { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Equipment picks and fishkeeping tips every Thursday."
-            source="aquarium-setup-builder"
-          />
         </>
       }
     >
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-14T00:00:00Z" updatedAt="2026-06-14T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-14T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Starter-kit shopping list
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the sized starter-kit list — filter GPH, heater watts, light, test kit,
+            conditioner, and substrate — so you can shop without re-running the builder. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Starter-kit shopping list"
+            subtitle="Email the sized starter-kit list — filter, heater, light, test kit, conditioner, substrate. No spam."
+            ctaText="Email the setup checklist"
+            source="tools-aquarium-setup-builder-under-hero"
+          />
+        </div>
 
         <h2 id="builder">The builder</h2>
         <p>
@@ -157,22 +177,91 @@ export default function AquariumSetupBuilderPage() {
         </p>
         <Calculator />
 
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop the starter kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            The checklist is a filter, heater, light, liquid master kit, water conditioner, and
+            substrate — then cycle before any fish. Same Amazon hops used on the{' '}
+            <Link href="/reviews/best-aquarium-filters" className="text-brand-primary no-underline hover:underline">
+              filter
+            </Link>
+            ,{' '}
+            <Link href="/reviews/best-aquarium-heaters" className="text-brand-primary no-underline hover:underline">
+              heater
+            </Link>
+            , and{' '}
+            <Link href="/reviews/best-aquarium-lighting" className="text-brand-primary no-underline hover:underline">
+              lighting
+            </Link>{' '}
+            reviews, the{' '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary no-underline hover:underline">
+              test-kit review
+            </Link>
+            , the{' '}
+            <Link href="/tools/substrate-calculator" className="text-brand-primary no-underline hover:underline">
+              substrate calculator
+            </Link>
+            , and the{' '}
+            <Link href="/health/new-tank-syndrome" className="text-brand-primary no-underline hover:underline">
+              new-tank-syndrome
+            </Link>{' '}
+            guide (Seachem Prime). Fish.com earns a commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aqueon+quietflow+30?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop aquarium filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/nicrew+classic+led?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop aquarium lights on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit+seachem+prime?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop Seachem Prime (water conditioner) on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel?s=tools-aquarium-setup-builder"
+              amazonLabel="Shop aquarium gravel on Amazon →"
+            />
+          </div>
+        </div>
+
         <h2 id="order">The order to do it in</h2>
         <p>
           Buy and assemble in this order: tank and stand first, then filter, heater, and light; add
           substrate and décor (size the bags with the{' '}
           <Link href="/tools/substrate-calculator">substrate calculator</Link>); fill and dechlorinate;
-          and only then begin the nitrogen cycle. The
+          and only then begin the nitrogen cycle. Size the filter with the{' '}
+          <Link href="/tools/filter-gph-calculator">filter GPH calculator</Link> and the heater with
+          the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> if you
+          want a tighter number than the builder&apos;s rule of thumb. The
           single biggest beginner mistake is adding fish on day one — a tank needs several weeks for
           its filter to grow the bacteria that make fish waste safe. Our{' '}
-          <a href="/setup/aquarium-cycling-guide">cycling guide</a> and{' '}
-          <a href="/health/new-tank-syndrome">new-tank-syndrome</a> explainer cover that step, and the{' '}
-          <a href="/tools/stocking-calculator">stocking calculator</a> tells you how many fish your
+          <Link href="/setup/aquarium-cycling-guide">cycling guide</Link> and{' '}
+          <Link href="/health/new-tank-syndrome">new-tank-syndrome</Link> explainer cover that step, and the{' '}
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> tells you how many fish your
           finished tank can hold.
         </p>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )
