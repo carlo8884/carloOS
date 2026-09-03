@@ -921,6 +921,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Guides', href: '/guides' },
           { label: 'Tools', href: '/tools' },
           { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
+          { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
           { label: 'Directory', href: '/directory' },
         ],
       },

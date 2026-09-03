@@ -131,6 +131,7 @@ export default function HorseCostCalculatorPage() {
         { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
+        { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Cost of Ownership Calculator',
@@ -168,6 +169,7 @@ export default function HorseCostCalculatorPage() {
               { label: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
               { label: 'First Horse Roadmap', href: '/first-horse-roadmap' },
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
               { label: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
             ]}
           />
@@ -386,6 +388,9 @@ export default function HorseCostCalculatorPage() {
           full <Link href="/ownership/cost-of-owning-a-horse">cost-of-owning-a-horse guide</Link> before you
           buy. Everyday handling starts with{' '}
           <Link href="/tack/halters-and-lead-ropes">halters and lead ropes</Link>.
+          For a conservative urgency read before the next crisis, use the{' '}
+          <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> — a
+          triage aid, not a diagnosis.
         </p>
 
         <CrossPortfolioCard currentSite="horses-com" contentType="tool" />

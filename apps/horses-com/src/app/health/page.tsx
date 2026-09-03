@@ -305,6 +305,11 @@ export default function HealthHubPage() {
             normal gut sounds, and typical manure output — turns a panicked phone call into a useful
             triage conversation. The references below cover the conditions owners and managers meet
             most often, from emergencies to chronic lameness, endocrine, respiratory, and skin disease.
+            For a conservative go-now / same-day / monitor read from the signs in front of you, use the{' '}
+            <Link href="/tools/is-this-a-horse-emergency" className="text-brand-primary no-underline hover:underline">
+              horse emergency sign-list
+            </Link>
+            {' '}— a triage aid, not a diagnosis.
           </p>
         </div>
 
@@ -379,7 +384,11 @@ export default function HealthHubPage() {
           <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
             equine body-condition score tool
           </Link>{' '}
-          (Henneke 1–9 scale, photo-anchored), and review the{' '}
+          (Henneke 1–9 scale, photo-anchored), check urgent signs on the{' '}
+          <Link href="/tools/is-this-a-horse-emergency" className="text-brand-primary no-underline hover:underline">
+            horse emergency sign-list
+          </Link>
+          , and review the{' '}
           <Link href="/nutrition/forage-basics" className="text-brand-primary no-underline hover:underline">
             forage-first feeding basics
           </Link>{' '}

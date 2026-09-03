@@ -81,6 +81,7 @@ export default function LaminitisPage() {
           { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
           { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
           { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+          { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
         hero={{
           title: 'Equine Laminitis',
@@ -124,6 +125,7 @@ export default function LaminitisPage() {
               { label: 'Hoof Abscess', href: '/health/abscess' },
               { label: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
               { label: 'Body Condition Score Tool', href: '/tools/body-condition-score' },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
@@ -147,7 +149,7 @@ export default function LaminitisPage() {
           <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 not-prose my-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The Short Answer</div>
             <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
-              Laminitis is inflammation and failure of the laminae that suspend the coffin bone inside the hoof, and it is a veterinary emergency. Most field cases are <strong>endocrinopathic</strong> — driven by insulin dysregulation from equine metabolic syndrome or PPID (Cushing&apos;s), not by the older &ldquo;grain founder&rdquo; picture. The earliest owner-detectable warning is usually a <strong>bounding digital pulse</strong> with warm feet and a short, stiff gait, often before obvious lameness. If you suspect it, call a vet immediately, move the horse onto deep soft footing, stop grain and lush pasture, and do not force walking. Prognosis hinges on how fast the trigger is controlled and the foot is supported; many early endocrinopathic cases return to soundness, while severe coffin-bone rotation or sinking carries a guarded outlook. Prevention is mostly metabolic: keep at-risk horses lean, limit sugar and starch, and test and treat the underlying endocrine disease.
+              Laminitis is inflammation and failure of the laminae that suspend the coffin bone inside the hoof, and it is a veterinary emergency. A conservative sign-list urgency read lives on the <a href="/tools/is-this-a-horse-emergency" className="text-brand-primary underline-offset-2 hover:underline">Is This a Horse Emergency? triage tool</a>; it does not diagnose. Most field cases are <strong>endocrinopathic</strong> — driven by insulin dysregulation from equine metabolic syndrome or PPID (Cushing&apos;s), not by the older &ldquo;grain founder&rdquo; picture. The earliest owner-detectable warning is usually a <strong>bounding digital pulse</strong> with warm feet and a short, stiff gait, often before obvious lameness. If you suspect it, call a vet immediately, move the horse onto deep soft footing, stop grain and lush pasture, and do not force walking. Prognosis hinges on how fast the trigger is controlled and the foot is supported; many early endocrinopathic cases return to soundness, while severe coffin-bone rotation or sinking carries a guarded outlook. Prevention is mostly metabolic: keep at-risk horses lean, limit sugar and starch, and test and treat the underlying endocrine disease.
             </p>
           </div>
 

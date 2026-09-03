@@ -59,6 +59,7 @@ export default function ChoosingVetPage() {
           { title: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit' },
           { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
           { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+          { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
         hero={{
           title: "Choosing an Equine Vet",
@@ -93,6 +94,7 @@ export default function ChoosingVetPage() {
               { label: "Vaccination Schedule", href: "/guides/equine-vaccination-schedule" },
               { label: "Equine Colic", href: "/health/colic" },
               { label: "Equine professional directory", href: "/directory" },
+              { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
@@ -114,7 +116,7 @@ export default function ChoosingVetPage() {
           />
 
           <h2 id="why">Why the Relationship Matters</h2>
-          <p>An equine veterinarian does far more than treat illness: they guide vaccination and parasite control, perform dental and routine care, conduct pre-purchase exams, advise on nutrition and management, and are the first call in any emergency. A vet who knows your horse and its history makes faster, better decisions in a crisis. Because emergencies do not wait, the relationship must be established before you need it -- the worst time to be searching for a vet is during a colic at midnight.</p>
+          <p>An equine veterinarian does far more than treat illness: they guide vaccination and parasite control, perform dental and routine care, conduct pre-purchase exams, advise on nutrition and management, and are the first call in any emergency. A vet who knows your horse and its history makes faster, better decisions in a crisis. Because emergencies do not wait, the relationship must be established before you need it -- the worst time to be searching for a vet is during a colic at midnight. For a conservative sign-list urgency read while you are lining up that relationship, use the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a> — it does not diagnose.</p>
 
           <h2 id="look">What to Look For</h2>
           <ul>

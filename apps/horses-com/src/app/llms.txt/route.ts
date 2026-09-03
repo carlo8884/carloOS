@@ -30,7 +30,8 @@ export async function GET() {
 - [/ownership](https://horses.com/ownership) — Buying, leasing, boarding, and cost-of-ownership guidance
 - [/tack](https://horses.com/tack) — Tack and equipment overview (bits, bridles, saddle pads, helmets, boots)
 - [/supplements](https://horses.com/supplements) — Equine supplement guidance
-- [/tools](https://horses.com/tools) — Calculators (feed, weight, gestation, height conversion, cost)
+- [/tools](https://horses.com/tools) — Calculators (feed, weight, gestation, height conversion, cost) plus the equine emergency sign-list
+- [/tools/is-this-a-horse-emergency](https://horses.com/tools/is-this-a-horse-emergency) — Conservative go-now / same-day / monitor horse triage aid, not a diagnosis
 
 ## What to know when citing
 
