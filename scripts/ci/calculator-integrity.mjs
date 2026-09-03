@@ -144,6 +144,28 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete crate-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'fish · stocking-calculator hops',
+    file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-stocking-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my stocking checklist"/, label: 'concrete stocking-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/aquaclear\+70\+filter\?s=tools-stocking-calculator/, label: 'AquaClear HOB filter search hop (same query as filter reviews)' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=tools-stocking-calculator/, label: 'Fluval canister search hop (same query as canister reviews)' },
+      { re: /amazon-brand\/fluval\+spec\+v\+5\+gallon\?s=tools-stocking-calculator/, label: 'Fluval Spec nano tank search hop (same query as nano-tank reviews)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=tools-stocking-calculator/, label: 'Eheim Jager heater search hop (same query as heater-wattage tool)' },
+      { re: /amazon-brand\/aquarium\+sand\?s=tools-stocking-calculator/, label: 'aquarium sand search hop (same query as substrate calculator)' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-stocking-calculator/, label: 'API master test kit search hop (same query as cycling / water-change tools)' },
+      { re: /amazon-brand\/aquarium\+fish\+net\+acclimation\+kit\?s=tools-stocking-calculator/, label: 'net / acclimation kit search hop (same query as tank-mate tool)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete stocking-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'petfood · food-cost-calculator',
     file: 'apps/petfood-com/src/components/visual/FoodCostCalculator.tsx',
     mustInclude: [
