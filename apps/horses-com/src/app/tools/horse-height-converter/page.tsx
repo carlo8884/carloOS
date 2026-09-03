@@ -11,6 +11,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -172,7 +174,7 @@ export default function HorseHeightConverterPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -199,6 +201,36 @@ export default function HorseHeightConverterPage() {
           inches field accepts only 0&ndash;3, because 4 inches is a whole hand.
         </p>
         <Calculator />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop height and sizing tools
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A measuring stick with a level is the official withers tool. A height/weight
+            tape is the everyday barn backup. A saddle-fitting kit (wither gauge or
+            fitting template) is how height turns into tack size. These are Amazon
+            category searches — not a ranked product list, not invented inventory, and
+            not a substitute for a formal measurement or a qualified saddle fitter.
+            Horses.com earns a commission on qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"
+              amazonLabel="Browse horse measuring sticks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+height+weight+tape?s=tools-horse-height-converter"
+              amazonLabel="Browse horse height and weight tapes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+saddle+fitting+kit?s=tools-horse-height-converter"
+              amazonLabel="Browse saddle fitting kits on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="formula">How the notation works</h2>
         <p>

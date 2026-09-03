@@ -21,6 +21,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 const CM_PER_INCH = 2.54
 const IN_PER_HAND = 4
@@ -249,6 +250,27 @@ export default function Calculator() {
             </>
           )}
         </p>
+      )}
+
+      {result && (
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Next step
+          </p>
+          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+            Shop a horse measuring stick
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
+            {result.handsNotation}hh is {round1(result.inches)} in ({round1(result.cm)} cm).
+            A measuring stick with a level is how you confirm that number at the withers
+            on hard, level ground — the same method used for official measurement.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <ShopCtas
+            amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"
+            amazonLabel="Browse horse measuring sticks on Amazon →"
+          />
+        </div>
       )}
 
       <p className="mt-4 text-xs text-brand-text-mid">
