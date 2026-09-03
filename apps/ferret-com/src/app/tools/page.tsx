@@ -11,6 +11,12 @@ export const metadata: Metadata = buildMetadata({
 
 const TOOLS = [
   {
+    href: '/tools/is-this-a-ferret-emergency',
+    title: 'Is This a Ferret Emergency?',
+    desc: 'Check ferret signs — labored breathing, pale gums, collapse, seizures, toxin (chocolate/xylitol/ibuprofen), trauma, a hard belly, inability to urinate, protracted vomiting with lethargy, sudden hind weakness — for a conservative go-now / same-day / monitor read, then shop a ferret emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A sign-list triage aid, not a diagnosis.',
+    tag: 'Triage',
+  },
+  {
     href: '/tools/food-evaluator',
     title: 'Ferret Food Evaluator',
     desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes.',
@@ -106,7 +112,7 @@ export default function ToolsHub() {
             Ferrets are obligate carnivores with a punishingly short digestive tract, which makes them far less forgiving of the wrong diet than a dog or cat. The marketing on a bag rarely tells you what matters. What matters is the guaranteed analysis &mdash; the small panel of protein, fat, fiber, and ash percentages every label is required to print &mdash; and the first few ingredients. The trouble is that reading those numbers against published ferret nutrient targets is fiddly, and most owners have nothing to check them against in the pet-store aisle. That gap is exactly what this hub is built to close.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat. The <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">readiness quiz</Link> scores whether a ferret fits your household, then packs a day-one kit.
+            The <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">ferret emergency sign-list</Link> answers how urgently to seek care — go now, same-day, or monitor — from ferret-specific signs. It is a triage aid, not a diagnosis. The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat. The <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">readiness quiz</Link> scores whether a ferret fits your household, then packs a day-one kit.
           </p>
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Where it fits with the rest of the site</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">

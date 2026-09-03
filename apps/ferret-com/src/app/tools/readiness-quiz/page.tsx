@@ -306,7 +306,11 @@ export default function ReadinessQuizPage() {
             The financial picture is the other factor most people underestimate. The up-front cost
             is real but manageable. The harder part is the emergency fund: adrenal disease,
             insulinoma, and gastrointestinal blockages are common in pet ferrets, and treatment
-            is not optional once they appear. The{' '}
+            is not optional once they appear. When a sign appears, the{' '}
+            <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret emergency sign-list
+            </Link>{' '}
+            is a conservative go-now / same-day / monitor read — a triage aid, not a diagnosis. The{' '}
             <Link href="/ownership/cost-of-owning-a-ferret" className="text-brand-primary underline-offset-2 hover:underline">
               cost of owning a ferret
             </Link>{' '}
@@ -349,6 +353,7 @@ export default function ReadinessQuizPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },

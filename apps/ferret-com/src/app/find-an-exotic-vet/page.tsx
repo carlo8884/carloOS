@@ -113,6 +113,7 @@ export default function FindAnExoticVetPage() {
               title="Related Guides"
               links={[
                 { label: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+                { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Ferret Health Hub', href: '/health' },
                 { label: 'License-board directory', href: '/directory' },
@@ -123,6 +124,7 @@ export default function FindAnExoticVetPage() {
       
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
           { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
           { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },

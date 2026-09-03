@@ -145,6 +145,7 @@ export default function FerretEmergencySignsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
                 { label: 'GI Blockage', href: '/health/gastrointestinal-blockage' },
                 { label: 'Heart Disease', href: '/health/heart-disease' },
                 { label: 'Health Hub', href: '/health' },
@@ -163,6 +164,7 @@ export default function FerretEmergencySignsPage() {
       
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { title: 'Signs of Pain', href: '/health/signs-of-pain' },
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
@@ -200,7 +202,10 @@ export default function FerretEmergencySignsPage() {
             teeth-grinding, straining to urinate or defecate, a bloated or
             painful belly, pale or bluish gums, and uncontrolled bleeding.
             Identify an exotic-mammal-capable emergency vet before you ever need
-            one.
+            one. Not sure how urgent the signs you are seeing are? Use the{' '}
+            <a href="/tools/is-this-a-ferret-emergency">Is This a Ferret Emergency? triage tool</a>{' '}
+            to check them against these same criteria for a conservative urgency
+            read. It does not diagnose — only a veterinarian can do that.
           </p>
 
           <h2 id="fast">Why Ferrets Crash Fast</h2>

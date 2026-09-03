@@ -307,6 +307,7 @@ export default function CageSizeCalculatorPage() {
               { label: 'Cage Setup', href: '/care/cage-setup', note: 'Bar spacing, hammocks, and the four-hour rule' },
               { label: 'Multi-Level Housing', href: '/care/multi-level-housing', note: 'Ramps, zoning, and fall risk' },
               { label: 'Best Ferret Cage', href: '/reviews/best-ferret-cage', note: 'Multi-level cage criteria' },
+              { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
