@@ -57,7 +57,7 @@ export default function TurnoutStablingPage() {
         relatedLinks={[
           { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
           { title: 'Pasture Management', href: '/care/pasture-management' },
-          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+          { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
           { title: 'Boarding Options', href: '/ownership/boarding-options' },
         ]}
         hero={{

@@ -145,6 +145,16 @@ const CALCULATORS = [
     why: 'Carroll & Huntington (1988) heart-girth weight-tape: lb=(girth²·length)/330; kg=(girth²·length)/11900.',
   },
   {
+    id: 'horses · stall-bedding-calculator',
+    file: 'apps/horses-com/src/app/tools/stall-bedding-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /lengthFt \* widthFt \* \(depthIn \/ 12\)/, label: 'volume = L × W × (depth_in / 12)' },
+      { re: /CU_FT_PER_SHAVINGS_BAG = 8/, label: '8 cu ft per compressed shavings bag' },
+      { re: /WEEKLY_FRACTION = 0\.15/, label: 'weekly restock ≈ 15% of initial bed' },
+    ],
+    why: 'Stall bed volume is a rectangular prism in cubic feet; 8 cu ft is the typical expanded pine-shavings / pellet bag; 15% is the daily pick-out restock fraction.',
+  },
+  {
     id: 'lizard · enclosure-size-calculator',
     file: 'apps/lizard-com/src/app/tools/enclosure-size-calculator/Calculator.tsx',
     mustInclude: [

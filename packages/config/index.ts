@@ -920,6 +920,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Health', href: '/health' },
           { label: 'Guides', href: '/guides' },
           { label: 'Tools', href: '/tools' },
+          { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
           { label: 'Directory', href: '/directory' },
         ],
       },

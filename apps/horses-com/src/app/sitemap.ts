@@ -190,6 +190,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/tools/horse-height-converter', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-size-for-rider', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-weight-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-{ url: 'https://horses.com/tools/horse-blanket-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/horse-blanket-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/stall-bedding-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

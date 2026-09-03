@@ -114,7 +114,7 @@ export default function HorseWeightCalculatorPage() {
       relatedLinks={[
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
-        { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
+        { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
       hero={{
@@ -147,9 +147,9 @@ export default function HorseWeightCalculatorPage() {
             title="Horse tools"
             links={[
               { label: 'Feed & Hay Calculator', href: '/tools/horse-feed-calculator' },
+              { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Forage Basics', href: '/nutrition/forage-basics' },
-              { label: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
               { label: 'Equine Health Hub', href: '/health' },
             ]}
           />
