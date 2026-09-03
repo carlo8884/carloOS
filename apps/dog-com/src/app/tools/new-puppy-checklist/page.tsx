@@ -8,15 +8,17 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'New Puppy Checklist — What Do I Need for a Puppy? | Dog.com',
+  title: 'New Puppy Checklist — First-Week Essentials | Dog.com',
   description:
-    'What do you need for a new puppy? Pick life stage and adult size for a complete essentials checklist — crate, food, bowls, bed, leash, prevention, and more.',
+    'Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop hops. Free.',
   path: '/tools/new-puppy-checklist',
 })
 
@@ -24,22 +26,22 @@ const FAQS = [
   {
     question: 'What do I need for a new puppy?',
     answer:
-      'The essentials are: a complete puppy food and stainless or ceramic bowls, an adult-size crate with a divider, a bed, a flat collar with an ID tag plus a harness and leash, house-training supplies (poop bags and an enzymatic cleaner), appropriate chews and a couple of toys, grooming basics, and a first vet visit to start vaccines, parasite prevention, and microchip registration. The builder above tailors the list to your puppy’s adult size.',
+      'The day-one essentials are a complete puppy food and stainless or ceramic bowls, an adult-size crate with a divider, a washable bed, a flat collar with an ID tag plus a harness and leash, house-training supplies (poop bags and an enzymatic cleaner), and a first vet visit to start vaccines, parasite prevention, and microchip registration. The builder above tailors the list to adult size, age at pickup, indoor or outdoor living, crate-training status, and budget.',
   },
   {
     question: 'What should I buy before bringing a puppy home?',
     answer:
-      'Have the core kit ready before day one: crate (sized to the adult dog, with a divider), food and bowls, bed, collar with ID tag, harness and leash, poop bags, and an enzymatic cleaner for the inevitable accidents. Book the first vet appointment in advance. Everything else — chews, grooming tools, training treats — can follow in the first week.',
+      'Have the core kit ready before day one: crate (sized to the adult dog, with a divider), food and bowls, bed, collar with ID tag, harness and leash, poop bags, and an enzymatic cleaner. Book the first vet appointment in advance. Everything else — chews, grooming tools, training treats — can follow in the first week.',
   },
   {
     question: 'How much do new-puppy supplies cost?',
     answer:
-      'It varies widely, but the crate, bed, and the first weeks of food are usually the largest items, and buying an adult-size crate once (rather than upsizing as the puppy grows) saves money. Ongoing costs — food, parasite prevention, and vet care — outweigh the one-time supplies over the dog’s life, which is worth planning for from the start.',
+      'It varies widely, but the crate, bed, and the first weeks of food are usually the largest items, and buying an adult-size crate once (rather than upsizing as the puppy grows) saves money. The first-year budget planner puts ranges on crate, food, vet, and training. Ongoing costs — food, parasite prevention, and vet care — outweigh the one-time supplies over the dog’s life.',
   },
   {
     question: 'Do I need pet insurance for a puppy?',
     answer:
-      'It is optional, but if you want it, enrolling while the puppy is young and healthy is the time to do it — once a condition appears it becomes pre-existing and is excluded from cover. Insurance is most valuable as protection against a large, unexpected vet bill rather than as a way to save money on routine care.',
+      'It is optional, but if you want it, enrolling while the puppy is young and healthy is the time to do it — once a condition appears it becomes pre-existing and is excluded from cover. Insurance is most valuable as protection against a large, unexpected vet bill rather than as a way to save money on routine care. Compare policies on Vets.co.',
   },
   {
     question: 'What matters most for a new puppy — beyond the gear?',
@@ -61,16 +63,16 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'New Puppy Essentials Checklist Builder',
   description:
-    'Free interactive checklist that builds a complete new-puppy or new-dog supplies list from life stage and adult size, with why each item matters and links to reviews and sizing tools.',
+    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon category-search hops on every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
-    'Tailors the list to life stage (puppy or adult) and adult size',
-    'Covers crate, food, bowls, bed, collar/leash/harness, prevention, and more',
+    'Tailors the list to adult size, pickup age, indoor/outdoor, crate training, and budget',
+    'Checkable stages: before pickup, first 48 hours, first month, vet and paperwork',
     'Flags the essentials vs. the nice-to-haves',
-    'Links each item to the relevant review or sizing tool',
+    'Shoppable first-week kit via Amazon category searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -78,13 +80,25 @@ const appSchema = {
 const howToSchema = buildHowToSchema({
   name: 'How to prepare for a new puppy',
   description:
-    'Build a complete new-puppy supplies checklist from the puppy’s life stage and adult size, then prioritise the day-one essentials.',
+    'Build a staged new-puppy supplies checklist from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, then shop the day-one kit.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   steps: [
-    { name: 'Pick life stage and adult size', text: 'Choose puppy or adult and the dog’s expected adult size so the crate, food, and bed recommendations fit.' },
-    { name: 'Get the day-one essentials first', text: 'Crate with divider, food and bowls, bed, collar with ID tag, harness and leash, poop bags, and an enzymatic cleaner.' },
-    { name: 'Book the first vet visit', text: 'Start vaccines, parasite prevention, and microchip registration, and decide about pet insurance while the puppy is healthy.' },
-    { name: 'Add the rest in week one', text: 'Chews and toys, grooming tools, training treats, and a first-aid kit, while you focus on socialisation and house-training.' },
+    {
+      name: 'Pick size, pickup age, setting, crate training, and budget',
+      text: 'Choose expected adult size, age at pickup, indoor or outdoor, whether the puppy is crate-trained, and a budget tier so crate, food, and extras fit.',
+    },
+    {
+      name: 'Check off the before-pickup essentials',
+      text: 'Crate with divider, food and bowls, bed, collar with ID tag, harness and leash, poop bags, and an enzymatic cleaner.',
+    },
+    {
+      name: 'Cover the first 48 hours and first month',
+      text: 'Teething toys, house-training supplies, training treats, and grooming basics once the puppy is home.',
+    },
+    {
+      name: 'Book the first vet visit',
+      text: 'Start vaccines, parasite prevention, and microchip registration, and decide about pet insurance while the puppy is healthy.',
+    },
   ],
 })
 
@@ -104,7 +118,9 @@ export default function NewPuppyChecklistPage() {
         <div className="relative z-10 max-w-3xl">
           <div className="flex items-center gap-2.5 mb-6">
             <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Tools &amp; Calculators</span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Tools &amp; Calculators
+            </span>
           </div>
           <h1
             className="font-display font-bold text-white tracking-tight leading-none mb-5"
@@ -113,9 +129,9 @@ export default function NewPuppyChecklistPage() {
             New Puppy Checklist
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            What do you actually need for a new puppy? Pick the life stage and adult size and get a
-            complete, prioritised essentials list — crate, food, bowls, bed, leash, prevention and
-            more — with why each matters and where to find the right one.
+            What do you actually need before a puppy comes home? Pick adult size, age at pickup,
+            indoor or outdoor, crate training, and budget — then check off a staged first-week list
+            with a shoppable kit for every gear item.
           </p>
         </div>
       </section>
@@ -128,9 +144,88 @@ export default function NewPuppyChecklistPage() {
         <span className="text-brand-text-mid font-medium">New Puppy Checklist</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Printable new-puppy checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the printable new-puppy checklist plus a week-1 schedule —
+            crate, food, first vet, house-training, and the shoppable kit —
+            so you can pack before pickup without re-running the builder. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Printable new-puppy checklist"
+            subtitle="Email the printable new-puppy checklist plus a week-1 schedule. No spam."
+            ctaText="Email my new-puppy checklist"
+            source="tools-new-puppy-checklist-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (first-week kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="new-puppy-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a first-week puppy kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items on the
+              checklist above — a wire crate with a divider, puppy food, a
+              slow-feeder bowl, a harness, an ID tag / collar, teething toys,
+              and an enzymatic cleaner. They are not a ranked product list,
+              not invented inventory, and they do not replace the first vet
+              visit. Size the crate and harness before you order. Dog.com
+              earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist"
+                amazonLabel="Browse puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist"
+                amazonLabel="Browse slow-feeder bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist"
+                amazonLabel="Browse harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist"
+                amazonLabel="Browse dog ID tags and collars on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+teething+toys?s=tools-new-puppy-checklist"
+                amazonLabel="Browse puppy teething toys on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"
+                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -146,8 +241,10 @@ export default function NewPuppyChecklistPage() {
                 <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">crate</Link>{' '}
                 and the{' '}
                 <Link href="/tools/harness-collar-size" className="text-brand-primary underline-offset-2 hover:underline">collar and harness</Link>{' '}
-                to the adult dog, setting the right{' '}
-                <Link href="/tools/dog-calorie-calculator" className="text-brand-primary underline-offset-2 hover:underline">food portion</Link>
+                to the adult dog, checking{' '}
+                <Link href="/tools/dog-ideal-weight-calculator" className="text-brand-primary underline-offset-2 hover:underline">healthy adult weight</Link>
+                , converting{' '}
+                <Link href="/tools/dog-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">age in human years</Link>
                 , and running the{' '}
                 <Link href="/tools/puppy-first-year-budget" className="text-brand-primary underline-offset-2 hover:underline">first-year budget planner</Link>{' '}
                 from the start are the easiest ways to avoid early mistakes.
@@ -168,17 +265,35 @@ export default function NewPuppyChecklistPage() {
             <h2 className="mb-4 font-display text-2xl font-bold text-brand-dark">Frequently asked questions</h2>
             <FAQAccordion items={FAQS} />
           </div>
-
-          <CrossPortfolioCard currentSite="dog-com" contentType="tool" />
-
-          <EmailCapture
-            siteId="dog-com"
-            title="Dog.com new-owner letter"
-            subtitle="Practical, vet-referenced guidance for the first year — one email a week."
-            source="tools-new-puppy-checklist"
-          />
         </div>
       </section>
+
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dog Crate Size Calculator', href: '/tools/dog-crate-size-calculator', note: 'Adult-size crate length before you buy' },
+              { label: 'Harness & Collar Size', href: '/tools/harness-collar-size', note: 'Fit the walk gear to neck and chest' },
+              { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget', note: 'Crate, food, vet, and training ranges' },
+              { label: 'Dog Age Calculator', href: '/tools/dog-age-calculator', note: 'Human-year estimate and life stage' },
+              { label: 'Dog Ideal Weight Calculator', href: '/tools/dog-ideal-weight-calculator', note: 'Healthy adult weight range by breed' },
+              { label: 'Puppy Schedule', href: '/training/puppy-schedule', note: 'Week-1 routine once the puppy is home' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CrossPortfolioCard currentSite="dog-com" contentType="tool" variant="footer" />
     </>
   )
 }

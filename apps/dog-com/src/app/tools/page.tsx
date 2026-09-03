@@ -86,7 +86,7 @@ const TOOLS = [
   {
     href: '/tools/new-puppy-checklist',
     title: 'New Puppy Checklist',
-    desc: 'What do you need for a new puppy? Pick life stage and adult size for a complete, prioritised essentials checklist — crate, food, bowls, bed, leash, parasite prevention — each linked to the right review or sizing tool.',
+    desc: 'What do you need for a new puppy? Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable first-week list — crate, food, bowls, harness, teething toys — then shop the kit on Amazon.',
     tag: 'New Owner',
   },
   {

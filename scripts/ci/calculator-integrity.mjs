@@ -269,6 +269,20 @@ const CALCULATORS = [
     why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
   },
   {
+    id: 'dog · new-puppy-checklist',
+    file: 'apps/dog-com/src/app/tools/new-puppy-checklist/Calculator.tsx',
+    mustInclude: [
+      { re: /id: 'before-pickup'/, label: 'before-pickup stage' },
+      { re: /id: 'first-48'/, label: 'first-48-hours stage' },
+      { re: /id: 'first-month'/, label: 'first-month stage' },
+      { re: /id: 'vet-paperwork'/, label: 'vet-and-paperwork stage' },
+      { re: /useState<Size>\('medium'\)/, label: 'default adult size = medium' },
+      { re: /SHOP_SOURCE = 'tools-new-puppy-checklist'/, label: 'amazon-brand hop source tag' },
+      { re: /amazonHop\('wire\+dog\+crate\+with\+divider\+panel'\)/, label: 'crate search hop (same query as crate-size tool)' },
+    ],
+    why: 'Staged new-puppy checklist with sensible medium/8-week/indoor defaults; every gear hop is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [
