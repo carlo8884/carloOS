@@ -13,6 +13,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultCTA } from '../_components/ResultCTA'
 
 interface Symptom {
   id: string
@@ -132,6 +133,19 @@ export default function FishDiseaseSymptomChecker() {
                 </li>
               ))}
             </ul>
+            <ResultCTA
+              heading="Test the water before you medicate"
+              blurb={
+                <>
+                  Ammonia and nitrite mimic most of these signs. A liquid multi-test kit rules that
+                  out first — then quarantine if you can and treat from the linked guide.
+                  Educational triage, not a diagnosis.
+                </>
+              }
+              query="api freshwater master test kit"
+              cta="Browse aquarium test kits on Amazon"
+              source="tools-fish-disease-symptom"
+            />
           </div>
         ) : (
           <p className="text-sm text-brand-text-light">

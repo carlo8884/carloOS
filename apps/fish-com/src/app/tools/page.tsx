@@ -71,7 +71,7 @@ const TOOLS = [
   {
     href: '/tools/fish-disease-symptom-checker',
     title: 'Fish Disease Symptom Checker',
-    desc: 'Why is your fish sick? Tick the signs you see to find the conditions that match — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide. Starts with water-quality testing.',
+    desc: 'Why is your fish sick? Tick the signs you see — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide. Starts with a water test; then a quarantine / illness kit.',
     tag: 'Health',
   },
   {
