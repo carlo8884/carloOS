@@ -6,6 +6,8 @@ import {
   resolveTag,
   isChewyHopLive,
   visibleChewyHref,
+  amazonFallbackFromChewyHref,
+  visibleShopHref,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 
@@ -93,6 +95,22 @@ describe('resolveAffiliateHop', () => {
       '/go/chewy-brand/ferret+cage',
     )
     assert.equal(visibleChewyHref('/go/amazon-brand/ferret+cage', {}), '/go/amazon-brand/ferret+cage')
+  })
+
+  it('falls Chewy-brand search hops to amazon-brand when Chewy is empty', () => {
+    assert.equal(
+      amazonFallbackFromChewyHref('/go/chewy-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks'),
+      '/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks',
+    )
+    assert.equal(amazonFallbackFromChewyHref('/go/chewy/connect'), undefined)
+    assert.equal(visibleShopHref('/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', {}), '/go/amazon-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food')
+    assert.equal(visibleShopHref('/go/chewy/connect', {}), undefined)
+    assert.equal(
+      visibleShopHref('/go/chewy-brand/aqueon+20+gallon+long+aquarium', { AFF_CHEWY_BRAND_TAG: 'live' }),
+      '/go/chewy-brand/aqueon+20+gallon+long+aquarium',
+    )
+    assert.equal(visibleShopHref('/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters', {}), '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters')
+    assert.equal(visibleShopHref('#', {}), undefined)
   })
 
   it('keeps Dog insurance quotes on the Vets.co review', () => {

@@ -9,6 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -181,6 +182,34 @@ export default function HeaterWattageCalculatorPage() {
           <li><strong>Failed off</strong> — heater stops heating. A single heater means the tank cools to room temperature. With two heaters, the other keeps the tank within 2–4°F of target.</li>
         </ul>
         <p>The cost difference is marginal. The safety upside is enormous. For any tank you actually care about, run two.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Shop a sized heater</div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            After you have a wattage, browse the same Amazon heater hops used on the{' '}
+            <Link href="/reviews/best-aquarium-heaters" className="text-brand-primary no-underline hover:underline">
+              best aquarium heaters
+            </Link>{' '}
+            review — Eheim Jager (best overall) or Aqueon Pro (budget). Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
+              rel="sponsored noopener"
+              className="inline-flex items-center rounded-lg bg-brand-dark px-4 py-2.5 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Shop Eheim Jager on Amazon →
+            </a>
+            <a
+              href="/go/amazon-brand/aqueon+pro+heater?s=tools-heater-wattage-calculator"
+              rel="sponsored noopener"
+              className="inline-flex items-center rounded-lg border border-brand-border px-4 py-2.5 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Shop Aqueon Pro on Amazon →
+            </a>
+          </div>
+        </div>
 
         <h2 id="controllers">External Controllers</h2>
         <p>

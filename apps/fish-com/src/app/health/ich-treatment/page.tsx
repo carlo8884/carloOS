@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -57,10 +57,10 @@ export default function IchTreatmentPage() {
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Heater + Thermometer for Heat Treatment</div>
           <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>The heat method requires raising and holding temperature precisely at 82-86°F for 10+ days. A reliable adjustable heater and a separate thermometer (heater thermostats drift) are the two pieces of equipment the method depends on. Equipment supports disease management; it is not a substitute for correct diagnosis or treatment of fish illness.</p>
           <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/aquarium%20adjustable%20heater%20thermometer%20ich%20heat%20treatment?s=health-ich-treatment" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/aquarium%20heater%20thermometer%20fish%20tank?s=health-ich-treatment" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
-          </div>
+          <ShopCtas
+            amazonHref="/go/amazon-brand/aquarium%20adjustable%20heater%20thermometer%20ich%20heat%20treatment?s=health-ich-treatment"
+            chewyHref="/go/chewy-brand/aquarium%20heater%20thermometer%20fish%20tank?s=health-ich-treatment"
+          />
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>

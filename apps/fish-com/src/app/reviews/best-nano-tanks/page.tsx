@@ -65,8 +65,8 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
               ctaText="Shop Aqueon 10 Gallon →"
-              ctaHref="/go/chewy-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
-              ctaAffiliateProgram="chewy"
+              ctaHref="/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-10-gallon"
             />
             <ReviewCard id="aqueon-20" badge="Best Overall Nano" name="Aqueon 20-Gallon Long" subtitle="Best beginner community tank size · Long footprint · Widely available" score={9.4}
@@ -76,8 +76,8 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
               ctaText="Shop 20-Gallon Long →"
-              ctaHref="/go/chewy-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
-              ctaAffiliateProgram="chewy"
+              ctaHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-20-long"
             />
           </div>
