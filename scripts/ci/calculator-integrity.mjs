@@ -308,6 +308,25 @@ const CALCULATORS = [
     why: 'Volume mode: gallons to remove = filled volume × change percent. Dilution mode: fraction = (current−target)/(current−sourceLevel).',
   },
   {
+    id: 'fish · water-change-calculator hops',
+    file: 'apps/fish-com/src/app/tools/water-change-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-water-change-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my water-change checklist"/, label: 'concrete water-change-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/python\+water\+changer\?s=tools-water-change-calculator/, label: 'Python water changer search hop (same query as this tool ResultCTA)' },
+      { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=tools-water-change-calculator/, label: 'gravel-vacuum siphon search hop (same query as this tool ResultCTA)' },
+      { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=tools-water-change-calculator/, label: 'Seachem Prime dechlorinator search hop (same query as disease-checker)' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-water-change-calculator/, label: 'API master test kit search hop (same query as water-test review / stocking)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete water-change-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · horse-height-converter',
     file: 'apps/horses-com/src/app/tools/horse-height-converter/Calculator.tsx',
     mustInclude: [{ re: /hands\s*\*\s*4\s*\+\s*extraInches/, label: 'inches = hands × 4 + extra (hands.inches notation)' }],

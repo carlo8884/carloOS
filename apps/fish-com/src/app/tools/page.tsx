@@ -83,7 +83,7 @@ const TOOLS = [
   {
     href: '/tools/water-change-calculator',
     title: 'Water Change Calculator',
-    desc: 'How many gallons to siphon? Tank size, fill %, and change % in — volume to remove plus a weekly schedule tip by bioload.',
+    desc: 'How many gallons to siphon? Tank size, fill %, and change % in — volume to remove plus a weekly schedule tip by bioload — then shop a change kit (Python-style changer, gravel vacuum, Seachem Prime, API test kit).',
     tag: 'Maintenance',
   },
   {
