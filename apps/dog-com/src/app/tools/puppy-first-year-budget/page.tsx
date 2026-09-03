@@ -147,24 +147,87 @@ export default function PuppyFirstYearBudgetPage() {
         <span className="text-brand-text-mid font-medium">Puppy First-Year Budget</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the budget plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Puppy first-year budget checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the first-year line items, crate-once notes, and the shoppable
+            kit (wire crate with divider, puppy food, scale, training pads) so
+            you can plan without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Puppy first-year budget checklist"
+            subtitle="Email the first-year line items, crate-once notes, and shoppable kit. No spam."
+            ctaText="Email my puppy budget checklist"
+            source="tools-puppy-first-year-budget-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+      {/* Money path — live amazon-brand search hops (first-year kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a quote. */}
+      <section id="puppy-budget-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
-          <div className="mt-4">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
-              amazonLabel="Browse crates on Amazon →"
-            />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a first-year puppy kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches match the crate, food, and
+              house-training lines above — a wire crate with a divider (same
+              query as the{' '}
+              <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+                new-puppy checklist
+              </Link>
+              {' '}and the{' '}
+              <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+                crate size calculator
+              </Link>
+              ), puppy food and a kitchen / pet scale (same queries as the{' '}
+              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
+                puppy weight predictor
+              </Link>
+              ), and puppy training pads. They are not a ranked product list,
+              not invented inventory, and they are not a clinic or retailer
+              quote. Size the crate and food to the adult dog before you
+              order. Dog.com earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget"
+                amazonLabel="Browse puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget"
+                amazonLabel="Browse kitchen / pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"
+                amazonLabel="Browse puppy training pads on Amazon →"
+              />
+            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through the Amazon link — at no extra cost to you, and we never rank by commission. A wire crate with a divider is the same hop as the new-puppy checklist.
-          </p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Pair this with the{' '}
             <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">

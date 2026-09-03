@@ -98,7 +98,7 @@ const TOOLS = [
   {
     href: '/tools/puppy-first-year-budget',
     title: 'Puppy First-Year Budget',
-    desc: 'How much does a puppy cost in year one? Pick adult size and how the puppy arrives for an editable planning total — crate and gear, food, first-year vet, and training. Not a quote.',
+    desc: 'How much does a puppy cost in year one? Pick adult size and how the puppy arrives for an editable planning total — crate and gear, food, first-year vet, and training — then shop the first-year kit (wire crate with divider, puppy food, scale, training pads). Not a quote.',
     tag: 'New Owner',
   },
   {

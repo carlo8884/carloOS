@@ -338,6 +338,25 @@ const CALCULATORS = [
     why: 'First-year food is twelve months of the monthly food line; small-dog gear band starts at $180 as an editable US retail starting point.',
   },
   {
+    id: 'dog · puppy-first-year-budget hops',
+    file: 'apps/dog-com/src/app/tools/puppy-first-year-budget/page.tsx',
+    mustInclude: [
+      { re: /source="tools-puppy-first-year-budget-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy budget checklist"/, label: 'concrete puppy-budget offer, not Subscribe' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-first-year-budget/, label: 'wire crate with divider search hop (same query as crate-size / new-puppy / puppy-weight)' },
+      { re: /amazon-brand\/puppy\+food\?s=tools-puppy-first-year-budget/, label: 'puppy food search hop (same query as new-puppy / puppy-weight)' },
+      { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-first-year-budget/, label: 'scale search hop (same query as puppy-weight / ideal-weight)' },
+      { re: /amazon-brand\/puppy\+training\+pads\?s=tools-puppy-first-year-budget/, label: 'puppy training pads search hop (same query as crate-size)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete puppy-budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · filter-gph-calculator',
     file: 'apps/fish-com/src/app/tools/filter-gph-calculator/Calculator.tsx',
     mustInclude: [
