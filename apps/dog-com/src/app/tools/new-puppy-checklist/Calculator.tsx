@@ -112,6 +112,7 @@ function buildList(stage: Stage, size: Size): Item[] {
         'A flat collar with an ID tag (legally required in many areas), a well-fitted harness for walks to protect the neck, and a standard 4–6 ft leash. A front-clip harness helps with pulling.',
       links: [
         { href: '/reviews/best-dog-harnesses', label: 'Best dog harnesses' },
+        { href: '/tools/harness-collar-size', label: 'Harness & collar size' },
         SHOP_HARNESS,
       ],
       essential: true,

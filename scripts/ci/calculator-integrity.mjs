@@ -222,6 +222,16 @@ const CALCULATORS = [
     ],
     why: 'Starter-kit planning figure: a 30 lb paper-pellet bag lasts one ferret ~6–8 weeks; pan rule is one per ferret plus one extra.',
   },
+  {
+    id: 'dog · harness-collar-size',
+    file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
+    mustInclude: [
+      { re: /SIZE_UP_MARGIN_IN\s*=\s*0\.5/, label: 'size-up when within 0.5 in of next band' },
+      { re: /id: 'XS',\s*minIn: 6,\s*maxIn: 10/, label: 'XS collar band 6–10 in neck' },
+      { re: /valueIn\s*>=\s*next\.minIn\s*-\s*SIZE_UP_MARGIN_IN/, label: 'conservative size-up at band boundary' },
+    ],
+    why: 'Typical retail collar/harness letters map to neck/girth inches; between sizes size up by a 0.5 in margin.',
+  },
 ]
 
 let failures = 0
