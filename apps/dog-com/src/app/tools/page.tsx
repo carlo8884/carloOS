@@ -56,7 +56,7 @@ const TOOLS = [
   {
     href: '/tools/dog-ideal-weight-calculator',
     title: 'Dog Ideal Weight Calculator',
-    desc: 'How much should my dog weigh? Get the healthy adult weight range by breed (AKC-standard) plus an estimated ideal weight from your dog\'s body condition score on the 9-point WSAVA scale. Every result defers a target weight to your veterinarian.',
+    desc: 'How much should my dog weigh? Get the healthy adult weight range by breed (AKC-standard) plus an estimated ideal weight from your dog\'s body condition score on the 9-point WSAVA scale, then shop a weight-check kit (scale, portion tools, slow feeder). Every result defers a target weight to your veterinarian.',
     tag: 'Nutrition',
   },
   {

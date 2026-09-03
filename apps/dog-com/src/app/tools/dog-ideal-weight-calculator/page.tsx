@@ -12,6 +12,7 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -79,6 +80,12 @@ const appSchema = {
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Healthy adult weight range by breed from AKC-standard bands',
+    'Estimated ideal weight from the WSAVA 9-point body condition score',
+    'Size-class fallback for mixed-breed or unlisted dogs',
+    'Shoppable weight-check kit via Amazon category searches',
+  ],
 }
 
 const articleSchema = buildArticleSchema({
@@ -166,6 +173,31 @@ export default function DogIdealWeightCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Dog Ideal Weight Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Weight-check checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the weight-check checklist — BCS recap, portion notes, and the
+            shoppable kit (digital scale, measuring tape, slow feeder) — so you
+            can re-weigh next month without re-running the estimate. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Weight-check checklist"
+            subtitle="Email the weight-check checklist — BCS recap, portion notes, and the shoppable kit. No spam."
+            ctaText="Email my weight-check checklist"
+            source="tools-dog-ideal-weight-under-hero"
+          />
+        </div>
+      </section>
+
       {/* GEO: extractable answer + worked example, ABOVE the tool */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
@@ -199,6 +231,58 @@ export default function DogIdealWeightCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (weight-check / portion kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="ideal-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a weight-check kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that make an
+              ideal-weight estimate repeatable — a digital kitchen / pet scale,
+              a portion-control food scale, a measuring tape or BCS chart, an
+              elevated slow-feeder bowl, a puzzle feeder, and weight-management
+              dog food. They are not a ranked product list, not invented
+              inventory, and they do not set a target weight or diagnose a
+              weight problem. Ask your veterinarian for a target and a safe
+              rate of change before cutting or adding calories. Dog.com earns
+              a commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight"
+                amazonLabel="Browse kitchen / pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
+                amazonLabel="Browse portion-control food scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-ideal-weight"
+                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-ideal-weight"
+                amazonLabel="Browse elevated slow-feeder bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-ideal-weight"
+                amazonLabel="Browse puzzle feeders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/weight+management+dog+food?s=tools-dog-ideal-weight"
+                amazonLabel="Browse weight-management dog food on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -345,19 +429,6 @@ export default function DogIdealWeightCalculatorPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com nutrition &amp; tool updates"
-            subtitle="Research-based weight and nutrition guidance and new tool announcements. No spam."
-            source="tools-dog-ideal-weight-calculator"
-          />
         </div>
       </section>
 
