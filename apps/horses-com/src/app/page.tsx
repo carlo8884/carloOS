@@ -459,6 +459,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-2 text-sm font-semibold">
                   <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">Horse weight calculator →</Link>
                   <Link href="/tools/horse-feed-calculator" className="text-brand-primary no-underline hover:underline">Feed & hay calculator →</Link>
+                  <Link href="/tools/stall-bedding-calculator" className="text-brand-primary no-underline hover:underline">Stall bedding calculator →</Link>
                   <Link href="/tools" className="text-brand-primary no-underline hover:underline">Browse the tools hub →</Link>
                 </div>
               </div>

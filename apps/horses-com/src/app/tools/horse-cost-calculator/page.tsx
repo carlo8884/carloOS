@@ -124,7 +124,7 @@ export default function HorseCostCalculatorPage() {
       relatedLinks={[
         { title: 'Cost of Owning a Horse (Guide)', href: '/ownership/cost-of-owning-a-horse', category: 'Ownership' },
         { title: 'Boarding Options', href: '/ownership/boarding-options', category: 'Ownership' },
-        { title: 'Horse Insurance', href: '/ownership/horse-insurance', category: 'Ownership' },
+        { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
       ]}
       hero={{
