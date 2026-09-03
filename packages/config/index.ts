@@ -1047,6 +1047,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Litter Planner', href: '/tools/litter-planner' },
           { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
+          { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
           { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { label: 'Directory', href: '/directory' },
         ],

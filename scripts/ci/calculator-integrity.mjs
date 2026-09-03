@@ -550,6 +550,41 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete life-stage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'ferret · ferret-body-condition-score',
+    file: 'apps/ferret-com/src/app/tools/ferret-body-condition-score/Calculator.tsx',
+    mustInclude: [
+      { re: /const bcs = Math\.min\(9, Math\.max\(1, Math\.round\(avg\)\)\)/, label: 'BCS = round(mean of 3 checks), clamped 1–9' },
+      { re: /if \(bcs <= 3\)/, label: 'underweight band ≤3' },
+      { re: /if \(bcs <= 5\)/, label: 'ideal band ≤5 (4–5 on the 9-point planning scale)' },
+      { re: /if \(bcs <= 7\)/, label: 'overweight band ≤7' },
+      { re: /seasonal weight swing/, label: 'seasonal-weight-swing caveat kept (ferret-specific, not invented scale)' },
+    ],
+    why: 'Same 1–9 planning scale as the dog/cat BCS tools (average rib/waist/belly, 4–5 ideal), with ferret descriptors and the seasonal weight-swing caveat from Ferret.com weight-management copy. Do not invent a new scale or claim a published ferret WSAVA chart.',
+  },
+  {
+    id: 'ferret · ferret-body-condition-score hops',
+    file: 'apps/ferret-com/src/app/tools/ferret-body-condition-score/page.tsx',
+    mustInclude: [
+      { re: /source="tools-ferret-bcs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret BCS checklist"/, label: 'concrete BCS-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/ferret\+food\?s=tools-ferret-body-condition-score/, label: 'ferret food search hop' },
+      { re: /amazon-brand\/senior\+ferret\+food\?s=tools-ferret-body-condition-score/, label: 'senior ferret food search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-ferret-body-condition-score/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/ferret\+hammock\?s=tools-ferret-body-condition-score/, label: 'ferret hammock search hop' },
+      { re: /amazon-brand\/ferret\+carrier\?s=tools-ferret-body-condition-score/, label: 'ferret carrier search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /https:\/\/vets\.co\/telehealth/, label: 'non-ER talk-to-a-vet points at vets.co/telehealth' },
+      { re: /https:\/\/vets\.co\/reviews\/best-pet-insurance/, label: 'insurance CTA points at educational vets.co comparison' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+    ],
+    why: 'Money path: under-hero capture with a concrete BCS-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · is-this-a-horse-emergency',
     file: 'apps/horses-com/src/app/tools/is-this-a-horse-emergency/TriageHelper.tsx',
     mustInclude: [
