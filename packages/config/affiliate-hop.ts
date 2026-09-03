@@ -45,6 +45,29 @@ export function visibleChewyHref(
   return href
 }
 
+/**
+ * Chewy-brand search hops can earn on Amazon until Carlo sets a Chewy tag.
+ * Only `/go/chewy-brand/{query}` rewrites. `/go/chewy/connect` and pharmacy
+ * hops stay hidden — those are not Amazon search queries.
+ */
+export function amazonFallbackFromChewyHref(href: string): string | undefined {
+  const match = href.match(/^(\/go\/)chewy-brand\/([^?#]+)([?#].*)?$/i)
+  if (!match) return undefined
+  return `${match[1]}amazon-brand/${match[2]}${match[3] ?? ''}`
+}
+
+/** Shop CTA href: hide empty Chewy, or fall Chewy-brand search hops back to Amazon. Never "#". */
+export function visibleShopHref(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): string | undefined {
+  if (!href || href === '#') return undefined
+  if (!isChewyHop(href)) return href
+  const chewy = visibleChewyHref(href, env)
+  if (chewy) return chewy
+  return amazonFallbackFromChewyHref(href)
+}
+
 const DEFAULT_HOME = 'https://www.amazon.com'
 
 export function resolveTag(

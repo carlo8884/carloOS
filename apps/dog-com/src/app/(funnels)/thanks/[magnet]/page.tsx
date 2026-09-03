@@ -6,7 +6,7 @@ import {
   buildMetadata,
   AffiliateDisclosure
 } from '@carloOS/ui'
-import { isChewyHop, visibleChewyHref } from '@carloOS/config/affiliate-hop'
+import { visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 /**
  * Lead-magnet thank-you page template.
@@ -193,7 +193,7 @@ export default async function ThanksPage({
               (r.cta.vendor && r.cta.sku
                 ? `/go/${r.cta.vendor}/${r.cta.sku}?s=thanks-${magnet}`
                 : undefined)
-            const href = rawHref && isChewyHop(rawHref) ? visibleChewyHref(rawHref) : rawHref
+            const href = visibleShopHref(rawHref)
             return (
             <div key={i} className="border border-brand-border rounded-xl p-6">
               <h3 className="font-display text-lg font-bold mb-2">

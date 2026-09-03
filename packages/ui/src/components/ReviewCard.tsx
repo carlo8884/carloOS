@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, visibleChewyHref } from '@carloOS/config/affiliate-hop'
+import { isChewyHop, visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 interface Spec {
   label: string
@@ -73,9 +73,13 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const chewyCta =
-    isChewyHop(ctaAffiliateProgram ?? '') || isChewyHop(rawHref ?? '')
-  const href = chewyCta ? visibleChewyHref(rawHref) : rawHref
+  const href = visibleShopHref(rawHref)
+  const chewyCta = isChewyHop(href ?? '')
+  const program = chewyCta
+    ? ctaAffiliateProgram
+    : href?.includes('/go/amazon')
+      ? 'amazon'
+      : ctaAffiliateProgram
   return (
     <div
       id={id}
@@ -193,7 +197,7 @@ export function ReviewCard({
             <a
               href={href}
               className="inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
-              data-program={editorial ? undefined : ctaAffiliateProgram}
+              data-program={editorial ? undefined : program}
               data-product={editorial ? undefined : ctaAffiliateProduct}
               rel={editorial ? undefined : 'nofollow sponsored'}
               target={editorial ? undefined : '_blank'}

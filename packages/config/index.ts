@@ -1447,6 +1447,8 @@ export {
   isChewyHop,
   isChewyHopLive,
   visibleChewyHref,
+  amazonFallbackFromChewyHref,
+  visibleShopHref,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 export type { HopResult } from './affiliate-hop'
