@@ -269,6 +269,24 @@ const CALCULATORS = [
     why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
   },
   {
+    id: 'ferret · food-evaluator hops',
+    file: 'apps/ferret-com/src/app/tools/food-evaluator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-food-evaluator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret food checklist"/, label: 'concrete food-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-food-evaluator/, label: 'high-protein ferret kibble search hop' },
+      { re: /amazon-brand\/freeze\+dried\+raw\+ferret\+treats\?s=tools-food-evaluator/, label: 'freeze-dried raw ferret treats search hop' },
+      { re: /amazon-brand\/salmon\+oil\+ferret\?s=tools-food-evaluator/, label: 'salmon oil / ferret oil search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete food-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
