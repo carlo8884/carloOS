@@ -1043,6 +1043,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tools', href: '/tools' },
           { label: 'Cost Calculator', href: '/tools/cost-calculator' },
           { label: 'Litter Planner', href: '/tools/litter-planner' },
+          { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { label: 'Directory', href: '/directory' },
         ],
       },

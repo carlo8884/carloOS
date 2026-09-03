@@ -1128,7 +1128,7 @@ export default function HomePage() {
             }}
           >
             Interactive tools and reference built on ferret husbandry data &mdash; evaluate
-            a food in the store aisle, plan your first-year budget, or look up the exact
+            a food in the store aisle, size the cage, plan your first-year budget, or look up the exact
             term your vet used.
           </p>
 
@@ -1304,7 +1304,85 @@ export default function HomePage() {
               </Link>
             </li>
 
-            {/* Card 3 — Ferret Glossary */}
+            {/* Card 3 — Cage Size Calculator */}
+            <li>
+              <Link
+                href="/tools/cage-size-calculator"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '28px 26px',
+                  background: 'rgba(251, 245, 232, 0.05)',
+                  border: '1px solid rgba(201, 157, 95, 0.18)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'background 0.22s ease, border-color 0.22s ease',
+                }}
+              >
+                <div
+                  aria-hidden
+                  style={{ marginBottom: '18px', lineHeight: 1, color: 'var(--brand-amber)' }}
+                >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="1.5" />
+                    <path d="M3 12h18" />
+                    <path d="M12 4v16" />
+                  </svg>
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  Husbandry calculator
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'rgba(251, 245, 232, 0.97)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  Cage Size Calculator
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.55,
+                    color: 'rgba(251, 245, 232, 0.55)',
+                    margin: '0 0 18px',
+                    flex: 1,
+                  }}
+                >
+                  Enter ferret count, levels, and daily playtime. Get a minimum
+                  L &times; W &times; H footprint &mdash; a planning estimate, not a
+                  clinical spec.
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-amber)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  Size the cage &#x2192;
+                </span>
+              </Link>
+            </li>
+
+            {/* Card 4 — Ferret Glossary */}
             <li>
               <Link
                 href="/ownership/ferret-glossary"
