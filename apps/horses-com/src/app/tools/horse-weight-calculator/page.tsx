@@ -237,7 +237,7 @@ export default function HorseWeightCalculatorPage() {
           />
         </div>
 
-        <h2 id="formula">The formula</h2
+        <h2 id="formula">The formula</h2>
         <p>The girth-and-length weight estimate (Carroll &amp; Huntington, 1988):</p>
         <ul>
           <li>
