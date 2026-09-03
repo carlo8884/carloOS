@@ -125,6 +125,25 @@ const CALCULATORS = [
     why: 'Crate must let the dog stand/turn/lie flat: add ~2 in (standard 2–4 in, min) to length+height, pick smallest standard crate clearing both — aligns with manufacturer weight charts.',
   },
   {
+    id: 'dog · dog-crate-size-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-crate-size-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-crate-size-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my crate-size checklist"/, label: 'concrete crate-size offer, not Subscribe' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-dog-crate-size/, label: 'wire crate with divider search hop (same query as puppy-weight / new-puppy)' },
+      { re: /amazon-brand\/dog\+crate\+pad\?s=tools-dog-crate-size/, label: 'crate pad search hop' },
+      { re: /amazon-brand\/dog\+crate\+cover\?s=tools-dog-crate-size/, label: 'crate cover search hop' },
+      { re: /amazon-brand\/puppy\+training\+pads\?s=tools-dog-crate-size/, label: 'puppy training pads search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete crate-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'petfood · food-cost-calculator',
     file: 'apps/petfood-com/src/components/visual/FoodCostCalculator.tsx',
     mustInclude: [
