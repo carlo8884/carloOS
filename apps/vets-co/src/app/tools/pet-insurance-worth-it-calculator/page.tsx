@@ -15,6 +15,7 @@ import {
   CrossPortfolioCard,
 } from '@carloOS/ui'
 import { PetInsuranceWorthItCalculator } from '../../../components/tools/PetInsuranceWorthItCalculator'
+import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 
 const URL = 'https://vets.co/tools/pet-insurance-worth-it-calculator'
 const REVIEWS_HREF = '/reviews/best-pet-insurance'
@@ -195,8 +196,9 @@ export default function PetInsuranceWorthItPage() {
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"
-            title="Vets.co reference letter"
-            subtitle="Veterinary references for pet owners."
+            title="Insurance decision checklist"
+            subtitle="Email the breakeven notes and enrollment checklist. No spam."
+            ctaText="Email the insurance checklist"
             source="insurance-worth-it"
           />
         </>
@@ -211,6 +213,29 @@ export default function PetInsuranceWorthItPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the number
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Insurance breakeven notes
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the breakeven line — premium vs. reimbursement and the eligible-cost level
+            where a policy pays for itself — so you can compare quotes without re-running the
+            math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Insurance breakeven notes"
+            subtitle="Email the breakeven line — premium vs. reimbursement and the eligible-cost threshold. No spam."
+            ctaText="Email the insurance checklist"
+            source="tools-pet-insurance-worth-it-calculator-under-hero"
+          />
+        </div>
 
         {/* GEO: extractable plain-language answer near the top. Calibrated, honest,
             both-sides — not a sales pitch. Followed by a worked breakeven example. */}
@@ -279,6 +304,8 @@ export default function PetInsuranceWorthItPage() {
             </Link>
           </p>
         </div>
+
+        <InsuranceWellnessShop source="tools-pet-insurance-worth-it-calculator" />
 
         <h2 id="example">A worked breakeven example</h2>
         <p>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -116,6 +117,31 @@ export default function VetsPetInsurancePage() {
         <span className="text-brand-text-mid">Best Pet Insurance</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Pet insurance decision checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the enrollment checklist — waiting periods, pre-existing exclusions, deductible
+            type, and wellness add-on — so you can compare quotes without re-reading the fine print.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Pet insurance decision checklist"
+            subtitle="Email the enrollment checklist — waiting periods, exclusions, deductible, wellness add-on. No spam."
+            ctaText="Email the insurance checklist"
+            source="reviews-best-pet-insurance-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
@@ -188,6 +214,8 @@ export default function VetsPetInsurancePage() {
               ctaText="Get a Quote →" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="embrace" ctaAffiliateProduct="pet-insurance"
             />
+
+            <InsuranceWellnessShop source="reviews-best-pet-insurance" />
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
@@ -203,8 +231,10 @@ export default function VetsPetInsurancePage() {
               { label: 'Emergency Signs', href: '/health/emergency-signs' },
             ]} />
             <EmailCapture variant="sidebar" siteId="vets-co"
-              title="Free Pet Health Tips"
-              subtitle="Practical guidance every Tuesday." source="review-pet-insurance" />
+              title="Insurance decision checklist"
+              subtitle="Waiting periods, exclusions, and wellness add-on — emailed so you can compare quotes."
+              ctaText="Email the insurance checklist"
+              source="review-pet-insurance" />
           </aside>
         </div>
       </div>
