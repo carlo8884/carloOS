@@ -28,6 +28,16 @@ const LIFE_STAGES: LifeStageOption[] = [
   { label: 'Senior (less active)', factor: 1.4 },
 ]
 
+/** Typical adult weights by size class — starting points, not breed calorie tables. */
+const SIZE_PRESETS: { label: string; lb: number | null }[] = [
+  { label: 'Enter weight yourself', lb: null },
+  { label: 'Toy (typical ~8 lb)', lb: 8 },
+  { label: 'Small (typical ~18 lb)', lb: 18 },
+  { label: 'Medium (typical ~40 lb)', lb: 40 },
+  { label: 'Large (typical ~70 lb)', lb: 70 },
+  { label: 'Giant (typical ~110 lb)', lb: 110 },
+]
+
 interface Result {
   rer: number
   mer: number
@@ -54,7 +64,19 @@ export default function DogCalorieCalculator() {
   const [weight, setWeight] = useState<string>('30')
   const [unit, setUnit] = useState<Unit>('lb')
   const [stageIndex, setStageIndex] = useState<number>(0)
+  const [sizeIndex, setSizeIndex] = useState<number>(0)
   const [kcalPerCupStr, setKcalPerCupStr] = useState<string>('')
+
+  function applySizePreset(index: number) {
+    setSizeIndex(index)
+    const preset = SIZE_PRESETS[index]
+    if (preset.lb == null) return
+    if (unit === 'lb') {
+      setWeight(String(preset.lb))
+    } else {
+      setWeight((preset.lb / 2.2046).toFixed(1))
+    }
+  }
 
   const weightNum = parseFloat(weight) || 0
   const kcalPerCup = kcalPerCupStr.trim() !== '' ? parseFloat(kcalPerCupStr) || null : null
@@ -71,6 +93,29 @@ export default function DogCalorieCalculator() {
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       {/* Inputs */}
       <div className="grid gap-5 md:grid-cols-2">
+        {/* Size class — optional weight starter, not a breed calorie table */}
+        <div className="md:col-span-2">
+          <label htmlFor="dc-size" className="mb-1 block text-xs font-medium text-brand-text-mid">
+            Size class <span className="font-normal text-brand-text-light">(optional starter)</span>
+          </label>
+          <select
+            id="dc-size"
+            value={sizeIndex}
+            onChange={(e) => applySizePreset(Number(e.target.value))}
+            className="w-full max-w-md rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
+          >
+            {SIZE_PRESETS.map((s, i) => (
+              <option key={s.label} value={i}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+          <p className="mt-1 text-2xs text-brand-text-light">
+            Fills a typical adult weight so you can start. Override with the scale weight — the
+            formula does not use breed-specific calorie tables.
+          </p>
+        </div>
+
         {/* Weight */}
         <div>
           <label htmlFor="dc-weight" className="mb-1 block text-xs font-medium text-brand-text-mid">

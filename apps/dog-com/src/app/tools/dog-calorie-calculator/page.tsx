@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -50,6 +51,13 @@ const FAQS = [
     answerText:
       'Formula estimates have 30%+ individual variation. Use as a starting point, then adjust over 4-6 weeks based on body condition score and veterinary guidance.',
   },
+  {
+    question: 'Do treats count toward the daily calorie target?',
+    answer:
+      'Yes. Treats should stay within about 10% of daily calories — training treats and table scraps both count. Subtract treat calories from the MER estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: cups over-portion by roughly 20% depending on how they are filled. That 10% rule and the scale-over-cup note are the same husbandry guidance used on the weight-management and breed-feeding pages.',
+    answerText:
+      'Keep treats to about 10% of daily calories. Weigh meals on a kitchen scale; measuring cups often over-portion by about 20%.',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -79,7 +87,7 @@ const howToSchema = buildHowToSchema({
   steps: [
     {
       name: 'Enter your dog\'s weight',
-      text: 'Enter your dog\'s body weight in pounds or kilograms. For weight-loss dogs, use the veterinarian-assessed target weight rather than the current weight.',
+      text: 'Optionally pick a size class to pre-fill a typical adult weight, then enter your dog\'s body weight in pounds or kilograms. For weight-loss dogs, use the veterinarian-assessed target weight rather than the current weight.',
     },
     {
       name: 'Select the life stage',
@@ -143,6 +151,30 @@ export default function DogCalorieCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Dog Calorie Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the target
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Daily kcal worksheet
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the daily kcal target — RER, MER, and cups-per-day from your food label — so you
+            can portion tomorrow without re-running the math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Daily kcal worksheet"
+            subtitle="Email the daily kcal target — RER, MER, and cups-per-day so you can portion tomorrow. No spam."
+            ctaText="Email the kcal target"
+            source="tools-dog-calorie-calculator-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Calculator */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-4xl">
@@ -150,30 +182,63 @@ export default function DogCalorieCalculatorPage() {
         </div>
       </section>
 
-      {/* Result next-step — shop foods matched to the calorie estimate.
-          One tasteful, disclosed editorial path after the result. The
-          comparison hub is where commercial /go food links live; we route
-          there rather than putting a buy-box on a free tool. */}
+      {/* Money path — live amazon-brand search hops (food / treats / scale).
+          Reuses queries already shipped on reviews + training + ferret diet.
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
-            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              Next step
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop portions
             </div>
-            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-              Have your dog&apos;s daily calorie target? Foods vary widely in calorie
-              density (roughly 270–500 kcal/cup), so the right pick makes hitting that
-              number easier. Compare formulas matched to your dog&apos;s calorie needs and
-              life stage.
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              Foods vary widely in calorie density (roughly 270–500 kcal/cup), so the label kcal/cup
+              figure is what turns MER into a bowl amount. Training treats count toward the 10%
+              treat budget. A gram kitchen scale beats a measuring cup — cups over-portion by
+              roughly 20%. Same Amazon hops used on the{' '}
+              <Link href="/reviews/best-dry-dog-food" className="text-brand-primary underline-offset-2 hover:underline">
+                dry-food reviews
+              </Link>{' '}
+              and{' '}
+              <Link href="/training/basic-commands" className="text-brand-primary underline-offset-2 hover:underline">
+                basic-commands
+              </Link>{' '}
+              pages. Dog.com earns a commission on qualifying purchases at no extra cost to you.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/royal+canin+dry+dog+food?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse dry dog food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+small+dog+training+treats?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse training treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse kitchen / pet scales on Amazon →"
+              />
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
+            Compare formulas on the{' '}
             <Link
               href="/reviews/best-dry-dog-food"
-              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+              className="text-brand-primary underline-offset-2 hover:underline"
             >
-              Compare foods by calorie density →
+              dry-food buyer&apos;s guide
             </Link>
-          </div>
+            , then calibrate the target with the{' '}
+            <Link
+              href="/tools/dog-body-condition-score"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              body condition score
+            </Link>{' '}
+            tool. Weight-loss dogs should use a veterinarian-set target weight, not the current
+            overweight number.
+          </p>
         </div>
       </section>
 
@@ -238,6 +303,7 @@ export default function DogCalorieCalculatorPage() {
               { label: 'Best Dog Food for Small Breeds', href: '/reviews/best-dog-food-small-breed', note: 'High-calorie-density small breed foods' },
               { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
               { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
+              { label: 'Dog Body Condition Score', href: '/tools/dog-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
             ].map(item => (
               <Link
                 key={item.href}
@@ -249,19 +315,6 @@ export default function DogCalorieCalculatorPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com nutrition &amp; tool updates"
-            subtitle="Research-based dog nutrition guidance and new tool announcements. No spam."
-            source="tools-dog-calorie-calculator"
-          />
         </div>
       </section>
 
