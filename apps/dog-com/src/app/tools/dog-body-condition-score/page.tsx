@@ -280,7 +280,12 @@ export default function DogBodyConditionScorePage() {
               <Link href="/health/dog-obesity" className="text-brand-primary underline-offset-2 hover:underline">
                 dog obesity guide
               </Link>{' '}
-              cover safe weight loss in depth.
+              cover safe weight loss in depth. If the dog also looks uncomfortable
+              in the face, the{' '}
+              <Link href="/tools/dog-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+                dog grimace scale
+              </Link>{' '}
+              is a pain-face observation aid — not a diagnosis.
             </p>
           </div>
 

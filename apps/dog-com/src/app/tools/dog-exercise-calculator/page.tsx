@@ -224,7 +224,13 @@ export default function DogExerciseCalculatorPage() {
                 Exercise is half of the weight equation — the other half is calories in. If you are working
                 on your dog&apos;s weight, pair this with the{' '}
                 <Link href="/tools/dog-calorie-calculator" className="text-brand-primary underline-offset-2 hover:underline">calorie calculator</Link>{' '}
-                to set the right portion, and read our{' '}
+                to set the right portion. If a walk or play session leaves the
+                dog looking sore in the face, the{' '}
+                <Link href="/tools/dog-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">dog grimace scale</Link>{' '}
+                is a pain-face observation aid — not a diagnosis — and sudden
+                distress belongs with{' '}
+                <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary underline-offset-2 hover:underline">emergency triage</Link>
+                , not a longer workout. Read our{' '}
                 <Link href="/health/dog-obesity" className="text-brand-primary underline-offset-2 hover:underline">dog obesity</Link>{' '}
                 and{' '}
                 <Link href="/nutrition/weight-management" className="text-brand-primary underline-offset-2 hover:underline">weight management</Link>{' '}

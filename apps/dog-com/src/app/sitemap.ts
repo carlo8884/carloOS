@@ -251,6 +251,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/tools/dog-water-intake-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/is-this-a-dog-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/dog-grimace-scale', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/puppy-weight-predictor', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-chocolate-toxicity-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-gestation-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },

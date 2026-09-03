@@ -30,7 +30,8 @@ export async function GET() {
 - [/nutrition](https://dog.com/nutrition) — Diet, label-reading, and feeding guidance
 - [/training](https://dog.com/training) — Training and behavior resources
 - [/pet-insurance](https://dog.com/pet-insurance) — Pet insurance comparison and breed-specific routing
-- [/tools](https://dog.com/tools) — Calculators (daily calorie, dog age, and more)
+- [/tools](https://dog.com/tools) — Calculators (daily calorie, dog age, grimace / pain-face, emergency triage, and more)
+- [/tools/dog-grimace-scale](https://dog.com/tools/dog-grimace-scale) — Dog facial grimace / pain-face checklist (ears, eyes, muzzle, brow, head); planning reference, not a diagnosis
 
 ## What to know when citing
 

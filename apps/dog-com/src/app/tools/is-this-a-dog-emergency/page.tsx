@@ -337,7 +337,15 @@ export default function IsThisADogEmergencyPage() {
             >
               15 dog symptoms you should never ignore
             </Link>{' '}
-            guide. If the sign is chocolate, use the{' '}
+            guide. If you are watching the face for a pain expression rather than a
+            listed emergency sign, use the{' '}
+            <Link
+              href="/tools/dog-grimace-scale"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              dog grimace scale
+            </Link>
+            {' '}— a planning / observation reference, not a diagnosis. If the sign is chocolate, use the{' '}
             <Link
               href="/tools/dog-chocolate-toxicity-calculator"
               className="text-brand-primary underline-offset-2 hover:underline"
@@ -376,6 +384,7 @@ export default function IsThisADogEmergencyPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: '15 Dog Symptoms You Should Never Ignore', href: '/health/dog-symptoms-guide', note: 'The full guide behind this tool' },
+              { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
               { label: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator', note: 'Theobromine dose bands + safety kit' },
               { label: 'Dog First-Aid Kit Guide', href: '/guides/dog-first-aid-kit', note: 'What to pack before you need it' },
               { label: 'How to Take a Dog\'s Temperature', href: '/guides/how-to-take-dogs-temperature', note: 'Baseline vitals for the phone call' },

@@ -113,7 +113,7 @@ export default function DogFirstAidKitPage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog First Aid Kit', href: '/guides/dog-first-aid-kit' },
         ]}
-        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'Is This a Dog Emergency?', href: '/tools/is-this-a-dog-emergency', category: 'Tools' }, { title: 'Take Vital Signs at Home', href: '/guides/how-to-take-dogs-temperature', category: 'Guides' }, { title: 'Toxic Foods for Dogs', href: '/nutrition/toxic-foods', category: 'Nutrition' }]}
+        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'Is This a Dog Emergency?', href: '/tools/is-this-a-dog-emergency', category: 'Tools' }, { title: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale', category: 'Tools' }, { title: 'Take Vital Signs at Home', href: '/guides/how-to-take-dogs-temperature', category: 'Guides' }, { title: 'Toxic Foods for Dogs', href: '/nutrition/toxic-foods', category: 'Nutrition' }]}
         sidebar={
           <>
             <TableOfContents
@@ -133,6 +133,7 @@ export default function DogFirstAidKitPage() {
               title="Related Guides"
               links={[
                 { label: 'Is This a Dog Emergency?', href: '/tools/is-this-a-dog-emergency' },
+                { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale' },
                 { label: 'Take Vital Signs at Home', href: '/guides/how-to-take-dogs-temperature' },
                 { label: 'Toxic Foods for Dogs', href: '/nutrition/toxic-foods' },
                 { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' },

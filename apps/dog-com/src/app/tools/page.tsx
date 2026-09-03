@@ -24,6 +24,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/dog-grimace-scale',
+    title: 'Dog Grimace Scale',
+    desc: 'Is your dog in pain? Score five facial signs — ears, eyes, muzzle, brow, head — on this owner pain-face checklist, then shop an observation / comfort kit (first-aid kit, soft recovery cone, orthopedic bed, ice pack wrap, calming chews). Planning / observation reference, not a diagnosis. High-pain faces go to emergency triage first, not a shopping list.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
     desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
@@ -212,6 +218,22 @@ export default function ToolsHub() {
             verifiable equation -- the RER formula and WSAVA/AAHA-style life-stage factors are
             documented in veterinary nutrition literature, not invented for this site. Every result
             is labeled as an estimate and includes guidance to calibrate with a veterinarian.
+            The{' '}
+            <Link
+              href="/tools/dog-grimace-scale"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              dog grimace scale
+            </Link>{' '}
+            is the pain-face twin of Vets.co&apos;s cat grimace tool: five facial signs, a planning
+            total, and a reminder that high-pain faces go to{' '}
+            <Link
+              href="/tools/is-this-a-dog-emergency"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              emergency triage
+            </Link>{' '}
+            first.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For the reference content that explains what these numbers mean, start with{' '}
