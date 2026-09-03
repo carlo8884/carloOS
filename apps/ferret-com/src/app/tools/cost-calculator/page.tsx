@@ -175,6 +175,7 @@ export default function CostCalculatorPage() {
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For the narrative version of these numbers — what each line item typically covers and why — see the
             in-depth <Link href="/ownership/cost-of-owning-a-ferret" className="text-brand-primary underline-offset-2 hover:underline">cost of owning a ferret</Link> guide.
+            If litter is driving the recurring number, the <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">litter planner</Link> sizes pans and 30 lb bags.
             If a food cost is driving your recurring number, the <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> helps
             you confirm you are paying for a food that actually meets ferret nutrient targets, and the <Link href="/diet" className="text-brand-primary underline-offset-2 hover:underline">diet</Link> reference
             explains the targets themselves. For the health costs called out above, the <Link href="/health" className="text-brand-primary underline-offset-2 hover:underline">health</Link> section

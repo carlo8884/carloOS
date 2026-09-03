@@ -141,5 +141,6 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/tools/food-evaluator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/readiness-quiz', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://ferret.com/tools/litter-planner', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
