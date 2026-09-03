@@ -923,6 +923,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tools', href: '/tools' },
           { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
           { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator' },
+          { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
           { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
           { label: 'Directory', href: '/directory' },
         ],

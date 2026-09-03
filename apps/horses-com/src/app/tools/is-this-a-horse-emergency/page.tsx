@@ -371,6 +371,10 @@ export default function IsThisAHorseEmergencyPage() {
             <Link href="/ownership/choosing-a-vet" className="text-brand-primary underline-offset-2 hover:underline">
               choosing an equine vet
             </Link>
+            . For a calm facial pain-watch that is not a diagnosis, use the{' '}
+            <Link href="/tools/horse-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+              horse grimace scale
+            </Link>
             .
           </p>
 
@@ -399,6 +403,7 @@ export default function IsThisAHorseEmergencyPage() {
               { label: 'Lameness Basics', href: '/health/lameness-basics', note: 'AAEP 0–5 grades and when to call' },
               { label: 'Horse Cost Calculator', href: '/tools/horse-cost-calculator', note: 'Size the emergency-fund line' },
               { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator', note: 'Human-year estimate and foal / young / adult / senior label' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
               { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
