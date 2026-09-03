@@ -298,6 +298,7 @@ export default function DogCalorieCalculatorPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: 'Dog Age in Human Years Calculator', href: '/tools/dog-age-calculator', note: 'Convert calendar age to life-stage' },
+              { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale', note: 'Facial pain-watch — not a diagnosis' },
               { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food', note: 'WSAVA-ranked foods by calorie density' },
               { label: 'Best Dog Food for Senior Dogs', href: '/reviews/best-dog-food-senior', note: 'Lower-calorie senior formulas' },
               { label: 'Best Dog Food for Small Breeds', href: '/reviews/best-dog-food-small-breed', note: 'High-calorie-density small breed foods' },

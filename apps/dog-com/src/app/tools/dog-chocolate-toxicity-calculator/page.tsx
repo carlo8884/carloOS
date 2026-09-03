@@ -412,6 +412,7 @@ export default function DogChocolateToxicityCalculatorPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: 'Is This a Dog Emergency?', href: '/tools/is-this-a-dog-emergency', note: 'Conservative symptom triage' },
+              { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale', note: 'Facial pain-watch after a toxin scare — not a diagnosis' },
               { label: 'Dog Symptoms You Should Never Ignore', href: '/health/dog-symptoms-guide', note: 'When to seek care urgently' },
               { label: 'Toxic Foods for Dogs', href: '/nutrition/toxic-foods', note: 'The full dangerous-foods list' },
               { label: 'Find an Emergency Vet', href: '/find-a-vet', note: 'Locate 24/7 care near you' },

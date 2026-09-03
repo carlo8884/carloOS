@@ -604,6 +604,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Tools & Guides',
         links: [
           { label: 'All Tools & Calculators', href: '/tools' },
+          { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale' },
           { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget' },
           { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' },
           { label: 'Compare Breeds', href: '/compare' },

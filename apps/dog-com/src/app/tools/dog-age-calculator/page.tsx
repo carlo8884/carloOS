@@ -314,6 +314,7 @@ export default function DogAgeCalculatorPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: 'New Puppy Checklist', href: '/tools/new-puppy-checklist', note: 'First-week kit before a puppy comes home' },
+              { label: 'Dog Grimace Scale', href: '/tools/dog-grimace-scale', note: 'Facial pain-watch for seniors and sore dogs — not a diagnosis' },
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Estimate daily kcal needs by life stage' },
               { label: 'Best Senior Dog Food 2026', href: '/reviews/best-dog-food-senior', note: 'Nutrition for dogs 7+ years' },
               { label: 'Best Joint Supplements for Dogs', href: '/reviews/best-joint-supplements', note: 'Evidence-based options for senior joint health' },
