@@ -166,6 +166,37 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete stocking-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'horses · horse-blanket-size-calculator',
+    file: 'apps/horses-com/src/app/tools/horse-blanket-size-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /Math\.round\(inches \/ 3\) \* 3/, label: 'US size rounds to nearest 3-inch step' },
+      { re: /Math\.max\(48, Math\.min\(90,/, label: 'US sizes clamped pony 48 → draft 90' },
+      { re: /125 \+ \(\(us - 69\) \* 10\) \/ 3/, label: 'EU cm ≈ 125 + 10 cm per 3" above 69"' },
+      { re: /value \/ 2\.54/, label: 'cm → in = ÷ 2.54' },
+    ],
+    why: 'US horse-blanket size is the chest-to-tail measurement in inches, rounded to the nearest 3-inch size (48–90). EU/cm is the standard approximate conversion from that US size, not a second body measurement.',
+  },
+  {
+    id: 'horses · horse-blanket-size-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-blanket-size-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-blanket-size-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my blanket fit checklist"/, label: 'concrete blanket-fit offer, not Subscribe' },
+      { re: /amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'winter horse blanket search hop' },
+      { re: /amazon-brand\/horse\+turnout\+sheet\?s=tools-horse-blanket-size-calculator/, label: 'turnout sheet search hop' },
+      { re: /amazon-brand\/horse\+stable\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'stable blanket search hop' },
+      { re: /amazon-brand\/horse\+measuring\+tape\?s=tools-horse-blanket-size-calculator/, label: 'measuring tape search hop (same query as horse-weight-calculator)' },
+      { re: /amazon-brand\/horse\+fleece\+cooler\?s=tools-horse-blanket-size-calculator/, label: 'fleece cooler search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete blanket-fit offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'petfood · food-cost-calculator',
     file: 'apps/petfood-com/src/components/visual/FoodCostCalculator.tsx',
     mustInclude: [
