@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildHowToSchema,
@@ -8,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -115,6 +118,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           <TableOfContents
             items={[
               { label: 'The checker', href: '#checker' },
+              { label: 'Shop an illness kit', href: '#shop' },
               { label: 'Water quality comes first', href: '#water' },
               { label: 'FAQ', href: '#faq' },
             ]}
@@ -130,19 +134,35 @@ export default function FishDiseaseSymptomCheckerPage() {
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Equipment picks and fishkeeping tips every Thursday."
-            source="fish-disease-symptom-checker"
-          />
         </>
       }
     >
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-14T00:00:00Z" updatedAt="2026-06-14T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-14T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fish illness checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the fish illness checklist — water-test first, quarantine steps, and what to
+            gather before you medicate — so you can work the signs without re-running the
+            checker. Educational triage, not a diagnosis. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Fish illness checklist"
+            subtitle="Email the fish illness checklist — water-test first, quarantine, and what to gather before you medicate. No spam."
+            ctaText="Email my fish illness checklist"
+            source="tools-fish-disease-symptom-under-hero"
+          />
+        </div>
 
         <h2 id="checker">The checker</h2>
         <p>
@@ -152,6 +172,64 @@ export default function FishDiseaseSymptomCheckerPage() {
           <a href="/health">aquarium disease reference library</a>.
         </p>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (test kit / ich / salt / conditioner / quarantine).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop an illness kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A liquid multi-test kit rules out ammonia, nitrite, and nitrate before you treat; then
+            isolate if you can and use a targeted product from the linked guide. Same Amazon hops
+            used on the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            , the{' '}
+            <Link
+              href="/health/ich-treatment"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              ich treatment guide
+            </Link>
+            , and the{' '}
+            <Link
+              href="/setup/quarantine-tank-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              quarantine tank guide
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra cost to you. This is
+            educational triage, not a diagnosis.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
+              amazonLabel="Shop aquarium multi-test kits on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom"
+              amazonLabel="Shop ich / white-spot treatment on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom"
+              amazonLabel="Shop aquarium salt / disease treatment on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom"
+              amazonLabel="Shop water conditioner / dechlorinator on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"
+              amazonLabel="Shop quarantine hospital tanks and nets on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="water">Water quality comes first</h2>
         <p>
@@ -164,7 +242,11 @@ export default function FishDiseaseSymptomCheckerPage() {
         </p>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion
+          items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
+          includeSchema
+          allowMultiple
+        />
       </div>
     </ArticleLayout>
   )
