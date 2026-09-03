@@ -44,6 +44,8 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/tools/co2-calculator/Calculator.tsx',
     mustInclude: [
       { re: /3\s*\*\s*khN\s*\*\s*Math\.pow\(10,\s*7\s*-\s*phN\)/, label: 'CO2 = 3 × dKH × 10^(7−pH)' },
+      { re: /BPS_PER_10_GAL\s*=\s*1/, label: 'starting bubble rate 1 bps per 10 gal' },
+      { re: /ML_PER_10_GAL\s*=\s*1/, label: 'liquid carbon starting point 1 ml per 10 gal' },
     ],
     mustExclude: [
       { re: /12\.839\s*\*\s*kh/i, label: '12.839 (meq/L coefficient) used against a dKH input → ~4.3× overestimate' },
