@@ -197,6 +197,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete blanket-fit offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'horses · horse-feed-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-feed-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-feed-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my daily hay checklist"/, label: 'concrete daily-hay offer, not Subscribe' },
+      { re: /amazon-brand\/timothy\+hay\+horse\?s=tools-horse-feed-calculator/, label: 'timothy hay search hop' },
+      { re: /amazon-brand\/horse\+ration\+balancer\?s=tools-horse-feed-calculator/, label: 'ration balancer search hop' },
+      { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=tools-horse-feed-calculator/, label: 'feed scoop search hop (same query as horse-cost-calculator / BCS)' },
+      { re: /amazon-brand\/slow\+feeder\+hay\+net\+horse\?s=tools-horse-feed-calculator/, label: 'slow-feeder hay net search hop (same query as forage-basics / BCS)' },
+      { re: /amazon-brand\/equine\+salt\+lick\?s=tools-horse-feed-calculator/, label: 'equine salt lick search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete daily-hay offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'petfood · food-cost-calculator',
     file: 'apps/petfood-com/src/components/visual/FoodCostCalculator.tsx',
     mustInclude: [
