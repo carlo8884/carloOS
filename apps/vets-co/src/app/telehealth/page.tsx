@@ -53,7 +53,7 @@ export default function TelehealthPage() {
             </p>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
-              <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment.</p>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment. Unsure which setting fits? Use the <Link href="/tools/er-vs-clinic" className="text-brand-primary font-medium hover:underline">ER vs clinic vs telehealth</Link> tool.</p>
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="vets-co" />
@@ -83,7 +83,8 @@ export default function TelehealthPage() {
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When to Go to Emergency Instead</div>
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
-              <Link href="/find-a-vet" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
+              <Link href="/tools/er-vs-clinic" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth →</Link>
+              <Link href="/find-a-vet" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
               <Link href="/directory" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
             </div>
           </aside>
