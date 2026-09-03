@@ -149,30 +149,100 @@ export default function HarnessCollarSizePage() {
         <span className="text-brand-text-mid font-medium">Harness &amp; Collar Size</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the size chart
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Harness &amp; collar size chart
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the neck and chest bands, two-finger fit check, and the shoppable
+            walk kit (harness, collar, measuring tape, leash) so you can measure
+            once and buy without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Harness & collar size chart"
+            subtitle="Email the size bands, fit check, and shoppable walk kit. No spam."
+            ctaText="Email my harness size chart"
+            source="tools-harness-collar-size-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+      {/* Money path — live amazon-brand search hops (walk kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a brand guarantee. */}
+      <section id="walk-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
-          <div className="mt-4 flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-              amazonLabel="Browse harnesses on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"
-              amazonLabel="Browse collars on Amazon →"
-            />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a walk kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches match the neck and chest bands you
+              just calculated — a Julius-K9-style harness and a flat buckle
+              collar (same queries this tool already used), a measuring tape
+              (same query as the{' '}
+              <Link href="/tools/dog-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">
+                body condition score
+              </Link>
+              {' '}tool and the{' '}
+              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
+                puppy weight predictor
+              </Link>
+              ), a leash (same query as the{' '}
+              <Link href="/tools/dog-exercise-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+                exercise calculator
+              </Link>
+              ), and a front-clip no-pull harness for dogs that pull (same
+              query as the{' '}
+              <Link href="/training/loose-leash-walking" className="text-brand-primary underline-offset-2 hover:underline">
+                loose-leash walking
+              </Link>
+              {' '}guide). They are not a ranked product list, not invented
+              inventory, and they are not a brand size guarantee. Match the
+              tape to the product chart before you buy — see the{' '}
+              <Link href="/reviews/best-dog-harnesses" className="text-brand-primary underline-offset-2 hover:underline">
+                harness buyer&apos;s guide
+              </Link>
+              . Dog.com earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
+                amazonLabel="Browse harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"
+                amazonLabel="Browse collars on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size"
+                amazonLabel="Browse measuring tapes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+leash?s=tools-harness-collar-size"
+                amazonLabel="Browse leashes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"
+                amazonLabel="Browse front-clip harnesses on Amazon →"
+              />
+            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission. The harness hop is the same Julius-K9 search already used on the new-puppy
-            checklist and harness reviews.
-          </p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Compare styles on the{' '}
             <Link href="/reviews/best-dog-harnesses" className="text-brand-primary underline-offset-2 hover:underline">

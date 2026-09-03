@@ -987,6 +987,26 @@ const CALCULATORS = [
     ],
     why: 'Typical retail collar/harness letters map to neck/girth inches; between sizes size up by a 0.5 in margin.',
   },
+  {
+    id: 'dog · harness-collar-size hops',
+    file: 'apps/dog-com/src/app/tools/harness-collar-size/page.tsx',
+    mustInclude: [
+      { re: /source="tools-harness-collar-size-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my harness size chart"/, label: 'concrete harness-size-chart offer, not Subscribe' },
+      { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-harness-collar-size/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
+      { re: /amazon-brand\/flat\+buckle\+nylon\+dog\+collar\?s=tools-harness-collar-size/, label: 'flat buckle collar search hop (already on this page)' },
+      { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-harness-collar-size/, label: 'measuring tape search hop (same query as BCS / puppy-weight)' },
+      { re: /amazon-brand\/dog\+leash\?s=tools-harness-collar-size/, label: 'leash search hop (same query as exercise / age)' },
+      { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=tools-harness-collar-size/, label: 'front-clip no-pull harness search hop (same query as exercise / loose-leash)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete harness-size-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
 ]
 
 let failures = 0

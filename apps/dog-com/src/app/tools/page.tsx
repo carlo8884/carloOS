@@ -74,7 +74,7 @@ const TOOLS = [
   {
     href: '/tools/harness-collar-size',
     title: 'Harness & Collar Size Calculator',
-    desc: 'What size harness and collar does my dog need? Enter weight or size class plus neck and chest measurements for typical S–XL bands, fit tips, and when to size up.',
+    desc: 'What size harness and collar does my dog need? Enter weight or size class plus neck and chest measurements for typical S–XL bands, fit tips, and when to size up, then shop a walk kit (harness, collar, measuring tape, leash).',
     tag: 'Gear',
   },
   {
