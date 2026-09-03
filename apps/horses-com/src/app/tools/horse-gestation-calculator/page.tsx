@@ -11,8 +11,11 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import FoalingKit from './FoalingKit'
 
 const URL = 'https://horses.com/tools/horse-gestation-calculator'
 
@@ -20,14 +23,14 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Gestation & Foaling Date Calculator | Horses.com',
   description:
-    'Estimate a mare’s foaling date from her breeding date. Free calculator using the ~340-day average gestation, with the early/late 320–362 day foaling window.',
+    'How long are horses pregnant? Enter a breeding date for the ~340-day due date, then pack a foaling-kit checklist.',
   path: '/tools/horse-gestation-calculator',
 })
 
 const howToSchema = buildHowToSchema({
   name: 'How to estimate a mare’s foaling date from the breeding date',
   description:
-    'Add the average equine gestation of about 340 days to the mare’s breeding (last-cover) date to estimate a foaling date, then allow for a normal foaling window of roughly 320 to 362 days.',
+    'Add the average equine gestation of about 340 days to the mare’s breeding (last-cover) date to estimate a foaling date, then allow for a normal foaling window of roughly 320 to 362 days and pack a foaling kit before the early window.',
   url: URL,
   totalTime: 'PT2M',
   steps: [
@@ -42,6 +45,10 @@ const howToSchema = buildHowToSchema({
     {
       name: 'Mark the early and late foaling window',
       text: 'Add 320 days for the earliest typical foaling date and 362 days for the latest. A healthy foal can arrive anywhere across that window; the 340-day figure is only an average.',
+    },
+    {
+      name: 'Pack the foaling kit before the early window',
+      text: 'Gather a digital thermometer, a navel dip your veterinarian specifies, clean towels, a headlamp, exam gloves, and a foaling alarm or stall camera before day 320. Confirm extras with your veterinarian.',
     },
     {
       name: 'Confirm with your veterinarian',
@@ -59,7 +66,7 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'EquineBreedingCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free mare foaling-date estimator. Input: breeding (last-cover) date, with an optional custom gestation length. Outputs: estimated foaling date at ~340 days plus the early/late foaling window (320–362 days).',
+    'Free mare foaling-date estimator plus a packable foaling-kit checklist. Input: breeding (last-cover) date, with an optional custom gestation length. Outputs: estimated foaling date at ~340 days plus the early/late foaling window (320–362 days).',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -67,6 +74,7 @@ const softwareApplicationSchema = {
     'Average equine gestation of ~340 days (default)',
     'Early/late foaling window of 320–362 days',
     'Optional custom gestation length per mare or breed',
+    'Interactive foaling-kit checklist with Amazon shop hops',
     'Estimate framed against ultrasound confirmation',
     'Defers foaling management to a veterinarian',
   ],
@@ -99,6 +107,11 @@ const FAQS = [
     answer:
       'No. This is a calendar tool: it projects a foaling date from a breeding date, but it cannot confirm pregnancy, twins, or stage of gestation. Only a veterinarian can confirm and accurately date a pregnancy — typically by transrectal ultrasound from around 14 days after breeding, which also screens for twins. Use this estimate to plan and budget your foal-watch period, then have your veterinarian confirm the pregnancy and set up foaling management.',
   },
+  {
+    question: 'What should be in a horse foaling kit?',
+    answer:
+      'A typical owner kit is a digital thermometer, a navel dip your veterinarian specifies (usually dilute iodine or chlorhexidine), a stack of clean towels, a flashlight or headlamp, disposable exam gloves, and a foaling alarm or stall camera so you can watch from day 320. Pack it before the early window. This is a husbandry packing list, not a veterinary supply order — ask your veterinarian what else your mare needs, especially for a maiden mare or a mare with a history of dystocia.',
+  },
 ]
 
 export default function HorseGestationCalculatorPage() {
@@ -114,11 +127,11 @@ export default function HorseGestationCalculatorPage() {
       hero={{
         title: 'Horse Gestation & Foaling Date Calculator',
         subtitle:
-          'Estimate a mare’s foaling date from her breeding date using the ~340-day average gestation, with the realistic 320–362 day early/late window.',
+          'Estimate a mare’s foaling date from her breeding date using the ~340-day average gestation, then pack the foaling-kit checklist before the early 320-day window.',
         category: 'Calculators',
         categoryHref: '/tools',
-        publishedAt: 'June 2026',
-        readTime: '4 min',
+        publishedAt: 'September 2026',
+        readTime: '5 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -131,6 +144,7 @@ export default function HorseGestationCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Foaling kit', href: '#foaling-kit' },
               { label: 'The formula', href: '#formula' },
               { label: 'How it works', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -148,13 +162,6 @@ export default function HorseGestationCalculatorPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="gestation-calculator"
-          />
         </>
       }
     >
@@ -162,7 +169,7 @@ export default function HorseGestationCalculatorPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -171,14 +178,36 @@ export default function HorseGestationCalculatorPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Foaling kit packing list
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the foaling-kit list — thermometer, navel dip, towels, headlamp, gloves, and a
+            foaling alarm — so you can pack before the early window without re-opening the
+            calendar. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Foaling kit packing list"
+            subtitle="Email the foaling-kit list — thermometer, navel dip, towels, headlamp, gloves, alarm. No spam."
+            ctaText="Email the foaling kit checklist"
+            source="tools-horse-gestation-calculator-under-hero"
+          />
+        </div>
+
         <p>
           <strong>The quick answer:</strong> a mare&rsquo;s pregnancy lasts about{' '}
           <strong>340 days</strong> (roughly 11 months), so add 340 days to the
           breeding date to estimate the foaling date. A mare bred on{' '}
           <strong>April 1 is due around March 7 the next year</strong>. Because the
           normal range is wide &mdash; about <strong>320 to 362 days</strong> &mdash;
-          treat the date as a planning window, not a deadline, and confirm the
-          pregnancy with your veterinarian by ultrasound.
+          treat the date as a planning window, not a deadline, pack the foaling kit
+          before day 320, and confirm the pregnancy with your veterinarian by ultrasound.
         </p>
 
         <h2 id="calculator">The calculator</h2>
@@ -190,6 +219,43 @@ export default function HorseGestationCalculatorPage() {
           run longer or shorter.
         </p>
         <Calculator />
+
+        <h2 id="foaling-kit">Foaling kit checklist</h2>
+        <p>
+          Once you have a window, pack before the early date. The six-item list
+          below is a husbandry starting point — thermometer, navel dip, towels,
+          headlamp, gloves, and a foaling alarm or stall camera — not a ranked
+          product list and not a substitute for the kit your veterinarian
+          recommends for your mare.
+        </p>
+        <FoalingKit />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop the kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            The six-item list above is a husbandry starting point — thermometer, navel dip,
+            towels, headlamp, gloves, alarm — not a ranked product list. Same Amazon search
+            hops as the checklist rows. Horses.com earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator"
+              amazonLabel="Browse equine thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator"
+              amazonLabel="Browse foal navel dip on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"
+              amazonLabel="Browse foaling alarms on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="formula">The formula</h2>
         <ul>
@@ -238,6 +304,7 @@ export default function HorseGestationCalculatorPage() {
           <li>Confirm that the mare is pregnant, or detect twins</li>
           <li>Establish the true stage of gestation</li>
           <li>Replace veterinary foaling management or an ultrasound-dated due date</li>
+          <li>Rank foaling-kit products or tell you which brand to buy</li>
         </ul>
         <p>
           Use it to plan and budget your foal-watch period, then{' '}

@@ -322,7 +322,7 @@ export default function HorseHeightConverterPage() {
         <p className="mt-8 text-sm">
           Next: estimate the horse&rsquo;s weight with the{' '}
           <Link href="/tools/horse-weight-calculator">horse weight calculator</Link>, plan a
-          foaling date with the{' '}
+          foaling date — and pack the foaling-kit checklist — with the{' '}
           <Link href="/tools/horse-gestation-calculator">gestation calculator</Link>, and set a
           forage target with the{' '}
           <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link>.
