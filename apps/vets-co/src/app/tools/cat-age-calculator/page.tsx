@@ -147,6 +147,7 @@ export default function CatAgeCalculatorPage() {
           <RelatedLinks
             title="Feline health"
             links={[
+              { label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency' },
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score' },
               { label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
@@ -289,10 +290,12 @@ export default function CatAgeCalculatorPage() {
           matters most: vaccines and neutering for kittens; weight, dental, and an annual exam for young adults;
           baseline bloodwork and weight vigilance for mature adults; and twice-yearly visits with senior screening for
           kidney disease, thyroid disease, diabetes, and blood pressure once a cat is a senior. This page is a
-          planning reference, not a diagnosis. The{' '}
+          planning reference, not a diagnosis.           The{' '}
           <Link href="/tools/cat-body-condition-score">cat body condition score</Link> tool pairs with this to track
-          weight,           the <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> is an owner aid when you are
-          watching for pain (observation kit, not a diagnosis), and the <Link href="/health/senior-bloodwork-guide">senior bloodwork guide</Link>{' '}
+          weight, the <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> is an owner aid when you are
+          watching for pain (observation kit, not a diagnosis), the{' '}
+          <Link href="/tools/is-this-a-cat-emergency">cat emergency sign-list</Link> is a
+          go-now / same-day / monitor triage aid (not a diagnosis), and the <Link href="/health/senior-bloodwork-guide">senior bloodwork guide</Link>{' '}
           covers what those screening tests look for. For a stable, non-emergency question, start at{' '}
           <Link href="/telehealth">telehealth</Link>.
         </p>

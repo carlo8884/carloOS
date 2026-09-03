@@ -146,6 +146,7 @@ export default function CatBodyConditionScorePage() {
           <RelatedLinks
             title="Weight & wellness"
             links={[
+              { label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency' },
               { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator' },
               { label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale' },
               { label: 'Weight Management', href: '/health/weight-management' },
@@ -197,7 +198,10 @@ export default function CatBodyConditionScorePage() {
           <Link href="/tools/cat-age-calculator">cat age calculator</Link> to match
           weight checks to AAFP/AAHA life stage, and the{' '}
           <Link href="/tools/cat-grimace-scale">cat grimace scale</Link> if you are
-          also watching for pain (observation kit, not a diagnosis).
+          also watching for pain (observation kit, not a diagnosis). For a feline
+          sign-list urgency read, use{' '}
+          <Link href="/tools/is-this-a-cat-emergency">Is this a cat emergency?</Link>
+          {' '}— a triage aid, not a diagnosis.
         </p>
         <CatBodyConditionScore />
 

@@ -134,5 +134,6 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/tools/cat-grimace-scale', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/cat-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/tools/er-vs-clinic', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://vets.co/tools/is-this-a-cat-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

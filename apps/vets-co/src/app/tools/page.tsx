@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Vets.co Tools — Insurance, Cat Health & ER Triage | Vets.co',
-  description: 'Free tools: ER vs clinic vs telehealth, cat age and grimace scales, plus insurance finder and reimbursement estimators.',
+  description: 'Free tools: cat emergency sign-list triage, ER vs clinic vs telehealth, cat age and grimace scales, plus insurance finder and reimbursement estimators.',
   path: '/tools',
 })
 
@@ -18,6 +18,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const TOOLS = [
+  {
+    href: '/tools/is-this-a-cat-emergency',
+    title: 'Is This a Cat Emergency?',
+    desc: 'Check feline signs — open-mouth breathing, pale/blue gums, collapse, unproductive straining, lily/toxin, trauma, seizures, a hard belly — for a conservative go-now / same-day / monitor read, then shop a cat emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A sign-list triage aid, not a diagnosis, and not a replacement for ER vs clinic.',
+    tag: 'Triage',
+  },
   {
     href: '/tools/er-vs-clinic',
     title: 'ER vs Clinic vs Telehealth',
@@ -97,7 +103,7 @@ export default function ToolsHub() {
             Veterinary-side tools, <span className="italic font-normal">for owners.</span>
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Free reference tools: an ER vs clinic vs telehealth setting chooser, cat age / body-condition / grimace tools, a pet-insurance coverage finder and reimbursement estimator, plus the printable emergency triage card and the veterinary directory.
+            Free reference tools: a cat emergency sign-list triage, an ER vs clinic vs telehealth setting chooser, cat age / body-condition / grimace tools, a pet-insurance coverage finder and reimbursement estimator, plus the printable emergency triage card and the veterinary directory.
           </p>
         </div>
       </section>
@@ -115,7 +121,7 @@ export default function ToolsHub() {
         <div className="max-w-3xl mb-12">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s in the toolkit</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-            A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>is this an ER right now, a clinic visit, or telehealth</em>, <em>is pet insurance even worth it for my pet</em>, <em>which carriers fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
+            A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>are these cat signs go-now, same-day, or monitor</em>, <em>is this an ER right now, a clinic visit, or telehealth</em>, <em>is pet insurance even worth it for my pet</em>, <em>which carriers fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed">
             They&apos;re free, do not require a sign-up, and do not collect or sell personal data. The insurance estimator is a pure-browser calculation — your quote inputs never leave the page.
@@ -151,6 +157,9 @@ export default function ToolsHub() {
               <strong>The reimbursement estimator</strong> models the four levers that every consumer pet-insurance contract uses: the monthly premium, the annual deductible, the reimbursement percentage applied after the deductible is met, and the annual payout cap. For a given expected claim total, it computes the annual reimbursement, the total cost (premium minus reimbursement), and the net benefit vs. paying out of pocket. The math is the standard claims-side accounting — no carrier marketing, no &ldquo;estimated savings&rdquo; that double-counts. If the inputs match what your carrier actually wrote on the quote, the output matches what they will actually pay.
             </p>
             <p>
+              <strong>The cat emergency sign-list triage</strong> is a feline urgency read, not a diagnosis and not a setting chooser. Select the cat signs you are seeing — open-mouth breathing, pale or blue gums, collapse, unproductive straining, known lily or toxin, trauma, seizures, a bloated or hard belly — and it returns the most urgent result: go now, same-day vet, or monitor closely. It always rounds toward more care. It does not replace <Link href="/tools/er-vs-clinic" className="text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth</Link> (where to go) or the printable card (fridge reference).
+            </p>
+            <p>
               <strong>The ER vs clinic vs telehealth tool</strong> is a setting chooser, not a diagnostic symptom checker. Select the signs you are seeing; it returns the most urgent setting — emergency hospital now, clinic tomorrow, or licensed telehealth — and always rounds toward more care. Non-emergency &ldquo;talk to a vet&rdquo; points at the existing <Link href="/telehealth" className="text-brand-primary no-underline hover:underline">telehealth comparison</Link>. It pairs with the printable card below; it does not replace a veterinarian.
             </p>
             <p>
@@ -167,7 +176,7 @@ export default function ToolsHub() {
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s not here (and why)</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-            We deliberately do not ship a diagnostic &ldquo;pet symptom checker&rdquo; that names a disease from an owner&apos;s description. Consumer checkers over-refer to emergency rooms and still miss the cases where the owner&apos;s sense of severity is the real signal. The <Link href="/tools/er-vs-clinic" className="text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth</Link> tool only answers <em>where to go</em>. For named signs in prose, use the emergency triage card, the <Link href="/symptoms" className="text-brand-primary no-underline hover:underline">symptom library</Link>, and named specialists.
+            We deliberately do not ship a diagnostic &ldquo;pet symptom checker&rdquo; that names a disease from an owner&apos;s description. Consumer checkers over-refer to emergency rooms and still miss the cases where the owner&apos;s sense of severity is the real signal. The <Link href="/tools/is-this-a-cat-emergency" className="text-brand-primary no-underline hover:underline">cat emergency sign-list</Link> answers <em>how urgently</em> to seek care for feline signs. The <Link href="/tools/er-vs-clinic" className="text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth</Link> tool only answers <em>where to go</em>. For named signs in prose, use the emergency triage card, the <Link href="/symptoms" className="text-brand-primary no-underline hover:underline">symptom library</Link>, and named specialists.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed">
             We also do not ship breed-specific health calculators or genetic-risk estimators. Those exist as breed-specific reference content under <Link href="/breeds" className="text-brand-primary no-underline hover:underline">/breeds</Link> and condition-specific content under <Link href="/health" className="text-brand-primary no-underline hover:underline">/health</Link>, with citations to the published breed-prevalence data. A calculator would imply a precision the underlying data does not support.

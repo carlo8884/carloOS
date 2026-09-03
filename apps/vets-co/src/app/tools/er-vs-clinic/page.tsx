@@ -247,7 +247,11 @@ export default function ErVsClinicPage() {
             , plus a third bucket for licensed telehealth when the pet is stable.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            For the longer sign list, use the{' '}
+            For a cat-specific sign-list urgency read (go now / same-day / monitor), use{' '}
+            <Link href="/tools/is-this-a-cat-emergency" className="text-brand-primary underline-offset-2 hover:underline">
+              Is this a cat emergency?
+            </Link>
+            — that page does not replace this setting chooser. For the longer sign list, use the{' '}
             <Link href="/symptoms" className="text-brand-primary underline-offset-2 hover:underline">
               symptom library
             </Link>{' '}
@@ -281,6 +285,7 @@ export default function ErVsClinicPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related guides &amp; tools</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency', note: 'Cat sign-list urgency read' },
               { label: 'ER vs. Urgent Care guide', href: '/guides/er-vs-urgent-care', note: 'The prose version of this decision' },
               { label: 'When to go to the vet', href: '/guides/when-to-go-to-the-vet', note: 'Watch vs same-day vs emergency' },
               { label: 'Emergency signs', href: '/health/emergency-signs', note: 'The longer ER list' },
