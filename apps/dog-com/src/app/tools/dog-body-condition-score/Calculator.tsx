@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -100,6 +101,50 @@ function band(bcs: number): Band {
   }
 }
 
+const SHOP_SOURCE = 'tools-dog-bcs'
+
+function resultShop(tone: Band['tone']): {
+  heading: string
+  blurb: string
+  href: string
+  label: string
+} {
+  switch (tone) {
+    case 'low':
+      return {
+        heading: 'Weigh meals while you book the vet',
+        blurb:
+          'An underweight score is a reason to call your veterinarian before changing the diet — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
+        href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
+        label: 'Browse portion-control food scales on Amazon →',
+      }
+    case 'good':
+      return {
+        heading: 'Keep the routine with a measured feeder',
+        blurb:
+          'Ideal condition is a feeding-and-exercise routine that is already working. An elevated slow-feeder bowl helps you keep portions consistent without speeding through the meal. Re-check BCS every month or two, and let your veterinarian set any weight target if the score drifts.',
+        href: `/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=${SHOP_SOURCE}`,
+        label: 'Browse elevated slow-feeder bowls on Amazon →',
+      }
+    case 'warn':
+      return {
+        heading: 'Measure, portion, and slow the bowl',
+        blurb:
+          'An overweight score is a starting observation, not a diet plan. A dog measuring tape or body-condition chart makes the next score repeatable; a portion scale and a slow feeder help you measure meals instead of guessing. Ask your veterinarian for a target weight and a safe rate of loss before cutting calories.',
+        href: `/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=${SHOP_SOURCE}`,
+        label: 'Browse dog measuring tapes and BCS charts on Amazon →',
+      }
+    case 'danger':
+      return {
+        heading: 'Portion with a scale — then follow a vet plan',
+        blurb:
+          'An obese score needs a veterinarian-directed weight-loss plan, not a crash diet. A portion-control food scale is how you record what is actually in the bowl so the clinic can set calories. This tool does not diagnose obesity-related disease or set a target weight.',
+        href: `/go/amazon-brand/portion+control+food+scale+dog?s=${SHOP_SOURCE}`,
+        label: 'Browse portion-control food scales on Amazon →',
+      }
+  }
+}
+
 export default function DogBCSCalculator() {
   const [answers, setAnswers] = useState<Record<string, number | null>>({
     ribs: null,
@@ -112,7 +157,8 @@ export default function DogBCSCalculator() {
     if (scores.length < QUESTIONS.length) return null
     const avg = scores.reduce((a, b) => a + b, 0) / scores.length
     const bcs = Math.min(9, Math.max(1, Math.round(avg)))
-    return { bcs, ...band(bcs) }
+    const next = band(bcs)
+    return { bcs, ...next, shop: resultShop(next.tone) }
   }, [answers])
 
   const toneColor: Record<Band['tone'], string> = {
@@ -172,6 +218,20 @@ export default function DogBCSCalculator() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+        </div>
+      ) : null}
+
+      {result ? (
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Next step
+          </p>
+          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+            {result.shop.heading}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <ShopCtas amazonHref={result.shop.href} amazonLabel={result.shop.label} />
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">
