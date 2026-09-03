@@ -164,6 +164,10 @@ export default function DogCrateSizeCalculatorPage() {
               training guides
             </Link>
             ,             and if this is a new puppy, the{' '}
+            <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+              new-puppy checklist
+            </Link>{' '}
+            lists the day-one kit and the{' '}
             <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
               puppy weight predictor
             </Link>{' '}
