@@ -68,7 +68,7 @@ const TOOLS = [
   {
     href: '/tools/horse-height-converter',
     title: 'Horse Height Converter (Hands, Inches, cm)',
-    desc: 'Convert horse height between hands, inches, and centimetres. Handles the hands.inches notation correctly (15.2hh = 62 in = 157.5 cm) and flags the 14.2hh pony cutoff.',
+    desc: 'Convert horse height between hands, inches, and centimetres. Handles the hands.inches notation correctly (15.2hh = 62 in = 157.5 cm) and flags the 14.2hh pony cutoff, then shop a height-and-sizing kit (measuring stick, height/weight tape, saddle-fitting kit).',
     tag: 'Converter',
   },
   {
