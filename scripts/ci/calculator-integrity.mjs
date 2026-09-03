@@ -594,6 +594,43 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete BCS-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · cat-calorie-calculator',
+    file: 'apps/vets-co/src/app/tools/cat-calorie-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /70\s*\*\s*Math\.pow\(.*0\.75\)/, label: 'RER = 70 × kg^0.75' },
+      { re: /label: 'Neutered indoor adult', factor: 1\.2/, label: 'neutered indoor adult DER 1.2' },
+      { re: /label: 'Intact indoor adult', factor: 1\.4/, label: 'intact indoor adult DER 1.4' },
+      { re: /label: 'Neutered outdoor \/ active', factor: 1\.4/, label: 'neutered outdoor / active DER 1.4' },
+      { re: /label: 'Intact outdoor \/ active', factor: 1\.6/, label: 'intact outdoor / active DER 1.6' },
+      { re: /label: 'Weight loss \(vet-supervised\)', factor: 0\.8/, label: 'feline weight-loss DER 0.8' },
+      { re: /label: 'Kitten', factor: 2\.5/, label: 'kitten DER 2.5' },
+      { re: /label: 'Senior indoor', factor: 1\.1/, label: 'senior indoor DER 1.1' },
+      { re: /label: 'Obese-prone indoor', factor: 1\.0/, label: 'obese-prone indoor DER 1.0' },
+    ],
+    why: 'WSAVA/AAHA feline RER/DER: same 70 × kg^0.75 baseline as dogs, with lower cat factors (indoor/outdoor, neuter, life stage). Weight-loss 0.8 is vet-supervised only (hepatic lipidosis).',
+  },
+  {
+    id: 'vets · cat-calorie-calculator hops',
+    file: 'apps/vets-co/src/app/tools/cat-calorie-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cat-calorie-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my cat kcal target"/, label: 'concrete cat-kcal offer, not Subscribe' },
+      { re: /amazon-brand\/measured\+cat\+food\?s=tools-cat-calorie-calculator/, label: 'measured cat food search hop' },
+      { re: /amazon-brand\/kitchen\+gram\+scale\?s=tools-cat-calorie-calculator/, label: 'kitchen gram scale search hop' },
+      { re: /amazon-brand\/slow\+feeder\+cat\+bowl\?s=tools-cat-calorie-calculator/, label: 'slow-feeder cat bowl search hop' },
+      { re: /amazon-brand\/interactive\+cat\+feeder\?s=tools-cat-calorie-calculator/, label: 'interactive cat feeder search hop' },
+      { re: /amazon-brand\/low\+calorie\+cat\+treats\?s=tools-cat-calorie-calculator/, label: 'low-calorie cat treats search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+    ],
+    why: 'Money path: under-hero capture with a concrete cat-kcal offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'vets · cat-grimace-scale',
     file: 'apps/vets-co/src/components/tools/CatGrimaceScale.tsx',
     mustInclude: [
