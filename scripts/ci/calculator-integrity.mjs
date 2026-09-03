@@ -333,6 +333,24 @@ const CALCULATORS = [
     why: '1 hand = 4 inches; height in hands is hands.inches notation, not decimal (15.2hh = 62 in).',
   },
   {
+    id: 'horses · horse-height-converter hops',
+    file: 'apps/horses-com/src/app/tools/horse-height-converter/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-height-converter-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my height conversion chart"/, label: 'concrete height-chart offer, not Subscribe' },
+      { re: /amazon-brand\/horse\+measuring\+stick\?s=tools-horse-height-converter/, label: 'measuring stick search hop (same query as BCS)' },
+      { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-height-converter/, label: 'height/weight tape search hop (same query as weight-calculator / BCS / age / size-for-rider)' },
+      { re: /amazon-brand\/horse\+saddle\+fitting\+kit\?s=tools-horse-height-converter/, label: 'saddle-fitting kit search hop (height→tack hop already on this page)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete height-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'vets · pet-insurance-worth-it-calculator',
     file: 'apps/vets-co/src/components/tools/PetInsuranceWorthItCalculator.tsx',
     mustInclude: [{ re: /deductible\s*\+\s*annualPremium\s*\/\s*pct/, label: 'breakeven X = deductible + annualPremium/pct' }],

@@ -142,6 +142,7 @@ export default function HorseHeightConverterPage() {
           <TableOfContents
             items={[
               { label: 'The converter', href: '#calculator' },
+              { label: 'Shop height and sizing tools', href: '#shop' },
               { label: 'How the notation works', href: '#formula' },
               { label: 'Reference table', href: '#reference' },
               { label: 'Pony vs. horse', href: '#methodology' },
@@ -183,6 +184,29 @@ export default function HorseHeightConverterPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the conversion chart
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Height conversion chart
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the hands / inches / cm chart — including the 14.2hh pony
+            cutoff and official withers-measurement notes — so you can convert
+            without re-running the tool. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Height conversion chart"
+            subtitle="Email the hands / inches / cm chart and withers-measurement notes. No spam."
+            ctaText="Email my height conversion chart"
+            source="tools-horse-height-converter-under-hero"
+          />
+        </div>
+
         <p>
           <strong>The quick answer:</strong> one hand equals <strong>4 inches</strong>,
           and horse height is written in <strong>hands.inches</strong> notation &mdash;
@@ -202,19 +226,33 @@ export default function HorseHeightConverterPage() {
         </p>
         <Calculator />
 
+        {/* Money path — live amazon-brand search hops (measuring stick /
+            height-weight tape / saddle-fitting kit). ShopCtas hides empty
+            Chewy; never href="#" or PLACEHOLDER. Stick matches BCS; tape
+            matches weight-calculator / BCS / age / size-for-rider; saddle-
+            fitting kit is the height→tack hop already on this page. */}
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop height and sizing tools
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            A measuring stick with a level is the official withers tool. A height/weight
-            tape is the everyday barn backup. A saddle-fitting kit (wither gauge or
-            fitting template) is how height turns into tack size. These are Amazon
-            category searches — not a ranked product list, not invented inventory, and
-            not a substitute for a formal measurement or a qualified saddle fitter.
-            Horses.com earns a commission on qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
+            A measuring stick with a level is the official withers tool (same
+            query as the{' '}
+            <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
+              Henneke BCS
+            </Link>
+            ). A height/weight tape is the everyday barn backup (same query as
+            the{' '}
+            <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">
+              weight calculator
+            </Link>
+            ). A saddle-fitting kit (wither gauge or fitting template) is how
+            height turns into tack size. These are Amazon category searches —
+            not a ranked product list, not invented inventory, and not a
+            substitute for a formal measurement or a qualified saddle fitter.
+            Horses.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
@@ -222,7 +260,7 @@ export default function HorseHeightConverterPage() {
               amazonLabel="Browse horse measuring sticks on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/horse+height+weight+tape?s=tools-horse-height-converter"
+              amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-height-converter"
               amazonLabel="Browse horse height and weight tapes on Amazon →"
             />
             <ShopCtas
