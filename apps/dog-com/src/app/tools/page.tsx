@@ -66,6 +66,12 @@ const TOOLS = [
     tag: 'Gear',
   },
   {
+    href: '/tools/harness-collar-size',
+    title: 'Harness & Collar Size Calculator',
+    desc: 'What size harness and collar does my dog need? Enter weight or size class plus neck and chest measurements for typical S–XL bands, fit tips, and when to size up.',
+    tag: 'Gear',
+  },
+  {
     href: '/tools/dog-body-condition-score',
     title: 'Dog Body Condition Score',
     desc: 'Is your dog under or overweight? Answer three hands-on checks — rib feel, waist from above, belly tuck from the side — to estimate your dog\'s body condition score on the 1–9 scale, with what to do next.',

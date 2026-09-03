@@ -247,6 +247,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/tools/puppy-first-year-budget', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-exercise-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-crate-size-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/harness-collar-size', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-water-intake-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-age-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/is-this-a-dog-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },

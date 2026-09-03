@@ -144,6 +144,8 @@ export default function NewPuppyChecklistPage() {
                 home, prioritise the crate, food and bowls, bed, collar with ID tag, leash and harness,
                 and house-training supplies — and book that first vet visit. Sizing the{' '}
                 <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">crate</Link>{' '}
+                and the{' '}
+                <Link href="/tools/harness-collar-size" className="text-brand-primary underline-offset-2 hover:underline">collar and harness</Link>{' '}
                 to the adult dog, setting the right{' '}
                 <Link href="/tools/dog-calorie-calculator" className="text-brand-primary underline-offset-2 hover:underline">food portion</Link>
                 , and running the{' '}

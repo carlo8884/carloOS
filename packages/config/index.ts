@@ -605,6 +605,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'All Tools & Calculators', href: '/tools' },
           { label: 'Puppy First-Year Budget', href: '/tools/puppy-first-year-budget' },
+          { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' },
           { label: 'Compare Breeds', href: '/compare' },
           { label: 'Which Pet Quiz', href: '/which-pet' },
           { label: 'Puppy Schedule', href: '/puppy-schedule' },

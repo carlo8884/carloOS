@@ -58,7 +58,7 @@ export default function LooseLeashPage() {
                 Shop on Chewy →
               </a>
             </div>
-            <p className="text-2xs text-brand-text-light mt-3">See our full <a href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline no-underline">Best Dog Harnesses 2026</a> guide for side-by-side comparisons.</p>
+            <p className="text-2xs text-brand-text-light mt-3">Size the harness first with the <a href="/tools/harness-collar-size" className="text-brand-primary hover:underline no-underline">harness and collar size calculator</a>, then see our full <a href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline no-underline">Best Dog Harnesses 2026</a> guide for side-by-side comparisons.</p>
           </div>
 
           <h2 id="mistakes">Most Common Mistakes</h2>
