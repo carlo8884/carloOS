@@ -167,7 +167,8 @@ export default function VolumeCalculatorPage() {
           Manufacturers advertise <strong>gross volume</strong>: pure geometry, no decor, water filled to the rim. Your real tank is a different number.
         </p>
         <p>
-          Substrate alone usually displaces 5–8% of capacity. Hardscape (driftwood, rock) can take another 3–5%. And you never fill water to the brim
+          Substrate alone usually displaces 5–8% of capacity — size the bed with the{' '}
+          <Link href="/tools/substrate-calculator">substrate calculator</Link>. Hardscape (driftwood, rock) can take another 3–5%. And you never fill water to the brim
           — you leave 1–2 inches of freeboard. Net water volume — what you should use for dosing meds, calculating water changes, and stocking — is
           usually <strong>88–92% of gross</strong>. Our calculator defaults to 92%, which is realistic for a planted tank with moderate hardscape.
         </p>

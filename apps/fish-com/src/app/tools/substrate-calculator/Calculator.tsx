@@ -142,8 +142,10 @@ export default function SubstrateCalculator() {
           note={
             <>
               <strong className="text-white/90">Buy ~10% extra.</strong>{' '}
-              Bags settle, slope, and never pour to an exact level. Weights are estimates from typical poured densities
-              ({DENSITY[substrate].note}); your product&apos;s actual density may vary, so check the bag.
+              Bags settle, slope, and never pour to an exact level. A typical 20 lb bag of gravel covers
+              roughly 5–6 liters poured — use the liters figure to count bags. Weights are estimates from
+              typical poured densities ({DENSITY[substrate].note}); your product&apos;s actual density may
+              vary, so check the bag.
             </>
           }
         />

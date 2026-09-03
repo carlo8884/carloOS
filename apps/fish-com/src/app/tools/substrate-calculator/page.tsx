@@ -10,6 +10,8 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -39,14 +41,14 @@ const howToSchema = buildHowToSchema({
 
 const softwareApplicationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
+  '@type': 'WebApplication',
   name: 'Aquarium Substrate Calculator',
   url: URL,
   applicationCategory: 'UtilitiesApplication',
   applicationSubCategory: 'AquariumCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free interactive aquarium substrate calculator. Enter tank length, width, and desired substrate depth in inches or centimeters and choose gravel, sand, or aqua soil to estimate the volume in liters and the weight in pounds and kilograms, including a 10% buying buffer.',
+    'Free interactive aquarium substrate calculator. Inputs: tank length, width, and desired substrate depth in inches or centimeters, plus gravel, sand, or aqua soil. Output: volume in liters and weight in pounds and kilograms, including a 10% buying buffer.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -68,7 +70,7 @@ const articleSchema = {
     'How to estimate how much gravel, sand, or aqua soil an aquarium needs — the length × width × depth volume formula, realistic substrate densities, a worked example, and a buy-10%-extra rule.',
   url: URL,
   datePublished: '2026-06-11T00:00:00Z',
-  dateModified: '2026-06-11T00:00:00Z',
+  dateModified: '2026-09-03T00:00:00Z',
   author: { '@type': 'Organization', name: 'Fish.com Editorial' },
   publisher: { '@type': 'Organization', name: 'Fish.com', url: 'https://fish.com' },
   mainEntityOfPage: URL,
@@ -134,8 +136,10 @@ export default function SubstrateCalculatorPage() {
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Aquarium Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tools' },
-        { title: 'Pond Volume Calculator', href: '/tools/pond-volume-calculator', category: 'Tools' },
         { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },
+        { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
+        { title: 'Water Change Calculator', href: '/tools/water-change-calculator', category: 'Tools' },
+        { title: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder', category: 'Tools' },
       ]}
       sidebar={
         <>
@@ -152,17 +156,12 @@ export default function SubstrateCalculatorPage() {
             title="Plan your setup"
             links={[
               { label: 'Aquarium Volume Calculator', href: '/tools/aquarium-volume-calculator' },
-              { label: 'Pond Volume Calculator', href: '/tools/pond-volume-calculator' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
-              { label: 'Aquarium Setup Guide', href: '/setup' },
+              { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+              { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
+              { label: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder' },
+              { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' },
             ]}
-          />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="New calculators and species tools every Thursday."
-            source="substrate-calculator"
           />
         </>
       }
@@ -179,9 +178,66 @@ export default function SubstrateCalculatorPage() {
         <ArticleByline
           siteName="Fish.com Editorial"
           publishedAt="2026-06-11T00:00:00Z"
-          updatedAt="2026-06-11T00:00:00Z"
+          updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
+
+        <h2 id="calculator">The Calculator</h2>
+        <Calculator />
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop substrate
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            Use the weight above to pick bag sizes. Inert gravel or sand suits most community tanks;
+            aqua soil is the planted-tank bed. A substrate vacuum keeps the bed clean after fill-day.
+            Same Amazon hops used on the{' '}
+            <Link href="/setup/planted-tank-setup" className="text-brand-primary no-underline hover:underline">
+              planted tank setup
+            </Link>{' '}
+            guide. Fish.com earns a commission on qualifying purchases at no extra cost to you.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator"
+              amazonLabel="Shop aquarium gravel on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sand?s=tools-substrate-calculator"
+              amazonLabel="Shop aquarium sand on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+aqua+soil+planted+substrate?s=tools-substrate-calculator"
+              amazonLabel="Shop aqua soil on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+substrate+vacuum?s=tools-substrate-calculator"
+              amazonLabel="Shop substrate vacuums on Amazon →"
+            />
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the bag sizes
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Substrate shopping list
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Send the pounds, kilograms, and liters for your footprint — plus the 10% buffer — so you
+            are not one bag short on setup day. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Substrate shopping list"
+            subtitle="Send the bag sizes — pounds, kilograms, and liters for your tank footprint. No spam."
+            source="tools-substrate-calculator-under-hero"
+          />
+        </div>
 
         <h2 id="formula">The Formula</h2>
         <p>
@@ -196,9 +252,6 @@ export default function SubstrateCalculatorPage() {
           g/cm³, and aqua soil — a light baked clay — ≈ 0.8 g/cm³. Convert volume to liters (1 liter = 1000 cm³) to
           compare against bag sizes, then add about 10% so settling and slope don&apos;t leave you short.
         </p>
-
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
 
         <h2 id="example">Worked Example</h2>
         <p>
@@ -226,8 +279,12 @@ export default function SubstrateCalculatorPage() {
         </ul>
         <p>
           Once you know your substrate volume, size everything else around the same tank:{' '}
-          <Link href="/tools/aquarium-volume-calculator">calculate water volume</Link> for dosing and stocking, or use
-          the <Link href="/tools/pond-volume-calculator">pond volume calculator</Link> if you are scaping outdoors.
+          <Link href="/tools/aquarium-volume-calculator">calculate water volume</Link> for dosing, the{' '}
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> for how many fish the net volume
+          can hold, the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the
+          same gallons, and the <Link href="/tools/water-change-calculator">water change calculator</Link> for
+          the weekly siphon. Building the whole kit? Start with the{' '}
+          <Link href="/tools/aquarium-setup-builder">aquarium setup builder</Link>.
         </p>
 
         <h2 id="faq">FAQ</h2>

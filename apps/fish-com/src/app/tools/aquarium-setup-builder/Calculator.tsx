@@ -94,8 +94,8 @@ function buildList(gallons: number, type: SetupType): Item[] {
     detail: planted
       ? 'Root-feeding plants do best in an aquasoil or nutrient substrate; a plain gravel cap over it works too. This is where a planted tank diverges from a basic setup.'
       : 'Inert gravel or sand is fine for a fish-only tank — choose by the fish (sand suits bottom-dwellers that sift it).',
-    href: planted ? '/setup/planted-tank-setup' : '/setup/nano-tank-setup',
-    hrefLabel: planted ? 'Planted tank setup' : 'Setup guides',
+    href: '/tools/substrate-calculator',
+    hrefLabel: 'Substrate calculator',
     essential: true,
   })
 
