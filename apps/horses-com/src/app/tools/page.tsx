@@ -50,7 +50,7 @@ const TOOLS = [
   {
     href: '/tools/horse-feed-calculator',
     title: 'Horse Feed & Hay Calculator',
-    desc: 'Estimate daily hay and feed from bodyweight, workload, and keeper type. Forage-first, using published NRC intake ranges, with a dry-matter vs. as-fed conversion.',
+    desc: 'Estimate daily hay and feed from bodyweight, workload, and keeper type. Forage-first, using published NRC intake ranges, with a dry-matter vs. as-fed conversion, then shop a barn feed kit (timothy hay, ration balancer, feed scoop, slow-feeder hay net, equine salt lick).',
     tag: 'Calculator',
   },
   {

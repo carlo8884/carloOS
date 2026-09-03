@@ -11,6 +11,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -137,6 +139,7 @@ export default function HorseFeedCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop a barn feed kit', href: '#shop' },
               { label: 'The math', href: '#math' },
               { label: 'How it works', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -169,7 +172,7 @@ export default function HorseFeedCalculatorPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -177,6 +180,29 @@ export default function HorseFeedCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the hay notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Daily hay checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the forage-first daily hay checklist — bodyweight %, as-fed
+            conversion, and the weigh-the-flake habit — so you can set a ration
+            without re-running the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Daily hay checklist"
+            subtitle="Email the daily hay checklist and forage-first feeding notes. No spam."
+            ctaText="Email my daily hay checklist"
+            source="tools-horse-feed-calculator-under-hero"
+          />
+        </div>
 
         <p>
           <strong>The quick answer:</strong> a horse eats about{' '}
@@ -195,6 +221,52 @@ export default function HorseFeedCalculatorPage() {
           <Link href="/tools/horse-weight-calculator">horse weight calculator</Link>.
         </p>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (timothy hay / ration
+            balancer / feed scoop / slow-feeder net / salt lick). ShopCtas
+            hides empty Chewy; never href="#" or PLACEHOLDER. Scoop and
+            slow-feeder queries match horse-cost-calculator / forage-basics. */}
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a barn feed kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            These Amazon category searches match the forage-first ration you just
+            calculated — timothy hay, a ration balancer for the vitamin/mineral
+            gap forage leaves, a feed scoop (or bucket) so you weigh what goes in
+            the net, a slow-feeder hay net (same query as{' '}
+            <Link href="/nutrition/forage-basics" className="text-brand-primary no-underline hover:underline">
+              forage basics
+            </Link>
+            ), and an equine salt lick / mineral block. They are not a ranked
+            product list and not invented inventory. Horses.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"
+              amazonLabel="Shop timothy hay on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+ration+balancer?s=tools-horse-feed-calculator"
+              amazonLabel="Shop ration balancers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-feed-calculator"
+              amazonLabel="Shop feed scoops on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-horse-feed-calculator"
+              amazonLabel="Shop slow-feeder hay nets on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+salt+lick?s=tools-horse-feed-calculator"
+              amazonLabel="Shop equine salt licks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="math">The math</h2>
         <ul>
