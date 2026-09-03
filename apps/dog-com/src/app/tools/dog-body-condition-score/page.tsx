@@ -9,6 +9,8 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -71,6 +73,7 @@ const appSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal tuck from the side',
     'Plain-English interpretation: underweight, ideal, overweight, obese',
     'Next-step guidance with a defer-to-vet note',
+    'Shoppable BCS / weight-management kit via Amazon category searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -142,9 +145,84 @@ export default function DogBodyConditionScorePage() {
         <span className="text-brand-text-mid font-medium">Body Condition Score</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog BCS checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the BCS checklist — rib feel, waist, belly tuck, and the shoppable
+            weight-management kit (measuring tape, portion scale, slow feeder) — so you
+            can re-score next month without re-reading the descriptors. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog BCS checklist"
+            subtitle="Email the BCS checklist — rib feel, waist, tuck, and the weight-management kit. No spam."
+            ctaText="Email my dog BCS checklist"
+            source="tools-dog-bcs-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a diagnosis. */}
+      <section id="bcs-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a BCS / weight-management kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that make a body-condition
+              score repeatable — a measuring tape or BCS chart, an elevated slow-feeder
+              bowl, a portion-control food scale, a puzzle feeder, joint-support treats,
+              and weight-management dog food. They are not a ranked product list, not
+              invented inventory, and they do not diagnose a weight problem or set a
+              target weight. Ask your veterinarian for a target and a safe rate of change
+              before cutting or adding calories. Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs"
+                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs"
+                amazonLabel="Browse elevated slow-feeder bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs"
+                amazonLabel="Browse portion-control food scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-bcs"
+                amazonLabel="Browse puzzle feeders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/joint+support+dog+treats?s=tools-dog-bcs"
+                amazonLabel="Browse joint-support dog treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"
+                amazonLabel="Browse weight-management dog food on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -214,13 +292,6 @@ export default function DogBodyConditionScorePage() {
           </div>
 
           <CrossPortfolioCard currentSite="dog-com" contentType="tool" />
-
-          <EmailCapture
-            siteId="dog-com"
-            title="Dog.com health letter"
-            subtitle="Practical, vet-referenced dog-care guidance — one email a week."
-            source="tools-body-condition-score"
-          />
         </div>
       </section>
     </>

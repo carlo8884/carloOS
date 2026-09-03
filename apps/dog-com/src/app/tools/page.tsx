@@ -74,7 +74,7 @@ const TOOLS = [
   {
     href: '/tools/dog-body-condition-score',
     title: 'Dog Body Condition Score',
-    desc: 'Is your dog under or overweight? Answer three hands-on checks — rib feel, waist from above, belly tuck from the side — to estimate your dog\'s body condition score on the 1–9 scale, with what to do next.',
+    desc: 'Is your dog under or overweight? Answer three hands-on checks — rib feel, waist from above, belly tuck from the side — to estimate your dog\'s body condition score on the 1–9 scale, then shop a BCS / weight-management kit (measuring tape, portion scale, slow feeder). Educational only: every result defers a target weight to your veterinarian.',
     tag: 'Health',
   },
   {
