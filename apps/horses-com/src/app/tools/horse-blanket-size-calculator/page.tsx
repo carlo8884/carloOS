@@ -9,6 +9,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -115,6 +117,7 @@ export default function HorseBlanketSizeCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Shop a blanket-fit kit', href: '#shop' },
               { label: 'How to measure', href: '#measure' },
               { label: 'Size vs. weight', href: '#weight' },
               { label: 'FAQ', href: '#faq' },
@@ -141,8 +144,31 @@ export default function HorseBlanketSizeCalculatorPage() {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Horses.com Editorial" publishedAt="2026-06-14" updatedAt="2026-06-14" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Horses.com Editorial" publishedAt="2026-06-14" updatedAt="2026-09-03" reviewedBy="Editorial team" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fit notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horse blanket fit checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the chest-to-tail measuring steps, the round-up-if-between-sizes
+            rule, and winter blanketing tips so you can fit without re-running the
+            calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horse blanket fit checklist"
+            subtitle="Email the blanket fit checklist and winter blanketing tips. No spam."
+            ctaText="Email my blanket fit checklist"
+            source="tools-horse-blanket-size-calculator-under-hero"
+          />
+        </div>
 
         <p>
           <strong>The quick answer:</strong> US horse-blanket sizing <em>is</em> the body measurement. Measure in a
@@ -157,6 +183,58 @@ export default function HorseBlanketSizeCalculatorPage() {
           US/UK size and gives the approximate EU/cm equivalent and the size category.
         </p>
         <Calculator />
+
+        {/* Money path — live amazon-brand search hops (winter blanket / turnout /
+            stable / tape / cooler). ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Measuring-tape query matches horse-weight-calculator. */}
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop a blanket-fit kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            These Amazon category searches match the size you just calculated — a
+            winter horse blanket, a turnout sheet, a stable blanket, a soft
+            measuring tape for the chest-to-tail check (same query as the{' '}
+            <a href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">
+              horse weight calculator
+            </a>
+            ), and a fleece cooler for after work. Pair the size with fill weight
+            on the{' '}
+            <a href="/tack/blanket-weights" className="text-brand-primary no-underline hover:underline">
+              blanket weights guide
+            </a>{' '}
+            and the{' '}
+            <a href="/reviews/best-winter-horse-blankets" className="text-brand-primary no-underline hover:underline">
+              winter blanket reviews
+            </a>
+            . They are not a ranked product list and not invented inventory.
+            Horses.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Shop winter horse blankets on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Shop turnout sheets on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Shop stable blankets on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Shop horse measuring tapes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Shop fleece coolers on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="measure">How to measure</h2>
         <p>

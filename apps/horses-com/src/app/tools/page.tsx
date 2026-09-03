@@ -44,7 +44,7 @@ const TOOLS = [
   {
     href: '/tools/horse-blanket-size-calculator',
     title: 'Horse Blanket Size Calculator',
-    desc: 'What size blanket does your horse need? Measure chest to tail and get the standard US/UK blanket size, the approximate EU/cm equivalent, and a fit tip — because US sizing is that body measurement in inches.',
+    desc: 'What size blanket does your horse need? Measure chest to tail and get the standard US/UK blanket size, the approximate EU/cm equivalent, and a fit tip — because US sizing is that body measurement in inches, then shop a blanket-fit kit (winter blanket, turnout sheet, stable blanket, measuring tape, fleece cooler).',
     tag: 'Tack',
   },
   {
