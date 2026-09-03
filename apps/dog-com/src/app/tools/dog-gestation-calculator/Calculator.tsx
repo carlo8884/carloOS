@@ -118,11 +118,28 @@ function compute(breeding: Date): Result {
   }
 }
 
+/** Calendar-day delta from local today (noon) to the estimated due date. */
+function daysUntil(due: Date): number {
+  const today = new Date()
+  const start = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0, 0, 0)
+  const end = new Date(due.getFullYear(), due.getMonth(), due.getDate(), 12, 0, 0, 0)
+  return Math.round((end.getTime() - start.getTime()) / 86_400_000)
+}
+
+function daysUntilCopy(n: number): string {
+  if (n > 1) return `${n} days from today`
+  if (n === 1) return '1 day from today'
+  if (n === 0) return 'due window starts around today'
+  if (n === -1) return '1 day past the 63-day average'
+  return `${Math.abs(n)} days past the 63-day average`
+}
+
 export default function DogGestationCalculator() {
   const [breedingStr, setBreedingStr] = useState<string>('')
 
   const breeding = useMemo(() => parseInputDate(breedingStr), [breedingStr])
   const result = useMemo(() => (breeding ? compute(breeding) : null), [breeding])
+  const daysUntilDue = result ? daysUntil(result.due) : null
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -139,8 +156,9 @@ export default function DogGestationCalculator() {
           className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
         />
         <p className="mt-1 text-2xs text-brand-text-light">
-          If you had a single breeding, use that date. If your veterinarian timed ovulation by
-          progesterone testing, the ovulation date gives the tightest estimate.
+          Use the mating date, or the ovulation date if your veterinarian timed it by progesterone.
+          A heat-start date is not the same as a breeding date — ovulation usually follows several
+          days later, which is why this tool does not count 63 days from the first day of heat.
         </p>
       </div>
 
@@ -162,6 +180,7 @@ export default function DogGestationCalculator() {
                 <p className="mt-1 font-display text-xl text-brand-dark">{fmt(result.due)}</p>
                 <p className="mt-0.5 text-2xs text-brand-text-light">
                   Breeding date + 63 days (the canine average)
+                  {daysUntilDue !== null ? ` · ${daysUntilCopy(daysUntilDue)}` : ''}
                 </p>
               </div>
               <div className="rounded border border-brand-border bg-brand-white p-4 sm:col-span-2">

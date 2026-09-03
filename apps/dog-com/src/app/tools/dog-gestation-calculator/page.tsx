@@ -12,14 +12,16 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import WhelpingKit from './WhelpingKit'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Pregnancy Calculator & Whelping Calendar | Dog.com',
   description:
-    'How long are dogs pregnant? Enter the breeding date to get your dog\'s estimated whelping (due) date — the 63-day average plus the normal 58–68 day window. Free.',
+    'How long are dogs pregnant? Enter a breeding date for the 63-day due date, then pack a whelping-kit checklist.',
   path: '/tools/dog-gestation-calculator',
 })
 
@@ -59,6 +61,13 @@ const FAQS = [
     answerText:
       'A dog\'s rectal temperature often drops (toward ~98–99°F, below the normal ~100–102.5°F) about 12–24 hours before labor. It is a general owner sign, not a precise predictor.',
   },
+  {
+    question: 'What should be in a dog whelping kit?',
+    answer:
+      'A typical owner kit is a whelping box with a pig rail, absorbent whelping pads, a digital puppy scale, a digital rectal thermometer, a clean bulb syringe, and a stack of clean towels. Set the box up by about day 45 so the dam can acclimate. This is a husbandry packing list, not a veterinary supply order — ask your veterinarian what else your dam needs, especially for a first litter or a breed that often needs a cesarean.',
+    answerText:
+      'A typical kit is a whelping box with a pig rail, pads, a digital puppy scale, a rectal thermometer, a bulb syringe, and clean towels. Set the box up by about day 45. Ask your veterinarian what else your dam needs.',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -74,7 +83,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Dog Pregnancy Calculator & Whelping Calendar',
   description:
-    'Free dog pregnancy calculator that estimates a whelping (due) date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window.',
+    'Free dog pregnancy calculator that estimates a whelping (due) date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, plus a packable whelping-kit checklist.',
   url: 'https://dog.com/tools/dog-gestation-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -103,6 +112,10 @@ const howToSchema = buildHowToSchema({
       name: 'Plan veterinary checkpoints',
       text: 'Plan an ultrasound at about days 25–30 to confirm pregnancy, and an X-ray from about day 45+ so your veterinarian can estimate the puppy count.',
     },
+    {
+      name: 'Pack the whelping kit by week 7',
+      text: 'Set up a whelping box by about day 45 and gather pads, a puppy scale, a digital thermometer, a bulb syringe, and clean towels. Confirm any extras with your veterinarian.',
+    },
   ],
 })
 
@@ -110,12 +123,12 @@ const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Dog Pregnancy Calculator & Whelping Calendar',
   description:
-    'How to estimate a dog\'s whelping date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, with a worked example.',
+    'How to estimate a dog\'s whelping date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, plus a packable whelping-kit checklist.',
   url: 'https://dog.com/tools/dog-gestation-calculator',
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11',
-  modifiedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
 
   citation: SOURCES,
 })
@@ -149,8 +162,8 @@ export default function DogGestationCalculatorPage() {
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
             How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due)
-            date — the 63-day canine average plus the normal 58–68 day window — with the typical
-            veterinary checkpoints mapped onto your own calendar.
+            date — the 63-day canine average plus the normal 58–68 day window — then pack the
+            whelping-kit checklist before week 7.
           </p>
         </div>
       </section>
@@ -166,6 +179,30 @@ export default function DogGestationCalculatorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Dog Pregnancy Calculator</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Whelping kit packing list
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the whelping-kit list — box, pads, puppy scale, thermometer, bulb syringe, and
+            towels — so you can pack before week 7 without re-opening the calendar. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Whelping kit packing list"
+            subtitle="Email the whelping-kit list — box, pads, scale, thermometer, bulb syringe, towels. No spam."
+            ctaText="Email the whelping kit checklist"
+            source="tools-dog-gestation-calculator-under-hero"
+          />
+        </div>
+      </section>
 
       {/* GEO: extractable answer + worked example, ABOVE the tool */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
@@ -202,6 +239,52 @@ export default function DogGestationCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Interactive whelping kit + Amazon hops. ShopCtas hides empty Chewy. */}
+      <section id="whelping-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-4xl">
+          <WhelpingKit />
+        </div>
+        <div className="max-w-2xl mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop the kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              The six-item list above is a husbandry starting point — box, pads, scale, thermometer,
+              bulb syringe, towels — not a ranked product list. Same Amazon search hops as the
+              checklist rows. Dog.com earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+whelping+box?s=tools-dog-gestation-calculator"
+                amazonLabel="Browse whelping boxes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
+                amazonLabel="Browse puppy scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-dog-gestation-calculator"
+                amazonLabel="Browse pet thermometers on Amazon →"
+              />
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
+            Once the puppies arrive, the{' '}
+            <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+              new-puppy checklist
+            </Link>{' '}
+            covers the day-one kit, and the{' '}
+            <Link href="/nutrition/puppy-nutrition" className="text-brand-primary underline-offset-2 hover:underline">
+              puppy nutrition guide
+            </Link>{' '}
+            covers feeding the dam and the litter.
+          </p>
         </div>
       </section>
 
@@ -328,12 +411,12 @@ export default function DogGestationCalculatorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'New Puppy Checklist', href: '/tools/new-puppy-checklist', note: 'Day-one kit once the litter arrives' },
               { label: 'Puppy Weight Predictor', href: '/tools/puppy-weight-predictor', note: 'How big will the puppies get?' },
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily calories for the dam and pups' },
               { label: 'Puppy Nutrition Guide', href: '/nutrition/puppy-nutrition', note: 'Feeding the dam and a litter' },
               { label: 'Best Puppy Food 2026', href: '/reviews/best-dog-food-for-puppies', note: 'Large- and small-breed formulas' },
               { label: 'Puppy Schedule', href: '/puppy-schedule', note: 'Week-by-week first-year plan' },
-              { label: 'Breed Profiles', href: '/breeds', note: 'Typical adult size by breed' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -345,19 +428,6 @@ export default function DogGestationCalculatorPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Email capture */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com breeding &amp; puppy updates"
-            subtitle="Research-based breeding and puppy care guidance and new tool announcements. No spam."
-            source="tools-dog-gestation-calculator"
-          />
         </div>
       </section>
 

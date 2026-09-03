@@ -330,11 +330,11 @@ export default function PuppyWeightPredictorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Guides</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Dog Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator', note: 'Due date plus a packable whelping kit' },
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily calories for your growing puppy' },
               { label: 'Dog Age in Human Years', href: '/tools/dog-age-calculator', note: 'Life-stage by size class' },
               { label: 'Puppy Nutrition Guide', href: '/nutrition/puppy-nutrition', note: 'How and what to feed a puppy' },
               { label: 'Best Puppy Food 2026', href: '/reviews/best-dog-food-for-puppies', note: 'Large- and small-breed formulas' },
-              { label: 'Breed Profiles', href: '/breeds', note: 'Typical adult size by breed' },
               { label: 'Puppy Schedule', href: '/puppy-schedule', note: 'Week-by-week first-year plan' },
             ].map((item) => (
               <Link

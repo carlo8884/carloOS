@@ -155,7 +155,11 @@ export default function NewPuppyChecklistPage() {
               <p>
                 Everything else — chews and toys, grooming tools, a first-aid kit — can follow in the
                 first week while you focus on what actually shapes the dog: socialisation,
-                house-training, and a calm, consistent routine.
+                house-training, and a calm, consistent routine. Expecting a litter? The{' '}
+                <Link href="/tools/dog-gestation-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+                  pregnancy and whelping calendar
+                </Link>{' '}
+                estimates the due date and lists the whelping-kit items to pack before week 7.
               </p>
             </div>
           </div>
