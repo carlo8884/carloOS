@@ -318,7 +318,11 @@ export default function ReadinessQuizPage() {
             <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
               cost calculator
             </Link>{' '}
-            give you a concrete number to plan against.
+            give you a concrete number to plan against. The{' '}
+            <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              ferret age calculator
+            </Link>{' '}
+            maps the 6–10 year commitment onto a life-stage label.
           </p>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">How to use your result</h2>
@@ -354,6 +358,7 @@ export default function ReadinessQuizPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
+              { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator', note: 'Human-year estimate and kit / young adult / mature / senior label' },
               { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator', note: 'Minimum L×W×H from ferret count and levels' },
               { label: 'Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year setup cost' },
               { label: 'Litter Planner', href: '/tools/litter-planner', note: 'Pans and 30 lb bags from ferret count' },
