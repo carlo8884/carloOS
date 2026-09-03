@@ -10,8 +10,11 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../../../components/visual/BodyConditionScoreCalculator'
+import ConditionKit from './ConditionKit'
 
 const URL = 'https://horses.com/tools/body-condition-score'
 
@@ -83,6 +86,7 @@ const softwareApplicationSchema = {
     'Condition narrative + feeding guidance per BCS range',
     'Underlying-condition flag at BCS 1-2 (refeeding syndrome) and 8-9 (EMS / laminitis / PPID risk)',
     'Explicit "BCS is husbandry, not diagnosis" framing',
+    'Interactive condition-tracking kit with Amazon shop hops',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -127,7 +131,7 @@ export default function BodyConditionScorePage() {
       relatedLinks={[
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
-        { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
+        { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
         { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
         { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
@@ -152,6 +156,7 @@ export default function BodyConditionScorePage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
+              { label: 'Condition kit', href: '#condition-kit' },
               { label: 'BCS reference scale', href: '#scale' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -161,21 +166,14 @@ export default function BodyConditionScorePage() {
           <RelatedLinks
             title="Horse care"
             links={[
-              { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
-              { label: 'First Horse Roadmap', href: '/first-horse-roadmap' },
-              { label: 'Breed Library', href: '/breeds' },
-              { label: 'Disciplines', href: '/disciplines' },
-              { label: 'Equine Supplements', href: '/reviews/best-equine-supplements' },
+              { label: 'Weight Calculator', href: '/tools/horse-weight-calculator' },
+              { label: 'Feed & Hay Calculator', href: '/tools/horse-feed-calculator' },
+              { label: 'Cost of Ownership Calculator', href: '/tools/horse-cost-calculator' },
+              { label: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+              { label: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="bcs-calculator"
-          />
         </>
       }
     >
@@ -183,7 +181,7 @@ export default function BodyConditionScorePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2025-05-01"
-            updatedAt="2025-05-01"
+            updatedAt="2026-09-03"
             reviewedBy="Editorial team"
           />
 
@@ -192,11 +190,85 @@ export default function BodyConditionScorePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the worksheet
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horse BCS worksheet
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the Henneke worksheet — six area scores, the overall BCS, and the
+            six-item condition kit — so you can re-score next month without re-reading
+            the descriptors. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horse BCS worksheet"
+            subtitle="Email the Henneke worksheet — six area scores, overall BCS, and the condition kit. No spam."
+            ctaText="Email my horse BCS worksheet"
+            source="tools-body-condition-score-under-hero"
+          />
+        </div>
+
         <h2 id="calculator">The calculator</h2>
         <p>
           Score each of the six body areas using the published Henneke 1-9 descriptors. The calculator averages the six scores into an overall BCS, names the condition range, and returns feeding guidance plus underlying-condition flags for the extremes.
         </p>
         <BodyConditionScoreCalculator />
+
+        <h2 id="condition-kit">Condition-tracking kit</h2>
+        <p>
+          Once you have a score, pack the kit that makes the next score repeatable:
+          a weight tape, a curry and body brush so you can palpate through the coat,
+          a measuring stick, a Henneke chart, a feed scoop or scale, and a slow-feeder
+          hay net for the easy keeper drifting above BCS 6. The six-item list below
+          is a husbandry starting point — not a ranked product list and not a
+          substitute for the ration or exam your veterinarian specifies when BCS
+          sits outside 4–7.
+        </p>
+        <ConditionKit />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop the condition kit
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            The six-item list above is a husbandry starting point — weight tape,
+            curry and body brush, measuring stick, BCS chart, feed scoop, slow
+            feeder — not a ranked product list. Same Amazon search hops as the
+            checklist rows. Horses.com earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-body-condition-score"
+              amazonLabel="Browse horse weight tapes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+curry+comb+body+brush?s=tools-body-condition-score"
+              amazonLabel="Browse horse curry combs and body brushes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-body-condition-score"
+              amazonLabel="Browse horse measuring sticks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+body+condition+score+chart?s=tools-body-condition-score"
+              amazonLabel="Browse horse BCS charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-body-condition-score"
+              amazonLabel="Browse feed scoops and scales on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-body-condition-score"
+              amazonLabel="Browse slow-feeder hay nets on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="scale">BCS reference scale (Henneke 1983)</h2>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
@@ -256,7 +328,7 @@ export default function BodyConditionScorePage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
+          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. Fold the kit into the monthly budget with the <Link href="/tools/horse-cost-calculator">horse cost of ownership calculator</Link>. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
         </p>
       </div>
     </ArticleLayout>

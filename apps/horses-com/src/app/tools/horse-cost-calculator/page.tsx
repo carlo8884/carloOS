@@ -130,6 +130,7 @@ export default function HorseCostCalculatorPage() {
         { title: 'Boarding Options', href: '/ownership/boarding-options', category: 'Ownership' },
         { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Horse Feed & Hay Calculator', href: '/tools/horse-feed-calculator', category: 'Tools' },
+        { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
       ]}
       hero={{
         title: 'Horse Cost of Ownership Calculator',
@@ -166,6 +167,7 @@ export default function HorseCostCalculatorPage() {
               { label: 'Horse Insurance', href: '/ownership/horse-insurance' },
               { label: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
               { label: 'First Horse Roadmap', href: '/first-horse-roadmap' },
+              { label: 'Body Condition Score', href: '/tools/body-condition-score' },
               { label: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
             ]}
           />
@@ -376,7 +378,9 @@ export default function HorseCostCalculatorPage() {
 
         <p className="mt-8 text-sm">
           Next: set a forage target with the{' '}
-          <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, size bedding
+          <Link href="/tools/horse-feed-calculator">horse feed &amp; hay calculator</Link>, track
+          condition with the{' '}
+          <Link href="/tools/body-condition-score">body condition score calculator</Link>, size bedding
           with the{' '}
           <Link href="/tools/stall-bedding-calculator">stall bedding calculator</Link>, and read the
           full <Link href="/ownership/cost-of-owning-a-horse">cost-of-owning-a-horse guide</Link> before you
