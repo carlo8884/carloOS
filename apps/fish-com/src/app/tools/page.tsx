@@ -47,7 +47,7 @@ const TOOLS = [
   {
     href: '/tools/stocking-calculator',
     title: 'Stocking Calculator',
-    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',
+    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule, then shop a stocking kit (AquaClear HOB, Fluval canister, heater, sand, test kit, net).',
     tag: 'Beginner essential',
   },
   {
