@@ -1050,6 +1050,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
           { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
+          { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale' },
           { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { label: 'Directory', href: '/directory' },
         ],
