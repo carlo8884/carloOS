@@ -181,14 +181,16 @@ export default function VolumeCalculator() {
 
       {result && result.grossUSGal > 0 && (
         <ResultCTA
-          heading={`Shop filters rated for a ${result.netUSGal.toFixed(0)}-gallon tank`}
+          heading={`Shop a ${result.netUSGal.toFixed(0)}-gallon tank, stand, and heater`}
           blurb={
             <>
-              Aim for a filter rated at your net volume or above — turnover of 4&ndash;6&times; tank volume per hour is a good target.
+              Match the glass or acrylic tank to this net volume, then pick a stand rated for the
+              filled weight ({result.weightLbs.toFixed(0)} lb freshwater) and a heater sized to
+              those gallons. A filter rated at or above this volume is the next buy.
             </>
           }
-          query={`aquarium filter ${result.netUSGal.toFixed(0)} gallon`}
-          cta="Browse filters on Amazon"
+          query={`${result.netUSGal.toFixed(0)} gallon glass aquarium tank stand heater`}
+          cta="Browse tanks and stands on Amazon"
           source="tools-aquarium-volume"
         />
       )}
