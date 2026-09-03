@@ -8,7 +8,9 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -71,6 +73,7 @@ const appSchema = {
     'Energy-level ranges from low to working-breed',
     'Puppy “5 minutes per month of age” joint-safe guideline',
     'Senior low-impact adjustment and heat/health cautions',
+    'Shoppable walk-gear kit via Amazon category searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -120,7 +123,10 @@ export default function DogExerciseCalculatorPage() {
         </div>
       </section>
 
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav
+        aria-label="Breadcrumb"
+        className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"
+      >
         <Link href="/" className="hover:text-brand-primary no-underline">Dog.com</Link>
         <span>›</span>
         <Link href="/tools" className="hover:text-brand-primary no-underline">Tools</Link>
@@ -128,9 +134,84 @@ export default function DogExerciseCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Exercise Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Walk-gear checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the walk-gear checklist — leash, harness, fetch toys, and
+            activity-tracker notes that match your daily target — so you can
+            kit the walk without re-running the estimate. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Walk-gear checklist"
+            subtitle="Email the walk-gear checklist — leash, harness, fetch toys, and activity-tracker notes. No spam."
+            ctaText="Email my walk-gear checklist"
+            source="tools-dog-exercise-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Money path — live amazon-brand search hops (walk / play kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not a workout plan. */}
+      <section id="dog-exercise-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop walk gear
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are walk and play items that match
+              the daily target above — a leash, a well-fitted harness, fetch
+              toys, and activity / GPS trackers. They are not a ranked product
+              list, not invented inventory, and they do not prescribe a workout.
+              Fit a harness before long walks, and check with your veterinarian
+              before ramping up exercise for puppies, seniors, or dogs with a
+              health condition. Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+leash?s=tools-dog-exercise"
+                amazonLabel="Browse dog leashes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-dog-exercise"
+                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise"
+                amazonLabel="Browse no-pull harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise"
+                amazonLabel="Browse Kong fetch / stuffable toys on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+fetch+toys?s=tools-dog-exercise"
+                amazonLabel="Browse dog fetch toys on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"
+                amazonLabel="Browse Fi activity / GPS collars on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -166,13 +247,6 @@ export default function DogExerciseCalculatorPage() {
           </div>
 
           <CrossPortfolioCard currentSite="dog-com" contentType="tool" />
-
-          <EmailCapture
-            siteId="dog-com"
-            title="Dog.com health letter"
-            subtitle="Practical, vet-referenced dog-care guidance — one email a week."
-            source="tools-exercise-calculator"
-          />
         </div>
       </section>
     </>
