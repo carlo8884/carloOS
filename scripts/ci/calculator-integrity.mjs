@@ -442,6 +442,39 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge-sheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'vets · is-this-a-cat-emergency',
+    file: 'apps/vets-co/src/app/tools/is-this-a-cat-emergency/TriageHelper.tsx',
+    mustInclude: [
+      { re: /hasEmergency = picked\.some\(\(s\) => s\.level === 'emergency'\)/, label: 'any emergency sign → go now' },
+      { re: /tier: 'go-now'/, label: 'go-now verdict kept' },
+      { re: /allMonitorEligible = picked\.every\(\(s\) => MONITOR_ELIGIBLE\.has\(s\.num\)\)/, label: 'monitor only if every selected sign is monitor-eligible' },
+      { re: /tier: 'same-day'/, label: 'same-day fallback when mixed/urgent' },
+      { re: /There is no "all clear" verdict/, label: 'no all-clear verdict (comment contract)' },
+      { re: /from '\.\.\/\.\.\/\.\.\/data\/cat-symptom-signs'/, label: 'signs imported from shared cat-symptom-signs (do not fork)' },
+    ],
+    why: 'Conservative cat triage: any emergency sign → go now; monitor only for 10/14 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
+  },
+  {
+    id: 'vets · is-this-a-cat-emergency hops',
+    file: 'apps/vets-co/src/app/tools/is-this-a-cat-emergency/page.tsx',
+    mustInclude: [
+      { re: /source="tools-is-this-a-cat-emergency-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my cat triage cheat sheet"/, label: 'concrete fridge-sheet offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-is-this-a-cat-emergency/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-is-this-a-cat-emergency/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/soft\+cat\+carrier\?s=tools-is-this-a-cat-emergency/, label: 'soft cat carrier search hop' },
+      { re: /amazon-brand\/styptic\+powder\?s=tools-is-this-a-cat-emergency/, label: 'styptic powder search hop' },
+      { re: /amazon-brand\/wound\+care\+gauze\?s=tools-is-this-a-cat-emergency/, label: 'wound-care gauze search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete fridge cat-triage cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · harness-collar-size',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/Calculator.tsx',
     mustInclude: [

@@ -149,6 +149,7 @@ export default function CatGrimaceScalePage() {
           <RelatedLinks
             title="Cat health"
             links={[
+              { label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency' },
               { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator' },
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score' },
               { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
@@ -201,7 +202,11 @@ export default function CatGrimaceScalePage() {
           <Link href="/tools/cat-age-calculator">cat age calculator</Link>. For
           weight, the{' '}
           <Link href="/tools/cat-body-condition-score">cat body condition score</Link>{' '}
-          is a wellness reference, not a diagnosis.
+          is a wellness reference, not a diagnosis. For a feline sign-list urgency
+          read (go now / same-day / monitor), use{' '}
+          <Link href="/tools/is-this-a-cat-emergency">Is this a cat emergency?</Link>
+          {' '}— a triage aid, not a diagnosis, and not a replacement for{' '}
+          <Link href="/tools/er-vs-clinic">ER vs clinic vs telehealth</Link>.
         </p>
         <CatGrimaceScale />
 
