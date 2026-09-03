@@ -111,10 +111,10 @@ export default function HorseFeedCalculatorPage() {
       siteId="horses-com"
       relatedLinks={[
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
+        { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         { title: 'Body Condition Score (Henneke)', href: '/tools/body-condition-score', category: 'Tools' },
         { title: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator', category: 'Tools' },
         { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
-        { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
         { title: 'Forage Basics', href: '/nutrition/forage-basics' },
       ]}
       hero={{
@@ -147,9 +147,9 @@ export default function HorseFeedCalculatorPage() {
             title="Horse tools"
             links={[
               { label: 'Weight Calculator', href: '/tools/horse-weight-calculator' },
+              { label: 'Cost of Ownership Calculator', href: '/tools/horse-cost-calculator' },
               { label: 'Stall Bedding Calculator', href: '/tools/stall-bedding-calculator' },
               { label: 'Body Condition Score', href: '/tools/body-condition-score' },
-              { label: 'Height Converter', href: '/tools/horse-height-converter' },
               { label: 'Hay Types', href: '/nutrition/hay-types' },
               { label: 'Ration Balancers', href: '/nutrition/ration-balancers' },
             ]}
