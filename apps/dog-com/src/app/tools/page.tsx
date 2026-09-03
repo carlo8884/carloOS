@@ -68,7 +68,7 @@ const TOOLS = [
   {
     href: '/tools/dog-crate-size-calculator',
     title: 'Dog Crate Size Calculator',
-    desc: 'What size crate does my dog need? Enter your dog\'s length and standing height to get the minimum internal crate dimensions and the recommended standard crate size (18–48"), plus puppy divider guidance.',
+    desc: 'What size crate does my dog need? Enter your dog\'s length and standing height to get the minimum internal crate dimensions and the recommended standard crate size (18–48"), plus puppy divider guidance, then shop a crate kit (wire crate with divider, crate pad, crate cover, puppy training pads).',
     tag: 'Gear',
   },
   {

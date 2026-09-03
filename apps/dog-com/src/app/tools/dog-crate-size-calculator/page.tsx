@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -72,6 +73,7 @@ const appSchema = {
     'Recommended standard crate size (18–48 inch line) with size class',
     'Inches or centimetres',
     'Puppy guidance: size to adult dimensions and use a divider',
+    'Shoppable crate kit via Amazon category searches (wire crate with divider, crate pad, crate cover, puppy training pads)',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -143,61 +145,89 @@ export default function DogCrateSizeCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Crate Size Calculator</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the crate plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Crate-size &amp; crate-training checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the measurement steps, standard size chart, puppy-divider notes,
+            and the shoppable crate kit (wire crate with divider, pad, cover,
+            training pads) so you can measure once and buy without re-running
+            the calculator. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Crate-size & crate-training checklist"
+            subtitle="Email the crate-size checklist, puppy-divider notes, and shoppable crate kit. No spam."
+            ctaText="Email my crate-size checklist"
+            source="tools-dog-crate-size-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <div className="max-w-2xl rounded-lg border border-brand-border bg-brand-white p-6">
-          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-            Got your size?
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Set the crate up for success
-          </h2>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            The right size is step one. Crate training goes faster with the crate in the right spot
-            and a positive introduction — see the{' '}
-            <Link href="/training" className="text-brand-primary underline-offset-2 hover:underline">
-              training guides
-            </Link>
-            ,             and if this is a new puppy, the{' '}
-            <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
-              new-puppy checklist
-            </Link>{' '}
-            lists the day-one kit and the{' '}
-            <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
-              puppy weight predictor
-            </Link>{' '}
-            estimates the adult size to buy for. The{' '}
-            <Link href="/tools/puppy-first-year-budget" className="text-brand-primary underline-offset-2 hover:underline">
-              first-year budget planner
-            </Link>{' '}
-            puts a number on crate, food, and vet together.
-          </p>
+      {/* Money path — live amazon-brand search hops (crate kit).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list, not invented inventory. */}
+      <section id="crate-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
-          <div className="mt-3 flex flex-wrap gap-3">
-            <a
-              href="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-crate-size"
-              rel="sponsored nofollow noopener noreferrer"
-              target="_blank"
-              className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white no-underline transition-colors hover:bg-brand-primary-dark"
-            >
-              Browse crates on Amazon
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-            <Link
-              href="/reviews/best-dog-crates"
-              className="inline-flex items-center rounded-lg border border-brand-border px-4 py-2.5 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-surface"
-            >
-              Read our crate reviews
-            </Link>
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a crate kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches are husbandry items that match
+              the size you just calculated — a wire crate with a divider
+              panel (same query as the{' '}
+              <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+                new-puppy checklist
+              </Link>
+              {' '}and the{' '}
+              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
+                puppy weight predictor
+              </Link>
+              ), a crate pad, a crate cover, and puppy training pads for
+              house-training. They are not a ranked product list, not invented
+              inventory, and they do not replace measuring your dog. Check the
+              crate&apos;s internal length and height against the minimums
+              above before you buy — see the{' '}
+              <Link href="/reviews/best-dog-crates" className="text-brand-primary underline-offset-2 hover:underline">
+                crate reviews
+              </Link>
+              . Dog.com earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+crate+pad?s=tools-dog-crate-size"
+                amazonLabel="Browse crate pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+crate+cover?s=tools-dog-crate-size"
+                amazonLabel="Browse crate covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-dog-crate-size"
+                amazonLabel="Browse puppy training pads on Amazon →"
+              />
+            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through the Amazon link — at no extra cost to you, and we never rank by commission. A wire crate with a divider panel fits most of the sizes above.
-          </p>
         </div>
       </section>
 
@@ -235,18 +265,6 @@ export default function DogCrateSizeCalculatorPage() {
             Frequently asked questions
           </h2>
           <FAQAccordion items={FAQS} />
-        </div>
-      </section>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com owner’s letter"
-            subtitle="Practical dog-care references and tool updates. No spam."
-            source="tools-dog-crate-size-calculator"
-          />
         </div>
       </section>
 
