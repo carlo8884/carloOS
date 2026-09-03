@@ -62,7 +62,7 @@ const TOOLS = [
   {
     href: '/tools/horse-size-for-rider',
     title: 'Horse Size for Rider Calculator',
-    desc: 'What size horse should you ride? Suggests a horse weight range and approximate height band from rider weight, height, and discipline, using the 15–20% carrying guideline. Guidance, not a rule.',
+    desc: 'What size horse should you ride? Suggests a horse weight range and approximate height band from rider weight, height, and discipline, using the 15–20% carrying guideline — then shop the rider-fit tack set (saddle, pad, girth, stirrups, ASTM/SEI helmet, weight tape). Guidance, not a rule.',
     tag: 'Fit',
   },
   {
