@@ -53,7 +53,7 @@ const TOOLS = [
   {
     href: '/tools/tank-mate-compatibility-checker',
     title: 'Tank Mate Compatibility Checker',
-    desc: 'Pick two or more freshwater fish and get a Compatible / Caution / Not-recommended verdict per pair, with the reason — temperament, temperature, fin-nipping, and size.',
+    desc: 'Pick two or more freshwater fish and get a Compatible / Caution / Not-recommended verdict per pair — then a divider, quarantine tank, or hiding spots if the mix is risky.',
     tag: 'Stocking',
   },
   {
