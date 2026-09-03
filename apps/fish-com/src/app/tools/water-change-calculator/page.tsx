@@ -138,6 +138,7 @@ export default function WaterChangeCalculatorPage() {
         { title: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator', category: 'Tools' },
         { title: 'Heater Wattage Calculator', href: '/tools/heater-wattage-calculator', category: 'Tools' },
         { title: 'Substrate Calculator', href: '/tools/substrate-calculator', category: 'Tools' },
+        { title: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder', category: 'Tools' },
         { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' },
         { title: 'Best Water Test Kits', href: '/reviews/best-water-test-kits', category: 'Reviews' },
       ]}
@@ -158,6 +159,7 @@ export default function WaterChangeCalculatorPage() {
               { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
               { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
               { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
+              { label: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder' },
               { label: 'Volume Calculator', href: '/tools/aquarium-volume-calculator' },
               { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
               { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },

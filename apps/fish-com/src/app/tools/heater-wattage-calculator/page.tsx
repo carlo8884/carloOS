@@ -108,7 +108,7 @@ export default function HeaterWattageCalculatorPage() {
         { name: 'Heater Wattage Calculator' },
       ]}
       schema={schema}
-      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Filter GPH Calculator", href: "/tools/filter-gph-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Setup Builder", href: "/tools/aquarium-setup-builder", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Filter GPH Calculator", href: "/tools/filter-gph-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
       sidebar={
         <>
           <TableOfContents
@@ -128,6 +128,7 @@ export default function HeaterWattageCalculatorPage() {
               { label: 'Substrate Calculator', href: '/tools/substrate-calculator' },
               { label: 'Stocking Calculator', href: '/tools/stocking-calculator' },
               { label: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator' },
+              { label: 'Aquarium Setup Builder', href: '/tools/aquarium-setup-builder' },
               { label: 'Water Change Calculator', href: '/tools/water-change-calculator' },
               { label: 'Saltwater Tank Setup', href: '/setup/saltwater-tank-setup' },
               { label: 'Aquarium Setup Guide', href: '/setup' },
@@ -224,7 +225,8 @@ export default function HeaterWattageCalculatorPage() {
           For specific heater model recommendations, see our <Link href="/reviews/best-aquarium-heaters">aquarium heater reviews</Link>.
           If the tank is still empty, size the gravel or sand bed first with the{' '}
           <Link href="/tools/substrate-calculator">substrate calculator</Link> — substrate displaces volume
-          the heater is sized against.
+          the heater is sized against — or build the whole starter kit with the{' '}
+          <Link href="/tools/aquarium-setup-builder">aquarium setup builder</Link>.
         </p>
 
         <h2 id="faq">FAQ</h2>
