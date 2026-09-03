@@ -13,6 +13,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -164,13 +166,6 @@ export default function HorseSizeForRiderPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="size-for-rider"
-          />
         </>
       }
     >
@@ -178,7 +173,7 @@ export default function HorseSizeForRiderPage() {
         <ArticleByline
           siteName="Horses.com Editorial"
           publishedAt="2026-06-11"
-          updatedAt="2026-06-11"
+          updatedAt="2026-09-03"
           reviewedBy="Editorial team"
         />
 
@@ -186,6 +181,28 @@ export default function HorseSizeForRiderPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the worksheet
+          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Rider-fit checklist
+          </h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the rider-fit checklist — suggested horse weight range, height band, and
+            the shoppable tack set (saddle, pad, girth, stirrups, ASTM/SEI helmet, weight
+            tape) — so you can shop without re-running the math. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Rider-fit checklist"
+            subtitle="Email the rider-fit checklist — suggested horse weight and height band plus the tack set. No spam."
+            ctaText="Email my rider-fit checklist"
+            source="tools-horse-size-for-rider-under-hero"
+          />
+        </div>
 
         <p>
           <strong>The quick answer:</strong> a widely cited welfare guideline is that the rider plus their
@@ -205,6 +222,52 @@ export default function HorseSizeForRiderPage() {
           experience setting anchors where in the 15&ndash;20% band the recommendation sits.
         </p>
         <Calculator />
+
+        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop rider-fit tack
+          </div>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            Once you have a horse weight and height band, the next fit questions are
+            saddle, pad, girth or cinch, stirrups, and an ASTM/SEI riding helmet. A
+            weight tape is how you confirm the horse you are looking at actually sits
+            in that range. These are Amazon category searches — not a ranked product
+            list, not invented inventory, and not a substitute for a saddle fitter or
+            a riding instructor. Horses.com earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider"
+              amazonLabel="Browse English saddles on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider"
+              amazonLabel="Browse Western saddles on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+saddle+pad?s=tools-horse-size-for-rider"
+              amazonLabel="Browse horse saddle pads on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+girth+cinch?s=tools-horse-size-for-rider"
+              amazonLabel="Browse girths and cinches on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stirrups?s=tools-horse-size-for-rider"
+              amazonLabel="Browse horse stirrups on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider"
+              amazonLabel="Browse ASTM/SEI riding helmets on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-size-for-rider"
+              amazonLabel="Browse horse weight tapes on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="guideline">The 15&ndash;20% carrying guideline</h2>
         <p>

@@ -14,6 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 
 type Unit = 'imperial' | 'metric'
 
@@ -295,6 +296,65 @@ export default function Calculator() {
               the leg. Height affects fit and appearance, not the carrying-capacity math.
             </p>
           )}
+        </div>
+      )}
+
+      {result && (
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Next step
+          </p>
+          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
+            {discipline === 'western'
+              ? 'Shop a Western saddle'
+              : discipline === 'english'
+                ? 'Shop an English saddle'
+                : 'Shop an ASTM/SEI riding helmet'}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
+            {discipline === 'western' ? (
+              <>
+                The range is {round(result.upperHorseLb).toLocaleString()}–
+                {round(result.conservativeHorseLb).toLocaleString()} lb
+                ({result.heightBand}). A Western saddle is the heavier tack this
+                calculator already added (~45 lb) — fit it to the horse, not the
+                rider&rsquo;s preference alone.
+              </>
+            ) : discipline === 'english' ? (
+              <>
+                The range is {round(result.upperHorseLb).toLocaleString()}–
+                {round(result.conservativeHorseLb).toLocaleString()} lb
+                ({result.heightBand}). An English saddle is the lighter tack this
+                calculator already added (~25 lb) — have a fitter check the tree
+                against the horse you are looking at.
+              </>
+            ) : (
+              <>
+                The range is {round(result.upperHorseLb).toLocaleString()}–
+                {round(result.conservativeHorseLb).toLocaleString()} lb
+                ({result.heightBand}). Bareback adds no tack weight, but an
+                ASTM/SEI riding helmet is still the safety baseline for every
+                rider, every ride.
+              </>
+            )}
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <ShopCtas
+            amazonHref={
+              discipline === 'western'
+                ? '/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider'
+                : discipline === 'english'
+                  ? '/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider'
+                  : '/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider'
+            }
+            amazonLabel={
+              discipline === 'western'
+                ? 'Browse Western saddles on Amazon →'
+                : discipline === 'english'
+                  ? 'Browse English saddles on Amazon →'
+                  : 'Browse ASTM/SEI riding helmets on Amazon →'
+            }
+          />
         </div>
       )}
 
