@@ -218,6 +218,17 @@ const CALCULATORS = [
     why: 'Hobby filter-sizing rule: community freshwater turnover is 4–6 tank volumes per hour; GPH = gallons × band.',
   },
   {
+    id: 'ferret · cost-calculator',
+    file: 'apps/ferret-com/src/app/tools/cost-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /const firstYear = oneTime \+ annualRecurring/, label: 'first year = one-time + annual recurring' },
+      { re: /const monthlyRecurring = annualRecurring \/ 12/, label: 'monthly = annual recurring ÷ 12' },
+      { re: /cageAndSetup: 350/, label: 'multi-level housing starting point $350' },
+      { re: /monthlyFoodLitter: 40/, label: 'kibble food+litter starting point $40/mo' },
+    ],
+    why: 'First year is setup plus twelve months of recurring; housing/food presets are labeled US retail starting points, not quotes.',
+  },
+  {
     id: 'ferret · litter-planner',
     file: 'apps/ferret-com/src/app/tools/litter-planner/Calculator.tsx',
     mustInclude: [
