@@ -228,7 +228,11 @@ export default function EmergencyTriageCardPage() {
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             Most pet emergencies are not actual emergencies. Three categories with concrete
             examples — so the next time you are staring at your dog at 11 p.m., the answer is
-            already in your wallet.
+            already in your wallet. For an interactive version of the same decision, use the{' '}
+            <Link href="/tools/er-vs-clinic" className="text-brand-primary font-medium hover:underline">
+              ER vs clinic vs telehealth
+            </Link>{' '}
+            tool.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">

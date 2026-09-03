@@ -193,6 +193,7 @@ export default function VetsPetInsurancePage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
               { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
+              { label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' },
               { label: 'Pet Insurance Education Hub', href: '/insurance' },
               { label: 'Pet Insurance Questions, Answered', href: '/insurance/questions' },
               { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' },

@@ -662,6 +662,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Tools & Reference',
         links: [
           { label: 'Tools & Calculators', href: '/tools' },
+          { label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' },
           { label: 'Diagnostics Guide', href: '/diagnostics' },
           { label: 'Specialists', href: '/specialists' },
           { label: 'Pet Health Data', href: '/data' },
