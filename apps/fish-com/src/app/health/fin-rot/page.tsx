@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -40,6 +41,33 @@ export default function FinRotPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the water-first isolate plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fin-rot water-first isolate checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the water-first isolate order — test ammonia, nitrite, and
+            nitrate with a liquid kit before you treat, move the affected
+            fish to a spare hospital tank so the display biofilter stays
+            protected, and gravel-vacuum the substrate during water changes
+            so the ammonia spike does not recur. Educational husbandry, not
+            a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Fin-rot water-first isolate checklist"
+            subtitle="Email the test-water-first, hospital-tank isolation, and gravel-vacuum order. No spam."
+            ctaText="Email my fin-rot water-first isolate checklist"
+            source="health-fin-rot-under-hero"
+          />
+        </div>
+
         <h2>Root Cause — Almost Always Water Quality</h2>
         <p>Healthy fish in clean water do not develop fin rot. The bacteria and fungi that cause fin rot (primarily Aeromonas, Pseudomonas, and Flavobacterium species for bacterial; Saprolegnia for fungal) are present in virtually all aquarium water as normal environmental organisms. They only cause disease when fish are immunocompromised — and the most common cause of immunocompromise in fish is poor water quality.</p>
         <p>Elevated ammonia, elevated nitrite, high nitrate, and temperature stress all suppress fish immune function. The pathway: ammonia accumulates (from overfeeding, overcrowding, or inadequate filtration) → fish immune system compromises → opportunistic bacteria establish infection at fin margins → fin rot develops. Treating fin rot with medication without correcting the water quality allows reinfection after treatment.</p>
@@ -63,17 +91,114 @@ export default function FinRotPage() {
         <h2>Fin Rot in Bettas — The Specific Case</h2>
         <p>Bettas are disproportionately affected by fin rot because: they are often kept in small, under-filtered tanks where water quality degrades quickly, their long fins are easily damaged by rough decorations or fin-nipping fish, and their elaborate fins provide more surface area for infection. Betta fin rot treatment follows the same protocol — but tank size and filtration upgrade is the most important preventive measure. A betta in a 5-gallon properly filtered tank rarely develops fin rot; a betta in an unfiltered 1-gallon bowl frequently does.</p>
 
-        <ArticleSourcesList sources={SOURCES} />
+        {/* Money path — live amazon-brand search hops (water-first / isolate / gravel-vacuum kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Water Test Kit + Gravel Vacuum</div>
-          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>Fin rot is almost always a water quality problem. Step 1 of the treatment protocol is testing ammonia, nitrite, and nitrate accurately — which requires a liquid test kit, not strips. Step 2 is removing accumulated waste from the substrate with a gravel vacuum during water changes to prevent the ammonia spike from recurring. These are maintenance tools, not disease treatments; they address the environmental root cause. They are not a substitute for correct diagnosis or veterinary guidance when a fish is significantly unwell.</p>
-          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/api%20freshwater%20master%20test%20kit%20gravel%20vacuum%20siphon?s=health-fin-rot" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/aquarium%20test%20kit%20gravel%20vacuum%20water%20change?s=health-fin-rot" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a water-first isolate kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Fin rot is almost always a water-quality problem. A liquid master
+            kit is how you see ammonia, nitrite, and nitrate before you treat
+            — strips are not accurate enough for Step 1. Isolate the affected
+            fish in a spare hospital tank with a seeded sponge filter so
+            treatment stays off the display biofilter. A gravel vacuum is how
+            you pull accumulated waste from the substrate during water
+            changes so the ammonia spike does not recur. Same test-kit hop
+            used on the{' '}
+            <Link
+              href="/health/bacterial-infections"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              bacterial infections guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/columnaris" className="text-brand-primary no-underline hover:underline">
+              columnaris guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same gravel-vacuum hop used on the{' '}
+            <Link
+              href="/tools/water-change-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-change calculator
+            </Link>
+            {' '}and the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . Heater and thermometer hops stay off this page — fin-rot copy
+            has no heat method. The hops below are not a ranked product
+            list, they are not medications, and they do not treat, reverse,
+            or cure fin rot. Fish.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy buttons stay
+            hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fin-rot"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-fin-rot"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=health-fin-rot"
+              amazonLabel="Browse gravel vacuums on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/health/bacterial-infections" className="text-brand-primary hover:underline">
+              Bacterial Infections
+            </Link>
+            {' · '}
+            <Link href="/health/new-tank-syndrome" className="text-brand-primary hover:underline">
+              New Tank Syndrome
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/tools/water-change-calculator" className="text-brand-primary hover:underline">
+              Water-Change Calculator
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
