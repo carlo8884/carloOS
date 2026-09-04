@@ -1112,6 +1112,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete winter-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page water and footing copy (tank heater, ice grit, snow pads, shoe studs), never a placeholder ASIN, a medication hop, or a colic / mud-fever treatment. Blankets stay on the blanketing page. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · trailering hops',
+    file: 'apps/horses-com/src/app/care/trailering/page.tsx',
+    mustInclude: [
+      { re: /source="care-trailering-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my trailering checklist"/, label: 'concrete trailering-checklist offer, not Subscribe' },
+      { re: /source="care-trailering"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+shipping\+boots\?s=care-trailering/, label: 'shipping-boots search hop (matches on-page travel-protection boots copy)' },
+      { re: /amazon-brand\/horse\+shipping\+wraps\?s=care-trailering/, label: 'shipping-wraps search hop (matches on-page travel-protection wraps copy)' },
+      { re: /amazon-brand\/horse\+poll\+guard\?s=care-trailering/, label: 'poll-guard search hop (matches on-page poll-guard copy)' },
+      { re: /amazon-brand\/horse\+trailer\+ties\?s=care-trailering/, label: 'trailer-ties search hop (matches on-page tying / rope copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|bute|phenylbutazone|banamine|shipping\+fever|antibiotic|hay\+bag|water\+bucket)/, label: 'never hop medications, shipping-fever treatments, hay bags, or water buckets — this page is educational travel-protection and tying gear, not a drug or invented-kit list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete trailering-checklist offer; every gear CTA is an amazon-brand category search matching on-page travel-protection and tying copy (shipping boots, shipping wraps, poll guard, trailer ties), never a placeholder ASIN, a medication hop, a shipping-fever treatment, or an invented hay-bag / water-bucket hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
