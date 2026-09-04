@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', de
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
-  { question: 'What can I give my dog for diarrhea at home?', answer: 'For an otherwise healthy adult dog with mild acute diarrhea (no blood, eating, alert, no vomiting, no known toxin or foreign body), home care for 24–48 hours is reasonable: a bland diet of boiled white chicken breast and plain white rice (50/50 by volume, small portions every 4–6 hours), a veterinary probiotic such as FortiFlora, and constant access to fresh water. Do not give human anti-diarrheal medications without veterinary guidance. If the diarrhea has not improved after 48 hours of home care, see your veterinarian.' },
+  { question: 'What can I give my dog for diarrhea at home?', answer: 'For an otherwise healthy adult dog with mild acute diarrhea (no blood, eating, alert, no vomiting, no known toxin or foreign body), home care for 24–48 hours is reasonable: a bland diet of boiled white chicken breast and plain white rice (50/50 by volume, small portions every 4–6 hours), a canine-specific OTC probiotic for digestive support (FortiFlora is one studied veterinary example), optional plain canned pumpkin (100% pumpkin, not pie filling) if your veterinarian agrees it fits a mild large-intestinal episode, and constant access to fresh water. Do not give human anti-diarrheal medications, antibiotics, or metronidazole without veterinary guidance. If the diarrhea has not improved after 48 hours of home care, see your veterinarian.' },
   { question: 'When should I take my dog to the vet for diarrhea?', answer: 'Do not wait with: blood in the stool (red or black/tarry), concurrent lethargy or vomiting, a puppy or senior dog (less physiological reserve), known or suspected ingestion of a foreign object or toxin, diarrhea that has not improved after 48 hours of home care, or pale/white gums. These presentations require examination, diagnostics, and likely IV fluids rather than home monitoring.' },
   { question: 'Why is there blood in my dog\'s stool?', answer: 'It depends on the appearance. Bright red blood (hematochezia), often with mucus, straining, and frequent small amounts, points to the large intestine (colitis). Dark brown-black "tarry" stool (melena) is digested blood and indicates upper GI bleeding — a more concerning finding. Either way, blood in the stool is on this page\'s see-the-vet-now list: have the dog examined rather than continuing home treatment.' },
   { question: 'How long does dog diarrhea usually last?', answer: 'Most acute cases in otherwise healthy adult dogs — typically from dietary indiscretion, mild enteritis, or stress colitis — resolve within 2–5 days with supportive care. Diarrhea lasting more than 2–3 weeks, or recurring frequently, is chronic and needs veterinary investigation (fecal testing, bloodwork, dietary elimination trial) rather than repeated symptomatic treatment.' },
@@ -45,6 +45,35 @@ export default function DogDiarrheaPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-diarrhea home-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-diarrhea home-care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes — a canine-specific OTC
+              probiotic for digestive support, plus optional
+              plain canned pumpkin (100% pumpkin, not pie
+              filling) when a veterinarian agrees it fits a
+              mild large-intestinal episode. Educational
+              checklist, not a diagnosis and not a treatment
+              list. Antibiotics, metronidazole, Imodium,
+              Pepto-Bismol, and prescription GI diets stay
+              off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-diarrhea home-care checklist"
+              subtitle="Email the OTC probiotic and plain-pumpkin notes. No spam."
+              ctaText="Email my dog-diarrhea home-care checklist"
+              source="health-dog-diarrhea-under-hero"
+            />
+          </div>
+
           <h2>Acute vs Chronic Diarrhea</h2>
           <p><strong>Acute diarrhea</strong> — sudden onset, less than 2 weeks — is most commonly dietary indiscretion (ate something they shouldn't), mild viral or bacterial enteritis, or stress-induced colitis. Most cases in otherwise healthy adult dogs resolve within 2–5 days with supportive care.</p>
           <p><strong>Chronic diarrhea</strong> — lasting more than 2–3 weeks, or recurring frequently — requires veterinary investigation. Causes include inflammatory bowel disease (IBD), food allergy, parasites, bacterial overgrowth, exocrine pancreatic insufficiency (EPI), and less commonly, neoplasia. Chronic diarrhea should not be repeatedly treated symptomatically without diagnostic workup.</p>
@@ -56,7 +85,8 @@ export default function DogDiarrheaPage() {
           <p>An otherwise healthy adult dog with mild acute diarrhea (no blood, eating, alert, normal energy, no concurrent vomiting, no known foreign body or toxin ingestion) can be managed at home for 24–48 hours:</p>
           <ul>
             <li><strong>Bland diet:</strong> Boiled white chicken breast (no seasoning) + plain white rice, 50/50 by volume. Small portions every 4–6 hours. This provides easily digestible protein and carbohydrate that rests the GI tract.</li>
-            <li><strong>Probiotics:</strong> FortiFlora (Purina) is the most evidence-supported veterinary probiotic — sachets mixed into food. Helps restore healthy gut flora.</li>
+            <li><strong>Probiotics:</strong> A canine-specific OTC probiotic for digestive support — sachets or capsules mixed into food — is the usual adjunct for mild acute diarrhea. FortiFlora (Purina) is one studied veterinary example; the category is the product class, not a single brand. This is supportive care, not a diagnosis and not a substitute for veterinary examination when warning signs are present.</li>
+            <li><strong>Optional plain canned pumpkin:</strong> Some veterinarians suggest a small amount of plain canned pumpkin (100% pumpkin puree, not pumpkin pie filling with spices, sugar, or xylitol) as a soluble-fiber adjunct for mild large-intestinal / colitis-type stool. Ask your veterinarian whether it fits this dog and how much to use. It is not a treatment, not a prescription GI diet, and not a reason to delay care if blood, lethargy, or vomiting is present.</li>
             <li><strong>Ensure hydration:</strong> Diarrhea causes fluid loss. Make fresh water constantly available. If the dog is not drinking, offer low-sodium chicken broth.</li>
             <li><strong>No human anti-diarrheal medications without vet guidance:</strong> Pepto-Bismol contains salicylate (aspirin-related) and should not be given without veterinary direction. Imodium (loperamide) is contraindicated in MDR1-positive herding breeds and should only be used under veterinary direction.</li>
           </ul>
@@ -66,6 +96,46 @@ export default function DogDiarrheaPage() {
 
           <h2>Diagnostic Workup for Chronic Diarrhea</h2>
           <p>For recurring or chronic diarrhea: fecal examination (parasites — Giardia is commonly missed with standard flotation, requires specific antigen testing), fecal culture, serum TLI (trypsin-like immunoreactivity — screens for EPI), cobalamin and folate (malabsorption markers), and dietary elimination trial (rules out food-responsive diarrhea, which is common and frequently the diagnosis). Endoscopy and intestinal biopsy are reserved for cases where less invasive workup is inconclusive.</p>
+
+          <h2 id="kit">Home-care kit</h2>
+          <p>Everyday OTC supplies that match the home-care copy above — a canine-specific dog probiotic for digestive support, plus optional plain canned pumpkin (100% pumpkin, not pie filling) when a veterinarian agrees it fits a mild large-intestinal episode. These are home-setup aids, not treatments. Antibiotics, metronidazole, Imodium, Pepto-Bismol, and prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar) stay educational copy only — this page never hops medications, Rx diets marketed as treatment, or brand ASINs. Soft e-collars and dog eye wipes stay on the sister <a href="/health/cherry-eye">cherry-eye</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (dog
+              probiotic / plain canned pumpkin). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only. Antibiotics,
+              metronidazole, Imodium, Pepto-Bismol,
+              prescription GI diets, cherry-eye recovery
+              collars, and obesity slow-feeders are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-diarrhea home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              home-care copy — a dog probiotic and plain canned
+              pumpkin. Everyday OTC physical products only. They
+              are not a ranked product list, they are not
+              medications, they are not prescription GI-diet
+              ASINs, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+probiotic?s=health-dog-diarrhea"
+                amazonLabel="Browse dog probiotics on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/plain+canned+pumpkin+dog?s=health-dog-diarrhea"
+                amazonLabel="Browse plain canned pumpkin for dogs on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
