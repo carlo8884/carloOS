@@ -719,6 +719,25 @@ const CALCULATORS = [
     why: 'First year is setup plus twelve months of recurring; housing/food presets are labeled US retail starting points, not quotes.',
   },
   {
+    id: 'ferret · cost-calculator hops',
+    file: 'apps/ferret-com/src/app/tools/cost-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cost-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the budget"/, label: 'concrete budget offer, not Subscribe' },
+      { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-cost-calculator/, label: 'high-protein ferret food search hop (same query as kibble guide)' },
+      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-cost-calculator/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
+      { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cost-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
+      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=tools-cost-calculator/, label: 'hammock / sleep-sack search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'ferret · litter-planner',
     file: 'apps/ferret-com/src/app/tools/litter-planner/Calculator.tsx',
     mustInclude: [
