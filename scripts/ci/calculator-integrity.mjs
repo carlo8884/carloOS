@@ -1112,6 +1112,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete separation-anxiety-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy snuffle-mat button that was rendering on this page.',
   },
   {
+    id: 'dog · training-puppy-biting hops',
+    file: 'apps/dog-com/src/app/training/puppy-biting/page.tsx',
+    mustInclude: [
+      { re: /source="training-puppy-biting-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy-biting protocol"/, label: 'concrete puppy-biting-protocol offer, not Subscribe' },
+      { re: /amazon-brand\/puppy\+chew\+toys\?s=training-puppy-biting/, label: 'puppy chew toys search hop (nipping redirection category)' },
+      { re: /amazon-brand\/puppy\+teething\+toys\?s=training-puppy-biting/, label: 'puppy teething toys search hop (same query as new-puppy / dog-age)' },
+      { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-puppy-biting/, label: 'stuffable Kong search hop (same query as sep-anxiety / exercise / new-puppy)' },
+      { re: /amazon-brand\/bitter\+apple\+spray\+dog\?s=training-puppy-biting/, label: 'bitter spray search hop (furniture-deterrent category, not a ranked SKU)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete puppy-biting-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
