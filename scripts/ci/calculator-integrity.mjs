@@ -1027,6 +1027,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete hoof-picking-checklist offer; every gear CTA is an amazon-brand category search matching on-page tools copy (hoof pick, hoof pick with stiff brush), never a placeholder ASIN, a medication hop, or a thrush / abscess treatment. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · hoof-care-basics hops',
+    file: 'apps/horses-com/src/app/care/hoof-care-basics/page.tsx',
+    mustInclude: [
+      { re: /source="care-hoof-care-basics-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hoof-care checklist"/, label: 'concrete hoof-care-checklist offer, not Subscribe' },
+      { re: /source="care-hoof-basics"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+hoof\+pick\?s=care-hoof-care-basics/, label: 'hoof-pick search hop (matches on-page daily-picking copy)' },
+      { re: /amazon-brand\/horse\+hoof\+pick\+brush\?s=care-hoof-care-basics/, label: 'hoof-pick-with-brush search hop (matches on-page packed-debris copy)' },
+      { re: /amazon-brand\/horse\+hoof\+boots\?s=care-hoof-care-basics/, label: 'hoof-boots search hop (matches on-page shoes-or-boots copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|thrush|abscess|laminitis|copper\+sulfate|iodine|antifungal|antibiotic)/, label: 'never hop medications or thrush / abscess / laminitis treatments — this page is educational hoof-care gear, not a drug or hoof-disease list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete hoof-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page daily-care and shoeing copy (hoof pick, hoof pick with stiff brush, hoof boots), never a placeholder ASIN, a medication hop, or a thrush / abscess / laminitis treatment. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
