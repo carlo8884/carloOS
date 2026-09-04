@@ -1309,6 +1309,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete dropsy quarantine-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-ich hops',
+    file: 'apps/fish-com/src/app/health/ich-treatment/page.tsx',
+    mustInclude: [
+      { re: /source="health-ich-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ich heat-method checklist"/, label: 'concrete heat-method / quarantine / aeration-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-ich/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-ich/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-ich/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy; no live aquarium+air+pump key on sister pages)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-ich/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete ich heat-method checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [

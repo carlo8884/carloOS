@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -37,6 +38,32 @@ export default function IchTreatmentPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the heat-method plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ich heat-method checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the quarantine / heat-method / aeration order — isolate new
+            or spotted fish, hold 82–86°F for 10+ days after the last spot if
+            the species tolerates it, and add air-driven aeration because
+            warmer water holds less oxygen. Educational husbandry, not a
+            diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Ich heat-method checklist"
+            subtitle="Email the quarantine, heat-method, and aeration order. No spam."
+            ctaText="Email my ich heat-method checklist"
+            source="health-ich-under-hero"
+          />
+        </div>
+
         <h2>The Life Cycle — Why Treatment Takes 10-14 Days</h2>
         <p>Ich has three life stages: the trophont (attached to the fish — the visible white spots), the tomont (fallen to the substrate, dividing to produce new parasites), and the theront (free-swimming infective stage, seeking a new host). Medications only kill the free-swimming theront stage — the parasite cannot be killed while attached to the fish or while encysted in the substrate tomont stage. The treatment strategy is therefore: maintain effective medication concentration continuously until all tomonts have completed their division cycle and released theronts, and all theronts have been exposed to the medication. This cycle takes 10-14 days at 72-76°F, or as little as 4-5 days at 82-84°F (the heat method).</p>
         <p>Stopping treatment when the white spots disappear is the most common treatment failure. The spots disappearing means the trophonts have fallen off and become tomonts — the tank is full of parasites that haven't yet released their infective theronts. Treatment stopped at this point leads to complete reinfestation within days.</p>
@@ -52,15 +79,88 @@ export default function IchTreatmentPage() {
         <h2>After Treatment — Prevention</h2>
         <p>Ich enters tanks from: new fish (quarantine all new fish — the most reliable prevention), aquatic plants from infected systems, water from pet store bags, and equipment moved between tanks. Once successfully treated, the tank is ich-free — but there is no lasting immunity. New introductions restart the risk. The parasite cannot survive in an established tank without a fish host for more than 48 hours at room temperature — a fish-out "fallow" period of 4-6 weeks in the display tank (all fish moved to a hospital tank for treatment) reliably clears ich from the display environment.</p>
 
+        {/* Money path — live amazon-brand search hops (heat-method kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Heater + Thermometer for Heat Treatment</div>
-          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>The heat method requires raising and holding temperature precisely at 82-86°F for 10+ days. A reliable adjustable heater and a separate thermometer (heater thermostats drift) are the two pieces of equipment the method depends on. Equipment supports disease management; it is not a substitute for correct diagnosis or treatment of fish illness.</p>
-          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <ShopCtas
-            amazonHref="/go/amazon-brand/aquarium%20adjustable%20heater%20thermometer%20ich%20heat%20treatment?s=health-ich-treatment"
-            chewyHref="/go/chewy-brand/aquarium%20heater%20thermometer%20fish%20tank?s=health-ich-treatment"
-          />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop heat-method husbandry gear
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            The heat method depends on holding 82–86°F for 10+ days after the
+            last visible spot (species-permitting) and adding aeration because
+            warmer water holds less oxygen. A heater rated for the tank, a
+            separate digital thermometer (heater thermostats drift), and an
+            air-driven sponge filter cover that husbandry set. A spare
+            hospital / quarantine tank is how you isolate spotted fish or run
+            a fish-out fallow period without medicating the display. Same
+            heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/equipment" className="text-brand-primary no-underline hover:underline">
+              equipment hub
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure ich. Fish.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-ich"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-ich"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-ich"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/equipment" className="text-brand-primary hover:underline">
+              Equipment Hub
+            </Link>
+          </p>
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
