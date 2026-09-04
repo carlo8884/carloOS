@@ -986,6 +986,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete cage-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleaning-supplies copy (enzymatic pet cleaner, small-animal cage cleaner, litter scoop, disposable nitrile gloves, fragrance-free laundry detergent), never a placeholder ASIN, a medication hop, phenol/pine cleaners, ammonia, or undiluted bleach. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · multi-level-housing hops',
+    file: 'apps/ferret-com/src/app/care/multi-level-housing/page.tsx',
+    mustInclude: [
+      { re: /source="care-multi-level-housing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret multi-level housing checklist"/, label: 'concrete multi-level-housing-checklist offer, not Subscribe' },
+      { re: /source="care-multi-level-housing"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/fleece\+ramp\+cover\?s=care-multi-level-housing/, label: 'fleece ramp-cover search hop (matches on-page fleece ramp covers copy)' },
+      { re: /amazon-brand\/pvc\+sheet\?s=care-multi-level-housing/, label: 'PVC-sheet search hop (matches on-page PVC sheet ramp-liner copy)' },
+      { re: /amazon-brand\/cable\+ties\?s=care-multi-level-housing/, label: 'cable-tie search hop (matches on-page cable-ties-to-anchor-ramps copy)' },
+      { re: /amazon-brand\/locking\+carabiner\?s=care-multi-level-housing/, label: 'locking-carabiner search hop (matches on-page carabiner-secure-every-door copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|critter\+nation|ferret\+nation|sleep\+sack|corner\+litter|hammock|tunnel|dig\+box)/, label: 'never hop medications, Critter Nation, sleep sacks, hammocks, corner pans, tunnels, or dig boxes — those hops already live on other ferret pages; this page is educational ramp/latch gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete multi-level-housing-checklist offer; every gear CTA is an amazon-brand category search matching on-page ramp-safety and door-security copy (fleece ramp covers, PVC sheet, cable ties, locking carabiners), never a placeholder ASIN, a medication hop, or a Critter Nation / sleep-sack / corner-pan / tunnel hop already shipped on other ferret pages. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'horses · grooming hops',
     file: 'apps/horses-com/src/app/care/grooming/page.tsx',
     mustInclude: [

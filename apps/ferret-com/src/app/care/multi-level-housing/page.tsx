@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +35,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -72,6 +72,7 @@ export default function MultiLevelHousingPage() {
                 { label: 'Zoning the Levels', href: '#zoning' },
                 { label: 'Connecting Multiple Cages', href: '#connecting' },
                 { label: 'Common Layout Mistakes', href: '#mistakes' },
+                { label: 'Vertical-Housing Kit', href: '#kit' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -107,9 +108,33 @@ export default function MultiLevelHousingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the multi-level housing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret multi-level housing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the ramp-cover, PVC-sheet, cable-tie, and carabiner notes
+              so the vertical cage is safer before you add another level.
+              Educational checklist, not a diagnosis and not a medication
+              order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret multi-level housing checklist"
+              subtitle="Email the ramp-cover, PVC-sheet, cable-tie, and carabiner notes. No spam."
+              ctaText="Email my ferret multi-level housing checklist"
+              source="care-multi-level-housing-under-hero"
+            />
+          </div>
 
           <h2 id="why-vertical">Why Vertical Layout Wins</h2>
           <p>
@@ -178,6 +203,61 @@ export default function MultiLevelHousingPage() {
           <p>
             Get the vertical layout right and a multi-level cage becomes what it should be: a secure, interesting home base the ferret returns to between the supervised out-of-cage hours that no amount of cage real estate replaces.
           </p>
+
+          <h2 id="kit">Vertical-Housing Kit</h2>
+          <p>
+            Everyday physical supplies that match the ramp-safety and door-security
+            copy above — fleece ramp covers for traction, PVC sheet as a hard
+            ramp liner, cable ties to pin both ends of a ramp, and locking
+            carabiners so a ferret cannot work a cam-latch. Critter Nation
+            cages, sleep sacks, hammocks, corner pans, connecting tunnels, and
+            ceramic crocks stay off this kit — those hops already live on the
+            cage-size, bedding, travel, and proofing pages. These are not a
+            treatment for a fracture and not a diagnosis. This page does not
+            claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops (vertical-housing kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page ramp-cover / PVC-sheet / cable-tie / carabiner copy,
+              not Critter Nation, sleep sacks, corner pans, tunnels, or
+              medication hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the vertical-housing kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page ramp-design and
+              door-security copy — fleece ramp covers, PVC sheet for a hard
+              liner, cable ties to anchor both ends, and locking carabiners
+              for every door. Everyday physical supplies only. They are not a
+              ranked product list, they are not a cage or a medication, and
+              they do not replace an exotic-pet veterinarian. Ferret.com
+              earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing"
+                amazonLabel="Browse fleece ramp covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pvc+sheet?s=care-multi-level-housing"
+                amazonLabel="Browse PVC sheets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cable+ties?s=care-multi-level-housing"
+                amazonLabel="Browse cable ties on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"
+                amazonLabel="Browse locking carabiners on Amazon →"
+              />
+            </div>
+          </div>
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
