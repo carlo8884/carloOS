@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -45,6 +45,34 @@ export default function LuxatingPatellaPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-luxating-patella walk-support checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-luxating-patella walk-support checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the walk-support notes — a dog knee brace
+              for leash walks when the kneecap is slipping, and a
+              rear-support harness to keep those walks controlled
+              during Grade 1 flares or the 6–8 week post-op
+              restriction window. Educational checklist, not a
+              diagnosis and not a treatment list. Joint
+              supplements, fish oil, NSAIDs, and prescription
+              weight diets stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-luxating-patella walk-support checklist"
+              subtitle="Email the dog-knee-brace and rear-support-harness notes. No spam."
+              ctaText="Email my dog-luxating-patella walk-support checklist"
+              source="health-dog-luxating-patella-under-hero"
+            />
+          </div>
+
           <h2>The Grading System — Grades 1 Through 4</h2>
           <p>Luxating patella is graded from 1–4 based on severity, and the grade guides treatment decisions:</p>
           <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -68,11 +96,50 @@ export default function LuxatingPatellaPage() {
 
           <h2>Surgical Correction</h2>
           <p>Surgery for luxating patella typically involves one or more procedures performed simultaneously: <strong>trochlear recession</strong> (deepening the groove the patella sits in — either trochlear wedge recession or block recession), <strong>tibial crest transposition</strong> (moving the tibial crest to realign the pull of the patellar tendon toward the center rather than the inside), and in severe cases, <strong>femoral or tibial osteotomy</strong> (corrective bone cuts to address the underlying skeletal deformity).</p>
-          <p>Surgery is performed by a board-certified veterinary surgeon (DACVS) or an experienced general practitioner with orthopedic training for uncomplicated Grade 2 cases. Grades 3 and 4 and large breed cases should be referred to a specialist. Post-operative: strict exercise restriction for 6–8 weeks, controlled leash walks, physical rehabilitation to rebuild muscle. Prognosis with surgery is excellent for Grade 2–3 cases — the majority of dogs return to normal or near-normal function.</p>
+          <p>Surgery is performed by a board-certified veterinary surgeon (DACVS) or an experienced general practitioner with orthopedic training for uncomplicated Grade 2 cases. Grades 3 and 4 and large breed cases should be referred to a specialist. Post-operative: strict exercise restriction for 6–8 weeks, controlled leash walks, physical rehabilitation to rebuild muscle. A rear-support harness helps keep those post-op leash walks short and controlled without extra jumping or twisting. Prognosis with surgery is excellent for Grade 2–3 cases — the majority of dogs return to normal or near-normal function.</p>
 
           <h2>Without Surgery — Grade 1 and Monitoring</h2>
           <p>Grade 1 luxating patella in a dog with minimal clinical signs does not necessarily require surgery. Management: maintain lean body weight (reduces force across the joint with every step), joint supplementation (Dasuquin Advanced — glucosamine and chondroitin), omega-3 fatty acids (EPA/DHA from fish oil — anti-inflammatory), and monitoring every 6 months to assess for progression. If the dog begins showing more frequent skipping, increased lameness, or significant cartilage wear (visible on radiograph), surgical intervention should be reconsidered.</p>
-          <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint.</p>
+          <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint. Some owners use a dog knee brace on the affected hind limb during those leash walks when skipping flares, so the kneecap has less room to slip sideways. Ask your veterinarian whether a brace fits this dog and this grade — it is a walk-support aid, not a substitute for grading, weight management, or surgery when those are indicated.</p>
+
+          <h2 id="kit">Walk-support kit</h2>
+          <p>Everyday physical supplies that match the walk-control copy above — a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>. Waterproof booties stay on <a href="/health/dog-skin-allergies">dog-skin-allergies</a>. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (dog
+              knee brace / rear-support harness). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER. Category
+              searches only. Joint supplements, fish oil, NSAIDs,
+              Rx weight diets, orthopedic beds, dog ramps, traction
+              rugs, raised bowls, and booties are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-luxating-patella walk-support kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              walk-support copy — a dog knee brace and a
+              rear-support harness. Everyday physical gear only.
+              They are not a ranked product list, they are not
+              medications, they are not joint-supplement ASINs,
+              they are not prescription diets, they are not brand
+              food ASINs, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+knee+brace?s=health-dog-luxating-patella"
+                amazonLabel="Browse dog knee braces on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+rear+support+harness?s=health-dog-luxating-patella"
+                amazonLabel="Browse rear-support harnesses on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
