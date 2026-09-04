@@ -1347,6 +1347,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete velvet temp-and-blackout checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-swim-bladder hops',
+    file: 'apps/fish-com/src/app/health/swim-bladder-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-swim-bladder-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my swim-bladder fasting-and-pea checklist"/, label: 'concrete fasting-and-pea / water-quality / shallow-hospital-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-swim-bladder/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-swim-bladder/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet; shallow 4–6 inch setup)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-swim-bladder/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /eheim\+jager\+heater/, label: 'omit heater hop — swim-bladder copy has no heat method' },
+      { re: /aquarium\+digital\+thermometer/, label: 'omit thermometer hop — swim-bladder copy has no heat method' },
+    ],
+    why: 'Money path: under-hero capture with a concrete swim-bladder fasting-and-pea checklist offer; every gear CTA is an amazon-brand category search matching on-page water-quality / shallow-hospital copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
