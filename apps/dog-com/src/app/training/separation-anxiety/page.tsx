@@ -1,5 +1,16 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -18,7 +29,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const howToSchema = buildHowToSchema({
@@ -78,7 +89,32 @@ export default function SeparationAnxietyPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the alone-time plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Separation-anxiety protocol
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the camera check, boredom vs true-SA protocol, and the
+            alone-time kit (stuffable Kong, snuffle mat, crate with divider,
+            long-lasting chews) so you can run the steps without scrolling
+            back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Separation-anxiety protocol"
+            subtitle="Email the camera check, boredom vs true-SA protocol, and alone-time kit. No spam."
+            ctaText="Email my separation-anxiety protocol"
+            source="training-sep-anxiety-under-hero"
+          />
+        </div>
+
         <h2 id="distinguish">True Separation Anxiety vs Boredom — How to Tell</h2>
         <p>This distinction matters enormously because the protocols are completely different. Applying the boredom protocol to a dog with true SA makes things worse; applying the SA protocol to a bored dog is unnecessary and slow.</p>
         <p><strong>The best diagnostic tool: a camera.</strong> Set up a phone or security camera to record your dog for 30 minutes after you leave. What you see tells you everything.</p>
@@ -103,27 +139,84 @@ export default function SeparationAnxietyPage() {
         <p>If your camera shows a dog that settles after you leave but has destruction or nuisance behavior during the absence, this is a management and enrichment problem — not anxiety.</p>
         <ul>
           <li><strong>Increase physical exercise</strong> before departures — a tired dog is a calmer dog. A 30–45 minute walk before leaving changes what the rest of the day looks like.</li>
-          <li><strong>Provide enrichment</strong> that lasts: stuffed frozen Kongs (fill with food, freeze overnight), snuffle mats, long-lasting chews (bully sticks, tendons). These replace the dog&apos;s decision to find their own entertainment.
-
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-            <div className="my-4 p-4 border border-brand-border rounded-xl bg-brand-surface">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Buyer&apos;s Guide — Enrichment Supplies</div>
-              <p className="text-sm text-brand-text-mid mb-3 leading-relaxed">A Kong stuffed with kibble or peanut butter and frozen overnight can keep most dogs occupied for 15–30 minutes. Rotate chews and toys to maintain novelty.</p>
-              <div className="flex flex-wrap gap-2">
-                <a href="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-                  Shop Kong Toys on Amazon →
-                </a>
-                <a href="/go/chewy-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-                  Shop Snuffle Mats on Chewy →
-                </a>
-              </div>
-            </div>
-          </li>
+          <li><strong>Provide enrichment</strong> that lasts: stuffed frozen Kongs (fill with food, freeze overnight), snuffle mats, long-lasting chews (bully sticks, tendons). These replace the dog&apos;s decision to find their own entertainment.</li>
           <li><strong>Crate when unsupervised</strong> — removes access to everything the dog can destroy and creates a predictable management structure while the dog builds a calm unsupervised habit.</li>
           <li><strong>Rotate enrichment</strong> — novelty matters. The same Kong every day becomes less interesting. Rotate chews, food types, and enrichment toys.</li>
           <li><strong>Gradually increase unsupervised freedom</strong> as the habit of calm behavior is established — start with one low-risk room, expand over weeks as reliability increases.</li>
         </ul>
+
+        {/* Money path — live amazon-brand search hops (alone-time kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop an alone-time kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A stuffed frozen Kong plus a snuffle mat occupy most dogs for the
+            first 15–30 minutes after you leave — the window where boredom
+            destruction usually starts. Pair them with a wire crate and
+            divider for unsupervised time, and rotate long-lasting chews so
+            the same Kong does not go stale. Same Kong hop used on the{' '}
+            <Link
+              href="/tools/dog-exercise-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dog exercise calculator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/tools/new-puppy-checklist"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              new-puppy checklist
+            </Link>
+            . Same crate hop used on the{' '}
+            <Link
+              href="/training/crate-training"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              crate-training guide
+            </Link>
+            . They are not a ranked product list and they do not replace the
+            camera check or the sub-threshold protocol. Size the crate before
+            you order. Dog.com earns a commission on qualifying purchases at
+            no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety"
+              amazonLabel="Browse stuffable Kong toys on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety"
+              amazonLabel="Browse snuffle mats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
+              amazonLabel="Browse crates on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"
+              amazonLabel="Browse long-lasting chews on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/training/crate-training" className="text-brand-primary hover:underline">
+              Crate Training Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-dog-crates" className="text-brand-primary hover:underline">
+              Best Dog Crates 2026
+            </Link>
+            {' · '}
+            <Link href="/health/dog-anxiety" className="text-brand-primary hover:underline">
+              Dog Anxiety
+            </Link>
+          </p>
+        </div>
 
         <h2 id="true-sa">Protocol for True Separation Anxiety</h2>
         <p>True SA is treated with a systematic desensitization protocol called sub-threshold training — the core of which is never leaving the dog at a level that triggers anxiety while building tolerance in very small increments.</p>
