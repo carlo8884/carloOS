@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -43,6 +43,35 @@ export default function IVDDPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-IVDD crate-rest checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-IVDD crate-rest checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the crate-rest notes — a recovery crate
+              for the 4–6 week Grade 1 confinement window, a
+              belly-support harness that lifts the torso so the
+              spine stays level on those brief toilet walks, and
+              a dog wheelchair (mobility cart) if a Grade 3–5
+              dog cannot walk yet. Educational checklist, not a
+              diagnosis and not a treatment list. NSAIDs, joint
+              supplements, and prescription pain meds stay off
+              this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-IVDD crate-rest checklist"
+              subtitle="Email the recovery-crate, belly-support-harness, and wheelchair notes. No spam."
+              ctaText="Email my dog-IVDD crate-rest checklist"
+              source="health-intervertebral-disc-disease-under-hero"
+            />
+          </div>
+
           <h2>What IVDD Is</h2>
           <p>Intervertebral discs are cartilaginous cushions between each vertebra of the spine. In chondrodystrophic breeds — dogs genetically selected for shortened, bowed legs (Dachshunds being the most affected) — the nucleus of these discs mineralizes and hardens abnormally early in life. Mineralized discs lose their shock-absorbing quality and are prone to sudden extrusion (Type I IVDD) into the spinal canal, where they compress the spinal cord.</p>
           <p>Non-chondrodystrophic breeds develop Type II IVDD — gradual fibrous disc protrusion over time rather than sudden extrusion — which is more common in large breeds like German Shepherds and Labrador Retrievers. Type II is generally slower in progression and somewhat less surgically urgent, though the neurological grades still apply.</p>
@@ -72,10 +101,57 @@ export default function IVDDPage() {
           <p>MRI is the gold standard for IVDD diagnosis — it precisely localizes the affected disc, shows the degree of spinal cord compression, and is required for surgical planning. CT myelography (CT scan after contrast injection into the spinal canal) is an alternative when MRI is not available. Plain radiographs can show narrowed disc spaces and mineralized discs but cannot directly visualize soft tissue compression.</p>
 
           <h2>Conservative Management — Grade 1</h2>
-          <p>Grade 1 IVDD (pain only, normal gait) can be managed conservatively with strict crate rest (no jumping, stairs, or running — truly strict confinement) for 4–6 weeks combined with NSAIDs for pain and inflammation. Approximately 80% of Grade 1 dogs improve with strict rest. "Strict rest" means: in a crate except for brief leashed toilet walks, no furniture access, no playing with other dogs. Many owners underestimate what strict means — insufficient restriction is the most common reason conservative management fails. If the dog is not improving or worsening at any point during conservative management, reassess with a neurologist immediately.</p>
+          <p>Grade 1 IVDD (pain only, normal gait) can be managed conservatively with strict crate rest (no jumping, stairs, or running — truly strict confinement) for 4–6 weeks combined with NSAIDs for pain and inflammation. Approximately 80% of Grade 1 dogs improve with strict rest. "Strict rest" means: in a recovery crate except for brief leashed toilet walks, no furniture access, no playing with other dogs. A recovery crate sized so the dog can stand and turn but cannot run or jump is the confinement tool that window depends on. Many owners underestimate what strict means — insufficient restriction is the most common reason conservative management fails. If the dog is not improving or worsening at any point during conservative management, reassess with a neurologist immediately.</p>
+          <p>For those brief leashed toilet walks, a belly-support harness (an IVDD back-support harness that lifts the torso) keeps the spine level so the disc is not flexed or twisted. That is a different tool from the rear-support harness on the <a href="/health/dog-luxating-patella">luxating-patella</a> page, which lifts the hindquarters of a walking dog with a slipping kneecap. Ask your veterinarian whether a belly-support harness fits this dog and this grade — it is a spinal-support aid for short toilet walks, not a substitute for crate rest or surgery when those are indicated.</p>
 
           <h2>Rehabilitation After Surgery</h2>
           <p>Post-surgical rehabilitation significantly improves outcomes. Hydrotherapy (underwater treadmill — allows weight-bearing movement before the dog can walk on land), neuromuscular electrical stimulation, therapeutic exercises, and massage all contribute to faster recovery. A certified canine rehabilitation therapist (CCRP or CCRT) designs the protocol. Recovery timeline varies: Grade 2-3 dogs typically regain ambulation within 2–8 weeks post-surgery. Grade 4-5 dogs may take 3–6 months or longer. Bladder management (manual expression or catheterization for dogs that cannot urinate voluntarily) is a critical component of post-surgical care that owners must learn.</p>
+          <p>When a Grade 3–5 dog cannot walk yet, a dog wheelchair (mobility cart) lets the dog move without loading the healing spine. Ask the rehabilitation therapist whether a cart fits this recovery stage — it is a mobility aid, not a substitute for crate rest, surgery when indicated, or bladder care. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>.</p>
+
+          <h2 id="kit">Crate-rest mobility kit</h2>
+          <p>Everyday physical supplies that match the crate-rest and mobility copy above — a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (recovery
+              crate / belly-support harness / wheelchair). ShopCtas
+              hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only. NSAIDs, joint supplements,
+              orthopedic beds, dog ramps, knee braces, rear-support
+              harnesses, traction rugs, and raised bowls are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-IVDD crate-rest kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              crate-rest and mobility copy — a recovery crate, a
+              belly-support harness, and a dog wheelchair
+              (mobility cart). Everyday physical gear only. They
+              are not a ranked product list, they are not
+              medications, they are not joint-supplement ASINs,
+              they are not a rear-support harness, they are not
+              a knee brace, and they do not replace a
+              veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+recovery+crate?s=health-intervertebral-disc-disease"
+                amazonLabel="Browse recovery crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+belly+support+harness?s=health-intervertebral-disc-disease"
+                amazonLabel="Browse belly-support harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+wheelchair+mobility+cart?s=health-intervertebral-disc-disease"
+                amazonLabel="Browse dog wheelchairs and mobility carts on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
