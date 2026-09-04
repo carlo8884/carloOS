@@ -1258,6 +1258,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-fencing-safety-checklist offer; every gear CTA is an amazon-brand category search matching on-page safe-fence copy (electric tape, horse mesh, electric rope, electric fence tester), never a placeholder ASIN, a medication hop, or a barbed-wire / sheep-mesh / high-tensile hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · pasture-management hops',
+    file: 'apps/horses-com/src/app/care/pasture-management/page.tsx',
+    mustInclude: [
+      { re: /source="care-pasture-management-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my pasture-management checklist"/, label: 'concrete pasture-management-checklist offer, not Subscribe' },
+      { re: /source="care-pasture"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+grazing\+muzzle\?s=care-pasture-management/, label: 'grazing-muzzle search hop (matches on-page restricted-grazing / laminitis-prone copy)' },
+      { re: /amazon-brand\/soil\+test\+kit\?s=care-pasture-management/, label: 'soil-test-kit search hop (matches on-page periodic-soil-testing copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|electrolyte|barn\+fan|clip\+on\+fan|slow\+feeder|horse\+hoof\+pick|horse\+hoof\+boots|horse\+electric\+tape|horse\+fence\+mesh|horse\+stall\+fork|fertilizer|herbicide|lime|ragwort|antifungal|antibiotic)/, label: 'never hop medications, electrolytes, fans, slow feeders, hoof gear, fencing-safety tape/mesh, stall forks, or fertilizer / herbicide / lime — this page hops only grazing-muzzle / soil-test-kit gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete pasture-management-checklist offer; every gear CTA is an amazon-brand category search matching on-page restricted-grazing and soil-testing copy (horse grazing muzzle, soil test kit), never a placeholder ASIN, a medication hop, an electrolyte hop, a fan / slow-feeder overlap, a hoof-pick / hoof-boot overlap, a fencing-safety electric-tape overlap, or a fertilizer / herbicide hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
