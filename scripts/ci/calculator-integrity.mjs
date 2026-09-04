@@ -1069,6 +1069,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete fly-control-checklist offer; every gear CTA is an amazon-brand category search matching on-page barrier / spray / trap copy (fly mask, fly sheet, fly boots, fly spray, fly trap), never a placeholder ASIN, a medication hop, or a sweet-itch / summer-sore treatment. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · blanketing hops',
+    file: 'apps/horses-com/src/app/care/blanketing/page.tsx',
+    mustInclude: [
+      { re: /source="care-blanketing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my blanketing checklist"/, label: 'concrete blanketing-checklist offer, not Subscribe' },
+      { re: /source="care-blanketing"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+turnout\+blanket\?s=care-blanketing/, label: 'turnout-blanket search hop (matches on-page turnout-rug copy)' },
+      { re: /amazon-brand\/horse\+waterproof\+sheet\?s=care-blanketing/, label: 'waterproof-sheet search hop (matches on-page waterproof-sheet copy)' },
+      { re: /amazon-brand\/horse\+lightweight\+blanket\?s=care-blanketing/, label: 'lightweight-blanket search hop (matches on-page lightweight-fill copy)' },
+      { re: /amazon-brand\/horse\+medium\+weight\+blanket\?s=care-blanketing/, label: 'medium-weight-blanket search hop (matches on-page medium-fill copy)' },
+      { re: /amazon-brand\/horse\+heavyweight\+blanket\?s=care-blanketing/, label: 'heavyweight-blanket search hop (matches on-page heavyweight-fill copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|bute|phenylbutazone|banamine|antifungal|antibiotic)/, label: 'never hop medications or diagnosis treatments — this page is educational blanketing gear, not a drug or diagnosis list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete blanketing-checklist offer; every gear CTA is an amazon-brand category search matching on-page turnout / sheet / fill-weight copy (turnout blanket, waterproof sheet, lightweight, medium-weight, heavyweight), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

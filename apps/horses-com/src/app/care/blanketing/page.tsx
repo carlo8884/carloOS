@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function BlanketingPage() {
             { label: "Choosing a Weight", href: "#weight" },
             { label: "Fit and Safety", href: "#fit" },
             { label: "The Case for Leaving Them Bare", href: "#bare" },
+            { label: "Blanketing Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,9 +109,34 @@ export default function BlanketingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the blanketing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse blanketing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the everyday kit — a turnout rug matched to fill weight, a
+              light waterproof sheet for an unclipped horse that only needs to
+              stay dry, plus lightweight, medium, and heavyweight options so
+              you can adjust as the weather changes. Educational checklist,
+              not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse blanketing checklist"
+              subtitle="Email the turnout-rug, waterproof-sheet, and fill-weight order. No spam."
+              ctaText="Email my blanketing checklist"
+              source="care-blanketing-under-hero"
+            />
+          </div>
 
           <h2 id="warmth">How Horses Stay Warm</h2>
           <p>A healthy horse is remarkably cold-hardy. Its winter coat traps an insulating layer of air, and the hairs stand up (piloerection) to thicken that layer; fiber fermentation in the hindgut generates substantial internal heat, effectively an internal furnace fueled by hay. A horse with a full coat, shelter from wind and wet, and plenty of forage is comfortable at temperatures that feel bitter to us. Wind and rain, which flatten the coat and strip its insulation, matter more than cold air alone.</p>
@@ -138,6 +164,54 @@ export default function BlanketingPage() {
 
           <h2 id="bare">The Case for Leaving Them Bare</h2>
           <p>For many healthy, unclipped horses with shelter and forage, no blanket is the better welfare choice: they regulate their own temperature, move freely, and keep their coats functioning. Blanketing an unclipped horse can flatten its coat and reduce its natural insulation, and a horse that overheats under a rug then chills. The honest question is whether the blanket serves the horse or the owner&apos;s worry.</p>
+
+          <h2 id="kit">Blanketing Kit</h2>
+          <p>Everyday physical supplies that match the weight, fit, and waterproof-sheet copy above — a turnout rug rated by fill, a light waterproof sheet when an unclipped horse only needs to stay dry, and lightweight, medium, and heavyweight options so the rug can be swapped as the temperature changes. These are not treatments for a sick, underweight, or shivering horse; a horse that cannot maintain condition or that is suddenly too cold or too hot belongs with your veterinarian, not a heavier rug. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (blanketing kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page turnout / sheet / fill-weight copy, not medical
+              or diagnosis hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the blanketing kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page turnout, sheet,
+              and fill-weight copy — a turnout blanket, a waterproof sheet, a
+              lightweight rug, a medium-weight rug, and a heavyweight rug.
+              Everyday physical supplies only. They are not a ranked product
+              list, they are not treatments for illness or poor condition, and
+              they do not replace a veterinarian. Horses.com earns a commission
+              on qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+turnout+blanket?s=care-blanketing"
+                amazonLabel="Browse horse turnout blankets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+waterproof+sheet?s=care-blanketing"
+                amazonLabel="Browse horse waterproof sheets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+lightweight+blanket?s=care-blanketing"
+                amazonLabel="Browse horse lightweight blankets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+medium+weight+blanket?s=care-blanketing"
+                amazonLabel="Browse horse medium-weight blankets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+heavyweight+blanket?s=care-blanketing"
+                amazonLabel="Browse horse heavyweight blankets on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
