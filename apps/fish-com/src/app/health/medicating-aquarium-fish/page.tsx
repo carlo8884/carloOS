@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -36,6 +37,34 @@ export default function MedicatingFishPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the hospital-tank dosing plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Hospital-tank dosing checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the isolate, real-volume, carbon-off, aeration order —
+            test and correct water quality with a liquid kit before any
+            dose, move the patient to a spare hospital tank so the display
+            biofilter stays protected, calculate the actual gallons after
+            decor displacement, pull carbon before you dose, and add
+            air-driven aeration because several medications drop dissolved
+            oxygen. Educational husbandry, not a diagnosis or a cure. No
+            spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Hospital-tank dosing checklist"
+            subtitle="Email the isolate, real-volume, carbon-off, aeration order. No spam."
+            ctaText="Email my hospital-tank dosing checklist"
+            source="health-medicating-fish-under-hero"
+          />
+        </div>
+
         <h2>Medicate Last, Not First</h2>
         <DropCap>The most important rule of fish medication is that it should rarely be the first response. A great many problems that prompt a trip to the medication shelf — clamped fins, lethargy, a touch of fin erosion, rapid breathing — are caused by water quality or stress, not by a pathogen that a drug can fix. Dosing such a fish does nothing for the real cause while exposing it, and the beneficial bacteria in the filter, to chemicals it did not need. The disciplined sequence is: observe and identify the likely problem, test and correct the water, remove any obvious stressor, and only then medicate if a specific pathogen is genuinely indicated. Shotgunning multiple medications at an undiagnosed fish is one of the surest ways to kill it.</DropCap>
 
@@ -55,17 +84,116 @@ export default function MedicatingFishPage() {
         <h2>Finishing and Follow-Up</h2>
         <p>Complete the full recommended course of any medication even if the fish appears to recover early — stopping short allows survivors to rebound and, with antibiotics, breeds resistant strains. After treatment, run fresh carbon to strip residual medication from the hospital tank, and continue excellent water quality during recovery. Reintroduce a recovered fish to the display only when fully healed and after observing it for any relapse. Throughout, remember that the surest way to need medication rarely is to prevent disease in the first place through stable water, sensible stocking, and a robust <a href="/setup/quarantine-tank-guide">quarantine routine</a>.</p>
 
-        <ArticleSourcesList sources={SOURCES} />
+        {/* Money path — live amazon-brand search hops (hospital-tank dosing kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Hospital Tank Equipment</div>
-          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>A hospital tank requires only three things: an adjustable heater to hold a stable treatment temperature, a sponge filter to maintain gentle biological filtration without harming the patient, and an air pump to drive it and maintain oxygenation during treatment. These are husbandry tools that support safe medication practice; they do not treat disease and are not a substitute for correct diagnosis and veterinary guidance when needed.</p>
-          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/aquarium%20sponge%20filter%20heater%20air%20pump%20hospital%20tank?s=health-medicating-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/aquarium%20sponge%20filter%20hospital%20tank%20setup?s=health-medicating-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a hospital-tank dosing kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Medication is last, not first. A liquid master kit is how you
+            see ammonia, nitrite, and nitrate before any dose — strips are
+            not accurate enough for the water-quality problems that look
+            like a pathogen. Isolate the patient in a spare hospital tank
+            with a seeded sponge filter so treatment stays off the display
+            biofilter and aeration holds as medications drop dissolved
+            oxygen. A heater rated for the hospital tank is how you hold a
+            stable treatment temperature. Same test-kit hop used on the{' '}
+            <Link
+              href="/health/bacterial-infections"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              bacterial infections guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/setup/quarantine-tank-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              quarantine tank guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
+              fin-rot guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/ich-treatment" className="text-brand-primary no-underline hover:underline">
+              ich treatment guide
+            </Link>
+            . Same heater hop used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary no-underline hover:underline">
+              fish disease guide
+            </Link>
+            . There is no live aquarium+air+pump search key on sister
+            pages — the sponge-filter hop is the aeration stand-in, same
+            as ich and velvet. The hops below are not a ranked product
+            list, they are not medications, and they do not treat,
+            reverse, or cure disease. Fish.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-medicating-fish"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-medicating-fish"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-medicating-fish"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-medicating-fish"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/ich-treatment" className="text-brand-primary hover:underline">
+              Ich Treatment Guide
+            </Link>
+            {' · '}
+            <Link href="/health/bacterial-infections" className="text-brand-primary hover:underline">
+              Bacterial Infections
+            </Link>
+            {' · '}
+            <Link href="/health/fin-rot" className="text-brand-primary hover:underline">
+              Fin Rot
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
