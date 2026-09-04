@@ -1047,6 +1047,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete hoof-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page daily-care and shoeing copy (hoof pick, hoof pick with stiff brush, hoof boots), never a placeholder ASIN, a medication hop, or a thrush / abscess / laminitis treatment. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · fly-control hops',
+    file: 'apps/horses-com/src/app/care/fly-control/page.tsx',
+    mustInclude: [
+      { re: /source="care-fly-control-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fly-control checklist"/, label: 'concrete fly-control-checklist offer, not Subscribe' },
+      { re: /source="care-fly-control"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+fly\+mask\?s=care-fly-control/, label: 'fly-mask search hop (matches on-page barrier copy)' },
+      { re: /amazon-brand\/horse\+fly\+sheet\?s=care-fly-control/, label: 'fly-sheet search hop (matches on-page barrier copy)' },
+      { re: /amazon-brand\/horse\+fly\+boots\?s=care-fly-control/, label: 'fly-boots search hop (matches on-page barrier copy)' },
+      { re: /amazon-brand\/horse\+fly\+spray\?s=care-fly-control/, label: 'fly-spray search hop (matches on-page repellent copy)' },
+      { re: /amazon-brand\/horse\+fly\+trap\?s=care-fly-control/, label: 'fly-trap search hop (matches on-page environmental-management copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|sweet\+itch|summer\+sore|ivermectin|permethrin|spot-on|antifungal|antibiotic)/, label: 'never hop medications or sweet-itch / summer-sore treatments — this page is educational fly-control gear, not a drug or diagnosis list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete fly-control-checklist offer; every gear CTA is an amazon-brand category search matching on-page barrier / spray / trap copy (fly mask, fly sheet, fly boots, fly spray, fly trap), never a placeholder ASIN, a medication hop, or a sweet-itch / summer-sore treatment. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -81,6 +81,7 @@ export default function FlyControlPage() {
             { label: "Physical Barriers", href: "#barriers" },
             { label: "Repellents", href: "#repellents" },
             { label: "Environmental Management", href: "#environment" },
+            { label: "Fly-Control Kit", href: "#kit" },
             { label: "Fly-Borne Problems", href: "#disease" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -108,9 +109,34 @@ export default function FlyControlPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the fly-control checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse fly-control checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the everyday kit — a well-fitted fly mask, a breathable
+              fly sheet, fly boots for the legs, a topical fly spray rated
+              for horses, and fly traps placed away from the horses — so
+              you are not hunting gear mid-season. Educational checklist,
+              not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse fly-control checklist"
+              subtitle="Email the fly-mask, fly-sheet, fly-boot, spray, and trap order. No spam."
+              ctaText="Email my fly-control checklist"
+              source="care-fly-control-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Flies Matter</h2>
           <p>Different flies cause different problems. Stable and horn flies inflict painful bites; face flies cluster at the eyes and spread conjunctivitis; bot flies lay eggs on the legs that the horse ingests, becoming stomach bots; and biting midges trigger sweet itch in allergic horses. Beyond disease, constant fly worry causes stamping (hard on hooves and shoes), stress, and weight loss, so control is a genuine welfare and health issue, not just comfort.</p>
@@ -134,6 +160,56 @@ export default function FlyControlPage() {
             <li><strong>Consider fly predators and traps</strong> as part of an integrated program, placed away from the horses.</li>
             <li><strong>Site and time turnout</strong> to avoid the worst fly hours and the dampest, most sheltered fly-friendly corners.</li>
           </ul>
+
+          <h2 id="kit">Fly-Control Kit</h2>
+          <p>Everyday physical supplies that match the barrier, repellent, and environmental-management copy above — a well-fitted fly mask for the eyes and face, a breathable fly sheet, fly boots for the legs, a topical fly spray rated for horses, and fly traps placed away from the horses. These are not treatments for sweet itch, summer sores, eye infections, or bots; persistent rubbing, wounds, or eye discharge belongs with your veterinarian, not a mask or a spray. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (fly-control kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page barrier / spray / trap copy, not sweet-itch diagnosis
+              or medical treatment hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the fly-control kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page barrier,
+              repellent, and environmental-management copy — a fly mask, a
+              fly sheet, fly boots, a topical fly spray / repellent rated
+              for horses, and fly traps placed away from the horses.
+              Everyday physical supplies only. They are not a ranked product
+              list, they are not treatments for sweet itch, summer sores,
+              eye infections, bots, or any medical condition, and they do
+              not replace a veterinarian. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fly+mask?s=care-fly-control"
+                amazonLabel="Browse horse fly masks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fly+sheet?s=care-fly-control"
+                amazonLabel="Browse horse fly sheets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fly+boots?s=care-fly-control"
+                amazonLabel="Browse horse fly boots on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fly+spray?s=care-fly-control"
+                amazonLabel="Browse horse fly spray on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fly+trap?s=care-fly-control"
+                amazonLabel="Browse horse fly traps on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="disease">Fly-Borne Problems</h2>
           <p>Flies are vectors and irritants behind several conditions: bot larvae from bot-fly eggs (controlled through the deworming program), summer sores from stomach-worm larvae deposited by flies in wounds, eye infections spread by face flies, and the midge-driven allergy of sweet itch. Good fly control therefore overlaps with parasite control and skin health, which is why it belongs in the overall management plan rather than being treated in isolation.</p>
