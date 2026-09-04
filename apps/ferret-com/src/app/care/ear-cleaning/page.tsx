@@ -1,5 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  FAQAccordion,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -36,7 +49,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -137,9 +150,35 @@ export default function EarCleaningPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ear-grooming checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret ear-grooming supplies checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the grooming-day order — a veterinary ear-cleaning
+              solution formulated for ferrets or for cats and dogs, cotton
+              pads or balls for wiping the visible ear, and a meat- or
+              fat-based lickable treat for distraction — so you are not
+              hunting supplies mid-clean. Educational checklist, not a
+              diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret ear-grooming supplies checklist"
+              subtitle="Email the vet ear cleaner, cotton pads, and distraction-treat order. No spam."
+              ctaText="Email my ferret ear-grooming checklist"
+              source="care-ear-cleaning-under-hero"
+            />
+          </div>
 
           <h2 id="normal">What Normal Ferret Ear Wax Looks Like</h2>
           <p>
@@ -166,6 +205,72 @@ export default function EarCleaningPage() {
           <p>
             This page describes supplies editorially and does not recommend a specific product to purchase.
           </p>
+
+          {/* Money path — live amazon-brand search hops (ear-grooming supplies).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list.
+              No prescription mite treatments, no hydrogen peroxide, no alcohol. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop ear-grooming supplies
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page supplies
+              copy — a veterinary ear-cleaning solution formulated for
+              ferrets or for cats and dogs, cotton pads or balls for
+              wiping the visible ear, and a ferret-safe lickable meat
+              paste for the same distraction trick used on the{' '}
+              <Link
+                href="/care/nail-trimming"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                nail-trimming
+              </Link>
+              {' '}guide. Same lickable-treat hop used there; the cleaner
+              matches the vet-recommended pet ear cleaner described on{' '}
+              <Link
+                href="/care/bathing-and-grooming"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                bathing and grooming
+              </Link>
+              . They are not a ranked product list, they are not
+              medications or mite treatments, and they do not diagnose or
+              replace an exotic-pet veterinarian. Hydrogen peroxide and
+              rubbing alcohol stay off this list on purpose. Ferret.com
+              earns a commission on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+ear+cleaner?s=care-ear-cleaning"
+                amazonLabel="Browse pet ear cleaners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cotton+pads?s=care-ear-cleaning"
+                amazonLabel="Browse cotton pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+lickable+treat+paste?s=care-ear-cleaning"
+                amazonLabel="Browse ferret lickable treat paste on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/nail-trimming" className="text-brand-primary hover:underline">
+                Nail Trimming
+              </Link>
+              {' · '}
+              <Link href="/care/bathing-and-grooming" className="text-brand-primary hover:underline">
+                Bathing &amp; Grooming
+              </Link>
+              {' · '}
+              <Link href="/health/ear-mites" className="text-brand-primary hover:underline">
+                Ear Mites
+              </Link>
+            </p>
+          </div>
 
           <h2 id="steps">Step by Step</h2>
           <ul>
