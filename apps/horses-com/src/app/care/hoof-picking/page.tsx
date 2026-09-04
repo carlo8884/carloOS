@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -79,6 +79,7 @@ export default function HoofPickingPage() {
           <TableOfContents items={[
             { label: "Why Pick Out the Feet", href: "#why" },
             { label: "What You Need", href: "#tools" },
+            { label: "Hoof-Picking Kit", href: "#kit" },
             { label: "Step by Step", href: "#steps" },
             { label: "What to Look For", href: "#look" },
             { label: "How Often", href: "#often" },
@@ -108,15 +109,74 @@ export default function HoofPickingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the hoof-picking checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse hoof-picking checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the everyday kit — a simple hoof pick, ideally one with
+              a stiff brush on the back to sweep the cleaned sole — so you
+              are not hunting tools mid-pick. Educational checklist, not a
+              diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse hoof-picking checklist"
+              subtitle="Email the hoof-pick and stiff-brush order. No spam."
+              ctaText="Email my hoof-picking checklist"
+              source="care-hoof-picking-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Pick Out the Feet</h2>
           <p>Horses pack mud, manure, bedding, and stones into the foot constantly. Left there, debris traps moisture and bacteria that cause thrush, hides a lodged stone that bruises the sole, and conceals early cracks or punctures. Picking out is both cleaning and inspection: it is the single best routine for catching foot problems while they are still small.</p>
 
           <h2 id="tools">What You Need</h2>
           <p>A simple hoof pick, ideally one with a stiff brush on the back to sweep the cleaned sole. That is all -- the value is in doing it consistently and thoroughly, not in fancy equipment. A safe, level place to work and a horse that has been taught to lift its feet make the job quick and safe.</p>
+
+          <h2 id="kit">Hoof-Picking Kit</h2>
+          <p>Everyday physical supplies that match the tools described above — a simple hoof pick, and a pick with a stiff brush on the back. These are not treatments for thrush, abscess, or any medical condition; heat, a foul smell, a lodged puncture, or sudden refusal to pick up a foot belongs with your veterinarian or farrier, not a pick. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (hoof-picking kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page tools copy, not thrush / abscess treatments. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the hoof-picking kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page tools copy — a
+              simple hoof pick, and a hoof pick with a stiff brush to sweep
+              the cleaned sole. Everyday physical supplies only. They are
+              not a ranked product list, they are not treatments for thrush,
+              abscess, or any medical condition, and they do not replace a
+              veterinarian or farrier. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hoof+pick?s=care-hoof-picking"
+                amazonLabel="Browse horse hoof picks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-picking"
+                amazonLabel="Browse horse hoof picks with brush on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="steps">Step by Step</h2>
           <ul>
