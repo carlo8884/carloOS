@@ -1205,6 +1205,28 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete socialization-window-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · setup-aquarium hops',
+    file: 'apps/fish-com/src/app/setup/page.tsx',
+    mustInclude: [
+      { re: /source="setup-aquarium-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my first-tank setup checklist"/, label: 'concrete first-tank-setup-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/aquaclear\+70\+filter\?s=setup-aquarium/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph)' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=setup-aquarium/, label: 'Fluval canister search hop (same query as stocking / filter-gph)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=setup-aquarium/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-builder)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=setup-aquarium/, label: 'digital aquarium thermometer search hop (category, not a ranked SKU)' },
+      { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=setup-aquarium/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / disease-symptom)' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=setup-aquarium/, label: 'API master test kit search hop (same query as stocking / cycling / water-change)' },
+      { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=setup-aquarium/, label: 'gravel vacuum search hop (same query as water-change calculator)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete first-tank-setup-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [

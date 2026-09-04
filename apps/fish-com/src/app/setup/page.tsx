@@ -1,8 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
-import { ArticleByline } from '@carloOS/ui'
 import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  FAQAccordion,
+  RelatedLinks,
+  TableOfContents,
+  StockImage,
+  ArticleByline,
+  EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
+import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -16,7 +26,7 @@ const articleSchema = buildArticleSchema({
   description: 'Step-by-step aquarium setup for beginners.',
   url: 'https://fish.com/setup', imageUrl: '',
   authorName: 'Fish.com Editorial',
-  publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z',
+  publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const howToSchema = buildHowToSchema({
@@ -89,7 +99,30 @@ export default function AquariumSetupPage() {
 </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the first-tank plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            First-tank setup checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the first-tank order — tank size, hang-on-back or canister filter,
+            heater, dechlorinator, API Master Test Kit, and the 4–8 week cycling
+            steps — so you can set up without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="First-tank setup checklist"
+            subtitle="Email tank size, filter/heater, dechlorinator, API Master Test Kit, and cycling steps. No spam."
+            ctaText="Email my first-tank setup checklist"
+            source="setup-aquarium-under-hero"
+          />
+        </div>
 
         <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />
 
@@ -118,6 +151,105 @@ export default function AquariumSetupPage() {
         <p className="text-sm text-brand-text-mid">
           Need the heater wattage for your tank size and target temperature? Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link>.
         </p>
+
+        {/* Money path — live amazon-brand search hops (first-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a first-tank setup kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A hang-on-back or canister filter is where the cycle lives. Pair it
+            with a heater rated for the tank, a separate digital thermometer to
+            verify the dial, Seachem Prime (or another dechlorinator) at every
+            fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
+            and a gravel vacuum for the first water change. Same HOB hop used on
+            the{' '}
+            <Link
+              href="/tools/stocking-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              stocking calculator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/tools/filter-gph-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              filter GPH calculator
+            </Link>
+            . Same heater hop used on the{' '}
+            <Link
+              href="/tools/heater-wattage-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              heater wattage calculator
+            </Link>
+            . Same Prime and gravel-vacuum hops used on the{' '}
+            <Link
+              href="/tools/water-change-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-change calculator
+            </Link>
+            . Same test-kit hop used on the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . They are not a ranked product list and they do not replace
+            cycling before fish. Fish.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium"
+              amazonLabel="Browse hang-on-back filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium"
+              amazonLabel="Browse canister filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=setup-aquarium"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium"
+              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"
+              amazonLabel="Browse gravel vacuums on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/tools/aquarium-setup-builder" className="text-brand-primary hover:underline">
+              Aquarium Setup Builder
+            </Link>
+            {' · '}
+            <Link href="/setup/aquarium-cycling-guide" className="text-brand-primary hover:underline">
+              Aquarium Cycling Guide
+            </Link>
+            {' · '}
+            <Link href="/tools/stocking-calculator" className="text-brand-primary hover:underline">
+              Stocking Calculator
+            </Link>
+          </p>
+        </div>
 
         <h2 id="setup">Step 3 — Set Up the Tank</h2>
         <ol style={{ marginBottom: '16px', paddingLeft: '24px' }}>
