@@ -82,6 +82,27 @@ const CALCULATORS = [
     why: 'US gallon = 231 in³; regular-hex face-to-face area = (√3/2)·w² ≈ 0.866·w².',
   },
   {
+    id: 'fish · aquarium-volume-calculator hops',
+    file: 'apps/fish-com/src/app/tools/aquarium-volume-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-aquarium-volume-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my tank size checklist"/, label: 'concrete tank-size-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/glass\+aquarium\+tank\+gallon\?s=tools-aquarium-volume/, label: 'glass tank by gallon search hop' },
+      { re: /amazon-brand\/acrylic\+aquarium\+tank\?s=tools-aquarium-volume/, label: 'acrylic tank search hop' },
+      { re: /amazon-brand\/aquarium\+stand\?s=tools-aquarium-volume/, label: 'aquarium stand search hop' },
+      { re: /amazon-brand\/aquarium\+substrate\+gravel\+bags\?s=tools-aquarium-volume/, label: 'substrate bags search hop' },
+      { re: /amazon-brand\/aquarium\+heater\+tank\+size\?s=tools-aquarium-volume/, label: 'heater by tank size search hop' },
+      { re: /amazon-brand\/aquarium\+filter\+gallon\?s=tools-aquarium-volume/, label: 'filter sized to gallons search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete tank-size-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · pond-volume-calculator',
     file: 'apps/fish-com/src/app/tools/pond-volume-calculator/Calculator.tsx',
     mustInclude: [
