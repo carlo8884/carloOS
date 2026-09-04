@@ -4,8 +4,11 @@ import { getSiteConfig } from '@carloOS/config'
 import {
   ArticleLayout,
   ArticleByline,
+  AffiliateDisclosure,
+  EmailCapture,
   FAQAccordion,
   SchemaScript,
+  ShopCtas,
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
@@ -14,13 +17,13 @@ import { WhichPetWizard } from './wizard-client'
 import { QUESTIONS } from './wizard-logic'
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
-// Title 49 chars (under 70); description 99 chars (under 160).
+// Title 33 chars (under 70); description 129 chars (under 160).
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Which Pet Should I Get? Free Quiz',
   description:
-    'Answer 10 lifestyle questions and get personalized pet recommendations. No email required.',
+    'Answer 10 lifestyle questions and get personalized pet recommendations. Quiz is ungated — optional first-week starter-list email.',
   path: '/which-pet',
   type: 'website',
   category: 'Decision Wizard',
@@ -99,7 +102,7 @@ const FAQS = [
   {
     question: 'Does the quiz collect my email or personal information?',
     answer:
-      'No. The quiz runs entirely in your browser. No answers are sent to a server, no email is required, and no personal data is collected by Dog.com to generate your recommendations.',
+      'No. The quiz runs entirely in your browser. No answers are sent to a server, no email is required to see your recommendations, and no personal data is collected by Dog.com to generate those results. The optional first-week starter-list capture on the page is separate from the wizard and is not required to run it.',
   },
 ]
 
@@ -188,7 +191,7 @@ export default function WhichPetPage() {
         hero={{
           title: 'Which Pet Should I Get?',
           subtitle:
-            'A free 10-question decision wizard. Answer once, get three species ranked against your real lifestyle — no email, no signup, no upsells.',
+            'A free 10-question decision wizard. Answer once, get three species ranked against your real lifestyle. The quiz is ungated — optional email for a first-week starter list.',
           category: 'Decision Wizard',
           authorName: 'Dog.com Editorial',
           authorAvatar: '🐾',
@@ -196,13 +199,37 @@ export default function WhichPetPage() {
           readTime: '3 min',
         }}
       >
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the starter list
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            First-week starter list
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the first-week starter list — crate, food, harness, ID tag, carrier, and
+            first-aid — so you can kit a dog-leaning result without re-running the wizard.
+            The quiz itself stays ungated. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="First-week starter list"
+            subtitle="Email the first-week starter list — crate, food, harness, ID tag, carrier, first-aid. No spam."
+            ctaText="Email my first-week starter list"
+            source="which-pet-under-hero"
+          />
+        </div>
+
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
           Picking the right species — not just the right breed — is the single biggest predictor of whether a pet relationship works. Roughly 6.3 million companion animals enter U.S. shelters each year (ASPCA, 2024 figures); the most common reason cited at intake is a mismatch between owner expectations and species reality.
         </p>
         <p className="text-base leading-relaxed text-brand-text-mid mb-3">
-          This wizard asks ten questions about your living space, schedule, allergies, budget, and experience, then surfaces three species ranked against AVMA Animal Welfare Division and ASPCA species-suitability references. There is no email gate. Your answers never leave your browser.
+          This wizard asks ten questions about your living space, schedule, allergies, budget, and experience, then surfaces three species ranked against AVMA Animal Welfare Division and ASPCA species-suitability references. The quiz itself is ungated. Your answers never leave your browser.
         </p>
         <p className="text-sm leading-relaxed text-brand-text-light mb-8">
           Built by Dog.com Editorial. Citations: <a href="https://www.avma.org/resources-tools/animal-health-welfare" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AVMA Animal Welfare Division</a> and <a href="https://www.aspca.org/pet-care" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">ASPCA Pet Care guides</a>. No paid placement of any species.
@@ -214,8 +241,7 @@ export default function WhichPetPage() {
         </div>
 
         {/* Result next-step — for a dog-leaning result, the natural next step is
-            narrowing to a breed. One soft, internal editorial path (no
-            commercial link here — this is a top-of-funnel species decision). */}
+            narrowing to a breed, then a first-week starter kit. */}
         <section className="mb-12 not-prose">
           <div className="rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -239,6 +265,68 @@ export default function WhichPetPage() {
               >
                 Browse breed care guides →
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Money path — live amazon-brand search hops (first-week starter kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list, not a species ranking. */}
+        <section id="first-week-kit" className="mb-12 not-prose">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a first-week starter kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              If the wizard leans dog, these Amazon category searches are day-one
+              husbandry items — a wire crate with a divider, puppy food, a harness,
+              an ID tag / collar, a soft carrier, and a pet first-aid kit. Same hops
+              used on the{' '}
+              <Link
+                href="/tools/new-puppy-checklist"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                new-puppy checklist
+              </Link>{' '}
+              and the{' '}
+              <Link
+                href="/tools/is-this-a-dog-emergency"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                emergency-prep tool
+              </Link>
+              . They are not a ranked product list, not invented inventory, and they
+              do not replace meeting a shelter, breeder, or veterinarian. Size the
+              crate and harness before you order. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+food?s=which-pet"
+                amazonLabel="Browse puppy food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet"
+                amazonLabel="Browse harnesses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+id+tag+collar?s=which-pet"
+                amazonLabel="Browse dog ID tags and collars on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+dog+carrier?s=which-pet"
+                amazonLabel="Browse soft dog carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=which-pet"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
             </div>
           </div>
         </section>

@@ -958,6 +958,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete chocolate-safety-checklist offer; every kit CTA is an amazon-brand category search, never a placeholder ASIN. Safety-kit hops do not treat or reverse chocolate poisoning.',
   },
   {
+    id: 'dog · which-pet hops',
+    file: 'apps/dog-com/src/app/which-pet/page.tsx',
+    mustInclude: [
+      { re: /source="which-pet-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my first-week starter list"/, label: 'concrete first-week-starter-list offer, not Subscribe' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=which-pet/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
+      { re: /amazon-brand\/puppy\+food\?s=which-pet/, label: 'puppy food search hop (same query as new-puppy)' },
+      { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=which-pet/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
+      { re: /amazon-brand\/dog\+id\+tag\+collar\?s=which-pet/, label: 'dog ID tag / collar search hop (same query as new-puppy)' },
+      { re: /amazon-brand\/soft\+dog\+carrier\?s=which-pet/, label: 'soft dog carrier search hop (same query as emergency-prep)' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=which-pet/, label: 'pet first-aid kit search hop (same query as emergency-prep)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete first-week-starter-list offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. The wizard itself stays ungated.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
