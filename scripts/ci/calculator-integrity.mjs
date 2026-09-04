@@ -986,6 +986,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete cage-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleaning-supplies copy (enzymatic pet cleaner, small-animal cage cleaner, litter scoop, disposable nitrile gloves, fragrance-free laundry detergent), never a placeholder ASIN, a medication hop, phenol/pine cleaners, ammonia, or undiluted bleach. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · grooming hops',
+    file: 'apps/horses-com/src/app/care/grooming/page.tsx',
+    mustInclude: [
+      { re: /source="care-grooming-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse grooming-kit checklist"/, label: 'concrete horse-grooming-kit-checklist offer, not Subscribe' },
+      { re: /source="care-grooming"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+curry\+comb\?s=care-grooming/, label: 'curry-comb search hop (matches on-page kit copy)' },
+      { re: /amazon-brand\/horse\+dandy\+brush\?s=care-grooming/, label: 'dandy-brush search hop (matches on-page kit copy)' },
+      { re: /amazon-brand\/horse\+body\+brush\?s=care-grooming/, label: 'body-brush search hop (matches on-page kit copy)' },
+      { re: /amazon-brand\/horse\+mane\+tail\+brush\?s=care-grooming/, label: 'mane/tail-brush search hop (matches on-page kit copy)' },
+      { re: /amazon-brand\/horse\+hoof\+pick\?s=care-grooming/, label: 'hoof-pick search hop (matches on-page kit copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|rain\+rot|sweet\+itch|antifungal|antibiotic)/, label: 'never hop medications or rain-rot / sweet-itch treatments — this page is educational grooming gear, not a drug or skin-condition list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-grooming-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page kit copy (curry comb, dandy brush, body brush, mane/tail brush, hoof pick), never a placeholder ASIN, a medication hop, or a rain-rot / sweet-itch treatment. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
