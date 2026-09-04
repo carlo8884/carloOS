@@ -3016,6 +3016,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-arthritis mobility-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (orthopedic dog bed, dog ramp), never a placeholder ASIN, an NSAID hop (carprofen / meloxicam / Galliprant), a joint-supplement hop (glucosamine / chondroitin / green-lipped mussel / omega-3), an Adequan / Librela hop, a prescription-diet hop, a food ASIN, or a chlorhexidine / bathing-product hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-obesity hops',
+    file: 'apps/dog-com/src/app/health/dog-obesity/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-obesity-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-obesity weigh-in checklist"/, label: 'concrete dog-obesity weigh-in-checklist offer, not Subscribe' },
+      { re: /source="health-obesity"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=health-dog-obesity/, label: 'digital pet-scale search hop (same query as vets/ferret BCS and insurance tools; matches on-page every-two-weeks weigh-in copy; not a brand ASIN)' },
+      { re: /amazon-brand\/slow\+feeder\+dog\+bowl\?s=health-dog-obesity/, label: 'slow-feeder dog-bowl search hop (same query as dog calorie calculator; matches on-page slow-feeder-bowl / meal-pacing copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hill|metabolic|royal|canin|satiety|purina|pro\+plan|overweight\+management|kitchen\+gram\+scale|portion\+control\+food\+scale|measuring\+cup|orthopedic\+dog\+bed|dog\+ramp|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop prescription WM diets, brand food ASINs, kitchen / portion food scales (vets.co weight-management), measuring cups, arthritis mobility gear, or medication — this page hops only physical digital-pet-scale / slow-feeder-bowl gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-obesity weigh-in-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (digital pet scale, slow-feeder dog bowl), never a placeholder ASIN, a prescription WM diet hop (Hill\'s Metabolic / Royal Canin Satiety / Purina Pro Plan Overweight Management), a kitchen / portion food-scale hop (sister vets.co weight-management page), a measuring-cup hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
