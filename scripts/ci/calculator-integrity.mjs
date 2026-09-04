@@ -835,6 +835,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete toxic-foods cheat-sheet offer; every gear CTA is an amazon-brand category search matching on-page toxic-foods / safe-treats copy (ferret-safe treats, freeze-dried meat treats, ceramic food bowls, water bottles, ferret-safe chew toys), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · nail-trimming hops',
+    file: 'apps/ferret-com/src/app/care/nail-trimming/page.tsx',
+    mustInclude: [
+      { re: /source="care-nail-trimming-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret nail-trim checklist"/, label: 'concrete nail-trim-checklist offer, not Subscribe' },
+      { re: /source="care-nail-trimming"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/cat\+kitten\+nail\+clippers\?s=care-nail-trimming/, label: 'cat/kitten nail-clipper search hop (matches on-page clippers-for-cats-kittens-or-small-dogs copy)' },
+      { re: /amazon-brand\/styptic\+powder\?s=care-nail-trimming/, label: 'styptic powder search hop (same query as ferret emergency triage)' },
+      { re: /amazon-brand\/ferret\+lickable\+treat\+paste\?s=care-nail-trimming/, label: 'ferret lickable treat / meat-paste search hop (matches on-page distraction trick)' },
+      { re: /amazon-brand\/LED\+desk\+lamp\?s=care-nail-trimming/, label: 'LED desk-lamp search hop (matches on-page good-lighting / see-the-quick copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription)/, label: 'never hop medications — this page is educational grooming gear, not a drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete nail-trim-checklist offer; every gear CTA is an amazon-brand category search matching on-page tools copy (cat/kitten/small-dog clippers, styptic powder, ferret-safe lickable treat paste, LED desk lamp for the quick), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

@@ -1,5 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  StockImage,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  FAQAccordion,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -31,7 +45,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -137,9 +151,34 @@ export default function NailTrimmingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the nail-trim checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret nail-trim checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the trim-day order — small cat, kitten, or small-dog
+              clippers, a bright light for the quick, styptic powder (or
+              cornstarch), and a ferret-safe lickable meat paste for the
+              belly-distraction trick — so you are not hunting tools mid-trim.
+              Educational checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret nail-trim checklist"
+              subtitle="Email the clippers, lighting, styptic, and distraction-treat order. No spam."
+              ctaText="Email my ferret nail-trim checklist"
+              source="care-nail-trimming-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Ferrets Need Regular Trims — and How Often</h2>
           <p>
@@ -164,9 +203,66 @@ export default function NailTrimmingPage() {
             <li><strong>Styptic powder</strong> on hand as a safety net for a nicked quick. Cornstarch is a household stand-in if you have no styptic powder.</li>
             <li><strong>A distraction treat</strong> — discussed below — which for most keepers is the single thing that makes the whole job easy.</li>
           </ul>
-          <p>
-            This page describes the tools editorially and does not recommend a specific product to purchase.
-          </p>
+
+          {/* Money path — live amazon-brand search hops (nail-trim / grooming gear).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop nail-trim tools
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page tools copy —
+              clippers made for cats, kittens, or small dogs; styptic powder
+              for a nicked quick; a ferret-safe lickable treat or meat paste
+              for the belly-distraction trick; and a small LED desk lamp so
+              you can see the quick. Same styptic-powder hop used on the{' '}
+              <Link
+                href="/tools/is-this-a-ferret-emergency"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                ferret emergency triage
+              </Link>
+              {' '}tool. They are not a ranked product list, they are not
+              medications, and they do not diagnose or replace an exotic-pet
+              veterinarian. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cat+kitten+nail+clippers?s=care-nail-trimming"
+                amazonLabel="Browse cat and kitten nail clippers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/styptic+powder?s=care-nail-trimming"
+                amazonLabel="Browse styptic powder on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+lickable+treat+paste?s=care-nail-trimming"
+                amazonLabel="Browse ferret lickable treat paste on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/LED+desk+lamp?s=care-nail-trimming"
+                amazonLabel="Browse LED desk lamps on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/bathing-and-grooming" className="text-brand-primary hover:underline">
+                Bathing &amp; Grooming
+              </Link>
+              {' · '}
+              <Link href="/care/diet-basics" className="text-brand-primary hover:underline">
+                Diet Basics
+              </Link>
+              {' · '}
+              <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary hover:underline">
+                Is This a Ferret Emergency?
+              </Link>
+            </p>
+          </div>
 
           <h2 id="distraction">The Distraction Method</h2>
           <p>
