@@ -1131,6 +1131,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete puppy-biting-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · training-excessive-barking hops',
+    file: 'apps/dog-com/src/app/training/excessive-barking/page.tsx',
+    mustInclude: [
+      { re: /source="training-excessive-barking-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my quiet-barking plan"/, label: 'concrete quiet-barking-plan offer, not Subscribe' },
+      { re: /amazon-brand\/puzzle\+feeder\+dog\?s=training-excessive-barking/, label: 'puzzle feeder search hop (same query as dog BCS / ideal-weight)' },
+      { re: /amazon-brand\/lick\+mat\+dog\?s=training-excessive-barking/, label: 'lick mat search hop (enrichment category, not a ranked SKU)' },
+      { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-excessive-barking/, label: 'snuffle mat search hop (same query as sep-anxiety)' },
+      { re: /amazon-brand\/calming\+dog\+chews\?s=training-excessive-barking/, label: 'calming chews search hop (same query as dog grimace scale)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete quiet-barking-plan offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
