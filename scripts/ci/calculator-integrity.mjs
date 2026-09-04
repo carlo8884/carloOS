@@ -736,6 +736,25 @@ const CALCULATORS = [
     why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
   },
   {
+    id: 'ferret · cage-size-calculator hops',
+    file: 'apps/ferret-com/src/app/tools/cage-size-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-cage-size-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the cage size"/, label: 'concrete cage-size offer, not Subscribe' },
+      { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
+      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=tools-cage-size-calculator/, label: 'hammock / sleep-sack search hop' },
+      { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-cage-size-calculator/, label: 'corner litter pan search hop' },
+      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-cage-size-calculator/, label: 'heat-treated wood pellet litter search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete cage-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'ferret · food-evaluator hops',
     file: 'apps/ferret-com/src/app/tools/food-evaluator/page.tsx',
     mustInclude: [
