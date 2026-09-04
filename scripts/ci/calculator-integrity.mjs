@@ -2895,6 +2895,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-anxiety safe-space-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (pressure wrap, covered crate, white noise), never a placeholder ASIN, a Thundershirt brand-ASIN hop, or a medication hop (fluoxetine / Reconcile, trazodone, gabapentin, Sileo, clomipramine). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-kidney-disease hops',
+    file: 'apps/dog-com/src/app/health/dog-kidney-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-kidney-disease-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog kidney hydration checklist"/, label: 'concrete dog-kidney hydration-checklist offer, not Subscribe' },
+      { re: /source="health-kidney"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+water\+fountain\?s=health-dog-kidney-disease/, label: 'water-fountain search hop (same query as dog water-intake calculator; matches on-page pet-water-fountain copy)' },
+      { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=health-dog-kidney-disease/, label: 'ceramic-water-bowl search hop (same query as dog water-intake calculator; matches on-page multiple-water-bowls copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hills|hill\+s|k\/d|royal\+canin|purina\+nf|renal\+diet|prescription\+diet|phosphate\+binder|aluminum\+hydroxide|amlodipine|ace\+inhibitor|subcutaneous|subq|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Rx renal diets, phosphate binders, subQ fluids, or medications — this page hops only physical fountain / extra-bowl gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-kidney hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (pet water fountain, extra water bowls), never a placeholder ASIN, a prescription renal-diet hop (Hill\'s k/d / Royal Canin Renal / Purina NF), a phosphate-binder hop, a subcutaneous-fluid hop, or a medication hop (amlodipine / ACE inhibitors). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
