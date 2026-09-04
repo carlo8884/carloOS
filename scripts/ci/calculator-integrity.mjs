@@ -2915,6 +2915,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-kidney hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (pet water fountain, extra water bowls), never a placeholder ASIN, a prescription renal-diet hop (Hill\'s k/d / Royal Canin Renal / Purina NF), a phosphate-binder hop, a subcutaneous-fluid hop, or a medication hop (amlodipine / ACE inhibitors). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · megaesophagus hops',
+    file: 'apps/dog-com/src/app/health/megaesophagus/page.tsx',
+    mustInclude: [
+      { re: /source="health-megaesophagus-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog Bailey chair checklist"/, label: 'concrete dog-megaesophagus Bailey-chair-checklist offer, not Subscribe' },
+      { re: /source="health-megaesophagus"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/bailey\+chair\+dog\?s=health-megaesophagus/, label: 'Bailey-chair search hop (category search matching on-page Bailey-chair / sitting-bear upright-feeding copy; not a brand ASIN)' },
+      { re: /amazon-brand\/upright\+dog\+feeding\+chair\?s=health-megaesophagus/, label: 'upright-feeding-chair search hop (matches on-page near-vertical custom-built-seat copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(canine\+caviar|caviar|hills|hill\+s|royal\+canin|purina|renal\+diet|prescription\+diet|pyridostigmine|mestinon|prednisone|antibiotic|aspiration|myasthenia|acetylcholine|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop brand megaesophagus foods, Rx diets, myasthenia medications, or antibiotics — this page hops only physical Bailey-chair / upright-feeding-chair gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-megaesophagus Bailey-chair-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (Bailey chair, near-vertical upright feeding chair), never a placeholder ASIN, a brand-food hop (Canine Caviar), a prescription-diet hop, or a medication hop (pyridostigmine / myasthenia gravis drugs / aspiration-pneumonia antibiotics). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
