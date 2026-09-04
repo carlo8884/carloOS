@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -122,6 +122,7 @@ export default function VaccinationSchedulePage() {
             { label: 'Schedule by Discipline', href: '#discipline' },
             { label: 'Vaccine Reactions', href: '#reactions' },
             { label: 'Cost &amp; Logistics', href: '#cost' },
+            { label: 'Barn Kit', href: '#kit' },
             { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
@@ -154,9 +155,32 @@ export default function VaccinationSchedulePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the vaccination-schedule checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse vaccination-schedule checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the AAEP core-vs-risk split, life-stage timing, and the
+              stall-fan / stall-screen note for PHF-endemic barns. Educational
+              checklist, not a diagnosis and not a vaccine order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse vaccination-schedule checklist"
+              subtitle="Email the AAEP core-vs-risk split and stall-fan / stall-screen note. No spam."
+              ctaText="Email my equine vaccination-schedule checklist"
+              source="guide-vaccination-under-hero"
+            />
+          </div>
 
           <h2 id="core-vs-risk">Core vs Risk-Based — The AAEP Framework</h2>
           <p>The American Association of Equine Practitioners (AAEP) classifies equine vaccines into two categories. <strong>Core vaccines</strong> are those that protect against diseases that are endemic to a region, virulent or highly infectious, of significant public health concern, or required by law — and are recommended for every horse regardless of geographic location or intended use. <strong>Risk-based vaccines</strong> are those whose use is determined by individual horse risk based on exposure pattern, age, geographic location, and use.</p>
@@ -313,6 +337,44 @@ export default function VaccinationSchedulePage() {
           </ul>
 
           <p>Practical logistics: many veterinary practices offer barn-call discounts when multiple horses are vaccinated in one visit. Sharing a farm call with neighbors or boarders reduces per-horse cost. Maintain vaccination records (paper or digital — many practices offer online records); USEF and FEI competition both require documented vaccination records.</p>
+
+          <h2 id="kit">Barn Kit</h2>
+          <p>Everyday physical supplies that match the PHF endemic-region management copy above — stall fans and stall screens. The vaccine does not eliminate risk; reducing pasture or turnout near water and using stall fans/screens is barn management, not a vaccination. These are not vaccines, not a vaccination or prescription kit, and not treatments for Potomac horse fever, encephalitis, West Nile, rabies, tetanus, influenza, EHV, or strangles. Needles, combination products, and documented vaccination records belong with the veterinarian and the official USEF / FEI record — not a retail Amazon kit. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (barn kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page PHF stall-fan / stall-screen copy, not vaccine,
+              medication, needle, or invented-kit hops.
+              Vaccines, needles, epinephrine, FEI passports, and fly spray
+              are not named as shoppable owner supplies on this page. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop stall fans and screens
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page PHF
+              endemic-region management copy — stall fans and stall screens.
+              Everyday physical supplies only. They are not a ranked product
+              list, they are not vaccines or a vaccination kit, they are not
+              treatments for Potomac horse fever or any other equine disease,
+              and they do not replace a veterinarian. Horses.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+fan?s=guides-equine-vaccination-schedule"
+                amazonLabel="Browse horse stall fans on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+screen?s=guides-equine-vaccination-schedule"
+                amazonLabel="Browse horse stall screens on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

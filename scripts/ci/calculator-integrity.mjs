@@ -1173,6 +1173,25 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete equine-dental-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page post-float soft-feed copy (soaked hay cubes, mashes), never a placeholder ASIN, a medication hop, a floating-procedure kit, or an invented apple-sauce / syringe / oral-paste hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · equine-vaccination-schedule hops',
+    file: 'apps/horses-com/src/app/guides/equine-vaccination-schedule/page.tsx',
+    mustInclude: [
+      { re: /source="guide-vaccination-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my equine vaccination-schedule checklist"/, label: 'concrete equine-vaccination-schedule-checklist offer, not Subscribe' },
+      { re: /source="guide-vaccination"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+stall\+fan\?s=guides-equine-vaccination-schedule/, label: 'stall-fan search hop (matches on-page stall-fans/screens copy)' },
+      { re: /amazon-brand\/horse\+stall\+screen\?s=guides-equine-vaccination-schedule/, label: 'stall-screen search hop (matches on-page stall-fans/screens copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|vaccine|vaccination|tetanus|rabies|influenza|strangles|botulism|rotavirus|anthrax|leptospirosis|pneumabort|prodigy|epinephrine|corticosteroid|needle|syringe|fly\+spray|fly\+mask|fly\+sheet|antifungal|antibiotic)/, label: 'never hop vaccines, medications, needles, or invented fly-control kits — this page is educational stall-fan / stall-screen barn management, not a drug or vaccine list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete equine-vaccination-schedule-checklist offer; every gear CTA is an amazon-brand category search matching on-page PHF stall-fan / stall-screen copy (stall fans, stall screens), never a placeholder ASIN, a vaccine / medication / needle hop, or an invented fly-spray / fly-mask hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
