@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -142,7 +142,10 @@ export default function FishDiseaseGuidePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The #1 Prevention</div>
           <p className="text-xs text-brand-text-mid leading-relaxed m-0">4-week quarantine of all new fish. Most disease enters tanks via new arrivals. A hospital/quarantine tank is the best investment in fish health you can make.</p>
         </div>
-        <TableOfContents items={DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` }))} />
+        <TableOfContents items={[
+          ...DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` })),
+          { label: 'Hospital Tank', href: '#hospital-tank' },
+        ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Nitrogen Cycle Guide', href: '/health/nitrogen-cycle-explained' },
           { label: 'Water Chemistry', href: '/water-parameters' },
@@ -154,6 +157,30 @@ export default function FishDiseaseGuidePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the hospital-tank plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Hospital-tank checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the disease-prevention order — test water first, 4-week
+            quarantine of new fish, and a ready 10-gallon hospital tank with a
+            seeded sponge filter and heater — so you can isolate without
+            scrambling. Educational husbandry, not a diagnosis. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Hospital-tank checklist"
+            subtitle="Email the test-water-first, 4-week quarantine, and 10-gallon hospital-tank order. No spam."
+            ctaText="Email my hospital-tank checklist"
+            source="health-disease-guide-under-hero"
+          />
+        </div>
 
         <DropCap>The most important thing to understand about fish disease: 90% of aquarium disease is caused by stress, and the most common stressor is poor water quality. Before reaching for medication, test your water. Before adding fish to a display tank, quarantine for 4 weeks. Before treating disease, fix the environment that allowed disease to develop.</DropCap>
 
@@ -205,9 +232,91 @@ export default function FishDiseaseGuidePage() {
           )
         })}
 
-        <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-4">
+        <div id="hospital-tank" className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-4">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
           <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
+        </div>
+
+        {/* Money path — live amazon-brand search hops (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a hospital-tank kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Test water before you medicate — a liquid master kit is how you
+            see ammonia, nitrite, and nitrate. Then isolate in a spare
+            10-gallon hospital tank with a seeded sponge filter, a heater
+            rated for the tank, and a separate digital thermometer so the
+            dial is not the only reading. Same test-kit hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the symptom checker. Same
+            sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not replace diagnosis or an aquatic veterinarian.
+            Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-disease-guide"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-disease-guide"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-disease-guide"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/tools/fish-disease-symptom-checker" className="text-brand-primary hover:underline">
+              Fish Disease Symptom Checker
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
