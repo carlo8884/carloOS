@@ -228,6 +228,25 @@ const CALCULATORS = [
     why: 'Standard husbandry rule: dogs need ~0.5–1 oz of water per lb of body weight per day.',
   },
   {
+    id: 'dog · dog-water-intake-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-water-intake-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-water-intake-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hydration checklist"/, label: 'concrete hydration-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=tools-dog-water-intake/, label: 'ceramic pet water bowl search hop' },
+      { re: /amazon-brand\/dog\+water\+fountain\?s=tools-dog-water-intake/, label: 'dog water fountain search hop' },
+      { re: /amazon-brand\/dog\+travel\+water\+bottle\?s=tools-dog-water-intake/, label: 'dog travel water bottle search hop' },
+      { re: /amazon-brand\/kitchen\+measuring\+cup\?s=tools-dog-water-intake/, label: 'kitchen measuring cup search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete hydration-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'petfood · food-transition-calculator',
     file: 'apps/petfood-com/src/app/tools/food-transition-calculator/Calculator.tsx',
     mustInclude: [{ re: /STEP_PCTS\s*=\s*\[0\.25,\s*0\.5,\s*0\.75,\s*1\.0\]/, label: 'four-step ramp 25→50→75→100% new food' }],
