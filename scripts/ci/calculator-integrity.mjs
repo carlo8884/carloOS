@@ -1785,6 +1785,29 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete dog-health-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid / emergency-prep / dental / senior-care copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · first-aid-kit hops',
+    file: 'apps/dog-com/src/app/guides/dog-first-aid-kit/page.tsx',
+    mustInclude: [
+      { re: /source="guides-first-aid-kit-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog first-aid kit checklist"/, label: 'concrete first-aid-kit-checklist offer, not Subscribe' },
+      { re: /source="guide-first-aid"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/wound\+care\+gauze\?s=guides-first-aid-kit/, label: 'wound-care gauze search hop (same query as vets cat-emergency / complementary hops)' },
+      { re: /amazon-brand\/vetrap\+cohesive\+bandage\?s=guides-first-aid-kit/, label: 'cohesive bandage wrap search hop (same query as vets emergency-triage-card)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=guides-first-aid-kit/, label: 'digital pet thermometer search hop (same query as emergency triage / health hub)' },
+      { re: /amazon-brand\/saline\+wound\+flush\?s=guides-first-aid-kit/, label: 'saline wound flush search hop (matches on-page kit copy)' },
+      { re: /amazon-brand\/soft\+dog\+muzzle\?s=guides-first-aid-kit/, label: 'soft dog muzzle search hop (matches on-page handling / kit copy)' },
+      { re: /amazon-brand\/soft\+dog\+carrier\?s=guides-first-aid-kit/, label: 'soft dog carrier search hop (same query as emergency triage / health hub)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(heartworm|flea\+tick|nsaid|ibuprofen|acetaminophen|medication|medicine|prescription)/, label: 'never hop medications — this guide is educational kit supplies, not a drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete first-aid-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid / emergency-prep copy (gauze, bandage wrap, thermometer, saline flush, soft muzzle, carrier), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · is-this-a-cat-emergency',
     file: 'apps/vets-co/src/app/tools/is-this-a-cat-emergency/TriageHelper.tsx',
     mustInclude: [

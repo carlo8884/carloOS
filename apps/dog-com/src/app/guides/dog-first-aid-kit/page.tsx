@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -6,6 +7,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -36,7 +39,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog First Aid Kit and Emergency Preparedness',
@@ -155,9 +158,34 @@ export default function DogFirstAidKitPage() {
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-06-11T00:00:00Z"
-            updatedAt="2026-06-11T00:00:00Z"
+            updatedAt="2026-09-04T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the first-aid kit list
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog first-aid kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the cabinet and car first-aid order — gauze, self-adhesive
+              bandage wrap, a digital thermometer, saline flush, a soft muzzle,
+              and a carrier or blanket — so you can assemble the kit without
+              scrolling back. Educational kit list, not a diagnosis or a
+              substitute for a veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog first-aid kit checklist"
+              subtitle="Email the first-aid kit supply order and emergency-prep notes. No spam."
+              ctaText="Email my dog first-aid kit checklist"
+              source="guides-first-aid-kit-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — Be ready before you need to be">
             <p>
@@ -194,6 +222,81 @@ export default function DogFirstAidKitPage() {
               Many common human drugs are toxic to dogs — including ibuprofen and other NSAIDs, acetaminophen, and some decongestants — and a dose safe for a person can be dangerous or fatal for a dog. Never include or administer human medication unless your own veterinarian has approved it for your specific dog, and call before giving anything in an emergency.
             </p>
           </CalloutBox>
+
+          {/* Money path — live amazon-brand search hops (first-aid / emergency-prep kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational kit supplies, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop first-aid kit supplies
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page kit list —
+              wound-care gauze, self-adhesive bandage wrap, a digital pet
+              thermometer, saline wound flush, a soft muzzle, and a soft
+              carrier or blanket for the car. Same thermometer and carrier
+              hops used on the{' '}
+              <Link
+                href="/tools/is-this-a-dog-emergency"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                emergency triage tool
+              </Link>
+              {' '}and the{' '}
+              <Link
+                href="/health"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                health library
+              </Link>
+              . They are not a ranked product list, they are not medications,
+              and they do not diagnose, treat, or replace emergency care. First
+              aid buys time on the way to a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wound+care+gauze?s=guides-first-aid-kit"
+                amazonLabel="Browse wound-care gauze on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit"
+                amazonLabel="Browse cohesive bandage wrap on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/saline+wound+flush?s=guides-first-aid-kit"
+                amazonLabel="Browse saline wound flush on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+dog+muzzle?s=guides-first-aid-kit"
+                amazonLabel="Browse soft dog muzzles on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+dog+carrier?s=guides-first-aid-kit"
+                amazonLabel="Browse soft dog carriers on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary hover:underline">
+                Is This a Dog Emergency?
+              </Link>
+              {' · '}
+              <Link href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">
+                Take Vital Signs at Home
+              </Link>
+              {' · '}
+              <Link href="/health" className="text-brand-primary hover:underline">
+                Dog Health Library
+              </Link>
+            </p>
+          </div>
 
           <h2 id="contacts">Emergency Contacts to Save Right Now</h2>
           <p>Program these into your phone and tape a printed copy inside the kit:</p>
