@@ -944,6 +944,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete bedding/litter shopping-list offer; every gear CTA is an amazon-brand category search matching on-page bedding and litter copy (fleece sleep sacks / cube beds, hammocks, fleece liners, recycled paper-pellet litter, corner litter pan), never a placeholder ASIN, a medication hop, cedar, pine shavings, or clumping clay. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · ear-cleaning hops',
+    file: 'apps/ferret-com/src/app/care/ear-cleaning/page.tsx',
+    mustInclude: [
+      { re: /source="care-ear-cleaning-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret ear-grooming checklist"/, label: 'concrete ear-grooming-checklist offer, not Subscribe' },
+      { re: /source="care-ear-cleaning"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pet\+ear\+cleaner\?s=care-ear-cleaning/, label: 'pet ear-cleaner search hop (matches on-page veterinary ear-cleaning solution / bathing-and-grooming pet ear cleaner copy)' },
+      { re: /amazon-brand\/cotton\+pads\?s=care-ear-cleaning/, label: 'cotton-pad search hop (matches on-page cotton balls or pads copy)' },
+      { re: /amazon-brand\/ferret\+lickable\+treat\+paste\?s=care-ear-cleaning/, label: 'ferret lickable treat / meat-paste search hop (same query as nail-trimming; matches on-page distraction treat)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|mite|ivermectin|selamectin|revolution|peroxide|alcohol|hydrogen)/, label: 'never hop medications, mite treatments, hydrogen peroxide, or alcohol — this page is educational grooming gear, not a drug or mite-treatment list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ear-grooming-checklist offer; every gear CTA is an amazon-brand category search matching on-page supplies copy (pet/ferret ear cleaner, cotton pads, ferret-safe lickable treat paste), never a placeholder ASIN, a medication hop, a mite treatment, hydrogen peroxide, or alcohol. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
