@@ -389,6 +389,31 @@ const CALCULATORS = [
     why: 'Standard annual-deductible model: reimburse = min(max(0,claims−deductible)×pct, annualCap).',
   },
   {
+    id: 'vets · insurance-reimbursement-estimator hops',
+    file: 'apps/vets-co/src/app/tools/insurance-reimbursement-estimator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-insurance-reimbursement-estimator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the insurance checklist"/, label: 'concrete insurance-checklist offer, not Subscribe' },
+      { re: /<InsuranceWellnessShop source="tools-insurance-reimbursement-estimator"/, label: 'InsuranceWellnessShop kept (do not re-rank carriers)' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-insurance-reimbursement-estimator/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-insurance-reimbursement-estimator/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-insurance-reimbursement-estimator/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/pet\+recovery\+cone\?s=tools-insurance-reimbursement-estimator/, label: 'pet recovery cone search hop' },
+      { re: /amazon-brand\/pet\+calming\+aid\?s=tools-insurance-reimbursement-estimator/, label: 'pet calming aid search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /href="\/reviews\/best-pet-insurance"/, label: 'insurance comparison CTA stays on best-pet-insurance' },
+      { re: /href="\/telehealth"/, label: 'non-ER talk-to-a-vet points at /telehealth' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+    ],
+    why: 'Money path: under-hero capture with a concrete insurance-checklist offer; complementary amazon-brand category searches for home-care prep beside InsuranceWellnessShop; insurance quotes stay on /reviews/best-pet-insurance; empty Chewy stays hidden.',
+  },
+  {
     id: 'dog · puppy-first-year-budget',
     file: 'apps/dog-com/src/app/tools/puppy-first-year-budget/Calculator.tsx',
     mustInclude: [
