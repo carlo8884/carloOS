@@ -2684,6 +2684,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dental-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page after-cleaning home-care copy (soft toothbrush, enzymatic toothpaste, VOHC dental chews, VOHC water additive), never a placeholder ASIN, a medication / vaccine / fluoride hop, anesthesia gear, or a brand-ASIN hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · arthritis-in-dogs hops',
+    file: 'apps/vets-co/src/app/health/arthritis-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-arthritis-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog arthritis home-setup checklist"/, label: 'concrete arthritis home-setup-checklist offer, not Subscribe' },
+      { re: /source="health-arthritis"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+traction\+rug\?s=health-arthritis-in-dogs/, label: 'traction-rug search hop (matches on-page rugs-for-traction copy)' },
+      { re: /amazon-brand\/dog\+ramp\?s=health-arthritis-in-dogs/, label: 'dog-ramp search hop (matches on-page ramps copy)' },
+      { re: /amazon-brand\/raised\+dog\+bowl\?s=health-arthritis-in-dogs/, label: 'raised-bowl search hop (matches on-page raised-bowls copy)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-arthritis-in-dogs/, label: 'orthopedic-bed search hop (same query as dog health hub; matches on-page orthopedic-bedding copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(ibuprofen|acetaminophen|naproxen|aspirin|nsaid|medication|medicine|prescription|vaccine|anesthesia|librela|gabapentin|omega|fish\+oil|joint\+supplement)/, label: 'never hop medications, vaccines, NSAIDs, injectable therapies, or joint-supplement ASINs — this page is educational home-setup, not a drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete arthritis home-setup-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-modification copy (rugs for traction, ramps, raised bowls, orthopedic bedding), never a placeholder ASIN, a medication / vaccine / NSAID hop, or a joint-supplement hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

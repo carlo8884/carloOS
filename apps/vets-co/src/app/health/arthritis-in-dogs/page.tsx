@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
   { label: 'AVMA: Osteoarthritis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/osteoarthritis-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal management of canine osteoarthritis.', url: 'https://vets.co/health/arthritis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -48,7 +48,30 @@ export default function ArthritisDogsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the arthritis home-setup checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog arthritis home-setup checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-modification notes — rugs for traction, ramps,
+              raised bowls, and orthopedic bedding. Educational checklist,
+              not a diagnosis and not a pain-medication order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Dog arthritis home-setup checklist"
+              subtitle="Email the traction-rug, ramp, raised-bowl, and orthopedic-bedding notes. No spam."
+              ctaText="Email my dog arthritis home-setup checklist"
+              source="health-arthritis-in-dogs-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="info" title="Arthritis is treatable, not just inevitable">
             Many owners assume a stiff older dog is simply "slowing down" and that nothing can be done. In reality, osteoarthritis pain responds well to a structured plan. Dogs that seem to have lost their spark often become noticeably more active and engaged once their joint pain is properly managed.
@@ -71,6 +94,53 @@ export default function ArthritisDogsPage() {
 
           <h2>Living Well With Arthritis</h2>
           <p>The goal is comfortable mobility and a good quality of life, reassessed over time as the disease progresses. Owners and veterinarians work together to adjust the plan, watching for both pain breakthrough and medication side effects. With consistent management, most arthritic dogs continue to enjoy walks, play, and family life well into their senior years.</p>
+
+          <h2 id="kit">Home-Setup Kit</h2>
+          <p>Everyday physical supplies that match the home-modification copy above — rugs for traction, ramps, raised bowls, and orthopedic bedding. These reduce daily strain; they are not a pain medication, not a joint supplement, and not a treatment for osteoarthritis. Human pain relievers (ibuprofen, naproxen, acetaminophen) stay off this kit — they are toxic to dogs. Veterinary anti-inflammatories, injectable therapies, and omega-3 joint supplements belong with a veterinarian, not a retail Amazon hop. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (home-setup kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page home-modification copy (rugs for traction, ramps,
+              raised bowls, orthopedic bedding), not medication, vaccine,
+              anesthesia, or invented-ASIN hops. NSAIDs, human pain
+              relievers, injectable therapies, and omega-3 / joint
+              supplements are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the arthritis home-setup kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              home-modification copy — rugs for traction, ramps, raised
+              bowls, and orthopedic bedding. Everyday physical supplies
+              only. They are not a ranked product list, they are not
+              medications or joint supplements, they are not a treatment
+              for osteoarthritis, and they do not replace a veterinarian.
+              Vets.co earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs"
+                amazonLabel="Browse dog traction rugs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+ramp?s=health-arthritis-in-dogs"
+                amazonLabel="Browse dog ramps on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/raised+dog+bowl?s=health-arthritis-in-dogs"
+                amazonLabel="Browse raised dog bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-arthritis-in-dogs"
+                amazonLabel="Browse orthopedic dog beds on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
