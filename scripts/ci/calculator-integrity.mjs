@@ -917,6 +917,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete dog-BCS-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret BCS hops.',
   },
   {
+    id: 'dog · dog-exercise-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-exercise-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-exercise-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my walk-gear checklist"/, label: 'concrete walk-gear-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/dog\+leash\?s=tools-dog-exercise/, label: 'dog leash search hop' },
+      { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-dog-exercise/, label: 'Julius-K9 harness search hop (same query as new-puppy / harness-collar-size)' },
+      { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=tools-dog-exercise/, label: 'no-pull harness search hop' },
+      { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=tools-dog-exercise/, label: 'Kong fetch / stuffable toy search hop' },
+      { re: /amazon-brand\/dog\+fetch\+toys\?s=tools-dog-exercise/, label: 'dog fetch toys search hop' },
+      { re: /amazon-brand\/fi\+series\+3\+dog\+collar\?s=tools-dog-exercise/, label: 'Fi activity / GPS collar search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete walk-gear-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
