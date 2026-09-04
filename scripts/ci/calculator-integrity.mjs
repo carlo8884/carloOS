@@ -3077,6 +3077,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-IVDD crate-rest-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (recovery crate, belly-support harness, wheelchair / mobility cart), never a placeholder ASIN, an orthopedic-bed / dog-ramp hop (sister dog-arthritis page), a knee-brace / rear-support-harness hop (sister luxating-patella page), a traction-rug / raised-bowl hop (vets.co arthritis-in-dogs), a bootie / paw-wipe hop, a HEPA hop, a pet-scale / slow-feeder hop, an NSAID hop, or a joint-supplement hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · cherry-eye hops',
+    file: 'apps/dog-com/src/app/health/cherry-eye/page.tsx',
+    mustInclude: [
+      { re: /source="health-cherry-eye-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog cherry-eye recovery-collar checklist"/, label: 'concrete dog-cherry-eye recovery-collar-checklist offer, not Subscribe' },
+      { re: /source="health-cherry-eye"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+e\+collar\+dog\?s=health-cherry-eye/, label: 'soft e-collar search hop (category search matching on-page pawing / post-op recovery-collar copy; not a brand ASIN; distinct from hot-spot pet+recovery+cone / soft+recovery+cone+dog)' },
+      { re: /amazon-brand\/dog\+eye\+wipes\?s=health-cherry-eye/, label: 'dog eye-wipes search hop (matches on-page keep-the-exposed-gland-moist moisture-bridge copy; distinct from skin-allergy paw wipes)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|cyclosporine|tacrolimus|optimmune|eye\+drops|ophthalmic|nsaid|carprofen|rimadyl|meloxicam|glucosamine|chondroitin|omega|fish\+oil|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), Rx eye drops (cyclosporine / tacrolimus), NSAIDs, or supplements — this page hops only physical soft-e-collar / dog-eye-wipe gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-cherry-eye recovery-collar-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (soft e-collar so the dog cannot paw the prolapsed gland, dog eye wipes as a moisture bridge), never a placeholder ASIN, a hot-spot recovery-cone hop (sister dog-hot-spots page), a HEPA hop, a paw-wipe / bootie hop, an orthopedic-bed / dog-ramp hop, a pet-scale / slow-feeder hop, a knee-brace / rear-support-harness hop, a recovery-crate / belly-support / wheelchair hop, an Rx eye-drop hop (cyclosporine / tacrolimus), an NSAID hop, or a supplement hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [

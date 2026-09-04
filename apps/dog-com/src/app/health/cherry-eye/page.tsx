@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -44,13 +44,41 @@ export default function CherryEyePage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog cherry-eye recovery-collar checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog cherry-eye recovery-collar checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the recovery-collar notes — a soft e-collar
+              so the dog cannot paw the prolapsed gland while
+              waiting for surgery or during post-op recovery, plus
+              dog eye wipes to keep the exposed gland from drying
+              out as a short moisture bridge. Educational
+              checklist, not a diagnosis and not a treatment list.
+              Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs,
+              and supplements stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog cherry-eye recovery-collar checklist"
+              subtitle="Email the soft e-collar and dog-eye-wipe notes. No spam."
+              ctaText="Email my dog cherry-eye recovery-collar checklist"
+              source="health-cherry-eye-under-hero"
+            />
+          </div>
+
           <h2>What Cherry Eye Is</h2>
           <p>Dogs have a third eyelid (nictitating membrane) in the inner corner of each eye. Inside this membrane sits a gland — the nictitating membrane gland (also called the third eyelid gland or Harderian gland) — that produces approximately 30–50% of the dog's total tear film. This gland is held in place by a small ligament and connective tissue. In dogs genetically predisposed to cherry eye, this anchoring system is weak or malformed — the gland pops out of position and becomes visible as a red, fleshy oval mass at the inner corner of the eye.</p>
-          <p>Cherry eye most commonly occurs in young dogs (under 2 years) and may affect one or both eyes. It is not immediately painful, though the exposed gland becomes chronically irritated and inflamed, and the dog may paw at the eye. The mass is easily visible — owners notice it suddenly and often describe it as appearing overnight.</p>
+          <p>Cherry eye most commonly occurs in young dogs (under 2 years) and may affect one or both eyes. It is not immediately painful, though the exposed gland becomes chronically irritated and inflamed, and the dog may paw at the eye. A soft e-collar (soft cone / recovery collar) keeps paws off the prolapsed gland while you wait for surgery or during post-op recovery — it does not treat cherry eye, and it does not replace surgical correction. Ask your veterinarian whether a soft e-collar fits this dog. The mass is easily visible — owners notice it suddenly and often describe it as appearing overnight.</p>
 
           <h2>Why Manual Replacement Doesn't Work</h2>
           <p>The instinct to push the gland back into position is understandable — and it usually works temporarily. The problem is structural: the connective tissue that was supposed to hold the gland in position is weak or absent. There is nothing for the gland to anchor to. Most manually replaced glands re-prolapse within hours to days. Repeated manipulation of the gland without addressing the underlying structural problem also causes further inflammation and scarring, which can complicate subsequent surgery.</p>
-          <p>Manual replacement is sometimes used as a short-term bridge to surgery — a veterinarian may show an owner how to temporarily reduce the prolapse to keep the gland moist until a surgical appointment. This is not a substitute for surgery.</p>
+          <p>Manual replacement is sometimes used as a short-term bridge to surgery — a veterinarian may show an owner how to temporarily reduce the prolapse to keep the gland moist until a surgical appointment. This is not a substitute for surgery. Some veterinarians also recommend a dog eye wipe (or sterile saline eye wash) as a short-term way to keep the exposed gland from drying out until that appointment — a moisture bridge, not a medication, not cyclosporine or tacrolimus, and not a substitute for surgery.</p>
 
           <h2>Surgical Options</h2>
           <p><strong>Pocket technique (gland replacement and anchoring):</strong> The preferred approach. The gland is repositioned and sutured into a pocket created in the nictitating membrane, securing it in place. The gland is preserved — maintaining its tear-producing function. Re-prolapse rate: approximately 5–20% depending on technique and breed. Bulldog-type breeds have higher re-prolapse rates due to the severity of the underlying anatomical weakness. Recommended to be performed by a veterinary ophthalmologist (<a href="https://acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVO</a>) for best outcomes.</p>
@@ -58,6 +86,45 @@ export default function CherryEyePage() {
 
           <h2>When to See an Ophthalmologist</h2>
           <p>Cherry eye surgery can be performed by general practice veterinarians with appropriate training, but referral to a board-certified veterinary ophthalmologist (DACVO) produces better outcomes — lower re-prolapse rates, better preservation of glandular function. For brachycephalic breeds (Bulldogs, French Bulldogs) where re-prolapse rates are higher and ocular complications are more common, ophthalmologist referral is particularly advisable. Pet insurance typically covers cherry eye surgery as it is a medical condition rather than cosmetic.</p>
+
+          <h2 id="kit">Recovery-collar kit</h2>
+          <p>Everyday physical supplies that match the pawing-and-moisture copy above — a soft e-collar (soft cone / recovery collar) so the dog cannot paw the prolapsed gland while waiting for surgery or during post-op recovery, plus dog eye wipes to keep the exposed gland from drying out as a short moisture bridge. These are home-setup aids, not treatments. Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs, and supplements stay educational copy only — this page never hops medications, Rx drops, or brand ASINs. Hot-spot recovery cones stay on the sister <a href="/health/dog-hot-spots">dog-hot-spots</a> page. Recovery crates, belly-support harnesses, and wheelchairs stay on <a href="/health/intervertebral-disc-disease">IVDD</a>. Knee braces and rear-support harnesses stay on <a href="/health/dog-luxating-patella">luxating patella</a>. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (soft
+              e-collar / dog eye wipes). ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER. Category
+              searches only. Cyclosporine, tacrolimus, other Rx
+              eye drops, NSAIDs, supplements, hot-spot recovery
+              cones, IVDD crates / harnesses / wheelchairs, and
+              luxating-patella braces are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog cherry-eye recovery-collar kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              pawing-and-moisture copy — a soft e-collar and dog
+              eye wipes. Everyday physical gear only. They are
+              not a ranked product list, they are not medications,
+              they are not Rx eye-drop ASINs, they are not
+              supplements, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+e+collar+dog?s=health-cherry-eye"
+                amazonLabel="Browse soft e-collars on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+eye+wipes?s=health-cherry-eye"
+                amazonLabel="Browse dog eye wipes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
