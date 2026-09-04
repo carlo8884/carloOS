@@ -467,6 +467,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete bag-count offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'horses · horse-cost-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-cost-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-cost-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse budget worksheet"/, label: 'concrete horse-budget-worksheet offer, not Subscribe' },
+      { re: /amazon-brand\/horse\+halter\+lead\+rope\?s=tools-horse-cost-calculator/, label: 'halter and lead search hop' },
+      { re: /amazon-brand\/horse\+grooming\+kit\?s=tools-horse-cost-calculator/, label: 'grooming kit search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick\?s=tools-horse-cost-calculator/, label: 'hoof pick search hop' },
+      { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=tools-horse-cost-calculator/, label: 'feed scoop search hop' },
+      { re: /amazon-brand\/horse\+barn\+first\+aid\+kit\?s=tools-horse-cost-calculator/, label: 'barn first-aid kit search hop' },
+      { re: /amazon-brand\/horse\+fly\+mask\?s=tools-horse-cost-calculator/, label: 'fly mask search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete horse-budget-worksheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'lizard · enclosure-size-calculator',
     file: 'apps/lizard-com/src/app/tools/enclosure-size-calculator/Calculator.tsx',
     mustInclude: [
