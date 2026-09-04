@@ -3056,6 +3056,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-luxating-patella walk-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (dog knee brace, rear-support harness), never a placeholder ASIN, an orthopedic-bed / dog-ramp hop (sister dog-arthritis page), a traction-rug / raised-bowl hop (vets.co arthritis-in-dogs), a bootie / paw-wipe hop, a HEPA hop, a joint-supplement hop (Dasuquin / glucosamine / chondroitin / omega-3 / fish oil), an NSAID hop, or a prescription-diet hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · intervertebral-disc-disease hops',
+    file: 'apps/dog-com/src/app/health/intervertebral-disc-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-intervertebral-disc-disease-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-IVDD crate-rest checklist"/, label: 'concrete dog-IVDD crate-rest-checklist offer, not Subscribe' },
+      { re: /source="health-ivdd"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+recovery\+crate\?s=health-intervertebral-disc-disease/, label: 'recovery-crate search hop (category search matching on-page Grade 1 4–6 week crate-rest copy; not a brand ASIN)' },
+      { re: /amazon-brand\/dog\+belly\+support\+harness\?s=health-intervertebral-disc-disease/, label: 'belly-support-harness search hop (matches on-page IVDD torso-lift / spine-level toilet-walk copy; distinct from luxating-patella rear-support harness)' },
+      { re: /amazon-brand\/dog\+wheelchair\+mobility\+cart\?s=health-intervertebral-disc-disease/, label: 'dog-wheelchair / mobility-cart search hop (matches on-page Grade 3–5 non-ambulatory mobility copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(orthopedic\+dog\+bed|dog\+ramp|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|traction\+rug|raised\+dog\+bowl|paw\+wipes|waterproof\+dog\+booties|hepa|digital\+pet\+scale|slow\+feeder|carprofen|rimadyl|meloxicam|nsaid|glucosamine|chondroitin|dasuquin|omega|fish\+oil|hills|hill\+s|royal\+canin|prescription\+diet|joint\+support|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop orthopedic beds / ramps (#1004), knee braces / rear-support harnesses (#1006), traction rugs / raised bowls (vets arthritis), booties / paw wipes (#1003), HEPA (#1002), pet scales / slow-feeders (#1005), NSAIDs, or supplements — this page hops only physical recovery-crate / belly-support-harness / wheelchair gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-IVDD crate-rest-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (recovery crate, belly-support harness, wheelchair / mobility cart), never a placeholder ASIN, an orthopedic-bed / dog-ramp hop (sister dog-arthritis page), a knee-brace / rear-support-harness hop (sister luxating-patella page), a traction-rug / raised-bowl hop (vets.co arthritis-in-dogs), a bootie / paw-wipe hop, a HEPA hop, a pet-scale / slow-feeder hop, an NSAID hop, or a joint-supplement hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
