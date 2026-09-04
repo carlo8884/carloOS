@@ -1764,6 +1764,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fridge-sheet offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · health-hub hops',
+    file: 'apps/dog-com/src/app/health/page.tsx',
+    mustInclude: [
+      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog health checklist"/, label: 'concrete dog-health-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=health-hub/, label: 'pet first-aid kit search hop (same query as emergency triage / which-pet)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-hub/, label: 'digital pet thermometer search hop (same query as emergency triage)' },
+      { re: /amazon-brand\/soft\+dog\+carrier\?s=health-hub/, label: 'soft dog carrier search hop (same query as emergency triage)' },
+      { re: /amazon-brand\/dental\+chews\+dog\?s=health-hub/, label: 'dental chews search hop (same query as dog-age calculator; matches dental-care copy)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-hub/, label: 'orthopedic dog bed search hop (same query as grimace scale; matches senior-care copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription)/, label: 'never hop medications — this hub is first-aid / emergency-prep / dental / senior-care gear, not a drug list' },
+    ],
+    why: 'Money path: under-hero capture with a concrete dog-health-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid / emergency-prep / dental / senior-care copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · is-this-a-cat-emergency',
     file: 'apps/vets-co/src/app/tools/is-this-a-cat-emergency/TriageHelper.tsx',
     mustInclude: [
