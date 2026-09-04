@@ -1127,6 +1127,29 @@ const CALCULATORS = [
     ],
     why: 'Money path: under-hero capture with a concrete telehealth-checklist offer; complementary amazon-brand category searches for home-care prep; existing Vetster/AskVet/Chewy partner hops kept; empty Chewy stays hidden.',
   },
+  {
+    id: 'vets · emergency-triage-card hops',
+    file: 'apps/vets-co/src/app/emergency-triage-card/page.tsx',
+    mustInclude: [
+      { re: /source="emergency-triage-card-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my emergency triage card"/, label: 'concrete emergency-triage-card offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=emergency-triage/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=emergency-triage/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/styptic\+powder\?s=emergency-triage/, label: 'styptic powder search hop' },
+      { re: /amazon-brand\/tick\+removal\+tool\?s=emergency-triage/, label: 'tick-removal tool search hop' },
+      { re: /amazon-brand\/vetrap\+cohesive\+bandage\?s=emergency-triage/, label: 'Vetrap cohesive bandage search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /href="\/reviews\/best-pet-insurance"/, label: 'insurance quote CTA points at best-pet-insurance' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+    ],
+    why: 'Money path: under-hero capture with a concrete triage-card offer; complementary amazon-brand category searches for kit items already listed on the page; hops stay on the web page, not the printable card; empty Chewy stays hidden.',
+  },
 ]
 
 let failures = 0
