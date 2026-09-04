@@ -979,6 +979,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete first-week-starter-list offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. The wizard itself stays ungated.',
   },
   {
+    id: 'dog · training-puppy-schedule hops',
+    file: 'apps/dog-com/src/app/training/puppy-schedule/page.tsx',
+    mustInclude: [
+      { re: /source="training-puppy-schedule-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my week-by-week puppy schedule"/, label: 'concrete week-by-week-schedule offer, not Subscribe' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-puppy-schedule/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
+      { re: /amazon-brand\/puppy\+food\?s=training-puppy-schedule/, label: 'puppy food search hop (same query as new-puppy)' },
+      { re: /amazon-brand\/puppy\+training\+treats\?s=training-puppy-schedule/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
+      { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=training-puppy-schedule/, label: 'enzymatic cleaner search hop (same query as new-puppy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete week-by-week-schedule offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy treat button that was rendering on this page.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
