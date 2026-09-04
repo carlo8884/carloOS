@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -6,6 +7,12 @@ import {
   EmailCapture,
   RelatedLinks,
   TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  DropCap,
+  CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -14,7 +21,6 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -35,7 +41,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog Socialization Window',
@@ -166,9 +172,33 @@ export default function DogSocializationWindowPage() {
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-04T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the window plan
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Socialization-window checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the 3–14 week exposure list, the AVSAB vaccination-versus-socialization
+              notes, and the first-week kit (treats for pairing, crate for alone-time,
+              soft carrier for carry-and-expose, puppy grooming kit for handling) so you
+              can run the window without scrolling back. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Socialization-window checklist"
+              subtitle="Email the 3–14 week exposure list, AVSAB notes, and first-week kit. No spam."
+              ctaText="Email my socialization-window checklist"
+              source="training-socialization-window-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — The science in one box">
             <p>
@@ -223,6 +253,94 @@ export default function DogSocializationWindowPage() {
               <strong>Alone time.</strong> Short, calm intervals of being alone (5, 10, 30 minutes) starting young, to prevent separation distress later.
             </li>
           </ul>
+
+          {/* Money path — live amazon-brand search hops (socialization-window kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop a socialization-window kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              High-value, pea-sized treats pair every new person, surface, and
+              handling session with a positive outcome. A wire crate with a
+              divider is the alone-time den on the checklist. A soft carrier
+              (or sling) is the carry-and-expose tool for high-traffic places
+              before the vaccine series finishes. A puppy grooming kit turns
+              daily paw / ear / mouth handling into a food-paired habit. Same
+              treat hop used on the{' '}
+              <Link
+                href="/training/puppy-schedule"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                puppy schedule
+              </Link>
+              {' '}and the{' '}
+              <Link
+                href="/training/house-training"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                house-training guide
+              </Link>
+              . Same crate hop used on the{' '}
+              <Link
+                href="/training/crate-training"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                crate-training guide
+              </Link>
+              {' '}and the{' '}
+              <Link
+                href="/tools/new-puppy-checklist"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                new-puppy checklist
+              </Link>
+              . Same soft-carrier hop used on the{' '}
+              <Link
+                href="/which-pet"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                which-pet guide
+              </Link>
+              . They are not a ranked product list and they do not replace
+              staying under threshold. Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+training+treats?s=training-socialization-window"
+                amazonLabel="Browse puppy training treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
+                amazonLabel="Browse crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+dog+carrier?s=training-socialization-window"
+                amazonLabel="Browse soft dog carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"
+                amazonLabel="Browse puppy grooming kits on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/training/puppy-schedule" className="text-brand-primary hover:underline">
+                Puppy Schedule
+              </Link>
+              {' · '}
+              <Link href="/training/crate-training" className="text-brand-primary hover:underline">
+                Crate Training Guide
+              </Link>
+              {' · '}
+              <Link href="/tools/new-puppy-checklist" className="text-brand-primary hover:underline">
+                New Puppy Checklist
+              </Link>
+            </p>
+          </div>
 
           <h2 id="vaccine">The Vaccination Question — What AVSAB Actually Says</h2>
           <p>
