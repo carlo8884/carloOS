@@ -2874,6 +2874,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-hot-spot e-collar-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (e-collar / recovery cone, soft cone alternative), never a placeholder ASIN, a chlorhexidine / Vetericyn-style spray hop, a brand-ASIN hop (Vetericyn / Genesis / Malacetic), or a medication hop (Cytopoint / Apoquel / corticosteroids / antibiotics). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-anxiety hops',
+    file: 'apps/dog-com/src/app/health/dog-anxiety/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-anxiety-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog anxiety safe-space checklist"/, label: 'concrete dog-anxiety safe-space-checklist offer, not Subscribe' },
+      { re: /source="health-anxiety"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+anxiety\+wrap\?s=health-dog-anxiety/, label: 'pressure-wrap search hop (category search matching on-page pressure-wrap / Thundershirt-example copy; not a brand ASIN)' },
+      { re: /amazon-brand\/dog\+crate\+cover\?s=health-dog-anxiety/, label: 'crate-cover search hop (same query as crate-size + crate-training; matches on-page covered-crate / safe-hiding-space copy)' },
+      { re: /amazon-brand\/white\+noise\+machine\?s=health-dog-anxiety/, label: 'white-noise-machine search hop (matches on-page white-noise copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(thundershirt|thunder\+shirt|fluoxetine|reconcile|trazodone|gabapentin|sileo|clomipramine|dexmedetomidine|ssri|tca|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Thundershirt brand ASINs or anxiety medications — this page hops only physical pressure-wrap / crate-cover / white-noise gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-anxiety safe-space-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (pressure wrap, covered crate, white noise), never a placeholder ASIN, a Thundershirt brand-ASIN hop, or a medication hop (fluoxetine / Reconcile, trazodone, gabapentin, Sileo, clomipramine). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

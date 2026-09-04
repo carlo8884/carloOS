@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -32,13 +32,39 @@ export default function DogAnxietyPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Anxiety', href: '/health/dog-anxiety' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Seizures', href: '/health/dog-seizures', category: 'Dog Health' }, { title: 'Separation Anxiety Training', href: '/training/separation-anxiety', category: 'Training' }, { title: 'Dog Aggression Guide', href: '/training/dog-aggression', category: 'Training' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }, { label: 'Safe-space kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the anxiety safe-space checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog anxiety safe-space checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the noise-phobia safe-space notes — a pressure wrap,
+              a covered crate or other small dark hiding space, and
+              white noise to mask thunder or fireworks. Educational
+              checklist, not a diagnosis and not a medication. Fluoxetine
+              / Reconcile, trazodone, gabapentin, Sileo, and
+              clomipramine stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog anxiety safe-space checklist"
+              subtitle="Email the pressure-wrap, covered-crate, and white-noise notes. No spam."
+              ctaText="Email my dog anxiety safe-space checklist"
+              source="health-dog-anxiety-under-hero"
+            />
+          </div>
+
           <h2 id="signs">Recognizing Anxiety — Beyond Obvious Distress</h2>
           <p>Obvious anxiety signs (destruction, vocalization, house soiling) are recognized. Subtle chronic anxiety signs are frequently missed: yawning when not tired, lip-licking without food present, excessive panting at rest, inability to settle, hypervigilance (scanning constantly, ears up), avoidance of eye contact, whale eye (showing whites of eyes), weight loss, reduced play, and decreased interest in food. A dog that is "always on alert" or "never truly relaxes" may be experiencing chronic anxiety rather than having a high-energy personality.</p>
 
@@ -58,6 +84,49 @@ export default function DogAnxietyPage() {
 
           <h2 id="medication">When Medication Helps</h2>
           <p>Anxiety is a medical condition with neurobiological underpinnings. For moderate to severe anxiety, medication is not a shortcut or a crutch — it is a tool that reduces the neurological arousal enough to allow learning to occur. Without medication, a severely anxious dog may be unable to engage with behavioral modification at all. Daily medication (fluoxetine is <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for separation anxiety in dogs as Reconcile) takes 4–6 weeks to reach full effect. Situational medications (trazodone, gabapentin) work within 1–2 hours for acute events. Discuss both options with your veterinarian.</p>
+
+          <h2 id="kit">Noise-phobia safe-space kit</h2>
+          <p>Everyday physical supplies that match the noise-phobia copy above — a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page never hops medications, brand ASINs, or prescription products. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (pressure wrap /
+              covered crate / white noise). ShopCtas hides empty Chewy;
+              never href="#" or PLACEHOLDER. Category searches only —
+              reuse live sister query from crate-size + crate-training
+              (dog+crate+cover). Pressure-wrap and white-noise searches
+              match on-page named gear; they are not brand ASINs.
+              Fluoxetine / Reconcile, trazodone, gabapentin, Sileo, and
+              clomipramine are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the anxiety safe-space kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page noise-phobia
+              copy — a pressure wrap, a crate cover for a safe hiding
+              space, and a white-noise machine to mask thunder or
+              fireworks. Everyday physical gear only. They are not a
+              ranked product list, they are not medications, they are
+              not brand ASINs, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety"
+                amazonLabel="Browse pressure wraps on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety"
+                amazonLabel="Browse crate covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/white+noise+machine?s=health-dog-anxiety"
+                amazonLabel="Browse white-noise machines on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
