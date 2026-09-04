@@ -3036,6 +3036,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-obesity weigh-in-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (digital pet scale, slow-feeder dog bowl), never a placeholder ASIN, a prescription WM diet hop (Hill\'s Metabolic / Royal Canin Satiety / Purina Pro Plan Overweight Management), a kitchen / portion food-scale hop (sister vets.co weight-management page), a measuring-cup hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-luxating-patella hops',
+    file: 'apps/dog-com/src/app/health/dog-luxating-patella/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-luxating-patella-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-luxating-patella walk-support checklist"/, label: 'concrete dog-luxating-patella walk-support-checklist offer, not Subscribe' },
+      { re: /source="health-luxating-patella"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+knee\+brace\?s=health-dog-luxating-patella/, label: 'dog knee-brace search hop (category search matching on-page skipping-gait / leash-walk brace copy; not a brand ASIN)' },
+      { re: /amazon-brand\/dog\+rear\+support\+harness\?s=health-dog-luxating-patella/, label: 'rear-support-harness search hop (matches on-page controlled leash-walk / post-op restriction copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(orthopedic\+dog\+bed|dog\+ramp|traction\+rug|raised\+dog\+bowl|elevated|low.entry\+feeder|paw\+wipes|waterproof\+dog\+booties|toe\+grip|paw\+grip|hepa|carprofen|rimadyl|meloxicam|nsaid|glucosamine|chondroitin|dasuquin|omega|fish\+oil|hills|hill\+s|royal\+canin|metabolic|satiety|prescription\+diet|joint\+support|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop orthopedic beds / ramps (#1004), traction rugs / raised bowls (vets arthritis), booties / paw wipes (#1003), HEPA (#1002), joint supplements, NSAIDs, or Rx weight diets — this page hops only physical dog-knee-brace / rear-support-harness gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-luxating-patella walk-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (dog knee brace, rear-support harness), never a placeholder ASIN, an orthopedic-bed / dog-ramp hop (sister dog-arthritis page), a traction-rug / raised-bowl hop (vets.co arthritis-in-dogs), a bootie / paw-wipe hop, a HEPA hop, a joint-supplement hop (Dasuquin / glucosamine / chondroitin / omega-3 / fish oil), an NSAID hop, or a prescription-diet hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
