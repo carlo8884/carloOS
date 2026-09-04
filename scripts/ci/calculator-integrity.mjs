@@ -420,6 +420,24 @@ const CALCULATORS = [
     why: 'Carroll & Huntington (1988) heart-girth weight-tape: lb=(girth²·length)/330; kg=(girth²·length)/11900.',
   },
   {
+    id: 'horses · horse-weight-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-weight-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-weight-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the tape size"/, label: 'concrete tape-size offer, not Subscribe' },
+      { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-weight-calculator/, label: 'horse weight tape search hop' },
+      { re: /amazon-brand\/horse\+measuring\+tape\?s=tools-horse-weight-calculator/, label: 'horse measuring tape search hop' },
+      { re: /amazon-brand\/livestock\+barn\+scale\?s=tools-horse-weight-calculator/, label: 'livestock barn scale search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete tape-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · stall-bedding-calculator',
     file: 'apps/horses-com/src/app/tools/stall-bedding-calculator/Calculator.tsx',
     mustInclude: [
