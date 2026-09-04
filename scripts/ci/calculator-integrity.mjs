@@ -964,6 +964,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ear-grooming-checklist offer; every gear CTA is an amazon-brand category search matching on-page supplies copy (pet/ferret ear cleaner, cotton pads, ferret-safe lickable treat paste), never a placeholder ASIN, a medication hop, a mite treatment, hydrogen peroxide, or alcohol. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · cage-cleaning hops',
+    file: 'apps/ferret-com/src/app/care/cage-cleaning-routine/page.tsx',
+    mustInclude: [
+      { re: /source="care-cage-cleaning-routine-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret cage-cleaning checklist"/, label: 'concrete cage-cleaning-checklist offer, not Subscribe' },
+      { re: /source="care-cage-cleaning-routine"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=care-cage-cleaning-routine/, label: 'enzymatic pet-cleaner search hop (same query as dog house-training; matches on-page enzymatic cleaner / accident-odor copy)' },
+      { re: /amazon-brand\/small\+animal\+cage\+cleaner\?s=care-cage-cleaning-routine/, label: 'small-animal cage-cleaner search hop (matches on-page ferret-safe cleaner / tray-and-surface copy)' },
+      { re: /amazon-brand\/litter\+scoop\?s=care-cage-cleaning-routine/, label: 'litter-scoop search hop (matches on-page daily scoop / spot-clean copy)' },
+      { re: /amazon-brand\/disposable\+nitrile\+gloves\?s=care-cage-cleaning-routine/, label: 'disposable nitrile-glove search hop (matches on-page weekly pan-scrub / monthly deep-clean gloves copy)' },
+      { re: /amazon-brand\/fragrance\+free\+laundry\+detergent\?s=care-cage-cleaning-routine/, label: 'fragrance-free detergent search hop (matches on-page hammock / fleece-liner laundry copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|phenol|pine\+scent|ammonia|undiluted\+bleach)/, label: 'never hop medications, phenols, pine-scented cleaners, ammonia, or undiluted bleach — this page is educational husbandry gear, not a drug or toxic-cleaner list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete cage-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleaning-supplies copy (enzymatic pet cleaner, small-animal cage cleaner, litter scoop, disposable nitrile gloves, fragrance-free laundry detergent), never a placeholder ASIN, a medication hop, phenol/pine cleaners, ammonia, or undiluted bleach. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

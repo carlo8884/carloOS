@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -11,6 +12,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -52,7 +55,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -159,8 +162,35 @@ export default function FerretCageCleaningRoutinePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
+            reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the cage-cleaning checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret cage-cleaning supply checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the daily-to-monthly order — an enzymatic pet cleaner for
+              accidents, a ferret-safe cage cleaner for trays and high-traffic
+              surfaces, a litter scoop for the once-or-twice-daily box, disposable
+              gloves for the weekly pan scrub, and a fragrance-free detergent for
+              hammocks and fleece liners — so you are not hunting supplies mid-
+              clean. Educational checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret cage-cleaning supply checklist"
+              subtitle="Email the enzyme cleaner, cage cleaner, scoop, gloves, and detergent order. No spam."
+              ctaText="Email my ferret cage-cleaning checklist"
+              source="care-cage-cleaning-routine-under-hero"
+            />
+          </div>
 
           <DropCap>
             Ferrets are clean animals living in close quarters, and the cage is
@@ -192,9 +222,11 @@ export default function FerretCageCleaningRoutinePage() {
           <ul>
             <li>
               <strong>Spot-clean litter boxes once or twice a day.</strong>{' '}
-              Scoop or change soiled paper-pellet litter. A ferret will abandon
-              a fouled box and eliminate beside it, so this is the task that
-              most directly protects litter training.
+              Scoop or change soiled paper-pellet litter with a dedicated
+              litter scoop — a small cat or small-animal scoop is the right
+              scale. A ferret will abandon a fouled box and eliminate beside
+              it, so this is the task that most directly protects litter
+              training.
             </li>
             <li>
               <strong>Refresh food and water.</strong> Wash water bowls or
@@ -221,6 +253,8 @@ export default function FerretCageCleaningRoutinePage() {
               <strong>Empty and scrub litter pans.</strong> A full wash of each
               litter pan — not just a scoop — removes the urine-mineral crust
               that holds odor. Diluted white vinegar cuts this residue well.
+              Disposable nitrile or vinyl gloves keep urine residue off your
+              hands during the weekly scrub and the monthly deep clean.
             </li>
             <li>
               <strong>Wipe down high-traffic surfaces.</strong> Ramps, shelves,
@@ -304,6 +338,81 @@ export default function FerretCageCleaningRoutinePage() {
               mammals, rinse, and dry.
             </p>
           </CalloutBox>
+
+          {/* Money path — live amazon-brand search hops (cage-cleaning supplies).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list.
+              No phenol/pine cleaners, no ammonia, no undiluted bleach. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop cage-cleaning supplies
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page routine copy —
+              an enzymatic pet cleaner that breaks down accident odor instead
+              of masking it, a small-animal / pet-safe cage cleaner for trays
+              and high-traffic surfaces, a litter scoop for the daily box, disposable
+              nitrile gloves for the weekly pan scrub, and a fragrance-free
+              laundry detergent for hammocks and fleece liners. Same
+              paper-pellet / corner-pan context as the{' '}
+              <Link
+                href="/care/bedding-and-litter-types"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                bedding and litter
+              </Link>
+              {' '}guide and the{' '}
+              <Link
+                href="/tools/litter-planner"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                litter planner
+              </Link>
+              . They are not a ranked product list, they are not
+              medications, and they do not diagnose or replace an exotic-pet
+              veterinarian. Phenol-based and pine-scented cleaners, ammonia,
+              and undiluted bleach stay off this list on purpose. Ferret.com
+              earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine"
+                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine"
+                amazonLabel="Browse small-animal cage cleaners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/litter+scoop?s=care-cage-cleaning-routine"
+                amazonLabel="Browse litter scoops on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/disposable+nitrile+gloves?s=care-cage-cleaning-routine"
+                amazonLabel="Browse disposable nitrile gloves on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fragrance+free+laundry+detergent?s=care-cage-cleaning-routine"
+                amazonLabel="Browse fragrance-free laundry detergent on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/bedding-and-litter-types" className="text-brand-primary hover:underline">
+                Bedding &amp; Litter Types
+              </Link>
+              {' · '}
+              <Link href="/care/odor-and-scent-control" className="text-brand-primary hover:underline">
+                Odor &amp; Scent Control
+              </Link>
+              {' · '}
+              <Link href="/tools/litter-planner" className="text-brand-primary hover:underline">
+                Litter Planner
+              </Link>
+            </p>
+          </div>
 
           <h2 id="balance">Don&apos;t Over-Clean</h2>
           <p>
