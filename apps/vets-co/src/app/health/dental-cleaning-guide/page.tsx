@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
   { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Veterinary Dental Cleaning Guide', description: 'Professional dental cleaning under anesthesia — grades, safety, and expectations.', url: 'https://vets.co/health/dental-cleaning-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -47,7 +47,31 @@ export default function DentalCleaningGuidePage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dental-home-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Pet dental-home-care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the after-cleaning home-care notes — a soft toothbrush and
+              enzymatic toothpaste, then VOHC-accepted dental chews and a VOHC
+              water additive as adjuncts. Educational checklist, not a
+              diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Pet dental-home-care checklist"
+              subtitle="Email the after-cleaning brushing and VOHC-adjunct notes. No spam."
+              ctaText="Email my dental-cleaning checklist"
+              source="health-dental-cleaning-guide-under-hero"
+            />
+          </div>
 
           <h2>Why Anesthesia Is Required</h2>
           <DropCap>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</DropCap>
@@ -65,6 +89,54 @@ export default function DentalCleaningGuidePage() {
 
           <h2>Home Care After Cleaning</h2>
           <p>A professional cleaning resets the clock on periodontal disease — the tooth surface is clean and the gumline is healthy. What happens next depends on home care. Daily toothbrushing (a soft toothbrush and enzymatic toothpaste — CET, Vetradent — never human fluoride toothpaste) is the most effective intervention to maintain the cleaning and extend the interval before the next professional cleaning is needed. VOHC-accepted dental chews (Greenies, Whimzees) supplement brushing. Water additives with the VOHC seal provide additional support. The goal is to maintain the Grade 0-1 state achieved by the cleaning for as long as possible.</p>
+
+          <h2 id="kit">Home-Care Kit After a Cleaning</h2>
+          <p>Everyday physical supplies that match the home-care copy above — a soft toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews and a VOHC water additive as adjuncts. These are not a professional cleaning, not anesthesia-free dentistry, and not a treatment for periodontal disease; bad breath, tartar, red gums, or eating changes belong with a veterinarian, not a chew. Human fluoride toothpaste is explicitly not for pets. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (dental home-care kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page after-cleaning copy (soft toothbrush, enzymatic
+              toothpaste, VOHC dental chews, VOHC water additive), not
+              medication, anesthesia, or invented-kit hops. Human fluoride
+              toothpaste, CET/Vetradent ASINs, and clinic procedure gear
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dental home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page after-cleaning
+              home-care copy — a soft toothbrush, enzymatic toothpaste,
+              VOHC-accepted dental chews, and a VOHC water additive.
+              Everyday physical supplies only. They are not a ranked product
+              list, they are not a professional cleaning or anesthesia-free
+              substitute, they are not medications, and they do not replace
+              a veterinarian. Vets.co earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide"
+                amazonLabel="Browse soft pet toothbrushes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dental-cleaning-guide"
+                amazonLabel="Browse enzymatic pet toothpaste on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dental+chews+dog?s=health-dental-cleaning-guide"
+                amazonLabel="Browse dental chews on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+dental+water+additive?s=health-dental-cleaning-guide"
+                amazonLabel="Browse pet dental water additives on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
