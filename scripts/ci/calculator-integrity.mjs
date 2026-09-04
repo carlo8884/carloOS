@@ -430,6 +430,25 @@ const CALCULATORS = [
     why: 'Stall bed volume is a rectangular prism in cubic feet; 8 cu ft is the typical expanded pine-shavings / pellet bag; 15% is the daily pick-out restock fraction.',
   },
   {
+    id: 'horses · stall-bedding-calculator hops',
+    file: 'apps/horses-com/src/app/tools/stall-bedding-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-stall-bedding-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the bag count"/, label: 'concrete bag-count offer, not Subscribe' },
+      { re: /amazon-brand\/pine\+shavings\+horse\+stall\+bedding\?s=tools-stall-bedding-calculator/, label: 'pine shavings stall bedding search hop' },
+      { re: /amazon-brand\/wood\+pellet\+horse\+stall\+bedding\?s=tools-stall-bedding-calculator/, label: 'wood pellet stall bedding search hop' },
+      { re: /amazon-brand\/horse\+stall\+rubber\+mats\?s=tools-stall-bedding-calculator/, label: 'rubber stall mats search hop' },
+      { re: /amazon-brand\/horse\+stall\+fork\+manure\+picker\?s=tools-stall-bedding-calculator/, label: 'stall fork / manure picker search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete bag-count offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'lizard · enclosure-size-calculator',
     file: 'apps/lizard-com/src/app/tools/enclosure-size-calculator/Calculator.tsx',
     mustInclude: [
