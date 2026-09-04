@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -36,6 +37,33 @@ export default function FishStressPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the low-stress tank plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Low-stress tank checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the water-first, temperature-stable, quarantine order —
+            test ammonia, nitrite, and nitrate with a liquid kit (not
+            strips), hold temperature with a rated heater and a separate
+            digital thermometer so swings do not suppress immunity, and
+            quarantine every new arrival so shipping stress stays out of
+            the display. Educational husbandry, not a diagnosis or a cure.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Low-stress tank checklist"
+            subtitle="Email the water-first, temperature-stable, quarantine order. No spam."
+            ctaText="Email my low-stress tank checklist"
+            source="health-stress-immunity-under-hero"
+          />
+        </div>
+
         <h2>Stress Is the Real First Cause</h2>
         <DropCap>It is tempting to treat fish disease as a series of discrete infections to be diagnosed and medicated, but experienced aquarists come to see most illness through a single lens: stress. The ich parasite, the Aeromonas bacteria behind fin rot and ulcers, and the fungal spores that colonize damaged tissue are nearly always already present in a tank, held at bay by a healthy fish's defenses. What tips the balance toward visible disease is some chronic stressor that suppresses the immune system and degrades the protective slime coat. This is why outbreaks so often follow a water-quality lapse, a new aggressive tankmate, or a temperature swing — the stressor came first, and the pathogen merely exploited the opening.</DropCap>
 
@@ -55,17 +83,103 @@ export default function FishStressPage() {
         <h2>Stress, Quarantine, and Acclimation</h2>
         <p>Two moments carry concentrated stress risk: bringing home a new fish and acclimating it. New arrivals are already stressed and immunosuppressed from capture, shipping, and retail holding, which is exactly when latent infections flare. Quarantining new fish in a dedicated <a href="/setup/quarantine-tank-guide">quarantine tank</a> lets them recover in calm, pristine conditions and reveals illness before it reaches the display. Acclimate slowly to match temperature and chemistry, dim the lights, and avoid feeding heavily on the first day. Managing stress at these pinch points prevents a large share of the disease that otherwise follows new additions, and complements the broader picture covered in our <a href="/health/bacterial-infections">bacterial infections</a> guide.</p>
 
-        <ArticleSourcesList sources={SOURCES} />
+        {/* Money path — live amazon-brand search hops (low-stress tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Stable Heater + Water Test Kit</div>
-          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>Temperature stability and water quality are the two most controllable stressors in any aquarium. A reliable adjustable heater prevents temperature swings; a liquid test kit (not strips) gives accurate ammonia, nitrite, nitrate, and pH readings. These are husbandry tools — they support a low-stress environment but do not treat disease and are not a substitute for correct diagnosis or veterinary guidance when a fish is unwell.</p>
-          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/aquarium%20adjustable%20heater%20water%20test%20kit%20ammonia%20nitrite?s=health-fish-stress-immunity" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/aquarium%20heater%20water%20quality%20test%20kit?s=health-fish-stress-immunity" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a low-stress tank kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Water quality and temperature stability are the two most
+            controllable stressors in any aquarium. A liquid master kit is
+            how you see ammonia, nitrite, and nitrate — strips are not
+            accurate enough for the stress load that suppresses immunity.
+            A heater rated for the tank plus a separate digital thermometer
+            is how you hold temperature so the dial is not the only
+            reading. Quarantine every new arrival in a spare hospital tank
+            so shipping stress and latent infections stay out of the
+            display. Same test-kit hop used on the{' '}
+            <Link
+              href="/health/bacterial-infections"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              bacterial infections guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary no-underline hover:underline">
+              fish disease guide
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/setup/quarantine-tank-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              quarantine tank guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
+              fin-rot guide
+            </Link>
+            . The hops below are not a ranked product list, they are not
+            medications, and they do not treat, reverse, or cure disease.
+            Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-stress-immunity"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-stress-immunity"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-stress-immunity"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/health/nitrogen-cycle-explained" className="text-brand-primary hover:underline">
+              Nitrogen Cycle Explained
+            </Link>
+            {' · '}
+            <Link href="/health/new-tank-syndrome" className="text-brand-primary hover:underline">
+              New Tank Syndrome
+            </Link>
+            {' · '}
+            <Link href="/health/bacterial-infections" className="text-brand-primary hover:underline">
+              Bacterial Infections
+            </Link>
+            {' · '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
