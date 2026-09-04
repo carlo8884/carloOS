@@ -53,6 +53,25 @@ const CALCULATORS = [
     why: 'Standard planted-tank CO2/pH/KH chart: 4 dKH @ pH 6.6 → ~30 ppm. Input is dKH, so coefficient must be 3.',
   },
   {
+    id: 'fish · co2-calculator hops',
+    file: 'apps/fish-com/src/app/tools/co2-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-co2-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my planted-tank checklist"/, label: 'concrete planted-tank-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/aquarium\+co2\+regulator\+solenoid\?s=tools-co2-calculator/, label: 'CO2 regulator+solenoid search hop' },
+      { re: /amazon-brand\/aquarium\+co2\+diffuser\?s=tools-co2-calculator/, label: 'CO2 diffuser search hop' },
+      { re: /amazon-brand\/aquarium\+co2\+drop\+checker\?s=tools-co2-calculator/, label: 'drop checker search hop' },
+      { re: /amazon-brand\/seachem\+flourish\+excel\?s=tools-co2-calculator/, label: 'Seachem Flourish Excel liquid carbon search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete planted-tank-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · aquarium-volume-calculator',
     file: 'apps/fish-com/src/app/tools/aquarium-volume-calculator/Calculator.tsx',
     mustInclude: [
