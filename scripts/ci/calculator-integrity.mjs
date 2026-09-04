@@ -938,6 +938,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete walk-gear-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · dog-chocolate-toxicity-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-chocolate-toxicity-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-chocolate-toxicity-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my chocolate-safety checklist"/, label: 'concrete chocolate-safety-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/activated\+charcoal\+pet\?s=tools-chocolate-toxicity/, label: 'activated charcoal (vet-directed) search hop' },
+      { re: /amazon-brand\/hydrogen\+peroxide\+3\+percent\+first\+aid\?s=tools-chocolate-toxicity/, label: '3% hydrogen peroxide first aid (vet-directed) search hop' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\+dog\?s=tools-chocolate-toxicity/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/pet\+emergency\+kit\+dog\+toxin\?s=tools-chocolate-toxicity/, label: 'pet emergency / toxin kit search hop' },
+      { re: /amazon-brand\/dog\+crate\+for\+recovery\?s=tools-chocolate-toxicity/, label: 'recovery crate search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete chocolate-safety-checklist offer; every kit CTA is an amazon-brand category search, never a placeholder ASIN. Safety-kit hops do not treat or reverse chocolate poisoning.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
