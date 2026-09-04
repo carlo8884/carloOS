@@ -1,5 +1,17 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +47,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -107,9 +119,34 @@ export default function BeddingAndLitterTypesPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the bedding and litter list
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret bedding &amp; litter shopping list
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the starter order — a fleece sleep sack or cube bed, a
+              hammock, washable fleece liners, recycled paper-pellet litter,
+              and a high-back corner pan — so you shop enclosed fabric and
+              safe pellets instead of loose shavings or clumping clay.
+              Educational checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret bedding & litter shopping list"
+              subtitle="Email the sleep-sack, hammock, fleece-liner, paper-pellet, and corner-pan order. No spam."
+              ctaText="Email my ferret bedding & litter list"
+              source="care-bedding-and-litter-types-under-hero"
+            />
+          </div>
 
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>
           <p>
@@ -154,6 +191,86 @@ export default function BeddingAndLitterTypesPage() {
           <p>
             Whatever the material, the pan shape matters as much as the fill: a corner pan with a high back wall and a low front lip works with the ferret's instinct, as covered in our <a href="/care/litter-training">litter training</a> guide.
           </p>
+
+          {/* Money path — live amazon-brand search hops (bedding / litter gear).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list.
+              No cedar, pine shavings, or clumping-clay products. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop bedding and litter
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page material
+              copy — enclosed fleece sleep sacks and cube beds, elevated
+              hammocks, machine-washable fleece liners for each cage level,
+              recycled paper-pellet litter, and a high-back corner pan.
+              Same sleep-sack hop used on the{' '}
+              <Link
+                href="/tools/cage-size-calculator"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                cage-size calculator
+              </Link>
+              , the same hammock hop used on the{' '}
+              <Link
+                href="/tools/ferret-body-condition-score"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                ferret body-condition score
+              </Link>
+              {' '}tool, and the same corner-pan hop used on the{' '}
+              <Link
+                href="/tools/litter-planner"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                litter planner
+              </Link>
+              . They are not a ranked product list, they are not
+              medications, and they do not diagnose or replace an exotic-pet
+              veterinarian. Cedar, untreated pine shavings, and clumping
+              clay stay off this list on purpose. Ferret.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types"
+                amazonLabel="Browse ferret sleep sacks and cube beds on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types"
+                amazonLabel="Browse ferret hammocks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types"
+                amazonLabel="Browse ferret fleece liners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types"
+                amazonLabel="Browse recycled paper-pellet litter on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"
+                amazonLabel="Browse high-back corner litter pans on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/cage-setup" className="text-brand-primary hover:underline">
+                Cage Setup
+              </Link>
+              {' · '}
+              <Link href="/care/litter-training" className="text-brand-primary hover:underline">
+                Litter Training
+              </Link>
+              {' · '}
+              <Link href="/tools/litter-planner" className="text-brand-primary hover:underline">
+                Litter Planner
+              </Link>
+            </p>
+          </div>
 
           <h2 id="litter-bad">Litter to Avoid</h2>
           <ul>
