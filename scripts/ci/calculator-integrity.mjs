@@ -896,6 +896,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete dog-age-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret/horse age-calculator hops.',
   },
   {
+    id: 'dog · dog-body-condition-score hops',
+    file: 'apps/dog-com/src/app/tools/dog-body-condition-score/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-bcs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog BCS checklist"/, label: 'concrete dog-BCS-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-bcs/, label: 'measuring tape / BCS chart search hop' },
+      { re: /amazon-brand\/elevated\+slow\+feeder\+bowl\+dog\?s=tools-dog-bcs/, label: 'elevated slow-feeder bowl search hop' },
+      { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-bcs/, label: 'portion-control food scale search hop' },
+      { re: /amazon-brand\/puzzle\+feeder\+dog\?s=tools-dog-bcs/, label: 'puzzle feeder search hop' },
+      { re: /amazon-brand\/joint\+support\+dog\+treats\?s=tools-dog-bcs/, label: 'joint-support treats search hop' },
+      { re: /amazon-brand\/weight\+management\+dog\+food\?s=tools-dog-bcs/, label: 'weight-management dog food search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete dog-BCS-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret BCS hops.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
