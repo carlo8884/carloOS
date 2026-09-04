@@ -1532,6 +1532,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fin-rot water-first isolate checklist offer; every gear CTA is an amazon-brand category search matching on-page test-water-first / hospital-isolation / gravel-vacuum copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-stress-immunity hops',
+    file: 'apps/fish-com/src/app/health/fish-stress-and-immunity/page.tsx',
+    mustInclude: [
+      { re: /source="health-stress-immunity-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my low-stress tank checklist"/, label: 'concrete low-stress tank checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-stress-immunity/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-stress-immunity/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / bacterial-infections / columnaris / pop-eye)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-stress-immunity/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / bacterial-infections / columnaris / pop-eye)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-stress-immunity/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / fin-rot)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /aquarium\+sponge\+filter/, label: 'omit sponge-filter hop — stress-immunity copy is water quality / temperature / quarantine, not hospital-tank aeration' },
+    ],
+    why: 'Money path: under-hero capture with a concrete low-stress tank checklist offer; every gear CTA is an amazon-brand category search matching on-page liquid-test-kit / heater / thermometer / quarantine copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
