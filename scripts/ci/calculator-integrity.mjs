@@ -165,6 +165,25 @@ const CALCULATORS = [
     why: 'Mass = volume(cm³) × density(g/cm³); 1 lb = 453.592 g.',
   },
   {
+    id: 'fish · substrate-calculator hops',
+    file: 'apps/fish-com/src/app/tools/substrate-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-substrate-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my substrate shopping list"/, label: 'concrete substrate-shopping-list offer, not Subscribe' },
+      { re: /amazon-brand\/aquarium\+gravel\?s=tools-substrate-calculator/, label: 'aquarium gravel search hop' },
+      { re: /amazon-brand\/aquarium\+sand\?s=tools-substrate-calculator/, label: 'aquarium sand search hop' },
+      { re: /amazon-brand\/aquarium\+aqua\+soil\+planted\+substrate\?s=tools-substrate-calculator/, label: 'aqua soil / planted substrate search hop' },
+      { re: /amazon-brand\/aquarium\+substrate\+vacuum\?s=tools-substrate-calculator/, label: 'substrate vacuum search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete substrate-shopping-list offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'dog · dog-calorie-calculator',
     file: 'apps/dog-com/src/app/tools/dog-calorie-calculator/Calculator.tsx',
     mustInclude: [{ re: /70\s*\*\s*Math\.pow\(.*0\.75\)/, label: 'RER = 70 × kg^0.75' }],
