@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const TWELVE_POINTS: Array<[string, string]> = [
@@ -111,9 +111,34 @@ export default function SaddleFitBasicsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the saddle-fit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse saddle-fit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the 12-point owner checks plus the between-fitting kit —
+              a contoured saddle pad, a sheepskin half-pad, thin shims when a
+              fitter has identified a minor asymmetry, and the girth or cinch
+              that hangs at the heart girth. Educational checklist, not a
+              diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse saddle-fit checklist"
+              subtitle="Email the 12-point checks plus pad, half-pad, shim, and girth/cinch order. No spam."
+              ctaText="Email my saddle-fit checklist"
+              source="guide-saddle-fit-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Saddle Fit Changes</h2>
           <p>Owners are often told to have a saddle fitted to a horse and treat the result as permanent. The horse's back does not cooperate with this view. A working horse's topline gains and loses muscle on a timescale of weeks; the topline of a horse coming back into work after winter turnout looks measurably different from the same horse at the end of a competition season. A saddle that fit at the start of the season often fits poorly six months later, and a saddle that fits a fit horse in July fits poorly the same horse in February.</p>
@@ -210,12 +235,55 @@ export default function SaddleFitBasicsPage() {
             <li>Every 6–12 months as routine maintenance for any working horse.</li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
           <h2 id="picks">Pad and Tack Picks</h2>
           <p>
-            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (saddle-fit kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page pad / half-pad / shim / girth-or-cinch copy, not
+              wither pads, measuring tapes, saddles, or medication hops.
+              Wither pads and measuring tapes are not named on this page. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the saddle-fit kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page between-fitting
+              tack copy — a contoured saddle pad, a sheepskin half-pad, saddle
+              shims for correction pockets or foam-panel adjustment, and a
+              girth or cinch. Everyday physical supplies only. They are not a
+              ranked product list, they are not a substitute for a Society of
+              Master Saddlers or Master Saddlers Association fitter, they are
+              not treatments for back pain, lameness, or girthiness, and they
+              do not replace a veterinarian. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics"
+                amazonLabel="Browse horse saddle pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+sheepskin+half+pad?s=guides-saddle-fit-basics"
+                amazonLabel="Browse horse sheepskin half-pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+saddle+shims?s=guides-saddle-fit-basics"
+                amazonLabel="Browse horse saddle shims on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+girth+cinch?s=guides-saddle-fit-basics"
+                amazonLabel="Browse horse girths and cinches on Amazon →"
+              />
+            </div>
+          </div>
+
           <ScoreMethodology />
           <ReviewCard
             id="mattes-sheepskin-half-pad"

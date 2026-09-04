@@ -1133,6 +1133,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete trailering-checklist offer; every gear CTA is an amazon-brand category search matching on-page travel-protection and tying copy (shipping boots, shipping wraps, poll guard, trailer ties), never a placeholder ASIN, a medication hop, a shipping-fever treatment, or an invented hay-bag / water-bucket hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · saddle-fit-basics hops',
+    file: 'apps/horses-com/src/app/guides/saddle-fit-basics/page.tsx',
+    mustInclude: [
+      { re: /source="guide-saddle-fit-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my saddle-fit checklist"/, label: 'concrete saddle-fit-checklist offer, not Subscribe' },
+      { re: /source="guide-saddle-fit"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+saddle\+pad\?s=guides-saddle-fit-basics/, label: 'saddle-pad search hop (matches on-page daily pad / saddle-pad copy)' },
+      { re: /amazon-brand\/horse\+sheepskin\+half\+pad\?s=guides-saddle-fit-basics/, label: 'sheepskin-half-pad search hop (matches on-page half-pad copy)' },
+      { re: /amazon-brand\/horse\+saddle\+shims\?s=guides-saddle-fit-basics/, label: 'saddle-shims search hop (matches on-page thin-shim / foam-shim copy)' },
+      { re: /amazon-brand\/horse\+girth\+cinch\?s=guides-saddle-fit-basics/, label: 'girth-or-cinch search hop (matches on-page girth / cinch copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|bute|phenylbutazone|banamine|wither\+pad|measuring\+tape|antifungal|antibiotic)/, label: 'never hop medications, wither pads, or measuring tapes — this page is educational between-fitting tack, not a drug list or invented-kit list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete saddle-fit-checklist offer; every gear CTA is an amazon-brand category search matching on-page pad / half-pad / shim / girth-or-cinch copy (saddle pad, sheepskin half-pad, saddle shims, girth or cinch), never a placeholder ASIN, a medication hop, or an invented wither-pad / measuring-tape hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
