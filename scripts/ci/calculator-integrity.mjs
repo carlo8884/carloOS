@@ -1192,6 +1192,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete equine-vaccination-schedule-checklist offer; every gear CTA is an amazon-brand category search matching on-page PHF stall-fan / stall-screen copy (stall fans, stall screens), never a placeholder ASIN, a vaccine / medication / needle hop, or an invented fly-spray / fly-mask hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · body-clipping hops',
+    file: 'apps/horses-com/src/app/care/body-clipping/page.tsx',
+    mustInclude: [
+      { re: /source="care-body-clipping-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse body-clipping checklist"/, label: 'concrete horse-body-clipping-checklist offer, not Subscribe' },
+      { re: /source="care-clipping"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+clippers\?s=care-body-clipping/, label: 'horse-clippers search hop (matches on-page well-maintained/sharp/tensioned clippers copy)' },
+      { re: /amazon-brand\/horse\+clipper\+blades\?s=care-body-clipping/, label: 'clipper-blades search hop (matches on-page clean-blades copy)' },
+      { re: /amazon-brand\/horse\+clipper\+oil\?s=care-body-clipping/, label: 'clipper-oil search hop (matches on-page regular-oiling copy)' },
+      { re: /amazon-brand\/horse\+fleece\+cooler\?s=care-body-clipping/, label: 'fleece-cooler search hop (same query as blanket-size calculator; matches on-page moisture-wicking coolers copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|sedation|sedative|acepromazine|bute|phenylbutazone|banamine|ppid|prascend|antifungal|antibiotic)/, label: 'never hop medications, sedation, or PPID treatments — this page is educational clipping gear, not a drug or diagnosis list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-body-clipping-checklist offer; every gear CTA is an amazon-brand category search matching on-page clipper / blade / oil / cooler copy (horse clippers, clipper blades, clipper oil, fleece cooler), never a placeholder ASIN, a medication / sedation hop, or a rug / blanket hop (those live on the blanketing page). Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function BodyClippingPage() {
             { label: "Clip Types", href: "#types" },
             { label: "Technique Basics", href: "#technique" },
             { label: "Aftercare", href: "#aftercare" },
+            { label: "Clipping Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,9 +109,32 @@ export default function BodyClippingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the body-clipping checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse body-clipping checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the clipper, blade, clipper-oil, and cooler notes so the
+              kit is ready before the winter coat comes in. Educational
+              checklist, not a diagnosis and not a sedation order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse body-clipping checklist"
+              subtitle="Email the clipper, blade, clipper-oil, and cooler notes. No spam."
+              ctaText="Email my horse body-clipping checklist"
+              source="care-body-clipping-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Clip</h2>
           <p>A horse in regular winter work grows a thick coat, sweats heavily under it, and then takes hours to dry -- risking chills and making proper cooling impossible. Clipping removes the coat so the horse sweats less, cools and dries quickly after work, is easier to keep clean, and recovers better. Clipping is also used to help old or PPID horses that fail to shed and overheat under heavy coats. The trade-off is that the horse loses its natural insulation and must be blanketed.</p>
@@ -132,6 +156,50 @@ export default function BodyClippingPage() {
 
           <h2 id="aftercare">Aftercare</h2>
           <p>A clipped horse has lost its insulation and must be rugged appropriately for the weather and the extent of the clip, with weights adjusted as conditions change -- see the blanketing and blanket-weights guides. Clipped horses also benefit from extra warmth after washing and from coolers that wick moisture. Watch for the horse being too cold (shivering, tucked up) or too hot under rugs, and groom regularly, since clipping exposes the skin and a clipped coat shows dirt and rubs more readily.</p>
+
+          <h2 id="kit">Clipping Kit</h2>
+          <p>Everyday physical supplies that match the technique and aftercare copy above — well-maintained, sharp, properly tensioned clippers, clean blades, clipper oil for regular oiling and cooling, and coolers that wick moisture after a wash. Rugs and blanket weights stay on the blanketing guide; veterinary sedation for a nervous horse stays with a veterinarian. These are not a treatment for PPID, overheating, or a skin condition. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (clipping kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page clipper / blade / oil / cooler copy, not rugs
+              (blanketing page), medication, or sedation hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the clipping kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page technique and
+              aftercare copy — horse clippers, clipper blades, clipper oil,
+              and a fleece cooler that wicks moisture. Everyday physical
+              supplies only. They are not a ranked product list, they are not
+              rugs or blanket weights, they are not sedation or a medication,
+              and they do not replace a veterinarian. Horses.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+clippers?s=care-body-clipping"
+                amazonLabel="Browse horse clippers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+clipper+blades?s=care-body-clipping"
+                amazonLabel="Browse horse clipper blades on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+clipper+oil?s=care-body-clipping"
+                amazonLabel="Browse horse clipper oil on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fleece+cooler?s=care-body-clipping"
+                amazonLabel="Browse horse fleece coolers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
