@@ -399,6 +399,27 @@ const CALCULATORS = [
     why: 'Standard WSAVA body-condition heuristic: each BCS point above ideal (5/9) ≈ 10% over ideal body weight.',
   },
   {
+    id: 'dog · dog-ideal-weight-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-ideal-weight-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my weight-check checklist"/, label: 'concrete weight-check-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-dog-ideal-weight/, label: 'digital kitchen / pet scale search hop' },
+      { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-ideal-weight/, label: 'portion-control food scale search hop' },
+      { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-ideal-weight/, label: 'dog measuring tape / BCS chart search hop' },
+      { re: /amazon-brand\/elevated\+slow\+feeder\+bowl\+dog\?s=tools-dog-ideal-weight/, label: 'elevated slow-feeder bowl search hop' },
+      { re: /amazon-brand\/puzzle\+feeder\+dog\?s=tools-dog-ideal-weight/, label: 'puzzle feeder search hop' },
+      { re: /amazon-brand\/weight\+management\+dog\+food\?s=tools-dog-ideal-weight/, label: 'weight-management dog food search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete weight-check-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · water-change-calculator',
     file: 'apps/fish-com/src/app/tools/water-change-calculator/Calculator.tsx',
     mustInclude: [
