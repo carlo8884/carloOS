@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion, buildBreadcrumbSchema } from '@carloOS/ui'
+import {
+  buildMetadata,
+  EmailCapture,
+  FAQAccordion,
+  buildBreadcrumbSchema,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -53,7 +60,7 @@ const FAQS = [
   },
   {
     question: 'Are there affiliate links?',
-    answer: 'Some emails reference products we have evaluated (first-aid kit components, pet-insurance providers); a small number of those links earn commission at no cost to you, disclosed in line. The triage card itself contains no affiliate content.',
+    answer: 'Some emails reference products we have evaluated (first-aid kit components, pet-insurance providers); a small number of those links earn commission at no cost to you, disclosed in line. The printable triage card itself contains no affiliate content. Complementary Amazon category searches for kit items sit on this web page only, below the checklist, and are disclosed inline.',
   },
   {
     question: 'Does this work for puppies and kittens?',
@@ -164,54 +171,60 @@ export default function EmergencyTriageCardPage() {
       <>
       <SchemaScript schema={allSchemas} />
 
-      {/* HERO with above-the-fold capture */}
+      {/* HERO — editorial only. Capture lives under-hero so the source
+          ends in -under-hero and always renders (no Vercel env write). */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
-          <div>
-            <div className="flex items-center gap-2.5 mb-5">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Free Download · Pet Owners</span>
-            </div>
-            <h1 className="font-display font-black text-white tracking-tighter leading-[1.05] mb-6"
-              style={{ fontSize: 'clamp(36px, 5.5vw, 66px)' }}>
-              Free Pet Emergency<br />
-              <span className="text-brand-primary">Triage Card.</span>
-            </h1>
-            <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
-              The wallet + fridge card that tells you when a pet symptom is ER-immediate, when it
-              is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
-              dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance.
-            </p>
-            <ul className="text-sm text-white/70 space-y-2 mb-10 max-w-md">
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Wallet-sized triage card + US-Letter fridge version</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Vital sign ranges (HR, RR, temp, CRT, gums) per species</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>First-aid kit list — exactly what to stock, why each item</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>8 short emails over ~3 months. Free. One-click unsubscribe.</span></li>
-            </ul>
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-2.5 mb-5">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Free Download · Pet Owners</span>
           </div>
+          <h1 className="font-display font-black text-white tracking-tighter leading-[1.05] mb-6"
+            style={{ fontSize: 'clamp(36px, 5.5vw, 66px)' }}>
+            Free Pet Emergency<br />
+            <span className="text-brand-primary">Triage Card.</span>
+          </h1>
+          <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
+            The wallet + fridge card that tells you when a pet symptom is ER-immediate, when it
+            is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
+            dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance.
+          </p>
+          <ul className="text-sm text-white/70 space-y-2 mb-0 max-w-md">
+            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Wallet-sized triage card + US-Letter fridge version</span></li>
+            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Vital sign ranges (HR, RR, temp, CRT, gums) per species</span></li>
+            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>First-aid kit list — exactly what to stock, why each item</span></li>
+            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>8 short emails over ~3 months. Free. One-click unsubscribe.</span></li>
+          </ul>
+        </div>
+      </section>
 
-          <div className="lg:pl-4">
-            <div className="bg-white rounded-xl p-7 shadow-card-hover">
-              <div className="mb-5">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Step 1 of 1</div>
-                <div className="font-display font-bold text-brand-dark text-xl leading-tight">
-                  Get the triage card + 8-email course
-                </div>
-              </div>
-              <EmailCapture
-                variant="inline"
-                siteId="vets-co"
-                title=""
-                ctaText="Send me the triage card →"
-                placeholder="your@email.com"
-                source="emergency-triage"
-              />
-              <p className="text-2xs text-brand-text-light mt-4 leading-relaxed">
-                We&apos;ll email the card immediately. See our <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>.
-                Triage aid, not a substitute for veterinary care.
-              </p>
-            </div>
-          </div>
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fridge card
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Email my emergency triage card
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the wallet + fridge triage card and the first-aid kit list so you can
+            re-check ER vs same-day vs monitor later without re-reading this page. A
+            triage aid, not a substitute for veterinary care. See our{' '}
+            <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">
+              Privacy Policy
+            </Link>
+            . No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Email my emergency triage card"
+            subtitle="Wallet + fridge card plus the first-aid kit list. Triage aid, not a substitute for veterinary care. No spam."
+            ctaText="Email my emergency triage card"
+            placeholder="your@email.com"
+            source="emergency-triage-card-under-hero"
+          />
         </div>
       </section>
 
@@ -397,6 +410,59 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
 
+      {/* Money path — live amazon-brand search hops (first-aid kit items on this page).
+          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          Category searches only — not a ranked list. Hops stay on this web page;
+          the printable card body has no affiliate links. */}
+      <section id="pet-first-aid-kit-shop" className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-2xl mx-auto">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop the kit items
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              These Amazon category searches match items already on the checklist above — a
+              pet first-aid kit, a digital pet thermometer, styptic powder (Kwik Stop), a
+              tick-removal tool, and Vetrap-style cohesive bandage. They are not a ranked
+              product list, not invented inventory, and they do not diagnose or replace
+              emergency care. The printable card itself has no affiliate links. Vets.co
+              earns a commission on qualifying purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden. For the unexpected bill, compare policies on the{' '}
+              <Link
+                href="/reviews/best-pet-insurance"
+                className="text-brand-primary underline-offset-2 hover:underline"
+              >
+                Best Pet Insurance
+              </Link>{' '}
+              review — a coverage comparison, not a carrier ranking.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=emergency-triage"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/styptic+powder?s=emergency-triage"
+                amazonLabel="Browse styptic powder on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/tick+removal+tool?s=emergency-triage"
+                amazonLabel="Browse tick-removal tools on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/vetrap+cohesive+bandage?s=emergency-triage"
+                amazonLabel="Browse Vetrap cohesive bandage on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECOND CAPTURE */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
@@ -412,7 +478,7 @@ export default function EmergencyTriageCardPage() {
               variant="inline"
               siteId="vets-co"
               title=""
-              ctaText="Send me the triage card →"
+              ctaText="Email my emergency triage card"
               source="emergency-triage-midpage"
             />
           </div>
