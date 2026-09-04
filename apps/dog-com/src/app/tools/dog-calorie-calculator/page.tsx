@@ -169,7 +169,7 @@ export default function DogCalorieCalculatorPage() {
             siteId="dog-com"
             title="Daily kcal worksheet"
             subtitle="Email the daily kcal target — RER, MER, and cups-per-day so you can portion tomorrow. No spam."
-            ctaText="Email the kcal target"
+            ctaText="Email my dog kcal target"
             source="tools-dog-calorie-calculator-under-hero"
           />
         </div>
@@ -182,9 +182,9 @@ export default function DogCalorieCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / treats / scale).
-          Reuses queries already shipped on reviews + training + ferret diet.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+      {/* Money path — live amazon-brand search hops (food / scale / feeders / treats).
+          Twin of vets.co cat-calorie-calculator. ShopCtas hides empty Chewy;
+          never href="#" or PLACEHOLDER. Category searches only — not ranked ASINs. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -194,30 +194,34 @@ export default function DogCalorieCalculatorPage() {
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               Foods vary widely in calorie density (roughly 270–500 kcal/cup), so the label kcal/cup
-              figure is what turns MER into a bowl amount. Training treats count toward the 10%
-              treat budget. A gram kitchen scale beats a measuring cup — cups over-portion by
-              roughly 20%. Same Amazon hops used on the{' '}
-              <Link href="/reviews/best-dry-dog-food" className="text-brand-primary underline-offset-2 hover:underline">
-                dry-food reviews
-              </Link>{' '}
-              and{' '}
-              <Link href="/training/basic-commands" className="text-brand-primary underline-offset-2 hover:underline">
-                basic-commands
-              </Link>{' '}
-              pages. Dog.com earns a commission on qualifying purchases at no extra cost to you.
+              figure is what turns MER into a bowl amount. A kitchen gram scale beats a measuring
+              cup — cups over-portion by roughly 20%. A slow-feeder bowl or interactive feeder
+              stretches a measured ration without adding calories. Low-calorie treats belong in the
+              10% treat budget. These are Amazon category searches — not a ranked product list and
+              not a diet plan. Ask your veterinarian which foods and portions fit your dog. Dog.com
+              earns a commission on qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/royal+canin+dry+dog+food?s=tools-dog-calorie-calculator"
-                amazonLabel="Browse dry dog food on Amazon →"
+                amazonHref="/go/amazon-brand/measured+dog+food?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse measured dog food on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/soft+small+dog+training+treats?s=tools-dog-calorie-calculator"
-                amazonLabel="Browse training treats on Amazon →"
+                amazonHref="/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse kitchen gram scales on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-calorie-calculator"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonHref="/go/amazon-brand/slow+feeder+dog+bowl?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse slow-feeder dog bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/interactive+dog+feeder?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse interactive dog feeders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/low+calorie+dog+treats?s=tools-dog-calorie-calculator"
+                amazonLabel="Browse low-calorie dog treats on Amazon →"
               />
             </div>
           </div>
@@ -237,7 +241,21 @@ export default function DogCalorieCalculatorPage() {
               body condition score
             </Link>{' '}
             tool. Weight-loss dogs should use a veterinarian-set target weight, not the current
-            overweight number.
+            overweight number. The cat twin of this math lives on{' '}
+            <a
+              href="https://vets.co/tools/cat-calorie-calculator"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              Vets.co&apos;s cat calorie calculator
+            </a>
+            . For how weight-related disease can change vet costs, read the educational{' '}
+            <a
+              href="https://vets.co/reviews/best-pet-insurance"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              pet insurance review
+            </a>
+            {' '}— a coverage comparison, not a carrier ranking.
           </p>
         </div>
       </section>
@@ -282,7 +300,41 @@ export default function DogCalorieCalculatorPage() {
               weight management
             </Link>{' '}
             reference covers caloric restriction, body condition scoring, and veterinary supervision.
+            This page is a planning / wellness reference, not a diagnosis or a diet plan. For a
+            stable, non-emergency feeding question, start at{' '}
+            <a href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+              telehealth
+            </a>
+            .
           </p>
+
+          <div className="mb-8 rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Planning ahead
+            </div>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Weight-related disease (diabetes, arthritis, pancreatitis) is one of the cost
+              drivers pet insurance is built for. Comparing published coverage while a dog is
+              young and healthy matters because pre-existing conditions are excluded. This is
+              educational context, not a recommendation of any named carrier. For a stable,
+              non-emergency feeding question, talk to a licensed vet on a screen rather than
+              waiting for a gap to become an ER visit.
+            </p>
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <a
+                href="https://vets.co/reviews/best-pet-insurance"
+                className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
+              >
+                Compare pet insurance →
+              </a>
+              <a
+                href="https://vets.co/telehealth"
+                className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+              >
+                Talk to a vet (telehealth) →
+              </a>
+            </div>
+          </div>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">
             Common questions
@@ -305,6 +357,8 @@ export default function DogCalorieCalculatorPage() {
               { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
               { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
               { label: 'Dog Body Condition Score', href: '/tools/dog-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
+              { label: 'Pet Insurance Review', href: 'https://vets.co/reviews/best-pet-insurance', note: 'Educational coverage comparison, not a ranking' },
+              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable feeding questions, not an ER substitute' },
             ].map(item => (
               <Link
                 key={item.href}
