@@ -393,6 +393,24 @@ const CALCULATORS = [
     why: 'Mare gestation averages ~340 days (normal range ~320–362).',
   },
   {
+    id: 'horses · horse-gestation-calculator hops',
+    file: 'apps/horses-com/src/app/tools/horse-gestation-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-horse-gestation-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the foaling kit checklist"/, label: 'concrete foaling-kit-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/digital\+equine\+thermometer\?s=tools-horse-gestation-calculator/, label: 'digital equine thermometer search hop' },
+      { re: /amazon-brand\/iodine\+navel\+dip\+foal\?s=tools-horse-gestation-calculator/, label: 'foal navel dip search hop' },
+      { re: /amazon-brand\/foaling\+alarm\?s=tools-horse-gestation-calculator/, label: 'foaling alarm search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete foaling-kit-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · horse-weight-calculator',
     file: 'apps/horses-com/src/app/tools/horse-weight-calculator/Calculator.tsx',
     mustInclude: [
