@@ -878,6 +878,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete heat-safety-checklist offer; every gear CTA is an amazon-brand category search matching on-page prevention copy (indoor thermometer at the cage, reusable bottles to freeze, ceramic tiles, backup ferret water bottle, clip-on fan for cooled air), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · travel-and-carriers hops',
+    file: 'apps/ferret-com/src/app/care/travel-and-carriers/page.tsx',
+    mustInclude: [
+      { re: /source="care-travel-and-carriers-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret travel-carrier checklist"/, label: 'concrete travel-carrier-checklist offer, not Subscribe' },
+      { re: /source="care-travel-and-carriers"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+carrier\+hard\+sided\?s=care-travel-and-carriers/, label: 'hard-sided ferret-carrier search hop (same query as readiness quiz; matches on-page hard-sided plastic carrier copy)' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=care-travel-and-carriers/, label: 'soft-sided pet-carrier search hop (same query as ferret emergency triage; matches on-page soft-sided carrier copy)' },
+      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-travel-and-carriers/, label: 'ferret sleep-sack / fleece-liner search hop (same query as cage-size calculator; matches on-page familiar-sleep-sack copy)' },
+      { re: /amazon-brand\/ferret\+water\+bottle\?s=care-travel-and-carriers/, label: 'ferret water-bottle search hop (same query as heat-stroke-prevention; matches on-page clip-on water copy)' },
+      { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=care-travel-and-carriers/, label: 'ferret corner-litter-pan search hop (same query as litter-planner; matches on-page small low-sided pan copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription)/, label: 'never hop medications — this page is educational travel gear, not a drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete travel-carrier-checklist offer; every gear CTA is an amazon-brand category search matching on-page carrier and supplies copy (hard-sided carrier, soft-sided carrier, sleep sack / fleece liner, clip-on water bottle, corner litter pan), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

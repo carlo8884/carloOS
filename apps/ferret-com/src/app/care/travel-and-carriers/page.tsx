@@ -1,5 +1,17 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -36,7 +48,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -106,9 +118,34 @@ export default function TravelAndCarriersPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the travel-carrier checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret travel-carrier checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the vet-trip and road-trip order — a hard-sided plastic
+              carrier (or a zipper-secure soft-sided one), a familiar sleep
+              sack or fleece liner, a spill-resistant clip-on water bottle,
+              and a small low-sided litter pan for longer rides. Educational
+              checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret travel-carrier checklist"
+              subtitle="Email the carrier, liner, clip-on water, and travel-litter-pan order. No spam."
+              ctaText="Email my ferret travel-carrier checklist"
+              source="care-travel-and-carriers-under-hero"
+            />
+          </div>
 
           <h2 id="carrier">Choosing a Carrier</h2>
           <p>
@@ -151,6 +188,78 @@ export default function TravelAndCarriersPage() {
             <li><strong>Food:</strong> ferrets have a fast metabolism and short gut transit, so do not expect them to go many hours without eating. Offer their normal food at stops; bring the diet they already eat rather than switching foods on the road, which invites digestive upset.</li>
             <li><strong>Litter:</strong> a small low-sided pan in a larger carrier, or simply plan stops and a clean-up kit. Line the carrier with an absorbent washable liner in case of accidents.</li>
           </ul>
+
+          {/* Money path — live amazon-brand search hops (carrier / travel gear).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop travel-carrier gear
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page carrier and
+              supplies copy — a hard-sided plastic carrier of the type sold
+              for cats and small dogs, a zipper-secure soft-sided carrier, a
+              familiar sleep sack or fleece liner, a spill-resistant clip-on
+              water bottle for rest stops, and a small corner litter pan for
+              a larger carrier. Same hard-sided-carrier hop used on the{' '}
+              <Link
+                href="/tools/readiness-quiz"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                ferret readiness quiz
+              </Link>
+              {' '}and the same sleep-sack hop used on the{' '}
+              <Link
+                href="/tools/cage-size-calculator"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                cage-size calculator
+              </Link>
+              . They are not a ranked product list, they are not
+              medications, and they do not diagnose or replace an exotic-pet
+              veterinarian. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=care-travel-and-carriers"
+                amazonLabel="Browse hard-sided ferret carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+pet+carrier?s=care-travel-and-carriers"
+                amazonLabel="Browse soft-sided pet carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-travel-and-carriers"
+                amazonLabel="Browse ferret sleep sacks and fleece liners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+water+bottle?s=care-travel-and-carriers"
+                amazonLabel="Browse clip-on water bottles for ferrets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-travel-and-carriers"
+                amazonLabel="Browse ferret corner litter pans on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/heat-stroke-prevention" className="text-brand-primary hover:underline">
+                Heat Stroke Prevention
+              </Link>
+              {' · '}
+              <Link href="/health/vet-visit-prep" className="text-brand-primary hover:underline">
+                Vet Visit Prep
+              </Link>
+              {' · '}
+              <Link href="/care/cage-setup" className="text-brand-primary hover:underline">
+                Cage Setup
+              </Link>
+            </p>
+          </div>
 
           <h2 id="stress">Reducing Travel Stress</h2>
           <p>
