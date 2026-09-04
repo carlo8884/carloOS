@@ -1017,6 +1017,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete crate-training-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy crate button that was rendering on this page.',
   },
   {
+    id: 'dog · training-house hops',
+    file: 'apps/dog-com/src/app/training/house-training/page.tsx',
+    mustInclude: [
+      { re: /source="training-house-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my house-training schedule"/, label: 'concrete house-training-schedule offer, not Subscribe' },
+      { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=training-house/, label: 'enzymatic cleaner search hop (same query as new-puppy / puppy-schedule)' },
+      { re: /amazon-brand\/puppy\+training\+treats\?s=training-house/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-house/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
+      { re: /amazon-brand\/dog\+poop\+bags\?s=training-house/, label: 'dog poop bags search hop (same query as new-puppy checklist)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete house-training-schedule offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy cleaner button that was rendering on this page.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [

@@ -1,9 +1,20 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'House Training Guide — The Schedule Method That Works | Dog.com', description: 'Complete house training guide for puppies and adult dogs. The schedule method, accident protocol, common mistakes.', path: '/training/house-training', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'House Training Guide', description: 'The schedule method, accident protocol, and realistic timeline.', url: 'https://dog.com/training/house-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'House Training Guide', description: 'The schedule method, accident protocol, and realistic timeline.', url: 'https://dog.com/training/house-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' })
 
 const howToSchema = buildHowToSchema({
   name: 'How to House Train a Dog',
@@ -40,7 +51,31 @@ export default function HouseTrainingPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the schedule method
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            House-training schedule
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the schedule method, accident protocol, and house-training kit
+            (enzymatic cleaner, high-value treats, crate with divider, poop bags)
+            so you can run the routine without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="House-training schedule"
+            subtitle="Email the schedule method, accident protocol, and house-training kit. No spam."
+            ctaText="Email my house-training schedule"
+            source="training-house-under-hero"
+          />
+        </div>
+
         <h2 id="principle">The Core Principle</h2>
         <p>House training works by making outdoor elimination the path of least resistance through consistent scheduling, and by making indoor accidents impossible (via crate or direct supervision) or unrewarding (via neutral cleanup rather than attention). Punishment does not work — a puppy that is punished for indoor accidents learns to hide their accidents, not to go outside. The goal is to reward the right behavior, not to punish the wrong one.</p>
 
@@ -60,19 +95,65 @@ export default function HouseTrainingPage() {
         <p>If you catch the puppy in the act: a calm, neutral "ah-ah" or clap to interrupt, then immediately take outside. If they finish outside, reward. Never yell, never rub the puppy&apos;s nose in it, never physical punishment — none of these work and all of them damage the relationship and trust required for effective training.</p>
         <p>If you find the accident after the fact: clean it up quietly and completely with an enzymatic cleaner (Nature&apos;s Miracle, Simple Solution) that eliminates the scent residue — regular cleaners leave residue that dogs can smell even when humans cannot, which marks the spot as a bathroom. Do not react to the puppy. There is no teaching opportunity after the fact; the puppy does not connect your current reaction to something that happened minutes or hours ago.</p>
 
+        {/* Money path — live amazon-brand search hops (house-training kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide</div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Enzymatic cleaners break down the proteins in pet waste that standard cleaners miss. This is the single most important supply for house training — without it, the scent marker remains and the spot becomes a repeat target.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/go/amazon-brand/enzymatic+pet+odor+cleaner+natures+miracle?s=training-house" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-              Shop Enzymatic Cleaners on Amazon →
-            </a>
-            <a href="/go/chewy-brand/natures+miracle+pet+stain+odor+remover?s=training-house" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop on Chewy →
-            </a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a house-training kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Enzymatic cleaner is the single most important supply — without it,
+            scent markers invite repeat accidents. Pair it with high-value
+            training treats, a wire crate with a divider for unsupervised time,
+            and poop bags. Same cleaner / treat / crate hops used on the{' '}
+            <Link
+              href="/tools/new-puppy-checklist"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              new-puppy checklist
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/training/puppy-schedule"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              puppy schedule
+            </Link>
+            . They are not a ranked product list and they do not replace the
+            schedule method. Size the crate before you order. Dog.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
+              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+treats?s=training-house"
+              amazonLabel="Browse puppy training treats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-house"
+              amazonLabel="Browse crates on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+poop+bags?s=training-house"
+              amazonLabel="Browse dog poop bags on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/training/crate-training" className="text-brand-primary hover:underline">
+              Crate Training Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-dog-crates" className="text-brand-primary hover:underline">
+              Best Dog Crates 2026
+            </Link>
+          </p>
         </div>
 
         <h2 id="reinforce">Reinforcing Outside Elimination</h2>
