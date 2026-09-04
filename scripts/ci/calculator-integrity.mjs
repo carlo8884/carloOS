@@ -2996,6 +2996,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-skin-allergies paw-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (dog paw wipes, waterproof dog booties), never a placeholder ASIN, a HEPA indoor-air hop (sister dog-allergies page), a chlorhexidine / bathing-product hop, a prescription-diet hop, a medication hop (Apoquel / Cytopoint / Atopica / antihistamines / glucocorticoids), a hot-spot cone hop, or an ear-cleaner hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-arthritis hops',
+    file: 'apps/dog-com/src/app/health/dog-arthritis/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-arthritis-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-arthritis mobility checklist"/, label: 'concrete dog-arthritis mobility-checklist offer, not Subscribe' },
+      { re: /source="health-arthritis"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-dog-arthritis/, label: 'orthopedic-bed search hop (same query as dog health hub; matches on-page rising-from-rest / stiffness-after-rest copy; not a brand ASIN)' },
+      { re: /amazon-brand\/dog\+ramp\?s=health-dog-arthritis/, label: 'dog-ramp search hop (matches on-page stairs / furniture-jump mobility copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(carprofen|rimadyl|meloxicam|metacam|galliprant|grapiprant|deracoxib|nsaid|glucosamine|chondroitin|dasuquin|green-lipped|mussel|omega|fish\+oil|adequan|librela|bedinvetmab|hills|hill\+s|royal\+canin|metabolic|satiety|prescription\+diet|chlorhexidine|shampoo|bathing|traction\+rug|raised\+dog\+bowl|joint\+support|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop NSAIDs, joint supplements, Adequan / Librela, Rx weight diets, food ASINs, chlorhexidine / bathing, or vets.co traction-rug / raised-bowl hops — this page hops only physical orthopedic-bed / dog-ramp gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-arthritis mobility-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (orthopedic dog bed, dog ramp), never a placeholder ASIN, an NSAID hop (carprofen / meloxicam / Galliprant), a joint-supplement hop (glucosamine / chondroitin / green-lipped mussel / omega-3), an Adequan / Librela hop, a prescription-diet hop, a food ASIN, or a chlorhexidine / bathing-product hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
