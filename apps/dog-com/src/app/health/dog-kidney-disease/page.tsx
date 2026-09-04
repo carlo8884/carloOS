@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Kidney Disease in Dogs -- IRIS Staging, SDMA | Dog.com', description: 'Canine CKD: IRIS staging, SDMA early detection, phosphorus restriction, and why 75% of kidney function is lost before creatinine rises.', path: '/health/dog-kidney-disease', type: 'article' })
@@ -24,7 +24,7 @@ export default function DogKidneyPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Related' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }]}
         contentType="health"
         sidebar={<>
-          <TableOfContents items={[{ label: 'IRIS Staging', href: '#iris' }, { label: 'SDMA Early Detection', href: '#sdma' }, { label: 'Phosphorus Restriction', href: '#phosphorus' }, { label: 'Hydration', href: '#hydration' }, { label: 'Monitoring', href: '#monitoring' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'IRIS Staging', href: '#iris' }, { label: 'SDMA Early Detection', href: '#sdma' }, { label: 'Phosphorus Restriction', href: '#phosphorus' }, { label: 'Hydration', href: '#hydration' }, { label: 'Monitoring', href: '#monitoring' }, { label: 'Hydration kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mt-4">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of CKD</div>
             {['Increased drinking and urination', 'Decreased appetite', 'Weight loss', 'Vomiting (uremia)', 'Lethargy', 'Bad breath (ammonia odor)', 'Pale gums (anemia of CKD)'].map(s => (
@@ -43,6 +43,32 @@ export default function DogKidneyPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the CKD hydration checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog kidney-disease hydration checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the hydration notes — a pet water fountain and extra
+              water bowls around the house so a CKD dog can drink more
+              often. Educational checklist, not a diagnosis and not a
+              prescription renal diet. Hill&apos;s k/d, Royal Canin Renal,
+              Purina NF, phosphate binders, and subcutaneous fluids stay
+              off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog kidney-disease hydration checklist"
+              subtitle="Email the fountain and extra-bowl notes. No spam."
+              ctaText="Email my dog kidney hydration checklist"
+              source="health-dog-kidney-disease-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Chronic kidney disease in dogs is a slow-moving, largely silent condition until it is not. The kidneys carry an extraordinary functional reserve -- roughly 75% of nephrons can be lost before creatinine, the most common screening marker, rises above the normal range on a standard blood panel. That reserve is both the organ's resilience and the clinical trap: by the time routine bloodwork flags a problem, the damage is already substantial. Understanding the IRIS staging system, the SDMA biomarker, and the interventions that genuinely slow progression gives veterinarians and owners the tools to act long before crisis arrives.</DropCap>
@@ -91,6 +117,45 @@ export default function DogKidneyPage() {
 
           <h2 id="monitoring">Monitoring Frequency</h2>
           <p>Stage 1-2: every 3-6 months -- bloodwork (creatinine, SDMA, phosphorus, BUN, electrolytes), urinalysis with UPC, blood pressure. Stage 3: every 3 months. Stage 4: every 1-3 months depending on stability. Blood pressure monitoring is essential -- systemic hypertension is common in CKD and accelerates both renal and cardiac disease. When blood pressure is persistently elevated, the veterinarian may prescribe antihypertensive therapy (amlodipine is commonly used in dogs). Proteinuria (assessed via UPC ratio) is another parameter the veterinarian evaluates when deciding whether medications to reduce intraglomerular pressure -- such as ACE inhibitors -- are appropriate; these decisions are individualized based on staging, labs, and the dog's overall clinical picture.</p>
+
+          <h2 id="kit">CKD hydration kit</h2>
+          <p>Everyday physical supplies that match the hydration copy above — a pet water fountain (moving water encourages more drinking in many dogs) and extra water bowls placed around the house. Hill&apos;s k/d, Royal Canin Renal, Purina NF, intestinal phosphate binders, subcutaneous fluids, amlodipine, and ACE inhibitors stay educational copy only — this page never hops prescription renal diets, brand diet ASINs, binders, fluids, or medications. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (fountain / extra
+              water bowls). ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only — reuse live sister
+              queries from the dog water-intake calculator
+              (dog+water+fountain, heavy+ceramic+pet+water+bowl).
+              Prescription renal diets, phosphate binders, subcutaneous
+              fluids, and antihypertensive / ACE-inhibitor medications
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the CKD hydration kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page hydration
+              copy — a pet water fountain and extra water bowls so a CKD
+              dog can drink more often. Everyday physical gear only. They
+              are not a ranked product list, they are not prescription
+              renal diets, they are not medications, and they do not
+              replace a veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+water+fountain?s=health-dog-kidney-disease"
+                amazonLabel="Browse dog water fountains on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"
+                amazonLabel="Browse ceramic pet water bowls on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
