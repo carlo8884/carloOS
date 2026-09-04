@@ -922,6 +922,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret-proofing-checklist offer; every gear CTA is an amazon-brand category search matching on-page proofing copy (floor vent covers, cord covers, hardware cloth, hard-rubber chew toys, dig box), never a placeholder ASIN, a medication hop, or foam. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · bedding-and-litter-types hops',
+    file: 'apps/ferret-com/src/app/care/bedding-and-litter-types/page.tsx',
+    mustInclude: [
+      { re: /source="care-bedding-and-litter-types-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret bedding & litter list"/, label: 'concrete bedding-and-litter shopping-list offer, not Subscribe' },
+      { re: /source="care-bedding-and-litter-types"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-bedding-and-litter-types/, label: 'ferret sleep-sack / cube-bed search hop (same query as cage-size calculator; matches on-page enclosed fleece pouch copy)' },
+      { re: /amazon-brand\/ferret\+hammock\?s=care-bedding-and-litter-types/, label: 'ferret hammock search hop (same query as ferret body-condition score; matches on-page elevated fabric-sling copy)' },
+      { re: /amazon-brand\/ferret\+fleece\+liner\?s=care-bedding-and-litter-types/, label: 'ferret fleece-liner search hop (matches on-page machine-washable cage-level liner copy)' },
+      { re: /amazon-brand\/recycled\+paper\+pellet\+litter\?s=care-bedding-and-litter-types/, label: 'recycled paper-pellet litter search hop (matches on-page default-safe litter copy)' },
+      { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=care-bedding-and-litter-types/, label: 'ferret corner-litter-pan search hop (same query as litter-planner; matches on-page high-back corner-pan copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|cedar|pine\+shavings|clumping\+clay)/, label: 'never hop medications, cedar, pine shavings, or clumping clay — this page is educational bedding/litter gear, not a drug or hazardous-substrate list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete bedding/litter shopping-list offer; every gear CTA is an amazon-brand category search matching on-page bedding and litter copy (fleece sleep sacks / cube beds, hammocks, fleece liners, recycled paper-pellet litter, corner litter pan), never a placeholder ASIN, a medication hop, cedar, pine shavings, or clumping clay. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
