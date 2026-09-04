@@ -2834,6 +2834,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-dental-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (soft toothbrush, enzymatic toothpaste, VOHC dental chews), never a placeholder ASIN, a prescription dental-diet hop (Hill\'s t/d), a brand-ASIN hop (CET / Vetradent / Greenies / Whimzees), a fluoride hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-ear-infections hops',
+    file: 'apps/dog-com/src/app/health/dog-ear-infections/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-ear-infections-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog ear-cleaning checklist"/, label: 'concrete dog-ear-cleaning-checklist offer, not Subscribe' },
+      { re: /source="health-ear-infections"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pet\+ear\+cleaner\?s=health-dog-ear-infections/, label: 'pet ear-cleaner search hop (same query as ferret ear-cleaning; matches on-page veterinary-ear-cleaner copy)' },
+      { re: /amazon-brand\/cotton\+balls\?s=health-dog-ear-infections/, label: 'cotton-balls search hop (matches on-page cotton-ball wipe copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(virbac|epi-otic|epi\+otic|douxo|revolution|bravecto|ivermectin|selamectin|ketoconazole|clotrimazole|ear\+drop|cotton\+swab|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Rx ear drops, parasiticide brands, brand ASINs, cotton swabs, or medication — this page is educational weekly cleaning, not a drug or parasiticide list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-ear-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (veterinary ear cleaner, cotton balls), never a placeholder ASIN, a prescription ear-drop hop, a parasiticide-brand hop (Revolution / Bravecto), a brand-ASIN hop (Virbac Epi-Otic / Douxo Ear), a cotton-swab hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

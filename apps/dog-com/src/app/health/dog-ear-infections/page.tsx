@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -46,6 +46,31 @@ export default function DogEarInfectionsPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the weekly ear-cleaning checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog ear-cleaning checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the weekly ear-cleaning notes — a veterinary ear
+              cleaner and cotton balls for wiping the visible canal and
+              ear flap. Educational checklist, not a diagnosis and not a
+              prescription ear drop. Active infections need a vet exam.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog ear-cleaning checklist"
+              subtitle="Email the weekly ear-cleaning notes. No spam."
+              ctaText="Email my dog ear-cleaning checklist"
+              source="health-dog-ear-infections-under-hero"
+            />
+          </div>
+
           <h2>The Three Types and How to Tell Them Apart</h2>
 
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-4">
@@ -71,6 +96,44 @@ export default function DogEarInfectionsPage() {
 
           <h2>High-Risk Breeds</h2>
           <p>Breeds with heavy, pendulous ears (Cocker Spaniels, Basset Hounds, Bloodhounds) trap moisture and have reduced airflow — predisposing to chronic infections. Breeds with hairy ear canals (Poodles, Schnauzers) may benefit from hair removal by a groomer or veterinarian to improve ventilation. Breeds with allergies (Goldens, Labradors, Frenchies, Bulldogs) are predisposed because ear infection is commonly an allergy manifestation.</p>
+
+          <h2 id="kit">Weekly ear-cleaning kit</h2>
+          <p>Everyday physical supplies that match the home-care copy above — a veterinary ear cleaner to fill the canal, then a cotton ball to wipe the visible canal and ear flap after the dog shakes. Cotton swabs stay out of the canal. Prescription ear drops, parasiticide brands (Revolution, Bravecto), and brand ASINs (Virbac Epi-Otic, Douxo Ear) stay educational copy only — this page never hops Rx drops, parasiticide brands, or medications. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (weekly ear-cleaning kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — reuse the live sister query from
+              ferret.com ear-cleaning (pet+ear+cleaner). Cotton balls
+              match on-page wipe copy. Prescription ear drops,
+              parasiticide brands, and brand ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the weekly ear-cleaning kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              ear-cleaning copy — a veterinary ear cleaner and cotton
+              balls for wiping the visible canal and ear flap. Everyday
+              physical supplies only. They are not a ranked product list,
+              they are not prescription ear drops, they are not
+              medications or parasiticide brands, and they do not replace
+              a veterinarian or cytology. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+ear+cleaner?s=health-dog-ear-infections"
+                amazonLabel="Browse pet ear cleaners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cotton+balls?s=health-dog-ear-infections"
+                amazonLabel="Browse cotton balls on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
