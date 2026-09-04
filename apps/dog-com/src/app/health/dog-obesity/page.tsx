@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -121,6 +123,7 @@ export default function DogObesityPage() {
                 { label: 'Activity Prescription', href: '#activity' },
                 { label: 'Common Pitfalls', href: '#pitfalls' },
                 { label: 'High-Risk Breeds', href: '#breeds' },
+                { label: 'Weigh-in kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
               ]}
             />
@@ -147,6 +150,33 @@ export default function DogObesityPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-obesity weigh-in checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-obesity weigh-in checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the weigh-in notes — a digital pet scale
+              for the every-two-weeks weigh-in, and a slow-feeder
+              bowl so meals take longer. Educational
+              checklist, not a diagnosis and not a diet plan.
+              Prescription weight-management diets, brand food
+              ASINs, and kitchen food-portioning scales stay off
+              this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-obesity weigh-in checklist"
+              subtitle="Email the digital-pet-scale and slow-feeder notes. No spam."
+              ctaText="Email my dog-obesity weigh-in checklist"
+              source="health-dog-obesity-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2025-05-01T00:00:00Z"
@@ -227,7 +257,7 @@ export default function DogObesityPage() {
             <li><strong>Measure all food by weight.</strong> Use a digital kitchen scale and weigh kibble in grams. Measuring cups are inaccurate by 20–30% depending on kibble shape and how the cup is filled — published data documents this consistently. Gram weight is the only reliable measure.</li>
             <li><strong>Account for every treat.</strong> Within 5% of the calorie target if possible; subtract treat calories from the meal ration if treats exceed 10%. Use kibble from the daily ration as training treats, or switch to very low-calorie treats (carrot rounds, green beans, ice cubes).</li>
             <li><strong>Switch to a weight-management diet.</strong> See next section.</li>
-            <li><strong>Weigh every 2 weeks.</strong> Adjust the calorie target by 10% in the appropriate direction if weekly loss is outside the 1–2% range.</li>
+            <li><strong>Weigh every 2 weeks on a digital pet scale</strong> (or the same clinic scale each visit) so the number is consistent. Adjust the calorie target by 10% in the appropriate direction if weekly loss is outside the 1–2% range.</li>
             <li><strong>Re-score BCS monthly.</strong> Scale weight alone can mislead during early weight loss (initial fluid shifts); BCS is the truth.</li>
           </ol>
 
@@ -278,6 +308,43 @@ export default function DogObesityPage() {
           <p>
             For these breeds, the management is the same as for any obese dog but with less margin for error: measure every meal, treat sparingly within the 10% rule, weigh monthly, and maintain BCS 4–5 as a lifelong baseline rather than a recovery target.
           </p>
+
+          <h2 id="kit">Weigh-in kit</h2>
+          <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href="https://vets.co/health/weight-management">vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (digital
+              pet scale / slow-feeder dog bowl). ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER. Category searches
+              only. Rx weight diets, brand food ASINs, and kitchen
+              food-portioning scales are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-obesity weigh-in kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              weigh-in and meal-pacing copy — a digital pet scale and a
+              slow-feeder dog bowl. Everyday physical gear only. They
+              are not a ranked product list, they are not medications,
+              they are not prescription diets, they are not brand food
+              ASINs, they are not kitchen food-portioning scales, and
+              they do not replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+scale?s=health-dog-obesity"
+                amazonLabel="Browse digital pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"
+                amazonLabel="Browse slow-feeder dog bowls on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion
