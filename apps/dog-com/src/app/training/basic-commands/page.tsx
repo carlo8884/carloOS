@@ -1,5 +1,16 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +30,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const COMMANDS = [
@@ -141,25 +152,94 @@ export default function BasicCommandsPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the five commands
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Five-command protocol
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the sit / down / stay / come / leave-it teaching order, session
+            length, and the training kit (high-value treats, treat pouch, clicker,
+            long line) so you can run the protocol without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Five-command protocol"
+            subtitle="Email the five-command teaching order, session length, and training kit. No spam."
+            ctaText="Email my five-command protocol"
+            source="training-basic-commands-under-hero"
+          />
+        </div>
+
         <div style={{ background: 'var(--brand-primary-pale)', borderLeft: '4px solid var(--brand-primary)', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '8px' }}>Session Length</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Keep sessions short: 3–5 minutes for puppies, 5–10 minutes for adult dogs. Multiple short sessions daily produce faster results than one long session. Always end on success — finish with something the dog does well, reward generously, and stop before either of you loses focus.</p>
         </div>
 
+        {/* Money path — live amazon-brand search hops (five-command kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Training Supplies</div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Soft, small, high-value treats (pea-sized pieces) work best for basic command training — they can be delivered quickly and don&apos;t interrupt focus. A treat pouch keeps rewards immediately accessible during sessions.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/go/amazon-brand/soft+small+dog+training+treats?s=training-basic-commands" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-              Shop Training Treats on Amazon →
-            </a>
-            <a href="/go/chewy-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop Treat Pouches on Chewy →
-            </a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a five-command kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Soft, pea-sized treats and a belt-clip pouch keep rewards in the
+            1–2 second window. Pair them with a clicker (or a verbal &quot;yes&quot;)
+            and a 15–30 foot long line for recall before you go off-leash. Same
+            treat hop used on the{' '}
+            <Link
+              href="/training/house-training"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              house-training guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/training/puppy-schedule"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              puppy schedule
+            </Link>
+            . They are not a ranked product list and they do not replace the
+            teaching order. Dog.com earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"
+              amazonLabel="Browse puppy training treats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands"
+              amazonLabel="Browse treat pouches on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+training+clicker?s=training-basic-commands"
+              amazonLabel="Browse dog training clickers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"
+              amazonLabel="Browse long-line leashes on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/training/marker-training" className="text-brand-primary hover:underline">
+              Marker Training
+            </Link>
+            {' · '}
+            <Link href="/training/loose-leash-walking" className="text-brand-primary hover:underline">
+              Loose Leash Walking
+            </Link>
+          </p>
         </div>
 
         {COMMANDS.map(cmd => (
