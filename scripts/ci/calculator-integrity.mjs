@@ -2772,6 +2772,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete arthritis home-setup-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-modification copy (rugs for traction, ramps, raised bowls, orthopedic bedding), never a placeholder ASIN, a medication / vaccine / NSAID hop, or a joint-supplement hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · weight-management hops',
+    file: 'apps/vets-co/src/app/health/weight-management/page.tsx',
+    mustInclude: [
+      { re: /source="health-weight-management-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my kitchen-scale portioning checklist"/, label: 'concrete kitchen-scale portioning-checklist offer, not Subscribe' },
+      { re: /source="health-weight-mgmt"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/kitchen\+gram\+scale\?s=health-weight-management/, label: 'kitchen gram scale search hop (same query as dog/vets calorie calculators; matches on-page kitchen-scale-in-grams copy)' },
+      { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=health-weight-management/, label: 'portion-control food scale search hop (same query as dog ideal-weight / BCS; matches on-page weigh-every-meal copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hill|metabolic|royal|canin|satiety|purina|pro\+plan|overweight\+management|prescription|medication|medicine|rx\b|measuring\+cup|ibuprofen|acetaminophen|naproxen)/, label: 'never hop prescription WM diets, brand ASINs for Rx food, medication, or measuring cups — this page is educational portioning, not a diet or drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete kitchen-scale portioning-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (kitchen gram scale, portion-control food scale), never a placeholder ASIN, a prescription WM diet hop (Hill\'s Metabolic / Royal Canin Satiety / Purina Pro Plan Overweight Management), a medication hop, or a measuring-cup hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

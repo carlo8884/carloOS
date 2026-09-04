@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -45,6 +45,29 @@ export default function WeightManagementPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the kitchen-scale portioning notes
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Kitchen-scale portioning checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the gram-scale portioning notes — weigh every meal in
+              grams and skip the measuring cup. Educational checklist, not
+              a diet plan and not a prescription. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Kitchen-scale portioning checklist"
+              subtitle="Email the gram-scale meal-weighing notes. No spam."
+              ctaText="Email my kitchen-scale portioning checklist"
+              source="health-weight-management-under-hero"
+            />
+          </div>
+
           <h2>Body Condition Score — Assess Your Dog Accurately</h2>
           <p>The 9-point body condition score (BCS) system provides a standardized way to assess fat stores regardless of breed or size. Weight alone is meaningless — a 70-lb Labrador at BCS 5 is ideal; a 70-lb Labrador at BCS 7 is significantly overweight. BCS assesses body composition through hands-on palpation and visual inspection.</p>
           <p><strong>How to assess BCS:</strong> Run your hands along both sides of the ribcage. At BCS 4–5 (ideal): you feel ribs easily with light pressure — like running fingers over the back of your hand. At BCS 6–7: you must press harder to feel ribs — like pressing on your palm. At BCS 8–9: ribs are not palpable or require significant pressure — like pressing on your abdomen. Look at the dog from above (waist visible?) and from the side (abdominal tuck?). A healthy dog has a visible waist and abdominal tuck at BCS 4–5.</p>
@@ -73,6 +96,44 @@ export default function WeightManagementPage() {
           <p><strong>Count treats.</strong> Treats are calories. Ten medium-sized training treats per day for a small dog may represent 15–20% of daily caloric allowance. Either eliminate treats or switch to very low-calorie options (small pieces of carrot, cucumber, green beans) and count them against the daily total.</p>
           <p><strong>All family members must comply.</strong> One person covertly giving extra food or treats eliminates the deficit. Weight management requires household-wide consistency. Identify who is feeding extra and address it directly — it is the most common reason veterinary weight management fails.</p>
           <p><strong>Weigh monthly.</strong> Expect 1–2% body weight loss per month — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
+
+          <h2 id="kit">Kitchen-scale portioning kit</h2>
+          <p>Everyday physical supplies that match the portioning copy above — a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce, not a retail treat hop. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page never hops Rx food, brand ASINs, or medication. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (kitchen / food gram scale).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — reuse live sister queries from the
+              dog calorie calculator (kitchen+gram+scale) and dog
+              ideal-weight / BCS tools (portion+control+food+scale+dog).
+              Measuring cups, commercial treat ASINs, prescription WM
+              diets, and medication are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the kitchen-scale portioning kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page portioning
+              copy — a kitchen scale that measures in grams, and a
+              portion-control food scale for weighing every meal. Everyday
+              physical supplies only. They are not a ranked product list,
+              they are not a prescription weight-management diet, they are
+              not medications, and they do not replace a veterinarian.
+              Vets.co earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/kitchen+gram+scale?s=health-weight-management"
+                amazonLabel="Browse kitchen gram scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"
+                amazonLabel="Browse portion-control food scales on Amazon →"
+              />
+            </div>
+          </div>
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
