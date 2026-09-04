@@ -875,6 +875,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete new-puppy-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · dog-age-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-age-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-age-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-age checklist"/, label: 'concrete dog-age-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/puppy\+food\?s=tools-dog-age/, label: 'puppy food search hop' },
+      { re: /amazon-brand\/puppy\+teething\+toys\?s=tools-dog-age/, label: 'puppy teething toys search hop' },
+      { re: /amazon-brand\/dental\+chews\+dog\?s=tools-dog-age/, label: 'dental chews search hop' },
+      { re: /amazon-brand\/joint\+support\+dog\+treats\?s=tools-dog-age/, label: 'joint-support treats search hop' },
+      { re: /amazon-brand\/dog\+id\+tag\+collar\?s=tools-dog-age/, label: 'ID tag / collar search hop' },
+      { re: /amazon-brand\/dog\+leash\?s=tools-dog-age/, label: 'dog leash search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete dog-age-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret/horse age-calculator hops.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
