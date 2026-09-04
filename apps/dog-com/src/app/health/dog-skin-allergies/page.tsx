@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -32,7 +32,7 @@ export default function DogSkinAllergiesPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Skin Allergies', href: '/health/dog-skin-allergies' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Allergies', href: '/health/dog-allergies', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Dog Ear Infections', href: '/health/dog-ear-infections', category: 'Dog Health' }, { title: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet', category: 'Nutrition' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopy (Environmental)', href: '#atopy' }, { label: 'Food Allergy', href: '#food' }, { label: 'Flea Allergy', href: '#flea' }, { label: 'Apoquel & Cytopoint', href: '#medications' }, { label: 'Immunotherapy', href: '#immunotherapy' }]} />
+          <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopy (Environmental)', href: '#atopy' }, { label: 'Food Allergy', href: '#food' }, { label: 'Flea Allergy', href: '#flea' }, { label: 'Apoquel & Cytopoint', href: '#medications' }, { label: 'Immunotherapy', href: '#immunotherapy' }, { label: 'Paw allergen kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">High-Risk Breeds</div>
             {['West Highland White Terrier', 'French Bulldog', 'Golden Retriever', 'Labrador Retriever', 'Bulldog', 'Boxer', 'Cocker Spaniel', 'German Shepherd'].map(b => (
@@ -45,6 +45,32 @@ export default function DogSkinAllergiesPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the skin-allergies paw checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-skin-allergies paw checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the paw notes — dog paw wipes after outdoor walks and
+              waterproof dog booties when pollen load is high. Educational
+              checklist, not a diagnosis and not a medicated shampoo.
+              Chlorhexidine bathing products, Apoquel, Cytopoint, and
+              food hops stay off this list. Indoor HEPA gear lives on the
+              sister dog-allergies page. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-skin-allergies paw checklist"
+              subtitle="Email the paw-wipe and waterproof-bootie notes. No spam."
+              ctaText="Email my dog-skin-allergies paw checklist"
+              source="health-dog-skin-allergies-under-hero"
+            />
+          </div>
+
           <h2 id="types">The Three Types — How They Differ</h2>
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
             {[
@@ -83,7 +109,45 @@ export default function DogSkinAllergiesPage() {
           <h2 id="immunotherapy">Allergen-Specific Immunotherapy</h2>
           <p>Allergen-specific immunotherapy (ASIT) — allergy shots or sublingual drops — is the only treatment that modifies the underlying immune response rather than just controlling symptoms. Based on intradermal or serum allergy testing identifying specific allergens, a custom immunotherapy solution is formulated and administered as subcutaneous injections (weekly initially, then monthly) or sublingual drops (daily). Response rate: 50–75% good to excellent response, with improvement building over 6–12 months. Requires long-term (often lifelong) commitment. Best outcome when started in young dogs early in the disease course.</p>
 
-          <h2>FAQ</h2>
+          <h2 id="kit">Paw allergen kit</h2>
+          <p>Everyday physical supplies that match the atopy feet-and-pollen copy above — dog paw wipes after outdoor walks, plus waterproof dog booties when pollen or damp ground is part of the exposure. Wiping or covering the feet reduces the allergen load that atopic dogs then lick into the skin. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets, Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications. Indoor HEPA air purifiers and HEPA filter kits stay on the sister <a href="/health/dog-allergies">dog-allergies</a> page. Recovery cones stay on the <a href="/health/dog-hot-spots">hot-spots</a> page. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (dog paw
+              wipes / waterproof dog booties). ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER. Category searches
+              only. Chlorhexidine shampoo, bathing products, Rx
+              allergy meds (Apoquel / Cytopoint / Atopica), food, and
+              HEPA indoor-air gear are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the paw allergen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              feet-and-pollen copy — dog paw wipes and waterproof dog
+              booties. Everyday physical gear only. They are not a
+              ranked product list, they are not medicated shampoos,
+              they are not medications, they are not brand diet ASINs,
+              they are not HEPA indoor-air gear, and they do not
+              replace a veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+paw+wipes?s=health-dog-skin-allergies"
+                amazonLabel="Browse dog paw wipes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/waterproof+dog+booties?s=health-dog-skin-allergies"
+                amazonLabel="Browse waterproof dog booties on Amazon →"
+              />
+            </div>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
