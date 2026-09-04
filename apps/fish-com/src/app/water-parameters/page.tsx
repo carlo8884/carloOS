@@ -25,6 +25,9 @@ import {
   buildBreadcrumbSchema,
   FAQAccordion,
   CalloutBox,
+  EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
@@ -186,6 +189,32 @@ export default function WaterParametersHubPage() {
         <span className="text-brand-text-mid font-medium">Water Parameters</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the weekly test order
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Water-parameter testing checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the weekly test order — ammonia, nitrite, nitrate, and pH on
+            community freshwater, plus KH on planted and reef tanks — and the
+            liquid-kit vs strip note so you can read a crash without scrolling
+            back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Water-parameter testing checklist"
+            subtitle="Email the weekly ammonia / nitrite / nitrate / pH order and when to add KH. No spam."
+            ctaText="Email my water-parameter testing checklist"
+            source="water-parameters-under-hero"
+          />
+        </div>
+      </div>
+
       {/* Intro / overview */}
       <div className="px-container-sm sm:px-container py-12 max-w-content-wide mx-auto">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-4">
@@ -265,6 +294,97 @@ export default function WaterParametersHubPage() {
           Ranges are hobby-literature bands; individual species edge cases listed on each deep-dive
           page.
         </p>
+
+        {/* Money path — live amazon-brand search hops (test + water-change kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop water-parameter testing gear
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A liquid master test kit is how you see ammonia, nitrite, nitrate,
+            and pH at the low end where husbandry decisions happen. Pair it with
+            Seachem Prime (or another dechlorinator) at every fill, a gravel
+            vacuum or Python-style changer for the weekly water change that
+            exports nitrate, and a separate digital thermometer so temperature
+            is not just the heater dial. Same test-kit hop used on the{' '}
+            <Link
+              href="/tools/stocking-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              stocking calculator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same Prime, gravel-vacuum, and Python hops used on the{' '}
+            <Link
+              href="/tools/water-change-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-change calculator
+            </Link>
+            . Same thermometer hop used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/equipment" className="text-brand-primary no-underline hover:underline">
+              equipment hub
+            </Link>
+            . They are not a ranked product list — ranked kits live on{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit reviews
+            </Link>
+            . Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=water-parameters"
+              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters"
+              amazonLabel="Browse gravel vacuums on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/python+water+changer?s=water-parameters"
+              amazonLabel="Browse Python-style water changers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=water-parameters"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/tools/water-change-calculator" className="text-brand-primary hover:underline">
+              Water Change Calculator
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+            {' · '}
+            <Link href="/setup/water-chemistry-guide" className="text-brand-primary hover:underline">
+              Water Chemistry Guide
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* How to interpret a full test */}
