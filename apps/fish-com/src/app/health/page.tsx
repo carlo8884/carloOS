@@ -1,6 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import {
+  buildMetadata,
+  buildBreadcrumbSchema,
+  combineSchemas,
+  SchemaScript,
+  DirectoryPlacesCta,
+  EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { Diseases, RESERVED_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
@@ -70,6 +79,35 @@ export default function FishHealthPage() {
         primaryCta={{ href: '/health/fish-disease-guide', label: 'Diagnose a sick fish' }}
         secondaryCta={{ href: '/tools/water-change-calculator', label: 'Plan a water change' }}
       />
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the test-first health order
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Aquarium health checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the water-chemistry, disease-identification, and nitrogen-cycle
+            order — liquid-test ammonia, nitrite, and nitrate first, isolate a
+            sick fish in a spare hospital tank with a seeded sponge filter, and
+            hold a stable temperature with a heater plus a separate digital
+            thermometer — so you can diagnose without scrolling back. Educational
+            husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Aquarium health checklist"
+            subtitle="Email the test-first, isolate, hold-temp order. No spam."
+            ctaText="Email my aquarium health checklist"
+            source="health-hub-under-hero"
+          />
+        </div>
+      </div>
+
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
           {GUIDES.map(g => (
@@ -79,6 +117,114 @@ export default function FishHealthPage() {
               <div className="text-xs text-brand-text-light">{g.desc}</div>
             </Link>
           ))}
+        </div>
+
+        {/* Money path — live amazon-brand search hops (health-library kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop aquarium health gear
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Water chemistry is how you diagnose before you treat. A liquid
+            master kit is how you see ammonia, nitrite, and nitrate — the
+            nitrogen-cycle numbers that look like disease — before you isolate
+            a sick fish. Pair it with a spare hospital tank and a seeded sponge
+            filter so treatment stays off the display biofilter, plus a heater
+            and a separate digital thermometer to hold a stable temperature
+            (the ich heat-method kit). Same test-kit hop used on the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/health/medicating-aquarium-fish"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              medicating aquarium fish guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/setup/quarantine-tank-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              quarantine tank guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/health/ich-treatment"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              ich treatment guide
+            </Link>
+            . Same heater hop used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/health/velvet-disease"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              velvet disease guide
+            </Link>
+            . The hops below are not a ranked product list, they are not
+            medications, and they do not treat, reverse, or cure disease.
+            Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-hub"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-hub"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-hub"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-hub"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/health/nitrogen-cycle-explained" className="text-brand-primary hover:underline">
+              Nitrogen Cycle Explained
+            </Link>
+            {' · '}
+            <Link href="/tools/water-change-calculator" className="text-brand-primary hover:underline">
+              Water Change Calculator
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
         </div>
       </div>
       {/* agent1-browse-all-start */}
