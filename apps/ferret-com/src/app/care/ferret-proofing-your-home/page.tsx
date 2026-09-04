@@ -1,5 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  FAQAccordion,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +48,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -136,9 +149,35 @@ export default function FerretProofingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret-proofing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret-proofing room checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the dedicated-room order — floor vent covers to screen
+              heating and AC openings, cord covers so electrical cables stay
+              out of reach, hardware cloth to screen gaps and furniture
+              undersides, hard-rubber chew toys (no foam), and a dig box so
+              the proofed room has safe work to do. Educational checklist,
+              not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret-proofing room checklist"
+              subtitle="Email the vent-cover, cord-cover, hardware-cloth, hard-toy, and dig-box order. No spam."
+              ctaText="Email my ferret-proofing checklist"
+              source="care-ferret-proofing-your-home-under-hero"
+            />
+          </div>
 
           <h2 id="how-differ">How Ferret-Proofing Differs From Puppy-Proofing</h2>
           <p>
@@ -195,6 +234,81 @@ export default function FerretProofingPage() {
             <li><strong>Toxic foods.</strong> Chocolate, onions, raisins, xylitol, and other human foods are dangerous to ferrets; the full list is in our <a href="/care/toxic-foods">toxic foods</a> guide. Keep counters and trash inaccessible.</li>
             <li><strong>Electrical cords.</strong> Bundle, cover, or route them out of reach to prevent both shock and chewing damage.</li>
           </ul>
+
+          {/* Money path — live amazon-brand search hops (proofing / safe-room gear).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop ferret-proofing setup
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page room-by-room
+              copy — floor vent covers for heating and AC openings, cord
+              covers so electrical cables stay bundled and out of reach,
+              hardware cloth to screen gaps and the undersides of
+              upholstered furniture, hard-rubber ferret chew toys (durable
+              plastic only — no foam), and a dig box so the dedicated
+              free-roam room has safe work to do. Same ferret-chew-toy hop
+              used on the{' '}
+              <Link
+                href="/care/toxic-foods"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                toxic-foods
+              </Link>
+              {' '}guide and the same dig-box hop used on the{' '}
+              <Link
+                href="/tools/readiness-quiz"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                ferret readiness quiz
+              </Link>
+              . They are not a ranked product list, they are not
+              medications, and they do not diagnose or replace an exotic-pet
+              veterinarian. Soft rubber, foam, and household toxins stay off
+              this list on purpose. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/floor+vent+cover?s=care-ferret-proofing-your-home"
+                amazonLabel="Browse floor vent covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cable+cord+cover?s=care-ferret-proofing-your-home"
+                amazonLabel="Browse cable and cord covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hardware+cloth?s=care-ferret-proofing-your-home"
+                amazonLabel="Browse hardware cloth on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+chew+toys?s=care-ferret-proofing-your-home"
+                amazonLabel="Browse hard-rubber ferret chew toys on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+dig+box?s=care-ferret-proofing-your-home"
+                amazonLabel="Browse ferret dig boxes on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/exercise-and-enrichment" className="text-brand-primary hover:underline">
+                Exercise &amp; Enrichment
+              </Link>
+              {' · '}
+              <Link href="/care/toxic-foods" className="text-brand-primary hover:underline">
+                Toxic Foods
+              </Link>
+              {' · '}
+              <Link href="/health/gastrointestinal-blockage" className="text-brand-primary hover:underline">
+                Gastrointestinal Blockage
+              </Link>
+            </p>
+          </div>
 
           <h2 id="safe-room">Building a Safe Free-Roam Room</h2>
           <p>

@@ -900,6 +900,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete travel-carrier-checklist offer; every gear CTA is an amazon-brand category search matching on-page carrier and supplies copy (hard-sided carrier, soft-sided carrier, sleep sack / fleece liner, clip-on water bottle, corner litter pan), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · ferret-proofing-your-home hops',
+    file: 'apps/ferret-com/src/app/care/ferret-proofing-your-home/page.tsx',
+    mustInclude: [
+      { re: /source="care-ferret-proofing-your-home-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-proofing checklist"/, label: 'concrete ferret-proofing-checklist offer, not Subscribe' },
+      { re: /source="care-ferret-proofing-your-home"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/floor\+vent\+cover\?s=care-ferret-proofing-your-home/, label: 'floor vent-cover search hop (matches on-page screen-or-cover heating-and-AC-vents copy)' },
+      { re: /amazon-brand\/cable\+cord\+cover\?s=care-ferret-proofing-your-home/, label: 'cable/cord-cover search hop (matches on-page bundle-cover-or-route electrical-cords copy)' },
+      { re: /amazon-brand\/hardware\+cloth\?s=care-ferret-proofing-your-home/, label: 'hardware-cloth search hop (matches on-page screen-gaps-and-furniture-undersides copy)' },
+      { re: /amazon-brand\/ferret\+chew\+toys\?s=care-ferret-proofing-your-home/, label: 'ferret chew-toy search hop (same query as toxic-foods; matches on-page hard-rubber / durable-plastic copy)' },
+      { re: /amazon-brand\/ferret\+dig\+box\?s=care-ferret-proofing-your-home/, label: 'ferret dig-box search hop (same query as readiness quiz; matches on-page safe-enrichment copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|xylitol|rodenticide|foam)/, label: 'never hop medications, toxins, or foam — this page is educational proofing gear, not a drug or ingestible-foam list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret-proofing-checklist offer; every gear CTA is an amazon-brand category search matching on-page proofing copy (floor vent covers, cord covers, hardware cloth, hard-rubber chew toys, dig box), never a placeholder ASIN, a medication hop, or foam. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
