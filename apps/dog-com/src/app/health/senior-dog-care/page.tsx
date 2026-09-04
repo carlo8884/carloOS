@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -100,6 +100,7 @@ export default function SeniorDogCarePage() {
           { label: 'Senior Vet Schedule', href: '#schedule' },
           { label: 'Exercise Adaptation', href: '#exercise' },
           { label: 'Nutrition', href: '#nutrition' },
+          { label: 'Senior care kit', href: '#kit' },
           { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related Guides" links={[
@@ -116,6 +117,30 @@ export default function SeniorDogCarePage() {
       </>}
     >
       <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the senior-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Senior-dog care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the senior-formula, monthly weigh-in, and joint-care notes
+              — a senior formula (not a prescription kidney diet), a
+              portion-control food scale for monthly body weight / BCS, and
+              joint-support treats as a husbandry category. Educational
+              checklist, not a diagnosis and not a medication order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Senior-dog care checklist"
+              subtitle="Email the senior-formula, monthly weigh-in, and joint-care notes. No spam."
+              ctaText="Email my senior-dog care checklist"
+              source="health-senior-dog-care-under-hero"
+            />
+          </div>
 
         <h2 id="when">When Is a Dog Senior?</h2>
         <p>The answer depends on size. Small breeds (under 20 lbs) age slowly — a 10-year-old Chihuahua is early senior. Giant breeds age rapidly — a 6-year-old Great Dane is already entering senior territory. Large breeds like Golden Retrievers and German Shepherds are considered senior at 7–8 years. This matters because it determines when to shift to twice-yearly vet exams, when to begin cancer screening, and when to start senior nutritional adjustments.</p>
@@ -164,6 +189,50 @@ export default function SeniorDogCarePage() {
           <li><strong>Prescription kidney diet</strong> if CKD is diagnosed — reduced phosphorus formulas (Hill&apos;s k/d, Royal Canin Renal Support) slow disease progression</li>
           <li><strong>Cognitive function diets</strong> — Hill&apos;s b/d or Purina Pro Plan Bright Mind if CCD is present or concerning</li>
         </ul>
+
+        <h2 id="kit">Senior care kit</h2>
+        <p>Everyday physical supplies that match the senior-care copy above — a senior formula (lower calorie density, typically higher protein), a portion-control food scale for monthly body weight and BCS checks plus the 10–15% portion adjustment, and joint-support treats as a husbandry category beside the arthritis notes. Fish oil (EPA/DHA), glucosamine/chondroitin bottles, NSAIDs, selegiline/Anipryl, and prescription kidney or cognitive diets (Hill&apos;s k/d, Royal Canin Renal Support, Hill&apos;s b/d, Purina Pro Plan Bright Mind) stay educational copy only — this page never hops Rx food, brand ASINs, supplements as medication, or drugs. Orthopedic beds and ramps are not named on this page, so they stay off the kit. This page does not claim hands-on testing.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops (senior formula, joint
+            treats, portion scale). ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Category searches only — reuse live sister
+            queries from dog-age / BCS (joint+support+dog+treats,
+            portion+control+food+scale+dog). Senior-formula search matches
+            on-page "senior formula food" copy. Prescription kidney /
+            cognitive diets, fish-oil bottles, and medication are not
+            shoppable hops. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the senior care kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page senior-care
+            copy — senior formula food, joint-support treats, and a
+            portion-control food scale for monthly weigh-ins and portion
+            adjustments. Everyday physical supplies only. They are not a
+            ranked product list, they are not a prescription kidney or
+            cognitive diet, they are not medications, and they do not
+            replace a veterinarian. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/senior+dog+food?s=health-senior-dog-care"
+              amazonLabel="Browse senior dog food on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/joint+support+dog+treats?s=health-senior-dog-care"
+              amazonLabel="Browse joint-support dog treats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=health-senior-dog-care"
+              amazonLabel="Browse portion-control food scales on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} allowMultiple />

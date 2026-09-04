@@ -2792,6 +2792,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete kitchen-scale portioning-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (kitchen gram scale, portion-control food scale), never a placeholder ASIN, a prescription WM diet hop (Hill\'s Metabolic / Royal Canin Satiety / Purina Pro Plan Overweight Management), a medication hop, or a measuring-cup hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · senior-dog-care hops',
+    file: 'apps/dog-com/src/app/health/senior-dog-care/page.tsx',
+    mustInclude: [
+      { re: /source="health-senior-dog-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my senior-dog care checklist"/, label: 'concrete senior-dog-care-checklist offer, not Subscribe' },
+      { re: /source="health-senior-dog"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/senior\+dog\+food\?s=health-senior-dog-care/, label: 'senior dog food search hop (matches on-page senior-formula-food copy; not an Rx kidney diet)' },
+      { re: /amazon-brand\/joint\+support\+dog\+treats\?s=health-senior-dog-care/, label: 'joint-support treats search hop (same query as dog-age / BCS; matches on-page arthritis / joint-health copy)' },
+      { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=health-senior-dog-care/, label: 'portion-control food scale search hop (same query as dog ideal-weight / BCS; matches on-page monthly weigh / BCS / 10–15% portion copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hill|k\/d|renal|bright\+mind|royal|canin|prescription|medication|medicine|rx\b|selegiline|anipryl|nsaid|ibuprofen|acetaminophen|naproxen|fish\+oil|omega|glucosamine|chondroitin|same|neutricks|orthopedic\+dog\+bed|dog\+ramp)/, label: 'never hop Rx kidney / cognitive diets, brand ASINs for Rx food, medication, fish-oil / supplement ASINs, or unnamed mobility gear — this page is educational senior husbandry, not a drug or Rx-diet list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete senior-dog-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (senior formula food, joint-support treats, portion-control food scale), never a placeholder ASIN, a prescription kidney / cognitive diet hop (Hill\'s k/d / Royal Canin Renal Support / Hill\'s b/d / Purina Pro Plan Bright Mind), a medication hop, a fish-oil / supplement hop, or unnamed mobility gear (beds / ramps). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
