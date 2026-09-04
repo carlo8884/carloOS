@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
@@ -26,7 +26,7 @@ export default function DogArthritisPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Best Joint Supplements', href: '/reviews/best-joint-supplements', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Newer Treatments: Librela (bedinvetmab)', href: '/health/dog-arthritis#newer', category: 'Dog Health' }]}
         contentType="health"
         sidebar={<>
-          <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }, { label: 'Mobility kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Health Hub', href: '/health' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Arthritis + Insurance</div>
@@ -39,6 +39,32 @@ export default function DogArthritisPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-arthritis mobility checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-arthritis mobility checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-mobility notes — an orthopedic dog bed
+              for dogs that struggle to rise from rest, and a dog ramp
+              when stairs or furniture jumps have become hard. Educational
+              checklist, not a diagnosis and not a medication list.
+              NSAIDs, joint supplements, Adequan, Librela, and
+              prescription weight diets stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-arthritis mobility checklist"
+              subtitle="Email the orthopedic-bed and dog-ramp notes. No spam."
+              ctaText="Email my dog-arthritis mobility checklist"
+              source="health-dog-arthritis-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Osteoarthritis is the most common source of chronic pain in dogs — yet most affected animals go untreated because their owners attribute the signs to normal aging. Understanding the subtle early signs, and the multimodal treatments that genuinely work, can restore a dog's quality of life for years.</DropCap>
@@ -82,6 +108,43 @@ export default function DogArthritisPage() {
           <h2 id="newer">Newer Treatments</h2>
           <p><strong>Librela (bedinvetmab):</strong> A monoclonal antibody targeting nerve growth factor (NGF), a key pain mediator in osteoarthritis. Monthly injection. <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> approved in 2023. Clinical trials showed significant improvement in pain and mobility scores with minimal side effects. A meaningful advance — particularly for dogs that cannot tolerate NSAIDs due to kidney or liver disease.</p>
           <p><strong>Adequan (polysulfated glycosaminoglycan):</strong> Injectable — administered by injection twice weekly for 4 weeks, then monthly. Inhibits cartilage-degrading enzymes and may support cartilage repair. Used as a disease-modifying treatment in early arthritis.</p>
+
+          <h2 id="kit">Mobility kit</h2>
+          <p>Everyday physical supplies that match the mobility-and-comfort copy above — an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a> page. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (orthopedic
+              dog bed / dog ramp). ShopCtas hides empty Chewy; never
+              href="#" or PLACEHOLDER. Category searches only.
+              NSAIDs, joint supplements, Adequan / Librela, Rx
+              weight diets, and food ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-arthritis mobility kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              mobility-and-comfort copy — an orthopedic dog bed and a
+              dog ramp. Everyday physical gear only. They are not a
+              ranked product list, they are not medications, they are
+              not joint-supplement ASINs, they are not prescription
+              diets, they are not brand food ASINs, and they do not
+              replace a veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-dog-arthritis"
+                amazonLabel="Browse orthopedic dog beds on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+ramp?s=health-dog-arthritis"
+                amazonLabel="Browse dog ramps on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
