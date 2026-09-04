@@ -1150,6 +1150,24 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete quiet-barking-plan offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · training-marker-training hops',
+    file: 'apps/dog-com/src/app/training/marker-training/page.tsx',
+    mustInclude: [
+      { re: /source="training-marker-training-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my marker-training protocol"/, label: 'concrete marker-training-protocol offer, not Subscribe' },
+      { re: /amazon-brand\/dog\+training\+clicker\?s=training-marker-training/, label: 'dog training clicker search hop (same query as basic-commands)' },
+      { re: /amazon-brand\/puppy\+training\+treats\?s=training-marker-training/, label: 'puppy training treats search hop (same query as basic-commands / house-training / puppy-schedule)' },
+      { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-marker-training/, label: 'treat pouch search hop (same query as basic-commands / loose-leash / leash-reactivity)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete marker-training-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
