@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -74,6 +74,30 @@ export default function NitrogenCyclePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the 0/0 confirmation plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fishless-cycling checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the fishless-cycle order — dechlorinate, dose a measured
+            ammonia source, test ammonia, nitrite, and nitrate every 2–3
+            days, and wait for the 24-hour 0/0 confirmation before adding
+            fish. Educational husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Fishless-cycling checklist"
+            subtitle="Email the dechlorinate, ammonia-dose, and 0/0 confirmation order. No spam."
+            ctaText="Email my fishless-cycling checklist"
+            source="health-nitrogen-cycle-under-hero"
+          />
+        </div>
 
         <div id="tldr">
           <CalloutBox variant="info" title="The short answer">
@@ -176,16 +200,110 @@ export default function NitrogenCyclePage() {
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} />
 
-        <ArticleSourcesList sources={SOURCES} />
+        {/* Money path — live amazon-brand search hops (fishless-cycle kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-          <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Cycling Test Kits</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#4a6573', lineHeight: 1.55 }}>Cycling monitoring requires daily ammonia/nitrite/nitrate testing. API Master Kit is the standard; Salifert + Seachem alternatives for higher-precision needs. This is husbandry equipment, not a substitute for veterinary care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/api%20freshwater%20master%20test%20kit%20ammonia%20nitrite%20nitrate?s=health-nitrogen-cycle-explained" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/api%20freshwater%20master%20test%20kit%20ammonia%20nitrite%20nitrate?s=health-nitrogen-cycle-explained" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a fishless-cycling kit
           </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A liquid master kit is how you see ammonia, nitrite, and nitrate
+            through the three stages and confirm the 24-hour 0/0 test before
+            adding fish. Seachem Prime (or another dechlorinator) is how you
+            fill the tank without chlorine killing the colony. A measured
+            ammonium-chloride source is how you run a fishless cycle. Bottled
+            nitrifiers shorten the wait; a seeded sponge filter is the
+            fastest media transfer from an established tank. Same test-kit
+            hop used on the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/water-parameters"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-parameters hub
+            </Link>
+            . Same Prime hop used on the{' '}
+            <Link
+              href="/tools/water-change-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-change calculator
+            </Link>
+            {' '}and the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . Same ammonium-chloride, bottled-bacteria, and sponge-filter
+            hops used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link href="/health/gill-flukes" className="text-brand-primary no-underline hover:underline">
+              gill-flukes guide
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure new-tank syndrome.
+            Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle"
+              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle"
+              amazonLabel="Browse fishless-cycling ammonia on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle"
+              amazonLabel="Browse bottled bacteria starter on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/aquarium-cycling-guide" className="text-brand-primary hover:underline">
+              Aquarium Cycling Guide
+            </Link>
+            {' · '}
+            <Link href="/health/new-tank-syndrome" className="text-brand-primary hover:underline">
+              New Tank Syndrome
+            </Link>
+            {' · '}
+            <Link href="/tools/aquarium-cycling-estimator" className="text-brand-primary hover:underline">
+              Cycling Estimator
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+            {' · '}
+            <Link href="/water-parameters" className="text-brand-primary hover:underline">
+              Water Parameters
+            </Link>
+          </p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
 
       </div>
       </ArticleLayout>
