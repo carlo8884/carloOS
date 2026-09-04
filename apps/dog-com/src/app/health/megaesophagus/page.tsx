@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -45,6 +45,32 @@ export default function MegaesophagusPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Bailey-chair feeding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog megaesophagus Bailey-chair checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the upright-feeding notes — a Bailey chair or other
+              near-vertical feeding chair so gravity can move food into
+              the stomach after each meal. Educational checklist, not a
+              diagnosis and not a prescription diet. Canine Caviar,
+              myasthenia gravis medications, and antibiotics for
+              aspiration pneumonia stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog megaesophagus Bailey-chair checklist"
+              subtitle="Email the Bailey-chair and upright-feeding notes. No spam."
+              ctaText="Email my dog Bailey chair checklist"
+              source="health-megaesophagus-under-hero"
+            />
+          </div>
+
           <h2>Regurgitation vs Vomiting — The Critical Distinction</h2>
           <p>Owners often describe megaesophagus as "vomiting" but the distinction matters diagnostically. Vomiting is an active, forceful process — the dog retches, the abdomen contracts, there is effort. Regurgitation is passive — food or fluid comes up without active effort, often as a tube-shaped mass of undigested food (the food never reached the stomach to be digested, so it retains its shape). The dog may not show warning signs before regurgitation and may be surprised by it. This passive, effortless expulsion of undigested food is the hallmark of megaesophagus and esophageal disease generally.</p>
 
@@ -61,6 +87,43 @@ export default function MegaesophagusPage() {
 
           <h2>Causes and Diagnostics</h2>
           <p>Megaesophagus may be congenital (present from birth — diagnosed when puppies begin eating solid food) or acquired (develops later in life from neuromuscular disease). Acquired causes include myasthenia gravis (the most common cause of acquired megaesophagus in adult dogs — an immune-mediated condition affecting the neuromuscular junction), hypothyroidism, hypoadrenocorticism (Addison's disease), and toxin exposure. Thoracic radiographs show the dilated esophagus. Fluoroscopic swallow study (barium swallow) demonstrates the functional deficit. In acquired megaesophagus, testing for underlying causes — specifically acetylcholine receptor antibody titer for myasthenia gravis — is essential because treating the underlying condition may resolve the megaesophagus.</p>
+
+          <h2 id="kit">Bailey-chair feeding kit</h2>
+          <p>Everyday physical supplies that match the upright-feeding copy above — a Bailey chair or other near-vertical feeding chair that holds the dog in a sitting-bear position during the meal and for 10–30 minutes afterward. Canine Caviar, prescription diets, myasthenia gravis medications, and antibiotics for aspiration pneumonia stay educational copy only — this page never hops brand foods, diet ASINs, or medications. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (Bailey chair /
+              upright feeding chair). ShopCtas hides empty Chewy; never
+              href="#" or PLACEHOLDER. Category searches only.
+              Canine Caviar, prescription diets, myasthenia gravis
+              medications, and antibiotics are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Bailey-chair feeding kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page upright-
+              feeding copy — a Bailey chair and other near-vertical
+              feeding chairs so gravity can move food into the stomach.
+              Everyday physical gear only. They are not a ranked product
+              list, they are not prescription diets, they are not
+              medications, they are not brand ASINs, and they do not
+              replace a veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/bailey+chair+dog?s=health-megaesophagus"
+                amazonLabel="Browse Bailey chairs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/upright+dog+feeding+chair?s=health-megaesophagus"
+                amazonLabel="Browse upright feeding chairs on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
