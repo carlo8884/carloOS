@@ -1407,6 +1407,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete columnaris isolate-and-cool checklist offer; every gear CTA is an amazon-brand category search matching on-page water-quality / hospital-isolation / cool-hold copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-pop-eye hops',
+    file: 'apps/fish-com/src/app/health/pop-eye/page.tsx',
+    mustInclude: [
+      { re: /source="health-pop-eye-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my pop-eye isolate-and-test checklist"/, label: 'concrete isolate-and-test / hospital-tank-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-pop-eye/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-pop-eye/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-pop-eye/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-pop-eye/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / bacterial-infections / columnaris)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-pop-eye/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / bacterial-infections / columnaris)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete pop-eye isolate-and-test checklist offer; every gear CTA is an amazon-brand category search matching on-page water-quality / hospital-isolation copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
