@@ -2813,6 +2813,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete senior-dog-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (senior formula food, joint-support treats, portion-control food scale), never a placeholder ASIN, a prescription kidney / cognitive diet hop (Hill\'s k/d / Royal Canin Renal Support / Hill\'s b/d / Purina Pro Plan Bright Mind), a medication hop, a fish-oil / supplement hop, or unnamed mobility gear (beds / ramps). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-dental-care hops',
+    file: 'apps/dog-com/src/app/health/dog-dental-care/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-dental-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog dental-care checklist"/, label: 'concrete dog-dental-care-checklist offer, not Subscribe' },
+      { re: /source="health-dental"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+pet\+toothbrush\?s=health-dog-dental-care/, label: 'soft pet-toothbrush search hop (same query as vets dental-cleaning-guide; matches on-page soft-bristled-toothbrush copy)' },
+      { re: /amazon-brand\/enzymatic\+pet\+toothpaste\?s=health-dog-dental-care/, label: 'enzymatic pet-toothpaste search hop (same query as vets dental-cleaning-guide; matches on-page enzymatic-toothpaste copy)' },
+      { re: /amazon-brand\/dental\+chews\+dog\?s=health-dog-dental-care/, label: 'dental-chews search hop (same query as dog health hub / vets dental-cleaning-guide; matches on-page VOHC dental-chews copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hill|t\/d|prescription|medication|medicine|rx\b|fluoride|cet|vetradent|greenies|whimzees|anesthesia|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Rx dental diets, brand ASINs, fluoride toothpaste, medication, or anesthesia gear — this page is educational daily home care, not a drug or Rx-diet list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-dental-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (soft toothbrush, enzymatic toothpaste, VOHC dental chews), never a placeholder ASIN, a prescription dental-diet hop (Hill\'s t/d), a brand-ASIN hop (CET / Vetradent / Greenies / Whimzees), a fluoride hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
