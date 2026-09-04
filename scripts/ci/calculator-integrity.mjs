@@ -3097,6 +3097,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-cherry-eye recovery-collar-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (soft e-collar so the dog cannot paw the prolapsed gland, dog eye wipes as a moisture bridge), never a placeholder ASIN, a hot-spot recovery-cone hop (sister dog-hot-spots page), a HEPA hop, a paw-wipe / bootie hop, an orthopedic-bed / dog-ramp hop, a pet-scale / slow-feeder hop, a knee-brace / rear-support-harness hop, a recovery-crate / belly-support / wheelchair hop, an Rx eye-drop hop (cyclosporine / tacrolimus), an NSAID hop, or a supplement hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-diarrhea hops',
+    file: 'apps/dog-com/src/app/health/dog-diarrhea/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-diarrhea-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-diarrhea home-care checklist"/, label: 'concrete dog-diarrhea home-care-checklist offer, not Subscribe' },
+      { re: /source="health-diarrhea"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+probiotic\?s=health-dog-diarrhea/, label: 'dog-probiotic search hop (category search matching on-page canine-specific OTC digestive-support probiotic copy; not a FortiFlora brand ASIN)' },
+      { re: /amazon-brand\/plain\+canned\+pumpkin\+dog\?s=health-dog-diarrhea/, label: 'plain canned-pumpkin search hop (matches on-page 100% pumpkin / not-pie-filling copy; unique vs #993–#1008)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|metronidazole|antibiotic|imodium|loperamide|pepto|fortiflora|hills|hill\+s|royal\+canin|prescription\+diet|gastrointestinal|i\+d\b|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), FortiFlora brand ASINs, metronidazole / antibiotics, Imodium / Pepto, or prescription GI diets — this page hops only OTC dog-probiotic / plain-canned-pumpkin products' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-diarrhea home-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-care copy (canine-specific OTC dog probiotic for digestive support, optional plain canned pumpkin), never a placeholder ASIN, a FortiFlora brand ASIN, a cherry-eye soft-e-collar / eye-wipe hop (#1008), a slow-feeder hop (sister dog-obesity page), a metronidazole / antibiotic hop, an Imodium / Pepto hop, or a prescription-GI-diet hop (Hill\'s i/d / Royal Canin Gastrointestinal). Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
