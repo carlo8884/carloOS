@@ -1552,6 +1552,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete low-stress tank checklist offer; every gear CTA is an amazon-brand category search matching on-page liquid-test-kit / heater / thermometer / quarantine copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-medicating-fish hops',
+    file: 'apps/fish-com/src/app/health/medicating-aquarium-fish/page.tsx',
+    mustInclude: [
+      { re: /source="health-medicating-fish-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hospital-tank dosing checklist"/, label: 'concrete hospital-tank dosing checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-medicating-fish/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot / stress-immunity)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-medicating-fish/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / fin-rot / stress-immunity)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-medicating-fish/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot; no live aquarium+air+pump key on sister pages)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-medicating-fish/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / bacterial-infections / columnaris / pop-eye / stress-immunity)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /aquarium\+digital\+thermometer/, label: 'omit thermometer hop — medicating copy is hospital-tank / volume / carbon-off / aeration, not a heat method' },
+      { re: /amazonHref=["'][^"']*(ich-x|kanaplex|pimafix|super\+ick|fish\+medication|fish\+medicine)/, label: 'never hop medications — this page is hospital-tank husbandry, not a drug list' },
+    ],
+    why: 'Money path: under-hero capture with a concrete hospital-tank dosing checklist offer; every gear CTA is an amazon-brand category search matching on-page test-water-first / hospital-isolation / sponge-filter aeration / heater copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
