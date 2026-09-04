@@ -1154,6 +1154,25 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete saddle-fit-checklist offer; every gear CTA is an amazon-brand category search matching on-page pad / half-pad / shim / girth-or-cinch copy (saddle pad, sheepskin half-pad, saddle shims, girth or cinch), never a placeholder ASIN, a medication hop, or an invented wither-pad / measuring-tape hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · equine-dental-care hops',
+    file: 'apps/horses-com/src/app/guides/equine-dental-care/page.tsx',
+    mustInclude: [
+      { re: /source="guide-dental-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my equine dental-care checklist"/, label: 'concrete equine-dental-care-checklist offer, not Subscribe' },
+      { re: /source="guide-dental"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+hay\+cubes\?s=guides-equine-dental-care/, label: 'hay-cubes search hop (matches on-page soaked-hay-cubes copy)' },
+      { re: /amazon-brand\/horse\+mash\?s=guides-equine-dental-care/, label: 'mash search hop (matches on-page mashes copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|bute|phenylbutazone|banamine|detomidine|butorphanol|apple\+sauce|applesauce|syringe|oral\+paste|float|speculum|wolf\+teeth|eotrh|antifungal|antibiotic)/, label: 'never hop medications, floating-procedure kits, apple sauce, syringes, or invented dental gear — this page is educational post-float soft feed, not a drug or vet-procedure list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete equine-dental-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page post-float soft-feed copy (soaked hay cubes, mashes), never a placeholder ASIN, a medication hop, a floating-procedure kit, or an invented apple-sauce / syringe / oral-paste hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

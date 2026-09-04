@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -124,6 +124,7 @@ export default function EquineDentalCarePage() {
             { label: 'EOTRH — Senior Horses', href: '#eotrh' },
             { label: 'Other Common Conditions', href: '#other' },
             { label: 'Cost &amp; Practitioners', href: '#cost' },
+            { label: 'Dental-Care Kit', href: '#kit' },
             { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
@@ -156,9 +157,33 @@ export default function EquineDentalCarePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dental-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse dental-care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the owner-side recovery notes — soaked hay cubes or a
+              mash for the first day after significant dental work, plus the
+              annual-exam cadence. Educational checklist, not a diagnosis.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse dental-care checklist"
+              subtitle="Email the post-float soft-feed notes and annual-exam cadence. No spam."
+              ctaText="Email my equine dental-care checklist"
+              source="guide-dental-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Dental Care Matters</h2>
           <p>Horses are unique among domestic species in having <strong>hypsodont teeth</strong> — teeth with very long crowns embedded in the jaw at the time of eruption, designed to continue erupting throughout the animal&apos;s life as the occlusal (chewing) surface wears down. A horse&apos;s incisor and cheek teeth erupt approximately 2–3 mm per year for most of the horse&apos;s working life. This evolutionary design suited the wild horse&apos;s grass-grazing lifestyle — constant slow grinding of high-silica grasses produced predictable, even wear across the dental arcades.</p>
@@ -306,6 +331,44 @@ export default function EquineDentalCarePage() {
           <p><strong>Choosing a practitioner:</strong> equine dentistry is now a specialty. Look for a veterinarian who performs dentistry as a regular part of practice, ideally with continuing-education hours in equine dentistry. The American Veterinary Dental College (AVDC) certifies board-certified veterinary dentists; the equine specialty within AVDC is small but growing. The International Association of Equine Dentistry (IAED) certifies non-veterinary equine dental practitioners, who in some jurisdictions can work alongside or under the supervision of licensed veterinarians. State veterinary practice acts vary on what non-veterinary dental practitioners can legally do — sedation and extractions everywhere require a licensed veterinarian.</p>
 
           <p>Questions worth asking a prospective dental practitioner: How long is a typical visit? Do you use sedation routinely? Do you use a full-mouth speculum? Do you take radiographs when indicated? What is your protocol for finding and addressing periodontal disease? Are you a licensed veterinarian, or are you working under veterinary supervision? Practitioners whose answers don&apos;t include sedation, speculum, examination, and radiograph capability are working at a lower standard than the AVDC and AAEP recommend.</p>
+
+          <h2 id="kit">Dental-Care Kit</h2>
+          <p>Everyday physical supplies that match the post-float recovery copy above — soaked hay cubes or a mash for the first day if significant work was done. These are not treatments for sharp points, EOTRH, wolf teeth, periodontal disease, or any dental diagnosis; quidding, weight loss, nasal discharge, or reluctance to be bridled belongs with a dental veterinarian, not a bag of cubes. Sedation, floating equipment, and hard treats (apples, carrots) are procedure work or diagnostic signs, not a retail kit. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (dental-care kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page post-float soft-feed copy (soaked hay cubes, mashes),
+              not medication, floating-procedure, or invented-kit hops.
+              Apple sauce, syringes, oral paste, floats, and speculums are
+              not named as shoppable owner supplies on this page. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dental-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page post-float
+              soft-feed copy — soaked hay cubes and mashes for the first day
+              after significant dental work. Everyday physical supplies only.
+              They are not a ranked product list, they are not treatments for
+              dental disease, EOTRH, or wolf teeth, they are not a floating
+              or sedation kit, and they do not replace a dental veterinarian.
+              Horses.com earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hay+cubes?s=guides-equine-dental-care"
+                amazonLabel="Browse horse hay cubes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+mash?s=guides-equine-dental-care"
+                amazonLabel="Browse horse mashes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
