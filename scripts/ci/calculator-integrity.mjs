@@ -856,6 +856,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete nail-trim-checklist offer; every gear CTA is an amazon-brand category search matching on-page tools copy (cat/kitten/small-dog clippers, styptic powder, ferret-safe lickable treat paste, LED desk lamp for the quick), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · heat-stroke-prevention hops',
+    file: 'apps/ferret-com/src/app/care/heat-stroke-prevention/page.tsx',
+    mustInclude: [
+      { re: /source="care-heat-stroke-prevention-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret heat-safety checklist"/, label: 'concrete heat-safety-checklist offer, not Subscribe' },
+      { re: /source="care-heat-stroke-prevention"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/digital\+indoor\+thermometer\?s=care-heat-stroke-prevention/, label: 'digital indoor thermometer search hop (matches on-page temperature-at-the-cage copy)' },
+      { re: /amazon-brand\/reusable\+plastic\+water\+bottle\?s=care-heat-stroke-prevention/, label: 'reusable plastic water-bottle search hop (matches on-page frozen-bottle intervention)' },
+      { re: /amazon-brand\/ceramic\+tile\?s=care-heat-stroke-prevention/, label: 'ceramic-tile search hop (matches on-page chilled ceramic-or-stone-tile copy)' },
+      { re: /amazon-brand\/ferret\+water\+bottle\?s=care-heat-stroke-prevention/, label: 'ferret water-bottle search hop (same query as toxic-foods; matches backup-water copy)' },
+      { re: /amazon-brand\/clip\+on\+fan\?s=care-heat-stroke-prevention/, label: 'clip-on fan search hop (matches on-page circulate-cooled-air copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription)/, label: 'never hop medications — this page is educational cooling-setup gear, not a drug list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete heat-safety-checklist offer; every gear CTA is an amazon-brand category search matching on-page prevention copy (indoor thermometer at the cage, reusable bottles to freeze, ceramic tiles, backup ferret water bottle, clip-on fan for cooled air), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
