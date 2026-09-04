@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -11,6 +12,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -62,7 +65,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -172,9 +175,34 @@ export default function FerretToxicFoodsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the toxic-foods list
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret toxic-foods cheat sheet
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the fridge-door list — chocolate, xylitol, onions, grapes,
+              and the avoid-as-treats swap (meat treats, not raisins or yogurt
+              drops) — so you are not scrolling mid-crisis. Educational
+              checklist, not a diagnosis or a substitute for poison control.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret toxic-foods cheat sheet"
+              subtitle="Email the toxic list and the safe-treats swap. No spam."
+              ctaText="Email my ferret toxic-foods cheat sheet"
+              source="care-toxic-foods-under-hero"
+            />
+          </div>
 
           <DropCap>
             Most ferret toxic exposures are accidents — a dropped square
@@ -316,6 +344,94 @@ export default function FerretToxicFoodsPage() {
               carnivores.
             </li>
           </ul>
+          <p>
+            What to offer instead is on the complementary{' '}
+            <Link href="/diet/safe-treats" className="text-brand-primary hover:underline">
+              safe treats
+            </Link>
+            {' '}and{' '}
+            <Link href="/care/diet-basics" className="text-brand-primary hover:underline">
+              diet basics
+            </Link>
+            {' '}pages: small pieces of cooked or freeze-dried meat,
+            single-ingredient freeze-dried meat treats, and a meat-first
+            staple — not yogurt drops, raisins, or grain biscuits. Serve
+            that food in a heavy ceramic food bowl with a backup water
+            bottle so the ferret is not grazing human leftovers off the
+            floor. Soft chew toys belong only if they are designed for
+            ferrets; rubber and foam toys that are not are the foreign-body
+            risk below.
+          </p>
+
+          {/* Money path — live amazon-brand search hops (safe treats / bowls / bottles).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational food-safety gear, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop safe-treat and feeding gear
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page toxic-foods
+              and safe-treats copy — ferret-safe treats, freeze-dried meat
+              treats, a heavy ceramic food bowl, a backup water bottle, and
+              ferret-safe chew toys. Same freeze-dried-treat hop used on the{' '}
+              <Link
+                href="/tools/food-evaluator"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                food evaluator
+              </Link>
+              {' '}and the complementary{' '}
+              <Link
+                href="/diet/safe-treats"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                safe treats
+              </Link>
+              {' '}guide. They are not a ranked product list, they are not
+              medications, and they do not diagnose, treat, or replace
+              poison control. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+safe+treats?s=care-toxic-foods"
+                amazonLabel="Browse ferret-safe treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/freeze+dried+raw+ferret+treats?s=care-toxic-foods"
+                amazonLabel="Browse freeze-dried meat treats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods"
+                amazonLabel="Browse ceramic food bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+water+bottle?s=care-toxic-foods"
+                amazonLabel="Browse water bottles for ferrets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+chew+toys?s=care-toxic-foods"
+                amazonLabel="Browse ferret-safe chew toys on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/diet/safe-treats" className="text-brand-primary hover:underline">
+                Safe Treats
+              </Link>
+              {' · '}
+              <Link href="/care/diet-basics" className="text-brand-primary hover:underline">
+                Diet Basics
+              </Link>
+              {' · '}
+              <Link href="/health/gastrointestinal-blockage" className="text-brand-primary hover:underline">
+                Gastrointestinal Blockage
+              </Link>
+            </p>
+          </div>
 
           <h2 id="household">Common Household Toxins</h2>
           <h3>Human medications</h3>
