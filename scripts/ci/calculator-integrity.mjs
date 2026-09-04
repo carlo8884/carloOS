@@ -117,6 +117,25 @@ const CALCULATORS = [
     why: '1 ft³ = 7.48052 US gallons. 10×8×2 ft rectangle = 160 ft³ × 7.48052 ≈ 1197 US gal; circular diameter×depth uses π·r² ≈ 1175 US gal.',
   },
   {
+    id: 'fish · pond-volume-calculator hops',
+    file: 'apps/fish-com/src/app/tools/pond-volume-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-pond-volume-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my pond setup checklist"/, label: 'concrete pond-setup-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/epdm\+pond\+liner\?s=tools-pond-volume/, label: 'EPDM pond liner search hop' },
+      { re: /amazon-brand\/submersible\+pond\+pump\?s=tools-pond-volume/, label: 'submersible pond pump search hop' },
+      { re: /amazon-brand\/pond\+filter\+skimmer\+kit\?s=tools-pond-volume/, label: 'pond filter / skimmer kit search hop' },
+      { re: /amazon-brand\/pond\+dechlorinator\+water\+conditioner\?s=tools-pond-volume/, label: 'pond dechlorinator / water conditioner search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete pond-setup-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'fish · heater-wattage-calculator',
     file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/Calculator.tsx',
     mustInclude: [{ re: /gal\s*\*\s*3\s*\*\s*\(deltaF\s*\/\s*10\)/, label: '3 W/gal per 10°F lift' }],
