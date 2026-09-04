@@ -1447,6 +1447,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fish-lice 4-to-6-week quarantine-checklist offer; every gear CTA is an amazon-brand category search matching on-page quarantine / treat-the-holding-water copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-gill-flukes hops',
+    file: 'apps/fish-com/src/app/health/gill-flukes/page.tsx',
+    mustInclude: [
+      { re: /source="health-gill-flukes-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my gill-flukes quarantine checklist"/, label: 'concrete quarantine / water-first-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-gill-flukes/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-gill-flukes/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-gill-flukes/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /eheim\+jager\+heater/, label: 'omit heater hop — gill-flukes copy has no heat method' },
+      { re: /aquarium\+digital\+thermometer/, label: 'omit thermometer hop — gill-flukes copy has no heat method' },
+    ],
+    why: 'Money path: under-hero capture with a concrete gill-flukes quarantine / water-first checklist offer; every gear CTA is an amazon-brand category search matching on-page quarantine / water-test-first / hospital-tank copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [

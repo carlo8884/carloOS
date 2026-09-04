@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -40,6 +41,32 @@ export default function FlukesPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the quarantine / water-first plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Gill-flukes quarantine checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the quarantine / water-first / hospital-tank order — hold
+            every new fish in a spare quarantine tank so flukes are treated
+            prophylactically before they reach the display, and test ammonia,
+            nitrite, and nitrate first if an established tank starts flashing.
+            Educational husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Gill-flukes quarantine checklist"
+            subtitle="Email the quarantine, water-first, and hospital-tank order. No spam."
+            ctaText="Email my gill-flukes quarantine checklist"
+            source="health-gill-flukes-under-hero"
+          />
+        </div>
+
         <h2>Signs — Often Nonspecific</h2>
         <p>The challenge with flukes: their signs are nonspecific and shared with several other conditions. Flashing (rubbing against substrate or decorations), clamped fins, rapid gill movement, excess mucus production on the body surface, lethargy, and reduced appetite all describe fluke infestation — and also describe poor water quality, velvet, and bacterial skin infections. This is why flukes are frequently missed and why prophylactic praziquantel during quarantine is so valuable: it eliminates flukes from the differential before the fish enters the display tank, regardless of whether clinical signs are present.</p>
         <p>Distinguishing features when present: gill flukes produce primarily respiratory signs (rapid breathing, fish near the surface or near aeration) with relatively minor external signs. Body flukes produce more visible flashing and skin changes — excess mucus making the fish appear matte rather than shiny, reddened skin areas, and in heavy infestations, ulcerations at attachment sites. Both can occur simultaneously in the same fish.</p>
@@ -55,6 +82,100 @@ export default function FlukesPage() {
 
         <h2>Distinguishing From Other Conditions</h2>
         <p>If fish are flashing and showing respiratory signs in an established, previously healthy tank: test water quality first (ammonia, nitrite, nitrate, pH). Water quality issues are more common than parasites and should be ruled out before medicating. If water quality is normal: consider velvet (use flashlight check) and flukes (no reliable visual identification without microscopy — treat based on clinical presentation and ruling out other causes). A combined treatment addressing both gill/body flukes (praziquantel) and external protozoa (copper or salt) in a hospital tank is appropriate when the cause is unclear and the fish's condition is declining.</p>
+
+        {/* Money path — live amazon-brand search hops (quarantine / water-first kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a quarantine / water-first kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Prevention on this page is prophylactic treatment during
+            quarantine of every new fish — flukes are microscopic and often
+            invisible before signs develop — plus testing water first if an
+            established tank starts flashing. A liquid master kit is how you
+            see ammonia, nitrite, and nitrate before you medicate. A spare
+            quarantine / hospital tank is how you run that watch and the
+            combined hospital-tank protocol without dropping the display. A
+            seeded sponge filter keeps that holding water moving. Same
+            test-kit hop used on the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/fish-lice-anchor-worm" className="text-brand-primary no-underline hover:underline">
+              fish lice &amp; anchor worm guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Heater and thermometer hops stay off this page — gill-flukes
+            copy has no heat method. The hops below are not a ranked product
+            list, they are not medications, and they do not treat, reverse,
+            or cure Gyrodactylus or Dactylogyrus. Fish.com earns a
+            commission on qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-gill-flukes"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-gill-flukes"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-gill-flukes"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/fish-lice-anchor-worm" className="text-brand-primary hover:underline">
+              Fish Lice &amp; Anchor Worm
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/health/medicating-aquarium-fish" className="text-brand-primary hover:underline">
+              Medicating Aquarium Fish
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
+        </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
