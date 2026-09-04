@@ -1100,6 +1100,33 @@ const CALCULATORS = [
     ],
     why: 'Money path: under-hero capture with a concrete harness-size-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
+  {
+    id: 'vets · telehealth hops',
+    file: 'apps/vets-co/src/app/telehealth/page.tsx',
+    mustInclude: [
+      { re: /source="telehealth-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my telehealth checklist"/, label: 'concrete telehealth-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=telehealth/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=telehealth/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=telehealth/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/pet\+calming\+aid\?s=telehealth/, label: 'pet calming aid search hop' },
+      { re: /amazon-brand\/pet\+recovery\+cone\?s=telehealth/, label: 'pet recovery cone search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /ctaHref="\/go\/vetster\/telehealth"/, label: 'Vetster partner hop kept' },
+      { re: /ctaHref="\/go\/askvet\/telehealth"/, label: 'AskVet partner hop kept' },
+      { re: /ctaHref="\/go\/chewy\/connect"/, label: 'Chewy Connect partner hop kept (ReviewCard hides it when empty)' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ReviewCard href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into ReviewCard hrefs' },
+      { re: /chewyHref|chewy-brand/, label: 'omit ShopCtas Chewy so empty hops stay hidden' },
+      { re: /href=["']https?:\/\/(www\.)?chewy\.com/, label: 'never bare Chewy URLs — keep /go/chewy/connect only' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+    ],
+    why: 'Money path: under-hero capture with a concrete telehealth-checklist offer; complementary amazon-brand category searches for home-care prep; existing Vetster/AskVet/Chewy partner hops kept; empty Chewy stays hidden.',
+  },
 ]
 
 let failures = 0
