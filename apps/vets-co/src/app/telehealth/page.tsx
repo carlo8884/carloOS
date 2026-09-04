@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, EmailCapture, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -44,6 +44,32 @@ export default function TelehealthPage() {
       />
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Telehealth prep checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the consult checklist — what to photograph, what vitals you can take at home,
+            and when to skip the screen and go to an ER — so you can prep without re-reading the
+            comparison. Planning reference only. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Telehealth prep checklist"
+            subtitle="Email the consult checklist — photos, at-home vitals, and when to go to an ER. No spam."
+            ctaText="Email my telehealth checklist"
+            source="telehealth-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
@@ -75,6 +101,49 @@ export default function TelehealthPage() {
               pros={['Included with Chewy+ membership', 'Direct Chewy pharmacy integration', 'Convenient for existing Chewy customers']}
               cons={['Only valuable if you already use Chewy+', 'Less specialist access than Vetster']}
               price="Included with Chewy+ ($19.99/month)" ctaText="Check Price →" ctaHref="/go/chewy/connect" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
+
+            {/* Money path — live amazon-brand search hops (home-care prep kit).
+                ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+                Category searches only — not a ranked list, not a diagnosis.
+                Partner hops above stay as-is; this block does not re-rank Vetster / AskVet / Chewy. */}
+            <div id="telehealth-prep-kit" className="mt-8 mb-8">
+              <AffiliateDisclosure variant="inline" siteId="vets-co" />
+              <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
+                <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Shop a telehealth prep kit
+                </div>
+                <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+                  A first-aid kit, a digital thermometer, a pet scale, a calming aid, and a
+                  recovery cone are the home-care items owners often have on hand before a
+                  video consult — or while waiting for an in-person visit. These are Amazon
+                  category searches, not a ranked product list and not a treatment plan. Ask
+                  your veterinarian which items fit your pet. Vets.co earns a commission on
+                  qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/pet+first+aid+kit?s=telehealth"
+                    amazonLabel="Browse pet first-aid kits on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/digital+pet+thermometer?s=telehealth"
+                    amazonLabel="Browse digital pet thermometers on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/digital+pet+scale?s=telehealth"
+                    amazonLabel="Browse digital pet scales on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/pet+calming+aid?s=telehealth"
+                    amazonLabel="Browse pet calming aids on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/pet+recovery+cone?s=telehealth"
+                    amazonLabel="Browse pet recovery cones on Amazon →"
+                  />
+                </div>
+              </div>
+            </div>
 
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
