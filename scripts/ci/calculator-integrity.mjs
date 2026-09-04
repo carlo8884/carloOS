@@ -1227,6 +1227,28 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete first-tank-setup-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · equipment-hub hops',
+    file: 'apps/fish-com/src/app/equipment/page.tsx',
+    mustInclude: [
+      { re: /source="equipment-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium equipment checklist"/, label: 'concrete aquarium-equipment-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/aquaclear\+70\+filter\?s=equipment-hub/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph / setup-aquarium)' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=equipment-hub/, label: 'Fluval canister search hop (same query as stocking / filter-gph / setup-aquarium)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=equipment-hub/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=equipment-hub/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium)' },
+      { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=equipment-hub/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium)' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=equipment-hub/, label: 'API master test kit search hop (same query as stocking / cycling / setup-aquarium)' },
+      { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=equipment-hub/, label: 'gravel vacuum search hop (same query as water-change / setup-aquarium)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete aquarium-equipment-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
