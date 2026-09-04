@@ -2976,6 +2976,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-allergies HEPA-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (HEPA filtration air purifier, replacement HEPA filter kit), never a placeholder ASIN, a chlorhexidine / bathing-product hop, a prescription-diet hop (Royal Canin Hydrolyzed / Hill\'s z/d / Purina HA), or a medication hop (Apoquel / Cytopoint / Atopica / antihistamines / glucocorticoids). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-skin-allergies hops',
+    file: 'apps/dog-com/src/app/health/dog-skin-allergies/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-skin-allergies-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-skin-allergies paw checklist"/, label: 'concrete dog-skin-allergies paw-checklist offer, not Subscribe' },
+      { re: /source="health-skin-allergies"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+paw\+wipes\?s=health-dog-skin-allergies/, label: 'dog paw-wipes search hop (category search matching on-page paw-wipe-after-walks copy; not a brand ASIN)' },
+      { re: /amazon-brand\/waterproof\+dog\+booties\?s=health-dog-skin-allergies/, label: 'waterproof dog-booties search hop (matches on-page waterproof-booties-when-pollen-is-high copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hepa|chlorhexidine|shampoo|bathing|apoquel|oclacitinib|cytopoint|lokivetmab|atopica|cyclosporine|prednisone|glucocorticoid|benadryl|diphenhydramine|antihistamine|hydrolyzed|royal\+canin|hills|hill\+s|purina|z\/d|prescription\+diet|fish\+oil|omega|pet\+recovery\+cone|soft\+recovery\+cone|pet\+ear\+cleaner|cotton\+balls|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop HEPA indoor-air gear, chlorhexidine / bathing products, Rx allergy meds, prescription diets, supplements, hot-spot cones, or ear-infection hops — this page hops only physical dog paw-wipes / waterproof dog-booties gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-skin-allergies paw-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (dog paw wipes, waterproof dog booties), never a placeholder ASIN, a HEPA indoor-air hop (sister dog-allergies page), a chlorhexidine / bathing-product hop, a prescription-diet hop, a medication hop (Apoquel / Cytopoint / Atopica / antihistamines / glucocorticoids), a hot-spot cone hop, or an ear-cleaner hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
