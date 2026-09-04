@@ -2662,6 +2662,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: under-hero capture with a concrete insurance-checklist offer; complementary amazon-brand category searches for home-care prep beside InsuranceWellnessShop; insurance quotes stay on /reviews/best-pet-insurance; empty Chewy stays hidden.',
   },
+  {
+    id: 'vets · dental-cleaning-guide hops',
+    file: 'apps/vets-co/src/app/health/dental-cleaning-guide/page.tsx',
+    mustInclude: [
+      { re: /source="health-dental-cleaning-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dental-cleaning checklist"/, label: 'concrete dental-cleaning-checklist offer, not Subscribe' },
+      { re: /source="health-dental-cleaning"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+pet\+toothbrush\?s=health-dental-cleaning-guide/, label: 'soft pet-toothbrush search hop (matches on-page soft-toothbrush copy)' },
+      { re: /amazon-brand\/enzymatic\+pet\+toothpaste\?s=health-dental-cleaning-guide/, label: 'enzymatic pet-toothpaste search hop (matches on-page enzymatic-toothpaste copy)' },
+      { re: /amazon-brand\/dental\+chews\+dog\?s=health-dental-cleaning-guide/, label: 'dental-chews search hop (same query as dog health hub; matches on-page VOHC dental-chews copy)' },
+      { re: /amazon-brand\/pet\+dental\+water\+additive\?s=health-dental-cleaning-guide/, label: 'dental water-additive search hop (matches on-page VOHC water-additive copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|vaccine|fluoride|anesthesia|endotracheal|catheter|cet|vetradent|greenies|whimzees|hill|antifungal|antibiotic)/, label: 'never hop medications, vaccines, fluoride toothpaste, anesthesia gear, or brand ASINs — this page is educational after-cleaning home care, not a drug or clinic-procedure list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dental-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page after-cleaning home-care copy (soft toothbrush, enzymatic toothpaste, VOHC dental chews, VOHC water additive), never a placeholder ASIN, a medication / vaccine / fluoride hop, anesthesia gear, or a brand-ASIN hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
