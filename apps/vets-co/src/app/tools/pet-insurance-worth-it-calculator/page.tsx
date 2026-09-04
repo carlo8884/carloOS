@@ -10,6 +10,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   EmailCapture,
+  ShopCtas,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -306,6 +307,66 @@ export default function PetInsuranceWorthItPage() {
         </div>
 
         <InsuranceWellnessShop source="tools-pet-insurance-worth-it-calculator" />
+
+        {/* Money path — complementary amazon-brand search hops (home-care prep
+            beside an insurance decision). ShopCtas hides empty Chewy; never
+            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            list. InsuranceWellnessShop above stays as-is; this block does not
+            re-rank Trupanion / Healthy Paws / Embrace. */}
+        <div id="insurance-home-care-kit" className="mt-8 mb-8">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
+            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Shop a home-care prep kit
+            </div>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+              A first-aid kit, a digital thermometer, a pet scale, a recovery
+              cone, and a calming aid are the home-care items owners often keep
+              on hand while they decide whether a policy is worth it — and
+              after a claim, while a pet recovers. These are Amazon category
+              searches, not a ranked product list and not a treatment plan.
+              Accident-and-illness quotes stay on the{' '}
+              <Link
+                href={REVIEWS_HREF}
+                className="text-brand-primary underline-offset-2 hover:underline"
+              >
+                Best Pet Insurance
+              </Link>{' '}
+              comparison, not a carrier ranking. For a stable, non-emergency
+              question, start at{' '}
+              <Link
+                href="/telehealth"
+                className="text-brand-primary underline-offset-2 hover:underline"
+              >
+                telehealth
+              </Link>
+              . Vets.co earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-pet-insurance-worth-it-calculator"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+scale?s=tools-pet-insurance-worth-it-calculator"
+                amazonLabel="Browse digital pet scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+recovery+cone?s=tools-pet-insurance-worth-it-calculator"
+                amazonLabel="Browse pet recovery cones on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+calming+aid?s=tools-pet-insurance-worth-it-calculator"
+                amazonLabel="Browse pet calming aids on Amazon →"
+              />
+            </div>
+          </div>
+        </div>
 
         <h2 id="example">A worked breakeven example</h2>
         <p>
