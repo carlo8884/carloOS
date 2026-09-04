@@ -813,6 +813,28 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete food-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'ferret · toxic-foods hops',
+    file: 'apps/ferret-com/src/app/care/toxic-foods/page.tsx',
+    mustInclude: [
+      { re: /source="care-toxic-foods-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret toxic-foods cheat sheet"/, label: 'concrete toxic-foods-cheat-sheet offer, not Subscribe' },
+      { re: /source="care-toxic-foods"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+safe\+treats\?s=care-toxic-foods/, label: 'ferret-safe treats search hop (matches on-page avoid-as-treats / safe-treats copy)' },
+      { re: /amazon-brand\/freeze\+dried\+raw\+ferret\+treats\?s=care-toxic-foods/, label: 'freeze-dried meat treats search hop (same query as food-evaluator / safe-treats)' },
+      { re: /amazon-brand\/heavy\+ceramic\+pet\+food\+bowl\?s=care-toxic-foods/, label: 'ceramic food bowl search hop (matches on-page diet-basics feeding copy)' },
+      { re: /amazon-brand\/ferret\+water\+bottle\?s=care-toxic-foods/, label: 'ferret water-bottle search hop (matches on-page backup-bottle copy)' },
+      { re: /amazon-brand\/ferret\+chew\+toys\?s=care-toxic-foods/, label: 'ferret chew-toy search hop (matches on-page foreign-body / ferret-safe toy copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|xylitol|rodenticide)/, label: 'never hop medications or toxins — this page is educational food-safety gear, not a drug or poison list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete toxic-foods cheat-sheet offer; every gear CTA is an amazon-brand category search matching on-page toxic-foods / safe-treats copy (ferret-safe treats, freeze-dried meat treats, ceramic food bowls, water bottles, ferret-safe chew toys), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
