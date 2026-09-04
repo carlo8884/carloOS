@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -39,6 +40,32 @@ export default function PopEyePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the isolate-and-test plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Isolate-and-test / hospital-tank checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the isolate-and-test order — move the affected fish to a
+            spare hospital tank, test ammonia, nitrite, and nitrate first,
+            and run frequent small water changes so orbital swelling is not
+            sitting on the same poor water that usually precedes it.
+            Educational husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Isolate-and-test / hospital-tank checklist"
+            subtitle="Email the hospital-tank isolation and test-water-first order. No spam."
+            ctaText="Email my pop-eye isolate-and-test checklist"
+            source="health-pop-eye-under-hero"
+          />
+        </div>
+
         <h2>Causes and the Unilateral vs Bilateral Distinction</h2>
         <p><strong>Unilateral pop-eye (one eye):</strong> Most commonly caused by a localized bacterial infection or physical injury — the fish bumped into something, was nipped by a tankmate, or got a minor scratch that became infected. Bacteria infect the tissue behind the eye, causing localized inflammation and fluid accumulation. Prognosis for unilateral pop-eye caught and treated early is generally good. The eye may not fully return to normal position even after successful treatment — some minor protrusion often remains.</p>
         <p><strong>Bilateral pop-eye (both eyes):</strong> Both eyes involved simultaneously suggests a systemic problem — bacteria throughout the bloodstream, organ failure (often kidney-related), or the same systemic fluid accumulation that causes dropsy. Bilateral pop-eye combined with abdominal distension (a fish that has both pop-eye and a bloated belly) is a sign of systemic organ failure with a poor prognosis, even with aggressive treatment. Treat immediately and aggressively, but prepare for the possibility that the fish will not recover.</p>
@@ -55,6 +82,108 @@ export default function PopEyePage() {
 
         <h2>Prevention</h2>
         <p>Pop-eye prevention is water quality management. The vast majority of pop-eye cases occur in tanks with elevated nitrate, inadequate filtration, or irregular maintenance. Weekly water changes of 25-30%, filter maintenance, and not overstocking are the primary preventive measures. Quarantine new fish before adding to established tanks — new fish stressed from shipping are more susceptible to bacterial infection including orbital infection.</p>
+
+        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a water-first hospital-tank kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Isolate first, then test the water — a liquid master kit is how
+            you see ammonia, nitrite, and nitrate that almost always precede
+            pop-eye. Move the affected fish to a spare hospital tank with a
+            seeded sponge filter so treatment stays off the display
+            biofilter, a heater rated for the tank, and a separate digital
+            thermometer so the dial is not the only reading. Same test-kit
+            hop used on the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/dropsy-treatment" className="text-brand-primary no-underline hover:underline">
+              dropsy guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure pop-eye. Fish.com earns
+            a commission on qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-pop-eye"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-pop-eye"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-pop-eye"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-pop-eye"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-pop-eye"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/dropsy-treatment" className="text-brand-primary hover:underline">
+              Dropsy Treatment
+            </Link>
+            {' · '}
+            <Link href="/health/bacterial-infections" className="text-brand-primary hover:underline">
+              Bacterial Infections
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
+        </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
