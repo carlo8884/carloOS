@@ -1,6 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion, DirectoryPlacesCta, type FAQItem } from '@carloOS/ui'
+import {
+  buildMetadata,
+  buildBreadcrumbSchema,
+  buildFAQSchema,
+  combineSchemas,
+  SchemaScript,
+  StockImage,
+  CrossPortfolioCard,
+  FAQAccordion,
+  DirectoryPlacesCta,
+  EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
+  type FAQItem,
+} from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
@@ -232,6 +246,35 @@ export default function DogHealthHubPage() {
           </p>
         </div>
       </section>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the health-library order
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog health checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the first-aid, emergency-prep, dental, and senior-care order —
+            a pet first-aid kit and digital thermometer for the cabinet, a soft
+            carrier for the car, VOHC-style dental chews as a brushing adjunct,
+            and an orthopedic bed for senior rest — so you can act without
+            scrolling back. Educational kit list, not a diagnosis or a cure.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog health checklist"
+            subtitle="Email the first-aid, emergency-prep, dental, and senior-care order. No spam."
+            ctaText="Email my dog health checklist"
+            source="health-hub-under-hero"
+          />
+        </div>
+      </div>
+
       {/* Extractable direct-answer block + urgency triage reference table.
           Sits high on the page so AI answer surfaces and SERP snippets can lift
           a self-contained summary. The triage tiers mirror the urgencyBadge()
@@ -317,6 +360,109 @@ export default function DogHealthHubPage() {
             </div>
           </div>
         ))}
+
+        {/* Money path — live amazon-brand search hops (health-library kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop dog health gear
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Emergency prep is how you act before a crisis. A pet first-aid kit
+            and a digital thermometer belong in the cabinet; a soft carrier
+            belongs in the car so you can leave without hunting for one. Pair
+            that with VOHC-style dental chews as a brushing adjunct — not a
+            substitute for the daily toothbrushing in the{' '}
+            <Link
+              href="/health/dog-dental-care"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dental care guide
+            </Link>
+            {' '}or a professional cleaning — and an orthopedic bed for the
+            senior-rest / arthritis notes in the{' '}
+            <Link
+              href="/health/senior-dog-care"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              senior dog care guide
+            </Link>
+            . Same first-aid-kit, thermometer, and carrier hops used on the{' '}
+            <Link
+              href="/tools/is-this-a-dog-emergency"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              emergency triage tool
+            </Link>
+            {' '}— the kit items already listed in the{' '}
+            <Link
+              href="/guides/dog-first-aid-kit"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              first-aid kit guide
+            </Link>
+            . Same dental-chew hop used on the{' '}
+            <Link
+              href="/tools/dog-age-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dog age calculator
+            </Link>
+            . Same orthopedic-bed hop used on the{' '}
+            <Link
+              href="/tools/dog-grimace-scale"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dog grimace scale
+            </Link>
+            . The hops below are not a ranked product list, they are not
+            medications, and they do not treat, reverse, or cure disease.
+            Dog.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"
+              amazonLabel="Browse pet first-aid kits on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/digital+pet+thermometer?s=health-hub"
+              amazonLabel="Browse digital pet thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/soft+dog+carrier?s=health-hub"
+              amazonLabel="Browse soft dog carriers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dental+chews+dog?s=health-hub"
+              amazonLabel="Browse dental chews on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-hub"
+              amazonLabel="Browse orthopedic dog beds on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary hover:underline">
+              Is This a Dog Emergency?
+            </Link>
+            {' · '}
+            <Link href="/guides/dog-first-aid-kit" className="text-brand-primary hover:underline">
+              Dog First Aid Kit
+            </Link>
+            {' · '}
+            <Link href="/health/dog-dental-care" className="text-brand-primary hover:underline">
+              Dog Dental Care
+            </Link>
+            {' · '}
+            <Link href="/health/senior-dog-care" className="text-brand-primary hover:underline">
+              Senior Dog Care
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* Conditions browser — grouped by category, programmatic from /data/diseases.ts */}
