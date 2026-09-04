@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -38,6 +39,32 @@ export default function VelvetDiseasePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the temp-and-blackout plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Velvet temp-and-blackout checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the quarantine / temp-and-blackout / aeration order — isolate
+            affected fish in a hospital tank, hold 82–84°F if the species
+            tolerates it, cover for a 24–72 hour blackout, and add air-driven
+            aeration because warmer water holds less oxygen. Educational
+            husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Velvet temp-and-blackout checklist"
+            subtitle="Email the quarantine, temp-and-blackout, and aeration order. No spam."
+            ctaText="Email my velvet temp-and-blackout checklist"
+            source="health-velvet-under-hero"
+          />
+        </div>
+
         <h2>Identification — The Flashlight Test</h2>
         <p>Velvet in its early stages is difficult to see under normal aquarium lighting — the gold or rust-colored dust that gives the disease its name is often invisible until fish are examined with a flashlight held at an angle to the body. This flashlight inspection reveals the gold sheen on the fish's skin that is characteristic of Oodinium. By the time velvet is clearly visible to the naked eye under normal lighting, the infection is advanced.</p>
         <p>Early behavioral signs before the gold dust is visible: fish scratching against surfaces (flashing or glancing — same as ich), lethargy, clamped fins, rapid gill movement (Oodinium infects gill tissue heavily — gill involvement causes labored breathing that often precedes visible skin signs). A fish that is flashing and breathing rapidly in an otherwise clean, well-maintained tank should be examined with a flashlight for velvet.</p>
@@ -53,15 +80,93 @@ export default function VelvetDiseasePage() {
         <h2>Saltwater Velvet (Amyloodinium) — More Dangerous</h2>
         <p>Amyloodinium ocellatum in marine aquariums is significantly more lethal than freshwater Piscinoodinium. It progresses faster, the dinospore infective stage is shorter, and it can kill a full tank of fish within 48-72 hours of first visible signs. Marine velvet is an emergency — treatment must begin immediately. The same copper or chloroquine phosphate protocols apply, in a quarantine tank separate from any invertebrates or coral.</p>
 
+        {/* Money path — live amazon-brand search hops (temp-and-blackout kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Heater + Thermometer for Temperature Management</div>
-          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>Velvet treatment using the temperature-and-blackout method requires raising the tank to 82-84°F and holding it there precisely. An accurate aquarium thermometer (separate from the heater's dial, which drifts) is necessary to confirm the temperature is actually at the target range. Both items are husbandry tools that support the management protocol; raising temperature is a supportive measure used alongside primary treatment, not a standalone cure, and is not a substitute for correct diagnosis or veterinary guidance when fish are severely ill.</p>
-          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
-          <ShopCtas
-            amazonHref="/go/amazon-brand/aquarium%20adjustable%20heater%20digital%20thermometer%20fish%20tank?s=health-velvet-disease"
-            chewyHref="/go/chewy-brand/aquarium%20heater%20thermometer%20temperature%20control?s=health-velvet-disease"
-          />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop temp-and-blackout husbandry gear
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Temp-and-blackout husbandry depends on holding 82–84°F if the
+            species tolerates it, covering the tank for a 24–72 hour blackout,
+            and adding aeration because warmer water holds less oxygen. A
+            heater rated for the tank, a separate digital thermometer (heater
+            thermostats drift), and an air-driven sponge filter cover that
+            husbandry set. A spare hospital / quarantine tank is how you
+            isolate affected fish — and keep copper or other medications off
+            a reef or invertebrate display. Same heater and thermometer hops
+            used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            {' '}and the{' '}
+            <Link href="/equipment" className="text-brand-primary no-underline hover:underline">
+              equipment hub
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure velvet. Fish.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-velvet"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-velvet"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-velvet"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/ich-treatment" className="text-brand-primary hover:underline">
+              Ich Treatment Guide
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/equipment" className="text-brand-primary hover:underline">
+              Equipment Hub
+            </Link>
+          </p>
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>

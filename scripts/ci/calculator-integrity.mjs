@@ -1328,6 +1328,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete ich heat-method checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-velvet hops',
+    file: 'apps/fish-com/src/app/health/velvet-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-velvet-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my velvet temp-and-blackout checklist"/, label: 'concrete temp-and-blackout / quarantine / aeration-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-velvet/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / ich)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-velvet/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / ich)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-velvet/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich; no live aquarium+air+pump key on sister pages)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-velvet/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete velvet temp-and-blackout checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
