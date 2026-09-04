@@ -2956,6 +2956,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-megaesophagus Bailey-chair-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (Bailey chair, near-vertical upright feeding chair), never a placeholder ASIN, a brand-food hop (Canine Caviar), a prescription-diet hop, or a medication hop (pyridostigmine / myasthenia gravis drugs / aspiration-pneumonia antibiotics). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-allergies hops',
+    file: 'apps/dog-com/src/app/health/dog-allergies/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-allergies-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-allergies HEPA checklist"/, label: 'concrete dog-allergies HEPA-checklist offer, not Subscribe' },
+      { re: /source="health-allergies"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/hepa\+air\+purifier\?s=health-dog-allergies/, label: 'HEPA air-purifier search hop (category search matching on-page HEPA filtration air-purifier copy; not a brand ASIN)' },
+      { re: /amazon-brand\/hepa\+filter\+kit\?s=health-dog-allergies/, label: 'HEPA filter-kit search hop (matches on-page replacement HEPA filter kit copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(chlorhexidine|shampoo|bathing|apoquel|oclacitinib|cytopoint|lokivetmab|atopica|cyclosporine|prednisone|glucocorticoid|benadryl|diphenhydramine|antihistamine|hydrolyzed|royal\+canin|hills|hill\+s|purina|z\/d|prescription\+diet|fish\+oil|omega|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop chlorhexidine / bathing products, Rx allergy meds, prescription diets, or supplements — this page hops only physical HEPA air-purifier / HEPA filter-kit gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-allergies HEPA-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (HEPA filtration air purifier, replacement HEPA filter kit), never a placeholder ASIN, a chlorhexidine / bathing-product hop, a prescription-diet hop (Royal Canin Hydrolyzed / Hill\'s z/d / Purina HA), or a medication hop (Apoquel / Cytopoint / Atopica / antihistamines / glucocorticoids). Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
