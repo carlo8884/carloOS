@@ -1249,6 +1249,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete aquarium-equipment-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · water-parameters hops',
+    file: 'apps/fish-com/src/app/water-parameters/page.tsx',
+    mustInclude: [
+      { re: /source="water-parameters-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my water-parameter testing checklist"/, label: 'concrete water-parameter-testing-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=water-parameters/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / equipment-hub)' },
+      { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=water-parameters/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium / equipment-hub)' },
+      { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=water-parameters/, label: 'gravel vacuum search hop (same query as water-change / setup-aquarium / equipment-hub)' },
+      { re: /amazon-brand\/python\+water\+changer\?s=water-parameters/, label: 'Python water changer search hop (same query as water-change calculator)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=water-parameters/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete water-parameter-testing-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
