@@ -1008,6 +1008,25 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-grooming-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page kit copy (curry comb, dandy brush, body brush, mane/tail brush, hoof pick), never a placeholder ASIN, a medication hop, or a rain-rot / sweet-itch treatment. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · hoof-picking hops',
+    file: 'apps/horses-com/src/app/care/hoof-picking/page.tsx',
+    mustInclude: [
+      { re: /source="care-hoof-picking-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hoof-picking checklist"/, label: 'concrete hoof-picking-checklist offer, not Subscribe' },
+      { re: /source="care-hoof-picking"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+hoof\+pick\?s=care-hoof-picking/, label: 'hoof-pick search hop (matches on-page tools copy)' },
+      { re: /amazon-brand\/horse\+hoof\+pick\+brush\?s=care-hoof-picking/, label: 'hoof-pick-with-brush search hop (matches on-page stiff-brush copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|thrush|abscess|copper\+sulfate|iodine|antifungal|antibiotic)/, label: 'never hop medications or thrush / abscess treatments — this page is educational hoof-picking gear, not a drug or hoof-disease list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete hoof-picking-checklist offer; every gear CTA is an amazon-brand category search matching on-page tools copy (hoof pick, hoof pick with stiff brush), never a placeholder ASIN, a medication hop, or a thrush / abscess treatment. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [
