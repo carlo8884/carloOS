@@ -853,6 +853,28 @@ const CALCULATORS = [
     why: 'Staged new-puppy checklist with sensible medium/8-week/indoor defaults; every gear hop is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · new-puppy-checklist hops',
+    file: 'apps/dog-com/src/app/tools/new-puppy-checklist/page.tsx',
+    mustInclude: [
+      { re: /source="tools-new-puppy-checklist-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my new-puppy checklist"/, label: 'concrete new-puppy-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-new-puppy-checklist/, label: 'crate search hop (same query as crate-size tool)' },
+      { re: /amazon-brand\/puppy\+food\?s=tools-new-puppy-checklist/, label: 'puppy food search hop' },
+      { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=tools-new-puppy-checklist/, label: 'interactive feeder search hop' },
+      { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-new-puppy-checklist/, label: 'Julius-K9 harness search hop' },
+      { re: /amazon-brand\/dog\+id\+tag\+collar\?s=tools-new-puppy-checklist/, label: 'ID tag / collar search hop' },
+      { re: /amazon-brand\/puppy\+teething\+toys\?s=tools-new-puppy-checklist/, label: 'puppy teething toys search hop' },
+      { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=tools-new-puppy-checklist/, label: 'enzymatic cleaner search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete new-puppy-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
