@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -35,7 +35,7 @@ export default function DogAllergiesPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Allergies', href: '/health/dog-allergies' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Ear Infections', href: '/health/dog-ear-infections', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet', category: 'Nutrition' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopic Dermatitis', href: '#atopy' }, { label: 'Food Allergy (CAFR)', href: '#food' }, { label: 'Contact Allergy', href: '#contact' }, { label: 'Differential Diagnosis', href: '#differential' }, { label: 'Diagnostic Ladder', href: '#ladder' }, { label: 'Treatment Tiers', href: '#treatment' }, { label: 'When to See a Dermatologist', href: '#specialist' }, { label: 'Common Owner Mistakes', href: '#mistakes' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopic Dermatitis', href: '#atopy' }, { label: 'Food Allergy (CAFR)', href: '#food' }, { label: 'Contact Allergy', href: '#contact' }, { label: 'Differential Diagnosis', href: '#differential' }, { label: 'Diagnostic Ladder', href: '#ladder' }, { label: 'Treatment Tiers', href: '#treatment' }, { label: 'When to See a Dermatologist', href: '#specialist' }, { label: 'Common Owner Mistakes', href: '#mistakes' }, { label: 'HEPA Filter Kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Key Sources Cited</div>
             <ul className="text-xs text-brand-text-mid space-y-1.5 m-0 p-0 list-none">
@@ -52,6 +52,33 @@ export default function DogAllergiesPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the allergy HEPA-filter checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-allergies HEPA-filter checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the HEPA notes — a HEPA filtration air purifier and a
+              replacement HEPA filter kit for homes where environmental
+              allergen load is part of the plan. Educational checklist,
+              not a diagnosis and not a medicated shampoo.
+              Chlorhexidine bathing products, Apoquel, Cytopoint,
+              Atopica, and prescription diets stay off this list. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-allergies HEPA-filter checklist"
+              subtitle="Email the HEPA air-purifier and filter-kit notes. No spam."
+              ctaText="Email my dog-allergies HEPA checklist"
+              source="health-dog-allergies-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
@@ -120,7 +147,7 @@ export default function DogAllergiesPage() {
 
           <h2 id="treatment">Treatment Tiers</h2>
           <p>The ICADA guidelines (Olivry et al., BMC Vet Res 2015) describe treatment as a layered approach combining trigger avoidance, skin barrier support, infection control, and pharmacologic anti-pruritic therapy. The tiers below summarize that framework.</p>
-          <p><strong>Tier 1 — Topical and supportive care.</strong> Weekly or twice-weekly bathing with a veterinary chlorhexidine or ceramide-restoring shampoo, ear cleaning protocols where otitis is recurrent, omega-3 fatty acid supplementation (EPA/DHA from fish oil, dosed at 50 to 100 mg combined EPA+DHA per kg), and environmental measures (frequent washing of bedding, HEPA filtration in some homes). Topical care is foundational, not optional.</p>
+          <p><strong>Tier 1 — Topical and supportive care.</strong> Weekly or twice-weekly bathing with a veterinary chlorhexidine or ceramide-restoring shampoo, ear cleaning protocols where otitis is recurrent, omega-3 fatty acid supplementation (EPA/DHA from fish oil, dosed at 50 to 100 mg combined EPA+DHA per kg), and environmental measures (frequent washing of bedding, a HEPA filtration air purifier plus a replacement HEPA filter kit in some homes). Topical care is foundational, not optional.</p>
           <p><strong>Tier 2 — Targeted pharmacologic therapy.</strong> Two products dominate current practice and are supported by extensive published data:</p>
           <ul>
             <li><strong>Oclacitinib (Apoquel)</strong> — an oral JAK inhibitor that interrupts cytokine signaling (notably IL-31, the principal pruritogenic cytokine in canine atopy). Onset within hours; effective in a large proportion of dogs. Monitoring includes periodic CBC and biochemistry; the product label and manufacturer prescribing information describe contraindications and use in young dogs.</li>
@@ -150,6 +177,44 @@ export default function DogAllergiesPage() {
             <li><strong>Stopping medication when the dog is comfortable.</strong> Atopic dermatitis is a lifelong condition. Discontinuing therapy because the dog is doing well usually leads to flare; the more useful question to discuss with the vet is whether to taper to the lowest effective dose.</li>
             <li><strong>Skipping ectoparasite control during the work-up.</strong> Flea allergy can mimic or layer onto any other allergy. Continuous, year-round flea prevention on every pet in the household removes the most important confounder.</li>
           </ul>
+
+          <h2 id="kit">HEPA filtration kit</h2>
+          <p>Everyday physical supplies that match the environmental-measures copy above — a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (HEPA air
+              purifier / HEPA filter kit). ShopCtas hides empty Chewy;
+              never href="#" or PLACEHOLDER. Category searches only.
+              Chlorhexidine shampoo, bathing products, Rx allergy meds
+              (Apoquel / Cytopoint / Atopica), and prescription diets
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the HEPA filtration kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              environmental-measures copy — a HEPA filtration air
+              purifier and a replacement HEPA filter kit. Everyday
+              physical gear only. They are not a ranked product list,
+              they are not medicated shampoos, they are not
+              medications, they are not brand diet ASINs, and they do
+              not replace a veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies"
+                amazonLabel="Browse HEPA air purifiers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"
+                amazonLabel="Browse HEPA filter kits on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
