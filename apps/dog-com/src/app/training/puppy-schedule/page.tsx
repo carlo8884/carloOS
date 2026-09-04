@@ -1,9 +1,20 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Schedule — Week by Week', description: 'Complete puppy schedule: sleep, feeding, training, and socialization.', url: 'https://dog.com/training/puppy-schedule', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Schedule — Week by Week', description: 'Complete puppy schedule: sleep, feeding, training, and socialization.', url: 'https://dog.com/training/puppy-schedule', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' })
 
 const SAMPLE_SCHEDULE = [
   { time: '6:30am', activity: 'Wake up → Immediately outside for potty' },
@@ -59,7 +70,30 @@ export default function PuppySchedulePage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the schedule
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Week-by-week puppy schedule
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the week-by-week puppy schedule — sleep, meals, potty, crate naps, and
+            the first-week kit — so you can run the routine without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Week-by-week puppy schedule"
+            subtitle="Email the week-by-week puppy schedule — sleep, meals, potty, crate naps, first-week kit. No spam."
+            ctaText="Email my week-by-week puppy schedule"
+            source="training-puppy-schedule-under-hero"
+          />
+        </div>
+
         <h2 id="why">Why a Schedule Is Your Best Training Tool</h2>
         <p>A consistent schedule accomplishes what training alone cannot: it makes accidents nearly impossible by creating predictable patterns of eating, eliminating, playing, and sleeping. A puppy on a schedule eliminates at predictable times — you can be there to reward outdoor elimination before indoor accidents become a habit. A puppy without a schedule eliminates unpredictably — owners miss opportunities to reinforce correct behavior and the habit of going outside develops more slowly.</p>
         <p>The schedule is also about managing energy. Puppies need substantial sleep — 16–18 hours per day for young puppies. A puppy that is not getting enough sleep becomes overtired, which manifests as biting, zoomies, and inability to focus. Scheduled naps prevent the overtired state that makes puppies appear to have behavior problems they wouldn&apos;t have if well-rested.</p>
@@ -87,20 +121,56 @@ export default function PuppySchedulePage() {
         </div>
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', fontStyle: 'italic' }}>Adjust timing to your actual schedule. The pattern matters more than exact times.</p>
 
+        {/* Money path — live amazon-brand search hops (schedule essentials).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Puppy Essentials</div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A few supplies make the schedule significantly easier to run: a wire crate with divider panel (for safe nap space), an age-appropriate puppy food, and high-value training treats.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/go/amazon-brand/wire+dog+crate+with+divider+panel+puppy?s=training-puppy-schedule" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-              Shop Puppy Crates on Amazon →
-            </a>
-            <a href="/go/chewy-brand/puppy+training+treats+small+soft?s=training-puppy-schedule" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop Training Treats on Chewy →
-            </a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop schedule essentials
           </div>
-          <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a> · <a href="/reviews/best-dog-crates" className="text-brand-primary hover:underline no-underline">Best Dog Crates 2026</a></p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A few supplies make the schedule easier to run: a wire crate with a divider
+            (safe nap space), age-appropriate puppy food, high-value training treats, and
+            an enzymatic cleaner for accidents. Same crate / food / treat hops used on the{' '}
+            <Link
+              href="/tools/new-puppy-checklist"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              new-puppy checklist
+            </Link>
+            . They are not a ranked product list and they do not replace the first vet
+            visit. Size the crate before you order. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule"
+              amazonLabel="Browse crates on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
+              amazonLabel="Browse puppy food on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+treats?s=training-puppy-schedule"
+              amazonLabel="Browse puppy training treats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"
+              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline">
+              Best Dog Food for Puppies
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-dog-crates" className="text-brand-primary hover:underline">
+              Best Dog Crates
+            </Link>
+          </p>
         </div>
 
         <h2 id="socialization">The Critical Socialization Window — 8 to 16 Weeks</h2>
