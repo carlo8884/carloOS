@@ -1,9 +1,20 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Crate Training Guide — How to Make the Crate a Good Place | Dog.com', description: 'Step-by-step crate training guide. Introduction protocol, how long is too long, night training, and how to use the crate without it feeling like punishment.', path: '/training/crate-training', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Crate Training Guide', description: 'Introduction protocol, duration limits, and night training for crates.', url: 'https://dog.com/training/crate-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Crate Training Guide', description: 'Introduction protocol, duration limits, and night training for crates.', url: 'https://dog.com/training/crate-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' })
 
 const howToSchema = buildHowToSchema({
   name: 'How to Crate Train a Dog',
@@ -40,7 +51,32 @@ export default function CrateTrainingPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the crate plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Crate-training protocol
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the day-by-day crate introduction, duration limits by age, and
+            night-training notes — plus the crate kit (wire crate with divider,
+            pad, cover, training pads) — so you can run the protocol without
+            scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Crate-training protocol"
+            subtitle="Email the crate introduction protocol, duration limits, night notes, and crate kit. No spam."
+            ctaText="Email my crate-training protocol"
+            source="training-crate-under-hero"
+          />
+        </div>
+
         <h2 id="why">Why Crate Training Is Worth It</h2>
         <p>A crate serves multiple functions: it prevents destructive behavior and accidents when unsupervised, provides a den-like retreat that most dogs come to value, makes traveling and vet visits less stressful (a dog comfortable in a crate is dramatically calmer in any confined space), and is an essential housetraining tool (dogs typically avoid soiling their sleeping area).</p>
         <p>The crate should never be used as punishment. Sending a dog to their crate in anger changes the association from safe space to negative consequence. Instead, the crate should always be associated with good things — meals fed in the crate, high-value treats, rest after exercise.</p>
@@ -48,20 +84,61 @@ export default function CrateTrainingPage() {
         <h2 id="size">Correct Crate Size</h2>
         <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows. To turn your dog's measurements into an exact size, use the <a href="/tools/dog-crate-size-calculator">dog crate size calculator →</a>, then see our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
 
+        {/* Money path — live amazon-brand search hops (crate kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide</div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Not sure which crate to buy? A wire crate with a divider panel is the right starting point for most puppies. For escape artists, step up to a heavy-duty aluminum option.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/go/amazon-brand/midwest+icrate+dog+crate+with+divider?s=training-crate" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-              Shop Wire Crates on Amazon →
-            </a>
-            <a href="/go/chewy-brand/dog+crate+with+divider?s=training-crate" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop on Chewy →
-            </a>
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a crate kit
           </div>
-          <p className="text-2xs text-brand-text-light mt-3">See our full <a href="/reviews/best-dog-crates" className="text-brand-primary hover:underline no-underline">Best Dog Crates 2026</a> guide for side-by-side comparisons.</p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A wire crate with a divider panel is the right starting point for
+            most puppies — same crate / pad / cover / training-pad hops used on
+            the{' '}
+            <Link
+              href="/tools/dog-crate-size-calculator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              crate size calculator
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/tools/new-puppy-checklist"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              new-puppy checklist
+            </Link>
+            . Size the crate before you order. They are not a ranked product
+            list and they do not replace the introduction protocol. Dog.com
+            earns a commission on qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"
+              amazonLabel="Browse crates on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+crate+pad?s=training-crate"
+              amazonLabel="Browse crate pads on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+crate+cover?s=training-crate"
+              amazonLabel="Browse crate covers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+pads?s=training-crate"
+              amazonLabel="Browse puppy training pads on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See our full{' '}
+            <Link href="/reviews/best-dog-crates" className="text-brand-primary hover:underline">
+              Best Dog Crates 2026
+            </Link>
+            {' '}guide for side-by-side comparisons.
+          </p>
         </div>
 
         <h2 id="intro">Introduction Protocol</h2>
