@@ -2935,6 +2935,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-megaesophagus Bailey-chair-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (Bailey chair, near-vertical upright feeding chair), never a placeholder ASIN, a brand-food hop (Canine Caviar), a prescription-diet hop, or a medication hop (pyridostigmine / myasthenia gravis drugs / aspiration-pneumonia antibiotics). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · heat-stroke-dogs hops',
+    file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-heat-stroke-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog heat-stroke cooling checklist"/, label: 'concrete dog heat-stroke cooling-checklist offer, not Subscribe' },
+      { re: /source="health-heat-stroke"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/cool\+water\+towels\?s=health-heat-stroke-dogs/, label: 'cool-water-towels search hop (matches on-page wet-towels-with-cool-water first-aid copy)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-heat-stroke-dogs/, label: 'digital pet thermometer search hop (same query as emergency triage / telehealth / first-aid kit; matches on-page digital-thermometer copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(ice\+pack|icepack|iv\+fluid|saline|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen|aspirin|dog\+water\+fountain|heavy\+ceramic\+pet\+water\+bowl|bailey\+chair|dog\+anxiety\+wrap|dog\+crate\+cover|white\+noise)/, label: 'never hop ice packs, IV fluids, medications, or overlap kits (kidney fountain/bowls, Bailey chair, anxiety wrap/crate-cover/white-noise)' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog heat-stroke cooling-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid cooling copy (cool-water towels, digital thermometer), never a placeholder ASIN, an ice-pack hop (copy says ice packs slow cooling), an IV-fluid hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
