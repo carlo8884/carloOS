@@ -1055,6 +1055,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete five-command-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy treat-pouch button that was rendering on this page.',
   },
   {
+    id: 'dog · training-loose-leash-walking hops',
+    file: 'apps/dog-com/src/app/training/loose-leash-walking/page.tsx',
+    mustInclude: [
+      { re: /source="training-loose-leash-walking-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my loose-leash protocol"/, label: 'concrete loose-leash-protocol offer, not Subscribe' },
+      { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=training-loose-leash-walking/, label: 'front-clip no-pull harness search hop (same query as exercise / harness-collar-size)' },
+      { re: /amazon-brand\/6\+ft\+dog\+leash\?s=training-loose-leash-walking/, label: '6-ft dog leash search hop (standard walk leash, not a retractable)' },
+      { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-loose-leash-walking/, label: 'treat pouch search hop (same query as basic-commands)' },
+      { re: /amazon-brand\/puppy\+training\+treats\?s=training-loose-leash-walking/, label: 'high-value training treats search hop (same query as basic-commands / house-training / puppy-schedule)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete loose-leash-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy harness button that was rendering on this page.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
