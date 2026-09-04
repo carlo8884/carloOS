@@ -2854,6 +2854,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-ear-cleaning-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-supplies copy (veterinary ear cleaner, cotton balls), never a placeholder ASIN, a prescription ear-drop hop, a parasiticide-brand hop (Revolution / Bravecto), a brand-ASIN hop (Virbac Epi-Otic / Douxo Ear), a cotton-swab hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-hot-spots hops',
+    file: 'apps/dog-com/src/app/health/dog-hot-spots/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-hot-spots-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog hot-spot e-collar checklist"/, label: 'concrete dog-hot-spot e-collar-checklist offer, not Subscribe' },
+      { re: /source="health-hot-spots"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pet\+recovery\+cone\?s=health-dog-hot-spots/, label: 'recovery-cone search hop (same query as vets telehealth / insurance tools; matches on-page e-collar / cone copy)' },
+      { re: /amazon-brand\/soft\+recovery\+cone\+dog\?s=health-dog-hot-spots/, label: 'soft-cone search hop (same query as dog grimace-scale; matches on-page soft-cone-alternative copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(chlorhexidine|vetericyn|genesis|malacetic|betadine|hydrocortisone|cytopoint|apoquel|spray|antibiotic|corticosteroid|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop chlorhexidine / Vetericyn-style sprays, Rx allergy / steroid / antibiotic meds, or medications — this page hops only physical e-collar / soft-cone gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-hot-spot e-collar-checklist offer; every gear CTA is an amazon-brand category search matching on-page physical-gear copy (e-collar / recovery cone, soft cone alternative), never a placeholder ASIN, a chlorhexidine / Vetericyn-style spray hop, a brand-ASIN hop (Vetericyn / Genesis / Malacetic), or a medication hop (Cytopoint / Apoquel / corticosteroids / antibiotics). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
