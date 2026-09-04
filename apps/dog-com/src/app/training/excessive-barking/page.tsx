@@ -1,9 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Excessive Barking in Dogs', description: 'Types of barking, causes, and evidence-based solutions for each.', url: 'https://dog.com/training/excessive-barking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Excessive Barking in Dogs', description: 'Types of barking, causes, and evidence-based solutions for each.', url: 'https://dog.com/training/excessive-barking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' })
 
 const TYPES = [
   { type: 'Alert / Territorial Barking', cause: 'Stranger, animal, or vehicle approaching the territory. The dog is performing its function.', solution: 'Management: block visual access to triggers (window film on lower panes, keep dog away from front windows). Training: "thank you" interruption — acknowledge the bark ("thank you"), then redirect to a mat or settle behavior. Do not punish the bark; you lose the early warning function and the dog\'s trust.' },
@@ -30,7 +40,32 @@ export default function ExcessiveBarkingPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the quiet-barking plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Quiet-barking plan
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the six bark-type diagnoses, the camera check, and the
+            enrichment kit (puzzle feeder, lick mat, snuffle mat, calming
+            chews) so you can match the protocol to the bark you actually
+            have. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Quiet-barking plan"
+            subtitle="Email the six bark-type diagnoses, camera check, and enrichment kit. No spam."
+            ctaText="Email my quiet-barking plan"
+            source="training-excessive-barking-under-hero"
+          />
+        </div>
+
         <h2>Diagnose Before You Treat</h2>
         <p>The first step is identifying which type of barking you are dealing with — not guessing. Set up a camera and record your dog when the barking occurs. Watch the footage. Is the barking triggered by something external (alert barking)? Does it happen when the dog is alone (separation anxiety)? Is it during play (excitement)? Does it happen when the dog sees a specific trigger (fear)? The footage tells you what type you have.</p>
         {TYPES.map((t, i) => (
@@ -42,6 +77,79 @@ export default function ExcessiveBarkingPage() {
             </div>
           </div>
         ))}
+
+        {/* Money path — live amazon-brand search hops (bark-control / enrichment kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a quiet-barking kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Boredom and frustration barking are enrichment problems — a
+            puzzle feeder, lick mat, or snuffle mat occupies the mouth
+            instead of the bark. Calming chews are a category search for
+            anxiety-adjacent barking, not a ranked SKU and not a substitute
+            for diagnosing the bark type. Same puzzle-feeder hop used on the{' '}
+            <Link
+              href="/tools/dog-body-condition-score"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dog body-condition score
+            </Link>
+            . Same snuffle-mat hop used on the{' '}
+            <Link
+              href="/training/separation-anxiety"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              separation-anxiety guide
+            </Link>
+            . Same calming-chew hop used on the{' '}
+            <Link
+              href="/tools/dog-grimace-scale"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              dog grimace scale
+            </Link>
+            . They are not a ranked product list and they do not replace
+            the camera check. Dog.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking"
+              amazonLabel="Browse puzzle feeders on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/lick+mat+dog?s=training-excessive-barking"
+              amazonLabel="Browse lick mats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking"
+              amazonLabel="Browse snuffle mats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/calming+dog+chews?s=training-excessive-barking"
+              amazonLabel="Browse calming chews on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/training/separation-anxiety" className="text-brand-primary hover:underline">
+              Separation Anxiety
+            </Link>
+            {' · '}
+            <Link href="/training/leash-reactivity" className="text-brand-primary hover:underline">
+              Leash Reactivity
+            </Link>
+            {' · '}
+            <Link href="/tools/dog-body-condition-score" className="text-brand-primary hover:underline">
+              Dog Body Condition Score
+            </Link>
+          </p>
+        </div>
+
         <h2>What Doesn&apos;t Work (Across All Types)</h2>
         <ul>
           <li><strong>Anti-bark collars (shock, citronella, ultrasonic):</strong> Suppress barking through aversion without addressing the underlying cause. Fear barking treated with a shock collar produces a dog that is more frightened and cannot communicate distress. Alert barking suppressed by pain produces a dog that eventually bites without warning. The bark was the warning.</li>
