@@ -1269,6 +1269,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete water-parameter-testing-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-hub hops',
+    file: 'apps/fish-com/src/app/health/page.tsx',
+    mustInclude: [
+      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium health checklist"/, label: 'concrete aquarium-health-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-hub/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide)' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-hub/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / medicating-fish)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-hub/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / ich)' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=health-hub/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / velvet)' },
+      { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-hub/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ich-x|kanaplex|pimafix|super\+ick|fish\+medication|fish\+medicine)/, label: 'never hop medications — this hub is water-chemistry / isolation / temperature, not a drug list' },
+    ],
+    why: 'Money path: under-hero capture with a concrete aquarium-health-checklist offer; every gear CTA is an amazon-brand category search matching on-page water-chemistry / disease-identification / nitrogen-cycle copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'fish · health-disease-guide hops',
     file: 'apps/fish-com/src/app/health/fish-disease-guide/page.tsx',
     mustInclude: [
