@@ -1173,6 +1173,31 @@ const CALCULATORS = [
     ],
     why: 'Money path: under-hero capture with a concrete triage-card offer; complementary amazon-brand category searches for kit items already listed on the page; hops stay on the web page, not the printable card; empty Chewy stays hidden.',
   },
+  {
+    id: 'vets · pet-insurance-worth-it-calculator hops',
+    file: 'apps/vets-co/src/app/tools/pet-insurance-worth-it-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-pet-insurance-worth-it-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the insurance checklist"/, label: 'concrete insurance-checklist offer, not Subscribe' },
+      { re: /<InsuranceWellnessShop source="tools-pet-insurance-worth-it-calculator"/, label: 'InsuranceWellnessShop kept (do not re-rank carriers)' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-pet-insurance-worth-it-calculator/, label: 'pet first-aid kit search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-pet-insurance-worth-it-calculator/, label: 'digital pet thermometer search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=tools-pet-insurance-worth-it-calculator/, label: 'digital pet scale search hop' },
+      { re: /amazon-brand\/pet\+recovery\+cone\?s=tools-pet-insurance-worth-it-calculator/, label: 'pet recovery cone search hop' },
+      { re: /amazon-brand\/pet\+calming\+aid\?s=tools-pet-insurance-worth-it-calculator/, label: 'pet calming aid search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /REVIEWS_HREF = '\/reviews\/best-pet-insurance'/, label: 'insurance comparison CTA stays on best-pet-insurance' },
+      { re: /href="\/telehealth"/, label: 'non-ER talk-to-a-vet points at /telehealth' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+    ],
+    why: 'Money path: under-hero capture with a concrete insurance-checklist offer; complementary amazon-brand category searches for home-care prep beside InsuranceWellnessShop; insurance quotes stay on /reviews/best-pet-insurance; empty Chewy stays hidden.',
+  },
 ]
 
 let failures = 0
