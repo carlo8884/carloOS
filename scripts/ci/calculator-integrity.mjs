@@ -1427,6 +1427,26 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete pop-eye isolate-and-test checklist offer; every gear CTA is an amazon-brand category search matching on-page water-quality / hospital-isolation copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-fish-lice hops',
+    file: 'apps/fish-com/src/app/health/fish-lice-anchor-worm/page.tsx',
+    mustInclude: [
+      { re: /source="health-fish-lice-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fish-lice quarantine checklist"/, label: 'concrete 4-to-6-week quarantine-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-fish-lice/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-fish-lice/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /api\+freshwater\+master\+test\+kit/, label: 'omit test-kit hop — lice / anchor-worm copy has no water-test-first step' },
+      { re: /eheim\+jager\+heater/, label: 'omit heater hop — lice / anchor-worm copy has no heat method' },
+      { re: /aquarium\+digital\+thermometer/, label: 'omit thermometer hop — lice / anchor-worm copy has no heat method' },
+    ],
+    why: 'Money path: under-hero capture with a concrete fish-lice 4-to-6-week quarantine-checklist offer; every gear CTA is an amazon-brand category search matching on-page quarantine / treat-the-holding-water copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [

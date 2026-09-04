@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -40,6 +41,32 @@ export default function FishLicePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the 4-to-6-week quarantine plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Lice-and-anchor-worm quarantine checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the 4-to-6-week quarantine order — hold every new fish in
+            a spare quarantine tank so Argulus and Lernaea are visible
+            before they reach the display, and treat the holding water so
+            eggs and free-swimming larvae do not re-seed the tank.
+            Educational husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Lice-and-anchor-worm quarantine checklist"
+            subtitle="Email the 4-to-6-week quarantine and treat-the-holding-water order. No spam."
+            ctaText="Email my fish-lice quarantine checklist"
+            source="health-fish-lice-under-hero"
+          />
+        </div>
+
         <h2>Fish Lice (Argulus)</h2>
         <p>Argulus are flat, oval crustacean parasites 5–10mm in diameter — visible to the naked eye as small disc-shaped organisms attached to or moving across the fish's skin. They use sucking mouthparts to pierce the skin and feed on tissue fluid and blood, causing: visible attachment lesions (red, inflamed spots where they attach), intense irritation (fish rubbing against surfaces — flashing — and jumping), secondary bacterial infection at wound sites, and in heavy infestations, anemia and immune suppression from blood loss.</p>
         <p>Argulus can detach from the fish and swim freely in the water column — adults can survive briefly off the host. Eggs are deposited on hard surfaces (rocks, aquarium glass, substrate) and hatch into free-swimming larvae that seek a host. This life cycle means treating the fish alone is insufficient — the aquarium or pond environment must also be treated to kill eggs and larvae.</p>
@@ -54,6 +81,81 @@ export default function FishLicePage() {
         <h2>Sources and Prevention</h2>
         <p>Both parasites enter closed aquariums from: wild-caught fish not quarantined, live feeder fish from pond environments (feeder goldfish from outdoor rearing ponds are a common source), water or plants taken from natural water sources, and pond-reared fish of any species. Prevention: rigorous quarantine of all new fish (4–6 weeks observation — both parasites would be visible well within this window), avoid live feeder fish from unknown sources, and do not introduce water, plants, or substrate from natural water bodies without treating for potential parasites.</p>
         <p>Once established in a pond, both parasites can be extremely persistent — pond treatment with diflubenzuron or potassium permanganate repeated at appropriate intervals is required to break the life cycle.</p>
+
+        {/* Money path — live amazon-brand search hops (quarantine-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a quarantine-tank kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Prevention on this page is a 4–6 week quarantine of every new
+            fish — both parasites would be visible well within that window
+            — plus treating the holding water so eggs and larvae do not
+            re-seed the tank. A spare quarantine / hospital tank is how you
+            run that watch without dropping the display. A seeded sponge
+            filter keeps that holding water moving. Same hospital-tank hop
+            used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/pop-eye" className="text-brand-primary no-underline hover:underline">
+              pop-eye guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Test-kit, heater, and thermometer hops stay off this page —
+            lice and anchor-worm copy has no water-test-first step and no
+            heat method. The hops below are not a ranked product list, they
+            are not medications, and they do not treat, reverse, or cure
+            Argulus or Lernaea. Fish.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy buttons stay
+            hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-fish-lice"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/gill-flukes" className="text-brand-primary hover:underline">
+              Gill Flukes
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/health/medicating-aquarium-fish" className="text-brand-primary hover:underline">
+              Medicating Aquarium Fish
+            </Link>
+            {' · '}
+            <Link href="/species/koi" className="text-brand-primary hover:underline">
+              Koi Care
+            </Link>
+          </p>
+        </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
