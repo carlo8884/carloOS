@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -47,6 +47,32 @@ export default function DogHotSpotsPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the hot-spot e-collar checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog hot-spot e-collar checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the e-collar and soft-cone notes — a recovery cone so
+              the dog cannot lick or scratch the lesion, plus a soft cone
+              alternative for dogs that tolerate it. Educational
+              checklist, not a diagnosis and not a medicated spray.
+              Chlorhexidine, Vetericyn-style sprays, and prescription
+              meds stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog hot-spot e-collar checklist"
+              subtitle="Email the e-collar and soft-cone notes. No spam."
+              ctaText="Email my dog hot-spot e-collar checklist"
+              source="health-dog-hot-spots-under-hero"
+            />
+          </div>
+
           <h2>What Triggers Hot Spots</h2>
           <p>Hot spots are secondary to an underlying trigger that initiates self-trauma. The most common triggers: <strong>allergies</strong> (environmental atopy, food allergy, or flea allergy creating an itch that the dog traumatizes), <strong>flea infestation</strong> (flea allergy dermatitis — a single flea bite on an allergic dog can initiate scratching intense enough to create a hot spot at the site of the bite, typically over the lower back and base of tail), <strong>ear infections</strong> (dogs scratch at painful ears and traumatize the skin around the ear base — the most common hot spot location), <strong>coat matting</strong> (matted fur traps moisture against the skin), and <strong>boredom or anxiety</strong> (some dogs lick compulsively, creating hot spots in the absence of any external trigger).</p>
           <p>Hot spots are most common in summer — heat and humidity create a favorable environment for bacterial proliferation. Thick-coated breeds (Golden Retrievers, Labs, German Shepherds, Newfoundlands) that trap moisture in their undercoat are highest risk.</p>
@@ -63,6 +89,44 @@ export default function DogHotSpotsPage() {
 
           <h2>Preventing Recurrence</h2>
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
+
+          <h2 id="kit">Hot-spot e-collar kit</h2>
+          <p>Everyday physical supplies that match the home-care copy above — an e-collar (cone) so the dog cannot lick, scratch, or bite the lesion, plus a soft cone alternative for dogs that tolerate it. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page never hops medicated sprays, brand ASINs, or medications. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (e-collar / soft cone).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — reuse live sister queries from
+              vets telehealth / insurance tools (pet+recovery+cone) and
+              dog grimace-scale (soft+recovery+cone+dog). Chlorhexidine,
+              Vetericyn-style sprays, and Rx meds are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the hot-spot e-collar kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page hot-spot
+              copy — an e-collar (recovery cone) and a soft cone
+              alternative so the dog cannot keep licking or scratching
+              the lesion. Everyday physical gear only. They are not a
+              ranked product list, they are not medicated sprays, they
+              are not medications, and they do not replace a
+              veterinarian. Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots"
+                amazonLabel="Browse recovery cones on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"
+                amazonLabel="Browse soft recovery cones on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
