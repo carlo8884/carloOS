@@ -1093,6 +1093,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete leash-reactivity-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy harness button that was rendering on this page.',
   },
   {
+    id: 'dog · training-separation-anxiety hops',
+    file: 'apps/dog-com/src/app/training/separation-anxiety/page.tsx',
+    mustInclude: [
+      { re: /source="training-sep-anxiety-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my separation-anxiety protocol"/, label: 'concrete separation-anxiety-protocol offer, not Subscribe' },
+      { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-sep-anxiety/, label: 'stuffable Kong search hop (same query as exercise calculator / new-puppy checklist)' },
+      { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-sep-anxiety/, label: 'snuffle mat search hop (amazon-brand replacement for the empty Chewy snuffle mat)' },
+      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-sep-anxiety/, label: 'wire crate with divider search hop (same query as crate-training)' },
+      { re: /amazon-brand\/bully\+sticks\+dog\+chew\?s=training-sep-anxiety/, label: 'long-lasting chew search hop (bully sticks named on-page)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete separation-anxiety-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy snuffle-mat button that was rendering on this page.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
