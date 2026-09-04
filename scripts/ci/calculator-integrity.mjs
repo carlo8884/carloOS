@@ -1036,6 +1036,25 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete house-training-schedule offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy cleaner button that was rendering on this page.',
   },
   {
+    id: 'dog · training-basic-commands hops',
+    file: 'apps/dog-com/src/app/training/basic-commands/page.tsx',
+    mustInclude: [
+      { re: /source="training-basic-commands-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my five-command protocol"/, label: 'concrete five-command-protocol offer, not Subscribe' },
+      { re: /amazon-brand\/puppy\+training\+treats\?s=training-basic-commands/, label: 'puppy training treats search hop (same query as house-training / puppy-schedule / new-puppy)' },
+      { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-basic-commands/, label: 'treat pouch search hop (amazon-brand replacement for the empty Chewy pouch)' },
+      { re: /amazon-brand\/dog\+training\+clicker\?s=training-basic-commands/, label: 'dog training clicker search hop (marker for sit / leave-it)' },
+      { re: /amazon-brand\/dog\+long\+line\+leash\?s=training-basic-commands/, label: 'long-line leash search hop (recall before off-leash)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete five-command-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy treat-pouch button that was rendering on this page.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
