@@ -1214,6 +1214,28 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-body-clipping-checklist offer; every gear CTA is an amazon-brand category search matching on-page clipper / blade / oil / cooler copy (horse clippers, clipper blades, clipper oil, fleece cooler), never a placeholder ASIN, a medication / sedation hop, or a rug / blanket hop (those live on the blanketing page). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · fencing-safety hops',
+    file: 'apps/horses-com/src/app/care/fencing-safety/page.tsx',
+    mustInclude: [
+      { re: /source="care-fencing-safety-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse fencing-safety checklist"/, label: 'concrete horse-fencing-safety-checklist offer, not Subscribe' },
+      { re: /source="care-fencing"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+electric\+tape\?s=care-fencing-safety/, label: 'electric-tape search hop (matches on-page electric tape copy)' },
+      { re: /amazon-brand\/horse\+fence\+mesh\?s=care-fencing-safety/, label: 'horse-mesh search hop (matches on-page mesh designed for horses copy)' },
+      { re: /amazon-brand\/horse\+electric\+rope\?s=care-fencing-safety/, label: 'electric-rope search hop (matches on-page electric rope copy)' },
+      { re: /amazon-brand\/electric\+fence\+tester\?s=care-fencing-safety/, label: 'fence-tester search hop (matches on-page test-the-electric-charge copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|sedation|sedative|bute|phenylbutazone|banamine|barbed|sheep\+mesh|high-tensile|antifungal|antibiotic)/, label: 'never hop medications, barbed wire, sheep mesh, or high-tensile wire — this page is educational safe-fence gear, not a drug or hazard list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse-fencing-safety-checklist offer; every gear CTA is an amazon-brand category search matching on-page safe-fence copy (electric tape, horse mesh, electric rope, electric fence tester), never a placeholder ASIN, a medication hop, or a barbed-wire / sheep-mesh / high-tensile hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

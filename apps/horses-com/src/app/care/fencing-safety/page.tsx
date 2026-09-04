@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function FencingSafetyPage() {
             { label: "Height and Spacing", href: "#height" },
             { label: "Hazards to Avoid", href: "#hazards" },
             { label: "Gates and Routine Checks", href: "#gates" },
+            { label: "Fencing Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,9 +109,33 @@ export default function FencingSafetyPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the fencing-safety checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse fencing-safety checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the electric-tape, horse-mesh, electric-rope, and fence-tester
+              notes so the paddock kit is ready before you walk the line.
+              Educational checklist, not a diagnosis and not a medication
+              order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse fencing-safety checklist"
+              subtitle="Email the electric-tape, horse-mesh, electric-rope, and fence-tester notes. No spam."
+              ctaText="Email my horse fencing-safety checklist"
+              source="care-fencing-safety-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Fencing Safety Matters</h2>
           <p>A horse that hits, leans on, or gets a leg through a fence at speed can suffer catastrophic injury. The goals of good fencing are to be highly visible so horses respect and avoid it, to contain without trapping, to flex or break safely rather than impale or saw, and to have no gaps, points, or loops that catch a leg or head. Cheap, sharp, or flimsy fencing is a false economy.</p>
@@ -137,6 +162,51 @@ export default function FencingSafetyPage() {
 
           <h2 id="gates">Gates and Routine Checks</h2>
           <p>Gates should be horse-safe -- well hung, easy for a person to open and close one-handed while leading, latched securely against a determined horse, and free of gaps that trap a leg. Walk the fence line regularly to check tension, look for broken rails or downed wire, test the electric charge, clear vegetation off electric lines, and remove debris and hazards from the field. Many fence injuries trace to a known fault that was not fixed in time.</p>
+
+          <h2 id="kit">Fencing Kit</h2>
+          <p>Everyday physical supplies that match the safe-fence and routine-check copy above — visible electric tape, electric rope, mesh designed for horses with openings too small for a hoof, and a tester for the electric charge. Post-and-rail lumber, vinyl rail systems, and contractor-installed fencing stay off this kit. Barbed wire, high-tensile unflagged wire, and sheep mesh stay off it too — those are hazards, not shoppable hops. These are not a treatment for a laceration or a diagnosis. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (fencing kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page electric-tape / horse-mesh / electric-rope / tester
+              copy, not barbed wire, sheep mesh, medication, or
+              contractor lumber hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the fencing kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page safe-fence
+              and routine-check copy — horse electric tape, horse-safe mesh,
+              electric rope, and an electric fence tester. Everyday physical
+              supplies only. They are not a ranked product list, they are not
+              barbed wire or sheep mesh, they are not a medication, and they
+              do not replace a veterinarian. Horses.com earns a commission
+              on qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+electric+tape?s=care-fencing-safety"
+                amazonLabel="Browse horse electric tape on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+fence+mesh?s=care-fencing-safety"
+                amazonLabel="Browse horse fence mesh on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+electric+rope?s=care-fencing-safety"
+                amazonLabel="Browse horse electric rope on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/electric+fence+tester?s=care-fencing-safety"
+                amazonLabel="Browse electric fence testers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
