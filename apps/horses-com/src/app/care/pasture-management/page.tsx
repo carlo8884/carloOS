@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function PastureManagementPage() {
             { label: "Soil, Reseeding, and Fertility", href: "#soil" },
             { label: "Avoiding Overgrazing", href: "#overgrazing" },
             { label: "Laminitis and Rich Grass", href: "#laminitis" },
+            { label: "Pasture Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,9 +110,33 @@ export default function PastureManagementPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the pasture-management checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse pasture-management checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the grazing-muzzle and soil-test-kit notes so the
+              restricted-grazing kit is ready before the spring flush.
+              Educational checklist, not a diagnosis and not a medication
+              or fertilizer order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse pasture-management checklist"
+              subtitle="Email the grazing-muzzle and soil-test-kit notes. No spam."
+              ctaText="Email my pasture-management checklist"
+              source="care-pasture-management-under-hero"
+            />
+          </div>
 
           <h2 id="grazing">How Horses Graze</h2>
           <p>Horses are selective grazers that crop grass close with their incisors and create distinct lawns and roughs -- short, repeatedly grazed areas and tall, manure-fouled areas they avoid. Left unmanaged, this patchy grazing wastes pasture, concentrates parasite larvae in the roughs, and lets weeds invade the bare lawns. Understanding this behavior is the starting point for managing the land.</p>
@@ -135,6 +160,44 @@ export default function PastureManagementPage() {
 
           <h2 id="laminitis">Laminitis and Rich Grass</h2>
           <p>Lush pasture is high in the sugars that trigger laminitis in susceptible horses. Spring and autumn flushes, and sunny afternoons after cool nights, are the high-risk windows. At-risk horses need restricted grazing through grazing muzzles, strip grazing, dry lots, or turnout at lower-sugar times. Pasture management for an easy-keeping pony is as much about limiting intake as growing grass.</p>
+
+          <h2 id="kit">Pasture Kit</h2>
+          <p>Everyday physical supplies that match the restricted-grazing and soil-management copy above — a grazing muzzle for laminitis-prone horses and ponies, plus a soil test kit so liming and fertilizing follow a pH and nutrient reading rather than a guess. Electric tape for strip grazing stays on the fencing-safety page. Fans, slow feeders, electrolytes, hoof picks, hoof boots, and stall forks stay off this kit — those already ship on other care pages. Fertilizer, lime, herbicide, and poisonous-plant treatments stay off it too. These are not a treatment for laminitis or a diagnosis. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (pasture kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page grazing-muzzle / soil-testing copy, not strip-grazing
+              electric tape (fencing-safety), fans, slow feeders,
+              electrolytes, hoof gear, stall forks, fertilizer, or
+              medication hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the pasture kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page restricted-grazing
+              and soil-testing copy — a horse grazing muzzle for at-risk horses
+              and ponies, and a soil test kit before you lime or fertilize.
+              Everyday physical supplies only. They are not a ranked product
+              list, they are not fertilizer or herbicide, they are not a
+              medication, and they do not replace a veterinarian. Horses.com
+              earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+grazing+muzzle?s=care-pasture-management"
+                amazonLabel="Browse horse grazing muzzles on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soil+test+kit?s=care-pasture-management"
+                amazonLabel="Browse soil test kits on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
