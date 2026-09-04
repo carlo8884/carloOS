@@ -1,5 +1,18 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  ArticleByline,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  FAQAccordion,
+  CrossPortfolioCard,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -36,7 +49,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -137,9 +150,34 @@ export default function HeatStrokePreventionPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the heat-safety checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret heat-safety checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the summer cage-setup order — a digital indoor thermometer
+              at the cage (not the hallway thermostat), a sealed frozen water
+              bottle wrapped in thin cloth, a chilled ceramic tile, a backup
+              ferret water bottle, and a clip-on fan only to move already-cooled
+              air. Educational checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret heat-safety checklist"
+              subtitle="Email the cage-temperature, frozen-bottle, tile, and backup-water order. No spam."
+              ctaText="Email my ferret heat-safety checklist"
+              source="care-heat-stroke-prevention-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Ferrets Overheat So Easily</h2>
           <p>
@@ -186,6 +224,73 @@ export default function HeatStrokePreventionPage() {
           <p>
             Build these into the habitat from the start; our <a href="/care/cage-setup">cage setup</a> guide covers placement, and the principles extend to any space the ferret roams.
           </p>
+
+          {/* Money path — live amazon-brand search hops (heat-safety / cooling gear).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — educational gear, not medications, not a ranked list. */}
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+              Shop heat-safety setup
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page prevention
+              copy — a digital indoor thermometer so you can read the
+              temperature at the cage, reusable plastic bottles you can freeze
+              and wrap in thin cloth, a ceramic tile to chill as a cool
+              surface, a spare ferret water bottle as the backup water source,
+              and a small clip-on fan only to circulate already-cooled air.
+              Same ferret-water-bottle hop used on the{' '}
+              <Link
+                href="/care/toxic-foods"
+                className="text-brand-primary no-underline hover:underline"
+              >
+                toxic-foods
+              </Link>
+              {' '}guide. They are not a ranked product list, they are not
+              medications, and they do not diagnose, treat, or replace an
+              exotic-pet veterinarian. Air conditioning remains the gold
+              standard; this gear is the inexpensive cage-level layer. Ferret.com
+              earns a commission on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+indoor+thermometer?s=care-heat-stroke-prevention"
+                amazonLabel="Browse digital indoor thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/reusable+plastic+water+bottle?s=care-heat-stroke-prevention"
+                amazonLabel="Browse reusable plastic water bottles on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ceramic+tile?s=care-heat-stroke-prevention"
+                amazonLabel="Browse ceramic tiles on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+water+bottle?s=care-heat-stroke-prevention"
+                amazonLabel="Browse water bottles for ferrets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/clip+on+fan?s=care-heat-stroke-prevention"
+                amazonLabel="Browse clip-on fans on Amazon →"
+              />
+            </div>
+            <p className="text-2xs text-brand-text-light mt-3">
+              See also:{' '}
+              <Link href="/care/cage-setup" className="text-brand-primary hover:underline">
+                Cage Setup
+              </Link>
+              {' · '}
+              <Link href="/care/travel-and-carriers" className="text-brand-primary hover:underline">
+                Travel &amp; Carriers
+              </Link>
+              {' · '}
+              <Link href="/health/emergency-warning-signs" className="text-brand-primary hover:underline">
+                Emergency Warning Signs
+              </Link>
+            </p>
+          </div>
 
           <h2 id="emergency">Emergency Cooling</h2>
           <p>
