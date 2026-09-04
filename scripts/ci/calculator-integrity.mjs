@@ -369,6 +369,24 @@ const CALCULATORS = [
     why: 'Canine gestation averages ~63 days from breeding (normal window ~58–68).',
   },
   {
+    id: 'dog · dog-gestation-calculator hops',
+    file: 'apps/dog-com/src/app/tools/dog-gestation-calculator/page.tsx',
+    mustInclude: [
+      { re: /source="tools-dog-gestation-calculator-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email the whelping kit checklist"/, label: 'concrete whelping-kit-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/dog\+whelping\+box\?s=tools-dog-gestation-calculator/, label: 'whelping box search hop' },
+      { re: /amazon-brand\/digital\+puppy\+scale\?s=tools-dog-gestation-calculator/, label: 'digital puppy scale search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-dog-gestation-calculator/, label: 'digital pet thermometer search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: 'Money path: under-hero capture with a concrete whelping-kit-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
     id: 'horses · horse-gestation-calculator',
     file: 'apps/horses-com/src/app/tools/horse-gestation-calculator/Calculator.tsx',
     mustInclude: [{ re: /DEFAULT_GESTATION\s*=\s*340/, label: 'mare gestation ~340 days' }],
