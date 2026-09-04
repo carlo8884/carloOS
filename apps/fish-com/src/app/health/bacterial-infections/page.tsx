@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -36,6 +37,31 @@ export default function BacterialInfectionsPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the water-first plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Water-first / hospital-tank checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the water-first / hospital-tank order — test ammonia,
+            nitrite, and nitrate before you treat, isolate the affected fish
+            in a spare hospital tank so the display biofilter stays
+            protected, and quarantine every new arrival. Educational
+            husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Water-first / hospital-tank checklist"
+            subtitle="Email the test-water-first and hospital-tank isolation order. No spam."
+            ctaText="Email my water-first hospital-tank checklist"
+            source="health-bacterial-infections-under-hero"
+          />
+        </div>
+
         <h2>Opportunistic, Not Contagious</h2>
         <DropCap>The crucial fact about most fish bacterial infections is that the bacteria responsible — chiefly gram-negative genera such as Aeromonas, Pseudomonas, and Vibrio — are ubiquitous. They live in every aquarium, on every surface, all the time, and a healthy fish with intact slime coat and a functioning immune system fends them off without difficulty. Disease occurs when that defense is compromised: by chronically elevated ammonia or nitrite, by accumulating nitrate, by a physical injury, by stress from aggression or shipping, or by a temperature shock. The infection is the consequence; the water-quality or stress problem is the cause. This is why dosing antibiotics without correcting the underlying environment so often fails — the medicine knocks back the bacteria, but the same conditions simply invite the next infection.</DropCap>
 
@@ -54,6 +80,107 @@ export default function BacterialInfectionsPage() {
 
         <h2>Prevention</h2>
         <p>Because these infections are opportunistic, prevention is overwhelmingly a matter of husbandry. Keep ammonia and nitrite at zero and nitrate low through a fully established <a href="/health/nitrogen-cycle-explained">nitrogen cycle</a> and regular water changes. Quarantine every new arrival to avoid importing both pathogens and stress. Avoid overcrowding and incompatible tankmates that cause chronic stress and injury. Feed a varied, high-quality diet to support immune function. A fish kept in clean, stable water at appropriate density very rarely succumbs to the bacteria that are always swimming alongside it.</p>
+
+        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a water-first hospital-tank kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Fix the water first — a liquid master kit is how you see ammonia,
+            nitrite, and nitrate that let opportunistic bacteria take hold.
+            Isolate in a spare hospital tank with a seeded sponge filter so
+            treatment stays off the display biofilter, a heater rated for the
+            tank, and a separate digital thermometer so the dial is not the
+            only reading. Same test-kit hop used on the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            {' '}and the{' '}
+            <Link href="/health/dropsy-treatment" className="text-brand-primary no-underline hover:underline">
+              dropsy guide
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure bacterial infections.
+            Fish.com earns a commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-bacterial-infections"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-bacterial-infections"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-bacterial-infections"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-bacterial-infections"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-bacterial-infections"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/fin-rot" className="text-brand-primary hover:underline">
+              Fin Rot
+            </Link>
+            {' · '}
+            <Link href="/health/dropsy-treatment" className="text-brand-primary hover:underline">
+              Dropsy Treatment
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
+        </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
