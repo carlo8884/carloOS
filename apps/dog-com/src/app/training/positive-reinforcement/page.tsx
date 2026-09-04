@@ -1,7 +1,20 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  FAQAccordion,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  DropCap,
+  CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -20,7 +33,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 // HowTo steps mirror the page's own sequence: reinforcer selection → timing →
@@ -85,7 +98,31 @@ export default function PositiveReinforcementPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the reward-based protocol
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Reward-based training protocol
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the reinforcer-matching steps, the 2-second timing window,
+            how to charge a marker, and the CRF-to-intermittent schedule —
+            plus the kit (pea-sized treats, clicker, belt-clip pouch) so you
+            can run the protocol without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Reward-based training protocol"
+            subtitle="Email the reinforcer steps, timing window, marker charge, and kit. No spam."
+            ctaText="Email my reward-based training protocol"
+            source="training-positive-reinforcement-under-hero"
+          />
+        </div>
 
         <h2 id="principle">The Core Principle</h2>
         <DropCap>Positive reinforcement is the delivery of something the learner values immediately following a behavior, which increases the probability of that behavior occurring again in the future. That is the complete definition. &quot;Positive&quot; means adding something — not that training is gentle or easy. &quot;Reinforcement&quot; means the behavior increases — if it doesn&apos;t increase, whatever you&apos;re using is not a reinforcer for that individual.</DropCap>
@@ -110,6 +147,82 @@ export default function PositiveReinforcementPage() {
         <p>A marker is a conditioned reinforcer — a sound (click from a clicker, or a word like &quot;yes&quot;) that has been paired with food until it predicts food delivery. The marker solves the timing problem: you can mark the exact moment of the behavior, then take up to 3–4 seconds to deliver the food. The click or &quot;yes&quot; bridges the gap.</p>
         <p><strong>How to charge the marker:</strong> Click (or say &quot;yes&quot;), immediately deliver a treat. Repeat 20–30 times in rapid succession. The dog does not need to do anything — this is classical conditioning, not operant. After charging, test: click once and watch whether the dog looks for the treat. If yes, the marker is charged.</p>
         <p><strong>Clicker vs verbal marker:</strong> Clickers are more precise and consistent (always the same sound) but require a hand. A verbal marker (&quot;yes,&quot; &quot;good,&quot; &quot;mark&quot;) is always available. Choose based on preference — both work.</p>
+
+        {/* Money path — live amazon-brand search hops (reward / marker kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a reward-based training kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            High-value, pea-sized treats and a belt-clip pouch keep the
+            reinforcer inside the 2-second window. A clicker (or a verbal
+            &quot;yes&quot;) marks the exact moment so you can deliver the food a
+            beat later without losing the association. Same clicker, treat,
+            and pouch hops used on the{' '}
+            <Link
+              href="/training/marker-training"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              marker-training guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/training/basic-commands"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              basic-commands guide
+            </Link>
+            . Same treat hop used on the{' '}
+            <Link
+              href="/training/house-training"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              house-training guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/training/puppy-schedule"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              puppy schedule
+            </Link>
+            . They are not a ranked product list and they do not replace
+            matching the reinforcer to the task. Dog.com earns a commission
+            on qualifying purchases at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement"
+              amazonLabel="Browse puppy training treats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement"
+              amazonLabel="Browse dog training clickers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"
+              amazonLabel="Browse treat pouches on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/training/marker-training" className="text-brand-primary hover:underline">
+              Marker Training
+            </Link>
+            {' · '}
+            <Link href="/training/basic-commands" className="text-brand-primary hover:underline">
+              Basic Commands
+            </Link>
+            {' · '}
+            <Link href="/training/trainer-credentials" className="text-brand-primary hover:underline">
+              Trainer Credentials
+            </Link>
+          </p>
+        </div>
 
         <h2 id="schedules">Schedules of Reinforcement</h2>
         <p><strong>Continuous reinforcement (CRF):</strong> Reward every correct response. Use during initial learning of a new behavior — the most efficient way to create a new behavior pattern.</p>
