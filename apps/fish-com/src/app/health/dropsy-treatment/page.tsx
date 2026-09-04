@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +35,31 @@ export default function DropsyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the hospital-tank plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Hospital-tank / quarantine checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the isolate-first order — move a pinecone-scale fish to a
+            spare hospital tank, test ammonia / nitrite / nitrate, and watch
+            tankmates — so quarantine is ready before water quality slips
+            further. Educational husbandry, not a diagnosis or a cure. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Hospital-tank / quarantine checklist"
+            subtitle="Email the isolate-first hospital-tank and remaining-fish watch order. No spam."
+            ctaText="Email my dropsy quarantine checklist"
+            source="health-dropsy-under-hero"
+          />
+        </div>
+
         <h2>What Dropsy Actually Is</h2>
         <p>Dropsy describes the accumulation of fluid (edema and ascites) within the body cavity of a fish, causing the characteristic distension and scale protrusion. It is not caused by a single pathogen — it is a final common endpoint of multiple serious conditions that damage internal organs to the point where normal fluid regulation fails.</p>
         <p>The most common underlying causes: bacterial infection involving the kidneys (Aeromonas, Pseudomonas, Edwardsiella) damaging the renal tubules responsible for fluid regulation; viral infection; parasitic organ infiltration; hepatic (liver) failure from any cause; and neoplasia (internal tumors). Bacterial kidney infection is by far the most common cause in aquarium fish, and this is why the condition is historically associated with poor water quality — elevated nitrate and ammonia predispose fish to systemic bacterial infection.</p>
@@ -52,6 +78,95 @@ export default function DropsyPage() {
 
         <h2>Quarantine Remaining Fish</h2>
         <p>When one fish develops dropsy from a bacterial systemic infection, other fish in the same tank are at risk — particularly if they are stressed by the same water quality issues. Monitor all other fish closely. A preemptive course of antibiotics in the display tank is sometimes recommended when multiple fish are showing early signs, but should be weighed against the impact on biological filtration.</p>
+
+        {/* Money path — live amazon-brand search hops (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. No medication hops. */}
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a hospital-tank kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            Isolate first, then test water — a liquid master kit is how you
+            see ammonia, nitrite, and nitrate that predispose fish to systemic
+            bacterial infection. A spare hospital tank with a seeded sponge
+            filter, a heater rated for the tank, and a separate digital
+            thermometer keeps treatment off the display biofilter. Same
+            test-kit hop used on the{' '}
+            <Link
+              href="/health/fish-disease-guide"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              fish disease guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/reviews/best-water-test-kits"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              water-test kit review
+            </Link>
+            . Same hospital-tank hop used on the{' '}
+            <Link
+              href="/tools/fish-disease-symptom-checker"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              disease symptom checker
+            </Link>
+            . Same sponge-filter hop used on the{' '}
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              cycling estimator
+            </Link>
+            . Same heater and thermometer hops used on the{' '}
+            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
+              aquarium setup guide
+            </Link>
+            . They are not a ranked product list, they are not medications,
+            and they do not treat, reverse, or cure dropsy. Fish.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-dropsy"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-dropsy"
+              amazonLabel="Browse quarantine / hospital tanks on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-dropsy"
+              amazonLabel="Browse sponge filters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-dropsy"
+              amazonLabel="Browse aquarium heaters on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-dropsy"
+              amazonLabel="Browse digital aquarium thermometers on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            See also:{' '}
+            <Link href="/setup/quarantine-tank-guide" className="text-brand-primary hover:underline">
+              Quarantine Tank Guide
+            </Link>
+            {' · '}
+            <Link href="/health/fish-disease-guide" className="text-brand-primary hover:underline">
+              Fish Disease Guide
+            </Link>
+            {' · '}
+            <Link href="/reviews/best-water-test-kits" className="text-brand-primary hover:underline">
+              Best Water Test Kits
+            </Link>
+          </p>
+        </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
