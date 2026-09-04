@@ -1489,6 +1489,28 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete fishless-cycling checklist offer; every gear CTA is an amazon-brand category search matching on-page dechlorinate / ammonia-dose / test / seeded-media copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'fish · health-new-tank-syndrome hops',
+    file: 'apps/fish-com/src/app/health/new-tank-syndrome/page.tsx',
+    mustInclude: [
+      { re: /source="health-new-tank-syndrome-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my new-tank ammonia-spike checklist"/, label: 'concrete ammonia-spike / fishless-cycle / fish-in-emergency checklist offer, not Subscribe' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-new-tank-syndrome/, label: 'API master test kit search hop (same query as nitrogen-cycle / stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / gill-flukes)' },
+      { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=health-new-tank-syndrome/, label: 'Seachem Prime dechlorinator search hop (same query as nitrogen-cycle / water-change / setup-aquarium / equipment-hub / water-parameters)' },
+      { re: /amazon-brand\/dr\+tims\+ammonium\+chloride\?s=health-new-tank-syndrome/, label: 'Dr. Tims ammonium chloride search hop (same query as nitrogen-cycle / cycling estimator)' },
+      { re: /amazon-brand\/tetra\+safestart\+plus\?s=health-new-tank-syndrome/, label: 'bottled bacteria starter search hop (same query as nitrogen-cycle / cycling estimator)' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-new-tank-syndrome/, label: 'sponge filter search hop (same query as nitrogen-cycle / cycling estimator / filter-gph / disease-guide / gill-flukes)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /eheim\+jager\+heater/, label: 'omit heater hop — new-tank-syndrome copy is ammonia / cycling, not a heat method' },
+      { re: /aquarium\+quarantine\+hospital\+tank\+net/, label: 'omit hospital-tank hop — new-tank-syndrome copy is fishless cycling + fish-in water changes, not quarantine treatment' },
+    ],
+    why: 'Money path: under-hero capture with a concrete new-tank ammonia-spike checklist offer; every gear CTA is an amazon-brand category search matching on-page test-daily / Prime / fishless-ammonia / bottled-bacteria / seeded-media copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · cat-age-calculator',
     file: 'apps/vets-co/src/components/tools/CatAgeCalculator.tsx',
     mustInclude: [
