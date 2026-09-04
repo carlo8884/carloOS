@@ -43,6 +43,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/cat-calorie-calculator',
+    title: 'Cat Calorie Calculator',
+    desc: 'How many calories does your cat need each day? Estimate daily kcal from feline RER (70 × kg^0.75) and DER factors for indoor vs outdoor, neuter status, and life stage — then shop a portioning kit (measured cat food, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats). Planning / wellness reference, not a diagnosis.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/cat-grimace-scale',
     title: 'Cat Grimace Scale',
     desc: 'Is your cat in pain? Score five facial action units — ears, eyes, muzzle, whiskers, head — using the framework of the validated Feline Grimace Scale for a 0–10 grimace total, with the ≈4/10 pain threshold, then shop a pain-watch observation kit (soft carrier, first-aid kit, calming pheromone diffuser, digital thermometer, cozy recovery bed). Planning / observation reference, not a diagnosis or emergency-triage substitute.',
