@@ -1,5 +1,16 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import Link from 'next/link'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  TableOfContents,
+  CrossPortfolioCard,
+  ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +30,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const howToSchema = buildHowToSchema({
@@ -79,7 +90,32 @@ export default function LeashReactivityPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the leash-reactivity plan
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Leash-reactivity protocol
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the look-at-that / counter-conditioning protocol, the
+            threshold-distance rule, and the walk kit (front-clip no-pull
+            harness, 6-ft leash, treat pouch, high-value treats) so you can
+            run sessions without scrolling back. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Leash-reactivity protocol"
+            subtitle="Email the LAT / counter-conditioning protocol, threshold rule, and walk kit. No spam."
+            ctaText="Email my leash-reactivity protocol"
+            source="training-leash-reactivity-under-hero"
+          />
+        </div>
+
         <h2 id="why">Why Leash Reactivity Happens</h2>
         <p>Leash reactivity is almost always one of two things: frustration or fear — or a combination of both. Understanding which is driving your dog&apos;s behavior shapes the protocol.</p>
         <p><strong>Frustration-based reactivity (barrier frustration):</strong> A social dog that wants to approach and greet other dogs learns that the leash prevents this. The frustration of restrained access to a desired resource — other dogs — produces a classic frustration response: barking, lunging, spinning. These dogs are often described as &quot;great with other dogs off-leash but terrible on-leash.&quot; Their body language tends forward: weight forward, tail up and wagging, straining toward the other dog.</p>
@@ -106,26 +142,80 @@ export default function LeashReactivityPage() {
         <ul>
           <li><strong>Walk at low-traffic times and places:</strong> Early morning, quiet streets, parks during off-peak hours. Reduce trigger exposure between training sessions.</li>
           <li><strong>Cross the street before you need to:</strong> Move away from triggers before your dog notices or before you reach threshold distance. You are not avoiding — you are managing.</li>
-          <li><strong>Use a no-pull harness for control:</strong> A front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) provides better physical control and reduces pulling without the aversive impact of a choke chain or prong collar.
-
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-
-            <div className="my-4 p-4 border border-brand-border rounded-xl bg-brand-surface">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Buyer&apos;s Guide — No-Pull Harnesses</div>
-              <p className="text-sm text-brand-text-mid mb-3 leading-relaxed">A front-clip harness gives you immediate control during counter-conditioning sessions without adding aversive pressure. Both the PetSafe Easy Walk and Ruffwear Front Range are widely used by trainers working on reactivity.</p>
-              <div className="flex flex-wrap gap-2">
-                <a href="/go/amazon-brand/petsafe+easy+walk+front+clip+harness?s=training-leash-reactivity" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-                  Shop No-Pull Harnesses on Amazon →
-                </a>
-                <a href="/go/chewy-brand/ruffwear+front+range+harness?s=training-leash-reactivity" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-                  Shop on Chewy →
-                </a>
-              </div>
-            </div>
-          </li>
+          <li><strong>Use a no-pull harness for control:</strong> A front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) provides better physical control and reduces pulling without the aversive impact of a choke chain or prong collar.</li>
           <li><strong>Emergency U-turn:</strong> If you encounter a trigger suddenly and cannot create enough distance: turn 180°, move quickly in the opposite direction, then feed when the dog is moving with you. Avoid yelling, jerking the leash, or any aversive response — these increase arousal and worsen reactivity.</li>
           <li><strong>&quot;Look at that&quot; (LAT) cue:</strong> Once your dog can see a trigger below threshold, you can add a cue: &quot;look at that&quot; as they notice the dog, followed by marking when they look at you. This puts the orienting response on cue and is useful for warning you about incoming triggers.</li>
         </ul>
+
+        {/* Money path — live amazon-brand search hops (leash-reactivity kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — not a ranked list. */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Shop a leash-reactivity kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            A front-clip no-pull harness gives steering control during
+            counter-conditioning without adding aversive pressure. Pair it
+            with a 6-ft leash (not a retractable), a belt-clip treat pouch,
+            and high-value treats so food lands the instant the trigger
+            appears. Same harness hop used on the{' '}
+            <Link
+              href="/training/loose-leash-walking"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              loose-leash walking guide
+            </Link>
+            {' '}and the{' '}
+            <Link
+              href="/tools/harness-collar-size"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              harness and collar size calculator
+            </Link>
+            . Same treat-pouch hop used on the{' '}
+            <Link
+              href="/training/basic-commands"
+              className="text-brand-primary no-underline hover:underline"
+            >
+              basic-commands guide
+            </Link>
+            . They are not a ranked product list and they do not replace the
+            protocol. Size the harness before you order. Dog.com earns a
+            commission on qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
+              amazonLabel="Browse no-pull harnesses on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/6+ft+dog+leash?s=training-leash-reactivity"
+              amazonLabel="Browse 6-ft leashes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-leash-reactivity"
+              amazonLabel="Browse treat pouches on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/puppy+training+treats?s=training-leash-reactivity"
+              amazonLabel="Browse high-value training treats on Amazon →"
+            />
+          </div>
+          <p className="text-2xs text-brand-text-light mt-3">
+            Size the harness first with the{' '}
+            <Link href="/tools/harness-collar-size" className="text-brand-primary hover:underline">
+              harness and collar size calculator
+            </Link>
+            , then see our full{' '}
+            <Link href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline">
+              Best Dog Harnesses 2026
+            </Link>
+            {' '}guide for side-by-side comparisons.
+          </p>
+        </div>
 
         <h2 id="worse">What Makes Leash Reactivity Worse</h2>
         <ul>
