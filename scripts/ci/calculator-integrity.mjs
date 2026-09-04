@@ -1091,6 +1091,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete blanketing-checklist offer; every gear CTA is an amazon-brand category search matching on-page turnout / sheet / fill-weight copy (turnout blanket, waterproof sheet, lightweight, medium-weight, heavyweight), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · winter-care hops',
+    file: 'apps/horses-com/src/app/care/winter-care/page.tsx',
+    mustInclude: [
+      { re: /source="care-winter-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my winter-care checklist"/, label: 'concrete winter-care-checklist offer, not Subscribe' },
+      { re: /source="care-winter"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+tank\+heater\?s=care-winter-care/, label: 'tank-heater search hop (matches on-page unfrozen-water copy)' },
+      { re: /amazon-brand\/ice\+grit\?s=care-winter-care/, label: 'ice-grit search hop (matches on-page grit-or-sand ice copy)' },
+      { re: /amazon-brand\/horse\+snow\+pads\?s=care-winter-care/, label: 'snow-pads search hop (matches on-page shoeing copy)' },
+      { re: /amazon-brand\/horse\+shoe\+studs\?s=care-winter-care/, label: 'shoe-studs search hop (matches on-page studs-for-working-horses copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|bute|phenylbutazone|banamine|colic|mud\+fever|antifungal|antibiotic)/, label: 'never hop medications or colic / mud-fever treatments — this page is educational winter-care gear, not a drug or diagnosis list' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete winter-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page water and footing copy (tank heater, ice grit, snow pads, shoe studs), never a placeholder ASIN, a medication hop, or a colic / mud-fever treatment. Blankets stay on the blanketing page. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

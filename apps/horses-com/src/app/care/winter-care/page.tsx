@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-04T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function WinterCarePage() {
             { label: "Shelter and Blanketing", href: "#shelter" },
             { label: "Footing, Ice, and Mud", href: "#footing" },
             { label: "Monitoring Condition", href: "#condition" },
+            { label: "Winter-Care Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,9 +109,33 @@ export default function WinterCarePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the winter-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse winter-care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the everyday kit — a tank heater so water stays unfrozen,
+              grit or sand for ice around gates and troughs, plus snow pads
+              or studs when the farrier conversation is about working horses
+              in winter. Educational checklist, not a diagnosis. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse winter-care checklist"
+              subtitle="Email the tank-heater, ice-grit, snow-pad, and stud order. No spam."
+              ctaText="Email my winter-care checklist"
+              source="care-winter-care-under-hero"
+            />
+          </div>
 
           <h2 id="water">Water First</h2>
           <p>The biggest winter health risk is reduced water intake. Horses drink less when water is icy, and dehydration combined with dry winter forage is a leading cause of impaction colic. Keep water available and unfrozen with tank heaters or frequent breaking and refilling, and offer slightly warmed water, which horses drink more readily in cold weather. A horse needs roughly 5 to 10 gallons or more a day even in winter; monitor that troughs are actually being drunk down.</p>
@@ -131,6 +156,49 @@ export default function WinterCarePage() {
 
           <h2 id="condition">Monitoring Condition</h2>
           <p>A thick winter coat hides weight loss, so a horse can quietly drop condition under a fluffy or blanketed exterior. Put hands on the horse regularly -- feel the ribs, topline, and hindquarters rather than relying on the eye -- and use body condition scoring through the winter. Catching a horse losing condition early lets you increase forage or investigate before spring reveals a thin horse under the coat.</p>
+
+          <h2 id="kit">Winter-Care Kit</h2>
+          <p>Everyday physical supplies that match the water and footing copy above — a tank heater so troughs stay unfrozen, grit or sand for ice around gates and high-traffic areas, and snow pads or studs when the farrier conversation is about working horses in winter. These are not treatments for impaction colic, mud fever, or a horse that is losing condition under a winter coat; reduced drinking, persistent mud-related skin trouble, or unexplained weight loss belongs with your veterinarian, not a heater or a bag of grit. Blanketing decisions live on the blanketing guide. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (winter-care kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page tank-heater / grit / snow-pad / stud copy, not colic
+              or mud-fever diagnosis hops. Blankets stay on /care/blanketing. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the winter-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page water and
+              footing copy — a tank heater, ice grit, snow pads, and horse
+              shoe studs. Everyday physical supplies only. They are not a
+              ranked product list, they are not treatments for colic, mud
+              fever, or weight loss, and they do not replace a veterinarian.
+              Horses.com earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+tank+heater?s=care-winter-care"
+                amazonLabel="Browse horse tank heaters on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ice+grit?s=care-winter-care"
+                amazonLabel="Browse ice grit on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+snow+pads?s=care-winter-care"
+                amazonLabel="Browse horse snow pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+shoe+studs?s=care-winter-care"
+                amazonLabel="Browse horse shoe studs on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
