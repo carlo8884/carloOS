@@ -4524,6 +4524,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete pet dental-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page brushing / VOHC home-care / plaque-prevention copy (a pet toothbrush and enzymatic toothpaste kit for daily brushing, VOHC dental chews for dogs as secondary plaque support, a VOHC-accepted dental water additive when brushing is not possible every day), never a placeholder ASIN, a #1075 egg-crate-pad / pet-steps / floor-scale hop, a #1074 muzzle / underpad / flashlight hop, a dental-cleaning-guide soft-toothbrush / enzymatic-toothpaste / dental-chews-dog / pet-dental-water-additive hop, or a prescription hop. Educational home-care tools only — not a ranked product list, not a substitute for professional veterinary dental cleaning / anesthesia dentistry. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · vomiting-diarrhea-pets hops',
+    file: 'apps/vets-co/src/app/health/vomiting-diarrhea-pets/page.tsx',
+    mustInclude: [
+      { re: /source="health-vomiting-diarrhea-pets-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vomiting-diarrhea vet-call checklist"/, label: 'concrete vomiting-diarrhea vet-call-checklist offer, not Subscribe' },
+      { re: /source="health-vomiting-diarrhea"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/narrow\+neck\+glass\+water\+carafe\?s=health-vomiting-diarrhea-pets/, label: 'narrow-neck glass water-carafe search hop (matches on-page hydration-watch / still-drinking copy; unique vs unflavored+pediatric+electrolyte / kitchen+liquid+measuring+pitcher / shallow+lipped+dog+saucer)' },
+      { re: /amazon-brand\/2\+quart\+stainless\+saucepan\+with\+lid\?s=health-vomiting-diarrhea-pets/, label: '2-quart stainless-saucepan-with-lid search hop (matches on-page bland-diet prep copy; unique vs mini+rice+cooker / glass+meal+prep+containers)' },
+      { re: /amazon-brand\/pocket\+spiral\+memo\+pad\?s=health-vomiting-diarrhea-pets/, label: 'pocket spiral memo-pad search hop (matches on-page recovery-monitoring / episode-timing copy; unique vs waterproof+field+notebook / dog+weight+log+book)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+toothbrush\+and\+enzymatic\+toothpaste\+kit|vohc\+dental\+chews\+for\+dogs|vohc\+accepted\+dental\+water\+additive|egg\+crate\+foam\+dog\+kennel\+pad|carpeted\+wooden\+pet\+steps|wide\+platform\+veterinary\+floor\+scale|wire\+basket\+dog\+muzzle|quilted\+disposable\+underpads|handheld\+aa\+led\+flashlight|double\+door\+wire\+dog\+crate|pet\+safe\+kennel\+disinfectant\+spray|analog\+wall\+clock\+with\+second\+hand|tick\+removal\+hook|fine\+tooth\+flea\+comb|laminated\+tick\+identification\+card|letter\+size\+expanding\+file\+organizer|sterile\+urine\+specimen\+cup|12\+hour\+mechanical\+kitchen\+timer|unflavored\+pediatric\+electrolyte|kitchen\+liquid\+measuring\+pitcher|shallow\+lipped\+dog\+saucer|mini\+rice\+cooker|glass\+meal\+prep\+containers|waterproof\+field\+notebook|dog\+weight\+log\+book|low\+fat\+digestive\+care\+dog\+food|cerenia|maropitant|ondansetron|pepto|imodium|famotidine|loperamide|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1076 toothbrush-kit / VOHC-chews / water-additive, #1075 egg-crate-pad / pet-steps / floor-scale, #1074 muzzle / underpads / flashlight, #1073 crate / kennel-spray / second-hand-clock, #1072 tick-hook / flea-comb / ID-card, #1071 expanding-file / urine-cup / 12-hour-timer, dehydration electrolyte / pitcher / saucer, dog-vomiting rice-cooker / meal-prep, field-notebook / weight-log-book, pancreatitis GI-food, Cerenia / maropitant / ondansetron / Pepto / Imodium / famotidine, or Rx — this page hops only narrow-neck-glass-water-carafe / 2-quart-stainless-saucepan-with-lid / pocket-spiral-memo-pad gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete vomiting-diarrhea vet-call-checklist offer; every gear CTA is an amazon-brand category search matching on-page hydration-watch / bland-diet / recovery-monitoring copy (a narrow-neck glass water carafe so you can see whether a vomiting or diarrheic pet is still drinking, a 2-quart stainless saucepan with lid for a short bland-diet batch if the veterinarian advises one, a pocket spiral memo pad so each episode stays a timed observation), never a placeholder ASIN, a #1076 toothbrush-kit / VOHC-chew / water-additive hop, a #1075 egg-crate-pad / pet-steps / floor-scale hop, a #1074 muzzle / underpad / flashlight hop, a dehydration electrolyte / pitcher / saucer hop, a dog-vomiting rice-cooker / meal-prep hop, an anti-nausea / human-med hop, or a prescription hop. Educational home-care / monitoring tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
