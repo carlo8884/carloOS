@@ -4882,6 +4882,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete when-to-go-to-the-vet decision-checklist offer; every gear CTA is an amazon-brand category search matching on-page watchful-waiting / same-day / when-unsure-call copy (a 48-hour digital kitchen timer so a mild isolated sign is a counted day-or-two window, a lined telephone message pad so the clinic call records the sign, start time, and how the pet is otherwise doing, a medium hard-sided plastic pet carrier so a same-day visit is a ready crate), never a placeholder ASIN, a #1092 floor-bowl / wobble-dispenser / hourglass hop, a #1091 laminating-pouch / countdown-timer / travel-bowl hop, a #1090 sandbox-cover / waste-scooper / yard hand-wash hop, a vomiting memo-pad hop, an emergency-signs muzzle / underpad / flashlight hop, a first-aid-kit hop, or a prescription hop. Educational home-care / monitoring / transport tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · choke hops',
+    file: 'apps/horses-com/src/app/health/choke/page.tsx',
+    mustInclude: [
+      { re: /source="health-choke-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse choke soak-and-slow-feed checklist"/, label: 'concrete horse choke soak-and-slow-feed-checklist offer, not Subscribe' },
+      { re: /source="health-choke"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/lidded\+5\+gallon\+feed\+soaking\+pail\?s=health-choke/, label: 'lidded 5-gallon feed-soaking-pail search hop (matches on-page soak-feeds-that-swell / beet-pulp / dry-pellet copy; unique vs horse+hay+soaking+bag / horse+hay+steamer / horse+mash / horse+hay+cubes)' },
+      { re: /amazon-brand\/large\+smooth\+feed\+tub\+rocks\?s=health-choke/, label: 'large smooth feed-tub-rocks search hop (matches on-page slow-down-greedy-eaters / stones-in-the-feed-tub copy; unique vs slow+feeder+hay+net+horse / small+hole+slow+feeder+hay+net+horse / equine+slow+feeder+hay+box)' },
+      { re: /amazon-brand\/apple\+wedger\+slicer\?s=health-choke/, label: 'apple wedger-slicer search hop (matches on-page cut-treats-small / apple-or-carrot copy; unique vs horse+hay+cubes / horse+mash / molasses+free+beet+pulp+shreds+horse)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|single\+stainless\+floor\+dog\+bowl|wobble\+dog\+food\+dispenser|30\+minute\+sand\+hourglass\+timer|letter\+size\+thermal\+laminating\+pouches|72\+hour\+digital\+countdown\+timer|collapsible\+silicone\+travel\+dog\+bowl|hinged\+cedar\+sandbox\+cover|metal\+jaw\+dog\+waste\+scooper|outdoor\+garden\+hand\+wash\+station|horse\+hay\+soaking\+bag|horse\+hay\+steamer|slow\+feeder\+hay\+net\+horse|small\+hole\+slow\+feeder\+hay\+net\+horse|equine\+slow\+feeder\+hay\+box|horse\+hay\+cubes|horse\+mash|molasses\+free\+beet\+pulp\+shreds\+horse|beet\+pulp\+pellets\+horse\+feed|equine\+first\+aid\+kit|digital\+equine\+thermometer|digital\+veterinary\+thermometer|equine\+digital\+rectal\+thermometer|bute|phenylbutazone|banamine|flunixin|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1093 kitchen-timer / message-pad / pet-carrier, #1092 floor-bowl / wobble-dispenser / hourglass, #1091 laminating-pouches / countdown-timer / travel-bowl, heaves hay-soaking-bag, feed-calculator hay-net, easy-keeper small-hole net, turnout hay-box, dental mash / hay-cubes, beet-pulp shreds / pellets, first-aid-kit / thermometer, or Rx — this page hops only lidded-5-gallon-feed-soaking-pail / large-smooth-feed-tub-rocks / apple-wedger-slicer gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse choke soak-and-slow-feed-checklist offer; every gear CTA is an amazon-brand category search matching on-page soak-feeds-that-swell / slow-down-greedy-eaters / cut-treats-small copy (a lidded 5-gallon feed-soaking pail so beet pulp and dry pellets soak fully before they hit the tub, large smooth feed-tub rocks so a bolting eater works around obstacles instead of packing a dry mouthful, an apple wedger slicer so apples and carrots go in as sticks, not coins), never a placeholder ASIN, a #1093 kitchen-timer / message-pad / pet-carrier hop, a #1092 floor-bowl / wobble-dispenser / hourglass hop, a #1091 laminating-pouch / countdown-timer / travel-bowl hop, a heaves hay-soaking-bag hop, a feed-calculator hay-net hop, a dental mash / hay-cube hop, a first-aid-kit hop, or a prescription hop. Educational feeding-management tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
