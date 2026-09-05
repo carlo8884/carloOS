@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -59,6 +59,50 @@ export default function DogCancerSignsPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog cancer-signs early-detection checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog cancer-signs early-detection checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the lymph-node, weight-tracking, and
+              oral-exam notes — a silicone dog grooming glove
+              so a weekly coat-and-node check covers the
+              submandibular, prescapular, inguinal, and
+              popliteal nodes plus any new lump or bump, an
+              analog bathroom scale so unexplained weight
+              loss can be logged at home (hold-to-weigh:
+              owner plus dog minus owner; more than 10% of
+              body weight warrants investigation), and a dog
+              dental finger brush so a weekly lip-lift oral
+              exam can catch offensive mouth odor, difficulty
+              eating, or a visible oral mass. Educational
+              checklist, not a chemotherapy product list,
+              not an oncology hop, and not a prescription.
+              Fine needle aspiration and cancer workups still
+              belong with a veterinarian. Resting respiratory
+              rate notebooks, one-minute kitchen timers,
+              step-in padded harnesses, medical-records
+              binders, AM/PM weekly pill organizers, hanging
+              luggage scales, penlights, emergency contact
+              cards, stretchers, vaccination record books,
+              seat-belt tethers, puppy mats, mosquito dunks,
+              monthly pill organizers, and clinic-visit
+              carriers stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog cancer-signs early-detection checklist"
+              subtitle="Email the grooming-glove, analog-scale, and finger-brush notes. No spam."
+              ctaText="Email my dog cancer-signs early-detection checklist"
+              source="health-dog-cancer-signs-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">Recognizing these signs early — before a cancer is advanced — provides more treatment options, better prognosis, and in many cases, the difference between curative intent treatment and palliative care. Annual or biannual comprehensive wellness exams with a veterinarian who performs thorough physical assessment (lymph node palpation, abdominal palpation, oral examination) is the baseline.</p>
@@ -75,6 +119,134 @@ export default function DogCancerSignsPage() {
               </div>
             </div>
           ))}
+
+          <h2 id="kit">A Simple Cancer-Signs Early-Detection Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            lymph-node palpation, unexplained-weight-loss,
+            and oral-examination copy above: a silicone dog
+            grooming glove so a weekly coat-and-node check
+            can feel the nodes under the jaw, in front of
+            the shoulders, in the groin, and behind the
+            knees plus any new lump or bump — do not take a
+            wait-and-see approach; fine needle aspiration
+            is what identifies the cell type — an analog
+            bathroom scale so progressive weight loss not
+            explained by reduced calorie intake can be
+            logged between wellness exams (hold-to-weigh
+            the dog; unintended loss of more than 10% of
+            body weight warrants investigation), and a dog
+            dental finger brush so a weekly lip-lift can
+            catch oral odor from tissue necrosis, difficulty
+            eating or swallowing, or a visible oral mass
+            (melanoma, squamous cell carcinoma, fibrosarcoma)
+            before the next appointment. These are household
+            early-detection tools, not treatments. They do
+            not diagnose cancer, they do not replace fine
+            needle aspiration, they do not replace lymph
+            node palpation, abdominal palpation, or oral
+            examination by a veterinarian, they do not
+            treat lymphoma, hemangiosarcoma, osteosarcoma,
+            or mast cell tumors, and they are not
+            chemotherapy, Tanovea, or a ranked oncology
+            product list. Resting respiratory rate
+            notebooks, one-minute kitchen timers, step-in
+            padded dog harnesses, pet medical records
+            binders, AM/PM weekly pill organizers, digital
+            hanging luggage scales, LED medical penlights,
+            pet emergency contact cards, folding pet
+            stretchers, vaccination record books, seat-belt
+            tethers, foldable waterproof puppy mats,
+            mosquito dunks, a monthly pill organizer, a
+            soft-sided vet-visit carrier, a gum-color
+            assessment chart, recovery food, a feeding
+            syringe, digital pet scales, digital puppy
+            scales, kitchen gram scales, portion-control
+            food scales, hanging luggage scales, and
+            high-value vet-visit treats already live on
+            other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (silicone dog grooming glove / analog
+              bathroom scale / dog dental finger brush).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1047 resting respiratory rate
+              notebook / one-minute kitchen timer /
+              step-in padded dog harness, #1046 pet
+              medical records binder / AM/PM weekly pill
+              organizer / digital hanging luggage scale,
+              #1045 LED medical penlight / pet emergency
+              contact card / folding pet stretcher, #1044
+              pet vaccination record book / dog seat-belt
+              tether / foldable waterproof puppy mat,
+              #1043 mosquito dunks / monthly pill
+              organizer / soft-sided vet-visit carrier,
+              #1042 gum-chart / recovery-food /
+              feeding-syringe, #1041 heat-pants /
+              belly-band / exercise-pen, #1030
+              high-value vet-visit treats,
+              digital+pet+scale / digital+puppy+scale /
+              kitchen+gram+scale /
+              portion+control+food+scale+dog,
+              ferret finger+toothbrush+pet,
+              soft+measuring+tape+for+pets,
+              dental+chews+dog, pet first-aid kits,
+              digital pet thermometers, and
+              soft+dog+carrier / soft+pet+carrier.
+              Chemotherapy, Tanovea, Hill's / Royal
+              Canin oncology diets, and Rx ASINs are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the cancer-signs early-detection kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page lymph-node, weight-tracking, and
+              oral-exam copy — a silicone dog grooming
+              glove, an analog bathroom scale, and a dog
+              dental finger brush. Everyday physical
+              supplies only. They are not a ranked
+              product list, they are not a chemotherapy
+              / Tanovea hop, they are not the #1047
+              notebook / timer / harness hops, they are
+              not the #1046 binder / AM-PM
+              pill-organizer / luggage-scale hops, they
+              are not the #1045 penlight / contact-card
+              / stretcher hops, they are not the #1044
+              vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / monthly-pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not digital-pet-scale
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs"
+                amazonLabel="Browse silicone dog grooming gloves on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/analog+bathroom+scale?s=health-dog-cancer-signs"
+                amazonLabel="Browse analog bathroom scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"
+                amazonLabel="Browse dog dental finger brushes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
