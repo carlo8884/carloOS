@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -33,7 +33,7 @@ export default function DogDiabetesPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diabetes', href: '/health/dog-diabetes' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }]}
         sidebar={<>
-          <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }, { label: 'Glucose-monitor kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Diabetes + Insurance</div>
@@ -46,6 +46,36 @@ export default function DogDiabetesPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-diabetes glucose-monitor checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-diabetes glucose-monitor checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-monitor notes — a pet glucometer for
+              ear-margin or inner-lip checks between clinic
+              curves, plus light corn syrup kept at the door
+              for the first-sign hypoglycemia rub (honey is the
+              same-category stand-in when corn syrup is not on
+              the shelf). Educational checklist, not a
+              diagnosis and not a dosing schedule. Insulin,
+              syringes, FreeStyle Libre / Dexcom brand CGMs,
+              Vetsulin, and prescription diabetic diets stay
+              off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-diabetes glucose-monitor checklist"
+              subtitle="Email the pet-glucometer and corn-syrup notes. No spam."
+              ctaText="Email my dog-diabetes glucose-monitor checklist"
+              source="health-dog-diabetes-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <h2 id="signs">Signs — The Classic Presentation</h2>
@@ -64,8 +94,8 @@ export default function DogDiabetesPage() {
           <p>Same food, same amount, same time as insulin injections — consistency is the dietary requirement for diabetic dogs. Dietary changes alter glucose absorption kinetics and can destabilize previously controlled diabetes. High-fiber diets (Hill's w/d, Royal Canin Diabetic) slow glucose absorption and reduce post-meal glucose spikes. Feed immediately before or with each insulin injection. If the dog does not eat, do not give the usual insulin dose — contact your veterinarian for instructions, because insulin given without food risks dangerous hypoglycemia.</p>
 
           <h2 id="monitoring">Blood Glucose Monitoring</h2>
-          <p><strong>Glucose curves:</strong> Serial blood glucose measured every 1–2 hours over a full 12-hour dosing interval to assess the insulin's peak effect and duration. This identifies whether the dose is adequate, too high, or too low. Performed in clinic initially and then periodically during management adjustments. Home glucose monitoring using a pet glucometer or human glucometer (on the ear margin or inner lip) allows owners to detect hypoglycemia or poor control between clinic visits.</p>
-          <p><strong>Continuous glucose monitors (CGM):</strong> Human CGMs (FreeStyle Libre, Dexterity) can be applied to a dog's skin with veterinary guidance — they provide continuous 24-hour glucose data without blood draws. A week of CGM data provides far more information about a dog's glucose pattern than a single clinic curve, and has changed the standard of care for attentive diabetic dog management.</p>
+          <p><strong>Glucose curves:</strong> Serial blood glucose measured every 1–2 hours over a full 12-hour dosing interval to assess the insulin&apos;s peak effect and duration. This identifies whether the dose is adequate, too high, or too low. Performed in clinic initially and then periodically during management adjustments. Home glucose monitoring using a pet glucometer (or a human glucometer, on the ear margin or inner lip) allows owners to detect hypoglycemia or poor control between clinic visits. A pet glucometer is a home-setup aid so you can check between scheduled clinic curves — it does not replace those curves, it does not set the insulin dose, and it is not a reason to adjust insulin on your own. Ask your veterinarian which meter and sampling site fit this dog.</p>
+          <p><strong>Continuous glucose monitors (CGM):</strong> Human CGMs (FreeStyle Libre, Dexcom) can be applied to a dog&apos;s skin with veterinary guidance — they provide continuous 24-hour glucose data without blood draws. A week of CGM data provides far more information about a dog&apos;s glucose pattern than a single clinic curve, and has changed the standard of care for attentive diabetic dog management. Brand CGM sensors stay educational copy only on this page — this kit hops the pet glucometer, not a FreeStyle Libre or Dexcom ASIN.</p>
           <p><strong>Fructosamine:</strong> Reflects average blood glucose over 2–3 weeks. A single clinic value provides a useful "average control" metric. Target fructosamine: 350–450 μmol/L in well-controlled diabetic dogs.</p>
 
           <h2 id="hypoglycemia">Hypoglycemia — The Emergency to Know</h2>
@@ -73,7 +103,48 @@ export default function DogDiabetesPage() {
             Every diabetic dog household should keep Karo corn syrup or honey somewhere accessible and an emergency-vet number saved in every phone. If a diabetic dog is wobbly, trembling, or disoriented: rub a tablespoon of Karo syrup on the gums and travel to the vet immediately. Never give anything by mouth to an unconscious or seizing dog — go directly to emergency care. This is a life-threatening complication that requires IV dextrose.
           </CalloutBox>
 
-          <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have Karo corn syrup or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of Karo syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose.</p>
+          <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have light corn syrup (Karo is one grocery example; the category is the product class, not a single brand) or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of light corn syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose. Light corn syrup in the front-door kit is a first-sign glucose source, not a treatment plan and not a substitute for emergency care.</p>
+
+          <h2 id="kit">Glucose-monitor kit</h2>
+          <p>Everyday physical supplies that match the home-monitor and hypoglycemia-kit copy above — a pet glucometer for ear-margin or inner-lip checks between clinic curves, plus light corn syrup kept at the door for the first-sign gum rub (honey is the same-category stand-in). These are home-setup aids, not treatments. They do not set the insulin dose, they do not replace clinic glucose curves or fructosamine, and they do not treat unconscious hypoglycemia. Insulin, syringes, Vetsulin / NPH brand ASINs, FreeStyle Libre / Dexcom brand CGMs, digital pet scales, and prescription diabetic diets (Hill&apos;s w/d, Royal Canin Diabetic) stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (pet
+              glucometer / light corn syrup). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only. Insulin, syringes,
+              Vetsulin / NPH, FreeStyle Libre / Dexcom,
+              digital pet scales, and prescription diabetic
+              diets are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-diabetes glucose-monitor kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              home-monitor copy — a pet glucometer and light
+              corn syrup. Everyday physical gear only. They
+              are not a ranked product list, they are not
+              medications, they are not insulin or syringe
+              ASINs, they are not FreeStyle Libre / Dexcom
+              brand CGMs, they are not prescription diabetic
+              diets, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+glucometer?s=health-dog-diabetes"
+                amazonLabel="Browse pet glucometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/light+corn+syrup?s=health-dog-diabetes"
+                amazonLabel="Browse light corn syrup on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
