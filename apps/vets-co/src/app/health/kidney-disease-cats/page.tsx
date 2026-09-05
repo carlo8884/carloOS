@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chronic Kidney Disease in Cats — Stages, Diet, Outlook | Vets.co", description: "Chronic kidney disease is the most common serious illness in older cats. IRIS staging, renal diets, fluid therapy, and prognosis explained.", path: '/health/kidney-disease-cats', type: 'article' })
@@ -52,6 +52,49 @@ export default function KidneyDiseaseCatsPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the cat CKD home-care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Cat CKD home-care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes that match the
+              water-bowl, warming-food, and litter-clump
+              copy on this page — a wide-rim stainless
+              cat water bowl so an emptier bowl is a
+              seen refill instead of a guessed puddle,
+              an electric pet-food warming plate so the
+              renal diet is warmed food the cat will
+              actually try, and a high-sided jumbo cat
+              litter box so larger or more frequent
+              clumps stay a seen early clue. Educational
+              checklist, not a ranked product list,
+              not a substitute for veterinary care,
+              and not a Hill&apos;s k/d / Royal Canin
+              Renal / phosphate-binder / SQ-fluid-bag
+              hop. Cat water fountains, extra litter
+              boxes, and canned wet cat food already
+              live on FLUTD. Insulated pet water bowls
+              and airtight locking pet-food bins
+              already live on diabetes. Heated pet mats
+              already live on senior-pet-care. Ceramic
+              pet water bowls and dog water fountains
+              already live on dog.com kidney-disease.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Cat CKD home-care checklist"
+              subtitle="Email the water-bowl, warming-plate, and litter-box notes. No spam."
+              ctaText="Email my cat CKD home-care checklist"
+              source="health-kidney-disease-cats-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="info" title="Early detection changes the outcome">
@@ -61,7 +104,7 @@ export default function KidneyDiseaseCatsPage() {
           <DropCap>The kidneys filter waste, balance fluids and electrolytes, regulate blood pressure, and support red blood cell production. In chronic kidney disease, functional kidney tissue (nephrons) is gradually lost and replaced by scar tissue. The decline is irreversible and tends to progress over months to years. Because cats compensate well, they often show no signs until a large fraction of kidney function is already gone — which is why screening older cats is so valuable.</DropCap>
 
           <h2>Signs to Watch For</h2>
-          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
+          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. A high-sided jumbo cat litter box is how those larger clumps stay a seen clue instead of a tracked scatter on the floor — it is not an extra cat litter box (that lives on FLUTD) and it is not a covered top-entry box that hides the clump. A wide-rim stainless cat water bowl is how that emptier bowl becomes a seen refill instead of a guessed puddle — it is not an insulated pet water bowl (that lives on diabetes), not a cat water fountain (that lives on FLUTD), and not a heavy ceramic pet water bowl or dog water fountain (those live on dog.com kidney-disease). Household bowls and boxes do not diagnose CKD and they do not replace SDMA or creatinine. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
 
           <h2>Staging With IRIS</h2>
           <p>Veterinarians stage CKD using the International Renal Interest Society (IRIS) system, based primarily on blood creatinine and SDMA, then substaged by urine protein and blood pressure. Staging guides treatment and prognosis: a stage 2 cat may need only a renal diet and monitoring, while a stage 4 cat needs intensive support. Staging is repeated over time to track progression and adjust care.</p>
@@ -73,17 +116,134 @@ export default function KidneyDiseaseCatsPage() {
           />
 
           <h2>Managing the Disease</h2>
-          <p>Management targets the consequences of kidney failure rather than reversing it. The core elements are a therapeutic renal diet (restricted phosphorus, controlled protein), aggressive hydration through encouraging water intake and often subcutaneous fluids, and control of phosphorus with binders when diet alone is insufficient. High blood pressure and urinary protein loss are treated with veterinarian-prescribed medications, with the specific drug and dose determined by your vet. Anemia, nausea, and potassium imbalances are addressed as they arise.</p>
+          <p>Management targets the consequences of kidney failure rather than reversing it. The core elements are a therapeutic renal diet (restricted phosphorus, controlled protein), aggressive hydration through encouraging water intake and often subcutaneous fluids, and control of phosphorus with binders when diet alone is insufficient. High blood pressure and urinary protein loss are treated with veterinarian-prescribed medications, with the specific drug and dose determined by your vet. Anemia, nausea, and potassium imbalances are addressed as they arise. Fluid bags, needles, syringes, and phosphate binders are clinic prescriptions, not shoppable hops. The water bowl, warming plate, and litter box are household consistency tools. They do not replace the veterinarian who stages the cat and chooses the fluids.</p>
 
           <h2>Diet Is Central</h2>
-          <p>Phosphorus control through diet is one of the best-supported interventions in feline CKD and is linked to longer survival. Renal diets also reduce the protein waste the kidneys must clear and counter the acidosis that makes cats feel ill. Because appetite is fragile in CKD cats, getting them to eat the renal diet — through gradual transition, warming food, and offering different forms — is a practical priority worth real effort.</p>
+          <p>Phosphorus control through diet is one of the best-supported interventions in feline CKD and is linked to longer survival. Renal diets also reduce the protein waste the kidneys must clear and counter the acidosis that makes cats feel ill. Because appetite is fragile in CKD cats, getting them to eat the renal diet — through gradual transition, warming food, and offering different forms — is a practical priority worth real effort. An electric pet-food warming plate is how that warmed meal stays a plate, not a guessed microwave zap — it is not a plug-in heated pet mat (that lives on senior-pet-care), not a 2-quart stainless saucepan (that lives on vomiting-diarrhea), and not an airtight locking pet-food bin (that lives on diabetes). It does not set a phosphorus target and it is not a Hill&apos;s k/d or Royal Canin Renal hop.</p>
 
           <CalloutBox variant="evidence" title="ISFM consensus: phosphorus restriction and survival">
             The International Society of Feline Medicine consensus guidelines cite dietary phosphorus restriction as one of the interventions with the most consistent evidence for slowing CKD progression and improving survival in cats with stage 2 and 3 disease. Phosphate binders are recommended when dietary restriction alone fails to achieve target serum phosphorus levels.
           </CalloutBox>
 
           <h2>Quality of Life and Prognosis</h2>
-          <p>CKD is a marathon, not a sprint. Many cats diagnosed early live comfortably for years with diet and hydration support, with periodic rechecks to adjust treatment. The focus throughout is quality of life: a cat that is eating, hydrated, comfortable, and engaged is doing well regardless of bloodwork numbers. Honest, ongoing conversations with your veterinary team about how your cat is actually doing day to day guide both treatment intensity and, eventually, end-of-life decisions.</p>
+          <p>CKD is a marathon, not a sprint. Many cats diagnosed early live comfortably for years with diet and hydration support, with periodic rechecks to adjust treatment. The focus throughout is quality of life: a cat that is eating, hydrated, comfortable, and engaged is doing well regardless of bloodwork numbers. Honest, ongoing conversations with your veterinary team about how your cat is actually doing day to day guide both treatment intensity and, eventually, end-of-life decisions. The water bowl, warming plate, and litter box do not replace those conversations.</p>
+
+          <h2 id="kit">Home-care kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            water-bowl, warming-food, and litter-clump
+            copy on this page — a wide-rim stainless
+            cat water bowl so an emptier bowl is a
+            seen refill, an electric pet-food warming
+            plate so the renal diet is warmed food the
+            cat will actually try, and a high-sided
+            jumbo cat litter box so larger or more
+            frequent clumps stay a seen early clue.
+            These are educational home-care and
+            monitoring tools, not a ranked product
+            list, not a substitute for veterinary
+            care, and not a treatment for CKD.
+            Hill&apos;s k/d, Royal Canin Renal,
+            phosphate binders, SQ fluid bags, needles,
+            and syringes are not shoppable hops. Cat
+            water fountains, extra litter boxes, and
+            canned wet cat food already live on FLUTD.
+            Insulated pet water bowls and airtight
+            locking pet-food bins already live on
+            diabetes. Heated pet mats already live on
+            senior-pet-care. Ceramic pet water bowls
+            and dog water fountains already live on
+            dog.com kidney-disease. This page does
+            not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (wide-rim stainless cat water bowl /
+              electric pet-food warming plate /
+              high-sided jumbo cat litter box).
+              These are educational home-care /
+              monitoring / lifestyle tools, not a
+              ranked product list, not a substitute
+              for veterinary care, no Rx / Hill's k/d /
+              Royal Canin Renal / phosphate-binder /
+              SQ-fluid / needle / syringe ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1085
+              digital+pet+glucose+log+notebook /
+              insulated+pet+water+bowl /
+              airtight+locking+pet+food+bin, #1084
+              wall+mounted+magnetic+monthly+planner /
+              waterproof+rear+seat+hammock /
+              folding+four+wheel+dog+stroller, #1083
+              14+inch+manual+reel+lawn+mower /
+              zippered+waterproof+dog+duvet+cover /
+              handheld+led+magnifying+glass, #1082
+              large+platform+digital+bathroom+scale /
+              quilted+dog+winter+coat /
+              weekly+pill+organizer+with+alarms, #1081
+              sterile+saline+eye+wash /
+              padded+elizabethan+collar+dog /
+              dog+blind+halo+harness, #1080
+              letter+size+plastic+file+box /
+              plug+in+heated+pet+mat /
+              battery+motion+sensor+night+light,
+              FLUTD
+              cat+water+fountain /
+              extra+cat+litter+box /
+              canned+wet+cat+food,
+              dog.com kidney-disease
+              dog+water+fountain /
+              heavy+ceramic+pet+water+bowl.
+              Hill's k/d, Royal Canin Renal,
+              phosphate binders, SQ fluid bags,
+              needles, and syringes are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page water-bowl, warming-food, and
+              litter-clump copy — a wide-rim stainless
+              cat water bowl, an electric pet-food
+              warming plate, and a high-sided jumbo
+              cat litter box. Educational home-care
+              and monitoring tools only. They are not
+              a ranked product list, they are not a
+              substitute for veterinary care, they
+              are not a #1085 glucose-log / insulated
+              water-bowl / food-bin hop, they are not
+              a #1084 planner / hammock / stroller
+              hop, they are not a FLUTD fountain /
+              extra-litter-box / canned-wet-food hop,
+              they are not a dog.com kidney fountain /
+              ceramic-bowl hop, they are not a
+              Hill&apos;s k/d / phosphate-binder /
+              SQ-fluid hop, and they do not replace a
+              veterinarian. Vets.co earns a
+              commission on qualifying purchases at
+              no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wide+rim+stainless+cat+water+bowl?s=health-kidney-disease-cats"
+                amazonLabel="Browse wide-rim stainless cat water bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/electric+pet+food+warming+plate?s=health-kidney-disease-cats"
+                amazonLabel="Browse electric pet-food warming plates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/high+sided+jumbo+cat+litter+box?s=health-kidney-disease-cats"
+                amazonLabel="Browse high-sided jumbo cat litter boxes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
