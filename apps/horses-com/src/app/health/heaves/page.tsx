@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -94,6 +94,7 @@ export default function HeavesPage() {
             { label: "Diagnosis", href: "#diagnosis" },
             { label: "Environmental Management", href: "#environment" },
             { label: "Medical Treatment", href: "#medical" },
+            { label: "Heaves Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -120,9 +121,33 @@ export default function HeavesPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the heaves hay-soaking checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse heaves hay-soaking checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the hay-steamer and hay-soaking-bag notes so dusty
+              winter hay is soaked or steamed before the first barn-cough
+              flare. Educational checklist, not a diagnosis and not a
+              steroid, inhaler, or medication order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse heaves hay-soaking checklist"
+              subtitle="Email the hay-steamer and hay-soaking-bag notes. No spam."
+              ctaText="Email my horse heaves hay-soaking checklist"
+              source="health-heaves-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Is Equine Asthma</h2>
           <p>Equine asthma is a spectrum of chronic, non-infectious airway inflammation. Mild to moderate equine asthma (formerly inflammatory airway disease) causes poor performance and intermittent cough in younger horses, while severe equine asthma -- the classic &apos;heaves&apos; -- causes overt difficulty breathing in older horses. In susceptible horses, inhaled allergens provoke airway inflammation, excess mucus, and bronchoconstriction, narrowing the airways and making it hard to push air out.</p>
@@ -146,14 +171,52 @@ export default function HeavesPage() {
           <h2 id="environment">Environmental Management</h2>
           <ul>
             <li><strong>Maximize turnout</strong> and fresh air -- for most heaves horses, living out is the single biggest improvement.</li>
-            <li><strong>Soak or steam hay, or feed alternative forage</strong> such as haylage or a low-dust complete feed, to slash inhaled mold and dust.</li>
+            <li><strong>Soak or steam hay, or feed alternative forage</strong> such as haylage or a low-dust complete feed, to slash inhaled mold and dust. A hay steamer treats a flake or net in steam so mold and dust drop before the horse eats; a hay soaking bag lets a flake sit in water, then drain, so the same dusty winter hay is wet rather than airborne. Low-dust bedding and rubber stall mats already live on the stall-bedding calculator and stay off this kit.</li>
             <li><strong>Use low-dust bedding</strong> such as dust-extracted shavings, cardboard, or rubber mats instead of straw.</li>
-            <li><strong>Improve barn ventilation</strong> and avoid keeping the horse stabled while bedding is shaken out or hay is moved nearby.</li>
-            <li><strong>Feed at ground level</strong> rather than from a raised net, to help airway drainage.</li>
+            <li><strong>Improve barn ventilation</strong> and avoid keeping the horse stabled while bedding is shaken out or hay is moved nearby. Stall fans already live on other horses.com pages and stay off this kit.</li>
+            <li><strong>Feed at ground level</strong> rather than from a raised net, to help airway drainage. Slow-feeder hay nets stay on the feed calculator and forage pages.</li>
           </ul>
 
           <h2 id="medical">Medical Treatment</h2>
-          <p>When environmental change alone is not enough, veterinarians prescribe medication -- inhaled or systemic corticosteroids to reduce airway inflammation and bronchodilators to relieve constriction during flares. Inhaled therapy via an equine spacer device targets the lungs while limiting systemic effects. All medication selection, dosing, and tapering is determined by the veterinarian. Crucially, medication works best layered on top of good environmental control, not instead of it.</p>
+          <p>When environmental change alone is not enough, veterinarians prescribe medication -- inhaled or systemic corticosteroids to reduce airway inflammation and bronchodilators to relieve constriction during flares. Inhaled therapy via an equine spacer device targets the lungs while limiting systemic effects. All medication selection, dosing, and tapering is determined by the veterinarian. Crucially, medication works best layered on top of good environmental control, not instead of it. This page does not hop inhalers, spacers, steroids, or any other medication.</p>
+
+          <h2 id="kit">Heaves Kit</h2>
+          <p>Everyday physical supplies that match the soak-or-steam hay copy above — a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (heaves kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page soak-or-steam hay copy, not bedding, fans, hay nets,
+              inhalers, steroids, or medication hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the heaves kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page soak-or-steam
+              hay copy — a horse hay steamer for treating a flake before
+              feeding, and a hay soaking bag so dusty winter hay can sit in
+              water and drain. Everyday physical supplies only. They are not
+              a ranked product list, they are not low-dust bedding or stall
+              mats, they are not fans or hay nets, they are not an inhaler
+              or a steroid, they are not a medication, and they do not
+              replace a veterinarian. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hay+steamer?s=health-heaves"
+                amazonLabel="Browse horse hay steamers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hay+soaking+bag?s=health-heaves"
+                amazonLabel="Browse horse hay soaking bags on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
