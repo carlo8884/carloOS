@@ -12,6 +12,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -62,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -142,6 +144,7 @@ export default function FerretDentalDiseasePage() {
                 { label: 'Quick Reference', href: '#quickref' },
                 { label: 'Stages of Disease', href: '#stages' },
                 { label: 'Home Brushing Protocol', href: '#brushing' },
+                { label: 'Home dental-care kit', href: '#kit' },
                 { label: 'Anesthetized Cleanings', href: '#scaling' },
                 { label: 'Tooth Loss & Extraction', href: '#extraction' },
                 { label: 'Finding an Exotic-Pet Vet', href: '#vet' },
@@ -184,8 +187,36 @@ export default function FerretDentalDiseasePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-05"
+            reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret brushing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret brushing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes — a fingertip rubber brush for
+              kits, a soft infant toothbrush for outside-surface brushing,
+              and pet dental wipes (gauze on a fingertip with enzymatic
+              paste) for days a ferret will not tolerate a brush.
+              Educational checklist, not a diagnosis and not a substitute
+              for the exotic-pet vet. Human toothpaste, fluoride, xylitol,
+              antibiotics, and anesthesia stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret brushing checklist"
+              subtitle="Email the fingertip-brush, infant-toothbrush, and dental-wipe notes. No spam."
+              ctaText="Email my ferret brushing checklist"
+              source="health-dental-disease-under-hero"
+            />
+          </div>
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost
@@ -406,6 +437,64 @@ export default function FerretDentalDiseasePage() {
               meaningfully better than nothing.
             </p>
           </CalloutBox>
+
+          <h2 id="kit">Home dental-care kit</h2>
+          <p>
+            Everyday physical supplies that match the brushing copy above
+            — a fingertip rubber brush so a kit can learn the flavor and
+            the feel before a handle is introduced, a soft infant
+            toothbrush for the 30–60 second outside-surface pass, and pet
+            dental wipes (gauze on a fingertip with enzymatic paste) for
+            the days a ferret will not tolerate a brush. Enzymatic pet
+            toothpaste sits beside those three as the paste already
+            described in the protocol; it is not a fourth shop hop on
+            this page. Human toothpaste (fluoride, xylitol), named
+            toothpaste brand ASINs, antibiotics, analgesia (meloxicam,
+            buprenorphine), and anesthetized scaling stay educational
+            copy only. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops (fingertip rubber
+              brush / infant toothbrush / pet dental wipes). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER. Category
+              searches only — unused vs #993–#1024 soft+pet+toothbrush,
+              enzymatic+pet+toothpaste, dental+chews+dog,
+              pet+dental+water+additive, and cat+dental.
+              Human toothpaste, brand ASINs, and medications are not hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret dental-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              brushing-protocol copy — a fingertip rubber brush, a soft
+              infant toothbrush for outside-surface brushing, and pet
+              dental wipes for gauze-on-a-fingertip days. Everyday
+              physical supplies only. They are not a ranked product list,
+              they are not the dog/vets toothbrush or enzymatic-paste hops
+              already used elsewhere, they are not human toothpaste, they
+              are not medications, and they do not replace an exotic-pet
+              veterinarian. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease"
+                amazonLabel="Browse fingertip pet toothbrushes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease"
+                amazonLabel="Browse soft infant toothbrushes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"
+                amazonLabel="Browse pet dental wipes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="scaling">Anesthetized Professional Cleanings</h2>
           <p>
