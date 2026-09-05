@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -61,18 +61,89 @@ export default function DogMangePage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-mange bedding-wash checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-mange bedding-wash checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the household-wash notes — a washable dog
+              bed cover so bedding can go in the laundry after
+              a sarcoptic-mange diagnosis, plus pet-safe
+              laundry detergent for that wash cycle
+              (fragrance-free residue matters on already
+              irritated skin). Educational checklist, not a
+              diagnosis and not a mite treatment.
+              Isoxazoline products (Bravecto, NexGard,
+              Simparica, Credelio), ivermectin, amitraz dips,
+              medicated shampoo, and recovery cones stay off
+              this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-mange bedding-wash checklist"
+              subtitle="Email the washable-cover and laundry-detergent notes. No spam."
+              ctaText="Email my dog-mange bedding-wash checklist"
+              source="health-dog-mange-under-hero"
+            />
+          </div>
+
           <h2>Sarcoptic Mange (Scabies) — The Contagious One</h2>
           <p>Sarcoptic mange is caused by Sarcoptes scabiei var. canis, a mite that burrows into the superficial skin layers and causes intense allergic itching. It spreads by direct contact with infected animals — wildlife (foxes, coyotes), other infected dogs, and contaminated bedding or grooming equipment. The itching is characteristically intense — out of proportion to visible skin changes early in the disease. Dogs with sarcoptic mange often cannot stop scratching.</p>
           <p><strong>Zoonotic risk:</strong> Sarcoptic mange is transmissible to humans. Human scabies from dog-origin mites tends to be self-limiting (the dog-adapted mite cannot complete its lifecycle in human skin) but causes significant itching and skin reaction while it lasts. All people in contact with a dog diagnosed with sarcoptic mange should monitor for skin rash and itching, and consult a physician if symptoms develop.</p>
           <p><strong>Distribution:</strong> Classic presentation — intense itching beginning at the ear margins (crust on the edges of the ears), elbows, hocks, and ventral abdomen. The pinnal-pedal reflex (scratching with the hind leg when the ear margin is rubbed) is a reliable clinical indicator of sarcoptic mange. Progresses to widespread hair loss and skin thickening with chronicity.</p>
           <p><strong>Diagnosis:</strong> Skin scraping under microscope can identify mites but sensitivity is low — mites are present in small numbers and frequently not found even in confirmed cases. A positive scraping confirms mange; a negative scraping does not rule it out. In many cases, diagnosis is made by response to treatment ("therapeutic trial") — if the dog dramatically improves with antiparasitic treatment, sarcoptic mange was likely the diagnosis.</p>
-          <p><strong>Treatment:</strong> Isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) are highly effective against sarcoptic mange mites — often producing dramatic improvement within 2–4 weeks. Traditional treatments (Revolution/selamectin, ivermectin) also work. All dogs in the household must be treated simultaneously. Bedding should be washed and the environment treated for mites.</p>
+          <p><strong>Treatment:</strong> Isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) are highly effective against sarcoptic mange mites — often producing dramatic improvement within 2–4 weeks. Traditional treatments (Revolution/selamectin, ivermectin) also work. All dogs in the household must be treated simultaneously. Bedding should be washed and the environment treated for mites. A washable dog bed cover lets the crate pad or couch throw go in the laundry on hot after a sarcoptic diagnosis; pet-safe laundry detergent is the wash product for that cycle so leftover fragrance does not sit on already irritated skin. Those two items are household-wash tools. They do not kill mites, they do not replace the veterinarian-selected isoxazoline (or older parasiticide), and they are not a medicated shampoo or a recovery cone.</p>
 
           <h2>Demodectic Mange — The Immune-Related One</h2>
           <p>Demodex canis is a normal inhabitant of dog skin — present in small numbers in healthy dogs without causing disease. Demodectic mange occurs when immune suppression (in puppies with immature immune systems, or in adult dogs with compromised immunity) allows the mite population to proliferate beyond the normal controlled levels.</p>
           <p><strong>Juvenile (localized) demodicosis:</strong> Small patches of hair loss, typically on the face and legs of puppies under 18 months. Often self-resolving as the immune system matures. Limited to fewer than 5 lesions. Monitor — often does not require treatment.</p>
           <p><strong>Generalized demodicosis:</strong> Extensive hair loss affecting the entire body, often with secondary bacterial infection (pyoderma). Can occur in juveniles or adults. In adult-onset generalized demodicosis — any dog over 18 months developing new generalized demodex — an underlying cause of immune suppression must be investigated: Cushing's disease, hypothyroidism, diabetes mellitus, neoplasia, immunosuppressive medications. Treating the skin without addressing the underlying cause results in treatment failure.</p>
           <p><strong>Treatment:</strong> Isoxazoline products (Bravecto, NexGard, Simparica) are highly effective — they have revolutionized demodectic mange treatment and are now the standard of care. Monthly or every-3-month dosing continues until two consecutive negative skin scrapings are achieved. Traditional treatments (amitraz dips, oral ivermectin) are still used in some cases. Secondary bacterial pyoderma requires concurrent antibiotic treatment. Treatment duration: typically 3–6 months for generalized cases.</p>
+
+          <h2 id="kit">Bedding-wash kit</h2>
+          <p>Everyday physical supplies that match the household-wash copy above — a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page never hops parasiticide brands, brand ASINs, medicated shampoo, or clinical gear. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (washable
+              dog bed cover / pet-safe laundry detergent). ShopCtas
+              hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only. Isoxazoline parasiticide
+              brands, ivermectin, amitraz, medicated shampoo, and
+              recovery cones are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-mange bedding-wash kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              household-wash copy — a washable dog bed cover
+              and pet-safe laundry detergent. Everyday physical
+              gear only. They are not a ranked product list,
+              they are not medications, they are not
+              parasiticide brand ASINs (Bravecto / NexGard /
+              Simparica / Credelio), they are not medicated
+              shampoo, they are not recovery cones, and they
+              do not replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange"
+                amazonLabel="Browse washable dog bed covers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"
+                amazonLabel="Browse pet-safe laundry detergent on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
