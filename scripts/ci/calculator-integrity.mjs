@@ -3862,6 +3862,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete puppy-series vaccine-record-checklist offer; every gear CTA is an amazon-brand category search matching on-page puppy-series / documented-history / titer / observation-wait copy (a pet vaccination record book so the 6–16 week series, adult boosters, and titer printouts stay in one official history, a dog seat-belt tether for the repeated clinic trips that series requires, a foldable waterproof puppy mat for the 30–60 minute post-vaccine observation wait), never a placeholder ASIN, a #1043 heartworm hop, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a #1030 high-value vet-visit-treat hop, a first-aid-kit hop, a vaccine / vaccine-brand hop, a Heartgard / Interceptor / Simparica / ProHeart hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-symptoms-guide hops',
+    file: 'apps/dog-com/src/app/health/dog-symptoms-guide/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-symptoms-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog emergency-sign watch checklist"/, label: 'concrete dog emergency-sign-watch-checklist offer, not Subscribe' },
+      { re: /source="health-symptoms"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/led\+medical\+penlight\?s=health-dog-symptoms-guide/, label: 'LED medical-penlight search hop (matches on-page pale / white / blue / grey gum and sudden eye-change copy; unique vs dog+gum+color+assessment+chart and digital+pet+thermometer)' },
+      { re: /amazon-brand\/pet\+emergency\+contact\+card\?s=health-dog-symptoms-guide/, label: 'pet emergency-contact-card search hop (matches on-page ASPCA 888-426-4435 / Save This Number / call-the-ER copy; unique vs pet+vaccination+record+book and engraved+dog+collar+id+tags)' },
+      { re: /amazon-brand\/folding\+pet\+stretcher\?s=health-dog-symptoms-guide/, label: 'folding pet-stretcher search hop (matches on-page sudden-collapse / inability-to-stand copy; unique vs dog+belly+support+harness / dog+rear+support+harness / dog+wheelchair+mobility+cart / soft+sided+vet+visit+carrier)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /amazon-brand\/[^?"']*(pet\+vaccination\+record\+book|dog\+seat\+belt\+tether|foldable\+waterproof\+puppy\+mat|mosquito\+dunks|monthly\+pill\+organizer|soft\+sided\+vet\+visit\+carrier|dog\+gum\+color\+assessment\+chart|high\+calorie\+dog\+recovery\+food|pet\+oral\+feeding\+syringe|washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|high\+value\+vet\+visit\+treats|soft\+dog\+carrier|soft\+pet\+carrier|pet\+first\+aid\+kit|dog\+first\+aid\+kit|digital\+pet\+thermometer|styptic\+powder|tick\+remover|wound\+care\+gauze|vetrap|soft\+dog\+muzzle|soft\+throw\+blanket|dog\+crate\+bumper\+pads|interlocking\+foam\+floor\+tiles|prescription|medication|medicine|rx\b)/, label: 'never hop #1044 vaccine-record / seat-belt-tether / puppy-mat, #1043 mosquito-dunks / monthly-pill-organizer / soft-sided-vet-visit-carrier, #1042 anemia gum-chart / recovery-food / syringe, #1041 heat-pants / belly-band / exercise-pen, #1030 high-value vet-visit treats, generic soft-dog/pet-carrier, first-aid kits, digital thermometers, styptic / tick-remover / gauze / Vetrap / muzzle, seizure throw-blanket / crate-bumper / foam-tile hops, or Rx — this page hops only led-medical-penlight / pet-emergency-contact-card / folding-pet-stretcher gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog emergency-sign-watch-checklist offer; every gear CTA is an amazon-brand category search matching on-page gum-check / poison-control / collapse-transport copy (an LED medical penlight so pale / white / blue / grey gums and sudden pupil or eye changes can be checked in low light against the learned baseline, a pet emergency contact card so the ASPCA 888-426-4435 line and nearest emergency clinic stay visible, a folding pet stretcher for a dog that collapses or cannot stand), never a placeholder ASIN, a #1044 vaccination hop, a #1043 heartworm hop, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a #1030 high-value vet-visit-treat hop, a first-aid-kit hop, a thermometer hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

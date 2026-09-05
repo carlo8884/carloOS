@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
@@ -100,6 +100,45 @@ export default function DogSymptomsGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog emergency-sign watch checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog emergency-sign watch checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the gum-check, poison-control, and
+              collapse-transport notes — an LED medical
+              penlight so pale, white, blue, or grey gums
+              and sudden pupil or eye changes can be
+              checked in low light against the baseline
+              this page tells owners to learn, a pet
+              emergency contact card so the ASPCA
+              888-426-4435 line and the nearest emergency
+              clinic stay on the fridge, and a folding
+              pet stretcher for a dog that collapses or
+              cannot stand. Educational checklist, not a
+              first-aid kit, not a diagnosis, and not a
+              prescription. Emergency care still belongs
+              with a veterinarian. Vaccination record
+              books, seat-belt tethers, puppy mats,
+              mosquito dunks, pill organizers,
+              clinic-visit carriers, gum-color charts,
+              recovery food, and feeding syringes stay
+              on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog emergency-sign watch checklist"
+              subtitle="Email the penlight, contact-card, and stretcher notes. No spam."
+              ctaText="Email my dog emergency-sign watch checklist"
+              source="health-dog-symptoms-guide-under-hero"
+            />
+          </div>
+
         <p>In emergency veterinary medicine, the hardest cases are often the ones that came in too late — not because the owner didn&apos;t care, but because they didn&apos;t know. A dog that seemed &quot;a little off&quot; yesterday. A belly that &quot;looked slightly bigger.&quot; A gum color that had been pale for hours. This guide gives you what you need to make fast, accurate decisions.</p>
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)', borderRadius: '10px', padding: '16px 20px', margin: '24px 0' }}>
@@ -164,6 +203,105 @@ export default function DogSymptomsGuidePage() {
             Find Your Nearest Emergency Vet →
           </Link>
         </div>
+
+        <h2 id="kit">A Simple Emergency-Sign Watch Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            gum-check, poison-control, and
+            collapse-transport copy above: an LED
+            medical penlight so pale, white, blue, or
+            grey gums and sudden pupil or eye changes
+            can be checked in low light against the
+            individual baseline this page tells owners
+            to learn, a pet emergency contact card so
+            the ASPCA Animal Poison Control number
+            (888-426-4435) and the nearest emergency
+            clinic stay visible, and a folding pet
+            stretcher for a dog that collapses or
+            cannot support its own weight. These are
+            household watch-and-transport tools, not
+            treatments. They do not diagnose a
+            symptom, they do not replace a phone call
+            to the emergency clinic, they do not
+            replace ASPCA Poison Control, they do not
+            treat GDV, seizure, poisoning, bleeding,
+            or eye trauma, and they are not a first-aid
+            kit. Vaccination record books, seat-belt
+            tethers, foldable waterproof puppy mats,
+            mosquito dunks, a monthly pill organizer,
+            a soft-sided vet-visit carrier, a gum-color
+            assessment chart, recovery food, a feeding
+            syringe, digital pet thermometers, and
+            high-value vet-visit treats already live
+            on other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (LED medical penlight / pet emergency
+              contact card / folding pet stretcher).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1044 pet vaccination record
+              book / dog seat-belt tether / foldable
+              waterproof puppy mat, #1043 mosquito
+              dunks / monthly pill organizer /
+              soft-sided vet-visit carrier, #1042
+              gum-chart / recovery-food /
+              feeding-syringe, #1041 heat-pants /
+              belly-band / exercise-pen, #1030
+              high-value vet-visit treats, pet first-aid
+              kits, digital pet thermometers,
+              soft+dog+carrier / soft+pet+carrier,
+              styptic powder, and tick removers.
+              Wound gauze, Vetrap, soft dog muzzles,
+              seizure throw blankets / crate bumpers /
+              foam tiles, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the emergency-sign watch kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page gum-check, poison-control, and
+              collapse-transport copy — an LED medical
+              penlight, a pet emergency contact card,
+              and a folding pet stretcher. Everyday
+              physical supplies only. They are not a
+              ranked product list, they are not a
+              first-aid-kit hop, they are not the
+              #1044 vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not the #1030
+              high-value vet-visit-treat hops, they
+              are not thermometer or soft-carrier hops,
+              and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide"
+                amazonLabel="Browse LED medical penlights on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+emergency+contact+card?s=health-dog-symptoms-guide"
+                amazonLabel="Browse pet emergency contact cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"
+                amazonLabel="Browse folding pet stretchers on Amazon →"
+              />
+            </div>
+          </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
