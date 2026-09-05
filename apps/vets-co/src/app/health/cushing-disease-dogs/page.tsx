@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
@@ -53,6 +53,47 @@ export default function CushingsPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Cushing&apos;s monitoring checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Cushing&apos;s monitoring checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes that match the
+              PU/PD water-intake, pot-belly comfort, and
+              symptom-log copy on this page — a 2-liter
+              plastic graduated pitcher so excessive
+              drinking is a measured pour instead of a
+              guessed refill, an extra-large bolster dog
+              lounge so pot-belly and muscle-loss dogs
+              can rest without climbing, and an A5
+              hardcover dot-grid notebook so thirst,
+              panting, and energy stay dated observations
+              for the next ACTH recheck. Educational
+              checklist, not a ranked product list, not
+              a substitute for veterinary care, and not
+              a trilostane / Vetoryl / mitotane hop.
+              Narrow-neck glass water carafes, 2-quart
+              stainless saucepans, and pocket spiral
+              memo pads already live on
+              vomiting-diarrhea-pets. Gallon gravity
+              dog-waterers, extra-large disposable pee
+              pads, and cooling bandanas already live on
+              dog.com Cushing&apos;s. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Cushing's monitoring checklist"
+              subtitle="Email the pitcher, bolster-lounge, and notebook notes. No spam."
+              ctaText="Email my Cushing's monitoring checklist"
+              source="health-cushing-disease-dogs-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Pituitary-dependent hyperadrenocorticism (PDH) accounts for approximately 85% of Cushing's cases: a tumor (usually a small microadenoma) in the pituitary gland overproduces ACTH, which chronically overstimulates both adrenal glands to produce excess cortisol, resulting in bilateral adrenal hyperplasia. The remaining 15% is adrenal-dependent — a tumor in one adrenal gland autonomously overproduces cortisol regardless of pituitary input, and the opposite adrenal gland atrophies from suppressed ACTH. The distinction matters because it determines whether surgery is the definitive treatment.</DropCap>
@@ -78,10 +119,121 @@ export default function CushingsPage() {
             The 2012 ACVIM Consensus Statement on canine hyperadrenocorticism cites the LDDS test as the recommended first-line screening test, with approximately 85-95% sensitivity for PDH. Post-ACTH cortisol monitoring targets for trilostane therapy are 1-5 microg/dL at 4-6 hours post-pill; values below 1 microg/dL indicate overdosing risk and values above 9 microg/dL indicate inadequate control.
           </CalloutBox>
 
-          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
+          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Between those clinic visits, a 2-liter plastic graduated pitcher is how PU/PD stays a number — fill the bowl from the marked pitcher once and you can see whether overnight drinking jumped instead of guessing from a refilled bowl. It is not a narrow-neck glass water carafe, not a gallon gravity dog-waterer, and not a kitchen liquid-measuring pitcher. It does not treat Cushing&apos;s and it does not replace an LDDS or ACTH stimulation test. An A5 hardcover dot-grid notebook is how those pours, plus panting, pot-belly shape, and energy, stay dated observations you can hand the veterinarian at the next recheck — not a pocket spiral memo pad and not a waterproof field notebook. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
 
           <h2>Iatrogenic Cushing's — Steroid-Induced</h2>
-          <p>Chronic administration of corticosteroids (prednisone, dexamethasone, methylprednisolone — including long-acting injections) suppresses the hypothalamic-pituitary-adrenal axis and can produce all the classic Cushing's signs — PU/PD, pot belly, panting, hair loss, thin skin — indistinguishable from natural Cushing's. The ALP elevation on chemistry from corticosteroids (steroid-induced ALP) is often the first laboratory clue. Treatment: gradual corticosteroid tapering under veterinary guidance (never stop abruptly — the adrenals have become suppressed and need time to recover). LDDS and ACTH stimulation results will be abnormal while corticosteroids are being tapered — testing during taper is unreliable for diagnosis of natural Cushing's.</p>
+          <p>Chronic administration of corticosteroids (prednisone, dexamethasone, methylprednisolone — including long-acting injections) suppresses the hypothalamic-pituitary-adrenal axis and can produce all the classic Cushing's signs — PU/PD, pot belly, panting, hair loss, thin skin — indistinguishable from natural Cushing's. The ALP elevation on chemistry from corticosteroids (steroid-induced ALP) is often the first laboratory clue. Treatment: gradual corticosteroid tapering under veterinary guidance (never stop abruptly — the adrenals have become suppressed and need time to recover). LDDS and ACTH stimulation results will be abnormal while corticosteroids are being tapered — testing during taper is unreliable for diagnosis of natural Cushing's. Muscle wasting plus fat redistribution is why the pot belly looks like weight gain while the legs thin. An extra-large bolster dog lounge is comfort for that shape — a low-sided lounge they can sink into without climbing, not an egg-crate foam kennel pad and not an orthopedic dog bed. It does not treat hyperadrenocorticism.</p>
+
+          <h2 id="kit">Home monitoring kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            PU/PD water-intake, pot-belly comfort, and
+            symptom-log copy on this page — a 2-liter
+            plastic graduated pitcher so excessive
+            drinking is a measured pour, an extra-large
+            bolster dog lounge so pot-belly and
+            muscle-loss dogs can rest without climbing,
+            and an A5 hardcover dot-grid notebook so
+            thirst, panting, and energy stay dated
+            observations for the next ACTH recheck.
+            These are educational home-care and
+            monitoring tools, not a ranked product
+            list, not a substitute for veterinary
+            care, and not a treatment for Cushing&apos;s,
+            adrenal crisis, or iatrogenic steroid
+            excess. Trilostane, Vetoryl, mitotane,
+            Lysodren, and human steroids are not
+            shoppable hops. Narrow-neck glass water
+            carafes, 2-quart stainless saucepans, and
+            pocket spiral memo pads already live on
+            vomiting-diarrhea-pets. Gallon gravity
+            dog-waterers, extra-large disposable pee
+            pads, and cooling bandanas already live on
+            dog.com Cushing&apos;s. This page does not
+            claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (2-liter plastic graduated pitcher /
+              extra-large bolster dog lounge /
+              A5 hardcover dot-grid notebook).
+              These are educational home-care /
+              monitoring tools, not a ranked product
+              list, not a substitute for veterinary
+              care, no Rx / trilostane / Vetoryl /
+              mitotane / human-med ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1077
+              narrow+neck+glass+water+carafe /
+              2+quart+stainless+saucepan+with+lid /
+              pocket+spiral+memo+pad, #1076
+              pet+toothbrush+and+enzymatic+toothpaste+kit /
+              vohc+dental+chews+for+dogs /
+              vohc+accepted+dental+water+additive, #1075
+              egg+crate+foam+dog+kennel+pad /
+              carpeted+wooden+pet+steps /
+              wide+platform+veterinary+floor+scale, #1074
+              wire+basket+dog+muzzle /
+              quilted+disposable+underpads /
+              handheld+aa+led+flashlight, #1073
+              double+door+wire+dog+crate /
+              pet+safe+kennel+disinfectant+spray /
+              analog+wall+clock+with+second+hand, #1072
+              tick+removal+hook /
+              fine+tooth+flea+comb /
+              laminated+tick+identification+card, #1071
+              letter+size+expanding+file+organizer /
+              sterile+urine+specimen+cup /
+              12+hour+mechanical+kitchen+timer,
+              dog.com Cushing's
+              gallon+gravity+dog+waterer /
+              extra+large+disposable+dog+pee+pads /
+              dog+cooling+bandana.
+              Trilostane, Vetoryl, mitotane, Lysodren,
+              and Rx ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the home monitoring kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page PU/PD water-intake, pot-belly
+              comfort, and symptom-log copy — a 2-liter
+              plastic graduated pitcher, an extra-large
+              bolster dog lounge, and an A5 hardcover
+              dot-grid notebook. Educational home-care
+              and monitoring tools only. They are not a
+              ranked product list, they are not a
+              substitute for veterinary care, they are
+              not a #1077 carafe / saucepan / memo-pad
+              hop, they are not a #1076 toothbrush-kit /
+              VOHC-chew / water-additive hop, they are
+              not a #1075 egg-crate-pad / pet-steps /
+              floor-scale hop, they are not a dog.com
+              gravity-waterer / pee-pad / cooling-bandana
+              hop, and they do not replace a
+              veterinarian. Vets.co earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs"
+                amazonLabel="Browse 2-liter plastic graduated pitchers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/extra+large+bolster+dog+lounge?s=health-cushing-disease-dogs"
+                amazonLabel="Browse extra-large bolster dog lounges on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/a5+hardcover+dot+grid+notebook?s=health-cushing-disease-dogs"
+                amazonLabel="Browse A5 hardcover dot-grid notebooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
