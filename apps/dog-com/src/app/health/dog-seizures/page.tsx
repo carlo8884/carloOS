@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -11,7 +11,7 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Seizures — Types, Causes, When to ER | Dog.com', description: 'Dog seizures: focal vs generalized, cluster vs status, idiopathic vs symptomatic causes, anticonvulsants, seizure journaling, and ER red flags.', path: '/health/dog-seizures', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, diagnostic workup, anticonvulsant management, and emergency criteria for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, diagnostic workup, anticonvulsant management, and emergency criteria for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency criteria, diagnostic workup, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
@@ -41,13 +41,45 @@ export default function DogSeizuresPage() {
               {['Seizure lasting 5+ minutes', 'More than 2 seizures in 24 hours (cluster)', 'First seizure in a dog <1 year or >5 years', 'Not recovering between seizures', 'Known or suspected toxin exposure', 'Persistent post-ictal beyond 30–60 min'].map(s => <li key={s} className="flex gap-2"><span className="text-brand-danger">→</span>{s}</li>)}
             </ul>
           </div>
-          <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'FAQ', href: '#faq' }]} />
+          <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'Home Safety Kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-seizure safety-kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-seizure safety-kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-safety notes — a soft throw
+              blanket to slide the dog away from stairs or
+              water without handling, crate bumper pads so
+              the usual rest crate is already padded, and
+              interlocking foam floor tiles for the quiet
+              dim recovery space after the event.
+              Educational checklist, not a diagnosis and
+              not an anticonvulsant list. Phenobarbital,
+              potassium bromide, levetiracetam, rescue
+              diazepam, first-aid kits, thermometers, and
+              IVDD recovery crates stay off this list. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-seizure safety-kit checklist"
+              subtitle="Email the throw-blanket, crate-bumper, and foam-tile notes. No spam."
+              ctaText="Email my dog-seizure safety-kit checklist"
+              source="health-dog-seizures-under-hero"
+            />
+          </div>
+
           <div style={{ background: 'rgba(200,74,42,0.06)', border: '1px solid rgba(200,74,42,0.25)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Action First</div>
             <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>If your dog is seizing right now: do not put your hands near the mouth, do not restrain the dog, start a timer, move hazards out of the way, dim the lights, and if you can, video the event. If the seizure passes five minutes or if multiple seizures occur, go to the emergency vet immediately. Call ahead. The rest of this page is for after.</p>
@@ -55,11 +87,11 @@ export default function DogSeizuresPage() {
 
           <h2 id="during">What to Do During a Seizure</h2>
           <p><strong>Do not put your hands near the dog&apos;s mouth.</strong> Contrary to a persistent myth carried over from human first-aid folklore, dogs cannot swallow their tongues. Putting fingers or objects into a seizing dog&apos;s mouth is a common route to a serious bite injury — the dog is not conscious and cannot control jaw movement.</p>
-          <p><strong>Do not restrain the dog.</strong> Holding a seizing dog still does not shorten the seizure and increases bite risk to the handler. The exception is moving the dog away from an immediate hazard such as the top of a staircase or the edge of a pool; in that case, use a blanket or a board to slide the dog rather than handling it directly.</p>
+          <p><strong>Do not restrain the dog.</strong> Holding a seizing dog still does not shorten the seizure and increases bite risk to the handler. The exception is moving the dog away from an immediate hazard such as the top of a staircase or the edge of a pool; in that case, use a soft throw blanket or a board to slide the dog rather than handling it directly. Keep that blanket near the usual rest area so you are not hunting for one mid-event.</p>
           <p><strong>Start a timer.</strong> The single most useful piece of information for the veterinarian is the duration of the event from onset of motor activity to cessation. Owners almost always overestimate the duration of a seizure because of the stress of witnessing it; a phone stopwatch is much better than a guess.</p>
-          <p><strong>Clear the environment.</strong> Move hard furniture, sharp objects, and other pets away. Dim the lights and reduce noise. If the dog is on stairs or near water, manage that hazard first.</p>
+          <p><strong>Clear the environment.</strong> Move hard furniture, sharp objects, and other pets away. Dim the lights and reduce noise. If the dog is on stairs or near water, manage that hazard first. A set of interlocking foam floor tiles on the usual recovery spot turns a hard kitchen or crate-room floor into a quieter landing; crate bumper pads on the usual rest crate do the same job inside the crate so the dog is not hitting wire or plastic if the event starts there.</p>
           <p><strong>Video the event.</strong> If two people are present, one should manage the environment and one should record video on a phone. A 30-second clip is enormously informative for the veterinarian; it answers questions about whether the event is truly a generalized seizure, a focal seizure, a syncopal episode, or a non-seizure paroxysmal disorder.</p>
-          <p><strong>After the seizure, the post-ictal period.</strong> Most generalized seizures are followed by minutes to hours of confusion, disorientation, pacing, temporary blindness, excessive thirst or hunger, and ataxia. Keep the dog in a quiet, dim, padded space until oriented. Offer water. Do not offer food until alert and steady; aspiration risk is real in a disoriented dog.</p>
+          <p><strong>After the seizure, the post-ictal period.</strong> Most generalized seizures are followed by minutes to hours of confusion, disorientation, pacing, temporary blindness, excessive thirst or hunger, and ataxia. Keep the dog in a quiet, dim, padded space until oriented — the same foam tiles and crate bumper pads you staged beforehand. Offer water. Do not offer food until alert and steady; aspiration risk is real in a disoriented dog.</p>
 
           <h2 id="types">Types of Seizures</h2>
           <p>Canine seizures are classified by the international veterinary epilepsy task force terminology (De Risio et al., BMC Vet Res 2015), parallel to the human International League Against Epilepsy framework.</p>
@@ -146,6 +178,53 @@ export default function DogSeizuresPage() {
             <li><strong>Video clip</strong> if available — link or filename for the vet.</li>
           </ul>
           <p>Bringing the journal to follow-up visits transforms the conversation from impressionistic ("she had a few seizures this month") to actionable ("three seizures in the last 60 days, two within an 18-hour cluster on day 34, durations 90 seconds, 75 seconds, and 110 seconds, missed an evening dose two days before the cluster"). That is the level of detail that drives sensible dose adjustments.</p>
+
+          <h2 id="kit">Home safety kit</h2>
+          <p>Everyday physical supplies that match the during-and-after copy above — a soft throw blanket to slide the dog away from stairs or water without putting hands near the mouth, crate bumper pads so the usual rest crate is already padded if an event starts there, and interlocking foam floor tiles for the quiet dim recovery space. These are safety tools, not treatments. They do not stop a seizure, they do not replace a timer or a video clip, and they do not treat epilepsy, toxin exposure, or status epilepticus. Phenobarbital, potassium bromide, levetiracetam (Keppra), zonisamide, rescue diazepam or midazolam, and CBD stay educational copy only. First-aid kits, digital pet thermometers, IVDD recovery crates, crate covers, crate pads, cooling mats, and night lights stay off this kit. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (soft
+              throw blanket / crate bumper pads / interlocking
+              foam floor tiles). ShopCtas hides empty Chewy;
+              never href="#" or PLACEHOLDER. Category searches
+              only. Anticonvulsants, first-aid kits,
+              thermometers, IVDD recovery crates, crate covers,
+              crate pads, cooling mats, and night lights are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-seizure safety kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              home-safety copy — a soft throw blanket to slide
+              the dog, crate bumper pads for the usual rest
+              crate, and interlocking foam floor tiles for the
+              padded recovery space. Everyday physical gear
+              only. They are not a ranked product list, they
+              are not medications, they are not first-aid-kit
+              or thermometer ASINs, they are not IVDD recovery
+              crates or crate covers, and they do not replace a
+              veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+throw+blanket?s=health-dog-seizures"
+                amazonLabel="Browse soft throw blankets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+crate+bumper+pads?s=health-dog-seizures"
+                amazonLabel="Browse dog crate bumper pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/interlocking+foam+floor+tiles?s=health-dog-seizures"
+                amazonLabel="Browse interlocking foam floor tiles on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

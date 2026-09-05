@@ -3501,6 +3501,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquarium hardness-adjust-checklist offer; every gear CTA is an amazon-brand category search matching on-page raise-and-lower copy (crushed coral in the filter to raise GH and KH together, a GH remineralizer for calcium/magnesium only, Indian almond leaves for a slow blackwater KH/pH drop), never a placeholder ASIN, an API freshwater master / GH-KH test-kit hop (the #1026 hold reason), a Prime / Flourish Excel / Equilibrium brand hop, a #1020 Seiryu / spiderwood hop, a #1021 scraper hop, a #1022 light-timer / root-tab hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-seizures hops',
+    file: 'apps/dog-com/src/app/health/dog-seizures/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-seizures-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-seizure safety-kit checklist"/, label: 'concrete dog-seizure safety-kit-checklist offer, not Subscribe' },
+      { re: /source="health-seizures"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+throw\+blanket\?s=health-dog-seizures/, label: 'soft throw-blanket search hop (matches on-page slide-the-dog-away-from-stairs-or-water copy; unique vs #993–#1027 first-aid / recovery-crate hops)' },
+      { re: /amazon-brand\/dog\+crate\+bumper\+pads\?s=health-dog-seizures/, label: 'dog crate-bumper-pads search hop (matches on-page padded rest-crate copy; unique vs crate-pad / crate-cover / IVDD recovery-crate hops)' },
+      { re: /amazon-brand\/interlocking\+foam\+floor\+tiles\?s=health-dog-seizures/, label: 'interlocking foam floor-tiles search hop (matches on-page padded recovery-space copy; unused vs #993–#1027)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+first\+aid\+kit|digital\+pet\+thermometer|digital\+rectal\+thermometer|dog\+recovery\+crate|dog\+crate\+pad|dog\+crate\+cover|dog\+belly\+support|dog\+wheelchair|soft\+dog\+carrier|dog\+cooling\+mat|dog\+cooling\+vest|cool\+water\+towels|nightlight|night\+light|phenobarbital|potassium\+bromide|levetiracetam|keppra|zonisamide|diazepam|midazolam|cbd|selegiline|anipryl|bright\+mind|orthopedic\+dog\+bed|dog\+ramp|extra\+tall\+baby\+gate|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop first-aid kits / thermometers (#1023 and emergency triage), IVDD recovery crates / belly-support / wheelchairs (#1007), crate pads / crate covers (crate-size / anxiety), cooling mats / vests (#1010), night lights (CDS hold), anticonvulsants (phenobarbital / KBr / Keppra / zonisamide / diazepam / midazolam / CBD), or medications — this page hops only throw-blanket / crate-bumper / foam-tile gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-seizure safety-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-safety copy (soft throw blanket to slide the dog away from stairs or water, crate bumper pads on the usual rest crate, interlocking foam floor tiles for the padded recovery space), never a placeholder ASIN, a first-aid-kit / thermometer hop, an IVDD recovery-crate hop, a crate-pad / crate-cover hop, a cooling-mat hop, a CDS night-light hop, or an anticonvulsant / medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
