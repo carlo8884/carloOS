@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Diabetes Mellitus in Dogs & Cats — Signs, Management | Vets.co", description: "Diabetes mellitus in pets causes excessive thirst, urination, and weight loss. Insulin therapy, diet, and monitoring explained for dog and cat owners.", path: '/health/diabetes-in-dogs-cats', type: 'article' })
@@ -52,6 +52,51 @@ export default function DiabetesPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the pet diabetes care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Pet diabetes care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes that match the
+              water-bowl, measured-meal, and
+              owner-tracking copy on this page — a
+              digital pet glucose-log notebook so
+              water intake, appetite, weight, and
+              energy stay dated observations between
+              clinic glucose curves, an insulated pet
+              water bowl so emptying the bowl
+              unusually fast is a seen refill instead
+              of a guessed puddle, and an airtight
+              locking pet-food bin so twice-daily
+              measured meals stay the same food, not
+              a table-scrap surprise. Educational
+              checklist, not a ranked product list,
+              not a substitute for veterinary care,
+              and not a Vetsulin / NPH / syringe /
+              FreeStyle Libre / Dexcom / Hill&apos;s
+              w/d hop. Pet glucometers and light corn
+              syrup already live on dog.com diabetes.
+              Kitchen gram scales, portion-control
+              food scales, elevated slow-feeder bowls,
+              and cooling mats already live on other
+              floors. Soft-sided vet-visit carriers
+              already live on dog.com
+              heartworm-prevention. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Pet diabetes care checklist"
+              subtitle="Email the glucose-log, water-bowl, and food-bin notes. No spam."
+              ctaText="Email my pet diabetes care checklist"
+              source="health-diabetes-in-dogs-cats-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="warning" title="Diabetic ketoacidosis is an emergency">
@@ -61,10 +106,10 @@ export default function DiabetesPage() {
           <DropCap>Diabetes mellitus is a failure of glucose regulation. Normally, the pancreas secretes insulin in response to rising blood glucose, and insulin allows cells to take up glucose for energy. In diabetes, either the pancreas does not make enough insulin (insulin-dependent, typical of dogs) or the body cannot respond to it (insulin resistance, typical of cats). The result is persistently elevated blood glucose while cells starve. The body begins breaking down fat and muscle for energy, producing the classic picture of a hungry pet that drinks and urinates excessively while losing weight.</DropCap>
 
           <h2>Recognizing the Signs</h2>
-          <p>The four hallmark signs are excessive thirst, excessive urination, increased appetite, and weight loss despite eating. Owners often first notice the pet asking to go out more frequently, urinating in the house after years of being reliable, or emptying the water bowl unusually fast. Cats may urinate large clumps in the litter box. As disease progresses, appetite can decline, lethargy sets in, and dogs may develop cloudy eyes from cataracts. Any combination of these signs warrants blood and urine testing.</p>
+          <p>The four hallmark signs are excessive thirst, excessive urination, increased appetite, and weight loss despite eating. Owners often first notice the pet asking to go out more frequently, urinating in the house after years of being reliable, or emptying the water bowl unusually fast. Cats may urinate large clumps in the litter box. As disease progresses, appetite can decline, lethargy sets in, and dogs may develop cloudy eyes from cataracts. Any combination of these signs warrants blood and urine testing. An insulated pet water bowl is how that unusually-fast empty becomes a seen refill instead of a guessed puddle — it is not a heavy ceramic pet water bowl, not a gallon gravity dog-waterer, and not a 2-liter plastic graduated pitcher (that lives on Cushing&apos;s). It does not diagnose diabetes and it does not replace a glucose or fructosamine test.</p>
 
           <h2>How Diabetes Is Diagnosed</h2>
-          <p>Diagnosis requires both persistently elevated blood glucose and glucose spilling into the urine, alongside consistent clinical signs. A single high glucose reading is not enough in cats — stress alone can transiently raise a cat's blood glucose well above normal. For this reason veterinarians often measure fructosamine, a blood marker reflecting average glucose over the prior two to three weeks, which is not affected by momentary stress. Additional bloodwork screens for concurrent disease such as pancreatitis, urinary tract infection, kidney disease, and in dogs, Cushing disease, which can complicate diabetes control.</p>
+          <p>Diagnosis requires both persistently elevated blood glucose and glucose spilling into the urine, alongside consistent clinical signs. A single high glucose reading is not enough in cats — stress alone can transiently raise a cat&apos;s blood glucose well above normal. For this reason veterinarians often measure fructosamine, a blood marker reflecting average glucose over the prior two to three weeks, which is not affected by momentary stress. Additional bloodwork screens for concurrent disease such as pancreatitis, urinary tract infection, kidney disease, and in dogs, Cushing disease, which can complicate diabetes control. Household water bowls, food bins, and notebooks do not replace that panel.</p>
 
           <PullQuote
             variant="inline"
@@ -73,20 +118,144 @@ export default function DiabetesPage() {
           />
 
           <h2>Insulin Therapy</h2>
-          <p>Insulin is the cornerstone of treatment for nearly all diabetic pets. Several veterinary and human insulin products are used in dogs and cats; the choice, dose, and frequency are determined entirely by your veterinarian based on the individual pet's response, and are adjusted over time using glucose monitoring. Owners learn to give small subcutaneous injections, typically twice daily after meals, using fine insulin needles that most pets tolerate well. Consistency matters more than perfection: giving insulin at the same times relative to meals, storing it correctly, and never doubling a missed dose are the practical keys to stable control.</p>
+          <p>Insulin is the cornerstone of treatment for nearly all diabetic pets. Several veterinary and human insulin products are used in dogs and cats; the choice, dose, and frequency are determined entirely by your veterinarian based on the individual pet&apos;s response, and are adjusted over time using glucose monitoring. Owners learn to give small subcutaneous injections, typically twice daily after meals, using fine insulin needles that most pets tolerate well. Consistency matters more than perfection: giving insulin at the same times relative to meals, storing it correctly, and never doubling a missed dose are the practical keys to stable control. Vetsulin, NPH, ProZinc, glargine, syringes, and any other insulin brand are clinic prescriptions, not shoppable hops.</p>
 
           <h2>Diet and Weight</h2>
-          <p>Diet is a powerful tool. Diabetic cats benefit from low-carbohydrate, high-protein diets that reduce insulin demand and improve remission odds. Diabetic dogs do best on consistent, measured meals with moderate fiber to slow glucose absorption, fed on a fixed schedule that matches insulin timing. Obesity worsens insulin resistance, so a structured weight-loss plan often improves control. Treats and table scraps should be minimized and standardized, because erratic feeding undermines insulin dosing.</p>
+          <p>Diet is a powerful tool. Diabetic cats benefit from low-carbohydrate, high-protein diets that reduce insulin demand and improve remission odds. Diabetic dogs do best on consistent, measured meals with moderate fiber to slow glucose absorption, fed on a fixed schedule that matches insulin timing. Obesity worsens insulin resistance, so a structured weight-loss plan often improves control. Treats and table scraps should be minimized and standardized, because erratic feeding undermines insulin dosing. An airtight locking pet-food bin is how that twice-daily measured meal stays the same food — it is not a kitchen gram scale (that lives on weight-management), not a portion-control food scale (that lives on the dog calorie / ideal-weight tools), and not an elevated slow-feeder bowl. It does not set a ration and it is not a Hill&apos;s w/d or Royal Canin Diabetic hop.</p>
 
           <CalloutBox variant="evidence" title="Feline diabetic remission: diet and early treatment">
             ISFM and AAFP consensus guidelines report diabetic remission rates of 30-50% in cats when a low-carbohydrate diet is combined with early, consistent insulin therapy. Remission is defined as the ability to discontinue insulin while maintaining normal blood glucose. It is most likely when treatment begins within the first six months of diagnosis and the cat achieves a lean body weight.
           </CalloutBox>
 
           <h2>Monitoring at Home and at the Clinic</h2>
-          <p>Good control depends on monitoring. Continuous glucose monitors and periodic glucose curves let the veterinary team see how glucose rises and falls through the day and adjust insulin accordingly. Owners track water intake, appetite, weight, and energy. The goal is not a perfect glucose number but resolution of clinical signs with no episodes of dangerous low blood sugar. Signs of hypoglycemia — weakness, wobbliness, tremors, disorientation, or seizures — require immediate action: offer food or rub corn syrup on the gums and contact a veterinarian.</p>
+          <p>Good control depends on monitoring. Continuous glucose monitors and periodic glucose curves let the veterinary team see how glucose rises and falls through the day and adjust insulin accordingly. Owners track water intake, appetite, weight, and energy. The goal is not a perfect glucose number but resolution of clinical signs with no episodes of dangerous low blood sugar. Signs of hypoglycemia — weakness, wobbliness, tremors, disorientation, or seizures — require immediate action: offer food or rub corn syrup on the gums and contact a veterinarian. A digital pet glucose-log notebook is how those water-intake, appetite, weight, and energy notes stay dated for the next curve — it is not a pet glucometer (that lives on dog.com diabetes), not an A5 hardcover dot-grid notebook (that lives on Cushing&apos;s), not a waterproof field notebook, and not a dog weight-log book. It does not read a glucose number and it is not a FreeStyle Libre or Dexcom hop. Light corn syrup already lives on dog.com diabetes.</p>
 
           <h2>Prognosis</h2>
-          <p>With committed daily care, most diabetic dogs and cats live well for years. Cats may achieve remission with early, aggressive management. The disease is demanding for owners — daily injections, scheduled feeding, and regular rechecks — but the payoff is a comfortable pet with a normal quality of life. The pets that do poorly are usually those diagnosed late, with uncontrolled concurrent disease, or where treatment is inconsistent.</p>
+          <p>With committed daily care, most diabetic dogs and cats live well for years. Cats may achieve remission with early, aggressive management. The disease is demanding for owners — daily injections, scheduled feeding, and regular rechecks — but the payoff is a comfortable pet with a normal quality of life. The pets that do poorly are usually those diagnosed late, with uncontrolled concurrent disease, or where treatment is inconsistent. The notebook, water bowl, and food bin are household consistency tools. They do not replace the veterinarian who chooses the insulin and reads the next curve.</p>
+
+          <h2 id="kit">Home-care kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            water-bowl, measured-meal, and
+            owner-tracking copy on this page — a
+            digital pet glucose-log notebook so water
+            intake, appetite, weight, and energy stay
+            dated observations between clinic curves,
+            an insulated pet water bowl so emptying
+            the bowl unusually fast is a seen refill,
+            and an airtight locking pet-food bin so
+            twice-daily measured meals stay the same
+            food. These are educational home-care and
+            monitoring tools, not a ranked product
+            list, not a substitute for veterinary
+            care, and not a treatment for diabetes.
+            Vetsulin, NPH, ProZinc, glargine,
+            syringes, FreeStyle Libre, Dexcom, and
+            prescription diabetic diets are not
+            shoppable hops. Pet glucometers and light
+            corn syrup already live on dog.com
+            diabetes. Kitchen gram scales,
+            portion-control food scales, elevated
+            slow-feeder bowls, and cooling mats
+            already live on other floors. Soft-sided
+            vet-visit carriers already live on
+            dog.com heartworm-prevention. This page
+            does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (digital pet glucose-log notebook /
+              insulated pet water bowl /
+              airtight locking pet-food bin).
+              These are educational home-care /
+              monitoring / lifestyle tools, not a
+              ranked product list, not a substitute
+              for veterinary care, no Rx / Vetsulin /
+              NPH / syringe / FreeStyle Libre /
+              Dexcom / Hill's w/d ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1084
+              wall+mounted+magnetic+monthly+planner /
+              waterproof+rear+seat+hammock /
+              folding+four+wheel+dog+stroller, #1083
+              14+inch+manual+reel+lawn+mower /
+              zippered+waterproof+dog+duvet+cover /
+              handheld+led+magnifying+glass, #1082
+              large+platform+digital+bathroom+scale /
+              quilted+dog+winter+coat /
+              weekly+pill+organizer+with+alarms, #1081
+              sterile+saline+eye+wash /
+              padded+elizabethan+collar+dog /
+              dog+blind+halo+harness, #1080
+              letter+size+plastic+file+box /
+              plug+in+heated+pet+mat /
+              battery+motion+sensor+night+light, #1079
+              elevated+mesh+dog+cot /
+              clear+adhesive+non+slip+stair+treads /
+              hardcover+weekly+appointment+planner,
+              dog.com diabetes
+              pet+glucometer /
+              light+corn+syrup,
+              dog.com heartworm-prevention
+              soft+sided+vet+visit+carrier,
+              kitchen+gram+scale /
+              portion+control+food+scale+dog /
+              elevated+slow+feeder+bowl+dog /
+              dog+cooling+mat /
+              2+liter+plastic+graduated+pitcher /
+              a5+hardcover+dot+grid+notebook /
+              waterproof+field+notebook /
+              dog+weight+log+book.
+              Vetsulin, NPH, syringes, FreeStyle
+              Libre, Dexcom, Hill's w/d, and Rx
+              ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page water-bowl, measured-meal, and
+              owner-tracking copy — a digital pet
+              glucose-log notebook, an insulated pet
+              water bowl, and an airtight locking
+              pet-food bin. Educational home-care and
+              monitoring tools only. They are not a
+              ranked product list, they are not a
+              substitute for veterinary care, they
+              are not a #1084 planner / hammock /
+              stroller hop, they are not a #1083
+              reel-mower / duvet-cover / magnifier
+              hop, they are not a dog.com diabetes
+              glucometer / corn-syrup hop, they are
+              not a kitchen-gram-scale /
+              portion-control-scale /
+              elevated-slow-feeder hop, they are not
+              a Vetsulin / syringe / FreeStyle Libre
+              hop, and they do not replace a
+              veterinarian. Vets.co earns a
+              commission on qualifying purchases at
+              no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+pet+glucose+log+notebook?s=health-diabetes-in-dogs-cats"
+                amazonLabel="Browse digital pet glucose-log notebooks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats"
+                amazonLabel="Browse insulated pet water bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/airtight+locking+pet+food+bin?s=health-diabetes-in-dogs-cats"
+                amazonLabel="Browse airtight locking pet-food bins on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
