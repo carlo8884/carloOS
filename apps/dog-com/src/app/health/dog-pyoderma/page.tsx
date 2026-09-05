@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -43,6 +43,39 @@ export default function DogPyodermaPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog-pyoderma chlorhexidine-bath checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog-pyoderma chlorhexidine-bath checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the topical-bath notes — a chlorhexidine
+              dog shampoo (2–4%, or chlorhexidine plus
+              miconazole) for the 10-minute contact-time
+              baths used 2–3 times weekly, plus dedicated
+              hypoallergenic washcloths so you can apply
+              that lather to folds and lesions without
+              reusing the household bath cloth. Educational
+              checklist, not a diagnosis and not an
+              antibiotic list. Systemic antibiotics,
+              isoxazoline parasiticide brands, steroids,
+              recovery cones, paw wipes, HEPA filters, and
+              washable-bed laundry gear stay off this list.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog-pyoderma chlorhexidine-bath checklist"
+              subtitle="Email the chlorhexidine-shampoo and washcloth notes. No spam."
+              ctaText="Email my dog-pyoderma chlorhexidine-bath checklist"
+              source="health-dog-pyoderma-under-hero"
+            />
+          </div>
+
           <h2>Three Types — Different Depths, Different Treatment Duration</h2>
           <p><strong>Surface pyoderma:</strong> Infection limited to the surface of the skin — the epidermis and hair follicle openings. Includes acute moist dermatitis (hot spots) and intertrigo (skin fold pyoderma). Often resolves with topical treatment alone: chlorhexidine shampoo or wipes, topical antibiotics. Systemic antibiotics may not be required for surface-only disease.</p>
           <p><strong>Superficial pyoderma:</strong> The most common type — infection of the epidermis and superficial hair follicle (folliculitis). Presents as papules (small bumps), pustules (pimple-like lesions), epidermal collarettes (circular scaling patterns with a central clearing — classic superficial pyoderma pattern), and crusting. Requires systemic antibiotics for 3–6 weeks minimum. Stopping antibiotics when the skin "looks better" — typically 1–2 weeks — causes relapse because the infection is not fully cleared.</p>
@@ -57,7 +90,48 @@ export default function DogPyodermaPage() {
           <p>MRSP is a growing concern — resistant to beta-lactam antibiotics including cephalosporins. MRSP infections require antibiotic selection guided by sensitivity testing and often require antibiotics with more significant side effect profiles (doxycycline, chloramphenicol, clindamycin depending on sensitivity). This is why culture should not be skipped in recurring or treatment-refractory pyoderma.</p>
 
           <h2>Topical Therapy — Underutilized and Effective</h2>
-          <p>Topical antimicrobial therapy — medicated shampoos (chlorhexidine 2–4%, or chlorhexidine + miconazole), sprays, and wipes — significantly reduces bacterial load and supports systemic antibiotic treatment. Chlorhexidine shampoo used 2–3 times weekly during systemic antibiotic treatment shortens treatment duration and reduces relapse rates in clinical studies. In mild surface and early superficial pyoderma, topical therapy alone can be sufficient. The time investment of bathing (leave-on 10-minute contact time for chlorhexidine shampoos to work) limits compliance for many owners, but the efficacy is real.</p>
+          <p>Topical antimicrobial therapy — medicated shampoos (chlorhexidine 2–4%, or chlorhexidine + miconazole), sprays, and wipes — significantly reduces bacterial load and supports systemic antibiotic treatment. Chlorhexidine shampoo used 2–3 times weekly during systemic antibiotic treatment shortens treatment duration and reduces relapse rates in clinical studies. In mild surface and early superficial pyoderma, topical therapy alone can be sufficient. The time investment of bathing (leave-on 10-minute contact time for chlorhexidine shampoos to work) limits compliance for many owners, but the efficacy is real. Dedicated hypoallergenic washcloths let you apply that chlorhexidine lather to skin folds and lesions for the full contact time without using the household bath cloth, which can re-seed bacteria onto already infected skin. Those two items are bath tools. They are not a systemic antibiotic, they do not replace culture-guided treatment for deep or recurring pyoderma, and they are not a recovery cone, a paw wipe, or a HEPA filter.</p>
+
+          <h2 id="kit">Chlorhexidine-bath kit</h2>
+          <p>Everyday topical-bath supplies that match the on-page copy above — a chlorhexidine dog shampoo (2–4%, or chlorhexidine plus miconazole) for the 2–3 times weekly 10-minute contact-time baths, plus dedicated hypoallergenic washcloths for applying that lather to folds and lesions. These are bath tools, not treatments that replace a veterinarian. They do not treat deep pyoderma on their own, they do not replace culture and sensitivity, and they do not treat the underlying allergy, thyroid, Cushing&apos;s, or Demodex cause. Systemic antibiotics (cephalexin, cefpodoxime / Simplicef, amoxicillin-clavulanate / Clavamox, and similar), isoxazoline parasiticide brands (Bravecto / NexGard / Simparica / Credelio), steroids, recovery cones, paw wipes / booties, HEPA indoor-air gear, and washable-bed / laundry gear stay educational copy only — cones stay on the sister <a href="/health/dog-hot-spots">hot spots</a> and <a href="/health/cherry-eye">cherry eye</a> pages, paw wipes stay on <a href="/health/dog-skin-allergies">dog skin allergies</a>, HEPA stays on <a href="/health/dog-allergies">dog allergies</a>, and bedding-wash gear stays on <a href="/health/dog-mange">dog mange</a>. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (chlorhexidine
+              dog shampoo / hypoallergenic washcloths). ShopCtas
+              hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only. Systemic antibiotics,
+              isoxazoline parasiticide brands, steroids, recovery
+              cones, paw wipes, HEPA, and mange laundry gear are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog-pyoderma chlorhexidine-bath kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              topical-bath copy — a chlorhexidine dog shampoo
+              and hypoallergenic washcloths. Everyday physical
+              gear only. They are not a ranked product list,
+              they are not medications, they are not antibiotic
+              or parasiticide brand ASINs, they are not
+              recovery cones, they are not paw wipes or HEPA
+              filters, and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/chlorhexidine+dog+shampoo?s=health-dog-pyoderma"
+                amazonLabel="Browse chlorhexidine dog shampoo on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hypoallergenic+washcloths?s=health-dog-pyoderma"
+                amazonLabel="Browse hypoallergenic washcloths on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
