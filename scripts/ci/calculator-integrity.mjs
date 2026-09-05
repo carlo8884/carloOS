@@ -3157,6 +3157,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-diabetes glucose-monitor-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-monitor copy (pet glucometer for ear-margin / inner-lip checks between clinic curves, light corn syrup for the first-sign hypoglycemia gum rub), never a placeholder ASIN, a Karo brand ASIN, an insulin / syringe hop, a Vetsulin / NPH hop, a FreeStyle Libre / Dexcom brand-CGM hop, a digital-pet-scale hop (sister dog-obesity page), a Frenchie cooling-mat / vest hop (#1010), a diarrhea probiotic / pumpkin hop (#1009), or a prescription-diabetic-diet hop (Hill\'s w/d / Royal Canin Diabetic). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-mange hops',
+    file: 'apps/dog-com/src/app/health/dog-mange/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-mange-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-mange bedding-wash checklist"/, label: 'concrete dog-mange bedding-wash-checklist offer, not Subscribe' },
+      { re: /source="health-mange"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/washable\+dog\+bed\+cover\?s=health-dog-mange/, label: 'washable dog-bed-cover search hop (category search matching on-page household-wash / laundry-after-sarcoptic-diagnosis copy; unique vs #993–#1011 orthopedic-bed hops)' },
+      { re: /amazon-brand\/pet\+safe\+laundry\+detergent\?s=health-dog-mange/, label: 'pet-safe laundry-detergent search hop (matches on-page bedding-wash detergent copy; unique vs #993–#1011)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+glucometer|light\+corn\+syrup|dog\+cooling\+mat|dog\+cooling\+vest|cool\+water\+towels|digital\+pet\+thermometer|ice\+pack|icepack|dog\+probiotic|plain\+canned\+pumpkin|soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|bravecto|nexgard|simparica|credelio|revolution|selamectin|ivermectin|amitraz|chlorhexidine|shampoo|karo|vetsulin|insulin|syringe|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop diabetes glucometer / corn syrup (#1011), Frenchie cooling mat / vest (#1010), heat-stroke cool-water towels / thermometers (#1000), diarrhea probiotic / pumpkin (#1009), cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), isoxazoline / parasiticide brands (Bravecto / NexGard / Simparica / Credelio / Revolution), ivermectin / amitraz, chlorhexidine / medicated shampoo, or medications — this page hops only physical washable-dog-bed-cover / pet-safe-laundry-detergent gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-mange bedding-wash-checklist offer; every gear CTA is an amazon-brand category search matching on-page household-wash copy (washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, pet-safe laundry detergent for that wash), never a placeholder ASIN, an isoxazoline / parasiticide-brand hop (Bravecto / NexGard / Simparica / Credelio / Revolution), an ivermectin / amitraz hop, a chlorhexidine / medicated-shampoo hop (leave antimicrobial shampoo for pyoderma), a recovery-cone hop (sister hot-spots / cherry-eye pages), a diabetes glucometer / corn-syrup hop (#1011), or an orthopedic-bed hop (sister arthritis page). Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
