@@ -3755,6 +3755,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog pancreatitis recovery-diet-checklist offer; every gear CTA is an amazon-brand category search matching on-page low-fat recovery, no-table-scraps, and weight-control copy (low-fat digestive-care dog food, lean low-fat dog treats, digital pet-food portion scale), never a placeholder ASIN, a dog-obesity digital-pet-scale / slow-feeder hop (#1005), a calorie / ideal-weight / BCS kitchen-gram or portion-control food-scale hop, a dehydration electrolyte / pitcher / saucer hop (#1038), a UTI fountain / pee-pad / ceramic-bowl hop (#1033), a Hill\'s i/d / Royal Canin Gastrointestinal Low Fat / Purina EN brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · guides-dog-body-condition-score hops',
+    file: 'apps/dog-com/src/app/guides/dog-body-condition-score/page.tsx',
+    mustInclude: [
+      { re: /source="guides-dog-body-condition-score-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog BCS tracking checklist"/, label: 'concrete dog BCS tracking-checklist offer, not Subscribe' },
+      { re: /source="guide-bcs"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+measuring\+tape\+for\+pets\?s=guides-dog-body-condition-score/, label: 'soft measuring-tape-for-pets search hop (matches on-page girth / pelvic-circumference copy; unique vs dog+measuring+tape+body+condition+chart and measuring+tape)' },
+      { re: /amazon-brand\/dog\+body\+condition\+score\+chart\+poster\?s=guides-dog-body-condition-score/, label: 'dog BCS chart-poster search hop (matches on-page visual 1–9 reference copy; unique vs dog+measuring+tape+body+condition+chart and horse+body+condition+score+chart)' },
+      { re: /amazon-brand\/single\+ingredient\+lean\+dog\+treats\?s=guides-dog-body-condition-score/, label: 'single-ingredient lean dog-treats search hop (matches on-page treat-calorie-audit copy; unique vs lean+low+fat+dog+treats / low+calorie+dog+treats / high+value+vet+visit+treats)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(digital\+pet\+scale\?|slow\+feeder\+dog\+bowl|kitchen\+gram\+scale|portion\+control\+food\+scale|dog\+measuring\+tape\+body\+condition\+chart|digital\+pet\+food\+portion\+scale|low\+fat\+digestive\+care\+dog\+food|lean\+low\+fat\+dog\+treats|low\+calorie\+dog\+treats|weight\+management\+dog\+food|unflavored\+pediatric\+electrolyte|kitchen\+liquid\+measuring\+pitcher|shallow\+lipped\+dog\+saucer|stainless\+steel\+dog\+fountain|washable\+dog\+pee\+pads|weighted\+ceramic\+dog\+water\+bowl|hills|hill\+s|royal\+canin|metabolic|satiety|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop dog-obesity digital-pet-scale / slow-feeder (#1005), calorie / ideal-weight / BCS-tool kitchen-gram or portion-control food scales, combined measuring-tape-plus-chart, #1039 pancreatitis food / treat / portion-scale hops, UTI / dehydration electrolyte kits, Hill\'s Metabolic / Royal Canin Satiety ASINs, or Rx — this page hops only soft-measuring-tape-for-pets / dog-body-condition-score-chart-poster / single-ingredient-lean-dog-treats gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog BCS tracking-checklist offer; every gear CTA is an amazon-brand category search matching on-page monthly scoring, morphometric, and treat-audit copy (soft measuring tape for pets, dog body condition score chart poster, single-ingredient lean dog treats), never a placeholder ASIN, a dog-obesity digital-pet-scale / slow-feeder hop (#1005), a calorie / ideal-weight / BCS-tool kitchen-gram or portion-control food-scale hop, a combined measuring-tape-plus-chart hop, a #1039 pancreatitis food / treat / portion-scale hop, a UTI / dehydration electrolyte hop, a Hill\'s Metabolic / Royal Canin Satiety brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

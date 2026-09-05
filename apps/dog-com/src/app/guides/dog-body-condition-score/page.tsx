@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -35,7 +37,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog Body Condition Score (BCS)',
@@ -70,7 +72,7 @@ const FAQS = [
   {
     question: 'Is BMI used for dogs?',
     answer:
-      'No. Human BMI is a height-to-weight calculation; dogs vary enormously in frame, breed conformation, and muscle mass, so a single weight-to-height ratio is not meaningful. Veterinary professional bodies including WSAVA and AAHA use body condition scoring (visual + palpation) instead, with optional muscle condition scoring as a separate axis. Some clinics also use morphometric measurements (girth, pelvic circumference), but BCS remains the standard.',
+      'No. Human BMI is a height-to-weight calculation; dogs vary enormously in frame, breed conformation, and muscle mass, so a single weight-to-height ratio is not meaningful. Veterinary professional bodies including WSAVA and AAHA use body condition scoring (visual + palpation) instead, with optional muscle condition scoring as a separate axis. Some clinics also use morphometric measurements (girth, pelvic circumference) with a soft measuring tape for pets, but BCS remains the standard.',
   },
 ]
 
@@ -110,6 +112,7 @@ export default function DogBodyConditionScorePage() {
                 { label: 'Assessment Frequency', href: '#frequency' },
                 { label: 'BCS vs Muscle Condition Score', href: '#mcs' },
                 { label: 'What to Do With the Number', href: '#action' },
+                { label: 'BCS Tracking Kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
               ]}
             />
@@ -134,10 +137,39 @@ export default function DogBodyConditionScorePage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog BCS tracking checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog BCS tracking checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the monthly scoring notes — a soft
+              measuring tape for pets for girth and
+              pelvic-circumference checks, a dog body
+              condition score chart poster as the visual
+              1–9 reference, and single-ingredient lean
+              dog treats so the treat-calorie audit stays
+              honest. Educational checklist, not a
+              diagnosis and not a substitute for
+              veterinary scoring. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog BCS tracking checklist"
+              subtitle="Email the tape, chart-poster, and lean-treat notes. No spam."
+              ctaText="Email my dog BCS tracking checklist"
+              source="guides-dog-body-condition-score-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -294,7 +326,7 @@ export default function DogBodyConditionScorePage() {
             AAHA recommends a body condition check at every veterinary visit. For most adult dogs that is once or twice a year. That cadence is too slow to catch slow weight drift, which is why a monthly home self-check is the standard recommendation.
           </p>
           <p>
-            <strong>Monthly at home:</strong> Three-test palpation + weight on the same scale. Log both. A change of one BCS point or a 3–5% weight change month-over-month is worth a conversation with your vet.
+            <strong>Monthly at home:</strong> Three-test palpation + weight on the same scale. Keep a dog body condition score chart poster next to the scoring spot so the 1–9 visual stays consistent, and use a soft measuring tape for pets if you also log girth. Log both. A change of one BCS point or a 3–5% weight change month-over-month is worth a conversation with your vet.
           </p>
           <p>
             <strong>At every vet visit:</strong> Ask your vet to score and record BCS. If it is not in the chart, ask for it to be added. WSAVA recommends recording BCS in the medical record at every visit so trends are visible.
@@ -315,10 +347,93 @@ export default function DogBodyConditionScorePage() {
           <p>BCS only matters if it changes behavior. Practical thresholds:</p>
           <ul>
             <li><strong>BCS 4–5:</strong> Keep doing what you are doing. Maintain monthly checks.</li>
-            <li><strong>BCS 6:</strong> Trim portions by 10% and recheck in a month. Audit treat calories first — they are almost always the culprit. See our <a href="/nutrition/dog-treats-guide" className="text-brand-primary hover:underline">dog treats guide</a>.</li>
+            <li><strong>BCS 6:</strong> Trim portions by 10% and recheck in a month. Audit treat calories first — they are almost always the culprit. Single-ingredient lean dog treats make that audit simpler than mixed table scraps. See our <a href="/nutrition/dog-treats-guide" className="text-brand-primary hover:underline">dog treats guide</a>.</li>
             <li><strong>BCS 7–9:</strong> Work with your vet on a structured weight-loss plan. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety) are calorie-restricted and fiber-enriched to reduce hunger while cutting calories; both have clinical trial support. See our <a href="/health/dog-obesity" className="text-brand-primary hover:underline">dog obesity guide</a> for the full protocol.</li>
             <li><strong>BCS 1–3:</strong> Veterinary evaluation. Causes include parasitism, dental disease, gastrointestinal disease, endocrine disease, and inadequate food. Adding food without a diagnosis is not a plan.</li>
           </ul>
+
+          <h2 id="kit">A Simple BCS Tracking Kit</h2>
+          <p>
+            Three everyday physical supplies match the monthly
+            scoring copy above: a soft measuring tape for pets
+            so girth and pelvic-circumference checks stay
+            consistent month to month, a dog body condition
+            score chart poster as the visual 1–9 reference
+            next to the hands-on rib / waist / tuck tests, and
+            single-ingredient lean dog treats so the treat
+            calorie audit is not mixed table scraps. These
+            are household scoring tools, not treatments. They
+            do not replace a veterinarian&rsquo;s BCS, they
+            are not a prescription weight-management diet,
+            and they are not the dog-obesity digital pet
+            scale or slow-feeder bowl. They are not the
+            calorie / ideal-weight / BCS-tool kitchen gram
+            scale, portion-control food scale, or combined
+            measuring-tape-plus-chart hop. They are not the
+            pancreatitis digital pet-food portion scale,
+            low-fat digestive-care food, or lean low-fat
+            treats. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (soft measuring tape for pets / dog body
+              condition score chart poster / single-
+              ingredient lean dog treats). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — unused vs #848–#1039
+              digital+pet+scale, slow+feeder+dog+bowl,
+              kitchen+gram+scale,
+              portion+control+food+scale+dog,
+              dog+measuring+tape+body+condition+chart,
+              digital+pet+food+portion+scale,
+              low+fat+digestive+care+dog+food,
+              lean+low+fat+dog+treats,
+              low+calorie+dog+treats,
+              unflavored+pediatric+electrolyte,
+              stainless+steel+dog+fountain,
+              washable+dog+pee+pads, and
+              weighted+ceramic+dog+water+bowl.
+              Prescription WM diets and med ASINs are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog BCS tracking kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page monthly scoring, morphometric, and
+              treat-audit copy — a soft measuring tape for
+              pets, a dog body condition score chart poster,
+              and single-ingredient lean dog treats.
+              Everyday physical supplies only. They are not
+              a ranked product list, they are not the
+              dog-obesity scale / slow-feeder hops, they
+              are not the calorie / BCS kitchen-gram or
+              portion-control scale hops, they are not the
+              pancreatitis food / treat / portion-scale
+              hops, they are not the UTI / dehydration
+              electrolyte kits, and they do not replace a
+              veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score"
+                amazonLabel="Browse soft measuring tapes for pets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score"
+                amazonLabel="Browse dog BCS chart posters on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"
+                amazonLabel="Browse single-ingredient lean dog treats on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion
