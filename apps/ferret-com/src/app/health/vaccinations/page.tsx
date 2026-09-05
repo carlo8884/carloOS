@@ -12,6 +12,8 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -62,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -148,6 +150,7 @@ export default function FerretVaccinationsPage() {
                 { label: 'Adverse Reactions', href: '#reactions' },
                 { label: 'Premedication Protocol', href: '#premed' },
                 { label: 'Legal and Travel', href: '#legal' },
+                { label: 'Vaccine-day travel kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -189,9 +192,38 @@ export default function FerretVaccinationsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret vaccine-day travel-kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret vaccine-day travel-kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the clinic-trip notes — a small-animal rabies-certificate
+              holder so the signed rabies certificate and CVI travel with the
+              ferret, a top-loading small-animal carrier for the kit-series
+              clinic hops and the ride straight home, and a fleece small-animal
+              bonding pouch so the 30–60 minute in-clinic observation and the
+              quiet ride home stay contained. Educational travel-kit checklist,
+              not a diagnosis and not a substitute for an exotic-mammal
+              veterinarian. Vaccines, Nobivac, IMRAB, diphenhydramine, and
+              compounded meds stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret vaccine-day travel-kit checklist"
+              subtitle="Email the rabies-certificate-holder, top-loading-carrier, and bonding-pouch notes. No spam."
+              ctaText="Email my ferret vaccine-day travel-kit checklist"
+              source="health-vaccinations-under-hero"
+            />
+          </div>
 
           <DropCap>
             Ferret vaccination is one of the small number of preventive
@@ -465,10 +497,25 @@ export default function FerretVaccinationsPage() {
             Interstate travel within the US generally requires a current
             rabies certificate and, in some states, a Certificate of
             Veterinary Inspection (CVI / health certificate) issued
-            within a recent window before travel. International travel
-            requirements vary by destination country and almost always
-            require advance planning — USDA APHIS is the authoritative
-            source for current export requirements.
+            within a recent window before travel. A small-animal rabies
+            certificate holder keeps that signed certificate — and the
+            CVI when a state asks for one — with the ferret instead of
+            loose in a glove box. International travel requirements vary
+            by destination country and almost always require advance
+            planning — USDA APHIS is the authoritative source for
+            current export requirements.
+          </p>
+          <p>
+            Kit-series days are repeated clinic trips (roughly 8, 11,
+            and 14 weeks, plus a separate rabies visit). A top-loading
+            small-animal carrier is the clinic-trip box for those hops
+            and for the ride straight home after the 30–60 minute
+            in-clinic observation — not a loose ferret on a lap, and
+            not a leftover dog airline crate. A fleece small-animal
+            bonding pouch is the quiet wrap for that observation wait
+            and the contained ride home after a mild reaction, when
+            the page already calls for a quiet environment and no
+            extra antigenic load in the car.
           </p>
           <p>
             A few US jurisdictions — California, Hawaii, New York City,
@@ -491,6 +538,95 @@ export default function FerretVaccinationsPage() {
               ongoing ferret care.
             </p>
           </CalloutBox>
+
+          <h2 id="kit">Vaccine-day travel kit</h2>
+          <p>
+            Everyday physical supplies that match the clinic-trip, legal-
+            certificate, and post-vaccine observation copy on this page —
+            a small-animal rabies-certificate holder so the signed rabies
+            certificate and CVI stay with the ferret for interstate or
+            local compliance checks, a top-loading small-animal carrier
+            so kit-series clinic hops and the ride straight home stay
+            contained, and a fleece small-animal bonding pouch so the
+            30–60 minute in-clinic observation and the quiet ride home
+            after a mild reaction stay wrapped, not loose on a lap.
+            These are household travel tools, not treatments. They do
+            not vaccinate a ferret, they do not replace a USDA-licensed
+            product chosen by a veterinarian, they do not set a
+            premedication dose, and they are not a ranked product list.
+            Pet vaccination record books, pet medical-records binders,
+            ferret hard-sided carriers, soft pet carriers, soft-sided
+            vet-visit carriers, ferret sleep sacks, foldable waterproof
+            puppy mats, and dog seat-belt tethers already live on other
+            pages. This page does not hop vaccines, Nobivac, IMRAB,
+            diphenhydramine, insulin syringes, compounded meds, or Rx
+            ASINs. This page does not hop diagnosis kits that imply
+            treatment. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (small-animal rabies-certificate holder /
+              top-loading small-animal carrier /
+              fleece small-animal bonding pouch).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1066 carnivore-care / baby-food /
+              silicone dosing syringe, #1065 hay-box /
+              stall-guard / hemp-bedding, #1064
+              thrush-antiseptic / folding-hoof-pick /
+              stall-sweet-lime, ferret dental
+              finger-toothbrush / infant-toothbrush /
+              dental-wipes, seasonal slicker / metal-comb /
+              lint-roller, pet+vaccination+record+book,
+              pet+medical+records+binder,
+              ferret+carrier+hard+sided, soft+pet+carrier,
+              soft+sided+vet+visit+carrier,
+              ferret+sleep+sack+fleece,
+              foldable+waterproof+puppy+mat,
+              dog+seat+belt+tether,
+              pet+glucometer / light+corn+syrup,
+              pet+oral+feeding+syringe.
+              Vaccines, Nobivac, IMRAB, diphenhydramine,
+              insulin syringes, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret vaccine-day travel kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page clinic-trip, rabies-certificate, and
+              observation-wait copy — a small-animal rabies-
+              certificate holder, a top-loading small-animal
+              carrier, and a fleece small-animal bonding
+              pouch. Everyday physical supplies only. They
+              are not a ranked product list, they are not a
+              vaccine hop, they are not a Nobivac / IMRAB /
+              diphenhydramine hop, they are not a #1066
+              carnivore-care / baby-food / silicone-dosing-
+              syringe hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com earns
+              a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations"
+                amazonLabel="Browse small-animal rabies-certificate holders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/top+loading+small+animal+carrier?s=health-vaccinations"
+                amazonLabel="Browse top-loading small-animal carriers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fleece+small+animal+bonding+pouch?s=health-vaccinations"
+                amazonLabel="Browse fleece small-animal bonding pouches on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
