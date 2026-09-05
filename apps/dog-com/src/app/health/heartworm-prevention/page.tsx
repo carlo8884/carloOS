@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -51,6 +51,38 @@ export default function HeartwormPreventionPage() {
       </>}
     >
       <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the year-round heartworm-prevention checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Year-round heartworm-prevention checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the mosquito, monthly-dosing, and annual
+              test-day notes — mosquito dunks for standing
+              water in the yard, a monthly pill organizer so
+              the preventive chew is not missed, and a
+              soft-sided vet-visit carrier for the annual
+              antigen blood-test trip. Educational
+              checklist, not a Heartgard, Interceptor,
+              Simparica, or ProHeart list, and not a
+              prescription. Annual antigen testing still
+              belongs with a veterinarian. Pale-gums
+              charts, recovery food, and feeding syringes
+              stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Year-round heartworm-prevention checklist"
+              subtitle="Email the mosquito-dunk, pill-organizer, and clinic-carrier notes. No spam."
+              ctaText="Email my year-round heartworm-prevention checklist"
+              source="health-heartworm-prevention-under-hero"
+            />
+          </div>
+
         <h2>What Heartworm Disease Is</h2>
         <p>Dirofilaria immitis — heartworms — are parasitic worms that live in the heart, lungs, and associated blood vessels of dogs. Transmitted by mosquitoes. A single infected mosquito bite can transmit larvae; larvae mature into worms over 6 months; adult worms live for 5–7 years and can reach 12 inches in length. Untreated heavy infections cause heart failure, lung disease, and death.</p>
         <p>Heartworm disease is present in all 50 US states and is endemic in warm, humid regions (Southeast, Gulf Coast, Mississippi River Valley, Atlantic Coast). All dogs in the continental US should be on year-round prevention — mosquitoes can be present even in colder months in heated indoor environments, and climate patterns make year-round prevention simpler and safer than seasonal.</p>
@@ -71,6 +103,86 @@ export default function HeartwormPreventionPage() {
 
         <h2>Treatment If Positive</h2>
         <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
+
+        <h2 id="kit">A Simple Mosquito-and-Compliance Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            mosquito, year-round prevention-compliance, and
+            annual-testing copy above: mosquito dunks for
+            standing water so fewer larvae hatch in the
+            yard, a monthly pill organizer so the
+            preventive chew is not skipped, and a
+            soft-sided vet-visit carrier for the annual
+            in-clinic antigen blood test. These are
+            household support tools, not treatments.
+            They do not prevent heartworm by themselves,
+            they do not replace a monthly preventive
+            prescribed by a veterinarian, they do not
+            replace the annual antigen blood test, and they
+            are not Heartgard, Interceptor, Simparica,
+            ProHeart, melarsomine, ivermectin, milbemycin,
+            or moxidectin. A gum-color chart, recovery
+            food, a feeding syringe, and the generic
+            soft-dog-carrier hop already live on other
+            pages. This page does not hop medications.
+            This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (mosquito dunks / monthly pill organizer /
+              soft-sided vet-visit carrier). ShopCtas
+              hides empty Chewy; never href="#" or
+              PLACEHOLDER. Category searches only —
+              unused vs #1042 gum-chart / recovery-food /
+              feeding-syringe, #1041 heat-pants /
+              belly-band / exercise-pen, #1030
+              high-value vet-visit treats, mosquito
+              yard trap (held), and soft+dog+carrier.
+              Heartgard, Interceptor, Simparica,
+              ProHeart, melarsomine, ivermectin,
+              milbemycin, moxidectin,
+              heartworm+prevention drug searches,
+              flea+tick meds, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the mosquito-and-compliance kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page mosquito, monthly-dosing, and
+              annual-test copy — mosquito dunks, a
+              monthly pill organizer, and a soft-sided
+              vet-visit carrier. Everyday physical
+              supplies only. They are not a ranked
+              product list, they are not Heartgard /
+              Interceptor / Simparica / ProHeart hops,
+              they are not the #1042 anemia gum-chart /
+              recovery-food / syringe hops, they are not
+              the generic soft-dog-carrier hop, they are
+              not flea-and-tick medication hops, and they
+              do not replace a veterinarian. Dog.com
+              earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mosquito+dunks?s=health-heartworm-prevention"
+                amazonLabel="Browse mosquito dunks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/monthly+pill+organizer?s=health-heartworm-prevention"
+                amazonLabel="Browse monthly pill organizers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+sided+vet+visit+carrier?s=health-heartworm-prevention"
+                amazonLabel="Browse soft-sided vet-visit carriers on Amazon →"
+              />
+            </div>
+          </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

@@ -3818,6 +3818,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog pale-gums-watch-checklist offer; every gear CTA is an amazon-brand category search matching on-page pale-gums and reduced-appetite copy (dog gum-color assessment chart so pale / white / gray gums have a shared color word for the veterinarian, high-calorie dog recovery food when appetite drops, a pet oral feeding syringe for offering blended soft food), never a placeholder ASIN, a #1041 heat-pants / belly-band / exercise-pen hop, a #1040 BCS tape / chart / treat hop, a #1039 pancreatitis food / treat / portion-scale hop, a #1038 dehydration electrolyte hop, a UTI / ear / anxiety-wrap hop, an iron / transfusion / immunosuppressant hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · heartworm-prevention hops',
+    file: 'apps/dog-com/src/app/health/heartworm-prevention/page.tsx',
+    mustInclude: [
+      { re: /source="health-heartworm-prevention-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my year-round heartworm-prevention checklist"/, label: 'concrete year-round heartworm-prevention-checklist offer, not Subscribe' },
+      { re: /source="health-heartworm"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/mosquito\+dunks\?s=health-heartworm-prevention/, label: 'mosquito-dunks search hop (matches on-page mosquito / standing-water copy; unique vs horse+fly+trap and unused vs yard+mosquito+control / mosquito+yard+trap)' },
+      { re: /amazon-brand\/monthly\+pill\+organizer\?s=health-heartworm-prevention/, label: 'monthly pill-organizer search hop (matches on-page year-round monthly-dosing / missed-dose copy; unused vs weekly+pill+organizer)' },
+      { re: /amazon-brand\/soft\+sided\+vet\+visit\+carrier\?s=health-heartworm-prevention/, label: 'soft-sided vet-visit-carrier search hop (matches on-page annual antigen blood-test logistics; unique vs soft+dog+carrier / soft+pet+carrier / soft+cat+carrier)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /amazon-brand\/[^?"']*(dog\+gum\+color\+assessment\+chart|high\+calorie\+dog\+recovery\+food|pet\+oral\+feeding\+syringe|washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|high\+value\+vet\+visit\+treats|soft\+dog\+carrier|soft\+pet\+carrier|mosquito\+yard\+trap|yard\+mosquito\+control|heartgard|interceptor|simparica|proheart|melarsomine|ivermectin|milbemycin|moxidectin|heartworm\+prevention|flea\+tick|prescription|medication|medicine|rx\b)/, label: 'never hop #1042 anemia gum-chart / recovery-food / syringe, #1041 heat-pants / belly-band / exercise-pen, #1030 high-value vet-visit treats, generic soft-dog/pet-carrier, held mosquito-yard-trap / yard-mosquito-control, Heartgard / Interceptor / Simparica / ProHeart / melarsomine / ivermectin / milbemycin / moxidectin, heartworm+prevention drug searches, flea+tick meds, or Rx — this page hops only mosquito-dunks / monthly-pill-organizer / soft-sided-vet-visit-carrier gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete year-round heartworm-prevention-checklist offer; every gear CTA is an amazon-brand category search matching on-page mosquito / year-round prevention-compliance / annual-testing copy (mosquito dunks for standing-water larvae, a monthly pill organizer so the preventive chew is not missed, a soft-sided vet-visit carrier for the annual antigen blood-test trip), never a placeholder ASIN, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a generic soft-dog-carrier hop, a Heartgard / Interceptor / Simparica / ProHeart / melarsomine hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
