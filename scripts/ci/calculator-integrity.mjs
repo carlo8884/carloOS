@@ -3522,6 +3522,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-seizure safety-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-safety copy (soft throw blanket to slide the dog away from stairs or water, crate bumper pads on the usual rest crate, interlocking foam floor tiles for the padded recovery space), never a placeholder ASIN, a first-aid-kit / thermometer hop, an IVDD recovery-crate hop, a crate-pad / crate-cover hop, a cooling-mat hop, a CDS night-light hop, or an anticonvulsant / medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · parvovirus-in-puppies hops',
+    file: 'apps/vets-co/src/app/health/parvovirus-in-puppies/page.tsx',
+    mustInclude: [
+      { re: /source="health-parvovirus-in-puppies-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy parvo-cleanup checklist"/, label: 'concrete puppy parvo-cleanup-checklist offer, not Subscribe' },
+      { re: /source="health-parvo"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/accelerated\+hydrogen\+peroxide\+disinfectant\?s=health-parvovirus-in-puppies/, label: 'accelerated hydrogen-peroxide disinfectant search hop (matches on-page parvo-labeled AHP cleanup copy; unique vs 3% first-aid peroxide on chocolate-toxicity)' },
+      { re: /amazon-brand\/disposable\+shoe\+covers\?s=health-parvovirus-in-puppies/, label: 'disposable shoe-cover search hop (matches on-page do-not-track-the-virus copy; unused vs #993–#1028)' },
+      { re: /amazon-brand\/pump\+sprayer\?s=health-parvovirus-in-puppies/, label: 'pump-sprayer search hop (matches on-page outdoor soil / concrete coverage copy; unused vs #993–#1028)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(hydrogen\+peroxide\+3\+percent|enzymatic\+pet\+stain|small\+animal\+cage\+cleaner|bleach|vaccine|dhpp|da2pp|nobivac|iv\+fluid|cerenia|maropitant|ondansetron|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+throw\+blanket|dog\+crate\+bumper|interlocking\+foam|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop 3% first-aid peroxide (chocolate-toxicity), enzymatic odor cleaners, grocery bleach, vaccines, IV fluids, anti-nausea Rx, first-aid / thermometer hops, or #1028 seizure-safety hops — this page hops only AHP-disinfectant / shoe-cover / pump-sprayer gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete puppy parvo-cleanup-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleanup copy (accelerated hydrogen peroxide disinfectant labeled for parvovirus, disposable shoe covers so you do not track the virus, a pump sprayer for outdoor soil and concrete), never a placeholder ASIN, a 3% first-aid peroxide hop, an enzymatic-cleaner hop, a vaccine hop, an IV-fluid / anti-nausea hop, or a #1028 seizure-safety hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
