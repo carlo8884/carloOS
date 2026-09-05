@@ -3197,6 +3197,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-vomiting bland-diet-checklist offer; every gear CTA is an amazon-brand category search matching on-page bland-diet prep copy (mini rice cooker for a small batch of plain white rice after the 6–12 hour withhold, glass meal-prep containers for leftover bland-diet portions and the bedtime snack), never a placeholder ASIN, a slow-feeder / elevated-bowl hop (sister dog-obesity page / bloat overlap), a Bailey-chair hop (sister megaesophagus page), a probiotic / pumpkin hop (sister diarrhea page), a mange washable-bed-cover / laundry-detergent hop (#1012), a diabetes glucometer / corn-syrup hop (#1011), a Cerenia / maropitant hop, or a prescription-GI-diet hop (Hill\'s i/d / Royal Canin Gastrointestinal). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-pyoderma hops',
+    file: 'apps/dog-com/src/app/health/dog-pyoderma/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-pyoderma-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-pyoderma chlorhexidine-bath checklist"/, label: 'concrete dog-pyoderma chlorhexidine-bath-checklist offer, not Subscribe' },
+      { re: /source="health-pyoderma"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/chlorhexidine\+dog\+shampoo\?s=health-dog-pyoderma/, label: 'chlorhexidine dog-shampoo search hop (category search matching on-page 2–4% chlorhexidine / chlorhexidine-plus-miconazole 10-minute contact-time bath copy; reserved from #1012 mange; unique vs #993–#1013)' },
+      { re: /amazon-brand\/hypoallergenic\+washcloths\?s=health-dog-pyoderma/, label: 'hypoallergenic-washcloths search hop (matches on-page dedicated-washcloth fold/lesion lather copy; unique vs #993–#1013; cone left on hot-spots / cherry-eye)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(mini\+rice\+cooker|glass\+meal\+prep|washable\+dog\+bed\+cover|pet\+safe\+laundry\+detergent|pet\+glucometer|light\+corn\+syrup|dog\+cooling\+mat|dog\+cooling\+vest|cool\+water\+towels|digital\+pet\+thermometer|ice\+pack|icepack|dog\+probiotic|plain\+canned\+pumpkin|soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|elevated|bailey\+chair|upright\+dog\+feeding|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|cephalexin|cefpodoxime|simplicef|clavamox|amoxicillin|doxycycline|chloramphenicol|clindamycin|bravecto|nexgard|simparica|credelio|revolution|selamectin|ivermectin|amitraz|apoquel|cytopoint|prednisone|steroid|corticosteroid|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop vomiting rice-cooker / meal-prep (#1013), mange washable-bed-cover / laundry-detergent (#1012), diabetes glucometer / corn syrup (#1011), Frenchie cooling mat / vest (#1010), diarrhea probiotic / pumpkin (#1009), cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), elevated bowls, Bailey chairs (#999), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), systemic antibiotics (cephalexin / cefpodoxime / Clavamox), isoxazoline / parasiticide brands, or steroids — this page hops only chlorhexidine-dog-shampoo / hypoallergenic-washcloths gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-pyoderma chlorhexidine-bath-checklist offer; every gear CTA is an amazon-brand category search matching on-page topical-bath copy (chlorhexidine dog shampoo for the 10-minute contact-time baths reserved from #1012 mange, hypoallergenic washcloths for applying that lather to folds and lesions), never a placeholder ASIN, a recovery-cone hop (sister hot-spots / cherry-eye pages), a paw-wipe / bootie hop (#1003), a HEPA hop (#1002), a mange washable-bed-cover / laundry-detergent hop (#1012), a systemic-antibiotic hop (cephalexin / cefpodoxime / Clavamox), an isoxazoline / parasiticide-brand hop, or a steroid hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
