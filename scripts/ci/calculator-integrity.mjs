@@ -3298,6 +3298,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete cat FLUTD hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page prevention copy (cat water fountain, extra litter boxes one-per-cat-plus-one-extra, canned wet cat food for water intake), never a placeholder ASIN, a dog-water-fountain hop, a prescription urinary-diet hop (Hill\'s c/d / Royal Canin Urinary SO), an antibiotic / pain-medication hop, or a #1023 rectal-thermometer / lubricant / alcohol-wipe hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · dental-disease hops',
+    file: 'apps/ferret-com/src/app/health/dental-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-dental-disease-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret brushing checklist"/, label: 'concrete ferret brushing-checklist offer, not Subscribe' },
+      { re: /source="health-dental-disease"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/finger\+toothbrush\+pet\?s=health-dental-disease/, label: 'fingertip rubber / finger-toothbrush search hop (matches on-page fingertip rubber brush / kit-tolerance copy; unique vs soft+pet+toothbrush)' },
+      { re: /amazon-brand\/infant\+toothbrush\+soft\+bristle\?s=health-dental-disease/, label: 'soft infant-toothbrush search hop (matches on-page infant toothbrush copy; unused vs #993–#1024)' },
+      { re: /amazon-brand\/pet\+dental\+wipes\?s=health-dental-disease/, label: 'pet dental-wipe search hop (matches on-page gauze-on-a-fingertip dental-wipe copy; unique vs cotton+pads / enzymatic+pet+toothpaste)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(soft\+pet\+toothbrush|enzymatic\+pet\+toothpaste|dental\+chews\+dog|pet\+dental\+water\+additive|cat\+dental|cet|virbac|human\+toothpaste|fluoride|xylitol|antibiotic|meloxicam|buprenorphine|anesthesia|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen|cat\+water\+fountain|extra\+cat\+litter\+box|canned\+wet\+cat\+food|digital\+rectal\+thermometer)/, label: 'never hop existing dog/vets dental categories, CET/Virbac brand ASINs, human toothpaste, antibiotics, analgesia, anesthesia, #1024 FLUTD hops, or #1023 thermometer hops — this page hops only finger-toothbrush / infant-toothbrush / pet-dental-wipe gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret brushing-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-brushing copy (fingertip rubber / finger toothbrush, soft infant toothbrush, pet dental wipes), never a placeholder ASIN, a dog/vets soft-toothbrush or enzymatic-paste hop, a CET/Virbac brand ASIN, human toothpaste, an antibiotic / analgesia hop, or a #1024 FLUTD hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'horses · heaves hops',
     file: 'apps/horses-com/src/app/health/heaves/page.tsx',
     mustInclude: [
