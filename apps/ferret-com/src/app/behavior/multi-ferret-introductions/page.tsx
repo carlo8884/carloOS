@@ -11,6 +11,8 @@ import {
   DropCap,
   ArticleSourcesList,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -53,7 +55,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -117,6 +119,7 @@ export default function MultiFerretIntroductionsPage() {
                 { label: 'What Normal Posturing Looks Like', href: '#posturing' },
                 { label: 'Step 4: Shared Cage & Resources', href: '#shared' },
                 { label: 'When a Pairing Is Not Working', href: '#failing' },
+                { label: 'Staged-Introduction Kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -151,8 +154,39 @@ export default function MultiFerretIntroductionsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret staged-introduction checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret staged-introduction checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the staged-protocol notes — a wire small-animal
+              single-story cage so the newcomer has its own adjacent
+              box during quarantine and the two-week see-and-smell
+              window, a non-slip suction bathtub mat so the first
+              meetings happen on a dry bathtub floor neither ferret
+              owns, and a stainless-steel small-animal crock so the
+              shared cage has a second food station. Educational
+              introduction-kit checklist, not a pairing guarantee
+              and not a substitute for an exotic-mammal veterinarian.
+              Vaccines, Rx, and diagnosis kits stay off this list. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret staged-introduction checklist"
+              subtitle="Email the single-story-cage, bathtub-mat, and stainless-crock notes. No spam."
+              ctaText="Email my ferret staged-introduction checklist"
+              source="behavior-multi-ferret-introductions-under-hero"
+            />
+          </div>
 
           <DropCap>
             Bringing a second ferret home is usually a good decision —
@@ -180,7 +214,11 @@ export default function MultiFerretIntroductionsPage() {
           <h2 id="quarantine">Step 1: Quarantine</h2>
           <p>
             Before any introduction, quarantine the new ferret for a minimum of
-            two weeks — separate cage, separate handling, no shared toys. ECE
+            two weeks — separate cage, separate handling, no shared toys. A
+            wire small-animal single-story cage is that second box: the
+            newcomer&apos;s own housing for the isolation window, not the
+            resident&apos;s Critter Nation double, not an extra travel kennel,
+            and not a shared overnight that undoes the separate-room rule. ECE
             (Epizootic Catarrhal Enteritis), influenza, and parasites all
             transmit between ferrets, and a new arrival that looks healthy can
             be shedding a pathogen subclinically. The quarantine protects your
@@ -191,19 +229,25 @@ export default function MultiFerretIntroductionsPage() {
           <p>
             Once health status is confirmed, place the cages near each other for
             roughly two weeks so the ferrets can see and smell one another
-            without contact. This lets a lot of the initial curiosity and
-            agitation burn off before they ever touch, which makes the first
-            physical meeting calmer.
+            without contact. The same wire small-animal single-story cage is
+            the adjacent box — rolled next to the resident so they can see
+            and smell through bars, then left as the newcomer&apos;s room
+            until shared-cage time. This lets a lot of the initial curiosity
+            and agitation burn off before they ever touch, which makes the
+            first physical meeting calmer.
           </p>
 
           <h2 id="neutral">Step 3: Neutral-Ground Sessions</h2>
           <p>
             The first physical introduction happens on neutral territory —
             somewhere neither ferret has scent-marked, such as a bathtub, an
-            unfamiliar room, or a clean play pen. Home turf triggers
-            territoriality; neutral ground reduces it. Keep the first sessions
-            short and supervise closely, extending the time only as the meetings
-            stay calm.
+            unfamiliar room, or a clean play pen. A non-slip suction bathtub
+            mat is that bathtub floor — a dry, temporary meeting surface
+            that is not a portable small-animal playpen, not the
+            resident&apos;s cage, and not a room the resident already owns.
+            Home turf triggers territoriality; neutral ground reduces it.
+            Keep the first sessions short and supervise closely, extending
+            the time only as the meetings stay calm.
           </p>
 
           <h2 id="posturing">What Normal Posturing Looks Like</h2>
@@ -242,8 +286,12 @@ export default function MultiFerretIntroductionsPage() {
             Move to shared cage time only after several calm neutral-ground
             sessions. Supervise the first overnight stay, and make sure the cage
             has two of every resource — litter boxes, food bowls, sleeping spots
-            — so there is nothing to compete over. Resource scarcity reignites
-            conflict that the introduction had otherwise resolved. For litter
+            — so there is nothing to compete over. A stainless-steel
+            small-animal crock is that second food station: a heavy bowl
+            the other ferret cannot tip or monopolize, not the ceramic pet
+            food bowl from the toxic-foods page, and not a shared dish that
+            restarts resource fights. Resource scarcity reignites conflict
+            that the introduction had otherwise resolved. For litter
             setup in a multi-ferret cage, see our{' '}
             <a href="/behavior/litter-box-troubleshooting">litter-box troubleshooting guide</a>.
           </p>
@@ -275,6 +323,106 @@ export default function MultiFerretIntroductionsPage() {
             such as adrenal disease or dental pain, and warrants a veterinary
             exam rather than re-introduction.
           </p>
+
+          <h2 id="kit">Staged-introduction kit</h2>
+          <p>
+            Everyday physical supplies that match the quarantine,
+            adjacent-cage, bathtub, and two-of-every-resource copy on
+            this page — a wire small-animal single-story cage so the
+            newcomer has its own adjacent box during the isolation
+            window and the two-week see-and-smell phase, a non-slip
+            suction bathtub mat so the first sessions happen on a dry
+            bathtub floor neither ferret owns, and a stainless-steel
+            small-animal crock so the shared cage has a second food
+            station. These are household introduction tools, not
+            treatments. They do not guarantee a pairing, they do not
+            replace a veterinary quarantine check, they do not skip
+            the separate-room window, and they are not a ranked
+            product list. Extra small-animal travel kennels,
+            scent-swap fleece sleep pouches, portable small-animal
+            playpens, Critter Nation cages, ferret sleep sacks,
+            fleece bonding pouches, ceramic pet food bowls, and
+            puppy playpens already live on other pages. This page
+            does not hop vaccines, Nobivac, IMRAB, diphenhydramine,
+            insulin syringes, compounded meds, or Rx ASINs. This
+            page does not hop diagnosis kits that imply treatment.
+            This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (wire small-animal single-story cage /
+              non-slip suction bathtub mat /
+              stainless-steel small-animal crock).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1068 extra-small-animal-travel-
+              kennel / scent-swap-fleece-sleep-pouch /
+              portable-small-animal-playpen, #1067
+              small-animal-rabies-certificate-holder /
+              top-loading-small-animal-carrier /
+              fleece-small-animal-bonding-pouch, #1066
+              carnivore-care / baby-food / silicone
+              dosing syringe, #1065 hay-box / stall-guard
+              / hemp-bedding, #1064 thrush-antiseptic /
+              folding-hoof-pick / stall-sweet-lime,
+              ferret dental finger-toothbrush /
+              infant-toothbrush / dental-wipes, seasonal
+              slicker / metal-comb / lint-roller,
+              pet+vaccination+record+book,
+              pet+medical+records+binder,
+              ferret+carrier+hard+sided, soft+pet+carrier,
+              soft+sided+vet+visit+carrier,
+              ferret+carrier, ferret+sleep+sack+fleece,
+              ferret+hammock, foldable+waterproof+puppy+mat,
+              puppy+playpen, dog+seat+belt+tether,
+              heavy+ceramic+pet+food+bowl,
+              ferret+nation+critter+nation+double+unit,
+              pet+glucometer / light+corn+syrup,
+              pet+oral+feeding+syringe.
+              Vaccines, Nobivac, IMRAB, diphenhydramine,
+              insulin syringes, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret staged-introduction kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page quarantine, adjacent-cage, bathtub,
+              and two-of-every-resource copy — a wire
+              small-animal single-story cage, a non-slip
+              suction bathtub mat, and a stainless-steel
+              small-animal crock. Everyday physical
+              supplies only. They are not a ranked product
+              list, they are not a vaccine hop, they are
+              not a #1068 travel-kennel / scent-swap-pouch
+              / portable-playpen hop, they are not a #1067
+              rabies-certificate-holder / top-loading-
+              carrier / bonding-pouch hop, they are not a
+              #1066 carnivore-care / baby-food /
+              silicone-dosing-syringe hop, and they do
+              not replace an exotic-mammal veterinarian.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions"
+                amazonLabel="Browse wire small-animal single-story cages on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/non+slip+suction+bathtub+mat?s=behavior-multi-ferret-introductions"
+                amazonLabel="Browse non-slip suction bathtub mats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"
+                amazonLabel="Browse stainless-steel small-animal crocks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
