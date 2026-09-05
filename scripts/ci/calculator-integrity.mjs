@@ -4188,6 +4188,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog post-neuter calorie-cut-checklist offer; every gear CTA is an amazon-brand category search matching on-page after-surgery portion copy (an adjustable sliding dog-food scoop so the 20–25% cut is a set mark instead of a guessed handful, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, a dog weight-log book so monthly body-condition notes stay written down), never a placeholder ASIN, a #1058 stopwatch / field-notebook / table-bumper hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1056 diaper / inflatable-collar / airline-crate hop, a #1041 heat-pants / belly-band / exercise-pen hop, a kitchen-gram-scale / portion-control food-scale hop, a measuring-cup hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · deworming-program hops',
+    file: 'apps/horses-com/src/app/care/deworming-program/page.tsx',
+    mustInclude: [
+      { re: /source="care-deworming-program-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse fecal-egg-count sampling checklist"/, label: 'concrete horse fecal-egg-count sampling-checklist offer, not Subscribe' },
+      { re: /source="care-deworming"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/equine\+fecal\+sample\+container\?s=care-deworming-program/, label: 'equine fecal-sample-container search hop (matches on-page labeled-fresh-pile / clinic-sample copy; unique vs fecal+sample+collection+kit / leak-proof+specimen+bags)' },
+      { re: /amazon-brand\/pasture\+manure\+rake\?s=care-deworming-program/, label: 'pasture manure-rake search hop (matches on-page removing-manure / pasture-cleanup copy; unique vs horse+stall+fork+manure+picker)' },
+      { re: /amazon-brand\/stable\+muck\+cart\?s=care-deworming-program/, label: 'stable muck-cart search hop (matches on-page piles-leave-the-paddock copy; unused vs stall-bedding / pasture-management hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(adjustable\+sliding\+dog\+food\+scoop|reusable\+dog\+food\+portion\+cups|dog\+weight\+log\+book|digital\+handheld\+stopwatch|waterproof\+field\+notebook|foam\+table\+edge\+bumper|automatic\+timed\+dog\+feeder|maze\+slow\+feed\+dog\+bowl|indoor\+dog\+house\+line|disposable\+female\+dog\+diapers|inflatable\+dog\+collar|hard\+sided\+airline\+dog\+crate|horse\+stall\+fork\+manure\+picker|fecal\+sample\+collection\+kit|leak\+proof\+specimen\+bags|horse\+grazing\+muzzle|soil\+test\+kit|ivermectin|praziquantel|fenbendazole|moxidectin|pyrantel|quest|panacur|zimecterin|eqvalan|dewormer|anthelmintic|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1059 scoop / portion-cups / weight-log-book, #1058 stopwatch / field-notebook / table-bumper, #1057 timed-feeder / maze-bowl / house-line, #1056 diapers / inflatable-collar / airline-crate, stall-fork / manure-picker, dog fecal-sample-collection-kit / leak-proof-specimen-bags, grazing-muzzle / soil-test-kit, ivermectin / praziquantel / fenbendazole / moxidectin / pyrantel, or Rx — this page hops only equine-fecal-sample-container / pasture-manure-rake / stable-muck-cart gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse fecal-egg-count sampling-checklist offer; every gear CTA is an amazon-brand category search matching on-page FEC / pasture-cleanup copy (an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, a stable muck cart so those piles leave the paddock), never a placeholder ASIN, a #1059 scoop / portion-cups / weight-log-book hop, a #1058 stopwatch / field-notebook / table-bumper hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1056 diaper / inflatable-collar / airline-crate hop, a stall-fork / manure-picker hop, a dog fecal-sample-collection-kit / leak-proof-specimen-bag hop, a grazing-muzzle / soil-test-kit hop, or a dewormer / prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
