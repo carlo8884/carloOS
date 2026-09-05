@@ -3692,6 +3692,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog anxiety home-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page environmental-management copy (anxiety vest for gentle pressure during a known trigger, dog pheromone diffuser for the room the dog rests in, heartbeat comfort toy for short absences), never a placeholder ASIN, a Dog.com dog+anxiety+wrap / crate-cover / white-noise hop, a lick+mat+dog hop, a snuffle / Kong / crate training hop, an allergic-reactions oatmeal-shampoo / paw-wipe / recovery-collar hop (#1035), a Thundershirt or Adaptil brand-ASIN hop, or a prescription-anxiolytic hop (fluoxetine / Reconcile, trazodone, gabapentin, Sileo, clomipramine). Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · cognitive-dysfunction hops',
+    file: 'apps/vets-co/src/app/health/cognitive-dysfunction/page.tsx',
+    mustInclude: [
+      { re: /source="health-cognitive-dysfunction-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog CDS home-support checklist"/, label: 'concrete dog CDS home-support-checklist offer, not Subscribe' },
+      { re: /source="health-cds"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/plug\+in\+night\+light\?s=health-cognitive-dysfunction/, label: 'plug-in night-light search hop (matches on-page nighttime-disorientation / hallway-after-dark copy; unused vs #848–#1036)' },
+      { re: /amazon-brand\/dog\+sniff\+box\?s=health-cognitive-dysfunction/, label: 'dog sniff-box search hop (matches on-page novel-smells / sniff-boxes-with-new-objects copy; unique vs snuffle+mat+dog+enrichment)' },
+      { re: /amazon-brand\/senior\+dog\+food\+puzzle\?s=health-cognitive-dysfunction/, label: 'senior dog food-puzzle search hop (matches on-page food-puzzles / brief-enrichment copy; unique vs puzzle+feeder+dog)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(puzzle\+feeder\+dog|snuffle\+mat|senior\+dog\+food\?|joint\+support\+dog\+treats|portion\+control\+food\+scale|anxiety\+vest\+dog|pheromone\+diffuser\+dog|dog\+heartbeat\+comfort\+toy|bright\+mind|purina|anipryl|selegiline|melatonin|fish\+oil|omega|neutricks|apoaequorin|nordic\+naturals|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop puzzle+feeder+dog, snuffle-mat, Dog.com senior-dog-care food / joint-treat / portion-scale hops, #1036 anxiety vest / pheromone / heartbeat hops, Bright Mind / Anipryl / selegiline / melatonin / fish-oil / Neutricks brand ASINs, or Rx — this page hops only plug-in-night-light / dog-sniff-box / senior-dog-food-puzzle gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog CDS home-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page enrichment and nighttime-management copy (plug-in night light for the hall the dog walks at night, sniff box with new objects for short scent sessions, senior food-puzzle toy for brief enrichment), never a placeholder ASIN, a puzzle+feeder+dog hop, a snuffle-mat hop, a Dog.com senior-dog-care senior+dog+food / joint-treat / portion-scale hop, an anxiety-in-dogs vest / diffuser / heartbeat hop (#1036), a Bright Mind / Anipryl / selegiline / melatonin / fish-oil / Neutricks brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
