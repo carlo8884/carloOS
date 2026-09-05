@@ -3319,6 +3319,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret brushing-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-brushing copy (fingertip rubber / finger toothbrush, soft infant toothbrush, pet dental wipes), never a placeholder ASIN, a dog/vets soft-toothbrush or enzymatic-paste hop, a CET/Virbac brand ASIN, human toothpaste, an antibiotic / analgesia hop, or a #1024 FLUTD hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'ferret · seasonal-shedding hops',
+    file: 'apps/ferret-com/src/app/care/seasonal-shedding/page.tsx',
+    mustInclude: [
+      { re: /source="care-seasonal-shedding-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret molt-grooming checklist"/, label: 'concrete ferret molt-grooming-checklist offer, not Subscribe' },
+      { re: /source="care-seasonal-shedding"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/soft\+slicker\+brush\+small\+animal\?s=care-seasonal-shedding/, label: 'soft small-animal slicker-brush search hop (matches on-page soft slicker brush copy; unique vs dog slicker-brush-dog-grooming and puppy shampoo+clippers+slicker combo)' },
+      { re: /amazon-brand\/fine\+tooth\+metal\+comb\?s=care-seasonal-shedding/, label: 'fine-tooth metal-comb search hop (matches on-page fine-toothed metal comb copy; unused vs #993–#1025 horse curry/dandy/body brushes)' },
+      { re: /amazon-brand\/reusable\+lint\+roller\?s=care-seasonal-shedding/, label: 'reusable lint-roller search hop (matches on-page hammock / hard-surface recycled-hair copy; unused vs #993–#1025)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(slicker\+brush\+dog|puppy\+shampoo\+nail\+clippers\+slicker|horse\+curry|horse\+dandy|horse\+body\+brush|ferret\+lickable\+treat|ferret\+sleep\+sack|ferret\+hammock|finger\+toothbrush|infant\+toothbrush|pet\+dental\+wipes|enzymatic\+pet\+toothpaste|hairball|laxative|petroleum|shampoo|marshall|tea\+tree|antibiotic|meloxicam|buprenorphine|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop dog-grooming slicker, puppy combo slicker, horse brushes, existing ferret treat-paste / sleep-sack / hammock hops, #1025 dental hops, hairball pastes, shampoos, or medications — this page hops only small-animal slicker / metal-comb / lint-roller gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret molt-grooming-checklist offer; every gear CTA is an amazon-brand category search matching on-page coat-blow copy (soft small-animal slicker brush, fine-tooth metal comb, reusable lint roller), never a placeholder ASIN, a dog-grooming slicker hop, a horse curry/dandy/body-brush hop, a hairball-paste / shampoo hop, a #1025 dental hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'horses · heaves hops',
     file: 'apps/horses-com/src/app/health/heaves/page.tsx',
     mustInclude: [
