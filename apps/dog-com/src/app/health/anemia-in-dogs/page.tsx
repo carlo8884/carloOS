@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -10,7 +10,7 @@ const SOURCES = [
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -49,6 +49,36 @@ export default function DogAnemiaPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog pale-gums watch checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog pale-gums watch checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-watch notes — a dog gum-color
+              assessment chart so pale, white, or gray gums
+              have a shared color word for the veterinarian,
+              high-calorie dog recovery food when appetite
+              drops, and a pet oral feeding syringe for
+              offering blended soft food. Educational
+              checklist, not a diagnosis and not an iron,
+              transfusion, or immunosuppressant list. BCS
+              chart posters, heat pants, belly bands, and
+              exercise pens stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog pale-gums watch checklist"
+              subtitle="Email the gum-chart, recovery-food, and feeding-syringe notes. No spam."
+              ctaText="Email my dog pale-gums watch checklist"
+              source="health-anemia-in-dogs-under-hero"
+            />
+          </div>
+
           <h2>Regenerative vs Non-Regenerative — The Critical Distinction</h2>
           <p>The first determination in any anemia workup: is the bone marrow responding? The CBC's reticulocyte count measures immature red blood cells released by the bone marrow — a high reticulocyte count (regenerative anemia) means the bone marrow is working and the problem is loss or destruction of red cells. A low reticulocyte count (non-regenerative anemia) means the bone marrow is not producing adequate red cells — a significantly more serious finding suggesting bone marrow disease, chronic disease, or production failure.</p>
           <p><strong>Regenerative anemia causes:</strong> Blood loss (external hemorrhage, GI bleeding, tumor bleeding) and hemolytic anemia (destruction of red blood cells). The bone marrow is normal and trying to compensate. In most cases, treatment of the underlying cause resolves the anemia over time as the bone marrow replenishes the red cell supply.</p>
@@ -66,6 +96,81 @@ export default function DogAnemiaPage() {
 
           <h2>Blood Transfusion</h2>
           <p>Transfusion is indicated when PCV (packed cell volume, a measure of red cell percentage) falls below approximately 15–18% in dogs without active compensation, or when clinical signs (collapse, extreme lethargy, respiratory distress at rest) indicate that the anemia is compromising vital organ function regardless of the specific PCV. Canine blood transfusion uses whole blood or packed red blood cells from typed donors. Most specialty and emergency hospitals maintain blood banks. DEA 1.1 is the most important blood type antigen — typing before first transfusion prevents significant transfusion reactions.</p>
+
+          <h2 id="kit">A Simple Pale-Gums Watch Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            pale-gums and reduced-appetite copy above: a
+            dog gum-color assessment chart so pale, white,
+            or gray gums have a shared color word for the
+            veterinarian, high-calorie dog recovery food
+            when appetite drops, and a pet oral feeding
+            syringe for offering blended soft food. These
+            are household watch-and-feed tools, not
+            treatments. They do not diagnose anemia, they
+            do not replace a CBC or a packed-cell-volume
+            reading, they are not iron supplements, they
+            are not a transfusion, and they are not
+            prednisolone, azathioprine, or mycophenolate.
+            A BCS chart poster, heat pants, a belly band,
+            and an exercise pen already live on other
+            pages. This page does not hop medications.
+            This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (dog gum-color assessment chart / high-calorie
+              dog recovery food / pet oral feeding syringe).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1041 heat-pants / belly-band /
+              exercise-pen, #1040 BCS tape / chart /
+              lean treats, #1039 pancreatitis food /
+              treat / portion-scale hops, #1038
+              dehydration electrolyte kits, UTI / ear /
+              anxiety-wrap hops, ferret electrolytes
+              recovery food, and bulb+syringe+puppy.
+              Prescription, iron, transfusion, and
+              immunosuppressant ASINs are not shoppable
+              hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the pale-gums watch kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page pale-gums and reduced-appetite copy
+              — a dog gum-color assessment chart,
+              high-calorie dog recovery food, and a pet
+              oral feeding syringe. Everyday physical
+              supplies only. They are not a ranked
+              product list, they are not iron or
+              transfusion hops, they are not the #1040
+              BCS tape / chart / treat hops, they are
+              not the #1041 heat-pants / belly-band /
+              exercise-pen hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+gum+color+assessment+chart?s=health-anemia-in-dogs"
+                amazonLabel="Browse dog gum-color assessment charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/high+calorie+dog+recovery+food?s=health-anemia-in-dogs"
+                amazonLabel="Browse high-calorie dog recovery food on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+oral+feeding+syringe?s=health-anemia-in-dogs"
+                amazonLabel="Browse pet oral feeding syringes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

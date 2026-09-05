@@ -3797,6 +3797,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete intact-dog-management-checklist offer; every gear CTA is an amazon-brand category search matching on-page delayed-timing lifestyle copy (washable dog heat pants for the bloody phase of a heat cycle, a male dog belly band for indoor marking, a heavy-duty dog exercise pen when the yard is not fully fenced), never a placeholder ASIN, a washable-pee-pad / bed-cover hop, a recovery-cone / e-collar hop, a crate / baby-gate hop, a #1040 BCS tape / chart / treat hop, a GPS-collar hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · anemia-in-dogs hops',
+    file: 'apps/dog-com/src/app/health/anemia-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-anemia-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog pale-gums watch checklist"/, label: 'concrete dog pale-gums-watch-checklist offer, not Subscribe' },
+      { re: /source="health-anemia"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+gum\+color\+assessment\+chart\?s=health-anemia-in-dogs/, label: 'dog gum-color assessment-chart search hop (matches on-page pale / white / gray gums copy; unique vs dog+body+condition+score+chart+poster and dog+measuring+tape+body+condition+chart)' },
+      { re: /amazon-brand\/high\+calorie\+dog\+recovery\+food\?s=health-anemia-in-dogs/, label: 'high-calorie dog recovery-food search hop (matches on-page reduced-appetite copy; unique vs ferret+electrolytes+recovery+food / low+fat+digestive+care+dog+food / weight+management+dog+food)' },
+      { re: /amazon-brand\/pet\+oral\+feeding\+syringe\?s=health-anemia-in-dogs/, label: 'pet oral feeding-syringe search hop (matches on-page blended-soft-food copy; unique vs bulb+syringe+puppy; unused vs insulin / med syringes)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|soft\+measuring\+tape\+for\+pets|dog\+body\+condition\+score\+chart|single\+ingredient\+lean\+dog\+treats|low\+fat\+digestive\+care\+dog\+food|lean\+low\+fat\+dog\+treats|digital\+pet\+food\+portion\+scale|unflavored\+pediatric\+electrolyte|kitchen\+liquid\+measuring\+pitcher|shallow\+lipped\+dog\+saucer|stainless\+steel\+dog\+fountain|washable\+dog\+pee\+pads|weighted\+ceramic\+dog\+water\+bowl|dog\+anxiety\+wrap|pet\+ear\+cleaner|ferret\+electrolytes\+recovery\+food|bulb\+syringe\+puppy|insulin|iron\+supplement|transfusion|prednisolone|azathioprine|mycophenolate|hills|hill\+s|royal\+canin|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1041 heat-pants / belly-band / exercise-pen, #1040 BCS tape / chart / lean treats, #1039 pancreatitis food / treat / portion-scale, #1038 dehydration electrolyte kits, UTI fountain / pee-pad / bowl, anxiety-wrap, ear-cleaner, ferret electrolytes recovery food, bulb-syringe-puppy, insulin / iron / transfusion / immunosuppressant ASINs, or Rx — this page hops only dog-gum-color-assessment-chart / high-calorie-dog-recovery-food / pet-oral-feeding-syringe gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog pale-gums-watch-checklist offer; every gear CTA is an amazon-brand category search matching on-page pale-gums and reduced-appetite copy (dog gum-color assessment chart so pale / white / gray gums have a shared color word for the veterinarian, high-calorie dog recovery food when appetite drops, a pet oral feeding syringe for offering blended soft food), never a placeholder ASIN, a #1041 heat-pants / belly-band / exercise-pen hop, a #1040 BCS tape / chart / treat hop, a #1039 pancreatitis food / treat / portion-scale hop, a #1038 dehydration electrolyte hop, a UTI / ear / anxiety-wrap hop, an iron / transfusion / immunosuppressant hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
