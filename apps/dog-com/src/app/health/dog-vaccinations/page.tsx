@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -49,6 +49,41 @@ export default function DogVaccinationsPage() {
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the puppy-series vaccine-record checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Puppy-series vaccine-record checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the puppy-series, titer, and lifestyle-vaccine
+              notes — a pet vaccination record book so the
+              6–16 week series, adult boosters, and titer
+              printouts stay in one documented history, a
+              dog seat-belt tether for the repeated clinic
+              trips, and a foldable waterproof puppy mat for
+              the 30–60 minute post-vaccine observation
+              wait. Educational checklist, not a Nobivac,
+              DA2PP, or Bordetella product list, and not a
+              prescription. Core and lifestyle vaccines
+              still belong with a veterinarian. Mosquito
+              dunks, monthly pill organizers, soft-sided
+              vet-visit carriers, first-aid kits, and
+              high-value vet-visit treats stay on other
+              pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Puppy-series vaccine-record checklist"
+              subtitle="Email the record-book, seat-belt-tether, and wait-mat notes. No spam."
+              ctaText="Email my puppy-series vaccine-record checklist"
+              source="health-dog-vaccinations-under-hero"
+            />
+          </div>
+
           <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
             Every dog needs four core vaccines per WSAVA guidelines: rabies (required by law),
             distemper, adenovirus, and parvovirus (combined as DA2PP). Puppies receive a
@@ -96,6 +131,90 @@ export default function DogVaccinationsPage() {
           <p><strong>Leptospirosis:</strong> Bacterial disease transmitted through urine of infected wildlife — particularly rats, raccoons, and deer. Affects kidneys and liver; can be fatal and is transmissible to humans. Recommended for dogs with outdoor exposure, especially in areas near water sources, wooded areas, or urban environments with rodent populations. Two initial vaccines 3–4 weeks apart, then annual booster.</p>
           <p><strong>Lyme:</strong> Recommended in high-tick-burden geographic areas (Northeast, Upper Midwest, Pacific Coast). Requires two initial vaccines 3–4 weeks apart, then annual booster. Does not replace tick prevention — use both.</p>
           <p><strong>Canine Influenza (H3N2/H3N8):</strong> Recommended for dogs with high social contact — boarding, shows, sporting events. Two initial vaccines 3–4 weeks apart, then annual booster.</p>
+
+          <h2 id="kit">A Simple Vaccine-Record-and-Clinic-Trip Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            puppy-series, documented-history / titer, and
+            30–60 minute observation copy above: a pet
+            vaccination record book so the 6–8, 10–12, and
+            14–16 week dates, adult boosters, and titer
+            printouts stay in one official history, a dog
+            seat-belt tether for the repeated clinic trips
+            that series requires, and a foldable waterproof
+            puppy mat for waiting after vaccines while
+            watching for a reaction. These are household
+            record-and-logistics tools, not treatments.
+            They do not vaccinate a dog, they do not
+            replace a veterinarian-administered core or
+            lifestyle vaccine, they do not replace a titer
+            blood test, and they are not Nobivac, DA2PP,
+            Bordetella, rabies, Lyme, or influenza
+            products. Mosquito dunks, a monthly pill
+            organizer, a soft-sided vet-visit carrier,
+            a first-aid kit, and high-value vet-visit
+            treats already live on other pages. This page
+            does not hop vaccines or medications. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (pet vaccination record book / dog seat-belt
+              tether / foldable waterproof puppy mat).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1043 mosquito dunks / monthly
+              pill organizer / soft-sided vet-visit
+              carrier, #1042 gum-chart / recovery-food /
+              feeding-syringe, #1041 heat-pants /
+              belly-band / exercise-pen, #1030
+              high-value vet-visit treats, pet first-aid
+              kits, calming dog chews, lick+mat+dog,
+              and soft+dog+carrier / soft+pet+carrier.
+              Nobivac, DA2PP, Bordetella, rabies, Lyme,
+              influenza, Heartgard, Interceptor,
+              Simparica, ProHeart, flea+tick meds, and
+              Rx ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the vaccine-record-and-clinic-trip kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page puppy-series, titer, and
+              observation-wait copy — a pet vaccination
+              record book, a dog seat-belt tether, and a
+              foldable waterproof puppy mat. Everyday
+              physical supplies only. They are not a
+              ranked product list, they are not vaccine
+              or vaccine-brand hops, they are not the
+              #1043 mosquito-dunk / pill-organizer /
+              clinic-carrier hops, they are not the
+              #1030 high-value vet-visit-treat hops,
+              they are not first-aid-kit hops, they are
+              not flea-and-tick medication hops, and
+              they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations"
+                amazonLabel="Browse pet vaccination record books on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations"
+                amazonLabel="Browse dog seat-belt tethers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"
+                amazonLabel="Browse foldable waterproof puppy mats on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
