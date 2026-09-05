@@ -1278,6 +1278,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete pasture-management-checklist offer; every gear CTA is an amazon-brand category search matching on-page restricted-grazing and soil-testing copy (horse grazing muzzle, soil test kit), never a placeholder ASIN, a medication hop, an electrolyte hop, a fan / slow-feeder overlap, a hoof-pick / hoof-boot overlap, a fencing-safety electric-tape overlap, or a fertilizer / herbicide hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'horses · summer-heat-care hops',
+    file: 'apps/horses-com/src/app/care/summer-heat-care/page.tsx',
+    mustInclude: [
+      { re: /source="care-summer-heat-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse summer-heat cooling checklist"/, label: 'concrete summer-heat cooling-checklist offer, not Subscribe' },
+      { re: /source="care-summer"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+sweat\+scraper\?s=care-summer-heat-care/, label: 'horse sweat-scraper search hop (matches on-page apply-and-scrape cold-water cooling copy; unique vs #993–#1015 fans / electrolytes / cool-water towels)' },
+      { re: /amazon-brand\/horse\+shade\+cloth\?s=care-summer-heat-care/, label: 'horse shade-cloth search hop (matches on-page provide-shade copy when tree cover is thin; unique vs #993–#1015 stall fans / fleece coolers / turnout blankets)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|electrolyte|barn\+fan|clip\+on\+fan|horse\+stall\+fan|slow\+feeder|horse\+hoof\+pick|horse\+hoof\+boots|horse\+grazing\+muzzle|soil\+test\+kit|cool\+water\+towels|digital\+pet\+thermometer|digital\+equine\+thermometer|digital\+veterinary\+thermometer|horse\+fleece\+cooler|horse\+turnout\+blanket|ice\+pack|icepack|antifungal|antibiotic)/, label: 'never hop medications, electrolytes, fans, slow feeders, hoof boots, grazing-muzzle / soil-kit (#1001), vets.co heat-stroke towels / thermometers (#1000), fleece coolers (body-clipping), or turnout blankets (blanketing) — this page hops only sweat-scraper / shade-cloth gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse summer-heat cooling-checklist offer; every gear CTA is an amazon-brand category search matching on-page after-work cooling and shade copy (horse sweat scraper, horse shade cloth), never a placeholder ASIN, a medication hop, an electrolyte hop, a fan / stall-fan overlap, a slow-feeder overlap, a hoof-boot overlap, a pasture-management grazing-muzzle / soil-kit hop (#1001), a vets.co heat-stroke cool-water-towel / thermometer hop (#1000), or a fleece-cooler / turnout-blanket overlap. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'dog · puppy-weight-predictor',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/Predictor.tsx',
     mustInclude: [

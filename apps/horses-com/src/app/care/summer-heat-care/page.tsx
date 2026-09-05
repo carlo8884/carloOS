@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,16 +20,16 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 
 const FAQS = [
   {
     question: "What is the fastest way to cool an overheated horse?",
     answer:
-      "Continuous application of copious cold water over the whole body, scraping it off and reapplying repeatedly, is the fastest safe cooling method -- the old belief that cold water on hot muscles is harmful has been disproven. Move the horse to shade with airflow, offer water, and call a veterinarian if it does not recover quickly.",
+      "Continuous application of copious cold water over the whole body, scraping it off with a sweat scraper and reapplying repeatedly, is the fastest safe cooling method -- the old belief that cold water on hot muscles is harmful has been disproven. Move the horse to shade with airflow (a shade cloth over a run-in or paddock helps when tree cover is thin), offer water, and call a veterinarian if it does not recover quickly.",
     answerText:
-      "Repeatedly apply copious cold water and scrape it off -- continuous cold-water cooling is fastest and safe. Move to shade with airflow, offer water, and call a vet if recovery is slow.",
+      "Repeatedly apply copious cold water and scrape it off with a sweat scraper -- continuous cold-water cooling is fastest and safe. Move to shade with airflow, offer water, and call a vet if recovery is slow.",
   },
   {
     question: "What is anhidrosis in horses?",
@@ -82,6 +82,7 @@ export default function SummerHeatCarePage() {
             { label: "Recognizing Heat Stress", href: "#stress" },
             { label: "Anhidrosis", href: "#anhidrosis" },
             { label: "Cooling and Managing Work", href: "#manage" },
+            { label: "Summer-Heat Kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -114,9 +115,33 @@ export default function SummerHeatCarePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the summer-heat cooling checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse summer-heat cooling checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the sweat-scraper and shade-cloth notes so the
+              after-work cooling kit is ready before the first hot,
+              humid day. Educational checklist, not a diagnosis and
+              not an electrolyte or medication order. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse summer-heat cooling checklist"
+              subtitle="Email the sweat-scraper and shade-cloth notes. No spam."
+              ctaText="Email my horse summer-heat cooling checklist"
+              source="care-summer-heat-care-under-hero"
+            />
+          </div>
 
           <h2 id="cooling">How Horses Cool Themselves</h2>
           <p>Horses dump heat mainly through sweating and the evaporation of that sweat, supplemented by increased breathing and blood flow to the skin. Because they are large, muscular, and work hard, they produce a lot of heat and rely heavily on evaporative cooling -- which fails in high humidity, when sweat cannot evaporate. The combination of high heat and high humidity is therefore far more dangerous than dry heat alone.</p>
@@ -139,11 +164,49 @@ export default function SummerHeatCarePage() {
           <h2 id="manage">Cooling and Managing Work</h2>
           <ul>
             <li><strong>Work in the cool hours</strong> of early morning or evening and reduce intensity on hot, humid days.</li>
-            <li><strong>Cool actively after work</strong> with copious cold water applied and scraped off repeatedly -- continuous cold-water application is the fastest safe method.</li>
-            <li><strong>Provide shade, airflow, and fans</strong> and avoid trailering in the heat of the day.</li>
+            <li><strong>Cool actively after work</strong> with copious cold water applied and scraped off repeatedly with a sweat scraper -- continuous cold-water application is the fastest safe method. The scraper lets water carry heat off the coat instead of sitting as a warm film.</li>
+            <li><strong>Provide shade, airflow, and fans</strong> and avoid trailering in the heat of the day. A shade cloth over a run-in or paddock adds shade when tree cover is thin; stall fans already live on other horses.com pages and stay off this kit.</li>
             <li><strong>Use the heat index</strong> (temperature plus humidity) to judge risk; high combined values call for caution or rest.</li>
-            <li><strong>Keep water and electrolytes available</strong> and let the horse drink during and after work.</li>
+            <li><strong>Keep water and electrolytes available</strong> and let the horse drink during and after work. Electrolyte products stay on the salt-and-electrolytes guide, not this page.</li>
           </ul>
+
+          <h2 id="kit">Summer-Heat Kit</h2>
+          <p>Everyday physical supplies that match the cooling and shade copy above — a sweat scraper so cold water can be applied and scraped off repeatedly after work, plus a shade cloth when a run-in or paddock needs shade and tree cover is thin. These are not treatments for heat stroke or anhidrosis; a distressed horse, a very high temperature, a horse that has stopped sweating, or one that becomes weak or disoriented in the heat needs immediate aggressive cooling and a veterinarian. Fans, stall fans, electrolytes, digital thermometers, cool-water towels, fleece coolers, grazing muzzles, soil-test kits, hoof boots, and slow feeders stay off this kit — those already ship on other pages. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops (summer-heat kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page sweat-scraper / shade-cloth copy, not electrolytes,
+              fans, thermometers, cool-water towels, fleece coolers,
+              hoof boots, grazing muzzles, or medication hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the summer-heat kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page cooling and
+              shade copy — a horse sweat scraper for after-work cold-water
+              cooling, and a horse shade cloth when a run-in or paddock
+              needs shade. Everyday physical supplies only. They are not a
+              ranked product list, they are not electrolytes, they are not
+              fans or thermometers, they are not a medication, and they do
+              not replace a veterinarian. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+sweat+scraper?s=care-summer-heat-care"
+                amazonLabel="Browse horse sweat scrapers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+shade+cloth?s=care-summer-heat-care"
+                amazonLabel="Browse horse shade cloth on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
