@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -83,6 +83,7 @@ export default function GoldenRetrieverHealthPage() {
             { label: 'Hypothyroidism', href: '#thyroid' },
             { label: 'Preventive Care Schedule', href: '#preventive' },
             { label: 'Insurance Recommendation', href: '#insurance' },
+            { label: 'Cancer-watch kit', href: '#kit' },
             { label: 'FAQ', href: '#faq' },
           ]} />
           <RelatedLinks title="Related" links={[
@@ -105,6 +106,54 @@ export default function GoldenRetrieverHealthPage() {
       ]}
     >
       <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Golden Retriever cancer-watch checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Golden Retriever cancer-watch checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the lymph-node, stair, and ear-cleaning
+              notes — a dog lymph-node anatomy chart so the
+              monthly lymphoma check (under the jaw, in
+              front of the shoulders, in the groin, and
+              behind the knees) stays a mapped habit from
+              middle age, foam dog stairs so hip- and
+              elbow-dysplasia reluctance to climb stairs
+              and stiffness after exercise have a low-impact
+              indoor step instead of jumping, and dog ear
+              wipes so regular ear cleaning can catch
+              recurrent ear infections that come with
+              atopic dermatitis. Educational checklist, not
+              a chemotherapy product list, not an Apoquel
+              or Cytopoint hop, and not a prescription.
+              Abdominal ultrasound, echocardiogram, T4
+              bloodwork, and oncology referral still belong
+              with a veterinarian. Assisted-walking slings,
+              hind-paw booties, hip braces, silicone
+              grooming gloves, analog bathroom scales, dog
+              dental finger brushes, resting respiratory
+              rate notebooks, one-minute kitchen timers,
+              step-in padded harnesses, medical-records
+              binders, AM/PM weekly pill organizers,
+              hanging luggage scales, penlights, emergency
+              contact cards, stretchers, vaccination record
+              books, seat-belt tethers, puppy mats,
+              mosquito dunks, monthly pill organizers, and
+              clinic-visit carriers stay on other pages.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Golden Retriever cancer-watch checklist"
+              subtitle="Email the lymph-node-chart, foam-stair, and ear-wipe notes. No spam."
+              ctaText="Email my Golden Retriever cancer-watch checklist"
+              source="health-golden-retriever-health-under-hero"
+            />
+          </div>
 
         <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />
 
@@ -226,6 +275,152 @@ export default function GoldenRetrieverHealthPage() {
             Compare Pet Insurance Plans →
           </Link>
         </div>
+
+        <h2 id="kit">A Simple Golden Retriever Cancer-Watch Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            lymphoma lymph-node, hip-and-elbow stair, and
+            allergy ear-cleaning copy above: a dog
+            lymph-node anatomy chart so the monthly check
+            from middle age covers the nodes under the jaw,
+            in front of the shoulders, in the groin, and
+            behind the knees — swollen nodes that persist
+            more than 2 weeks warrant veterinary
+            evaluation — foam dog stairs so hip- and
+            elbow-dysplasia reluctance to climb stairs,
+            stiffness after exercise, and reduced exercise
+            tolerance have a low-impact indoor step
+            (weight management remains the most impactful
+            intervention; this is not a dog ramp, hip
+            brace, or joint-support treat), and dog ear
+            wipes so regular ear cleaning can interrupt
+            the recurrent ear infections that come with
+            atopic dermatitis, paw licking, and face
+            rubbing. These are household cancer-watch and
+            allergy-care tools, not treatments. They do
+            not diagnose hemangiosarcoma, lymphoma,
+            osteosarcoma, or mast cell tumors, they do
+            not replace annual abdominal ultrasound from
+            age 6–7, they do not replace OFA hip and
+            elbow films, they do not treat hypothyroidism
+            with levothyroxine, they do not treat SAS,
+            and they are not Apoquel, Cytopoint,
+            chemotherapy, or a ranked clinical product
+            list. Assisted-walking slings, hind-paw
+            booties, hip braces, silicone dog grooming
+            gloves, analog bathroom scales, dog dental
+            finger brushes, resting respiratory rate
+            notebooks, one-minute kitchen timers, step-in
+            padded dog harnesses, pet medical records
+            binders, AM/PM weekly pill organizers,
+            digital hanging luggage scales, LED medical
+            penlights, pet emergency contact cards,
+            folding pet stretchers, vaccination record
+            books, seat-belt tethers, foldable waterproof
+            puppy mats, mosquito dunks, a monthly pill
+            organizer, a soft-sided vet-visit carrier, a
+            gum-color assessment chart, recovery food, a
+            feeding syringe, digital pet scales, dog
+            wheelchairs, rear-support harnesses,
+            belly-support harnesses, knee braces,
+            waterproof dog booties, orthopedic dog beds,
+            dog ramps, and joint-support treats already
+            live on other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (dog lymph-node anatomy chart / foam dog
+              stairs / dog ear wipes). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — unused vs #1049
+              dog assisted-walking sling / dog hind-paw
+              booties / dog hip brace, #1048 silicone
+              dog grooming glove / analog bathroom scale
+              / dog dental finger brush, #1047 resting
+              respiratory rate notebook / one-minute
+              kitchen timer / step-in padded dog harness,
+              #1046 pet medical records binder / AM/PM
+              weekly pill organizer / digital hanging
+              luggage scale, #1045 LED medical penlight /
+              pet emergency contact card / folding pet
+              stretcher, #1044 pet vaccination record
+              book / dog seat-belt tether / foldable
+              waterproof puppy mat, #1043 mosquito dunks
+              / monthly pill organizer / soft-sided
+              vet-visit carrier, #1042 gum-chart /
+              recovery-food / feeding-syringe, #1041
+              heat-pants / belly-band / exercise-pen,
+              #1030 high-value vet-visit treats,
+              digital+pet+scale / digital+puppy+scale /
+              kitchen+gram+scale /
+              portion+control+food+scale+dog,
+              ferret finger+toothbrush+pet,
+              soft+measuring+tape+for+pets,
+              dental+chews+dog, pet first-aid kits,
+              digital pet thermometers,
+              dog+wheelchair+mobility+cart /
+              dog+rear+support+harness /
+              dog+belly+support+harness / dog+knee+brace /
+              waterproof+dog+booties / orthopedic+dog+bed /
+              dog+ramp / joint+support+dog+treats,
+              pet+ear+cleaner / dog+ear+drying+solution /
+              dog+paw+wipes / dog+eye+wipes, and
+              soft+dog+carrier / soft+pet+carrier.
+              Apoquel, Cytopoint, chemotherapy, and Rx
+              ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Golden Retriever cancer-watch kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page lymphoma lymph-node, hip-and-elbow
+              stair, and allergy ear-cleaning copy — a
+              dog lymph-node anatomy chart, foam dog
+              stairs, and dog ear wipes. Everyday
+              physical supplies only. They are not a
+              ranked product list, they are not an
+              Apoquel / Cytopoint / chemotherapy hop,
+              they are not the #1049 sling / hind-paw
+              bootie / hip-brace hops, they are not the
+              #1048 grooming-glove / analog-scale /
+              finger-brush hops, they are not the #1047
+              notebook / timer / harness hops, they are
+              not the #1046 binder / AM-PM
+              pill-organizer / luggage-scale hops, they
+              are not the #1045 penlight / contact-card
+              / stretcher hops, they are not the #1044
+              vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / monthly-pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not digital-pet-scale
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health"
+                amazonLabel="Browse dog lymph-node anatomy charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/foam+dog+stairs?s=health-golden-retriever-health"
+                amazonLabel="Browse foam dog stairs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"
+                amazonLabel="Browse dog ear wipes on Amazon →"
+              />
+            </div>
+          </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
