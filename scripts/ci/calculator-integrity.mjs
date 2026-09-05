@@ -3276,6 +3276,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog heat-stroke cooling-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid cooling copy (cool-water towels, digital thermometer), never a placeholder ASIN, an ice-pack hop (copy says ice packs slow cooling), an IV-fluid hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · heaves hops',
+    file: 'apps/horses-com/src/app/health/heaves/page.tsx',
+    mustInclude: [
+      { re: /source="health-heaves-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse heaves hay-soaking checklist"/, label: 'concrete heaves hay-soaking-checklist offer, not Subscribe' },
+      { re: /source="health-heaves"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+hay\+steamer\?s=health-heaves/, label: 'horse hay-steamer search hop (matches on-page soak-or-steam hay copy; unique vs #993–#1016 bedding / fans / hay nets)' },
+      { re: /amazon-brand\/horse\+hay\+soaking\+bag\?s=health-heaves/, label: 'horse hay-soaking-bag search hop (matches on-page soak-hay copy so dusty winter hay sits in water then drains; unique vs #993–#1016)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pine\+shavings|wood\+pellet|stall\+rubber\+mats|horse\+stall\+rubber|low\+dust|slow\+feeder|hay\+net|barn\+fan|clip\+on\+fan|horse\+stall\+fan|horse\+sweat\+scraper|horse\+shade\+cloth|horse\+grazing\+muzzle|soil\+test\+kit|cool\+water\+towels|digital\+pet\+thermometer|digital\+equine\+thermometer|horse\+fleece\+cooler|horse\+turnout\+blanket|inhaler|spacer|aerohippus|flexineb|prednisolone|dexamethasone|clenbuterol|ventipulmin|corticosteroid|steroid|bronchodilator|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop stall bedding / rubber mats (#993 stall-bedding), slow-feeder hay nets, fans / stall fans, summer-heat sweat-scraper / shade-cloth (#1016), grazing-muzzle / soil-kit (#1001), fleece coolers / turnout blankets, inhaler spacers, corticosteroids, bronchodilators, or medications — this page hops only hay-steamer / hay-soaking-bag gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse heaves hay-soaking-checklist offer; every gear CTA is an amazon-brand category search matching on-page soak-or-steam hay copy (horse hay steamer, hay soaking bag), never a placeholder ASIN, a medication hop, an inhaler / spacer hop, a steroid / bronchodilator hop, a low-dust-bedding / rubber-mat overlap, a slow-feeder hay-net overlap, a stall-fan overlap, or a #1016 sweat-scraper / shade-cloth hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
