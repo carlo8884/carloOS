@@ -3217,6 +3217,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-pyoderma chlorhexidine-bath-checklist offer; every gear CTA is an amazon-brand category search matching on-page topical-bath copy (chlorhexidine dog shampoo for the 10-minute contact-time baths reserved from #1012 mange, hypoallergenic washcloths for applying that lather to folds and lesions), never a placeholder ASIN, a recovery-cone hop (sister hot-spots / cherry-eye pages), a paw-wipe / bootie hop (#1003), a HEPA hop (#1002), a mange washable-bed-cover / laundry-detergent hop (#1012), a systemic-antibiotic hop (cephalexin / cefpodoxime / Clavamox), an isoxazoline / parasiticide-brand hop, or a steroid hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · labrador-health hops',
+    file: 'apps/dog-com/src/app/health/labrador-health/page.tsx',
+    mustInclude: [
+      { re: /source="health-labrador-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Labrador swim-ear checklist"/, label: 'concrete Labrador swim-ear-checklist offer, not Subscribe' },
+      { re: /source="health-labrador"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/microfiber\+dog\+towel\?s=health-labrador-health/, label: 'microfiber dog-towel search hop (category search matching on-page post-swim coat-dry copy so water does not drip back into floppy Lab ears; unique vs #993–#1014 cool-water / whelping towels)' },
+      { re: /amazon-brand\/dog\+ear\+drying\+solution\?s=health-labrador-health/, label: 'dog ear-drying-solution search hop (matches on-page post-swim ear-drying copy; unique vs #995 pet-ear-cleaner / cotton-balls weekly-clean hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+ear\+cleaner|cotton\+ball|cotton\+swab|chlorhexidine|hypoallergenic\+washcloths|mini\+rice\+cooker|glass\+meal\+prep|washable\+dog\+bed\+cover|pet\+safe\+laundry\+detergent|pet\+glucometer|light\+corn\+syrup|dog\+cooling\+mat|dog\+cooling\+vest|cool\+water\+towels|digital\+pet\+thermometer|ice\+pack|icepack|dog\+probiotic|plain\+canned\+pumpkin|soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|elevated|bailey\+chair|upright\+dog\+feeding|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|measuring\+cup|portion\+control|nightlight|fish\+oil|omega|glucosamine|chondroitin|virbac|epi-otic|epi\+otic|douxo|apoquel|cytopoint|prednisone|steroid|corticosteroid|cephalexin|cefpodoxime|simplicef|clavamox|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop weekly ear-cleaner / cotton-balls (#995), chlorhexidine shampoo / washcloths (#1014), vomiting rice-cooker / meal-prep (#1013), mange washable-bed-cover / laundry-detergent (#1012), diabetes glucometer / corn syrup (#1011), Frenchie cooling mat / vest (#1010), diarrhea probiotic / pumpkin (#1009), cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders / measuring cups (#1005), elevated bowls, Bailey chairs (#999), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), nightlights, fish-oil / joint supplements, or prescription ear drops — this page hops only physical microfiber-dog-towel / ear-drying-solution gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete Labrador swim-ear-checklist offer; every gear CTA is an amazon-brand category search matching on-page post-swim drying copy (microfiber dog towel so the wet coat does not drip back into floppy Lab ears, veterinary ear drying solution for the ears after every swim or bath), never a placeholder ASIN, a weekly ear-cleaner / cotton-ball hop (sister dog-ear-infections page #995), a chlorhexidine / washcloth hop (#1014), a measuring-cup / pet-scale / slow-feeder hop (sister dog-obesity page / water-intake calculator), a nightlight hop, or a prescription ear-drop hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [

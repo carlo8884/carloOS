@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -23,7 +23,7 @@ const FAQS = [
   { question: 'Why is my Labrador always hungry?', answer: 'It is biology, not bad manners. Cambridge researchers identified a mutation in the POMC gene — extremely common in the breed — that disrupts the brain\'s satiety signaling: affected Labs do not receive normal "I am full" signals after eating. That is not an excuse to overfeed; it is the explanation for why strict portion control matters more in Labs than in almost any other breed. Measure every meal, never free-feed, and count treats toward the daily total (maximum 10% of calories).' },
   { question: 'Does keeping a Labrador lean really extend its life?', answer: 'Yes — by the most compelling dietary longevity data in canine medicine. The 2002 Purina Life Span Study found lean Labs lived 1.8 years longer than their slightly overweight littermates, and obesity — which affects over half of US Labs — accelerates joint disease, raises cancer and diabetes risk, and shortens lifespan by 2+ years. Aim for a body condition score of 4–5 out of 9, where the ribs are easily felt but not visible, and score monthly.' },
   { question: 'What is Exercise-Induced Collapse (EIC) in Labradors?', answer: 'A genetic condition essentially unique to Labs and a few related breeds: after 5–20 minutes of strenuous activity, an affected dog loses hindlimb coordination and muscle tone and collapses, then recovers fully within 5–25 minutes and looks completely normal at rest. It is caused by a recessive DNM1 mutation — dogs with two copies are at risk; carriers do not collapse. There is no treatment; management is avoiding triggering exercise intensity. If your Lab has ever collapsed after hard exercise, ask your veterinarian about EIC DNA testing.' },
-  { question: 'How do I prevent ear infections in my Lab?', answer: 'Labs\' floppy ears trap moisture, and swimmers are at particular risk — ear infections are among the most common reasons Labs see the vet, and most are preventable. The routine on this page: check ears weekly, dry them thoroughly after every swim or bath, clean monthly with a veterinary ear cleaning solution (never cotton swabs into the canal), and have infections treated promptly — untreated infections progress and become harder to resolve. Chronic recurrences warrant cytology with your veterinarian to identify the organism.' },
+  { question: 'How do I prevent ear infections in my Lab?', answer: 'Labs\' floppy ears trap moisture, and swimmers are at particular risk — ear infections are among the most common reasons Labs see the vet, and most are preventable. The routine on this page: check ears weekly, dry the coat with an absorbent microfiber dog towel after every swim or bath so water does not drip back into the canal, then dry the ears with a veterinary ear drying solution (never cotton swabs into the canal), and have infections treated promptly — untreated infections progress and become harder to resolve. Weekly cleaning with a veterinary ear cleaner stays on the sister ear-infections page. Chronic recurrences warrant cytology with your veterinarian to identify the organism.' },
   { question: 'What health tests should a Labrador breeder provide?', answer: 'The minimum for a reputable Lab breeder, per this guide: OFA hip evaluation, OFA elbow evaluation, current annual CAER eye examination, OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test — with documentation, not verbal assurances. Coat color matters less than breeders imply; in any color, parental health testing is what predicts a healthy puppy.' },
 ]
 
@@ -77,6 +77,7 @@ export default function LabradorHealthPage() {
           { label: 'Progressive Retinal Atrophy', href: '#pra' },
           { label: 'Tricuspid Valve Dysplasia', href: '#tvd' },
           { label: 'Ear Infections', href: '#ears' },
+          { label: 'Swim-ear kit', href: '#kit' },
           { label: 'Preventive Schedule', href: '#preventive' },
           { label: 'Choosing a Healthy Lab', href: '#choosing' },
           { label: 'FAQ', href: '#faq' },
@@ -100,6 +101,35 @@ export default function LabradorHealthPage() {
       ]}
     >
       <div className="carloOS-article">
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the Labrador swim-ear checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Labrador swim-ear checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the post-swim drying notes — an absorbent
+            microfiber dog towel to dry the coat so water does
+            not drip back into the canal, plus a veterinary
+            ear drying solution for the ears after every swim
+            or bath. Educational checklist, not a diagnosis
+            and not a treatment list. Veterinary ear cleaners
+            and cotton balls stay on the sister ear-infections
+            page. Measuring cups, pet scales, slow-feeders,
+            chlorhexidine shampoo, washcloths, and nightlights
+            stay off this list. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Labrador swim-ear checklist"
+            subtitle="Email the towel and ear-drying-solution notes. No spam."
+            ctaText="Email my Labrador swim-ear checklist"
+            source="health-labrador-health-under-hero"
+          />
+        </div>
 
         <StockImage manifestKey="dog-com:breed-labrador-retriever" alt="A Labrador Retriever in natural light" aspect="16:9" priority />
 
@@ -169,8 +199,10 @@ export default function LabradorHealthPage() {
           riskLevel="very-high"
           description="Labs' floppy ears trap moisture and reduce air circulation in the ear canal, creating ideal conditions for bacterial and yeast ear infections. Labs who swim regularly are at particularly high risk. Ear infections are among the most common reasons Labs visit the vet — and most are preventable with consistent ear hygiene."
           signs={['Head shaking', 'Scratching at ears or side of face', 'Odor from ears', 'Brown or dark discharge', 'Redness or swelling of ear canal opening', 'Sensitivity when ears are touched']}
-          management="Check ears weekly. Dry ears thoroughly after every swim or bath — use a dry cotton ball or ear drying solution. Clean ears monthly with a veterinary ear cleaning solution (not cotton swabs into the canal). Treat infections promptly — untreated ear infections progress and become harder to resolve. Chronic or recurring infections warrant cytology to identify the specific organism and guide treatment."
+          management="Check ears weekly. After every swim or bath, dry the coat with an absorbent microfiber dog towel so water does not drip back into the canal, then dry the ears with a veterinary ear drying solution — not cotton swabs into the canal. Weekly veterinary ear-cleaner and cotton-ball wipe routine stays on the sister ear-infections page. Treat infections promptly — untreated ear infections progress and become harder to resolve. Chronic or recurring infections warrant cytology to identify the specific organism and guide treatment."
         />
+
+        <p>Everyday physical swim-ear drying — not a treatment for an active infection — starts with an absorbent microfiber dog towel after the swim so the wet coat does not drip back into floppy Lab ears, then a veterinary ear drying solution in the visible canal. These are post-swim drying tools. They are not a prescription ear drop, they do not replace cytology for recurring infections, and they are not the weekly veterinary ear-cleaner / cotton-ball wipe that lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Cotton swabs stay out of the canal. Ask your veterinarian whether a towel-plus-drying-solution routine fits this dog.</p>
 
         <h2 id="preventive">Preventive Care Schedule for Labs</h2>
 
@@ -178,7 +210,7 @@ export default function LabradorHealthPage() {
           <li><strong>Measure every meal from day one</strong> — the most impactful health habit for the breed</li>
           <li><strong>Buy from OFA-certified breeders</strong> — hips, elbows, CAER eyes, OFA cardiac, EIC DNA testing minimum</li>
           <li><strong>Annual bloodwork from age 5</strong> — catch hypothyroidism, early kidney or liver changes</li>
-          <li><strong>Weekly ear checks</strong> — dry after all water exposure, clean monthly</li>
+          <li><strong>Weekly ear checks</strong> — dry the coat with a microfiber towel and the ears with an ear drying solution after all water exposure; weekly cleaner/cotton-ball routine stays on the ear-infections page</li>
           <li><strong>Joint supplements from age 5</strong> — fish oil and glucosamine/chondroitin have documented benefit</li>
           <li><strong>Twice-yearly exams from age 8</strong></li>
           <li><strong>Body condition scoring monthly throughout life</strong> — more predictive of health outcomes than any other single metric</li>
@@ -189,6 +221,46 @@ export default function LabradorHealthPage() {
         <p>Color matters less than breeders imply. The data suggesting chocolate Labs have shorter lifespans and more health issues likely reflects historic breeding practices in chocolate lines (less health testing) rather than coat color itself. In any color, what matters is health testing of the parents.</p>
 
         <p>Minimum health testing for a reputable Lab breeder: OFA hip evaluation, OFA elbow evaluation, CAER eye examination (current, annual), OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test. Request documentation for all of these — not verbal assurances. A breeder who cannot provide this documentation is not a reputable breeder regardless of how nice their website looks.</p>
+
+        <h2 id="kit">Swim-ear kit</h2>
+        <p>Everyday physical supplies that match the swim-ear copy above — an absorbent microfiber dog towel to dry the coat after a swim or bath so water does not drip back into the canal, plus a veterinary ear drying solution for the ears themselves. These are post-swim drying tools, not treatments. They do not treat an active ear infection, they do not replace cytology, and they do not replace a veterinarian. Veterinary ear cleaners, cotton balls, and cotton swabs stay educational copy only — the weekly cleaner / cotton-ball wipe lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Measuring cups, digital pet scales, slow-feeders, chlorhexidine shampoo, hypoallergenic washcloths, nightlights, fish oil, glucosamine, and prescription ear drops stay off this kit. This page does not claim hands-on testing.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops (microfiber
+            dog towel / ear drying solution). ShopCtas hides
+            empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only. Veterinary ear cleaners,
+            cotton balls, cotton swabs, measuring cups, pet
+            scales, slow-feeders, chlorhexidine shampoo,
+            washcloths, and nightlights are not shoppable hops. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Labrador swim-ear kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            swim-ear copy — a microfiber dog towel and a
+            veterinary ear drying solution. Everyday physical
+            gear only. They are not a ranked product list,
+            they are not medications, they are not ear-cleaner
+            or cotton-ball ASINs, they are not measuring cups
+            or slow-feeders, and they do not replace a
+            veterinarian. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/microfiber+dog+towel?s=health-labrador-health"
+              amazonLabel="Browse microfiber dog towels on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+ear+drying+solution?s=health-labrador-health"
+              amazonLabel="Browse dog ear drying solution on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
