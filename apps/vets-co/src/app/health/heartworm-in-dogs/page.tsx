@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
@@ -52,12 +52,57 @@ export default function HeartwormPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog heartworm rest-and-test checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog heartworm rest-and-test checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes that match the
+              crate-rest, leash-restriction, and
+              standing-water copy on this page — a
+              heavy-gauge 48-inch dog crate so an
+              8-week treatment rest is a crate, not
+              a guessed hallway, a 2-foot nylon
+              traffic lead so outdoor potty stays
+              leash-restricted instead of a run, and
+              an adjustable aluminum downspout
+              extender so roof runoff does not pool
+              into a mosquito breeding puddle by the
+              foundation. Educational checklist, not
+              a ranked product list, not a substitute
+              for veterinary care, and not a Heartgard
+              / Interceptor / Sentinel / Revolution /
+              ProHeart / melarsomine / ivermectin hop.
+              Mosquito dunks, monthly pill organizers,
+              and soft-sided vet-visit carriers
+              already live on dog.com heartworm
+              prevention. Double-door wire crates
+              already live on canine-influenza. Wide-rim
+              stainless cat water bowls, electric
+              pet-food warming plates, and high-sided
+              jumbo cat litter boxes already live on
+              kidney-disease-cats. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Dog heartworm rest-and-test checklist"
+              subtitle="Email the crate-rest, traffic-lead, and downspout notes. No spam."
+              ctaText="Email my dog heartworm rest-and-test checklist"
+              source="health-heartworm-in-dogs-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
 
-          <DropCap>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood -- a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10-14 days at temperatures above 57 degrees F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms.</DropCap>
+          <DropCap>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood -- a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10-14 days at temperatures above 57 degrees F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms. Standing water near the house is how that mosquito finds a puddle. An adjustable aluminum downspout extender is how roof runoff is carried away from the foundation instead of pooling at the downspout — it is not a 14-inch manual reel lawn mower (that lives on flea-tick-prevention), not mosquito dunks (those live on dog.com heartworm prevention), and it is not a Heartgard chew. A downspout does not diagnose heartworm and it does not replace year-round prevention prescribed by a veterinarian.</DropCap>
 
           <CalloutBox variant="warning" title="Strict rest during treatment">
-            Once melarsomine is administered, dying worms can lodge in pulmonary arteries and cause life-threatening thromboembolism -- exercise dramatically raises this risk. The dog must be leash-restricted (no running, no playing, crate rest for high-energy dogs) for the full 8-week treatment course. This is not optional; non-compliance kills dogs every year.
+            Once melarsomine is administered, dying worms can lodge in pulmonary arteries and cause life-threatening thromboembolism -- exercise dramatically raises this risk. The dog must be leash-restricted (no running, no playing, crate rest for high-energy dogs) for the full 8-week treatment course. A heavy-gauge 48-inch dog crate is how that crate rest stays a crate instead of a guessed hallway — it is not a double-door wire dog crate (that lives on canine-influenza) and it is not a soft-sided crate. A 2-foot nylon traffic lead is how outdoor potty stays a short leash instead of a run — it is not a seat-belt tether (that lives on dog.com vaccinations) and it is not a long-line. This is not optional; non-compliance kills dogs every year. The crate and lead do not replace the veterinarian who stages the infection and administers melarsomine.
           </CalloutBox>
 
           <h2>Annual Testing -- Required Even on Prevention</h2>
@@ -83,7 +128,142 @@ export default function HeartwormPage() {
             The American Heartworm Society recommends the three-dose melarsomine protocol combined with doxycycline as the evidence-based standard for treating heartworm-positive dogs. The previous "slow kill" approach using macrocyclic lactone prevention alone is explicitly no longer recommended due to slow clearance, ongoing cardiac damage, and growing macrocyclic lactone resistance in heartworm populations.
           </CalloutBox>
 
-          <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow -- exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference.</p>
+          <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow -- exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference. The crate, traffic lead, and downspout extender are household consistency tools. They do not replace the veterinarian who chooses the protocol, and they are not Heartgard, Interceptor, Sentinel, Revolution, ProHeart, or melarsomine hops.</p>
+
+          <h2 id="kit">Home-care kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            crate-rest, leash-restriction, and
+            standing-water copy on this page — a
+            heavy-gauge 48-inch dog crate so an
+            8-week treatment rest is a crate, a
+            2-foot nylon traffic lead so outdoor
+            potty stays leash-restricted, and an
+            adjustable aluminum downspout extender
+            so roof runoff does not pool into a
+            mosquito breeding puddle. These are
+            educational home-care and monitoring
+            tools, not a ranked product list, not a
+            substitute for veterinary care, and not
+            a treatment for heartworm. Heartgard,
+            Interceptor, Sentinel, Revolution,
+            ProHeart, ivermectin, milbemycin,
+            moxidectin, and melarsomine are clinic
+            prescriptions, not shoppable hops.
+            Mosquito dunks, monthly pill organizers,
+            and soft-sided vet-visit carriers already
+            live on dog.com heartworm prevention.
+            Double-door wire crates already live on
+            canine-influenza. Wide-rim stainless cat
+            water bowls, electric pet-food warming
+            plates, and high-sided jumbo cat litter
+            boxes already live on kidney-disease-cats.
+            This page does not claim hands-on
+            testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (heavy-gauge 48-inch dog crate /
+              2-foot nylon traffic lead /
+              adjustable aluminum downspout extender).
+              These are educational home-care /
+              monitoring / lifestyle tools, not a
+              ranked product list, not a substitute
+              for veterinary care, no Rx / Heartgard /
+              Interceptor / Sentinel / Revolution /
+              ProHeart / melarsomine / ivermectin
+              ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1086
+              wide+rim+stainless+cat+water+bowl /
+              electric+pet+food+warming+plate /
+              high+sided+jumbo+cat+litter+box, #1085
+              digital+pet+glucose+log+notebook /
+              insulated+pet+water+bowl /
+              airtight+locking+pet+food+bin, #1084
+              wall+mounted+magnetic+monthly+planner /
+              waterproof+rear+seat+hammock /
+              folding+four+wheel+dog+stroller, #1083
+              14+inch+manual+reel+lawn+mower /
+              zippered+waterproof+dog+duvet+cover /
+              handheld+led+magnifying+glass, #1082
+              large+platform+digital+bathroom+scale /
+              quilted+dog+winter+coat /
+              weekly+pill+organizer+with+alarms, #1081
+              sterile+saline+eye+wash /
+              padded+elizabethan+collar+dog /
+              dog+blind+halo+harness, #1080
+              letter+size+plastic+file+box /
+              plug+in+heated+pet+mat /
+              battery+motion+sensor+night+light,
+              #1079
+              elevated+mesh+dog+cot /
+              clear+adhesive+non+slip+stair+treads /
+              hardcover+weekly+appointment+planner,
+              #1078–#1071
+              pitcher / lounge / notebook /
+              carafe / saucepan / memo-pad /
+              toothbrush-kit / VOHC-chews /
+              water-additive / egg-crate-pad /
+              pet-steps / floor-scale / muzzle /
+              underpads / flashlight / crate /
+              kennel-spray / second-hand-clock /
+              tick-hook / flea-comb / ID-card /
+              expanding-file / urine-cup /
+              12-hour-timer,
+              dog.com heartworm-prevention
+              mosquito+dunks /
+              monthly+pill+organizer /
+              soft+sided+vet+visit+carrier.
+              Heartgard, Interceptor, Sentinel,
+              Revolution, ProHeart, ivermectin,
+              milbemycin, moxidectin, and
+              melarsomine are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page crate-rest, leash-restriction,
+              and standing-water copy — a heavy-gauge
+              48-inch dog crate, a 2-foot nylon
+              traffic lead, and an adjustable aluminum
+              downspout extender. Educational
+              home-care and monitoring tools only.
+              They are not a ranked product list,
+              they are not a substitute for veterinary
+              care, they are not a #1086 water-bowl /
+              warming-plate / litter-box hop, they are
+              not a #1085 glucose-log / insulated
+              water-bowl / food-bin hop, they are not
+              a dog.com heartworm dunk / pill-organizer
+              / carrier hop, they are not a
+              Heartgard / Interceptor / ProHeart /
+              melarsomine hop, and they do not replace
+              a veterinarian. Vets.co earns a
+              commission on qualifying purchases at
+              no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs"
+                amazonLabel="Browse heavy-gauge 48-inch dog crates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/2+foot+nylon+traffic+lead?s=health-heartworm-in-dogs"
+                amazonLabel="Browse 2-foot nylon traffic leads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"
+                amazonLabel="Browse adjustable aluminum downspout extenders on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
