@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function TurnoutStablingPage() {
             { label: "When Stabling Is Justified", href: "#stabling" },
             { label: "Risks of Too Much Confinement", href: "#risks" },
             { label: "Finding the Balance", href: "#balance" },
+            { label: "Stall-offset kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,9 +109,39 @@ export default function TurnoutStablingPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the stall-offset kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse stall-offset kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the equine slow-feeder hay-box,
+              nylon equine stall-guard, and hemp equine
+              stall-bedding notes so necessary stabling
+              still has near-continuous forage, a head-out
+              view of other horses, and a low-dust bed.
+              Educational stall-offset checklist, not a
+              turnout schedule and not a substitute for a
+              veterinarian. Hay nets, pine shavings, stall
+              fans, turnout sheets, and grazing muzzles
+              stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse stall-offset kit checklist"
+              subtitle="Email the hay-box, stall-guard, and hemp-bedding notes. No spam."
+              ctaText="Email my horse stall-offset kit checklist"
+              source="care-turnout-vs-stabling-under-hero"
+            />
+          </div>
 
           <h2 id="built">What the Horse Is Built For</h2>
           <p>Free-living horses spend most of the day and night moving slowly while grazing, covering many miles, in the company of other horses. Their digestive system, feet, joints, and minds are all adapted to near-constant movement and trickle-feeding. Any management system is, in effect, a compromise against this baseline, and the more a routine departs from it, the more the owner must actively compensate.</p>
@@ -137,7 +168,73 @@ export default function TurnoutStablingPage() {
           </ul>
 
           <h2 id="balance">Finding the Balance</h2>
-          <p>For most horses, maximizing turnout and minimizing unnecessary stabling is the healthiest default, with stabling used deliberately for genuine needs. When a horse must be stabled, the downsides are softened by providing near-continuous forage (slow feeders), companionship and a view of other horses, good ventilation and low-dust bedding, and as much daily movement as possible. The right balance is individual -- shaped by the horse, the climate, the facilities, and the horse&apos;s job -- but the bias of the evidence is toward more turnout, not less.</p>
+          <p>For most horses, maximizing turnout and minimizing unnecessary stabling is the healthiest default, with stabling used deliberately for genuine needs. When a horse must be stabled, the downsides are softened by providing near-continuous forage (slow feeders), companionship and a view of other horses, good ventilation and low-dust bedding, and as much daily movement as possible. An equine slow-feeder hay box is how that near-continuous-forage copy stays a stall-corner box that meters hay instead of an emptied flake -- it is not a hay net and not a soaking bag. A nylon equine stall guard is how that see-and-touch-other-horses copy stays a door-opening web the horse can hang a head through -- it is not a stall screen and not a stall fan. Hemp equine stall bedding is how that low-dust-bedding copy stays a bagged hemp bed instead of a dusty flake of pine -- it is not pine shavings, not wood pellets, not deep-sand stall bedding, and not stall sweet lime. The right balance is individual -- shaped by the horse, the climate, the facilities, and the horse&apos;s job -- but the bias of the evidence is toward more turnout, not less.</p>
+
+          <h2 id="kit">Stall-offset kit</h2>
+          <p>Everyday physical supplies that match the near-continuous-forage, companionship, and low-dust-bedding copy on this page — an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list. Hay nets, hay steamers, hay-soaking bags, pine shavings, wood pellets, stall rubber mats, deep-sand stall bedding, stall sweet lime, stall fans, stall screens, turnout sheets, turnout blankets, grazing muzzles, manure rakes, and muck carts already live on other pages. This page does not hop Banamine, flunixin, bute, NSAIDs, copper sulfate, iodine, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (equine slow-feeder hay box /
+              nylon equine stall guard /
+              hemp equine stall bedding).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1064 thrush-antiseptic /
+              folding-hoof-pick / stall-sweet-lime, #1063
+              foam-pads / sand-bedding / easy-keeper-muzzle,
+              #1062 thermometer / stethoscope / fleece-cooler,
+              #1061 farrier-log / hoof-stand / barn-flood-light,
+              #1060 fecal-container / manure-rake / muck-cart,
+              #1059 scoop / portion-cups / weight-log-book,
+              #1058 stopwatch / notebook / bumper, #1057
+              feeder / maze-bowl / house-line, #1056 diapers
+              / collar / crate, slow+feeder+hay+net+horse /
+              pine+shavings / wood+pellet / stall+rubber+mats
+              / horse+stall+fan / horse+stall+screen /
+              horse+turnout+sheet / horse+grazing+muzzle.
+              Rx ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the horse stall-offset kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page forage, companionship, and low-dust
+              bedding copy — an equine slow-feeder hay
+              box, a nylon equine stall guard, and hemp
+              equine stall bedding. Everyday physical
+              supplies only. They are not a ranked product
+              list, they are not a medication hop, they
+              are not a #1064 thrush-antiseptic /
+              folding-hoof-pick / stall-sweet-lime hop,
+              they are not a #1063 foam-pad / sand-bedding
+              / easy-keeper-muzzle hop, they are not a
+              #1062 thermometer / stethoscope /
+              fleece-cooler hop, they are not a hay-net /
+              pine-shavings / stall-fan hop, they are not
+              a turnout-sheet / grazing-muzzle hop, and
+              they do not replace a veterinarian. Horses.com
+              earns a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+slow+feeder+hay+box?s=care-turnout-vs-stabling"
+                amazonLabel="Browse equine slow-feeder hay boxes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/nylon+equine+stall+guard?s=care-turnout-vs-stabling"
+                amazonLabel="Browse nylon equine stall guards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hemp+equine+stall+bedding?s=care-turnout-vs-stabling"
+                amazonLabel="Browse hemp equine stall bedding on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
