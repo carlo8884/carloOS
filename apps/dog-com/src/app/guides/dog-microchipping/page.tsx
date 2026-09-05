@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -35,7 +37,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog Microchipping Explained',
@@ -43,7 +45,7 @@ const med = buildMedicalWebPageSchema({
     'How microchips work in dogs, the implant procedure, registration, and limitations.',
   url: 'https://dog.com/guides/dog-microchipping',
   authorName: 'Dog.com Editorial',
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-09-05',
 })
 
 const FAQS = [
@@ -110,6 +112,7 @@ export default function DogMicrochippingPage() {
                 { label: 'Effectiveness & Evidence', href: '#evidence' },
                 { label: 'Safety & Limitations', href: '#safety' },
                 { label: 'Owner Checklist', href: '#checklist' },
+                { label: 'Home Verification & Collar ID', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
               ]}
             />
@@ -137,9 +140,38 @@ export default function DogMicrochippingPage() {
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-06-11T00:00:00Z"
-            updatedAt="2026-06-11T00:00:00Z"
+            updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the microchip registration checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Microchip registration checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the registration notes — find the chip
+              number, claim the registry record, keep an
+              ISO / universal scanner for home verification,
+              and pair the implant with a visible engraved
+              collar ID tag (a silent slide-on tag stays on
+              the collar if a hanging tag comes off).
+              Educational checklist, not a GPS tracker and
+              not a clinic implant kit. GPS collars stay on
+              the GPS-tracker comparison. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Microchip registration checklist"
+              subtitle="Email the registry, scanner, and collar-ID notes. No spam."
+              ctaText="Email my microchip registration checklist"
+              source="guides-dog-microchipping-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — What you need to know">
             <p>
@@ -171,7 +203,7 @@ export default function DogMicrochippingPage() {
             Most modern pet microchips follow the international ISO 11784/11785 standard, which defines a 15-digit code and the 134.2 kHz radio frequency used to read it. ISO-standard chips are designed to be read by universal scanners worldwide, which matters if a dog is found in a different region or country.
           </p>
           <p>
-            Historically, some chips in the United States used non-ISO frequencies (such as 125 kHz and 128 kHz), which created compatibility gaps where a scanner could miss a chip it was not built to read. The widespread adoption of <strong>universal (forward- and backward-reading) scanners</strong> in shelters and clinics has largely closed that gap, so most found dogs are now scanned successfully regardless of chip type. When choosing where to chip a dog, an ISO-standard chip is the most broadly compatible option.
+            Historically, some chips in the United States used non-ISO frequencies (such as 125 kHz and 128 kHz), which created compatibility gaps where a scanner could miss a chip it was not built to read. The widespread adoption of <strong>universal (forward- and backward-reading) scanners</strong> in shelters and clinics has largely closed that gap, so most found dogs are now scanned successfully regardless of chip type. When choosing where to chip a dog, an ISO-standard chip is the most broadly compatible option. An ISO pet microchip scanner — a handheld universal reader that covers 134.2 kHz ISO 11784/11785 plus the older US frequencies — is also the tool owners use at home to read the number off an already-implanted chip so they can claim the registry record without a clinic visit. That home check verifies the number. It does not implant a chip, it does not replace a shelter or veterinary scan of a found dog, and it is not a GPS tracker.
           </p>
 
           <CalloutBox variant="info" title="Why scanning technique matters">
@@ -264,10 +296,58 @@ export default function DogMicrochippingPage() {
             <li>Locate the chip number and identify its registry.</li>
             <li>Register or transfer the record into your own name with a current phone and address.</li>
             <li>Add a backup contact to the record.</li>
-            <li>Keep a visible collar ID tag as well — it is the fastest route to reunion when a neighbor finds the dog.</li>
+            <li>Keep a visible engraved dog collar ID tag as well — it is the fastest route to reunion when a neighbor finds the dog. A silent slide-on pet ID tag stays on the collar if a hanging tag comes off.</li>
             <li>Re-verify registration after every move or phone-number change.</li>
             <li>Consider a GPS collar if your dog is a wanderer or you live near roads or open land.</li>
           </ul>
+
+          <h2 id="kit">A Simple Home-Verification and Collar-ID Kit</h2>
+          <p>
+            Three everyday physical supplies match the registration and reunion copy above: an ISO pet microchip scanner so you can read the number at home and confirm the registry record, engraved dog collar ID tags so a neighbor can call you without a scanner, and a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off. These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. GPS collar trackers already live on the <a href="/reviews/best-dog-gps-tracker" className="text-brand-primary hover:underline">GPS tracker comparison</a>. This page does not hop GPS gear, clinic implant kits, or medications. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (microchip registration kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page iso-pet-microchip-scanner / engraved-dog-collar-id-tags /
+              pet-id-tag-slide-on copy, not GPS trackers, clinic implant kits,
+              or generic dog+id+tag+collar hops already used elsewhere. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the microchip registration kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              registration and reunion copy — an ISO pet
+              microchip scanner for home verification,
+              engraved dog collar ID tags, and a silent
+              slide-on pet ID tag. Everyday physical ID
+              tools only. They are not a ranked product list,
+              they are not GPS trackers, they are not clinic
+              implant kits, they are not the generic
+              dog-id-tag-collar hop, and they do not replace
+              a veterinarian or a registry record. Dog.com
+              earns a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/iso+pet+microchip+scanner?s=guides-dog-microchipping"
+                amazonLabel="Browse ISO pet microchip scanners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping"
+                amazonLabel="Browse engraved dog collar ID tags on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pet+id+tag+slide+on?s=guides-dog-microchipping"
+                amazonLabel="Browse slide-on pet ID tags on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion

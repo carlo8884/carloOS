@@ -3564,6 +3564,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete wellness-visit-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page appointment-prep copy (fecal-sample collection kit so a fresh sample is ready if the clinic asks, leak-proof specimen bags so it does not leak in the car, high-value vet-visit treats reserved for the exam room), never a placeholder ASIN, a house-training poop-bag hop, a puppy-training / low-calorie / joint-support treat hop, a first-aid-kit / thermometer hop, a #1028 seizure-safety hop, a #1029 parvo-cleanup hop, or a medication / vaccine hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-microchipping hops',
+    file: 'apps/dog-com/src/app/guides/dog-microchipping/page.tsx',
+    mustInclude: [
+      { re: /source="guides-dog-microchipping-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my microchip registration checklist"/, label: 'concrete microchip-registration-checklist offer, not Subscribe' },
+      { re: /source="guide-microchip"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/iso\+pet\+microchip\+scanner\?s=guides-dog-microchipping/, label: 'ISO pet microchip-scanner search hop (matches on-page home-verification / ISO 11784/11785 copy; unused vs #993–#1030)' },
+      { re: /amazon-brand\/engraved\+dog\+collar\+id\+tags\?s=guides-dog-microchipping/, label: 'engraved dog collar-ID-tags search hop (matches on-page fastest-reunion-route copy; unique vs generic dog+id+tag+collar / pet+id+tag+collar hops)' },
+      { re: /amazon-brand\/pet\+id\+tag\+slide\+on\?s=guides-dog-microchipping/, label: 'slide-on pet ID-tag search hop (matches on-page stays-on-the-collar-if-a-hanging-tag-comes-off copy; unique vs engraved hanging tags and GPS gear)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(gps\+tracker|gps\+collar|fi\+collar|whistle|tractive|microchip\+implant|implant\+kit|home\+microchip\+kit|dog\+id\+tag\+collar|pet\+id\+tag\+collar|fecal\+sample|leak\+proof\+specimen|high\+value\+vet\+visit|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+throw\+blanket|dog\+crate\+bumper|interlocking\+foam|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop GPS trackers / collars, clinic implant kits, generic dog+id+tag+collar / pet+id+tag+collar hops, #1030 wellness-exam hops, first-aid / thermometer hops, #1028 seizure-safety hops, or medications — this page hops only ISO-scanner / engraved-collar-ID / slide-on-tag gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete microchip-registration-checklist offer; every gear CTA is an amazon-brand category search matching on-page registration and reunion copy (ISO pet microchip scanner for home verification of an ISO 11784/11785 chip, engraved dog collar ID tags as the fastest reunion route when a neighbor finds the dog, a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off), never a placeholder ASIN, a GPS-tracker hop, a clinic implant-kit hop, a generic dog+id+tag+collar hop, a #1030 wellness-exam hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
