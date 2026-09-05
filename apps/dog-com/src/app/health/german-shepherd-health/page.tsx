@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -78,6 +78,7 @@ export default function GermanShepherdHealthPage() {
           { label: 'EPI', href: '#epi' },
           { label: 'Perianal Fistulas', href: '#perianal' },
           { label: 'Preventive Schedule', href: '#preventive' },
+          { label: 'Home-watch kit', href: '#kit' },
           { label: 'FAQ', href: '#faq' },
         ]} />
         <RelatedLinks title="Related" links={[
@@ -93,6 +94,53 @@ export default function GermanShepherdHealthPage() {
       </>}
     >
       <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the German Shepherd mobility-watch checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              German Shepherd mobility-watch checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the DM assisted-walking, worn-nail, and
+              hip-support notes — a dog assisted-walking
+              sling so range-of-motion work and assisted
+              walking can continue while hindlimb weakness
+              and wobbling show up from age 7+, dog hind-paw
+              booties so worn nails on the rear paws (the
+              classic early DM clue from dragging of the
+              rear feet) stay visible and protected between
+              exams, and a dog hip brace so hip-dysplasia
+              stiffness after rest and hindlimb lameness
+              have everyday support alongside lean body
+              weight. Educational checklist, not a
+              pancreatic-enzyme product list, not a
+              cyclosporine hop, and not a prescription.
+              DM DNA testing, TLI, OFA films, and
+              gastropexy still belong with a veterinarian.
+              Silicone grooming gloves, analog bathroom
+              scales, dog dental finger brushes, resting
+              respiratory rate notebooks, one-minute kitchen
+              timers, step-in padded harnesses,
+              medical-records binders, AM/PM weekly pill
+              organizers, hanging luggage scales, penlights,
+              emergency contact cards, stretchers,
+              vaccination record books, seat-belt tethers,
+              puppy mats, mosquito dunks, monthly pill
+              organizers, and clinic-visit carriers stay on
+              other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="German Shepherd mobility-watch checklist"
+              subtitle="Email the walking-sling, hind-paw-bootie, and hip-brace notes. No spam."
+              ctaText="Email my German Shepherd mobility-watch checklist"
+              source="health-german-shepherd-health-under-hero"
+            />
+          </div>
+
         <StockImage manifestKey="dog-com:breed-german-shepherd" alt="A German Shepherd Dog in natural light" aspect="16:9" priority />
         <p>The German Shepherd Dog is among the world&apos;s most versatile working breeds — police dogs, military dogs, search and rescue, guide dogs, competitive sport. Their intelligence, drive, and loyalty are unmatched. They are also, structurally and genetically, one of the breeds most prone to serious degenerative conditions that owners must understand and actively manage.</p>
 
@@ -152,6 +200,140 @@ export default function GermanShepherdHealthPage() {
           <li><strong>Maintain lean body weight throughout life</strong> — reduces joint disease progression dramatically</li>
           <li><strong>Twice-yearly exams from age 8</strong></li>
         </ul>
+
+        <h2 id="kit">A Simple German Shepherd Mobility-Watch Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            DM assisted-walking, worn-nail, and hip-support
+            copy above: a dog assisted-walking sling so
+            physical rehabilitation — range of motion
+            exercises and assisted walking — can continue
+            as progressive hindlimb weakness and wobbling
+            appear from age 7+ (dog wheelchairs and carts
+            still belong with a rehabilitation specialist
+            after the hindlimbs fail), dog hind-paw booties
+            so worn nails on the rear paws — the classic
+            early clue from dragging of the rear feet —
+            stay visible and protected between exams, and
+            a dog hip brace so hip-dysplasia stiffness
+            after rest, bunny-hopping, and hindlimb
+            lameness have everyday support while weight
+            control remains the most impactful single
+            intervention. These are household mobility-watch
+            tools, not treatments. They do not diagnose DM,
+            they do not replace SOD1 DNA testing, they do
+            not replace OFA hip films, they do not treat
+            EPI with powdered pancreatic enzymes, they do
+            not prevent GDV, and they are not cyclosporine,
+            tacrolimus, or a ranked clinical product list.
+            Silicone dog grooming gloves, analog bathroom
+            scales, dog dental finger brushes, resting
+            respiratory rate notebooks, one-minute kitchen
+            timers, step-in padded dog harnesses, pet
+            medical records binders, AM/PM weekly pill
+            organizers, digital hanging luggage scales,
+            LED medical penlights, pet emergency contact
+            cards, folding pet stretchers, vaccination
+            record books, seat-belt tethers, foldable
+            waterproof puppy mats, mosquito dunks, a
+            monthly pill organizer, a soft-sided vet-visit
+            carrier, a gum-color assessment chart, recovery
+            food, a feeding syringe, digital pet scales,
+            dog wheelchairs, rear-support harnesses,
+            belly-support harnesses, knee braces,
+            waterproof dog booties, orthopedic dog beds,
+            dog ramps, and joint-support treats already
+            live on other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (dog assisted-walking sling / dog hind-paw
+              booties / dog hip brace). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — unused vs #1048
+              silicone dog grooming glove / analog
+              bathroom scale / dog dental finger brush,
+              #1047 resting respiratory rate notebook /
+              one-minute kitchen timer / step-in padded
+              dog harness, #1046 pet medical records
+              binder / AM/PM weekly pill organizer /
+              digital hanging luggage scale, #1045 LED
+              medical penlight / pet emergency contact
+              card / folding pet stretcher, #1044 pet
+              vaccination record book / dog seat-belt
+              tether / foldable waterproof puppy mat,
+              #1043 mosquito dunks / monthly pill
+              organizer / soft-sided vet-visit carrier,
+              #1042 gum-chart / recovery-food /
+              feeding-syringe, #1041 heat-pants /
+              belly-band / exercise-pen, #1030
+              high-value vet-visit treats,
+              digital+pet+scale / digital+puppy+scale /
+              kitchen+gram+scale /
+              portion+control+food+scale+dog,
+              ferret finger+toothbrush+pet,
+              soft+measuring+tape+for+pets,
+              dental+chews+dog, pet first-aid kits,
+              digital pet thermometers,
+              dog+wheelchair+mobility+cart /
+              dog+rear+support+harness /
+              dog+belly+support+harness / dog+knee+brace /
+              waterproof+dog+booties / orthopedic+dog+bed /
+              dog+ramp / joint+support+dog+treats, and
+              soft+dog+carrier / soft+pet+carrier.
+              Pancreatic enzymes, cyclosporine,
+              tacrolimus, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the German Shepherd mobility-watch kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page DM assisted-walking, worn-nail, and
+              hip-support copy — a dog assisted-walking
+              sling, dog hind-paw booties, and a dog hip
+              brace. Everyday physical supplies only. They
+              are not a ranked product list, they are not
+              a pancreatic-enzyme / cyclosporine hop, they
+              are not the #1048 grooming-glove / analog-scale
+              / finger-brush hops, they are not the #1047
+              notebook / timer / harness hops, they are
+              not the #1046 binder / AM-PM
+              pill-organizer / luggage-scale hops, they
+              are not the #1045 penlight / contact-card
+              / stretcher hops, they are not the #1044
+              vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / monthly-pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not digital-pet-scale
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+assisted+walking+sling?s=health-german-shepherd-health"
+                amazonLabel="Browse dog assisted-walking slings on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+hind+paw+booties?s=health-german-shepherd-health"
+                amazonLabel="Browse dog hind-paw booties on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+hip+brace?s=health-german-shepherd-health"
+                amazonLabel="Browse dog hip braces on Amazon →"
+              />
+            </div>
+          </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
