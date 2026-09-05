@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
   { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -47,7 +47,34 @@ export default function FLUTDPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the cat FLUTD hydration checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Cat FLUTD hydration checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prevention notes — a cat water fountain plus
+              extra water stations so the cat drinks more, extra litter
+              boxes (one per cat plus one extra), and canned wet cat
+              food for water intake. Educational checklist, not a
+              diagnosis and not a substitute for the emergency vet.
+              Prescription urinary diets, antibiotics, and pain
+              medications stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Cat FLUTD hydration checklist"
+              subtitle="Email the fountain, extra-litter-box, and wet-food notes. No spam."
+              ctaText="Email my cat FLUTD hydration checklist"
+              source="health-feline-lower-urinary-tract-disease-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="warning" title="A cat that cannot urinate is an emergency">
             If your cat — especially a male cat — is straining in the litter box and producing little or no urine, crying, vomiting, or hiding and lethargic, treat it as an emergency and seek veterinary care right away. A complete urethral obstruction can be fatal within a day. Do not wait until morning.
@@ -68,8 +95,53 @@ export default function FLUTDPage() {
           <h2>Treatment and Management</h2>
           <p>Treatment depends on the cause. Obstructed cats need emergency relief of the blockage, intravenous fluids, and hospitalization. Stones may require dissolution diets or surgical removal. Idiopathic cystitis — the most common form in young cats — is managed by reducing stress, increasing water intake, environmental enrichment, pain control, and sometimes diet, since antibiotics are unhelpful when no infection is present. Any prescribed medications and their dosing are determined by your veterinarian.</p>
 
-          <h2>Prevention and Long-Term Care</h2>
+          <h2 id="prevention">Prevention and Long-Term Care</h2>
           <p>Because FLUTD tends to recur, prevention is central. The pillars are water intake (wet food, fountains, multiple water stations), litter box hygiene and adequate numbers of boxes, stress reduction, weight control, and an appropriate diet. Many cats do well long-term once their environment and hydration are optimized, with veterinary rechecks to catch recurrences early.</p>
+
+          <h2 id="kit">Home hydration and litter-box kit</h2>
+          <p>
+            Everyday physical supplies that match the prevention copy above — a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear. This is not the sister UTI page and it does not hop a dog water fountain. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (cat fountain /
+              extra litter boxes / canned wet cat food). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER. Category
+              searches only — unused vs #993–#1023 dog+water+fountain,
+              ceramic pet water bowl, and existing cat-food hops.
+              Prescription urinary diets and medications are not hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the FLUTD hydration kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              prevention copy — a cat water fountain, extra litter
+              boxes (one per cat plus one extra), and canned wet cat
+              food for water intake. Everyday physical supplies only.
+              They are not a ranked product list, they are not
+              prescription urinary diets, they are not the dog water
+              fountain already hopped elsewhere, they are not
+              medications, and they do not replace a veterinarian.
+              Vets.co earns a commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease"
+                amazonLabel="Browse cat water fountains on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease"
+                amazonLabel="Browse extra cat litter boxes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"
+                amazonLabel="Browse canned wet cat food on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

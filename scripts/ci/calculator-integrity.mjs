@@ -3277,6 +3277,27 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog heat-stroke cooling-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid cooling copy (cool-water towels, digital thermometer), never a placeholder ASIN, an ice-pack hop (copy says ice packs slow cooling), an IV-fluid hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'vets · feline-lower-urinary-tract-disease hops',
+    file: 'apps/vets-co/src/app/health/feline-lower-urinary-tract-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-feline-lower-urinary-tract-disease-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my cat FLUTD hydration checklist"/, label: 'concrete cat FLUTD hydration-checklist offer, not Subscribe' },
+      { re: /source="health-flutd"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/cat\+water\+fountain\?s=health-feline-lower-urinary-tract-disease/, label: 'cat water-fountain search hop (matches on-page fountain / running-water copy; unique vs dog+water+fountain)' },
+      { re: /amazon-brand\/extra\+cat\+litter\+box\?s=health-feline-lower-urinary-tract-disease/, label: 'extra cat-litter-box search hop (matches on-page one-per-cat-plus-one-extra copy; unused vs #993–#1023)' },
+      { re: /amazon-brand\/canned\+wet\+cat\+food\?s=health-feline-lower-urinary-tract-disease/, label: 'canned wet-cat-food search hop (matches on-page wet-food water-intake copy; unique vs kitten / senior / measured / weight-management cat food)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(dog\+water\+fountain|heavy\+ceramic\+pet\+water\+bowl|kitten\+food|senior\+cat\+food|measured\+cat\+food|weight\+management\+cat\+food|hill|c\/d|urinary\+so|prescription\+diet|prescription|antibiotic|gabapentin|buprenorphine|meloxicam|iv\+fluid|saline|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen|cool\+water\+towels|digital\+pet\+thermometer)/, label: 'never hop dog water fountain, ceramic pet water bowl, existing cat-food hops, prescription urinary diets, antibiotics, pain meds, IV fluids, or #1023 / heat-stroke thermometer / towel hops — this page hops only cat-fountain / extra-litter-box / canned-wet-cat-food gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete cat FLUTD hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page prevention copy (cat water fountain, extra litter boxes one-per-cat-plus-one-extra, canned wet cat food for water intake), never a placeholder ASIN, a dog-water-fountain hop, a prescription urinary-diet hop (Hill\'s c/d / Royal Canin Urinary SO), an antibiotic / pain-medication hop, or a #1023 rectal-thermometer / lubricant / alcohol-wipe hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'horses · heaves hops',
     file: 'apps/horses-com/src/app/health/heaves/page.tsx',
     mustInclude: [
