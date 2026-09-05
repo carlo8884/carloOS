@@ -3884,6 +3884,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog emergency-sign-watch-checklist offer; every gear CTA is an amazon-brand category search matching on-page gum-check / poison-control / collapse-transport copy (an LED medical penlight so pale / white / blue / grey gums and sudden pupil or eye changes can be checked in low light against the learned baseline, a pet emergency contact card so the ASPCA 888-426-4435 line and nearest emergency clinic stay visible, a folding pet stretcher for a dog that collapses or cannot stand), never a placeholder ASIN, a #1044 vaccination hop, a #1043 heartworm hop, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a #1030 high-value vet-visit-treat hop, a first-aid-kit hop, a thermometer hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-liver-disease hops',
+    file: 'apps/dog-com/src/app/health/dog-liver-disease/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-liver-disease-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog liver-enzyme watch checklist"/, label: 'concrete dog liver-enzyme-watch-checklist offer, not Subscribe' },
+      { re: /source="health-liver"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pet\+medical\+records\+binder\?s=health-dog-liver-disease/, label: 'pet medical-records-binder search hop (matches on-page ALT / ALP trend-over-time enzyme-monitoring copy; unique vs pet+vaccination+record+book and pet+emergency+contact+card)' },
+      { re: /amazon-brand\/am\+pm\+weekly\+pill\+organizer\?s=health-dog-liver-disease/, label: 'AM/PM weekly pill-organizer search hop (matches on-page hepatoprotective SAMe / silymarin routine copy; unique vs #1043 monthly+pill+organizer; unused vs weekly+pill+organizer)' },
+      { re: /amazon-brand\/digital\+hanging\+luggage\+scale\?s=health-dog-liver-disease/, label: 'digital hanging luggage-scale search hop (matches on-page cachexia weight-tracking copy; unique vs digital+pet+scale / digital+puppy+scale / kitchen+gram+scale / portion+control+food+scale+dog)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /amazon-brand\/[^?"']*(led\+medical\+penlight|pet\+emergency\+contact\+card|folding\+pet\+stretcher|pet\+vaccination\+record\+book|dog\+seat\+belt\+tether|foldable\+waterproof\+puppy\+mat|mosquito\+dunks|monthly\+pill\+organizer|soft\+sided\+vet\+visit\+carrier|dog\+gum\+color\+assessment\+chart|high\+calorie\+dog\+recovery\+food|pet\+oral\+feeding\+syringe|washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|high\+value\+vet\+visit\+treats|soft\+dog\+carrier|soft\+pet\+carrier|pet\+first\+aid\+kit|dog\+first\+aid\+kit|digital\+pet\+thermometer|digital\+pet\+scale|digital\+puppy\+scale|styptic\+powder|tick\+remover|wound\+care\+gauze|vetrap|soft\+dog\+muzzle|soft\+throw\+blanket|dog\+crate\+bumper\+pads|interlocking\+foam\+floor\+tiles|denamarin|hills|hill\+s|royal\+canin|lactulose|heartgard|interceptor|simparica|proheart|prescription|medication|medicine|rx\b)/, label: 'never hop #1045 penlight / contact-card / stretcher, #1044 vaccine-record / seat-belt-tether / puppy-mat, #1043 mosquito-dunks / monthly-pill-organizer / soft-sided-vet-visit-carrier, #1042 anemia gum-chart / recovery-food / syringe, #1041 heat-pants / belly-band / exercise-pen, #1030 high-value vet-visit treats, generic soft-dog/pet-carrier, first-aid kits, digital thermometers / pet scales / puppy scales, styptic / tick-remover / gauze / Vetrap / muzzle, seizure throw-blanket / crate-bumper / foam-tile hops, Denamarin / Hill\'s / Royal Canin / lactulose, Heartgard / Interceptor / Simparica / ProHeart, or Rx — this page hops only pet-medical-records-binder / am-pm-weekly-pill-organizer / digital-hanging-luggage-scale gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog liver-enzyme-watch-checklist offer; every gear CTA is an amazon-brand category search matching on-page enzyme-monitoring / hepatoprotective-routine / cachexia-weight copy (a pet medical records binder so ALT / ALP printouts stay in one history because the trend over time matters more than a single value, an AM/PM weekly pill organizer for the veterinarian-set SAMe / silymarin timing — not a Denamarin hop — a digital hanging luggage scale for cachexia weight tracking between rechecks), never a placeholder ASIN, a #1045 symptoms-guide hop, a #1044 vaccination hop, a #1043 heartworm hop, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a #1030 high-value vet-visit-treat hop, a first-aid-kit hop, a thermometer / pet-scale hop, a Denamarin / Hill\'s / Royal Canin hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
