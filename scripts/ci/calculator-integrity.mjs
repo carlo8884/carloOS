@@ -3480,6 +3480,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete home-vitals-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-check copy (digital rectal thermometer dedicated to the dog, water-based lubricant / petroleum jelly for the tip, isopropyl alcohol wipes to clean after each reading), never a placeholder ASIN, the generic digital+pet+thermometer hop already pinned on the first-aid-kit guide, a first-aid wound-kit hop (gauze / Vetrap / saline / muzzle / carrier), or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'fish · gh-kh-water-hardness hops',
+    file: 'apps/fish-com/src/app/setup/gh-kh-water-hardness/page.tsx',
+    mustInclude: [
+      { re: /source="setup-gh-kh-water-hardness-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium hardness-adjust checklist"/, label: 'concrete aquarium hardness-adjust-checklist offer, not Subscribe' },
+      { re: /source="setup-gh-kh"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/crushed\+coral\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'crushed-coral aquarium search hop (matches on-page raise-both-GH-and-KH filter-media copy; unique vs #993–#1026 setup-hub gravel / aquasoil / Seiryu)' },
+      { re: /amazon-brand\/aquarium\+gh\+remineralizer\?s=setup-gh-kh-water-hardness/, label: 'aquarium GH-remineralizer search hop (matches on-page raise-GH-only calcium/magnesium-salts copy; unused vs #993–#1026)' },
+      { re: /amazon-brand\/indian\+almond\+leaves\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'Indian almond-leaf search hop (matches on-page lower-KH blackwater tannin copy; unused vs #993–#1026 spiderwood / driftwood)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(api\+freshwater|api\+gh|gh\+kh\+test|seachem\+prime|seachem\+flourish|seachem\+equilibrium|aquaclear|fluval|eheim\+jager|aqueon|aquarium\+gravel|aquarium\+sand|aqua\+soil|gravel\+vacuum|substrate\+vacuum|co2\+regulator|co2\+diffuser|drop\+checker|aquarium\+heater|aquarium\+filter|aquarium\+stand|glass\+aquarium|acrylic\+aquarium|seiryu|spiderwood|ohko|dragon\+stone|manzanita|mopani|magnetic\+scraper|handheld\+aquarium\+algae|light\+timer|root\+tab|baking\+soda|ro\+di|reverse\+osmosis|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop setup-hub filter / heater / API-freshwater-master / Prime, GH/KH test-kit restocks, Seachem Equilibrium brand, planted aquasoil, CO2 / Flourish Excel, #1020 Seiryu / spiderwood, #1021 scrapers, #1022 light-timer / root-tabs, baking soda, RO/DI systems, or medications — this page hops only crushed-coral / GH-remineralizer / Indian-almond-leaf gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquarium hardness-adjust-checklist offer; every gear CTA is an amazon-brand category search matching on-page raise-and-lower copy (crushed coral in the filter to raise GH and KH together, a GH remineralizer for calcium/magnesium only, Indian almond leaves for a slow blackwater KH/pH drop), never a placeholder ASIN, an API freshwater master / GH-KH test-kit hop (the #1026 hold reason), a Prime / Flourish Excel / Equilibrium brand hop, a #1020 Seiryu / spiderwood hop, a #1021 scraper hop, a #1022 light-timer / root-tab hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

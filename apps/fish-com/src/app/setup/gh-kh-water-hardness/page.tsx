@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, FAQAccordion } from '@carloOS/ui'
 
@@ -43,7 +43,7 @@ const FAQS = [
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'GH and KH Explained — Aquarium Water Hardness Guide | Fish.com', description: "What GH and KH mean, why they differ, and how they affect pH stability and fish health. How to raise, lower, and match hardness to your species.", path: '/setup/gh-kh-water-hardness', type: 'article' })
 
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'GH and KH Water Hardness Guide', description: 'General hardness, carbonate hardness, pH buffering, and matching hardness to fish.', url: 'https://fish.com/setup/gh-kh-water-hardness', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-15T00:00:00Z',
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'GH and KH Water Hardness Guide', description: 'General hardness, carbonate hardness, pH buffering, and matching hardness to fish.', url: 'https://fish.com/setup/gh-kh-water-hardness', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z',
   citation: SOURCES,
 })
 
@@ -72,7 +72,35 @@ export default function GhKhPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium hardness-adjust checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium hardness-adjust checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the GH/KH notes — crushed coral in the filter to raise
+              both hardness readings together, a GH remineralizer when you
+              only need calcium and magnesium, and Indian almond leaves
+              when a blackwater tank needs KH and pH to drift down slowly.
+              Educational checklist, not a water-test-kit restock and not
+              a substitute for matching hardness to the species you keep.
+              API master kits, Prime, Flourish Excel, and medications stay
+              off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium hardness-adjust checklist"
+              subtitle="Email the crushed-coral, GH-remineralizer, and almond-leaf notes. No spam."
+              ctaText="Email my aquarium hardness-adjust checklist"
+              source="setup-gh-kh-water-hardness-under-hero"
+            />
+          </div>
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
           <strong className="not-italic">TL;DR.</strong> GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.
@@ -192,6 +220,65 @@ export default function GhKhPage() {
         </table>
 
         <p>For the wider picture of pH, ammonia, and nitrate, see the <a href="/setup/water-chemistry-guide">water chemistry guide</a>, and to choose a kit that reads GH and KH accurately as drop tests rather than coarse strips, see our <a href="/reviews/best-water-test-kits">best water test kits</a> guide.</p>
+
+          <h2 id="kit">Hardness-adjust kit</h2>
+          <p>
+            Everyday physical supplies that match the raise-and-lower copy
+            above — crushed coral in the filter so both GH and KH climb
+            slowly, a GH remineralizer when you only need calcium and
+            magnesium, and Indian almond leaves when a blackwater biotope
+            should lose KH and pH through tannins. API freshwater master
+            test kits, Seachem Prime, Flourish Excel, aquasoil, pressurized
+            CO2 gear, Seiryu stone, spiderwood, algae scrapers, light
+            timers, and root tabs stay off this kit — those hops already
+            live on the setup hub, CO2 calculator, planted-tank, and
+            #1020–#1022 pages. Baking soda is a grocery bicarbonate, not a
+            shop hop. These are not a treatment for a pH crash and not a
+            diagnosis. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+
+          {/* Money path — live amazon-brand search hops (crushed coral /
+              GH remineralizer / Indian almond leaves). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER. Category
+              searches only — unused vs #993–#1026 setup-hub filter /
+              heater / API-freshwater-master / Prime, #1020 Seiryu /
+              spiderwood, #1021 scrapers, #1022 light-timer / root-tabs,
+              planted aquasoil, and CO2 regulator / Flourish Excel hops.
+              Test kits and medications are not hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium hardness-adjust kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page hardness
+              copy — crushed coral for the filter when both GH and KH
+              should rise, a GH remineralizer when only calcium and
+              magnesium are low, and Indian almond leaves for a slow KH
+              and pH drop in blackwater setups. Everyday physical supplies
+              only. They are not a ranked product list, they are not an
+              API master test-kit restock, they are not Prime or Flourish
+              Excel, they are not medications, and they do not replace
+              matching hardness to the species you keep. Fish.com earns a
+              commission on qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness"
+                amazonLabel="Browse crushed coral for aquariums on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness"
+                amazonLabel="Browse aquarium GH remineralizers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"
+                amazonLabel="Browse Indian almond leaves on Amazon →"
+              />
+            </div>
+          </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
