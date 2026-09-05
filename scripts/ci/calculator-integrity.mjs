@@ -3627,6 +3627,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog UTI hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page hydration and house-accident copy (stainless-steel dog fountain so running water invites more drinking, washable pee pads for accidents in a previously reliable dog, weighted ceramic water bowl that stays put when a dog with urgency drinks often), never a placeholder ASIN, a dog+water+fountain hop, a heavy+ceramic+pet+water+bowl hop, a FLUTD cat hop (#1024), a kennel-cough hop (#1032), a prescription urinary-diet hop (Hill\'s c/d / Royal Canin Urinary SO), a cranberry hop, a clinic culture-kit hop, or an antibiotic hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · ear-infections-dogs hops',
+    file: 'apps/vets-co/src/app/health/ear-infections-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-ear-infections-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog ear-infection care checklist"/, label: 'concrete dog ear-infection care-checklist offer, not Subscribe' },
+      { re: /source="health-ear-infections"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+ear\+cleaner\+solution\?s=health-ear-infections-dogs/, label: 'dog ear-cleaner-solution search hop (matches on-page veterinarian-recommended cleaner / wax-prone copy; unique vs pet+ear+cleaner on Dog.com #995 / ferret ear-cleaning)' },
+      { re: /amazon-brand\/cotton\+balls\+for\+dog\+ears\?s=health-ear-infections-dogs/, label: 'cotton-balls-for-dog-ears search hop (matches on-page wipe-the-visible-canal copy; unique vs cotton+balls / cotton+pads)' },
+      { re: /amazon-brand\/dog\+ear\+drying\+powder\?s=health-ear-infections-dogs/, label: 'dog ear-drying-powder search hop (matches on-page after-swim / after-bath moisture copy; unique vs Labrador dog+ear+drying+solution)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/cotton\+balls\?/, label: 'never reuse the bare cotton+balls hop from Dog.com dog-ear-infections — this page hops cotton+balls+for+dog+ears' },
+      { re: /amazon-brand\/[^?"']*(pet\+ear\+cleaner|cotton\+pads|dog\+ear\+drying\+solution|microfiber\+dog\+towel|stainless\+steel\+dog\+fountain|washable\+dog\+pee\+pads|weighted\+ceramic\+dog\+water\+bowl|y\+shaped\+front\+clip|cool\+mist\+humidifier|soft\+sided\+dog\+crate|virbac|epi-otic|epi\+otic|douxo|ear\+drop|cotton\+swab|ketoconazole|clotrimazole|revolution|bravecto|ivermectin|selamectin|leftover|vinegar|peroxide|hydrogen|alcohol|antibiotic|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Dog.com pet+ear+cleaner / cotton-pads / Labrador ear-drying-solution / microfiber-towel, UTI fountain/pads/bowl (#1033), kennel-cough harness/humidifier/crate (#1032), brand ASINs, Rx ear drops, cotton swabs, leftover medication, home-remedy hops, or antibiotics — this page hops only dog-ear-cleaner-solution / cotton-balls-for-dog-ears / dog-ear-drying-powder gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog ear-infection care-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleaning and drying copy (dog ear-cleaner solution a veterinarian has recommended for wax-prone ears, cotton balls for dog ears to wipe the visible canal and flap, dog ear-drying powder after a swim or bath), never a placeholder ASIN, a pet+ear+cleaner hop (#995), a bare cotton+balls hop, a Labrador dog+ear+drying+solution hop (#1015), a UTI fountain/pads/bowl hop (#1033), a kennel-cough hop (#1032), a prescription ear-drop hop, a cotton-swab hop, or a leftover-medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
