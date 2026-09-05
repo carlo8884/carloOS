@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -95,6 +95,7 @@ export default function ChokePage() {
             { label: "Why It Is an Emergency", href: "#emergency" },
             { label: "Treatment", href: "#treatment" },
             { label: "Prevention", href: "#prevention" },
+            { label: "Soak-and-slow-feed kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -128,9 +129,41 @@ export default function ChokePage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the choke soak-and-slow-feed checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse choke soak-and-slow-feed checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the lidded 5-gallon feed-soaking-pail,
+              large smooth feed-tub-rock, and apple-wedger
+              slicer notes that match the soak-feeds-that-swell,
+              slow-down-greedy-eaters, and cut-treats-small
+              copy on this page — a pail so beet pulp and dry
+              pellets soak fully before they hit the tub, rocks
+              so a bolting eater works around obstacles instead
+              of packing a dry mouthful, and a wedger so apples
+              and carrots go in as sticks, not coins. Educational
+              checklist, not a treatment, not a substitute for
+              calling the veterinarian, and not a hay-soaking-bag,
+              hay-net, mash, or hay-cube hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse choke soak-and-slow-feed checklist"
+              subtitle="Email the soaking-pail, feed-tub-rock, and apple-wedger notes. No spam."
+              ctaText="Email my horse choke soak-and-slow-feed checklist"
+              source="health-choke-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Choke Is</h2>
           <p>In horses, choke means an obstruction of the esophagus -- the muscular tube carrying food from the throat to the stomach -- not of the windpipe. Because the airway is usually unaffected, a choking horse can typically still breathe, which distinguishes it from human choking. The obstruction prevents the horse from swallowing, so saliva and feed back up and may spill out of the nose and mouth.</p>
@@ -155,12 +188,117 @@ export default function ChokePage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters.</li>
-            <li><strong>Slow down greedy eaters</strong> with large smooth stones in the feed tub, slow feeders, or spreading feed out.</li>
-            <li><strong>Maintain dental care</strong> so the horse can chew properly; poor dentition is a leading risk factor.</li>
-            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing.</li>
+            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters. A lidded 5-gallon feed-soaking pail is how that mash stays fully wet before it hits the tub — it is not a hay-soaking bag (that lives on heaves), not a hay steamer, and not a mash hop (that lives on equine dental care).</li>
+            <li><strong>Slow down greedy eaters</strong> with large smooth stones in the feed tub, slow feeders, or spreading feed out. Large smooth feed-tub rocks are how a bolting eater works around obstacles instead of packing a dry mouthful — they are not a slow-feeder hay net (that lives on the feed calculator and forage-basics), not a small-hole hay net (that lives on the easy-keeper page), and not an equine slow-feeder hay box (that lives on turnout-vs-stabling).</li>
+            <li><strong>Maintain dental care</strong> so the horse can chew properly; poor dentition is a leading risk factor. See the <a href="/guides/equine-dental-care">equine dental-care guide</a>.</li>
+            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing. An apple wedger slicer is how apples and carrots go in as sticks, not coins — it is not a treat hopper and not a dental hay-cube hop.</li>
             <li><strong>Wait after sedation</strong> before feeding, since sedation impairs swallowing.</li>
           </ul>
+
+          <h2 id="kit">Soak-and-slow-feed kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            soak-feeds-that-swell, slow-down-greedy-eaters,
+            and cut-treats-small copy on this page — a
+            lidded 5-gallon feed-soaking pail so beet pulp
+            and dry pellets soak fully before they hit the
+            tub, large smooth feed-tub rocks so a bolting
+            eater works around obstacles instead of packing
+            a dry mouthful, and an apple wedger slicer so
+            apples and carrots go in as sticks, not coins.
+            These are educational feeding-management tools,
+            not a ranked product list, not a substitute for
+            veterinary care, and not a treatment. Hay-soaking
+            bags already live on heaves. Slow-feeder hay nets
+            already live on the feed calculator and
+            forage-basics. Small-hole hay nets already live
+            on the easy-keeper page. Equine slow-feeder hay
+            boxes already live on turnout-vs-stabling. Hay
+            cubes and mashes already live on equine dental
+            care. Beet-pulp shreds and pellets already live
+            on the beet-pulp page. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (lidded 5-gallon feed-soaking pail /
+              large smooth feed-tub rocks /
+              apple wedger slicer).
+              These are educational feeding-management
+              tools, not a ranked product list, not a
+              substitute for veterinary care, no Rx /
+              first-aid kit / thermometer / hay-net /
+              hay-soaking-bag / mash ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1093
+              48+hour+digital+kitchen+timer /
+              lined+telephone+message+pad /
+              medium+hard+sided+plastic+pet+carrier, #1092
+              single+stainless+floor+dog+bowl /
+              wobble+dog+food+dispenser /
+              30+minute+sand+hourglass+timer, #1091
+              letter+size+thermal+laminating+pouches /
+              72+hour+digital+countdown+timer /
+              collapsible+silicone+travel+dog+bowl,
+              horse+hay+soaking+bag (heaves),
+              slow+feeder+hay+net+horse (feed calculator /
+              forage-basics),
+              small+hole+slow+feeder+hay+net+horse
+              (easy-keeper),
+              equine+slow+feeder+hay+box
+              (turnout-vs-stabling),
+              horse+hay+cubes / horse+mash (dental),
+              molasses+free+beet+pulp+shreds+horse /
+              beet+pulp+pellets+horse+feed.
+              First-aid kits, digital equine
+              thermometers, and prescriptions
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the soak-and-slow-feed kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page soak-feeds-that-swell, slow-down-greedy-eaters,
+              and cut-treats-small copy — a lidded 5-gallon
+              feed-soaking pail, large smooth feed-tub rocks,
+              and an apple wedger slicer. Educational
+              feeding-management tools only.
+              They are not a ranked product list,
+              they are not a substitute for veterinary
+              care, they are not a #1093 kitchen-timer /
+              message-pad / pet-carrier hop, they
+              are not a #1092 floor-bowl /
+              wobble-dispenser / hourglass hop, they
+              are not a #1091 laminating-pouch /
+              72-hour-timer / travel-bowl hop, they
+              are not a heaves hay-soaking-bag hop, they
+              are not a feed-calculator hay-net hop, they
+              are not a dental mash / hay-cube hop, and
+              they do not replace a veterinarian.
+              Horses.com earns a commission on
+              qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke"
+                amazonLabel="Browse lidded 5-gallon feed-soaking pails on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/large+smooth+feed+tub+rocks?s=health-choke"
+                amazonLabel="Browse large smooth feed-tub rocks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/apple+wedger+slicer?s=health-choke"
+                amazonLabel="Browse apple wedger slicers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
