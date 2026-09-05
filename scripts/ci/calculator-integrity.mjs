@@ -3296,6 +3296,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse heaves hay-soaking-checklist offer; every gear CTA is an amazon-brand category search matching on-page soak-or-steam hay copy (horse hay steamer, hay soaking bag), never a placeholder ASIN, a medication hop, an inhaler / spacer hop, a steroid / bronchodilator hop, a low-dust-bedding / rubber-mat overlap, a slow-feeder hay-net overlap, a stall-fan overlap, or a #1016 sweat-scraper / shade-cloth hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · sweet-itch hops',
+    file: 'apps/horses-com/src/app/health/sweet-itch/page.tsx',
+    mustInclude: [
+      { re: /source="health-sweet-itch-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse sweet-itch rug checklist"/, label: 'concrete sweet-itch rug-checklist offer, not Subscribe' },
+      { re: /source="health-sweet-itch"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/horse\+sweet\+itch\+rug\?s=health-sweet-itch/, label: 'horse sweet-itch-rug search hop (matches on-page fitted-barrier body / belly / tail-dock copy; unique vs fly-control fly sheet)' },
+      { re: /amazon-brand\/horse\+sweet\+itch\+hood\?s=health-sweet-itch/, label: 'horse sweet-itch-hood search hop (matches on-page mane / poll / ear cover copy; unique vs fly-control fly mask)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(horse\+fly\+mask|horse\+fly\+sheet|horse\+fly\+boots|horse\+fly\+spray|horse\+fly\+trap|barn\+fan|clip\+on\+fan|horse\+stall\+fan|horse\+turnout\+blanket|horse\+waterproof\+sheet|horse\+sweat\+scraper|horse\+shade\+cloth|horse\+hay\+steamer|horse\+hay\+soaking|ivermectin|permethrin|spot-on|antihistamine|steroid|prednisolone|dexamethasone|inhaler|antifungal|antibiotic|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop fly-control fly mask / sheet / boots / spray / trap, stall fans, turnout blankets, #1016 sweat-scraper / shade-cloth, #1017 hay-steamer / hay-soaking-bag, spot-ons, steroids, antihistamines, or medications — this page hops only sweet-itch rug / hood gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse sweet-itch rug-checklist offer; every gear CTA is an amazon-brand category search matching on-page fitted sweet-itch rug and hood copy, never a placeholder ASIN, a medication hop, a spot-on / steroid / antihistamine hop, a fly-control fly-mask / fly-sheet / fly-spray overlap, a stall-fan overlap, a turnout-blanket overlap, a #1016 sweat-scraper / shade-cloth hop, or a #1017 hay-steamer / hay-soaking-bag hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
