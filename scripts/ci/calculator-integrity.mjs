@@ -3606,6 +3606,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete kennel-cough isolation-checklist offer; every gear CTA is an amazon-brand category search matching on-page isolation and rest copy (Y-shaped front-clip harness so a collar does not press the trachea, cool-mist humidifier for the recovery room, soft-sided crate for rest away from other dogs after boarding), never a placeholder ASIN, a front+clip+no+pull harness hop, a HEPA hop, a recovery-crate hop, a thermometer hop, a Bordetella-vaccine hop, an antibiotic hop, or a clinic implant-kit hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · urinary-tract-infection hops',
+    file: 'apps/vets-co/src/app/health/urinary-tract-infection/page.tsx',
+    mustInclude: [
+      { re: /source="health-urinary-tract-infection-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog UTI hydration checklist"/, label: 'concrete dog UTI hydration-checklist offer, not Subscribe' },
+      { re: /source="health-uti"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/stainless\+steel\+dog\+fountain\?s=health-urinary-tract-infection/, label: 'stainless-steel dog-fountain search hop (matches on-page running-water / drink-more copy; unique vs dog+water+fountain and FLUTD cat+water+fountain)' },
+      { re: /amazon-brand\/washable\+dog\+pee\+pads\?s=health-urinary-tract-infection/, label: 'washable dog pee-pad search hop (matches on-page house-accident copy; unique vs puppy+training+pads / whelping+pads+for+dogs)' },
+      { re: /amazon-brand\/weighted\+ceramic\+dog\+water\+bowl\?s=health-urinary-tract-infection/, label: 'weighted ceramic dog-water-bowl search hop (matches on-page stay-put / frequent-drinking copy; unique vs heavy+ceramic+pet+water+bowl)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(cat\+water\+fountain|extra\+cat\+litter\+box|canned\+wet\+cat\+food|dog\+water\+fountain|heavy\+ceramic\+pet\+water\+bowl|puppy\+training\+pads|whelping\+pads|y\+shaped\+front\+clip|cool\+mist\+humidifier|soft\+sided\+dog\+crate|hill|c\/d|urinary\+so|cranberry|culture\+kit|amoxicillin|enrofloxacin|marbofloxacin|antibiotic|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop FLUTD cat fountain / extra-litter-box / wet-cat-food, existing dog+water+fountain or ceramic-pet-bowl hops, puppy/whelping pads, #1032 kennel-cough hops, prescription urinary diets, cranberry products, clinic culture kits, or antibiotics — this page hops only stainless-steel-dog-fountain / washable-pee-pad / weighted-ceramic-bowl gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog UTI hydration-checklist offer; every gear CTA is an amazon-brand category search matching on-page hydration and house-accident copy (stainless-steel dog fountain so running water invites more drinking, washable pee pads for accidents in a previously reliable dog, weighted ceramic water bowl that stays put when a dog with urgency drinks often), never a placeholder ASIN, a dog+water+fountain hop, a heavy+ceramic+pet+water+bowl hop, a FLUTD cat hop (#1024), a kennel-cough hop (#1032), a prescription urinary-diet hop (Hill\'s c/d / Royal Canin Urinary SO), a cranberry hop, a clinic culture-kit hop, or an antibiotic hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
