@@ -3543,6 +3543,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete puppy parvo-cleanup-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleanup copy (accelerated hydrogen peroxide disinfectant labeled for parvovirus, disposable shoe covers so you do not track the virus, a pump sprayer for outdoor soil and concrete), never a placeholder ASIN, a 3% first-aid peroxide hop, an enzymatic-cleaner hop, a vaccine hop, an IV-fluid / anti-nausea hop, or a #1028 seizure-safety hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-wellness-exam hops',
+    file: 'apps/dog-com/src/app/guides/dog-wellness-exam/page.tsx',
+    mustInclude: [
+      { re: /source="guides-dog-wellness-exam-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my wellness-visit kit checklist"/, label: 'concrete wellness-visit-kit-checklist offer, not Subscribe' },
+      { re: /source="guide-wellness"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/fecal\+sample\+collection\+kit\?s=guides-dog-wellness-exam/, label: 'fecal-sample collection-kit search hop (matches on-page clinic-asks-for-a-fresh-sample copy; unused vs #993–#1029)' },
+      { re: /amazon-brand\/leak\+proof\+specimen\+bags\?s=guides-dog-wellness-exam/, label: 'leak-proof specimen-bags search hop (matches on-page do-not-leak-in-the-car copy; unique vs house-training dog+poop+bags)' },
+      { re: /amazon-brand\/high\+value\+vet\+visit\+treats\?s=guides-dog-wellness-exam/, label: 'high-value vet-visit-treats search hop (matches on-page low-stress exam-room copy; unique vs puppy-training / low-calorie / joint-support treat hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(dog\+poop\+bags|puppy\+training\+treats|low\+calorie\+dog\+treats|joint\+support\+dog\+treats|pet\+first\+aid\+kit|wound\+care\+gauze|vetrap\+cohesive|saline\+wound\+flush|soft\+dog\+muzzle|soft\+dog\+carrier|digital\+pet\+thermometer|digital\+rectal\+thermometer|accelerated\+hydrogen\+peroxide|disposable\+shoe\+covers|pump\+sprayer|soft\+throw\+blanket|dog\+crate\+bumper|interlocking\+foam|vaccine|heartworm|flea\+tick|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop house-training poop bags, puppy-training / low-calorie / joint-support treats, first-aid / thermometer hops (#1023), #1029 AHP / shoe-cover / sprayer hops, #1028 seizure-safety hops, vaccines, heartworm tests, or medications — this page hops only fecal-sample-collection-kit / leak-proof-specimen-bags / high-value-vet-visit-treats gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete wellness-visit-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page appointment-prep copy (fecal-sample collection kit so a fresh sample is ready if the clinic asks, leak-proof specimen bags so it does not leak in the car, high-value vet-visit treats reserved for the exam room), never a placeholder ASIN, a house-training poop-bag hop, a puppy-training / low-calorie / joint-support treat hop, a first-aid-kit / thermometer hop, a #1028 seizure-safety hop, a #1029 parvo-cleanup hop, or a medication / vaccine hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

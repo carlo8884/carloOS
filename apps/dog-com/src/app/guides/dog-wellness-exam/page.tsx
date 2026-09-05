@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -35,7 +37,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog Wellness Exam — What to Expect',
@@ -65,7 +67,7 @@ const FAQS = [
   {
     question: 'How should I prepare for a wellness visit?',
     answer:
-      'Bring any prior medical records if the dog is new to the clinic, a current list of medications and supplements with doses, the name of the food and roughly how much your dog eats, and a written list of any changes you have noticed — appetite, drinking, energy, lumps, limping, or behavior. A fresh fecal sample is often useful. Note specific questions in advance so you do not forget them in the room. If your dog is anxious at the vet, ask about a calm-handling or low-stress approach when you book.',
+      'Bring any prior medical records if the dog is new to the clinic, a current list of medications and supplements with doses, the name of the food and roughly how much your dog eats, and a written list of any changes you have noticed — appetite, drinking, energy, lumps, limping, or behavior. A fresh fecal sample is often useful; a fecal-sample collection kit and leak-proof specimen bags keep it from leaking in the car. Note specific questions in advance so you do not forget them in the room. If your dog is anxious at the vet, bring high-value vet-visit treats and ask about a calm-handling or low-stress approach when you book.',
   },
   {
     question: 'Is a wellness exam worth it if my dog seems healthy?',
@@ -110,6 +112,7 @@ export default function DogWellnessExamPage() {
                 { label: 'Questions to Ask', href: '#questions' },
                 { label: 'How to Prepare', href: '#prepare' },
                 { label: 'Reducing Vet Stress', href: '#stress' },
+                { label: 'Wellness-Visit Kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
               ]}
             />
@@ -138,9 +141,41 @@ export default function DogWellnessExamPage() {
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-06-11T00:00:00Z"
-            updatedAt="2026-06-11T00:00:00Z"
+            updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the wellness-visit kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Wellness-visit kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the appointment-prep notes — a
+              fecal-sample collection kit so a fresh
+              stool sample is ready if the clinic asks,
+              leak-proof specimen bags so it does not
+              leak in the car, and high-value vet-visit
+              treats for low-stress handling in the
+              exam room. Educational checklist, not a
+              diagnosis and not a first-aid wound kit.
+              Gauze, Vetrap, saline flush, muzzles, and
+              carriers stay on the first-aid-kit guide.
+              Thermometers stay on the home-vitals
+              guide. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Wellness-visit kit checklist"
+              subtitle="Email the fecal-sample-kit, specimen-bag, and vet-visit-treat notes. No spam."
+              ctaText="Email my wellness-visit kit checklist"
+              source="guides-dog-wellness-exam-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — What you need to know">
             <p>
@@ -230,13 +265,59 @@ export default function DogWellnessExamPage() {
 
           <h2 id="prepare">How to Prepare for the Visit</h2>
           <p>
-            Walk in organized and you get more from the appointment. Bring prior medical records if the clinic is new to you, a current list of all medications and supplements with doses, the name and rough amount of the food your dog eats, and a written list of any changes you have noticed — appetite, thirst, energy, lumps, limping, coughing, or behavior. A fresh fecal sample is often useful. Writing your questions down beforehand keeps them from slipping your mind in the exam room.
+            Walk in organized and you get more from the appointment. Bring prior medical records if the clinic is new to you, a current list of all medications and supplements with doses, the name and rough amount of the food your dog eats, and a written list of any changes you have noticed — appetite, thirst, energy, lumps, limping, coughing, or behavior. A fresh fecal sample is often useful: a fecal-sample collection kit and leak-proof specimen bags keep the sample from leaking in the car and make it easier to hand over at the desk. Writing your questions down beforehand keeps them from slipping your mind in the exam room.
           </p>
 
           <h2 id="stress">Reducing Vet-Visit Stress</h2>
           <p>
-            A stressed dog is harder to examine and may have an artificially elevated heart rate and temperature, so reducing fear improves the quality of the exam as well as the dog&rsquo;s welfare. Approaches that help: acclimating a puppy to handling and car rides early, bringing high-value treats, asking the clinic about low-stress or fear-free handling protocols, scheduling at quieter times, and — for very anxious dogs — discussing pre-visit calming options with the veterinarian in advance. Many practices now train staff specifically in low-stress handling; it is fair to ask.
+            A stressed dog is harder to examine and may have an artificially elevated heart rate and temperature, so reducing fear improves the quality of the exam as well as the dog&rsquo;s welfare. Approaches that help: acclimating a puppy to handling and car rides early, bringing high-value vet-visit treats the dog only sees at the clinic, asking the clinic about low-stress or fear-free handling protocols, scheduling at quieter times, and — for very anxious dogs — discussing pre-visit calming options with the veterinarian in advance. Many practices now train staff specifically in low-stress handling; it is fair to ask. Those treats are a handling aid. They are not a medication, they are not a sedative, and they do not replace a veterinarian-directed pre-visit calming plan.
           </p>
+
+          <h2 id="kit">A Simple Wellness-Visit Kit</h2>
+          <p>
+            Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Gauze, Vetrap cohesive bandage, saline wound flush, a soft muzzle, and a soft carrier already live on the <a href="/guides/dog-first-aid-kit" className="text-brand-primary hover:underline">dog first-aid kit</a> guide. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not hop medications. This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (wellness-visit kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page fecal-sample-collection-kit / leak-proof-specimen-bags /
+              high-value-vet-visit-treats copy, not first-aid wound hops,
+              house-training poop bags, or puppy-training treats. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the wellness-visit kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              appointment-prep copy — a fecal-sample collection
+              kit, leak-proof specimen bags, and high-value
+              vet-visit treats. Everyday physical prep tools
+              only. They are not a ranked product list, they
+              are not a first-aid wound kit, they are not the
+              house-training poop-bag hop, they are not puppy
+              training treats, and they do not replace a
+              veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam"
+                amazonLabel="Browse fecal-sample collection kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/leak+proof+specimen+bags?s=guides-dog-wellness-exam"
+                amazonLabel="Browse leak-proof specimen bags on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"
+                amazonLabel="Browse high-value vet-visit treats on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion
