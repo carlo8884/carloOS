@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -44,9 +44,60 @@ export default function PancreatitisPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog pancreatitis leftover-lockdown checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog pancreatitis leftover-lockdown checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the holiday-trash, kitchen-gate, and
+              low-fat-kibble notes — a locking kitchen
+              trash can so turkey skin, ham fat, and
+              other high-fat leftovers cannot become the
+              garbage-ingestion trigger listed on this
+              page, a walk-through pet gate so the dog
+              stays out of the kitchen while holiday
+              scraps sit on counters, and an airtight
+              dog-food storage container so the lifelong
+              low-fat kibble stays labeled and separate
+              from household food. Educational checklist,
+              not a Hill&apos;s i/d / Royal Canin
+              Gastrointestinal Low Fat / Purina EN
+              product list, and not a prescription.
+              Hospitalization, cPLI testing, and diet
+              fat-percent decisions still belong with a
+              veterinarian. Pill pockets, dry-erase
+              monthly calendars, medical-alert collar
+              tags, gravity waterers, extra-large
+              disposable pee pads, cooling bandanas,
+              self-warming mats, fleece sweaters,
+              slicker brushes, lymph-node anatomy
+              charts, foam dog stairs, ear wipes,
+              assisted-walking slings, hind-paw booties,
+              hip braces, silicone grooming gloves,
+              analog bathroom scales, dog dental finger
+              brushes, mini rice cookers, glass
+              meal-prep containers, low-fat digestive-care
+              dog food, lean low-fat dog treats, digital
+              pet-food portion scales, and clinic-visit
+              carriers stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog pancreatitis leftover-lockdown checklist"
+              subtitle="Email the locking-trash, kitchen-gate, and airtight-kibble notes. No spam."
+              ctaText="Email my dog pancreatitis leftover-lockdown checklist"
+              source="health-pancreatitis-under-hero"
+            />
+          </div>
+
           <h2>The Holiday Meal Trigger</h2>
           <p>Veterinary emergency rooms see pancreatitis cases spike predictably after Thanksgiving and Christmas — the dogs that were given turkey skin, ham fat, or other high-fat holiday scraps as a treat. A dog that has been eating standard commercial kibble all year receives a massive high-fat bolus that overwhelms the pancreas's normal regulatory mechanisms, triggering acute inflammation. This is the most common presentation of acute pancreatitis: a previously healthy dog vomiting 12-24 hours after a high-fat meal, with abdominal pain and lethargy.</p>
-          <p>The fat content is the critical variable — not the quantity alone. A small piece of very fatty meat (bacon fat, turkey skin) can trigger pancreatitis in susceptible dogs. Dogs that have had pancreatitis once are at significantly higher risk for recurrence with any dietary indiscretion. For these dogs, table scraps of any kind are permanently off the table.</p>
+          <p>The fat content is the critical variable — not the quantity alone. A small piece of very fatty meat (bacon fat, turkey skin) can trigger pancreatitis in susceptible dogs. Dogs that have had pancreatitis once are at significantly higher risk for recurrence with any dietary indiscretion. For these dogs, table scraps of any kind are permanently off the table. A locking kitchen trash can keeps those leftovers from becoming the garbage-ingestion trigger listed in the sidebar; a walk-through pet gate keeps the dog out of the kitchen while holiday scraps sit on counters. Neither replaces the rule that table scraps stay off-limits.</p>
 
           <h2>Signs — Recognizing the Emergency</h2>
           <p>Classic acute pancreatitis presentation: vomiting (often repeated, projectile), abdominal pain (the "prayer position" — front end down, rear end up — or reluctance to move, hunched posture, yelping when the abdomen is touched), lethargy, anorexia, and diarrhea in some cases. Fever (rectal temperature above 102.5°F) is present in many cases. Severe pancreatitis adds: signs of shock (pale gums, rapid weak pulse), jaundice (yellowing of gums and whites of eyes from bile duct obstruction), and in some cases, cardiovascular collapse.</p>
@@ -59,7 +110,160 @@ export default function PancreatitisPage() {
           <p>Traditional pancreatitis management included prolonged fasting ("resting the pancreas"). Current evidence does not support prolonged NPO (nothing by mouth) — early enteral nutrition (feeding the GI tract, even in small amounts) actually supports mucosal integrity and reduces bacterial translocation. Dogs with mild pancreatitis who are not vomiting can be offered small amounts of bland, low-fat food 12-24 hours after symptoms stabilize. Dogs with severe pancreatitis who cannot eat may require nasogastric or jejunostomy tube feeding within 48-72 hours of hospitalization. Discuss nutritional timing with your veterinarian — it is case-specific.</p>
 
           <h2>Long-Term Management — Low-Fat Diet for Life</h2>
-          <p>A dog that has experienced significant pancreatitis — particularly if it has been recurrent — should be maintained on a low-fat diet permanently. The threshold for "low fat" varies by individual: some dogs do well on any commercial food with under 10% fat (dry matter basis); dogs with severe recurrent pancreatitis may need prescription low-fat diets (Hill's i/d Low Fat, Royal Canin Gastrointestinal Low Fat, Purina EN Gastroenteric Low Fat) with fat content under 8% DM. Human food, high-fat treats, fatty table scraps, and any food with over 15% DM fat is permanently off-limits for severely affected dogs. This is not optional — dietary indiscretion is the most common trigger for recurrence.</p>
+          <p>A dog that has experienced significant pancreatitis — particularly if it has been recurrent — should be maintained on a low-fat diet permanently. The threshold for "low fat" varies by individual: some dogs do well on any commercial food with under 10% fat (dry matter basis); dogs with severe recurrent pancreatitis may need prescription low-fat diets (Hill's i/d Low Fat, Royal Canin Gastrointestinal Low Fat, Purina EN Gastroenteric Low Fat) with fat content under 8% DM. Human food, high-fat treats, fatty table scraps, and any food with over 15% DM fat is permanently off-limits for severely affected dogs. This is not optional — dietary indiscretion is the most common trigger for recurrence. An airtight dog-food storage container keeps that dedicated low-fat kibble labeled and separate from household food and from other pets' higher-fat bags; it does not choose the diet or set the fat-percent threshold.</p>
+
+          <h2 id="kit">A Simple Pancreatitis Leftover-Lockdown Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            holiday-trigger, garbage-ingestion, and
+            lifelong low-fat-diet copy above: a locking
+            kitchen trash can so turkey skin, ham fat,
+            bacon grease, and other high-fat leftovers
+            cannot become the garbage-ingestion trigger
+            this page lists, a walk-through pet gate so
+            the dog stays out of the kitchen while
+            holiday scraps sit on counters, and an
+            airtight dog-food storage container so the
+            dedicated low-fat kibble stays labeled and
+            separate from household food. These are
+            household leftover-lockdown tools, not
+            treatments. They do not diagnose
+            pancreatitis, they do not replace a cPLI
+            test or abdominal ultrasound, they do not
+            set a fat-percent threshold, they do not
+            replace hospitalization or IV fluids, and
+            they are not Hill&apos;s i/d Low Fat, Royal
+            Canin Gastrointestinal Low Fat, Purina EN
+            Gastroenteric Low Fat, Cerenia, maropitant,
+            or a ranked GI product list. Dog pill
+            pockets, dry-erase monthly calendars, dog
+            medical-alert collar tags, gallon gravity
+            dog waterers, extra-large disposable dog
+            pee pads, dog cooling bandanas,
+            self-warming dog mats, fleece dog sweaters,
+            dog slicker brushes, lymph-node anatomy
+            charts, foam dog stairs, dog ear wipes,
+            assisted-walking slings, hind-paw booties,
+            hip braces, silicone dog grooming gloves,
+            analog bathroom scales, dog dental finger
+            brushes, mini rice cookers, glass meal-prep
+            containers, low-fat digestive-care dog
+            food, lean low-fat dog treats, digital
+            pet-food portion scales, kitchen gram
+            scales, AM/PM weekly pill organizers,
+            monthly pill organizers, pet medical
+            records binders, pet emergency contact
+            cards, and soft-sided vet-visit carriers
+            already live on other pages. This page
+            does not hop medications. This page does
+            not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (locking kitchen trash can / walk-through
+              pet gate / airtight dog-food storage
+              container). ShopCtas hides empty Chewy;
+              never href="#" or PLACEHOLDER. Category
+              searches only — unused vs #1053 dog pill
+              pockets / dry-erase monthly calendar /
+              dog medical-alert collar tag, #1052
+              gallon gravity dog waterer / extra-large
+              disposable dog pee pads / dog cooling
+              bandana, #1051 self-warming dog mat /
+              fleece dog sweater / dog slicker brush,
+              #1050 dog lymph-node anatomy chart /
+              foam dog stairs / dog ear wipes, #1049
+              dog assisted-walking sling / dog hind-paw
+              booties / dog hip brace, #1048 silicone
+              dog grooming glove / analog bathroom
+              scale / dog dental finger brush, #1047
+              resting respiratory rate notebook /
+              one-minute kitchen timer / step-in padded
+              dog harness, #1046 pet medical records
+              binder / AM/PM weekly pill organizer /
+              digital hanging luggage scale, #1045 LED
+              medical penlight / pet emergency contact
+              card / folding pet stretcher, #1044 pet
+              vaccination record book / dog seat-belt
+              tether / foldable waterproof puppy mat,
+              #1043 mosquito dunks / monthly pill
+              organizer / soft-sided vet-visit carrier,
+              #1041 heavy-duty dog exercise pen, #1039
+              vets.co low-fat digestive-care dog food /
+              lean low-fat dog treats / digital
+              pet-food portion scale, #1013 mini rice
+              cooker / glass meal-prep containers,
+              washable+dog+pee+pads /
+              puppy+training+pads / dog+water+fountain /
+              heavy+ceramic+pet+water+bowl /
+              stainless+steel+dog+fountain /
+              weighted+ceramic+dog+water+bowl /
+              digital+pet+food+portion+scale /
+              portion+control+food+scale+dog /
+              kitchen+gram+scale / dog+cooling+mat /
+              dog+cooling+vest, and
+              low+fat+digestive+care+dog+food /
+              lean+low+fat+dog+treats. Hill's i/d,
+              Royal Canin Gastrointestinal Low Fat,
+              Purina EN, Cerenia, maropitant, and Rx
+              ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog pancreatitis leftover-lockdown kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page holiday-trigger, garbage-ingestion,
+              and lifelong low-fat-diet copy — a locking
+              kitchen trash can, a walk-through pet
+              gate, and an airtight dog-food storage
+              container. Everyday physical supplies
+              only. They are not a ranked product list,
+              they are not a Hill&apos;s i/d / Royal
+              Canin Gastrointestinal Low Fat / Purina
+              EN / Cerenia / maropitant hop, they are
+              not the #1053 pill-pocket / dry-erase
+              calendar / medical-alert-tag hops, they
+              are not the #1052 gravity-waterer /
+              extra-large-pee-pad / cooling-bandana
+              hops, they are not the #1051
+              self-warming-mat / fleece-sweater /
+              slicker-brush hops, they are not the
+              #1050 lymph-node-chart / foam-stair /
+              ear-wipe hops, they are not the #1049
+              sling / hind-paw-bootie / hip-brace hops,
+              they are not the #1048 grooming-glove /
+              analog-scale / finger-brush hops, they
+              are not the #1041 exercise-pen hop, they
+              are not the #1039 vets.co low-fat food /
+              lean-treat / portion-scale hops, they
+              are not the #1013 rice-cooker /
+              meal-prep-container hops, they are not
+              washable-pee-pad / fountain / ceramic-bowl
+              / cooling-mat hops, they are not
+              digital-pet-scale or first-aid-kit hops,
+              and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/locking+kitchen+trash+can?s=health-pancreatitis"
+                amazonLabel="Browse locking kitchen trash cans on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/walk+through+pet+gate?s=health-pancreatitis"
+                amazonLabel="Browse walk-through pet gates on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/airtight+dog+food+storage+container?s=health-pancreatitis"
+                amazonLabel="Browse airtight dog-food storage containers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
