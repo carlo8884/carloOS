@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Anxiety in Dogs — Separation, Noise & Treatment | Vets.co", description: "Canine anxiety, including separation and noise anxiety, is a real medical and behavioral condition. Learn the signs and the evidence-based approaches that help.", path: '/health/anxiety-in-dogs', type: 'article' })
@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/behavioral-problems-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -47,7 +47,36 @@ export default function AnxietyDogsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog anxiety home-support checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog anxiety home-support checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-support notes — an anxiety vest
+              for gentle pressure during a known trigger, a
+              dog pheromone diffuser for the room the dog
+              rests in, and a heartbeat comfort toy for short
+              absences. Educational checklist, not a
+              diagnosis and not a substitute for behavior
+              modification or a veterinarian. Trazodone,
+              fluoxetine, gabapentin, and other prescription
+              anxiolytics stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Dog anxiety home-support checklist"
+              subtitle="Email the vest, pheromone-diffuser, and heartbeat-toy notes. No spam."
+              ctaText="Email my dog anxiety home-support checklist"
+              source="health-anxiety-in-dogs-under-hero"
+            />
+          </div>
+
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="info" title="Anxiety is treatable, and punishment makes it worse">
             Punishing a fearful dog increases anxiety and damages trust, because the behavior is driven by fear, not defiance. Effective help comes from reducing the fear and teaching the dog that the trigger is safe. Early, compassionate intervention with professional guidance produces the best results.
@@ -67,6 +96,81 @@ export default function AnxietyDogsPage() {
 
           <h2>Evidence-Based Management</h2>
           <p>The foundation of treatment is behavior modification: desensitization (gradual, controlled exposure to the trigger at a low intensity) and counter-conditioning (pairing the trigger with positive experiences), alongside environmental management and enrichment to reduce overall stress. For moderate to severe anxiety, where a dog is too distressed to learn, veterinarians may prescribe medication to lower the fear enough for behavior work to succeed, with the specific medication and dosing determined by your veterinarian. A certified behaviorist or veterinary behavior specialist can be invaluable for complex cases. Consistency and patience are essential, since progress is gradual.</p>
+          <p>Household physical supports can sit alongside that behavior work after a veterinarian has ruled out a medical mimic. An anxiety vest applies gentle, even pressure during a known trigger such as a storm or a short departure. A dog pheromone diffuser is a room-level environmental aid for the space the dog rests in. A heartbeat comfort toy gives a warm, ticking object for brief absences. These are household tools, not treatments. They do not replace desensitization, they do not replace a veterinary behavior plan, and they are not trazodone, fluoxetine, gabapentin, or any other prescription anxiolytic. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit.</p>
+
+          <h2 id="kit">Home-support kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            environmental-management copy on this page — an
+            anxiety vest for gentle pressure during a known
+            trigger, a dog pheromone diffuser for the room
+            the dog rests in, and a heartbeat comfort toy
+            for short absences. These are household tools,
+            not treatments. They do not treat panic, they
+            do not replace a veterinarian, and they are not
+            Thundershirt brand ASINs, Adaptil brand ASINs,
+            or prescription anxiolytics. This is not the
+            Dog.com anxiety page and it does not hop a
+            dog anxiety wrap, crate cover, or white-noise
+            machine. It is not the Dog.com
+            separation-anxiety training page and it does
+            not hop a stuffable Kong, snuffle mat, or
+            crate. It is not the excessive-barking page
+            and it does not hop a lick mat. This page
+            does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (anxiety
+              vest / pheromone diffuser / heartbeat comfort toy).
+              ShopCtas hides empty Chewy; never href="#" or
+              PLACEHOLDER. Category searches only — unused vs
+              #848–#1035 dog+anxiety+wrap, dog+crate+cover,
+              white+noise+machine, lick+mat+dog,
+              snuffle+mat+dog+enrichment,
+              kong+classic+dog+toy+stuffable,
+              oatmeal+dog+shampoo, dog+paw+cleaner+wipes,
+              and soft+recovery+collar+dog. Trazodone,
+              fluoxetine, gabapentin, and other Rx
+              anxiolytics are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog anxiety home-support kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page environmental-management copy — an
+              anxiety vest, a dog pheromone diffuser, and
+              a heartbeat comfort toy. Everyday physical
+              supplies only. They are not a ranked product
+              list, they are not trazodone, fluoxetine, or
+              gabapentin, they are not Thundershirt or
+              Adaptil brand ASINs, they are not the
+              Dog.com wrap / crate-cover / white-noise
+              hops, they are not the Kong / snuffle / lick
+              mat training hops, they are not the allergy
+              oatmeal-shampoo / paw-wipe / recovery-collar
+              hops, and they do not replace a veterinarian.
+              Vets.co earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs"
+                amazonLabel="Browse anxiety vests for dogs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/pheromone+diffuser+dog?s=health-anxiety-in-dogs"
+                amazonLabel="Browse dog pheromone diffusers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+heartbeat+comfort+toy?s=health-anxiety-in-dogs"
+                amazonLabel="Browse heartbeat comfort toys for dogs on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
