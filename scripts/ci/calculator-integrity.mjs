@@ -3840,6 +3840,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete year-round heartworm-prevention-checklist offer; every gear CTA is an amazon-brand category search matching on-page mosquito / year-round prevention-compliance / annual-testing copy (mosquito dunks for standing-water larvae, a monthly pill organizer so the preventive chew is not missed, a soft-sided vet-visit carrier for the annual antigen blood-test trip), never a placeholder ASIN, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a generic soft-dog-carrier hop, a Heartgard / Interceptor / Simparica / ProHeart / melarsomine hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-vaccinations hops',
+    file: 'apps/dog-com/src/app/health/dog-vaccinations/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-vaccinations-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy-series vaccine-record checklist"/, label: 'concrete puppy-series vaccine-record-checklist offer, not Subscribe' },
+      { re: /source="health-vaccinations"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pet\+vaccination\+record\+book\?s=health-dog-vaccinations/, label: 'pet vaccination-record-book search hop (matches on-page documented-history / titer-printout / official-records copy; unused vs #848–#1043 monthly+pill+organizer)' },
+      { re: /amazon-brand\/dog\+seat\+belt\+tether\?s=health-dog-vaccinations/, label: 'dog seat-belt-tether search hop (matches on-page puppy-series clinic-trip copy; unique vs dog+leash / dog+long+line+leash / Y-shaped-front-clip harness)' },
+      { re: /amazon-brand\/foldable\+waterproof\+puppy\+mat\?s=health-dog-vaccinations/, label: 'foldable waterproof puppy-mat search hop (matches on-page 30–60 minute post-vaccine observation-wait copy; unique vs puppy+training+pads / washable+dog+pee+pads / dog+cooling+mat / dog+crate+pad)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /amazon-brand\/[^?"']*(mosquito\+dunks|monthly\+pill\+organizer|soft\+sided\+vet\+visit\+carrier|dog\+gum\+color\+assessment\+chart|high\+calorie\+dog\+recovery\+food|pet\+oral\+feeding\+syringe|washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|high\+value\+vet\+visit\+treats|soft\+dog\+carrier|soft\+pet\+carrier|pet\+first\+aid\+kit|dog\+first\+aid\+kit|calming\+dog\+chews|pet\+calming\+aid|lick\+mat\+dog|nobivac|da2pp|dhpp|bordetella|rabies\+vaccine|lyme\+vaccine|canine\+influenza|heartgard|interceptor|simparica|proheart|flea\+tick|prescription|medication|medicine|rx\b)/, label: 'never hop #1043 mosquito-dunks / monthly-pill-organizer / soft-sided-vet-visit-carrier, #1042 anemia gum-chart / recovery-food / syringe, #1041 heat-pants / belly-band / exercise-pen, #1030 high-value vet-visit treats, generic soft-dog/pet-carrier, first-aid kits, calming chews / aids, lick+mat+dog, Nobivac / DA2PP / Bordetella / rabies+vaccine / Lyme+vaccine / canine-influenza product searches, Heartgard / Interceptor / Simparica / ProHeart, flea+tick meds, or Rx — this page hops only pet-vaccination-record-book / dog-seat-belt-tether / foldable-waterproof-puppy-mat gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete puppy-series vaccine-record-checklist offer; every gear CTA is an amazon-brand category search matching on-page puppy-series / documented-history / titer / observation-wait copy (a pet vaccination record book so the 6–16 week series, adult boosters, and titer printouts stay in one official history, a dog seat-belt tether for the repeated clinic trips that series requires, a foldable waterproof puppy mat for the 30–60 minute post-vaccine observation wait), never a placeholder ASIN, a #1043 heartworm hop, a #1042 anemia hop, a #1041 heat-pants / belly-band / exercise-pen hop, a #1030 high-value vet-visit-treat hop, a first-aid-kit hop, a vaccine / vaccine-brand hop, a Heartgard / Interceptor / Simparica / ProHeart hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
