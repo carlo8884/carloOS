@@ -3177,6 +3177,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-mange bedding-wash-checklist offer; every gear CTA is an amazon-brand category search matching on-page household-wash copy (washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, pet-safe laundry detergent for that wash), never a placeholder ASIN, an isoxazoline / parasiticide-brand hop (Bravecto / NexGard / Simparica / Credelio / Revolution), an ivermectin / amitraz hop, a chlorhexidine / medicated-shampoo hop (leave antimicrobial shampoo for pyoderma), a recovery-cone hop (sister hot-spots / cherry-eye pages), a diabetes glucometer / corn-syrup hop (#1011), or an orthopedic-bed hop (sister arthritis page). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · dog-vomiting hops',
+    file: 'apps/dog-com/src/app/health/dog-vomiting/page.tsx',
+    mustInclude: [
+      { re: /source="health-dog-vomiting-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-vomiting bland-diet checklist"/, label: 'concrete dog-vomiting bland-diet-checklist offer, not Subscribe' },
+      { re: /source="health-vomiting"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/mini\+rice\+cooker\?s=health-dog-vomiting/, label: 'mini-rice-cooker search hop (category search matching on-page bland-diet plain-white-rice prep copy after the 6–12 hour withhold; unique vs #993–#1012)' },
+      { re: /amazon-brand\/glass\+meal\+prep\+containers\?s=health-dog-vomiting/, label: 'glass meal-prep-containers search hop (matches on-page leftover bland-diet / bedtime-snack portion copy; unique vs #993–#1012)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(washable\+dog\+bed\+cover|pet\+safe\+laundry\+detergent|pet\+glucometer|light\+corn\+syrup|dog\+cooling\+mat|dog\+cooling\+vest|cool\+water\+towels|digital\+pet\+thermometer|ice\+pack|icepack|dog\+probiotic|plain\+canned\+pumpkin|soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|elevated|bailey\+chair|upright\+dog\+feeding|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|cerenia|maropitant|ondansetron|metoclopramide|cerenia|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop mange washable-bed-cover / laundry-detergent (#1012), diabetes glucometer / corn syrup (#1011), Frenchie cooling mat / vest (#1010), diarrhea probiotic / pumpkin (#1009), cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), elevated bowls, Bailey chairs (#999), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), hot-spot recovery cones (#996), Cerenia / maropitant / ondansetron, or prescription GI diets — this page hops only physical mini-rice-cooker / glass-meal-prep-container gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-vomiting bland-diet-checklist offer; every gear CTA is an amazon-brand category search matching on-page bland-diet prep copy (mini rice cooker for a small batch of plain white rice after the 6–12 hour withhold, glass meal-prep containers for leftover bland-diet portions and the bedtime snack), never a placeholder ASIN, a slow-feeder / elevated-bowl hop (sister dog-obesity page / bloat overlap), a Bailey-chair hop (sister megaesophagus page), a probiotic / pumpkin hop (sister diarrhea page), a mange washable-bed-cover / laundry-detergent hop (#1012), a diabetes glucometer / corn-syrup hop (#1011), a Cerenia / maropitant hop, or a prescription-GI-diet hop (Hill\'s i/d / Royal Canin Gastrointestinal). Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
