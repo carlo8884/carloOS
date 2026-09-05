@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -56,7 +58,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -128,6 +130,7 @@ export default function FerretSeasonalSheddingPage() {
                 { label: 'Grooming Through a Coat Blow', href: '#grooming' },
                 { label: 'The Hairball Risk', href: '#hairball' },
                 { label: 'When Shedding Is Not Normal', href: '#abnormal' },
+                { label: 'Molt grooming kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -162,8 +165,35 @@ export default function FerretSeasonalSheddingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-05"
+            reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret molt-grooming checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret molt-grooming checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the coat-blow notes — a soft slicker brush and a
+              fine-toothed metal comb for short daily sessions, plus a
+              reusable lint roller for hammocks and hard surfaces between
+              washes. Educational checklist, not a diagnosis and not a
+              substitute for the exotic-pet vet. Hairball laxative pastes,
+              shampoos, and medications stay off this list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret molt-grooming checklist"
+              subtitle="Email the slicker-brush, metal-comb, and lint-roller notes. No spam."
+              ctaText="Email my ferret molt-grooming checklist"
+              source="care-seasonal-shedding-under-hero"
+            />
+          </div>
 
           <DropCap>
             Twice a year, a ferret&apos;s coat transforms. In spring the thick,
@@ -227,10 +257,10 @@ export default function FerretSeasonalSheddingPage() {
           <p>
             The main job during a shed is to remove as much loose hair as you
             can before the ferret swallows it. A soft slicker brush or a
-            fine-toothed comb, used in short, gentle sessions, lifts dead coat
-            efficiently. Most ferrets tolerate brushing better when it is paired
-            with a high-value treat and kept brief — a minute or two at a time
-            rather than a long session.
+            fine-toothed metal comb, used in short, gentle sessions, lifts dead
+            coat efficiently. Most ferrets tolerate brushing better when it is
+            paired with a high-value treat and kept brief — a minute or two at
+            a time rather than a long session.
           </p>
           <ul>
             <li>
@@ -248,8 +278,9 @@ export default function FerretSeasonalSheddingPage() {
             <li>
               <strong>Wipe down hard surfaces and wash bedding more often.</strong>{' '}
               A heavy shed coats hammocks and sleep sacks with fur, which the
-              ferret then re-ingests when burrowing. Frequent laundering during
-              the molt reduces the recycled-hair load.
+              ferret then re-ingests when burrowing. A reusable lint roller on
+              hammocks and hard surfaces between washes captures recycled hair.
+              Frequent laundering during the molt reduces the recycled-hair load.
             </li>
           </ul>
 
@@ -337,6 +368,63 @@ export default function FerretSeasonalSheddingPage() {
               an exotic-pet exam, not to wait for the next molt.
             </p>
           </CalloutBox>
+
+          <h2 id="kit">Molt grooming kit</h2>
+          <p>
+            Everyday physical supplies that match the coat-blow copy above —
+            a soft slicker brush and a fine-toothed metal comb for the short
+            daily sessions that lift dead coat before the ferret swallows it,
+            plus a reusable lint roller for hammocks and hard surfaces between
+            washes. Hairball / petroleum laxative pastes stay a vet
+            conversation, not a shop hop. Ferret shampoo, lickable treat
+            paste, sleep sacks, and hammocks stay off this kit — those hops
+            already live on bathing-and-grooming, ear-cleaning, nail-trimming,
+            and bedding pages. These are not a treatment for adrenal disease
+            or a GI blockage and not a diagnosis. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops (slicker / metal
+              comb / lint roller). ShopCtas hides empty Chewy; never
+              href="#" or PLACEHOLDER. Category searches only — unused vs
+              #993–#1025 dog slicker-brush-dog-grooming, puppy shampoo+
+              clippers+slicker combo, horse curry/dandy/body brushes,
+              ferret lickable-treat paste, sleep sacks, and #1025 dental
+              finger-toothbrush / infant-toothbrush / dental-wipe hops.
+              Hairball pastes, shampoos, and medications are not hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret molt-grooming kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page grooming
+              copy — a soft small-animal slicker brush, a fine-tooth metal
+              comb, and a reusable lint roller for hammocks between washes.
+              Everyday physical supplies only. They are not a ranked
+              product list, they are not the dog-grooming slicker hop, they
+              are not a hairball paste or a shampoo, they are not
+              medications, and they do not replace an exotic-pet
+              veterinarian. Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding"
+                amazonLabel="Browse soft small-animal slicker brushes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fine+tooth+metal+comb?s=care-seasonal-shedding"
+                amazonLabel="Browse fine-tooth metal combs on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"
+                amazonLabel="Browse reusable lint rollers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
