@@ -3649,6 +3649,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog ear-infection care-checklist offer; every gear CTA is an amazon-brand category search matching on-page cleaning and drying copy (dog ear-cleaner solution a veterinarian has recommended for wax-prone ears, cotton balls for dog ears to wipe the visible canal and flap, dog ear-drying powder after a swim or bath), never a placeholder ASIN, a pet+ear+cleaner hop (#995), a bare cotton+balls hop, a Labrador dog+ear+drying+solution hop (#1015), a UTI fountain/pads/bowl hop (#1033), a kennel-cough hop (#1032), a prescription ear-drop hop, a cotton-swab hop, or a leftover-medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · allergic-reactions-dogs hops',
+    file: 'apps/vets-co/src/app/health/allergic-reactions-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-allergic-reactions-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog allergy flare checklist"/, label: 'concrete dog allergy flare-checklist offer, not Subscribe' },
+      { re: /source="health-allergic-rxn"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/oatmeal\+dog\+shampoo\?s=health-allergic-reactions-dogs/, label: 'oatmeal dog-shampoo search hop (matches on-page mild-hive / contact-allergen rinse copy; unique vs chlorhexidine+dog+shampoo #1013)' },
+      { re: /amazon-brand\/dog\+paw\+cleaner\+wipes\?s=health-allergic-reactions-dogs/, label: 'dog paw-cleaner-wipes search hop (matches on-page investigating-paw / sting-site copy; unique vs dog+paw+wipes #1003)' },
+      { re: /amazon-brand\/soft\+recovery\+collar\+dog\?s=health-allergic-reactions-dogs/, label: 'soft recovery-collar-dog search hop (matches on-page keep-paws-off-swollen-skin copy; unique vs soft+recovery+cone+dog and soft+e+collar+dog)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/dog\+paw\+wipes\?/, label: 'never reuse the Dog.com dog+paw+wipes hop (#1003) — this page hops dog+paw+cleaner+wipes' },
+      { re: /amazon-brand\/[^?"']*(dog\+ear\+cleaner\+solution|cotton\+balls\+for\+dog\+ears|dog\+ear\+drying\+powder|stainless\+steel\+dog\+fountain|washable\+dog\+pee\+pads|weighted\+ceramic\+dog\+water\+bowl|y\+shaped\+front\+clip|cool\+mist\+humidifier|soft\+sided\+dog\+crate|chlorhexidine\+dog\+shampoo|soft\+recovery\+cone|soft\+e\+collar|apoquel|oclacitinib|cytopoint|lokivetmab|atopica|benadryl|diphenhydramine|antihistamine|epipen|epinephrine|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop ear-infection cleaner/cotton/powder (#1034), UTI fountain/pads/bowl (#1033), kennel-cough harness/humidifier/crate (#1032), chlorhexidine shampoo (#1013), hot-spot recovery cones, cherry-eye soft e-collars, Apoquel / Cytopoint, Benadryl ASINs, prescription antihistamines, or epinephrine — this page hops only oatmeal-dog-shampoo / dog-paw-cleaner-wipes / soft-recovery-collar-dog gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog allergy flare-checklist offer; every gear CTA is an amazon-brand category search matching on-page mild-flare rinse-and-rest copy (oatmeal dog shampoo to rinse a contact allergen after localized hives, dog paw cleaner wipes for the investigating paw after a sting or outdoor allergen, soft recovery collar so the dog cannot scratch swollen skin while waiting for the veterinarian), never a placeholder ASIN, an ear-infection hop (#1034), a UTI fountain/pads/bowl hop (#1033), a kennel-cough hop (#1032), a dog+paw+wipes hop (#1003), a chlorhexidine-shampoo hop (#1013), a soft+recovery+cone or soft+e+collar hop, an Apoquel / Cytopoint hop, a Benadryl ASIN hop, or a prescription-antihistamine hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
