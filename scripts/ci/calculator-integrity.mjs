@@ -3316,6 +3316,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse sweet-itch rug-checklist offer; every gear CTA is an amazon-brand category search matching on-page fitted sweet-itch rug and hood copy, never a placeholder ASIN, a medication hop, a spot-on / steroid / antihistamine hop, a fly-control fly-mask / fly-sheet / fly-spray overlap, a stall-fan overlap, a turnout-blanket overlap, a #1016 sweat-scraper / shade-cloth hop, or a #1017 hay-steamer / hay-soaking-bag hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · abscess hops',
+    file: 'apps/horses-com/src/app/health/abscess/page.tsx',
+    mustInclude: [
+      { re: /source="health-abscess-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse hoof-abscess soak checklist"/, label: 'concrete hoof-abscess soak-checklist offer, not Subscribe' },
+      { re: /source="health-abscess"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/epsom\+salt\+horse\+hoof\?s=health-abscess/, label: 'Epsom-salt horse-hoof search hop (matches on-page warm Epsom-salt soak copy after the tract is opened; unique vs #993–#1018 poultice / bandage / hay-soaking-bag hops)' },
+      { re: /amazon-brand\/horse\+hoof\+soaking\+boot\?s=health-abscess/, label: 'horse hoof-soaking-boot search hop (holds the Epsom soak around the hoof; unique vs hoof-care-basics riding hoof boots and grimace / emergency poultice / bandage)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(poultice|vet\+wrap|cohesive\+bandage|equine\+first\+aid|horse\+hoof\+pick|horse\+hoof\+boots|horse\+hay\+steamer|horse\+hay\+soaking|horse\+sweat\+scraper|horse\+shade\+cloth|horse\+sweet\+itch|horse\+fly\+mask|horse\+fly\+sheet|phenylbutazone|bute|banamine|flunixin|antibiotic|iodine|copper\+sulfate|thrush|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop grimace / emergency poultice / bandage / first-aid kit, hoof-picking picks, hoof-care-basics riding hoof boots, #1017 hay-steamer / hay-soaking-bag, #1016 sweat-scraper / shade-cloth, #1018 sweet-itch rug / hood, fly-control fly mask / sheet, bute / Banamine, iodine, copper sulfate, or medications — this page hops only Epsom-salt / soaking-boot gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse hoof-abscess soak-checklist offer; every gear CTA is an amazon-brand category search matching on-page soak copy (Epsom salt for the warm hoof soak after a vet or farrier opens the tract, soaking boot so that soak stays around the hoof), never a placeholder ASIN, a poultice / bandage / first-aid-kit hop (grimace-scale + emergency-kit), a riding hoof-boot hop (hoof-care-basics), a hoof-pick hop, a #1017 hay-steamer / hay-soaking-bag hop, a #1016 sweat-scraper / shade-cloth hop, a #1018 sweet-itch rug / hood hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
