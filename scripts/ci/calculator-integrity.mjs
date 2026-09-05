@@ -3713,6 +3713,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog CDS home-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page enrichment and nighttime-management copy (plug-in night light for the hall the dog walks at night, sniff box with new objects for short scent sessions, senior food-puzzle toy for brief enrichment), never a placeholder ASIN, a puzzle+feeder+dog hop, a snuffle-mat hop, a Dog.com senior-dog-care senior+dog+food / joint-treat / portion-scale hop, an anxiety-in-dogs vest / diffuser / heartbeat hop (#1036), a Bright Mind / Anipryl / selegiline / melatonin / fish-oil / Neutricks brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · dehydration-in-dogs hops',
+    file: 'apps/vets-co/src/app/health/dehydration-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-dehydration-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog dehydration home-sip checklist"/, label: 'concrete dog dehydration home-sip-checklist offer, not Subscribe' },
+      { re: /source="health-dehydration"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/unflavored\+pediatric\+electrolyte\?s=health-dehydration-in-dogs/, label: 'unflavored pediatric-electrolyte search hop (matches on-page Pedialyte-class 50/50 dilution copy; unique vs horse+electrolytes / ferret+electrolytes+recovery+food)' },
+      { re: /amazon-brand\/kitchen\+liquid\+measuring\+pitcher\?s=health-dehydration-in-dogs/, label: 'kitchen liquid-measuring-pitcher search hop (matches on-page 50/50 mix copy; unique vs kitchen+measuring+cup)' },
+      { re: /amazon-brand\/shallow\+lipped\+dog\+saucer\?s=health-dehydration-in-dogs/, label: 'shallow lipped dog-saucer search hop (matches on-page frequent-small-sips copy; unique vs fountain / ceramic-bowl hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(dog\+water\+fountain|stainless\+steel\+dog\+fountain|heavy\+ceramic\+pet\+water\+bowl|weighted\+ceramic\+dog\+water\+bowl|kitchen\+measuring\+cup|dog\+travel\+water\+bottle|washable\+dog\+pee\+pads|horse\+electrolytes|ferret\+electrolytes|cool\+water\+towels|digital\+pet\+thermometer|pedialyte|lactated\+ringer|iv\+fluid|subcutaneous|sq\+fluid|plasmalyte|0\.9\+nacl|plug\+in\+night\+light|dog\+sniff\+box|senior\+dog\+food\+puzzle|anxiety\+vest\+dog|pheromone\+diffuser\+dog|dog\+heartbeat\+comfort\+toy|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop UTI fountain / pee-pad / ceramic-bowl (#1033), water-intake fountain / ceramic-bowl / travel-bottle / measuring-cup, horse / ferret electrolytes, heat-stroke towels / thermometers (#1000), Pedialyte brand ASINs, IV / SQ fluid bags, #1037 CDS hops, #1036 anxiety hops, or Rx — this page hops only unflavored-pediatric-electrolyte / kitchen-liquid-measuring-pitcher / shallow-lipped-dog-saucer gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog dehydration home-sip-checklist offer; every gear CTA is an amazon-brand category search matching on-page mild-case oral-fluid copy (unflavored pediatric electrolyte to dilute 50/50 with water, kitchen liquid-measuring pitcher for that mix, shallow lipped dog saucer for frequent small sips), never a placeholder ASIN, a UTI fountain / pee-pad / ceramic-bowl hop (#1033), a water-intake fountain / ceramic-bowl / travel-bottle / measuring-cup hop, a horse / ferret electrolyte hop, a heat-stroke towel / thermometer hop (#1000), a Pedialyte brand-ASIN hop, an IV / SQ fluid-bag hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
