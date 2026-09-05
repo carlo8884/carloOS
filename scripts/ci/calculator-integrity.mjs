@@ -3376,6 +3376,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete algae-control scraper-checklist offer; every gear CTA is an amazon-brand category search matching on-page glass-cleaning copy (aquarium magnetic scraper for the viewing panes, handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a light-timer / root-tab hop reserved for low-tech-planted, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'fish · low-tech-planted-tank hops',
+    file: 'apps/fish-com/src/app/setup/low-tech-planted-tank/page.tsx',
+    mustInclude: [
+      { re: /source="setup-low-tech-planted-tank-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my low-tech planted checklist"/, label: 'concrete low-tech planted-checklist offer, not Subscribe' },
+      { re: /source="setup-low-tech-planted"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/aquarium\+light\+timer\?s=setup-low-tech-planted-tank/, label: 'aquarium light-timer search hop (matches on-page 6–8 hour photoperiod copy; unique vs #993–#1021 setup-hub filter / heater / test-kit, aquascaping Seiryu / spiderwood, and algae-control scraper hops)' },
+      { re: /amazon-brand\/aquarium\+plant\+root\+tabs\?s=setup-low-tech-planted-tank/, label: 'aquarium plant root-tabs search hop (matches on-page swords / crypts root-feeder copy; unique vs setup-hub / aquascaping / algae-control / CO2 hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(aquaclear|fluval|eheim\+jager|aqueon|api\+freshwater|seachem\+prime|seachem\+flourish|aquarium\+gravel|aquarium\+sand|aqua\+soil|gravel\+vacuum|substrate\+vacuum|co2\+regulator|co2\+diffuser|drop\+checker|aquarium\+heater|aquarium\+filter|aquarium\+stand|glass\+aquarium|acrylic\+aquarium|seiryu|spiderwood|ohko|dragon\+stone|manzanita|mopani|magnetic\+scraper|handheld\+aquarium\+algae|easy\+green|nilocg|algaecide|erythromycin|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop setup-hub filter / heater / test-kit / Prime / gravel-vacuum, planted-tank aquasoil, CO2 regulator / diffuser / drop checker / Flourish Excel, #1020 Seiryu / spiderwood, #1021 magnetic / handheld algae scrapers, liquid fertilizers, algaecides, erythromycin, or medications — this page hops only aquarium-light-timer / plant-root-tabs gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete low-tech planted-checklist offer; every gear CTA is an amazon-brand category search matching on-page no-CO2 copy (aquarium light timer for the six-to-eight-hour photoperiod, aquarium plant root tabs for swords and crypts), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, a #1021 magnetic-scraper / handheld-algae-scraper hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a liquid-fertilizer hop, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
