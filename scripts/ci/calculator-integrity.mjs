@@ -3776,6 +3776,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog BCS tracking-checklist offer; every gear CTA is an amazon-brand category search matching on-page monthly scoring, morphometric, and treat-audit copy (soft measuring tape for pets, dog body condition score chart poster, single-ingredient lean dog treats), never a placeholder ASIN, a dog-obesity digital-pet-scale / slow-feeder hop (#1005), a calorie / ideal-weight / BCS-tool kitchen-gram or portion-control food-scale hop, a combined measuring-tape-plus-chart hop, a #1039 pancreatitis food / treat / portion-scale hop, a UTI / dehydration electrolyte hop, a Hill\'s Metabolic / Royal Canin Satiety brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · dog-spay-neuter-timing hops',
+    file: 'apps/dog-com/src/app/guides/dog-spay-neuter-timing/page.tsx',
+    mustInclude: [
+      { re: /source="guides-dog-spay-neuter-timing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my intact-dog management checklist"/, label: 'concrete intact-dog-management-checklist offer, not Subscribe' },
+      { re: /source="guide-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/washable\+dog\+heat\+pants\?s=guides-dog-spay-neuter-timing/, label: 'washable dog heat-pants search hop (matches on-page bloody-phase / heat-cycle copy; unused vs #848–#1040 washable+dog+pee+pads / washable+dog+bed+cover)' },
+      { re: /amazon-brand\/male\+dog\+belly\+band\?s=guides-dog-spay-neuter-timing/, label: 'male dog belly-band search hop (matches on-page indoor-marking copy; unused vs #848–#1040 dog+anxiety+wrap / vet+wrap hops)' },
+      { re: /amazon-brand\/heavy\+duty\+dog\+exercise\+pen\?s=guides-dog-spay-neuter-timing/, label: 'heavy-duty dog exercise-pen search hop (matches on-page yard-not-fully-fenced containment copy; unused vs #848–#1040 crate / baby-gate hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(washable\+dog\+pee\+pads|washable\+dog\+bed\+cover|pet\+recovery\+cone|soft\+recovery\+cone|soft\+e\+collar|soft\+recovery\+collar|dog\+recovery\+crate|dog\+crate\+for\+recovery|wire\+dog\+crate|extra\+tall\+baby\+gate|engraved\+dog\+collar|gps\+tracker|gps\+collar|fi\+collar|soft\+measuring\+tape\+for\+pets|dog\+body\+condition\+score\+chart|single\+ingredient\+lean\+dog\+treats|pet\+first\+aid\+kit|digital\+pet\+thermometer|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop washable pee-pads / bed covers, recovery cones / e-collars, crates, baby gates, #1040 BCS tape / chart / treat hops, GPS collars, first-aid / thermometer hops, or medications — this page hops only washable-dog-heat-pants / male-dog-belly-band / heavy-duty-dog-exercise-pen gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete intact-dog-management-checklist offer; every gear CTA is an amazon-brand category search matching on-page delayed-timing lifestyle copy (washable dog heat pants for the bloody phase of a heat cycle, a male dog belly band for indoor marking, a heavy-duty dog exercise pen when the yard is not fully fenced), never a placeholder ASIN, a washable-pee-pad / bed-cover hop, a recovery-cone / e-collar hop, a crate / baby-gate hop, a #1040 BCS tape / chart / treat hop, a GPS-collar hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
