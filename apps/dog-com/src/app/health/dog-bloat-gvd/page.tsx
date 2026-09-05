@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -12,7 +11,7 @@ const SOURCES = [
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs — Signs, Emergency Response | Dog.com', description: 'Gastric dilatation-volvulus (GDV) kills within hours without surgery. Know the signs — unproductive retching, distended abdomen — and act immediately.', path: '/health/dog-bloat-gvd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'GDV (Bloat) in Dogs', description: 'Emergency signs and prevention for canine gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -20,7 +19,7 @@ const FAQS = [
   { question: 'What are the first signs of bloat (GDV) in a dog?', answer: 'The most important early sign is unproductive retching — the dog repeatedly tries to vomit but brings up nothing, or only white foam. In approximate order, the other signs are: visible abdominal distension (hard, drum-like when tapped), extreme restlessness and inability to settle, excessive drooling, and pale or white gums (already a sign of shock). In a large or deep-chested breed, unproductive retching alone is reason to go to the emergency vet immediately — do not wait for the other signs.' },
   { question: 'How long does a dog with bloat have without treatment?', answer: 'GDV is fatal without emergency surgery, typically within 4–6 hours of onset. Time is measured in hours: the twisted stomach traps gas, cuts off blood supply to the stomach wall, obstructs venous return to the heart, and rapidly causes cardiovascular shock. If you suspect GDV, the page above says it directly — stop reading, call ahead, and go to the emergency vet now.' },
   { question: 'Which dog breeds are most at risk of GDV?', answer: 'Large, deep-chested breeds with a chest depth-to-width ratio greater than 1.4. Great Danes carry the highest risk — a lifetime GDV risk of approximately 37% (Glickman et al., JAVMA 2000). Standard Poodles, German Shepherds, Irish and Gordon Setters, Weimaraners, Saint Bernards, Irish Wolfhounds, Bloodhounds, Dobermans, Rottweilers, and other large breeds are also at significantly elevated risk.' },
-  { question: 'Can bloat in dogs be prevented?', answer: 'Risk can be meaningfully reduced: feed twice daily rather than once (once-daily feeding is a documented risk factor), use a slow-feeder bowl for fast eaters, and know your dog\'s breed risk. The most definitive option is prophylactic gastropexy — surgically attaching the stomach to the abdominal wall so it cannot twist. It can be done laparoscopically at the time of spay or neuter for roughly $300–500, versus $5,000–15,000+ for emergency GDV treatment. Ask your vet whether your dog\'s breed is a candidate.' },
+  { question: 'Can bloat in dogs be prevented?', answer: 'Risk can be meaningfully reduced: feed twice daily rather than once (once-daily feeding is a documented risk factor), slow a fast eater with a wobble food dispenser rather than a gulp-from-the-bowl meal, keep the meal at floor level rather than in a raised bowl (the Glickman 2000 cohort associated elevated feeders with higher GDV risk), hold activity for a visible half-hour after a meal, and know your dog\'s breed risk. The most definitive option is prophylactic gastropexy — surgically attaching the stomach to the abdominal wall so it cannot twist. It can be done laparoscopically at the time of spay or neuter for roughly $300–500, versus $5,000–15,000+ for emergency GDV treatment. Ask your vet whether your dog\'s breed is a candidate.' },
   { question: 'Can a dog survive GDV with surgery?', answer: 'Yes — with prompt treatment at a well-equipped emergency facility, survival rates are 80–95%. Survival drops significantly with delayed treatment or when the stomach wall tissue has been deprived of blood long enough to become necrotic. This is why acting on the first sign (unproductive retching) rather than waiting matters so much.' },
 ]
 
@@ -58,6 +57,46 @@ export default function GdvPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog bloat / GDV emergency checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog bloat / GDV emergency checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes — a single
+              stainless floor dog bowl so a deep-chested
+              dog eats at floor level instead of from a
+              raised feeder (the Glickman 2000 cohort
+              associated elevated bowls with higher GDV
+              risk), a wobble dog food dispenser so a
+              fast eater works for kibble instead of
+              gulping a bowl in seconds, and a
+              30-minute sand hourglass timer so fetch
+              and yard sprints stay off the half-hour
+              after a meal. Educational checklist, not
+              a diagnosis, not a gastropexy, and not a
+              substitute for emergency care if the dog
+              is retching without producing anything.
+              Maze slow-feed bowls, slow-feeder bowls,
+              raised bowls, adjustable-height bowls,
+              timed automatic feeders, puzzle feeders,
+              Northmate hoppers, indoor house-lines,
+              and first-aid kits stay on other pages.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog bloat / GDV emergency checklist"
+              subtitle="Email the floor-bowl, wobble-dispenser, and hourglass notes. No spam."
+              ctaText="Email my dog bloat / GDV emergency checklist"
+              source="health-dog-bloat-gvd-under-hero"
+            />
+          </div>
+
           <div style={{ background: 'rgba(200,74,42,0.06)', border: '1px solid rgba(200,74,42,0.25)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Action First</div>
             <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>If your dog is retching unproductively with a distended abdomen — stop reading and go to the emergency vet. Call ahead so they can prepare. Time is measured in hours. Read this guide later, when your dog is safe.</p>
@@ -78,7 +117,8 @@ export default function GdvPage() {
 
           <h2>Risk Factors</h2>
           <p><strong>Breed</strong> is the strongest risk factor — large, deep-chested breeds with a depth-to-width chest ratio greater than 1.4 are most at risk. Great Danes have a lifetime GDV risk of approximately 37% (Glickman et al., JAVMA 2000). Standard Poodles, Irish Setters, Gordon Setters, Weimaraners, Saint Bernards, and German Shepherds are all significantly elevated risk.</p>
-          <p>Other risk factors with research support: eating once daily (twice daily feeding reduces risk), eating rapidly (use a slow feeder bowl), family history of GDV, prior splenic disease, anxious or fearful temperament. Exercise immediately after eating has been suggested but the evidence is less conclusive than breed and feeding frequency.</p>
+          <p>Other risk factors with research support: eating once daily (twice daily feeding reduces risk), eating rapidly, family history of GDV, prior splenic disease, anxious or fearful temperament. The same Glickman 2000 cohort already cited above associated raised food bowls with higher GDV risk in large and giant breeds — an elevated feeder is not a prevention tool. A single stainless floor dog bowl keeps the meal at floor level; it is not a raised bowl, not an adjustable-height stand, and not an elevated slow-feeder. That finding is observational and is still debated; it does not change the go-now emergency if the dog is retching without producing anything.</p>
+          <p>A wobble dog food dispenser is one way a fast eater works for kibble instead of gulping a bowl in seconds — it is not the maze slow-feed bowl, slow-feeder bowl, puzzle feeder, interactive feeder, or Northmate hopper used on other pages. Exercise immediately after eating has been suggested as a risk factor, though the evidence is less conclusive than breed and feeding frequency. A 30-minute sand hourglass timer is a household cue so fetch and yard sprints stay off the half-hour after a meal; it is not a kitchen timer, a 72-hour countdown, or an indoor house-line.</p>
 
           <h2>Treatment</h2>
           <p>Emergency stabilization: IV fluids, pain management, gastric decompression (passing a tube to release gas or trocharization through the body wall). Emergency surgery: the stomach is repositioned and sutured to the body wall to prevent re-rotation (gastropexy). Non-viable stomach tissue is resected if blood supply was compromised long enough to cause necrosis. The spleen may require removal if compromised.</p>
@@ -88,6 +128,115 @@ export default function GdvPage() {
           <p>Prophylactic gastropexy is a surgical procedure that permanently attaches the stomach to the abdominal wall, preventing the torsion (twisting) component of GDV. It does not prevent the stomach from dilating (the first stage) but eliminates the life-threatening second stage. It can be performed laparoscopically (minimally invasive) at the time of spay or neuter, adding $300–500 to the procedure cost.</p>
           <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $400 prophylactic surgery versus a $10,000+ emergency procedure if GDV occurs.</p>
           <p>Ask your vet: <em>"Is my dog's breed a candidate for prophylactic gastropexy? Can it be performed with the spay/neuter?"</em></p>
+          <p>Household feeding-management tools can sit alongside that gastropexy conversation after a veterinarian has talked through breed risk. A single stainless floor dog bowl keeps a deep-chested dog&rsquo;s meal at floor level instead of on a stand. A wobble dog food dispenser slows a fast eater without a maze bowl or a raised slow-feeder. A 30-minute sand hourglass timer keeps post-meal rest visible so activity stays off the half-hour after a meal. These are household tools, not treatments. They do not prevent simple gas bloating, they do not replace prophylactic gastropexy, they do not treat GDV, and they do not change the go-now emergency if the dog is retching without producing anything.</p>
+
+          <h2 id="kit">A Simple Dog Bloat / GDV Home-Care Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            elevated-feeder-debate, slow-feeding, and
+            post-meal-rest copy above: a single
+            stainless floor dog bowl so a deep-chested
+            dog eats at floor level instead of from a
+            raised feeder, a wobble dog food dispenser
+            so a fast eater cannot gulp a bowl in
+            seconds, and a 30-minute sand hourglass
+            timer so fetch and yard sprints stay off
+            the half-hour after a meal. These are
+            household home-care tools, not treatments.
+            They do not diagnose GDV, they do not
+            replace prophylactic gastropexy, they do
+            not replace the emergency vet, and they
+            are not a ranked product list. Maze
+            slow-feed dog bowls, slow-feeder dog bowls,
+            raised dog bowls, adjustable-height dog
+            bowls, elevated slow-feeder bowls, timed
+            automatic dog feeders, puzzle feeders,
+            Northmate interactive feeders, lick mats,
+            snuffle mats, indoor dog house-lines, 6-ft
+            dog leashes, dog long-line leashes, first-aid
+            kits, and emergency-contact cards already
+            live on other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (single stainless floor dog bowl /
+              wobble dog food dispenser / 30-minute
+              sand hourglass timer). ShopCtas hides
+              empty Chewy; never href="#" or
+              PLACEHOLDER. Category searches only —
+              unused vs #1091
+              letter+size+thermal+laminating+pouches /
+              72+hour+digital+countdown+timer /
+              collapsible+silicone+travel+dog+bowl,
+              #1090 hinged+cedar+sandbox+cover /
+              metal+jaw+dog+waste+scooper /
+              outdoor+garden+hand+wash+station, #1089
+              24+ounce+stainless+hiking+dog+bottle /
+              powder+free+nitrile+exam+gloves /
+              32+gallon+locking+animal+proof+trash+can,
+              #1088 small+digital+kitchen+food+scale /
+              silicone+cat+grooming+glove /
+              8+ounce+glass+liquid+measuring+cup,
+              #1087 heavy+gauge+48+inch+dog+crate /
+              2+foot+nylon+traffic+lead /
+              adjustable+aluminum+downspout+extender,
+              #1057 automatic+timed+dog+feeder /
+              maze+slow+feed+dog+bowl /
+              indoor+dog+house+line, and earlier
+              slow+feeder+dog+bowl /
+              elevated+slow+feeder+bowl+dog /
+              raised+dog+bowl / puzzle+feeder+dog /
+              interactive+dog+feeder hops. Rx ASINs
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog bloat / GDV home-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page elevated-feeder-debate,
+              slow-feeding, and post-meal-rest copy — a
+              single stainless floor dog bowl, a wobble
+              dog food dispenser, and a 30-minute sand
+              hourglass timer. Everyday physical
+              supplies only. They are not a ranked
+              product list, they are not a gastropexy
+              or medication hop, they are not the #1091
+              laminating-pouch / countdown-timer /
+              travel-bowl hops, they are not the #1090
+              sandbox-cover / waste-scooper / yard
+              hand-wash hops, they are not the #1089
+              hiking-bottle / nitrile-glove /
+              animal-proof-trash hops, they are not the
+              #1057 timed-feeder / maze-bowl /
+              house-line hops, they are not
+              slow-feeder, elevated-slow-feeder, raised
+              bowl, puzzle-feeder, interactive-feeder,
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd"
+                amazonLabel="Browse single stainless floor dog bowls on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wobble+dog+food+dispenser?s=health-dog-bloat-gvd"
+                amazonLabel="Browse wobble dog food dispensers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"
+                amazonLabel="Browse 30-minute sand hourglass timers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
