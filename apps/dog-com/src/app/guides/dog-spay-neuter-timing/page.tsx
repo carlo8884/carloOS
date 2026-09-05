@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -35,7 +37,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: 'Dog Spay/Neuter Timing',
@@ -111,6 +113,7 @@ export default function DogSpayNeuterTimingPage() {
                 { label: 'Alternatives (Ovary-Sparing, Vasectomy)', href: '#alternatives' },
                 { label: 'Lifestyle Considerations', href: '#lifestyle' },
                 { label: 'Discussion Checklist for Your Vet', href: '#checklist' },
+                { label: 'Intact-Dog Management Kit', href: '#kit' },
                 { label: 'FAQ', href: '#faq' },
               ]}
             />
@@ -136,10 +139,41 @@ export default function DogSpayNeuterTimingPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the intact-dog management checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Intact-dog management checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the delayed-timing notes — washable
+              dog heat pants for the bloody phase of a
+              heat cycle, a male dog belly band for
+              indoor marking while you keep working the
+              outdoor toilet plan, and a heavy-duty dog
+              exercise pen when the yard is not fully
+              fenced. Educational checklist, not a
+              diagnosis and not a substitute for the
+              veterinary timing conversation. Recovery
+              cones, crates, and GPS collars stay on
+              other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Intact-dog management checklist"
+              subtitle="Email the heat-pants, belly-band, and exercise-pen notes. No spam."
+              ctaText="Email my intact-dog management checklist"
+              source="guides-dog-spay-neuter-timing-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -217,7 +251,7 @@ export default function DogSpayNeuterTimingPage() {
               <strong>Cancer risk</strong> for several specific large-breed cancers (osteosarcoma in Rottweilers, hemangiosarcoma and lymphoma in some Golden Retriever lines) appears elevated with early neuter in some studies.
             </li>
             <li>
-              <strong>Managing an intact dog through adolescence</strong> takes work: secure containment, leash management around dogs in heat, and dealing with heat cycles in females (typically every 6–8 months, lasting about 3 weeks each, with bleeding for part of that time). For owners who cannot reliably manage intact-dog containment, the trade-off may still favor earlier surgery despite the increased orthopedic risk; an accidental litter or a roaming-related injury is also a meaningful harm.
+              <strong>Managing an intact dog through adolescence</strong> takes work: secure containment (a heavy-duty dog exercise pen is one indoor/outdoor option when the yard is not fully fenced), leash management around dogs in heat, and dealing with heat cycles in females (typically every 6–8 months, lasting about 3 weeks each, with bleeding for part of that time — washable dog heat pants keep furniture and floors cleaner during that phase). For owners who cannot reliably manage intact-dog containment, the trade-off may still favor earlier surgery despite the increased orthopedic risk; an accidental litter or a roaming-related injury is also a meaningful harm.
             </li>
           </ul>
 
@@ -296,16 +330,16 @@ export default function DogSpayNeuterTimingPage() {
           </p>
           <ul>
             <li>
-              <strong>Containment.</strong> Is the yard fully fenced? Are doors and gates reliably closed by every member of the household? Intact dogs roam, especially during a nearby heat.
+              <strong>Containment.</strong> Is the yard fully fenced? Are doors and gates reliably closed by every member of the household? Intact dogs roam, especially during a nearby heat. A heavy-duty dog exercise pen is a temporary indoor/outdoor barrier when the fence has a gap — it is not a substitute for a locked gate or a fenced yard.
             </li>
             <li>
-              <strong>Management of heat cycles (females).</strong> Are you prepared for 2–3 weeks of heat every 6–8 months, including bleeding, behavioral changes, and the need to keep intact males away?
+              <strong>Management of heat cycles (females).</strong> Are you prepared for 2–3 weeks of heat every 6–8 months, including bleeding, behavioral changes, and the need to keep intact males away? Washable dog heat pants catch the bloody phase so furniture and floors stay cleaner; they do not prevent pregnancy and they do not replace keeping intact males away.
             </li>
             <li>
               <strong>Dog-park access.</strong> Many dog parks do not allow intact dogs. Many doggy daycares do not accept intact dogs over 6 months. Plan accordingly.
             </li>
             <li>
-              <strong>Reactive intact dogs.</strong> Some intact males develop inter-male reactivity that complicates leash walks; vigilant training and management can mitigate, but not eliminate.
+              <strong>Reactive intact dogs.</strong> Some intact males develop inter-male reactivity that complicates leash walks; vigilant training and management can mitigate, but not eliminate. Indoor marking is a separate management problem — a male dog belly band contains urine on furniture while you keep working the outdoor toilet plan; it is not a training substitute and it does not reduce roaming or reactivity.
             </li>
             <li>
               <strong>Routine veterinary care.</strong> Establishing care with a veterinarian who is comfortable with delayed-neuter protocols and can advise on the breed-specific question is part of the decision.
@@ -318,10 +352,81 @@ export default function DogSpayNeuterTimingPage() {
             <li>What does the breed-specific Hart et al. data show, if available?</li>
             <li>What is the expected age of growth plate closure for this breed?</li>
             <li>What are this household&rsquo;s realistic containment and management options for an intact dog?</li>
-            <li>What is the female&rsquo;s anticipated heat cycle pattern, and are we prepared for it?</li>
+            <li>What is the female&rsquo;s anticipated heat cycle pattern, and are we prepared for it (including washable dog heat pants for the bloody phase)?</li>
             <li>Are ovary-sparing spay or vasectomy options available from this clinic or a nearby ACVS-certified surgeon?</li>
             <li>If we choose later spay/neuter, what is the post-surgery calorie adjustment plan to prevent weight gain?</li>
           </ul>
+
+          <h2 id="kit">A Simple Intact-Dog Management Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            delayed-timing lifestyle copy above: washable
+            dog heat pants so the bloody phase of a heat
+            cycle does not soak furniture, a male dog
+            belly band that contains indoor marking while
+            you keep working the outdoor toilet plan, and
+            a heavy-duty dog exercise pen when the yard
+            is not fully fenced. These are household
+            management tools, not treatments. They do not
+            prevent pregnancy, they do not replace a
+            locked gate or a veterinary timing
+            conversation, they are not a recovery cone or
+            surgical recovery suit, and they are not a
+            crate, GPS collar, or first-aid kit. This
+            page does not hop recovery cones, crates,
+            baby gates, or medications. This page does
+            not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (washable dog heat pants / male dog belly
+              band / heavy-duty dog exercise pen).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #848–#1040 washable+dog+pee+pads,
+              washable+dog+bed+cover, pet+recovery+cone,
+              soft+recovery+cone+dog, soft+e+collar+dog,
+              soft+recovery+collar+dog,
+              dog+recovery+crate, wire+dog+crate,
+              extra+tall+baby+gate, engraved+dog+collar,
+              and GPS collar hops. Prescription and med
+              ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the intact-dog management kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page delayed-timing lifestyle copy —
+              washable dog heat pants, a male dog belly
+              band, and a heavy-duty dog exercise pen.
+              Everyday physical supplies only. They are
+              not a ranked product list, they are not
+              recovery-cone / e-collar hops, they are
+              not crate or baby-gate hops, they are not
+              the #1040 BCS tape / chart / treat hops,
+              and they do not replace a veterinarian.
+              Dog.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing"
+                amazonLabel="Browse washable dog heat pants on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/male+dog+belly+band?s=guides-dog-spay-neuter-timing"
+                amazonLabel="Browse male dog belly bands on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"
+                amazonLabel="Browse heavy-duty dog exercise pens on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion
