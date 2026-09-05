@@ -4209,6 +4209,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse fecal-egg-count sampling-checklist offer; every gear CTA is an amazon-brand category search matching on-page FEC / pasture-cleanup copy (an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, a stable muck cart so those piles leave the paddock), never a placeholder ASIN, a #1059 scoop / portion-cups / weight-log-book hop, a #1058 stopwatch / field-notebook / table-bumper hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1056 diaper / inflatable-collar / airline-crate hop, a stall-fork / manure-picker hop, a dog fecal-sample-collection-kit / leak-proof-specimen-bag hop, a grazing-muzzle / soil-test-kit hop, or a dewormer / prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · farrier-schedule hops',
+    file: 'apps/horses-com/src/app/care/farrier-schedule/page.tsx',
+    mustInclude: [
+      { re: /source="care-farrier-schedule-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse farrier-visit checklist"/, label: 'concrete horse farrier-visit-checklist offer, not Subscribe' },
+      { re: /source="care-farrier"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/equine\+farrier\+log\+book\?s=care-farrier-schedule/, label: 'equine farrier-log-book search hop (matches on-page standing-appointment / book-ahead copy; unique vs waterproof+field+notebook / dog+weight+log+book / dry+erase+monthly+calendar)' },
+      { re: /amazon-brand\/portable\+farrier\+hoof\+stand\?s=care-farrier-schedule/, label: 'portable farrier-hoof-stand search hop (matches on-page stand-quietly / lifted-foot copy; unique vs horse+hoof+boots / horse+hoof+soaking+boot)' },
+      { re: /amazon-brand\/cordless\+barn\+flood\+light\?s=care-farrier-schedule/, label: 'cordless barn-flood-light search hop (matches on-page well-lit-area copy; unique vs LED+headlamp / led+medical+penlight)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(equine\+fecal\+sample\+container|pasture\+manure\+rake|stable\+muck\+cart|adjustable\+sliding\+dog\+food\+scoop|reusable\+dog\+food\+portion\+cups|dog\+weight\+log\+book|digital\+handheld\+stopwatch|waterproof\+field\+notebook|foam\+table\+edge\+bumper|automatic\+timed\+dog\+feeder|maze\+slow\+feed\+dog\+bowl|indoor\+dog\+house\+line|disposable\+female\+dog\+diapers|inflatable\+dog\+collar|hard\+sided\+airline\+dog\+crate|horse\+hoof\+pick|horse\+hoof\+boots|horse\+snow\+pads|horse\+shoe\+studs|horse\+hoof\+soaking\+boot|horse\+stall\+fork\+manure\+picker|horse\+grazing\+muzzle|soil\+test\+kit|pine\+shavings|wood\+pellet|stall\+rubber\+mats|bute|phenylbutazone|banamine|flunixin|copper\+sulfate|iodine|thrush|abscess|laminitis|dewormer|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1060 fecal-container / manure-rake / muck-cart, #1059 scoop / portion-cups / weight-log-book, #1058 stopwatch / field-notebook / table-bumper, #1057 timed-feeder / maze-bowl / house-line, #1056 diapers / inflatable-collar / airline-crate, hoof-pick / hoof-boots, snow-pads / shoe-studs, soaking-boot, stall-fork / manure-picker, grazing-muzzle / soil-kit, stall bedding, bute / Banamine, copper sulfate / iodine, or Rx — this page hops only equine-farrier-log-book / portable-farrier-hoof-stand / cordless-barn-flood-light gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse farrier-visit-checklist offer; every gear CTA is an amazon-brand category search matching on-page booking / work-area copy (an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, a cordless barn flood light so the aisle is bright enough to see clenches and flaring), never a placeholder ASIN, a #1060 fecal-container / manure-rake / muck-cart hop, a #1059 scoop / portion-cups / weight-log-book hop, a #1058 stopwatch / field-notebook / table-bumper hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1056 diaper / inflatable-collar / airline-crate hop, a hoof-pick / hoof-boot hop, a snow-pad / shoe-stud hop, a stall-bedding / pasture-management hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
