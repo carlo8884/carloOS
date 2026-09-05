@@ -3585,6 +3585,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete microchip-registration-checklist offer; every gear CTA is an amazon-brand category search matching on-page registration and reunion copy (ISO pet microchip scanner for home verification of an ISO 11784/11785 chip, engraved dog collar ID tags as the fastest reunion route when a neighbor finds the dog, a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off), never a placeholder ASIN, a GPS-tracker hop, a clinic implant-kit hop, a generic dog+id+tag+collar hop, a #1030 wellness-exam hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · kennel-cough hops',
+    file: 'apps/vets-co/src/app/health/kennel-cough/page.tsx',
+    mustInclude: [
+      { re: /source="health-kennel-cough-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my kennel-cough isolation checklist"/, label: 'concrete kennel-cough isolation-checklist offer, not Subscribe' },
+      { re: /source="health-kennel-cough"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=health-kennel-cough/, label: 'Y-shaped front-clip harness search hop (matches on-page collar-pressure / trachea copy; unique vs front+clip+no+pull+dog+harness and Julius-K9 hops)' },
+      { re: /amazon-brand\/cool\+mist\+humidifier\?s=health-kennel-cough/, label: 'cool-mist humidifier search hop (matches on-page recovery-room dry-air copy; unused vs #848–#1031 HEPA air-purifier hops)' },
+      { re: /amazon-brand\/soft\+sided\+dog\+crate\?s=health-kennel-cough/, label: 'soft-sided dog-crate search hop (matches on-page isolation-after-boarding copy; unique vs dog+recovery+crate / dog+crate+for+recovery / wire+dog+crate+with+divider)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(front\+clip\+no\+pull|julius\+k9|hepa\+air\+purifier|hepa\+filter|dog\+recovery\+crate|dog\+crate\+for\+recovery|wire\+dog\+crate|digital\+pet\+thermometer|pet\+first\+aid\+kit|iso\+pet\+microchip|engraved\+dog\+collar|pet\+id\+tag\+slide|accelerated\+hydrogen|disposable\+shoe|pump\+sprayer|bordetella|nobivac|bronchicine|vaccine|doxycycline|antibiotic|cough\+suppressant|hydrocodone|implant\+kit|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop existing no-pull / Julius-K9 harnesses, HEPA (#1002), recovery crates (#1007), thermometers / first-aid kits, #1031 microchip hops, #1029 parvo-cleanup hops, Bordetella vaccines, antibiotics, cough suppressants, or clinic implant kits — this page hops only Y-shaped-front-clip-harness / cool-mist-humidifier / soft-sided-crate gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete kennel-cough isolation-checklist offer; every gear CTA is an amazon-brand category search matching on-page isolation and rest copy (Y-shaped front-clip harness so a collar does not press the trachea, cool-mist humidifier for the recovery room, soft-sided crate for rest away from other dogs after boarding), never a placeholder ASIN, a front+clip+no+pull harness hop, a HEPA hop, a recovery-crate hop, a thermometer hop, a Bordetella-vaccine hop, an antibiotic hop, or a clinic implant-kit hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
