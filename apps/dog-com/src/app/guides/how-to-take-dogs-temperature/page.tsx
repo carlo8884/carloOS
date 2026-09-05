@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -36,7 +38,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 const med = buildMedicalWebPageSchema({
   name: "How to Take a Dog's Temperature and Vital Signs at Home",
@@ -53,11 +55,11 @@ const howto = buildHowToSchema({
   url: 'https://dog.com/guides/how-to-take-dogs-temperature',
   totalTime: 'PT5M',
   steps: [
-    { name: 'Prepare the thermometer', text: 'Use a digital thermometer (ideally a dedicated pet thermometer). Turn it on and coat the tip with a water-based lubricant such as petroleum jelly or KY jelly.' },
+    { name: 'Prepare the thermometer', text: 'Use a digital rectal thermometer (ideally a dedicated pet thermometer). Turn it on and coat the tip with a water-based lubricant such as petroleum jelly or KY jelly.' },
     { name: 'Position your dog', text: 'Have a helper steady the dog standing or lying on its side. Lift the tail gently to expose the anus.' },
     { name: 'Insert the thermometer', text: 'Insert the lubricated tip about 1 inch (2.5 cm) into the rectum for a medium dog — less for a small dog, slightly more for a large dog. Hold it gently in place; do not force against resistance.' },
     { name: 'Wait for the reading', text: 'Keep the thermometer still until the digital unit beeps, usually 10 to 60 seconds depending on the model.' },
-    { name: 'Read and clean', text: 'Remove the thermometer, read the temperature, and clean it with alcohol. Record the number with the date and time so you can track trends.' },
+    { name: 'Read and clean', text: 'Remove the thermometer, read the temperature, and clean it with isopropyl alcohol wipes. Record the number with the date and time so you can track trends.' },
   ],
 })
 
@@ -153,9 +155,38 @@ export default function HowToTakeDogsTemperaturePage() {
           <ArticleByline
             siteName="Dog.com Editorial"
             publishedAt="2026-06-11T00:00:00Z"
-            updatedAt="2026-06-11T00:00:00Z"
+            updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the home-vitals kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Home-vitals kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-check notes — a digital rectal
+              thermometer dedicated to the dog, a water-based
+              lubricant (petroleum jelly works) for the tip, plus
+              isopropyl alcohol wipes to clean it after each
+              reading — so a baseline is ready before something
+              is off. Educational checklist, not a diagnosis and
+              not a first-aid wound kit. Gauze, Vetrap, saline
+              flush, muzzles, and carriers stay on the
+              first-aid-kit guide. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Home-vitals kit checklist"
+              subtitle="Email the rectal-thermometer, lubricant, and alcohol-wipe notes. No spam."
+              ctaText="Email my home-vitals kit checklist"
+              source="guides-how-to-take-dogs-temperature-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — The numbers to know">
             <p>
@@ -228,14 +259,14 @@ export default function HowToTakeDogsTemperaturePage() {
 
           <h2 id="temperature">Taking the Temperature</h2>
           <p>
-            Rectal temperature with a digital thermometer is the home reference standard. Do not rely on a warm nose, warm ears, or how the dog feels to your hand — those are not reliable indicators of body temperature.
+            Rectal temperature with a digital rectal thermometer is the home reference standard. Do not rely on a warm nose, warm ears, or how the dog feels to your hand — those are not reliable indicators of body temperature.
           </p>
           <ol className="space-y-2">
-            <li><strong>1. Prepare.</strong> Use a digital thermometer, ideally a dedicated pet one. Switch it on and coat the tip with a water-based lubricant (petroleum jelly works).</li>
+            <li><strong>1. Prepare.</strong> Use a digital rectal thermometer, ideally a dedicated pet one. Switch it on and coat the tip with a water-based lubricant (petroleum jelly works).</li>
             <li><strong>2. Steady the dog.</strong> A second person to keep the dog calm and still makes this far easier. Lift the tail.</li>
             <li><strong>3. Insert gently.</strong> Slide the tip in about 1 inch for a medium dog (less for small, slightly more for large). Never force it against resistance.</li>
             <li><strong>4. Wait for the beep.</strong> Hold it still until the unit signals, typically 10–60 seconds.</li>
-            <li><strong>5. Read, clean, record.</strong> Remove, read, clean with alcohol, and log the number with the date and time.</li>
+            <li><strong>5. Read, clean, record.</strong> Remove, read, clean with isopropyl alcohol wipes, and log the number with the date and time.</li>
           </ol>
           <CalloutBox variant="tip" title="If your dog won't tolerate it">
             <p>
@@ -288,8 +319,49 @@ export default function HowToTakeDogsTemperaturePage() {
 
           <h2 id="kit">Building a Simple Home Vitals Kit</h2>
           <p>
-            A small kit kept where you can reach it makes home checks routine rather than improvised. A practical set: a digital thermometer (dedicated to the dog), water-based lubricant, alcohol wipes, a phone with a stopwatch and a notes file for your baseline numbers, and your veterinarian&rsquo;s daytime number plus the nearest 24-hour emergency clinic&rsquo;s address and number saved in advance. Knowing where the emergency clinic is <em>before</em> you need it removes a frightening delay from a real emergency. If you have not chosen a regular veterinarian yet, our <a href="/guides/dog-wellness-exam" className="text-brand-primary hover:underline">wellness exam guide</a> covers how to find one and what to expect.
+            A small kit kept where you can reach it makes home checks routine rather than improvised. A practical set: a digital rectal thermometer (dedicated to the dog), a water-based lubricant (petroleum jelly works) for the tip, isopropyl alcohol wipes to clean the probe after each reading, a phone with a stopwatch and a notes file for your baseline numbers, and your veterinarian&rsquo;s daytime number plus the nearest 24-hour emergency clinic&rsquo;s address and number saved in advance. Those three physical supplies are vitals tools. They are not a first-aid wound kit — gauze, Vetrap cohesive bandage, saline wound flush, a soft muzzle, and a soft carrier already live on the <a href="/guides/dog-first-aid-kit" className="text-brand-primary hover:underline">dog first-aid kit</a> guide, and the generic digital pet thermometer hop stays there too. This page does not hop medications. Knowing where the emergency clinic is <em>before</em> you need it removes a frightening delay from a real emergency. If you have not chosen a regular veterinarian yet, our <a href="/guides/dog-wellness-exam" className="text-brand-primary hover:underline">wellness exam guide</a> covers how to find one and what to expect.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops (home-vitals kit).
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — everyday physical supplies matching
+              on-page digital-rectal-thermometer / petroleum-jelly lubricant /
+              isopropyl-alcohol-wipes copy, not the first-aid-kit wound hops
+              or the generic digital+pet+thermometer key already pinned there. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the home-vitals kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              home-check copy — a digital rectal thermometer, a
+              water-based lubricant (petroleum jelly), and
+              isopropyl alcohol wipes. Everyday physical vitals
+              tools only. They are not a ranked product list,
+              they are not a first-aid wound kit, they are not
+              the generic digital pet thermometer hop already on
+              the first-aid-kit guide, and they do not replace a
+              veterinarian. Dog.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature"
+                amazonLabel="Browse digital rectal thermometers for pets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/water+based+lubricant+petroleum+jelly?s=guides-how-to-take-dogs-temperature"
+                amazonLabel="Browse water-based lubricant / petroleum jelly on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/isopropyl+alcohol+wipes?s=guides-how-to-take-dogs-temperature"
+                amazonLabel="Browse isopropyl alcohol wipes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion

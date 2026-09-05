@@ -3396,6 +3396,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete low-tech planted-checklist offer; every gear CTA is an amazon-brand category search matching on-page no-CO2 copy (aquarium light timer for the six-to-eight-hour photoperiod, aquarium plant root tabs for swords and crypts), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, a #1021 magnetic-scraper / handheld-algae-scraper hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a liquid-fertilizer hop, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'dog · how-to-take-dogs-temperature hops',
+    file: 'apps/dog-com/src/app/guides/how-to-take-dogs-temperature/page.tsx',
+    mustInclude: [
+      { re: /source="guides-how-to-take-dogs-temperature-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my home-vitals kit checklist"/, label: 'concrete home-vitals-kit-checklist offer, not Subscribe' },
+      { re: /source="guide-vitals"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/digital\+rectal\+thermometer\+pet\?s=guides-how-to-take-dogs-temperature/, label: 'digital rectal thermometer (pet) search hop — unique vs first-aid-kit / emergency-triage generic digital+pet+thermometer' },
+      { re: /amazon-brand\/water\+based\+lubricant\+petroleum\+jelly\?s=guides-how-to-take-dogs-temperature/, label: 'water-based lubricant / petroleum jelly search hop (matches on-page tip-prep copy)' },
+      { re: /amazon-brand\/isopropyl\+alcohol\+wipes\?s=guides-how-to-take-dogs-temperature/, label: 'isopropyl alcohol wipes search hop (matches on-page clean-and-record copy)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(digital\+pet\+thermometer|wound\+care\+gauze|vetrap\+cohesive|saline\+wound\+flush|soft\+dog\+muzzle|soft\+dog\+carrier|pet\+first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|acetaminophen|medication|medicine|prescription|rx\b)/, label: 'never hop the generic digital+pet+thermometer already on first-aid-kit / emergency triage, first-aid wound-kit items (gauze / Vetrap / saline / muzzle / carrier), or medications — this page hops only rectal-thermometer / petroleum-jelly lubricant / isopropyl-alcohol-wipes gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete home-vitals-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-check copy (digital rectal thermometer dedicated to the dog, water-based lubricant / petroleum jelly for the tip, isopropyl alcohol wipes to clean after each reading), never a placeholder ASIN, the generic digital+pet+thermometer hop already pinned on the first-aid-kit guide, a first-aid wound-kit hop (gauze / Vetrap / saline / muzzle / carrier), or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
