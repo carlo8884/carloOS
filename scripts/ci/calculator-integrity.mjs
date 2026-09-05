@@ -3117,6 +3117,26 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog-diarrhea home-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-care copy (canine-specific OTC dog probiotic for digestive support, optional plain canned pumpkin), never a placeholder ASIN, a FortiFlora brand ASIN, a cherry-eye soft-e-collar / eye-wipe hop (#1008), a slow-feeder hop (sister dog-obesity page), a metronidazole / antibiotic hop, an Imodium / Pepto hop, or a prescription-GI-diet hop (Hill\'s i/d / Royal Canin Gastrointestinal). Chewy stays omitted so empty buttons stay hidden.',
   },
   {
+    id: 'dog · french-bulldog-health hops',
+    file: 'apps/dog-com/src/app/health/french-bulldog-health/page.tsx',
+    mustInclude: [
+      { re: /source="health-french-bulldog-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Frenchie heat-care checklist"/, label: 'concrete Frenchie heat-care-checklist offer, not Subscribe' },
+      { re: /source="health-french-bulldog"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dog\+cooling\+mat\?s=health-french-bulldog-health/, label: 'dog-cooling-mat search hop (category search matching on-page indoor cooling-mat heat-care copy; unique vs #993–#1009 and vs vets.co heat-stroke cool-water-towels)' },
+      { re: /amazon-brand\/dog\+cooling\+vest\?s=health-french-bulldog-health/, label: 'dog-cooling-vest search hop (matches on-page short-outdoor-trip cooling-vest copy; unique vs #993–#1009)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(cool\+water\+towels|digital\+pet\+thermometer|ice\+pack|icepack|dog\+probiotic|plain\+canned\+pumpkin|soft\+e\+collar|dog\+eye\+wipes|hepa|paw\+wipes|waterproof\+dog\+booties|orthopedic\+dog\+bed|dog\+ramp|digital\+pet\+scale|slow\+feeder|dog\+knee\+brace|dog\+rear\+support|rear\+support\+harness|dog\+recovery\+crate|dog\+belly\+support|dog\+wheelchair|pet\+recovery\+cone|soft\+recovery\+cone|fold\+wipes|cyclosporine|tacrolimus|optimmune|eye\+drops|ophthalmic|nsaid|carprofen|rimadyl|meloxicam|glucosamine|chondroitin|omega|fish\+oil|hills|hill\+s|royal\+canin|prescription\+diet|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop heat-stroke cool-water towels / thermometers (#1000), ice packs, diarrhea probiotic / pumpkin (#1009), cherry-eye soft e-collar / eye wipes (#1008), HEPA (#1002), paw wipes / booties (#1003), orthopedic beds / ramps (#1004), pet scales / slow-feeders (#1005), knee braces / rear-support harnesses (#1006), recovery crates / belly-support / wheelchairs (#1007), fold wipes, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, or supplements — this page hops only physical dog-cooling-mat / dog-cooling-vest gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete Frenchie heat-care-checklist offer; every gear CTA is an amazon-brand category search matching on-page heat-care copy (cooling mat the dog can lie on indoors, cooling vest for short outdoor trips), never a placeholder ASIN, a vets.co heat-stroke cool-water-towel / thermometer hop (#1000), an ice-pack hop, a diarrhea probiotic / pumpkin hop (#1009), a cherry-eye soft-e-collar / eye-wipe hop (#1008), a dog-ramp hop (sister arthritis / IVDD pages), a fold-wipe / paw-wipe hop, an Rx eye-drop hop (cyclosporine / tacrolimus), an NSAID hop, or a BOAS / IVDD clinical-treatment hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
+  {
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -74,6 +74,7 @@ export default function FrenchBulldogHealthPage() {
         <TableOfContents items={[
           { label: 'BOAS — Breathing', href: '#boas' },
           { label: 'Heat Danger', href: '#heat' },
+          { label: 'Heat-care kit', href: '#kit' },
           { label: 'IVDD — Spine', href: '#ivdd' },
           { label: 'Skin Fold Infections', href: '#skin' },
           { label: 'Eye Conditions', href: '#eyes' },
@@ -94,6 +95,35 @@ export default function FrenchBulldogHealthPage() {
       </>}
     >
       <div className="carloOS-article">
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the Frenchie heat-care checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Frenchie heat-care checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the heat-care notes — a cooling mat the dog can
+            lie on indoors, plus a cooling vest for short outdoor
+            trips when a cool environment is not already available.
+            Educational checklist, not a diagnosis and not a
+            treatment list. Cool-water towels and digital
+            thermometers stay on the sister heat-stroke first-aid
+            page. Ice packs, ramps, fold wipes, Rx eye drops, and
+            BOAS / IVDD clinical treatments stay off this list.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Frenchie heat-care checklist"
+            subtitle="Email the cooling-mat and cooling-vest notes. No spam."
+            ctaText="Email my Frenchie heat-care checklist"
+            source="health-french-bulldog-health-under-hero"
+          />
+        </div>
+
         <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog in natural light" aspect="16:9" priority />
         <p>French Bulldogs have become one of the most registered breeds globally — a reflection of their genuine charm as companion dogs. They are adaptable, affectionate, low-exercise, and endlessly entertaining. They are also a breed whose extreme anatomy creates near-inevitable health problems that every owner must understand, budget for, and actively manage throughout the dog&apos;s life.</p>
 
@@ -118,6 +148,7 @@ export default function FrenchBulldogHealthPage() {
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>⚠️ Emergency Risk</div>
           <p style={{ fontSize: '15px', color: '#4A2E18', margin: 0, lineHeight: 1.65 }}>Frenchies cannot cool themselves efficiently — their compromised airway severely limits panting, the primary cooling mechanism in dogs. Heatstroke can develop in French Bulldogs at temperatures that are comfortable for humans. <strong>Never leave a Frenchie in a car. Limit outdoor activity in warm weather. Always ensure cool environment access.</strong> Summer walks should happen before 8am or after 8pm. Heatstroke is fatal if not treated immediately.</p>
         </div>
+        <p>Everyday physical heat-care — not a treatment for heatstroke — includes a cooling mat the dog can lie on indoors and a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids so a Frenchie can rest on a cooler surface and wear evaporative cooling on a brief walk; they do not replace shade, water, or the &quot;never leave a Frenchie in a car&quot; rule, and they do not treat heatstroke. If heatstroke is suspected, wet the dog with cool (not ice-cold) water and go to an emergency veterinarian — first-aid cool-water towels and a digital thermometer live on the sister <a href="https://vets.co/health/heat-stroke-dogs">Vets.co heat-stroke</a> page. Ice packs stay off this kit: vasoconstriction can slow cooling. Ask your veterinarian whether a cooling mat or cooling vest fits this dog.</p>
 
         <h2 id="ivdd">IVDD — Spinal Disc Disease</h2>
         <BreedHealthCard
@@ -159,6 +190,44 @@ export default function FrenchBulldogHealthPage() {
           <li><strong>The breeder asks you questions</strong> — a breeder who cares about their dogs wants to know your living situation, experience, and commitment</li>
           <li><strong>Avoid the &quot;extreme&quot; Frenchie look</strong> — maximally flat face, deeply furrowed skin, very small nostrils. These features are associated with the worst health outcomes.</li>
         </ul>
+
+        <h2 id="kit">Heat-care kit</h2>
+        <p>Everyday physical supplies that match the heat-care copy above — a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href="https://vets.co/health/heat-stroke-dogs">Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops (cooling
+            mat / cooling vest). ShopCtas hides empty Chewy;
+            never href="#" or PLACEHOLDER. Category searches
+            only. Cool-water towels, digital thermometers,
+            ice packs, ramps, fold wipes, Rx eye drops, and
+            BOAS / IVDD clinical treatments are not
+            shoppable hops. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Frenchie heat-care kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            heat-care copy — a cooling mat and a cooling vest.
+            Everyday physical gear only. They are not a ranked
+            product list, they are not medications, they are not
+            heatstroke first-aid ASINs, and they do not replace
+            a veterinarian. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health"
+              amazonLabel="Browse dog cooling mats on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+cooling+vest?s=health-french-bulldog-health"
+              amazonLabel="Browse dog cooling vests on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
