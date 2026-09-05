@@ -4146,6 +4146,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog GDV prevention-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page feeding-management copy (a timed automatic dog feeder so two or more smaller meals replace one large meal, a maze slow-feed dog bowl so a fast eater cannot gulp a bowl in seconds, an indoor dog house-line so a post-meal potty trip stays a short walk not a run), never a placeholder ASIN, a #1056 diaper / inflatable-collar / airline-crate hop, a #1055 cancer-treatment hop, a #1054 pancreatitis leftover-lockdown hop, a #1053 Addison hop, a #1041 heat-pants / belly-band / exercise-pen hop, a slow-feeder / elevated-slow-feeder / raised-bowl / puzzle-feeder hop, a 6-ft-leash / long-line hop, a first-aid-kit hop, a thermometer / pet-scale hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · seizures-in-dogs hops',
+    file: 'apps/vets-co/src/app/health/seizures-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-seizures-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog seizure observation-kit checklist"/, label: 'concrete dog seizure observation-kit-checklist offer, not Subscribe' },
+      { re: /source="health-seizures"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/digital\+handheld\+stopwatch\?s=health-seizures-in-dogs/, label: 'digital handheld-stopwatch search hop (matches on-page time-the-event / note-start-and-length copy; unique vs one+minute+kitchen+timer / aquarium+light+timer)' },
+      { re: /amazon-brand\/waterproof\+field\+notebook\?s=health-seizures-in-dogs/, label: 'waterproof field-notebook search hop (matches on-page seizure-diary / dates-durations-triggers copy; unique vs resting+respiratory+rate+notebook / pet+medical+records+binder / pet+vaccination+record+book)' },
+      { re: /amazon-brand\/foam\+table\+edge\+bumper\?s=health-seizures-in-dogs/, label: 'foam table-edge-bumper search hop (matches on-page clear-hard-or-sharp-objects copy; unique vs interlocking+foam+floor+tiles / dog+crate+bumper+pads)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(soft\+throw\+blanket|dog\+crate\+bumper\+pads|interlocking\+foam\+floor\+tiles|automatic\+timed\+dog\+feeder|maze\+slow\+feed\+dog\+bowl|indoor\+dog\+house\+line|disposable\+female\+dog\+diapers|inflatable\+dog\+collar|hard\+sided\+airline\+dog\+crate|dog\+surgical\+recovery\+suit|non\+slip\+dog\+socks|adjustable\+height\+dog\+bowls|locking\+kitchen\+trash\+can|walk\+through\+pet\+gate|airtight\+dog\+food\+storage\+container|dog\+pill\+pockets|dry\+erase\+monthly\+calendar|dog\+medical\+alert\+collar\+tag|resting\+respiratory\+rate\+notebook|one\+minute\+kitchen\+timer|step\+in\+padded\+dog\+harness|pet\+medical\+records\+binder|am\+pm\+weekly\+pill\+organizer|pet\+vaccination\+record\+book|led\+medical\+penlight|pet\+emergency\+contact\+card|folding\+pet\+stretcher|pet\+first\+aid\+kit|dog\+first\+aid\+kit|digital\+pet\+thermometer|soft\+dog\+muzzle|phenobarbital|potassium\+bromide|levetiracetam|keppra|zonisamide|diazepam|midazolam|valium|primidone|imepitoin|potassium\+bromide|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1028 throw-blanket / crate-bumper / foam-tile, #1057 timed-feeder / maze-bowl / house-line, #1056 diapers / inflatable-collar / airline-crate, #1055 recovery-suit / non-slip-socks / adjustable-bowls, #1054 locking-trash / kitchen-gate / airtight-storage, #1053 pill-pockets / dry-erase-calendar / medical-alert-tag, #1047 notebook / timer / harness, #1046 binder / AM-PM pill-organizer, #1045 penlight / contact-card / stretcher, #1044 vaccine-record, first-aid kits / thermometers / muzzles, phenobarbital / potassium bromide / levetiracetam / zonisamide / diazepam / midazolam, or Rx — this page hops only digital-handheld-stopwatch / waterproof-field-notebook / foam-table-edge-bumper gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog seizure observation-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-minutes / diary copy (a digital handheld stopwatch so start and length are timed instead of guessed, a waterproof field notebook so the seizure diary of dates, durations, and possible triggers stays writable after a messy event, a foam table-edge bumper so hard or sharp furniture is padded before the next seizure), never a placeholder ASIN, a #1028 throw-blanket / crate-bumper / foam-tile hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1047 kitchen-timer / respiratory-notebook hop, a first-aid-kit hop, a thermometer hop, a phenobarbital / levetiracetam / diazepam hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
