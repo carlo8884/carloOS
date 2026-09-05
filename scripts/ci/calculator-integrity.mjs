@@ -3336,6 +3336,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse hoof-abscess soak-checklist offer; every gear CTA is an amazon-brand category search matching on-page soak copy (Epsom salt for the warm hoof soak after a vet or farrier opens the tract, soaking boot so that soak stays around the hoof), never a placeholder ASIN, a poultice / bandage / first-aid-kit hop (grimace-scale + emergency-kit), a riding hoof-boot hop (hoof-care-basics), a hoof-pick hop, a #1017 hay-steamer / hay-soaking-bag hop, a #1016 sweat-scraper / shade-cloth hop, a #1018 sweet-itch rug / hood hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'fish · aquascaping-guide hops',
+    file: 'apps/fish-com/src/app/setup/aquascaping-guide/page.tsx',
+    mustInclude: [
+      { re: /source="setup-aquascaping-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquascape hardscape checklist"/, label: 'concrete aquascape hardscape-checklist offer, not Subscribe' },
+      { re: /source="setup-aquascaping"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/aquarium\+seiryu\+stone\?s=setup-aquascaping-guide/, label: 'aquarium Seiryu-stone search hop (matches on-page Seiryu textured-rock / GH-pH copy; unique vs #993–#1019 setup-hub filter / heater / test-kit hops)' },
+      { re: /amazon-brand\/aquarium\+spiderwood\+driftwood\?s=setup-aquascaping-guide/, label: 'aquarium spiderwood-driftwood search hop (matches on-page spiderwood soak-or-boil copy; unique vs setup-hub / planted-tank / CO2 hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(aquaclear|fluval|eheim\+jager|aqueon|api\+freshwater|seachem\+prime|seachem\+flourish|aquarium\+gravel|aquarium\+sand|aqua\+soil|gravel\+vacuum|substrate\+vacuum|co2\+regulator|co2\+diffuser|drop\+checker|aquarium\+heater|aquarium\+filter|aquarium\+stand|glass\+aquarium|acrylic\+aquarium|ohko|dragon\+stone|manzanita|mopani|aquascaping\+tweezer|root\+tab|fertilizer|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop setup-hub filter / heater / test-kit / Prime / gravel-vacuum, planted-tank aquasoil, CO2 regulator / diffuser / drop checker / Flourish Excel, Ohko / manzanita / mopani extra SKUs, tweezers, or fertilizers — this page hops only Seiryu-stone / spiderwood-driftwood gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquascape hardscape-checklist offer; every gear CTA is an amazon-brand category search matching on-page hardscape copy (aquarium Seiryu stone for the textured rock skeleton, aquarium spiderwood driftwood for the wood lines), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), an aquasoil hop (planted-tank / substrate calculator), a pressurized-CO2 hop (CO2 calculator), or a fertilizer hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
