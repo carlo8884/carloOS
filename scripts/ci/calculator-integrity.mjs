@@ -4482,6 +4482,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete 14-sign emergency-prep-checklist offer; every gear CTA is an amazon-brand category search matching on-page 14-sign transport / cleanup / night gum-color copy (a wire basket dog muzzle so a collapsed, fractured, or post-seizure dog can be moved without a bite, quilted disposable underpads so blood, vomit, or wound fluid stays off the car seat, a handheld AA LED flashlight so pale / white / blue / gray gums get a look at night), never a placeholder ASIN, a #1073 crate / kennel-spray / second-hand-clock hop, a #1072 tick-hook / flea-comb / ID-card hop, a first-aid-kit / penlight / soft-carrier hop, a GDV-treatment hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · pain-signs-dogs hops',
+    file: 'apps/vets-co/src/app/health/pain-signs-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-pain-signs-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog pain-signs observation checklist"/, label: 'concrete dog pain-signs observation-checklist offer, not Subscribe' },
+      { re: /source="health-pain-signs"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/egg\+crate\+foam\+dog\+kennel\+pad\?s=health-pain-signs-dogs/, label: 'egg-crate foam dog-kennel-pad search hop (matches on-page posture / floor-sleeping / night-restlessness copy; unique vs orthopedic+dog+bed / self+warming+dog+mat / dog+crate+pad)' },
+      { re: /amazon-brand\/carpeted\+wooden\+pet\+steps\?s=health-pain-signs-dogs/, label: 'carpeted wooden pet-steps search hop (matches on-page reluctance-to-climb-stairs-to-the-bed copy; unique vs foam+dog+stairs / dog+ramp / dog+rear+support+harness)' },
+      { re: /amazon-brand\/wide\+platform\+veterinary\+floor\+scale\?s=health-pain-signs-dogs/, label: 'wide-platform veterinary floor-scale search hop (matches on-page activity-level / reduced-appetite / not-rising weight-change copy; unique vs digital+pet+scale / analog+bathroom+scale / digital+hanging+luggage+scale)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(wire\+basket\+dog\+muzzle|quilted\+disposable\+underpads|handheld\+aa\+led\+flashlight|double\+door\+wire\+dog\+crate|pet\+safe\+kennel\+disinfectant\+spray|analog\+wall\+clock\+with\+second\+hand|tick\+removal\+hook|fine\+tooth\+flea\+comb|laminated\+tick\+identification\+card|letter\+size\+expanding\+file\+organizer|sterile\+urine\+specimen\+cup|12\+hour\+mechanical\+kitchen\+timer|orthopedic\+dog\+bed|dog\+ramp|foam\+dog\+stairs|dog\+rear\+support\+harness|dog\+belly\+support\+harness|dog\+assisted\+walking\+sling|digital\+pet\+scale|analog\+bathroom\+scale|digital\+hanging\+luggage\+scale|pet\+first\+aid\+kit|led\+medical\+penlight|soft\+dog\+muzzle|dog\+recovery\+crate|soft\+sided\+dog\+crate|calming\+dog\+chews|lick\+mat\+dog|joint\+support\+dog\+treats|carprofen|rimadyl|meloxicam|gabapentin|tramadol|opioid|nsaid|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1074 muzzle / underpads / flashlight, #1073 crate / kennel-spray / second-hand-clock, #1072 tick-hook / flea-comb / ID-card, #1071 expanding-file / urine-cup / 12-hour-timer, orthopedic-bed / ramp / foam-stairs / rear-harness / belly-harness / walking-sling, digital-pet-scale / analog-bathroom-scale / hanging-luggage-scale, first-aid-kit / penlight / soft-muzzle / recovery-crate, calming-chews / lick-mat / joint-treats, carprofen / Rimadyl / meloxicam / gabapentin / tramadol / NSAID, or Rx — this page hops only egg-crate-foam-dog-kennel-pad / carpeted-wooden-pet-steps / wide-platform-veterinary-floor-scale gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog pain-signs observation-checklist offer; every gear CTA is an amazon-brand category search matching on-page posture / stair-reluctance / restlessness / weight-change copy (an egg-crate foam dog kennel pad so a dog that left the bed for the floor has a surface you can watch for hunched posture and night restlessness, carpeted wooden pet steps so reluctance to climb stairs to the bed stays a specific observation, a wide-platform veterinary floor scale so quieter activity and a smaller appetite get a weekly weight), never a placeholder ASIN, a #1074 muzzle / underpad / flashlight hop, a #1073 crate / kennel-spray / second-hand-clock hop, an orthopedic-bed / ramp / foam-stairs / rear-harness hop, a digital-pet-scale hop, an NSAID / opioid / gabapentin hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
