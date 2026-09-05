@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/ear-disorders/diseases-of-the-outer-ear/otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Ear Infections in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/ear-infections-dogs', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -47,7 +47,38 @@ export default function EarInfectionsDogsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog ear-infection care checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog ear-infection care checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the home-care notes — a dog ear-cleaner
+              solution a veterinarian has recommended for
+              wax-prone ears, cotton balls for dog ears to
+              wipe the visible canal and flap after the dog
+              shakes, and dog ear-drying powder after a swim
+              or bath so trapped moisture does not sit in the
+              L-shaped canal. Educational checklist, not a
+              diagnosis and not a substitute for otoscopy or
+              cytology. Prescription ear drops, leftover
+              medication, and cotton swabs stay off this
+              list. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Dog ear-infection care checklist"
+              subtitle="Email the cleaner, cotton-ball, and drying-powder notes. No spam."
+              ctaText="Email my dog ear-infection care checklist"
+              source="health-ear-infections-dogs-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="info" title="Recurrence means look deeper">
             A dog that gets ear infection after ear infection does not have bad luck — it has an unaddressed underlying cause, most often allergies. Breaking the cycle requires identifying and managing that cause, not just clearing each infection as it appears.
@@ -69,7 +100,72 @@ export default function EarInfectionsDogsPage() {
           <p>Treatment typically involves thorough cleaning of the ear and a veterinarian-selected medication targeting the specific organisms found, with the choice and dosing determined by your veterinarian based on cytology and the condition of the eardrum. Pain and inflammation are addressed as needed. For chronic or recurrent infections, the focus shifts to identifying and controlling the underlying cause. Owners should complete the full course and return for a recheck to confirm the infection has resolved rather than stopping when signs improve.</p>
 
           <h2>Prevention</h2>
-          <p>Prevention is tailored to the dog. For allergic dogs, allergy management is the foundation. General measures include drying ears after swimming and bathing, routine cleaning with a veterinarian-recommended cleaner for wax-prone dogs, and avoiding over-cleaning healthy ears. Staying ahead of the underlying cause is what keeps prone dogs comfortable and out of the recurring-infection cycle.</p>
+          <p>Prevention is tailored to the dog. For allergic dogs, allergy management is the foundation. General measures include drying ears after swimming and bathing, routine cleaning with a veterinarian-recommended cleaner for wax-prone dogs, and avoiding over-cleaning healthy ears. A dog ear-cleaner solution a veterinarian has recommended loosens wax in the L-shaped canal; cotton balls for dog ears wipe the visible canal and flap after the dog shakes — cotton swabs stay out of the canal. Dog ear-drying powder after a swim or bath helps leftover moisture leave the canal instead of sitting warm and wet. Staying ahead of the underlying cause is what keeps prone dogs comfortable and out of the recurring-infection cycle.</p>
+
+          <h2 id="kit">Home ear-care kit</h2>
+          <p>
+            Everyday physical supplies that match the prevention copy
+            on this page — a dog ear-cleaner solution a veterinarian
+            has recommended for wax-prone ears, cotton balls for dog
+            ears to wipe the visible canal and flap after the dog
+            shakes, and dog ear-drying powder after swimming or
+            bathing. These are household tools, not treatments. They
+            do not treat an active infection, they do not replace a
+            veterinarian or cytology, and they are not prescription
+            ear drops, leftover medication, vinegar, peroxide, or
+            cotton swabs. This is not the sister Dog.com weekly
+            ear-cleaning page and it does not hop a generic pet ear
+            cleaner or bare cotton-ball search. It is not the
+            Labrador swim-ear page and it does not hop a
+            microfiber dog towel or dog ear-drying solution. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops (dog ear-cleaner
+              solution / cotton balls for dog ears / dog ear-drying
+              powder). ShopCtas hides empty Chewy; never href="#" or
+              PLACEHOLDER. Category searches only — unused vs #848–#1033
+              pet+ear+cleaner, cotton+balls, cotton+pads,
+              dog+ear+drying+solution, UTI fountain/pads/bowl, and
+              kennel-cough harness/humidifier/crate. Prescription
+              ear drops, leftover medication, and cotton swabs are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog ear-infection care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              ear-cleaning and drying copy — a dog ear-cleaner
+              solution, cotton balls for dog ears, and dog
+              ear-drying powder after a swim or bath. Everyday
+              physical supplies only. They are not a ranked product
+              list, they are not prescription ear drops, they are
+              not the pet ear-cleaner or cotton-ball hops already
+              used on Dog.com, they are not the Labrador
+              ear-drying-solution hop, they are not the UTI
+              fountain / pads / bowl hops, and they do not replace
+              a veterinarian. Vets.co earns a commission on
+              qualifying purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs"
+                amazonLabel="Browse dog ear-cleaner solutions on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/cotton+balls+for+dog+ears?s=health-ear-infections-dogs"
+                amazonLabel="Browse cotton balls for dog ears on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+ear+drying+powder?s=health-ear-infections-dogs"
+                amazonLabel="Browse dog ear-drying powder on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
