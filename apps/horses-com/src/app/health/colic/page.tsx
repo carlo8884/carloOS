@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-05T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -126,6 +126,7 @@ export default function ColicPage() {
             { label: 'Surgical Treatment', href: '#surgical' },
             { label: 'Post-Op Recovery', href: '#post-op' },
             { label: 'Prevention', href: '#prevention' },
+            { label: 'Baseline-Vitals Kit', href: '#kit' },
             { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
@@ -159,9 +160,39 @@ export default function ColicPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the colic baseline-vitals checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse colic baseline-vitals checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the equine digital rectal-thermometer,
+              large-animal stethoscope, and soft fleece
+              equine-cooler notes so a resting temperature,
+              four-quadrant gut sounds, and a quiet stall
+              stay written down before the veterinarian
+              arrives. Educational monitoring checklist,
+              not a treatment plan and not a substitute
+              for the veterinarian. Stopwatches, field
+              notebooks, first-aid kits, and foaling
+              thermometers stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse colic baseline-vitals checklist"
+              subtitle="Email the thermometer, stethoscope, and cooler notes. No spam."
+              ctaText="Email my horse colic baseline-vitals checklist"
+              source="health-colic-under-hero"
+            />
+          </div>
 
           <h2 id="what-is-colic">What Is Colic</h2>
           <p>Colic is a clinical sign — abdominal pain — and not a diagnosis. The horse&apos;s gastrointestinal anatomy is uniquely vulnerable to problems that cause pain: roughly 100 feet of intestine arranged in a long, mobile, sharply-folded path that includes the large colon (a 12-foot-long fermentation chamber that doubles back on itself at the pelvic flexure) and a relatively narrow attachment to the body wall that allows substantial movement of the gut. The same anatomy that makes horses efficient fiber fermenters also makes them prone to displacements, torsions, impactions, and gas accumulation that do not occur in carnivores or in ruminants.</p>
@@ -216,7 +247,7 @@ export default function ColicPage() {
             <li><strong>Discolored mucous membranes</strong> — pale, brick-red, or purple gums indicate shock or endotoxemia.</li>
           </ul>
 
-          <p>The single most useful piece of equipment for the owner during a colic episode is a watch and a notebook: time of onset, heart rate at intervals, time of last manure, time of last drink, current pain behavior. This information transforms the veterinary phone consultation from guesswork to triage.</p>
+          <p>The single most useful piece of equipment for the owner during a colic episode is a watch and a notebook: time of onset, heart rate at intervals, time of last manure, time of last drink, current pain behavior. This information transforms the veterinary phone consultation from guesswork to triage. An equine digital rectal thermometer is how the physical-exam temperature stays written down with those notes — it is not a foaling thermometer and not a dog rectal thermometer. A large-animal stethoscope is how gut sounds in all four quadrants are listened to for the auscultation copy on this page — it is educational monitoring, not a diagnosis kit and not a substitute for the veterinarian.</p>
 
           <h2 id="emergency">When to Call the ER Vet</h2>
           <p>Call your regular veterinarian at the first sign of colic. A conservative sign-list urgency read — go now, same-day, or monitor — lives on the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a>; it does not diagnose. Call the emergency line and prepare for referral to a surgical hospital if any of the following are present:</p>
@@ -335,7 +366,72 @@ export default function ColicPage() {
           <p>In sandy regions: feed off the ground (rubber mats, slow-feeders), supplement psyllium periodically (typical regimen is 1 cup of psyllium powder per 500 lb body weight, top-dressed daily for the first 7 days of each month), monitor manure for excessive sand sedimentation.</p>
 
           <h3>Monitor and document baseline vitals</h3>
-          <p>Knowing the horse&apos;s resting heart rate, normal gut sounds, normal manure output, and typical attitude makes it possible to recognize early deviations. Owners who can describe the horse&apos;s baseline accurately give the veterinarian a substantial diagnostic advantage in any acute presentation.</p>
+          <p>Knowing the horse&apos;s resting heart rate, normal gut sounds, normal manure output, and typical attitude makes it possible to recognize early deviations. Owners who can describe the horse&apos;s baseline accurately give the veterinarian a substantial diagnostic advantage in any acute presentation. A soft fleece equine cooler is how a sweating horse stays quietly covered in a stall while you wait for the veterinarian — it is not a turnout blanket, not a body-clipping cooler, and not a treatment.</p>
+
+          <h2 id="kit">Baseline-vitals kit</h2>
+          <p>Everyday physical supplies that match the monitoring and quiet-stall copy on this page — an equine digital rectal thermometer so the physical-exam temperature stays written down with the onset notes, a large-animal stethoscope so gut sounds in all four quadrants can be listened to for the auscultation copy, and a soft fleece equine cooler so a sweating horse stays quietly covered in a stall while you wait for the veterinarian. These are household barn tools, not treatments. They do not diagnose or treat colic, they do not replace a veterinarian, and they are not a ranked product list. Stopwatches, field notebooks, first-aid kits, foaling thermometers, veterinary thermometers, turnout blankets, and body-clipping coolers already live on other pages. This page does not hop Banamine, flunixin, bute, Buscopan, mineral oil, psyllium, dewormers, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (equine digital rectal thermometer /
+              large animal stethoscope /
+              soft fleece equine cooler).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1061 farrier-log / hoof-stand /
+              barn-flood-light, #1060 fecal-container /
+              manure-rake / muck-cart, #1059 scoop /
+              portion-cups / weight-log-book, #1058
+              stopwatch / notebook / bumper, #1057
+              feeder / maze-bowl / house-line, #1056
+              diapers / collar / crate, digital+equine+
+              thermometer / digital+veterinary+
+              thermometer / horse+fleece+cooler /
+              equine+first+aid+kit, hoof-pick /
+              hoof-boots, snow-pads / shoe-studs,
+              stall-bedding / pasture-management. Rx
+              ASINs are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the horse colic baseline-vitals kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page monitoring and quiet-stall copy —
+              an equine digital rectal thermometer, a
+              large-animal stethoscope, and a soft fleece
+              equine cooler. Everyday physical supplies
+              only. They are not a ranked product list,
+              they are not a medication hop, they are not
+              a diagnosis-kit hop, they are not a #1061
+              farrier-log / hoof-stand / barn-flood-light
+              hop, they are not a #1060 fecal-sample-
+              container / manure-rake / muck-cart hop,
+              they are not a #1058 stopwatch / field-
+              notebook hop, they are not a foaling or
+              veterinary-thermometer hop, they are not a
+              horse-fleece-cooler hop, and they do not
+              replace a veterinarian. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic"
+                amazonLabel="Browse equine digital rectal thermometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/large+animal+stethoscope?s=health-colic"
+                amazonLabel="Browse large-animal stethoscopes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/soft+fleece+equine+cooler?s=health-colic"
+                amazonLabel="Browse soft fleece equine coolers on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
