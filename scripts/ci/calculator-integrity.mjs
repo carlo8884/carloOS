@@ -3671,6 +3671,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog allergy flare-checklist offer; every gear CTA is an amazon-brand category search matching on-page mild-flare rinse-and-rest copy (oatmeal dog shampoo to rinse a contact allergen after localized hives, dog paw cleaner wipes for the investigating paw after a sting or outdoor allergen, soft recovery collar so the dog cannot scratch swollen skin while waiting for the veterinarian), never a placeholder ASIN, an ear-infection hop (#1034), a UTI fountain/pads/bowl hop (#1033), a kennel-cough hop (#1032), a dog+paw+wipes hop (#1003), a chlorhexidine-shampoo hop (#1013), a soft+recovery+cone or soft+e+collar hop, an Apoquel / Cytopoint hop, a Benadryl ASIN hop, or a prescription-antihistamine hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · anxiety-in-dogs hops',
+    file: 'apps/vets-co/src/app/health/anxiety-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-anxiety-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog anxiety home-support checklist"/, label: 'concrete dog anxiety home-support-checklist offer, not Subscribe' },
+      { re: /source="health-anxiety"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/anxiety\+vest\+dog\?s=health-anxiety-in-dogs/, label: 'anxiety-vest-dog search hop (matches on-page gentle-pressure / known-trigger copy; unique vs dog+anxiety+wrap and dog+cooling+vest)' },
+      { re: /amazon-brand\/pheromone\+diffuser\+dog\?s=health-anxiety-in-dogs/, label: 'pheromone-diffuser-dog search hop (matches on-page room-level environmental-aid copy; unique vs calming+pheromone+diffuser on cat grimace-scale)' },
+      { re: /amazon-brand\/dog\+heartbeat\+comfort\+toy\?s=health-anxiety-in-dogs/, label: 'dog heartbeat-comfort-toy search hop (matches on-page short-absence copy; unique vs lick+mat+dog, white+noise+machine, kong, and snuffle-mat hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(dog\+anxiety\+wrap|dog\+crate\+cover|white\+noise|lick\+mat|snuffle\+mat|kong\+classic|wire\+dog\+crate|oatmeal\+dog\+shampoo|dog\+paw\+cleaner\+wipes|soft\+recovery\+collar|thundershirt|thunder\+shirt|adaptil|fluoxetine|reconcile|trazodone|gabapentin|sileo|clomipramine|dexmedetomidine|ssri|tca|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop Dog.com anxiety wrap / crate-cover / white-noise (#dog-anxiety), lick+mat+dog, snuffle/kong/crate training hops, #1035 oatmeal-shampoo / paw-cleaner-wipes / recovery-collar, Thundershirt or Adaptil brand ASINs, or Rx anxiolytics — this page hops only anxiety-vest-dog / pheromone-diffuser-dog / heartbeat-comfort-toy gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog anxiety home-support-checklist offer; every gear CTA is an amazon-brand category search matching on-page environmental-management copy (anxiety vest for gentle pressure during a known trigger, dog pheromone diffuser for the room the dog rests in, heartbeat comfort toy for short absences), never a placeholder ASIN, a Dog.com dog+anxiety+wrap / crate-cover / white-noise hop, a lick+mat+dog hop, a snuffle / Kong / crate training hop, an allergic-reactions oatmeal-shampoo / paw-wipe / recovery-collar hop (#1035), a Thundershirt or Adaptil brand-ASIN hop, or a prescription-anxiolytic hop (fluoxetine / Reconcile, trazodone, gabapentin, Sileo, clomipramine). Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
