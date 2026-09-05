@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide — What Each Test Finds | Vets.co', description: 'What your senior dog\'s bloodwork actually measures. CBC, chemistry panel, urinalysis, SDMA, and thyroid explained', path: '/health/senior-bloodwork-guide', type: 'article' })
@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/senior-care-configuration/', publisher: 'AAHA' },
   { label: 'IRIS: SDMA and Early Kidney Disease Detection', url: 'https://www.iris-kidney.com/', publisher: 'International Renal Interest Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Bloodwork Guide', description: 'Interpreting CBC, chemistry panel, and urinalysis in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -33,6 +33,45 @@ export default function SeniorBloodworkPage() {
 </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the senior-dog bloodwork visit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Senior-dog bloodwork visit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the visit-prep notes — a letter-size
+              accordion file organizer so dated CBC,
+              chemistry, and urinalysis printouts stay
+              in one trend instead of a junk-drawer
+              pile, a sterile urine specimen cup so a
+              free-catch sample can travel with the
+              appointment, and a magnetic kitchen memo
+              board so the overnight fast before
+              glucose and chemistry is written where
+              every person in the house can see it.
+              Educational checklist, not a diagnosis,
+              not a lab interpretation, and not a
+              substitute for the veterinarian who
+              ordered the panel. Pet medical-records
+              binders, vaccination-record books,
+              waterproof field notebooks, fecal-sample
+              kits, leak-proof specimen bags, pet
+              glucometers, and dry-erase monthly
+              calendars stay on other pages. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Senior-dog bloodwork visit checklist"
+              subtitle="Email the accordion-file, urine-cup, and fasting-board notes. No spam."
+              ctaText="Email my senior-dog bloodwork visit checklist"
+              source="health-senior-bloodwork-guide-under-hero"
+            />
+          </div>
+
           <h2>Complete Blood Count (CBC)</h2>
           <p>The CBC evaluates the cellular components of blood — the cells that carry oxygen, fight infection, and enable clotting. Key values:</p>
           <p><strong>Red blood cells (RBC) and hematocrit (HCT/PCV):</strong> Anemia (low RBC/HCT) in a senior dog has multiple causes — chronic disease, blood loss, bone marrow disease, immune-mediated destruction. The CBC's red cell indices (MCV, MCH, MCHC) help characterize the type of anemia and guide diagnosis. Erythrocytosis (elevated RBC) is less common but can indicate dehydration or polycythemia vera.</p>
@@ -58,6 +97,111 @@ export default function SeniorBloodworkPage() {
           <p><strong>Protein in urine (proteinuria):</strong> Small amounts are normal. Significant proteinuria (urine protein:creatinine ratio &gt; 0.5) indicates protein loss through damaged glomeruli — glomerular disease, hypertension, or early CKD. Persistent proteinuria in a senior dog warrants further investigation.</p>
           <p><strong>Glucose in urine (glucosuria):</strong> Glucose should not be in urine. Glucosuria indicates either blood glucose above the renal threshold (diabetes) or — in the absence of hyperglycemia — primary renal glucosuria (renal tubular disease).</p>
           <p><strong>Bacteria and white cells:</strong> Urinary tract infection. Culture and sensitivity testing should be performed on any urine showing bacterial growth to guide antibiotic selection — empirical antibiotic treatment without culture misses resistant organisms.</p>
+
+          <p>Household visit-prep tools can sit alongside that panel-and-urine copy after a veterinarian has ordered the senior workup. A letter-size accordion file organizer is how dated CBC, chemistry, and urinalysis printouts stay in one chronological trend so a rising SDMA is visible across years — it is not a pet medical-records binder, not a vaccination-record book, and not a waterproof field notebook. A sterile urine specimen cup is how a free-catch sample reaches the clinic with the appointment instead of leaking in a bag or waiting on a fecal kit — it is not a leak-proof specimen bag and not an equine fecal-sample container. A magnetic kitchen memo board is where the overnight fast before glucose and chemistry gets written so the last meal is not a guessed handful at midnight — it is not a dry-erase monthly calendar and not a one-minute kitchen timer. These are household tools, not treatments. They do not interpret a panel, they do not replace a veterinarian, they do not diagnose CKD or diabetes, and they are not a ranked product list. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s visit kit.</p>
+
+          <h2 id="kit">Senior-dog bloodwork visit kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            visit-prep copy on this page — a letter-size
+            accordion file organizer so dated CBC,
+            chemistry, and urinalysis printouts stay in
+            one trend, a sterile urine specimen cup so a
+            free-catch sample can travel with the
+            appointment, and a magnetic kitchen memo
+            board so the overnight fast before glucose
+            and chemistry is written where the household
+            can see it. These are household tools, not
+            treatments. They do not interpret bloodwork,
+            they do not replace a veterinarian, and they
+            are not a ranked product list. Pet
+            medical-records binders, vaccination-record
+            books, waterproof field notebooks, resting
+            respiratory-rate notebooks, dog weight-log
+            books, dry-erase monthly calendars,
+            fecal-sample collection kits, leak-proof
+            specimen bags, pet glucometers, light corn
+            syrup, oral feeding syringes, and ceramic
+            pet food bowls already live on other pages.
+            This page does not hop medications. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (letter-size accordion file organizer /
+              sterile urine specimen cup /
+              magnetic kitchen memo board).
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1069
+              wire+small+animal+single+story+cage /
+              non+slip+suction+bathtub+mat /
+              stainless+steel+small+animal+crock, #1068
+              extra+small+animal+travel+kennel /
+              scent+swap+fleece+sleep+pouch /
+              portable+small+animal+playpen, #1059
+              adjustable+sliding+dog+food+scoop /
+              reusable+dog+food+portion+cups /
+              dog+weight+log+book, #1058
+              digital+handheld+stopwatch /
+              waterproof+field+notebook /
+              foam+table+edge+bumper, reserved
+              pet-glucometer / light-corn-syrup /
+              pet-oral-feeding-syringe /
+              pet-vaccination-record-book /
+              ferret-carrier / ceramic-pet-food-bowl /
+              Critter-Nation-double, and
+              pet+medical+records+binder /
+              fecal+sample+collection+kit /
+              leak+proof+specimen+bags. Rx ASINs are
+              not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the senior-dog bloodwork visit kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page visit-prep copy — a letter-size
+              accordion file organizer, a sterile urine
+              specimen cup, and a magnetic kitchen memo
+              board. Everyday physical supplies only.
+              They are not a ranked product list, they
+              are not a prescription or medication hop,
+              they are not the #1069 wire-cage /
+              bathtub-mat / stainless-crock hops, they
+              are not the #1068 travel-kennel /
+              scent-swap-pouch / portable-playpen hops,
+              they are not the #1059 scoop /
+              portion-cup / weight-log hops, they are
+              not the #1058 stopwatch / field-notebook /
+              table-bumper hops, they are not a pet
+              medical-records binder or
+              vaccination-record book, they are not a
+              fecal-sample kit or leak-proof specimen
+              bag, they are not a pet glucometer /
+              light-corn-syrup / oral-feeding-syringe
+              hop, and they do not replace a
+              veterinarian. Vets.co earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/letter+size+accordion+file+organizer?s=health-senior-bloodwork-guide"
+                amazonLabel="Browse letter-size accordion file organizers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide"
+                amazonLabel="Browse sterile urine specimen cups on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/magnetic+kitchen+memo+board?s=health-senior-bloodwork-guide"
+                amazonLabel="Browse magnetic kitchen memo boards on Amazon →"
+              />
+            </div>
+          </div>
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
