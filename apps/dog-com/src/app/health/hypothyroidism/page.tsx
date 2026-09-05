@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs -- Weight Gain, Skin Changes | Dog.com', description: 'Hypothyroidism is the most common endocrine disorder in dogs. Weight gain without increased appetite, coat changes, and lethargy are the classic signs.', path: '/health/hypothyroidism', type: 'article' })
@@ -35,6 +35,55 @@ export default function HypothyroidismPage() {
         </>}
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog hypothyroidism cold-and-coat checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog hypothyroidism cold-and-coat checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the warm-spot, cold-weather, and coat
+              notes — a self-warming dog mat so cold
+              intolerance (seeking warm spots) has a
+              mapped rest place, a fleece dog sweater so
+              a dog reluctant to go outside in cold
+              weather can still take a short walk, and a
+              dog slicker brush so a dull or brittle coat
+              and bilaterally symmetrical hair loss stay
+              visible while coat improvement is watched
+              over 6–8 weeks. Educational checklist, not
+              a levothyroxine product list, not a
+              Soloxine or Thyro-Tabs hop, and not a
+              prescription. Thyroid testing and dose
+              decisions still belong with a veterinarian.
+              Lymph-node anatomy charts, foam dog stairs,
+              ear wipes, assisted-walking slings,
+              hind-paw booties, hip braces, silicone
+              grooming gloves, analog bathroom scales,
+              dog dental finger brushes, resting
+              respiratory rate notebooks, one-minute
+              kitchen timers, step-in padded harnesses,
+              medical-records binders, AM/PM weekly pill
+              organizers, hanging luggage scales,
+              penlights, emergency contact cards,
+              stretchers, vaccination record books,
+              seat-belt tethers, puppy mats, mosquito
+              dunks, monthly pill organizers, and
+              clinic-visit carriers stay on other pages.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog hypothyroidism cold-and-coat checklist"
+              subtitle="Email the warm-mat, fleece-sweater, and slicker-brush notes. No spam."
+              ctaText="Email my dog hypothyroidism cold-and-coat checklist"
+              source="health-hypothyroidism-under-hero"
+            />
+          </div>
+
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Hypothyroidism is the most common endocrine disorder diagnosed in dogs, yet it is also one of the most frequently overlooked -- because its signs develop gradually and mirror the changes many owners attribute to normal middle age. Weight gain despite stable food intake, a coat that seems to have lost its shine, and a dog that seems perpetually tired are the hallmarks. A single blood panel can confirm or rule out the diagnosis, and once levothyroxine treatment begins, the transformation in energy, coat, and body condition is among the most rewarding recoveries in small animal medicine.</DropCap>
@@ -61,6 +110,149 @@ export default function HypothyroidismPage() {
           <p>Levothyroxine (synthetic T4 -- brand names include Soloxine, Thyro-Tabs, Nutri-Vet) is a veterinarian-prescribed medication given once or twice daily; the starting dose must be determined by a veterinarian based on the dog's body weight and overall health. Response to treatment is dramatic and rewarding -- most owners notice improved energy and attitude within 2-4 weeks, coat improvement within 6-8 weeks, and weight loss (combined with appropriate diet) over several months.</p>
           <p>Monitoring: post-pill T4 levels (measured 4-6 hours after morning pill) at 4-8 weeks after starting or dose-adjusting, then every 6 months once stable. The target is T4 in the upper half of the normal range at the 4-6 hour post-pill measurement. Underdosing leaves the dog symptomatic; overdosing causes signs of hyperthyroidism (restlessness, increased appetite, weight loss, rapid heart rate). Dose adjustments are common in the first year and then the dog typically remains stable.</p>
           <p>Human levothyroxine (Synthroid) is not recommended -- the formulation and absorption characteristics differ from veterinary products and dosing is less predictable in dogs. Use veterinary-specific levothyroxine products for the most consistent results.</p>
+
+          <h2 id="kit">A Simple Hypothyroidism Cold-and-Coat Kit</h2>
+          <p>
+            Three everyday physical supplies match the
+            cold-intolerance, cold-weather-walk, and
+            dull-coat copy above: a self-warming dog mat
+            so a dog seeking warm spots has a mapped rest
+            place instead of camping on a heating vent, a
+            fleece dog sweater so reluctance to go outside
+            in cold weather does not cancel a short
+            leash walk, and a dog slicker brush so a dull
+            or brittle coat and bilaterally symmetrical
+            hair loss stay visible while coat improvement
+            is watched over 6–8 weeks of veterinarian-set
+            levothyroxine. These are household comfort
+            and coat-watch tools, not treatments. They do
+            not diagnose hypothyroidism, they do not
+            replace TT4 / fT4ed / cTSH testing, they do
+            not set or adjust a levothyroxine dose, they
+            do not replace post-pill T4 monitoring, and
+            they are not Soloxine, Thyro-Tabs, Synthroid,
+            or a ranked endocrine product list.
+            Lymph-node anatomy charts, foam dog stairs,
+            dog ear wipes, assisted-walking slings,
+            hind-paw booties, hip braces, silicone dog
+            grooming gloves, analog bathroom scales, dog
+            dental finger brushes, resting respiratory
+            rate notebooks, one-minute kitchen timers,
+            step-in padded dog harnesses, pet medical
+            records binders, AM/PM weekly pill
+            organizers, digital hanging luggage scales,
+            LED medical penlights, pet emergency contact
+            cards, folding pet stretchers, vaccination
+            record books, seat-belt tethers, foldable
+            waterproof puppy mats, mosquito dunks, a
+            monthly pill organizer, a soft-sided
+            vet-visit carrier, a gum-color assessment
+            chart, recovery food, a feeding syringe,
+            digital pet scales, cooling mats, cooling
+            vests, heat pants, throw blankets, ferret
+            small-animal slicker brushes, and high-value
+            vet-visit treats already live on other
+            pages. This page does not hop medications.
+            This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (self-warming dog mat / fleece dog sweater
+              / dog slicker brush). ShopCtas hides
+              empty Chewy; never href="#" or PLACEHOLDER.
+              Category searches only — unused vs #1050
+              dog lymph-node anatomy chart / foam dog
+              stairs / dog ear wipes, #1049 dog
+              assisted-walking sling / dog hind-paw
+              booties / dog hip brace, #1048 silicone
+              dog grooming glove / analog bathroom scale
+              / dog dental finger brush, #1047 resting
+              respiratory rate notebook / one-minute
+              kitchen timer / step-in padded dog harness,
+              #1046 pet medical records binder / AM/PM
+              weekly pill organizer / digital hanging
+              luggage scale, #1045 LED medical penlight /
+              pet emergency contact card / folding pet
+              stretcher, #1044 pet vaccination record
+              book / dog seat-belt tether / foldable
+              waterproof puppy mat, #1043 mosquito dunks
+              / monthly pill organizer / soft-sided
+              vet-visit carrier, #1042 gum-chart /
+              recovery-food / feeding-syringe, #1041
+              heat-pants / belly-band / exercise-pen,
+              #1030 high-value vet-visit treats,
+              digital+pet+scale / digital+puppy+scale /
+              kitchen+gram+scale /
+              portion+control+food+scale+dog,
+              ferret finger+toothbrush+pet /
+              soft+slicker+brush+small+animal,
+              soft+measuring+tape+for+pets,
+              dental+chews+dog, pet first-aid kits,
+              digital pet thermometers,
+              dog+wheelchair+mobility+cart /
+              dog+rear+support+harness /
+              dog+belly+support+harness / dog+knee+brace /
+              waterproof+dog+booties / orthopedic+dog+bed /
+              dog+ramp / joint+support+dog+treats,
+              pet+ear+cleaner / dog+ear+drying+solution /
+              dog+paw+wipes / dog+eye+wipes,
+              dog+cooling+mat / dog+cooling+vest /
+              soft+throw+blanket, and
+              soft+dog+carrier / soft+pet+carrier.
+              Soloxine, Thyro-Tabs, Synthroid,
+              levothyroxine, and Rx ASINs are not
+              shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog hypothyroidism cold-and-coat kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page cold-intolerance, cold-weather-walk,
+              and dull-coat copy — a self-warming dog mat,
+              a fleece dog sweater, and a dog slicker
+              brush. Everyday physical supplies only. They
+              are not a ranked product list, they are not
+              a Soloxine / Thyro-Tabs / Synthroid hop,
+              they are not the #1050 lymph-node-chart /
+              foam-stair / ear-wipe hops, they are not the
+              #1049 sling / hind-paw-bootie / hip-brace
+              hops, they are not the #1048 grooming-glove
+              / analog-scale / finger-brush hops, they are
+              not the #1047 notebook / timer / harness
+              hops, they are not the #1046 binder / AM-PM
+              pill-organizer / luggage-scale hops, they
+              are not the #1045 penlight / contact-card
+              / stretcher hops, they are not the #1044
+              vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / monthly-pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not digital-pet-scale
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/self+warming+dog+mat?s=health-hypothyroidism"
+                amazonLabel="Browse self-warming dog mats on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/fleece+dog+sweater?s=health-hypothyroidism"
+                amazonLabel="Browse fleece dog sweaters on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+slicker+brush?s=health-hypothyroidism"
+                amazonLabel="Browse dog slicker brushes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
