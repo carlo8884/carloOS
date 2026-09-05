@@ -3356,6 +3356,26 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquascape hardscape-checklist offer; every gear CTA is an amazon-brand category search matching on-page hardscape copy (aquarium Seiryu stone for the textured rock skeleton, aquarium spiderwood driftwood for the wood lines), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), an aquasoil hop (planted-tank / substrate calculator), a pressurized-CO2 hop (CO2 calculator), or a fertilizer hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'fish · aquarium-algae-control hops',
+    file: 'apps/fish-com/src/app/setup/aquarium-algae-control/page.tsx',
+    mustInclude: [
+      { re: /source="setup-aquarium-algae-control-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my algae-control scraper checklist"/, label: 'concrete algae-control scraper-checklist offer, not Subscribe' },
+      { re: /source="setup-algae-control"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/aquarium\+magnetic\+scraper\?s=setup-aquarium-algae-control/, label: 'aquarium magnetic-scraper search hop (matches on-page viewing-pane / green-spot / green-dust copy; unique vs #993–#1020 setup-hub filter / heater / test-kit and aquascaping Seiryu / spiderwood hops)' },
+      { re: /amazon-brand\/handheld\+aquarium\+algae\+scraper\?s=setup-aquarium-algae-control/, label: 'handheld aquarium algae-scraper search hop (matches on-page plant-leaf / hardscape-tuft copy the magnet cannot reach; unique vs setup-hub / aquascaping / CO2 hops)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(aquaclear|fluval|eheim\+jager|aqueon|api\+freshwater|seachem\+prime|seachem\+flourish|aquarium\+gravel|aquarium\+sand|aqua\+soil|gravel\+vacuum|substrate\+vacuum|co2\+regulator|co2\+diffuser|drop\+checker|aquarium\+heater|aquarium\+filter|aquarium\+stand|glass\+aquarium|acrylic\+aquarium|seiryu|spiderwood|ohko|dragon\+stone|manzanita|mopani|light\+timer|root\+tab|fertilizer|algaecide|erythromycin|medication|medicine|prescription|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop setup-hub filter / heater / test-kit / Prime / gravel-vacuum, planted-tank aquasoil, CO2 regulator / diffuser / drop checker / Flourish Excel, #1020 Seiryu / spiderwood, light timer / root tabs (low-tech leftover), algaecides, erythromycin, or medications — this page hops only magnetic-scraper / handheld-algae-scraper gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete algae-control scraper-checklist offer; every gear CTA is an amazon-brand category search matching on-page glass-cleaning copy (aquarium magnetic scraper for the viewing panes, handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a light-timer / root-tab hop reserved for low-tech-planted, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

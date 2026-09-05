@@ -1,5 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
+import {
+  buildMetadata,
+  ArticleLayout,
+  EmailCapture,
+  RelatedLinks,
+  ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
+} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -10,7 +18,7 @@ const SOURCES = [
   { label: "Dodds, W.K. & Gudder, D.A. The Ecology of Cladophora. Journal of Phycology, 1992.", publisher: "Journal of Phycology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Algae Control — Identify and Beat Every Type | Fish.com', description: "How to identify and control aquarium algae: green spot, hair, black beard, diatoms, and cyanobacteria. Fix the root causes — light, nutrients, and CO2.", path: '/setup/aquarium-algae-control', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
 })
 export default function AlgaeControlPage() {
@@ -35,13 +43,41 @@ export default function AlgaeControlPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the algae-control scraper checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Algae-control scraper checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the glass-cleaning notes — an aquarium magnetic
+            scraper for the viewing panes, plus a handheld aquarium
+            algae scraper for plant leaves and hardscape the magnet
+            cannot reach — so manual removal is ready while the
+            light / nutrient / CO2 imbalance is fixed. Educational
+            checklist, not a ranked product list and not a first-tank
+            filter / heater / test-kit order. Those stay on the setup
+            hub. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Algae-control scraper checklist"
+            subtitle="Email the magnetic-scraper and handheld-scraper notes. No spam."
+            ctaText="Email my algae-control scraper checklist"
+            source="setup-aquarium-algae-control-under-hero"
+          />
+        </div>
 
         <h2>The Three Levers</h2>
         <DropCap>Algae growth is governed by three inputs: light, nutrients (nitrate and phosphate), and carbon dioxide. In a healthy planted tank, fast-growing plants outcompete algae for these resources, and algae stays in check. Algae blooms when one lever is out of proportion with the others — most often too much light for the available CO2 and plant mass, or a nutrient surplus from overfeeding and infrequent water changes. The durable fix for any algae problem is therefore not an algaecide but a rebalancing: reduce the photoperiod, increase water changes, improve circulation, and either add CO2 or add more (and faster-growing) plants to consume the surplus. Manual removal and algae-eating animals are useful supporting tools, never the whole solution.</DropCap>
 
         <h2>Identifying the Common Types</h2>
-        <p><strong>Green spot algae</strong> forms hard green dots, usually on the glass and slow-growing plant leaves, and is associated with low phosphate. <strong>Green dust algae</strong> coats the glass in a fine film, typically during a tank's early months, and tends to resolve on its own as the tank matures. <strong>Hair and thread algae</strong> grow in soft green strands and signal excess light relative to CO2 and nutrients. <strong>Black beard algae</strong> (a red algae despite its dark color) forms stubborn tufts on hardscape and plant edges and is strongly linked to unstable or insufficient CO2 and high organic waste. <strong>Diatoms</strong> appear as a brown dust on every surface, common in new tanks where silicates are abundant, and usually fade as the system stabilizes.</p>
+        <p><strong>Green spot algae</strong> forms hard green dots, usually on the glass and slow-growing plant leaves, and is associated with low phosphate. <strong>Green dust algae</strong> coats the glass in a fine film, typically during a tank&apos;s early months, and tends to resolve on its own as the tank matures. <strong>Hair and thread algae</strong> grow in soft green strands and signal excess light relative to CO2 and nutrients. <strong>Black beard algae</strong> (a red algae despite its dark color) forms stubborn tufts on hardscape and plant edges and is strongly linked to unstable or insufficient CO2 and high organic waste. <strong>Diatoms</strong> appear as a brown dust on every surface, common in new tanks where silicates are abundant, and usually fade as the system stabilizes.</p>
 
         <CalloutBox variant="warning" title="Blue-green algae is not algae">
           The blue-green slimy film with a distinctive musty smell is cyanobacteria — a photosynthetic bacterium, not a true algae. It often signals low nitrate, poor flow, and accumulated waste. It will not respond to ordinary algae control and is typically addressed with improved circulation, a thorough cleanup, and in stubborn cases a course of erythromycin.
@@ -49,12 +85,53 @@ export default function AlgaeControlPage() {
 
         <h2>The Treatment Playbook</h2>
         <p>Start with the universal fixes that help every algae type: cut the photoperiod to 6 to 8 hours on a timer, keep light off direct sunlight, increase water-change frequency to export excess nutrients, improve flow so no dead spots accumulate detritus, and feed less. For black beard algae and persistent spot algae, dosing liquid carbon (such as glutaraldehyde-based products) directly onto the affected areas with the filter briefly off can spot-treat it, but use caution as some plants and invertebrates are sensitive. For diatoms and green dust in a new tank, patience plus regular maintenance is usually all that is required.</p>
+        <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, Seiryu stone, spiderwood, light timers, root tabs, pressurized CO2, and Flourish Excel already live on the <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop algaecides, erythromycin, or any medication.</p>
 
         <h2>Algae-Eating Animals — Help, Not Magic</h2>
         <p>The right cleanup crew suppresses algae but cannot fix an imbalance on its own. Otocinclus catfish and nerite snails are exceptional grazers of diatoms and green film and are safe for community tanks. Amano shrimp consume hair and thread algae more effectively than almost any fish. Bristlenose plecos rasp algae from broad surfaces and driftwood. Siamese algae eaters are one of the few animals that reliably eat black beard algae. Match the animal to the tank size and the algae present, never overstock for the purpose, and remember that a hungry algae crew in a clean tank still needs supplemental feeding.</p>
 
         <h2>Preventing the Next Bloom</h2>
         <p>The tanks that stay algae-free long term share a few traits: a consistent, modest photoperiod on a timer; healthy, actively growing plants that monopolize nutrients; regular water changes that prevent nutrient accumulation; and restrained feeding. Establish those routines and algae becomes a minor, occasional nuisance rather than a recurring battle. Test nitrate and phosphate periodically — both unusually high and unusually low readings can drive specific algae types, and balance is the goal.</p>
+
+        <h2 id="kit">Algae-control scraper kit</h2>
+        <p>Everyday physical supplies that match the glass-cleaning copy above — an aquarium magnetic scraper for the viewing panes, plus a handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach. These are maintenance tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, light timers, root tabs, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, low-tech planted tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+
+        {/* Money path — live amazon-brand search hops (algae-control scraper kit).
+            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            Category searches only — everyday physical supplies matching
+            on-page magnetic-scraper / handheld-algae-scraper copy, not
+            first-tank filter / heater / test-kit / hardscape / CO2 hops. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the algae-control scraper kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            glass-cleaning copy — an aquarium magnetic scraper and a
+            handheld aquarium algae scraper. Everyday physical
+            maintenance tools only. They are not a ranked product
+            list, they are not a first-tank filter or heater, they
+            are not a test kit or a gravel vacuum, they are not
+            aquasoil, Seiryu stone, spiderwood, a light timer, root
+            tabs, or pressurized CO2, and they do not replace fixing
+            the light / nutrient / CO2 imbalance. Fish.com earns a
+            commission on qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control"
+              amazonLabel="Browse aquarium magnetic scrapers on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/handheld+aquarium+algae+scraper?s=setup-aquarium-algae-control"
+              amazonLabel="Browse handheld aquarium algae scrapers on Amazon →"
+            />
+          </div>
+        </div>
+
         <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
