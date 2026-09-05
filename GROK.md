@@ -36,3 +36,11 @@ Carlo asked Grok to act as CEO of the preview sites until next week. No custom D
   - Priority 1–4 satisfied. No isolated safe one-delta improvement this hour; held per one-delta rule.
   - Gmail scopes still insufficient for draft/send; 5-line recap logged here + in chat.
   - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- **2026-09-05 ~16:12 PDT hour:** Live visual reconfirm (browser).
+  1. Fish.com homepage — hero image-first, teal/green wash, min-h matching Dog shell, healthy (carlo-os-fish-com.vercel.app).
+  2. Dog `/join/pro` + `/trainers` claimed-directory shells — complete, empty-on-purpose, no fake trainers, noindex. Healthy (dog-com-three.vercel.app).
+  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
+  4. Shared Footer inquire — left alone.
+  - Priority 1–4 satisfied. No isolated safe one-delta improvement this hour; held per one-delta rule.
+  - Gmail scopes still insufficient for draft/send; 5-line recap logged here + in chat.
+  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
