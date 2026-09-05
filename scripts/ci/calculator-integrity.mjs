@@ -4167,6 +4167,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog seizure observation-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-minutes / diary copy (a digital handheld stopwatch so start and length are timed instead of guessed, a waterproof field notebook so the seizure diary of dates, durations, and possible triggers stays writable after a messy event, a foam table-edge bumper so hard or sharp furniture is padded before the next seizure), never a placeholder ASIN, a #1028 throw-blanket / crate-bumper / foam-tile hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1047 kitchen-timer / respiratory-notebook hop, a first-aid-kit hop, a thermometer hop, a phenobarbital / levetiracetam / diazepam hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · spay-neuter-benefits hops',
+    file: 'apps/vets-co/src/app/health/spay-neuter-benefits/page.tsx',
+    mustInclude: [
+      { re: /source="health-spay-neuter-benefits-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog post-neuter calorie-cut checklist"/, label: 'concrete dog post-neuter calorie-cut-checklist offer, not Subscribe' },
+      { re: /source="health-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/adjustable\+sliding\+dog\+food\+scoop\?s=health-spay-neuter-benefits/, label: 'adjustable sliding dog-food-scoop search hop (matches on-page 20–25% portion-cut copy; unique vs kitchen+measuring+cup / kitchen+gram+scale / portion+control+food+scale+dog / digital+pet+food+portion+scale)' },
+      { re: /amazon-brand\/reusable\+dog\+food\+portion\+cups\?s=health-spay-neuter-benefits/, label: 'reusable dog-food portion-cups search hop (matches on-page household-wide smaller-ration copy; unique vs glass+meal+prep / portion+control+food+scale+dog)' },
+      { re: /amazon-brand\/dog\+weight\+log\+book\?s=health-spay-neuter-benefits/, label: 'dog weight-log-book search hop (matches on-page monthly body-condition copy; unique vs waterproof+field+notebook / resting+respiratory+rate+notebook / pet+medical+records+binder / pet+vaccination+record+book / dry+erase+monthly+calendar)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(digital\+handheld\+stopwatch|waterproof\+field\+notebook|foam\+table\+edge\+bumper|automatic\+timed\+dog\+feeder|maze\+slow\+feed\+dog\+bowl|indoor\+dog\+house\+line|disposable\+female\+dog\+diapers|inflatable\+dog\+collar|hard\+sided\+airline\+dog\+crate|washable\+dog\+heat\+pants|male\+dog\+belly\+band|heavy\+duty\+dog\+exercise\+pen|kitchen\+gram\+scale|portion\+control\+food\+scale\+dog|digital\+pet\+food\+portion\+scale|digital\+pet\+scale|kitchen\+measuring\+cup|dog\+surgical\+recovery\+suit|non\+slip\+dog\+socks|adjustable\+height\+dog\+bowls|locking\+kitchen\+trash\+can|walk\+through\+pet\+gate|airtight\+dog\+food\+storage\+container|soft\+recovery\+collar|soft\+recovery\+cone|soft\+e\+collar|pet\+recovery\+cone|weight\+management\+dog\+food|low\+calorie\+dog\+treats|hills|hill\+s|royal\+canin|metabolic|satiety|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1058 stopwatch / field-notebook / table-bumper, #1057 timed-feeder / maze-bowl / house-line, #1056 diapers / inflatable-collar / airline-crate, #1041 heat-pants / belly-band / exercise-pen, weight-management kitchen-gram / portion-control food-scale hops, measuring cups, recovery-cone / e-collar / surgical-recovery-suit, Hill\'s Metabolic / Royal Canin Satiety, or Rx — this page hops only adjustable-sliding-dog-food-scoop / reusable-dog-food-portion-cups / dog-weight-log-book gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog post-neuter calorie-cut-checklist offer; every gear CTA is an amazon-brand category search matching on-page after-surgery portion copy (an adjustable sliding dog-food scoop so the 20–25% cut is a set mark instead of a guessed handful, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, a dog weight-log book so monthly body-condition notes stay written down), never a placeholder ASIN, a #1058 stopwatch / field-notebook / table-bumper hop, a #1057 timed-feeder / maze-bowl / house-line hop, a #1056 diaper / inflatable-collar / airline-crate hop, a #1041 heat-pants / belly-band / exercise-pen hop, a kitchen-gram-scale / portion-control food-scale hop, a measuring-cup hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
