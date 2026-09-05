@@ -3734,6 +3734,27 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog dehydration home-sip-checklist offer; every gear CTA is an amazon-brand category search matching on-page mild-case oral-fluid copy (unflavored pediatric electrolyte to dilute 50/50 with water, kitchen liquid-measuring pitcher for that mix, shallow lipped dog saucer for frequent small sips), never a placeholder ASIN, a UTI fountain / pee-pad / ceramic-bowl hop (#1033), a water-intake fountain / ceramic-bowl / travel-bottle / measuring-cup hop, a horse / ferret electrolyte hop, a heat-stroke towel / thermometer hop (#1000), a Pedialyte brand-ASIN hop, an IV / SQ fluid-bag hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · pancreatitis-in-dogs hops',
+    file: 'apps/vets-co/src/app/health/pancreatitis-in-dogs/page.tsx',
+    mustInclude: [
+      { re: /source="health-pancreatitis-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog pancreatitis recovery-diet checklist"/, label: 'concrete dog pancreatitis recovery-diet-checklist offer, not Subscribe' },
+      { re: /source="health-pancreatitis"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/low\+fat\+digestive\+care\+dog\+food\?s=health-pancreatitis-in-dogs/, label: 'low-fat digestive-care dog-food search hop (matches on-page recovery-diet copy; unique vs Hill\'s i/d / Royal Canin GI Low Fat ASINs)' },
+      { re: /amazon-brand\/lean\+low\+fat\+dog\+treats\?s=health-pancreatitis-in-dogs/, label: 'lean low-fat dog-treats search hop (matches on-page no-table-scraps copy; unique vs joint+support+dog+treats)' },
+      { re: /amazon-brand\/digital\+pet\+food\+portion\+scale\?s=health-pancreatitis-in-dogs/, label: 'digital pet-food portion-scale search hop (matches on-page weight-control portion copy; unique vs digital+pet+scale / kitchen+gram+scale / portion+control+food+scale+dog)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(digital\+pet\+scale\?|slow\+feeder\+dog\+bowl|kitchen\+gram\+scale|portion\+control\+food\+scale|unflavored\+pediatric\+electrolyte|kitchen\+liquid\+measuring\+pitcher|shallow\+lipped\+dog\+saucer|stainless\+steel\+dog\+fountain|washable\+dog\+pee\+pads|weighted\+ceramic\+dog\+water\+bowl|dog\+probiotic|plain\+canned\+pumpkin|joint\+support\+dog\+treats|hills|hill\+s|royal\+canin|i\+d\+low\+fat|gastrointestinal\+low\+fat|purina\+en|gastroenteric|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop dog-obesity digital-pet-scale / slow-feeder (#1005), calorie / BCS kitchen-gram or portion-control food scales, dehydration electrolyte / pitcher / saucer (#1038), UTI fountain / pee-pad / ceramic-bowl (#1033), diarrhea probiotic / pumpkin, joint-support treats, Hill\'s i/d / Royal Canin GI Low Fat / Purina EN ASINs, or Rx — this page hops only low-fat-digestive-care-dog-food / lean-low-fat-dog-treats / digital-pet-food-portion-scale gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete dog pancreatitis recovery-diet-checklist offer; every gear CTA is an amazon-brand category search matching on-page low-fat recovery, no-table-scraps, and weight-control copy (low-fat digestive-care dog food, lean low-fat dog treats, digital pet-food portion scale), never a placeholder ASIN, a dog-obesity digital-pet-scale / slow-feeder hop (#1005), a calorie / ideal-weight / BCS kitchen-gram or portion-control food-scale hop, a dehydration electrolyte / pitcher / saucer hop (#1038), a UTI fountain / pee-pad / ceramic-bowl hop (#1033), a Hill\'s i/d / Royal Canin Gastrointestinal Low Fat / Purina EN brand-ASIN hop, or a prescription hop. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
