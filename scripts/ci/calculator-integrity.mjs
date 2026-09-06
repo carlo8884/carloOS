@@ -470,6 +470,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1259: vets.co /insurance hub is on main. This existing horses.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete horses reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / AAEP-and-editorial-criteria copy (a laminated horse barn reviews buyer-guide chart so the supplements / blankets map is posted at the barn, a horse stall-door reviews comparison card so each category’s editorial criteria and shortlist is labeled on the stall door, an equine reviews reference handbook so the AAEP / breed-club / editorial-criteria grounding is a physical barn book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child Platinum / KER hop, or a flea / heartworm / vaccine hop. Educational barn searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1259 / crate-size / stocking.',
   },
   {
+    id: 'ferret · reviews hub',
+    file: 'apps/ferret-com/src/app/reviews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret reviews-hub checklist"/, label: 'concrete ferret reviews-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+ferret\+reviews\+buyer\+guide\+chart\?s=reviews-hub/, label: 'laminated ferret reviews buyer-guide-chart search hop (matches on-page reviews-section-map copy; unique vs laminated+ferret+calculator+tools+chart / ferret+nation+critter+nation+double+unit)' },
+      { re: /amazon-brand\/ferret\+fridge\+reviews\+comparison\+card\?s=reviews-hub/, label: 'ferret fridge reviews comparison-card search hop (matches on-page per-category-comparison-log copy; unique vs ferret+fridge+measurement+card)' },
+      { re: /amazon-brand\/mustelid\+reviews\+reference\+handbook\?s=reviews-hub/, label: 'mustelid reviews reference-handbook search hop (matches on-page AFA-and-editorial-criteria copy; unique vs mustelid+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+calculator\+tools\+chart|ferret\+fridge\+measurement\+card|mustelid\+calculator\+reference\+handbook|ferret\+nation\+critter\+nation|prevue\+feisty|compressed\+wood\+pellet|ferret\+vest\+harness|ferret\+h\+style\+harness|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub kitchen kit, child Critter-Nation / wood-pellet / vest-harness hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-ferret-reviews-buyer-guide-chart / ferret-fridge-reviews-comparison-card / mustelid-reviews-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1260: horses.com /reviews hub is on main. This existing ferret.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / AFA-and-editorial-criteria copy (a laminated ferret reviews buyer-guide chart so the cage / litter / harness / food map is posted on the fridge, a ferret fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a mustelid reviews reference handbook so the AFA / exotic-vet / editorial-criteria grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child Critter-Nation / litter / harness hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Ferret aging stays held. Do not re-open #1251–#1260 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
