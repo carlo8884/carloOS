@@ -81,6 +81,37 @@ export default function MysterySnailPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the mystery-snail-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Mystery-snail-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Pomacea bridgesii
+                notes that match the care copy on this
+                page — 68–82°F and pH 7.0–8.0, GH 8+
+                for shell health, copper-free water, and
+                air-humid egg clutches above the
+                waterline. Educational
+                mystery-snail-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing mystery-snail tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Mystery-snail-setup checklist"
+                subtitle="Email the copper-free, GH 8+, and above-water clutch notes. No spam."
+                ctaText="Email my mystery-snail-setup checklist"
+                source="species-mystery-snail-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-mystery-snail" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A mystery snail in a home aquarium." priority />
         <h2>Copper — The Single Most Important Care Fact</h2>
         <p>Mystery snails, like all freshwater snails, are killed by copper at concentrations that are safe for fish. This is the most critical care fact — more important than any other husbandry consideration. Sources of copper that kill snails: copper-based algae treatments (API AlgaeFix contains copper), copper-based disease treatments, tap water from old copper pipes, some plant fertilizers, and some fish foods. Before adding mystery snails to any established tank, verify that no copper-containing products have ever been used. Test with a copper test kit if uncertain. Even trace copper remaining from a previous treatment can kill snails.</p>
@@ -113,7 +144,6 @@ export default function MysterySnailPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for mystery snail care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/mystery%20snail%20tank%20setup?s=species-mystery-snail" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Mystery Snail Setup on Amazon →</a>
-            <a href="/go/chewy-brand/mystery%20snail%20tank%20setup?s=species-mystery-snail" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
