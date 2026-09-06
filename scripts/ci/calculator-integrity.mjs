@@ -6897,6 +6897,27 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1184: keep the existing sidebar capture and the already-hopped Fluval 307 / Eheim Classic amazon-brand searches; add under-hero capture with a concrete canister-filter-checklist offer matching on-page AquaStop / 40–70 gallon / decades-of-track-record copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · best-aquarium-heaters hops',
+    file: 'apps/fish-com/src/app/reviews/best-aquarium-heaters/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-aquarium-heaters-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium-heater checklist"/, label: 'concrete aquarium-heater-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-heaters"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'existing Cobalt-Neo-Therm amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/aqueon\+pro\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1185: keep the existing sidebar capture and the already-hopped Eheim Jager / Cobalt Neo-Therm / Hydor Inline / Aqueon Pro amazon-brand searches; add under-hero capture with a concrete aquarium-heater-checklist offer matching on-page recalibration-dial / slim-profile / canister-inline copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
