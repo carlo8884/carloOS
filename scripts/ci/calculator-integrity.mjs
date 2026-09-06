@@ -8098,6 +8098,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1249: ferret leash-and-harness under-hero is on main. Preferred ferret Amazon leftovers and fish/vets/dog/horses Amazon leftovers are exhausted; this is the remaining ferret review leftover (litter was deprioritized until now). Keep the existing sidebar capture, the already-hopped wood / grass Amazon searches, and the product-specific Yesterday\'s News Chewy hop; add under-hero capture with a concrete ferret-litter-checklist offer matching on-page no-clump / low-dust / paper-default / heat-treated-wood copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Enrichment stays deprioritized; ferret aging stays held.',
   },
+  {
+    id: 'ferret · diy-enrichment-toys hops',
+    file: 'apps/ferret-com/src/app/behavior/diy-enrichment-toys/page.tsx',
+    mustInclude: [
+      { re: /source="behavior-diy-enrichment-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret enrichment checklist"/, label: 'concrete ferret enrichment-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-diy-enrichment"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/snuffle\+mat\+small\+pet\?s=behavior-diy-enrichment/, label: 'existing snuffle-mat amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /marshall\/pop-n-play-tunnel\?s=behavior-diy-enrichment/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1250: ferret litter review under-hero is on main. Preferred ferret / fish / vets / dog / horses Amazon leftovers are exhausted; this is the last remaining Amazon leftover (enrichment was deprioritized until now). Keep the existing sidebar capture, the already-hopped snuffle-mat Amazon search, and the existing Marshall tunnel hop; add under-hero capture with a concrete ferret enrichment-checklist offer matching on-page tunnel-first / no-rubber / forage / rotate-toys copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden. Ferret aging stays held.',
+  },
 
 ]
 
