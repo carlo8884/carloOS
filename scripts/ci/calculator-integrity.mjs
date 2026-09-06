@@ -407,6 +407,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1256: dog.com /reviews hub is on main. This existing dog.com /nutrition hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog nutrition-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page feeding-section-map / wsava-label-and-life-stage-log / NRC-WSAVA-and-AAFCO-grounding copy (a laminated dog nutrition feeding chart so the choosing-food / how-much / labels / puppy-vs-senior map is posted on the fridge, a dog fridge WSAVA label card so AAFCO statements and life-stage feeding notes are labeled on the fridge, a canine nutrition reference handbook so the NRC / WSAVA / AAFCO grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a reviews-hub buyer-guide hop, a child puppy / senior food hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. No directory import on this page. Do not re-open #1251–#1256 / crate-size / stocking.',
   },
   {
+    id: 'dog · training hub',
+    file: 'apps/dog-com/src/app/training/page.tsx',
+    mustInclude: [
+      { re: /source="training-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog training-hub checklist"/, label: 'concrete dog training-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+training\+session\+chart\?s=training-hub/, label: 'laminated dog training session-chart search hop (matches on-page training-section-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+dog+reviews+buyer+guide+chart / laminated+dog+nutrition+feeding+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+training\+cue\+card\?s=training-hub/, label: 'dog fridge training cue-card search hop (matches on-page cue-order-and-session-log copy; unique vs dog+fridge+measurement+card / dog+fridge+reviews+comparison+card / dog+fridge+wsava+label+card)' },
+      { re: /amazon-brand\/canine\+training\+reference\+handbook\?s=training-hub/, label: 'canine training reference-handbook search hop (matches on-page AVSAB-CCPDT-reward-based-grounding copy; unique vs canine+calculator+reference+handbook / canine+reviews+reference+handbook / canine+nutrition+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+calculator\+tools\+chart|laminated\+dog\+reviews\+buyer\+guide\+chart|laminated\+dog\+nutrition\+feeding\+chart|dog\+fridge\+measurement\+card|dog\+fridge\+reviews\+comparison\+card|dog\+fridge\+wsava\+label\+card|canine\+calculator\+reference\+handbook|canine\+reviews\+reference\+handbook|canine\+nutrition\+reference\+handbook|wire\+dog\+crate\+with\+divider\+panel|puppy\+training\+treats|dog\+training\+clicker|dog\+training\+treat\+pouch|front\+clip\+no\+pull|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b|shock\+collar|prong\+collar|e-collar)/, label: 'never hop tools / reviews / nutrition kitchen kits, child crate / clicker / treat / harness hops, or Rx / flea / heartworm / vaccine / shock-collar — this page hops only laminated-dog-training-session-chart / dog-fridge-training-cue-card / canine-training-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1257: dog.com /nutrition hub is on main. This existing dog.com /training hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog training-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page training-section-map / cue-order-and-session-log / AVSAB-CCPDT-reward-based-grounding copy (a laminated dog training session chart so the fundamentals / puppy / crate / behavior / credentials map is posted on the fridge, a dog fridge training cue card so sit / down / stay / come / leave-it order is labeled on the fridge, a canine training reference handbook so the AVSAB / CCPDT / reward-based grounding is a physical kitchen book), never a placeholder ASIN, a tools / reviews / nutrition kitchen hop, a child crate / clicker / treat / harness hop, or a flea / heartworm / vaccine / shock-collar hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched (this page has no listings import). Do not re-open #1251–#1257 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
