@@ -6593,6 +6593,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1170: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete deductibles checklist offer; every gear CTA is an amazon-brand category search matching on-page deductible / reimbursement-rate / annual-limit copy (a quad-ruled graph pad so the $5,000 bill, deductible, reimbursement rate, and leftover limit stay plotted combinations, a paid rubber stamp so reimbursed invoices stay marked after the pay-then-claim lands, a handheld tally counter so remaining annual-limit headroom stays a counted number), never a placeholder ASIN, a #1170 3-tab-divider / highlighter / page-flag hop, a #1169 monthly-desk-pad / date-stamp / file-jacket hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational deductible / reimbursement tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · reading-the-fine-print hops',
+    file: 'apps/vets-co/src/app/insurance/reading-the-fine-print/page.tsx',
+    mustInclude: [
+      { re: /source="insurance-reading-the-fine-print-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fine-print checklist"/, label: 'concrete fine-print checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-fine-print"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/full\+page\+magnifier\?s=insurance-reading-the-fine-print/, label: 'full-page-magnifier search hop (matches on-page orthopedic waiting-period / sample-policy copy; unique vs assorted+highlighter+set / removable+page+flags / self+inking+date+stamp)' },
+      { re: /amazon-brand\/adjustable\+copyholder\?s=insurance-reading-the-fine-print/, label: 'adjustable-copyholder search hop (matches on-page side-by-side sample-policy / payout-model copy; unique vs letter+size+file+jacket / kraft+two+pocket+folder / clipboard+with+storage)' },
+      { re: /amazon-brand\/line\+reader\+strip\?s=insurance-reading-the-fine-print/, label: 'line-reader-strip search hop (matches on-page exclusions-list copy; unique vs 3x3+sticky+notes / ruled+index+cards / letter+size+sheet+protectors)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(quad\+ruled\+graph\+pad|paid\+rubber\+stamp|handheld\+tally\+counter|3\+tab\+dividers|assorted\+highlighter\+set|removable\+page\+flags|monthly\+desk\+pad\+calendar|self\+inking\+date\+stamp|letter\+size\+file\+jacket|four\+column\+accounting\+pad|letter\+size\+poly\+envelope|desktop\+receipt\+organizer|reporter\+notebook|kraft\+two\+pocket\+folder|pocket\+size\+address\+book|ruled\+index\+cards|3x3\+sticky\+notes|letter\+size\+sheet\+protectors|spiral\+notebook|small\+soft\+cooler\+bag|clipboard\+with\+storage|cash\+envelope\+budget\+system|yellow\+legal\+pad|hanging\+file\+folders\+letter\+size|household\+budget\+workbook|checkbook\+register|accordion\+file\+folder\+letter\+size|locking\+cash\+box\+with\+key|basic\+desktop\+calculator|manila\+file\+folders\+letter\+size|credit\+card\+size\+laminating\+pouches|small\+magnetic\+dry\+erase\+board|car\+visor\+document\+holder|48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|letter\+size\+expanding\+file\+organizer|letter\+size\+plastic\+file\+box|letter\+size\+thermal\+laminating\+pouches|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|pet\+emergency\+contact\+card|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|manypets|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1171 graph-pad / paid-stamp / tally-counter, #1170 3-tab-divider / highlighter / page-flag, #1169 monthly-desk-pad / date-stamp / file-jacket, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only full-page-magnifier / adjustable-copyholder / line-reader-strip gear' },
+    ],
+    why: 'Money path leftover after #1171: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete fine-print checklist offer; every gear CTA is an amazon-brand category search matching on-page waiting-period / payout-model / exclusions-list copy (a full-page magnifier so orthopedic waiting-period clauses stay readable on the sample policy, an adjustable copyholder so two sample policies stay propped for a side-by-side read, a line-reader strip so the exclusions list stays followed line by line), never a placeholder ASIN, a #1171 graph-pad / paid-stamp / tally-counter hop, a #1170 3-tab-divider / highlighter / page-flag hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational fine-print / reading tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
