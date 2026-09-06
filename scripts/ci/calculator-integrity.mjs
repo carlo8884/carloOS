@@ -7888,6 +7888,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1238: GPS-tracker review under-hero is on main. Keep the existing sidebar capture and the already-hopped Julius-K9 Amazon + PetSafe / Ruffwear Chewy searches; add under-hero capture with a concrete dog-harness-checklist offer matching on-page front-clip-for-pullers / Easy Walk martingale / Ruffwear two-clip hiking / Julius escape-proof back-clip copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-slow-feeder-bowls hops',
+    file: 'apps/dog-com/src/app/reviews/best-slow-feeder-bowls/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-slow-feeder-bowls-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my slow-feeder checklist"/, label: 'concrete slow-feeder-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-slow-feeders"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Northmate Green amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/outward\+hound\+fun\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Outward Hound Fun Feeder Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/lickimat\+splash\?s=reviews-best-slow-feeder-bowls/, label: 'existing LickiMat Splash Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1239: harness review under-hero is on main. Keep the existing sidebar capture and the already-hopped Northmate Amazon + Outward Hound / LickiMat Chewy searches; add under-hero capture with a concrete slow-feeder-checklist offer matching on-page twice-daily / 10x Fun Feeder / Northmate forage / LickiMat lick-to-calm copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
