@@ -5307,6 +5307,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse hay-types-checklist offer; every gear CTA is an amazon-brand category search matching on-page grass / legume / mixed-hay copy (orchard-grass hay as the everyday leafy grass base, alfalfa hay bales as the richer legume option, timothy-alfalfa mixed hay as the middle ground), never a placeholder ASIN, a timothy-hay hop, an EMS hay-test hop, a forage #1111 hop, a grain #1112 hop, or a vaccine / prescription hop. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · water-requirements hops',
+    file: 'apps/horses-com/src/app/nutrition/water-requirements/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-water-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse water checklist"/, label: 'concrete horse water-checklist offer, not Subscribe' },
+      { re: /source="nutrition-water"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/flat\+back\+horse\+water\+bucket\?s=nutrition-water/, label: 'flat-back horse water-bucket search hop (matches on-page free-choice stall-source / clean-and-refill copy; unique vs wide+mouth+horse+water+bucket / color+coded+flat+back+horse+buckets)' },
+      { re: /amazon-brand\/heated\+horse\+water\+bucket\?s=nutrition-water/, label: 'heated horse water-bucket search hop (matches on-page slightly-warmed winter stall-water copy; unique vs horse+tank+heater / automatic+horse+waterer)' },
+      { re: /amazon-brand\/electrolyte\+for\+horses\?s=nutrition-water/, label: 'electrolyte-for-horses search hop (matches on-page after-sweat thirst-drive copy; unique vs salt+first+horse+electrolyte+powder / horse+electrolytes)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(orchard\+grass\+hay\+horse|alfalfa\+hay\+bales\+horse|timothy\+alfalfa\+mixed\+hay\+horse|tabletop\+digital\+horse\+grain\+scale|stackable\+rubber\+horse\+feed\+tubs|rodent\+proof\+metal\+horse\+feed\+bin|horse\+hay\+probe\+moisture\+tester|equine\+hay\+core\+sampler|wall\+mounted\+horse\+hay\+rack|plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|automatic\+horse\+waterer|horse\+tank\+heater|color\+coded\+flat\+back\+horse\+buckets|horse\+electrolytes|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop #1113 orchard-grass / alfalfa-bales / mixed-hay, #1112 grain-scale / feed-tubs / feed-bin, #1111 hay-probe / core-sampler / hay-rack, #1110 salt-block / salt-first-powder / wide-mouth-bucket, #1108 automatic-waterer, #1105 hay-bale-scale / NSC kit / strip-grazing, winter-care tank-heater, strangles color-coded-buckets, emergency horse-electrolytes, or Rx / vaccine — this page hops only flat-back-horse-water-bucket / heated-horse-water-bucket / electrolyte-for-horses searches' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse water-checklist offer; every gear CTA is an amazon-brand category search matching on-page free-choice / winter-warm / after-sweat copy (a flat-back stall water bucket as the everyday cleaned-and-refilled source, a heated stall water bucket so winter water stays slightly warmed and unfrozen, electrolyte for horses after heavy sweat so thirst stays driven), never a placeholder ASIN, a wide-mouth mixing-bucket hop, an automatic-waterer hop, a tank-heater hop, a hay-types #1113 hop, a grain #1112 hop, or a vaccine / prescription hop. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

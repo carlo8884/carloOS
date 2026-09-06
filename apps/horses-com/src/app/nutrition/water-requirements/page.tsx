@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function WaterRequirementsPage() {
             { label: "Water and Colic", href: "#colic" },
             { label: "Water Quality", href: "#quality" },
             { label: "Encouraging Drinking", href: "#encourage" },
+            { label: "Barn water-care kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,12 +109,51 @@ export default function WaterRequirementsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the horse water checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse water checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the flat-back-horse-water-bucket,
+              heated-horse-water-bucket, and
+              electrolyte-for-horses notes that match
+              the free-choice, winter-warm, and
+              after-sweat copy on this page — a
+              flat-back stall water bucket as the
+              everyday source that is cleaned and
+              refilled (not a wide-mouth mixing
+              bucket, not a color-coded biosecurity
+              bucket), a heated stall water bucket so
+              winter water stays slightly warmed and
+              unfrozen (not a tank heater), and
+              electrolyte for horses after heavy sweat
+              so thirst stays driven (not a salt-first
+              powder hop, not a generic
+              horse-electrolytes hop). Educational
+              barn checklist, not a treatment, and not
+              a substitute for calling the
+              veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse water checklist"
+              subtitle="Email the stall-bucket, heated-bucket, and after-sweat notes. No spam."
+              ctaText="Email my horse water checklist"
+              source="nutrition-water-under-hero"
+            />
+          </div>
+
           <h2 id="howmuch">How Much Water</h2>
-          <p>An average idle adult horse drinks roughly 20 to 40 liters (about 5 to 10 gallons) of water a day in temperate conditions, though the figure varies widely with size, diet, weather, and work. Horses on dry hay drink more than those on lush, moisture-rich grass; a horse on pasture may drink little because it gets water from the grass. The practical rule is to provide clean water free-choice at all times and never assume a fixed amount is enough.</p>
+          <p>An average idle adult horse drinks roughly 20 to 40 liters (about 5 to 10 gallons) of water a day in temperate conditions, though the figure varies widely with size, diet, weather, and work. Horses on dry hay drink more than those on lush, moisture-rich grass; a horse on pasture may drink little because it gets water from the grass. The practical rule is to provide clean water free-choice at all times and never assume a fixed amount is enough. A flat-back horse water bucket is that everyday stall source — hang it, clean it, and refill it rather than guessing a fixed volume. It is not a wide-mouth mixing bucket (that lives on the salt page) and not a color-coded biosecurity bucket (that lives on the strangles page).</p>
 
           <h2 id="drivers">What Drives Intake Up</h2>
           <ul>
@@ -123,6 +163,7 @@ export default function WaterRequirementsPage() {
             <li><strong>Lactation</strong> -- a nursing mare has greatly elevated water needs.</li>
             <li><strong>Large body size and high salt intake</strong> both raise daily requirement.</li>
           </ul>
+          <p>After heavy sweat, electrolyte for horses is the after-work thirst-drive companion to free-choice water — it is not a salt-first electrolyte powder (that lives on the salt page) and not a generic horse-electrolytes hop (that lives on the emergency and grimace-scale tools). Electrolytes do not replace clean water.</p>
 
           <h2 id="colic">Water and Colic</h2>
           <p>Dehydration is one of the most consistently identified risk factors for colic, especially impaction colic, where dry gut contents block the bowel. The classic scenario is winter, when icy water suppresses drinking just as horses switch to dry hay -- a recipe for impaction. Keeping water available, unfrozen, and palatable is therefore one of the simplest and most effective colic-prevention measures an owner has.</p>
@@ -133,11 +174,103 @@ export default function WaterRequirementsPage() {
           <h2 id="encourage">Encouraging Drinking</h2>
           <ul>
             <li><strong>Offer clean water free-choice</strong> at all times, in more than one source where possible.</li>
-            <li><strong>Warm water in winter</strong> -- horses drink more slightly warmed water in the cold, reducing impaction risk.</li>
+            <li><strong>Warm water in winter</strong> -- horses drink more slightly warmed water in the cold, reducing impaction risk. A heated horse water bucket is the stall-level way to keep that water slightly warmed and unfrozen — it is not a tank heater (that lives on the winter-care page).</li>
             <li><strong>Provide salt</strong> -- free-choice salt and added dietary salt drive the thirst that maintains intake.</li>
             <li><strong>Acclimate travelers</strong> to flavored water at home so they accept unfamiliar water away.</li>
             <li><strong>Monitor consumption</strong> so a sudden drop in drinking is noticed early as a warning sign.</li>
           </ul>
+
+          <h2 id="kit">Barn water-care kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            free-choice, winter-warm, and after-sweat
+            copy on this page — a flat-back horse
+            water bucket as the everyday stall source
+            that is cleaned and refilled, a heated
+            horse water bucket so winter stall water
+            stays slightly warmed and unfrozen, and
+            electrolyte for horses after heavy sweat
+            so thirst stays driven. These are
+            educational barn searches, not a ranked
+            product list, not a substitute for
+            veterinary care, and not a wide-mouth
+            mixing-bucket hop (that lives on the salt
+            page), a color-coded biosecurity-bucket
+            hop (that lives on the strangles page), an
+            automatic-waterer hop (that lives on the
+            PPID page), or a tank-heater hop (that
+            lives on the winter-care page). This page
+            does not hop medications or vaccines. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (flat back horse water bucket /
+              heated horse water bucket /
+              electrolyte for horses).
+              Educational barn searches only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1113
+              orchard+grass+hay+horse /
+              alfalfa+hay+bales+horse /
+              timothy+alfalfa+mixed+hay+horse, #1112
+              tabletop+digital+horse+grain+scale /
+              stackable+rubber+horse+feed+tubs /
+              rodent+proof+metal+horse+feed+bin, #1111
+              horse+hay+probe+moisture+tester /
+              equine+hay+core+sampler /
+              wall+mounted+horse+hay+rack, #1110
+              plain+white+horse+salt+block /
+              salt+first+horse+electrolyte+powder /
+              wide+mouth+horse+water+bucket, #1108
+              automatic+horse+waterer, #1105
+              digital+hanging+hay+bale+scale /
+              equine+forage+nsc+hay+test+kit /
+              portable+strip+grazing+step+in+posts,
+              horse+tank+heater
+              (winter-care),
+              color+coded+flat+back+horse+buckets
+              (strangles),
+              horse+electrolytes
+              (emergency / grimace-scale). */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the barn water-care kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page free-choice, winter-warm, and
+              after-sweat copy — a flat-back stall
+              water bucket, a heated stall water
+              bucket, and electrolyte for horses.
+              Educational barn searches only. They are
+              not a ranked product list, they are not
+              a wide-mouth mixing-bucket hop, they are
+              not an automatic-waterer hop, they are
+              not a tank-heater hop, and they do not
+              replace a veterinarian. Horses.com earns
+              a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/flat+back+horse+water+bucket?s=nutrition-water"
+                amazonLabel="Browse flat-back horse water buckets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heated+horse+water+bucket?s=nutrition-water"
+                amazonLabel="Browse heated horse water buckets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/electrolyte+for+horses?s=nutrition-water"
+                amazonLabel="Browse electrolyte for horses on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
