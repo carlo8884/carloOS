@@ -449,6 +449,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1258: dog.com /training hub is on main. This existing vets.co /insurance hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets insurance-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page insurance-section-map / four-levers-and-fine-print-log / reimbursement-model-grounding copy (a laminated pet insurance policy-map chart so the how-it-works / enroll / coverage / deductibles / fine-print map is posted on the fridge, a pet fridge insurance levers card so premium / deductible / reimbursement / annual-limit notes are labeled on the fridge, a veterinary insurance reference handbook so the reimbursement-model / waiting-period / exclusion grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child accounting-pad hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked insurer list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1258 / crate-size / stocking.',
   },
   {
+    id: 'horses · reviews hub',
+    file: 'apps/horses-com/src/app/reviews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horses reviews-hub checklist"/, label: 'concrete horses reviews-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+horse\+barn\+reviews\+buyer\+guide\+chart\?s=reviews-hub/, label: 'laminated horse barn reviews buyer-guide-chart search hop (matches on-page reviews-section-map copy; unique vs laminated+horse+barn+calculator+tools+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+reviews\+comparison\+card\?s=reviews-hub/, label: 'horse stall-door reviews comparison-card search hop (matches on-page per-category-comparison-log copy; unique vs horse+stall+door+measurement+card)' },
+      { re: /amazon-brand\/equine\+reviews\+reference\+handbook\?s=reviews-hub/, label: 'equine reviews reference-handbook search hop (matches on-page AAEP-and-editorial-criteria copy; unique vs equine+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+calculator\+tools\+chart|horse\+stall\+door\+measurement\+card|equine\+calculator\+reference\+handbook|platinum\+performance|kentucky\+equine\+research|equithrive|standlee|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub kitchen kit, child Platinum / KER / Equithrive / Standlee hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-barn-reviews-buyer-guide-chart / horse-stall-door-reviews-comparison-card / equine-reviews-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1259: vets.co /insurance hub is on main. This existing horses.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete horses reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / AAEP-and-editorial-criteria copy (a laminated horse barn reviews buyer-guide chart so the supplements / blankets map is posted at the barn, a horse stall-door reviews comparison card so each category’s editorial criteria and shortlist is labeled on the stall door, an equine reviews reference handbook so the AAEP / breed-club / editorial-criteria grounding is a physical barn book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child Platinum / KER hop, or a flea / heartworm / vaccine hop. Educational barn searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1259 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

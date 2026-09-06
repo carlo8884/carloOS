@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -61,6 +61,52 @@ export default function HorsesReviewsPage() {
         <span className="text-brand-text-mid font-medium">Reviews</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-3xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the horses reviews-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horses reviews-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-horse-barn-reviews-buyer-guide-chart,
+            stall-door-reviews-comparison-card, and
+            equine-reviews-reference-handbook notes that
+            match the reviews-section-map,
+            per-category-comparison-log, and
+            AAEP-and-editorial-criteria copy on this
+            hub — a laminated horse barn reviews
+            buyer-guide chart so the section map
+            (supplements vs winter blankets) is posted
+            at the barn (not a tools-hub calculator
+            chart, not a forage-first chart), a horse
+            stall-door reviews comparison card so each
+            category&apos;s editorial criteria and
+            shortlist is labeled on the stall door
+            (not a measurement card, not a ration
+            card), and an equine reviews reference
+            handbook so the AAEP / breed-club /
+            editorial-criteria grounding is a physical
+            barn book (not a calculator handbook, not
+            a nutrition handbook). Educational barn
+            checklist, not a ranked product list, not
+            a Platinum / KER / Equithrive hop, and
+            not a substitute for a veterinarian. No
+            spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horses reviews-hub checklist"
+            subtitle="Email the reviews-buyer-guide-chart, stall-door comparison-card, and reviews-handbook notes. No spam."
+            ctaText="Email my horses reviews-hub checklist"
+            source="reviews-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container pt-12 max-w-3xl">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>
         <p className="text-base text-brand-text-mid leading-relaxed mb-4">
@@ -93,6 +139,90 @@ export default function HorsesReviewsPage() {
           ))}
         </ul>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
+          Reviews-hub barn kit
+        </h2>
+        <p className="max-w-3xl text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          reviews-section-map, per-category-comparison-log,
+          and AAEP-and-editorial-criteria copy on this
+          hub — a laminated horse barn reviews
+          buyer-guide chart so the supplements /
+          blankets map is posted at the barn, a horse
+          stall-door reviews comparison card so each
+          category&apos;s editorial criteria and
+          shortlist is labeled on the stall door, and
+          an equine reviews reference handbook so the
+          AAEP / breed-club / editorial-criteria
+          grounding is a physical barn book. These are
+          educational barn searches, not a ranked
+          product list, not a substitute for a
+          veterinarian, not a tools-hub
+          calculator-tools hop, and not a child
+          Platinum / KER / Equithrive / Standlee hop
+          (those live on the child reviews). This page
+          does not hop medications or vaccines. This
+          page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-3xl mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn reviews buyer-guide
+            chart / horse stall-door reviews comparison
+            card / equine reviews reference handbook).
+            Educational barn searches only; no Rx /
+            vaccine / supplement-SKU hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools-hub
+            laminated+horse+barn+calculator+tools+chart /
+            horse+stall+door+measurement+card /
+            equine+calculator+reference+handbook
+            and child platinum+performance /
+            kentucky+equine+research hops.
+            Directory import left untouched. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the reviews-hub barn kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page reviews-section-map,
+            per-category-comparison-log, and
+            AAEP-and-editorial-criteria copy — a
+            laminated horse barn reviews buyer-guide
+            chart, a horse stall-door reviews
+            comparison card, and an equine reviews
+            reference handbook. Educational barn
+            searches only. They are not a ranked
+            product list, they are not a tools-hub
+            calculator-tools hop, they are not a
+            Platinum / KER / Equithrive hop, and they
+            do not replace a veterinarian. Horses.com
+            earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+reviews+buyer+guide+chart?s=reviews-hub"
+              amazonLabel="Browse laminated horse barn reviews buyer-guide charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stall+door+reviews+comparison+card?s=reviews-hub"
+              amazonLabel="Browse horse stall-door reviews comparison cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+reviews+reference+handbook?s=reviews-hub"
+              amazonLabel="Browse equine reviews reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
       <CrossPortfolioCard currentSite="horses-com" contentType="gear" variant="footer" />
