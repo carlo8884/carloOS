@@ -680,6 +680,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1269: vets.co /health hub is on main. This existing vets.co /guides hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets guides-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page cost-visit-urgency-map / appointment-prep-log / owner-guides-grounding copy (a laminated pet guides section-map chart so the cost / visit / urgency tracks are posted on the fridge, a pet fridge guides prep card so appointment-prep notes are labeled on the fridge, a veterinary guides reference handbook so the owner-guides grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / insurance-hub / reviews-hub / health-hub kitchen hop, a child spiral-notebook / budget-workbook hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Vets.co does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / what-to-expect / #1251–#1269 / crate-size / stocking.',
   },
   {
+    id: 'fish · species hub',
+    file: 'apps/fish-com/src/app/species/page.tsx',
+    mustInclude: [
+      { re: /source="species-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fish species-hub checklist"/, label: 'concrete fish species-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+aquarium\+species\+profile\+chart\?s=species-hub/, label: 'laminated aquarium species-profile-chart search hop (matches on-page featured-species-map copy; unique vs laminated+aquarium+calculator+tools+chart / laminated+aquarium+reviews+buyer+guide+chart)' },
+      { re: /amazon-brand\/aquarium\+rim\+species\+card\?s=species-hub/, label: 'aquarium rim species-card search hop (matches on-page freshwater-saltwater-category-log copy; unique vs aquarium+rim+measurement+card / aquarium+rim+reviews+comparison+card)' },
+      { re: /amazon-brand\/aquarist\+species\+reference\+handbook\?s=species-hub/, label: 'aquarist species reference-handbook search hop (matches on-page care-guide-grounding copy; unique vs aquarist+calculator+reference+handbook / aquarist+reviews+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+aquarium\+calculator\+tools\+chart|aquarium\+rim\+measurement\+card|aquarist\+calculator\+reference\+handbook|laminated\+aquarium\+reviews\+buyer\+guide\+chart|aquarium\+rim\+reviews\+comparison\+card|aquarist\+reviews\+reference\+handbook|aquaclear\+70|fluval\+307|eheim\+jager|tank\+setup|tank%20setup|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews kitchen kits, child tank-setup / AquaClear / Fluval hops, or Rx — this page hops only laminated-aquarium-species-profile-chart / aquarium-rim-species-card / aquarist-species-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1270: vets.co /guides hub is on main. This existing fish.com /species hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete fish species-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page featured-species-map / freshwater-saltwater-category-log / care-guide-grounding copy (a laminated aquarium species profile chart so the featured-species map is posted on the rim, an aquarium rim species card so each freshwater / saltwater category note is labeled on the rim, an aquarist species reference handbook so the tank-size / water-parameter / diet / compatibility / health grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub kitchen hop, a child tank-setup hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked livestock list, not a substitute for a veterinarian. Skip discus / kuhli / otocinclus children. Chewy stays omitted so empty buttons stay hidden. Do not re-open #1165 / #1251–#1270 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
