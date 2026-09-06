@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { HORSE_FOODS, HORSE_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -74,6 +74,48 @@ export default function CanHorsesEatHubPage() {
         </div>
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the can-horses-eat hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Can-horses-eat hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-barn-treat-safety-chart,
+            lidded-barn-treat-tote, and
+            barn-treat-prep-shears notes that match
+            the browse-the-A-Z-list,
+            keep-kitchen-leftovers-out-of-the-barn, and
+            choke-safe-treat-prep copy on this hub — a
+            laminated horse barn treat-safety chart so
+            anyone can check the safe / caution / toxic
+            list before offering a leftover (not a
+            toxic-plant field guide), a lidded horse
+            barn treat tote so only pre-checked treats
+            leave the kitchen (not an airtight labeled
+            treat canister, not a waist treat pouch),
+            and horse barn treat-prep shears so an
+            approved treat is cut to a choke-safe size
+            at hub scope (not a barn cutting board, not
+            an apple wedger). Educational barn
+            checklist, not a treatment, not a ranked
+            product list, and not a substitute for
+            calling the veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Can-horses-eat hub checklist"
+            subtitle="Email the treat-safety-chart, treat-tote, and treat-prep-shears notes. No spam."
+            ctaText="Email my can-horses-eat hub checklist"
+            source="can-horses-eat-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container py-12">
         {HORSE_FOOD_CATEGORIES.map((cat) => {
           const items = HORSE_FOODS.filter((f) => f.category === cat)
@@ -111,8 +153,135 @@ export default function CanHorsesEatHubPage() {
             <Link href="/nutrition" className="text-brand-primary hover:underline">nutrition hub</Link>
           </p>
           <p className="text-xs text-gray-500 mt-4">
-            Verdicts reflect established equine veterinary and nutrition references (ASPCA Animal Poison Control, Merck Veterinary Manual, the Equine Endocrinology Group, and equine clinical-nutrition literature) and are general guidance, not a substitute for veterinary advice. Individual horses vary, and sugary treats should be limited for laminitis-prone, insulin-resistant, or Cushing’s horses.
+            Verdicts reflect established equine veterinary and nutrition references (ASPCA Animal Poison Control, Merck Veterinary Manual, the Equine Endocrinology Group, and equine clinical-nutrition literature) and are general guidance, not a substitute for veterinary advice. Individual horses vary, and sugary treats should be limited for laminitis-prone, insulin-resistant, or Cushing’s horses. A laminated horse barn treat-safety chart is how anyone checks this A–Z list before offering a leftover — it is not a toxic-plant field guide (that lives on toxic-plants). A lidded horse barn treat tote is how only pre-checked treats leave the kitchen — it is not an airtight labeled horse treat canister or a nylon waist treat pouch (those live on each food page). Horse barn treat-prep shears are how an approved treat is cut to a choke-safe size at hub scope — they are not a nonslip barn cutting board (that lives on each food page) and not an apple wedger (that lives on choke). This hub does not hop toxic foods or poisons as products.
           </p>
+        </div>
+
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-10 mb-4 max-w-content-wide">
+          Can-horses-eat hub barn kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          browse-the-A-Z-list,
+          keep-kitchen-leftovers-out-of-the-barn, and
+          choke-safe-treat-prep copy on this hub — a
+          laminated horse barn treat-safety chart so
+          anyone can check the safe / caution / toxic
+          list before offering a leftover, a lidded
+          horse barn treat tote so only pre-checked
+          treats leave the kitchen, and horse barn
+          treat-prep shears so an approved treat is
+          cut to a choke-safe size at hub scope.
+          These are educational barn searches, not a
+          ranked product list, not a substitute for
+          veterinary care, not a toxic-food or poison
+          hop, not an airtight-labeled-treat-canister /
+          cutting-board / waist-pouch hop (those live
+          on each food page), and not an apple-wedger
+          hop (that lives on choke). This page does
+          not hop medications or vaccines. This page
+          does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn treat-safety chart /
+            lidded horse barn treat tote /
+            horse barn treat-prep shears).
+            Educational barn searches only; no Rx /
+            vaccine ASIN hops. ShopCtas hides empty
+            Chewy; never href="#" or PLACEHOLDER.
+            Unused vs #1122
+            airtight+labeled+horse+treat+canister /
+            nonslip+horse+barn+cutting+board /
+            nylon+horse+waist+treat+pouch, #1121
+            fine+mesh+horse+feed+colander /
+            long+handled+horse+feed+mixing+paddle /
+            silicone+horse+feed+tub+scraper +
+            molasses+free+beet+pulp+shreds+horse /
+            beet+pulp+pellets+horse+feed, #1120
+            compact+digital+gram+scale+horse+feed /
+            molasses+free+chaff+horse /
+            small+rubber+horse+mixing+pan +
+            purina+enrich+plus+ration+balancer /
+            triple+crown+30+ration+balancer /
+            nutrena+empower+topline+balancer, #1119
+            horse+alfalfa+cubes /
+            soy+hull+pellets+horse+feed /
+            over+door+horse+feed+bucket +
+            stabilized+rice+bran+horse+supplement /
+            high+fat+low+starch+horse+feed, #1118
+            portable+horse+hay+flake+scale /
+            horse+hay+soaking+tub /
+            low+sugar+horse+treats, #1117
+            nylon+horse+hay+bag /
+            horse+feed+grade+vegetable+oil /
+            marked+horse+grain+scoop, #1116
+            horse+chopped+forage /
+            horse+feed+soaking+tub /
+            horse+corner+feeder, #1115
+            equine+toxic+plant+identification+field+guide /
+            horse+pasture+walk+weed+identification+handbook /
+            horse+paddock+tree+guard+fencing, #1114
+            flat+back+horse+water+bucket /
+            heated+horse+water+bucket /
+            electrolyte+for+horses, #1113
+            orchard+grass+hay+horse /
+            alfalfa+hay+bales+horse /
+            timothy+alfalfa+mixed+hay+horse, #1112
+            tabletop+digital+horse+grain+scale /
+            stackable+rubber+horse+feed+tubs /
+            rodent+proof+metal+horse+feed+bin, #1111
+            horse+hay+probe+moisture+tester /
+            equine+hay+core+sampler /
+            wall+mounted+horse+hay+rack, #1110
+            plain+white+horse+salt+block /
+            salt+first+horse+electrolyte+powder /
+            wide+mouth+horse+water+bucket, #1105
+            digital+hanging+hay+bale+scale /
+            equine+forage+nsc+hay+test+kit /
+            portable+strip+grazing+step+in+posts,
+            apple+wedger+slicer
+            (choke #1093). */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the can-horses-eat hub barn kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page browse-the-A-Z-list,
+            keep-kitchen-leftovers-out-of-the-barn, and
+            choke-safe-treat-prep copy — a laminated
+            horse barn treat-safety chart, a lidded
+            horse barn treat tote, and horse barn
+            treat-prep shears. Educational barn
+            searches only. They are not a ranked
+            product list, they are not a toxic-food or
+            poison hop, they are not the food-page
+            canister / cutting-board / pouch hops,
+            they are not an apple-wedger hop, and they
+            do not replace a veterinarian. Horses.com
+            earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+treat+safety+chart?s=can-horses-eat-hub"
+              amazonLabel="Browse laminated horse barn treat-safety charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/lidded+horse+barn+treat+tote?s=can-horses-eat-hub"
+              amazonLabel="Browse lidded horse barn treat totes on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+barn+treat+prep+shears?s=can-horses-eat-hub"
+              amazonLabel="Browse horse barn treat-prep shears on Amazon →"
+            />
+          </div>
         </div>
       </div>
 
