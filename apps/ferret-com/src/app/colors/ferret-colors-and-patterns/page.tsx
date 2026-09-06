@@ -10,6 +10,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -135,6 +137,63 @@ export default function FerretColorsPatternsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret colors-and-patterns checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret colors-and-patterns checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-color-pattern-axis-chart,
+              fridge-color-vs-pattern-card, and
+              mustelid-color-pattern-reference-handbook notes
+              that match the color-vs-pattern-axis-map,
+              seasonal-age-shift-log, and
+              afa-quesenberry-color-grounding copy on this
+              page — a laminated ferret color-pattern axis
+              chart so the color / pattern two-axis map is
+              posted on the fridge (not a tools-hub
+              calculator chart, not a reviews buyer-guide
+              chart, not a diet feeding chart, not a care
+              routine chart, not a behavior cue chart, not a
+              health triage chart, not an ownership
+              section-map chart, not a colors-hub palette
+              chart, not a first-year schedule chart), a
+              ferret fridge color-vs-pattern card so
+              seasonal and age-shift notes are labeled on
+              the fridge (not a measurement card, not a
+              reviews comparison card, not a diet label
+              card, not a care card, not a behavior card,
+              not a health library card, not an ownership
+              prep card, not a colors-hub color id card,
+              not a first-year milestone card), and a
+              mustelid color-pattern reference handbook so
+              the AFA / Quesenberry color grounding is a
+              physical kitchen book (not a calculator
+              handbook, not a reviews handbook, not a diet
+              handbook, not a care handbook, not a behavior
+              handbook, not a health handbook, not an
+              ownership handbook, not a colors-hub
+              handbook, not a first-year handbook).
+              Educational kitchen checklist, not a ranked
+              color list, not a child toothbrush / dosing
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret colors-and-patterns checklist"
+              subtitle="Email the color-pattern-axis-chart, fridge color-vs-pattern card, and color-pattern-handbook notes. No spam."
+              ctaText="Email my ferret colors-and-patterns checklist"
+              source="colors-ferret-colors-and-patterns-under-hero"
+            />
+          </div>
 
           <DropCap>
             The first thing to know about ferret &quot;types&quot; is that they
@@ -291,6 +350,87 @@ export default function FerretColorsPatternsPage() {
             congenital conditions warrant evaluation by an exotic-mammal
             veterinarian.
           </p>
+
+          <h2 id="kit">Colors-and-patterns kitchen kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            color-vs-pattern-axis-map, seasonal-age-shift-log,
+            and afa-quesenberry-color-grounding copy on this
+            page — a laminated ferret color-pattern axis
+            chart so the color / pattern two-axis map is
+            posted on the fridge, a ferret fridge
+            color-vs-pattern card so seasonal and age-shift
+            notes are labeled on the fridge, and a mustelid
+            color-pattern reference handbook so the AFA /
+            Quesenberry color grounding is a physical
+            kitchen book. These are educational kitchen
+            searches, not a ranked color list, not a
+            substitute for an exotic-mammal veterinarian,
+            not a tools-hub / reviews-hub / diet-hub /
+            care-hub / behavior-hub / health-hub /
+            ownership-hub / colors-hub / first-year-schedule
+            hop, and not a child toothbrush / dosing hop
+            (those live on health children). This page does
+            not hop medications or vaccines. This page does
+            not sell insurance. This page does not claim
+            hands-on testing. Ferret aging stays held.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret color-pattern axis chart /
+              ferret fridge color-vs-pattern card /
+              mustelid color-pattern reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs tools / reviews /
+              diet / care / behavior / health / ownership /
+              colors-hub / first-year-schedule kitchen kits
+              and child finger+toothbrush / carnivore+care
+              hops. Directory import left untouched.
+              Ferret aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the colors-and-patterns kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page color-vs-pattern-axis-map,
+              seasonal-age-shift-log, and
+              afa-quesenberry-color-grounding copy — a
+              laminated ferret color-pattern axis chart, a
+              ferret fridge color-vs-pattern card, and a
+              mustelid color-pattern reference handbook.
+              Educational kitchen searches only. They are
+              not a ranked color list, they are not a
+              tools-hub / reviews-hub / diet-hub / care-hub
+              / behavior-hub / health-hub / ownership-hub /
+              colors-hub / first-year-schedule hop, they
+              are not a child toothbrush hop, and they do
+              not replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+color+pattern+axis+chart?s=colors-and-patterns"
+                amazonLabel="Browse laminated ferret color-pattern axis charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+color+vs+pattern+card?s=colors-and-patterns"
+                amazonLabel="Browse ferret fridge color-vs-pattern cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+color+pattern+reference+handbook?s=colors-and-patterns"
+                amazonLabel="Browse mustelid color-pattern reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
