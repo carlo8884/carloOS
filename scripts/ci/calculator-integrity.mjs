@@ -6412,6 +6412,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1162: keep the existing sidebar capture; add under-hero capture with a concrete veterinary-care cost-category-checklist offer; every gear CTA is an amazon-brand category search matching on-page routine-budget / recurring-chronic-line / last-12-months-of-invoices copy (a household budget workbook so wellness exams, vaccinations, and parasite prevention stay a written annual line, a checkbook register so chronic medication and recheck visits stay a running total, a letter-size accordion file folder so the last 12 months of invoices sort into Routine / Procedures / Chronic / Emergency), never a placeholder ASIN, a #1162 cash-box / calculator / manila-folder hop, a #1161 laminating-pouch / dry-erase-board / visor-holder hop, an expanding-file / plastic file-box hop, an ER-vs-clinic first-aid-kit / thermometer hop, an insurance-brand hop, or a prescription hop. Educational cost-planning / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
 
+  {
+    id: 'vets · how-to-afford-vet-care hops',
+    file: 'apps/vets-co/src/app/guides/how-to-afford-vet-care/page.tsx',
+    mustInclude: [
+      { re: /source="guides-how-to-afford-vet-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my how-to-afford-vet-care checklist"/, label: 'concrete how-to-afford-vet-care checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="guides-afford"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/cash\+envelope\+budget\+system\?s=guides-how-to-afford-vet-care/, label: 'cash-envelope budget-system search hop (matches on-page automatic-monthly-transfer / deductible / surprise-set-aside copy; unique vs locking+cash+box+with+key / household+budget+workbook)' },
+      { re: /amazon-brand\/yellow\+legal\+pad\?s=guides-how-to-afford-vet-care/, label: 'yellow legal-pad search hop (matches on-page tiered-plan conversation / ideal-middle-minimum copy; unique vs lined+telephone+message+pad / checkbook+register)' },
+      { re: /amazon-brand\/hanging\+file\+folders\+letter\+size\?s=guides-how-to-afford-vet-care/, label: 'letter-size hanging file-folder search hop (matches on-page payment-plan / assistance-application copy; unique vs manila+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+expanding+file+organizer / letter+size+plastic+file+box)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(household\+budget\+workbook|checkbook\+register|accordion\+file\+folder\+letter\+size|locking\+cash\+box\+with\+key|basic\+desktop\+calculator|manila\+file\+folders\+letter\+size|credit\+card\+size\+laminating\+pouches|small\+magnetic\+dry\+erase\+board|car\+visor\+document\+holder|48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|letter\+size\+expanding\+file\+organizer|letter\+size\+plastic\+file\+box|letter\+size\+thermal\+laminating\+pouches|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|pet\+emergency\+contact\+card|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1163 budget-workbook / checkbook-register / accordion-file, #1162 cash-box / calculator / manila-folder, #1161 laminating-pouch / dry-erase-board / visor-holder, #1093 kitchen-timer / message-pad / hard-sided-carrier, ER-vs-clinic first-aid-kit / thermometer / soft-carrier, senior-bloodwork expanding-file, senior-pet-care plastic file-box, vaccinations letter-size laminating-pouch, pain-management weekly-planner, preventive-care magnetic-planner, pet-emergency-contact-card, first-aid-kit / thermometer, or Rx — this page hops only cash-envelope-budget-system / yellow-legal-pad / hanging-file-folders-letter-size gear' },
+    ],
+    why: 'Money path leftover after #1163: keep the existing sidebar capture; add under-hero capture with a concrete how-to-afford-vet-care checklist offer; every gear CTA is an amazon-brand category search matching on-page automatic-monthly-transfer / tiered-plan conversation / payment-plan / assistance-application copy (a cash envelope budget system so the monthly set-aside for deductibles and surprises stays a counted transfer, a yellow legal pad so the ideal / middle / minimum plan is written during the cost talk, letter-size hanging file folders so the payment-plan agreement and assistance applications stay a file), never a placeholder ASIN, a #1163 budget-workbook / checkbook-register / accordion-file hop, a #1162 cash-box / calculator / manila-folder hop, a #1161 laminating-pouch / dry-erase-board / visor-holder hop, an expanding-file / plastic file-box hop, an ER-vs-clinic first-aid-kit / thermometer hop, a financing-brand hop, an insurance-brand hop, or a prescription hop. Educational affordability / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
+
 ]
 
 let failures = 0
