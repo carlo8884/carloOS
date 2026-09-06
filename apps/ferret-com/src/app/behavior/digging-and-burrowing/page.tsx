@@ -14,6 +14,7 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -155,6 +156,52 @@ export default function FerretDiggingBurrowingPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret dig-box checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret dig-box checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-dig-box-chart,
+              fridge-dig-filler-card, and
+              mustelid-dig-burrow-reference-handbook notes
+              that match the polecat-dig-instinct-map,
+              dig-box-filler-log, and
+              afa-enrichment-grounding copy on this page —
+              a laminated ferret dig-box chart so the
+              carpet-corner / plant-soil / litter-fling
+              map is posted on the fridge (not a
+              behavior-hub cue chart, not a dead-sleep
+              chart, not a bonding-week chart), a ferret
+              fridge dig-filler card so rice / river-rock /
+              ball-pit notes are labeled on the fridge
+              (not a behavior card, not a wake-safely
+              card, not a scent-trust card), and a
+              mustelid dig-burrow reference handbook so
+              the AFA enrichment grounding is a physical
+              kitchen book (not a behavior handbook, not
+              a dead-sleep handbook, not a bonding
+              handbook). Educational kitchen checklist,
+              not a ranked toy list, not a sleep-sack hop,
+              and not a substitute for an exotic-mammal
+              veterinarian. The existing Marshall tunnel
+              hop and Chewy ball-pit hop stay below.
+              Ferret.com does not sell insurance. Aging
+              pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret dig-box checklist"
+              subtitle="Email the dig-box-chart, fridge dig-filler card, and dig-burrow-handbook notes. No spam."
+              ctaText="Email my ferret dig-box checklist"
+              source="behavior-digging-burrowing-under-hero"
+            />
+          </div>
 
           <DropCap>
             Watch a ferret discover loose soil and you are watching ten thousand
@@ -300,6 +347,54 @@ export default function FerretDiggingBurrowingPage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret dig-box chart /
+              ferret fridge dig-filler card /
+              mustelid dig-burrow reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              Existing Marshall tunnel + Chewy ball-pit
+              hops stay below. ShopCtas never href="#"
+              or PLACEHOLDER.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret dig-box kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page polecat-dig-instinct-map,
+              dig-box-filler-log, and
+              afa-enrichment-grounding copy — a laminated
+              ferret dig-box chart, a ferret fridge
+              dig-filler card, and a mustelid dig-burrow
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked toy
+              list, they are not a behavior-hub /
+              dead-sleep / bonding hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. The
+              Marshall tunnel and Chewy ball-pit hops
+              stay below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+dig+box+chart?s=digging-and-burrowing"
+                amazonLabel="Browse laminated ferret dig-box charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+dig+filler+card?s=digging-and-burrowing"
+                amazonLabel="Browse ferret fridge dig-filler cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+dig+burrow+reference+handbook?s=digging-and-burrowing"
+                amazonLabel="Browse mustelid dig-burrow reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Dig Box and Tunnel Picks</h2>
           <p>
