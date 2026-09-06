@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function ForageBasicsPage() {
             { label: "Trickle Feeding", href: "#trickle" },
             { label: "Hay Nets", href: "#hay-nets" },
             { label: "Forage Quality", href: "#quality" },
+            { label: "Barn forage-quality kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,9 +110,44 @@ export default function ForageBasicsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the forage-first checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse forage-first checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the horse-hay-probe-moisture-tester,
+              equine-hay-core-sampler, and
+              wall-mounted-horse-hay-rack notes that
+              match the cleanliness, representative-
+              sample, and keep-forage-off-the-ground
+              copy on this page — a hay-probe moisture
+              tester so moldy forage is not stored or
+              fed, a hay-core sampler so a lab sample
+              is representative (not an EMS NSC kit),
+              and a wall-mounted hay rack so forage
+              stays off dirty ground. Educational barn
+              checklist, not a treatment, not a hay-net
+              hop, and not a substitute for calling the
+              veterinarian or equine nutritionist. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse forage-first checklist"
+              subtitle="Email the moisture-tester, core-sampler, and hay-rack notes. No spam."
+              ctaText="Email my horse forage-first checklist"
+              source="nutrition-forage-under-hero"
+            />
+          </div>
 
           <h2 id="fiber">Why Fiber First</h2>
           <p>The horse evolved grazing fibrous grasses for 16 or more hours a day. Its teeth, its small stomach that secretes acid continuously, and its enormous fermenting hindgut are all built for a constant flow of fiber. Feeding a forage-based diet keeps that system working as designed: it buffers stomach acid, keeps the gut moving, generates body heat, and occupies the horse mentally. Diets short on forage and heavy in grain are behind much of the colic, ulceration, and behavioral trouble seen in domestic horses.</p>
@@ -154,12 +190,93 @@ export default function ForageBasicsPage() {
 
           <h2 id="quality">Forage Quality</h2>
           <ul>
-            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic.</li>
+            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale (that lives on EMS) and not a hay steamer or soaking bag (those live on heaves).</li>
             <li><strong>Maturity at cutting</strong> -- earlier-cut forage is more digestible and higher in nutrients; very stemmy late-cut hay is largely filler.</li>
             <li><strong>Type</strong> -- grass versus legume (such as alfalfa) changes calories, protein, and calcium; match to the horse.</li>
-            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it.</li>
+            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit and not a timothy-hay hop (that lives on the feed calculator).</li>
             <li><strong>Consistency</strong> -- change forage gradually, since the hindgut microbes need time to adapt.</li>
+            <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net (that lives on easy-keeper), and not an equine slow-feeder hay box (that lives on turnout).</li>
           </ul>
+
+          <h2 id="kit">Barn forage-quality kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            cleanliness, representative-sample, and
+            keep-forage-off-the-ground copy on this page — a
+            horse hay-probe moisture tester so moldy forage
+            is not stored or fed, an equine hay-core sampler
+            so a lab sample is representative rather than a
+            grab of the top flake, and a wall-mounted horse
+            hay rack so forage stays off dirty ground. These
+            are educational barn tools, not a ranked product
+            list, not a substitute for veterinary or
+            nutritionist care, and not a hanging hay-bale
+            scale, an EMS forage-NSC hay-test kit, or
+            strip-grazing posts (those live on EMS). This
+            page does not hop medications or vaccines. This
+            page does not claim hands-on testing.
+          </p>
+
+          {/* Money path — live amazon-brand search hops
+              (horse hay probe moisture tester /
+              equine hay core sampler /
+              wall mounted horse hay rack).
+              Educational barn tools only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1110
+              plain+white+horse+salt+block /
+              salt+first+horse+electrolyte+powder /
+              wide+mouth+horse+water+bucket, #1105
+              digital+hanging+hay+bale+scale /
+              equine+forage+nsc+hay+test+kit /
+              portable+strip+grazing+step+in+posts,
+              horse+hay+steamer / horse+hay+soaking+bag
+              (heaves),
+              timothy+hay+horse
+              (feed calculator),
+              horse+hay+cubes
+              (dental),
+              slow+feeder+hay+net+horse
+              (kept on the ReviewCard above),
+              small+hole+slow+feeder+hay+net+horse
+              (easy keeper),
+              equine+slow+feeder+hay+box
+              (turnout). */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the barn forage-quality kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page cleanliness, representative-sample,
+              and keep-forage-off-the-ground copy — a hay-
+              probe moisture tester, a hay-core sampler,
+              and a wall-mounted hay rack. Educational
+              barn tools only. They are not a ranked
+              product list, they are not an EMS hay-test
+              or bale-scale hop, they are not a hay-net
+              hop, and they do not replace a veterinarian
+              or equine nutritionist. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+hay+probe+moisture+tester?s=nutrition-forage"
+                amazonLabel="Browse horse hay-probe moisture testers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+hay+core+sampler?s=nutrition-forage"
+                amazonLabel="Browse equine hay-core samplers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wall+mounted+horse+hay+rack?s=nutrition-forage"
+                amazonLabel="Browse wall-mounted horse hay racks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
