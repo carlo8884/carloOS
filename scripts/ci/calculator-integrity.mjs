@@ -8060,6 +8060,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1247: ferret weight-management under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture, the already-hopped sleep-sack Amazon search, and the existing Marshall tunnel hop; add under-hero capture with a concrete ferret stress-signs-checklist offer matching on-page appetite / hiding / bar-biting / environment-vs-illness copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · leash-and-harness-training hops',
+    file: 'apps/ferret-com/src/app/behavior/leash-and-harness-training/page.tsx',
+    mustInclude: [
+      { re: /source="behavior-leash-harness-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret leash-and-harness checklist"/, label: 'concrete ferret leash-and-harness-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-leash-harness"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+vest\+harness\?s=behavior-leash-harness/, label: 'existing ferret vest-harness amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /marshall\/ferret-harness-leash\?s=behavior-leash-harness/, label: 'existing Marshall H-style harness hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1248: ferret stress-signs under-hero is on main. Verify-first care/diet list had no remaining Amazon leftovers (bathing hop-less; multi-level-housing and introducing-a-second-ferret already pinned; food-label and whole-prey hop-less). Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture, the already-hopped vest Amazon search, and the existing Marshall H-style hop; add under-hero capture with a concrete ferret leash-and-harness-checklist offer matching on-page no-collar / two-finger-fit / indoor-break-in / 80F-heat copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
