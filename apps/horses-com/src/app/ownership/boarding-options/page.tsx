@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -83,6 +83,7 @@ export default function BoardingOptionsPage() {
             { label: "Self-Care Board", href: "#self" },
             { label: "Keeping a Horse at Home", href: "#home" },
             { label: "Choosing a Facility", href: "#choosing" },
+            { label: "Boarding leftover barn kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,9 +110,52 @@ export default function BoardingOptionsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the horse boarding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse boarding checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the boarding-facility-walkthrough,
+              written-boarding-contract, and
+              hay-and-bedding-storage notes that match
+              the visit-and-observe, clarify-in-writing,
+              and hay-and-bedding-storage copy on this
+              page — a laminated horse boarding facility
+              walkthrough checklist so the visit records
+              horse condition, cleanliness, and fencing
+              and stabling safety (not a daily-care
+              chart, not an emergency-triage chart, not
+              an owner-guides chart), a horse boarding
+              contract document binder so the fee
+              inclusions and extras stay in writing
+              (not a farrier log, not a stall-door
+              care card, not a weatherproof clipboard),
+              and a waterproof horse hay-bale storage
+              tarp so home-kept hay and bedding stay
+              dry (not a hay rack, not a hay bag, not
+              a feed bin). Educational barn checklist,
+              not a ranked product list, and not a
+              substitute for visiting the yard or
+              putting the boarding agreement in
+              writing. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse boarding checklist"
+              subtitle="Email the walkthrough, written-contract, and hay-storage notes. No spam."
+              ctaText="Email my horse boarding checklist"
+              source="ownership-boarding-options-under-hero"
+            />
+          </div>
 
           <h2 id="spectrum">The Spectrum of Options</h2>
           <p>Boarding arrangements sit on a spectrum from most service to least. At one end, full-care board has the facility do all the daily work for a higher fee; at the other, self-care board provides only the space while you do everything; and keeping a horse at home gives total control and total responsibility. Between them lie partial and pasture board. The right choice depends on your time, budget, experience, facilities available, and how hands-on you want or need to be.</p>
@@ -127,6 +171,20 @@ export default function BoardingOptionsPage() {
 
           <h2 id="home">Keeping a Horse at Home</h2>
           <p>Keeping a horse at home offers maximum control and the joy of having the horse on your doorstep, but it is a serious undertaking: it requires suitable land, safe fencing and shelter, water, hay and bedding storage, and your labor every single day, year-round. Horses are herd animals, so a lone horse needs company. Home-keeping also means you are the first responder in every emergency. It can be rewarding and even economical with the right setup, but it is a lifestyle commitment, not just a saving.</p>
+          <p>
+            A waterproof horse hay-bale storage tarp is how
+            home-kept hay and bedding stay dry instead of
+            sitting in a leak — it is not a wall-mounted
+            horse hay rack (that lives on forage-basics),
+            not a nylon horse hay bag (that lives on
+            performance feeding), and not a rodent-proof
+            metal horse feed bin (that lives on grain
+            and concentrates). This page does not hop
+            stall bedding, manure carts, or automatic
+            waterers already pinned on the stall-bedding
+            calculator, deworming-program, and water
+            pages.
+          </p>
 
           <h2 id="choosing">Choosing a Facility</h2>
           <ul>
@@ -136,6 +194,154 @@ export default function BoardingOptionsPage() {
             <li><strong>Ask about routine</strong> feeding times, hay quality, and how emergencies and after-hours problems are handled.</li>
             <li><strong>Talk to current boarders</strong> and confirm the management style and atmosphere suit you and your horse.</li>
           </ul>
+          <p>
+            A laminated horse boarding facility
+            walkthrough checklist is how the visit
+            records horse condition, cleanliness, and
+            fencing and stabling safety instead of
+            relying on memory after the tour — it is
+            not a laminated horse barn daily-care chart
+            (that lives on the care hub), not an
+            emergency-triage chart (that lives on the
+            health hub), and not an owner-guides chart
+            (that lives on the guides hub). A horse
+            boarding contract document binder is how
+            the fee inclusions and extras stay in
+            writing — it is not a farrier log book
+            (that lives on farrier-schedule), not a
+            stall-door care card (that lives on the
+            care hub), and not a weatherproof storage
+            clipboard (that lives on flu pages). This
+            page does not hop electric tape, fence
+            mesh, or flood lights already pinned on
+            fencing-safety and farrier-schedule.
+          </p>
+
+          <h2 id="kit">Boarding leftover barn kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            visit-and-observe, clarify-in-writing, and
+            hay-and-bedding-storage copy on this page —
+            a laminated horse boarding facility
+            walkthrough checklist so the visit records
+            horse condition, cleanliness, and fencing
+            and stabling safety, a horse boarding
+            contract document binder so the fee
+            inclusions and extras stay in writing, and
+            a waterproof horse hay-bale storage tarp so
+            home-kept hay and bedding stay dry. These
+            are educational barn searches, not a ranked
+            product list, not a substitute for visiting
+            the yard or putting the boarding agreement
+            in writing, not a daily-care-chart /
+            stall-door-care-card / husbandry-handbook
+            hop (those live on the care hub), not an
+            emergency-triage-chart / vital-signs-card /
+            health-handbook hop, not a forage-first-chart
+            / ration-card / nutrition-handbook hop, not
+            an owner-guides-chart hop, not a
+            calculator-tools-chart hop, not a first-aid
+            saline / pads / scissors hop, not a
+            hay-rack / hay-bag / feed-bin hop, not a
+            farrier flood-light hop, and not a
+            fencing-safety tape / mesh / rope hop.
+            This page does not hop medications or
+            vaccines. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse boarding facility
+              walkthrough checklist /
+              horse boarding contract document binder /
+              waterproof horse hay-bale storage tarp).
+              Educational barn searches only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1129
+              sterile+saline+wound+flush+horse /
+              nonstick+wound+dressing+pads+horse /
+              equine+bandage+scissors, #1128
+              laminated+horse+barn+calculator+tools+chart /
+              horse+stall+door+measurement+card /
+              equine+calculator+reference+handbook, #1127
+              laminated+horse+barn+owner+guides+chart /
+              horse+stall+door+owner+guides+card /
+              equine+owner+guides+reference+handbook, #1126
+              laminated+horse+barn+daily+care+chart /
+              horse+stall+door+care+card /
+              equine+husbandry+reference+handbook, #1125
+              laminated+horse+barn+emergency+triage+chart /
+              horse+stall+door+vital+signs+card /
+              equine+health+reference+handbook, #1124
+              laminated+horse+barn+forage+first+chart /
+              horse+stall+door+ration+card /
+              equine+nutrition+reference+handbook, #1123
+              laminated+horse+barn+treat+safety+chart /
+              lidded+horse+barn+treat+tote /
+              horse+barn+treat+prep+shears,
+              grimace / emergency
+              equine+first+aid+kit /
+              digital+veterinary+thermometer /
+              vet+wrap+bandage /
+              poultice,
+              cost-calculator
+              horse+barn+first+aid+kit,
+              farrier-schedule
+              cordless+barn+flood+light,
+              fencing-safety
+              horse+electric+tape /
+              horse+fence+mesh /
+              horse+electric+rope,
+              forage-basics
+              wall+mounted+horse+hay+rack,
+              grain
+              rodent+proof+metal+horse+feed+bin,
+              performance
+              nylon+horse+hay+bag. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the boarding leftover barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page visit-and-observe,
+              clarify-in-writing, and
+              hay-and-bedding-storage copy — a
+              laminated horse boarding facility
+              walkthrough checklist, a horse boarding
+              contract document binder, and a
+              waterproof horse hay-bale storage tarp.
+              Educational barn searches only. They are
+              not a ranked product list, they are not a
+              daily-care / emergency-triage /
+              owner-guides / calculator-tools chart
+              hop, they are not a first-aid saline /
+              pads / scissors hop, they are not a hay
+              rack / hay bag / feed bin hop, and they
+              do not replace visiting the yard or
+              putting the boarding agreement in
+              writing. Horses.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+boarding+facility+walkthrough+checklist?s=ownership-boarding-options"
+                amazonLabel="Browse laminated horse boarding facility walkthrough checklists on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+boarding+contract+document+binder?s=ownership-boarding-options"
+                amazonLabel="Browse horse boarding contract document binders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/waterproof+horse+hay+bale+storage+tarp?s=ownership-boarding-options"
+                amazonLabel="Browse waterproof horse hay-bale storage tarps on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
