@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function SaltElectrolytesPage() {
             { label: "Equine Sweat Is Salty", href: "#sweat" },
             { label: "When to Supplement", href: "#when" },
             { label: "Using Electrolytes Safely", href: "#safe" },
+            { label: "Barn salt-and-water kit", href: "#kit" },
             { label: "Salt and Electrolyte Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -109,9 +110,43 @@ export default function SaltElectrolytesPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the salt-and-electrolyte checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse salt-and-electrolyte checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the plain-white-horse-salt-block,
+              salt-first-horse-electrolyte-powder, and
+              wide-mouth-horse-water-bucket notes that
+              match the year-round-baseline-salt, sweat-
+              replacement, and always-provide-water copy
+              on this page — a white salt block so every
+              horse has a free-choice source, a salt-first
+              electrolyte powder so heavy sweat is not
+              replaced with sugar, and a wide-mouth water
+              bucket so electrolytes are never given
+              without water. Educational barn checklist,
+              not a treatment, not a tying-up loose-salt
+              hop, and not a substitute for calling the
+              veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse salt-and-electrolyte checklist"
+              subtitle="Email the salt-block, salt-first-powder, and water-bucket notes. No spam."
+              ctaText="Email my horse salt-and-electrolyte checklist"
+              source="nutrition-salt-under-hero"
+            />
+          </div>
 
           <h2 id="salt">Why Salt Matters</h2>
           <p>Sodium and chloride -- common salt -- are essential nutrients that forage is usually too low in to meet a horse&apos;s baseline needs, even before any sweating. Adequate salt drives the thirst that maintains water intake, supports nerve and muscle function, and underpins the body&apos;s fluid balance. Every horse should have access to salt, and many benefit from a measured daily amount of loose salt added to feed, which is more reliably consumed than a salt block alone.</p>
@@ -124,7 +159,7 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="when">When to Supplement</h2>
           <ul>
-            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source.</li>
+            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source. A plain white horse salt block is that free-choice source — it is not loose plain white salt (that lives on tying-up) and not an equine salt lick (that lives on the feed calculator).</li>
             <li><strong>Added electrolytes</strong> for horses in hard or prolonged work, especially in heat and humidity.</li>
             <li><strong>After heavy sweating</strong> from competition, long hauls, or hot-weather exertion.</li>
             <li><strong>For poor drinkers and travelers</strong> where salt and electrolytes help maintain the drive to drink.</li>
@@ -133,12 +168,100 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="safe">Using Electrolytes Safely</h2>
           <ul>
-            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration.</li>
-            <li><strong>Choose quality products</strong> where salt is the main ingredient, not sugar fillers.</li>
+            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration. A wide-mouth horse water bucket is how that water stays in front of the horse — it is not an automatic waterer (that lives on PPID) and not a color-coded flat-back bucket (that lives on strangles).</li>
+            <li><strong>Choose quality products</strong> where salt is the main ingredient, not sugar fillers. A salt-first horse electrolyte powder is how heavy sweat is replaced without a sugar-first mix — it is not the generic horse-electrolytes hop on the emergency and grimace-scale tools.</li>
             <li><strong>Introduce gradually</strong> and avoid giving large doses to an empty stomach, which can irritate it.</li>
             <li><strong>Match the dose to the work and losses</strong> rather than over-supplementing an idle horse.</li>
             <li><strong>Consult your vet</strong> for horses with kidney issues or specific medical conditions before adding electrolytes.</li>
           </ul>
+
+          <h2 id="kit">Barn salt-and-water kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            year-round-baseline-salt, sweat-replacement,
+            and always-provide-water copy on this page — a
+            plain white horse salt block so every horse
+            has a free-choice source, a salt-first
+            electrolyte powder so heavy sweat is not
+            replaced with sugar, and a wide-mouth water
+            bucket so electrolytes are never given
+            without water. These are educational barn
+            tools, not a ranked product list, not a
+            substitute for veterinary care, and not
+            loose plain white salt (that lives on
+            tying-up), a generic horse-electrolytes hop
+            (that lives on the emergency tools), or an
+            equine salt lick (that lives on the feed
+            calculator). This page does not hop
+            medications or vaccines. This page does not
+            claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (plain white horse salt block /
+              salt first horse electrolyte powder /
+              wide mouth horse water bucket).
+              Educational barn tools only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1108
+              stainless+horse+shedding+blade /
+              wicking+horse+anti+sweat+sheet /
+              automatic+horse+waterer, #1107
+              equine+hoof+angle+gauge /
+              leather+horse+lunge+cavesson /
+              neoprene+horse+overreach+bell+boots, #1106
+              tow+behind+arena+drag+harrow /
+              cotton+horse+polo+exercise+wraps /
+              portable+horse+paddock+panels, #1105
+              digital+hanging+hay+bale+scale /
+              equine+forage+nsc+hay+test+kit /
+              portable+strip+grazing+step+in+posts,
+              loose+plain+white+salt+horse
+              (tying-up),
+              horse+electrolytes
+              (emergency / grimace-scale),
+              equine+salt+lick
+              (feed calculator),
+              color+coded+flat+back+horse+buckets
+              (strangles). */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the barn salt-and-water kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page baseline-salt, sweat-replacement,
+              and always-provide-water copy — a plain
+              white horse salt block, a salt-first
+              electrolyte powder, and a wide-mouth water
+              bucket. Educational barn tools only. They
+              are not a ranked product list, they are
+              not a tying-up loose-salt hop, they are
+              not a generic horse-electrolytes hop, they
+              are not a PPID automatic-waterer hop, and
+              they do not replace a veterinarian.
+              Horses.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt"
+                amazonLabel="Browse plain white horse salt blocks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/salt+first+horse+electrolyte+powder?s=nutrition-salt"
+                amazonLabel="Browse salt-first horse electrolyte powders on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wide+mouth+horse+water+bucket?s=nutrition-salt"
+                amazonLabel="Browse wide-mouth horse water buckets on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Salt and Electrolyte Picks</h2>
           <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
