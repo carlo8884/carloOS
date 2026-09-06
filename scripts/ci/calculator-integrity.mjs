@@ -386,6 +386,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1255: five-site tools-hub set is on main. This existing dog.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / WSAVA-VOHC-and-editorial-criteria copy (a laminated dog reviews buyer-guide chart so the food / crate / harness / bed / GPS map is posted on the fridge, a dog fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a canine reviews reference handbook so the WSAVA / VOHC / editorial-criteria grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child-review crate hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1255 / crate-size / stocking.',
   },
   {
+    id: 'dog · nutrition hub',
+    file: 'apps/dog-com/src/app/nutrition/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog nutrition-hub checklist"/, label: 'concrete dog nutrition-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+nutrition\+feeding\+chart\?s=nutrition-hub/, label: 'laminated dog nutrition feeding-chart search hop (matches on-page feeding-section-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+dog+reviews+buyer+guide+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+wsava\+label\+card\?s=nutrition-hub/, label: 'dog fridge WSAVA label-card search hop (matches on-page wsava-label-and-life-stage-log copy; unique vs dog+fridge+measurement+card / dog+fridge+reviews+comparison+card)' },
+      { re: /amazon-brand\/canine\+nutrition\+reference\+handbook\?s=nutrition-hub/, label: 'canine nutrition reference-handbook search hop (matches on-page NRC-WSAVA-and-AAFCO-grounding copy; unique vs canine+calculator+reference+handbook / canine+reviews+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+calculator\+tools\+chart|laminated\+dog\+reviews\+buyer\+guide\+chart|dog\+fridge\+measurement\+card|dog\+fridge\+reviews\+comparison\+card|canine\+calculator\+reference\+handbook|canine\+reviews\+reference\+handbook|large\+breed\+puppy\+dry\+dog\+food\+aafco|senior\+dog\+dry\+food\+wsava\+recommended|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub / reviews-hub kitchen kits, child puppy / senior food hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-dog-nutrition-feeding-chart / dog-fridge-wsava-label-card / canine-nutrition-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1256: dog.com /reviews hub is on main. This existing dog.com /nutrition hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog nutrition-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page feeding-section-map / wsava-label-and-life-stage-log / NRC-WSAVA-and-AAFCO-grounding copy (a laminated dog nutrition feeding chart so the choosing-food / how-much / labels / puppy-vs-senior map is posted on the fridge, a dog fridge WSAVA label card so AAFCO statements and life-stage feeding notes are labeled on the fridge, a canine nutrition reference handbook so the NRC / WSAVA / AAFCO grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a reviews-hub buyer-guide hop, a child puppy / senior food hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. No directory import on this page. Do not re-open #1251–#1256 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
