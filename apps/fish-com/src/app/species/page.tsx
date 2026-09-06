@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -93,6 +93,52 @@ export default async function SpeciesIndexPage() {
         secondaryCta={{ href: '/species/betta-fish', label: 'Start with betta care' }}
       />
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fish species-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fish species-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-aquarium-species-profile-chart,
+            rim-species-card, and
+            aquarist-species-reference-handbook notes that
+            match the featured-species-map,
+            freshwater-saltwater-category-log, and
+            care-guide-grounding copy on this hub — a
+            laminated aquarium species profile chart so
+            the featured-species map (betta, tetra,
+            clownfish, goldfish, and the rest of the
+            library) is posted on the rim (not a
+            tools-hub calculator chart, not a reviews
+            buyer-guide chart), an aquarium rim species
+            card so each freshwater / saltwater category
+            note is labeled on the rim (not a measurement
+            card, not a reviews comparison card), and an
+            aquarist species reference handbook so the
+            tank-size / water-parameter / diet /
+            compatibility / health grounding is a
+            physical kitchen book (not a calculator
+            handbook, not a reviews handbook).
+            Educational kitchen checklist, not a ranked
+            livestock list, not a child betta-tank-setup
+            / discus / kuhli / otocinclus hop, and not a
+            substitute for a veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Fish species-hub checklist"
+            subtitle="Email the species-profile-chart, rim species-card, and species-handbook notes. No spam."
+            ctaText="Email my fish species-hub checklist"
+            source="species-hub-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Category filters */}
       <div className="bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-4">
         <div className="flex gap-3 overflow-x-auto pb-1 -mb-1">
@@ -157,6 +203,82 @@ export default async function SpeciesIndexPage() {
           ))}
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Species-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          featured-species-map,
+          freshwater-saltwater-category-log, and
+          care-guide-grounding copy on this hub — a
+          laminated aquarium species profile chart so the
+          featured-species map is posted on the rim, an
+          aquarium rim species card so each freshwater /
+          saltwater category note is labeled on the rim,
+          and an aquarist species reference handbook so
+          the tank-size / water-parameter / diet /
+          compatibility / health grounding is a physical
+          kitchen book. These are educational kitchen
+          searches, not a ranked livestock list, not a
+          substitute for a veterinarian, not a tools-hub
+          / reviews-hub hop, and not a child
+          betta-tank-setup / discus / kuhli / otocinclus
+          hop (those live on species children). This page
+          does not hop medications. This page does not
+          claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated aquarium species profile chart /
+            aquarium rim species card /
+            aquarist species reference handbook).
+            Educational kitchen searches only; no Rx hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews
+            kitchen kits and child tank-setup hops.
+            Skip discus / kuhli / otocinclus children. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the species-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page featured-species-map,
+            freshwater-saltwater-category-log, and
+            care-guide-grounding copy — a laminated
+            aquarium species profile chart, an aquarium
+            rim species card, and an aquarist species
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked
+            livestock list, they are not a tools-hub /
+            reviews-hub hop, they are not a child
+            tank-setup hop, and they do not replace a
+            veterinarian. Fish.com earns a commission on
+            qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+aquarium+species+profile+chart?s=species-hub"
+              amazonLabel="Browse laminated aquarium species profile charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+rim+species+card?s=species-hub"
+              amazonLabel="Browse aquarium rim species cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarist+species+reference+handbook?s=species-hub"
+              amazonLabel="Browse aquarist species reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
