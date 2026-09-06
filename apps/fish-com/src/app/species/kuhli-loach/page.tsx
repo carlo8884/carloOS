@@ -81,6 +81,37 @@ export default function KuhliLoachPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the kuhli-loach-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Kuhli-loach-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Pangio kuhlii
+                notes that match the care copy on this
+                page — a group of 6+, 2 inches of fine
+                sand, 75–82°F and pH 6.0–7.0, dense
+                hides, and a pre-filter sponge on every
+                intake. Educational
+                kuhli-loach-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing kuhli-loach tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Kuhli-loach-setup checklist"
+                subtitle="Email the 6+ group, fine-sand, and intake-sponge notes. No spam."
+                ctaText="Email my kuhli-loach-setup checklist"
+                source="species-kuhli-loach-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-kuhli-loach" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A kuhli loach in a home aquarium." priority />
         <h2>Sand Substrate — Non-Negotiable</h2>
         <p>Kuhli loaches burrow into substrate. Their soft, scaleless skin is easily damaged by coarse gravel or sharp substrates. Fine sand (pool filter sand, Caribsea Super Naturals, or play sand) is required. In gravel substrates, kuhli loaches attempt to burrow and injure themselves, become stressed, and develop skin abrasions that lead to infection. This is not optional — sand is a welfare requirement for kuhli loaches, not a preference.</p>
@@ -114,7 +145,6 @@ export default function KuhliLoachPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for kuhli loach care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Kuhli Loach Setup on Amazon →</a>
-            <a href="/go/chewy-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
