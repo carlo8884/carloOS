@@ -156,6 +156,38 @@ export default function FerretDIYEnrichmentPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret enrichment checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret enrichment checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the enrichment notes that match
+              the copy on this page — tunnels first,
+              dig boxes and foraging games, skip
+              rubber and foam that can be swallowed,
+              supervise cardboard chewing, and
+              rotate toys so a cheap box stays
+              interesting. Educational checklist,
+              not a new product hop and not a
+              substitute for an exotic-animal
+              veterinarian. The existing Marshall
+              tunnel hop and snuffle-mat Amazon
+              search stay below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret enrichment checklist"
+              subtitle="Email the tunnel, forage, and no-rubber safety notes. No spam."
+              ctaText="Email my ferret enrichment checklist"
+              source="behavior-diy-enrichment-under-hero"
+            />
+          </div>
+
           <DropCap>
             A bored ferret is a destructive ferret. Channel that boundless
             curiosity into safe outlets and you get a happier, calmer, more
