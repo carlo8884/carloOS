@@ -7501,6 +7501,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1217: keep the existing sidebar capture and the already-hopped otocinclus tank-setup amazon-brand search; add under-hero capture with a concrete otocinclus-setup-checklist offer matching on-page 6+ group / 2–3 month algae tank / pH 6.0–7.5 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · pearl-gourami hops',
+    file: 'apps/fish-com/src/app/species/pearl-gourami/page.tsx',
+    mustInclude: [
+      { re: /source="species-pearl-gourami-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my pearl-gourami-setup checklist"/, label: 'concrete pearl-gourami-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-pearl-gourami"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pearl%20gourami%20tank%20setup\?s=species-pearl-gourami/, label: 'existing pearl-gourami tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1218: keep the existing sidebar capture and the already-hopped pearl-gourami tank-setup amazon-brand search; add under-hero capture with a concrete pearl-gourami-setup-checklist offer matching on-page 30-gallon / 77–82°F / pH 6.0–7.5 / surface-air copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
