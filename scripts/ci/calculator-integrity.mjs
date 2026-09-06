@@ -596,6 +596,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1265: vets.co /reviews hub is on main. This existing ferret.com /diet hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret diet-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page diet-section-map / macronutrient-and-label-log / obligate-carnivore-and-AFA-grounding copy (a laminated ferret diet feeding chart so the whole-prey / kibble / protein-fat / treats / labels / hydration / weight map is posted on the fridge, a ferret fridge diet label card so macronutrient-window and label-literacy notes are labeled on the fridge, a mustelid diet reference handbook so the obligate-carnivore / AFA / exotic-vet grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub kitchen hop, a child gram-scale / sipper hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked kibble list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. No directory import on this page. Ferret aging stays held. Do not re-open #1251–#1265 / crate-size / stocking.',
   },
   {
+    id: 'ferret · care hub',
+    file: 'apps/ferret-com/src/app/care/page.tsx',
+    mustInclude: [
+      { re: /source="care-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret care-hub checklist"/, label: 'concrete ferret care-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+ferret\+care\+routine\+chart\?s=care-hub/, label: 'laminated ferret care routine-chart search hop (matches on-page care-section-map copy; unique vs laminated+ferret+calculator+tools+chart / laminated+ferret+reviews+buyer+guide+chart / laminated+ferret+diet+feeding+chart)' },
+      { re: /amazon-brand\/ferret\+fridge\+care\+card\?s=care-hub/, label: 'ferret fridge care-card search hop (matches on-page daily-and-seasonal-routines-log copy; unique vs ferret+fridge+measurement+card / ferret+fridge+reviews+comparison+card / ferret+fridge+diet+label+card)' },
+      { re: /amazon-brand\/mustelid\+care\+reference\+handbook\?s=care-hub/, label: 'mustelid care reference-handbook search hop (matches on-page AFA-and-husbandry-grounding copy; unique vs mustelid+calculator+reference+handbook / mustelid+reviews+reference+handbook / mustelid+diet+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+calculator\+tools\+chart|ferret\+fridge\+measurement\+card|mustelid\+calculator\+reference\+handbook|laminated\+ferret\+reviews\+buyer\+guide\+chart|ferret\+fridge\+reviews\+comparison\+card|mustelid\+reviews\+reference\+handbook|laminated\+ferret\+diet\+feeding\+chart|ferret\+fridge\+diet\+label\+card|mustelid\+diet\+reference\+handbook|midwest\+critter\+nation|ferret\+nation\+critter\+nation|ferret\+sleep\+sack|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews / diet kitchen kits, child Critter-Nation / sleep-sack hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-ferret-care-routine-chart / ferret-fridge-care-card / mustelid-care-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1266: ferret.com /diet hub is on main. This existing ferret.com /care hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret care-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page care-section-map / daily-and-seasonal-routines-log / AFA-and-husbandry-grounding copy (a laminated ferret care routine chart so the housing / grooming / litter / travel / proofing / heat map is posted on the fridge, a ferret fridge care card so daily/seasonal husbandry notes are labeled on the fridge, a mustelid care reference handbook so the AFA / exotic-vet husbandry grounding is a physical kitchen book), never a placeholder ASIN, a tools / reviews / diet kitchen hop, a child Critter-Nation / sleep-sack hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked cage list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Ferret aging stays held. Do not re-open #1251–#1266 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
