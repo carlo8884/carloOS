@@ -6878,6 +6878,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1183: keep the existing sidebar capture and the already-hopped AquaClear / Fluval / Hikari / Aqueon amazon-brand searches; add under-hero capture with a concrete aquarium-filter-checklist offer matching on-page HOB / canister / sponge / fry-safe copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · best-canister-filters hops',
+    file: 'apps/fish-com/src/app/reviews/best-canister-filters/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-canister-filters-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my canister-filter checklist"/, label: 'concrete canister-filter-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-canister-filters"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/eheim\+classic\+350\+2215\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1184: keep the existing sidebar capture and the already-hopped Fluval 307 / Eheim Classic amazon-brand searches; add under-hero capture with a concrete canister-filter-checklist offer matching on-page AquaStop / 40–70 gallon / decades-of-track-record copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
