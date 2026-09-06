@@ -6769,6 +6769,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1178: keep the existing sidebar capture; add under-hero capture with a concrete Beagle health checklist offer; every gear CTA is an amazon-brand category search matching on-page epilepsy / obesity / screening copy (an analog stopwatch so seizure duration stays a written count against the five-minute emergency line, blank index cards so each seizure stays one dated card, a recipe-card box so measured meals stay one card per ration), never a placeholder ASIN, a #1178 divider / outdoor-thermometer / checklist-notepad hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Beagle-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · yorkshire-terrier-health hops',
+    file: 'apps/vets-co/src/app/breeds/yorkshire-terrier-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-yorkshire-terrier-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Yorkshire Terrier health checklist"/, label: 'concrete Yorkshire Terrier health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-yorkshire-terrier"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/two\+column\+ledger\+pad\?s=breeds-yorkshire-terrier-health/, label: 'two-column-ledger-pad search hop (matches on-page fasting / post-prandial bile-acids pair copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / weekly+checklist+notepad)' },
+      { re: /amazon-brand\/30\+day\+habit\+tracker\+pad\?s=breeds-yorkshire-terrier-health/, label: '30-day-habit-tracker-pad search hop (matches on-page daily home-brushing copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
+      { re: /amazon-brand\/hourly\+desk\+pad\?s=breeds-yorkshire-terrier-health/, label: 'hourly-desk-pad search hop (matches on-page four-small-meals-until-four-months copy; unique vs monthly+desk+pad+calendar / mechanical+kitchen+timer / recipe+card+box)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|four\+tab\+dividers|analog\+outdoor\+thermometer|weekly\+checklist\+notepad|top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|four\+column\+accounting\+pad|monthly\+desk\+pad\+calendar|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|dog\+dental\+finger\+brush|step\+in\+padded\+dog\+harness|dog\+ramp|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1179 stopwatch / index-card / recipe-box, #1178 divider / outdoor-thermometer / checklist-notepad, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only two-column-ledger-pad / 30-day-habit-tracker-pad / hourly-desk-pad gear' },
+    ],
+    why: 'Money path leftover after #1179: keep the existing sidebar capture; add under-hero capture with a concrete Yorkshire Terrier health checklist offer; every gear CTA is an amazon-brand category search matching on-page PSS / dental / hypoglycemia copy (a two-column ledger pad so the fasting and post-prandial bile-acids pair stays one written row, a 30-day habit-tracker pad so daily brushing stays a dated streak, an hourly desk pad so the four small meals until four months stay timed blocks), never a placeholder ASIN, a #1179 stopwatch / index-card / recipe-box hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Yorkshire-terrier-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
