@@ -785,6 +785,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1274: horses.com /ownership hub is on main. This existing vets.co /breeds hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets breeds-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page breed-health-map / screening-and-prevention-log / breed-club-grounding copy (a laminated pet breeds screening chart so the hip / eye / cardiac / airway map is posted on the fridge, a pet fridge breeds library card so each breed-health spoke is labeled on the fridge, a veterinary breeds reference handbook so the breed-club grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / insurance-hub / reviews-hub / health-hub / guides-hub kitchen hop, a child hygrometer / divider / sewing-tape hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked breed list, not a substitute for a veterinarian. Vets.co does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1274 / crate-size / stocking.',
   },
   {
+    id: 'dog · breeds hub',
+    file: 'apps/dog-com/src/app/breeds/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog breeds-hub checklist"/, label: 'concrete dog breeds-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+breeds\+profile\+chart\?s=breeds-hub/, label: 'laminated dog breeds profile-chart search hop (matches on-page size-energy-shedding-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+dog+reviews+buyer+guide+chart / laminated+dog+nutrition+feeding+chart / laminated+dog+training+session+chart / laminated+dog+guides+section+map+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+breeds\+library\+card\?s=breeds-hub/, label: 'dog fridge breeds-library-card search hop (matches on-page akc-group-browse-log copy; unique vs dog+fridge+measurement+card / dog+fridge+reviews+comparison+card / dog+fridge+wsava+label+card / dog+fridge+training+cue+card / dog+fridge+guides+prep+card)' },
+      { re: /amazon-brand\/canine\+breeds\+reference\+handbook\?s=breeds-hub/, label: 'canine breeds reference-handbook search hop (matches on-page ofa-akc-health-grounding copy; unique vs canine+calculator+reference+handbook / canine+reviews+reference+handbook / canine+nutrition+reference+handbook / canine+training+reference+handbook / canine+guides+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+calculator\+tools\+chart|dog\+fridge\+measurement\+card|canine\+calculator\+reference\+handbook|laminated\+dog\+reviews\+buyer\+guide\+chart|dog\+fridge\+reviews\+comparison\+card|canine\+reviews\+reference\+handbook|laminated\+dog\+nutrition\+feeding+chart|dog\+fridge\+wsava\+label\+card|canine\+nutrition\+reference\+handbook|laminated\+dog\+training\+session\+chart|dog\+fridge\+training\+cue\+card|canine\+training\+reference\+handbook|laminated\+dog\+guides\+section\+map\+chart|dog\+fridge\+guides\+prep\+card|canine\+guides\+reference\+handbook|slicker\+brush|rubber\+curry|wound\+care\+gauze|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews / nutrition / training / guides kitchen kits, child slicker-brush / rubber-curry hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-dog-breeds-profile-chart / dog-fridge-breeds-library-card / canine-breeds-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1275: vets.co /breeds hub is on main. This existing dog.com /breeds hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog breeds-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page size-energy-shedding-map / akc-group-browse-log / ofa-akc-health-grounding copy (a laminated dog breeds profile chart so the size / energy / shedding map is posted on the fridge, a dog fridge breeds library card so each AKC-group spoke is labeled on the fridge, a canine breeds reference handbook so the OFA / AKC grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub / nutrition-hub / training-hub / guides-hub kitchen hop, a child slicker-brush / rubber-curry hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked breed list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1275 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

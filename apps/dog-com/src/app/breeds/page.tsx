@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup, groupBreedsBySize, type SizeCategory } from '../../data/breeds'
 
@@ -206,6 +206,54 @@ export default async function BreedsPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog breeds-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog breeds-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-breeds-profile-chart,
+            fridge-breeds-library-card, and
+            canine-breeds-reference-handbook notes that
+            match the size-energy-shedding-map,
+            akc-group-browse-log, and
+            ofa-akc-health-grounding copy on this hub — a
+            laminated dog breeds profile chart so the
+            size / energy / shedding map is posted on the
+            fridge (not a tools-hub calculator chart, not
+            a reviews buyer-guide chart, not a nutrition
+            feeding chart, not a training session chart,
+            not a guides section-map chart), a dog fridge
+            breeds library card so each AKC-group spoke
+            is labeled on the fridge (not a measurement
+            card, not a reviews comparison card, not a
+            WSAVA label card, not a training cue card,
+            not a guides prep card), and a canine breeds
+            reference handbook so the OFA / AKC
+            grounding is a physical kitchen book (not a
+            calculator handbook, not a reviews handbook,
+            not a nutrition handbook, not a training
+            handbook, not a guides handbook).
+            Educational kitchen checklist, not a ranked
+            breed list, not a child slicker-brush /
+            rubber-curry hop, and not a substitute for a
+            veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog breeds-hub checklist"
+            subtitle="Email the breeds-profile-chart, fridge library-card, and breeds-handbook notes. No spam."
+            ctaText="Email my dog breeds-hub checklist"
+            source="breeds-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Breed-match wizard — prominent on-brand entry CTA. Surfaces the
           /breeds/match decision wizard at the top of the hub (previously
@@ -623,6 +671,84 @@ export default async function BreedsPage() {
               Puppy first-year budget — size the year-one cost
             </div>
           </Link>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Breeds-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          size-energy-shedding-map, akc-group-browse-log,
+          and ofa-akc-health-grounding copy on this hub —
+          a laminated dog breeds profile chart so the
+          size / energy / shedding map is posted on the
+          fridge, a dog fridge breeds library card so
+          each AKC-group spoke is labeled on the fridge,
+          and a canine breeds reference handbook so the
+          OFA / AKC grounding is a physical kitchen book.
+          These are educational kitchen searches, not a
+          ranked breed list, not a substitute for a
+          veterinarian, not a tools-hub / reviews-hub /
+          nutrition-hub / training-hub / guides-hub hop,
+          and not a child slicker-brush / rubber-curry
+          hop (those live on breed children). This page
+          does not hop medications or vaccines. This page
+          does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog breeds profile chart /
+            dog fridge breeds library card /
+            canine breeds reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews /
+            nutrition / training / guides kitchen kits
+            and child slicker+brush / rubber+curry hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the breeds-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page size-energy-shedding-map,
+            akc-group-browse-log, and
+            ofa-akc-health-grounding copy — a laminated
+            dog breeds profile chart, a dog fridge breeds
+            library card, and a canine breeds reference
+            handbook. Educational kitchen searches only.
+            They are not a ranked breed list, they are
+            not a tools-hub / reviews-hub / nutrition-hub
+            / training-hub / guides-hub hop, they are not
+            a child slicker-brush hop, and they do not
+            replace a veterinarian. Dog.com earns a
+            commission on qualifying purchases at no
+            extra cost to you. Empty Chewy buttons stay
+            hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+breeds+profile+chart?s=breeds-hub"
+              amazonLabel="Browse laminated dog breeds profile charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+breeds+library+card?s=breeds-hub"
+              amazonLabel="Browse dog fridge breeds library cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+breeds+reference+handbook?s=breeds-hub"
+              amazonLabel="Browse canine breeds reference handbooks on Amazon →"
+            />
+          </div>
         </div>
       </section>
 
