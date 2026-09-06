@@ -82,6 +82,39 @@ export default function DiscusPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the discus-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Discus-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the discus notes that match the
+                care copy on this page — 82–86°F soft
+                acidic water so a Symphysodon stays
+                near pH 5.5–6.8, 30–50% daily or
+                every-other-day changes with
+                pre-heated replacement water, and a
+                group of 6 in a 55-gallon tank so
+                hierarchy aggression stays distributed.
+                Educational discus-setup checklist, not
+                a new product hop, not livestock, and
+                not a substitute for a fish veterinarian.
+                The existing discus tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Discus-setup checklist"
+                subtitle="Email the warm-soft-water, daily-change, and group-size notes. No spam."
+                ctaText="Email my discus-setup checklist"
+                source="species-discus-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-discus" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A discus in a home aquarium." priority />
 
         <h2>Why Discus Are Advanced</h2>
@@ -125,7 +158,6 @@ export default function DiscusPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for discus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/discus%20tank%20setup?s=species-discus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Discus Setup on Amazon →</a>
-            <a href="/go/chewy-brand/discus%20tank%20setup?s=species-discus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
