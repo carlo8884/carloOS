@@ -9,8 +9,10 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -155,6 +157,52 @@ export default function LitterBoxTroubleshootingPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret litter-box checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret litter-box checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-litter-box-chart,
+              fridge-litter-choice-card, and
+              mustelid-litter-box-reference-handbook notes
+              that match the corner-instinct-placement-map,
+              paper-pellet-litter-log, and
+              afa-aemv-litter-grounding copy on this page —
+              a laminated ferret litter-box chart so the
+              one-box-per-room / fifteen-to-twenty-foot /
+              lowest-cage-level map is posted on the fridge
+              (not a behavior-hub cue chart, not a
+              dook-sound chart, not a dig-box chart), a
+              ferret fridge litter-choice card so
+              paper-pellet / non-aromatic wood-pellet /
+              no-clumping-clay notes are labeled on the
+              fridge (not a behavior card, not a
+              hiss-scream card, not a dig-filler card),
+              and a mustelid litter-box reference handbook
+              so the AFA / AEMV litter grounding is a
+              physical kitchen book (not a behavior
+              handbook, not a vocalization handbook, not a
+              dig-burrow handbook). Educational kitchen
+              checklist, not a ranked litter list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret litter-box checklist"
+              subtitle="Email the litter-box-chart, fridge litter-choice card, and litter-box-handbook notes. No spam."
+              ctaText="Email my ferret litter-box checklist"
+              source="behavior-litter-troubleshooting-under-hero"
+            />
+          </div>
+
           <DropCap>
             Almost every litter-box complaint about ferrets comes down to
             one of four things: an expectation set too high, a box too far
@@ -285,6 +333,58 @@ export default function LitterBoxTroubleshootingPage() {
             warrants an exotic-pet veterinary exam before pursuing a
             training-only solution.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret litter-box chart /
+              ferret fridge litter-choice card /
+              mustelid litter-box reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs behavior-hub /
+              dooking / digging kitchen kits and child
+              sleep-sack / snuffle-mat hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret litter-box kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page corner-instinct-placement-map,
+              paper-pellet-litter-log, and
+              afa-aemv-litter-grounding copy — a laminated
+              ferret litter-box chart, a ferret fridge
+              litter-choice card, and a mustelid litter-box
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked litter
+              list, they are not a behavior-hub / dooking /
+              digging hop, they are not a child toothbrush
+              hop, and they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+litter+box+chart?s=litter-box-troubleshooting"
+                amazonLabel="Browse laminated ferret litter-box charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+litter+choice+card?s=litter-box-troubleshooting"
+                amazonLabel="Browse ferret fridge litter-choice cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+litter+box+reference+handbook?s=litter-box-troubleshooting"
+                amazonLabel="Browse mustelid litter-box reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
