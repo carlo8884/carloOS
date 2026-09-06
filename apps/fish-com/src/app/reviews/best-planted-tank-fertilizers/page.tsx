@@ -41,6 +41,42 @@ export default function BestPlantedFertilizersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the planted-fertilizer checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Planted-fertilizer checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the fertilizer notes that match the
+                Easy Green, Seachem Flourish, and
+                NilocG Thrive copy on this page — Easy
+                Green so a low-to-medium-tech planted
+                tank keeps one-pump weekly macros and
+                micros, Seachem Flourish so a store-run
+                tank keeps a micronutrient bottle on the
+                shelf, and NilocG Thrive so a
+                CO2-injected high-tech tank keeps a
+                high-dose all-in-one. Educational
+                fertilizer checklist, not a new product
+                hop, not livestock, and not a substitute
+                for a fish veterinarian. The existing
+                Easy Green / Flourish / Thrive Amazon
+                searches stay below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Planted-fertilizer checklist"
+                subtitle="Email the Easy Green, Flourish, and Thrive notes. No spam."
+                ctaText="Email my planted-fertilizer checklist"
+                source="reviews-best-planted-tank-fertilizers-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most low-to-medium-tech planted tanks the all-in-one <strong>Easy Green</strong> (Aquarium Co-Op) is our overall pick — simple dosing that covers macros and micros. For comprehensive trace elements, <strong>Seachem Flourish</strong>; for high-tech CO2-injected tanks, the high-dose <strong>NilocG Thrive</strong>. Heavy root feeders also benefit from <strong>Aquarium Co-Op Easy Root Tabs</strong> in the substrate.</p>
