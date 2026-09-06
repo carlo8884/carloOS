@@ -82,6 +82,43 @@ export default function BristlenosePlecoPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the bristlenose-pleco-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Bristlenose-pleco-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Ancistrus notes that match
+                the care copy on this page — a 25–30
+                gallon tank so a 4–5 inch bristlenose
+                stays a true dwarf instead of a common
+                pleco, driftwood (bogwood, mopani, or
+                spiderwood) so wood fiber is there to
+                rasp, sinking wafers plus blanched
+                vegetables because tank algae is not
+                enough, 73–80°F and pH 6.5–7.5, and a
+                cave or hollow wood so the nocturnal
+                grazer has cover. Educational
+                bristlenose-pleco-setup checklist, not
+                a new product hop, not livestock, and
+                not a substitute for a fish
+                veterinarian. The existing
+                bristlenose-pleco tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Bristlenose-pleco-setup checklist"
+                subtitle="Email the driftwood, 25–30 gallon, and algae-wafer notes. No spam."
+                ctaText="Email my bristlenose-pleco-setup checklist"
+                source="species-bristlenose-pleco-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-bristlenose-pleco" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A bristlenose pleco in a home aquarium." priority />
 
         <h2>The Pleco You Should Actually Buy</h2>
@@ -117,7 +154,6 @@ export default function BristlenosePlecoPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, driftwood, and algae wafers sized for bristlenose pleco care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/bristlenose%20pleco%20tank%20setup?s=species-bristlenose-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Bristlenose Pleco Setup on Amazon →</a>
-            <a href="/go/chewy-brand/bristlenose%20pleco%20tank%20setup?s=species-bristlenose-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />

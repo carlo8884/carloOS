@@ -7231,6 +7231,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1202: keep the existing sidebar capture and the already-hopped boesemani-rainbowfish tank-setup amazon-brand search; add under-hero capture with a concrete boesemani-rainbowfish-setup-checklist offer matching on-page 55-gallon / group of 8+ / pH 7.2–8.0 / GH 10–18 / nitrate under 20 ppm copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · bristlenose-pleco hops',
+    file: 'apps/fish-com/src/app/species/bristlenose-pleco/page.tsx',
+    mustInclude: [
+      { re: /source="species-bristlenose-pleco-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my bristlenose-pleco-setup checklist"/, label: 'concrete bristlenose-pleco-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-bristlenose-pleco"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/bristlenose%20pleco%20tank%20setup\?s=species-bristlenose-pleco/, label: 'existing bristlenose-pleco tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1203: keep the existing sidebar capture and the already-hopped bristlenose-pleco tank-setup amazon-brand search; add under-hero capture with a concrete bristlenose-pleco-setup-checklist offer matching on-page 25–30 gallon / driftwood / algae-not-enough copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
