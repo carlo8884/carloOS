@@ -5197,6 +5197,25 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete horse PPID coat-and-cooling-checklist offer; every gear CTA is an amazon-brand category search matching on-page failed-shed / heavy-coat-impairs-cooling / increased-drinking copy (a stainless shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so the horse can cool, an automatic waterer so extra thirst is not a dry bucket), never a placeholder ASIN, a #1107 hoof-angle-gauge / lunge-cavesson / overreach-bell-boots hop, a #1106 arena-drag / polo-wrap / paddock-panel hop, a #1105 hay-bale-scale / NSC-hay-test-kit / strip-grazing-posts hop, a #1104 run-in-shelter / grooming-caddy / blanket-wash-bag hop, a #1103 mud-grid / turnout-boot / leg-towel hop, a #1102 Irish-knit-cooler / quarter-sheet / loose-salt hop, a body-clipping clipper hop, an EMS diet-management hop, a laminitis grazing-muzzle hop, or a vaccine / prescription hop. Educational coat-and-cooling tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · equine-ulcers under-hero',
+    file: 'apps/horses-com/src/app/health/equine-ulcers/page.tsx',
+    mustInclude: [
+      { re: /source="health-egus-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse EGUS forage-first checklist"/, label: 'concrete horse EGUS forage-first-checklist offer, not Subscribe' },
+      { re: /source="health-egus"/, label: 'existing sidebar email capture kept in place' },
+      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+    ],
+    mustExclude: [
+      { re: /ShopCtas/, label: 'disclosure-only — no Amazon ShopCtas on this page' },
+      { re: /amazon-brand/, label: 'disclosure-only — no amazon-brand hops' },
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Disclosure-only money path: keep the existing sidebar capture and existing AffiliateDisclosure; add under-hero capture with a concrete horse EGUS forage-first-checklist offer; do not add Amazon ShopCtas or amazon-brand queries (this page stays disclosure-only). Never a placeholder ASIN, never href="#", never generic Subscribe. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
