@@ -9,8 +9,10 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -153,6 +155,51 @@ export default function FerretVocalizationsPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret dook-sound checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret dook-sound checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-dook-sound-chart,
+              fridge-hiss-scream-card, and
+              mustelid-vocalization-reference-handbook notes
+              that match the dook-hiss-scream-map,
+              vocal-context-fridge-log, and
+              afa-communication-grounding copy on this page —
+              a laminated ferret dook-sound chart so the
+              happy-dook / warning-hiss / alarm-scream map
+              is posted on the fridge (not a behavior-hub
+              cue chart, not a dead-sleep chart, not a
+              dig-box chart), a ferret fridge hiss-scream
+              card so play-hiss / retreat-hiss /
+              pain-scream notes are labeled on the fridge
+              (not a behavior card, not a wake-safely
+              card, not a dig-filler card), and a mustelid
+              vocalization reference handbook so the AFA
+              communication grounding is a physical kitchen
+              book (not a behavior handbook, not a
+              dead-sleep handbook, not a dig-burrow
+              handbook). Educational kitchen checklist,
+              not a ranked toy list, not a sleep-sack
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret dook-sound checklist"
+              subtitle="Email the dook-sound-chart, fridge hiss-scream card, and vocalization-handbook notes. No spam."
+              ctaText="Email my ferret dook-sound checklist"
+              source="behavior-dooking-vocalizations-under-hero"
+            />
+          </div>
+
           <DropCap>
             Ferrets are not loud animals — they spend most of the day asleep —
             but when they do speak, every sound carries meaning. A ferret&apos;s
@@ -279,6 +326,59 @@ export default function FerretVocalizationsPage() {
             especially pain-screaming when handled, warrant an exotic-pet vet
             evaluation.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret dook-sound chart /
+              ferret fridge hiss-scream card /
+              mustelid vocalization reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs behavior-hub /
+              dead-sleep / digging kitchen kits and child
+              sleep-sack / snuffle-mat hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret dook-sound kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page dook-hiss-scream-map,
+              vocal-context-fridge-log, and
+              afa-communication-grounding copy — a laminated
+              ferret dook-sound chart, a ferret fridge
+              hiss-scream card, and a mustelid vocalization
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked toy
+              list, they are not a behavior-hub /
+              dead-sleep / digging hop, they are not a
+              child toothbrush hop, and they do not replace
+              an exotic-mammal veterinarian. Ferret.com
+              does not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+dook+sound+chart?s=dooking-and-vocalizations"
+                amazonLabel="Browse laminated ferret dook-sound charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+hiss+scream+card?s=dooking-and-vocalizations"
+                amazonLabel="Browse ferret fridge hiss-scream cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+vocalization+reference+handbook?s=dooking-and-vocalizations"
+                amazonLabel="Browse mustelid vocalization reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
