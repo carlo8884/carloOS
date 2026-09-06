@@ -43,6 +43,43 @@ export default function BestWaterTestKitsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the water-test-kit checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Water-test-kit checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the test-kit notes that match the
+                API Freshwater Master Kit, Salifert,
+                and digital-meter copy on this page —
+                an API Master Kit so a freshwater tank
+                keeps weekly pH, ammonia, nitrite, and
+                nitrate readings, Salifert individual
+                tests so a reef tank keeps alkalinity,
+                calcium, and magnesium, and a digital
+                pH or TDS meter so a CO2 planted or
+                shrimp tank keeps a calibrated reading.
+                Educational test-kit checklist, not a
+                new product hop, not livestock, and
+                not a substitute for a fish
+                veterinarian. The existing API Master
+                Test Kit Amazon search stays below.
+                Empty Chewy buttons stay hidden. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Water-test-kit checklist"
+                subtitle="Email the API, Salifert, and digital-meter notes. No spam."
+                ctaText="Email my water-test-kit checklist"
+                source="reviews-best-water-test-kits-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater keepers the <strong>API Freshwater Master Kit</strong> is our overall pick — liquid reagents (more accurate than strips), around 800 tests, covering pH, ammonia, nitrite, and nitrate. Reef keepers should add <strong>Salifert</strong> individual tests for reef-grade alkalinity, calcium, and magnesium accuracy. For reagent-free convenience, <strong>Apogee or Bluelab</strong> digital pH/TDS meters.</p>

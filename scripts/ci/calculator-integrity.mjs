@@ -6939,6 +6939,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1186: keep the existing sidebar capture and the already-hopped Hygger 957 / Fluval Plant 3.0 / Kessil A360X / Nicrew Classic amazon-brand searches; add under-hero capture with a concrete aquarium-lighting-checklist offer matching on-page PAR / planted / reef / FOWLR copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · best-water-test-kits hops',
+    file: 'apps/fish-com/src/app/reviews/best-water-test-kits/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-water-test-kits-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my water-test-kit checklist"/, label: 'concrete water-test-kit-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-test-kits"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=reviews-best-water-test-kits/, label: 'existing API Master Test Kit amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1187: keep the existing sidebar capture and the already-hopped API Freshwater Master Test Kit amazon-brand search; add under-hero capture with a concrete water-test-kit-checklist offer matching on-page API / Salifert / digital-meter copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
