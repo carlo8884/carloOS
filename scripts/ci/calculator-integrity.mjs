@@ -1058,6 +1058,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1287: horses.com /bloodstock hub is on main. This existing horses.com /racing hub had footer EmailCapture only and no Amazon hops. Add under-hero capture with a concrete horses racing-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page racing-discipline-class-map / aftercare-governance-log / jockey-club-usta-aaep-grounding copy (a laminated horse barn racing section-map chart so the flat / harness / Quarter Horse / jump / class map is posted on the stall door, a horse stall-door racing prep card so TAA / aftercare and governance notes are labeled on the stall door, an equine racing reference handbook so The Jockey Club / USTA / AAEP grounding is a physical barn book), never a placeholder ASIN, a sibling-hub kitchen hop, a child curry-comb / hoof-pick hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1287 / crate-size / stocking.',
   },
   {
+    id: 'horses · first-derby',
+    file: 'apps/horses-com/src/app/first-derby/page.tsx',
+    mustInclude: [
+      { re: /source="first-derby-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horses first-derby checklist"/, label: 'concrete horses first-derby-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+horse\+barn\+spectator\+day\+map\+chart\?s=first-derby/, label: 'laminated horse barn spectator day-map-chart search hop (matches on-page spectator-day-map copy; unique vs laminated+horse+barn+racing+section+map+chart / laminated+horse+barn+bloodstock+section+map+chart / laminated+first+horse+90+day+week+by+week+checklist)' },
+      { re: /amazon-brand\/horse\+stall\+door\+silks\+follow\+card\?s=first-derby/, label: 'horse stall-door silks-follow-card search hop (matches on-page silks-follow-log copy; unique vs horse+stall+door+racing+prep+card / horse+stall+door+bloodstock+prep+card / first+horse+ground+manners+cue+card)' },
+      { re: /amazon-brand\/equine\+first\+derby\+spectator\+handbook\?s=first-derby/, label: 'equine first-derby spectator-handbook search hop (matches on-page jockey-club-ifha-grounding copy; unique vs equine+racing+reference+handbook / equine+bloodstock+reference+handbook / first+horse+tack+room+emergency+plan+card)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+calculator\+tools\+chart|horse\+stall\+door\+measurement\+card|equine\+calculator\+reference\+handbook|laminated\+horse\+barn\+racing\+section\+map\+chart|horse\+stall\+door\+racing\+prep\+card|equine\+racing\+reference\+handbook|laminated\+horse\+barn\+bloodstock\+section\+map\+chart|horse\+stall\+door\+bloodstock\+prep\+card|equine\+bloodstock\+reference\+handbook|laminated\+first\+horse\+90\+day\+week\+by\+week\+checklist|first\+horse\+ground\+manners\+cue\+card|first\+horse\+tack\+room\+emergency\+plan\+card|laminated\+horse\+barn\+discipline\+section\+map\+chart|horse\+curry\+comb|horse\+hoof\+pick|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop sibling kitchen kits, first-horse-roadmap hops, child curry-comb / hoof-pick hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-barn-spectator-day-map-chart / horse-stall-door-silks-follow-card / equine-first-derby-spectator-handbook searches' },
+    ],
+    why: 'Money path leftover after #1288: horses.com /racing hub is on main. This existing horses.com /first-derby page had sidebar EmailCapture only and no Amazon hops. Add under-hero capture with a concrete horses first-derby-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page spectator-day-map / silks-follow-log / jockey-club-ifha-grounding copy (a laminated horse barn spectator day-map chart so the undercard / parade / ceremony / feature map is posted on the stall door, a horse stall-door silks follow card so name / silks / post-position notes are labeled on the stall door, an equine first-derby spectator handbook so The Jockey Club / IFHA grounding is a physical barn book), never a placeholder ASIN, a sibling-hub kitchen hop, a first-horse-roadmap hop, a child curry-comb / hoof-pick hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1288 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
