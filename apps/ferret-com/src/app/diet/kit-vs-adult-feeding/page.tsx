@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -102,6 +102,52 @@ export default function KitVsAdultFeedingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret kit-adult feeding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret kit-adult feeding checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-kit-imprint-chart,
+              fridge-imprint-window-card, and
+              mustelid-kit-adult-feeding-handbook notes
+              that match the kit-imprint-map,
+              food-fixation-log, and
+              afa-lifestage-grounding copy on this page —
+              a laminated ferret kit-imprint chart so the
+              six-week wean / first-six-months / rotate-two-or-three
+              map is posted on the fridge (not a diet-hub
+              feeding chart, not a prey-vs-kibble chart,
+              not a protein-fat chart), a ferret fridge
+              imprint-window card so food-fixation /
+              brand-discontinued / hypoglycemic-standoff
+              notes are labeled on the fridge (not a
+              diet-model card, not a life-stage card, not
+              a first-year-milestone card), and a mustelid
+              kit-adult feeding handbook so the AFA /
+              Quesenberry life-stage grounding is a
+              physical kitchen book (not a diet handbook,
+              not a diet-model handbook, not a
+              lifespan handbook). Educational kitchen
+              checklist, not a ranked kibble list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret kit-adult feeding checklist"
+              subtitle="Email the kit-imprint-chart, fridge imprint-window card, and kit-adult-feeding-handbook notes. No spam."
+              ctaText="Email my ferret kit-adult feeding checklist"
+              source="diet-kit-vs-adult-feeding-under-hero"
+            />
+          </div>
+
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>
             Ferret kits wean from their mother's milk onto solid food at around six weeks of age and grow rapidly through their first several months. During this period their requirements sit at the high end of the ferret window — more protein and more fat to fuel growth (see <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>). Many keepers and breeders feed a high-quality kit or ferret diet free-choice during this stage, sometimes lightly moistened at first to ease the transition from milk to kibble. Whole-prey and raw feeders introduce appropriate raw food in this window as well. The constant is high-calorie, high-protein, animal-based nutrition available throughout the day, because a growing kit eats often.
@@ -133,6 +179,58 @@ export default function KitVsAdultFeedingPage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret kit-imprint chart /
+              ferret fridge imprint-window card /
+              mustelid kit-adult feeding handbook).
+              Keep existing Marshall review hop.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              whole-prey / protein-fat kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret kit-adult feeding kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page kit-imprint-map, food-fixation-log,
+              and afa-lifestage-grounding copy — a
+              laminated ferret kit-imprint chart, a ferret
+              fridge imprint-window card, and a mustelid
+              kit-adult feeding handbook. Educational
+              kitchen searches only. They are not a ranked
+              kibble list, they are not a diet-hub /
+              whole-prey / protein-fat hop, they are not a
+              child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden. Existing Marshall
+              review hop stays in the rotation staple
+              below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+kit+imprint+chart?s=kit-vs-adult-feeding"
+                amazonLabel="Browse laminated ferret kit-imprint charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+imprint+window+card?s=kit-vs-adult-feeding"
+                amazonLabel="Browse ferret fridge imprint-window cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+kit+adult+feeding+handbook?s=kit-vs-adult-feeding"
+                amazonLabel="Browse mustelid kit-adult feeding handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">A Ferret-Specific Diet to Build On</h2>
           <p>
