@@ -6324,6 +6324,25 @@ const CALCULATORS = [
     why: 'Money path leftover after #1158: keep the existing sidebar capture and the already-hopped API-freshwater-master-test-kit amazon-brand search; add under-hero capture with a concrete water-chemistry-checklist offer matching on-page API-freshwater-master-test-kit / ammonia-nitrite-nitrate / pH-GH-KH / nitrogen-cycle copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
   },
 
+  {
+    id: 'fish · aquarium-cycling-guide hops',
+    file: 'apps/fish-com/src/app/setup/aquarium-cycling-guide/page.tsx',
+    mustInclude: [
+      { re: /source="setup-aquarium-cycling-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium-cycling checklist"/, label: 'concrete aquarium-cycling-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="setup-cycling"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide/, label: 'existing ammonia-nitrite-nitrate-test-kit amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1159: keep the existing sidebar capture and the already-hopped ammonia-nitrite-nitrate-test-kit amazon-brand search; add under-hero capture with a concrete aquarium-cycling-checklist offer matching on-page nitrogen-cycle / fishless-vs-fish-in / ammonia-nitrite-nitrate / bottled-bacteria / test-schedule copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+  },
+
 ]
 
 let failures = 0
