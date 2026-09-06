@@ -7591,6 +7591,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1222: keep the existing sidebar capture (source species-swordtail, not the hop s= slug) and the already-hopped swordtail-fish tank-setup amazon-brand search; add under-hero capture with a concrete swordtail-fish-setup-checklist offer matching on-page 30-gallon trio / 70–78°F / pH 7.2–8.4 / one-male copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · koi hops',
+    file: 'apps/fish-com/src/app/species/koi/page.tsx',
+    mustInclude: [
+      { re: /source="species-koi-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my koi-setup checklist"/, label: 'concrete koi-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-koi"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/koi%20tank%20setup\?s=species-koi/, label: 'existing koi tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1223: keep the existing sidebar capture and the already-hopped koi tank-setup amazon-brand search; add under-hero capture with a concrete koi-setup-checklist offer matching on-page 250-gallon-per-fish / 3+ feet / 59–77°F / pH 7.0–8.5 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

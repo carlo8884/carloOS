@@ -82,6 +82,37 @@ export default function KoiPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the koi-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Koi-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the pond notes that match the
+                care copy on this page — 250 gallons
+                per fish as a conservative minimum
+                (1,000 gallons for 4–5; 2,500 for 6–8),
+                3+ feet of depth, 59–77°F, pH 7.0–8.5,
+                and weekly 10–25% water changes.
+                Educational koi-setup checklist, not a
+                new product hop, not livestock, and not
+                a substitute for a fish veterinarian. The
+                existing koi tank-setup Amazon search
+                stays below. Empty Chewy buttons stay
+                hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Koi-setup checklist"
+                subtitle="Email the 250-gallon, depth, and weekly-change notes. No spam."
+                ctaText="Email my koi-setup checklist"
+                source="species-koi-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-koi" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A koi in a home aquarium." priority />
         <h2>Pond Size — The Non-Negotiable</h2>
         <p>The most common koi husbandry mistake: underestimating pond size requirements. A single koi purchased at 6 inches will reach 18–24 inches within 3–5 years under good conditions. Koi produce substantial waste — ammonia load per fish is significantly higher than smaller pond fish. The guideline of 250 gallons per koi is a conservative minimum; experienced koi keepers recommend 500–1,000 gallons per fish for high-quality water conditions and optimal growth.</p>
@@ -122,7 +153,6 @@ export default function KoiPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for koi care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/koi%20tank%20setup?s=species-koi" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Koi Setup on Amazon →</a>
-            <a href="/go/chewy-brand/koi%20tank%20setup?s=species-koi" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
