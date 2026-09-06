@@ -12,6 +12,8 @@ import {
   StockImage,
   ArticleSourcesList,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -165,6 +167,53 @@ export default function FerretBitingNippingPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret bite-inhibition checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret bite-inhibition checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-bite-inhibition-chart,
+              fridge-bite-type-card, and
+              mustelid-bite-inhibition-reference-handbook notes
+              that match the play-vs-fear-vs-pain-map,
+              no-punishment-plan-log, and
+              afa-avsab-bite-grounding copy on this page —
+              a laminated ferret bite-inhibition chart so
+              the play / fear / pain / teething map is
+              posted on the fridge (not a behavior-hub
+              cue chart, not a colors-hub palette chart,
+              not a hob-jill size chart, not a
+              lifespan-stage chart), a ferret fridge
+              bite-type card so play vs fear vs pain
+              notes are labeled on the fridge (not a
+              behavior card, not a hob-vs-jill card, not
+              a life-stage card), and a mustelid
+              bite-inhibition reference handbook so the
+              AFA / AVSAB bite-inhibition grounding is a
+              physical kitchen book (not a behavior
+              handbook, not a hob-jill handbook, not a
+              lifespan handbook). Educational kitchen
+              checklist, not a ranked toy list, not a
+              child toothbrush / dosing hop, not a
+              sleep-sack hop, not a snuffle-mat hop, and
+              not a substitute for an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret bite-inhibition checklist"
+              subtitle="Email the bite-inhibition-chart, fridge bite-type card, and bite-handbook notes. No spam."
+              ctaText="Email my ferret bite-inhibition checklist"
+              source="behavior-biting-nipping-under-hero"
+            />
+          </div>
 
           <DropCap>
             A ferret&apos;s mouth is its primary tool for exploring the world.
@@ -353,6 +402,84 @@ export default function FerretBitingNippingPage() {
             previously gentle ferret frequently has a medical cause and warrants
             an exotic-pet vet visit.
           </p>
+
+          <p className="text-sm leading-relaxed text-brand-text-mid">
+            Keep a physical ferret bite-inhibition kitchen kit
+            next to this page — a laminated ferret
+            bite-inhibition chart so the play / fear / pain /
+            teething map is posted on the fridge, a ferret
+            fridge bite-type card so play vs fear vs pain
+            notes are labeled on the fridge, and a mustelid
+            bite-inhibition reference handbook so the AFA /
+            AVSAB bite-inhibition grounding is a physical
+            kitchen book. These are educational kitchen
+            searches, not a ranked toy list, not a
+            substitute for an exotic-mammal veterinarian,
+            not a behavior-hub / colors-hub /
+            first-year-schedule / male-vs-female /
+            ferret-lifespan hop, and not a child toothbrush
+            / dosing hop. This page does not hop
+            medications or vaccines. This page does not
+            sell insurance. This page does not claim
+            hands-on testing. Ferret aging stays held.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret bite-inhibition chart /
+              ferret fridge bite-type card /
+              mustelid bite-inhibition reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs behavior-hub /
+              colors-hub / first-year-schedule /
+              male-vs-female / ferret-lifespan kitchen
+              kits and child sleep-sack / snuffle-mat /
+              finger+toothbrush / carnivore+care hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret bite-inhibition kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page play-vs-fear-vs-pain-map,
+              no-punishment-plan-log, and
+              afa-avsab-bite-grounding copy — a laminated
+              ferret bite-inhibition chart, a ferret fridge
+              bite-type card, and a mustelid
+              bite-inhibition reference handbook.
+              Educational kitchen searches only. They are
+              not a ranked toy list, they are not a
+              behavior-hub / colors-hub /
+              first-year-schedule / male-vs-female /
+              ferret-lifespan hop, they are not a child
+              toothbrush hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+bite+inhibition+chart?s=biting-and-nipping"
+                amazonLabel="Browse laminated ferret bite-inhibition charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+bite+type+card?s=biting-and-nipping"
+                amazonLabel="Browse ferret fridge bite-type cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+bite+inhibition+reference+handbook?s=biting-and-nipping"
+                amazonLabel="Browse mustelid bite-inhibition reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
