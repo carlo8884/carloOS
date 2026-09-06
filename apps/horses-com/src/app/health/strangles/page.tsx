@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -94,6 +94,7 @@ export default function StranglesPage() {
             { label: "Complications", href: "#complications" },
             { label: "The Carrier State", href: "#carriers" },
             { label: "Biosecurity", href: "#biosecurity" },
+            { label: "Isolation-and-disinfect kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -126,9 +127,44 @@ export default function StranglesPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the strangles isolation-and-disinfect checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse strangles isolation-and-disinfect checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the color-coded flat-back bucket,
+              disposable-coverall, and rubber boot-dip-tub
+              notes that match the dedicated-equipment,
+              dedicated-clothing, and clean-and-disinfect
+              copy on this page — buckets so an isolation
+              horse drinks from its own color-coded pair
+              instead of a shared trough, a coverall so the
+              handler of a draining horse wears clothing
+              that stays in that barn, and a boot-dip tub
+              so pus and nasal discharge do not walk to the
+              next stall. Educational biosecurity checklist,
+              not a treatment, not a vaccine, not a
+              substitute for calling the veterinarian, and
+              not a thermometer, first-aid-kit, shoe-cover,
+              or kennel-spray hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse strangles isolation-and-disinfect checklist"
+              subtitle="Email the color-coded-bucket, coverall, and boot-dip-tub notes. No spam."
+              ctaText="Email my horse strangles isolation-and-disinfect checklist"
+              source="health-strangles-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Is Strangles</h2>
           <p>Strangles is an upper respiratory infection caused by Streptococcus equi subspecies equi, a host-adapted bacterium that infects only horses and their relatives. After infection, the bacteria colonize the lymph nodes of the head and throat, which swell and abscess. When those abscesses press on the airway they can cause the laboured breathing that historically gave the disease its name. It is among the most contagious equine diseases and one of the most frequently diagnosed worldwide.</p>
@@ -154,11 +190,116 @@ export default function StranglesPage() {
           <h2 id="biosecurity">Biosecurity</h2>
           <ul>
             <li><strong>Isolate new arrivals</strong> for a quarantine period and monitor their temperature before mixing with the resident herd.</li>
-            <li><strong>Isolate sick horses immediately</strong> and use dedicated equipment, clothing, and handlers for them.</li>
+            <li><strong>Isolate sick horses immediately</strong> and use dedicated equipment, clothing, and handlers for them. Color-coded flat-back horse buckets are how an isolation horse drinks from its own pair instead of a shared trough — they are not a lidded 5-gallon feed-soaking pail (that lives on choke) and not a hay-soaking bag (that lives on heaves).</li>
             <li><strong>Stop all horse movement</strong> on and off the property during an outbreak.</li>
-            <li><strong>Clean and disinfect</strong> shared equipment, water sources, stalls, and trailers; the organism persists in the environment.</li>
+            <li><strong>Clean and disinfect</strong> shared equipment, water sources, stalls, and trailers; the organism persists in the environment. A heavy-duty rubber boot-dip tub at the isolation-stall door is how pus and nasal discharge stay off the next aisle — it is not a parvo shoe-cover hop, not a pump-sprayer hop, and not a kennel-disinfectant-spray hop.</li>
+            <li><strong>Dedicated clothing for handlers</strong> of draining horses so contaminated jackets and jeans do not walk the barn. A disposable coverall suit is how that clothing stays in the isolation barn and comes off before the next stall — it is not a disposable shoe-cover hop and not a nitrile-exam-glove hop.</li>
             <li><strong>Screen recovered horses</strong> for the carrier state with your veterinarian before declaring the outbreak over.</li>
           </ul>
+
+          <h2 id="kit">Isolation-and-disinfect kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            dedicated-equipment, dedicated-clothing, and
+            clean-and-disinfect copy on this page — color-coded
+            flat-back horse buckets so an isolation horse
+            drinks from its own pair instead of a shared
+            trough, a disposable coverall suit so the handler
+            of a draining horse wears clothing that stays in
+            that barn, and a heavy-duty rubber boot-dip tub
+            so pus and nasal discharge do not walk to the
+            next stall. These are educational biosecurity
+            tools, not a ranked product list, not a
+            substitute for veterinary care, and not a
+            treatment or a vaccine. Thermometers already live
+            on colic, the grimace scale, and the emergency
+            tool. First-aid kits already live on the emergency
+            tool. Lidded 5-gallon feed-soaking pails already
+            live on choke. Hay-soaking bags already live on
+            heaves. Disposable shoe covers and pump sprayers
+            already live on the vets.co parvo page.
+            Kennel-disinfectant spray already lives on canine
+            influenza. This page does not hop vaccines,
+            antibiotics, or needles. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (color-coded flat-back horse buckets /
+              disposable coverall suit /
+              heavy-duty rubber boot-dip tub).
+              These are educational biosecurity tools,
+              not a ranked product list, not a
+              substitute for veterinary care, no Rx /
+              vaccine / thermometer / first-aid kit /
+              shoe-cover / kennel-spray ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1096
+              ruled+marble+composition+notebook /
+              soft+cotton+receiving+blanket /
+              activated+charcoal+odor+absorber, #1095
+              air+driven+corner+sponge+filter /
+              preset+25+watt+nano+aquarium+heater /
+              food+grade+1+gallon+water+jug, #1094
+              lidded+5+gallon+feed+soaking+pail /
+              large+smooth+feed+tub+rocks /
+              apple+wedger+slicer, #1093
+              48+hour+digital+kitchen+timer /
+              lined+telephone+message+pad /
+              medium+hard+sided+plastic+pet+carrier,
+              equine+digital+rectal+thermometer (colic),
+              disposable+shoe+covers / pump+sprayer (parvo),
+              pet+safe+kennel+disinfectant+spray
+              (canine influenza).
+              Thermometers, first-aid kits, vaccines,
+              and prescriptions are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the isolation-and-disinfect kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page dedicated-equipment, dedicated-clothing,
+              and clean-and-disinfect copy — color-coded
+              flat-back horse buckets, a disposable coverall
+              suit, and a heavy-duty rubber boot-dip tub.
+              Educational biosecurity tools only.
+              They are not a ranked product list,
+              they are not a substitute for veterinary
+              care, they are not a #1096 composition-notebook /
+              receiving-blanket / charcoal hop, they
+              are not a #1095 sponge-filter /
+              nano-heater / water-jug hop, they
+              are not a #1094 soaking-pail /
+              feed-tub-rock / apple-wedger hop, they
+              are not a #1093 kitchen-timer /
+              message-pad / pet-carrier hop, they
+              are not a colic thermometer hop, they
+              are not a parvo shoe-cover / pump-sprayer hop,
+              they are not a canine-influenza kennel-spray hop,
+              and they do not replace a veterinarian.
+              Horses.com earns a commission on
+              qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/color+coded+flat+back+horse+buckets?s=health-strangles"
+                amazonLabel="Browse color-coded flat-back horse buckets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/disposable+coverall+suit?s=health-strangles"
+                amazonLabel="Browse disposable coverall suits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/heavy+duty+rubber+boot+dip+tub?s=health-strangles"
+                amazonLabel="Browse heavy-duty rubber boot-dip tubs on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
