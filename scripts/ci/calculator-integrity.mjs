@@ -533,6 +533,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1262: horses.com /supplements hub is on main. This existing horses.com /tack hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete horses tack-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page tack-section-map / fit-and-humane-choice-log / SMS-and-safety-standards-grounding copy (a laminated horse barn tack section-map chart so the bits / bridles / girths / pads / stirrups / helmets / boots / blankets / halters map is posted at the barn, a horse stall-door tack fit card so fit-and-humane-choice notes are labeled on the stall door, an equine tack reference handbook so the Society of Master Saddlers / safety-standards grounding is a physical barn book), never a placeholder ASIN, a sibling-hub kitchen hop, a child snaffle / helmet / girth hop, or a flea / heartworm / vaccine hop. Educational barn searches only — not a ranked product list, not a substitute for a qualified instructor or saddle fitter. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1262 / crate-size / stocking.',
   },
   {
+    id: 'fish · reviews hub',
+    file: 'apps/fish-com/src/app/reviews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Send the tank notes"/, label: 'concrete tank-notes offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+aquarium\+reviews\+buyer\+guide\+chart\?s=reviews-hub/, label: 'laminated aquarium reviews buyer-guide-chart search hop (matches on-page reviews-section-map copy; unique vs laminated+aquarium+calculator+tools+chart)' },
+      { re: /amazon-brand\/aquarium\+rim\+reviews\+comparison\+card\?s=reviews-hub/, label: 'aquarium rim reviews comparison-card search hop (matches on-page per-category-comparison-log copy; unique vs aquarium+rim+measurement+card)' },
+      { re: /amazon-brand\/aquarist\+reviews\+reference\+handbook\?s=reviews-hub/, label: 'aquarist reviews reference-handbook search hop (matches on-page editorial-criteria-and-specs-grounding copy; unique vs aquarist+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+aquarium\+calculator\+tools\+chart|aquarium\+rim\+measurement\+card|aquarist\+calculator\+reference\+handbook|aquaclear\+70\+filter|fluval\+307\+canister\+filter|fluval\+spec\+v\+5\+gallon|eheim\+jager\+heater|hygger\+957|api\+freshwater\+master\+test\+kit|seachem\+prime|medication|medicine|prescription|rx\b)/, label: 'never hop tools-hub kitchen kit, child AquaClear / Fluval / Eheim / Hygger hops, or Rx — this page hops only laminated-aquarium-reviews-buyer-guide-chart / aquarium-rim-reviews-comparison-card / aquarist-reviews-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1263: horses.com /tack hub is on main. This existing fish.com /reviews hub already had under-hero EmailCapture (source=reviews-under-hero, ctaText=Send the tank notes) but no Amazon hops and no hub pin. Keep the existing under-hero capture; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / editorial-criteria-and-specs-grounding copy (a laminated aquarium reviews buyer-guide chart so the filters / heaters / lighting / test-kits / nano-tanks / fertilizers map is posted on the stand, an aquarium rim reviews comparison card so each category’s editorial criteria and shortlist is labeled on the rim, an aquarist reviews reference handbook so the published-spec / editorial-criteria grounding is a physical stand book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child AquaClear / Fluval / Eheim / Hygger hop, or a prescription hop. Educational stand searches only — not a ranked product list, not a substitute for a water test. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1263 / crate-size / stocking / discus / kuhli / otocinclus.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
