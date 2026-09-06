@@ -6571,6 +6571,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1169: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete coverage checklist offer; every gear CTA is an amazon-brand category search matching on-page accident-only / accident-and-illness / exam-fee copy (a 3-tab divider set so accident-only, accident-and-illness, and wellness add-on stay three labeled categories, an assorted highlighter set so typical coverage and usual exclusions stay marked on the sample policy, removable page flags so exam-fee, hereditary, dental, and waiting-period clauses stay flagged where plans diverge), never a placeholder ASIN, a #1169 monthly-desk-pad / date-stamp / file-jacket hop, a #1168 four-column-pad / poly-envelope / receipt-organizer hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational coverage / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · deductibles-reimbursement hops',
+    file: 'apps/vets-co/src/app/insurance/deductibles-reimbursement/page.tsx',
+    mustInclude: [
+      { re: /source="insurance-deductibles-reimbursement-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my deductibles checklist"/, label: 'concrete deductibles checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-deductibles"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/quad\+ruled\+graph\+pad\?s=insurance-deductibles-reimbursement/, label: 'quad-ruled-graph-pad search hop (matches on-page $5,000-bill / deductible / reimbursement / leftover-limit copy; unique vs four+column+accounting+pad / yellow+legal+pad / ruled+index+cards)' },
+      { re: /amazon-brand\/paid\+rubber\+stamp\?s=insurance-deductibles-reimbursement/, label: 'paid-rubber-stamp search hop (matches on-page pay-then-claim / reimbursed-invoice copy; unique vs self+inking+date+stamp / desktop+receipt+organizer / four+column+accounting+pad)' },
+      { re: /amazon-brand\/handheld\+tally\+counter\?s=insurance-deductibles-reimbursement/, label: 'handheld-tally-counter search hop (matches on-page remaining annual-limit headroom copy; unique vs basic+desktop+calculator / locking+cash+box+with+key / cash+envelope+budget+system)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(3\+tab\+dividers|assorted\+highlighter\+set|removable\+page\+flags|monthly\+desk\+pad\+calendar|self\+inking\+date\+stamp|letter\+size\+file\+jacket|four\+column\+accounting\+pad|letter\+size\+poly\+envelope|desktop\+receipt\+organizer|reporter\+notebook|kraft\+two\+pocket\+folder|pocket\+size\+address\+book|ruled\+index\+cards|3x3\+sticky\+notes|letter\+size\+sheet\+protectors|spiral\+notebook|small\+soft\+cooler\+bag|clipboard\+with\+storage|cash\+envelope\+budget\+system|yellow\+legal\+pad|hanging\+file\+folders\+letter\+size|household\+budget\+workbook|checkbook\+register|accordion\+file\+folder\+letter\+size|locking\+cash\+box\+with\+key|basic\+desktop\+calculator|manila\+file\+folders\+letter\+size|credit\+card\+size\+laminating\+pouches|small\+magnetic\+dry\+erase\+board|car\+visor\+document\+holder|48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|letter\+size\+expanding\+file\+organizer|letter\+size\+plastic\+file\+box|letter\+size\+thermal\+laminating\+pouches|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|pet\+emergency\+contact\+card|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1170 3-tab-divider / highlighter / page-flag, #1169 monthly-desk-pad / date-stamp / file-jacket, #1168 four-column-pad / poly-envelope / receipt-organizer, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only quad-ruled-graph-pad / paid-rubber-stamp / handheld-tally-counter gear' },
+    ],
+    why: 'Money path leftover after #1170: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete deductibles checklist offer; every gear CTA is an amazon-brand category search matching on-page deductible / reimbursement-rate / annual-limit copy (a quad-ruled graph pad so the $5,000 bill, deductible, reimbursement rate, and leftover limit stay plotted combinations, a paid rubber stamp so reimbursed invoices stay marked after the pay-then-claim lands, a handheld tally counter so remaining annual-limit headroom stays a counted number), never a placeholder ASIN, a #1170 3-tab-divider / highlighter / page-flag hop, a #1169 monthly-desk-pad / date-stamp / file-jacket hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational deductible / reimbursement tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
