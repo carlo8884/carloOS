@@ -428,6 +428,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1257: dog.com /nutrition hub is on main. This existing dog.com /training hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog training-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page training-section-map / cue-order-and-session-log / AVSAB-CCPDT-reward-based-grounding copy (a laminated dog training session chart so the fundamentals / puppy / crate / behavior / credentials map is posted on the fridge, a dog fridge training cue card so sit / down / stay / come / leave-it order is labeled on the fridge, a canine training reference handbook so the AVSAB / CCPDT / reward-based grounding is a physical kitchen book), never a placeholder ASIN, a tools / reviews / nutrition kitchen hop, a child crate / clicker / treat / harness hop, or a flea / heartworm / vaccine / shock-collar hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched (this page has no listings import). Do not re-open #1251–#1257 / crate-size / stocking.',
   },
   {
+    id: 'vets · insurance hub',
+    file: 'apps/vets-co/src/app/insurance/page.tsx',
+    mustInclude: [
+      { re: /source="insurance-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vets insurance-hub checklist"/, label: 'concrete vets insurance-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+pet\+insurance\+policy\+map\+chart\?s=insurance-hub/, label: 'laminated pet insurance policy-map-chart search hop (matches on-page insurance-section-map copy; unique vs laminated+cat+calculator+tools+chart / four+column+accounting+pad)' },
+      { re: /amazon-brand\/pet\+fridge\+insurance\+levers\+card\?s=insurance-hub/, label: 'pet fridge insurance levers-card search hop (matches on-page four-levers-and-fine-print-log copy; unique vs cat+fridge+measurement+card / self+inking+date+stamp)' },
+      { re: /amazon-brand\/veterinary\+insurance\+reference\+handbook\?s=insurance-hub/, label: 'veterinary insurance reference-handbook search hop (matches on-page reimbursement-model-grounding copy; unique vs feline+calculator+reference+handbook / desktop+receipt+organizer)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+cat\+calculator\+tools\+chart|cat\+fridge\+measurement\+card|feline\+calculator\+reference\+handbook|four\+column\+accounting\+pad|letter\+size\+poly\+envelope|desktop\+receipt\+organizer|monthly\+desk\+pad\+calendar|self\+inking\+date\+stamp|letter\+size\+file\+jacket|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub kitchen kit, child insurance accounting-pad / poly-envelope / date-stamp hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-pet-insurance-policy-map-chart / pet-fridge-insurance-levers-card / veterinary-insurance-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1258: dog.com /training hub is on main. This existing vets.co /insurance hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets insurance-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page insurance-section-map / four-levers-and-fine-print-log / reimbursement-model-grounding copy (a laminated pet insurance policy-map chart so the how-it-works / enroll / coverage / deductibles / fine-print map is posted on the fridge, a pet fridge insurance levers card so premium / deductible / reimbursement / annual-limit notes are labeled on the fridge, a veterinary insurance reference handbook so the reimbursement-model / waiting-period / exclusion grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child accounting-pad hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked insurer list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1258 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

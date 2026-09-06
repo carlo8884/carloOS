@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -55,6 +55,55 @@ export default function VetsInsuranceHubPage() {
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Insurance</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vets insurance-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vets insurance-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-insurance-policy-map-chart,
+            fridge-insurance-levers-card, and
+            veterinary-insurance-reference-handbook notes that
+            match the insurance-section-map,
+            four-levers-and-fine-print-log, and
+            reimbursement-model-grounding copy on this
+            hub — a laminated pet insurance policy-map
+            chart so the section map (how it works, when
+            to enroll, what is covered, deductibles,
+            fine print, pre-existing, breed risk) is
+            posted on the fridge (not a tools-hub
+            calculator chart, not a four-column
+            accounting pad), a pet fridge insurance
+            levers card so premium / deductible /
+            reimbursement / annual-limit notes are
+            labeled on the fridge (not a cat measurement
+            card, not a date-stamp card), and a
+            veterinary insurance reference handbook so
+            the reimbursement-model / waiting-period /
+            exclusion grounding is a physical kitchen
+            book (not a feline calculator handbook, not
+            a receipt organizer). Educational kitchen
+            checklist, not a ranked insurer list, not
+            an enrollment hop, and not a substitute for
+            a veterinarian. Vets.co does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Vets insurance-hub checklist"
+            subtitle="Email the policy-map-chart, fridge levers-card, and insurance-handbook notes. No spam."
+            ctaText="Email my vets insurance-hub checklist"
+            source="insurance-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container pt-14 pb-2">
         <div className="max-w-2xl">
           <h2 className="font-display text-2xl font-bold text-brand-dark mb-4 leading-tight">What this hub covers</h2>
@@ -107,6 +156,92 @@ export default function VetsInsuranceHubPage() {
           </div>
         ))}
       </div>
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Insurance-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          insurance-section-map, four-levers-and-fine-print-log,
+          and reimbursement-model-grounding copy on this
+          hub — a laminated pet insurance policy-map
+          chart so the section map is posted on the
+          fridge, a pet fridge insurance levers card so
+          premium / deductible / reimbursement / annual
+          limit stay labeled on the fridge, and a
+          veterinary insurance reference handbook so the
+          reimbursement-model / waiting-period /
+          exclusion grounding is a physical kitchen
+          book. These are educational kitchen searches,
+          not a ranked insurer list, not a substitute
+          for a veterinarian, not a tools-hub
+          calculator-tools hop, and not a child
+          accounting-pad / poly-envelope / date-stamp
+          hop (those live on the child insurance
+          guides). This page does not hop medications
+          or vaccines. This page does not sell
+          insurance. This page does not claim hands-on
+          testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated pet insurance policy-map chart /
+            pet fridge insurance levers card /
+            veterinary insurance reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / enrollment ASIN hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools-hub
+            laminated+cat+calculator+tools+chart /
+            cat+fridge+measurement+card /
+            feline+calculator+reference+handbook
+            and child insurance four+column+accounting+pad /
+            letter+size+poly+envelope /
+            monthly+desk+pad+calendar hops.
+            Directory import left untouched. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the insurance-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page insurance-section-map,
+            four-levers-and-fine-print-log, and
+            reimbursement-model-grounding copy — a
+            laminated pet insurance policy-map chart, a
+            pet fridge insurance levers card, and a
+            veterinary insurance reference handbook.
+            Educational kitchen searches only. They are
+            not a ranked insurer list, they are not a
+            tools-hub calculator-tools hop, they are
+            not a child accounting-pad hop, and they
+            do not replace a veterinarian. Vets.co
+            does not sell insurance. Vets.co earns a
+            commission on qualifying Amazon purchases
+            at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+insurance+policy+map+chart?s=insurance-hub"
+              amazonLabel="Browse laminated pet insurance policy-map charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+insurance+levers+card?s=insurance-hub"
+              amazonLabel="Browse pet fridge insurance levers cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+insurance+reference+handbook?s=insurance-hub"
+              amazonLabel="Browse veterinary insurance reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
+
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
   </>
