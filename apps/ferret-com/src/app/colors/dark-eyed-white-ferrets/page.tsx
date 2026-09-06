@@ -10,6 +10,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -136,6 +138,69 @@ export default function DarkEyedWhiteFerretsPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret dew-ferrets checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret dew-ferrets checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-dew-dark-eye-chart,
+              fridge-dew-hearing-check-card, and
+              mustelid-dew-reference-handbook notes that
+              match the dew-dark-eye-look-map,
+              white-marking-deafness-log, and
+              afa-dew-vs-albino-grounding copy on this page
+              — a laminated ferret DEW dark-eye chart so
+              the white coat / dark-eye / pigment-present
+              map is posted on the fridge (not a tools-hub
+              calculator chart, not a reviews buyer-guide
+              chart, not a diet feeding chart, not a care
+              routine chart, not a behavior cue chart, not
+              a health triage chart, not an ownership
+              section-map chart, not a colors-hub palette
+              chart, not a first-year schedule chart, not a
+              color-pattern axis chart, not a sable
+              bandit-mask chart, not an albino red-eye
+              chart), a ferret fridge DEW hearing-check
+              card so white-marking deafness notes are
+              labeled on the fridge (not a measurement
+              card, not a reviews comparison card, not a
+              diet label card, not a care card, not a
+              behavior card, not a health library card,
+              not an ownership prep card, not a colors-hub
+              color id card, not a first-year milestone
+              card, not a color-vs-pattern card, not a
+              sable-vs-black-sable card, not an
+              albino-vs-dew card), and a mustelid DEW
+              reference handbook so the AFA / DEW-vs-albino
+              grounding is a physical kitchen book (not a
+              calculator handbook, not a reviews handbook,
+              not a diet handbook, not a care handbook,
+              not a behavior handbook, not a health
+              handbook, not an ownership handbook, not a
+              colors-hub handbook, not a first-year
+              handbook, not a color-pattern handbook, not a
+              sable handbook, not an albino handbook).
+              Educational kitchen checklist, not a ranked
+              color list, not a child toothbrush / dosing
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret dew-ferrets checklist"
+              subtitle="Email the dew-dark-eye-chart, fridge hearing-check card, and dew-handbook notes. No spam."
+              ctaText="Email my ferret dew-ferrets checklist"
+              source="colors-dew-ferrets-under-hero"
+            />
+          </div>
+
           <DropCap>
             The dark-eyed white is one of the most commonly misidentified ferrets
             around — routinely mistaken for an albino, sometimes even by people
@@ -250,6 +315,92 @@ export default function DarkEyedWhiteFerretsPage() {
             congenital conditions warrant evaluation by an exotic-mammal
             veterinarian.
           </p>
+
+          <h2 id="kit">DEW-ferrets kitchen kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            dew-dark-eye-look-map, white-marking-deafness-log,
+            and afa-dew-vs-albino-grounding copy on this
+            page — a laminated ferret DEW dark-eye chart so
+            the white coat / dark-eye / pigment-present map
+            is posted on the fridge, a ferret fridge DEW
+            hearing-check card so white-marking deafness
+            notes are labeled on the fridge, and a mustelid
+            DEW reference handbook so the AFA /
+            DEW-vs-albino grounding is a physical kitchen
+            book. These are educational kitchen searches,
+            not a ranked color list, not a substitute for
+            an exotic-mammal veterinarian, not a tools-hub
+            / reviews-hub / diet-hub / care-hub /
+            behavior-hub / health-hub / ownership-hub /
+            colors-hub / first-year-schedule /
+            colors-and-patterns / sable-ferrets /
+            albino-ferrets hop, and not a child toothbrush
+            / dosing hop (those live on health children).
+            This page does not hop medications or vaccines.
+            This page does not sell insurance. This page
+            does not claim hands-on testing. Ferret aging
+            stays held.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret DEW dark-eye chart /
+              ferret fridge DEW hearing-check card /
+              mustelid DEW reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs tools / reviews /
+              diet / care / behavior / health / ownership /
+              colors-hub / first-year-schedule /
+              colors-and-patterns / sable-ferrets /
+              albino-ferrets kitchen kits and child
+              finger+toothbrush / carnivore+care hops.
+              Directory import left untouched.
+              Ferret aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dew-ferrets kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page dew-dark-eye-look-map,
+              white-marking-deafness-log, and
+              afa-dew-vs-albino-grounding copy — a
+              laminated ferret DEW dark-eye chart, a ferret
+              fridge DEW hearing-check card, and a mustelid
+              DEW reference handbook. Educational kitchen
+              searches only. They are not a ranked color
+              list, they are not a tools-hub / reviews-hub
+              / diet-hub / care-hub / behavior-hub /
+              health-hub / ownership-hub / colors-hub /
+              first-year-schedule / colors-and-patterns /
+              sable-ferrets / albino-ferrets hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+dew+dark+eye+chart?s=dew-ferrets"
+                amazonLabel="Browse laminated ferret DEW dark-eye charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+dew+hearing+check+card?s=dew-ferrets"
+                amazonLabel="Browse ferret fridge DEW hearing-check cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+dew+reference+handbook?s=dew-ferrets"
+                amazonLabel="Browse mustelid DEW reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
