@@ -8005,6 +8005,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1244: ferret cage review under-hero is on main. Litter/enrichment stay deprioritized. Keep the existing sidebar capture and the already-hopped ceramic-bowl / sipper-bottle Amazon searches; add under-hero capture with a concrete ferret-hydration-checklist offer matching on-page bowl-first / backup-bottle / heat-stress copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · cage-setup hops',
+    file: 'apps/ferret-com/src/app/care/cage-setup/page.tsx',
+    mustInclude: [
+      { re: /source="care-cage-setup-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret cage-setup checklist"/, label: 'concrete ferret cage-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="care-cage-setup"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/midwest\+critter\+nation\+double\+unit\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'existing Kaytee corner-pan Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1245: ferret hydration under-hero is on main. Litter/enrichment stay deprioritized. Keep the existing sidebar capture, the already-hopped Critter Nation Amazon search, and the product-specific Kaytee Chewy hop; add under-hero capture with a concrete ferret cage-setup-checklist offer matching on-page bar-spacing / solid-floor / multi-level copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

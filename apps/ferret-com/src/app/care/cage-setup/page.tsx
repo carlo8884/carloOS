@@ -155,6 +155,40 @@ export default function FerretCageSetupPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret cage-setup checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret cage-setup checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the cage-setup notes that match
+              the copy on this page — bar spacing at
+              one inch or less for adults and half an
+              inch for kits, solid floors instead of
+              wire, a MidWest Critter Nation double
+              unit when you need kit-safe stacked
+              space, a Marshall starter cage only
+              until a pair outgrows it, and a Kaytee
+              corner litter pan on each level. Educational
+              housing checklist, not a new product hop
+              and not a substitute for an exotic-animal
+              veterinarian. The existing Critter Nation
+              Amazon and Kaytee Chewy searches stay
+              below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret cage-setup checklist"
+              subtitle="Email the bar-spacing, Critter Nation, and corner-pan notes. No spam."
+              ctaText="Email my ferret cage-setup checklist"
+              source="care-cage-setup-under-hero"
+            />
+          </div>
+
           <h2 id="sizing">Cage Sizing and Bar Spacing</h2>
           <p>
             The American Ferret Association recommends a minimum cage floor area of roughly 24 × 24 inches with a minimum height of 18 inches per ferret, with strong preference for multi-level cages that increase usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — most keepers settle on a 36 × 24-inch or larger footprint with at least three levels. To turn those minimums into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
