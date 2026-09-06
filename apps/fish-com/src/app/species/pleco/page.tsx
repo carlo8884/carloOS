@@ -89,6 +89,37 @@ export default function PlecoPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the pleco-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Pleco-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Ancistrus / Hypostomus
+                notes that match the care copy on this
+                page — bristlenose at 20 gallons with
+                driftwood, 73–82°F and pH 6.5–7.5, and
+                125+ gallons if the fish is a common
+                pleco. Educational pleco-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing pleco
+                tank-setup Amazon search stays below.
+                Empty Chewy buttons stay hidden. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Pleco-setup checklist"
+                subtitle="Email the bristlenose-vs-common and driftwood notes. No spam."
+                ctaText="Email my pleco-setup checklist"
+                source="species-pleco-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-pleco" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pleco in a home aquarium." priority />
         <h2>Common Pleco vs Bristlenose — The Critical Distinction</h2>
         <p><strong>Common pleco (Hypostomus plecostomus):</strong> Sold as juvenile algae eaters at 2–3 inches in virtually every fish store. Adults reach 18–24 inches. A 24-inch fish requires a tank of 125+ gallons minimum and produces waste equivalent to a heavily stocked community tank. They also stop eating algae as adults and transition primarily to a bottom-scavenging carnivore diet. The vast majority of common plecos purchased for community tanks are eventually surrendered to stores or left in tanks that cannot support them. <strong>Do not buy a common pleco for a standard community tank.</strong></p>
@@ -125,7 +156,6 @@ export default function PlecoPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for pleco care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/pleco%20tank%20setup?s=species-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Pleco Setup on Amazon →</a>
-            <a href="/go/chewy-brand/pleco%20tank%20setup?s=species-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
