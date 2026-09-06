@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
+  EmailCapture,
   SchemaScript,
   FAQAccordion,
+  ShopCtas,
 } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 import { Symptoms, type Symptom, type UrgencyTier } from '../../data/symptoms'
@@ -210,6 +213,57 @@ export default function SymptomsHubPage() {
           <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
         </p>
       </div>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vets symptoms-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vets symptoms-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-symptoms-triage-chart,
+            fridge-symptoms-library-card, and
+            veterinary-symptoms-reference-handbook notes that
+            match the urgency-tier-map, presenting-sign-log,
+            and avma-aaha-acvim-grounding copy on this hub —
+            a laminated pet symptoms triage chart so the ER
+            NOW / same-day / schedule / monitor map is posted
+            on the fridge (not a tools-hub calculator chart,
+            not an insurance policy-map chart, not a reviews
+            buyer-guide chart, not a health triage chart, not
+            a guides section-map chart, not a breeds
+            screening chart, not a diagnostics test-map
+            chart), a pet fridge symptoms library card so
+            each presenting-sign spoke is labeled on the
+            fridge (not a cat measurement card, not an
+            insurance levers card, not a reviews comparison
+            card, not a health library card, not a guides
+            prep card, not a breeds library card, not a
+            diagnostics library card), and a veterinary
+            symptoms reference handbook so the AVMA / AAHA /
+            ACVIM grounding is a physical kitchen book (not
+            a feline calculator handbook, not an insurance
+            handbook, not a reviews handbook, not a health
+            handbook, not a guides handbook, not a breeds
+            handbook, not a diagnostics handbook).
+            Educational kitchen checklist, not a ranked
+            medication list, not a child first-aid-kit hop,
+            and not a substitute for a veterinarian. Vets.co
+            does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Vets symptoms-hub checklist"
+            subtitle="Email the symptoms-triage-chart, fridge library-card, and symptoms-handbook notes. No spam."
+            ctaText="Email my vets symptoms-hub checklist"
+            source="symptoms-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Direct-answer / TL;DR block — extractable summary for AI Overviews,
           Perplexity, and ChatGPT citation (GEO). Routes the reader straight to
@@ -419,6 +473,87 @@ export default function SymptomsHubPage() {
           </Link>
         </section>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Symptoms-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          urgency-tier-map, presenting-sign-log, and
+          avma-aaha-acvim-grounding copy on this hub — a
+          laminated pet symptoms triage chart so the ER NOW
+          / same-day / schedule / monitor map is posted on
+          the fridge, a pet fridge symptoms library card so
+          each presenting-sign spoke is labeled on the
+          fridge, and a veterinary symptoms reference
+          handbook so the AVMA / AAHA / ACVIM grounding is
+          a physical kitchen book. These are educational
+          kitchen searches, not a ranked medication list,
+          not a substitute for a veterinarian, not a
+          tools-hub / insurance-hub / reviews-hub /
+          health-hub / guides-hub / breeds-hub /
+          diagnostics-hub hop, and not a child first-aid-kit
+          hop (those live on the emergency triage card).
+          This page does not hop medications or vaccines.
+          This page does not sell insurance. This page does
+          not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated pet symptoms triage chart /
+            pet fridge symptoms library card /
+            veterinary symptoms reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / insurance /
+            reviews / health / guides / breeds /
+            diagnostics kitchen kits and child
+            pet+first+aid+kit hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the symptoms-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page urgency-tier-map, presenting-sign-log,
+            and avma-aaha-acvim-grounding copy — a laminated
+            pet symptoms triage chart, a pet fridge symptoms
+            library card, and a veterinary symptoms
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked medication
+            list, they are not a tools-hub / insurance-hub
+            / reviews-hub / health-hub / guides-hub /
+            breeds-hub / diagnostics-hub hop, they are not
+            a child first-aid-kit hop, and they do not
+            replace a veterinarian. Vets.co does not sell
+            insurance. Vets.co earns a commission on
+            qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+symptoms+triage+chart?s=symptoms-hub"
+              amazonLabel="Browse laminated pet symptoms triage charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+symptoms+library+card?s=symptoms-hub"
+              amazonLabel="Browse pet fridge symptoms library cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+symptoms+reference+handbook?s=symptoms-hub"
+              amazonLabel="Browse veterinary symptoms reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
