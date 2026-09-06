@@ -6527,6 +6527,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1167: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete how-pet-insurance-works checklist offer; every gear CTA is an amazon-brand category search matching on-page reimbursement-model / four-levers / pay-then-claim copy (a four-column accounting pad so premium, deductible, reimbursement rate, and annual limit stay four written columns, a letter-size poly envelope so the itemized invoice and records stay one claim packet, a desktop receipt organizer so paid invoices stay filed until reimbursement lands), never a placeholder ASIN, a #1167 reporter-notebook / two-pocket-folder / address-book hop, a #1166 index-card / sticky-note / sheet-protector hop, a #1165 spiral-notebook / cooler-bag / clipboard hop, a #1164 cash-envelope / legal-pad / hanging-file hop, a #1163 budget-workbook / checkbook-register / accordion-file hop, a #1162 cash-box / calculator / manila-folder hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational insurance-education / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
 
+  {
+    id: 'vets · when-to-enroll hops',
+    file: 'apps/vets-co/src/app/insurance/when-to-enroll/page.tsx',
+    mustInclude: [
+      { re: /source="insurance-when-to-enroll-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my when-to-enroll checklist"/, label: 'concrete when-to-enroll checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-when-enroll"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/monthly\+desk\+pad\+calendar\?s=insurance-when-to-enroll/, label: 'monthly-desk-pad-calendar search hop (matches on-page enroll-this-month / waiting-period copy; unique vs hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner / 48+hour+digital+kitchen+timer)' },
+      { re: /amazon-brand\/self\+inking\+date\+stamp\?s=insurance-when-to-enroll/, label: 'self-inking-date-stamp search hop (matches on-page enrollment-day / new-pet-exam-day copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer)' },
+      { re: /amazon-brand\/letter\+size\+file\+jacket\?s=insurance-when-to-enroll/, label: 'letter-size-file-jacket search hop (matches on-page adoption / new-pet-exam paperwork copy; unique vs letter+size+poly+envelope / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(four\+column\+accounting\+pad|letter\+size\+poly\+envelope|desktop\+receipt\+organizer|reporter\+notebook|kraft\+two\+pocket\+folder|pocket\+size\+address\+book|ruled\+index\+cards|3x3\+sticky\+notes|letter\+size\+sheet\+protectors|spiral\+notebook|small\+soft\+cooler\+bag|clipboard\+with\+storage|cash\+envelope\+budget\+system|yellow\+legal\+pad|hanging\+file\+folders\+letter\+size|household\+budget\+workbook|checkbook\+register|accordion\+file\+folder\+letter\+size|locking\+cash\+box\+with\+key|basic\+desktop\+calculator|manila\+file\+folders\+letter\+size|credit\+card\+size\+laminating\+pouches|small\+magnetic\+dry\+erase\+board|car\+visor\+document\+holder|48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|letter\+size\+expanding\+file\+organizer|letter\+size\+plastic\+file\+box|letter\+size\+thermal\+laminating\+pouches|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|pet\+emergency\+contact\+card|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1168 four-column-pad / poly-envelope / receipt-organizer, #1167 reporter-notebook / two-pocket-folder / address-book, #1166 index-card / sticky-note / sheet-protector, #1165 spiral-notebook / cooler-bag / clipboard, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only monthly-desk-pad-calendar / self-inking-date-stamp / letter-size-file-jacket gear' },
+    ],
+    why: 'Money path leftover after #1168: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete when-to-enroll checklist offer; every gear CTA is an amazon-brand category search matching on-page enroll-while-healthy / puppy-or-kitten / adopted-pet-exam copy (a monthly desk pad calendar so the enroll-this-month and waiting-period window stay a written date, a self-inking date stamp so the enrollment day and new-pet exam day stay stamped facts, a letter-size file jacket so adoption and exam paperwork stay one sleeve until coverage starts), never a placeholder ASIN, a #1168 four-column-pad / poly-envelope / receipt-organizer hop, a #1167 reporter-notebook / two-pocket-folder / address-book hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational enrollment-timing / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
+
 ]
 
 let failures = 0
