@@ -7849,6 +7849,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1236: crate review under-hero is on main. Keep the existing sidebar capture and the already-hopped Dasuquin / Nordic Naturals / Cosequin amazon-brand searches; add under-hero capture with a concrete joint-supplement-checklist offer matching on-page NSAID-first / ASU 4–6 week / EPA-DHA 20–55 mg/kg / NASC budget copy. Do not re-ship new queries. Empty Chewy buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-dog-gps-tracker hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-gps-tracker/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-gps-tracker-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-GPS-tracker checklist"/, label: 'concrete dog-GPS-tracker-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-gps"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/fi\+series\+3\+dog\+collar\?s=reviews-best-dog-gps-tracker/, label: 'existing Fi Series 3 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/whistle\+go\+explore\?s=reviews-best-dog-gps-tracker/, label: 'existing Whistle Go Explore amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/tractive\+gps\+dog\+tracker\?s=reviews-best-dog-gps-tracker/, label: 'existing Tractive GPS amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1237: joint-supplement review under-hero is on main. Keep the existing sidebar capture and the already-hopped Fi / Whistle / Tractive amazon-brand searches; add under-hero capture with a concrete dog-GPS-tracker-checklist offer matching on-page monthly-subscription / 3-month Fi battery / LTE-M geofence / Whistle 20-day health / Tractive $5 175-country copy. Do not re-ship new queries. Empty Chewy buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
