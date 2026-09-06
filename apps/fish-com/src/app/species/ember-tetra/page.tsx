@@ -79,6 +79,38 @@ export default function EmberTetraPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the ember-tetra-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Ember-tetra-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Hyphessobrycon amandae
+                notes that match the care copy on this
+                page — a school of 10 (20+ for the
+                fire-school display), a planted 5-gallon
+                minimum or 10+ gallons for room,
+                73–82°F and pH 5.5–7.0, and
+                shrimp-safe nano tankmates. Educational
+                ember-tetra-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing ember-tetra tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Ember-tetra-setup checklist"
+                subtitle="Email the school-size, planted-nano, and shrimp-safe notes. No spam."
+                ctaText="Email my ember-tetra-setup checklist"
+                source="species-ember-tetra-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-ember-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An ember tetra in a home aquarium." priority />
         <h2>Why Ember Tetras Excel in Planted Nano Tanks</h2>
         <p>The ember tetra's orange-amber color is enhanced dramatically by: dark substrate (black or dark brown sand creates maximum contrast), green plant background (red-orange against green is one of the highest-contrast color combinations in nature), moderate lighting that illuminates the fish without washing out the coloration, and a group large enough to create the "school of fire" effect — 20+ fish moving together through a planted scape is a compelling sight in even a small tank.</p>
@@ -98,7 +130,6 @@ export default function EmberTetraPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Ember Tetra Setup on Amazon →</a>
-            <a href="/go/chewy-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 

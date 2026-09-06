@@ -7393,6 +7393,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1211: keep the existing sidebar capture and the already-hopped dwarf-puffer nano tank-setup amazon-brand search; add under-hero capture with a concrete dwarf-puffer-setup-checklist offer matching on-page 5-gallon / live-snail / pH 7.0–7.8 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · ember-tetra hops',
+    file: 'apps/fish-com/src/app/species/ember-tetra/page.tsx',
+    mustInclude: [
+      { re: /source="species-ember-tetra-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ember-tetra-setup checklist"/, label: 'concrete ember-tetra-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-ember-tetra"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ember%20tetra%20tank%20setup\?s=species-ember-tetra/, label: 'existing ember-tetra tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1212: keep the existing sidebar capture and the already-hopped ember-tetra tank-setup amazon-brand search; add under-hero capture with a concrete ember-tetra-setup-checklist offer matching on-page 10/20+ school / planted 5-gallon / pH 5.5–7.0 / shrimp-safe copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
