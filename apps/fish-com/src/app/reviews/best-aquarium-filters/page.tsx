@@ -72,6 +72,42 @@ export default function BestAquariumFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the aquarium-filter checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Aquarium-filter checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the filter notes that match the
+                HOB, canister, and sponge copy on
+                this page — an AquaClear 70 hang-on-
+                back so a 10–75 gallon tank keeps a
+                refillable media basket, a Fluval 307
+                canister so a 40–70 gallon tank keeps
+                longer cleaning intervals, and a
+                Hikari Bacto-Surge sponge so shrimp,
+                fry, and nano tanks keep a fry-safe
+                intake. Educational filter-type
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                AquaClear / Fluval / Hikari / Aqueon
+                Amazon searches stay below. Empty
+                Chewy buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Aquarium-filter checklist"
+                subtitle="Email the HOB, canister, and sponge-filter notes. No spam."
+                ctaText="Email my aquarium-filter checklist"
+                source="reviews-best-aquarium-filters-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater tanks the <strong>AquaClear 70</strong> is our top hang-on-back pick — the largest media basket in its class, refillable (no proprietary cartridges), and quiet. For 40–70 gallon tanks needing higher biological capacity, the <strong>Fluval 307</strong> canister is the pick; for shrimp, breeding, and nano tanks, a <strong>Hikari Bacto-Surge</strong> sponge filter. The <strong>Aqueon QuietFlow 30</strong> is the best budget HOB.</p>

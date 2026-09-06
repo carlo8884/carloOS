@@ -6857,6 +6857,27 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1182: keep the existing sidebar capture; add under-hero capture with a concrete Pomeranian health checklist offer; every gear CTA is an amazon-brand category search matching on-page trachea / PDA / alopecia X copy (an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a 6-column columnar pad so patellar grade, murmur, dental score, and body condition stay one well-visit row, an undated daily planner so thyroid / ACTH / LDDS dates stay written before anyone accepts alopecia X), never a placeholder ASIN, a #1182 planner / columnar-pad / sketch-pad hop, a weekly-planner or magnetic-planner hop, a melatonin or trilostane hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Pomeranian-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'fish · best-aquarium-filters hops',
+    file: 'apps/fish-com/src/app/reviews/best-aquarium-filters/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-aquarium-filters-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium-filter checklist"/, label: 'concrete aquarium-filter-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-filters"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/aquaclear\+70\+filter\?s=reviews-best-aquarium-filters/, label: 'existing AquaClear-70 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/hikari\+bacto\+surge\+sponge\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Hikari-Bacto-Surge amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/aqueon\+quietflow\+30\?s=reviews-best-aquarium-filters/, label: 'existing Aqueon-QuietFlow-30 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1183: keep the existing sidebar capture and the already-hopped AquaClear / Fluval / Hikari / Aqueon amazon-brand searches; add under-hero capture with a concrete aquarium-filter-checklist offer matching on-page HOB / canister / sponge / fry-safe copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
