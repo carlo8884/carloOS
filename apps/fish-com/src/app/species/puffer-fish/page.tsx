@@ -82,6 +82,40 @@ export default function PufferFishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the puffer-fish-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Puffer-fish-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Tetraodon / Carinotetraodon
+                notes that match the care copy on this
+                page — dwarf (pea) puffers at 1 inch in
+                a 10-gallon planted species tank (1
+                male to 2–3 females), hard-shelled
+                snails to wear the beak, figure 8 at
+                30+ gallons in brackish, and fahaka at
+                18 inches in 200+ gallons,
+                species-only. Educational
+                puffer-fish-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing puffer-fish tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Puffer-fish-setup checklist"
+                subtitle="Email the dwarf 10-gallon, snail-beak, and fahaka notes. No spam."
+                ctaText="Email my puffer-fish-setup checklist"
+                source="species-puffer-fish-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-puffer-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pufferfish in a home aquarium." priority />
         <h2>The Beak — Why It Matters</h2>
         <p>Puffer fish have fused beak-like teeth (technically a beak of dental plates) that grow continuously throughout their lives. In the wild, they grind snails, crustaceans, and other hard-shelled prey that naturally wear the beak to an appropriate length. In captivity, a puffer fed only soft foods (bloodworms, soft pellets) develops an overgrown beak — the upper and lower plates grow to the point where the fish cannot close its mouth or eat normally. This is painful and eventually fatal without intervention.</p>
@@ -112,7 +146,6 @@ export default function PufferFishPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for puffer fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/puffer%20fish%20tank%20setup?s=species-puffer-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Puffer Fish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/puffer%20fish%20tank%20setup?s=species-puffer-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
