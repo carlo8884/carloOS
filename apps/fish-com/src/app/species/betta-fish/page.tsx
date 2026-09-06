@@ -171,6 +171,38 @@ export default function BettaFishPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the betta-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Betta-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the betta-setup notes that match the
+                care copy on this page — a heated,
+                filtered 5-gallon minimum so ammonia
+                stays at 0 ppm, a sponge filter so a
+                long-finned betta keeps gentle flow, and
+                a floating rest so a halfmoon can sit
+                near the labyrinth-organ air interface.
+                Educational betta-setup checklist, not a
+                new product hop, not livestock, and not
+                a substitute for a fish veterinarian.
+                The existing betta tank-setup Amazon
+                search stays below. Empty Chewy buttons
+                stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Betta-setup checklist"
+                subtitle="Email the 5-gallon, sponge-filter, and rest-spot notes. No spam."
+                ctaText="Email my betta-setup checklist"
+                source="species-betta-fish-under-hero"
+              />
+            </div>
           <StockImage manifestKey="fish-com:cornerstone-species-betta" aspect="16:9" variant="inline" caption="A betta (Betta splendens) displaying its fins in a planted aquarium." priority />
           <h2>The Bowl Myth — Why Bettas Die Young</h2>
           <p>
@@ -395,7 +427,6 @@ export default function BettaFishPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for betta fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Betta Fish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/betta%20fish%20tank%20setup?s=species-betta-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
