@@ -9,8 +9,10 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -156,6 +158,51 @@ export default function FerretPlayAggressionPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret play-aggression checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret play-aggression checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-play-vs-fight-chart,
+              fridge-over-arousal-card, and
+              mustelid-play-aggression-reference-handbook notes
+              that match the war-dance-vs-fight-map,
+              over-arousal-break-log, and
+              afa-avsab-play-grounding copy on this page —
+              a laminated ferret play-vs-fight chart so the
+              role-swap / one-sided-attack / drawn-blood map
+              is posted on the fridge (not a behavior-hub
+              cue chart, not a litter-box chart, not a
+              dook-sound chart), a ferret fridge over-arousal
+              card so short-session / redirect-to-toy /
+              end-on-calm notes are labeled on the fridge
+              (not a behavior card, not a litter-choice
+              card, not a hiss-scream card), and a mustelid
+              play-aggression reference handbook so the AFA /
+              AVSAB play grounding is a physical kitchen
+              book (not a behavior handbook, not a
+              litter-box handbook, not a vocalization
+              handbook). Educational kitchen checklist,
+              not a ranked toy list, not a sleep-sack
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret play-aggression checklist"
+              subtitle="Email the play-vs-fight-chart, fridge over-arousal card, and play-aggression-handbook notes. No spam."
+              ctaText="Email my ferret play-aggression checklist"
+              source="behavior-play-aggression-under-hero"
+            />
+          </div>
 
           <DropCap>
             The first time you watch two bonded ferrets play, you may be
@@ -303,6 +350,59 @@ export default function FerretPlayAggressionPage() {
             previously peaceful ferret frequently has a medical cause and
             warrants an exotic-pet vet visit.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret play-vs-fight chart /
+              ferret fridge over-arousal card /
+              mustelid play-aggression reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs behavior-hub /
+              litter-box / dooking kitchen kits and child
+              sleep-sack / snuffle-mat hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret play-aggression kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page war-dance-vs-fight-map,
+              over-arousal-break-log, and
+              afa-avsab-play-grounding copy — a laminated
+              ferret play-vs-fight chart, a ferret fridge
+              over-arousal card, and a mustelid
+              play-aggression reference handbook.
+              Educational kitchen searches only. They are
+              not a ranked toy list, they are not a
+              behavior-hub / litter-box / dooking hop,
+              they are not a child toothbrush hop, and they
+              do not replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+play+vs+fight+chart?s=play-aggression"
+                amazonLabel="Browse laminated ferret play-vs-fight charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+over+arousal+card?s=play-aggression"
+                amazonLabel="Browse ferret fridge over-arousal cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+play+aggression+reference+handbook?s=play-aggression"
+                amazonLabel="Browse mustelid play-aggression reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
