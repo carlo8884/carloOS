@@ -7789,6 +7789,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1233: puppy-nutrition under-hero is on main. Keep the existing sidebar capture and the already-hopped WSAVA senior Amazon + Purina Pro Plan Chewy searches; add under-hero capture with a concrete senior-dog-nutrition-checklist offer matching on-page AAFCO-no-senior-standard / higher protein unless kidney disease / health-status switch / EPA-DHA + 4–6 week glucosamine copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-dog-food-for-puppies hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-food-for-puppies/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-food-for-puppies-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy-food checklist"/, label: 'concrete puppy-food-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-puppy-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/royal\+canin\+large\+breed\+puppy\?s=reviews-best-dog-food-for-puppies/, label: 'existing Royal Canin large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/hills\+science\+diet\+puppy\+small\+paws\?s=reviews-best-dog-food-for-puppies/, label: 'existing Hill\'s Small Paws Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/iams\+proactive\+health\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Iams puppy large-breed Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1234: senior-dog-nutrition under-hero is on main. Dog nutrition leftover hops are exhausted. Keep the existing sidebar capture and the already-hopped Royal Canin Amazon + Purina / Hill\'s / Iams Chewy searches; add under-hero capture with a concrete puppy-food-checklist offer matching on-page >50 lb large-breed / controlled calcium / WSAVA + AAFCO feeding-trial / switch-age copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
