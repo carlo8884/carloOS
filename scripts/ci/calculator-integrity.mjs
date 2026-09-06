@@ -7447,6 +7447,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1214: keep the existing sidebar capture (source species-harlequin, not the hop s= slug) and the already-hopped harlequin-rasbora tank-setup amazon-brand search; add under-hero capture with a concrete harlequin-rasbora-setup-checklist offer matching on-page 10/15+ school / 73–82°F / pH 5.5–7.5 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · hillstream-loach hops',
+    file: 'apps/fish-com/src/app/species/hillstream-loach/page.tsx',
+    mustInclude: [
+      { re: /source="species-hillstream-loach-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hillstream-loach-setup checklist"/, label: 'concrete hillstream-loach-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-hillstream"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/hillstream%20loach%20tank%20setup\?s=species-hillstream-loach/, label: 'existing hillstream-loach tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1215: keep the existing sidebar capture (source species-hillstream, not the hop s= slug) and the already-hopped hillstream-loach tank-setup amazon-brand search; add under-hero capture with a concrete hillstream-loach-setup-checklist offer matching on-page 10–15× flow / 65–75°F / biofilm copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
