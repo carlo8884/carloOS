@@ -86,6 +86,39 @@ export default function ClownfishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the clownfish-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Clownfish-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the clownfish notes that match the
+                care copy on this page — a 20-gallon
+                marine pair tank so salinity stays at
+                1.023–1.026 SG, captive-bred ocellaris
+                so a beginner saltwater tank keeps a
+                hardy pair, and no anemone requirement
+                so a reef-free setup still hosts a
+                pair. Educational clownfish-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                clownfish tank-setup Amazon search
+                stays below. Empty Chewy buttons stay
+                hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Clownfish-setup checklist"
+                subtitle="Email the 20-gallon, salinity, and captive-bred notes. No spam."
+                ctaText="Email my clownfish-setup checklist"
+                source="species-clownfish-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-clownfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A clownfish in a home aquarium." priority />
         <h2>Saltwater Tank Basics</h2>
         <p>Clownfish are marine fish — they require saltwater maintained at 1.023–1.026 specific gravity (SG). This is measured with a refractometer (more accurate) or hydrometer. Mix Instant Ocean or Red Sea Salt with RODI (reverse osmosis/deionized) water — never tap water in a marine tank. Marine tanks also require protein skimmers and higher-quality filtration than freshwater setups.</p>
@@ -140,7 +173,6 @@ export default function ClownfishPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for clownfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/clownfish%20tank%20setup?s=species-clownfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Clownfish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/clownfish%20tank%20setup?s=species-clownfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
