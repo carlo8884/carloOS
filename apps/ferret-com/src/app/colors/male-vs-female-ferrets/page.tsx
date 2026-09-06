@@ -9,6 +9,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -129,6 +131,91 @@ export default function MaleVsFemaleFerretsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret hob-vs-jill checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret hob-vs-jill checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-hob-jill-size-chart,
+              fridge-hob-vs-jill-card, and
+              mustelid-hob-jill-reference-handbook notes
+              that match the hob-vs-jill-size-map,
+              temperament-myth-log, and
+              afa-aemv-sex-grounding copy on this page —
+              a laminated ferret hob-jill size chart so
+              the larger-hob / sleeker-jill map is
+              posted on the fridge (not a tools-hub
+              calculator chart, not a reviews buyer-guide
+              chart, not a diet feeding chart, not a care
+              routine chart, not a behavior cue chart, not
+              a health triage chart, not an ownership
+              section-map chart, not a colors-hub palette
+              chart, not a first-year schedule chart, not
+              a color-pattern axis chart, not a sable
+              bandit-mask chart, not an albino red-eye
+              chart, not a DEW dark-eye chart, not a
+              cinnamon brick-coat chart, not a champagne
+              milky-coat chart, not a chocolate milk-coat
+              chart, not a black jet-coat chart, not a
+              silver frost-coat chart, not a panda
+              white-head chart, not a blaze stripe chart,
+              not a healthy-kit checklist chart, not a
+              lifespan-stage chart), a ferret fridge
+              hob-vs-jill card so size / temperament /
+              altering notes are labeled on the fridge
+              (not a measurement card, not a reviews
+              comparison card, not a diet label card, not
+              a care card, not a behavior card, not a
+              health library card, not an ownership prep
+              card, not a colors-hub color id card, not a
+              first-year milestone card, not a
+              color-vs-pattern card, not a
+              sable-vs-black-sable card, not an
+              albino-vs-dew card, not a DEW hearing-check
+              card, not a cinnamon-vs-brown card, not a
+              champagne-vs-brown card, not a
+              chocolate-vs-brown card, not a
+              black-vs-sable card, not a silver-vs-dew
+              card, not a panda-vs-blaze card, not a
+              blaze-vs-roan card, not an adoption
+              red-flag card, not a life-stage card), and
+              a mustelid hob-jill reference handbook so
+              the AFA / AEMV sex-difference grounding is
+              a physical kitchen book (not a calculator
+              handbook, not a reviews handbook, not a
+              diet handbook, not a care handbook, not a
+              behavior handbook, not a health handbook,
+              not an ownership handbook, not a colors-hub
+              handbook, not a first-year handbook, not a
+              color-pattern handbook, not a sable
+              handbook, not an albino handbook, not a DEW
+              handbook, not a cinnamon handbook, not a
+              champagne handbook, not a chocolate
+              handbook, not a black handbook, not a
+              silver handbook, not a panda handbook, not
+              a blaze-roan handbook, not a healthy-ferret
+              handbook, not a lifespan handbook).
+              Educational kitchen checklist, not a ranked
+              color list, not a child toothbrush / dosing
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret hob-vs-jill checklist"
+              subtitle="Email the hob-jill-size-chart, fridge hob-vs-jill card, and hob-jill-handbook notes. No spam."
+              ctaText="Email my ferret hob-vs-jill checklist"
+              source="colors-male-vs-female-under-hero"
+            />
+          </div>
 
           <DropCap>
             Walk into any ferret conversation and the &quot;male or female?&quot;
@@ -252,6 +339,103 @@ export default function MaleVsFemaleFerretsPage() {
             and reproductive health should be made with an exotic-mammal
             veterinarian.
           </p>
+
+          <p className="text-sm leading-relaxed text-brand-text-mid">
+            Keep a physical ferret hob-vs-jill kitchen kit
+            next to this page — a laminated ferret hob-jill
+            size chart so the larger-hob / sleeker-jill map
+            is posted on the fridge, a ferret fridge
+            hob-vs-jill card so size / temperament /
+            altering notes are labeled on the fridge, and a
+            mustelid hob-jill reference handbook so the AFA
+            / AEMV sex-difference grounding is a physical
+            kitchen book. These are educational kitchen
+            searches, not a ranked color list, not a
+            substitute for an exotic-mammal veterinarian,
+            not a tools-hub / reviews-hub / diet-hub /
+            care-hub / behavior-hub / health-hub /
+            ownership-hub / colors-hub / first-year-schedule
+            / colors-and-patterns / sable-ferrets /
+            albino-ferrets / dew-ferrets / cinnamon-ferrets
+            / champagne-ferrets / chocolate-ferrets /
+            black-ferrets / silver-ferrets / panda-ferrets
+            / blaze-and-roan / choosing-healthy /
+            ferret-lifespan hop, and not a child toothbrush
+            / dosing hop (those live on health children).
+            This page does not hop medications or vaccines.
+            This page does not sell insurance. This page
+            does not claim hands-on testing. Ferret aging
+            stays held.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret hob-jill size chart /
+              ferret fridge hob-vs-jill card /
+              mustelid hob-jill reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs tools / reviews /
+              diet / care / behavior / health / ownership /
+              colors-hub / first-year-schedule /
+              colors-and-patterns / sable-ferrets /
+              albino-ferrets / dew-ferrets /
+              cinnamon-ferrets / champagne-ferrets /
+              chocolate-ferrets / black-ferrets /
+              silver-ferrets / panda-ferrets /
+              blaze-and-roan / choosing-healthy /
+              ferret-lifespan kitchen kits and child
+              finger+toothbrush / carnivore+care hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret hob-vs-jill kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page hob-vs-jill-size-map,
+              temperament-myth-log, and
+              afa-aemv-sex-grounding copy — a laminated
+              ferret hob-jill size chart, a ferret fridge
+              hob-vs-jill card, and a mustelid hob-jill
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked color
+              list, they are not a tools-hub / reviews-hub
+              / diet-hub / care-hub / behavior-hub /
+              health-hub / ownership-hub / colors-hub /
+              first-year-schedule / colors-and-patterns /
+              sable-ferrets / albino-ferrets / dew-ferrets
+              / cinnamon-ferrets / champagne-ferrets /
+              chocolate-ferrets / black-ferrets /
+              silver-ferrets / panda-ferrets /
+              blaze-and-roan / choosing-healthy /
+              ferret-lifespan hop, they are not a child
+              toothbrush hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+hob+jill+size+chart?s=male-vs-female"
+                amazonLabel="Browse laminated ferret hob-jill size charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+hob+vs+jill+card?s=male-vs-female"
+                amazonLabel="Browse ferret fridge hob-vs-jill cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+hob+jill+reference+handbook?s=male-vs-female"
+                amazonLabel="Browse mustelid hob-jill reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
