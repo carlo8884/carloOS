@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -123,6 +123,50 @@ export default function ToolsHub() {
         <StockImage manifestKey="ferret-com:tools-hero" aspect="16:9" variant="wide" priority />
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the ferret tools-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ferret tools-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-ferret-calculator-tools-chart,
+            fridge-measurement-card, and
+            mustelid-calculator-reference-handbook notes that
+            match the calculator-section-map,
+            per-ferret-measurement-log, and
+            AFA-GA-and-grimace copy on this hub — a laminated
+            ferret calculator-tools chart so the section map
+            (emergency, grimace, age, BCS, food evaluator,
+            cost, readiness, litter, cage size) is posted on
+            the fridge (not a first-aid chart, not a cage-size
+            chart, not a litter-planner chart), a ferret fridge
+            measurement card so each ferret&apos;s age label,
+            BCS, food verdict, and cage minimums is labeled
+            on the fridge (not a hammock card, not a litter
+            card, not a first-aid card), and a mustelid
+            calculator reference handbook so the AFA cage
+            floor / guaranteed-analysis / grimace grounding
+            is a physical kitchen book (not a first-aid
+            handbook, not a diet handbook, not a cage
+            handbook). Educational kitchen checklist, not a
+            treatment, not a ranked product list, and not a
+            substitute for a veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Ferret tools-hub checklist"
+            subtitle="Email the calculator-tools-chart, fridge measurement-card, and calculator-handbook notes. No spam."
+            ctaText="Email my ferret tools-hub checklist"
+            source="tools-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
         <div className="max-w-2xl">
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">Why a ferret food tool exists at all</h2>
@@ -170,6 +214,79 @@ export default function ToolsHub() {
               you a number, or the food evaluator settles which kibble to buy.
             </p>
           </Link>
+        </div>
+
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
+          Tools-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          calculator-section-map, per-ferret-measurement-log,
+          and AFA-GA-and-grimace copy on this hub — a
+          laminated ferret calculator-tools chart so the
+          section map is posted on the fridge, a ferret fridge
+          measurement card so each ferret&apos;s age label,
+          BCS, food verdict, and cage minimums is labeled on
+          the fridge, and a mustelid calculator reference
+          handbook so the AFA cage floor / guaranteed-analysis
+          / grimace grounding is a physical kitchen book.
+          These are educational kitchen searches, not a ranked
+          product list, not a substitute for a veterinarian,
+          not a first-aid-kit / thermometer / hammock /
+          Critter-Nation / wood-pellet hop (those live on the
+          child tools). This page does not hop medications or
+          vaccines. This page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated ferret calculator-tools chart /
+            ferret fridge measurement card /
+            mustelid calculator reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine ASIN hops. ShopCtas hides empty
+            Chewy; never href="#" or PLACEHOLDER.
+            Unused vs child tools pet+first+aid+kit /
+            digital+pet+thermometer / ferret+hammock /
+            ferret+nation+critter+nation+double+unit /
+            compressed+wood+pellet+litter. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the tools-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page calculator-section-map,
+            per-ferret-measurement-log, and
+            AFA-GA-and-grimace copy — a laminated ferret
+            calculator-tools chart, a ferret fridge
+            measurement card, and a mustelid calculator
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a first-aid-kit /
+            thermometer / hammock / Critter-Nation hop, and
+            they do not replace a veterinarian. Ferret.com
+            earns a commission on qualifying purchases at
+            no extra cost to you. Empty Chewy buttons stay
+            hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+ferret+calculator+tools+chart?s=tools-hub"
+              amazonLabel="Browse laminated ferret calculator-tools charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ferret+fridge+measurement+card?s=tools-hub"
+              amazonLabel="Browse ferret fridge measurement cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/mustelid+calculator+reference+handbook?s=tools-hub"
+              amazonLabel="Browse mustelid calculator reference handbooks on Amazon →"
+            />
+          </div>
         </div>
       </section>
 
