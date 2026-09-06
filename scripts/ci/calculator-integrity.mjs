@@ -6248,6 +6248,25 @@ const CALCULATORS = [
     why: 'Money path leftover after #1154: keep the existing sidebar capture and the already-hopped quarantine-tank-kit amazon-brand search; add under-hero capture with a concrete quarantine-tank-checklist offer matching on-page seeded-sponge-filter / four-to-six-week-minimum / bare-bottom-observation copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
   },
 
+  {
+    id: 'fish · pond-guide hops',
+    file: 'apps/fish-com/src/app/setup/pond-guide/page.tsx',
+    mustInclude: [
+      { re: /source="setup-pond-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my backyard-pond setup checklist"/, label: 'concrete backyard-pond-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="setup-pond"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide/, label: 'existing pond-pump-filter-liner-kit amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1155: keep the existing sidebar capture and the already-hopped pond-pump-filter-liner-kit amazon-brand search; add under-hero capture with a concrete backyard-pond-setup-checklist offer matching on-page 250-plus-gallons-per-koi / 45-mil-EPDM / one-pond-volume-per-hour filtration copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+  },
+
 ]
 
 let failures = 0
