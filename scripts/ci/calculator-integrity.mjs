@@ -575,6 +575,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1264: fish.com /reviews hub is on main. This existing vets.co /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / payout-data-and-editorial-criteria copy (a laminated pet reviews buyer-guide chart so the insurance / telehealth map is posted on the fridge, a pet fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a veterinary reviews reference handbook so the payout-data / policy-disclosure / credential grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / insurance-hub kitchen hop, a child accounting-pad hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked insurer list, not a substitute for a veterinarian. Vets.co does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1264 / crate-size / stocking.',
   },
   {
+    id: 'ferret · diet hub',
+    file: 'apps/ferret-com/src/app/diet/page.tsx',
+    mustInclude: [
+      { re: /source="diet-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret diet-hub checklist"/, label: 'concrete ferret diet-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+ferret\+diet\+feeding\+chart\?s=diet-hub/, label: 'laminated ferret diet feeding-chart search hop (matches on-page diet-section-map copy; unique vs laminated+ferret+calculator+tools+chart / laminated+ferret+reviews+buyer+guide+chart)' },
+      { re: /amazon-brand\/ferret\+fridge\+diet\+label\+card\?s=diet-hub/, label: 'ferret fridge diet label-card search hop (matches on-page macronutrient-and-label-log copy; unique vs ferret+fridge+measurement+card / ferret+fridge+reviews+comparison+card)' },
+      { re: /amazon-brand\/mustelid\+diet\+reference\+handbook\?s=diet-hub/, label: 'mustelid diet reference-handbook search hop (matches on-page obligate-carnivore-and-AFA-grounding copy; unique vs mustelid+calculator+reference+handbook / mustelid+reviews+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+calculator\+tools\+chart|ferret\+fridge\+measurement\+card|mustelid\+calculator\+reference\+handbook|laminated\+ferret\+reviews\+buyer\+guide\+chart|ferret\+fridge\+reviews\+comparison\+card|mustelid\+reviews\+reference\+handbook|digital\+gram\+scale|heavy\+ceramic\+pet\+water\+bowl|small\+animal\+sipper|high\+protein\+ferret\+food\+kibble|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub / reviews-hub kitchen kits, child gram-scale / sipper / kibble hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-ferret-diet-feeding-chart / ferret-fridge-diet-label-card / mustelid-diet-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1265: vets.co /reviews hub is on main. This existing ferret.com /diet hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret diet-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page diet-section-map / macronutrient-and-label-log / obligate-carnivore-and-AFA-grounding copy (a laminated ferret diet feeding chart so the whole-prey / kibble / protein-fat / treats / labels / hydration / weight map is posted on the fridge, a ferret fridge diet label card so macronutrient-window and label-literacy notes are labeled on the fridge, a mustelid diet reference handbook so the obligate-carnivore / AFA / exotic-vet grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub kitchen hop, a child gram-scale / sipper hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked kibble list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. No directory import on this page. Ferret aging stays held. Do not re-open #1251–#1265 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
