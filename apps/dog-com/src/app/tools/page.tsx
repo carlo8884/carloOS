@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
+  EmailCapture,
   SchemaScript,
+  ShopCtas,
   StockImage,
 } from '@carloOS/ui'
 
@@ -185,6 +188,53 @@ export default function ToolsHub() {
         <StockImage manifestKey="dog-com:tools-hero" aspect="16:9" variant="wide" priority />
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog tools-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog tools-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-calculator-tools-chart,
+            fridge-measurement-card, and
+            canine-calculator-reference-handbook notes that
+            match the calculator-section-map,
+            per-dog-measurement-log, and
+            RER-WSAVA-and-crate-size copy on this hub — a
+            laminated dog calculator-tools chart so the
+            section map (calories, crate size, harness fit,
+            age, water, BCS, exercise, gestation, ideal
+            weight, emergency, grimace, chocolate, puppy
+            checklist, first-year budget) is posted on the
+            fridge (not a first-aid chart, not a health-hub
+            chart, not a crate-size chart), a dog fridge
+            measurement card so each dog&apos;s calorie
+            estimate, crate minimums, harness band, and
+            water range is labeled on the fridge (not a
+            first-aid card, not a crate-pad card, not a
+            harness-fit card), and a canine calculator
+            reference handbook so the RER / WSAVA /
+            crate-clearance grounding is a physical kitchen
+            book (not a first-aid handbook, not a health
+            handbook, not a crate-training handbook).
+            Educational kitchen checklist, not a treatment,
+            not a ranked product list, and not a substitute
+            for a veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog tools-hub checklist"
+            subtitle="Email the calculator-tools-chart, fridge measurement-card, and calculator-handbook notes. No spam."
+            ctaText="Email my dog tools-hub checklist"
+            source="tools-hub-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Tool cards */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
@@ -252,7 +302,91 @@ export default function ToolsHub() {
               nutrition hub
             </Link>{' '}
             covers the broader diet context: food label reading, WSAVA guidelines, and condition-specific diets.
+            A laminated dog calculator-tools chart is how the hub map (calories, crate size, harness fit, age, water, BCS, exercise, gestation, ideal weight, emergency, grimace, chocolate, puppy checklist, first-year budget) stays posted on the fridge — it is not a laminated first-aid chart (that lives on the health hub), not a laminated crate-size chart (that lives on the crate-size tool), and not a laminated harness-fit chart (that lives on the harness tool).
+            A dog fridge measurement card is how each dog&apos;s calorie estimate, crate minimums, harness band, and water range is labeled on the fridge — it is not a first-aid card, not a crate-pad card, and not a harness-fit card (those live on the health hub and the child tools).
+            A canine calculator reference handbook is how the RER / WSAVA / crate-clearance grounding sits in the kitchen — it is not a canine first-aid handbook and not a canine health handbook (those live on the health hub).
           </p>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Tools-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          calculator-section-map, per-dog-measurement-log,
+          and RER-WSAVA-and-crate-size copy on this hub — a
+          laminated dog calculator-tools chart so the
+          section map is posted on the fridge, a dog fridge
+          measurement card so each dog&apos;s calorie
+          estimate, crate minimums, harness band, and water
+          range is labeled on the fridge, and a canine
+          calculator reference handbook so the RER / WSAVA /
+          crate-clearance grounding is a physical kitchen
+          book. These are educational kitchen searches, not
+          a ranked product list, not a substitute for a
+          veterinarian, not a first-aid-kit / thermometer /
+          carrier hop (those live on the health hub), and
+          not a wire-crate / crate-pad / crate-cover /
+          harness hop (those live on the tool children).
+          This page does not hop medications or vaccines.
+          This page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog calculator-tools chart /
+            dog fridge measurement card /
+            canine calculator reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine ASIN hops. ShopCtas hides empty
+            Chewy; never href="#" or PLACEHOLDER.
+            Unused vs health-hub
+            pet+first+aid+kit / digital+pet+thermometer /
+            soft+dog+carrier / dental+chews+dog /
+            orthopedic+dog+bed, tool children
+            wire+dog+crate+with+divider+panel /
+            dog+crate+pad / dog+crate+cover /
+            puppy+training+pads. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the tools-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page calculator-section-map,
+            per-dog-measurement-log, and
+            RER-WSAVA-and-crate-size copy — a laminated
+            dog calculator-tools chart, a dog fridge
+            measurement card, and a canine calculator
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a first-aid-kit /
+            thermometer / carrier hop, they are not a
+            wire-crate / crate-pad / crate-cover hop, and
+            they do not replace a veterinarian. Dog.com
+            earns a commission on qualifying purchases at
+            no extra cost to you. Empty Chewy buttons stay
+            hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+calculator+tools+chart?s=tools-hub"
+              amazonLabel="Browse laminated dog calculator-tools charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+measurement+card?s=tools-hub"
+              amazonLabel="Browse dog fridge measurement cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+calculator+reference+handbook?s=tools-hub"
+              amazonLabel="Browse canine calculator reference handbooks on Amazon →"
+            />
+          </div>
         </div>
       </section>
 

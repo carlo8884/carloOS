@@ -281,6 +281,27 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete crate-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · tools hub',
+    file: 'apps/dog-com/src/app/tools/page.tsx',
+    mustInclude: [
+      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog tools-hub checklist"/, label: 'concrete dog tools-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+calculator\+tools\+chart\?s=tools-hub/, label: 'laminated dog calculator-tools-chart search hop (matches on-page calculator-section-map copy; unique vs pet+first+aid+kit / wire+dog+crate+with+divider+panel / laminated+horse+barn+calculator+tools+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+measurement\+card\?s=tools-hub/, label: 'dog fridge measurement-card search hop (matches on-page per-dog-measurement-log copy; unique vs dog+crate+pad / digital+pet+thermometer / horse+stall+door+measurement+card)' },
+      { re: /amazon-brand\/canine\+calculator\+reference\+handbook\?s=tools-hub/, label: 'canine calculator reference-handbook search hop (matches on-page RER-WSAVA-and-crate-size copy; unique vs equine+calculator+reference+handbook / pet+first+aid+kit)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+dog\+carrier|dental\+chews\+dog|orthopedic\+dog\+bed|wire\+dog\+crate\+with\+divider\+panel|dog\+crate\+pad|dog\+crate\+cover|puppy\+training\+pads|kitchen\+gram\+scale|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop health-hub first-aid-kit / thermometer / carrier / dental-chews / orthopedic-bed, tool-child wire-crate / crate-pad / crate-cover / training-pads, or Rx / vaccine — this page hops only laminated-dog-calculator-tools-chart / dog-fridge-measurement-card / canine-calculator-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1251: preferred Amazon leftovers on existing content pages are exhausted. This existing dog.com /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-dog-measurement-log / RER-WSAVA-and-crate-size copy (a laminated dog calculator-tools chart so the calorie / crate / harness / age / water / BCS map is posted on the fridge, a dog fridge measurement card so each dog’s calorie estimate / crate minimums / harness band / water range is labeled on the fridge, a canine calculator reference handbook so the RER / WSAVA / crate-clearance grounding is a physical kitchen book), never a placeholder ASIN, a health-hub first-aid-kit hop, a crate-size child hop, or a vaccine / prescription hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Do not re-open crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
