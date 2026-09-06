@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, ShopCtas } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -175,6 +175,59 @@ export default function ColorsHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Patterns</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the ferret colors-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ferret colors-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-ferret-colors-palette-chart,
+            fridge-color-id-card, and
+            mustelid-colors-reference-handbook notes that
+            match the sable-to-dew-palette-map,
+            coat-label-overlap-log, and
+            mustela-furo-single-species-grounding copy on
+            this hub — a laminated ferret colors palette
+            chart so the sable / albino / DEW / cinnamon /
+            champagne / black / chocolate map is posted
+            on the fridge (not a tools-hub calculator
+            chart, not a reviews buyer-guide chart, not a
+            diet feeding chart, not a care routine chart,
+            not a behavior cue chart, not a health triage
+            chart, not an ownership section-map chart), a
+            ferret fridge color id card so coat-label and
+            seasonal-shift notes are labeled on the fridge
+            (not a measurement card, not a reviews
+            comparison card, not a diet label card, not a
+            care card, not a behavior card, not a health
+            library card, not an ownership prep card), and
+            a mustelid colors reference handbook so the
+            Mustela furo single-species grounding is a
+            physical kitchen book (not a calculator
+            handbook, not a reviews handbook, not a diet
+            handbook, not a care handbook, not a behavior
+            handbook, not a health handbook, not an
+            ownership handbook). Educational kitchen
+            checklist, not a ranked color list, not a
+            child toothbrush / dosing hop, and not a
+            substitute for an exotic-mammal veterinarian.
+            Ferret.com does not sell insurance. Aging
+            pages stay held. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Ferret colors-hub checklist"
+            subtitle="Email the colors-palette-chart, fridge color-id-card, and colors-handbook notes. No spam."
+            ctaText="Email my ferret colors-hub checklist"
+            source="colors-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Intro */}
       <div
@@ -292,6 +345,91 @@ export default function ColorsHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Colors-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          sable-to-dew-palette-map, coat-label-overlap-log,
+          and mustela-furo-single-species-grounding copy on
+          this hub — a laminated ferret colors palette
+          chart so the sable / albino / DEW / cinnamon /
+          champagne / black / chocolate map is posted on
+          the fridge, a ferret fridge color id card so
+          coat-label and seasonal-shift notes are labeled
+          on the fridge, and a mustelid colors reference
+          handbook so the Mustela furo single-species
+          grounding is a physical kitchen book. These are
+          educational kitchen searches, not a ranked
+          color list, not a substitute for an
+          exotic-mammal veterinarian, not a tools-hub /
+          reviews-hub / diet-hub / care-hub / behavior-hub
+          / health-hub / ownership-hub hop, and not a
+          child toothbrush / dosing hop (those live on
+          health children). This page does not hop
+          medications or vaccines. This page does not
+          sell insurance. This page does not claim
+          hands-on testing. Ferret aging stays held.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated ferret colors palette chart /
+            ferret fridge color id card /
+            mustelid colors reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / aging hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews /
+            diet / care / behavior / health / ownership
+            kitchen kits and child finger+toothbrush /
+            carnivore+care hops. Directory import left
+            untouched. Ferret aging stays held.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the colors-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page sable-to-dew-palette-map,
+            coat-label-overlap-log, and
+            mustela-furo-single-species-grounding copy — a
+            laminated ferret colors palette chart, a
+            ferret fridge color id card, and a mustelid
+            colors reference handbook. Educational
+            kitchen searches only. They are not a ranked
+            color list, they are not a tools-hub /
+            reviews-hub / diet-hub / care-hub /
+            behavior-hub / health-hub / ownership-hub hop,
+            they are not a child toothbrush hop, and they
+            do not replace an exotic-mammal veterinarian.
+            Ferret.com does not sell insurance. Ferret.com
+            earns a commission on qualifying purchases at
+            no extra cost to you. Empty Chewy buttons
+            stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+ferret+colors+palette+chart?s=colors-hub"
+              amazonLabel="Browse laminated ferret colors palette charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ferret+fridge+color+id+card?s=colors-hub"
+              amazonLabel="Browse ferret fridge color id cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/mustelid+colors+reference+handbook?s=colors-hub"
+              amazonLabel="Browse mustelid colors reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Email Capture */}
       <section
