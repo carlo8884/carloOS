@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, EmailCapture, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,6 +124,63 @@ export default function PuppySchedulePage() {
         </div>
       </section>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog puppy-schedule checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog puppy-schedule checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-puppy-week-schedule-chart,
+            fridge-puppy-milestone-card, and
+            canine-puppy-schedule-reference-handbook notes
+            that match the week-8-to-16-map,
+            socialization-milestone-log, and
+            avsab-aaha-grounding copy on this page — a
+            laminated dog puppy week-schedule chart so the
+            week 8–16 sleep / feeding / training map is
+            posted on the fridge (not a tools-hub
+            calculator chart, not a reviews buyer-guide
+            chart, not a nutrition feeding chart, not a
+            training session chart, not a guides
+            section-map chart, not a breeds profile chart,
+            not a conditions body-system chart, not a
+            symptoms triage chart, not a compare
+            decision-axis chart), a dog fridge puppy
+            milestone card so settle-in / socialization /
+            foundation notes are labeled on the fridge
+            (not a measurement card, not a reviews
+            comparison card, not a WSAVA label card, not a
+            training cue card, not a guides prep card, not
+            a breeds library card, not a conditions
+            library card, not a symptoms library card, not
+            a compare axis card), and a canine puppy
+            schedule reference handbook so the AVSAB /
+            AAHA grounding is a physical kitchen book (not
+            a calculator handbook, not a reviews handbook,
+            not a nutrition handbook, not a training
+            handbook, not a guides handbook, not a breeds
+            handbook, not a conditions handbook, not a
+            symptoms handbook, not a compare handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a child crate / puppy-food /
+            stain-cleaner hop, and not a substitute for a
+            veterinarian. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog puppy-schedule checklist"
+            subtitle="Email the puppy-week-schedule-chart, fridge milestone-card, and puppy-schedule-handbook notes. No spam."
+            ctaText="Email my dog puppy-schedule checklist"
+            source="puppy-schedule-under-hero"
+          />
+        </div>
+      </section>
+
       {/* WEEK-BY-WEEK PREVIEW (free, visible to non-subscribers) */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
@@ -210,6 +267,85 @@ export default function PuppySchedulePage() {
               <li><Link href="/training/puppy-biting" className="text-brand-primary hover:underline">Puppy biting and bite inhibition</Link></li>
               <li><Link href="/training/house-training" className="text-brand-primary hover:underline">House training: the schedule method</Link></li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Puppy-schedule kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          week-8-to-16-map, socialization-milestone-log, and
+          avsab-aaha-grounding copy on this page — a
+          laminated dog puppy week-schedule chart so the
+          week 8–16 sleep / feeding / training map is
+          posted on the fridge, a dog fridge puppy
+          milestone card so settle-in / socialization /
+          foundation notes are labeled on the fridge, and
+          a canine puppy schedule reference handbook so
+          the AVSAB / AAHA grounding is a physical kitchen
+          book. These are educational kitchen searches,
+          not a ranked product list, not a substitute for
+          a veterinarian, not a tools-hub / reviews-hub /
+          nutrition-hub / training-hub / guides-hub /
+          breeds-hub / conditions-hub / symptoms-hub /
+          compare-hub hop, and not a child crate /
+          puppy-food / stain-cleaner hop (those live on
+          training/puppy-schedule and new-puppy-checklist).
+          This page does not hop medications or vaccines.
+          This page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog puppy week-schedule chart /
+            dog fridge puppy milestone card /
+            canine puppy schedule reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs sibling hub kitchen
+            kits and child wire+dog+crate /
+            puppy+food / enzymatic+pet+stain hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the puppy-schedule kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page week-8-to-16-map,
+            socialization-milestone-log, and
+            avsab-aaha-grounding copy — a laminated dog
+            puppy week-schedule chart, a dog fridge puppy
+            milestone card, and a canine puppy schedule
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a sibling-hub kitchen hop,
+            they are not a child crate hop, and they do
+            not replace a veterinarian. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+puppy+week+schedule+chart?s=puppy-schedule"
+              amazonLabel="Browse laminated dog puppy week-schedule charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+puppy+milestone+card?s=puppy-schedule"
+              amazonLabel="Browse dog fridge puppy milestone cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+puppy+schedule+reference+handbook?s=puppy-schedule"
+              amazonLabel="Browse canine puppy schedule reference handbooks on Amazon →"
+            />
           </div>
         </div>
       </section>
