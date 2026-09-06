@@ -192,6 +192,42 @@ export default function BestFerretCagePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret-cage checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret-cage checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the cage notes that match the
+              ranking copy on this page — bar spacing
+              first so a ferret cannot slip through,
+              usable floor space per ferret rather
+              than a single tall tower, ramps and
+              shelves that do not catch a foot, a
+              Ferret Nation / Critter Nation double
+              unit when you need stacked floor space,
+              Prevue Feisty when a mid-size multi-level
+              fits the room, and Kaytee Multi-Level
+              only as a starter. Educational housing
+              checklist, not a new product hop and
+              not a substitute for an exotic-animal
+              veterinarian. The existing Ferret Nation
+              / Prevue / Kaytee Amazon searches stay
+              below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret-cage checklist"
+              subtitle="Email the bar-spacing, floor-space, and ramp notes. No spam."
+              ctaText="Email my ferret-cage checklist"
+              source="reviews-best-ferret-cage-under-hero"
+            />
+          </div>
+
           <QuickPicks items={QUICK_PICKS} />
 
           <p>

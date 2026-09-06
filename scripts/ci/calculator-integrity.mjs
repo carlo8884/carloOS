@@ -7966,6 +7966,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1242: horses.com joint-supplements under-hero is on main. Horses review/money Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped vest / H-style / mesh Amazon searches; add under-hero capture with a concrete ferret-harness-checklist offer matching on-page escape-prevention / jacket-vest / adjustable-H / one-finger indoor-test copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · best-ferret-cage hops',
+    file: 'apps/ferret-com/src/app/reviews/best-ferret-cage/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-ferret-cage-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-cage checklist"/, label: 'concrete ferret-cage-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-cage"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation / Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/prevue\+feisty\+ferret\+cage\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/kaytee\+multi\+level\+ferret\+home\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1243: ferret harness review under-hero is on main. Keep the existing sidebar capture and the already-hopped Ferret Nation / Prevue Feisty / Kaytee Amazon searches; add under-hero capture with a concrete ferret-cage-checklist offer matching on-page bar-spacing / floor-space / ramp-safety copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
