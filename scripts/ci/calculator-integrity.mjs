@@ -7105,6 +7105,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1195: keep the existing sidebar capture and the already-hopped discus tank-setup amazon-brand search; add under-hero capture with a concrete discus-setup-checklist offer matching on-page 82–86°F / daily-change / group-of-6 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · guppy hops',
+    file: 'apps/fish-com/src/app/species/guppy/page.tsx',
+    mustInclude: [
+      { re: /source="species-guppy-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my guppy-setup checklist"/, label: 'concrete guppy-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-guppy"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/guppy%20tank%20setup\?s=species-guppy/, label: 'existing guppy tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1196: keep the existing sidebar capture and the already-hopped guppy tank-setup amazon-brand search; add under-hero capture with a concrete guppy-setup-checklist offer matching on-page planted-cover / 2–3 females-per-male / 28-day gestation copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

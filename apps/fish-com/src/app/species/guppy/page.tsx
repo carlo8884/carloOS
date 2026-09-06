@@ -82,6 +82,38 @@ export default function GuppyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the guppy-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Guppy-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the guppy notes that match the
+                care copy on this page — a 72–82°F
+                planted tank so fry keep cover from
+                adults, a 2–3 female-per-male ratio so
+                pursuit stays distributed, and a 28-day
+                gestation note at 76°F so a livebearer
+                colony stays planned. Educational
+                guppy-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing guppy tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Guppy-setup checklist"
+                subtitle="Email the planted-cover, sex-ratio, and livebearer notes. No spam."
+                ctaText="Email my guppy-setup checklist"
+                source="species-guppy-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-guppy" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A guppy in a home aquarium." priority />
         <h2>The Pet Store Guppy Problem</h2>
         <p>Pet store guppies — mass-produced in fish farms with high stocking densities, variable water quality, and mixed strains — frequently carry disease, particularly the complex of conditions called "guppy disease": Columnaris (bacterial), Epistylis (protozoan), and various other pathogens that circulate in crowded farm conditions. These fish often appear healthy in the store and crash within days to weeks of entering a home aquarium. This is the source of guppies' undeserved reputation as "fragile."</p>
@@ -114,7 +146,6 @@ export default function GuppyPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for guppy care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/guppy%20tank%20setup?s=species-guppy" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Guppy Setup on Amazon →</a>
-            <a href="/go/chewy-brand/guppy%20tank%20setup?s=species-guppy" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
