@@ -36,6 +36,42 @@ export default function BestCanisterFiltersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the canister-filter checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Canister-filter checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the canister notes that match the
+                Fluval 307 and Eheim Classic copy on
+                this page — a Fluval 307 so a 40–70
+                gallon tank keeps an AquaStop valve
+                for media changes without
+                disconnecting hoses, and an Eheim
+                Classic 350 so a long-running tank
+                keeps the simple impeller that has
+                decades of field track record.
+                Educational canister-filter
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                Fluval 307 and Eheim Classic Amazon
+                searches stay below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Canister-filter checklist"
+                subtitle="Email the Fluval 307 and Eheim Classic notes. No spam."
+                ctaText="Email my canister-filter checklist"
+                source="reviews-best-canister-filters-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For 40–70 gallon tanks the <strong>Fluval 307</strong> is our overall pick — near-silent, with an AquaStop valve that lets you change media without disconnecting hoses. For maximum long-term reliability, the <strong>Eheim Classic 350</strong> is the pick — decades of track record. The <strong>Penn Plax Cascade 1000</strong> is the best-value budget canister for larger tanks.</p>
