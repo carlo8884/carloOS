@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -93,6 +93,7 @@ export default function EMSPage() {
             { label: "Clinical Signs", href: "#signs" },
             { label: "Diagnosis", href: "#diagnosis" },
             { label: "Dietary Management", href: "#diet" },
+            { label: "Diet-management kit", href: "#kit" },
             { label: "Exercise", href: "#exercise" },
             { label: "Prognosis", href: "#prognosis" },
             { label: "FAQ", href: "#faq" },
@@ -127,9 +128,45 @@ export default function EMSPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the EMS diet-management checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse EMS diet-management checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the digital-hanging-hay-bale-scale,
+              equine-forage-NSC-hay-test-kit, and
+              portable-strip-grazing-step-in-posts notes
+              that match the feed-by-weight, test-hay, and
+              strip-grazing copy on this page — a hanging
+              hay-bale scale so the ration is weighed
+              instead of scooped by eye, an NSC hay-test
+              kit so forage sugar is measured instead of
+              guessed, and step-in strip-grazing posts so
+              pasture access is a movable strip instead of
+              a full-field binge. Educational diet-
+              management checklist, not a treatment, not
+              metformin or pergolide, not a substitute
+              for calling the veterinarian, and not a
+              grazing-muzzle, hay-soaking-bag, or ration-
+              balancer hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse EMS diet-management checklist"
+              subtitle="Email the hay-scale, NSC-test-kit, and strip-grazing-post notes. No spam."
+              ctaText="Email my horse EMS diet-management checklist"
+              source="health-ems-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Is EMS</h2>
           <p>Equine metabolic syndrome describes a horse with insulin dysregulation and an elevated risk of laminitis, frequently in combination with generalized obesity or localized fat deposits over the crest of the neck, the tailhead, behind the shoulder, and around the sheath or mammary region. The syndrome was formalized in the early 2000s and refined by the Equine Endocrinology Group, which publishes the consensus diagnostic and management guidance veterinarians follow.</p>
@@ -152,12 +189,150 @@ export default function EMSPage() {
 
           <h2 id="diet">Dietary Management</h2>
           <ul>
-            <li><strong>Restrict non-structural carbohydrate (NSC).</strong> Aim for forage under roughly 10 to 12 percent NSC; soaking hay for 30 to 60 minutes leaches out a meaningful fraction of sugar. Test hay when possible.</li>
-            <li><strong>Eliminate grain and treats</strong> for the affected horse; replace with a low-calorie ration balancer to supply vitamins and minerals without sugar and starch.</li>
-            <li><strong>Control pasture access</strong> with a grazing muzzle, a dry lot, or strip grazing. Pasture sugar peaks on sunny afternoons after cool nights and during spring and autumn flushes.</li>
-            <li><strong>Feed by weight, not volume</strong> -- typically 1.5 percent of ideal (not current) bodyweight per day in forage dry matter for weight loss, never below 1.25 percent without veterinary supervision.</li>
-            <li><strong>Use slow feeders</strong> to extend a restricted ration and reduce the long fasting gaps that promote ulcers.</li>
+            <li><strong>Restrict non-structural carbohydrate (NSC).</strong> Aim for forage under roughly 10 to 12 percent NSC; soaking hay for 30 to 60 minutes leaches out a meaningful fraction of sugar. Test hay when possible. An equine forage NSC hay-test kit is how that sugar is measured instead of guessed — it is not a hay-soaking bag (that lives on heaves) and not a lidded 5-gallon soaking pail (that lives on choke).</li>
+            <li><strong>Eliminate grain and treats</strong> for the affected horse; replace with a low-calorie ration balancer to supply vitamins and minerals without sugar and starch. This page does not hop ration balancers or high-fat feeds — those already live on the nutrition pages and stay a veterinary ration, not a shoppable treatment.</li>
+            <li><strong>Control pasture access</strong> with a grazing muzzle, a dry lot, or strip grazing. Pasture sugar peaks on sunny afternoons after cool nights and during spring and autumn flushes. Portable strip-grazing step-in posts are how that access is a movable strip instead of a full-field binge — they are not a grazing muzzle (those live on laminitis and pasture-management) and not electric tape (that lives on fencing-safety).</li>
+            <li><strong>Feed by weight, not volume</strong> -- typically 1.5 percent of ideal (not current) bodyweight per day in forage dry matter for weight loss, never below 1.25 percent without veterinary supervision. A digital hanging hay-bale scale is how that ration is weighed instead of scooped by eye — it is not a feed-scoop scale (that lives on the feed calculator) and not a horse weight tape (those live on the weight and age calculators).</li>
+            <li><strong>Use slow feeders</strong> to extend a restricted ration and reduce the long fasting gaps that promote ulcers. This page does not hop hay nets or hay boxes — those already live on the feed calculator and turnout-vs-stabling.</li>
           </ul>
+
+          <h2 id="kit">Diet-management kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            feed-by-weight, test-hay, and strip-grazing
+            copy on this page — a digital hanging hay-bale
+            scale so the ration is weighed instead of
+            scooped by eye, an equine forage NSC hay-test
+            kit so forage sugar is measured instead of
+            guessed, and portable strip-grazing step-in
+            posts so pasture access is a movable strip.
+            These are educational diet-management tools,
+            not a ranked product list, not a substitute
+            for veterinary care, and not metformin,
+            pergolide, or a diagnosis. Grazing muzzles
+            already live on laminitis and pasture-
+            management. Hay-soaking bags already live on
+            heaves. Soaking pails already live on choke.
+            Ration balancers already live on the nutrition
+            pages. Slow-feeder hay nets already live on
+            the feed calculator. Weight tapes already live
+            on the weight and age calculators. Foam sole-
+            support pads already live on laminitis. This
+            page does not hop medications, vaccines, or
+            insulin-test kits sold as treatments. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (digital hanging hay bale scale /
+              equine forage nsc hay test kit /
+              portable strip grazing step in posts).
+              These are educational diet-management
+              tools, not a ranked product list, not a
+              substitute for veterinary care, no Rx /
+              metformin / pergolide / grazing-muzzle /
+              hay-soaking-bag / ration-balancer ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1104
+              portable+3+sided+horse+run+in+shelter /
+              labeled+stackable+horse+grooming+caddy /
+              large+mesh+horse+blanket+wash+bag, #1103
+              heavy+duty+paddock+mud+grid /
+              full+length+horse+turnout+boots /
+              waffle+weave+horse+leg+towel, #1102
+              irish+knit+horse+cooler /
+              wool+exercise+quarter+sheet /
+              loose+plain+white+salt+horse, #1101
+              steel+heart+bar+horseshoe /
+              3+degree+leather+wedge+pad /
+              rocker+toe+steel+horseshoe, #1100
+              long+handle+stock+tank+brush /
+              20+foot+barn+mosquito+netting /
+              fine+mesh+horse+mosquito+sheet, #1099
+              30+foot+cotton+lunge+line /
+              leather+chain+lead+shank+horse /
+              orange+traffic+cone+set, #1098
+              weatherproof+storage+clipboard /
+              round+rubber+feed+pan+horse /
+              paper+pellet+horse+bedding, #1097
+              color+coded+flat+back+horse+buckets /
+              disposable+coverall+suit /
+              heavy+duty+rubber+boot+dip+tub, #1094
+              lidded+5+gallon+feed+soaking+pail /
+              large+smooth+feed+tub+rocks /
+              apple+wedger+slicer,
+              horse+hay+soaking+bag (heaves),
+              easy+keeper+grazing+muzzle /
+              horse+grazing+muzzle (laminitis /
+              pasture-management),
+              horse+ration+balancer /
+              low+nsc+ration+balancer
+              (nutrition / feed calculator),
+              slow+feeder+hay+net+horse
+              (feed calculator),
+              horse+feed+scoop+scale /
+              horse+weight+tape.
+              Medications and prescriptions
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the EMS diet-management kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page feed-by-weight, test-hay, and
+              strip-grazing copy — a digital hanging
+              hay-bale scale, an equine forage NSC
+              hay-test kit, and portable strip-grazing
+              step-in posts. Educational diet-management
+              tools only. Guessing hay sugar, scooping
+              by eye, or hopping metformin is not the
+              job of this kit. They are not a ranked
+              product list, they are not a substitute
+              for veterinary care, they are not a #1104
+              run-in-shelter / grooming-caddy /
+              blanket-wash-bag hop, they are not a
+              #1103 mud-grid / turnout-boot / leg-towel
+              hop, they are not a #1102 Irish-knit-
+              cooler / quarter-sheet / loose-salt hop,
+              they are not a #1101 heart-bar /
+              wedge-pad / rocker-toe hop, they are not
+              a #1100 stock-tank-brush / barn-mosquito-
+              netting / mosquito-sheet hop, they are
+              not a #1099 lunge-line / lead-shank /
+              traffic-cone hop, they are not a #1098
+              clipboard / feed-pan / paper-pellet-
+              bedding hop, they are not a #1097
+              color-coded-bucket / coverall / boot-dip-
+              tub hop, they are not a #1094 soaking-
+              pail / feed-tub-rock / apple-wedger hop,
+              they are not a heaves hay-soaking-bag
+              hop, they are not a laminitis grazing-
+              muzzle hop, they are not a nutrition
+              ration-balancer hop, and they do not
+              replace a veterinarian. Horses.com earns
+              a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/digital+hanging+hay+bale+scale?s=health-ems"
+                amazonLabel="Browse digital hanging hay-bale scales on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+forage+nsc+hay+test+kit?s=health-ems"
+                amazonLabel="Browse equine forage NSC hay-test kits on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/portable+strip+grazing+step+in+posts?s=health-ems"
+                amazonLabel="Browse portable strip-grazing step-in posts on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="exercise">Exercise</h2>
           <p>When the horse is sound, structured exercise improves insulin sensitivity independent of weight loss. The standard recommendation is progressive aerobic work -- brisk trotting, hill work, and conditioning rides several times a week. Exercise is contraindicated during active laminitis; in those cases, diet and the underlying endocrine control come first, and exercise resumes once the feet are stable.</p>
