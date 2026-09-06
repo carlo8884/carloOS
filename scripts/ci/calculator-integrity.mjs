@@ -7986,6 +7986,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1243: ferret harness review under-hero is on main. Keep the existing sidebar capture and the already-hopped Ferret Nation / Prevue Feisty / Kaytee Amazon searches; add under-hero capture with a concrete ferret-cage-checklist offer matching on-page bar-spacing / floor-space / ramp-safety copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · hydration-and-water hops',
+    file: 'apps/ferret-com/src/app/diet/hydration-and-water/page.tsx',
+    mustInclude: [
+      { re: /source="diet-hydration-and-water-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-hydration checklist"/, label: 'concrete ferret-hydration-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="diet-hydration-and-water"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=diet-hydration-and-water/, label: 'existing heavy ceramic bowl amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/small\+animal\+sipper\+water\+bottle\?s=diet-hydration-and-water/, label: 'existing sipper-bottle amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1244: ferret cage review under-hero is on main. Litter/enrichment stay deprioritized. Keep the existing sidebar capture and the already-hopped ceramic-bowl / sipper-bottle Amazon searches; add under-hero capture with a concrete ferret-hydration-checklist offer matching on-page bowl-first / backup-bottle / heat-stress copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
