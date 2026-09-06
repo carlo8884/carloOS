@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function HayTypesPage() {
             { label: "Mixed Hays", href: "#mixed" },
             { label: "Judging Quality", href: "#quality" },
             { label: "Matching Hay to the Horse", href: "#matching" },
+            { label: "Barn hay-types kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -108,18 +109,51 @@ export default function HayTypesPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the hay-types checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse hay-types checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the orchard-grass-hay-horse,
+              alfalfa-hay-bales-horse, and
+              timothy-alfalfa-mixed-hay-horse notes that
+              match the grass, legume, and mixed-hay copy
+              on this page — orchard-grass hay as the
+              everyday leafy grass base (not a timothy hop),
+              alfalfa hay bales as the richer legume option
+              for horses that need condition, and a
+              timothy-alfalfa mixed hay as the middle
+              ground. Educational barn checklist, not a
+              treatment, not an EMS hay-test hop, and not
+              a substitute for calling the veterinarian or
+              equine nutritionist. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse hay-types checklist"
+              subtitle="Email the orchard-grass, alfalfa-bale, and mixed-hay notes. No spam."
+              ctaText="Email my horse hay-types checklist"
+              source="nutrition-hay-under-hero"
+            />
+          </div>
+
           <h2 id="grass">Grass Hays</h2>
-          <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled.</p>
+          <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled. Orchard-grass hay for horses is that everyday leafy grass base — it is not a timothy-hay hop (that lives on the feed calculator) and not a Standlee forage-pellet hop (that lives on the supplements review).</p>
 
           <h2 id="legume">Legume Hays</h2>
-          <p>Alfalfa (lucerne) is the dominant legume hay, with clover hays also used. Legume hays are richer than grass hays -- higher in calories, protein, and calcium -- which makes them valuable for horses needing condition: hard keepers, lactating mares, growing youngstock, and performance horses. The same richness makes them easy to overfeed to idle or metabolic horses. Alfalfa is also useful fed in small amounts as a stomach-acid buffer for ulcer-prone horses.</p>
+          <p>Alfalfa (lucerne) is the dominant legume hay, with clover hays also used. Legume hays are richer than grass hays -- higher in calories, protein, and calcium -- which makes them valuable for horses needing condition: hard keepers, lactating mares, growing youngstock, and performance horses. The same richness makes them easy to overfeed to idle or metabolic horses. Alfalfa is also useful fed in small amounts as a stomach-acid buffer for ulcer-prone horses. Alfalfa hay bales for horses are that richer legume option — they are not an EMS forage-NSC hay-test kit and not forage-page hay-core sampler.</p>
 
           <h2 id="mixed">Mixed Hays</h2>
-          <p>Many hays are a mix of grass and legume -- for example a timothy-alfalfa or grass-clover blend -- which moderates the richness of pure legume while raising the nutrition of pure grass. Mixed hays are a practical middle ground for horses in moderate work or that need a little more than grass hay alone provides, and they are widely available baled together from mixed swards.</p>
+          <p>Many hays are a mix of grass and legume -- for example a timothy-alfalfa or grass-clover blend -- which moderates the richness of pure legume while raising the nutrition of pure grass. Mixed hays are a practical middle ground for horses in moderate work or that need a little more than grass hay alone provides, and they are widely available baled together from mixed swards. A timothy-alfalfa mixed hay for horses is that middle ground — it is not a hanging hay-bale scale (that lives on EMS) and not a wall-mounted hay rack (that lives on forage-basics).</p>
 
           <h2 id="quality">Judging Quality</h2>
           <ul>
@@ -132,6 +166,88 @@ export default function HayTypesPage() {
 
           <h2 id="matching">Matching Hay to the Horse</h2>
           <p>Match the forage to the horse rather than feeding one hay to all. Easy keepers and laminitis-prone horses do best on lower-sugar grass hay, often soaked, fed by weight. Hard keepers, broodmares, youngstock, and hard-working horses benefit from richer or part-legume hay. Seniors with poor teeth may need soft, leafy hay, chopped or soaked forage, or hay replacers. Whatever the type, introduce new hay gradually to let the hindgut adapt.</p>
+
+          <h2 id="kit">Barn hay-types kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            grass, legume, and mixed-hay copy on this page — orchard-grass
+            hay for horses as the everyday leafy grass
+            base, alfalfa hay bales as the richer
+            legume option for horses that need
+            condition, and a timothy-alfalfa mixed hay
+            as the middle ground. These are educational
+            barn searches, not a ranked product list,
+            not a substitute for veterinary or
+            nutritionist care, and not a timothy-hay
+            hop (that lives on the feed calculator), an
+            EMS hay-test kit, or a forage-page moisture
+            tester / core sampler / hay rack. This page
+            does not hop medications or vaccines. This
+            page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (orchard grass hay horse /
+              alfalfa hay bales horse /
+              timothy alfalfa mixed hay horse).
+              Educational barn searches only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1112
+              tabletop+digital+horse+grain+scale /
+              stackable+rubber+horse+feed+tubs /
+              rodent+proof+metal+horse+feed+bin, #1111
+              horse+hay+probe+moisture+tester /
+              equine+hay+core+sampler /
+              wall+mounted+horse+hay+rack, #1110
+              plain+white+horse+salt+block /
+              salt+first+horse+electrolyte+powder /
+              wide+mouth+horse+water+bucket, #1105
+              digital+hanging+hay+bale+scale /
+              equine+forage+nsc+hay+test+kit /
+              portable+strip+grazing+step+in+posts,
+              timothy+hay+horse
+              (feed calculator),
+              standlee+premium+forage+pellets
+              (supplements review),
+              horse+hay+steamer / horse+hay+soaking+bag
+              (heaves),
+              horse+hay+cubes
+              (dental). */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the barn hay-types kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page grass, legume, and mixed-hay copy —
+              orchard-grass hay, alfalfa hay bales, and a
+              timothy-alfalfa mixed hay. Educational barn
+              searches only. They are not a ranked product
+              list, they are not a timothy-hay hop, they
+              are not an EMS hay-test hop, and they do not
+              replace a veterinarian or equine nutritionist.
+              Horses.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/orchard+grass+hay+horse?s=nutrition-hay"
+                amazonLabel="Browse orchard-grass hay for horses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/alfalfa+hay+bales+horse?s=nutrition-hay"
+                amazonLabel="Browse alfalfa hay bales for horses on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/timothy+alfalfa+mixed+hay+horse?s=nutrition-hay"
+                amazonLabel="Browse timothy-alfalfa mixed hay for horses on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

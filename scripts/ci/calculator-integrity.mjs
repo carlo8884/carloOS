@@ -5285,6 +5285,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture, existing AffiliateDisclosure, and existing complete-feed / low-starch ReviewCards; under-hero capture with a concrete horse grain-and-concentrate-checklist offer; every new gear CTA is an amazon-brand category search matching on-page weigh-not-scoop / split-small-meals / keep-grain-consistent copy (a tabletop grain scale so concentrates are weighed not scooped, stackable rubber feed tubs so a daily ration is split into several small meals, a rodent-proof metal feed bin so grain stays clean and the ration does not drift), never a placeholder ASIN, a feed-scoop-scale hop, an EMS hay-bale-scale hop, a forage #1111 hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · hay-types hops',
+    file: 'apps/horses-com/src/app/nutrition/hay-types/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-hay-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse hay-types checklist"/, label: 'concrete horse hay-types-checklist offer, not Subscribe' },
+      { re: /source="nutrition-hay"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/orchard\+grass\+hay\+horse\?s=nutrition-hay/, label: 'orchard-grass hay-horse search hop (matches on-page everyday-leafy-grass copy; unique vs timothy+hay+horse / standlee+premium+forage+pellets)' },
+      { re: /amazon-brand\/alfalfa\+hay\+bales\+horse\?s=nutrition-hay/, label: 'alfalfa hay-bales search hop (matches on-page richer-legume copy; unique vs equine+forage+nsc+hay+test+kit / equine+hay+core+sampler)' },
+      { re: /amazon-brand\/timothy\+alfalfa\+mixed\+hay\+horse\?s=nutrition-hay/, label: 'timothy-alfalfa mixed-hay search hop (matches on-page mixed-hay middle-ground copy; unique vs timothy+hay+horse / digital+hanging+hay+bale+scale)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(tabletop\+digital\+horse\+grain\+scale|stackable\+rubber\+horse\+feed\+tubs|rodent\+proof\+metal\+horse\+feed\+bin|horse\+hay\+probe\+moisture\+tester|equine\+hay\+core\+sampler|wall\+mounted\+horse\+hay\+rack|plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|timothy\+hay\+horse|standlee\+premium\+forage\+pellets|horse\+hay\+steamer|horse\+hay\+soaking\+bag|horse\+hay\+cubes|complete\+pelleted\+horse\+feed\+formulated|low\+starch\+senior\+horse\+feed|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop #1112 grain-scale / feed-tubs / feed-bin, #1111 hay-probe / core-sampler / hay-rack, #1110 salt hops, #1105 hay-bale-scale / NSC kit / strip-grazing, feed-calculator timothy, Standlee pellets, heaves steamer / soaking-bag, dental hay-cubes, grain ReviewCard feeds, or Rx / vaccine — this page hops only orchard-grass-hay-horse / alfalfa-hay-bales-horse / timothy-alfalfa-mixed-hay-horse searches' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse hay-types-checklist offer; every gear CTA is an amazon-brand category search matching on-page grass / legume / mixed-hay copy (orchard-grass hay as the everyday leafy grass base, alfalfa hay bales as the richer legume option, timothy-alfalfa mixed hay as the middle ground), never a placeholder ASIN, a timothy-hay hop, an EMS hay-test hop, a forage #1111 hop, a grain #1112 hop, or a vaccine / prescription hop. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
