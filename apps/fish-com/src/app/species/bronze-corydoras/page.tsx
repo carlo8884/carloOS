@@ -79,6 +79,41 @@ export default function BronzeCorydorasPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the bronze-corydoras-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Bronze-corydoras-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Corydoras aeneus notes that
+                match the care copy on this page — a
+                group of 6+ so the school forages in
+                daylight instead of hiding, smooth sand
+                so barbels stay intact while they sift,
+                sinking pellets and wafers because they
+                are not scavengers, 72–79°F and pH
+                6.0–7.8, and 2.5–3 inch adults that
+                still need their own food. Educational
+                bronze-corydoras-setup checklist, not a
+                new product hop, not livestock, and
+                not a substitute for a fish
+                veterinarian. The existing corydoras
+                tank-setup Amazon search stays below.
+                Empty Chewy buttons stay hidden. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Bronze-corydoras-setup checklist"
+                subtitle="Email the sand, group-of-6, and sinking-food notes. No spam."
+                ctaText="Email my bronze-corydoras-setup checklist"
+                source="species-bronze-corydoras-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-bronze-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A bronze corydoras in a home aquarium." priority />
 
         <h2>The Beginner Cory</h2>
@@ -105,7 +140,6 @@ export default function BronzeCorydorasPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, sand substrate, and sinking food sized for corydoras care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Corydoras Setup on Amazon →</a>
-            <a href="/go/chewy-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />
