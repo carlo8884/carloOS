@@ -7159,6 +7159,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1198: keep the existing sidebar capture and the already-hopped african-cichlid tank-setup amazon-brand search; add under-hero capture with a concrete african-cichlid-setup-checklist offer matching on-page hard-alkaline / 55–75 gallon / Malawi-bloat copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · amano-shrimp hops',
+    file: 'apps/fish-com/src/app/species/amano-shrimp/page.tsx',
+    mustInclude: [
+      { re: /source="species-amano-shrimp-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my amano-shrimp-setup checklist"/, label: 'concrete amano-shrimp-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-amano"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/amano%20shrimp%20tank%20setup\?s=species-amano-shrimp/, label: 'existing amano-shrimp tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1199: keep the existing sidebar capture and the already-hopped amano-shrimp tank-setup amazon-brand search; add under-hero capture with a concrete amano-shrimp-setup-checklist offer matching on-page 1-per-5-gallons / hair-algae / covered-tank copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
