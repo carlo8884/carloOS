@@ -79,6 +79,40 @@ export default function CPDPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the celestial-pearl-danio-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Celestial-pearl-danio-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Danio margaritatus notes that
+                match the care copy on this page — a
+                group of 8+ (10–12 is better) so males
+                keep displaying, a planted 10-gallon
+                nano tank, soft slightly acidic water
+                (pH 6.5–7.5, GH under 10), 73–79°F, and
+                dark substrate plus dense planting so
+                the pearlescent spots stay vivid.
+                Educational celestial-pearl-danio-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                celestial-pearl-danio tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Celestial-pearl-danio-setup checklist"
+                subtitle="Email the 10-gallon, group-of-8, and soft-water notes. No spam."
+                ctaText="Email my celestial-pearl-danio-setup checklist"
+                source="species-celestial-pearl-danio-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-celestial-pearl-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A celestial pearl danio in a home aquarium." priority />
         <h2>Sexual Dimorphism and Display</h2>
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>
@@ -96,7 +130,6 @@ export default function CPDPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Celestial Pearl Danio Setup on Amazon →</a>
-            <a href="/go/chewy-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
