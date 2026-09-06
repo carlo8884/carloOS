@@ -30,7 +30,7 @@ const SOURCES = [
     publisher: "Purdue University Extension",
   },
 ]
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
@@ -66,7 +66,38 @@ export default function PondGuidePage() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the backyard-pond setup checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Backyard-pond setup checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the backyard-pond setup checklist that matches the 250-plus-gallons-per-koi,
+            45-mil-EPDM-liner, and one-pond-volume-per-hour filtration copy on this page —
+            plan adult size before digging (250+ gallons per koi, 100+ gallons per goldfish,
+            1,000+ gallons for four koi), excavate a 12–18 inch plant shelf plus a 3+ foot
+            center for temperature stability and heron refuge, lay fish-safe 45 mil EPDM over
+            underlayment, and size the pump for one pond volume per hour through a settlement
+            chamber, biofilter, and UV sterilizer. Educational setup notes only, not a ranked
+            product list, not livestock, and not a substitute for a fish veterinarian. The
+            existing pond-pump-filter-liner-kit Amazon search stays below. Empty Chewy
+            buttons stay hidden. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Backyard-pond setup checklist"
+            subtitle="Email the adult-size, 45-mil EPDM, and 1×-volume filtration notes. No spam."
+            ctaText="Email my backyard-pond setup checklist"
+            source="setup-pond-guide-under-hero"
+          />
+        </div>
+
           <h2>The Most Common Pond Failure — Undersizing</h2>
           <p>The overwhelming majority of failed backyard ponds fail for the same reason: the pond was built too small for the number of fish eventually added. The cognitive sequence that leads to failure: a 500-gallon pond is built "for just a few koi." The koi are purchased at 6 inches — they fit easily. They grow. They produce more waste. Water quality degrades. Fish get sick. More fish are added. The pond spirals into chronic water quality problems and fish illness. The pond is eventually either drained or the fish given away.</p>
           <p>The corrective thinking: plan for the fish at adult size, not juvenile size. A koi purchased at 6 inches will be 18–24 inches in 4–5 years. Plan for that fish, not this fish. Build the largest pond that budget and space allow — you will fill it, and you will be glad of the capacity.</p>
@@ -86,10 +117,9 @@ export default function PondGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Backyard Pond Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>
