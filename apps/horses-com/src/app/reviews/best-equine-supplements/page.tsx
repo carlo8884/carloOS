@@ -114,6 +114,45 @@ export default function BestEquineSupplementsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the equine-supplement checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Equine-supplement checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the supplement notes that match
+                the ranking copy on this page —
+                NASC Quality Seal as the minimum
+                manufacturing bar, diagnose first so
+                a supplement is never a substitute
+                for veterinary care, Cosequin ASU
+                Plus when joint evidence is the
+                target, Platinum Performance Equine
+                for one comprehensive wellness
+                ration, KER EO-3 when the omega-3
+                source must be marine DHA/EPA, and
+                Equithrive Original plus Standlee
+                forage so resveratrol and soaked
+                alfalfa stay in their lanes.
+                Educational buyer checklist, not a
+                new product hop and not a substitute
+                for a veterinarian. The existing
+                Platinum / KER / Equithrive /
+                Standlee Amazon searches stay below.
+                No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Equine-supplement checklist"
+                subtitle="Email the NASC, joint, omega-3, and forage notes. No spam."
+                ctaText="Email my equine-supplement checklist"
+                source="reviews-best-equine-supplements-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Supplements Are Not a Substitute for Veterinary Care</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
