@@ -11,6 +11,8 @@ import {
   DropCap,
   ArticleSourcesList,
   CrossPortfolioCard,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -152,6 +154,51 @@ export default function FerretDeadSleepPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret dead-sleep checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret dead-sleep checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-dead-sleep-chart,
+              fridge-wake-safely-card, and
+              mustelid-dead-sleep-reference-handbook notes
+              that match the dead-sleep-vs-emergency-map,
+              wake-safely-log, and
+              afa-deep-sleep-grounding copy on this page —
+              a laminated ferret dead-sleep chart so the
+              limp-but-rousable / 14-to-18-hour map is
+              posted on the fridge (not a behavior-hub
+              cue chart, not a bonding-week chart, not a
+              bite-inhibition chart), a ferret fridge
+              wake-safely card so warm-hands / scent /
+              no-shake notes are labeled on the fridge
+              (not a behavior card, not a scent-trust
+              card, not a bite-type card), and a mustelid
+              dead-sleep reference handbook so the AFA
+              deep-sleep grounding is a physical kitchen
+              book (not a behavior handbook, not a
+              bonding handbook, not a bite-inhibition
+              handbook). Educational kitchen checklist,
+              not a ranked toy list, not a sleep-sack
+              hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret dead-sleep checklist"
+              subtitle="Email the dead-sleep-chart, fridge wake-safely card, and dead-sleep-handbook notes. No spam."
+              ctaText="Email my ferret dead-sleep checklist"
+              source="behavior-dead-sleep-under-hero"
+            />
+          </div>
+
           <DropCap>
             There is a particular kind of panic reserved for new ferret owners.
             You reach into the hammock, lift out your ferret, and it hangs limp
@@ -286,6 +333,79 @@ export default function FerretDeadSleepPage() {
             pale gums, weakness, or seizure-like signs, is a potential emergency
             warranting immediate exotic-pet veterinary care.
           </p>
+
+          <p className="text-sm leading-relaxed text-brand-text-mid">
+            Keep a physical ferret dead-sleep kitchen kit
+            next to this page — a laminated ferret
+            dead-sleep chart so the limp-but-rousable /
+            14-to-18-hour map is posted on the fridge, a
+            ferret fridge wake-safely card so warm-hands /
+            scent / no-shake notes are labeled on the
+            fridge, and a mustelid dead-sleep reference
+            handbook so the AFA deep-sleep grounding is a
+            physical kitchen book. These are educational
+            kitchen searches, not a ranked toy list, not a
+            substitute for an exotic-mammal veterinarian,
+            not a behavior-hub / bonding / biting hop, and
+            not a child toothbrush / dosing hop. This page
+            does not hop medications or vaccines. This
+            page does not sell insurance. This page does
+            not claim hands-on testing. Ferret aging stays
+            held.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret dead-sleep chart /
+              ferret fridge wake-safely card /
+              mustelid dead-sleep reference handbook).
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs behavior-hub /
+              bonding / biting kitchen kits and child
+              sleep-sack / snuffle-mat hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret dead-sleep kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page dead-sleep-vs-emergency-map,
+              wake-safely-log, and
+              afa-deep-sleep-grounding copy — a laminated
+              ferret dead-sleep chart, a ferret fridge
+              wake-safely card, and a mustelid dead-sleep
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked toy
+              list, they are not a behavior-hub / bonding
+              / biting hop, they are not a child
+              toothbrush hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+dead+sleep+chart?s=dead-sleep-explained"
+                amazonLabel="Browse laminated ferret dead-sleep charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+wake+safely+card?s=dead-sleep-explained"
+                amazonLabel="Browse ferret fridge wake-safely cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+dead+sleep+reference+handbook?s=dead-sleep-explained"
+                amazonLabel="Browse mustelid dead-sleep reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
