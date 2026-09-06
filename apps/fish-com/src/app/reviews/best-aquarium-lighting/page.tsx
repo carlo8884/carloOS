@@ -36,6 +36,42 @@ export default function BestAquariumLightingPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the aquarium-lighting checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Aquarium-lighting checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the lighting notes that match the
+                Hygger 957, Fluval Plant 3.0, Kessil
+                A360X, and Nicrew copy on this page —
+                a Hygger 957 so a low-tech planted
+                tank keeps 45–65 PAR at 20 inches, a
+                Fluval Plant 3.0 so a high-tech
+                planted tank keeps app-controlled
+                spectrum, and a Kessil A360X so a
+                mixed reef keeps SPS-capable PAR.
+                Educational lighting checklist, not a
+                new product hop, not livestock, and
+                not a substitute for a fish
+                veterinarian. The existing Hygger /
+                Fluval / Kessil / Nicrew Amazon
+                searches stay below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Aquarium-lighting checklist"
+                subtitle="Email the Hygger, Fluval, Kessil, and Nicrew notes. No spam."
+                ctaText="Email my aquarium-lighting checklist"
+                source="reviews-best-aquarium-lighting-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most planted tanks the budget <strong>Hygger 957</strong> is our overall pick — planted-capable PAR with seven programmable channels well under $60. Step up to the app-controlled <strong>Fluval Plant 3.0</strong> for high-tech planted tanks needing the best spectrum quality. For reef tanks the <strong>Kessil A360X</strong> is the pick; for fish-only/FOWLR setups, the budget <strong>Nicrew Classic LED+</strong>. PAR at the substrate is what matters — match it to your tank type.</p>
