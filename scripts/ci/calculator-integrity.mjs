@@ -8079,6 +8079,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1248: ferret stress-signs under-hero is on main. Verify-first care/diet list had no remaining Amazon leftovers (bathing hop-less; multi-level-housing and introducing-a-second-ferret already pinned; food-label and whole-prey hop-less). Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture, the already-hopped vest Amazon search, and the existing Marshall H-style hop; add under-hero capture with a concrete ferret leash-and-harness-checklist offer matching on-page no-collar / two-finger-fit / indoor-break-in / 80F-heat copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · best-ferret-litter hops',
+    file: 'apps/ferret-com/src/app/reviews/best-ferret-litter/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-ferret-litter-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-litter checklist"/, label: 'concrete ferret-litter-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-litter"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing heat-treated wood-pellet amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing grass-pellet amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/yesterdays\+news\+recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing Yesterday\'s News paper-pellet Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1249: ferret leash-and-harness under-hero is on main. Preferred ferret Amazon leftovers and fish/vets/dog/horses Amazon leftovers are exhausted; this is the remaining ferret review leftover (litter was deprioritized until now). Keep the existing sidebar capture, the already-hopped wood / grass Amazon searches, and the product-specific Yesterday\'s News Chewy hop; add under-hero capture with a concrete ferret-litter-checklist offer matching on-page no-clump / low-dust / paper-default / heat-treated-wood copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Enrichment stays deprioritized; ferret aging stays held.',
+  },
 
 ]
 
