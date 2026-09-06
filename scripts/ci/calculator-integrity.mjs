@@ -7928,6 +7928,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1240: dog.com slow-feeder review under-hero is on main. Dog.com /reviews/* Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped Platinum / KER EO-3 / Equithrive / Standlee Amazon searches; add under-hero capture with a concrete equine-supplement-checklist offer matching on-page NASC / diagnose-first / Cosequin ASU / marine DHA-EPA / forage-first copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · joint-supplements hops',
+    file: 'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
+    mustInclude: [
+      { re: /source="supplements-joint-supplements-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my equine joint-supplement checklist"/, label: 'concrete equine joint-supplement-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="supplements-joint"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/platinum\+performance\+CJ\+joint\+supplement\?s=supplements-joint-supplements/, label: 'existing Platinum CJ amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1241: equine-supplement review under-hero is on main. Last remaining horses.com Amazon leftover (review/money pages). Keep the existing sidebar capture and the already-hopped Platinum CJ Amazon search; add under-hero capture with a concrete equine joint-supplement-checklist offer matching on-page diagnose-first / ASU / marine DHA-EPA / devil-claw FEI copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
