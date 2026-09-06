@@ -5261,6 +5261,30 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture, existing AffiliateDisclosure, and existing slow-feeder hay-net ReviewCard; under-hero capture with a concrete horse forage-first-checklist offer; every new gear CTA is an amazon-brand category search matching on-page cleanliness / representative-sample / keep-forage-off-the-ground copy (a hay-probe moisture tester so moldy forage is not stored or fed, a hay-core sampler so a lab sample is representative, a wall-mounted hay rack so forage stays off dirty ground), never a placeholder ASIN, an EMS hay-test or bale-scale hop, a heaves steamer hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · grain-and-concentrates hops',
+    file: 'apps/horses-com/src/app/nutrition/grain-and-concentrates/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-grain-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse grain-and-concentrate checklist"/, label: 'concrete horse grain-and-concentrate-checklist offer, not Subscribe' },
+      { re: /source="nutrition-grain"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/complete\+pelleted\+horse\+feed\+formulated\?s=nutrition-grain-and-concentrates/, label: 'existing formulated complete-feed ReviewCard hop kept in place' },
+      { re: /amazon-brand\/low\+starch\+senior\+horse\+feed\?s=nutrition-grain-and-concentrates/, label: 'existing low-starch senior-feed ReviewCard hop kept in place' },
+      { re: /amazon-brand\/tabletop\+digital\+horse\+grain\+scale\?s=nutrition-grain/, label: 'tabletop digital horse grain-scale search hop (matches on-page weigh-not-scoop copy; unique vs horse+feed+scoop+scale / digital+hanging+hay+bale+scale / livestock+barn+scale)' },
+      { re: /amazon-brand\/stackable\+rubber\+horse\+feed\+tubs\?s=nutrition-grain/, label: 'stackable rubber horse feed-tubs search hop (matches on-page split-small-meals copy; unique vs round+rubber+feed+pan+horse / large+smooth+feed+tub+rocks)' },
+      { re: /amazon-brand\/rodent\+proof\+metal\+horse\+feed\+bin\?s=nutrition-grain/, label: 'rodent-proof metal horse feed-bin search hop (matches on-page keep-grain-consistent copy; unique vs airtight+locking+pet+food+bin / airtight+dog+food+storage+container)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(horse\+hay\+probe\+moisture\+tester|equine\+hay\+core\+sampler|wall\+mounted\+horse\+hay\+rack|plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|horse\+feed\+scoop\+scale|livestock\+barn\+scale|round\+rubber\+feed\+pan\+horse|large\+smooth\+feed\+tub\+rocks|lidded\+5\+gallon\+feed\+soaking\+pail|horse\+hay\+steamer|horse\+hay\+soaking\+bag|automatic\+horse\+waterer|stainless\+horse\+shedding\+blade|wicking\+horse\+anti\+sweat\+sheet|equine\+hoof\+angle\+gauge|leather\+horse\+lunge\+cavesson|neoprene\+horse\+overreach\+bell\+boots|tow\+behind\+arena\+drag\+harrow|cotton\+horse\+polo\+exercise\+wraps|portable\+horse\+paddock\+panels|portable\+3\+sided\+horse\+run\+in\+shelter|labeled\+stackable\+horse\+grooming\+caddy|large\+mesh\+horse\+blanket\+wash\+bag|heavy\+duty\+paddock\+mud\+grid|full\+length\+horse\+turnout\+boots|waffle\+weave\+horse\+leg\+towel|irish\+knit\+horse\+cooler|wool\+exercise\+quarter\+sheet|steel\+heart\+bar\+horseshoe|3\+degree\+leather\+wedge\+pad|rocker\+toe\+steel\+horseshoe|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop #1111 hay-probe / core-sampler / hay-rack, #1110 salt-block / salt-first-powder / water-bucket, #1105 hay-bale-scale / NSC kit / strip-grazing, feed-calculator scoop-scale, weight-calculator livestock scale, flu feed-pan, choke tub-rocks / soaking-pail, or Rx / vaccine — this page hops only tabletop-digital-horse-grain-scale / stackable-rubber-horse-feed-tubs / rodent-proof-metal-horse-feed-bin gear plus the existing ReviewCard feeds' },
+    ],
+    why: 'Money path: keep the existing sidebar capture, existing AffiliateDisclosure, and existing complete-feed / low-starch ReviewCards; under-hero capture with a concrete horse grain-and-concentrate-checklist offer; every new gear CTA is an amazon-brand category search matching on-page weigh-not-scoop / split-small-meals / keep-grain-consistent copy (a tabletop grain scale so concentrates are weighed not scooped, stackable rubber feed tubs so a daily ration is split into several small meals, a rodent-proof metal feed bin so grain stays clean and the ration does not drift), never a placeholder ASIN, a feed-scoop-scale hop, an EMS hay-bale-scale hop, a forage #1111 hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
