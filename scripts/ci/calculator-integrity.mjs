@@ -365,6 +365,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1254: vets.co /tools hub under-hero is on main. This existing ferret.com /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-ferret-measurement-log / AFA-GA-and-grimace copy (a laminated ferret calculator-tools chart so the emergency / grimace / age / BCS / food / cost / litter / cage map is posted on the fridge, a ferret fridge measurement card so each ferret’s age label / BCS / food verdict / cage minimums is labeled on the fridge, a mustelid calculator reference handbook so the AFA cage floor / guaranteed-analysis / grimace grounding is a physical kitchen book), never a placeholder ASIN, a child-tool Critter-Nation hop, or a vaccine / prescription hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Ferret aging stays held. Do not re-open #1251–#1254 / crate-size / stocking.',
   },
   {
+    id: 'dog · reviews hub',
+    file: 'apps/dog-com/src/app/reviews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog reviews-hub checklist"/, label: 'concrete dog reviews-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+reviews\+buyer\+guide\+chart\?s=reviews-hub/, label: 'laminated dog reviews buyer-guide-chart search hop (matches on-page reviews-section-map copy; unique vs laminated+dog+calculator+tools+chart / wire+dog+crate+with+divider+panel)' },
+      { re: /amazon-brand\/dog\+fridge\+reviews\+comparison\+card\?s=reviews-hub/, label: 'dog fridge reviews comparison-card search hop (matches on-page per-category-comparison-log copy; unique vs dog+fridge+measurement+card / dog+crate+pad)' },
+      { re: /amazon-brand\/canine\+reviews\+reference\+handbook\?s=reviews-hub/, label: 'canine reviews reference-handbook search hop (matches on-page WSAVA-VOHC-and-editorial-criteria copy; unique vs canine+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+calculator\+tools\+chart|dog\+fridge\+measurement\+card|canine\+calculator\+reference\+handbook|wire\+dog\+crate\+with\+divider\+panel|dog\+crate\+pad|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub calculator-tools-chart / fridge-measurement-card / calculator-handbook, child-review crate hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-dog-reviews-buyer-guide-chart / dog-fridge-reviews-comparison-card / canine-reviews-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1255: five-site tools-hub set is on main. This existing dog.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / WSAVA-VOHC-and-editorial-criteria copy (a laminated dog reviews buyer-guide chart so the food / crate / harness / bed / GPS map is posted on the fridge, a dog fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a canine reviews reference handbook so the WSAVA / VOHC / editorial-criteria grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child-review crate hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1255 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
