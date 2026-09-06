@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
+  EmailCapture,
   SchemaScript,
+  ShopCtas,
   StockImage,
 } from '@carloOS/ui'
 import { Medications, type Medication } from '../../data/medications'
@@ -152,6 +155,61 @@ export default function MedicationsHubPage() {
         <StockImage manifestKey="vets-co:medications-hero" aspect="16:9" variant="wide" priority />
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vets medications-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vets medications-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-therapeutic-category-chart,
+            fridge-monitoring-recheck-card, and
+            veterinary-plumbs-reference-handbook notes that
+            match the therapeutic-category-map, no-dose-owner-log,
+            and fda-cvm-plumbs-grounding copy on this hub — a
+            laminated pet therapeutic category chart so the
+            dermatology / pain / cardiac / antibiotic /
+            endocrine / behavior map is posted on the fridge
+            (not a tools-hub calculator chart, not an
+            insurance policy-map chart, not a reviews
+            buyer-guide chart, not a health triage chart, not
+            a guides section-map chart, not a breeds
+            screening chart, not a diagnostics test-map
+            chart, not a symptoms triage chart), a pet fridge
+            monitoring recheck card so each bloodwork-and-
+            recheck spoke is labeled on the fridge (not a cat
+            measurement card, not an insurance levers card,
+            not a reviews comparison card, not a health
+            library card, not a guides prep card, not a
+            breeds library card, not a diagnostics library
+            card, not a symptoms library card), and a
+            veterinary Plumb&apos;s reference handbook so the
+            FDA CVM / Plumb&apos;s grounding is a physical
+            kitchen book (not a feline calculator handbook,
+            not an insurance handbook, not a reviews
+            handbook, not a health handbook, not a guides
+            handbook, not a breeds handbook, not a
+            diagnostics handbook, not a symptoms handbook).
+            Educational kitchen checklist, not a ranked
+            drug list, not a child elevated-cot hop, and not
+            a substitute for a veterinarian. This page does
+            not publish doses. Vets.co does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Vets medications-hub checklist"
+            subtitle="Email the therapeutic-category-chart, fridge recheck-card, and Plumb's-handbook notes. No spam."
+            ctaText="Email my vets medications-hub checklist"
+            source="medications-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container pt-8 max-w-6xl">
         <a href="/medications/can-i-give-my-dog" className="block rounded-xl border-2 border-brand-primary/40 bg-brand-primary/5 p-5 no-underline hover:border-brand-primary transition">
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Human &amp; OTC medicine safety</span>
@@ -279,6 +337,90 @@ export default function MedicationsHubPage() {
           </Link>
         </section>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Medications-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          therapeutic-category-map, no-dose-owner-log, and
+          fda-cvm-plumbs-grounding copy on this hub — a
+          laminated pet therapeutic category chart so the
+          dermatology / pain / cardiac / antibiotic /
+          endocrine / behavior map is posted on the fridge,
+          a pet fridge monitoring recheck card so each
+          bloodwork-and-recheck spoke is labeled on the
+          fridge, and a veterinary Plumb&apos;s reference
+          handbook so the FDA CVM / Plumb&apos;s grounding
+          is a physical kitchen book. These are educational
+          kitchen searches, not a ranked drug list, not a
+          substitute for a veterinarian, not a tools-hub /
+          insurance-hub / reviews-hub / health-hub /
+          guides-hub / breeds-hub / diagnostics-hub /
+          symptoms-hub hop, and not a child elevated-cot
+          hop (those live on pain-management children).
+          This page does not hop doses, flea products, or
+          vaccines. This page does not sell insurance.
+          This page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated pet therapeutic category chart /
+            pet fridge monitoring recheck card /
+            veterinary Plumb's reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / insurance /
+            reviews / health / guides / breeds /
+            diagnostics / symptoms kitchen kits and child
+            elevated+mesh+dog+cot hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the medications-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page therapeutic-category-map,
+            no-dose-owner-log, and fda-cvm-plumbs-grounding
+            copy — a laminated pet therapeutic category
+            chart, a pet fridge monitoring recheck card,
+            and a veterinary Plumb&apos;s reference
+            handbook. Educational kitchen searches only.
+            They are not a ranked drug list, they are not
+            a tools-hub / insurance-hub / reviews-hub /
+            health-hub / guides-hub / breeds-hub /
+            diagnostics-hub / symptoms-hub hop, they are
+            not a child elevated-cot hop, and they do not
+            replace a veterinarian. This page does not
+            publish doses. Vets.co does not sell
+            insurance. Vets.co earns a commission on
+            qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+therapeutic+category+chart?s=medications-hub"
+              amazonLabel="Browse laminated pet therapeutic category charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+monitoring+recheck+card?s=medications-hub"
+              amazonLabel="Browse pet fridge monitoring recheck cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+plumbs+reference+handbook?s=medications-hub"
+              amazonLabel="Browse veterinary Plumb's reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
