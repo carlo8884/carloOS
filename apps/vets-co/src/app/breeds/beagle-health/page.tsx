@@ -5,6 +5,8 @@ import {
   EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,10 +132,44 @@ export default function VetsBeagleHealthPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Beagle health checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Beagle health checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prep notes that match the
+              epilepsy, obesity, and screening copy
+              on this page — an analog stopwatch so
+              seizure duration stays a written
+              count against the five-minute
+              emergency line, blank index cards
+              so each seizure stays one dated card,
+              and a recipe-card box so measured
+              meals stay one card per ration.
+              Educational checklist, not a
+              diagnosis, not a substitute for
+              veterinary care, and not a divider,
+              outdoor-thermometer, or checklist-
+              notepad hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Beagle health checklist"
+              subtitle="Email the stopwatch, index-card, and recipe-box notes. No spam."
+              ctaText="Email my Beagle health checklist"
+              source="breeds-beagle-health-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-06T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -173,7 +209,7 @@ export default function VetsBeagleHealthPage() {
               'Post-ictal phase: disorientation, blindness, ataxia lasting minutes to hours',
               'Cluster seizures (≥2 in 24 h) or seizure >5 min — emergency',
             ]}
-            management="Document seizures (date, duration, video). Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology."
+            management="Document seizures (date, duration, video). An analog stopwatch is how that duration stays a written count against the five-minute emergency line — it is not a mechanical kitchen timer (that lives on german-shepherd-health) and not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet). Blank index cards are how each seizure stays one dated card — they are not ruled index cards (that live on questions-to-ask-your-vet), not a top-bound steno pad (that lives on german-shepherd-health), and not a bound composition book (that lives on labrador-health). Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology."
             guideHref="/find-a-vet"
             guideLabel="Find a veterinary neurologist →"
           />
@@ -234,7 +270,7 @@ export default function VetsBeagleHealthPage() {
               'No abdominal tuck from the side',
               'Reduced exercise tolerance, reluctant to walk',
             ]}
-            management={'Measure every meal — never free-feed. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
+            management={'Measure every meal — never free-feed. A recipe-card box is how those measured meals stay one card per ration — it is not a four-tab divider (that lives on french-bulldog-health), not a weekly checklist notepad (that lives on french-bulldog-health), and not a hardcover weekly appointment planner. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
           />
 
           <BreedHealthCard
@@ -306,6 +342,93 @@ export default function VetsBeagleHealthPage() {
             typically covers these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
+
+          <h2 id="kit">Beagle-health kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            epilepsy, obesity, and screening copy on
+            this page — an analog stopwatch so
+            seizure duration stays a written count
+            against the five-minute emergency line,
+            blank index cards so each seizure
+            stays one dated card, and a recipe-card
+            box so measured meals stay one card per
+            ration. These are educational
+            Beagle-health / paperwork tools, not a
+            ranked product list, not a substitute
+            for veterinary care, and not a
+            treatment. Four-tab dividers, analog
+            outdoor thermometers, and weekly
+            checklist notepads already live on
+            french-bulldog-health. Top-bound steno
+            pads, mechanical kitchen timers, and
+            self-adhesive file-folder labels already
+            live on german-shepherd-health. This
+            page does not hop medications, enzymes,
+            or insurance brands as Amazon searches.
+            This page does not claim hands-on
+            testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (analog stopwatch /
+              blank index cards /
+              recipe-card box).
+              These are educational
+              Beagle-health / paperwork tools,
+              not a ranked product list, not a
+              substitute for veterinary care, no
+              Rx / first-aid kit / thermometer /
+              carrier / insurance-brand ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1178
+              four+tab+dividers /
+              analog+outdoor+thermometer /
+              weekly+checklist+notepad,
+              #1177
+              top+bound+steno+pad /
+              mechanical+kitchen+timer /
+              self+adhesive+file+folder+labels. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Beagle-health kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page epilepsy, obesity, and
+              screening copy — an analog stopwatch,
+              blank index cards, and a recipe-card
+              box. Educational Beagle-health /
+              paperwork tools only. They are not a
+              ranked product list, they are not a
+              substitute for veterinary care, they
+              are not a #1178 divider / outdoor-
+              thermometer / checklist-notepad hop,
+              they are not a financing-brand or
+              insurance-brand hop, and they do not
+              replace a veterinarian. Vets.co earns
+              a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health"
+                amazonLabel="Browse analog stopwatches on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/blank+index+cards?s=breeds-beagle-health"
+                amazonLabel="Browse blank index cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"
+                amazonLabel="Browse recipe-card boxes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion

@@ -6747,6 +6747,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1177: keep the existing sidebar capture; add under-hero capture with a concrete French Bulldog health checklist offer; every gear CTA is an amazon-brand category search matching on-page BOAS / IVDD / heat-risk copy (four-tab dividers so BOAS grades 0–III stay four labeled stacks, an analog outdoor thermometer so the 70°F outdoor limit stays a written cutoff, a weekly checklist notepad so fold-cleaning two-to-three times a week stays a dated list), never a placeholder ASIN, a #1177 steno-pad / kitchen-timer / file-label hop, a dog-com Frenchie cooling hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational French-bulldog-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · beagle-health hops',
+    file: 'apps/vets-co/src/app/breeds/beagle-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-beagle-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Beagle health checklist"/, label: 'concrete Beagle health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-beagle"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/analog\+stopwatch\?s=breeds-beagle-health/, label: 'analog-stopwatch search hop (matches on-page seizure-duration / five-minute emergency copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / analog+outdoor+thermometer)' },
+      { re: /amazon-brand\/blank\+index\+cards\?s=breeds-beagle-health/, label: 'blank-index-cards search hop (matches on-page document-seizures date/duration copy; unique vs ruled+index+cards / top+bound+steno+pad / bound+composition+book)' },
+      { re: /amazon-brand\/recipe\+card\+box\?s=breeds-beagle-health/, label: 'recipe-card-box search hop (matches on-page measure-every-meal / never-free-feed copy; unique vs four+tab+dividers / weekly+checklist+notepad / hardcover+weekly+appointment+planner)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(four\+tab\+dividers|analog\+outdoor\+thermometer|weekly\+checklist\+notepad|top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|blank\+pedigree\+chart|round\+color\+coding\+labels|5\+compartment\+letter\+sorter|3\+tab\+dividers|ruled\+index\+cards|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen|phenobarbital|levetiracetam)/, label: 'never hop #1178 divider / outdoor-thermometer / checklist-notepad, #1177 steno-pad / kitchen-timer / file-label, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only analog-stopwatch / blank-index-cards / recipe-card-box gear' },
+    ],
+    why: 'Money path leftover after #1178: keep the existing sidebar capture; add under-hero capture with a concrete Beagle health checklist offer; every gear CTA is an amazon-brand category search matching on-page epilepsy / obesity / screening copy (an analog stopwatch so seizure duration stays a written count against the five-minute emergency line, blank index cards so each seizure stays one dated card, a recipe-card box so measured meals stay one card per ration), never a placeholder ASIN, a #1178 divider / outdoor-thermometer / checklist-notepad hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Beagle-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
