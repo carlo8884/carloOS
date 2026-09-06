@@ -6835,6 +6835,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1181: keep the existing sidebar capture; add under-hero capture with a concrete Siberian Husky health checklist offer; every gear CTA is an amazon-brand category search matching on-page ACVO / GDV / zinc-dermatosis copy (an academic-year planner so the annual CAER eye exam stays one dated visit covering cataracts, PRA, and corneal dystrophy, an 8-column columnar pad so eyes, hips, thyroid, gastropexy, and platelet review stay one written row, a newsprint sketch pad so facial crusting sites and PRA furniture-layout cues stay drawn), never a placeholder ASIN, a #1181 analysis-pad / blotter / numbered-log hop, a weekly-planner or magnetic-planner hop, a zinc or levothyroxine hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Siberian-husky-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · pomeranian-health hops',
+    file: 'apps/vets-co/src/app/breeds/pomeranian-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-pomeranian-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Pomeranian health checklist"/, label: 'concrete Pomeranian health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-pomeranian"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/analog\+indoor\+hygrometer\?s=breeds-pomeranian-health/, label: 'analog-indoor-hygrometer search hop (matches on-page heat-and-humidity cough-trigger copy; unique vs analog+outdoor+thermometer / analog+stopwatch / digital+pet+thermometer)' },
+      { re: /amazon-brand\/6\+column\+columnar\+pad\?s=breeds-pomeranian-health/, label: '6-column-columnar-pad search hop (matches on-page patellar-grade / murmur / dental-score / BCS well-visit row; unique vs 8+column+columnar+pad / 13+column+analysis+pad / four+column+accounting+pad)' },
+      { re: /amazon-brand\/undated\+daily\+planner\?s=breeds-pomeranian-health/, label: 'undated-daily-planner search hop (matches on-page thyroid / ACTH / LDDS dates before accepting alopecia X; unique vs academic+year+planner / hardcover+weekly+appointment+planner / monthly+desk+pad+calendar)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(academic\+year\+planner|8\+column\+columnar\+pad|newsprint\+sketch\+pad|13\+column\+analysis\+pad|desk\+blotter\+pad|numbered\+log\+book|two\+column\+ledger\+pad|30\+day\+habit\+tracker\+pad|hourly\+desk\+pad|analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|four\+tab\+dividers|analog\+outdoor\+thermometer|weekly\+checklist\+notepad|top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|four\+column\+accounting\+pad|monthly\+desk\+pad\+calendar|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|lined\+telephone\+message\+pad|dog\+dental\+finger\+brush|step\+in\+padded\+dog\+harness|dog\+ramp|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen|melatonin|trilostane)/, label: 'never hop #1182 planner / columnar-pad / sketch-pad, #1181 analysis-pad / blotter / numbered-log, weekly-planner / magnetic-planner, melatonin / trilostane, insurance-brand amazon-brand hops, or Rx — this page hops only analog-indoor-hygrometer / 6-column-columnar-pad / undated-daily-planner gear' },
+    ],
+    why: 'Money path leftover after #1182: keep the existing sidebar capture; add under-hero capture with a concrete Pomeranian health checklist offer; every gear CTA is an amazon-brand category search matching on-page trachea / PDA / alopecia X copy (an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a 6-column columnar pad so patellar grade, murmur, dental score, and body condition stay one well-visit row, an undated daily planner so thyroid / ACTH / LDDS dates stay written before anyone accepts alopecia X), never a placeholder ASIN, a #1182 planner / columnar-pad / sketch-pad hop, a weekly-planner or magnetic-planner hop, a melatonin or trilostane hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Pomeranian-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
