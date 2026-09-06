@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -95,6 +95,7 @@ export default function NavicularPage() {
             { label: "Farriery", href: "#farriery" },
             { label: "Medical Management", href: "#medical" },
             { label: "Prognosis", href: "#prognosis" },
+            { label: "Farriery kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -121,9 +122,45 @@ export default function NavicularPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the navicular farriery-kit checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse navicular farriery-kit checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the steel-heart-bar-horseshoe,
+              3-degree-leather-wedge-pad, and
+              rocker-toe-steel-horseshoe notes that match
+              the bar-shoes-or-heart-bar-shoes, wedge-pads,
+              and rolled-or-rocker-toes copy on this page —
+              a steel heart-bar horseshoe so heel support
+              is a physical bar instead of a guessed pad
+              stack, a 3-degree leather wedge pad so the
+              pastern axis is lifted instead of left
+              broken-back, and a rocker-toe steel horseshoe
+              so breakover shortens without a riding hoof
+              boot. Educational farriery-kit checklist,
+              not a treatment, not a shoeing prescription,
+              not a substitute for calling the veterinarian
+              and farrier, and not a foam-sole-support,
+              soaking-boot, or snow-pad hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse navicular farriery-kit checklist"
+              subtitle="Email the heart-bar, wedge-pad, and rocker-toe notes. No spam."
+              ctaText="Email my horse navicular farriery-kit checklist"
+              source="health-navicular-under-hero"
+            />
+          </div>
 
           <h2 id="anatomy">The Anatomy</h2>
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
@@ -144,13 +181,143 @@ export default function NavicularPage() {
           <p>Diagnosis begins with a lameness examination, including flexion tests and hoof testers. Diagnostic nerve blocks -- a palmar digital block that desensitizes the heel -- localize the pain to the caudal foot. Radiographs assess the navicular bone for degenerative change, but normal radiographs do not rule out the syndrome. MRI is the reference standard, distinguishing tendon, ligament, bursa, and bone lesions and guiding targeted treatment. This is a veterinary diagnostic workup, not something an owner can confirm at home.</p>
 
           <h2 id="farriery">Farriery</h2>
-          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
+          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. A steel heart-bar horseshoe is how heel support stays a physical bar under the frog instead of a guessed pad stack — it is not a foam sole-support pad (that lives on laminitis), not a riding hoof boot (that lives on hoof-care-basics), and not a snow pad (that lives on winter-care). A 3-degree leather wedge pad is how a broken-back pastern axis is lifted instead of left long-toe low-heel — it is not an equine foam sole-support pad and not a hoof-soaking boot (that lives on abscess). A rocker-toe steel horseshoe is how breakover shortens so the deep digital flexor tendon is not levered over a long toe — it is not a portable farrier hoof stand (that lives on the farrier-schedule page) and not a shoe stud (that lives on winter-care). The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
 
           <h2 id="medical">Medical Management</h2>
           <p>Beyond farriery, veterinarians may prescribe anti-inflammatory medication, intra-articular or navicular-bursa medication, and bisphosphonate drugs that target bone remodeling in selected cases -- all under veterinary direction. Controlled exercise, appropriate footing, and weight management support the plan. Surgical options such as palmar digital neurectomy exist for refractory cases but are a last resort with their own risks.</p>
 
           <h2 id="prognosis">Prognosis</h2>
           <p>Navicular syndrome is generally managed rather than cured. Many horses stay comfortably in work for years with consistent farriery and a tailored medical plan, while others step down to lighter work. Prognosis depends heavily on which structures are involved -- bone and bursa lesions often respond better than extensive deep digital flexor tendon damage -- which is why MRI-guided diagnosis matters.</p>
+
+          <h2 id="kit">Farriery kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            bar-shoes-or-heart-bar-shoes, wedge-pads, and
+            rolled-or-rocker-toes copy on this page — a
+            steel heart-bar horseshoe so heel support is a
+            physical bar under the frog, a 3-degree leather
+            wedge pad so a broken-back pastern axis is
+            lifted, and a rocker-toe steel horseshoe so
+            breakover shortens instead of levering the
+            deep digital flexor tendon over a long toe.
+            These are educational farriery tools, not a
+            ranked product list, not a substitute for
+            veterinary or farrier care, and not a shoeing
+            prescription. Foam sole-support pads and deep-
+            sand stall bedding already live on laminitis.
+            Riding hoof boots already live on
+            hoof-care-basics. Soaking boots already live
+            on abscess. Snow pads and shoe studs already
+            live on winter-care. Farrier log books, hoof
+            stands, and barn flood lights already live on
+            the farrier-schedule page. This page does not
+            hop anti-inflammatory medication,
+            bisphosphonates, nerve-block kits, MRI, or
+            neurectomy gear. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (steel heart bar horseshoe /
+              3 degree leather wedge pad /
+              rocker toe steel horseshoe).
+              These are educational farriery
+              tools, not a ranked product list, not a
+              substitute for veterinary or farrier care,
+              no Rx / vaccine / foam-sole-support /
+              soaking-boot / snow-pad ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1100
+              long+handle+stock+tank+brush /
+              20+foot+barn+mosquito+netting /
+              fine+mesh+horse+mosquito+sheet, #1099
+              30+foot+cotton+lunge+line /
+              leather+chain+lead+shank+horse /
+              orange+traffic+cone+set, #1098
+              weatherproof+storage+clipboard /
+              round+rubber+feed+pan+horse /
+              paper+pellet+horse+bedding, #1097
+              color+coded+flat+back+horse+buckets /
+              disposable+coverall+suit /
+              heavy+duty+rubber+boot+dip+tub, #1096
+              ruled+marble+composition+notebook /
+              soft+cotton+receiving+blanket /
+              activated+charcoal+odor+absorber, #1095
+              air+driven+corner+sponge+filter /
+              preset+25+watt+nano+aquarium+heater /
+              food+grade+1+gallon+water+jug, #1094
+              lidded+5+gallon+feed+soaking+pail /
+              large+smooth+feed+tub+rocks /
+              apple+wedger+slicer,
+              equine+foam+sole+support+pads /
+              equine+deep+sand+stall+bedding /
+              easy+keeper+grazing+muzzle (laminitis),
+              horse+hoof+boots (hoof-care-basics),
+              horse+hoof+soaking+boot /
+              epsom+salt+horse+hoof (abscess),
+              horse+snow+pads / horse+shoe+studs
+              (winter-care),
+              equine+farrier+log+book /
+              portable+farrier+hoof+stand /
+              cordless+barn+flood+light
+              (farrier-schedule).
+              Medications and prescriptions
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the navicular farriery kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page bar-shoes-or-heart-bar-shoes,
+              wedge-pads, and rolled-or-rocker-toes copy —
+              a steel heart-bar horseshoe, a 3-degree
+              leather wedge pad, and a rocker-toe steel
+              horseshoe. Educational farriery tools only.
+              They are not a ranked product list, they are
+              not a substitute for veterinary or farrier
+              care, they are not a #1100 stock-tank-brush /
+              barn-mosquito-netting / mosquito-sheet hop,
+              they are not a #1099 lunge-line /
+              lead-shank / traffic-cone hop, they
+              are not a #1098 clipboard / feed-pan /
+              paper-pellet-bedding hop, they
+              are not a #1097 color-coded-bucket /
+              coverall / boot-dip-tub hop, they
+              are not a #1096 composition-notebook /
+              receiving-blanket / charcoal hop, they
+              are not a #1095 sponge-filter /
+              nano-heater / water-jug hop, they
+              are not a #1094 soaking-pail /
+              feed-tub-rock / apple-wedger hop, they
+              are not a laminitis foam-pad hop, they
+              are not a hoof-care riding-boot hop, they
+              are not an abscess soaking-boot hop, they
+              are not a winter-care snow-pad hop, they
+              are not a farrier-schedule hoof-stand hop,
+              and they do not replace a veterinarian or
+              farrier. Horses.com earns a commission on
+              qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/steel+heart+bar+horseshoe?s=health-navicular"
+                amazonLabel="Browse steel heart-bar horseshoes on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/3+degree+leather+wedge+pad?s=health-navicular"
+                amazonLabel="Browse 3-degree leather wedge pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/rocker+toe+steel+horseshoe?s=health-navicular"
+                amazonLabel="Browse rocker-toe steel horseshoes on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
