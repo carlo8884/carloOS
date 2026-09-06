@@ -102,6 +102,40 @@ export default function HydrationAndWaterPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret-hydration checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret-hydration checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the hydration notes that match
+              the copy on this page — a heavy ceramic
+              bowl as the primary source so a ferret
+              can lap in volume, a sipper bottle only
+              as a spill-free backup that is checked
+              daily for a clogged valve, kibble-fed
+              ferrets needing especially reliable
+              water, and heat-stress risk above the
+              high 70s. Educational hydration
+              checklist, not a new product hop and
+              not a substitute for an exotic-animal
+              veterinarian. The existing ceramic-bowl
+              and sipper-bottle Amazon searches stay
+              below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret-hydration checklist"
+              subtitle="Email the bowl-first and backup-bottle notes. No spam."
+              ctaText="Email my ferret-hydration checklist"
+              source="diet-hydration-and-water-under-hero"
+            />
+          </div>
+
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>
             Most ferrets drink more readily and more comfortably from a <strong>heavy ceramic bowl</strong> than from a sipper bottle. A bowl lets a ferret lap naturally and in volume; a bottle's ball valve releases water a drop at a time, which is slow and can frustrate a thirsty animal. The practical drawback of a bowl is that ferrets are diggers and tippers, so use a heavy, low, wide-based ceramic dish, or one that clips to the cage bars, and expect to refresh it more than once a day.
