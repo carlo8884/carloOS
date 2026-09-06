@@ -302,6 +302,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1251: preferred Amazon leftovers on existing content pages are exhausted. This existing dog.com /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-dog-measurement-log / RER-WSAVA-and-crate-size copy (a laminated dog calculator-tools chart so the calorie / crate / harness / age / water / BCS map is posted on the fridge, a dog fridge measurement card so each dog’s calorie estimate / crate minimums / harness band / water range is labeled on the fridge, a canine calculator reference handbook so the RER / WSAVA / crate-clearance grounding is a physical kitchen book), never a placeholder ASIN, a health-hub first-aid-kit hop, a crate-size child hop, or a vaccine / prescription hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Do not re-open crate-size / stocking.',
   },
   {
+    id: 'fish · tools hub',
+    file: 'apps/fish-com/src/app/tools/page.tsx',
+    mustInclude: [
+      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fish tools-hub checklist"/, label: 'concrete fish tools-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+aquarium\+calculator\+tools\+chart\?s=tools-hub/, label: 'laminated aquarium calculator-tools-chart search hop (matches on-page calculator-section-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+horse+barn+calculator+tools+chart / aquaclear+70+filter)' },
+      { re: /amazon-brand\/aquarium\+rim\+measurement\+card\?s=tools-hub/, label: 'aquarium rim measurement-card search hop (matches on-page per-tank-measurement-log copy; unique vs aquarium+stand / aquarium+digital+thermometer / dog+fridge+measurement+card)' },
+      { re: /amazon-brand\/aquarist\+calculator\+reference\+handbook\?s=tools-hub/, label: 'aquarist calculator reference-handbook search hop (matches on-page surface-area-bioload-and-KH-pH copy; unique vs canine+calculator+reference+handbook / equine+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(aquaclear\+70\+filter|fluval\+307\+canister\+filter|fluval\+spec\+v\+5\+gallon|eheim\+jager\+heater|api\+freshwater\+master\+test\+kit|seachem\+prime\+water\+conditioner|aquarium\+sand|aquarium\+stand|aquarium\+digital\+thermometer|aquarium\+gravel\+vacuum\+siphon|medication|medicine|prescription|rx\b)/, label: 'never hop equipment-hub / setup-aquarium AquaClear / Fluval / Eheim / API-test-kit / Prime / thermometer / gravel-vacuum, stocking sand, volume stand, or Rx — this page hops only laminated-aquarium-calculator-tools-chart / aquarium-rim-measurement-card / aquarist-calculator-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1252: dog.com /tools hub under-hero is on main. This existing fish.com /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete fish tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-tank-measurement-log / surface-area-bioload-and-KH-pH copy (a laminated aquarium calculator-tools chart so the volume / stocking / heater / filter / CO2 map is posted on the stand, an aquarium rim measurement card so each tank’s gallons / stocking load / heater watts / filter GPH is labeled on the rim, an aquarist calculator reference handbook so the surface-area / bioload / KH-pH grounding is a physical stand book), never a placeholder ASIN, an equipment-hub AquaClear hop, a stocking sand hop, or a prescription hop. Educational stand searches only — not a ranked product list, not a substitute for a water test. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open stocking / crate-size / #1252.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
