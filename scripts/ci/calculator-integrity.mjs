@@ -6229,6 +6229,25 @@ const CALCULATORS = [
     why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete trainer-credentials-CPDT-interview-checklist offer; every new gear CTA is an amazon-brand category search matching on-page credential-reference / hiring-interview / observe-a-session copy (a laminated dog CPDT-KA / CBCC-KA credential reference card so three-hundred-hours-of-documented-training-experience / five-hundred-hours-of-documented-behavior-consulting / knowledge-assessed-written-exam-rather-than-skills-assessed stay visible before anyone hires a trainer with no relevant education, a dog CPDT-KA hiring interview question card so what-credentials-do-you-hold / are-they-current / will-i-be-learning-to-train-my-dog stays posted, a dog trainer session-observation watch log notebook so can-i-observe-a-session-with-another-client / training-the-dog-while-excluding-the-owner / veterinary-reference-required stay written down), never a placeholder ASIN, a #1153 red-flags checklist / force-free interview / Easy Walk Front Range hop, a #1152 aggression warning-signal / type-and-function / never-alpha-roll hop, a #1151 resource-guarding trade-game / food-bowl / never-punish-growl hop, a #1150 off-leash recall-proofing / long-line / recall-cue never-punish hop, a leash-reactivity / loose-leash front-clip no-pull hop, a marker-training treat-pouch / clicker hop, a #1149 bits-guide hop, a shock/e-collar/prong/choke/alpha-roll hop, or a retractable-leash hop. Educational training searches only — not a ranked product list, not a clinic listing, not a substitute for a CPDT-KA, CBCC-KA, CAAB, or DACVB. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops on this page.',
   },
 
+  {
+    id: 'fish · quarantine-tank-guide hops',
+    file: 'apps/fish-com/src/app/setup/quarantine-tank-guide/page.tsx',
+    mustInclude: [
+      { re: /source="setup-quarantine-tank-guide-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my quarantine-tank checklist"/, label: 'concrete quarantine-tank-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="setup-quarantine"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide/, label: 'existing quarantine-tank-kit amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1154: keep the existing sidebar capture and the already-hopped quarantine-tank-kit amazon-brand search; add under-hero capture with a concrete quarantine-tank-checklist offer matching on-page seeded-sponge-filter / four-to-six-week-minimum / bare-bottom-observation copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+  },
+
 ]
 
 let failures = 0
