@@ -5329,6 +5329,28 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse water-checklist offer; every gear CTA is an amazon-brand category search matching on-page free-choice / winter-warm / after-sweat copy (a flat-back stall water bucket as the everyday cleaned-and-refilled source, a heated stall water bucket so winter water stays slightly warmed and unfrozen, electrolyte for horses after heavy sweat so thirst stays driven), never a placeholder ASIN, a wide-mouth mixing-bucket hop, an automatic-waterer hop, a tank-heater hop, a hay-types #1113 hop, a grain #1112 hop, or a vaccine / prescription hop. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · toxic-plants hops',
+    file: 'apps/horses-com/src/app/nutrition/toxic-plants/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-toxic-plants-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my pasture toxic-plant checklist"/, label: 'concrete pasture toxic-plant-checklist offer, not Subscribe' },
+      { re: /source="nutrition-toxic-plants"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/equine\+toxic\+plant\+identification\+field\+guide\?s=nutrition-toxic-plants/, label: 'equine toxic-plant identification field-guide search hop (matches on-page walk-and-identify copy; unique vs soil+test+kit / equine+forage+nsc+hay+test+kit)' },
+      { re: /amazon-brand\/horse\+pasture\+walk\+weed\+identification\+handbook\?s=nutrition-toxic-plants/, label: 'horse pasture-walk weed-identification handbook search hop (matches on-page inspect-the-sward copy; unique vs horse+grazing+muzzle / portable+strip+grazing+step+in+posts)' },
+      { re: /amazon-brand\/horse\+paddock\+tree\+guard\+fencing\?s=nutrition-toxic-plants/, label: 'horse paddock tree-guard fencing search hop (matches on-page fence-out-ornamentals copy; unique vs horse+electric+tape / horse+fence+mesh / horse+electric+rope / portable+horse+paddock+panels)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(flat\+back\+horse\+water\+bucket|heated\+horse\+water\+bucket|electrolyte\+for\+horses|orchard\+grass\+hay\+horse|alfalfa\+hay\+bales\+horse|timothy\+alfalfa\+mixed\+hay\+horse|tabletop\+digital\+horse\+grain\+scale|stackable\+rubber\+horse\+feed\+tubs|rodent\+proof\+metal\+horse\+feed\+bin|horse\+hay\+probe\+moisture\+tester|equine\+hay\+core\+sampler|wall\+mounted\+horse\+hay\+rack|plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|automatic\+horse\+waterer|horse\+tank\+heater|color\+coded\+flat\+back\+horse\+buckets|horse\+electrolytes|horse\+electric\+tape|horse\+fence\+mesh|horse\+electric\+rope|electric\+fence\+tester|horse\+grazing\+muzzle|soil\+test\+kit|portable\+horse\+paddock\+panels|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop #1114 flat-back-bucket / heated-bucket / electrolyte-for-horses, #1113 orchard-grass / alfalfa-bales / mixed-hay, #1112 grain-scale / feed-tubs / feed-bin, #1111 hay-probe / core-sampler / hay-rack, #1110 salt-block / salt-first-powder / wide-mouth-bucket, #1108 automatic-waterer, #1105 hay-bale-scale / NSC kit / strip-grazing, winter-care tank-heater, strangles color-coded-buckets, emergency horse-electrolytes, fencing-safety tape / mesh / rope / tester, pasture-management muzzle / soil-kit, osteoarthritis paddock-panels, or Rx / vaccine — this page hops only equine-toxic-plant-identification-field-guide / horse-pasture-walk-weed-identification-handbook / horse-paddock-tree-guard-fencing searches' },
+    ],
+    why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete pasture toxic-plant-checklist offer; every gear CTA is an amazon-brand category search matching on-page walk-and-identify / inspect-the-sward / fence-out-ornamentals copy (an equine toxic-plant identification field guide so the dangerous plants in the region can be named on the walk, a horse pasture-walk weed-identification handbook so the regular inspection has a pocket reference, horse paddock tree-guard fencing so ornamental hedges and toxic trees stay out of reach), never a placeholder ASIN, a soil-test-kit hop, a grazing-muzzle hop, an electric-tape hop, a paddock-panel hop, a water-requirements #1114 hop, or a vaccine / prescription hop. Educational pasture-safety searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0

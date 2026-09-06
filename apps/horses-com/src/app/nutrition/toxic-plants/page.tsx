@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,6 +82,7 @@ export default function ToxicPlantsPage() {
             { label: "Trees to Watch", href: "#trees" },
             { label: "Signs of Poisoning", href: "#signs" },
             { label: "Prevention", href: "#prevention" },
+            { label: "Pasture toxic-plant kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -114,9 +115,46 @@ export default function ToxicPlantsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the pasture toxic-plant checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Pasture toxic-plant checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the equine-toxic-plant-identification-field-guide,
+              horse-pasture-walk-weed-identification-handbook, and
+              horse-paddock-tree-guard-fencing notes that match
+              the walk-and-identify, inspect-the-sward, and
+              fence-out-ornamentals copy on this page — an
+              equine toxic-plant identification field guide so
+              the dangerous plants in the region can be named
+              on the walk (not a soil-test kit), a horse
+              pasture-walk weed-identification handbook so
+              the regular inspection has a pocket reference
+              (not a grazing-muzzle hop), and horse paddock
+              tree-guard fencing so ornamental hedges and
+              toxic trees stay out of reach (not electric
+              tape, fence mesh, electric rope, or paddock
+              panels). Educational pasture-safety checklist,
+              not a treatment, and not a substitute for
+              calling the veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Pasture toxic-plant checklist"
+              subtitle="Email the field-guide, pasture-walk, and tree-guard notes. No spam."
+              ctaText="Email my pasture toxic-plant checklist"
+              source="nutrition-toxic-plants-under-hero"
+            />
+          </div>
 
           <h2 id="how">How Poisoning Happens</h2>
           <p>Horses are selective grazers and often avoid bitter or unpalatable toxic plants when good forage is plentiful. The danger rises when pasture is bare or overgrazed and hungry horses eat what they normally would not, when toxic plants are dried in hay (which can mask bitterness and concentrate toxin), when wilted leaves become more palatable or more poisonous, or when curious or bored horses sample ornamental plants and hedge clippings. Never assume a horse will simply avoid everything harmful.</p>
@@ -144,13 +182,120 @@ export default function ToxicPlantsPage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Walk and inspect pastures</strong> regularly, learning to identify the dangerous plants in your region.</li>
-            <li><strong>Remove or fence off toxic plants and trees</strong> including ornamental hedges like yew near paddocks.</li>
+            <li><strong>Walk and inspect pastures</strong> regularly, learning to identify the dangerous plants in your region. An equine toxic-plant identification field guide is that walk-and-name reference — it is not a soil-test kit (that lives on the pasture-management page).</li>
+            <li><strong>Carry a pocket ID on the walk</strong> so weeds and ornamentals can be checked against a named list rather than guessed. A horse pasture-walk weed-identification handbook is that pocket reference — it is not a grazing-muzzle hop (that lives on pasture-management and laminitis pages).</li>
+            <li><strong>Remove or fence off toxic plants and trees</strong> including ornamental hedges like yew near paddocks. Horse paddock tree-guard fencing is the fence-out for those trees and hedges — it is not electric tape, fence mesh, or electric rope (those live on the fencing-safety page) and not portable paddock panels (those live on the osteoarthritis page).</li>
             <li><strong>Avoid overgrazing</strong> so horses are never forced to eat weeds on bare ground.</li>
             <li><strong>Check hay carefully</strong> for dried toxic plants such as ragwort, which is dangerous and palatable when dried.</li>
             <li><strong>Dispose of clippings and prunings safely</strong> and keep wilted leaves (especially red maple) out of reach.</li>
             <li><strong>Avoid black walnut shavings</strong> as bedding.</li>
           </ul>
+
+          <h2 id="kit">Pasture toxic-plant kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            walk-and-identify, inspect-the-sward, and
+            fence-out-ornamentals copy on this page — an
+            equine toxic-plant identification field guide
+            so the dangerous plants in the region can be
+            named on the walk, a horse pasture-walk
+            weed-identification handbook so the regular
+            inspection has a pocket reference, and horse
+            paddock tree-guard fencing so ornamental
+            hedges and toxic trees stay out of reach.
+            These are educational pasture-safety
+            searches, not a ranked product list, not a
+            substitute for veterinary care, and not a
+            soil-test-kit hop (that lives on the
+            pasture-management page), a grazing-muzzle
+            hop (that lives on pasture-management and
+            laminitis), an electric-tape / fence-mesh /
+            electric-rope hop (those live on
+            fencing-safety), or a paddock-panel hop
+            (that lives on the osteoarthritis page).
+            This page does not hop medications or
+            vaccines. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (equine toxic plant identification field guide /
+              horse pasture walk weed identification handbook /
+              horse paddock tree guard fencing).
+              Educational pasture/barn-safety searches only;
+              no Rx / vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1114
+              flat+back+horse+water+bucket /
+              heated+horse+water+bucket /
+              electrolyte+for+horses, #1113
+              orchard+grass+hay+horse /
+              alfalfa+hay+bales+horse /
+              timothy+alfalfa+mixed+hay+horse, #1112
+              tabletop+digital+horse+grain+scale /
+              stackable+rubber+horse+feed+tubs /
+              rodent+proof+metal+horse+feed+bin, #1111
+              horse+hay+probe+moisture+tester /
+              equine+hay+core+sampler /
+              wall+mounted+horse+hay+rack, #1110
+              plain+white+horse+salt+block /
+              salt+first+horse+electrolyte+powder /
+              wide+mouth+horse+water+bucket, #1108
+              automatic+horse+waterer, #1105
+              digital+hanging+hay+bale+scale /
+              equine+forage+nsc+hay+test+kit /
+              portable+strip+grazing+step+in+posts,
+              horse+tank+heater
+              (winter-care),
+              color+coded+flat+back+horse+buckets
+              (strangles),
+              horse+electrolytes
+              (emergency / grimace-scale),
+              horse+electric+tape / horse+fence+mesh /
+              horse+electric+rope / electric+fence+tester
+              (fencing-safety),
+              horse+grazing+muzzle / soil+test+kit
+              (pasture-management),
+              portable+horse+paddock+panels
+              (osteoarthritis). */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the pasture toxic-plant kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page walk-and-identify, inspect-the-sward,
+              and fence-out-ornamentals copy — an equine
+              toxic-plant identification field guide, a
+              horse pasture-walk weed-identification
+              handbook, and horse paddock tree-guard
+              fencing. Educational pasture-safety
+              searches only. They are not a ranked
+              product list, they are not a soil-test-kit
+              hop, they are not a grazing-muzzle hop,
+              they are not an electric-tape or paddock-panel
+              hop, and they do not replace a veterinarian.
+              Horses.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+toxic+plant+identification+field+guide?s=nutrition-toxic-plants"
+                amazonLabel="Browse equine toxic-plant identification field guides on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+pasture+walk+weed+identification+handbook?s=nutrition-toxic-plants"
+                amazonLabel="Browse horse pasture-walk weed-identification handbooks on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"
+                amazonLabel="Browse horse paddock tree-guard fencing on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
