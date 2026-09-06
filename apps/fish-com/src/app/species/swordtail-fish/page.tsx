@@ -171,6 +171,38 @@ export default function SwordtailPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the swordtail-fish-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Swordtail-fish-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Xiphophorus hellerii
+                notes that match the care copy on this
+                page — 30 gallons for a one-male trio
+                (55+ if extra males), 70–78°F and pH
+                7.2–8.4 hard alkaline water, and
+                population control because a trio can
+                fill a tank in a year. Educational
+                swordtail-fish-setup checklist, not a
+                new product hop, not livestock, and not
+                a substitute for a fish veterinarian. The
+                existing swordtail-fish tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Swordtail-fish-setup checklist"
+                subtitle="Email the 30-gallon, hard-alkaline, and one-male notes. No spam."
+                ctaText="Email my swordtail-fish-setup checklist"
+                source="species-swordtail-fish-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-swordtail-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A swordtail in a home aquarium." priority />
           <h2>The Fish in One Paragraph</h2>
           <p>
@@ -375,7 +407,6 @@ export default function SwordtailPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for swordtail fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/swordtail%20fish%20tank%20setup?s=species-swordtail-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Swordtail Fish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/swordtail%20fish%20tank%20setup?s=species-swordtail-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
