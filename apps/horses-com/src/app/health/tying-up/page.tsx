@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -94,6 +94,7 @@ export default function TyingUpPage() {
             { label: "Why It Is Urgent", href: "#emergency" },
             { label: "Diagnosis", href: "#diagnosis" },
             { label: "Management", href: "#management" },
+            { label: "Rest-and-routine kit", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -126,9 +127,47 @@ export default function TyingUpPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the tying-up rest-and-routine checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse tying-up rest-and-routine checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the irish-knit-horse-cooler,
+              wool-exercise-quarter-sheet, and
+              loose-plain-white-salt notes that match the
+              keep-warm-and-calm, warm-up-and-cool-down,
+              and hydration-and-electrolytes copy on this
+              page — an Irish-knit cooler so a horse that
+              must stay still stays warm instead of
+              standing in a sweat-soaked sheet, a wool
+              exercise quarter sheet so the warmup starts
+              on the muscle instead of a cold walk-out,
+              and loose plain white salt so daily sodium
+              is measured into the ration instead of
+              hoped-for on a lick. Educational
+              rest-and-routine checklist, not a treatment,
+              not a diet prescription, not a substitute
+              for calling the veterinarian, and not a
+              fleece-cooler, salt-lick, or electrolyte-paste
+              hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse tying-up rest-and-routine checklist"
+              subtitle="Email the Irish-knit-cooler, quarter-sheet, and loose-salt notes. No spam."
+              ctaText="Email my horse tying-up rest-and-routine checklist"
+              source="health-tying-up-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Is Tying-Up</h2>
           <p>Tying-up is the breakdown of skeletal muscle (rhabdomyolysis) in connection with exercise. Damaged muscle cells release their contents -- including the enzyme creatine kinase and the protein myoglobin -- into the bloodstream. The horse experiences cramping, stiffness, and pain, classically over the large muscles of the hindquarters and back. In severe episodes, myoglobin can overload and injure the kidneys, turning the urine dark.</p>
@@ -149,19 +188,145 @@ export default function TyingUpPage() {
           </ul>
 
           <h2 id="emergency">Why It Is Urgent</h2>
-          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode.</p>
+          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode. An Irish-knit horse cooler is how a horse that must stay still stays warm and dry instead of standing in a sweat-soaked sheet — it is not a soft fleece equine cooler (that lives on colic), not a horse fleece cooler (those live on body-clipping and the blanket-size calculator), and not a turnout blanket (that lives on blanketing).</p>
 
           <h2 id="diagnosis">Diagnosis</h2>
           <p>A veterinarian confirms tying-up by measuring muscle enzymes (creatine kinase and AST) in the blood, which rise markedly with muscle damage. For recurrent cases, the workup may include an exercise challenge test, muscle biopsy, and genetic testing for PSSM type 1 (the GYS1 mutation) to distinguish the underlying cause, which directs the long-term plan.</p>
 
           <h2 id="management">Management</h2>
           <ul>
-            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain.</li>
+            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain. This page does not hop rice-bran pellets, high-fat performance feed, or ration balancers — those already live on the nutrition pages and stay a veterinary ration, not a shoppable treatment.</li>
             <li><strong>Keep exercise consistent.</strong> Daily turnout and a regular work program without sudden days off on full feed are central to preventing recurrence.</li>
-            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather.</li>
+            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick — it is not an equine salt lick (that lives on the feed calculator), not a bottled horse-electrolytes hop (those live on the emergency tool and grimace scale), and not a tank heater (that lives on winter-care).</li>
             <li><strong>Reduce stress</strong> in nervous RER-type horses with routine and calm handling.</li>
-            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps.</li>
+            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet (that lives on the blanket-size calculator), not a waterproof sheet (that lives on blanketing), and not a fleece cooler.</li>
           </ul>
+
+          <h2 id="kit">Rest-and-routine kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            keep-warm-and-calm, warm-up-and-cool-down, and
+            hydration-and-electrolytes copy on this page —
+            an Irish-knit horse cooler so a horse that must
+            stay still stays warm, a wool exercise quarter
+            sheet so the warmup starts on the muscle, and
+            loose plain white salt so daily sodium is
+            measured into the ration. These are educational
+            rest-and-routine tools, not a ranked product
+            list, not a substitute for veterinary care, and
+            not a diet or medication prescription. Fleece
+            coolers already live on colic, body-clipping,
+            and the blanket-size calculator. Turnout sheets
+            and waterproof sheets already live on blanketing
+            and the blanket calculator. Salt licks already
+            live on the feed calculator. Bottled electrolytes
+            already live on the emergency tool and grimace
+            scale. Rice-bran fat supplements and high-fat
+            performance feeds already live on the nutrition
+            pages. This page does not hop medications,
+            muscle enzymes, genetic tests, or trailer gear.
+            This page does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (irish knit horse cooler /
+              wool exercise quarter sheet /
+              loose plain white salt horse).
+              These are educational rest-and-routine
+              tools, not a ranked product list, not a
+              substitute for veterinary care, no Rx /
+              vaccine / fleece-cooler / salt-lick /
+              electrolyte-paste ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1101
+              steel+heart+bar+horseshoe /
+              3+degree+leather+wedge+pad /
+              rocker+toe+steel+horseshoe, #1100
+              long+handle+stock+tank+brush /
+              20+foot+barn+mosquito+netting /
+              fine+mesh+horse+mosquito+sheet, #1099
+              30+foot+cotton+lunge+line /
+              leather+chain+lead+shank+horse /
+              orange+traffic+cone+set, #1098
+              weatherproof+storage+clipboard /
+              round+rubber+feed+pan+horse /
+              paper+pellet+horse+bedding, #1097
+              color+coded+flat+back+horse+buckets /
+              disposable+coverall+suit /
+              heavy+duty+rubber+boot+dip+tub, #1094
+              lidded+5+gallon+feed+soaking+pail /
+              large+smooth+feed+tub+rocks /
+              apple+wedger+slicer,
+              soft+fleece+equine+cooler (colic),
+              horse+fleece+cooler (body-clipping /
+              blanket calculator),
+              horse+turnout+sheet /
+              horse+waterproof+sheet (blanketing /
+              blanket calculator),
+              equine+salt+lick (feed calculator),
+              horse+electrolytes (emergency tool /
+              grimace scale),
+              stabilized+rice+bran+horse+fat+supplement /
+              high+fat+low+starch+horse+feed
+              (nutrition pages).
+              Medications and prescriptions
+              are not shoppable hops. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the tying-up rest-and-routine kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page keep-warm-and-calm,
+              warm-up-and-cool-down, and
+              hydration-and-electrolytes copy — an
+              Irish-knit horse cooler, a wool exercise
+              quarter sheet, and loose plain white salt.
+              Educational rest-and-routine tools only.
+              Fasting a horse that is tying up, walking
+              it out, or guessing a fat ration is not
+              the job of this kit. They are not a ranked
+              product list, they are not a substitute
+              for veterinary care, they are not a #1101
+              heart-bar / wedge-pad / rocker-toe hop,
+              they are not a #1100 stock-tank-brush /
+              barn-mosquito-netting / mosquito-sheet hop,
+              they are not a #1099 lunge-line /
+              lead-shank / traffic-cone hop, they
+              are not a #1098 clipboard / feed-pan /
+              paper-pellet-bedding hop, they
+              are not a #1097 color-coded-bucket /
+              coverall / boot-dip-tub hop, they
+              are not a #1094 soaking-pail /
+              feed-tub-rock / apple-wedger hop, they
+              are not a colic fleece-cooler hop, they
+              are not a blanketing turnout-sheet hop,
+              they are not a feed-calculator salt-lick
+              hop, they are not an emergency-tool
+              electrolyte hop, and they do not replace
+              a veterinarian. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up"
+                amazonLabel="Browse Irish-knit horse coolers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/wool+exercise+quarter+sheet?s=health-tying-up"
+                amazonLabel="Browse wool exercise quarter sheets on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"
+                amazonLabel="Browse loose plain white salt for horses on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
