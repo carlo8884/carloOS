@@ -161,6 +161,41 @@ export default function FerretStressSignsPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret stress-signs checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret stress-signs checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the stress notes that match the
+              copy on this page — appetite drop,
+              extra hiding, bar-biting, and sleep
+              change as early signals; loneliness
+              and under-stimulation as common
+              causes; environment first, then a vet
+              when signs persist or include weight
+              loss; and a quiet enclosed sleep sack
+              plus tunnel play as comfort items, not
+              treatment. Educational checklist, not
+              a new product hop and not a substitute
+              for an exotic-animal veterinarian. The
+              existing sleep-sack Amazon search and
+              Marshall tunnel hop stay below. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret stress-signs checklist"
+              subtitle="Email the appetite, hiding, and environment-vs-illness notes. No spam."
+              ctaText="Email my ferret stress-signs checklist"
+              source="behavior-stress-signs-under-hero"
+            />
+          </div>
+
           <DropCap>
             A happy ferret is an obvious thing: it dooks, war-dances, sleeps
             deeply, and bounces back into play the moment it wakes. A stressed

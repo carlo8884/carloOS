@@ -8041,6 +8041,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1246: ferret cage-setup under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture and the already-hopped digital gram-scale Amazon search; add under-hero capture with a concrete ferret weight-tracking-checklist offer matching on-page seasonal-swing / BCS / treat-discipline / weekly-grams copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · stress-signs hops',
+    file: 'apps/ferret-com/src/app/behavior/stress-signs/page.tsx',
+    mustInclude: [
+      { re: /source="behavior-stress-signs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret stress-signs checklist"/, label: 'concrete ferret stress-signs-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-stress-signs"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=behavior-stress-signs/, label: 'existing ferret sleep-sack amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /marshall\/pop-n-play-tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1247: ferret weight-management under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture, the already-hopped sleep-sack Amazon search, and the existing Marshall tunnel hop; add under-hero capture with a concrete ferret stress-signs-checklist offer matching on-page appetite / hiding / bar-biting / environment-vs-illness copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
