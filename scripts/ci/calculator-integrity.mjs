@@ -7555,6 +7555,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1220: keep the existing sidebar capture (source species-rainbowfish, not the hop s= slug) and the already-hopped rainbow-fish tank-setup amazon-brand search; add under-hero capture with a concrete rainbow-fish-setup-checklist offer matching on-page 6+ group / pH 7.0–8.0 / GH 8–15 / nitrate-under-20 copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · sparkling-gourami hops',
+    file: 'apps/fish-com/src/app/species/sparkling-gourami/page.tsx',
+    mustInclude: [
+      { re: /source="species-sparkling-gourami-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my sparkling-gourami-setup checklist"/, label: 'concrete sparkling-gourami-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-sparkling-gourami"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/sparkling%20gourami%20nano%20tank%20setup\?s=species-sparkling-gourami/, label: 'existing sparkling-gourami nano tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1221: keep the existing sidebar capture and the already-hopped sparkling-gourami nano tank-setup amazon-brand search; add under-hero capture with a concrete sparkling-gourami-setup-checklist offer matching on-page 10-gallon / 76–82°F / pH 6.0–7.5 / surface-air copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

@@ -79,6 +79,39 @@ export default function SparklingGouramiPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the sparkling-gourami-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Sparkling-gourami-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Trichopsis pumila
+                notes that match the care copy on this
+                page — a planted 10-gallon for a group
+                of four to six, 76–82°F and pH
+                6.0–7.5, gentle sponge-filter flow, and
+                open warm surface air for the labyrinth
+                organ. Educational
+                sparkling-gourami-setup checklist, not
+                a new product hop, not livestock, and not
+                a substitute for a fish veterinarian. The
+                existing sparkling-gourami nano
+                tank-setup Amazon search stays below.
+                Empty Chewy buttons stay hidden. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Sparkling-gourami-setup checklist"
+                subtitle="Email the 10-gallon, surface-air, and quiet-nano notes. No spam."
+                ctaText="Email my sparkling-gourami-setup checklist"
+                source="species-sparkling-gourami-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-sparkling-gourami" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A sparkling gourami in a home aquarium." priority />
 
         <h2>The Fish That Croaks</h2>
@@ -105,7 +138,6 @@ export default function SparklingGouramiPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Sparkling Gourami Setup on Amazon →</a>
-            <a href="/go/chewy-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />
