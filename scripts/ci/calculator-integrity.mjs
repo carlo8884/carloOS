@@ -491,6 +491,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1260: horses.com /reviews hub is on main. This existing ferret.com /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / AFA-and-editorial-criteria copy (a laminated ferret reviews buyer-guide chart so the cage / litter / harness / food map is posted on the fridge, a ferret fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a mustelid reviews reference handbook so the AFA / exotic-vet / editorial-criteria grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child Critter-Nation / litter / harness hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Ferret aging stays held. Do not re-open #1251–#1260 / crate-size / stocking.',
   },
   {
+    id: 'horses · supplements hub',
+    file: 'apps/horses-com/src/app/supplements/page.tsx',
+    mustInclude: [
+      { re: /source="supplements-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horses supplements-hub checklist"/, label: 'concrete horses supplements-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+horse\+barn\+supplements\+category\+chart\?s=supplements-hub/, label: 'laminated horse barn supplements category-chart search hop (matches on-page supplements-section-map copy; unique vs laminated+horse+barn+calculator+tools+chart / laminated+horse+barn+reviews+buyer+guide+chart / laminated+horse+barn+forage+first+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+supplements\+label\+card\?s=supplements-hub/, label: 'horse stall-door supplements label-card search hop (matches on-page nasc-vs-efficacy-log copy; unique vs horse+stall+door+measurement+card / horse+stall+door+reviews+comparison+card / horse+stall+door+ration+card)' },
+      { re: /amazon-brand\/equine\+supplements\+reference\+handbook\?s=supplements-hub/, label: 'equine supplements reference-handbook search hop (matches on-page AAEP-and-peer-reviewed-grounding copy; unique vs equine+calculator+reference+handbook / equine+reviews+reference+handbook / equine+nutrition+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+calculator\+tools\+chart|laminated\+horse\+barn\+reviews\+buyer\+guide\+chart|laminated\+horse\+barn\+forage\+first\+chart|horse\+stall\+door\+measurement\+card|horse\+stall\+door\+reviews\+comparison\+card|horse\+stall\+door\+ration\+card|equine\+calculator\+reference\+handbook|equine\+reviews\+reference\+handbook|equine\+nutrition\+reference\+handbook|platinum\+performance|kentucky\+equine\+research|equithrive|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews / nutrition kitchen kits, child Platinum / KER hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-barn-supplements-category-chart / horse-stall-door-supplements-label-card / equine-supplements-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1261: ferret.com /reviews hub is on main. This existing horses.com /supplements hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete horses supplements-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page supplements-section-map / nasc-vs-efficacy-log / AAEP-and-peer-reviewed-grounding copy (a laminated horse barn supplements category chart so the joint / hoof / gastric map is posted at the barn, a horse stall-door supplements label card so NASC listing vs proof-of-efficacy notes are labeled on the stall door, an equine supplements reference handbook so the AAEP / peer-reviewed equine-medicine grounding is a physical barn book), never a placeholder ASIN, a tools / reviews / nutrition kitchen hop, a child Platinum CJ hop, or a flea / heartworm / vaccine hop. Educational barn searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1261 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
