@@ -73,6 +73,42 @@ export default function JointSupplementsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the equine joint-supplement checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Equine joint-supplement checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the joint-supplement notes that
+                match the evidence-ladder copy on this
+                page — diagnose first so a lame horse
+                gets a lameness exam rather than a
+                supplement decision, ASU at
+                clinically-relevant doses (Cosequin
+                ASU Plus) as the strongest equine
+                oral ingredient, Platinum Performance
+                CJ when one comprehensive formula is
+                preferred to a stack, marine DHA/EPA
+                rather than flax, and devil&apos;s claw
+                off any FEI/USEF competition horse.
+                Educational buyer checklist, not a
+                new product hop and not a substitute
+                for a veterinarian. The existing
+                Platinum CJ Amazon search stays
+                below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Equine joint-supplement checklist"
+                subtitle="Email the ASU, marine-omega-3, and FEI notes. No spam."
+                ctaText="Email my equine joint-supplement checklist"
+                source="supplements-joint-supplements-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Supplements Are Not a Substitute for Veterinary Diagnosis</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
