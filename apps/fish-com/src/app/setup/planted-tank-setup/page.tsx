@@ -30,7 +30,7 @@ const SOURCES = [
     publisher: "University of Florida IFAS Extension",
   },
 ]
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Planted Aquarium', description: 'Step-by-step guide to setting up a planted freshwater aquarium.', url: 'https://fish.com/setup/planted-tank-setup', totalTime: 'P7D', steps: [
@@ -67,7 +67,38 @@ export default function PlantedTankSetupPage() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the low-tech vs high-tech planted-setup checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Low-tech vs high-tech planted-setup checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the low-tech vs high-tech planted-setup checklist that matches the
+            easy-plant, PAR, substrate, CO2-vs-no-CO2, and algae-lighting copy on this
+            page — start low-tech with Java fern, Anubias, crypts, and hornwort at
+            15–30 PAR and no injected CO2, or step up to high-tech with pressurized
+            CO2, 50–80+ PAR at the substrate, and a nutrient-rich planted substrate
+            (ADA Aqua Soil, Fluval Stratum, or CaribSea Eco-Complete). The single
+            most common algae mistake is more light without more CO2. Educational
+            setup notes only, not a ranked product list, not livestock, and not a
+            substitute for a fish veterinarian. The existing planted-aquarium-setup-CO2
+            Amazon search stays below. Empty Chewy buttons stay hidden. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Low-tech vs high-tech planted-setup checklist"
+            subtitle="Email the easy-plant, PAR, substrate, and CO2-vs-no-CO2 notes. No spam."
+            ctaText="Email my planted-setup checklist"
+            source="setup-planted-tank-setup-under-hero"
+          />
+        </div>
+
           <h2>Low-Tech vs High-Tech — Choose Before You Buy Anything</h2>
           <p><strong>Low-tech planted tank:</strong> No CO2 injection. Easy plants only (Java fern, Anubias, Cryptocoryne, mosses, hornwort). Standard lighting (moderate PAR). All-in-one liquid fertilizer once weekly. Lower maintenance. Still beautiful — most of the famous Dutch aquascapes and natural-style tanks use low-tech or medium-tech approaches. Appropriate for beginners and most hobbyists.</p>
           <p><strong>High-tech planted tank:</strong> Pressurized CO2 injection (CO2 is the primary limiting factor for plant growth). High-intensity lighting (80+ PAR at substrate). Advanced fertilization. Grows carpeting species (Hemianthus callitrichoides, Eleocharis, Glossostigma), demanding stem plants, and delicate foreground plants. Requires more daily monitoring (CO2 levels, fertilizer adjustments, algae management). Significantly more equipment investment ($200–500+ for CO2 system). Appropriate for experienced hobbyists willing to invest time and money.</p>
@@ -90,10 +121,9 @@ export default function PlantedTankSetupPage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Planted Tank Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>

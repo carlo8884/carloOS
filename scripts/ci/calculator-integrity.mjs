@@ -6286,6 +6286,25 @@ const CALCULATORS = [
     why: 'Money path leftover after #1156: keep the existing sidebar capture and the already-hopped saltwater-reef-tank-starter-kit amazon-brand search; add under-hero capture with a concrete FOWLR-saltwater-setup-checklist offer matching on-page FOWLR / salinity / live-rock / skimmer / quarantine copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
   },
 
+  {
+    id: 'fish · planted-tank-setup hops',
+    file: 'apps/fish-com/src/app/setup/planted-tank-setup/page.tsx',
+    mustInclude: [
+      { re: /source="setup-planted-tank-setup-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my planted-setup checklist"/, label: 'concrete planted-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="setup-planted"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup/, label: 'existing planted-aquarium-setup-CO2 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1157: keep the existing sidebar capture and the already-hopped planted-aquarium-setup-CO2 amazon-brand search; add under-hero capture with a concrete low-tech-vs-high-tech planted-setup-checklist offer matching on-page easy-plant / PAR / substrate / CO2-vs-no-CO2 / algae-lighting copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+  },
+
 ]
 
 let failures = 0
