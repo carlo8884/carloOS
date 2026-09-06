@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -28,7 +28,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -181,7 +181,7 @@ const CATEGORIES = [
   {
     title: 'Ground manners',
     body:
-      'Leading, respecting personal space, picking up feet, standing tied, accepting handling for the vet and farrier. The five short cues every first-horse owner drills until they are reflex: whoa, walk on, back, over, stand.',
+      'Leading, respecting personal space, picking up feet, standing tied, accepting handling for the vet and farrier. The five short cues every first-horse owner drills until they are reflex: whoa, walk on, back, over, stand. A first-horse ground-manners cue card is how those five cues stay posted in the aisle before anyone leads out — it is not a laminated horse ear-eye-tail signal checklist (that lives on reading-body-language), not a horse handler kick-zone safety question card, and not a first-horse buyer visit field notebook.',
   },
   {
     title: 'Tack fit',
@@ -191,7 +191,7 @@ const CATEGORIES = [
   {
     title: 'First-aid + emergency plan',
     body:
-      'The itemized kit, the normal vital ranges (HR 28–44, RR 8–16, temp 99–101.5°F), the written emergency plan that lives on the tack-room wall, and the difference between "call the vet now" and "monitor and call in the morning".',
+      'The itemized kit, the normal vital ranges (HR 28–44, RR 8–16, temp 99–101.5°F), the written emergency plan that lives on the tack-room wall, and the difference between "call the vet now" and "monitor and call in the morning". A first-horse tack-room emergency-plan card is how that written plan stays on the wall — it is not a laminated horse barn emergency-triage chart (that lives on the health hub), not a horse after-hours emergency-cover question card (that lives on choosing-a-vet), and not a sterile-saline / dressing-pads / bandage-scissors hop (those live on first-aid-kit).',
   },
 ]
 
@@ -274,6 +274,43 @@ export default function FirstHorseRoadmapPage() {
         </div>
       </section>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-white border-b border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-content mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the 90-day first-horse checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            90-day first-horse checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid max-w-2xl">
+            Email the week-by-week card, ground-manners cue list, and tack-room
+            emergency-plan notes that match the boarding, vet, farrier, feed,
+            ground-manners, tack-fit, and first-aid copy on this page — a laminated
+            first-horse 90-day week-by-week checklist so pre-purchase through the
+            day-90 checkpoint stay visible (not a first-horse tryout walkthrough,
+            not a boarding-facility walkthrough, not a senior age-related-change
+            checklist), a first-horse ground-manners cue card so whoa / walk on /
+            back / over / stand stay posted in the aisle (not an ear-eye-tail
+            signal checklist), and a first-horse tack-room emergency-plan card so
+            the written plan lives on the wall (not a health-hub emergency-triage
+            chart, not an after-hours-cover question card). Educational owner
+            roadmap tools only, not a ranked product list, not a clinic listing,
+            and not a substitute for a veterinarian. No spam.
+          </p>
+          <div className="max-w-md">
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="90-day first-horse checklist"
+              subtitle="Email the week-by-week card, ground-manners cues, and tack-room emergency-plan notes. No spam."
+              ctaText="Email my 90-day first-horse checklist"
+              source="first-horse-roadmap-under-hero"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* TIMELINE PREVIEW */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
@@ -289,7 +326,11 @@ export default function FirstHorseRoadmapPage() {
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             Twelve weeks broken into five stages. The email course follows the same stages, with each
             email timed to the decisions and questions you&apos;re likely to be working through that
-            week.
+            week. A laminated first-horse 90-day week-by-week checklist is how those five stages stay
+            posted at the barn — it is not a laminated first-horse tryout walkthrough checklist
+            (that lives on buying-your-first-horse), not a laminated horse boarding facility
+            walkthrough checklist (that lives on boarding-options), and not a laminated senior horse
+            age-related change checklist (that lives on senior-horse-care).
           </p>
 
           <div className="bg-white border border-brand-border rounded-lg overflow-hidden">
@@ -391,6 +432,139 @@ export default function FirstHorseRoadmapPage() {
                 Sources cited across the email series: American Association of Equine Practitioners
                 (AAEP), American Farriers Journal, Society of Master Saddlers, American Horse Council.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 90-day first-horse leftover kit */}
+      <section className="bg-white px-container-sm sm:px-container py-section">
+        <div className="max-w-content mx-auto">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              90-day first-horse leftover kit
+            </span>
+          </div>
+          <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
+            Week-by-week card, ground-manners cues, tack-room plan
+          </h2>
+          <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">
+            Everyday owner tools that match the boarding, vet, farrier, feed,
+            ground-manners, tack-fit, and first-aid copy on this page — a laminated
+            first-horse 90-day week-by-week checklist so pre-purchase, settle-in,
+            build-routine, partnership, and the day-90 checkpoint stay visible, a
+            first-horse ground-manners cue card so whoa / walk on / back / over /
+            stand stay posted before anyone leads out, and a first-horse tack-room
+            emergency-plan card so the written plan lives on the wall. These are
+            educational owner searches, not a ranked product list, not a clinic
+            listing, not a substitute for a veterinarian, not a first-horse tryout /
+            buyer-notebook / PPE-records hop, not a boarding walkthrough /
+            contract-binder / hay-tarp hop, not a choosing-a-vet interview /
+            after-hours-cover / VCPR-folder hop, not a first-aid saline / pads /
+            scissors hop, not a senior age-related-change / weight-and-joint /
+            quality-of-life hop, not an ear-eye-tail / kick-zone / pain-demeanor hop,
+            not a PPE-stage-walkthrough / findings-worksheet / buyer-vet-briefing hop,
+            not a lease / insurance / monthly-budget hop, not a daily-care /
+            emergency-triage / owner-guides / calculator-tools chart hop, not a
+            saddle-pad / half-pad / shim / girth hop, and not a farrier-log hop.
+            This page does not hop medications or vaccines. This page does not
+            claim hands-on testing. This page does not invent clinic listings.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated first-horse 90-day week-by-week checklist /
+              first-horse ground-manners cue card /
+              first-horse tack-room emergency-plan card).
+              Educational owner searches only; no Rx /
+              vaccine ASIN hops. ShopCtas hides empty
+              Chewy; never href="#" or PLACEHOLDER.
+              Unused vs #1138
+              laminated+senior+horse+age+related+change+checklist /
+              senior+horse+weight+and+joint+watch+notebook /
+              senior+horse+quality+of+life+score+card, #1137
+              laminated+horse+ear+eye+tail+signal+checklist /
+              horse+handler+kick+zone+safety+question+card /
+              horse+pain+demeanor+change+log+notebook, #1136
+              laminated+pre+purchase+exam+stage+walkthrough+checklist /
+              horse+pre+purchase+exam+findings+decision+worksheet /
+              horse+buyer+vet+briefing+question+card, #1135
+              horse+lease+agreement+document+binder /
+              laminated+horse+lease+walkthrough+checklist /
+              horse+full+vs+partial+lease+cost+share+worksheet, #1134
+              horse+insurance+policy+document+binder /
+              laminated+horse+insurance+claims+checklist /
+              horse+mortality+vs+major+medical+decision+worksheet, #1133
+              horse+ownership+monthly+budget+worksheet /
+              equine+emergency+fund+expense+tracker+notebook /
+              horse+keep+feed+farrier+cost+log+binder, #1132
+              laminated+equine+vet+interview+checklist /
+              horse+after+hours+emergency+cover+question+card /
+              horse+veterinary+history+vcpr+records+folder, #1131
+              first+horse+buyer+visit+field+notebook /
+              laminated+first+horse+tryout+walkthrough+checklist /
+              horse+pre+purchase+exam+records+binder, #1130
+              laminated+horse+boarding+facility+walkthrough+checklist /
+              horse+boarding+contract+document+binder /
+              waterproof+horse+hay+bale+storage+tarp, #1129
+              sterile+saline+wound+flush+horse /
+              nonstick+wound+dressing+pads+horse /
+              equine+bandage+scissors,
+              saddle-fit-basics
+              horse+saddle+pad /
+              horse+sheepskin+half+pad /
+              horse+saddle+shims /
+              horse+girth+cinch,
+              #1128
+              laminated+horse+barn+calculator+tools+chart /
+              horse+stall+door+measurement+card /
+              equine+calculator+reference+handbook, #1127
+              laminated+horse+barn+owner+guides+chart /
+              horse+stall+door+owner+guides+card /
+              equine+owner+guides+reference+handbook, #1126
+              laminated+horse+barn+daily+care+chart /
+              horse+stall+door+care+card /
+              equine+husbandry+reference+handbook, #1125
+              laminated+horse+barn+emergency+triage+chart /
+              horse+stall+door+vital+signs+card /
+              equine+health+reference+handbook. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the 90-day first-horse leftover kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page week-by-week
+              timeline, ground-manners five-cue, and tack-room emergency-plan
+              copy — a laminated first-horse 90-day week-by-week checklist, a
+              first-horse ground-manners cue card, and a first-horse tack-room
+              emergency-plan card. Educational owner searches only. They are not
+              a ranked product list, they are not a clinic listing, they are not
+              a first-horse tryout / buyer-notebook / PPE-records hop, they are
+              not a boarding walkthrough / contract-binder / hay-tarp hop, they
+              are not a choosing-a-vet interview / after-hours-cover hop, they
+              are not a first-aid saline / pads / scissors hop, they are not a
+              senior-horse-care hop, they are not a reading-body-language hop,
+              they are not a saddle-fit-basics pad / shim / girth hop, they are
+              not a daily-care / emergency-triage / owner-guides /
+              calculator-tools chart hop, and they do not replace a veterinarian.
+              Horses.com earns a commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+first+horse+90+day+week+by+week+checklist?s=first-horse-roadmap"
+                amazonLabel="Browse laminated first-horse 90-day week-by-week checklists on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/first+horse+ground+manners+cue+card?s=first-horse-roadmap"
+                amazonLabel="Browse first-horse ground-manners cue cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/first+horse+tack+room+emergency+plan+card?s=first-horse-roadmap"
+                amazonLabel="Browse first-horse tack-room emergency-plan cards on Amazon →"
+              />
             </div>
           </div>
         </div>
