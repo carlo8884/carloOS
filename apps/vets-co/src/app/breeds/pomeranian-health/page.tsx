@@ -5,6 +5,8 @@ import {
   EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,10 +132,45 @@ export default function VetsPomeranianHealthPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Pomeranian health checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Pomeranian health checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prep notes that match the
+              trachea, PDA, and alopecia X copy on
+              this page — an analog indoor
+              hygrometer so heat-and-humidity cough
+              triggers stay a written reading, a
+              6-column columnar pad so patellar
+              grade, murmur, dental score, and body
+              condition stay one well-visit row, and
+              an undated daily planner so thyroid /
+              ACTH / LDDS dates stay written before
+              anyone accepts alopecia X. Educational
+              checklist, not a diagnosis, not a
+              substitute for veterinary care, and
+              not a planner, columnar-pad, or
+              sketch-pad hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Pomeranian health checklist"
+              subtitle="Email the hygrometer, columnar-pad, and planner notes. No spam."
+              ctaText="Email my Pomeranian health checklist"
+              source="breeds-pomeranian-health-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-06T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -305,6 +342,94 @@ export default function VetsPomeranianHealthPage() {
             these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
+
+          <h2 id="kit">Pomeranian-health kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            trachea, PDA, and alopecia X copy on
+            this page — an analog indoor hygrometer
+            so heat-and-humidity cough triggers stay
+            a written reading, a 6-column columnar
+            pad so patellar grade, murmur, dental
+            score, and body condition stay one
+            well-visit row, and an undated daily
+            planner so thyroid / ACTH / LDDS dates
+            stay written before anyone accepts
+            alopecia X. These are educational
+            Pomeranian-health / paperwork tools, not
+            a ranked product list, not a substitute
+            for veterinary care, and not a
+            treatment. Academic-year planners,
+            8-column columnar pads, and newsprint
+            sketch pads already live on
+            husky-health. 13-column analysis pads,
+            desk blotter pads, and numbered log
+            books already live on chihuahua-health.
+            This page does not hop harnesses,
+            toothpaste, melatonin, or insurance
+            brands as Amazon searches. This page
+            does not claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (analog indoor hygrometer /
+              6-column columnar pad /
+              undated daily planner).
+              These are educational
+              Pomeranian-health / paperwork
+              tools, not a ranked product list, not
+              a substitute for veterinary care, no
+              Rx / first-aid kit / thermometer /
+              carrier / insurance-brand ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1182
+              academic+year+planner /
+              8+column+columnar+pad /
+              newsprint+sketch+pad,
+              #1181
+              13+column+analysis+pad /
+              desk+blotter+pad /
+              numbered+log+book. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Pomeranian-health kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page trachea, PDA, and alopecia X
+              copy — an analog indoor hygrometer, a
+              6-column columnar pad, and an undated
+              daily planner. Educational Pomeranian-
+              health / paperwork tools only. They
+              are not a ranked product list, they
+              are not a substitute for veterinary
+              care, they are not a #1182 planner /
+              columnar-pad / sketch-pad hop, they
+              are not a financing-brand or
+              insurance-brand hop, and they do not
+              replace a veterinarian. Vets.co earns
+              a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health"
+                amazonLabel="Browse analog indoor hygrometers on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/6+column+columnar+pad?s=breeds-pomeranian-health"
+                amazonLabel="Browse 6-column columnar pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"
+                amazonLabel="Browse undated daily planners on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion
