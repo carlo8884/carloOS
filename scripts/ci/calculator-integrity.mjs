@@ -701,6 +701,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1270: vets.co /guides hub is on main. This existing fish.com /species hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete fish species-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page featured-species-map / freshwater-saltwater-category-log / care-guide-grounding copy (a laminated aquarium species profile chart so the featured-species map is posted on the rim, an aquarium rim species card so each freshwater / saltwater category note is labeled on the rim, an aquarist species reference handbook so the tank-size / water-parameter / diet / compatibility / health grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub kitchen hop, a child tank-setup hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked livestock list, not a substitute for a veterinarian. Skip discus / kuhli / otocinclus children. Chewy stays omitted so empty buttons stay hidden. Do not re-open #1165 / #1251–#1270 / crate-size / stocking.',
   },
   {
+    id: 'ferret · health hub',
+    file: 'apps/ferret-com/src/app/health/page.tsx',
+    mustInclude: [
+      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret health-hub checklist"/, label: 'concrete ferret health-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+ferret\+health\+triage\+chart\?s=health-hub/, label: 'laminated ferret health triage-chart search hop (matches on-page condition-library-map copy; unique vs laminated+ferret+calculator+tools+chart / laminated+ferret+reviews+buyer+guide+chart / laminated+ferret+diet+feeding+chart / laminated+ferret+care+routine+chart / laminated+ferret+behavior+cue+chart)' },
+      { re: /amazon-brand\/ferret\+fridge\+health\+library\+card\?s=health-hub/, label: 'ferret fridge health-library-card search hop (matches on-page symptom-urgency-log copy; unique vs ferret+fridge+measurement+card / ferret+fridge+reviews+comparison+card / ferret+fridge+diet+label+card / ferret+fridge+care+card / ferret+fridge+behavior+card)' },
+      { re: /amazon-brand\/mustelid\+health\+reference\+handbook\?s=health-hub/, label: 'mustelid health reference-handbook search hop (matches on-page exotic-mammal-vet-grounding copy; unique vs mustelid+calculator+reference+handbook / mustelid+reviews+reference+handbook / mustelid+diet+reference+handbook / mustelid+care+reference+handbook / mustelid+behavior+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+calculator\+tools\+chart|ferret\+fridge\+measurement\+card|mustelid\+calculator\+reference\+handbook|laminated\+ferret\+reviews\+buyer\+guide\+chart|ferret\+fridge\+reviews\+comparison\+card|mustelid\+reviews\+reference\+handbook|laminated\+ferret\+diet\+feeding\+chart|ferret\+fridge\+diet\+label\+card|mustelid\+diet\+reference\+handbook|laminated\+ferret\+care\+routine\+chart|ferret\+fridge\+care\+card|mustelid\+care\+reference\+handbook|laminated\+ferret\+behavior\+cue\+chart|ferret\+fridge\+behavior\+card|mustelid\+behavior\+reference\+handbook|finger\+toothbrush|carnivore\+care|small\+animal\+rabies|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews / diet / care / behavior kitchen kits, child toothbrush / dosing hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-ferret-health-triage-chart / ferret-fridge-health-library-card / mustelid-health-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1271: fish.com /species hub is on main. This existing ferret.com /health hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret health-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page condition-library-map / symptom-urgency-log / exotic-mammal-vet-grounding copy (a laminated ferret health triage chart so the insulinoma / adrenal / emergency map is posted on the fridge, a ferret fridge health library card so each condition-library spoke is labeled on the fridge, a mustelid health reference handbook so the exotic-mammal-vet grounding is a physical kitchen book), never a placeholder ASIN, a sibling-hub kitchen hop, a child toothbrush / dosing hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked medication list, not a substitute for an exotic-mammal veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1271 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
