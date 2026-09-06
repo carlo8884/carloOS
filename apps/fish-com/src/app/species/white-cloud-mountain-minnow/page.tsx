@@ -79,6 +79,38 @@ export default function WhiteCloudPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the white-cloud-mountain-minnow-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                White-cloud-mountain-minnow-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Tanichthys albonubes notes
+                that match the care copy on this page
+                — 60–72°F unheated tanks, a school of
+                8+, pH 6.0–8.0, and 75°F as a maximum
+                for these 1.5-inch cool-water
+                minnows. Educational
+                white-cloud-mountain-minnow-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                white-cloud-mountain-minnow tank-setup
+                Amazon search stays below. Empty
+                Chewy buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="White-cloud-mountain-minnow-setup checklist"
+                subtitle="Email the 60–72°F unheated and 8+ school notes. No spam."
+                ctaText="Email my white-cloud-mountain-minnow-setup checklist"
+                source="species-white-cloud-mountain-minnow-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
@@ -104,7 +136,6 @@ export default function WhiteCloudPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for white cloud mountain minnow care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/white%20cloud%20mountain%20minnow%20tank%20setup?s=species-white-cloud-mountain-minnow" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop White Cloud Mountain Minnow Setup on Amazon →</a>
-            <a href="/go/chewy-brand/white%20cloud%20mountain%20minnow%20tank%20setup?s=species-white-cloud-mountain-minnow" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 

@@ -7699,6 +7699,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1228: keep the existing sidebar capture and the already-hopped puffer-fish tank-setup amazon-brand search; add under-hero capture with a concrete puffer-fish-setup-checklist offer matching on-page dwarf 10-gallon / snail-beak / figure-8 brackish 30+ / fahaka 200+ gallon copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · white-cloud-mountain-minnow hops',
+    file: 'apps/fish-com/src/app/species/white-cloud-mountain-minnow/page.tsx',
+    mustInclude: [
+      { re: /source="species-white-cloud-mountain-minnow-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my white-cloud-mountain-minnow-setup checklist"/, label: 'concrete white-cloud-mountain-minnow-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-white-cloud"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/white%20cloud%20mountain%20minnow%20tank%20setup\?s=species-white-cloud-mountain-minnow/, label: 'existing white-cloud-mountain-minnow tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1229: keep the existing sidebar capture and the already-hopped white-cloud-mountain-minnow tank-setup amazon-brand search; add under-hero capture with a concrete white-cloud-mountain-minnow-setup-checklist offer matching on-page 60–72°F unheated / 8+ school / pH 6.0–8.0 / 75°F max copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
