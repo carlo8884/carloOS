@@ -8023,6 +8023,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1245: ferret hydration under-hero is on main. Litter/enrichment stay deprioritized. Keep the existing sidebar capture, the already-hopped Critter Nation Amazon search, and the product-specific Kaytee Chewy hop; add under-hero capture with a concrete ferret cage-setup-checklist offer matching on-page bar-spacing / solid-floor / multi-level copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'ferret · weight-management hops',
+    file: 'apps/ferret-com/src/app/diet/weight-management/page.tsx',
+    mustInclude: [
+      { re: /source="diet-weight-management-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret weight-tracking checklist"/, label: 'concrete ferret weight-tracking-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="diet-weight-management"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=diet-weight-management/, label: 'existing digital gram-scale amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1246: ferret cage-setup under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture and the already-hopped digital gram-scale Amazon search; add under-hero capture with a concrete ferret weight-tracking-checklist offer matching on-page seasonal-swing / BCS / treat-discipline / weekly-grams copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 

@@ -104,6 +104,39 @@ export default function WeightManagementPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret weight-tracking checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret weight-tracking checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the weight notes that match the
+              copy on this page — seasonal autumn
+              fat is expected, not obesity; hands-on
+              body-condition scoring beats judging
+              by coat; treat discipline and play
+              before dramatic restriction; and a
+              digital gram scale with tare so weekly
+              grams show a trend a hand cannot.
+              Educational tracking checklist, not a
+              new product hop and not a substitute
+              for an exotic-animal veterinarian. The
+              existing gram-scale Amazon search stays
+              below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret weight-tracking checklist"
+              subtitle="Email the seasonal-swing, BCS, and gram-scale notes. No spam."
+              ctaText="Email my ferret weight-tracking checklist"
+              source="diet-weight-management-under-hero"
+            />
+          </div>
+
           <h2 id="seasonal">The Seasonal Weight Swing</h2>
           <p>
             Intact and even many altered ferrets put on a noticeable layer of fat in autumn and shed it again in spring — a normal seasonal cycle tied to coat changes and daylight. A ferret can gain a substantial fraction of its body weight heading into winter and look distinctly rounder, then slim down as the days lengthen. New owners frequently mistake the autumn version for obesity and the spring version for illness; in a ferret that is otherwise bright, active, and eating well, this swing is expected. Knowing the cycle exists prevents both needless worry and the opposite error of dismissing a genuine problem as "just the season."
