@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -133,6 +133,51 @@ export default function SafeTreatsPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret safe-treats checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret safe-treats checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-safe-treat-chart,
+              fridge-no-sugar-treat-card, and
+              mustelid-treat-safety-reference-handbook notes
+              that match the meat-only-rule-map,
+              yogurt-drop-avoid-log, and
+              quesenberry-treat-grounding copy on this page —
+              a laminated ferret safe-treat chart so the
+              if-it-isn&apos;t-meat / freeze-dried-single-protein /
+              skip-yogurt-drops map is posted on the fridge
+              (not a diet-hub feeding chart, not a
+              kit-imprint chart, not a prey-vs-kibble
+              chart), a ferret fridge no-sugar-treat card
+              so raisin / fruit-medley / molasses notes are
+              labeled on the fridge (not an imprint-window
+              card, not a diet-model card, not a
+              macro-window card), and a mustelid treat-safety
+              reference handbook so the Quesenberry /
+              VCNA toxin grounding is a physical kitchen
+              book (not a diet handbook, not a kit-adult
+              feeding handbook, not a diet-model handbook).
+              Educational kitchen checklist, not a ranked
+              treat list, not a sleep-sack hop, and not a
+              substitute for an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Aging
+              pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret safe-treats checklist"
+              subtitle="Email the safe-treat-chart, fridge no-sugar-treat card, and treat-safety-handbook notes. No spam."
+              ctaText="Email my ferret safe-treats checklist"
+              source="diet-safe-treats-under-hero"
+            />
+          </div>
+
           <h2 id="rule">The One Rule</h2>
           <p>
             Here is a rule that resolves most treat questions: <strong>if it isn't meat, it probably isn't a ferret treat.</strong> Ferrets are obligate carnivores; they have no nutritional use for sugar, grain, fruit, or vegetables, and chronic sugar exposure is implicated in pancreatic beta-cell stress and elevated insulinoma risk. A useful corollary: if you wouldn't feed it to a cat with diabetes, it is probably wrong for a ferret. Almost every safe treat is some form of plain animal protein.
@@ -174,6 +219,59 @@ export default function SafeTreatsPage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret safe-treat chart /
+              ferret fridge no-sugar-treat card /
+              mustelid treat-safety reference handbook).
+              Keep existing Wysong freeze-dried-treats hop.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              kit-adult / whole-prey kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret safe-treats kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page meat-only-rule-map,
+              yogurt-drop-avoid-log, and
+              quesenberry-treat-grounding copy — a laminated
+              ferret safe-treat chart, a ferret fridge
+              no-sugar-treat card, and a mustelid
+              treat-safety reference handbook. Educational
+              kitchen searches only. They are not a ranked
+              treat list, they are not a diet-hub /
+              kit-adult / whole-prey hop, they are not a
+              child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden. Existing Wysong
+              freeze-dried-treats review hop stays in the
+              pick below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+safe+treat+chart?s=safe-treats"
+                amazonLabel="Browse laminated ferret safe-treat charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+no+sugar+treat+card?s=safe-treats"
+                amazonLabel="Browse ferret fridge no-sugar-treat cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+treat+safety+reference+handbook?s=safe-treats"
+                amazonLabel="Browse mustelid treat-safety reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">A Meat-Based Treat Pick</h2>
           <p>
