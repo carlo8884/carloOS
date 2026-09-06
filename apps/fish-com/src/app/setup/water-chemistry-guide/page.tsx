@@ -10,7 +10,7 @@ const SOURCES = [
   { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.', path: '/setup/water-chemistry-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
 export default function WaterChemistryGuidePage() {
@@ -35,7 +35,40 @@ export default function WaterChemistryGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the water-chemistry checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Water-chemistry checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the water-chemistry checklist that matches the API freshwater
+            master test kit, ammonia / nitrite / nitrate, pH / GH / KH, and
+            nitrogen-cycle copy on this page — read pH as a result of KH and
+            CO2 rather than chasing pH-Up / pH-Down, keep GH (calcium and
+            magnesium) matched to the fish you keep, and treat KH as the
+            buffer that stops pH from swinging. An API freshwater master test
+            kit is the existing hop below for ammonia, nitrite, nitrate, and
+            pH; GH and KH still need their own tests. Educational nitrogen-cycle
+            notes only, not a ranked product list, not livestock, and not a
+            substitute for a fish veterinarian. The existing API freshwater
+            master test kit Amazon search stays below. Empty Chewy buttons
+            stay hidden. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Water-chemistry checklist"
+            subtitle="Email the API master-kit, ammonia / nitrite / nitrate, pH / GH / KH, and nitrogen-cycle notes. No spam."
+            ctaText="Email my water-chemistry checklist"
+            source="setup-water-chemistry-guide-under-hero"
+          />
+        </div>
+
         <h2>pH — The Scale and What It Means</h2>
         <p>pH is a logarithmic measure of hydrogen ion concentration — pH 7 is neutral, below 7 is acidic, above 7 is alkaline. Because the scale is logarithmic, pH 6 is 10× more acidic than pH 7, and pH 5 is 100× more acidic. Small numerical differences represent large actual differences in water chemistry. A stable pH within the appropriate range for your fish is more important than hitting a precise target number — fish handle a consistent pH that is slightly off-ideal better than they handle pH swings.</p>
         <p>What determines pH: the balance of carbonate buffering (KH), dissolved CO2, and other acids and bases in the water. In CO2-injected planted tanks, pH drops as CO2 dissolves into carbonic acid — this is intentional and managed. Understanding that pH is a result of other parameters (primarily KH and CO2), rather than something to be directly adjusted with pH-Up/pH-Down chemicals, allows for more stable management.</p>
@@ -59,10 +92,9 @@ export default function WaterChemistryGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Water Test & Chemistry Tools — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/api%20freshwater%20master%20test%20kit?s=setup-water-chemistry-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/api%20freshwater%20master%20test%20kit?s=setup-water-chemistry-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
