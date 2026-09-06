@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -141,9 +141,40 @@ export default function EquineUlcersPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the EGUS forage-first checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Horse EGUS forage-first checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the forage-first notes that match the
+              continuous-forage, alfalfa-before-work, and
+              split-starch-meals copy on this page — keep
+              hay in front of the horse so acid is not
+              sitting on an empty stomach, feed an alfalfa
+              flake before work, and split grain so no
+              meal exceeds the starch threshold. Educational
+              forage-first checklist, not a treatment, not
+              omeprazole or GastroGard, not a substitute
+              for gastroscopy, and not an Amazon hop. This
+              page stays disclosure-only. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Horse EGUS forage-first checklist"
+              subtitle="Email the forage-first, alfalfa-before-work, and split-starch notes. No spam."
+              ctaText="Email my horse EGUS forage-first checklist"
+              source="health-egus-under-hero"
+            />
+          </div>
 
           <div id="key-facts" className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 my-6 not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Key Facts — Equine Gastric Ulcers</div>
