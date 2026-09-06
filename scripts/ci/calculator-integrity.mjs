@@ -5238,6 +5238,29 @@ const CALCULATORS = [
     ],
     why: 'Money path: keep the existing sidebar capture and existing AffiliateDisclosure; under-hero capture with a concrete horse salt-and-electrolyte-checklist offer; every gear CTA is an amazon-brand category search matching on-page baseline-salt / sweat-replacement / always-provide-water copy (a plain white horse salt block so every horse has a free-choice source, a salt-first electrolyte powder so heavy sweat is not replaced with sugar, a wide-mouth water bucket so electrolytes are never given without water), never a placeholder ASIN, a tying-up loose-salt hop, a generic horse-electrolytes hop, a PPID automatic-waterer hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · forage-basics hops',
+    file: 'apps/horses-com/src/app/nutrition/forage-basics/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-forage-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse forage-first checklist"/, label: 'concrete horse forage-first-checklist offer, not Subscribe' },
+      { re: /source="nutrition-forage"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/slow\+feeder\+hay\+net\+horse\?s=nutrition-forage-basics/, label: 'existing slow-feeder hay-net ReviewCard hop kept in place' },
+      { re: /amazon-brand\/horse\+hay\+probe\+moisture\+tester\?s=nutrition-forage/, label: 'horse hay-probe moisture-tester search hop (matches on-page cleanliness / mold copy; unique vs digital+hanging+hay+bale+scale / horse+hay+steamer / horse+hay+soaking+bag)' },
+      { re: /amazon-brand\/equine\+hay\+core\+sampler\?s=nutrition-forage/, label: 'equine hay-core-sampler search hop (matches on-page representative-sample copy; unique vs equine+forage+nsc+hay+test+kit / timothy+hay+horse)' },
+      { re: /amazon-brand\/wall\+mounted\+horse\+hay\+rack\?s=nutrition-forage/, label: 'wall-mounted horse hay-rack search hop (matches on-page keep-forage-off-the-ground copy; unique vs slow+feeder+hay+net+horse / equine+slow+feeder+hay+box)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|horse\+hay\+steamer|horse\+hay\+soaking\+bag|timothy\+hay\+horse|horse\+hay\+cubes|small\+hole\+slow\+feeder\+hay\+net\+horse|equine\+slow\+feeder\+hay\+box|plain\+white\+horse\+salt|automatic\+horse\+waterer|stainless\+horse\+shedding\+blade|wicking\+horse\+anti\+sweat\+sheet|equine\+hoof\+angle\+gauge|leather\+horse\+lunge\+cavesson|neoprene\+horse\+overreach\+bell\+boots|tow\+behind\+arena\+drag\+harrow|cotton\+horse\+polo\+exercise\+wraps|portable\+horse\+paddock\+panels|portable\+3\+sided\+horse\+run\+in\+shelter|labeled\+stackable\+horse\+grooming\+caddy|large\+mesh\+horse\+blanket\+wash\+bag|heavy\+duty\+paddock\+mud\+grid|full\+length\+horse\+turnout\+boots|waffle\+weave\+horse\+leg\+towel|irish\+knit\+horse\+cooler|wool\+exercise\+quarter\+sheet|steel\+heart\+bar\+horseshoe|3\+degree\+leather\+wedge\+pad|rocker\+toe\+steel\+horseshoe|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop #1110 salt-block / salt-first-powder / water-bucket, #1105 hay-bale-scale / NSC kit / strip-grazing, heaves steamer / soaking-bag, feed-calculator timothy, dental hay-cubes, easy-keeper small-hole net, turnout hay-box, or Rx / vaccine — this page hops only horse-hay-probe-moisture-tester / equine-hay-core-sampler / wall-mounted-horse-hay-rack gear plus the existing ReviewCard hay-net' },
+    ],
+    why: 'Money path: keep the existing sidebar capture, existing AffiliateDisclosure, and existing slow-feeder hay-net ReviewCard; under-hero capture with a concrete horse forage-first-checklist offer; every new gear CTA is an amazon-brand category search matching on-page cleanliness / representative-sample / keep-forage-off-the-ground copy (a hay-probe moisture tester so moldy forage is not stored or fed, a hay-core sampler so a lab sample is representative, a wall-mounted hay rack so forage stays off dirty ground), never a placeholder ASIN, an EMS hay-test or bale-scale hop, a heaves steamer hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
