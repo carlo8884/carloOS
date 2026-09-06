@@ -82,6 +82,39 @@ export default function AngelfishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the angelfish-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Angelfish-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the angelfish notes that match the
+                care copy on this page — an 18–24 inch
+                tall tank so an adult keeps 6-inch
+                vertical fin span, a 75-gallon footprint
+                so a bonded pair keeps a retreat zone
+                for tankmates, and warm slightly acidic
+                water so a scalare stays near 76–82°F
+                and pH 6.0–7.5. Educational
+                angelfish-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing angelfish tank-setup Amazon
+                search stays below. Empty Chewy buttons
+                stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Angelfish-setup checklist"
+                subtitle="Email the tall-tank, pair-bond, and water-parameter notes. No spam."
+                ctaText="Email my angelfish-setup checklist"
+                source="species-angelfish-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-angelfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A freshwater angelfish in a home aquarium." priority />
         <h2>Tank Height — The Non-Negotiable</h2>
         <p>Angelfish grow vertically — their body is laterally compressed and their dorsal and ventral fins extend dramatically above and below. An adult angelfish may reach 6 inches in height (fin tip to fin tip) while being only 4 inches long. A standard 20-gallon "high" tank at 16 inches depth is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches and longer footprint is ideal for a small group or a pair. Shallow tanks stunt their growth, restrict their natural fin expression, and cause chronic stress. When buying angelfish, buy for the adult, not the juvenile.</p>
@@ -117,7 +150,6 @@ export default function AngelfishPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for angelfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/angelfish%20tank%20setup?s=species-angelfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Angelfish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/angelfish%20tank%20setup?s=species-angelfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
