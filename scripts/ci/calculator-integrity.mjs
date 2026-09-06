@@ -6725,6 +6725,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1176: keep the existing sidebar capture; add under-hero capture with a concrete German Shepherd health checklist offer; every gear CTA is an amazon-brand category search matching on-page DM / hip-dysplasia / GDV copy (a top-bound steno pad so hind-limb wobble and knuckling after age 5 stay a written DM-workup log, a mechanical kitchen timer so the no-exercise-right-after-eating rule stays a timed rest, self-adhesive file-folder labels so OFA hip-and-elbow, SOD1 DNA, and gastropexy notes stay three labeled tabs), never a placeholder ASIN, a #1176 notebook / paint-chip / calendar hop, a dog-com GSD mobility hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational German-shepherd-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · french-bulldog-health hops',
+    file: 'apps/vets-co/src/app/breeds/french-bulldog-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-french-bulldog-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my French Bulldog health checklist"/, label: 'concrete French Bulldog health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-french-bulldog"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/four\+tab\+dividers\?s=breeds-french-bulldog-health/, label: 'four-tab-dividers search hop (matches on-page BOAS grade 0–III copy; unique vs 3+tab+dividers / removable+page+flags / self+adhesive+file+folder+labels)' },
+      { re: /amazon-brand\/analog\+outdoor\+thermometer\?s=breeds-french-bulldog-health/, label: 'analog-outdoor-thermometer search hop (matches on-page 70°F outdoor-limit / heat-stroke copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / dog+cooling+mat / dog+cooling+vest)' },
+      { re: /amazon-brand\/weekly\+checklist\+notepad\?s=breeds-french-bulldog-health/, label: 'weekly-checklist-notepad search hop (matches on-page fold-cleaning 2–3 times weekly copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|blank\+pedigree\+chart|round\+color\+coding\+labels|5\+compartment\+letter\+sorter|3\+tab\+dividers|assorted\+highlighter\+set|removable\+page\+flags|monthly\+desk\+pad\+calendar|self\+inking\+date\+stamp|letter\+size\+file\+jacket|dog\+cooling\+mat|dog\+cooling\+vest|dog\+cooling\+bandana|dog\+ramp|foam\+dog\+stairs|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1177 steno-pad / kitchen-timer / file-label, #1176 notebook / paint-chip / calendar, dog-com Frenchie cooling hops, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only four-tab-dividers / analog-outdoor-thermometer / weekly-checklist-notepad gear' },
+    ],
+    why: 'Money path leftover after #1177: keep the existing sidebar capture; add under-hero capture with a concrete French Bulldog health checklist offer; every gear CTA is an amazon-brand category search matching on-page BOAS / IVDD / heat-risk copy (four-tab dividers so BOAS grades 0–III stay four labeled stacks, an analog outdoor thermometer so the 70°F outdoor limit stays a written cutoff, a weekly checklist notepad so fold-cleaning two-to-three times a week stays a dated list), never a placeholder ASIN, a #1177 steno-pad / kitchen-timer / file-label hop, a dog-com Frenchie cooling hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational French-bulldog-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
