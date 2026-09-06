@@ -235,6 +235,38 @@ export default function CyclingGuidePage() {
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-cycling checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-cycling checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the aquarium-cycling checklist that matches the nitrogen-cycle,
+              fishless-vs-fish-in, ammonia / nitrite / nitrate, bottled-bacteria, and
+              test-schedule copy on this page — grow Nitrosomonas and Nitrospira so
+              a 2 ppm ammonia dose drops to 0 ppm ammonia and 0 ppm nitrite within
+              24 hours, prefer fishless cycling with pure ammonium chloride, and
+              treat bottled starters (Tetra SafeStart Plus, Dr. Tim’s One & Only,
+              Fritz Turbo Start 700) as colony seed, not a skip of the test kit. An
+              ammonia / nitrite / nitrate test kit is the existing hop below.
+              Educational cycling notes only, not a ranked product list, not
+              livestock, and not a substitute for a fish veterinarian. The existing
+              ammonia-nitrite-nitrate-test-kit Amazon search stays below. Empty
+              Chewy buttons stay hidden. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-cycling checklist"
+              subtitle="Email the nitrogen-cycle, fishless-vs-fish-in, ammonia / nitrite / nitrate, and test-schedule notes. No spam."
+              ctaText="Email my aquarium-cycling checklist"
+              source="setup-aquarium-cycling-guide-under-hero"
+            />
+          </div>
+
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
             <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours. Plan the calendar with the{' '}
             <Link href="/tools/aquarium-cycling-estimator" className="text-brand-primary no-underline hover:underline">
@@ -516,10 +548,9 @@ export default function CyclingGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Tank Cycling Essentials — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>
