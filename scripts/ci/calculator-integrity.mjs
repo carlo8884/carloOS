@@ -7946,6 +7946,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1241: equine-supplement review under-hero is on main. Last remaining horses.com Amazon leftover (review/money pages). Keep the existing sidebar capture and the already-hopped Platinum CJ Amazon search; add under-hero capture with a concrete equine joint-supplement-checklist offer matching on-page diagnose-first / ASU / marine DHA-EPA / devil-claw FEI copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'ferret · best-ferret-harness hops',
+    file: 'apps/ferret-com/src/app/reviews/best-ferret-harness/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-ferret-harness-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-harness checklist"/, label: 'concrete ferret-harness-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-harness"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/ferret\+vest\+harness\+jacket\+escape\+proof\?s=reviews-best-ferret-harness/, label: 'existing vest/jacket amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/ferret\+h\+style\+harness\+adjustable\?s=reviews-best-ferret-harness/, label: 'existing H-style amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/ferret\+mesh\+harness\+leash\+set\?s=reviews-best-ferret-harness/, label: 'existing mesh H-plus-leash amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1242: horses.com joint-supplements under-hero is on main. Horses review/money Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped vest / H-style / mesh Amazon searches; add under-hero capture with a concrete ferret-harness-checklist offer matching on-page escape-prevention / jacket-vest / adjustable-H / one-finger indoor-test copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
