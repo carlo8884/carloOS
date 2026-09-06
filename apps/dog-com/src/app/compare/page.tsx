@@ -16,10 +16,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
+  EmailCapture,
   SchemaScript,
+  ShopCtas,
   StockImage,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -160,6 +163,58 @@ export default function CompareHubPage() {
         <StockImage manifestKey="dog-com:compare-hero" aspect="16:9" variant="wide" priority />
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog compare-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog compare-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-compare-decision-axis-chart,
+            fridge-compare-pair-card, and
+            canine-compare-reference-handbook notes that
+            match the decision-axis-map, side-by-side-pair-log,
+            and akc-ofa-encyclopedia-grounding copy on this
+            hub — a laminated dog compare decision-axis chart so
+            the family / apartment / beginner / energy /
+            maintenance map is posted on the fridge (not a
+            tools-hub calculator chart, not a reviews
+            buyer-guide chart, not a nutrition feeding chart,
+            not a training session chart, not a guides
+            section-map chart, not a breeds profile chart,
+            not a conditions body-system chart, not a
+            symptoms triage chart), a dog fridge compare pair
+            card so each breed-vs-breed spoke is labeled on
+            the fridge (not a measurement card, not a reviews
+            comparison card, not a WSAVA label card, not a
+            training cue card, not a guides prep card, not a
+            breeds library card, not a conditions library
+            card, not a symptoms library card), and a canine
+            compare reference handbook so the AKC / OFA /
+            Encyclopedia-of-the-Dog grounding is a physical
+            kitchen book (not a calculator handbook, not a
+            reviews handbook, not a nutrition handbook, not a
+            training handbook, not a guides handbook, not a
+            breeds handbook, not a conditions handbook, not a
+            symptoms handbook). Educational kitchen checklist,
+            not a ranked breed list, not a child slicker-brush
+            hop, and not a substitute for a veterinarian. No
+            spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog compare-hub checklist"
+            subtitle="Email the compare-decision-axis-chart, fridge pair-card, and compare-handbook notes. No spam."
+            ctaText="Email my dog compare-hub checklist"
+            source="compare-hub-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Methodology */}
       <div className="px-container-sm sm:px-container py-10 border-b border-brand-border">
         <h2 className="font-display font-bold text-brand-dark text-xl mb-3">
@@ -251,6 +306,84 @@ export default function CompareHubPage() {
         >
           Browse all breeds →
         </Link>
+      </section>
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Compare-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          decision-axis-map, side-by-side-pair-log, and
+          akc-ofa-encyclopedia-grounding copy on this hub —
+          a laminated dog compare decision-axis chart so the
+          family / apartment / beginner / energy / maintenance
+          map is posted on the fridge, a dog fridge compare
+          pair card so each breed-vs-breed spoke is labeled
+          on the fridge, and a canine compare reference
+          handbook so the AKC / OFA / Encyclopedia-of-the-Dog
+          grounding is a physical kitchen book. These are
+          educational kitchen searches, not a ranked breed
+          list, not a substitute for a veterinarian, not a
+          tools-hub / reviews-hub / nutrition-hub /
+          training-hub / guides-hub / breeds-hub /
+          conditions-hub / symptoms-hub hop, and not a child
+          slicker-brush hop (those live on breed children).
+          This page does not hop medications or vaccines.
+          This page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog compare decision-axis chart /
+            dog fridge compare pair card /
+            canine compare reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews /
+            nutrition / training / guides / breeds /
+            conditions / symptoms kitchen kits and child
+            slicker+brush+dog+grooming hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the compare-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page decision-axis-map, side-by-side-pair-log,
+            and akc-ofa-encyclopedia-grounding copy — a
+            laminated dog compare decision-axis chart, a
+            dog fridge compare pair card, and a canine
+            compare reference handbook. Educational kitchen
+            searches only. They are not a ranked breed list,
+            they are not a tools-hub / reviews-hub /
+            nutrition-hub / training-hub / guides-hub /
+            breeds-hub / conditions-hub / symptoms-hub hop,
+            they are not a child slicker-brush hop, and they
+            do not replace a veterinarian. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+compare+decision+axis+chart?s=compare-hub"
+              amazonLabel="Browse laminated dog compare decision-axis charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+compare+pair+card?s=compare-hub"
+              amazonLabel="Browse dog fridge compare pair cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+compare+reference+handbook?s=compare-hub"
+              amazonLabel="Browse canine compare reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </section>
       <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
     </>
