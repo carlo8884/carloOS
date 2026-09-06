@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-09-06T00:00:00Z',
 })
 
 const FAQS = [
@@ -109,9 +109,30 @@ export default function BootsWrapsPage() {
           <ArticleByline
             siteName="Horses.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the boots-and-wraps checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Boots-and-wraps checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the bandage-bow technique checklist, impact-not-tendon-support question card, and grit-rub clean-dry log that match the why-leg-protection, boots, wraps, wrapping-wrong, and do-boots-support-tendons copy on this page — a laminated horse-leg bandage-bow technique checklist so even padding / consistent moderate tension / correct direction and never-leave-on-too-long stay visible before anyone wraps a standing bandage (not a laminated saddle-pad cannot-fix-fit checklist, not a laminated riding-helmet fit-and-replace checklist, not a laminated first-horse 90-day week-by-week checklist, not a laminated senior age-related-change checklist), a horse-boot impact-not-tendon-support question card so boots-protect-against-knocks-and-brushing / they-do-not-structurally-support-tendons stays posted (not a saddle-pad sweat-pattern dry-spot question card, not a riding-helmet certification-label question card, not a buyer-vet-briefing card, not a kick-zone safety card), and a horse-boot grit-rub clean-dry log notebook so grit-under-a-boot-causes-rubs and clean-dry-inside stay written down (not a saddle-pad clean-dry rotation log, not a riding-helmet impact-retirement log, not a pain-demeanor change-log, not a weight-and-joint watch notebook). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for hands-on wrapping instruction or a veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Boots-and-wraps checklist"
+              subtitle="Email the bandage-bow card, impact-not-support check, and grit-rub clean-dry log. No spam."
+              ctaText="Email my boots-and-wraps checklist"
+              source="tack-boots-and-wraps-under-hero"
+            />
+          </div>
 
           <h2 id="why">Why Use Leg Protection</h2>
           <p>Horses can strike one leg with another (brushing or interfering), overreach with a hind foot onto a front heel, or knock a leg on a fence or jump. Boots and wraps protect against these impacts and abrasions during work, travel, and turnout. Some are also used in veterinary care to hold dressings or provide support during recovery. The key is to use the right protection for the purpose and to fit it correctly.</p>
@@ -135,9 +156,18 @@ export default function BootsWrapsPage() {
 
           <h2 id="dangers">The Dangers of Wrapping Wrong</h2>
           <p>A leg bandage applied too tightly, unevenly, or without adequate padding can cut off circulation and create pressure on the tendons -- in the worst case causing a bandage bow, lasting tendon damage. Bandages must be applied over sufficient even padding, with consistent, moderate tension, in the correct direction, and never left on too long or allowed to slip. Because of these risks, bandaging is a skill best learned hands-on from a knowledgeable horseperson or veterinarian rather than from a diagram alone.</p>
+          <p>
+            A laminated horse-leg bandage-bow technique checklist is how even padding, consistent moderate tension, correct direction, and never-leave-on-too-long stay visible before anyone wraps a standing bandage — it is not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads), not a laminated riding helmet fit-and-replace checklist (that lives on helmet-guide), not a laminated first-horse 90-day week-by-week checklist (that lives on the first-horse-roadmap), and not a laminated senior horse age-related change checklist (that lives on senior-horse-care). This page does not hop equine+bandage+scissors, vet-wrap, or first-aid saline / pads (those live on first-aid-kit). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
+          </p>
 
           <h2 id="support">Do Boots Support Tendons?</h2>
           <p>Owners often assume boots meaningfully support the tendons and ligaments. In reality, the forces on a galloping or landing horse&apos;s tendons are enormous, and boots provide impact protection rather than genuine structural support against those loads. Their real value is preventing the cuts, knocks, and brushing injuries that come from strikes and interference. Choosing boots for protection, fitting them snugly but not tightly, and keeping them clean and dry inside (grit under a boot causes rubs) matters more than chasing support claims.</p>
+          <p>
+            A horse-boot impact-not-tendon-support question card is how &quot;boots protect against knocks and brushing, they do not structurally support tendons&quot; stays posted — it is not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads), not a riding helmet certification-label question card (that lives on helmet-guide), not a horse buyer vet-briefing question card (that lives on pre-purchase-exam), and not a horse handler kick-zone safety question card (that lives on reading-body-language). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
+          </p>
+          <p>
+            A horse-boot grit-rub clean-dry log notebook is how grit-under-a-boot-causes-rubs and clean-dry-inside stay written down — it is not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads), not a riding helmet impact-retirement log notebook (that lives on helmet-guide), not a horse pain-demeanor change-log notebook (that lives on reading-body-language), and not a senior horse weight-and-joint watch notebook (that lives on senior-horse-care). This page does not hop horse+shipping+boots or horse+shipping+wraps (those live on trailering), and it does not hop ice+boot+cold+therapy+wrap (that lives on the grimace-scale / first-aid kit). This page does not hop first-aid saline / pads / scissors.
+          </p>
 
           <h2 id="picks">Boot and Wrap Picks</h2>
           <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -218,6 +248,96 @@ export default function BootsWrapsPage() {
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="standing-wraps-and-quilts"
           />
+
+          {/* Shop leftover kit — unused vs #1141
+              laminated+saddle+pad+cannot+fix+fit+checklist /
+              saddle+pad+sweat+pattern+dry+spot+question+card /
+              saddle+pad+clean+dry+rotation+log+notebook, #1140
+              laminated+riding+helmet+fit+and+replace+checklist /
+              riding+helmet+certification+label+question+card /
+              riding+helmet+impact+retirement+log+notebook, #1139
+              laminated+first+horse+90+day+week+by+week+checklist /
+              first+horse+ground+manners+cue+card /
+              first+horse+tack+room+emergency+plan+card, #1138
+              laminated+senior+horse+age+related+change+checklist /
+              senior+horse+weight+and+joint+watch+notebook /
+              senior+horse+quality+of+life+score+card, #1137
+              laminated+horse+ear+eye+tail+signal+checklist /
+              horse+handler+kick+zone+safety+question+card /
+              horse+pain+demeanor+change+log+notebook, #1136
+              laminated+pre+purchase+exam+stage+walkthrough+checklist /
+              horse+pre+purchase+exam+findings+decision+worksheet /
+              horse+buyer+vet+briefing+question+card, #1135
+              horse+lease+agreement+document+binder /
+              laminated+horse+lease+walkthrough+checklist /
+              horse+full+vs+partial+lease+cost+share+worksheet, #1134
+              horse+insurance+policy+document+binder /
+              laminated+horse+insurance+claims+checklist /
+              horse+mortality+vs+major+medical+decision+worksheet, #1133
+              horse+ownership+monthly+budget+worksheet /
+              equine+emergency+fund+expense+tracker+notebook /
+              horse+keep+feed+farrier+cost+log+binder, #1132
+              laminated+equine+vet+interview+checklist /
+              horse+after+hours+emergency+cover+question+card /
+              horse+veterinary+history+vcpr+records+folder, #1131
+              first+horse+buyer+visit+field+notebook /
+              laminated+first+horse+tryout+walkthrough+checklist /
+              horse+pre+purchase+exam+records+binder, #1130
+              laminated+horse+boarding+facility+walkthrough+checklist /
+              horse+boarding+contract+document+binder /
+              waterproof+horse+hay+bale+storage+tarp, #1129
+              sterile+saline+wound+flush+horse /
+              nonstick+wound+dressing+pads+horse /
+              equine+bandage+scissors,
+              saddle-fit-basics
+              horse+saddle+pad /
+              horse+sheepskin+half+pad /
+              horse+saddle+shims /
+              horse+girth+cinch,
+              horse-size-for-rider
+              ASTM+SEI+horse+riding+helmet,
+              trailering
+              horse+shipping+boots /
+              horse+shipping+wraps,
+              grimace / first-aid
+              ice+boot+cold+therapy+wrap /
+              vet+wrap /
+              equine+first+aid+kit,
+              #1128
+              laminated+horse+barn+calculator+tools+chart /
+              horse+stall+door+measurement+card /
+              equine+calculator+reference+handbook, #1127
+              laminated+horse+barn+owner+guides+chart /
+              horse+stall+door+owner+guides+card /
+              equine+owner+guides+reference+handbook, #1126
+              laminated+horse+barn+daily+care+chart /
+              horse+stall+door+care+card /
+              equine+husbandry+reference+handbook, #1125
+              laminated+horse+barn+emergency+triage+chart /
+              horse+stall+door+vital+signs+card /
+              equine+health+reference+handbook. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the boots-and-wraps leftover kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page why-leg-protection, boots, wraps, wrapping-wrong, and do-boots-support-tendons copy — a laminated horse-leg bandage-bow technique checklist, a horse-boot impact-not-tendon-support question card, and a horse-boot grit-rub clean-dry log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a horse+shipping+boots / horse+shipping+wraps hop (those live on trailering), they are not an equine+bandage+scissors / vet-wrap / ice+boot hop (those live on first-aid-kit / grimace-scale), they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a BCS-chart hop, and they do not replace hands-on wrapping instruction or a veterinarian. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+leg+bandage+bow+technique+checklist?s=boots-and-wraps"
+                amazonLabel="Browse laminated horse-leg bandage-bow technique checklists on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+boot+impact+not+tendon+support+question+card?s=boots-and-wraps"
+                amazonLabel="Browse horse-boot impact-not-tendon-support question cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+boot+grit+rub+clean+dry+log+notebook?s=boots-and-wraps"
+                amazonLabel="Browse horse-boot grit-rub clean-dry log notebooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
