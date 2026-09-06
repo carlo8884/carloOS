@@ -6343,6 +6343,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1159: keep the existing sidebar capture and the already-hopped ammonia-nitrite-nitrate-test-kit amazon-brand search; add under-hero capture with a concrete aquarium-cycling-checklist offer matching on-page nitrogen-cycle / fishless-vs-fish-in / ammonia-nitrite-nitrate / bottled-bacteria / test-schedule copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
   },
 
+  {
+    id: 'vets · er-vs-urgent-care hops',
+    file: 'apps/vets-co/src/app/guides/er-vs-urgent-care/page.tsx',
+    mustInclude: [
+      { re: /source="guides-er-vs-urgent-care-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ER vs urgent-care clinic checklist"/, label: 'concrete ER-vs-urgent-care clinic-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="guides-er-vs-urgent"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/credit\+card\+size\+laminating\+pouches\?s=guides-er-vs-urgent-care/, label: 'credit-card-size laminating-pouch search hop (matches on-page keep-contact-details-for-all-three-handy / pocket-card copy; unique vs letter+size+thermal+laminating+pouches / pet+emergency+contact+card)' },
+      { re: /amazon-brand\/small\+magnetic\+dry\+erase\+board\?s=guides-er-vs-urgent-care/, label: 'small magnetic dry-erase-board search hop (matches on-page fridge three-clinic-number copy; unique vs wall+mounted+magnetic+monthly+planner / hardcover+weekly+appointment+planner)' },
+      { re: /amazon-brand\/car\+visor\+document\+holder\?s=guides-er-vs-urgent-care/, label: 'car visor document-holder search hop (matches on-page nearest-ER-address-in-the-car / not-searching-during-a-crisis copy; unique vs medium+hard+sided+plastic+pet+carrier / soft+pet+carrier / lined+telephone+message+pad)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|styptic\+powder|wound\+care\+gauze|pet\+emergency\+contact\+card|led\+medical\+penlight|folding\+pet\+stretcher|letter\+size\+thermal\+laminating\+pouches|72\+hour\+digital\+countdown\+timer|wall\+mounted\+magnetic\+monthly\+planner|hardcover\+weekly\+appointment\+planner|wire\+basket\+dog\+muzzle|quilted\+disposable\+underpads|handheld\+aa\+led\+flashlight|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1093 kitchen-timer / message-pad / hard-sided-carrier, ER-vs-clinic first-aid-kit / thermometer / soft-carrier / styptic / gauze, dog-symptoms-guide emergency-contact-card / penlight / stretcher, vaccinations letter-size laminating-pouch / 72-hour-timer, preventive-care magnetic-planner, pain-management weekly-planner, emergency-signs muzzle / underpads / flashlight, first-aid-kit / thermometer, or Rx — this page hops only credit-card-size-laminating-pouches / small-magnetic-dry-erase-board / car-visor-document-holder gear' },
+    ],
+    why: 'Money path leftover after #1160: keep the existing sidebar capture; add under-hero capture with a concrete ER-vs-urgent-care clinic-checklist offer; every gear CTA is an amazon-brand category search matching on-page keep-contact-details-for-all-three-handy copy (credit-card-size laminating pouches so regular-vet / urgent-care / 24-hour-ER numbers stay a pocket card, a small magnetic dry-erase board so those three numbers stay on the fridge, a car visor document holder so the nearest ER address rides in the car), never a placeholder ASIN, a #1093 kitchen-timer / message-pad / hard-sided-carrier hop, an ER-vs-clinic first-aid-kit / thermometer / soft-carrier hop, a dog-symptoms-guide pet-emergency-contact-card hop, a letter-size laminating-pouch hop, or a prescription hop. Educational contact / planning tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
+
 ]
 
 let failures = 0
