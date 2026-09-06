@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -113,6 +113,51 @@ export default function WholePreyVsKibblePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret diet-model checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret diet-model checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-prey-vs-kibble-chart,
+              fridge-diet-model-card, and
+              mustelid-diet-model-reference-handbook notes
+              that match the prey-vs-kibble-map,
+              diet-model-tradeoff-log, and
+              avma-afa-diet-grounding copy on this page —
+              a laminated ferret prey-vs-kibble chart so the
+              whole-prey / frankenprey / commercial-kibble
+              map is posted on the fridge (not a diet-hub
+              feeding chart, not a kibble-panel chart, not
+              a protein-fat chart), a ferret fridge
+              diet-model card so convenience / food-safety /
+              dental-abrasion tradeoff notes are labeled on
+              the fridge (not a diet-label card, not a
+              macro-window card, not a dry-matter card),
+              and a mustelid diet-model reference handbook
+              so the AVMA raw-caution / AFA / Quesenberry
+              grounding is a physical kitchen book (not a
+              diet handbook, not a macro-target handbook,
+              not a food-label handbook). Educational
+              kitchen checklist, not a ranked kibble list,
+              not a sleep-sack hop, and not a substitute
+              for an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Aging
+              pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret diet-model checklist"
+              subtitle="Email the prey-vs-kibble-chart, fridge diet-model card, and diet-model-handbook notes. No spam."
+              ctaText="Email my ferret diet-model checklist"
+              source="diet-whole-prey-vs-kibble-under-hero"
+            />
+          </div>
+
           <h2 id="models">The Two Models</h2>
           <p>
             Ferrets (<em>Mustela putorius furo</em>) are obligate carnivores descended from the European polecat. In the wild, their relatives eat whole small prey — rodents, rabbits, birds — consuming muscle, organ, bone, and a small amount of fur. Two feeding philosophies attempt to meet that requirement in a domestic setting. The <strong>whole-prey / raw model</strong> feeds animal tissue directly: whole frozen-thawed prey, or a "frankenprey" assembly of muscle meat, organ, and raw meaty bone. The <strong>commercial-kibble model</strong> feeds a dry, shelf-stable formula engineered to hit the ferret macronutrient profile from rendered animal ingredients.
@@ -160,6 +205,59 @@ export default function WholePreyVsKibblePage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret prey-vs-kibble chart /
+              ferret fridge diet-model card /
+              mustelid diet-model reference handbook).
+              Keep existing Wysong + Chewy review hops.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              kibble / label / protein-fat kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret diet-model kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page prey-vs-kibble-map,
+              diet-model-tradeoff-log, and
+              avma-afa-diet-grounding copy — a laminated
+              ferret prey-vs-kibble chart, a ferret fridge
+              diet-model card, and a mustelid diet-model
+              reference handbook. Educational kitchen
+              searches only. They are not a ranked kibble
+              list, they are not a diet-hub / kibble /
+              label / protein-fat hop, they are not a
+              child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden. Existing Wysong
+              and frozen-feeder-prey review hops stay in
+              the starter-pick section below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+prey+vs+kibble+chart?s=whole-prey-vs-kibble"
+                amazonLabel="Browse laminated ferret prey-vs-kibble charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+diet+model+card?s=whole-prey-vs-kibble"
+                amazonLabel="Browse ferret fridge diet-model cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+diet+model+reference+handbook?s=whole-prey-vs-kibble"
+                amazonLabel="Browse mustelid diet-model reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">A Starter Pick for Each Model</h2>
           <p>
