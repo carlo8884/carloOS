@@ -6366,6 +6366,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1160: keep the existing sidebar capture; add under-hero capture with a concrete ER-vs-urgent-care clinic-checklist offer; every gear CTA is an amazon-brand category search matching on-page keep-contact-details-for-all-three-handy copy (credit-card-size laminating pouches so regular-vet / urgent-care / 24-hour-ER numbers stay a pocket card, a small magnetic dry-erase board so those three numbers stay on the fridge, a car visor document holder so the nearest ER address rides in the car), never a placeholder ASIN, a #1093 kitchen-timer / message-pad / hard-sided-carrier hop, an ER-vs-clinic first-aid-kit / thermometer / soft-carrier hop, a dog-symptoms-guide pet-emergency-contact-card hop, a letter-size laminating-pouch hop, or a prescription hop. Educational contact / planning tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
 
+  {
+    id: 'vets · emergency-vet-costs hops',
+    file: 'apps/vets-co/src/app/guides/emergency-vet-costs/page.tsx',
+    mustInclude: [
+      { re: /source="guides-emergency-vet-costs-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my emergency-vet-cost prep checklist"/, label: 'concrete emergency-vet-cost prep-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="guides-er-costs"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/locking\+cash\+box\+with\+key\?s=guides-emergency-vet-costs/, label: 'locking cash-box-with-key search hop (matches on-page emergency-savings-fund / deductible / deposit copy; unique vs 32+gallon+locking+animal+proof+trash+can / airtight+locking+pet+food+bin)' },
+      { re: /amazon-brand\/basic\+desktop\+calculator\?s=guides-emergency-vet-costs/, label: 'basic desktop-calculator search hop (matches on-page estimate-range / deposit-math copy; unique vs kitchen+gram+scale / hardcover+weekly+appointment+planner)' },
+      { re: /amazon-brand\/manila\+file\+folders\+letter\+size\?s=guides-emergency-vet-costs/, label: 'letter-size manila file-folder search hop (matches on-page written-treatment-plan / cost-estimate copy; unique vs letter+size+expanding+file+organizer / letter+size+plastic+file+box / letter+size+thermal+laminating+pouches)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(credit\+card\+size\+laminating\+pouches|small\+magnetic\+dry\+erase\+board|car\+visor\+document\+holder|48\+hour\+digital\+kitchen\+timer|lined\+telephone\+message\+pad|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|letter\+size\+expanding\+file\+organizer|letter\+size\+plastic\+file\+box|letter\+size\+thermal\+laminating\+pouches|32\+gallon\+locking\+animal\+proof\+trash\+can|airtight\+locking\+pet\+food\+bin|pet\+emergency\+contact\+card|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1161 laminating-pouch / dry-erase-board / visor-holder, #1093 kitchen-timer / message-pad / hard-sided-carrier, ER-vs-clinic first-aid-kit / thermometer / soft-carrier, senior-bloodwork expanding-file, senior-pet-care plastic file-box, vaccinations letter-size laminating-pouch, leptospirosis trash-can, diabetes food-bin, pet-emergency-contact-card, first-aid-kit / thermometer, or Rx — this page hops only locking-cash-box-with-key / basic-desktop-calculator / manila-file-folders-letter-size gear' },
+    ],
+    why: 'Money path leftover after #1161: keep the existing sidebar capture; add under-hero capture with a concrete emergency-vet-cost prep-checklist offer; every gear CTA is an amazon-brand category search matching on-page emergency-savings-fund / written-estimate / deposit copy (a locking cash box with a key so the deductible, non-reimbursed portion, and upfront deposit stay a counted fund, a basic desktop calculator so an estimate range is added up instead of guessed, letter-size manila file folders so the written treatment plan and cost estimate stay together), never a placeholder ASIN, a #1161 laminating-pouch / dry-erase-board / visor-holder hop, a #1093 kitchen-timer / message-pad / hard-sided-carrier hop, an expanding-file / plastic file-box hop, an ER-vs-clinic first-aid-kit / thermometer hop, an insurance-brand hop, or a prescription hop. Educational cost-prep / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
+
 ]
 
 let failures = 0
