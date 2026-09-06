@@ -73,6 +73,38 @@ export default function RainbowFishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the rainbow-fish-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Rainbow-fish-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Melanotaeniidae
+                notes that match the care copy on this
+                page — a group of 6+ with a 2:1 or 3:1
+                female-to-male ratio, pH 7.0–8.0 and
+                GH 8–15 hard alkaline water, nitrate
+                under 20 ppm, and 9–18 months plus
+                quality food before full color. Educational
+                rainbow-fish-setup checklist, not a
+                new product hop, not livestock, and not
+                a substitute for a fish veterinarian. The
+                existing rainbow-fish tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Rainbow-fish-setup checklist"
+                subtitle="Email the 6+ group, hard-alkaline, and color-development notes. No spam."
+                ctaText="Email my rainbow-fish-setup checklist"
+                source="species-rainbow-fish-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-rainbow-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A rainbowfish in a home aquarium." priority />
         <h2>Color Development — Why Your Rainbowfish Looks Different</h2>
         <p>Rainbowfish are notoriously dull-looking in fish stores and reach their full color potential only under specific conditions: maturity (full color at 9–18 months — juveniles are pale), clean water (nitrate under 20 ppm — consistent water changes), varied high-quality diet (spirulina-based flakes plus frozen daphnia and brine shrimp develop the carotenoid pigments responsible for red and orange coloration), and social stimulation (males display to each other and to females — a mixed-sex group in the correct ratio produces the best coloration). A Boesemani rainbowfish in a bare tank with poor water and flake food is unimpressive. The same fish in a planted tank with clean water, good food, and other rainbowfish is stunning.</p>
@@ -93,7 +125,6 @@ export default function RainbowFishPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for rainbow fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/rainbow%20fish%20tank%20setup?s=species-rainbow-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Rainbow Fish Setup on Amazon →</a>
-            <a href="/go/chewy-brand/rainbow%20fish%20tank%20setup?s=species-rainbow-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
