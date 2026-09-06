@@ -5216,6 +5216,28 @@ const CALCULATORS = [
     ],
     why: 'Disclosure-only money path: keep the existing sidebar capture and existing AffiliateDisclosure; add under-hero capture with a concrete horse EGUS forage-first-checklist offer; do not add Amazon ShopCtas or amazon-brand queries (this page stays disclosure-only). Never a placeholder ASIN, never href="#", never generic Subscribe. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'horses · salt-and-electrolytes hops',
+    file: 'apps/horses-com/src/app/nutrition/salt-and-electrolytes/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-salt-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my horse salt-and-electrolyte checklist"/, label: 'concrete horse salt-and-electrolyte-checklist offer, not Subscribe' },
+      { re: /source="nutrition-salt"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/plain\+white\+horse\+salt\+block\?s=nutrition-salt/, label: 'plain white horse salt-block search hop (matches on-page year-round-baseline-salt copy; unique vs loose+plain+white+salt+horse / equine+salt+lick)' },
+      { re: /amazon-brand\/salt\+first\+horse\+electrolyte\+powder\?s=nutrition-salt/, label: 'salt-first electrolyte-powder search hop (matches on-page sweat-replacement / salt-not-sugar copy; unique vs horse+electrolytes)' },
+      { re: /amazon-brand\/wide\+mouth\+horse\+water\+bucket\?s=nutrition-salt/, label: 'wide-mouth horse water-bucket search hop (matches on-page always-provide-water copy; unique vs automatic+horse+waterer / color+coded+flat+back+horse+buckets)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(loose\+plain\+white\+salt\+horse|horse\+electrolytes|equine\+salt\+lick|automatic\+horse\+waterer|stainless\+horse\+shedding\+blade|wicking\+horse\+anti\+sweat\+sheet|equine\+hoof\+angle\+gauge|leather\+horse\+lunge\+cavesson|neoprene\+horse\+overreach\+bell\+boots|tow\+behind\+arena\+drag\+harrow|cotton\+horse\+polo\+exercise\+wraps|portable\+horse\+paddock\+panels|digital\+hanging\+hay\+bale\+scale|equine\+forage\+nsc\+hay\+test\+kit|portable\+strip\+grazing\+step\+in\+posts|portable\+3\+sided\+horse\+run\+in\+shelter|labeled\+stackable\+horse\+grooming\+caddy|large\+mesh\+horse\+blanket\+wash\+bag|heavy\+duty\+paddock\+mud\+grid|full\+length\+horse\+turnout\+boots|waffle\+weave\+horse\+leg\+towel|irish\+knit\+horse\+cooler|wool\+exercise\+quarter\+sheet|steel\+heart\+bar\+horseshoe|3\+degree\+leather\+wedge\+pad|rocker\+toe\+steel\+horseshoe|color\+coded\+flat\+back\+horse\+buckets|epsom\+salt\+horse\+hoof|antimicrobial|antibiotic|vaccine|vaccination|prescription|medication|medicine|rx\b)/, label: 'never hop tying-up loose-salt, emergency horse-electrolytes, feed-calculator salt-lick, #1108 shedding-blade / anti-sweat-sheet / automatic-waterer, #1107 hoof-gauge / cavesson / bell-boots, #1106 arena-drag / polo-wraps / paddock-panels, #1105 hay-bale-scale / NSC kit / strip-grazing, #1104 run-in / caddy / wash-bag, #1103 mud-grid / turnout-boots / leg-towel, #1102 cooler / quarter-sheet, #1101 heart-bar / wedge / rocker, strangles buckets, abscess epsom salt, or Rx / vaccine — this page hops only plain-white-horse-salt-block / salt-first-horse-electrolyte-powder / wide-mouth-horse-water-bucket gear' },
+    ],
+    why: 'Money path: keep the existing sidebar capture and existing AffiliateDisclosure; under-hero capture with a concrete horse salt-and-electrolyte-checklist offer; every gear CTA is an amazon-brand category search matching on-page baseline-salt / sweat-replacement / always-provide-water copy (a plain white horse salt block so every horse has a free-choice source, a salt-first electrolyte powder so heavy sweat is not replaced with sugar, a wide-mouth water bucket so electrolytes are never given without water), never a placeholder ASIN, a tying-up loose-salt hop, a generic horse-electrolytes hop, a PPID automatic-waterer hop, or a vaccine / prescription hop. Educational barn tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 ]
 
 let failures = 0
