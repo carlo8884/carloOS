@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -162,6 +162,54 @@ export default function TrainingHubPage() {
       <div className="px-container-sm sm:px-container pt-8 max-w-container-wide mx-auto">
         <StockImage manifestKey="dog-com:category-training" aspect="16:9" variant="wide" priority />
       </div>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-container-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog training-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog training-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-training-session-chart,
+            fridge-training-cue-card, and
+            canine-training-reference-handbook notes that
+            match the training-section-map,
+            cue-order-and-session-log, and
+            AVSAB-CCPDT-reward-based-grounding copy on this
+            hub — a laminated dog training session chart so
+            the section map (fundamentals, puppy schedule,
+            crate / house training, behavior problems,
+            trainer credentials) is posted on the fridge
+            (not a tools-hub calculator chart, not a
+            reviews-hub buyer-guide chart, not a
+            nutrition feeding chart), a dog fridge
+            training cue card so sit / down / stay / come
+            / leave-it order and short-session notes are
+            labeled on the fridge (not a measurement card,
+            not a WSAVA label card, not a crate-pad card),
+            and a canine training reference handbook so
+            the AVSAB / CCPDT / reward-based grounding is
+            a physical kitchen book (not a calculator
+            handbook, not a reviews handbook, not a
+            nutrition handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            shock / prong / e-collar hop, and not a
+            substitute for a veterinarian or a certified
+            behavior professional. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog training-hub checklist"
+            subtitle="Email the training-session-chart, fridge cue-card, and training-handbook notes. No spam."
+            ctaText="Email my dog training-hub checklist"
+            source="training-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* TL;DR — extractable direct-answer block (GEO citation magnet) */}
       <div className="px-container-sm sm:px-container pt-10 max-w-container-wide mx-auto">
@@ -332,6 +380,86 @@ export default function TrainingHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-container-wide">
+          Training-hub kitchen kit
+        </h2>
+        <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          training-section-map, cue-order-and-session-log,
+          and AVSAB-CCPDT-reward-based-grounding copy on
+          this hub — a laminated dog training session
+          chart so the section map is posted on the
+          fridge, a dog fridge training cue card so sit /
+          down / stay / come / leave-it order is labeled
+          on the fridge, and a canine training reference
+          handbook so the AVSAB / CCPDT / reward-based
+          grounding is a physical kitchen book. These are
+          educational kitchen searches, not a ranked
+          product list, not a substitute for a
+          veterinarian, not a tools-hub calculator-tools
+          hop, not a reviews-hub or nutrition-hub hop,
+          and not a child crate / clicker / treat /
+          harness hop (those live on the child training
+          pages). This page does not hop medications,
+          vaccines, or shock / prong / e-collars. This
+          page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-container-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog training session chart /
+            dog fridge training cue card /
+            canine training reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / shock-collar
+            ASIN hops. ShopCtas hides empty Chewy;
+            never href="#" or PLACEHOLDER. Unused vs
+            tools / reviews / nutrition kitchen kits
+            and child training crate / clicker / treat
+            / harness hops. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the training-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page training-section-map,
+            cue-order-and-session-log, and
+            AVSAB-CCPDT-reward-based-grounding copy — a
+            laminated dog training session chart, a dog
+            fridge training cue card, and a canine
+            training reference handbook. Educational
+            kitchen searches only. They are not a ranked
+            product list, they are not a tools-hub /
+            reviews-hub / nutrition-hub hop, they are
+            not a crate / clicker / treat / harness hop,
+            and they do not replace a veterinarian or a
+            certified behavior professional. Dog.com
+            earns a commission on qualifying purchases
+            at no extra cost to you. Empty Chewy buttons
+            stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+training+session+chart?s=training-hub"
+              amazonLabel="Browse laminated dog training session charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+training+cue+card?s=training-hub"
+              amazonLabel="Browse dog fridge training cue cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+training+reference+handbook?s=training-hub"
+              amazonLabel="Browse canine training reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
+
       <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="footer" />
     </>
   </>
