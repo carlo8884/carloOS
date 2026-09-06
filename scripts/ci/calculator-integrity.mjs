@@ -7735,6 +7735,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1230: keep the existing sidebar capture and the already-hopped zebra-danio tank-setup amazon-brand search; add under-hero capture with a concrete zebra-danio-setup-checklist offer matching on-page 6+ school / 64–77°F / 10-gallon min / tight lid copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · betta-fish-tank-mates hops',
+    file: 'apps/fish-com/src/app/species/betta-fish-tank-mates/page.tsx',
+    mustInclude: [
+      { re: /source="species-betta-fish-tank-mates-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my betta-fish-tank-mates-setup checklist"/, label: 'concrete betta-fish-tank-mates-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-betta-mates"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/betta%20fish%20tank%20mates%20tank%20setup\?s=species-betta-fish-tank-mates/, label: 'existing betta-fish-tank-mates tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1231: keep the existing sidebar capture and the already-hopped betta-fish tank-mates tank-setup amazon-brand search; add under-hero capture with a concrete betta-fish-tank-mates-setup-checklist offer matching on-page 10-gallon min / add-betta-last / 72-hour observe / Cory 6+ copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
