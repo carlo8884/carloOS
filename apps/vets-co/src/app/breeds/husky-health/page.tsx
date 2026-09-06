@@ -5,6 +5,8 @@ import {
   EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,10 +132,46 @@ export default function VetsHuskyHealthPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Siberian Husky health checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Siberian Husky health checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prep notes that match the
+              ACVO, GDV, and zinc-dermatosis copy on
+              this page — an academic-year planner
+              so the annual CAER eye exam stays one
+              dated visit covering cataracts, PRA,
+              and corneal dystrophy, an 8-column
+              columnar pad so eyes, hips, thyroid,
+              gastropexy, and platelet review stay
+              one written row, and a newsprint
+              sketch pad so facial crusting sites
+              and PRA furniture-layout cues stay
+              drawn, not guessed. Educational
+              checklist, not a diagnosis, not a
+              substitute for veterinary care, and
+              not an analysis-pad, blotter, or
+              numbered-log hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Siberian Husky health checklist"
+              subtitle="Email the planner, columnar-pad, and sketch-pad notes. No spam."
+              ctaText="Email my Siberian Husky health checklist"
+              source="breeds-husky-health-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-06T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -318,6 +356,95 @@ export default function VetsHuskyHealthPage() {
             appear typically covers these as accident/illness with no breed exclusion. See our 2026
             comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
+
+          <h2 id="kit">Siberian-husky-health kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            ACVO, GDV, and zinc-dermatosis copy on
+            this page — an academic-year planner so
+            the annual CAER eye exam stays one dated
+            visit covering cataracts, PRA, and
+            corneal dystrophy, an 8-column columnar
+            pad so eyes, hips, thyroid, gastropexy,
+            and platelet review stay one written
+            row, and a newsprint sketch pad so
+            facial crusting sites and PRA furniture-
+            layout cues stay drawn, not guessed.
+            These are educational Siberian-husky-
+            health / paperwork tools, not a ranked
+            product list, not a substitute for
+            veterinary care, and not a treatment.
+            13-column analysis pads, desk blotter
+            pads, and numbered log books already
+            live on chihuahua-health. Two-column
+            ledger pads, 30-day habit-tracker pads,
+            and hourly desk pads already live on
+            yorkshire-terrier-health. This page does
+            not hop zinc supplements, levothyroxine,
+            harnesses, or insurance brands as Amazon
+            searches. This page does not claim
+            hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (academic-year planner /
+              8-column columnar pad /
+              newsprint sketch pad).
+              These are educational
+              Siberian-husky-health / paperwork
+              tools, not a ranked product list, not
+              a substitute for veterinary care, no
+              Rx / first-aid kit / thermometer /
+              carrier / insurance-brand ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1181
+              13+column+analysis+pad /
+              desk+blotter+pad /
+              numbered+log+book,
+              #1180
+              two+column+ledger+pad /
+              30+day+habit+tracker+pad /
+              hourly+desk+pad. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Siberian-husky-health kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page ACVO, GDV, and zinc-dermatosis
+              copy — an academic-year planner, an
+              8-column columnar pad, and a newsprint
+              sketch pad. Educational Siberian-
+              husky-health / paperwork tools only.
+              They are not a ranked product list,
+              they are not a substitute for
+              veterinary care, they are not a #1181
+              analysis-pad / blotter / numbered-log
+              hop, they are not a financing-brand or
+              insurance-brand hop, and they do not
+              replace a veterinarian. Vets.co earns
+              a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/academic+year+planner?s=breeds-husky-health"
+                amazonLabel="Browse academic-year planners on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health"
+                amazonLabel="Browse 8-column columnar pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"
+                amazonLabel="Browse newsprint sketch pads on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion

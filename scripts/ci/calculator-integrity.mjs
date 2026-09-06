@@ -6813,6 +6813,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1180: keep the existing sidebar capture; add under-hero capture with a concrete Chihuahua health checklist offer; every gear CTA is an amazon-brand category search matching on-page molera / MMVD / hypoglycemia copy (a 13-column analysis pad so murmur grade, echo date, Stage A–D, and resting respiratory rate stay one written row, a desk blotter pad so molera-protection household rules stay where kids see them, a numbered log book so each tremor-versus-hypo episode stays one dated entry), never a placeholder ASIN, a #1180 ledger / habit-tracker / hourly-desk-pad hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Chihuahua-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · husky-health hops',
+    file: 'apps/vets-co/src/app/breeds/husky-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-husky-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Siberian Husky health checklist"/, label: 'concrete Siberian Husky health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-husky"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/academic\+year\+planner\?s=breeds-husky-health/, label: 'academic-year-planner search hop (matches on-page annual CAER eye-exam copy covering cataracts / PRA / corneal dystrophy; unique vs hardcover+weekly+appointment+planner / 18+month+wall+calendar / monthly+desk+pad+calendar)' },
+      { re: /amazon-brand\/8\+column\+columnar\+pad\?s=breeds-husky-health/, label: '8-column-columnar-pad search hop (matches on-page eyes / hips / thyroid / gastropexy / platelet-review screening row; unique vs 13+column+analysis+pad / four+column+accounting+pad / two+column+ledger+pad)' },
+      { re: /amazon-brand\/newsprint\+sketch\+pad\?s=breeds-husky-health/, label: 'newsprint-sketch-pad search hop (matches on-page facial-crusting-site / PRA furniture-layout copy; unique vs paint+chip+sample+cards / blank+pedigree+chart / desk+blotter+pad)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(13\+column\+analysis\+pad|desk\+blotter\+pad|numbered\+log\+book|two\+column\+ledger\+pad|30\+day\+habit\+tracker\+pad|hourly\+desk\+pad|analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|four\+tab\+dividers|analog\+outdoor\+thermometer|weekly\+checklist\+notepad|top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|four\+column\+accounting\+pad|monthly\+desk\+pad\+calendar|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|lined\+telephone\+message\+pad|dog\+dental\+finger\+brush|step\+in\+padded\+dog\+harness|dog\+ramp|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen|zinc\+sulfate|levothyroxine)/, label: 'never hop #1181 analysis-pad / blotter / numbered-log, #1180 ledger / habit-tracker / hourly-desk-pad, weekly-planner / magnetic-planner, zinc or levothyroxine, insurance-brand amazon-brand hops, or Rx — this page hops only academic-year-planner / 8-column-columnar-pad / newsprint-sketch-pad gear' },
+    ],
+    why: 'Money path leftover after #1181: keep the existing sidebar capture; add under-hero capture with a concrete Siberian Husky health checklist offer; every gear CTA is an amazon-brand category search matching on-page ACVO / GDV / zinc-dermatosis copy (an academic-year planner so the annual CAER eye exam stays one dated visit covering cataracts, PRA, and corneal dystrophy, an 8-column columnar pad so eyes, hips, thyroid, gastropexy, and platelet review stay one written row, a newsprint sketch pad so facial crusting sites and PRA furniture-layout cues stay drawn), never a placeholder ASIN, a #1181 analysis-pad / blotter / numbered-log hop, a weekly-planner or magnetic-planner hop, a zinc or levothyroxine hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Siberian-husky-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
