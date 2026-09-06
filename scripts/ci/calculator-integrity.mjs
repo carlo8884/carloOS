@@ -7519,6 +7519,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1218: keep the existing sidebar capture and the already-hopped pearl-gourami tank-setup amazon-brand search; add under-hero capture with a concrete pearl-gourami-setup-checklist offer matching on-page 30-gallon / 77–82°F / pH 6.0–7.5 / surface-air copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · platy-fish hops',
+    file: 'apps/fish-com/src/app/species/platy-fish/page.tsx',
+    mustInclude: [
+      { re: /source="species-platy-fish-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my platy-fish-setup checklist"/, label: 'concrete platy-fish-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-platy"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/platy%20fish%20tank%20setup\?s=species-platy-fish/, label: 'existing platy-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1219: keep the existing sidebar capture (source species-platy, not the hop s= slug) and the already-hopped platy-fish tank-setup amazon-brand search; add under-hero capture with a concrete platy-fish-setup-checklist offer matching on-page 10/20-gallon / 74–78°F / pH 7.0–8.2 / all-male copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
