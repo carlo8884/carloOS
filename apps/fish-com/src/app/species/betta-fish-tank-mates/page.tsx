@@ -34,6 +34,40 @@ export default function BettaTankMatesPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the betta-fish-tank-mates-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Betta-fish-tank-mates-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Betta splendens tank-mate
+                notes that match the care copy on this
+                page — 10-gallon minimum (20 gallons
+                more reliable), add the betta last,
+                dense planting, observe 72 hours, and
+                Corydoras in 6+ or Otocinclus in 4–6
+                as typically ignored bottom dwellers.
+                Educational
+                betta-fish-tank-mates-setup checklist,
+                not a new product hop, not livestock,
+                and not a substitute for a fish
+                veterinarian. The existing betta-fish
+                tank-mates tank-setup Amazon search
+                stays below. Empty Chewy buttons stay
+                hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Betta-fish-tank-mates-setup checklist"
+                subtitle="Email the 10-gallon, add-betta-last, and 72-hour notes. No spam."
+                ctaText="Email my betta-fish-tank-mates-setup checklist"
+                source="species-betta-fish-tank-mates-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-betta-fish-tank-mates" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A betta fish community in a home aquarium." priority />
         <h2>Individual Variation — The Most Important Factor</h2>
         <p>Betta aggression varies enormously between individual fish. Some bettas live peacefully with a full community tank including other colorful fish. Others will attack, fin-nip, or kill fish that are typically considered "safe" companions. No compatibility guide can predict how a specific betta will behave — the individual fish's temperament is the determining factor. Always have a backup plan (a separate tank or divider) when introducing new tankmates to a betta.</p>
@@ -60,7 +94,6 @@ export default function BettaTankMatesPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for betta fish tank mates care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/betta%20fish%20tank%20mates%20tank%20setup?s=species-betta-fish-tank-mates" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Betta Fish Tank Mates Setup on Amazon →</a>
-            <a href="/go/chewy-brand/betta%20fish%20tank%20mates%20tank%20setup?s=species-betta-fish-tank-mates" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
