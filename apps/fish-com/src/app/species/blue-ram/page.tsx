@@ -79,6 +79,38 @@ export default function BlueRamPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the blue-ram-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Blue-ram-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the ram notes that match the care
+                copy on this page — pH 5.5–7.0 and GH
+                under 8 so a Mikrogeophagus stays in
+                soft acidic water, 80–86°F so warmth
+                matches the Llanos, and a 20-gallon
+                planted tank so a bonded pair keeps
+                visual barriers. Educational
+                blue-ram-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing blue-ram tank-setup Amazon
+                search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Blue-ram-setup checklist"
+                subtitle="Email the soft-acidic, warm-water, and pair-tank notes. No spam."
+                ctaText="Email my blue-ram-setup checklist"
+                source="species-blue-ram-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-blue-ram" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A blue ram cichlid in a home aquarium." priority />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
         <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
@@ -107,7 +139,6 @@ export default function BlueRamPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for blue ram care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/blue%20ram%20tank%20setup?s=species-blue-ram" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Blue Ram Setup on Amazon →</a>
-            <a href="/go/chewy-brand/blue%20ram%20tank%20setup?s=species-blue-ram" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
