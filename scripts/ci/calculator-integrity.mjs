@@ -7267,6 +7267,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1204: keep the existing sidebar capture and the already-hopped corydoras tank-setup amazon-brand search; add under-hero capture with a concrete bronze-corydoras-setup-checklist offer matching on-page group of 6+ / sand substrate / sinking-food copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · cardinal-tetra hops',
+    file: 'apps/fish-com/src/app/species/cardinal-tetra/page.tsx',
+    mustInclude: [
+      { re: /source="species-cardinal-tetra-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my cardinal-tetra-setup checklist"/, label: 'concrete cardinal-tetra-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-cardinal-tetra"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/cardinal%20tetra%20tank%20setup\?s=species-cardinal-tetra/, label: 'existing cardinal-tetra tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1205: keep the existing sidebar capture and the already-hopped cardinal-tetra tank-setup amazon-brand search; add under-hero capture with a concrete cardinal-tetra-setup-checklist offer matching on-page school of 10+ / pH 5.0–7.0 / GH 1–8 / 20-gallon-long copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
