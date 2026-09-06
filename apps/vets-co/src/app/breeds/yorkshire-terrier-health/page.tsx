@@ -5,6 +5,8 @@ import {
   EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,10 +132,44 @@ export default function VetsYorkshireTerrierHealthPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Yorkshire Terrier health checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Yorkshire Terrier health checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prep notes that match the
+              PSS, dental, and hypoglycemia copy on
+              this page — a two-column ledger pad
+              so the fasting and post-prandial
+              bile-acids pair stays one written
+              row, a 30-day habit-tracker pad so
+              daily brushing stays a dated streak,
+              and an hourly desk pad so the four
+              small meals until four months stay
+              timed blocks. Educational checklist,
+              not a diagnosis, not a substitute for
+              veterinary care, and not a stopwatch,
+              index-card, or recipe-box hop. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Yorkshire Terrier health checklist"
+              subtitle="Email the ledger, habit-tracker, and hourly-desk-pad notes. No spam."
+              ctaText="Email my Yorkshire Terrier health checklist"
+              source="breeds-yorkshire-terrier-health-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-06T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -173,7 +209,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Stunted growth, copper-colored irises (occasional)',
               'Prolonged anesthetic recovery — major red flag',
             ]}
-            management="Bile-acids screening before any anesthetic event in a puppy Yorkie. If elevated, refer to ACVIM internal medicine for abdominal ultrasound, CT angiography, or scintigraphy. Surgical attenuation (ameroid constrictor, cellophane banding, thin-film banding) at a referral hospital is curative in most extrahepatic cases. Medical management (low-protein hepatic diet, lactulose, antibiotics) bridges to surgery and is the long-term plan when surgery is not feasible."
+            management="Bile-acids screening before any anesthetic event in a puppy Yorkie — a fasting and post-prandial pair. A two-column ledger pad is how that pair stays one written row — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a quad-ruled graph pad (that lives on deductibles-reimbursement), and not a weekly checklist notepad (that lives on french-bulldog-health). If elevated, refer to ACVIM internal medicine for abdominal ultrasound, CT angiography, or scintigraphy. Surgical attenuation (ameroid constrictor, cellophane banding, thin-film banding) at a referral hospital is curative in most extrahepatic cases. Medical management (low-protein hepatic diet, lactulose, antibiotics) bridges to surgery and is the long-term plan when surgery is not feasible."
             guideHref="/find-a-vet"
             guideLabel="Find an internal medicine specialist →"
           />
@@ -221,7 +257,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Red, bleeding, receding gums',
               'Dropping food, pawing at face, chewing on one side',
             ]}
-            management="Daily home brushing with veterinary toothpaste. VOHC-accepted dental chews/water additives as adjuncts. Annual oral exam; professional cleaning under anesthesia with full-mouth dental radiographs when indicated. Extract retained deciduous canines at spay/neuter."
+            management="Daily home brushing with veterinary toothpaste. A 30-day habit-tracker pad is how that daily brushing stays a dated streak — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health). VOHC-accepted dental chews/water additives as adjuncts. Annual oral exam; professional cleaning under anesthesia with full-mouth dental radiographs when indicated. Extract retained deciduous canines at spay/neuter."
           />
 
           <BreedHealthCard
@@ -234,7 +270,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Seizure or collapse — EMERGENCY',
               'Following any stressor (vaccine, travel, GI upset, surgery)',
             ]}
-            management="Feed 4 small meals daily until ≥4 months old. Keep corn syrup or oral glucose gel at home and when traveling. Apply a pea-sized amount of corn syrup to the gums while transporting to an emergency hospital for any episode of weakness, seizure or unresponsiveness."
+            management="Feed 4 small meals daily until ≥4 months old. An hourly desk pad is how those four small meals stay timed blocks — it is not a monthly desk pad calendar (that lives on when-to-enroll), not a mechanical kitchen timer (that lives on german-shepherd-health), and not a recipe-card box (that lives on beagle-health). Keep corn syrup or oral glucose gel at home and when traveling. Apply a pea-sized amount of corn syrup to the gums while transporting to an emergency hospital for any episode of weakness, seizure or unresponsiveness."
           />
 
           <BreedHealthCard
@@ -298,6 +334,94 @@ export default function VetsYorkshireTerrierHealthPage() {
             symptoms appear typically covers these as accident/illness with no breed exclusion. See our
             2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
+
+          <h2 id="kit">Yorkshire-terrier-health kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            PSS, dental, and hypoglycemia copy on
+            this page — a two-column ledger pad so
+            the fasting and post-prandial bile-acids
+            pair stays one written row, a 30-day
+            habit-tracker pad so daily brushing
+            stays a dated streak, and an hourly
+            desk pad so the four small meals until
+            four months stay timed blocks. These
+            are educational Yorkshire-terrier-health
+            / paperwork tools, not a ranked product
+            list, not a substitute for veterinary
+            care, and not a treatment. Analog
+            stopwatches, blank index cards, and
+            recipe-card boxes already live on
+            beagle-health. Four-tab dividers, analog
+            outdoor thermometers, and weekly
+            checklist notepads already live on
+            french-bulldog-health. This page does
+            not hop harnesses, toothpaste,
+            medications, or insurance brands as
+            Amazon searches. This page does not
+            claim hands-on testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (two-column ledger pad /
+              30-day habit-tracker pad /
+              hourly desk pad).
+              These are educational
+              Yorkshire-terrier-health / paperwork
+              tools, not a ranked product list, not
+              a substitute for veterinary care, no
+              Rx / first-aid kit / thermometer /
+              carrier / insurance-brand ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1179
+              analog+stopwatch /
+              blank+index+cards /
+              recipe+card+box,
+              #1178
+              four+tab+dividers /
+              analog+outdoor+thermometer /
+              weekly+checklist+notepad. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Yorkshire-terrier-health kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page PSS, dental, and hypoglycemia
+              copy — a two-column ledger pad, a
+              30-day habit-tracker pad, and an
+              hourly desk pad. Educational
+              Yorkshire-terrier-health / paperwork
+              tools only. They are not a ranked
+              product list, they are not a
+              substitute for veterinary care, they
+              are not a #1179 stopwatch / index-
+              card / recipe-box hop, they are not a
+              financing-brand or insurance-brand
+              hop, and they do not replace a
+              veterinarian. Vets.co earns a
+              commission on qualifying purchases at
+              no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse two-column ledger pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse 30-day habit-tracker pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse hourly desk pads on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion
