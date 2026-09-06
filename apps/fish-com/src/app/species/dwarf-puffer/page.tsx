@@ -79,6 +79,39 @@ export default function DwarfPufferPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dwarf-puffer-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dwarf-puffer-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Carinotetraodon travancoricus
+                notes that match the care copy on this
+                page — a planted 5-gallon for one pea
+                puffer or 10+ gallons for a group, live
+                snails so the beak stays worn down,
+                74–82°F and pH 7.0–7.8, and broken
+                sightlines so fin-nipping stays
+                contained. Educational
+                dwarf-puffer-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing dwarf-puffer nano tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Dwarf-puffer-setup checklist"
+                subtitle="Email the snail, 5-gallon, and planted-cover notes. No spam."
+                ctaText="Email my dwarf-puffer-setup checklist"
+                source="species-dwarf-puffer-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-dwarf-puffer" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A dwarf puffer in a home aquarium." priority />
 
         <h2>A Tiny Predator With a Big Personality</h2>
@@ -104,7 +137,6 @@ export default function DwarfPufferPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and snail-culture supplies sized for dwarf puffer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/dwarf%20puffer%20nano%20tank%20setup?s=species-dwarf-puffer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Dwarf Puffer Setup on Amazon →</a>
-            <a href="/go/chewy-brand/dwarf%20puffer%20nano%20tank%20setup?s=species-dwarf-puffer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />
