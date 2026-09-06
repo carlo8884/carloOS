@@ -188,6 +188,40 @@ export default function BestFerretLitterPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret-litter checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret-litter checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the litter notes that match the
+              ranking copy on this page — low-dust
+              and no-clump first, never clay
+              clumping cat litter, skip loose
+              aromatic pine and cedar shavings,
+              recycled paper pellets as the default,
+              heat-treated wood pellets when odor is
+              the priority, and grass pellets for a
+              texture-fussy ferret. Educational
+              checklist, not a new product hop and
+              not a substitute for an exotic-animal
+              veterinarian. The existing Yesterday’s
+              News Chewy hop and wood / grass Amazon
+              searches stay below. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret-litter checklist"
+              subtitle="Email the no-clump, low-dust, and pellet-type notes. No spam."
+              ctaText="Email my ferret-litter checklist"
+              source="reviews-best-ferret-litter-under-hero"
+            />
+          </div>
+
           <QuickPicks items={QUICK_PICKS} />
 
           <p>
