@@ -722,6 +722,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1271: fish.com /species hub is on main. This existing ferret.com /health hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete ferret health-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page condition-library-map / symptom-urgency-log / exotic-mammal-vet-grounding copy (a laminated ferret health triage chart so the insulinoma / adrenal / emergency map is posted on the fridge, a ferret fridge health library card so each condition-library spoke is labeled on the fridge, a mustelid health reference handbook so the exotic-mammal-vet grounding is a physical kitchen book), never a placeholder ASIN, a sibling-hub kitchen hop, a child toothbrush / dosing hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked medication list, not a substitute for an exotic-mammal veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1271 / crate-size / stocking.',
   },
   {
+    id: 'dog · guides hub',
+    file: 'apps/dog-com/src/app/guides/page.tsx',
+    mustInclude: [
+      { re: /source="guides-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog guides-hub checklist"/, label: 'concrete dog guides-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+guides\+section\+map\+chart\?s=guides-hub/, label: 'laminated dog guides section-map-chart search hop (matches on-page foundational-decision-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+dog+reviews+buyer+guide+chart / laminated+dog+nutrition+feeding+chart / laminated+dog+training+session+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+guides\+prep\+card\?s=guides-hub/, label: 'dog fridge guides-prep-card search hop (matches on-page home-skills-log copy; unique vs dog+fridge+measurement+card / dog+fridge+reviews+comparison+card / dog+fridge+wsava+label+card / dog+fridge+training+cue+card)' },
+      { re: /amazon-brand\/canine\+guides\+reference\+handbook\?s=guides-hub/, label: 'canine guides reference-handbook search hop (matches on-page research-anchored-grounding copy; unique vs canine+calculator+reference+handbook / canine+reviews+reference+handbook / canine+nutrition+reference+handbook / canine+training+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+calculator\+tools\+chart|dog\+fridge\+measurement\+card|canine\+calculator\+reference\+handbook|laminated\+dog\+reviews\+buyer\+guide\+chart|dog\+fridge\+reviews\+comparison\+card|canine\+reviews\+reference\+handbook|laminated\+dog\+nutrition\+feeding\+chart|dog\+fridge\+wsava\+label\+card|canine\+nutrition\+reference\+handbook|laminated\+dog\+training\+session\+chart|dog\+fridge\+training\+cue\+card|canine\+training\+reference\+handbook|wound\+care\+gauze|digital\+pet\+thermometer|soft\+measuring\+tape|iso\+pet\+microchip|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / reviews / nutrition / training kitchen kits, child gauze / thermometer hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-dog-guides-section-map-chart / dog-fridge-guides-prep-card / canine-guides-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1272: ferret.com /health hub is on main. This existing dog.com /guides hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete dog guides-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page foundational-decision-map / home-skills-log / research-anchored-grounding copy (a laminated dog guides section-map chart so the BCS / spay-neuter / vitals / microchip / wellness / first-aid map is posted on the fridge, a dog fridge guides prep card so home-skills notes are labeled on the fridge, a canine guides reference handbook so the research-anchored grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / reviews-hub / nutrition-hub / training-hub kitchen hop, a child gauze / thermometer hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked first-aid kit list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1272 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
