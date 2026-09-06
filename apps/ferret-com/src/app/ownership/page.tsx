@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -159,6 +159,56 @@ export default function OwnershipHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Ownership</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the ferret ownership-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ferret ownership-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-ferret-ownership-section-map-chart,
+            fridge-ownership-prep-card, and
+            mustelid-ownership-reference-handbook notes that
+            match the cost-legality-adoption-map,
+            supplies-and-first-week-log, and
+            exotic-pet-planning-grounding copy on this hub —
+            a laminated ferret ownership section-map chart
+            so the cost / legality / adoption / family map
+            is posted on the fridge (not a tools-hub
+            calculator chart, not a reviews buyer-guide
+            chart, not a diet feeding chart, not a care
+            routine chart, not a behavior cue chart, not a
+            health triage chart), a ferret fridge
+            ownership prep card so supplies-and-first-week
+            notes are labeled on the fridge (not a
+            measurement card, not a reviews comparison
+            card, not a diet label card, not a care card,
+            not a behavior card, not a health library
+            card), and a mustelid ownership reference
+            handbook so the exotic-pet-planning grounding
+            is a physical kitchen book (not a calculator
+            handbook, not a reviews handbook, not a diet
+            handbook, not a care handbook, not a behavior
+            handbook, not a health handbook). Educational
+            kitchen checklist, not a ranked insurance
+            list, not a child toothbrush / dosing hop, and
+            not a substitute for an exotic-mammal
+            veterinarian. Ferret.com does not sell
+            insurance. Aging pages stay held. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Ferret ownership-hub checklist"
+            subtitle="Email the ownership-section-map-chart, fridge prep-card, and ownership-handbook notes. No spam."
+            ctaText="Email my ferret ownership-hub checklist"
+            source="ownership-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Featured ownership spokes — three photo-backed pillar articles */}
       <div
@@ -388,6 +438,91 @@ export default function OwnershipHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Ownership-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          cost-legality-adoption-map,
+          supplies-and-first-week-log, and
+          exotic-pet-planning-grounding copy on this hub —
+          a laminated ferret ownership section-map chart
+          so the cost / legality / adoption / family map
+          is posted on the fridge, a ferret fridge
+          ownership prep card so supplies-and-first-week
+          notes are labeled on the fridge, and a mustelid
+          ownership reference handbook so the
+          exotic-pet-planning grounding is a physical
+          kitchen book. These are educational kitchen
+          searches, not a ranked insurance list, not a
+          substitute for an exotic-mammal veterinarian,
+          not a tools-hub / reviews-hub / diet-hub /
+          care-hub / behavior-hub / health-hub hop, and
+          not a child toothbrush / dosing hop (those live
+          on health children). This page does not hop
+          medications or vaccines. This page does not
+          sell insurance. This page does not claim
+          hands-on testing. Ferret aging stays held.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated ferret ownership section-map chart /
+            ferret fridge ownership prep card /
+            mustelid ownership reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / aging hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews /
+            diet / care / behavior / health kitchen kits
+            and child finger+toothbrush / carnivore+care
+            hops. Directory import left untouched.
+            Ferret aging stays held.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the ownership-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page cost-legality-adoption-map,
+            supplies-and-first-week-log, and
+            exotic-pet-planning-grounding copy — a
+            laminated ferret ownership section-map chart,
+            a ferret fridge ownership prep card, and a
+            mustelid ownership reference handbook.
+            Educational kitchen searches only. They are
+            not a ranked insurance list, they are not a
+            tools-hub / reviews-hub / diet-hub / care-hub
+            / behavior-hub / health-hub hop, they are not
+            a child toothbrush hop, and they do not
+            replace an exotic-mammal veterinarian.
+            Ferret.com does not sell insurance. Ferret.com
+            earns a commission on qualifying purchases at
+            no extra cost to you. Empty Chewy buttons
+            stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+ferret+ownership+section+map+chart?s=ownership-hub"
+              amazonLabel="Browse laminated ferret ownership section-map charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ferret+fridge+ownership+prep+card?s=ownership-hub"
+              amazonLabel="Browse ferret fridge ownership prep cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/mustelid+ownership+reference+handbook?s=ownership-hub"
+              amazonLabel="Browse mustelid ownership reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
     </>
   )
