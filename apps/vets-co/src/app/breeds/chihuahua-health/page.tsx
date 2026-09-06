@@ -5,6 +5,8 @@ import {
   EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -130,10 +132,44 @@ export default function VetsChihuahuaHealthPage() {
         }
       >
         <div className="carloOS-article">
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the Chihuahua health checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Chihuahua health checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the prep notes that match the
+              molera, MMVD, and hypoglycemia copy on
+              this page — a 13-column analysis pad
+              so murmur grade, echo date, Stage A–D,
+              and resting respiratory rate stay one
+              written row, a desk blotter pad so the
+              molera-protection household rules stay
+              where kids see them, and a numbered
+              log book so each tremor-versus-hypo
+              episode stays one dated entry.
+              Educational checklist, not a diagnosis,
+              not a substitute for veterinary care,
+              and not a ledger, habit-tracker, or
+              hourly-desk-pad hop. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Chihuahua health checklist"
+              subtitle="Email the analysis-pad, blotter, and numbered-log notes. No spam."
+              ctaText="Email my Chihuahua health checklist"
+              source="breeds-chihuahua-health-under-hero"
+            />
+          </div>
+
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-09-06T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -303,6 +339,94 @@ export default function VetsChihuahuaHealthPage() {
             Insurance bought before symptoms appear typically covers these as accident/illness with no
             breed exclusion. See our 2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
+
+          <h2 id="kit">Chihuahua-health kit</h2>
+          <p>
+            Everyday physical supplies that match the
+            molera, MMVD, and hypoglycemia copy on
+            this page — a 13-column analysis pad so
+            murmur grade, echo date, Stage A–D, and
+            resting respiratory rate stay one
+            written row, a desk blotter pad so the
+            molera-protection household rules stay
+            where kids see them, and a numbered log
+            book so each tremor-versus-hypo episode
+            stays one dated entry. These are
+            educational Chihuahua-health / paperwork
+            tools, not a ranked product list, not a
+            substitute for veterinary care, and not
+            a treatment. Two-column ledger pads,
+            30-day habit-tracker pads, and hourly
+            desk pads already live on
+            yorkshire-terrier-health. Analog
+            stopwatches, blank index cards, and
+            recipe-card boxes already live on
+            beagle-health. This page does not hop
+            harnesses, toothpaste, medications, or
+            insurance brands as Amazon searches.
+            This page does not claim hands-on
+            testing.
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          {/* Money path — live amazon-brand search hops
+              (13-column analysis pad /
+              desk blotter pad /
+              numbered log book).
+              These are educational
+              Chihuahua-health / paperwork
+              tools, not a ranked product list, not
+              a substitute for veterinary care, no
+              Rx / first-aid kit / thermometer /
+              carrier / insurance-brand ASIN hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Category searches only —
+              unused vs #1180
+              two+column+ledger+pad /
+              30+day+habit+tracker+pad /
+              hourly+desk+pad,
+              #1179
+              analog+stopwatch /
+              blank+index+cards /
+              recipe+card+box. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the Chihuahua-health kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page molera, MMVD, and hypoglycemia
+              copy — a 13-column analysis pad, a
+              desk blotter pad, and a numbered log
+              book. Educational Chihuahua-health /
+              paperwork tools only. They are not a
+              ranked product list, they are not a
+              substitute for veterinary care, they
+              are not a #1180 ledger / habit-
+              tracker / hourly-desk-pad hop, they
+              are not a financing-brand or
+              insurance-brand hop, and they do not
+              replace a veterinarian. Vets.co earns
+              a commission on qualifying purchases
+              at no extra cost to you. Empty Chewy
+              buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health"
+                amazonLabel="Browse 13-column analysis pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health"
+                amazonLabel="Browse desk blotter pads on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"
+                amazonLabel="Browse numbered log books on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2>FAQ</h2>
           <FAQAccordion

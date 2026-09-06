@@ -6791,6 +6791,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1179: keep the existing sidebar capture; add under-hero capture with a concrete Yorkshire Terrier health checklist offer; every gear CTA is an amazon-brand category search matching on-page PSS / dental / hypoglycemia copy (a two-column ledger pad so the fasting and post-prandial bile-acids pair stays one written row, a 30-day habit-tracker pad so daily brushing stays a dated streak, an hourly desk pad so the four small meals until four months stay timed blocks), never a placeholder ASIN, a #1179 stopwatch / index-card / recipe-box hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Yorkshire-terrier-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · chihuahua-health hops',
+    file: 'apps/vets-co/src/app/breeds/chihuahua-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-chihuahua-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Chihuahua health checklist"/, label: 'concrete Chihuahua health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-chihuahua"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/13\+column\+analysis\+pad\?s=breeds-chihuahua-health/, label: '13-column-analysis-pad search hop (matches on-page murmur-grade / echo-date / Stage A–D / resting-RR copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / two+column+ledger+pad)' },
+      { re: /amazon-brand\/desk\+blotter\+pad\?s=breeds-chihuahua-health/, label: 'desk-blotter-pad search hop (matches on-page molera-protection household-rules copy; unique vs monthly+desk+pad+calendar / hourly+desk+pad / letter+size+document+frame)' },
+      { re: /amazon-brand\/numbered\+log\+book\?s=breeds-chihuahua-health/, label: 'numbered-log-book search hop (matches on-page tremor-versus-hypoglycemia episode copy; unique vs bound+composition+book / blank+index+cards / lined+telephone+message+pad)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(two\+column\+ledger\+pad|30\+day\+habit\+tracker\+pad|hourly\+desk\+pad|analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|four\+tab\+dividers|analog\+outdoor\+thermometer|weekly\+checklist\+notepad|top\+bound\+steno\+pad|mechanical\+kitchen\+timer|self\+adhesive\+file\+folder\+labels|dot\+grid\+notebook|paint\+chip\+sample\+cards|18\+month\+wall\+calendar|flexible\+sewing\+tape\+measure|bound\+composition\+book|letter\+size\+document\+frame|four\+column\+accounting\+pad|monthly\+desk\+pad\+calendar|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|lined\+telephone\+message\+pad|dog\+dental\+finger\+brush|step\+in\+padded\+dog\+harness|dog\+ramp|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1180 ledger / habit-tracker / hourly-desk-pad, #1179 stopwatch / index-card / recipe-box, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only 13-column-analysis-pad / desk-blotter-pad / numbered-log-book gear' },
+    ],
+    why: 'Money path leftover after #1180: keep the existing sidebar capture; add under-hero capture with a concrete Chihuahua health checklist offer; every gear CTA is an amazon-brand category search matching on-page molera / MMVD / hypoglycemia copy (a 13-column analysis pad so murmur grade, echo date, Stage A–D, and resting respiratory rate stay one written row, a desk blotter pad so molera-protection household rules stay where kids see them, a numbered log book so each tremor-versus-hypo episode stays one dated entry), never a placeholder ASIN, a #1180 ledger / habit-tracker / hourly-desk-pad hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Chihuahua-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
