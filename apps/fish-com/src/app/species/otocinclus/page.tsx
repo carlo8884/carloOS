@@ -81,6 +81,38 @@ export default function OtocinclsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the otocinclus-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Otocinclus-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Otocinclus vittatus
+                notes that match the care copy on this
+                page — a group of 6+ (8–10 in a
+                planted tank), a 2–3 month tank with
+                visible soft algae, 72–82°F and pH
+                6.0–7.5, and zucchini after lights
+                out. Educational otocinclus-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                otocinclus tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Otocinclus-setup checklist"
+                subtitle="Email the group-size, established-algae, and zucchini notes. No spam."
+                ctaText="Email my otocinclus-setup checklist"
+                source="species-otocinclus-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-otocinclus" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An otocinclus in a home aquarium." priority />
         <h2>The Starvation Problem — The Most Common Cause of Death</h2>
         <p>Otocinclus die from starvation more than any other cause. They are obligate soft algae eaters — their mouth is designed specifically to graze soft green algae (diatoms, green dust algae, green film algae) from smooth surfaces. They cannot eat hair algae, hard algae, or most commercial foods readily. In a new tank with no established algae growth, or in a tank that is kept spotlessly clean, otocinclus have nothing to eat and starve within weeks.</p>
@@ -113,7 +145,6 @@ export default function OtocinclsPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for otocinclus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/otocinclus%20tank%20setup?s=species-otocinclus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Otocinclus Setup on Amazon →</a>
-            <a href="/go/chewy-brand/otocinclus%20tank%20setup?s=species-otocinclus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
