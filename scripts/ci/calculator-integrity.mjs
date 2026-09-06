@@ -638,6 +638,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1267: ferret.com /care hub is on main. This existing ferret.com /behavior hub had a footer EmailCapture (source=behavior-hub, not under-hero) and no Amazon hops. Add under-hero capture with a concrete ferret behavior-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page behavior-section-map / training-and-bonding-log / AFA-and-welfare-grounding copy (a laminated ferret behavior cue chart so the training / biting / play / stress / harness / introductions map is posted on the fridge, a ferret fridge behavior card so training-and-bonding notes are labeled on the fridge, a mustelid behavior reference handbook so the AFA / welfare grounding is a physical kitchen book), never a placeholder ASIN, a sibling-hub kitchen hop, a child vest-harness / snuffle-mat hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked harness list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Footer capture left in place. Ferret aging stays held. Do not re-open #1251–#1267 / crate-size / stocking.',
   },
   {
+    id: 'vets · health hub',
+    file: 'apps/vets-co/src/app/health/page.tsx',
+    mustInclude: [
+      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vets health-hub checklist"/, label: 'concrete vets health-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+pet\+health\+triage\+chart\?s=health-hub/, label: 'laminated pet health triage-chart search hop (matches on-page triage-tier-map copy; unique vs laminated+cat+calculator+tools+chart / laminated+pet+insurance+policy+map+chart / laminated+pet+reviews+buyer+guide+chart)' },
+      { re: /amazon-brand\/pet\+fridge\+health\+library\+card\?s=health-hub/, label: 'pet fridge health-library-card search hop (matches on-page condition-library-log copy; unique vs cat+fridge+measurement+card / pet+fridge+insurance+levers+card / pet+fridge+reviews+comparison+card)' },
+      { re: /amazon-brand\/veterinary\+health\+reference\+handbook\?s=health-hub/, label: 'veterinary health reference-handbook search hop (matches on-page AVMA-AAHA-ACVIM-grounding copy; unique vs feline+calculator+reference+handbook / veterinary+insurance+reference+handbook / veterinary+reviews+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+cat\+calculator\+tools\+chart|cat\+fridge\+measurement\+card|feline\+calculator\+reference\+handbook|laminated\+pet\+insurance\+policy\+map\+chart|pet\+fridge\+insurance\+levers\+card|veterinary\+insurance\+reference\+handbook|laminated\+pet\+reviews\+buyer\+guide\+chart|pet\+fridge\+reviews\+comparison\+card|veterinary\+reviews\+reference\+handbook|four\+column\+accounting\+pad|self\+inking\+date\+stamp|dog\+ear\+cleaner|tick\+removal\+hook|kitchen\+gram\+scale|wire\+basket\+dog\+muzzle|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools / insurance / reviews kitchen kits, child ear-cleaner / tick-hook hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-pet-health-triage-chart / pet-fridge-health-library-card / veterinary-health-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1268: ferret.com /behavior hub is on main. This existing vets.co /health hub had no EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets health-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page triage-tier-map / condition-library-log / AVMA-AAHA-ACVIM-grounding copy (a laminated pet health triage chart so the emergency / urgent / routine map is posted on the fridge, a pet fridge health library card so each condition-library spoke is labeled on the fridge, a veterinary health reference handbook so the AVMA / AAHA / ACVIM grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / insurance-hub / reviews-hub kitchen hop, a child ear-cleaner / tick-hook hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked medication list, not a substitute for a veterinarian. Vets.co does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1165 / #1251–#1268 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
