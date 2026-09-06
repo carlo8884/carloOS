@@ -188,6 +188,39 @@ export default function AfricanCichlidPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the african-cichlid-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                African-cichlid-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the rift-lake notes that match the
+                care copy on this page — hard alkaline
+                water so Malawi and Tanganyika stay
+                near pH 7.8–9.0, a 55-gallon mbuna
+                tank or 75-gallon peacock/hap tank so
+                aggression stays diluted, and
+                spirulina pellets so herbivorous mbuna
+                stay off Malawi bloat. Educational
+                african-cichlid-setup checklist, not a
+                new product hop, not livestock, and
+                not a substitute for a fish veterinarian.
+                The existing african-cichlid tank-setup
+                Amazon search stays below. Empty
+                Chewy buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="African-cichlid-setup checklist"
+                subtitle="Email the hard-water, tank-size, and Malawi-bloat notes. No spam."
+                ctaText="Email my african-cichlid-setup checklist"
+                source="species-african-cichlid-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
@@ -548,7 +581,6 @@ export default function AfricanCichlidPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for african cichlid care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/african%20cichlid%20tank%20setup?s=species-african-cichlid" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop African Cichlid Setup on Amazon →</a>
-            <a href="/go/chewy-brand/african%20cichlid%20tank%20setup?s=species-african-cichlid" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
