@@ -11,7 +11,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -198,6 +198,70 @@ export default function RacingHubPage() {
         <span className="text-brand-text-mid font-medium">Racing</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the horses racing-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horses racing-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-horse-barn-racing-section-map-chart,
+            stall-door-racing-prep-card, and
+            equine-racing-reference-handbook notes that
+            match the racing-discipline-class-map,
+            aftercare-governance-log, and
+            jockey-club-usta-aaep-grounding copy on this
+            hub — a laminated horse barn racing
+            section-map chart so the flat / harness /
+            Quarter Horse / jump / class map is posted on
+            the stall door (not a tools-hub calculator
+            chart, not a reviews buyer-guide chart, not a
+            supplements category chart, not a tack
+            section-map chart, not an ownership
+            section-map chart, not a breeds profile chart,
+            not a discipline section-map chart, not a
+            bloodstock section-map chart, not a
+            forage-first chart, not a daily-care chart,
+            not an emergency-triage chart, not an
+            owner-guides chart), a horse stall-door racing
+            prep card so TAA / aftercare and governance
+            notes are labeled on the stall door (not a
+            measurement card, not a reviews comparison
+            card, not a supplements label card, not a
+            tack-fit card, not an ownership prep card, not
+            a breeds library card, not a discipline prep
+            card, not a bloodstock prep card, not a ration
+            card, not a care card, not a vital-signs card,
+            not an owner-guides card), and an equine
+            racing reference handbook so The Jockey Club /
+            USTA / AAEP grounding is a physical barn book
+            (not a calculator handbook, not a reviews
+            handbook, not a supplements handbook, not a
+            tack handbook, not an ownership handbook, not
+            a breeds handbook, not a discipline handbook,
+            not a bloodstock handbook, not a nutrition
+            handbook, not a husbandry handbook, not a
+            health handbook, not an owner-guides
+            handbook). Educational kitchen checklist, not
+            a ranked race list, not a child curry-comb /
+            hoof-pick hop, and not a substitute for a
+            veterinarian. Horses.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horses racing-hub checklist"
+            subtitle="Email the racing-section-map-chart, stall-door prep-card, and racing-handbook notes. No spam."
+            ctaText="Email my horses racing-hub checklist"
+            source="racing-hub-under-hero"
+          />
+        </div>
+      </section>
+
       {/* ── INTRO ──────────────────────────────────────────────────── */}
       <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-10 max-w-2xl">
@@ -288,6 +352,89 @@ export default function RacingHubPage() {
           </div>
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Racing-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          racing-discipline-class-map, aftercare-governance-log,
+          and jockey-club-usta-aaep-grounding copy on this
+          hub — a laminated horse barn racing section-map
+          chart so the flat / harness / Quarter Horse /
+          jump / class map is posted on the stall door, a
+          horse stall-door racing prep card so TAA /
+          aftercare and governance notes are labeled on
+          the stall door, and an equine racing reference
+          handbook so The Jockey Club / USTA / AAEP
+          grounding is a physical barn book. These are
+          educational kitchen searches, not a ranked race
+          list, not a substitute for a veterinarian, not a
+          tools-hub / reviews-hub / supplements-hub /
+          tack-hub / nutrition-hub / care-hub / health-hub
+          / guides-hub / ownership-hub / breeds-hub /
+          disciplines-hub / bloodstock-hub hop, and not a
+          child curry-comb / hoof-pick hop (those live on
+          care children). This page does not hop
+          medications or vaccines. This page does not sell
+          insurance. This page does not claim hands-on
+          testing. This page is not a wagering resource.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn racing section-map chart /
+            horse stall-door racing prep card /
+            equine racing reference handbook).
+            Educational kitchen searches only; no Rx hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / reviews /
+            supplements / tack / nutrition / care /
+            health / guides / ownership / breeds /
+            disciplines / bloodstock kitchen kits and
+            child horse+curry+comb / horse+hoof+pick hops.
+            Directory import left untouched. Do not
+            re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the racing-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page racing-discipline-class-map,
+            aftercare-governance-log, and
+            jockey-club-usta-aaep-grounding copy — a
+            laminated horse barn racing section-map chart,
+            a horse stall-door racing prep card, and an
+            equine racing reference handbook. Educational
+            kitchen searches only. They are not a ranked
+            race list, they are not a sibling-hub kitchen
+            hop, they are not a child curry-comb hop, and
+            they do not replace a veterinarian. Horses.com
+            does not sell insurance. Horses.com earns a
+            commission on qualifying purchases at no extra
+            cost to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+racing+section+map+chart?s=racing-hub"
+              amazonLabel="Browse laminated horse barn racing section-map charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stall+door+racing+prep+card?s=racing-hub"
+              amazonLabel="Browse horse stall-door racing prep cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+racing+reference+handbook?s=racing-hub"
+              amazonLabel="Browse equine racing reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
       <section
