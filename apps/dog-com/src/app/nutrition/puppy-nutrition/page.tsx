@@ -24,6 +24,38 @@ export default function PuppyNutritionPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the puppy-nutrition checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Puppy-nutrition checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the large-breed puppy notes that
+                match the care copy on this page —
+                AAFCO growth or all-life-stages
+                formulas, large-breed puppy food when
+                adult weight is over 50 lbs, 4 meals at
+                8–12 weeks then 3 at 3–6 months and 2
+                from 6 months, and a 7–10 day switch
+                at skeletal maturity. Educational
+                puppy-nutrition checklist, not a new
+                product hop, not a prescription diet,
+                and not a substitute for a veterinarian.
+                The existing large-breed puppy Amazon
+                and Chewy searches stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Puppy-nutrition checklist"
+                subtitle="Email the large-breed formula and meal-schedule notes. No spam."
+                ctaText="Email my puppy-nutrition checklist"
+                source="nutrition-puppy-under-hero"
+              />
+            </div>
         <h2 id="formulas">Puppy Formula vs Adult Food</h2>
         <p>Puppy formulas are nutritionally distinct from adult formulas in ways that matter. Puppies require more protein, more fat, more calories per pound of body weight, and a different calcium-to-phosphorus ratio than adults. Feeding adult food to a growing puppy is not ideal and can result in nutrient deficiencies that affect development. Conversely, feeding adult food with appropriate supplementation is not a substitute — the ratio adjustments in puppy-specific formulas are designed for the requirements of growth.</p>
         <p>Choose a puppy food with an <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>

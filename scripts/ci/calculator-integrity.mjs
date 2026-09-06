@@ -7753,6 +7753,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1231: keep the existing sidebar capture and the already-hopped betta-fish tank-mates tank-setup amazon-brand search; add under-hero capture with a concrete betta-fish-tank-mates-setup-checklist offer matching on-page 10-gallon min / add-betta-last / 72-hour observe / Cory 6+ copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · puppy-nutrition hops',
+    file: 'apps/dog-com/src/app/nutrition/puppy-nutrition/page.tsx',
+    mustInclude: [
+      { re: /source="nutrition-puppy-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my puppy-nutrition checklist"/, label: 'concrete puppy-nutrition-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-puppy"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/large\+breed\+puppy\+dry\+dog\+food\+aafco\?s=nutrition-puppy/, label: 'existing large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\+dry\+dog\+food\?s=nutrition-puppy/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1232: fish /species/* leftover hop pattern is exhausted. Keep the existing sidebar capture and the already-hopped large-breed puppy Amazon + Purina Pro Plan Chewy searches; add under-hero capture with a concrete puppy-nutrition-checklist offer matching on-page AAFCO growth / >50 lb large-breed / 4-then-3-then-2 meal schedule copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
