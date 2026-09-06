@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +101,52 @@ export default function TransitioningFoodsPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret food-transition checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret food-transition checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-food-transition-chart,
+              fridge-mix-ratio-card, and
+              mustelid-food-transition-handbook notes
+              that match the mixing-schedule-map,
+              soup-and-scent-log, and
+              quesenberry-transition-grounding copy on this
+              page — a laminated ferret food-transition
+              chart so the days-1-3 / half-and-half /
+              days-8-11 mix map is posted on the fridge
+              (not a diet-hub feeding chart, not a
+              kit-imprint chart, not a safe-treat chart),
+              a ferret fridge mix-ratio card so crush-and-dust /
+              soup-mash / meat-topper notes are labeled on
+              the fridge (not a no-sugar-treat card, not
+              an imprint-window card, not a diet-model
+              card), and a mustelid food-transition
+              handbook so the Quesenberry / VCNA
+              hypoglycemia-risk grounding is a physical
+              kitchen book (not a treat-safety handbook,
+              not a kit-adult feeding handbook, not a
+              diet handbook). Educational kitchen
+              checklist, not a ranked kibble list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret food-transition checklist"
+              subtitle="Email the food-transition-chart, fridge mix-ratio card, and food-transition-handbook notes. No spam."
+              ctaText="Email my ferret food-transition checklist"
+              source="diet-transitioning-foods-under-hero"
+            />
+          </div>
+
           <h2 id="why">Why Ferrets Resist Change</h2>
           <p>
             Ferrets imprint on the smell, taste, and texture of the food they
@@ -201,6 +247,58 @@ export default function TransitioningFoodsPage() {
           </ul>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret food-transition chart /
+              ferret fridge mix-ratio card /
+              mustelid food-transition handbook).
+              Keep existing Chewy meat-topper review hop.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              safe-treats / kit-adult kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret food-transition kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page mixing-schedule-map,
+              soup-and-scent-log, and
+              quesenberry-transition-grounding copy — a
+              laminated ferret food-transition chart, a
+              ferret fridge mix-ratio card, and a mustelid
+              food-transition handbook. Educational kitchen
+              searches only. They are not a ranked kibble
+              list, they are not a diet-hub / safe-treats /
+              kit-adult hop, they are not a child
+              toothbrush hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden. Existing Chewy meat-topper review hop
+              stays in the pick below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+food+transition+chart?s=transitioning-foods"
+                amazonLabel="Browse laminated ferret food-transition charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+mix+ratio+card?s=transitioning-foods"
+                amazonLabel="Browse ferret fridge mix-ratio cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+food+transition+handbook?s=transitioning-foods"
+                amazonLabel="Browse mustelid food-transition handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">A Meat-Based Topper Pick</h2>
           <p>
