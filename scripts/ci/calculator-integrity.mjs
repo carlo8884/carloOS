@@ -6659,6 +6659,28 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1173: keep the existing sidebar capture and carrier ReviewCards; add under-hero capture with a concrete breed-risk checklist offer; every gear CTA is an amazon-brand category search matching on-page large-breed / brachycephalic / hereditary-condition copy (a blank pedigree chart so hereditary and congenital lines stay a written family tree, round color-coding labels so large, brachy, purebred, and mixed risk patterns stay marked, a 5-compartment letter sorter so those four breed types stay separate stacks), never a placeholder ASIN, a #1173 classification-folder / clasp-envelope / checking-pencil hop, a #1172 magnifier / copyholder / line-reader hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational breed-risk / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
+  {
+    id: 'vets · labrador-health hops',
+    file: 'apps/vets-co/src/app/breeds/labrador-health/page.tsx',
+    mustInclude: [
+      { re: /source="breeds-labrador-health-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my Labrador health checklist"/, label: 'concrete Labrador health checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-labrador"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/flexible\+sewing\+tape\+measure\?s=breeds-labrador-health/, label: 'flexible-sewing-tape-measure search hop (matches on-page visible-waist / abdominal-tuck BCS copy; unique vs handheld+tally+counter / basic+desktop+calculator / digital+pet+scale)' },
+      { re: /amazon-brand\/bound\+composition\+book\?s=breeds-labrador-health/, label: 'bound-composition-book search hop (matches on-page monthly same-scale weigh-log copy; unique vs spiral+notebook / reporter+notebook / quad+ruled+graph+pad)' },
+      { re: /amazon-brand\/letter\+size\+document\+frame\?s=breeds-labrador-health/, label: 'letter-size-document-frame search hop (matches on-page OFA hip-and-elbow certificate copy; unique vs letter+size+file+jacket / clasp+envelope+letter+size / blank+pedigree+chart)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(blank\+pedigree\+chart|round\+color\+coding\+labels|5\+compartment\+letter\+sorter|pressboard\+classification\+folder|clasp\+envelope\+letter\+size|red\+and\+blue\+checking\+pencil|full\+page\+magnifier|adjustable\+copyholder|line\+reader\+strip|quad\+ruled\+graph\+pad|paid\+rubber\+stamp|handheld\+tally\+counter|3\+tab\+dividers|assorted\+highlighter\+set|removable\+page\+flags|monthly\+desk\+pad\+calendar|self\+inking\+date\+stamp|letter\+size\+file\+jacket|four\+column\+accounting\+pad|letter\+size\+poly\+envelope|desktop\+receipt\+organizer|reporter\+notebook|kraft\+two\+pocket\+folder|pocket\+size\+address\+book|ruled\+index\+cards|3x3\+sticky\+notes|letter\+size\+sheet\+protectors|spiral\+notebook|small\+soft\+cooler\+bag|clipboard\+with\+storage|cash\+envelope\+budget\+system|yellow\+legal\+pad|hanging\+file\+folders\+letter\+size|microfiber\+dog\+towel|dog\+ear\+drying\+solution|digital\+pet\+scale|slow\+feeder|measuring\+cup|orthopedic\+dog\+bed|fish\+oil|glucosamine|hardcover\+weekly\+appointment\+planner|wall\+mounted\+magnetic\+monthly\+planner|medium\+hard\+sided\+plastic\+pet\+carrier|pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+pet\+carrier|trupanion|healthy-paws|embrace|pumpkin|lemonade|pets-best|spot|figo|prescription|medication|medicine|rx\b|ibuprofen|acetaminophen|naproxen)/, label: 'never hop #1174 pedigree-chart / color-label / letter-sorter, #1173 classification-folder / clasp-envelope / checking-pencil, dog-com Labrador swim-ear hops, weekly-planner / magnetic-planner, insurance-brand amazon-brand hops, or Rx — this page hops only flexible-sewing-tape-measure / bound-composition-book / letter-size-document-frame gear' },
+    ],
+    why: 'Money path leftover after #1174: keep the existing sidebar capture; add under-hero capture with a concrete Labrador health checklist offer; every gear CTA is an amazon-brand category search matching on-page hip-dysplasia / obesity / OFA-screening copy (a flexible sewing tape measure so the visible waist and abdominal tuck stay a written BCS check, a bound composition book so the monthly weigh stays the same-scale same-time log, a letter-size document frame so the OFA hip and elbow result stays one posted certificate), never a placeholder ASIN, a #1174 pedigree-chart / color-label / letter-sorter hop, a dog-com Labrador swim-ear hop, a weekly-planner or magnetic-planner hop, an insurance-brand amazon-brand hop, or a prescription hop. Educational Labrador-health / paperwork tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 

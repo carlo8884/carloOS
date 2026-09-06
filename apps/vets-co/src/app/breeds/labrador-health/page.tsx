@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -63,7 +63,41 @@ export default function VetsLabradorHealthPage() {
       </>}
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the Labrador health checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Labrador health checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the prep notes that match the
+            hip-dysplasia, obesity, and OFA-screening
+            copy on this page — a flexible sewing
+            tape measure so the visible waist and
+            abdominal tuck stay a written BCS
+            check, a bound composition book so the
+            monthly weigh stays the same-scale
+            same-time log, and a letter-size
+            document frame so the OFA hip and elbow
+            result stays one posted certificate.
+            Educational checklist, not a diagnosis,
+            not a substitute for veterinary care,
+            and not a pedigree-chart, color-label,
+            or letter-sorter hop. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Labrador health checklist"
+            subtitle="Email the tape-measure, composition-book, and document-frame notes. No spam."
+            ctaText="Email my Labrador health checklist"
+            source="breeds-labrador-health-under-hero"
+          />
+        </div>
+
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2>The Conditions I Monitor Most Closely</h2>
 
@@ -81,11 +115,11 @@ export default function VetsLabradorHealthPage() {
         <CalloutBox variant="evidence" title="The POMC deletion is genuine — and prevalent">
           A 2016 Cell Metabolism study identified a POMC gene deletion that impairs satiety in Labradors; roughly 23% of pet Labs and a higher proportion of assistance dogs carry the mutation. The implication is that a hungry Lab is often biologically driven, not behaviorally manipulative. Measured meals and no free-feeding are management essentials, not preferences.
         </CalloutBox>
-        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
+        <p>The practical approach: weigh the dog monthly (same time, same scale). A bound composition book is how that monthly weigh stays the same-scale same-time log — it is not a spiral notebook (that lives on what-to-expect-at-the-vet), not a reporter notebook (that lives on choosing-a-veterinarian), and not a quad-ruled graph pad (that lives on deductibles-reimbursement). Adjust portions based on BCS, not appetite. A flexible sewing tape measure is how the visible waist and abdominal tuck stay a written BCS check — it is not a handheld tally counter (that lives on deductibles-reimbursement), not a basic desktop calculator (that lives on emergency-vet-costs), and not a digital pet scale hop. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
 
         <h2>Recommended Screening</h2>
         <ul>
-          <li><strong><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms</li>
+          <li><strong><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms. A letter-size document frame is how that OFA hip and elbow result stays one posted certificate — it is not a letter-size file jacket (that lives on when-to-enroll), not a clasp envelope (that lives on pre-existing-conditions), and not a blank pedigree chart (that lives on breed-specific-risk).</li>
           <li><strong>EIC DNA test:</strong> Before intense training programs; important for families with children who play intensely with the dog</li>
           <li><strong>PRA DNA test:</strong> For any dog used for breeding</li>
           <li><strong>Annual bloodwork:</strong> From age 5; earlier if overweight (metabolic monitoring)</li>
@@ -94,6 +128,101 @@ export default function VetsLabradorHealthPage() {
 
         <h2>Pet Insurance — Start Early</h2>
         <p>Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint. Bilateral (both hips): $7,000–14,000. Total hip replacement: $6,000–10,000 per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
+
+        <h2 id="kit">Labrador-health kit</h2>
+        <p>
+          Everyday physical supplies that match the
+          hip-dysplasia, obesity, and OFA-screening
+          copy on this page — a flexible sewing
+          tape measure so the visible waist and
+          abdominal tuck stay a written BCS check,
+          a bound composition book so the monthly
+          weigh stays the same-scale same-time log,
+          and a letter-size document frame so the
+          OFA hip and elbow result stays one posted
+          certificate. These are educational
+          Labrador-health / paperwork tools, not a
+          ranked product list, not a substitute for
+          veterinary care, and not a treatment.
+          Blank pedigree charts, round color-coding
+          labels, and 5-compartment letter sorters
+          already live on breed-specific-risk.
+          Pressboard classification folders,
+          letter-size clasp envelopes, and
+          red-and-blue checking pencils already
+          live on pre-existing-conditions. This
+          page does not hop medications, diets, or
+          insurance brands as Amazon searches.
+          This page does not claim hands-on
+          testing.
+        </p>
+
+        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+        {/* Money path — live amazon-brand search hops
+            (flexible sewing tape measure /
+            bound composition book /
+            letter-size document frame).
+            These are educational
+            Labrador-health / paperwork tools,
+            not a ranked product list, not a
+            substitute for veterinary care, no Rx
+            / first-aid kit / thermometer /
+            carrier / insurance-brand ASIN hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Category searches only —
+            unused vs #1174
+            blank+pedigree+chart /
+            round+color+coding+labels /
+            5+compartment+letter+sorter,
+            #1173
+            pressboard+classification+folder /
+            clasp+envelope+letter+size /
+            red+and+blue+checking+pencil,
+            dog · labrador-health
+            microfiber+dog+towel /
+            dog+ear+drying+solution,
+            hardcover+weekly+appointment+planner /
+            wall+mounted+magnetic+monthly+planner. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Labrador-health kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page hip-dysplasia, obesity, and
+            OFA-screening copy — a flexible sewing
+            tape measure, a bound composition book,
+            and a letter-size document frame.
+            Educational Labrador-health / paperwork
+            tools only. They are not a ranked
+            product list, they are not a substitute
+            for veterinary care, they are not a
+            #1174 pedigree-chart / color-label /
+            letter-sorter hop, they are not a
+            dog-com Labrador swim-ear hop, they are
+            not a financing-brand or insurance-brand
+            hop, and they do not replace a
+            veterinarian. Vets.co earns a
+            commission on qualifying purchases at
+            no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health"
+              amazonLabel="Browse flexible sewing tape measures on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/bound+composition+book?s=breeds-labrador-health"
+              amazonLabel="Browse bound composition books on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"
+              amazonLabel="Browse letter-size document frames on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>FAQ</h2>
         <FAQAccordion
