@@ -7829,6 +7829,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1235: puppy-food review under-hero is on main. Keep the existing sidebar capture and the already-hopped MidWest / Impact / Petmate Amazon + Frisco Chewy searches; add under-hero capture with a concrete dog-crate-checklist offer matching on-page stand-turn-lie sizing / divider / escape-artist / IATA cargo / furniture-calm-only copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-joint-supplements hops',
+    file: 'apps/dog-com/src/app/reviews/best-joint-supplements/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-joint-supplements-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my joint-supplement checklist"/, label: 'concrete joint-supplement-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-joint-supplements"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/dasuquin\+with\+msm\?s=reviews-best-joint-supplements/, label: 'existing Dasuquin amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/nordic\+naturals\+omega\+pet\?s=reviews-best-joint-supplements/, label: 'existing Nordic Naturals amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/cosequin\+ds\+maximum\+strength\?s=reviews-best-joint-supplements/, label: 'existing Cosequin DS amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1236: crate review under-hero is on main. Keep the existing sidebar capture and the already-hopped Dasuquin / Nordic Naturals / Cosequin amazon-brand searches; add under-hero capture with a concrete joint-supplement-checklist offer matching on-page NSAID-first / ASU 4–6 week / EPA-DHA 20–55 mg/kg / NASC budget copy. Do not re-ship new queries. Empty Chewy buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
