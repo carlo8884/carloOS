@@ -554,6 +554,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1263: horses.com /tack hub is on main. This existing fish.com /reviews hub already had under-hero EmailCapture (source=reviews-under-hero, ctaText=Send the tank notes) but no Amazon hops and no hub pin. Keep the existing under-hero capture; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / editorial-criteria-and-specs-grounding copy (a laminated aquarium reviews buyer-guide chart so the filters / heaters / lighting / test-kits / nano-tanks / fertilizers map is posted on the stand, an aquarium rim reviews comparison card so each category’s editorial criteria and shortlist is labeled on the rim, an aquarist reviews reference handbook so the published-spec / editorial-criteria grounding is a physical stand book), never a placeholder ASIN, a tools-hub calculator-tools hop, a child AquaClear / Fluval / Eheim / Hygger hop, or a prescription hop. Educational stand searches only — not a ranked product list, not a substitute for a water test. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1263 / crate-size / stocking / discus / kuhli / otocinclus.',
   },
   {
+    id: 'vets · reviews hub',
+    file: 'apps/vets-co/src/app/reviews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vets reviews-hub checklist"/, label: 'concrete vets reviews-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+pet\+reviews\+buyer\+guide\+chart\?s=reviews-hub/, label: 'laminated pet reviews buyer-guide-chart search hop (matches on-page reviews-section-map copy; unique vs laminated+cat+calculator+tools+chart / laminated+pet+insurance+policy+map+chart)' },
+      { re: /amazon-brand\/pet\+fridge\+reviews\+comparison\+card\?s=reviews-hub/, label: 'pet fridge reviews comparison-card search hop (matches on-page per-category-comparison-log copy; unique vs cat+fridge+measurement+card / pet+fridge+insurance+levers+card)' },
+      { re: /amazon-brand\/veterinary\+reviews\+reference\+handbook\?s=reviews-hub/, label: 'veterinary reviews reference-handbook search hop (matches on-page payout-data-and-editorial-criteria copy; unique vs feline+calculator+reference+handbook / veterinary+insurance+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(laminated\+cat\+calculator\+tools\+chart|cat\+fridge\+measurement\+card|feline\+calculator\+reference\+handbook|laminated\+pet\+insurance\+policy\+map\+chart|pet\+fridge\+insurance\+levers\+card|veterinary\+insurance\+reference\+handbook|four\+column\+accounting\+pad|letter\+size\+poly\+envelope|self\+inking\+date\+stamp|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop tools-hub / insurance-hub kitchen kits, child accounting-pad / date-stamp hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-pet-reviews-buyer-guide-chart / pet-fridge-reviews-comparison-card / veterinary-reviews-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1264: fish.com /reviews hub is on main. This existing vets.co /reviews hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets reviews-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page reviews-section-map / per-category-comparison-log / payout-data-and-editorial-criteria copy (a laminated pet reviews buyer-guide chart so the insurance / telehealth map is posted on the fridge, a pet fridge reviews comparison card so each category’s editorial criteria and shortlist is labeled on the fridge, a veterinary reviews reference handbook so the payout-data / policy-disclosure / credential grounding is a physical kitchen book), never a placeholder ASIN, a tools-hub / insurance-hub kitchen hop, a child accounting-pad hop, or a flea / heartworm / vaccine hop. Educational kitchen searches only — not a ranked insurer list, not a substitute for a veterinarian. Vets.co does not sell insurance. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1251–#1264 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

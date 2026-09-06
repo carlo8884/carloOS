@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -52,6 +52,52 @@ export default function VetsReviewsPage() {
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Reviews</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vets reviews-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vets reviews-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-reviews-buyer-guide-chart,
+            fridge-reviews-comparison-card, and
+            veterinary-reviews-reference-handbook notes that
+            match the reviews-section-map,
+            per-category-comparison-log, and
+            payout-data-and-editorial-criteria copy on this
+            hub — a laminated pet reviews buyer-guide
+            chart so the section map (pet insurance vs
+            telehealth) is posted on the fridge (not a
+            tools-hub calculator chart, not an insurance
+            policy-map chart), a pet fridge reviews
+            comparison card so each category&apos;s
+            editorial criteria and shortlist is labeled
+            on the fridge (not a cat measurement card,
+            not an insurance levers card), and a
+            veterinary reviews reference handbook so the
+            payout-data / policy-disclosure / credential
+            grounding is a physical kitchen book (not a
+            feline calculator handbook, not an insurance
+            handbook). Educational kitchen checklist, not
+            a ranked insurer list, not an enrollment hop,
+            and not a substitute for a veterinarian.
+            Vets.co does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Vets reviews-hub checklist"
+            subtitle="Email the reviews-buyer-guide-chart, fridge comparison-card, and reviews-handbook notes. No spam."
+            ctaText="Email my vets reviews-hub checklist"
+            source="reviews-hub-under-hero"
+          />
+        </div>
+      </section>
+
       <div className="px-container-sm sm:px-container pt-12 pb-2">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>
@@ -77,6 +123,93 @@ export default function VetsReviewsPage() {
           ))}
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Reviews-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          reviews-section-map, per-category-comparison-log,
+          and payout-data-and-editorial-criteria copy on
+          this hub — a laminated pet reviews buyer-guide
+          chart so the insurance / telehealth map is
+          posted on the fridge, a pet fridge reviews
+          comparison card so each category&apos;s editorial
+          criteria and shortlist is labeled on the fridge,
+          and a veterinary reviews reference handbook so
+          the payout-data / policy-disclosure / credential
+          grounding is a physical kitchen book. These are
+          educational kitchen searches, not a ranked
+          insurer list, not a substitute for a
+          veterinarian, not a tools-hub / insurance-hub
+          hop, and not a child accounting-pad / date-stamp
+          hop (those live on insurance children). This
+          page does not hop medications or vaccines. This
+          page does not sell insurance. This page does
+          not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated pet reviews buyer-guide chart /
+            pet fridge reviews comparison card /
+            veterinary reviews reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / enrollment hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools-hub
+            laminated+cat+calculator+tools+chart /
+            cat+fridge+measurement+card /
+            feline+calculator+reference+handbook,
+            insurance-hub
+            laminated+pet+insurance+policy+map+chart /
+            pet+fridge+insurance+levers+card /
+            veterinary+insurance+reference+handbook,
+            and child four+column+accounting+pad /
+            self+inking+date+stamp hops.
+            Directory import left untouched. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the reviews-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page reviews-section-map,
+            per-category-comparison-log, and
+            payout-data-and-editorial-criteria copy — a
+            laminated pet reviews buyer-guide chart, a
+            pet fridge reviews comparison card, and a
+            veterinary reviews reference handbook.
+            Educational kitchen searches only. They are
+            not a ranked insurer list, they are not a
+            tools-hub / insurance-hub hop, they are not
+            an enrollment hop, and they do not replace a
+            veterinarian. Vets.co does not sell
+            insurance. Vets.co earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+reviews+buyer+guide+chart?s=reviews-hub"
+              amazonLabel="Browse laminated pet reviews buyer-guide charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+reviews+comparison+card?s=reviews-hub"
+              amazonLabel="Browse pet fridge reviews comparison cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+reviews+reference+handbook?s=reviews-hub"
+              amazonLabel="Browse veterinary reviews reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
+
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
   </>
