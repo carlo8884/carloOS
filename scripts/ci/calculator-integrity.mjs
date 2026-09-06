@@ -7809,6 +7809,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1234: senior-dog-nutrition under-hero is on main. Dog nutrition leftover hops are exhausted. Keep the existing sidebar capture and the already-hopped Royal Canin Amazon + Purina / Hill\'s / Iams Chewy searches; add under-hero capture with a concrete puppy-food-checklist offer matching on-page >50 lb large-breed / controlled calcium / WSAVA + AAFCO feeding-trial / switch-age copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-dog-crates hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-crates-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-crate checklist"/, label: 'concrete dog-crate-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-dog-crates"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/midwest\+icrate\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing MidWest iCrate amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/impact\+high\+anxiety\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Impact high-anxiety amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/petmate\+sky\+kennel\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/frisco\+furniture\+style\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Frisco furniture-style Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1235: puppy-food review under-hero is on main. Keep the existing sidebar capture and the already-hopped MidWest / Impact / Petmate Amazon + Frisco Chewy searches; add under-hero capture with a concrete dog-crate-checklist offer matching on-page stand-turn-lie sizing / divider / escape-artist / IATA cargo / furniture-calm-only copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

@@ -62,6 +62,41 @@ export default function BestDogCratesPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_280px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dog-crate checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dog-crate checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the crate notes that match the
+                ranking copy on this page — size so
+                the dog can stand, turn, and lie
+                fully stretched and no larger, a
+                divider on a MidWest iCrate for house
+                training, an Impact aluminum crate
+                for escape artists or high anxiety,
+                a Petmate Sky Kennel for IATA cargo
+                travel, and furniture-style Frisco
+                only for calm crate-trained dogs.
+                Educational crate-type checklist,
+                not a new product hop and not a
+                substitute for a veterinarian. The
+                existing MidWest / Impact / Petmate
+                Amazon and Frisco Chewy searches
+                stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dog-crate checklist"
+                subtitle="Email the size, divider, and crate-type notes. No spam."
+                ctaText="Email my dog-crate checklist"
+                source="reviews-best-dog-crates-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Sizing — the Most Common Mistake</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
