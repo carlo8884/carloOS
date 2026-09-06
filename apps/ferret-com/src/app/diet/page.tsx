@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -166,6 +166,51 @@ export default function DietHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Diet</span>
       </nav>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the ferret diet-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Ferret diet-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-ferret-diet-feeding-chart,
+            fridge-diet-label-card, and
+            mustelid-diet-reference-handbook notes that
+            match the diet-section-map,
+            macronutrient-and-label-log, and
+            obligate-carnivore-and-AFA-grounding copy on
+            this hub — a laminated ferret diet feeding
+            chart so the section map (whole-prey vs
+            kibble, protein/fat, treats, labels,
+            hydration, weight) is posted on the fridge
+            (not a tools-hub calculator chart, not a
+            reviews buyer-guide chart), a ferret fridge
+            diet label card so macronutrient-window and
+            label-literacy notes are labeled on the
+            fridge (not a measurement card, not a reviews
+            comparison card), and a mustelid diet
+            reference handbook so the obligate-carnivore /
+            AFA / exotic-vet grounding is a physical
+            kitchen book (not a calculator handbook, not
+            a reviews handbook). Educational kitchen
+            checklist, not a ranked kibble list, not a
+            gram-scale / sipper-bottle hop, and not a
+            substitute for a veterinarian. Aging pages
+            stay held. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            title="Ferret diet-hub checklist"
+            subtitle="Email the diet-feeding-chart, fridge label-card, and diet-handbook notes. No spam."
+            ctaText="Email my ferret diet-hub checklist"
+            source="diet-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Featured diet spokes — three photo-backed pillar articles */}
       <div
@@ -394,6 +439,93 @@ export default function DietHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Diet-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          diet-section-map, macronutrient-and-label-log,
+          and obligate-carnivore-and-AFA-grounding copy
+          on this hub — a laminated ferret diet feeding
+          chart so the whole-prey / kibble / protein-fat /
+          treats / labels / hydration / weight map is
+          posted on the fridge, a ferret fridge diet
+          label card so macronutrient-window and
+          label-literacy notes are labeled on the fridge,
+          and a mustelid diet reference handbook so the
+          obligate-carnivore / AFA / exotic-vet grounding
+          is a physical kitchen book. These are
+          educational kitchen searches, not a ranked
+          kibble list, not a substitute for a
+          veterinarian, not a tools-hub / reviews-hub
+          hop, and not a child gram-scale / sipper-bottle
+          hop (those live on weight-management and
+          hydration-and-water). This page does not hop
+          medications or vaccines. This page does not
+          claim hands-on testing. Ferret aging stays
+          held.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated ferret diet feeding chart /
+            ferret fridge diet label card /
+            mustelid diet reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / kibble-SKU hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools-hub
+            laminated+ferret+calculator+tools+chart /
+            ferret+fridge+measurement+card /
+            mustelid+calculator+reference+handbook,
+            reviews-hub
+            laminated+ferret+reviews+buyer+guide+chart /
+            ferret+fridge+reviews+comparison+card /
+            mustelid+reviews+reference+handbook,
+            and child digital+gram+scale /
+            heavy+ceramic+pet+water+bowl hops.
+            No directory import on this page. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the diet-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page diet-section-map,
+            macronutrient-and-label-log, and
+            obligate-carnivore-and-AFA-grounding copy — a
+            laminated ferret diet feeding chart, a ferret
+            fridge diet label card, and a mustelid diet
+            reference handbook. Educational kitchen
+            searches only. They are not a ranked kibble
+            list, they are not a tools-hub / reviews-hub
+            hop, they are not a gram-scale / sipper
+            hop, and they do not replace a veterinarian.
+            Ferret.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+ferret+diet+feeding+chart?s=diet-hub"
+              amazonLabel="Browse laminated ferret diet feeding charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/ferret+fridge+diet+label+card?s=diet-hub"
+              amazonLabel="Browse ferret fridge diet label cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/mustelid+diet+reference+handbook?s=diet-hub"
+              amazonLabel="Browse mustelid diet reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
     </>
   )
