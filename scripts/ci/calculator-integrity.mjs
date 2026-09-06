@@ -7645,6 +7645,24 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1225: keep the existing sidebar capture and the already-hopped mystery-snail tank-setup amazon-brand search; add under-hero capture with a concrete mystery-snail-setup-checklist offer matching on-page 68–82°F / pH 7.0–8.0 / GH 8+ / copper-free copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · panda-corydoras hops',
+    file: 'apps/fish-com/src/app/species/panda-corydoras/page.tsx',
+    mustInclude: [
+      { re: /source="species-panda-corydoras-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my panda-corydoras-setup checklist"/, label: 'concrete panda-corydoras-setup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="species-panda-corydoras"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/panda%20corydoras%20tank%20setup\?s=species-panda-corydoras/, label: 'existing panda-corydoras tank-setup amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /href=["']#["']/, label: 'never href="#"' },
+      { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1226: keep the existing sidebar capture and the already-hopped panda-corydoras tank-setup amazon-brand search; add under-hero capture with a concrete panda-corydoras-setup-checklist offer matching on-page 6+ group / 20-gallon / 68–77°F / soft-sand copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
