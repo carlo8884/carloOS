@@ -37,6 +37,42 @@ export default function BestNanoTanksPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the nano-tank checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Nano-tank checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the nano-tank notes that match the
+                Fluval Spec V, Aqueon 10 Standard, and
+                Aqueon 20 Long copy on this page — a
+                Fluval Spec V so a 5-gallon betta or
+                shrimp tank keeps a rimless all-in-one,
+                an Aqueon 10 so a first tank keeps a
+                versatile 20×10×12 footprint, and an
+                Aqueon 20 Long so a community starter
+                keeps the more forgiving 30×12×12
+                long tank. Educational nano-tank
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing Fluval
+                / Aqueon Amazon searches stay below.
+                Empty Chewy buttons stay hidden. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Nano-tank checklist"
+                subtitle="Email the Spec V, Aqueon 10, and 20 Long notes. No spam."
+                ctaText="Email my nano-tank checklist"
+                source="reviews-best-nano-tanks-under-hero"
+              />
+            </div>
+
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For a 5-gallon, the rimless all-in-one <strong>Fluval Spec V</strong> is our pick — planted-ready and ideal for a betta or shrimp. The most versatile and widely available 10-gallon is the <strong>Aqueon 10 Standard</strong>, and the <strong>Aqueon 20 Long</strong> is the best community starter thanks to its forgiving footprint. For saltwater, the <strong>Innovative Marine Nuvo 10</strong> is the best reef-ready nano. Bigger is more forgiving — go as large as budget allows.</p>

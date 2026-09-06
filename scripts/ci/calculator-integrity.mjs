@@ -6957,6 +6957,26 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1187: keep the existing sidebar capture and the already-hopped API Freshwater Master Test Kit amazon-brand search; add under-hero capture with a concrete water-test-kit-checklist offer matching on-page API / Salifert / digital-meter copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · best-nano-tanks hops',
+    file: 'apps/fish-com/src/app/reviews/best-nano-tanks/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-nano-tanks-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my nano-tank checklist"/, label: 'concrete nano-tank-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-nano-tanks"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/fluval\+spec\+v\+5\+gallon\?s=reviews-best-nano-tanks/, label: 'existing Fluval-Spec-V amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/aqueon\+10\+gallon\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-10 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-20-Long amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1188: keep the existing sidebar capture and the already-hopped Fluval Spec V / Aqueon 10 / Aqueon 20 Long amazon-brand searches; add under-hero capture with a concrete nano-tank-checklist offer matching on-page 5-gallon / 10-gallon / 20-long copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
