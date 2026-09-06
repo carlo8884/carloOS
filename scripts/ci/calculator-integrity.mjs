@@ -323,6 +323,27 @@ const CALCULATORS = [
     why: 'Money path leftover after #1252: dog.com /tools hub under-hero is on main. This existing fish.com /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete fish tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-tank-measurement-log / surface-area-bioload-and-KH-pH copy (a laminated aquarium calculator-tools chart so the volume / stocking / heater / filter / CO2 map is posted on the stand, an aquarium rim measurement card so each tank’s gallons / stocking load / heater watts / filter GPH is labeled on the rim, an aquarist calculator reference handbook so the surface-area / bioload / KH-pH grounding is a physical stand book), never a placeholder ASIN, an equipment-hub AquaClear hop, a stocking sand hop, or a prescription hop. Educational stand searches only — not a ranked product list, not a substitute for a water test. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open stocking / crate-size / #1252.',
   },
   {
+    id: 'vets · tools hub',
+    file: 'apps/vets-co/src/app/tools/page.tsx',
+    mustInclude: [
+      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vets tools-hub checklist"/, label: 'concrete vets tools-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+cat\+calculator\+tools\+chart\?s=tools-hub/, label: 'laminated cat calculator-tools-chart search hop (matches on-page calculator-section-map copy; unique vs laminated+dog+calculator+tools+chart / laminated+aquarium+calculator+tools+chart / pet+first+aid+kit)' },
+      { re: /amazon-brand\/cat\+fridge\+measurement\+card\?s=tools-hub/, label: 'cat fridge measurement-card search hop (matches on-page per-cat-measurement-log copy; unique vs dog+fridge+measurement+card / digital+pet+thermometer / soft+cat+carrier)' },
+      { re: /amazon-brand\/feline\+calculator\+reference\+handbook\?s=tools-hub/, label: 'feline calculator reference-handbook search hop (matches on-page FGS-RER-and-WSAVA copy; unique vs canine+calculator+reference+handbook / aquarist+calculator+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(pet\+first\+aid\+kit|digital\+pet\+thermometer|soft\+cat\+carrier|soft\+pet\+carrier|styptic\+powder|wound\+care\+gauze|kitten\+food|senior\+cat\+food|digital\+pet\+scale|kitchen\+gram\+scale|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop child-tool first-aid-kit / thermometer / carrier / styptic / gauze / kitten-food / scale, or Rx / vaccine — this page hops only laminated-cat-calculator-tools-chart / cat-fridge-measurement-card / feline-calculator-reference-handbook searches' },
+    ],
+    why: 'Money path leftover after #1253: fish.com /tools hub under-hero is on main. This existing vets.co /tools hub had no page-level EmailCapture and no Amazon hops. Add under-hero capture with a concrete vets tools-hub-checklist offer; add AffiliateDisclosure above hops; every gear CTA is an amazon-brand category search matching on-page calculator-section-map / per-cat-measurement-log / FGS-RER-and-WSAVA copy (a laminated cat calculator-tools chart so the emergency / ER-vs-clinic / age / BCS / calorie / grimace / insurance map is posted on the fridge, a cat fridge measurement card so each cat’s age band / BCS / calorie estimate / grimace total is labeled on the fridge, a feline calculator reference handbook so the Feline Grimace Scale / RER / WSAVA grounding is a physical kitchen book), never a placeholder ASIN, a child-tool first-aid-kit hop, or a vaccine / prescription hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden. Directory import left untouched. Do not re-open #1252 / #1253 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
