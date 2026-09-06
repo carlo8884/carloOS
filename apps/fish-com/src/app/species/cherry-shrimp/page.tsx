@@ -82,6 +82,38 @@ export default function CherryShrimpPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the cherry-shrimp-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Cherry-shrimp-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Neocaridina davidi notes that
+                match the care copy on this page — a
+                10–15 shrimp starter colony in a
+                10-gallon established tank, pH 6.5–8.0
+                and GH 6–8 so molts succeed, 65–80°F,
+                nitrate under 20 ppm, and no copper.
+                Educational cherry-shrimp-setup
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                cherry-shrimp tank-setup Amazon search
+                stays below. Empty Chewy buttons stay
+                hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Cherry-shrimp-setup checklist"
+                subtitle="Email the GH, no-copper, and colony notes. No spam."
+                ctaText="Email my cherry-shrimp-setup checklist"
+                source="species-cherry-shrimp-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-cherry-shrimp" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry shrimp in a home aquarium." priority />
         <h2>Grades — What You're Paying For</h2>
         <p>Cherry shrimp are sold in grades based on color intensity and coverage. All grades are the same species (Neocaridina davidi) and have identical care requirements — grade is purely aesthetic and affects price, not ease of care. Low-grade "cherry" shrimp have pale, patchy red coloration with transparent areas. Higher grades have progressively more intense and solid red coloration, culminating in "Painted Fire Red" with solid, opaque red coloration throughout. Breeding higher-grade shrimp together tends to produce higher-grade offspring — but population grades drift toward lower grades without selective culling of pale individuals.</p>
@@ -117,7 +149,6 @@ export default function CherryShrimpPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cherry shrimp care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/cherry%20shrimp%20tank%20setup?s=species-cherry-shrimp" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Cherry Shrimp Setup on Amazon →</a>
-            <a href="/go/chewy-brand/cherry%20shrimp%20tank%20setup?s=species-cherry-shrimp" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
