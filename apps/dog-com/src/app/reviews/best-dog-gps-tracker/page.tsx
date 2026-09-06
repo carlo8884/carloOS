@@ -30,6 +30,40 @@ export default function BestGPSTrackerPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dog-GPS-tracker checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dog-GPS-tracker checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the GPS-tracker notes that
+                match the ranking copy on this page —
+                every tracker needs a monthly
+                subscription, Fi Series 3 for a
+                3-month battery and LTE-M geofence
+                alerts, Whistle Go Explore for
+                20-day battery plus lick and scratch
+                health monitoring, and Tractive for
+                the $5/mo annual plan and 175-country
+                coverage. Educational tracker
+                checklist, not a new product hop and
+                not a substitute for a veterinarian.
+                The existing Fi / Whistle / Tractive
+                Amazon searches stay below. Empty
+                Chewy buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dog-GPS-tracker checklist"
+                subtitle="Email the battery, subscription, and coverage notes. No spam."
+                ctaText="Email my dog-GPS-tracker checklist"
+                source="reviews-best-dog-gps-tracker-under-hero"
+              />
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3 Dog Collar" subtitle="3-month battery · LTE-M network · Geofence escape alerts · Sleek collar design" score={9.4} winner
