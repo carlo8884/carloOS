@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,6 +134,51 @@ export default function RawFeedingGuidePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret raw-feeding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret raw-feeding checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-frankenprey-ratio-chart,
+              fridge-freeze-thaw-card, and
+              mustelid-raw-feeding-handbook notes
+              that match the frankenprey-ratio-map,
+              freeze-30-day-log, and
+              avma-raw-safety-grounding copy on this page —
+              a laminated ferret frankenprey-ratio chart so
+              the 80% muscle / 10% edible-bone / 10% organ
+              map is posted on the fridge (not a diet-hub
+              feeding chart, not a food-transition chart,
+              not a prey-vs-kibble chart), a ferret fridge
+              freeze-thaw card so 30-day-freeze /
+              fridge-thaw / dedicated-utensil notes are
+              labeled on the fridge (not a mix-ratio card,
+              not a diet-model card, not a no-sugar-treat
+              card), and a mustelid raw-feeding handbook so
+              the AVMA raw-caution / Quesenberry /
+              calcium-balance grounding is a physical
+              kitchen book (not a food-transition handbook,
+              not a diet-model handbook, not a diet
+              handbook). Educational kitchen checklist,
+              not a ranked prey list, not a sleep-sack hop,
+              and not a substitute for an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret raw-feeding checklist"
+              subtitle="Email the frankenprey-ratio-chart, fridge freeze-thaw card, and raw-feeding-handbook notes. No spam."
+              ctaText="Email my ferret raw-feeding checklist"
+              source="diet-raw-feeding-guide-under-hero"
+            />
+          </div>
+
           <h2 id="why">Why Raw</h2>
           <p>
             A correctly formulated raw diet supplies animal protein and fat in the proportions a ferret evolved to digest, with essentially no plant carbohydrate, plus dietary moisture, taurine, and — when bone is included — a natural calcium-to-phosphorus balance. Keepers who feed raw commonly report firmer, less odorous stool, cleaner teeth, and good coat condition. None of this is automatic, however. The benefits belong to a <em>well-formulated</em> raw diet; a poorly assembled one can be worse than a good commercial kibble. For the broader comparison, see <a href="/diet/whole-prey-vs-kibble">whole-prey vs kibble</a>.
@@ -170,6 +215,58 @@ export default function RawFeedingGuidePage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret frankenprey-ratio chart /
+              ferret fridge freeze-thaw card /
+              mustelid raw-feeding handbook).
+              Keep existing Chewy feeder-prey review hop.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              transitioning / whole-prey kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret raw-feeding kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page frankenprey-ratio-map,
+              freeze-30-day-log, and
+              avma-raw-safety-grounding copy — a laminated
+              ferret frankenprey-ratio chart, a ferret
+              fridge freeze-thaw card, and a mustelid
+              raw-feeding handbook. Educational kitchen
+              searches only. They are not a ranked prey
+              list, they are not a diet-hub / transitioning
+              / whole-prey hop, they are not a child
+              toothbrush hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden. Existing Chewy frozen-feeder-prey
+              review hop stays in the sourcing pick below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+frankenprey+ratio+chart?s=raw-feeding-guide"
+                amazonLabel="Browse laminated ferret frankenprey-ratio charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+freeze+thaw+card?s=raw-feeding-guide"
+                amazonLabel="Browse ferret fridge freeze-thaw cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+raw+feeding+handbook?s=raw-feeding-guide"
+                amazonLabel="Browse mustelid raw-feeding handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Sourcing Whole Prey</h2>
           <p>
