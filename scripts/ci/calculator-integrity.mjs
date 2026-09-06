@@ -7869,6 +7869,25 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1237: joint-supplement review under-hero is on main. Keep the existing sidebar capture and the already-hopped Fi / Whistle / Tractive amazon-brand searches; add under-hero capture with a concrete dog-GPS-tracker-checklist offer matching on-page monthly-subscription / 3-month Fi battery / LTE-M geofence / Whistle 20-day health / Tractive $5 175-country copy. Do not re-ship new queries. Empty Chewy buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'dog · best-dog-harnesses hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-harnesses/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-harnesses-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-harness checklist"/, label: 'concrete dog-harness-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-harnesses"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=reviews-best-dog-harnesses/, label: 'existing Julius-K9 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/petsafe\+easy\+walk\+harness\?s=reviews-best-dog-harnesses/, label: 'existing PetSafe Easy Walk Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/ruffwear\+front\+range\+harness\?s=reviews-best-dog-harnesses/, label: 'existing Ruffwear Front Range Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1238: GPS-tracker review under-hero is on main. Keep the existing sidebar capture and the already-hopped Julius-K9 Amazon + PetSafe / Ruffwear Chewy searches; add under-hero capture with a concrete dog-harness-checklist offer matching on-page front-clip-for-pullers / Easy Walk martingale / Ruffwear two-clip hiking / Julius escape-proof back-clip copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 

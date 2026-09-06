@@ -34,6 +34,41 @@ export default function BestDogHarnessesPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dog-harness checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dog-harness checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the harness notes that match
+                the ranking copy on this page —
+                front-clip only for pullers so the
+                leash redirects at the chest, a
+                PetSafe Easy Walk martingale for
+                immediate no-pull walks, a Ruffwear
+                Front Range two-clip for hiking
+                days, and a Julius-K9 IDC
+                Powerharness for escape-prone dogs
+                (back-clip only, not a no-pull
+                tool). Educational harness-type
+                checklist, not a new product hop and
+                not a substitute for a veterinarian
+                or trainer. The existing Julius-K9
+                Amazon and PetSafe / Ruffwear Chewy
+                searches stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dog-harness checklist"
+                subtitle="Email the front-clip, hiking, and escape-proof notes. No spam."
+                ctaText="Email my dog-harness checklist"
+                source="reviews-best-dog-harnesses-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Front-Clip vs Back-Clip</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Front-clip harnesses attach the leash at the dog's chest — when the dog pulls forward, the leash redirects them to the side, interrupting the pulling motion without pain. Back-clip harnesses attach at the back — they allow full forward movement and are appropriate for dogs that already walk well on leash. For pullers: front-clip only.</p>
