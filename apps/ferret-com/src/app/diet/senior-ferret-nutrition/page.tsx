@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +101,52 @@ export default function SeniorFerretNutritionPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret senior-nutrition checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret senior-nutrition checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-senior-protein-chart,
+              fridge-soak-soften-card, and
+              mustelid-senior-nutrition-handbook notes
+              that match the protein-stays-high-map,
+              soak-soften-log, and
+              quesenberry-geriatric-grounding copy on this
+              page — a laminated ferret senior-protein chart
+              so the do-not-cut-protein / high-fat /
+              low-carb-stays map is posted on the fridge
+              (not a diet-hub feeding chart, not a
+              protein-fat chart, not a frankenprey-ratio
+              chart), a ferret fridge soak-soften card so
+              warm-water-soak / meat-paste / dental-exam
+              notes are labeled on the fridge (not a
+              freeze-thaw card, not a mix-ratio card, not
+              a hydration card), and a mustelid
+              senior-nutrition handbook so the Quesenberry /
+              VCNA geriatric grounding is a physical
+              kitchen book (not a raw-feeding handbook,
+              not a kit-adult feeding handbook, not a
+              lifespan handbook). Educational kitchen
+              checklist, not a ranked kibble list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret senior-nutrition checklist"
+              subtitle="Email the senior-protein-chart, fridge soak-soften card, and senior-nutrition-handbook notes. No spam."
+              ctaText="Email my ferret senior-nutrition checklist"
+              source="diet-senior-nutrition-under-hero"
+            />
+          </div>
 
           <h2 id="when">When a Ferret Becomes Senior</h2>
           <p>
@@ -208,6 +254,59 @@ export default function SeniorFerretNutritionPage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret senior-protein chart /
+              ferret fridge soak-soften card /
+              mustelid senior-nutrition handbook).
+              Keep existing Wysong review hop.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              raw-feeding / protein-fat kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret senior-nutrition kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page protein-stays-high-map,
+              soak-soften-log, and
+              quesenberry-geriatric-grounding copy — a
+              laminated ferret senior-protein chart, a
+              ferret fridge soak-soften card, and a
+              mustelid senior-nutrition handbook.
+              Educational kitchen searches only. They are
+              not a ranked kibble list, they are not a
+              diet-hub / raw-feeding / protein-fat hop,
+              they are not a child toothbrush hop, and
+              they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+              Existing Wysong review hop stays in the
+              soften-well pick below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+senior+protein+chart?s=senior-ferret-nutrition"
+                amazonLabel="Browse laminated ferret senior-protein charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+soak+soften+card?s=senior-ferret-nutrition"
+                amazonLabel="Browse ferret fridge soak-soften cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+senior+nutrition+handbook?s=senior-ferret-nutrition"
+                amazonLabel="Browse mustelid senior-nutrition handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">A High-Protein Diet That Softens Well</h2>
           <p>
