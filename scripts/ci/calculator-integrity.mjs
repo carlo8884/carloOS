@@ -6918,6 +6918,27 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1185: keep the existing sidebar capture and the already-hopped Eheim Jager / Cobalt Neo-Therm / Hydor Inline / Aqueon Pro amazon-brand searches; add under-hero capture with a concrete aquarium-heater-checklist offer matching on-page recalibration-dial / slim-profile / canister-inline copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'fish · best-aquarium-lighting hops',
+    file: 'apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-aquarium-lighting-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium-lighting checklist"/, label: 'concrete aquarium-lighting-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-lighting"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting/, label: 'existing Hygger-957 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/fluval\+plant\+3\.0\?s=reviews-best-aquarium-lighting/, label: 'existing Fluval-Plant-3.0 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/kessil\+a360x\?s=reviews-best-aquarium-lighting/, label: 'existing Kessil-A360X amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/nicrew\+classic\+led\?s=reviews-best-aquarium-lighting/, label: 'existing Nicrew-Classic-LED amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1186: keep the existing sidebar capture and the already-hopped Hygger 957 / Fluval Plant 3.0 / Kessil A360X / Nicrew Classic amazon-brand searches; add under-hero capture with a concrete aquarium-lighting-checklist offer matching on-page PAR / planted / reef / FOWLR copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+  },
 
 ]
 
