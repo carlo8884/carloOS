@@ -80,7 +80,43 @@ export default function BestHeatersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
-            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the aquarium-heater checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Aquarium-heater checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the heater notes that match the
+                Eheim Jager, Cobalt Neo-Therm, Hydor
+                Inline, and Aqueon Pro copy on this
+                page — an Eheim Jager so a tropical
+                tank keeps a recalibration dial
+                against drift, a Cobalt Neo-Therm so
+                a slim tank keeps a flat-profile
+                heater, and a Hydor Inline so a
+                canister setup keeps the heater out
+                of the display. Educational heater-
+                checklist, not a new product hop, not
+                livestock, and not a substitute for a
+                fish veterinarian. The existing
+                Eheim / Cobalt / Hydor / Aqueon
+                Amazon searches stay below. Empty
+                Chewy buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Aquarium-heater checklist"
+                subtitle="Email the Jager, Neo-Therm, inline, and Aqueon notes. No spam."
+                ctaText="Email my aquarium-heater checklist"
+                source="reviews-best-aquarium-heaters-under-hero"
+              />
+            </div>
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
