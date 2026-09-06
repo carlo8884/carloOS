@@ -7907,6 +7907,27 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1239: harness review under-hero is on main. Keep the existing sidebar capture and the already-hopped Northmate Amazon + Outward Hound / LickiMat Chewy searches; add under-hero capture with a concrete slow-feeder-checklist offer matching on-page twice-daily / 10x Fun Feeder / Northmate forage / LickiMat lick-to-calm copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
   },
+  {
+    id: 'horses · best-equine-supplements hops',
+    file: 'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-equine-supplements-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my equine-supplement checklist"/, label: 'concrete equine-supplement-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-best-supplements"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/platinum\+performance\+equine\+wellness\?s=reviews-best-equine-supplements/, label: 'existing Platinum Performance amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/kentucky\+equine\+research\+EO-3\+omega\+3\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/equithrive\+original\+pellets\+resveratrol\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/standlee\+premium\+forage\+pellets\?s=reviews-best-equine-supplements/, label: 'existing Standlee forage amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1240: dog.com slow-feeder review under-hero is on main. Dog.com /reviews/* Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped Platinum / KER EO-3 / Equithrive / Standlee Amazon searches; add under-hero capture with a concrete equine-supplement-checklist offer matching on-page NASC / diagnose-first / Cosequin ASU / marine DHA-EPA / forage-first copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+  },
 
 ]
 
