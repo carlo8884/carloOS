@@ -82,6 +82,41 @@ export default function NeonTetraPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the neon-tetra-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Neon-tetra-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the neon-tetra notes that match the
+                care copy on this page — a 4-week
+                quarantine so store-farmed neons stay
+                out of the display until ammonia and
+                nitrite read 0, a school of 10 or more
+                so the blue-red stripe shows as a
+                coordinated school, and a dark substrate
+                with tannins so a blackwater tank keeps
+                the slightly acidic conditions that
+                intensify color. Educational
+                neon-tetra-setup checklist, not a new
+                product hop, not livestock, and not a
+                substitute for a fish veterinarian. The
+                existing neon tank-setup Amazon search
+                stays below. Empty Chewy buttons stay
+                hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Neon-tetra-setup checklist"
+                subtitle="Email the quarantine, school-size, and blackwater notes. No spam."
+                ctaText="Email my neon-tetra-setup checklist"
+                source="species-neon-tetra-under-hero"
+              />
+            </div>
 
         <StockImage manifestKey="fish-com:species-neon-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A school of neon tetras (Paracheirodon innesi) in a planted aquarium." priority />
 
@@ -120,7 +155,6 @@ export default function NeonTetraPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for neon tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Neon Tetra Setup on Amazon →</a>
-            <a href="/go/chewy-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
 
