@@ -186,6 +186,42 @@ export default function BestFerretHarnessPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret-harness checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret-harness checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the harness notes that match the
+              ranking copy on this page — escape
+              prevention first because a ferret
+              reverses out of a loose fit, a jacket
+              vest when a determined escape artist
+              needs a wide chest panel, an adjustable
+              H-style when a no-neck body needs
+              multi-point girth, a one-finger indoor
+              test before any outdoor walk, and a
+              mesh H-plus-leash set only as a
+              supervised starter. Educational fit
+              checklist, not a new product hop and
+              not a substitute for an exotic-animal
+              veterinarian. The existing vest / H-style
+              / mesh Amazon searches stay below. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret-harness checklist"
+              subtitle="Email the vest, H-style, and one-finger-fit notes. No spam."
+              ctaText="Email my ferret-harness checklist"
+              source="reviews-best-ferret-harness-under-hero"
+            />
+          </div>
+
           <QuickPicks items={QUICK_PICKS} />
 
           <p>
