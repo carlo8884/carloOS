@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
+  EmailCapture,
   FAQAccordion,
   SchemaScript,
+  ShopCtas,
   StockImage,
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
@@ -186,6 +189,54 @@ export default function DiagnosticsHubPage() {
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="vets-co:diagnostics-hero" aspect="16:9" variant="wide" priority />
       </div>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vets diagnostics-hub checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vets diagnostics-hub checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-diagnostics-test-map-chart,
+            fridge-diagnostics-library-card, and
+            veterinary-diagnostics-reference-handbook notes that
+            match the test-category-map, cost-turnaround-log,
+            and acvim-aaha-merck-grounding copy on this hub —
+            a laminated pet diagnostics test-map chart so the
+            blood / urine / imaging / cardiac / biopsy map is
+            posted on the fridge (not a tools-hub calculator
+            chart, not an insurance policy-map chart, not a
+            reviews buyer-guide chart, not a health triage
+            chart, not a guides section-map chart, not a
+            breeds screening chart), a pet fridge diagnostics
+            library card so each test-category spoke is labeled
+            on the fridge (not a cat measurement card, not an
+            insurance levers card, not a reviews comparison
+            card, not a health library card, not a guides prep
+            card, not a breeds library card), and a veterinary
+            diagnostics reference handbook so the ACVIM / AAHA
+            / Merck grounding is a physical kitchen book (not
+            a feline calculator handbook, not an insurance
+            handbook, not a reviews handbook, not a health
+            handbook, not a guides handbook, not a breeds
+            handbook). Educational kitchen checklist, not a
+            ranked test list, not a child specimen-cup hop,
+            and not a substitute for a veterinarian. Vets.co
+            does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Vets diagnostics-hub checklist"
+            subtitle="Email the diagnostics-test-map-chart, fridge library-card, and diagnostics-handbook notes. No spam."
+            ctaText="Email my vets diagnostics-hub checklist"
+            source="diagnostics-hub-under-hero"
+          />
+        </div>
+      </section>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">
         {/* Extractable direct-answer summary (TL;DR) for SERP + AI citation */}
@@ -404,6 +455,85 @@ export default function DiagnosticsHubPage() {
           </Link>
         </section>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Diagnostics-hub kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          test-category-map, cost-turnaround-log, and
+          acvim-aaha-merck-grounding copy on this hub — a
+          laminated pet diagnostics test-map chart so the
+          blood / urine / imaging / cardiac / biopsy map is
+          posted on the fridge, a pet fridge diagnostics
+          library card so each test-category spoke is labeled
+          on the fridge, and a veterinary diagnostics
+          reference handbook so the ACVIM / AAHA / Merck
+          grounding is a physical kitchen book. These are
+          educational kitchen searches, not a ranked test
+          list, not a substitute for a veterinarian, not a
+          tools-hub / insurance-hub / reviews-hub /
+          health-hub / guides-hub / breeds-hub hop, and not
+          a child specimen-cup hop (those live on senior
+          bloodwork). This page does not hop medications or
+          vaccines. This page does not sell insurance. This
+          page does not claim hands-on testing.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated pet diagnostics test-map chart /
+            pet fridge diagnostics library card /
+            veterinary diagnostics reference handbook).
+            Educational kitchen searches only; no Rx /
+            vaccine / flea hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs tools / insurance /
+            reviews / health / guides / breeds kitchen
+            kits and child sterile+urine+specimen+cup hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the diagnostics-hub kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page test-category-map, cost-turnaround-log,
+            and acvim-aaha-merck-grounding copy — a laminated
+            pet diagnostics test-map chart, a pet fridge
+            diagnostics library card, and a veterinary
+            diagnostics reference handbook. Educational
+            kitchen searches only. They are not a ranked
+            test list, they are not a tools-hub /
+            insurance-hub / reviews-hub / health-hub /
+            guides-hub / breeds-hub hop, they are not a
+            child specimen-cup hop, and they do not replace
+            a veterinarian. Vets.co does not sell insurance.
+            Vets.co earns a commission on qualifying
+            purchases at no extra cost to you. Empty Chewy
+            buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+diagnostics+test+map+chart?s=diagnostics-hub"
+              amazonLabel="Browse laminated pet diagnostics test-map charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+diagnostics+library+card?s=diagnostics-hub"
+              amazonLabel="Browse pet fridge diagnostics library cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+diagnostics+reference+handbook?s=diagnostics-hub"
+              amazonLabel="Browse veterinary diagnostics reference handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
