@@ -81,6 +81,37 @@ export default function PearlGouramiPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the pearl-gourami-setup checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Pearl-gourami-setup checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the Trichopodus leerii
+                notes that match the care copy on this
+                page — a planted 30-gallon for one
+                adult or 40+ for a group, 77–82°F and
+                pH 6.0–7.5, and open warm surface
+                air for the labyrinth organ. Educational
+                pearl-gourami-setup checklist, not a
+                new product hop, not livestock, and not
+                a substitute for a fish veterinarian. The
+                existing pearl-gourami tank-setup
+                Amazon search stays below. Empty Chewy
+                buttons stay hidden. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="fish-com"
+                title="Pearl-gourami-setup checklist"
+                subtitle="Email the 30-gallon, surface-air, and planted-calm notes. No spam."
+                ctaText="Email my pearl-gourami-setup checklist"
+                source="species-pearl-gourami-under-hero"
+              />
+            </div>
         <StockImage manifestKey="fish-com:species-pearl-gourami" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pearl gourami in a home aquarium." priority />
 
         <h2>A Labyrinth Fish — Surface Access Is Mandatory</h2>
@@ -116,7 +147,6 @@ export default function PearlGouramiPage() {
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, gentle filters, heaters, live plants, and food sized for pearl gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/pearl%20gourami%20tank%20setup?s=species-pearl-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Pearl Gourami Setup on Amazon →</a>
-            <a href="/go/chewy-brand/pearl%20gourami%20tank%20setup?s=species-pearl-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />
