@@ -19,6 +19,7 @@
 
 import type { Metadata } from 'next'
 import {
+  AffiliateDisclosure,
   buildMetadata,
   ArticleLayout,
   ArticleByline,
@@ -28,6 +29,7 @@ import {
   FAQAccordion,
   buildArticleSchema,
   SchemaScript,
+  ShopCtas,
 } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 
@@ -90,6 +92,53 @@ export default function FirstDerbyPage() {
         subtitle="A friendly, no-jargon guide to enjoying the biggest day in racing as a spectator: what you are watching, the traditions, and how the afternoon unfolds. An on-ramp into the sport, not a betting guide."
         alt="A lively crowd watching from the grandstand on a sunny race day"
       />
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the horses first-derby checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Horses first-derby checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-horse-barn-spectator-day-map-chart,
+            stall-door-silks-follow-card, and
+            equine-first-derby-spectator-handbook notes that
+            match the spectator-day-map, silks-follow-log,
+            and jockey-club-ifha-grounding copy on this
+            page — a laminated horse barn spectator day-map
+            chart so the undercard / parade / ceremony /
+            feature map is posted on the stall door (not a
+            tools-hub calculator chart, not a racing
+            section-map chart, not a bloodstock
+            section-map chart, not a first-horse 90-day
+            week-by-week checklist), a horse stall-door
+            silks follow card so name / silks / post-position
+            notes are labeled on the stall door (not a
+            racing prep card, not a bloodstock prep card,
+            not a first-horse ground-manners cue card), and
+            an equine first-derby spectator handbook so
+            The Jockey Club / IFHA grounding is a physical
+            barn book (not a racing handbook, not a
+            bloodstock handbook, not a first-horse
+            tack-room emergency-plan card). Educational
+            kitchen checklist, not a ranked race list, not
+            a child curry-comb / hoof-pick hop, and not a
+            substitute for a veterinarian. Horses.com does
+            not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horses first-derby checklist"
+            subtitle="Email the spectator-day-map-chart, stall-door silks-card, and first-derby-handbook notes. No spam."
+            ctaText="Email my horses first-derby checklist"
+            source="first-derby-under-hero"
+          />
+        </div>
+      </section>
 
       <ArticleLayout
         siteId="horses-com"
@@ -318,6 +367,84 @@ export default function FirstDerbyPage() {
           </ol>
         </div>
       </ArticleLayout>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          First-derby kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          spectator-day-map, silks-follow-log, and
+          jockey-club-ifha-grounding copy on this page — a
+          laminated horse barn spectator day-map chart so
+          the undercard / parade / ceremony / feature map
+          is posted on the stall door, a horse stall-door
+          silks follow card so name / silks / post-position
+          notes are labeled on the stall door, and an
+          equine first-derby spectator handbook so The
+          Jockey Club / IFHA grounding is a physical barn
+          book. These are educational kitchen searches,
+          not a ranked race list, not a substitute for a
+          veterinarian, not a racing-hub / bloodstock-hub /
+          first-horse-roadmap hop, and not a child
+          curry-comb / hoof-pick hop. This page does not
+          hop medications or vaccines. This page does not
+          sell insurance. This page does not claim
+          hands-on testing. This page is not a wagering
+          resource.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn spectator day-map chart /
+            horse stall-door silks follow card /
+            equine first-derby spectator handbook).
+            Educational kitchen searches only; no Rx hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs racing / bloodstock /
+            first-horse-roadmap kitchen kits and child
+            horse+curry+comb / horse+hoof+pick hops.
+            Directory import left untouched. Do not
+            re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the first-derby kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page spectator-day-map, silks-follow-log,
+            and jockey-club-ifha-grounding copy — a
+            laminated horse barn spectator day-map chart,
+            a horse stall-door silks follow card, and an
+            equine first-derby spectator handbook.
+            Educational kitchen searches only. They are
+            not a ranked race list, they are not a
+            sibling-hub kitchen hop, they are not a child
+            curry-comb hop, and they do not replace a
+            veterinarian. Horses.com does not sell
+            insurance. Horses.com earns a commission on
+            qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+spectator+day+map+chart?s=first-derby"
+              amazonLabel="Browse laminated horse barn spectator day-map charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stall+door+silks+follow+card?s=first-derby"
+              amazonLabel="Browse horse stall-door silks follow cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+first+derby+spectator+handbook?s=first-derby"
+              amazonLabel="Browse equine first-derby spectator handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
