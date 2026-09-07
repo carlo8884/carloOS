@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,48 @@ export default function BarrelRacingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the barrel-racing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Barrel-racing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-cloverleaf-barrel-chart,
+              stall-door-nbha-jackpot-card, and
+              equine-barrel-rate-handbook notes
+              that match the cloverleaf-pattern, local
+              jackpot / NBHA / WPRA, and rate-into-the-turn
+              copy on this page — a laminated horse
+              cloverleaf barrel chart so the first / second /
+              third-barrel notes are posted on the stall
+              door (not an NRHA maneuver chart, not a
+              vet-gate recovery chart), a horse stall-door
+              NBHA jackpot card so the 4-H / jackpot /
+              WPRA notes are labeled at the barn (not an
+              NRHA level card, not a Tevis 100 card), and
+              an equine barrel-rate handbook so the
+              collect-and-set-up / rocket-out grounding is
+              a physical barn book (not a sliding-stop
+              handbook, not an AERC limited-distance
+              handbook). Educational barn checklist, not a
+              ranked clinic list, not a gag-bit kit hop,
+              not a first-aid-kit hop, and not a substitute
+              for a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Barrel-racing checklist"
+              subtitle="Email the cloverleaf chart, NBHA jackpot card, and barrel-rate handbook notes. No spam."
+              ctaText="Email my barrel-racing checklist"
+              source="disciplines-barrel-racing-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Barrel Racing Is</h2>
           <p>Barrel racing is a timed speed event most associated with rodeo and traditionally a women&apos;s event at the professional level. The horse and rider enter the arena at a gallop, run a set pattern around three barrels, and sprint back across the timer line, with the fastest clean run winning. It is one of the most popular grassroots horse sports in North America, with classes from local jackpots to professional rodeo finals, and an electronic timer to hundredths or thousandths of a second.</p>
 
@@ -136,6 +178,59 @@ export default function BarrelRacingPage() {
             <li>National Barrel Horse Association (NBHA). Pattern and competition rules. nbha.com.</li>
             <li>American Quarter Horse Association. Speed-event and barrel resources. aqha.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse cloverleaf barrel chart /
+              horse stall-door NBHA jackpot card /
+              equine barrel-rate handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no gag-bit kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs reining /
+              endurance hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the barrel-racing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page cloverleaf-pattern, local jackpot /
+              NBHA / WPRA, and rate-into-the-turn copy —
+              a laminated horse cloverleaf barrel chart, a
+              horse stall-door NBHA jackpot card, and an
+              equine barrel-rate handbook. Educational
+              barn searches only. They are not a ranked
+              clinic list, they are not a reining /
+              endurance hop, they are not a gag-bit kit
+              hop, they are not a first-aid-kit hop, they
+              are not a child toothbrush hop, and they do
+              not replace a veterinarian. Horses.com does
+              not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+cloverleaf+barrel+chart?s=discipline-barrel-racing"
+                amazonLabel="Browse laminated horse cloverleaf barrel charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+nbha+jackpot+card?s=discipline-barrel-racing"
+                amazonLabel="Browse horse stall-door NBHA jackpot cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+barrel+rate+handbook?s=discipline-barrel-racing"
+                amazonLabel="Browse equine barrel-rate handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
