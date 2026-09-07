@@ -446,6 +446,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'lipizzaner' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the lipizzaner checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Lipizzaner checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-lipica-1580-stud-chart,
+                  horse-stall-door-spanish-riding-school-card, and
+                  equine-first-owner-lipizzaner-handbook notes that
+                  match the Lipica 1580 stud, Spanish Riding School
+                  of Vienna, and first-time-owner copy on this page —
+                  a laminated horse Lipica-1580-stud chart so the
+                  Archduke Charles II / six-foundation-stallion notes
+                  are posted on the stall door (not a 1967-studbook-
+                  split hop, not a Carthusian-Iberian hop), a horse
+                  stall-door Spanish Riding School card so the
+                  Vienna / classical-dressage notes are labeled at
+                  the barn (not a working-equitation hop, not a
+                  USDF-level hop), and an equine first-owner
+                  lipizzaner handbook so the NO-typically / late-
+                  maturity-age-7 grounding is a physical barn book
+                  (not a first-owner-lusitano handbook, not a
+                  double-bridle hop). Educational barn checklist,
+                  not a ranked tack list, not a substitute for a
+                  veterinarian. Horses.com does not sell insurance.
+                  No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Lipizzaner checklist"
+                  subtitle="Email the Lipica-1580-stud chart, Spanish Riding School card, and first-owner handbook notes. No spam."
+                  ctaText="Email my lipizzaner checklist"
+                  source="breed-lipizzaner-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -803,6 +844,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+lusitano+handbook?s=breed-lusitano"
                     amazonLabel="Browse equine first-owner lusitano handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'lipizzaner' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the lipizzaner barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Lipica 1580 stud, Spanish Riding School of Vienna,
+                  and first-time-owner copy — a laminated horse
+                  Lipica-1580-stud chart, a horse stall-door Spanish
+                  Riding School card, and an equine first-owner
+                  lipizzaner handbook. Educational barn searches
+                  only. They are not a ranked tack list, they are
+                  not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying
+                  purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+lipica+1580+stud+chart?s=breed-lipizzaner"
+                    amazonLabel="Browse laminated horse Lipica-1580-stud charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+spanish+riding+school+card?s=breed-lipizzaner"
+                    amazonLabel="Browse horse stall-door Spanish Riding School cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+lipizzaner+handbook?s=breed-lipizzaner"
+                    amazonLabel="Browse equine first-owner lipizzaner handbooks on Amazon →"
                   />
                 </div>
               </div>
