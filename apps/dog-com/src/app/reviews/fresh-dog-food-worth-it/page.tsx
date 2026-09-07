@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,52 @@ export default function FreshDogFoodWorthItPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fresh-dog-food checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fresh-dog-food checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-fresh-vs-kibble-chart,
+            fridge-fresh-thaw-card, and
+            canine-gently-cooked-handbook notes
+            that match the format-comparison,
+            fridge-or-freezer-thaw, and
+            aafco-wsava-kcal copy on this
+            page — a laminated dog fresh-vs-kibble chart so
+            the cooked-vs-kibble-vs-raw axes are posted on
+            the fridge (not a cheek-swab chart,
+            not an eight-week-trial chart, not a
+            NASC-seal chart), a dog fridge
+            fresh-thaw card so refrigerated /
+            frozen thaw and portion notes are labeled on the
+            fridge (not a breed-estimate card, not an
+            itch-score card, not an EPA-DHA card),
+            and a canine gently-cooked handbook so the
+            AAFCO complete-and-balanced / WSAVA /
+            kcal-density grounding is a physical kitchen book (not
+            an MDR1-vet handbook, not a food-challenge
+            handbook, not a fish-oil handbook).
+            Educational kitchen checklist, not a
+            ranked clinic list, not a Farmer&apos;s Dog /
+            Ollie subscription hop, not a first-aid-kit
+            hop, and not a substitute for a
+            veterinarian. Dog.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Fresh-dog-food checklist"
+            subtitle="Email the fresh-vs-kibble chart, fridge thaw card, and gently-cooked-handbook notes. No spam."
+            ctaText="Email my fresh-dog-food checklist"
+            source="reviews-fresh-dog-food-worth-it-under-hero"
+          />
+        </div>
+
         <h2 id="short">The Short Answer</h2>
         <p>Fresh, gently-cooked dog food is one of the fastest-growing categories in pet nutrition — fresh-food sales have grown sharply since the early 2020s as more owners look for higher-moisture, less-processed options. But growth is not the same as necessity. <strong>For most healthy dogs, fresh food is a reasonable upgrade in palatability and transparency, not a medical requirement.</strong> A complete-and-balanced fresh diet and a quality kibble from a <a href="/nutrition/wsava-explained">WSAVA-aligned manufacturer</a> can both meet a dog&apos;s nutritional needs.</p>
         <p>The real question is not &ldquo;fresh or kibble&rdquo; in the abstract — it is whether <em>this</em> fresh product is complete and balanced, made by a company with real nutritional oversight, and worth its ongoing cost for <em>your</em> dog. This guide walks through how to answer that.</p>
@@ -116,6 +162,61 @@ export default function FreshDogFoodWorthItPage() {
         <FAQAccordion items={FAQS} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Category-growth figures reflect publicly reported industry trends and are described qualitatively where exact figures vary. Always consult your veterinarian before changing your dog&apos;s diet.</em></p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog fresh-vs-kibble chart /
+            dog fridge fresh-thaw card /
+            canine gently-cooked handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops
+            and no Farmer's Dog / Ollie kit hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs dog-dna-tests /
+            elimination-diet / dog-supplements hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the fresh-dog-food kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page format-comparison,
+            fridge-or-freezer-thaw, and
+            aafco-wsava-kcal copy — a
+            laminated dog fresh-vs-kibble chart, a
+            dog fridge fresh-thaw card, and a
+            canine gently-cooked handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a dog-dna-tests / elimination-diet /
+            dog-supplements hop, they are not a
+            Farmer&apos;s Dog / Ollie kit hop, they are
+            not a first-aid-kit hop, they are not a
+            child toothbrush hop, and they do not
+            replace a veterinarian. Dog.com does not
+            sell insurance. Dog.com earns a commission
+            on qualifying purchases at no extra cost
+            to you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+fresh+vs+kibble+chart?s=reviews-fresh-food"
+              amazonLabel="Browse laminated dog fresh-vs-kibble charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+fresh+thaw+card?s=reviews-fresh-food"
+              amazonLabel="Browse dog fridge fresh-thaw cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+gently+cooked+handbook?s=reviews-fresh-food"
+              amazonLabel="Browse canine gently-cooked handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
