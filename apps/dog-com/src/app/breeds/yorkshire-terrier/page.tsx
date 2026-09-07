@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide — Hypoglycemia | Dog.com', description: 'Yorkshire Terriers have big personalities in a fragile body. Hypoglycemia in puppies, tracheal collapse from collar pressure.', path: '/breeds/yorkshire-terrier', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -57,7 +57,49 @@ export default function YorkiePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-                <BreedHealthCard name="Hypoglycemia (Low Blood Sugar)" riskLevel="very-high"
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the yorkshire-terrier checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Yorkshire Terrier checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-yorkie-42tooth-jaw-chart,
+            dog-fridge-yorkie-4to6hr-feed-card, and
+            canine-first-owner-yorkshire-terrier-handbook notes
+            that match the 42-teeth-in-a-tiny-jaw dental load,
+            the every-4–6-hour puppy meal floor, and
+            first-time-owner notes on this page — a laminated
+            dog Yorkie 42-tooth jaw chart so the overcrowding
+            / retained-baby-tooth notes are posted on the
+            fridge (not a Chaser 1,000-object chart, not an
+            Aussie 50% MDR1 chart), a fridge Yorkie 4-to-6-
+            hour feed card so the puppy hypoglycemia notes
+            are labeled in the kitchen (not an eye-stalk
+            card, not a finger-toothbrush hop), and a first-
+            owner Yorkshire Terrier handbook so the
+            YES-typically / harness-not-collar / goose-honk
+            grounding is a physical kitchen book (not a
+            first-owner Border Collie handbook). Educational
+            kitchen checklist, not a ranked product list, not
+            a substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Yorkshire Terrier checklist"
+            subtitle="Email the 42-tooth jaw chart, 4–6-hour feed card, and first-owner handbook notes. No spam."
+            ctaText="Email my yorkshire-terrier checklist"
+            source="breed-yorkshire-terrier-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in 19th-century Yorkshire mills: a ratting terrier packed into a 4–7 lb body. That mill / tiny-jaw history is why a household Yorkie still needs a harness from day one and a 4–6 hour puppy meal clock, not a crate-only afternoon. Yorkshire Terriers are typically first-time-owner friendly — YES-typically — when the household accepts harness-not-collar, the 4–6 hour puppy feed floor, and the 42-tooth dental load.</p>
+
+        <BreedHealthCard name="Hypoglycemia (Low Blood Sugar)" riskLevel="very-high"
           description="Yorkie puppies under 4 months — and occasionally adults under 4 lbs — are at significant risk of hypoglycemic episodes. Their tiny body mass cannot store adequate glycogen to maintain blood glucose between meals, especially when stressed, active, or if a meal is missed. Hypoglycemic episodes: weakness, disorientation, trembling, seizure-like activity, collapse, coma, death. This is a genuine emergency."
           signs={['Weakness, wobbly gait', 'Disorientation or glazed eyes', 'Trembling', 'Seizure-like activity', 'Loss of consciousness']}
           management="Yorkie puppies must eat every 4-6 hours. Keep Karo syrup or honey accessible — rub on gums immediately if hypoglycemia is suspected, then get to a veterinarian. Do not withhold food from young Yorkies. Adults over 5 lbs and over 6 months rarely experience hypoglycemia with normal feeding schedules." />
@@ -76,6 +118,41 @@ export default function YorkiePage() {
 
         <h2>Harness — Not Optional</h2>
         <p>Every Yorkie should wear a harness, never a neck collar, for all walking and any situation where leash pressure might be applied. The tracheal and cervical spine vulnerability in this breed makes neck collar use a real injury risk. A harness distributes pressure across the chest instead. This applies to puppies from day one — get a properly fitting harness before bringing the puppy home.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Yorkshire Terrier home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            42-teeth-in-a-tiny-jaw dental load, the every-
+            4–6-hour puppy meal floor, and first-time-owner
+            notes — a laminated dog Yorkie 42-tooth jaw
+            chart, a fridge Yorkie 4-to-6-hour feed card, and
+            a first-owner Yorkshire Terrier handbook.
+            Educational kitchen searches only. They are not a
+            ranked product list, they are not a crate hop,
+            they are not a finger-toothbrush hop, and they do
+            not replace a veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+yorkie+42tooth+jaw+chart?s=breed-yorkie"
+              amazonLabel="Browse laminated dog Yorkie 42-tooth jaw charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+yorkie+4to6hr+feed+card?s=breed-yorkie"
+              amazonLabel="Browse fridge Yorkie 4-to-6-hour feed cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+yorkshire+terrier+handbook?s=breed-yorkie"
+              amazonLabel="Browse first-owner Yorkshire Terrier handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
