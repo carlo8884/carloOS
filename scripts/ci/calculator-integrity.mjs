@@ -3019,6 +3019,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1375: dog.com /reviews/fresh-dog-food-worth-it is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /reviews/best-winter-horse-blankets commercial spoke had sidebar EmailCapture only (source review-winter-blankets, not under-hero) plus live SmartPak Rambo / Schneider StormShield product hops and AffiliateDisclosure. Add under-hero capture with a concrete winter-blanket-checklist offer matching on-page most-horses-do-not-need / turnout-vs-stable / 1000D ballistic / Rambo Original / Schneiders 1680D copy. Keep the existing sidebar capture and the already-hopped SmartPak / Schneider searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1375 / crate-size / stocking.',
   },
   {
+    id: 'horses · trail-riding',
+    file: 'apps/horses-com/src/app/disciplines/trail-riding/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-trail-riding-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my trail-riding checklist"/, label: 'concrete trail-riding-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-trail-riding"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+trail\+etiquette\+chart\?s=discipline-trail-riding/, label: 'laminated horse trail-etiquette-chart search hop (matches on-page trail-etiquette copy; unique vs laminated+horse+barn+racing+section+map+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+natrc\+pace\+card\?s=discipline-trail-riding/, label: 'horse stall-door NATRC pace-card search hop (matches on-page NATRC judged-pace copy; unique vs horse+stall+door+racing+prep+card)' },
+      { re: /amazon-brand\/equine\+aerc\+endurance\+handbook\?s=discipline-trail-riding/, label: 'equine AERC endurance-handbook search hop (matches on-page AERC 25-to-100-mile copy; unique vs equine+racing+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+racing\+section\+map\+chart|horse\+stall\+door\+racing\+prep\+card|equine\+racing\+reference\+handbook|plain\+white\+horse\+salt\+block|salt\+first\+horse\+electrolyte\+powder|wide\+mouth\+horse\+water\+bucket|easyboot|renegade|cavallo|scoot\+boots|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop racing-hub / salt-and-electrolytes kitchen kits, Easyboot / Renegade product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-trail-etiquette-chart / horse-stall-door-natrc-pace-card / equine-aerc-endurance-handbook searches' },
+    ],
+    why: 'Money path leftover after #1376: horses.com /reviews/best-winter-horse-blankets is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/trail-riding commercial spoke had sidebar EmailCapture only (source discipline-trail-riding, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete trail-riding-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page trail-etiquette / NATRC judged-pace / AERC 25-to-100-mile copy (a laminated horse trail-etiquette chart so the yield / single-file / horse-length-gap notes are posted on the stall door, a horse stall-door NATRC pace card so the 15–40 mile judged-ride notes are labeled at the barn, an equine AERC endurance handbook so the Limited Distance / 50–100 mile / vet-gate grounding is a physical barn book), never a placeholder ASIN, a sibling racing-hub kitchen hop, a salt-and-electrolytes hop, an Easyboot kit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1376 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
