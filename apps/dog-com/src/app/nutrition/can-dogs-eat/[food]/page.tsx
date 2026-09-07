@@ -13,6 +13,8 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import { DOG_FOODS, getDogFood, getRelatedFoods, foodFaqs, VERDICT_META, type FoodEntry } from '../../../../data/foods'
 
@@ -129,6 +131,47 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the food-spoke checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Food-spoke checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-food-spoke-verdict-chart,
+            fridge-food-spoke-risk-card, and
+            canine-food-spoke-handbook notes that
+            match this remaining {entry.name} verdict
+            (safe / caution / toxic), the why / risks /
+            how-to-serve copy, and the ASPCA 888-426-4435
+            grounding — a laminated dog food-spoke
+            verdict chart so this remaining-food map is
+            posted on the fridge (not a hub chocolate-grape
+            chart, not a xylitol-critical chart, not a
+            health-spoke urgency chart), a fridge food-spoke
+            risk card so the caution / toxic / 10% treat
+            notes are labeled in the kitchen (not a hub
+            xylitol-onion card, not a health ER-flag card),
+            and a food-spoke handbook so the ASPCA /
+            Pet-Poison-Helpline row is a physical kitchen
+            book (not a hub food-safety handbook, not a
+            health-spoke handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does
+            not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Food-spoke checklist"
+            subtitle="Email the verdict chart, risk card, and food-spoke handbook notes. No spam."
+            ctaText="Email my food-spoke checklist"
+            source={`can-dogs-eat-${entry.slug}-under-hero`}
+          />
+        </div>
+
         <div className="rounded-lg border p-5 my-4" style={{ borderColor: meta.color, background: meta.tone === 'good' ? '#f0fdf4' : meta.tone === 'warn' ? '#fffbeb' : '#fef2f2' }}>
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Verdict</span>
           <div className="font-display font-black text-2xl mt-1" style={{ color: meta.color }}>{meta.label}</div>
@@ -182,6 +225,46 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
         <p className="text-sm text-gray-500 mt-2">
           See also: <Link href="/nutrition/toxic-foods">foods toxic to dogs</Link>, <Link href="/nutrition/safe-human-foods">safe human foods for dogs</Link>, and the full <Link href="/nutrition/can-dogs-eat">can-dogs-eat list</Link>.
         </p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the food-spoke kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page safe / caution / toxic verdict,
+            why / risks / 10% treat copy, and ASPCA
+            888-426-4435 grounding — a laminated dog
+            food-spoke verdict chart, a fridge
+            food-spoke risk card, and a canine
+            food-spoke handbook. Educational kitchen
+            searches only. They are not a ranked
+            product list, they are not a can-dogs-eat
+            hub hop, they are not a health-spoke hop,
+            they are not a crate hop, they are not a
+            finger-toothbrush hop, they are not a
+            flea / heartworm / vaccine hop, and they
+            do not replace a veterinarian. Dog.com
+            does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no
+            extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+food+spoke+verdict+chart?s=can-dogs-eat-food"
+              amazonLabel="Browse laminated dog food-spoke verdict charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+food+spoke+risk+card?s=can-dogs-eat-food"
+              amazonLabel="Browse fridge food-spoke risk cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+food+spoke+handbook?s=can-dogs-eat-food"
+              amazonLabel="Browse canine food-spoke handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">Frequently asked questions</h2>
         <FAQAccordion items={faqs} />
