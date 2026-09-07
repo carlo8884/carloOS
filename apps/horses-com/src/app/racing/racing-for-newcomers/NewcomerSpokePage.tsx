@@ -209,6 +209,47 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             </div>
           ) : null}
 
+          {spoke.slug === 'understanding-racing-silks' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the understanding-racing-silks checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Understanding-racing-silks checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-owner-silks-pattern-chart,
+                stall-door-saddlecloth-number-card, and
+                equine-racing-colours-register-handbook notes
+                that match the owner-registered-colours / pattern,
+                saddlecloth-number, and Jockey-Club-registration
+                copy on this page — a laminated horse owner-silks
+                pattern chart so the hooped / striped / chevroned
+                notes are posted on the stall door (not a
+                raceday-paddock-ring chart, not a race-card-field
+                chart), a horse stall-door saddlecloth-number
+                card so the follow-the-field notes are labeled
+                at the barn (not a call-to-post card, not a
+                form-line card), and an equine racing-colours
+                register handbook so the owner-livery grounding
+                is a physical barn book (not a raceday-etiquette
+                handbook, not a silks-literacy handbook).
+                Educational barn checklist, not a ranked race
+                list, not a first-aid-kit hop, and not a
+                substitute for a veterinarian. Horses.com does
+                not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Understanding-racing-silks checklist"
+                subtitle="Email the owner-silks-pattern chart, saddlecloth-number card, and racing-colours-register handbook notes. No spam."
+                ctaText="Email my understanding-racing-silks checklist"
+                source="racing-for-newcomers-understanding-racing-silks-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* Key facts quick-reference */}
           <div className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
@@ -356,6 +397,62 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+raceday+etiquette+handbook?s=racing-for-newcomers-a-day-at-the-races"
                     amazonLabel="Browse equine raceday-etiquette handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {spoke.slug === 'understanding-racing-silks' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse owner-silks-pattern chart /
+                  horse stall-door saddlecloth-number card /
+                  equine racing-colours-register handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs a-day-at-the-races
+                  / how-to-read-a-race-card / newcomers-hub hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the understanding-racing-silks barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page owner-registered-colours / pattern,
+                  saddlecloth-number, and Jockey-Club-
+                  registration copy — a laminated horse
+                  owner-silks-pattern chart, a horse stall-door
+                  saddlecloth-number card, and an equine
+                  racing-colours-register handbook. Educational
+                  barn searches only. They are not a ranked
+                  race list, they are not an a-day-at-the-races
+                  / how-to-read-a-race-card hop, they are not a
+                  first-aid-kit hop, they are not a child
+                  toothbrush hop, and they do not replace a
+                  veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to you.
+                  Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+owner+silks+pattern+chart?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonLabel="Browse laminated horse owner-silks-pattern charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+saddlecloth+number+card?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonLabel="Browse horse stall-door saddlecloth-number cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+racing+colours+register+handbook?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonLabel="Browse equine racing-colours-register handbooks on Amazon →"
                   />
                 </div>
               </div>
