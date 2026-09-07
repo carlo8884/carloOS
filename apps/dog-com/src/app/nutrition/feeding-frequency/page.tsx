@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Often to Feed Your Dog — Meal Frequency by Life Stage | Dog.com', description: 'How many times a day to feed your dog by age and size. Why twice daily is better than once, when to switch feeding schedules, and meal timing for housetraining.', path: '/nutrition/feeding-frequency', type: 'article' })
@@ -22,6 +22,51 @@ export default function FeedingFrequencyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog meal-frequency checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog meal-frequency checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-twice-daily-chart,
+            fridge-life-stage-meal-card, and
+            canine-gdv-timing-handbook notes
+            that match the twice-daily-adult-map,
+            life-stage-meal-log, and
+            gdv-exercise-timing-grounding copy on this
+            page — a laminated dog twice-daily chart so
+            the adult two-meal / not-once-daily map is
+            posted on the fridge (not a BCS-score chart,
+            not a ten-percent-treat chart, not a
+            nutrition-feeding chart), a dog fridge
+            life-stage-meal card so puppy 4 / 3 / 2 meal
+            notes are labeled on the fridge (not an
+            ideal-weight card, not a plain-prep card,
+            not a WSAVA label card), and a canine
+            GDV-timing handbook so the 1–2 hour wait
+            after eating / 30–60 after exercise grounding
+            is a physical kitchen book (not an RER-portion
+            handbook, not a safe-share handbook, not a
+            poison-protocol handbook). Educational kitchen
+            checklist, not a ranked clinic list, not a
+            first-aid-kit hop, and not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog meal-frequency checklist"
+            subtitle="Email the twice-daily chart, fridge life-stage-meal card, and GDV-timing-handbook notes. No spam."
+            ctaText="Email my dog meal-frequency checklist"
+            source="nutrition-frequency-under-hero"
+          />
+        </div>
+
         <h2>Frequency by Life Stage</h2>
 
         <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--brand-border)', margin: '20px 0' }}>
@@ -68,6 +113,59 @@ export default function FeedingFrequencyPage() {
 
         <h2>Before and After Exercise</h2>
         <p>Do not feed immediately before or after vigorous exercise — particularly relevant for large, deep-chested breeds at elevated GDV risk. The timing recommendation: wait 1–2 hours after eating before vigorous exercise, and 30–60 minutes after vigorous exercise before feeding. For most dogs on a normal schedule (morning feed, evening feed, daily walks), this timing naturally accommodates without needing specific management.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog twice-daily chart /
+            dog fridge life-stage-meal card /
+            canine GDV-timing handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs how-much-to-feed /
+            safe-human-foods / toxic-foods hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog meal-frequency kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page twice-daily-adult-map,
+            life-stage-meal-log, and
+            gdv-exercise-timing-grounding copy — a
+            laminated dog twice-daily chart, a
+            dog fridge life-stage-meal card, and a
+            canine GDV-timing handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a how-much-to-feed / safe-human-foods /
+            toxic-foods hop, they are not a
+            first-aid-kit hop, they are not a child
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+twice+daily+chart?s=nutrition-frequency"
+              amazonLabel="Browse laminated dog twice-daily charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+life+stage+meal+card?s=nutrition-frequency"
+              amazonLabel="Browse dog fridge life-stage-meal cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+gdv+timing+handbook?s=nutrition-frequency"
+              amazonLabel="Browse canine GDV-timing handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
