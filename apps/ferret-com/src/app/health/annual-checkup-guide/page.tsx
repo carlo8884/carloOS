@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -179,6 +181,50 @@ export default function FerretAnnualCheckupGuidePage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret checkup checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret checkup checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-checkup-map-chart,
+              fridge-exam-prep-card, and
+              mustelid-annual-exam-handbook notes
+              that match the age-cadence-map,
+              exam-prep-log, and
+              quesenberry-afa-wellness-grounding copy on this
+              page — a laminated ferret checkup-map chart so
+              the kit-series / annual / twice-yearly map is
+              posted on the fridge (not a cover-exclude chart,
+              not a health-hub triage chart, not an
+              ownership-hub section map), a ferret fridge
+              exam-prep card so carrier / notes / short-fast /
+              stool-sample notes are labeled on the fridge
+              (not a waiting-period card, not a heat-limit
+              card, not a health-library card), and a mustelid
+              annual-exam handbook so the Quesenberry / AEMV
+              wellness and screening grounding is a physical
+              kitchen book (not a vet-fund handbook, not a
+              health-reference handbook, not an
+              ownership-reference handbook). Educational
+              kitchen checklist, not a ranked clinic list, not
+              a toothbrush hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does not
+              sell insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret checkup checklist"
+              subtitle="Email the checkup-map-chart, fridge exam-prep card, and annual-exam-handbook notes. No spam."
+              ctaText="Email my ferret checkup checklist"
+              source="health-annual-checkup-guide-under-hero"
+            />
+          </div>
+
           <DropCap>
             Ferrets live fast and develop disease young. By the time a ferret
             reaches middle age — around three years old — insulinoma, adrenal
@@ -342,6 +388,59 @@ export default function FerretAnnualCheckupGuidePage() {
               requested one.
             </li>
           </ul>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret checkup-map chart /
+              ferret fridge exam-prep card /
+              mustelid annual-exam handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              insurance / dental toothbrush hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret checkup kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page age-cadence-map,
+              exam-prep-log, and
+              quesenberry-afa-wellness-grounding copy — a
+              laminated ferret checkup-map chart, a
+              ferret fridge exam-prep card, and a
+              mustelid annual-exam handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / insurance / travel hop, they
+              are not a child toothbrush hop, and they do
+              not replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+checkup+map+chart?s=annual-checkup-guide"
+                amazonLabel="Browse laminated ferret checkup-map charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+exam+prep+card?s=annual-checkup-guide"
+                amazonLabel="Browse ferret fridge exam-prep cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+annual+exam+handbook?s=annual-checkup-guide"
+                amazonLabel="Browse mustelid annual-exam handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
