@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,47 @@ export default function CuttingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the cutting checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Cutting checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-cutting-cow-work-chart,
+              stall-door-ncha-cutting-card, and
+              equine-cutting-cow-sense-handbook notes
+              that match the two-and-a-half-minute-run,
+              ncha-futurity, and cow-sense / loose-rein
+              copy on this page — a laminated horse
+              cutting cow-work chart so the herd-hold /
+              turnback / two-or-three-cow notes are posted
+              on the stall door (not an ADS driving-phase
+              chart, not a cloverleaf barrel chart), a horse
+              stall-door NCHA cutting card so the futurity /
+              NCHA / Doc Bar notes are labeled at the barn
+              (not a four-in-hand card, not an NBHA jackpot
+              card), and an equine cutting cow-sense
+              handbook so the loose-rein / horse-on-its-own
+              grounding is a physical barn book (not a
+              cones-driving handbook, not a barrel-rate
+              handbook). Educational barn checklist, not a
+              ranked clinic list, not a first-aid-kit hop,
+              and not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Cutting checklist"
+              subtitle="Email the cutting cow-work chart, NCHA cutting card, and cow-sense handbook notes. No spam."
+              ctaText="Email my cutting checklist"
+              source="disciplines-cutting-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Cutting Is</h2>
           <p>Cutting grew directly out of ranch work, where a horse and rider would separate (cut) a specific animal from the herd for branding or doctoring. As a sport it preserves that work: the rider drives into a herd of cattle, isolates one cow, and then must keep it separated for a set time while the horse, working largely on its own, blocks the cow&apos;s attempts to return. The drama is in the horse&apos;s instinctive, athletic anticipation of the cow.</p>
 
@@ -136,6 +177,58 @@ export default function CuttingPage() {
             <li>American Quarter Horse Association. Cutting and cow-horse resources. aqha.com.</li>
             <li>AQHA / UC Davis VGL. Genetic-testing resources for cutting-bred lines (HERDA and others).</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse cutting cow-work chart /
+              horse stall-door NCHA cutting card /
+              equine cutting cow-sense handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs combined-driving /
+              barrel-racing hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the cutting barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page two-and-a-half-minute-run,
+              ncha-futurity, and cow-sense / loose-rein
+              copy — a laminated horse cutting cow-work
+              chart, a horse stall-door NCHA cutting card,
+              and an equine cutting cow-sense handbook.
+              Educational barn searches only. They are not
+              a ranked clinic list, they are not a
+              combined-driving / barrel-racing hop, they
+              are not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+cutting+cow+work+chart?s=discipline-cutting"
+                amazonLabel="Browse laminated horse cutting cow-work charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+ncha+cutting+card?s=discipline-cutting"
+                amazonLabel="Browse horse stall-door NCHA cutting cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+cutting+cow+sense+handbook?s=discipline-cutting"
+                amazonLabel="Browse equine cutting cow-sense handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
