@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
@@ -42,6 +42,48 @@ export default function GreatPyreneesPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the great-pyrenees checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Great Pyrenees checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-pyr-lgd-wolf-chart,
+            dog-fridge-pyr-night-bark-card, and
+            canine-first-owner-great-pyrenees-handbook notes
+            that match the millennia livestock-guardian origin,
+            the nocturnal-bark floor, and first-time-owner
+            notes on this page — a laminated dog Pyr LGD-wolf
+            chart so the Pyrenees-mountain / wolf-and-bear
+            flock notes are posted on the fridge (not a Dane
+            boar-hunt chart, not a Doodle F1B 75% chart), a
+            fridge Pyr night-bark card so the 2am patrol /
+            not-a-training-failure notes are labeled in the
+            kitchen (not a gastropexy card, not a finger-
+            toothbrush hop), and a first-owner Great Pyrenees
+            handbook so the NO-typically / 6-foot fence /
+            not-off-leash grounding is a physical kitchen
+            book (not a first-owner Great Dane handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Great Pyrenees checklist"
+            subtitle="Email the LGD-wolf chart, night-bark card, and first-owner handbook notes. No spam."
+            ctaText="Email my great-pyrenees checklist"
+            source="breed-great-pyrenees-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in the Pyrenees Mountains: livestock guardian dogs selected for millennia to patrol flocks against wolves and bears without a handler nearby. That LGD / night-patrol history is why a household Pyr still needs a 6-foot fence and a nocturnal-bark plan, not a crate-only afternoon. Great Pyrenees are not typically first-time-owner friendly — NO-typically — when the household expects off-leash recall, a quiet suburban night, or a dog that looks to humans before deciding.</p>
+
                 <h2>Understanding the Livestock Guardian Dog</h2>
         <p>The Great Pyrenees was not bred as a companion, an obedience competitor, or a dog that looks to humans for direction. For thousands of years, these dogs lived with flocks in the Pyrenean mountains, patrolling territory, deterring predators, and making independent decisions — entirely on their own, often without a human nearby for days. They were selected for self-sufficiency, noise (to warn away predators), territorial behavior, and the judgment to act without instruction.</p>
         <p>This heritage is still fully present in the breed. A Great Pyrenees that is barking at 2am is not being disobedient — it heard something and is doing its job. A Great Pyrenees that escapes the yard is not being defiant — it is patrolling what it perceives as its territory. A Great Pyrenees that does not respond to recall with a squirrel in sight is not failing its training — it has evolved to make independent decisions. Understanding this context does not eliminate the management challenges, but it reframes them from "behavioral problems" to "breed characteristics requiring appropriate management."</p>
@@ -63,6 +105,41 @@ export default function GreatPyreneesPage() {
         <h2>Barking — Managing a Trait, Not a Behavior Problem</h2>
         <p>Great Pyrenees bark. They were selected for generations on the basis of their willingness to bark to deter predators and alert handlers. They are particularly active at night, when their ancestral predator activity peaked. Nighttime barking is not a training failure — it is a breed characteristic. Management approaches: bring the dog inside at night (most effective — removes the trigger of outdoor sounds and respects neighbors), white noise machines, anti-bark devices as a last resort, and ensuring adequate exercise to reduce overall arousal level. Training "quiet" commands provides some management tool, but will not prevent the breed-typical urge to bark.</p>
         <p>Prospective Great Pyrenees owners in suburban neighborhoods with close neighbors should carefully consider whether the breed's barking tendency is compatible with their living situation before acquisition.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Great Pyrenees home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            millennia livestock-guardian origin, the nocturnal-
+            bark floor, and first-time-owner notes — a
+            laminated dog Pyr LGD-wolf chart, a fridge Pyr
+            night-bark card, and a first-owner Great Pyrenees
+            handbook. Educational kitchen searches only.
+            They are not a ranked product list, they are not
+            a crate hop, they are not a finger-toothbrush
+            hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+pyr+lgd+wolf+chart?s=breed-great-pyrenees"
+              amazonLabel="Browse laminated dog Pyr LGD-wolf charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+pyr+night+bark+card?s=breed-great-pyrenees"
+              amazonLabel="Browse fridge Pyr night-bark cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+great+pyrenees+handbook?s=breed-great-pyrenees"
+              amazonLabel="Browse first-owner Great Pyrenees handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
