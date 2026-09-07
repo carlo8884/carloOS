@@ -11,6 +11,8 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -167,6 +169,49 @@ export default function ShowJumpingPage() {
             updatedAt="2026-05-28"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the show-jumping checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Show-jumping checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-jumper-course-chart,
+              stall-door-usef-jumper-level-card, and
+              equine-open-front-boot-handbook notes
+              that match the 12-foot-stride course,
+              Schooling-to-Grand-Prix, and
+              open-front-boot copy on this
+              page — a laminated horse jumper-course chart so
+              the related-distance / one-stride / jump-off
+              notes are posted on the stall door (not a
+              training-pyramid chart, not a trail-etiquette
+              chart), a horse stall-door USEF jumper
+              level card so the 2&apos;3″-to-1.60 m notes
+              are labeled at the barn (not a USDF level
+              card, not a NATRC pace card), and an equine
+              open-front-boot handbook so the
+              carefulness / fetlock-boot grounding is a
+              physical barn book (not a double-bridle
+              handbook, not an AERC endurance handbook).
+              Educational barn checklist, not a ranked
+              clinic list, not a jump-saddle kit hop, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Show-jumping checklist"
+              subtitle="Email the course chart, USEF jumper-level card, and open-front-boot handbook notes. No spam."
+              ctaText="Email my show-jumping checklist"
+              source="disciplines-show-jumping-under-hero"
+            />
+          </div>
+
           <h2 id="tldr">TL;DR</h2>
           <ul>
             <li><strong>What it is:</strong> a numbered course of jumps ridden against the clock under USEF Jumper and FEI Jumping rules; the horse with the fewest faults (and, in the jump-off, the fastest time) wins.</li>
@@ -316,6 +361,60 @@ export default function ShowJumpingPage() {
             <li>Spruce Meadows, CHIO Aachen, Devon Horse Show, Hampton Classic — official event documentation and results archives.</li>
             <li>Winter Equestrian Festival (Wellington International). Competition calendar and results. wef.cmthorse.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse jumper-course chart /
+              horse stall-door USEF jumper level card /
+              equine open-front-boot handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no jump-saddle kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs dressage /
+              trail-riding hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the show-jumping barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page 12-foot-stride course,
+              Schooling-to-Grand-Prix, and
+              open-front-boot copy — a
+              laminated horse jumper-course chart, a
+              horse stall-door USEF jumper level card, and an
+              equine open-front-boot handbook.
+              Educational barn searches only. They are
+              not a ranked clinic list, they are not
+              a dressage / trail-riding hop,
+              they are not a jump-saddle kit hop, they are
+              not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+jumper+course+chart?s=discipline-show-jumping"
+                amazonLabel="Browse laminated horse jumper-course charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+usef+jumper+level+card?s=discipline-show-jumping"
+                amazonLabel="Browse horse stall-door USEF jumper-level cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+open+front+boot+handbook?s=discipline-show-jumping"
+                amazonLabel="Browse equine open-front-boot handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
