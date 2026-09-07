@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,52 @@ export default function FerretsAndOtherPetsPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret other-pets checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret other-pets checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-prey-compat-chart,
+              fridge-intro-barrier-card, and
+              mustelid-cross-species-handbook notes
+              that match the prey-compat-map,
+              intro-barrier-log, and
+              quesenberry-afa-cross-species-grounding copy
+              on this page — a laminated ferret prey-compat
+              chart so the dog / cat / prey-species map is
+              posted on the fridge (not a kid-handle chart,
+              not a fit-check chart, not an ownership-hub
+              section map), a ferret fridge intro-barrier
+              card so scent-first / short-supervised /
+              retreat-space notes are labeled on the fridge
+              (not a supervise-rule card, not a
+              time-money-odor card, not a bite-type card),
+              and a mustelid cross-species handbook so the
+              Quesenberry / AFA prey-drive and quarantine
+              grounding is a physical kitchen book (not a
+              family-fit handbook, not a fit-decision
+              handbook, not an ownership-reference
+              handbook). Educational kitchen checklist,
+              not a ranked multi-pet list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret other-pets checklist"
+              subtitle="Email the prey-compat-chart, fridge intro-barrier card, and cross-species-handbook notes. No spam."
+              ctaText="Email my ferret other-pets checklist"
+              source="ownership-ferrets-and-other-pets-under-hero"
+            />
+          </div>
+
           <h2 id="prey-drive">Prey Drive First</h2>
           <p>
             Ferrets descend from the European polecat and retain a strong, hardwired prey drive. They are obligate carnivores built to hunt small animals, and no amount of domestication removes that instinct. This is the lens through which every cross-species question should be viewed: the issue is rarely whether the ferret will be hurt by a calm dog or cat, but whether the ferret will treat a smaller animal as prey, or whether a larger animal will treat the ferret as one. Everything below follows from that.
@@ -129,6 +175,59 @@ export default function FerretsAndOtherPetsPage() {
           <p>
             Whatever the other animal, the principles are the same. Start with scent and barrier introductions before any direct contact, keep the first face-to-face meetings short and closely supervised, ensure the ferret has a safe space to retreat to, and never force interaction. Progress only as fast as both animals stay calm, and accept that some pairings simply will not work — a high-prey-drive dog or a prey animal may never be safe with a ferret, and recognizing that early is part of responsible ownership.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret prey-compat chart /
+              ferret fridge intro-barrier card /
+              mustelid cross-species handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ownership-hub /
+              kids / fit-check / adoption kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret other-pets kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page prey-compat-map,
+              intro-barrier-log, and
+              quesenberry-afa-cross-species-grounding copy
+              — a laminated ferret prey-compat chart, a
+              ferret fridge intro-barrier card, and a
+              mustelid cross-species handbook.
+              Educational kitchen searches only. They are
+              not a ranked multi-pet list, they are not
+              an ownership-hub / kids / fit-check hop,
+              they are not a child toothbrush hop, and
+              they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+prey+compat+chart?s=ferrets-and-other-pets"
+                amazonLabel="Browse laminated ferret prey-compat charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+intro+barrier+card?s=ferrets-and-other-pets"
+                amazonLabel="Browse ferret fridge intro-barrier cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+cross+species+handbook?s=ferrets-and-other-pets"
+                amazonLabel="Browse mustelid cross-species handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>
