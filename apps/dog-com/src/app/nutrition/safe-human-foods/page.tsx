@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Human Foods Safe for Dogs — What Can Dogs Actually Eat? | Dog.com', description: 'Complete list of human foods that are safe to share with dogs — with portion guidance and which preparations to avoid. research-based.', path: '/nutrition/safe-human-foods', type: 'article' })
@@ -54,6 +54,50 @@ export default function SafeHumanFoodsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog safe-foods checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog safe-foods checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-ten-percent-treat-chart,
+            fridge-plain-prep-card, and
+            canine-safe-share-handbook notes
+            that match the ten-percent-treat-map,
+            plain-prep-avoid-log, and
+            always-check-label-grounding copy on this
+            page — a laminated dog ten-percent-treat chart
+            so the 10% / 40-kcal extras map is posted on
+            the fridge (not a xylitol-critical chart, not a
+            chocolate-grape chart, not a nutrition-feeding
+            chart), a dog fridge plain-prep card so no
+            seasoning / no oil / no xylitol notes are
+            labeled on the fridge (not a grape-kidney card,
+            not a xylitol-onion card, not a WSAVA label
+            card), and a canine safe-share handbook so the
+            whole-food share list and always-check-label
+            grounding is a physical kitchen book (not a
+            poison-protocol handbook, not a food-safety
+            handbook, not a nutrition reference handbook).
+            Educational kitchen checklist, not a ranked
+            clinic list, not a first-aid-kit hop, and not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog safe-foods checklist"
+            subtitle="Email the ten-percent-treat chart, fridge plain-prep card, and safe-share-handbook notes. No spam."
+            ctaText="Email my dog safe-foods checklist"
+            source="nutrition-safe-foods-under-hero"
+          />
+        </div>
+
         <div style={{ background: 'rgba(42,106,58,0.06)', border: '1px solid rgba(42,106,58,0.15)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A6A3A', marginBottom: '8px' }}>The 10% Rule</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>All treats and supplemental foods — including safe human foods — should not exceed 10% of your dog&apos;s daily caloric intake. A dog eating 400 kcal/day should get no more than 40 kcal from treats and extras. Exceeding this creates nutritional imbalance and excess calories.</p>
@@ -84,6 +128,58 @@ export default function SafeHumanFoodsPage() {
 
         <h2>The Always-Check List</h2>
         <p>Before sharing any human food product (not a whole food): check every ingredient for xylitol, grapes, raisins, onion powder, garlic powder, and macadamia nuts. Many products contain these in forms that aren&apos;t obvious — protein bars, certain breads, trail mixes, flavored yogurts, and packaged foods frequently contain one or more of these. When in doubt, consult the <a href="/nutrition/toxic-foods">toxic foods guide</a> or call your vet.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog ten-percent-treat chart /
+            dog fridge plain-prep card /
+            canine safe-share handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs toxic-foods /
+            can-dogs-eat / nutrition-hub hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog safe-foods kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page ten-percent-treat-map,
+            plain-prep-avoid-log, and
+            always-check-label-grounding copy — a
+            laminated dog ten-percent-treat chart, a
+            dog fridge plain-prep card, and a
+            canine safe-share handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a toxic-foods / can-dogs-eat / nutrition-hub
+            hop, they are not a first-aid-kit hop, they
+            are not a child toothbrush hop, and they do
+            not replace a veterinarian. Dog.com does not
+            sell insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+            Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+ten+percent+treat+chart?s=nutrition-safe-foods"
+              amazonLabel="Browse laminated dog ten-percent-treat charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+plain+prep+card?s=nutrition-safe-foods"
+              amazonLabel="Browse dog fridge plain-prep cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+safe+share+handbook?s=nutrition-safe-foods"
+              amazonLabel="Browse canine safe-share handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
