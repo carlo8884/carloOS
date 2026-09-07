@@ -168,6 +168,47 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             </div>
           ) : null}
 
+          {spoke.slug === 'a-day-at-the-races' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the a-day-at-the-races checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                A-day-at-the-races checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-raceday-paddock-ring-chart,
+                stall-door-call-to-post-card, and
+                equine-raceday-etiquette-handbook notes
+                that match the paddock / parade-ring, call-to-post
+                / bugle, and etiquette / first-visit copy on this
+                page — a laminated horse raceday-paddock-ring
+                chart so the walking-ring / rail notes are posted
+                on the stall door (not a race-card-field chart,
+                not a barn-newcomer-race-card chart), a horse
+                stall-door call-to-post card so the bugle /
+                starting-gate notes are labeled at the barn (not
+                a form-line card, not a paddock-parade card),
+                and an equine raceday-etiquette handbook so the
+                dress / family-friendly grounding is a physical
+                barn book (not a program-literacy handbook, not
+                a silks-literacy handbook). Educational barn
+                checklist, not a ranked race list, not a
+                first-aid-kit hop, and not a substitute for a
+                veterinarian. Horses.com does not sell insurance.
+                No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="A-day-at-the-races checklist"
+                subtitle="Email the raceday-paddock-ring chart, call-to-post card, and raceday-etiquette handbook notes. No spam."
+                ctaText="Email my a-day-at-the-races checklist"
+                source="racing-for-newcomers-a-day-at-the-races-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* Key facts quick-reference */}
           <div className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
@@ -260,6 +301,61 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+program+literacy+handbook?s=racing-for-newcomers-how-to-read-a-race-card"
                     amazonLabel="Browse equine program-literacy handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {spoke.slug === 'a-day-at-the-races' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse raceday-paddock-ring chart /
+                  horse stall-door call-to-post card /
+                  equine raceday-etiquette handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs how-to-read-a-race-card
+                  / racing-for-newcomers hub hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the a-day-at-the-races barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page paddock / parade-ring, call-to-post /
+                  bugle, and etiquette / first-visit copy — a
+                  laminated horse raceday-paddock-ring chart, a
+                  horse stall-door call-to-post card, and an
+                  equine raceday-etiquette handbook. Educational
+                  barn searches only. They are not a ranked
+                  race list, they are not a how-to-read-a-race-card
+                  / racing-for-newcomers-hub hop, they are not a
+                  first-aid-kit hop, they are not a child
+                  toothbrush hop, and they do not replace a
+                  veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to you.
+                  Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+raceday+paddock+ring+chart?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonLabel="Browse laminated horse raceday-paddock-ring charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+call+to+post+card?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonLabel="Browse horse stall-door call-to-post cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+raceday+etiquette+handbook?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonLabel="Browse equine raceday-etiquette handbooks on Amazon →"
                   />
                 </div>
               </div>
