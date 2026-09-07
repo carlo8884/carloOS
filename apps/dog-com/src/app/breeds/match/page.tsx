@@ -8,6 +8,8 @@ import {
   buildMetadata,
   combineSchemas,
   AffiliateDisclosure,
+  EmailCapture,
+  ShopCtas,
 } from '@carloOS/ui'
 import Link from 'next/link'
 import { BreedMatchWizard } from './wizard-client'
@@ -154,6 +156,50 @@ export default function BreedMatchPage() {
       >
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-07T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8 not-prose">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the breed-match checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Breed-match checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-match-tier-fit-chart,
+            fridge-match-persona-card, and
+            canine-match-akc-aspca-handbook notes that
+            match this /breeds/match wizard — the
+            seven-question home / time / experience /
+            activity / household / grooming / noise
+            copy, the may-fit / worth-a-closer-look
+            honest-tier map, and the AKC / ASPCA
+            grounding — a laminated dog match-tier-fit
+            chart so the two-tier map is posted on the
+            fridge (not a breeds-hub profile chart, not
+            an insurance-hub breed chart), a fridge
+            match-persona card so the first-time /
+            apartment / active-household / quiet-home
+            notes are labeled in the kitchen (not a
+            breeds library card, not an insurance-hub
+            timing card), and a match handbook so the
+            AKC / ASPCA row is a physical kitchen book
+            (not a breeds-reference handbook, not an
+            insurance-hub handbook). Educational kitchen
+            checklist, not a ranked product list, not an
+            email gate on the quiz, not a substitute for
+            meeting a breeder or rescue. Dog.com does
+            not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Breed-match checklist"
+            subtitle="Email the tier-fit chart, persona card, and match handbook notes. No spam."
+            ctaText="Email my breed-match checklist"
+            source="breed-match-under-hero"
+          />
+        </div>
+
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
           The single biggest predictor of a happy dog relationship is choosing a breed whose needs match your real life — not the breed you saw in a movie. Energy level, size, grooming, and tolerance for noise are where most mismatches happen.
@@ -203,6 +249,53 @@ export default function BreedMatchPage() {
             </div>
           </div>
         </section>
+
+        {/* Money path — live amazon-brand kitchen hops
+            matching on-page seven-question / honest-tier /
+            AKC-ASPCA copy. Unique vs the dog breeds hub
+            + breed-insurance hub kitchens. Educational
+            only — never a crate hop, never a first-aid
+            hop, never an email gate. */}
+        <div className="not-prose mb-12 rounded-xl border border-brand-border bg-brand-surface p-6">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the breed-match kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page seven-question home / time /
+            experience / activity / household / grooming
+            / noise copy, the may-fit /
+            worth-a-closer-look honest-tier map, and the
+            AKC / ASPCA grounding — a laminated dog
+            match-tier-fit chart, a fridge match-persona
+            card, and a canine match AKC-ASPCA handbook.
+            Educational kitchen searches only. They are
+            not a ranked product list, they are not a
+            breeds-hub hop, they are not a
+            breed-insurance-hub hop, they are not a
+            crate hop, they are not a first-aid-kit hop,
+            they are not a flea / heartworm / vaccine
+            hop, and they do not replace meeting a
+            breeder or rescue. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+match+tier+fit+chart?s=breed-match"
+              amazonLabel="Browse laminated dog match-tier-fit charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+match+persona+card?s=breed-match"
+              amazonLabel="Browse fridge dog match-persona cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+match+akc+aspca+handbook?s=breed-match"
+              amazonLabel="Browse canine match AKC-ASPCA handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         {/* Static persona index — SEO + AI crawl visibility */}
         <section className="mb-12">
