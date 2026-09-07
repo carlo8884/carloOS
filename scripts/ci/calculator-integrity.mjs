@@ -2851,6 +2851,24 @@ const CALCULATORS = [
     why: 'Money path leftover after #1366: dog.com /nutrition/elimination-diet is on main. Remaining ferret leftovers are aging (held), fleas-and-parasites (skip flea hops), glossary/legality/names, and programmatic children. This existing dog.com /nutrition/dog-dna-tests commercial spoke had sidebar EmailCapture only (source nutrition-dna-tests, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete dog DNA-test-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page cheek-swab-map / breed-estimate-log / mdr1-vet-grounding copy (a laminated dog cheek-swab chart so the at-home mail-in steps are posted on the fridge, a dog fridge breed-estimate card so major-ancestry / soft-percentage notes are labeled on the fridge, a canine MDR1-vet handbook so the drug-sensitivity / bring-the-report grounding is a physical kitchen book), never a placeholder ASIN, a sibling elimination-diet kitchen hop, a dog-supplements hop, a raw-diet-risks hop, an Embark / Wisdom Panel kit hop, a first-aid-kit hop, a child toothbrush hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held at /health/aging-ferret-care. Do not re-open #1165 / #1251–#1366 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-dental-chews',
+    file: 'apps/dog-com/src/app/reviews/best-dental-chews/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dental-chews-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dental-chew checklist"/, label: 'concrete dental-chew-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-dental-chews"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Greenies Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/whimzees\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Whimzees Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1367: dog.com /nutrition/dog-dna-tests is on main. Dog nutrition leftover hops are exhausted (skip prescription-diets / ozempic-for-dogs Rx-adjacent; skip can-dogs-eat children). This existing dog.com /reviews/best-dental-chews commercial spoke had sidebar EmailCapture only (source review-dental-chews, not under-hero) plus live Greenies / Whimzees Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dental-chew-checklist offer matching on-page VOHC-seal / Greenies plaque-and-tartar / Whimzees plant-based / 25–90 calorie copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1367 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

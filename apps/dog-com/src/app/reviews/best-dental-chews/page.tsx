@@ -29,6 +29,42 @@ export default function BestDentalChewsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dental-chew checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dental-chew checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the VOHC dental-chew notes that
+                match the ranking copy on this page —
+                the VOHC seal as the filter (not
+                &quot;dental&quot; marketing), Greenies
+                for plaque AND tartar with a pliable
+                tooth-safe texture, Whimzees for a
+                plant-based longer chew when animal
+                protein is a problem, and the 25–90
+                calorie count that must come out of
+                daily intake. Educational dental-chew
+                checklist, not a new product hop, not
+                a first-aid-kit hop, and not a
+                substitute for a veterinarian. The
+                existing Greenies and Whimzees Chewy
+                searches stay below. Dental chews
+                supplement toothbrushing — they do
+                not replace it. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dental-chew checklist"
+                subtitle="Email the VOHC seal, Greenies, and calorie-count notes. No spam."
+                ctaText="Email my dental-chew checklist"
+                source="reviews-best-dental-chews-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The VOHC Standard</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The Veterinary Oral Health Council awards its seal to products that demonstrate plaque or tartar reduction in controlled clinical studies. This is the correct filter for dental products — not ingredient claims, not packaging promises. The full VOHC-accepted product list is at vohc.org. Dental chews supplement toothbrushing — they do not replace it, and they do not substitute for professional cleaning.</p>
