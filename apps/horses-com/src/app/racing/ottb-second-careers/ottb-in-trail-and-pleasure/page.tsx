@@ -25,6 +25,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
@@ -159,6 +161,48 @@ export default function OttbInTrailAndPleasurePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ottb-in-trail-and-pleasure checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              OTTB-in-trail-and-pleasure checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-ottb-trail-confidence-chart,
+              stall-door-graduated-exposure-card, and
+              equine-ottb-calm-pleasure-handbook notes
+              that match the calmness / confidence, graduated
+              exposure / new-sights-and-surfaces, and quiet
+              pleasure-mount copy on this page — a laminated
+              horse OTTB trail-confidence chart so the
+              low-pressure / buddy-horse notes are posted on
+              the stall door (not an OTTB rebalance-topline
+              chart, not a trail-etiquette chart), a horse
+              stall-door graduated-exposure card so the
+              water-crossing / traffic / solo-outing notes
+              are labeled at the barn (not an accepting-
+              contact card, not an NATRC-pace card), and an
+              equine OTTB calm-pleasure handbook so the
+              quiet-mount / everyday-hacking grounding is a
+              physical barn book (not a collection-timeline
+              handbook, not an AERC-endurance handbook).
+              Educational barn checklist, not a ranked race
+              list, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="OTTB-in-trail-and-pleasure checklist"
+              subtitle="Email the OTTB trail-confidence chart, graduated-exposure card, and calm-pleasure handbook notes. No spam."
+              ctaText="Email my ottb-in-trail-and-pleasure checklist"
+              source="ottb-in-trail-and-pleasure-under-hero"
+            />
+          </div>
+
           <h2 id="why">A Valued Second Career</h2>
           <p>Competition is only one outcome for an off-track Thoroughbred, and for many horses it is not the right one. A quiet life as a trail and pleasure mount is a genuine and valued second career, not a consolation. The aftercare ecosystem&apos;s goal is to match each horse to an appropriate outcome, and for a great many OTTBs that outcome is a confident, willing partner for hacking out, recreational riding, and easy everyday work. For what trail and pleasure riding involve as activities in their own right, see the general <Link href="/disciplines/trail-riding">trail-riding reference</Link> and the <Link href="/disciplines/western-pleasure">western pleasure reference</Link>; this page covers only what the Thoroughbred coming off the track brings to that work.</p>
           <p>A horse that was sensitive and forward on the track can, with patient retraining, become an intelligent and engaged trail partner. The athleticism and surefootedness the breed has are real assets on varied terrain once the horse is calm and confident in the new role.</p>
@@ -183,6 +227,58 @@ export default function OttbInTrailAndPleasurePage() {
             <li>Thoroughbred Aftercare Alliance (TAA). Aftercare and rehoming framework. thoroughbredaftercare.org.</li>
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse OTTB trail-confidence chart /
+              horse stall-door graduated-exposure card /
+              equine OTTB calm-pleasure handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ottb-in-dressage /
+              disciplines-trail-riding hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ottb-in-trail-and-pleasure barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page calmness / confidence, graduated
+              exposure / new-sights-and-surfaces, and quiet
+              pleasure-mount copy — a laminated horse OTTB
+              trail-confidence chart, a horse stall-door
+              graduated-exposure card, and an equine OTTB
+              calm-pleasure handbook. Educational barn
+              searches only. They are not a ranked race
+              list, they are not an ottb-in-dressage /
+              disciplines-trail-riding hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+ottb+trail+confidence+chart?s=ottb-in-trail-and-pleasure"
+                amazonLabel="Browse laminated horse OTTB trail-confidence charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+graduated+exposure+card?s=ottb-in-trail-and-pleasure"
+                amazonLabel="Browse horse stall-door graduated-exposure cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+ottb+calm+pleasure+handbook?s=ottb-in-trail-and-pleasure"
+                amazonLabel="Browse equine OTTB calm-pleasure handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
