@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Weimaraner Breed Guide — Gray Ghost, Bloat Risk | Dog.com', description: 'Weimaraners are the "Gray Ghost" — haunting silver-gray, intense, and demanding. GDV/bloat risk high, prey drive extreme, and they bond deeply with one person.', path: '/breeds/weimaraner', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Weimaraner Breed Guide', description: 'GDV risk, prey drive, separation anxiety, and care for Weimaraners.', url: 'https://dog.com/breeds/weimaraner', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -56,6 +56,48 @@ export default function WeimaranerPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the weimaraner checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Weimaraner checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-weim-weimar-court-chart,
+            dog-fridge-weim-gray-ghost-card, and
+            canine-first-owner-weimaraner-handbook notes that
+            match the 19th-century Weimar-court origin, the
+            gray-ghost floor, and first-time-owner notes on
+            this page — a laminated dog Weim Weimar-court
+            chart so the German-nobility / large-game then
+            upland-bird notes are posted on the fridge (not
+            a Vizsla Magyar-point chart, not a Shiba
+            underbrush-hunt chart), a fridge Weim gray-ghost
+            card so the silver-gray / one-person-bond notes
+            are labeled in the kitchen (not a velcro card,
+            not a finger-toothbrush hop), and a first-owner
+            Weimaraner handbook so the NO-typically / 2-hour
+            high-drive / not-off-leash grounding is a
+            physical kitchen book (not a first-owner Vizsla
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Weimaraner checklist"
+            subtitle="Email the Weimar-court chart, gray-ghost card, and first-owner handbook notes. No spam."
+            ctaText="Email my weimaraner checklist"
+            source="breed-weimaraner-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in 19th-century Weimar: a noble's hunting dog bred at court to point and retrieve large game, then later upland birds. That Weimar-court / high-drive pointing history is why a household Weimaraner still needs a 2-hour vigorous-run clock and a one-person-bond plan, not a crate-only afternoon. Weimaraners are not typically first-time-owner friendly — NO-typically — when the household expects off-leash reliability around wildlife, a full unattended workday, or a dog that can be trained out of Gray Ghost intensity.</p>
+
                 <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="high"
           description="Weimaraners are a deep-chested breed with significant GDV predisposition. Prophylactic gastropexy at spay/neuter is recommended — it prevents the stomach rotation that makes GDV rapidly fatal while not affecting the dog's normal function. Discuss with your veterinarian before the spay/neuter procedure."
           signs={['Unproductive retching', 'Distended, taut abdomen', 'Restlessness to sudden collapse', 'Excessive drooling', 'Pale gums']}
@@ -70,6 +112,41 @@ export default function WeimaranerPage() {
 
         <h2>Exercise and Mental Stimulation</h2>
         <p>2+ hours of vigorous exercise daily is the minimum. Running, hiking, swimming, retrieving, or structured dog sports (agility, field trials, tracking) all channel their considerable energy and intelligence productively. Mental stimulation is equally important — nose work, obedience training, and problem-solving tasks satisfy the working dog's need for purposeful activity. A Weimaraner that is both physically and mentally worked is a genuinely wonderful companion. A sedentary Weimaraner in an unstimulating environment is a destructive, anxious, difficult dog — not because of a character flaw, but because their needs are not being met.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Weimaraner home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            19th-century Weimar-court origin, the gray-ghost
+            floor, and first-time-owner notes — a laminated
+            dog Weim Weimar-court chart, a fridge Weim gray-
+            ghost card, and a first-owner Weimaraner
+            handbook. Educational kitchen searches only.
+            They are not a ranked product list, they are not
+            a crate hop, they are not a finger-toothbrush
+            hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+weim+weimar+court+chart?s=breed-weimaraner"
+              amazonLabel="Browse laminated dog Weim Weimar-court charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+weim+gray+ghost+card?s=breed-weimaraner"
+              amazonLabel="Browse fridge Weim gray-ghost cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+weimaraner+handbook?s=breed-weimaraner"
+              amazonLabel="Browse first-owner Weimaraner handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
