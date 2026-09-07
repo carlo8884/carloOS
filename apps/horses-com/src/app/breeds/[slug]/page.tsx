@@ -1661,6 +1661,48 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'appaloosa' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the appaloosa checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Appaloosa checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-nez-perce-palouse-chart,
+                  horse-stall-door-buffalo-war-horse-card, and
+                  equine-first-owner-appaloosa-handbook notes that
+                  match the Nez Perce Palouse spotted war-and-buffalo
+                  horse origin, ApHC leopard-complex LP / ERU / CSNB
+                  copy, and first-time-owner notes on this page — a
+                  laminated horse Nez Perce Palouse chart so the
+                  Palouse / spotted-sure-footed notes are posted on
+                  the stall door (not an APHA-overo-color hop, not a
+                  Pintabian-Registry-tobiano hop), a horse stall-door
+                  buffalo war-horse card so the war-and-buffalo /
+                  Western / trail notes are labeled at the barn (not
+                  an Impressive-Poco-Bueno hop, not a Denmark-leopard-
+                  LP hop), and an equine first-owner appaloosa
+                  handbook so the YES-typically / ERU-LP / CSNB-LP-LP /
+                  PSSM1 / unpigmented-skin-SCC grounding is a physical
+                  barn book (not a first-owner-paint-horse handbook,
+                  not a double-bridle hop). Educational barn checklist,
+                  not a ranked tack list, not a substitute for a
+                  veterinarian. Horses.com does not sell insurance.
+                  No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Appaloosa checklist"
+                  subtitle="Email the Nez Perce Palouse chart, buffalo war-horse card, and first-owner handbook notes. No spam."
+                  ctaText="Email my appaloosa checklist"
+                  source="breed-appaloosa-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -3105,6 +3147,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+paint+horse+handbook?s=breed-paint-horse"
                     amazonLabel="Browse equine first-owner paint-horse handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'appaloosa' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the appaloosa barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Nez Perce Palouse spotted war-and-buffalo horse
+                  origin, ApHC leopard-complex LP / ERU / CSNB copy,
+                  and first-time-owner notes — a laminated horse Nez
+                  Perce Palouse chart, a horse stall-door buffalo
+                  war-horse card, and an equine first-owner appaloosa
+                  handbook. Educational barn searches only. They are
+                  not a ranked tack list, they are not a dressage-
+                  overview hop, they are not a first-aid-kit hop, and
+                  they do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+nez+perce+palouse+chart?s=breed-appaloosa"
+                    amazonLabel="Browse laminated horse Nez Perce Palouse charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+buffalo+war+horse+card?s=breed-appaloosa"
+                    amazonLabel="Browse horse stall-door buffalo war-horse cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+appaloosa+handbook?s=breed-appaloosa"
+                    amazonLabel="Browse equine first-owner appaloosa handbooks on Amazon →"
                   />
                 </div>
               </div>
