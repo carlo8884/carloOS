@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bernese Mountain Dog Guide — Cancer, 7-Year Lifespan | Dog.com', description: 'Berners have the shortest lifespan of any breed (~7 years). Cancer causes ~50% of deaths, with histiocytic sarcoma a breed-specific malignancy.', path: '/breeds/bernese-mountain-dog', type: 'article' })
@@ -43,6 +43,48 @@ export default function BerneseMountainDogPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the bernese-mountain-dog checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Bernese Mountain Dog checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-berner-50pct-cancer-chart,
+            dog-fridge-berner-7yr-lifespan-card, and
+            canine-first-owner-bernese-mountain-handbook notes
+            that match the ~50% cancer-mortality floor, the
+            7–8-year lifespan notes, and first-time-owner
+            notes on this page — a laminated dog Berner 50%
+            cancer chart so the histiocytic-sarcoma / lump-
+            aspirate notes are posted on the fridge (not an
+            Akita same-sex pair chart, not a Shih Tzu 6–8-
+            week groom chart), a fridge Berner 7-year
+            lifespan card so the three-years-young / three-
+            years-good notes are labeled in the kitchen (not
+            a Hachikō 10-year card, not a finger-toothbrush
+            hop), and a first-owner Bernese Mountain handbook
+            so the YES-typically / lean-weight / lump-aspirate
+            grounding is a physical kitchen book (not a
+            first-owner Akita handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Bernese Mountain Dog checklist"
+            subtitle="Email the 50% cancer chart, 7-year lifespan card, and first-owner handbook notes. No spam."
+            ctaText="Email my bernese-mountain-dog checklist"
+            source="breed-bernese-mountain-dog-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in the Swiss canton of Bern: a farm dog that pulled carts, droved cattle, and guarded the homestead. That cart / giant-frame history is why a household Berner still needs lean-weight joint care and a same-day lump-aspirate rule, not a crate-only afternoon. Bernese Mountain Dogs are typically first-time-owner friendly — YES-typically — when the household accepts the 7–8-year lifespan floor, the ~50% cancer-mortality watch, and lean-weight hip-and-elbow management.</p>
+
                 <BreedHealthCard name="Histiocytic Sarcoma" riskLevel="very-high"
           description="Histiocytic sarcoma is a malignant proliferation of histiocytes (immune cells) that is dramatically overrepresented in Bernese Mountain Dogs — they develop this cancer at rates orders of magnitude higher than other breeds. It can present as localized (affecting a single site — spleen, lung, bone marrow, skin) or disseminated (systemic, affecting multiple organs simultaneously). Disseminated histiocytic sarcoma is rapidly fatal — median survival even with chemotherapy (CCNU/lomustine) is 2–4 months. Localized disease treated surgically has a more variable prognosis."
           signs={['Rapid weight loss and muscle wasting', 'Lethargy and anorexia', 'Abdominal distension (splenic involvement)', 'Lameness (bone involvement)', 'Pale gums (anemia from bone marrow involvement)', 'Neurological signs (CNS involvement)']}
@@ -62,6 +104,41 @@ export default function BerneseMountainDogPage() {
 
         <h2>Pet Insurance — Get It at 8 Weeks</h2>
         <p>Pet insurance for Bernese Mountain Dogs should be purchased before the dog is 8 weeks old — ideally before any wellness visit that might create a pre-existing condition record. Given the breed's cancer predisposition and short lifespan, the cost-benefit calculation on pet insurance is strongly positive. A histiocytic sarcoma workup, treatment, and oncology visits can cost $5,000–20,000. Insurance that covers this — purchased before any condition develops — changes the financial reality of managing a breed-specific cancer. Compare policies specifically for cancer coverage, specialist referral coverage, and oncology treatment limits.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Bernese Mountain Dog home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            ~50% cancer-mortality floor, the 7–8-year
+            lifespan notes, and first-time-owner notes — a
+            laminated dog Berner 50% cancer chart, a fridge
+            Berner 7-year lifespan card, and a first-owner
+            Bernese Mountain handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a crate hop, they are not a
+            finger-toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+berner+50pct+cancer+chart?s=breed-berner"
+              amazonLabel="Browse laminated dog Berner 50% cancer charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+berner+7yr+lifespan+card?s=breed-berner"
+              amazonLabel="Browse fridge Berner 7-year lifespan cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+bernese+mountain+handbook?s=breed-berner"
+              amazonLabel="Browse first-owner Bernese Mountain handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
