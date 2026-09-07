@@ -238,6 +238,48 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           </div>
         ) : null}
 
+        {category.slug === 'aquarium-heaters' ? (
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-heaters checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-heaters checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-aquarium-heater-wattage-redundancy-chart,
+              aquarium-rim-independent-thermometer-card, and
+              aquarist-heater-controller-handbook notes that
+              match the 3–5 watts-per-gallon, two-heater
+              redundancy, and independent-thermometer copy on
+              this page — a laminated aquarium heater wattage-
+              redundancy chart so the 40-gallon / two-smaller-
+              heaters notes are posted on the stand (not an
+              Eheim-Jager hop, not an equipment-hub heater hop),
+              an aquarium rim independent-thermometer card so
+              the dial-is-approximate / 2–4°F-off notes are
+              labeled on the rim (not an Aqueon-Pro hop, not a
+              preset-25-watt nano hop), and an aquarist heater-
+              controller handbook so the titanium / Inkbird /
+              high-value-livestock grounding is a physical
+              stand book (not a Hydor-inline hop, not a
+              Cobalt-Neo-Therm hop). Educational stand
+              checklist, not a ranked heater list, not a
+              first-aid-kit hop, and not a substitute for a
+              water test. Fish.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-heaters checklist"
+              subtitle="Email the heater wattage-redundancy chart, independent-thermometer card, and heater-controller handbook notes. No spam."
+              ctaText="Email my aquarium-heaters checklist"
+              source="equipment-aquarium-heaters-under-hero"
+            />
+          </div>
+        ) : null}
+
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -464,6 +506,44 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarist+sponge+fry+filter+handbook?s=equipment-aquarium-filters"
                 amazonLabel="Browse aquarist sponge-fry-filter handbooks on Amazon →"
+              />
+            </div>
+          </div>
+        ) : null}
+
+        {category.slug === 'aquarium-heaters' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-heaters stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              3–5 watts-per-gallon, two-heater redundancy, and
+              independent-thermometer copy — a laminated
+              aquarium heater wattage-redundancy chart, an
+              aquarium rim independent-thermometer card, and
+              an aquarist heater-controller handbook.
+              Educational stand searches only. They are not a
+              ranked heater list, they are not an
+              equipment-hub / best-aquarium-heaters review hop,
+              they are not a first-aid-kit hop, and they do
+              not replace a water test. Fish.com does not sell
+              insurance. Fish.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Existing Chewy category buttons stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+aquarium+heater+wattage+redundancy+chart?s=equipment-aquarium-heaters"
+                amazonLabel="Browse laminated aquarium heater wattage-redundancy charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+rim+independent+thermometer+card?s=equipment-aquarium-heaters"
+                amazonLabel="Browse aquarium rim independent-thermometer cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarist+heater+controller+handbook?s=equipment-aquarium-heaters"
+                amazonLabel="Browse aquarist heater-controller handbooks on Amazon →"
               />
             </div>
           </div>
