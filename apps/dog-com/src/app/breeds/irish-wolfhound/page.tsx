@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
@@ -54,6 +54,48 @@ export default function IrishWolfhoundPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the irish-wolfhound checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Irish Wolfhound checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-wolfhound-irish-elk-chart,
+            dog-fridge-wolfhound-6to8yr-card, and
+            canine-first-owner-irish-wolfhound-handbook notes
+            that match the ancient Irish-elk coursing origin,
+            the 6–8-year lifespan floor, and first-time-owner
+            notes on this page — a laminated dog Wolfhound
+            Irish-elk chart so the wolf / Irish-elk / Graham-
+            revival notes are posted on the fridge (not a
+            Setter 1700s-bird chart, not a Pyr LGD-wolf
+            chart), a fridge Wolfhound 6to8yr card so the
+            shortest-breed / median-6.2-year notes are
+            labeled in the kitchen (not a 90min-run card,
+            not a finger-toothbrush hop), and a first-owner
+            Irish Wolfhound handbook so the YES-typically /
+            tallest-breed / not-a-guard-dog grounding is a
+            physical kitchen book (not a first-owner Irish
+            Setter handbook). Educational kitchen checklist,
+            not a ranked product list, not a substitute for
+            a veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Irish Wolfhound checklist"
+            subtitle="Email the Irish-elk chart, 6to8yr card, and first-owner handbook notes. No spam."
+            ctaText="Email my irish-wolfhound checklist"
+            source="breed-irish-wolfhound-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in ancient Ireland: a coursing hound used against wolves and Irish elk, nearly extinct by the 1800s and revived by Captain George Augustus Graham. That coursing / giant-sighthound history is why a household Wolfhound still needs a 6–8 year lifespan check and an osteosarcoma lameness watch, not a crate-only afternoon. Irish Wolfhounds are typically first-time-owner friendly — YES-typically — when the household accepts the shortest lifespan of any breed, the tallest-dog logistics, and that they are not guard dogs.</p>
+
                 <h2>The Lifespan Reality — Before You Decide</h2>
         <p>Irish Wolfhound owners describe the breed as "heartbreak dogs" — because loving them means accepting a much shorter relationship than any other breed. The median lifespan in published studies is 6.2-7.0 years. A significant percentage of Irish Wolfhounds die between 4-6 years from osteosarcoma — the most aggressive bone cancer in dogs. Owners who have had Wolfhounds describe the depth of the relationship, the quality of the years together, and the community of Wolfhound people as compensation. But the grief is real and the timeline is short. This should be known before the decision, not discovered afterward.</p>
 
@@ -70,6 +112,41 @@ export default function IrishWolfhoundPage() {
         <h2>Temperament — The Gentle Giant Reality</h2>
         <p>Irish Wolfhounds are famous for their mismatch between size and personality — the tallest dog in existence typically also has a gentle, quiet, low-intensity temperament. They are not guard dogs — they lack the territorial instinct that guard breeds have. They are not high-energy dogs despite their size — they are sighthounds, built for short sprints, and they spend most of their time in calm repose. They are profoundly affectionate with their families and patient with children.</p>
         <p>The size creates practical challenges: they require a vehicle that physically fits them, they cannot be left in small spaces, countertop access is automatic (they do not need to jump — they can eat off the counter standing flat), and the physical space of a 170-lb dog is impossible to ignore. Giant breed food costs are significant. Veterinary costs are dosed by weight — every procedure, medication, and surgery costs proportionally more. These are practical considerations, not reasons not to own one, but they should be anticipated.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Irish Wolfhound home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            ancient Irish-elk coursing origin, the 6–8-year
+            lifespan floor, and first-time-owner notes — a
+            laminated dog Wolfhound Irish-elk chart, a fridge
+            Wolfhound 6to8yr card, and a first-owner Irish
+            Wolfhound handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a finger-
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+wolfhound+irish+elk+chart?s=breed-irish-wolfhound"
+              amazonLabel="Browse laminated dog Wolfhound Irish-elk charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+wolfhound+6to8yr+card?s=breed-irish-wolfhound"
+              amazonLabel="Browse fridge Wolfhound 6to8yr cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+irish+wolfhound+handbook?s=breed-irish-wolfhound"
+              amazonLabel="Browse first-owner Irish Wolfhound handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
