@@ -989,6 +989,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'haflinger' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the haflinger checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Haflinger checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-folie-1874-tyrol-chart,
+                  horse-stall-door-flaxen-chestnut-card, and
+                  equine-first-owner-haflinger-handbook notes
+                  that match the 249 Folie / 1874 South Tyrol origin,
+                  chestnut-with-flaxen-mane look, and first-time-owner
+                  copy on this page — a laminated horse Folie-1874
+                  Tyrol chart so the mountain-pack / light-draft
+                  notes are posted on the stall door (not an
+                  HWSD-SERPINB11 hop, not an Iowa-1954-Boomhower
+                  hop), a horse stall-door flaxen-chestnut card so
+                  the traditional chestnut / flaxen-mane notes are
+                  labeled at the barn (not a western-Ireland-rock
+                  hop, not a USDF-level hop), and an equine
+                  first-owner haflinger handbook so the
+                  YES-with-caveats / easy-keeper grounding is a
+                  physical barn book (not a first-owner-connemara-pony
+                  handbook, not a double-bridle hop). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Haflinger checklist"
+                  subtitle="Email the Folie-1874 Tyrol chart, flaxen-chestnut card, and first-owner handbook notes. No spam."
+                  ctaText="Email my haflinger checklist"
+                  source="breed-haflinger-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -1830,6 +1871,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+connemara+pony+handbook?s=breed-connemara-pony"
                     amazonLabel="Browse equine first-owner connemara-pony handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'haflinger' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the haflinger barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  249 Folie / 1874 South Tyrol origin,
+                  chestnut-with-flaxen-mane look, and first-time-owner
+                  copy — a laminated horse Folie-1874 Tyrol chart, a
+                  horse stall-door flaxen-chestnut card, and an
+                  equine first-owner haflinger handbook. Educational
+                  barn searches only. They are not a ranked tack
+                  list, they are not a dressage-overview hop, they
+                  are not a first-aid-kit hop, and they do not
+                  replace a veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+folie+1874+tyrol+chart?s=breed-haflinger"
+                    amazonLabel="Browse laminated horse Folie-1874 Tyrol charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+flaxen+chestnut+card?s=breed-haflinger"
+                    amazonLabel="Browse horse stall-door flaxen-chestnut cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+haflinger+handbook?s=breed-haflinger"
+                    amazonLabel="Browse equine first-owner haflinger handbooks on Amazon →"
                   />
                 </div>
               </div>
