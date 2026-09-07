@@ -1787,6 +1787,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'holsteiner' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the holsteiner checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Holsteiner checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-elbe-marsh-holstein-chart,
+                  horse-stall-door-show-jumping-specialist-card, and
+                  equine-first-owner-holsteiner-handbook notes that
+                  match the 13th-century Elbe River marsh-horse origin,
+                  post-WWII show-jumping specialist refinement, and
+                  first-time-owner notes on this page — a laminated
+                  horse Elbe marsh Holstein chart so the oldest-German-
+                  warmblood / Elbe-marsh notes are posted on the stall
+                  door (not a Celle-State-Stud hop, not a Kentucky-
+                  saddle-seat hop), a horse stall-door show-jumping
+                  specialist card so the jumping / eventing notes are
+                  labeled at the barn (not a Lower-Saxony-sport hop,
+                  not a Narragansett-Pacer hop), and an equine first-
+                  owner holsteiner handbook so the NO-typically / OCD /
+                  PSSM2 / WFFS / suspensory / kissing-spine grounding
+                  is a physical barn book (not a first-owner-hanoverian
+                  handbook, not a first-owner-warmblood handbook).
+                  Educational barn checklist, not a ranked tack list,
+                  not a substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Holsteiner checklist"
+                  subtitle="Email the Elbe marsh Holstein chart, show-jumping specialist card, and first-owner handbook notes. No spam."
+                  ctaText="Email my holsteiner checklist"
+                  source="breed-holsteiner-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -3344,6 +3385,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+hanoverian+handbook?s=breed-hanoverian"
                     amazonLabel="Browse equine first-owner hanoverian handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'holsteiner' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the holsteiner barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  13th-century Elbe River marsh-horse origin, post-WWII
+                  show-jumping specialist refinement, and first-time-
+                  owner notes — a laminated horse Elbe marsh Holstein
+                  chart, a horse stall-door show-jumping specialist
+                  card, and an equine first-owner holsteiner handbook.
+                  Educational barn searches only. They are not a ranked
+                  tack list, they are not a dressage-overview hop, they
+                  are not a first-aid-kit hop, and they do not replace
+                  a veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying purchases
+                  at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+elbe+marsh+holstein+chart?s=breed-holsteiner"
+                    amazonLabel="Browse laminated horse Elbe marsh Holstein charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+show+jumping+specialist+card?s=breed-holsteiner"
+                    amazonLabel="Browse horse stall-door show-jumping specialist cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+holsteiner+handbook?s=breed-holsteiner"
+                    amazonLabel="Browse equine first-owner holsteiner handbooks on Amazon →"
                   />
                 </div>
               </div>
