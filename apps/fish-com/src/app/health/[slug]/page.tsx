@@ -30,6 +30,8 @@ import {
   CrossPortfolioCard,
   EmailCapture,
   ArticleByline,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -287,6 +289,52 @@ export default async function DiseasePage({ params }: PageProps) {
       />
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the fish-spoke checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Fish-spoke checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-fish-health-spoke-urgency-chart,
+            fridge-health-er-flag-card, and
+            aquarium-health-spoke-handbook notes that
+            match this remaining {disease.name} spoke —
+            the TL;DR urgency / mortality line, the
+            at-a-glance category / water-type /
+            contagious row, and the WAVMA / UF-IFAS /
+            Yanong diagnostic-ladder grounding — a
+            laminated fish health-spoke urgency chart
+            so this remaining-disease map is posted on
+            the fridge (not a health-hub test-first
+            chart, not a disease-guide hospital-tank
+            chart, not a dog health-spoke urgency
+            chart), a fridge health ER-flag card so the
+            high-mortality / act-now notes are labeled
+            in the kitchen (not a hub library card, not
+            a dog ER-flag card), and a fish-spoke
+            handbook so the treatment-tier / WAVMA /
+            UF-IFAS row is a physical kitchen book
+            (not a hub aquarium-health handbook, not a
+            canine health-spoke handbook). Educational
+            kitchen checklist, not a ranked product
+            list, not a medication hop, not a
+            substitute for an aquatic veterinarian. No
+            spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Fish-spoke checklist"
+            subtitle="Email the urgency chart, ER-flag card, and fish-spoke handbook notes. No spam."
+            ctaText="Email my fish-spoke checklist"
+            source={`health-${disease.slug}-under-hero`}
+          />
+        </div>
+
         <p id="tldr">
           <strong style={{ color: urgency.color }}>TL;DR — {urgency.label}.</strong> {buildTldr(disease)}
         </p>
@@ -440,6 +488,46 @@ export default async function DiseasePage({ params }: PageProps) {
             </div>
           </>
         )}
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the fish-spoke kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page TL;DR urgency / mortality line,
+            at-a-glance category / water-type /
+            contagious row, and WAVMA / UF-IFAS /
+            Yanong diagnostic-ladder copy — a laminated
+            fish health-spoke urgency chart, a fridge
+            health ER-flag card, and an aquarium
+            health-spoke handbook. Educational kitchen
+            searches only. They are not a ranked
+            product list, they are not a health-hub
+            test-kit hop, they are not a disease-guide
+            hospital-tank hop, they are not a
+            medication hop, they are not a flea /
+            heartworm / vaccine hop, and they do not
+            replace an aquatic veterinarian. Fish.com
+            earns a commission on qualifying purchases
+            at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+fish+health+spoke+urgency+chart?s=health-spoke"
+              amazonLabel="Browse laminated fish health-spoke urgency charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/fish+fridge+health+er+flag+card?s=health-spoke"
+              amazonLabel="Browse fridge fish health ER-flag cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/aquarium+health+spoke+handbook?s=health-spoke"
+              amazonLabel="Browse aquarium health-spoke handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={faqItems} />
