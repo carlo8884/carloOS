@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -151,6 +153,46 @@ export default function AllowanceRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the allowance-races checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Allowance-races checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-allowance-conditions-chart,
+              stall-door-nw1x-nw2x-card, and
+              equine-weight-allowance-handbook notes
+              that match the conditions-ladder, NW1X-NW2X,
+              and weight-allowance copy on this page — a laminated
+              horse allowance-conditions chart so the not-for-sale /
+              mid-tier notes are posted on the stall door
+              (not a claiming-price chart, not a breaking-maiden
+              chart), a horse stall-door NW1X-NW2X card so the
+              non-winners-of-two / step-up notes are labeled at
+              the barn (not a claim-tag card, not a
+              maiden-special-weight card), and an equine
+              weight-allowance handbook so the less-weight /
+              maiden-to-stakes grounding is a physical barn
+              book (not a purse-vs-horse handbook, not a maiden
+              proving-ground handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Allowance-races checklist"
+              subtitle="Email the allowance-conditions chart, NW1X-NW2X card, and weight-allowance handbook notes. No spam."
+              ctaText="Email my allowance-races checklist"
+              source="race-types-allowance-under-hero"
+            />
+          </div>
+
           <h2 id="what">What an Allowance Race Is</h2>
           <p>An <strong>allowance race</strong> occupies the middle of the class structure: it sits clearly above <a href="/racing/race-types/claiming-races">claiming races</a> and clearly below <a href="/racing/race-types/stakes-races">stakes</a>. Two things define it. First, the horses are <strong>not for sale</strong> &mdash; there is no claiming price, so no runner can be bought out of the race. Second, the weights each horse carries are adjusted by <strong>allowances</strong> written into the race&apos;s conditions.</p>
           <p>That combination makes the allowance race the natural home for a horse that has shown ability without yet being good enough for open stakes. It is the level where a young horse&apos;s reputation is built or quietly reassessed. This page treats it as a structural category; it contains no wagering guidance.</p>
@@ -186,6 +228,56 @@ export default function AllowanceRacesPage() {
               subject. It is not a wagering resource: no betting tips, odds
               commentary, or handicapping guidance is provided or implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse allowance-conditions chart /
+              horse stall-door NW1X-NW2X card /
+              equine weight-allowance handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs claiming /
+              maiden hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the allowance-races barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page conditions-ladder, NW1X-NW2X, and
+              weight-allowance copy — a laminated horse
+              allowance-conditions chart, a horse stall-door
+              NW1X-NW2X card, and an equine weight-allowance
+              handbook. Educational barn searches only.
+              They are not a ranked race list, they are
+              not a claiming / maiden hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+allowance+conditions+chart?s=race-types-allowance"
+                amazonLabel="Browse laminated horse allowance-conditions charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+nw1x+nw2x+card?s=race-types-allowance"
+                amazonLabel="Browse horse stall-door NW1X-NW2X cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+weight+allowance+handbook?s=race-types-allowance"
+                amazonLabel="Browse equine weight-allowance handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
