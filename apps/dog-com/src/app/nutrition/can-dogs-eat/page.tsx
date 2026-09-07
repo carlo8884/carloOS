@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { DOG_FOODS, DOG_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +58,52 @@ export default function CanDogsEatHubPage() {
         </p>
       </div>
 
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog food-safety checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog food-safety checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-chocolate-grape-chart,
+            fridge-xylitol-onion-card, and
+            canine-food-safety-handbook notes
+            that match the chocolate-grape-toxic-map,
+            xylitol-onion-avoid-log, and
+            aspca-poison-grounding copy on this
+            page — a laminated dog chocolate-grape chart
+            so the chocolate / grape / raisin toxic map is
+            posted on the fridge (not a nutrition-feeding
+            chart, not a puppy-week-schedule chart, not a
+            ferret meat-egg chart), a dog fridge
+            xylitol-onion card so xylitol / onion / garlic
+            notes are labeled on the fridge (not a WSAVA
+            label card, not a puppy-milestone card, not a
+            ferret plant-sugar card), and a canine
+            food-safety handbook so the ASPCA hotline and
+            toxic-list grounding is a physical kitchen book
+            (not a nutrition reference handbook, not a
+            puppy-schedule handbook, not a mustelid
+            food-safety handbook). Educational kitchen
+            checklist, not a ranked clinic list, not a
+            first-aid-kit hop, and not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog food-safety checklist"
+            subtitle="Email the chocolate-grape chart, fridge xylitol-onion card, and food-safety-handbook notes. No spam."
+            ctaText="Email my dog food-safety checklist"
+            source="can-dogs-eat-under-hero"
+          />
+        </div>
+      </section>
+
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
@@ -110,6 +156,63 @@ export default function CanDogsEatHubPage() {
           <p className="text-xs text-gray-500 mt-4">
             Verdicts reflect established veterinary toxicology references (ASPCA Animal Poison Control, Pet Poison Helpline, and veterinary literature) and are general guidance, not a substitute for veterinary advice. Individual dogs vary.
           </p>
+        </div>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-8">
+        <div className="max-w-content-wide">
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated dog chocolate-grape chart /
+              dog fridge xylitol-onion card /
+              canine food-safety handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs nutrition-hub /
+              puppy-schedule / ferret can-ferrets-eat hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog food-safety kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page chocolate-grape-toxic-map,
+              xylitol-onion-avoid-log, and
+              aspca-poison-grounding copy — a
+              laminated dog chocolate-grape chart, a
+              dog fridge xylitol-onion card, and a
+              canine food-safety handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a nutrition-hub / puppy-schedule /
+              can-ferrets-eat hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Dog.com does not sell
+              insurance. Dog.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+dog+chocolate+grape+chart?s=can-dogs-eat"
+                amazonLabel="Browse laminated dog chocolate-grape charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+fridge+xylitol+onion+card?s=can-dogs-eat"
+                amazonLabel="Browse dog fridge xylitol-onion cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/canine+food+safety+handbook?s=can-dogs-eat"
+                amazonLabel="Browse canine food-safety handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
