@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -151,6 +153,46 @@ export default function MaidenRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the maiden-races checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Maiden-races checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-breaking-maiden-chart,
+              stall-door-maiden-special-weight-card, and
+              equine-maiden-proving-ground-handbook notes
+              that match the breaking-maiden, maiden-special-weight,
+              and proving-ground copy on this page — a laminated
+              horse breaking-maiden chart so the never-won /
+              first-career-win notes are posted on the stall
+              door (not a race-class ladder chart, not a
+              maiden-claiming explainer chart), a horse stall-door
+              maiden-special-weight card so the not-for-sale /
+              conditions-weight notes are labeled at the barn
+              (not a maiden-to-stakes card, not a graded-stakes
+              card), and an equine maiden proving-ground handbook
+              so the first-time-starter / emerging-talent
+              grounding is a physical barn book (not a race-class
+              index handbook, not a condition-book handbook).
+              Educational barn checklist, not a ranked race
+              list, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Maiden-races checklist"
+              subtitle="Email the breaking-maiden chart, maiden-special-weight card, and proving-ground handbook notes. No spam."
+              ctaText="Email my maiden-races checklist"
+              source="race-types-maiden-under-hero"
+            />
+          </div>
+
           <h2 id="meaning">What &ldquo;Maiden&rdquo; Actually Means</h2>
           <p>In racing, a <strong>maiden</strong> is simply a horse that has never won a race. The label is about win record and nothing else: it has no connection to a horse&apos;s age, sex, or breeding. A beautifully bred, expensively purchased colt and a modest gelding are both &ldquo;maidens&rdquo; until the day each first crosses the line in front. That first win is called <strong>breaking your maiden</strong>, and from that moment the horse can no longer be entered under maiden conditions.</p>
           <p>Because every racing career starts at zero wins, the maiden ranks are the universal entry point to the sport. Almost every champion you can name once stood in a maiden field, unproven and untested. The class exists to give those unproven horses a level place to start &mdash; a race in which they are not immediately thrown in against established winners.</p>
@@ -189,6 +231,57 @@ export default function MaidenRacesPage() {
               subject. It is not a wagering resource: no betting tips, odds
               commentary, or handicapping guidance is provided or implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse breaking-maiden chart /
+              horse stall-door maiden-special-weight card /
+              equine maiden proving-ground handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs race-types hub /
+              understanding-race-types hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the maiden-races barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page breaking-maiden, maiden-special-weight,
+              and proving-ground copy — a laminated horse
+              breaking-maiden chart, a horse stall-door
+              maiden-special-weight card, and an equine
+              maiden proving-ground handbook. Educational
+              barn searches only. They are not a ranked
+              race list, they are not a race-types-hub /
+              understanding-race-types hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+breaking+maiden+chart?s=race-types-maiden"
+                amazonLabel="Browse laminated horse breaking-maiden charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+maiden+special+weight+card?s=race-types-maiden"
+                amazonLabel="Browse horse stall-door maiden-special-weight cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+maiden+proving+ground+handbook?s=race-types-maiden"
+                amazonLabel="Browse equine maiden proving-ground handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
