@@ -3341,6 +3341,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1389: horses.com /disciplines/ranch-riding is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/vaulting commercial spoke had sidebar EmailCapture only (source discipline-vaulting, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete vaulting-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page basic-seat-flag-mill / ava-fei / surcingle-roller copy (a laminated horse vaulting compulsory chart so the scissors / stand / flank notes are posted on the stall door, a horse stall-door AVA vaulting card so the AVA / FEI / pas-de-deux notes are labeled at the barn, an equine vaulting surcingle handbook so the lunger / roller / back-pad grounding is a physical barn book), never a placeholder ASIN, a sibling ranch-riding kitchen hop, a hunter-under-saddle hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1389 / crate-size / stocking.',
   },
   {
+    id: 'horses · thoroughbred-flat-racing',
+    file: 'apps/horses-com/src/app/racing/thoroughbred-flat-racing/page.tsx',
+    mustInclude: [
+      { re: /source="racing-thoroughbred-flat-racing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my thoroughbred-flat-racing checklist"/, label: 'concrete thoroughbred-flat-racing-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="racing-thoroughbred"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+thoroughbred\+flat\+surface\+chart\?s=racing-thoroughbred-flat-racing/, label: 'laminated horse Thoroughbred flat-surface-chart search hop (matches on-page dirt / turf / synthetic copy; unique vs laminated+horse+vaulting+compulsory+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+american\+stud\+book\+card\?s=racing-thoroughbred-flat-racing/, label: 'horse stall-door American Stud Book-card search hop (matches on-page Jockey Club / closed-studbook copy; unique vs horse+stall+door+ava+vaulting+card)' },
+      { re: /amazon-brand\/equine\+furlong\+distance\+handbook\?s=racing-thoroughbred-flat-racing/, label: 'equine furlong-distance-handbook search hop (matches on-page six-furlong / mile-and-a-quarter copy; unique vs equine+vaulting+surcingle+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+vaulting\+compulsory\+chart|horse\+stall\+door\+ava\+vaulting\+card|equine\+vaulting\+surcingle\+handbook|laminated\+horse\+barn\+racing\+section\+map\+chart|horse\+stall\+door\+racing\+prep\+card|equine\+racing\+reference\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop vaulting / racing-hub kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-thoroughbred-flat-surface-chart / horse-stall-door-american-stud-book-card / equine-furlong-distance-handbook searches' },
+    ],
+    why: 'Money path leftover after #1390: horses.com /disciplines/vaulting is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/thoroughbred-flat-racing commercial spoke had sidebar EmailCapture only (source racing-thoroughbred, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete thoroughbred-flat-racing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page dirt-turf-synthetic / jockey-club-stud-book / furlong-sprint-stayer copy (a laminated horse Thoroughbred flat-surface chart so the dirt / turf / synthetic notes are posted on the stall door, a horse stall-door American Stud Book card so The Jockey Club / closed-studbook notes are labeled at the barn, an equine furlong-distance handbook so the six-furlong / mile-and-a-quarter grounding is a physical barn book), never a placeholder ASIN, a sibling vaulting kitchen hop, a racing-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1390 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
