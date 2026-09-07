@@ -14,6 +14,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -181,6 +182,53 @@ export default function FerretLitterTrainingPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret litter-training checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret litter-training checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-corner-pan-map-chart,
+              fridge-paper-pellet-card, and
+              mustelid-litter-training-handbook notes
+              that match the corner-pan-placement-map,
+              paper-pellet-substrate-log, and
+              quesenberry-afa-litter-grounding copy on this
+              page — a laminated ferret corner-pan-map chart
+              so the every-room / cage-far-corner /
+              back-into-corners map is posted on the fridge
+              (not a litter-box troubleshooting chart, not a
+              care-hub routine chart, not a supplies
+              buy-first chart), a ferret fridge paper-pellet
+              card so recycled-paper / kiln-dried-pine /
+              no-clay-clumping notes are labeled on the
+              fridge (not a litter-choice card, not a
+              shampoo-choice card, not a housing-litter
+              card), and a mustelid litter-training handbook
+              so the Quesenberry / AFA / AEMV substrate-safety
+              grounding is a physical kitchen book (not a
+              litter-box-reference handbook, not a
+              grooming-reference handbook, not a
+              supplies-checklist handbook). Educational
+              kitchen checklist, not a ranked litter list,
+              not a sleep-sack hop, and not a substitute for
+              an exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret litter-training checklist"
+              subtitle="Email the corner-pan-map-chart, fridge paper-pellet card, and litter-training-handbook notes. No spam."
+              ctaText="Email my ferret litter-training checklist"
+              source="care-litter-training-under-hero"
+            />
+          </div>
 
           <DropCap>
             Litter training a ferret is not a single training event — it is
@@ -509,6 +557,58 @@ export default function FerretLitterTrainingPage() {
           </CalloutBox>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret corner-pan-map chart /
+              ferret fridge paper-pellet card /
+              mustelid litter-training handbook).
+              Keep existing Marshall + Chewy review hops.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs care-hub /
+              litter-box / bathing kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret litter-training kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page corner-pan-placement-map,
+              paper-pellet-substrate-log, and
+              quesenberry-afa-litter-grounding copy — a
+              laminated ferret corner-pan-map chart, a
+              ferret fridge paper-pellet card, and a
+              mustelid litter-training handbook.
+              Educational kitchen searches only. They are
+              not a ranked litter list, they are not a
+              care-hub / litter-box / bathing hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Ferret.com
+              earns a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons stay
+              hidden. Existing Marshall and Chewy review hops
+              stay in the pan-and-litter picks below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+corner+pan+map+chart?s=litter-training"
+                amazonLabel="Browse laminated ferret corner-pan-map charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+paper+pellet+card?s=litter-training"
+                amazonLabel="Browse ferret fridge paper-pellet cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+litter+training+handbook?s=litter-training"
+                amazonLabel="Browse mustelid litter-training handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Pan and Litter Picks</h2>
           <p>
