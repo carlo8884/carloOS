@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Labrador Retriever Guide — POMC Gene, Hip Dysplasia | Dog.com', description: 'Labradors have a specific genetic mutation (POMC) causing food obsession and obesity. Hip and elbow dysplasia common. One of the most trainable breeds', path: '/breeds/labrador-retriever', type: 'article' })
@@ -61,6 +61,45 @@ export default function LabradorPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the labrador-retriever checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Labrador Retriever checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-pomc-2016-satiety-chart,
+            dog-fridge-english-american-lab-card, and
+            canine-first-owner-labrador-retriever-handbook
+            notes that match the 2016 Cell Metabolism POMC
+            satiety deletion (~23% of pet Labs), the English
+            show-bred vs American field-bred type split, and
+            first-time-owner notes on this page — a laminated
+            dog POMC 2016 satiety chart so the measured-meal
+            / no-free-feeding notes are posted on the fridge
+            (not a Tweedmouth Highland retrieve chart, not a
+            breeds-hub profile chart), a fridge English-
+            American Lab card so field-vs-show energy is
+            labeled in the kitchen (not a breeds-library
+            card), and a first-owner Labrador Retriever
+            handbook so the YES-typically / 60–90-minute
+            exercise grounding is a physical kitchen book
+            (not a first-owner Golden Retriever handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a veterinarian.
+            Dog.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Labrador Retriever checklist"
+            subtitle="Email the POMC 2016 satiety chart, English-American Lab card, and first-owner handbook notes. No spam."
+            ctaText="Email my labrador-retriever checklist"
+            source="breed-labrador-retriever-under-hero"
+          />
+        </div>
+
         <StockImage manifestKey="dog-com:breed-labrador-retriever" aspect="16:9" variant="wide" priority />
 
         <h2>The POMC Gene — Why Labs Are Obsessed With Food</h2>
@@ -69,7 +108,7 @@ export default function LabradorPage() {
         <CalloutBox variant="evidence" title="Evidence-anchored">
           Hip and elbow dysplasia screening in Labradors uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> evaluation. Require OFA hip and elbow clearances on both sire and dam before purchasing — elbow radiographs are frequently overlooked despite Labradors being the second most elbow-affected breed.
         </CalloutBox>
-        <p>The practical implication: a Labrador with the POMC mutation genuinely does not feel full in the way other dogs do. They are not "just food motivated" in the way all dogs are — they have a physiological drive that does not signal satiety normally. This is why Labradors are the most obesity-prone large breed: the food obsession is not behavioral, it is genetic. Measured meals, no free-feeding, and treats counted against daily caloric intake are essential management tools, not suggestions.</p>
+        <p>The practical implication: a Labrador with the POMC mutation genuinely does not feel full in the way other dogs do. They are not "just food motivated" in the way all dogs are — they have a physiological drive that does not signal satiety normally. This is why Labradors are the most obesity-prone large breed: the food obsession is not behavioral, it is genetic. Measured meals, no free-feeding, and treats counted against daily caloric intake are essential management tools, not suggestions. Labs are typically first-time-owner friendly when the household can hold that measured-meal line and the 60–90 minutes of vigorous daily exercise.</p>
 
         <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="very-high"
           description="Labradors rank among the most commonly dysplastic large breeds for both hips and elbows. Hip dysplasia causes abnormal development of the hip socket, leading to arthritis and pain. Elbow dysplasia encompasses several developmental conditions (fragmented coronoid process, OCD, ununited anconeal process) that cause forelimb lameness from a young age. OFA clearances on both parents are a minimum baseline for responsible breeding. Elbow radiographs are often overlooked — require elbow OFA in addition to hips for any Labrador from a breeder."
@@ -83,6 +122,42 @@ export default function LabradorPage() {
         <h2>Colors and Types — English vs American Lab</h2>
         <p>Labradors come in three colors: black (most common), yellow (ranging from cream to fox red), and chocolate (the most recent color addition). Chocolate Labradors have a shorter median lifespan (10.7 years vs 12.1 years for blacks and yellows) based on published population data — likely related to smaller gene pool effects from breeding selection for the recessive chocolate coloration rather than a direct color-lifespan link.</p>
         <p>Two informal types: American (field-bred) Labradors — leaner, taller, higher energy, bred for hunting and field work. English (show-bred) Labradors — stockier, broader head, calmer temperament, heavier build. Both are Labradors and have similar health profiles, though English types may have higher obesity predisposition from their broader build. Choose based on lifestyle — an American Lab in a sedentary household is a challenging combination.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Labrador Retriever home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            2016 Cell Metabolism POMC satiety deletion, the
+            English show-bred vs American field-bred type
+            split, and first-time-owner notes — a laminated
+            dog POMC 2016 satiety chart, a fridge English-
+            American Lab card, and a first-owner Labrador
+            Retriever handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a first-aid-kit
+            hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+pomc+2016+satiety+chart?s=breed-labrador-retriever"
+              amazonLabel="Browse laminated dog POMC 2016 satiety charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+english+american+lab+card?s=breed-labrador-retriever"
+              amazonLabel="Browse fridge English-American Lab cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+labrador+retriever+handbook?s=breed-labrador-retriever"
+              amazonLabel="Browse first-owner Labrador Retriever handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
