@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -57,6 +57,50 @@ export default function GrainFreeDCMPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog grain-free checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog grain-free checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-fda-dcm-chart,
+            fridge-high-legume-card, and
+            canine-taurine-switch-handbook notes
+            that match the fda-dcm-report-map,
+            high-legume-log, and
+            taurine-switch-grounding copy on this
+            page — a laminated dog FDA-DCM chart so
+            the 500+ grain-free report map is posted
+            on the fridge (not a WSAVA-six chart, not
+            an AAFCO-trial chart, not a
+            nutrition-feeding chart), a dog fridge
+            high-legume card so peas / lentils /
+            chickpeas / potatoes notes are labeled on
+            the fridge (not a manufacturer-first card,
+            not a dry-matter card, not a WSAVA label
+            card), and a canine taurine-switch handbook
+            so the switch-to-WSAVA / cardiac-eval
+            grounding is a physical kitchen book (not a
+            DACVN-staff handbook, not a kcal-cup
+            handbook, not a nutrition-reference
+            handbook). Educational kitchen checklist,
+            not a ranked clinic list, not a first-aid-kit
+            hop, and not a substitute for a veterinarian.
+            Dog.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog grain-free checklist"
+            subtitle="Email the FDA-DCM chart, fridge high-legume card, and taurine-switch-handbook notes. No spam."
+            ctaText="Email my dog grain-free checklist"
+            source="nutrition-grain-free-under-hero"
+          />
+        </div>
+
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
           <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation — but most veterinary cardiologists now recommend avoiding high-legume grain-free formulas. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
         </p>
@@ -102,6 +146,59 @@ export default function GrainFreeDCMPage() {
         <h2>Should I Stop Feeding Grain-Free Dog Food?</h2>
         <p>The grain-free market was built primarily on marketing rather than nutritional science — the premise that dogs cannot digest grain or that grain-free is inherently more &quot;natural&quot; lacks scientific support. The subsequent FDA investigation revealing a potential link to serious cardiac disease is a significant concern that warrants caution.</p>
         <p>Our recommendation: choose a WSAVA-compliant food from a company that employs veterinary nutritionists and conducts feeding trials. See our <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for ranked options.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog FDA-DCM chart /
+            dog fridge high-legume card /
+            canine taurine-switch handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs wsava-explained /
+            reading-food-labels / dog-treats-guide hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog grain-free kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page fda-dcm-report-map,
+            high-legume-log, and
+            taurine-switch-grounding copy — a
+            laminated dog FDA-DCM chart, a
+            dog fridge high-legume card, and a
+            canine taurine-switch handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a wsava-explained / reading-food-labels /
+            dog-treats-guide hop, they are not a
+            first-aid-kit hop, they are not a child
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+fda+dcm+chart?s=nutrition-grain-free"
+              amazonLabel="Browse laminated dog FDA-DCM charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+high+legume+card?s=nutrition-grain-free"
+              amazonLabel="Browse dog fridge high-legume cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+taurine+switch+handbook?s=nutrition-grain-free"
+              amazonLabel="Browse canine taurine-switch handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
