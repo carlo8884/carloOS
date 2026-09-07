@@ -24,6 +24,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
@@ -158,6 +160,46 @@ export default function OttbInDressagePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ottb-in-dressage checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              OTTB-in-dressage checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-ottb-rebalance-topline-chart,
+              stall-door-accepting-contact-card, and
+              equine-ottb-collection-timeline-handbook notes
+              that match the rebalancing / lift-through-the-back,
+              rhythm / suppleness / accepting-contact, and
+              collection / levels copy on this page — a laminated
+              horse OTTB rebalance-topline chart so the step-under
+              and lift-the-back notes are posted on the stall door
+              (not an OTTB adjustable-canter chart, not a training-
+              pyramid chart), a horse stall-door accepting-contact
+              card so the rhythm / suppleness / connection notes
+              are labeled at the barn (not a related-distance card,
+              not a USDF-level card), and an equine OTTB collection-
+              timeline handbook so the patient-rebuild / levels
+              grounding is a physical barn book (not a gymnastic-
+              gridwork handbook, not a double-bridle handbook).
+              Educational barn checklist, not a ranked race list,
+              not a first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell insurance. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="OTTB-in-dressage checklist"
+              subtitle="Email the OTTB rebalance-topline chart, accepting-contact card, and collection-timeline handbook notes. No spam."
+              ctaText="Email my ottb-in-dressage checklist"
+              source="ottb-in-dressage-under-hero"
+            />
+          </div>
+
           <h2 id="why">Why Dressage Rewards the OTTB</h2>
           <p>At first glance dressage looks like the least likely second career for a horse bred and trained to race. The reality is more encouraging: the Thoroughbred&apos;s sensitivity and elastic, ground-covering movement are qualities correct dressage training rewards, and off-track Thoroughbreds compete successfully through the levels. The sensitivity that can feel like too much in a green ex-racehorse becomes responsiveness to subtle aids in a trained dressage horse. Modern top-level competition is dominated by purpose-bred warmbloods selected specifically for the gaits the sport judges, but that is a story about targeted breeding, not about what a Thoroughbred can learn to do. For how the levels and movements are structured, see the general <Link href="/disciplines/dressage">dressage reference</Link>; this page covers only the Thoroughbred-from-the-track angle.</p>
 
@@ -181,6 +223,58 @@ export default function OttbInDressagePage() {
             <li>Thoroughbred Aftercare Alliance (TAA). Aftercare and rehoming framework. thoroughbredaftercare.org.</li>
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse OTTB rebalance-topline chart /
+              horse stall-door accepting-contact card /
+              equine OTTB collection-timeline handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ottb-in-show-jumping /
+              disciplines-dressage hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ottb-in-dressage barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page rebalancing / lift-through-the-back,
+              rhythm / suppleness / accepting-contact, and
+              collection / levels copy — a laminated horse
+              OTTB rebalance-topline chart, a horse stall-door
+              accepting-contact card, and an equine OTTB
+              collection-timeline handbook. Educational barn
+              searches only. They are not a ranked race list,
+              they are not an ottb-in-show-jumping /
+              disciplines-dressage hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+ottb+rebalance+topline+chart?s=ottb-in-dressage"
+                amazonLabel="Browse laminated horse OTTB rebalance-topline charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+accepting+contact+card?s=ottb-in-dressage"
+                amazonLabel="Browse horse stall-door accepting-contact cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+ottb+collection+timeline+handbook?s=ottb-in-dressage"
+                amazonLabel="Browse equine OTTB collection-timeline handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
