@@ -38,8 +38,10 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
+  AffiliateDisclosure,
   EmailCapture,
   RelatedLinks,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   Breeds,
@@ -283,6 +285,46 @@ export default async function BreedTemplatePage({ params }: PageProps) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
+            {breed.slug === 'thoroughbred' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the thoroughbred checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Thoroughbred checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-three-foundation-sire-chart,
+                  horse-stall-door-jockey-club-registry-card, and
+                  equine-first-owner-thoroughbred-handbook notes that
+                  match the Byerley Turk / Darley Arabian / Godolphin
+                  Arabian, Jockey Club registry, and first-time-owner
+                  copy on this page — a laminated horse three-
+                  foundation-sire chart so the Byerley / Darley /
+                  Godolphin notes are posted on the stall door (not a
+                  thoroughbred-flat-surface hop, not a breeze-up-gallop
+                  hop), a horse stall-door Jockey Club registry card so
+                  the JC / closed-registry notes are labeled at the
+                  barn (not an American-Stud-Book racing hop, not an
+                  AQHA-five-panel hop), and an equine first-owner
+                  thoroughbred handbook so the NO-typically / very-high-
+                  energy grounding is a physical barn book (not a
+                  first-owner-quarter handbook, not a Thoroughbred-
+                  Makeover hop). Educational barn checklist, not a
+                  ranked tack list, not a substitute for a veterinarian.
+                  Horses.com does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Thoroughbred checklist"
+                  subtitle="Email the three-foundation-sire chart, Jockey Club registry card, and first-owner handbook notes. No spam."
+                  ctaText="Email my thoroughbred checklist"
+                  source="breed-thoroughbred-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -496,6 +538,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 horse you actually want to live with every day?
               </li>
             </ul>
+
+            {breed.slug === 'thoroughbred' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the thoroughbred barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  three-foundation-sire, Jockey Club registry, and
+                  first-time-owner copy — a laminated horse three-
+                  foundation-sire chart, a horse stall-door Jockey
+                  Club registry card, and an equine first-owner
+                  thoroughbred handbook. Educational barn searches
+                  only. They are not a ranked tack list, they are
+                  not a thoroughbred-flat-racing hop, they are not
+                  a first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying
+                  purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+three+foundation+sire+chart?s=breed-thoroughbred"
+                    amazonLabel="Browse laminated horse three-foundation-sire charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+jockey+club+registry+card?s=breed-thoroughbred"
+                    amazonLabel="Browse horse stall-door Jockey Club registry cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+thoroughbred+handbook?s=breed-thoroughbred"
+                    amazonLabel="Browse equine first-owner thoroughbred handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
 
             {/* Find a vet — cross-portfolio */}
             <h2>Find a Vet or Equine Specialty Care</h2>
