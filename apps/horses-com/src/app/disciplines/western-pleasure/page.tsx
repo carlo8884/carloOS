@@ -11,6 +11,8 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -167,6 +169,49 @@ export default function WesternPleasurePage() {
             updatedAt="2026-05-28"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the western-pleasure checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Western-pleasure checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-aqha-pleasure-gait-chart,
+              stall-door-aqha-world-show-card, and
+              equine-shw340-lope-handbook notes
+              that match the walk-jog-lope rail,
+              4-H-to-World-Show, and
+              AQHA-SHW340 three-beat-lope copy on this
+              page — a laminated horse AQHA pleasure-gait
+              chart so the walk / jog / lope notes are
+              posted on the stall door (not a USEA
+              eventing-level chart, not a jumper-course
+              chart), a horse stall-door AQHA World Show
+              card so the Open / Amateur / Youth notes
+              are labeled at the barn (not a CCI5* event
+              card, not a USEF jumper-level card), and an
+              equine SHW340 lope handbook so the
+              three-beat / natural-carriage grounding is
+              a physical barn book (not a frangible-pin
+              handbook, not an open-front-boot handbook).
+              Educational barn checklist, not a ranked
+              clinic list, not a silver-saddle kit hop,
+              not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com
+              does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Western-pleasure checklist"
+              subtitle="Email the pleasure-gait chart, AQHA World Show card, and SHW340 lope handbook notes. No spam."
+              ctaText="Email my western-pleasure checklist"
+              source="disciplines-western-pleasure-under-hero"
+            />
+          </div>
+
           <h2 id="tldr">TL;DR</h2>
           <ul>
             <li><strong>What it is:</strong> a rail class judged on manners and way of going at walk, jog, and lope in both directions of the arena.</li>
@@ -302,6 +347,58 @@ export default function WesternPleasurePage() {
             <li>All American Quarter Horse Congress. Show history and results. quarterhorsecongress.com.</li>
             <li>AQHA Professional Horsemen Program. aqha.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse AQHA pleasure-gait chart /
+              horse stall-door AQHA World Show card /
+              equine SHW340 lope handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no silver-saddle kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs eventing /
+              show-jumping hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the western-pleasure barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page walk-jog-lope rail, 4-H-to-World-Show,
+              and AQHA-SHW340 three-beat-lope copy — a
+              laminated horse AQHA pleasure-gait chart, a
+              horse stall-door AQHA World Show card, and an
+              equine SHW340 lope handbook. Educational barn
+              searches only. They are not a ranked clinic
+              list, they are not an eventing / show-jumping
+              hop, they are not a silver-saddle kit hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+aqha+pleasure+gait+chart?s=discipline-western-pleasure"
+                amazonLabel="Browse laminated horse AQHA pleasure-gait charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+aqha+world+show+card?s=discipline-western-pleasure"
+                amazonLabel="Browse horse stall-door AQHA World Show cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+shw340+lope+handbook?s=discipline-western-pleasure"
+                amazonLabel="Browse equine SHW340 lope handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
