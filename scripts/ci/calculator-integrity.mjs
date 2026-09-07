@@ -6373,6 +6373,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1521: dog.com /breeds/weimaraner is on main. All static handwritten dog.com /breeds/<slug> Pattern B leftovers (golden-retriever through weimaraner) are on main. This existing dog.com /breeds/best-small-dogs-for-apartments listicle spoke had sidebar EmailCapture only (source breeds-apartment-dogs, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Keep the existing sidebar capture; add under-hero capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page shared-wall / potty-logistics / indoor-exercise copy (a laminated dog apt shared-wall chart so the barking / neighbor notes are posted on the fridge, a fridge apt pee-pad card so the third-floor / small-bladder notes are labeled in the kitchen, a puzzle feeder so indoor mental work is on the counter, a quiet chew so shared-wall chewing stays low-noise, a canine first-owner apartment handbook so the temperament-over-size / no-yard grounding is a physical kitchen book), never a placeholder ASIN, a sibling weimaraner-breed hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1521 / crate-size / stocking.',
   },
   {
+    id: 'dog · compare-pair template',
+    file: 'apps/dog-com/src/app/compare/[slug]/page.tsx',
+    mustInclude: [
+      { re: /source=\{`compare-\$\{slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my breed-compare checklist"/, label: 'concrete breed-compare-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source=\{`compare-\$\{slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+dog\+compare\+spoke\+axis\+chart\?s=compare-pair/, label: 'laminated dog compare-spoke-axis-chart search hop (matches on-page side-by-side vs-row copy; unique vs laminated+dog+compare+decision+axis+chart / laminated+dog+apt+shared+wall+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+compare\+vs\+row\+card\?s=compare-pair/, label: 'dog fridge compare-vs-row-card search hop (matches on-page energy / size / grooming row copy; unique vs dog+fridge+compare+pair+card / dog+fridge+apt+pee+pad+card)' },
+      { re: /amazon-brand\/canine\+compare\+pair\+handbook\?s=compare-pair/, label: 'canine compare-pair-handbook search hop (matches on-page AKC / OFA / first-time-owner row copy; unique vs canine+compare+reference+handbook / canine+first+owner+apartment+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+compare\+decision\+axis\+chart|dog\+fridge\+compare\+pair\+card|canine\+compare\+reference\+handbook|laminated\+dog\+apt\+shared\+wall\+chart|dog\+fridge\+apt\+pee\+pad\+card|canine\+first\+owner\+apartment\+handbook|finger\+toothbrush|dog\+crate|midwest\+icrate|pet\+first\+aid\+kit|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|apoquel|cytopoint|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop compare-hub / apartment-dogs kitchen kits, finger-toothbrush hops, crate hops, first-aid hops, or flea / heartworm / vaccine — this page hops only laminated-dog-compare-spoke-axis-chart / dog-fridge-compare-vs-row-card / canine-compare-pair-handbook searches' },
+    ],
+    why: 'Money path leftover after #1522: dog.com /breeds/best-small-dogs-for-apartments is on main. All static handwritten dog.com /breeds/<slug> Pattern B leftovers (golden-retriever through weimaraner) are on main. horses.com /breeds/* through icelandic inclusive is exhausted. This existing dog.com /compare/[slug] commercial comparison template had sidebar EmailCapture only (source compare-${slug}, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Keep the existing sidebar capture; add under-hero capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page side-by-side energy / size / apartment / first-time-owner / AKC-OFA copy (a laminated dog compare spoke-axis chart so this vs-row map is posted on the fridge, a fridge compare vs-row card so the energy / size / grooming notes are labeled in the kitchen, a canine compare-pair handbook so the AKC / OFA / first-time-owner row is a physical kitchen book), never a placeholder ASIN, a sibling compare-hub hop, an apartment-dogs hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1522 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

@@ -25,9 +25,11 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
+  AffiliateDisclosure,
   CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
+  ShopCtas,
   StockImage,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../../data/breeds'
@@ -506,6 +508,56 @@ export default async function ComparePage({ params }: PageProps) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
+            <div className="mb-8 not-prose">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the breed-compare checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Breed-compare checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-dog-compare-spoke-axis-chart,
+                dog-fridge-compare-vs-row-card, and
+                canine-compare-pair-handbook notes that
+                match the side-by-side energy / size /
+                apartment / first-time-owner rows and the
+                AKC / OFA / Encyclopedia-of-the-Dog grounding
+                on this pair page — a laminated dog compare
+                spoke-axis chart so this vs-row map is posted
+                on the fridge (not a compare-hub decision-axis
+                chart, not an apartment-dog shared-wall chart),
+                a fridge compare vs-row card so the energy /
+                size / lifespan / grooming notes are labeled
+                in the kitchen (not a hub pair card, not a
+                crate hop), and a compare-pair handbook so
+                the AKC / OFA / first-time-owner row is a
+                physical kitchen book (not a compare-hub
+                handbook, not a first-owner Weimaraner
+                handbook). Educational kitchen checklist,
+                not a ranked product list, not a substitute
+                for a veterinarian. Dog.com does not sell
+                insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Breed-compare checklist"
+                subtitle="Email the spoke-axis chart, vs-row card, and compare-pair handbook notes. No spam."
+                ctaText="Email my breed-compare checklist"
+                source={`compare-${slug}-under-hero`}
+              />
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-8">
+              The working story starts with the side-by-side
+              table: energy, size, lifespan, grooming,
+              apartment suitability, and first-time-owner
+              suitability drawn from AKC / OFA fields — not
+              a crate-only afternoon and not a compare-hub
+              kitchen hop. Use the checklist above, then the
+              shop block later, to keep this pair&apos;s
+              vs-row notes on the fridge.
+            </p>
+
             {/* Quick verdict */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -636,6 +688,42 @@ export default async function ComparePage({ params }: PageProps) {
 
             <h2>Both are a fit if…</h2>
             <p>{bothCopy}</p>
+
+            <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                Shop the breed-compare pair kit
+              </div>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                These Amazon category searches match the on-page
+                side-by-side energy / size / apartment /
+                first-time-owner rows and the AKC / OFA /
+                Encyclopedia-of-the-Dog grounding — a laminated
+                dog compare spoke-axis chart, a fridge compare
+                vs-row card, and a compare-pair handbook.
+                Educational kitchen searches only. They are not
+                a ranked product list, they are not a
+                compare-hub hop, they are not a crate hop, they
+                are not a finger-toothbrush hop, and they do
+                not replace a veterinarian. Dog.com does not
+                sell insurance. Dog.com earns a commission on
+                qualifying purchases at no extra cost to you.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <div className="flex flex-col gap-3 mt-3">
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/laminated+dog+compare+spoke+axis+chart?s=compare-pair"
+                  amazonLabel="Browse laminated dog compare spoke-axis charts on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/dog+fridge+compare+vs+row+card?s=compare-pair"
+                  amazonLabel="Browse fridge compare vs-row cards on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/canine+compare+pair+handbook?s=compare-pair"
+                  amazonLabel="Browse canine compare-pair handbooks on Amazon →"
+                />
+              </div>
+            </div>
 
             {/* Insurance cross-link */}
             <h2>Compare pet insurance for either breed</h2>
