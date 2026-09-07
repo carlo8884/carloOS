@@ -12,6 +12,8 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -184,6 +186,51 @@ export default function FerretEmergencySignsPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret emergency-signs checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret emergency-signs checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-cant-wait-chart,
+              fridge-crash-list-card, and
+              mustelid-er-ready-handbook notes
+              that match the red-flag-map,
+              crash-list-log, and
+              quesenberry-afa-er-grounding copy on this
+              page — a laminated ferret can&apos;t-wait chart
+              so the collapse / breathing / straining map is
+              posted on the fridge (not a bring-list chart,
+              not a checkup-map chart, not a health-hub
+              triage chart), a ferret fridge crash-list card
+              so hide-illness / day-without-food / save-the-
+              number notes are labeled on the fridge (not a
+              carrier-prep card, not an exam-prep card, not
+              a waiting-period card), and a mustelid er-ready
+              handbook so the Quesenberry / AEMV crash-fast
+              and clinic-hours grounding is a physical
+              kitchen book (not a clinic-choice handbook,
+              not an annual-exam handbook, not a
+              health-reference handbook). Educational
+              kitchen checklist, not a ranked ER list, not
+              a first-aid-kit hop, and not a substitute for
+              an exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret emergency-signs checklist"
+              subtitle="Email the cant-wait-chart, fridge crash-list card, and er-ready-handbook notes. No spam."
+              ctaText="Email my ferret emergency-signs checklist"
+              source="health-emergency-warning-signs-under-hero"
+            />
+          </div>
+
           <DropCap>
             Ferrets are stoic, small, and quick to decline — a combination that
             makes them unforgiving when something goes wrong. The owner who
@@ -310,6 +357,59 @@ export default function FerretEmergencySignsPage() {
             most ferret emergencies — is organized at the{' '}
             <a href="/health">health hub</a>.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret cant-wait chart /
+              ferret fridge crash-list card /
+              mustelid er-ready handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              vet-visit / checkup / first-aid tool hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret emergency-signs kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page red-flag-map,
+              crash-list-log, and
+              quesenberry-afa-er-grounding copy — a
+              laminated ferret can&apos;t-wait chart, a
+              ferret fridge crash-list card, and a
+              mustelid er-ready handbook.
+              Educational kitchen searches only. They are
+              not a ranked ER list, they are not
+              a health-hub / vet-visit / checkup hop, they
+              are not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not replace
+              an exotic-mammal veterinarian. Ferret.com
+              does not sell insurance. Ferret.com earns a
+              commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+cant+wait+chart?s=emergency-warning-signs"
+                amazonLabel="Browse laminated ferret can't-wait charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+crash+list+card?s=emergency-warning-signs"
+                amazonLabel="Browse ferret fridge crash-list cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+er+ready+handbook?s=emergency-warning-signs"
+                amazonLabel="Browse mustelid er-ready handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
