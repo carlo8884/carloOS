@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs | Dog.com', description: 'How to run a proper 8-12 week food allergy elimination diet in dogs. Novel protein selection, what to avoid, how to confirm food allergy.', path: '/nutrition/elimination-diet', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,53 @@ export default function EliminationDietPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog elimination-diet checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog elimination-diet checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-dog-eight-week-trial-chart,
+              fridge-itch-score-card, and
+              canine-food-challenge-handbook notes
+              that match the eight-week-trial-map,
+              itch-score-log, and
+              food-challenge-grounding copy on this
+              page — a laminated dog eight-week-trial
+              chart so the 8–12 week clock is posted
+              on the fridge (not a NASC-seal chart, not
+              a raw-salmonella chart, not an FDA-DCM
+              chart), a dog fridge itch-score card so
+              weekly itching / ear / GI notes are
+              labeled on the fridge (not an EPA-DHA
+              card, not a zoonotic-risk card, not a
+              high-legume card), and a canine
+              food-challenge handbook so the
+              reintroduce-original-food / two-week
+              return grounding is a physical kitchen
+              book (not a fish-oil handbook, not an
+              HPP-raw handbook, not a taurine-switch
+              handbook). Educational kitchen checklist,
+              not a ranked clinic list, not a
+              prescription hydrolyzed-diet hop, not a
+              first-aid-kit hop, and not a substitute
+              for a veterinarian. Dog.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog elimination-diet checklist"
+              subtitle="Email the eight-week-trial chart, fridge itch-score card, and food-challenge-handbook notes. No spam."
+              ctaText="Email my dog elimination-diet checklist"
+              source="nutrition-elimination-under-hero"
+            />
+          </div>
+
           <h2 id="diet-choice">Choosing the Right Elimination Diet</h2>
           <p>Two options are appropriate for a diagnostic elimination trial:</p>
           <p><strong>Option 1 — Prescription hydrolyzed protein diet:</strong> Proteins broken into fragments too small to trigger an immune response. Royal Canin HP, Hill's z/d, Purina HA. These are the most reliable option because even dogs that are broadly sensitized to multiple proteins can tolerate hydrolyzed diets. Requires veterinary prescription.</p>
@@ -58,6 +105,61 @@ export default function EliminationDietPage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated dog eight-week-trial chart /
+              dog fridge itch-score card /
+              canine food-challenge handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs dog-supplements /
+              raw-diet-risks / grain-free-dcm hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog elimination-diet kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page eight-week-trial-map,
+              itch-score-log, and
+              food-challenge-grounding copy — a
+              laminated dog eight-week-trial chart, a
+              dog fridge itch-score card, and a
+              canine food-challenge handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a dog-supplements / raw-diet-risks /
+              grain-free-dcm hop, they are not a
+              prescription hydrolyzed-diet hop, they
+              are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do
+              not replace a veterinarian. Dog.com does
+              not sell insurance. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons
+              stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+dog+eight+week+trial+chart?s=nutrition-elimination"
+                amazonLabel="Browse laminated dog eight-week-trial charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+fridge+itch+score+card?s=nutrition-elimination"
+                amazonLabel="Browse dog fridge itch-score cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/canine+food+challenge+handbook?s=nutrition-elimination"
+                amazonLabel="Browse canine food-challenge handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
