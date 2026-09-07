@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -57,6 +57,50 @@ export default function WSAVAExplainedPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog WSAVA checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog WSAVA checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-wsava-six-chart,
+            fridge-manufacturer-first-card, and
+            canine-dacvn-staff-handbook notes
+            that match the six-question-map,
+            manufacturer-first-log, and
+            feeding-trial-grounding copy on this
+            page — a laminated dog WSAVA-six chart so
+            the six manufacturer questions are posted
+            on the fridge (not an AAFCO-trial chart,
+            not a treat-kcal chart, not a
+            nutrition-feeding chart), a dog fridge
+            manufacturer-first card so company-not-bag
+            notes are labeled on the fridge (not a
+            dry-matter card, not a VOHC-seal card, not a
+            WSAVA label card), and a canine
+            DACVN-staff handbook so the full-time
+            board-certified nutritionist grounding is a
+            physical kitchen book (not a kcal-cup
+            handbook, not a jerky-FDA handbook, not a
+            nutrition-reference handbook). Educational
+            kitchen checklist, not a ranked clinic list,
+            not a first-aid-kit hop, and not a substitute
+            for a veterinarian. Dog.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog WSAVA checklist"
+            subtitle="Email the WSAVA-six chart, fridge manufacturer-first card, and DACVN-staff-handbook notes. No spam."
+            ctaText="Email my dog WSAVA checklist"
+            source="nutrition-wsava-under-hero"
+          />
+        </div>
+
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
           <strong className="not-italic">TL;DR.</strong> The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
         </p>
@@ -94,6 +138,59 @@ export default function WSAVAExplainedPage() {
 
         <h2>The Bottom Line</h2>
         <p>When choosing a dog food: start with the manufacturer, not the bag. Ask the WSAVA questions or verify that the brand employs board-certified nutritionists and conducts AAFCO feeding trials. Then look at the specific formula for your dog&apos;s life stage and any health conditions. See our <a href="/reviews/best-dry-dog-food">complete dog food rankings</a> for the top options evaluated against WSAVA criteria.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog WSAVA-six chart /
+            dog fridge manufacturer-first card /
+            canine DACVN-staff handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs reading-food-labels /
+            dog-treats-guide / weight-management hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog WSAVA kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page six-question-map,
+            manufacturer-first-log, and
+            feeding-trial-grounding copy — a
+            laminated dog WSAVA-six chart, a
+            dog fridge manufacturer-first card, and a
+            canine DACVN-staff handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a reading-food-labels / dog-treats-guide /
+            weight-management hop, they are not a
+            first-aid-kit hop, they are not a child
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+wsava+six+chart?s=nutrition-wsava"
+              amazonLabel="Browse laminated dog WSAVA-six charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+manufacturer+first+card?s=nutrition-wsava"
+              amazonLabel="Browse dog fridge manufacturer-first cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+dacvn+staff+handbook?s=nutrition-wsava"
+              amazonLabel="Browse canine DACVN-staff handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
