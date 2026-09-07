@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -47,9 +47,47 @@ export default function BeaglePage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the beagle checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Beagle checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-hare-scent-pack-chart,
+            dog-fridge-five-foot-beagle-fence-card, and
+            canine-first-owner-beagle-handbook notes that
+            match the rabbit-and-hare scent-pack history, the
+            5+ foot fence / dig-under escape notes, and
+            first-time-owner notes on this page — a laminated
+            dog hare scent-pack chart so the pack-hound notes
+            are posted on the fridge (not a Paris 1800s lace
+            chart, not a Stephanitz 1899 herding chart), a
+            fridge five-foot Beagle fence card so the
+            dig-under / off-leash-no notes are labeled in
+            the kitchen (not a Frenchie skin-fold card), and
+            a first-owner Beagle handbook so the YES-typically
+            / epilepsy / obesity / nose-work grounding is a
+            physical kitchen book (not a first-owner French
+            Bulldog handbook). Educational kitchen checklist,
+            not a ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Beagle checklist"
+            subtitle="Email the hare scent-pack chart, five-foot fence card, and first-owner handbook notes. No spam."
+            ctaText="Email my beagle checklist"
+            source="breed-beagle-under-hero"
+          />
+        </div>
+
         <h2>Temperament</h2>
         <DropCap>Beagles were bred to trail rabbit and hare by scent — this history defines their behavior in captivity. They are friendly, pack-oriented dogs that coexist well with other dogs, children, and most people. The challenges: they follow their nose with extraordinary single-mindedness, bark and howl vocally (they were bred to alert hunters), and have a low threshold for bolting after scent trails.</DropCap>
-        <p>A Beagle off-leash in an unfenced area is a Beagle that can disappear — their nose overrides recall training reliably. Fenced yard or leash at all times outdoors. A high fence (5+ feet) is important — Beagles will dig under or find gaps in lower fences.</p>
+        <p>A Beagle off-leash in an unfenced area is a Beagle that can disappear — their nose overrides recall training reliably. Fenced yard or leash at all times outdoors. A high fence (5+ feet) is important — Beagles will dig under or find gaps in lower fences. Beagles are typically first-time-owner friendly when the household accepts a leash-or-5-foot-fence rule, measured meals, and a scent-work job.</p>
 
         <CalloutBox variant="tip" title="Channel the nose">
           Structured nose work classes are the single most effective enrichment activity for Beagles. Their scent drive is a feature, not a flaw — directing it into a training activity reduces destructive behavior, vocalisation, and bolting. Many positive-reinforcement trainers offer beginner scent-work programs that suit pet Beagles.
@@ -69,6 +107,41 @@ export default function BeaglePage() {
 
         <h2>What to Ask Breeders</h2>
         <p>Ask about epilepsy in the line — any dogs that developed seizures, at what age, whether medicated. Ask about hip OFA clearances. Ask about hypothyroidism in the lines. Responsible Beagle breeders are aware of these predispositions and select against them.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Beagle home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            rabbit-and-hare scent-pack history, the 5+ foot
+            fence / dig-under escape notes, and first-time-
+            owner notes — a laminated dog hare scent-pack
+            chart, a fridge five-foot Beagle fence card, and
+            a first-owner Beagle handbook. Educational kitchen
+            searches only. They are not a ranked product list,
+            they are not a crate hop, they are not a first-aid-
+            kit hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+hare+scent+pack+chart?s=breed-beagle"
+              amazonLabel="Browse laminated dog hare scent-pack charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+five+foot+beagle+fence+card?s=breed-beagle"
+              amazonLabel="Browse fridge five-foot Beagle fence cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+beagle+handbook?s=breed-beagle"
+              amazonLabel="Browse first-owner Beagle handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
