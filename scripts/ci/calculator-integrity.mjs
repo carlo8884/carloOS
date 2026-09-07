@@ -4169,6 +4169,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1425: horses.com /racing/racing-for-newcomers/a-day-at-the-races is on main. Remaining horses.com Triple Crown leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/racing-for-newcomers/understanding-racing-silks commercial spoke had sidebar EmailCapture only (source racing-for-newcomers-<slug>, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete understanding-racing-silks-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page owner-silks-pattern / saddlecloth-number / racing-colours-register copy (a laminated horse owner-silks-pattern chart so the hooped / striped / chevroned notes are posted on the stall door, a horse stall-door saddlecloth-number card so the follow-the-field notes are labeled at the barn, an equine racing-colours-register handbook so the owner-livery grounding is a physical barn book), never a placeholder ASIN, a sibling a-day-at-the-races kitchen hop, a how-to-read-a-race-card hop, a racing-for-newcomers-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1425 / crate-size / stocking.',
   },
   {
+    id: 'horses · reading-a-pedigree',
+    file: 'apps/horses-com/src/app/bloodstock/reading-a-pedigree/page.tsx',
+    mustInclude: [
+      { re: /source="bloodstock-pedigree-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my reading-a-pedigree checklist"/, label: 'concrete reading-a-pedigree-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="bloodstock-pedigree"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+sire\+dam\+pedigree\+chart\?s=bloodstock-reading-a-pedigree/, label: 'laminated horse sire-dam-pedigree-chart search hop (matches on-page sire / dam / page-shape copy; unique vs laminated+horse+yearling+sale+catalog+chart and laminated+horse+barn+bloodstock+section+map+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+black\+type\+card\?s=bloodstock-reading-a-pedigree/, label: 'horse stall-door black-type-card search hop (matches on-page stakes-winner / stakes-placed copy; unique vs horse+stall+door+rna+clearance+card and horse+stall+door+bloodstock+prep+card)' },
+      { re: /amazon-brand\/equine\+broodmare\+distaff\+handbook\?s=bloodstock-reading-a-pedigree/, label: 'equine broodmare-distaff-handbook search hop (matches on-page dam-line / female-family copy; unique vs equine+bloodstock+agent+handbook and equine+bloodstock+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+yearling\+sale\+catalog\+chart|horse\+stall\+door\+rna\+clearance\+card|equine\+bloodstock\+agent\+handbook|laminated\+horse\+barn\+bloodstock\+section\+map\+chart|horse\+stall\+door\+bloodstock\+prep\+card|equine\+bloodstock\+reference\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop racing-bloodstock / bloodstock-hub kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-sire-dam-pedigree-chart / horse-stall-door-black-type-card / equine-broodmare-distaff-handbook searches' },
+    ],
+    why: 'Money path leftover after #1426: horses.com /racing/racing-for-newcomers/understanding-racing-silks is on main. Remaining horses.com racing leftover spokes and Triple Crown children are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /bloodstock/reading-a-pedigree commercial spoke had sidebar EmailCapture only (source bloodstock-pedigree, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete reading-a-pedigree-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page sire-dam-pedigree / black-type / broodmare-distaff copy (a laminated horse sire-dam-pedigree chart so the top-line / dam-family notes are posted on the stall door, a horse stall-door black-type card so the stakes-winner / stakes-placed notes are labeled at the barn, an equine broodmare-distaff handbook so the female-family grounding is a physical barn book), never a placeholder ASIN, a sibling racing-bloodstock kitchen hop, a bloodstock-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked auction list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1426 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
