@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Poodle Breed Guide — Standard, Miniature & Toy | Dog.com', description: 'Poodles are the most intelligent dog breed. Three sizes with different health profiles — Standard Poodles at risk for GDV/bloat and Addison\'s disease.', path: '/breeds/poodle', type: 'article' })
@@ -60,6 +60,46 @@ export default function PoodlePage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the poodle checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Poodle checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-poodle-prcd-pra-chart,
+            dog-fridge-poodle-6to8wk-groom-card, and
+            canine-first-owner-poodle-handbook notes that
+            match the prcd-PRA DNA test, the 6–8 week
+            professional grooming cycle, and first-time-owner
+            notes on this page — a laminated dog Poodle
+            prcd-PRA chart so the carrier-test requirement is
+            posted on the fridge (not a Dachshund 25% IVDD
+            chart, not an 1835 bull-baiting-ban chart), a
+            fridge Poodle 6–8-week groom card so the
+            every-other-day brush notes are labeled in the
+            kitchen (not a 20-degree ramp card, not a crate
+            hop), and a first-owner Poodle handbook so the
+            YES-typically / three-size / mental-work grounding
+            is a physical kitchen book (not a first-owner
+            Dachshund handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Poodle checklist"
+            subtitle="Email the prcd-PRA chart, 6–8-week groom card, and first-owner handbook notes. No spam."
+            ctaText="Email my poodle checklist"
+            source="breed-poodle-under-hero"
+          />
+        </div>
+
+        <p>The working story starts with the German Pudel: a water retriever whose continuously growing coat is why a household Poodle still needs a 6–8 week clip, not a crate-only afternoon. Poodles are typically first-time-owner friendly when the household accepts professional grooming every 6–8 weeks, daily or every-other-day brushing, and the mental-work load of the breed ranked first in canine intelligence assessments.</p>
+
         <h2>Intelligence — The Practical Implications</h2>
         <DropCap>Poodles are consistently ranked first in canine intelligence assessments. This has practical implications beyond performance dog sports: a bored Poodle invents its own entertainment, which is rarely what owners want. Poodles need substantial mental stimulation — training, puzzle toys, nose work, agility, or any structured activity that engages their problem-solving capacity. A Poodle that receives training, enrichment, and interaction is an ideal companion; a Poodle left alone without mental engagement develops anxious, destructive behaviors.</DropCap>
 
@@ -82,6 +122,41 @@ export default function PoodlePage() {
 
         <h2>Coat — The Grooming Reality</h2>
         <p>The Poodle coat grows continuously and does not shed in the way double-coated breeds do — instead, dead hair tangles within the coat, causing mats if not brushed regularly. Professional grooming every 6–8 weeks is required for most coat styles. The classic "pet clip" (uniform length all over) is the most practical everyday style. The elaborate show clips (Continental, English Saddle) require significantly more maintenance and are not practical for most pet owners. Daily or every-other-day brushing between professional appointments prevents mat accumulation.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Poodle home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            prcd-PRA DNA test, the 6–8 week professional
+            grooming cycle, and first-time-owner notes — a
+            laminated dog Poodle prcd-PRA chart, a fridge
+            Poodle 6–8-week groom card, and a first-owner
+            Poodle handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a generic
+            dog-ramp hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying purchases
+            at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+poodle+prcd+pra+chart?s=breed-poodle"
+              amazonLabel="Browse laminated dog Poodle prcd-PRA charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+poodle+6to8wk+groom+card?s=breed-poodle"
+              amazonLabel="Browse fridge Poodle 6–8-week groom cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+poodle+handbook?s=breed-poodle"
+              amazonLabel="Browse first-owner Poodle handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
