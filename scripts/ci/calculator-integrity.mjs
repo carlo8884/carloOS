@@ -4353,6 +4353,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1433: horses.com /disciplines/western-pleasure/equipment is on main. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/reining/equipment commercial buyer-guide spoke had sidebar EmailCapture only (source discipline-equipment-<slug>, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete reining-equipment-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page undercut-pommel / sliding-plate / skid-boot copy (a laminated horse undercut-pommel reining-saddle chart so the close-contact-skirt / deep-slick-seat notes are posted on the stall door, a horse stall-door sliding-plate card so the hind-shoe / farrier notes are labeled at the barn, an equine skid-boot-nrha handbook so the NRHA Section 9 / hind-fetlock grounding is a physical barn book), never a placeholder ASIN, a sibling reining-overview kitchen hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked tack list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1433 / crate-size / stocking.',
   },
   {
+    id: 'horses · trail-riding-equipment',
+    file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
+    mustInclude: [
+      { re: /source="discipline-equipment-trail-riding-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my trail-riding-equipment checklist"/, label: 'concrete trail-riding-equipment-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+flex\+tree\+trail\+saddle\+chart\?s=discipline-equipment-trail-riding/, label: 'laminated horse flex-tree-trail-saddle-chart search hop (matches on-page flex-tree / D-ring / long-mileage copy; unique vs laminated+horse+trail+etiquette+chart and laminated+horse+undercut+pommel+reining+saddle+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+halter\+bridle\+combo\+card\?s=discipline-equipment-trail-riding/, label: 'horse stall-door halter-bridle-combo-card search hop (matches on-page halter-bridle / snap-off-bit / vet-check copy; unique vs horse+stall+door+natrc+pace+card and horse+stall+door+sliding+plate+card)' },
+      { re: /amazon-brand\/equine\+pommel\+cantle\+bag\+handbook\?s=discipline-equipment-trail-riding/, label: 'equine pommel-cantle-bag-handbook search hop (matches on-page pommel/cantle bag copy; unique vs equine+aerc+endurance+handbook and equine+skid+boot+nrha+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+trail\+etiquette\+chart|horse\+stall\+door\+natrc\+pace\+card|equine\+aerc\+endurance\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop trail-riding-overview kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-flex-tree-trail-saddle-chart / horse-stall-door-halter-bridle-combo-card / equine-pommel-cantle-bag-handbook searches' },
+    ],
+    why: 'Money path leftover after #1434: horses.com /disciplines/reining/equipment is on main. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/trail-riding/equipment commercial buyer-guide spoke had sidebar EmailCapture only (source discipline-equipment-<slug>, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete trail-riding-equipment-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page flex-tree-saddle / halter-bridle-combo / pommel-cantle-bag copy (a laminated horse flex-tree trail-saddle chart so the D-ring / long-mileage notes are posted on the stall door, a horse stall-door halter-bridle-combo card so the snap-off-bit / vet-check notes are labeled at the barn, an equine pommel-cantle-bag handbook so the cordura / snack-and-tool grounding is a physical barn book), never a placeholder ASIN, a sibling trail-riding-overview kitchen hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked tack list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1434 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
