@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -151,6 +153,47 @@ export default function OptionalClaimingRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the optional-claiming checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Optional-claiming checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-optional-claiming-hybrid-chart,
+              stall-door-for-the-tag-card, and
+              equine-field-fill-handbook notes
+              that match the hybrid / two-pools, for-the-tag
+              vs allowance-protected, and filling-fields /
+              racing-secretary copy on this page — a laminated
+              horse optional-claiming hybrid chart so the two
+              pools / mixed-conditions notes are posted on the
+              stall door (not an allowance-conditions chart,
+              not a claiming-price chart), a horse stall-door
+              for-the-tag card so the claimable vs
+              allowance-protected notes are labeled at the
+              barn (not an NW1X-NW2X card, not a claim-tag
+              card), and an equine field-fill handbook so the
+              racing-secretary / smaller-meets grounding is a
+              physical barn book (not a weight-allowance
+              handbook, not a purse-vs-horse handbook).
+              Educational barn checklist, not a ranked race
+              list, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Optional-claiming checklist"
+              subtitle="Email the optional-claiming hybrid chart, for-the-tag card, and field-fill handbook notes. No spam."
+              ctaText="Email my optional-claiming checklist"
+              source="race-types-optional-claiming-under-hero"
+            />
+          </div>
+
           <h2 id="hybrid">A Hybrid of Two Classes</h2>
           <p>An <strong>optional claiming race</strong> is exactly what its name suggests: a race that blends the two mid-level classes, <a href="/racing/race-types/allowance-races">allowance</a> and <a href="/racing/race-types/claiming-races">claiming</a>, into a single event. Rather than forcing every runner into one set of conditions, the format lets each horse&apos;s connections pick which set applies to them. The race therefore mixes protected, not-for-sale horses with claimable ones in the same field.</p>
           <p>It is one of the more elegant pieces of plumbing in the sport&apos;s class structure, and understanding it explains a lot about how cards actually get filled. This page treats the format as a structural device; it contains no wagering guidance.</p>
@@ -186,6 +229,58 @@ export default function OptionalClaimingRacesPage() {
               subject. It is not a wagering resource: no betting tips, odds
               commentary, or handicapping guidance is provided or implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse optional-claiming hybrid chart /
+              horse stall-door for-the-tag card /
+              equine field-fill handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs allowance /
+              claiming / maiden hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the optional-claiming barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page hybrid / two-pools, for-the-tag vs
+              allowance-protected, and filling-fields /
+              racing-secretary copy — a laminated horse
+              optional-claiming hybrid chart, a horse
+              stall-door for-the-tag card, and an equine
+              field-fill handbook. Educational barn
+              searches only. They are not a ranked race
+              list, they are not an allowance / claiming
+              hop, they are not a first-aid-kit hop, they
+              are not a child toothbrush hop, and they do
+              not replace a veterinarian. Horses.com does
+              not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+optional+claiming+hybrid+chart?s=race-types-optional-claiming"
+                amazonLabel="Browse laminated horse optional-claiming hybrid charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+for+the+tag+card?s=race-types-optional-claiming"
+                amazonLabel="Browse horse stall-door for-the-tag cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+field+fill+handbook?s=race-types-optional-claiming"
+                amazonLabel="Browse equine field-fill handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
