@@ -36,6 +36,39 @@ export default function BestDogBedsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dog-bed checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dog-bed checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the orthopedic dog-bed notes that
+                match the ranking copy on this page —
+                12–14 hours of sleep, Big Barker 7-inch
+                foam with the published AJVR arthritis
+                trial and 10-year no-flatten warranty
+                for large/giant breeds, Casper when you
+                need a machine-washable cover at a
+                mid-price, and Furhaven when budget is
+                the constraint. Educational dog-bed
+                checklist, not a new product hop, not
+                a first-aid-kit hop, and not a
+                substitute for a veterinarian. The
+                existing Big Barker and Casper Chewy
+                searches stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dog-bed checklist"
+                subtitle="Email the Big Barker, Casper, and foam-depth notes. No spam."
+                ctaText="Email my dog-bed checklist"
+                source="reviews-best-dog-beds-under-hero"
+              />
+            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="big-barker" badge="Best Orthopedic" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
