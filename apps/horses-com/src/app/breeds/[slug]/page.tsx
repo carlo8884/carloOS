@@ -2303,6 +2303,49 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'icelandic' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the icelandic checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Icelandic Horse checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-norse-982-import-ban-chart,
+                  horse-stall-door-iceland-tolt-skeid-card, and
+                  equine-first-owner-icelandic-handbook notes that
+                  match the Norse-settler Iceland origin and genetic
+                  isolation since AD 982 import ban, the inherited
+                  four-beat tölt and lateral skeið, and first-time-
+                  owner notes on this page — a laminated horse Norse
+                  982 import-ban chart so the Norse / 982 / isolation
+                  notes are posted on the stall door (not a
+                  Hambletonian-1849 hop, not a viking-mane-dorsal-
+                  stripe hop), a horse stall-door Iceland tolt-skeid
+                  card so the tölt / skeið / five-gaited / trail notes
+                  are labeled at the barn (not a one-mile-standard
+                  hop, not a western-norway-pack hop), and an equine
+                  first-owner icelandic handbook so the YES-typically /
+                  sweet-itch / EMS-laminitis / PSSM2 / spavin
+                  grounding is a physical barn book (not a
+                  first-owner-standardbred handbook, not a
+                  first-owner-norwegian-fjord handbook). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does not
+                  sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Icelandic Horse checklist"
+                  subtitle="Email the Norse 982 import-ban chart, Iceland tolt-skeid card, and first-owner handbook notes. No spam."
+                  ctaText="Email my icelandic checklist"
+                  source="breed-icelandic-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -4321,6 +4364,44 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+standardbred+handbook?s=breed-standardbred"
                     amazonLabel="Browse equine first-owner standardbred handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'icelandic' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the icelandic barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Norse-settler Iceland origin and genetic isolation
+                  since AD 982 import ban, the inherited four-beat
+                  tölt and lateral skeið, and first-time-owner notes
+                  — a laminated horse Norse 982 import-ban chart, a
+                  horse stall-door Iceland tolt-skeid card, and an
+                  equine first-owner icelandic handbook. Educational
+                  barn searches only. They are not a ranked tack list,
+                  they are not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying purchases
+                  at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+norse+982+import+ban+chart?s=breed-icelandic"
+                    amazonLabel="Browse laminated horse Norse 982 import-ban charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+iceland+tolt+skeid+card?s=breed-icelandic"
+                    amazonLabel="Browse horse stall-door Iceland tolt-skeid cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+icelandic+handbook?s=breed-icelandic"
+                    amazonLabel="Browse equine first-owner icelandic handbooks on Amazon →"
                   />
                 </div>
               </div>
