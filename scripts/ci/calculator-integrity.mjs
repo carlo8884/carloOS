@@ -6581,6 +6581,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1530: ferret.com /diet/can-ferrets-eat/[food] remaining-food template is on main. Fish remaining-disease + remaining-parameter templates are exhausted. This existing vets.co /diagnostics/[slug] programmatic remaining-test template (hub /diagnostics already Pattern B on main) had sidebar EmailCapture only (source diagnostics-${slug}, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture and existing insurance CTA; add under-hero capture; add amazon-brand kitchen hops matching on-page what-it-measures / when-vets-order / typical-US-cost / ACVIM-AAHA-Merck result-urgency copy (a laminated pet diagnostics-spoke urgency chart so this remaining-test map is posted on the fridge, a fridge diagnostics-spoke cost card so the typical-US-cost notes are labeled in the kitchen, a veterinary diagnostics-spoke handbook so the ACVIM / AAHA / Merck row is a physical kitchen book), never a placeholder ASIN, a sibling diagnostics-hub hop, a symptoms-hub hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Vets.co does not sell insurance. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1530 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'vets · specialists-spoke template',
+    file: 'apps/vets-co/src/app/specialists/[slug]/page.tsx',
+    mustInclude: [
+      { re: /source=\{`specialist-\$\{s\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my specialist-spoke checklist"/, label: 'concrete specialist-spoke-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source=\{`specialist-\$\{s\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+pet\+spec\+spoke\+refer\+chart\?s=specialists-spoke/, label: 'laminated pet spec-spoke-refer-chart search hop (matches on-page when-to-see / primary-vet-referral copy; unique vs laminated+pet+specialty+discipline+chart / laminated+pet+diag+spoke+urgency+chart)' },
+      { re: /amazon-brand\/pet\+fridge\+spec\+spoke\+cost\+card\?s=specialists-spoke/, label: 'pet fridge spec-spoke-cost-card search hop (matches on-page typical-US-cost ranges; unique vs pet+fridge+referral+consult+card / pet+fridge+diag+spoke+cost+card)' },
+      { re: /amazon-brand\/veterinary\+spec\+spoke\+handbook\?s=specialists-spoke/, label: 'veterinary spec-spoke-handbook search hop (matches on-page AVMA / college-directory grounding; unique vs veterinary+specialty+reference+handbook / veterinary+diag+spoke+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+pet\+specialty\+discipline\+chart|pet\+fridge\+referral\+consult\+card|veterinary\+specialty\+reference\+handbook|laminated\+pet\+diag\+spoke\+urgency\+chart|pet\+fridge\+diag\+spoke\+cost\+card|veterinary\+diag\+spoke\+handbook|laminated\+pet\+diagnostics\+test\+map\+chart|pet\+fridge\+diagnostics\+library\+card|veterinary\+diagnostics\+reference\+handbook|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop specialists-hub / diagnostics-spoke / diagnostics-hub kitchen kits, crate hops, first-aid hops, or flea / heartworm / vaccine — this page hops only laminated-pet-spec-spoke-refer-chart / pet-fridge-spec-spoke-cost-card / veterinary-spec-spoke-handbook searches' },
+    ],
+    why: 'Money path leftover after #1531: vets.co /diagnostics/[slug] remaining-diagnostics template is on main. Fish remaining-disease + remaining-parameter templates are exhausted. Dog remaining-food / remaining-condition / remaining-breed / remaining-feeding templates are on main. This existing vets.co /specialists/[slug] programmatic remaining-specialty template (hub /specialists already Pattern B on main) had sidebar EmailCapture only (source specialist-${slug}, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture and existing insurance CTA; add under-hero capture; add amazon-brand kitchen hops matching on-page when-to-see / primary-vet-referral / typical-US-cost / AVMA-college-directory board-certification copy (a laminated pet specialists-spoke referral chart so this remaining-specialty map is posted on the fridge, a fridge specialists-spoke cost card so the typical-US-cost notes are labeled in the kitchen, a veterinary specialists-spoke handbook so the AVMA / college-directory row is a physical kitchen book), never a placeholder ASIN, a sibling specialists-hub hop, a diagnostics-spoke hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Vets.co does not sell insurance. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1531 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
