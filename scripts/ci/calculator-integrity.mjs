@@ -2907,6 +2907,23 @@ const CALCULATORS = [
     why: 'Money path leftover after #1369: dog.com /reviews/best-dog-beds is on main. This existing dog.com /reviews/best-dry-dog-food commercial spoke had sidebar EmailCapture only (source review-best-dry-dog-food, not under-hero) plus live Royal Canin / Purina / Hill\'s / Orijen Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dry-dog-food-checklist offer matching on-page WSAVA / Royal Canin feeding-trial / Purina value / Hill\'s prescription / FDA grain-free DCM copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1369 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-dog-food-sensitive-stomach',
+    file: 'apps/dog-com/src/app/reviews/best-dog-food-sensitive-stomach/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-food-sensitive-stomach-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my sensitive-stomach checklist"/, label: 'concrete sensitive-stomach-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-sensitive-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/purina\+pro\+plan\+sensitive\+skin\+stomach\?s=reviews-best-dog-food-sensitive-stomach/, label: 'existing Purina Pro Plan Sensitive Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1370: dog.com /reviews/best-dry-dog-food is on main. This existing dog.com /reviews/best-dog-food-sensitive-stomach commercial spoke had sidebar EmailCapture only (source review-sensitive-food, not under-hero) plus a live Purina Pro Plan Sensitive Chewy product hop and AffiliateDisclosure. Add under-hero capture with a concrete sensitive-stomach-checklist offer matching on-page description-not-diagnosis / salmon-and-rice / no corn-wheat-soy / live probiotic / 8–12 week trial copy. Keep the existing sidebar capture and the already-hopped Chewy search. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1370 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
