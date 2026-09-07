@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
@@ -23,6 +23,51 @@ export default function ReadingFoodLabelsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog label checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog label checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-aafco-trial-chart,
+            fridge-dry-matter-card, and
+            canine-kcal-cup-handbook notes
+            that match the aafco-feeding-trial-map,
+            dry-matter-log, and
+            kcal-cup-grounding copy on this
+            page — a laminated dog AAFCO-trial chart so
+            the feeding-trial vs formulation map is
+            posted on the fridge (not a treat-kcal chart,
+            not a rib-waist chart, not a
+            nutrition-feeding chart), a dog fridge
+            dry-matter card so moisture-removed protein
+            notes are labeled on the fridge (not a
+            VOHC-seal card, not a kcal-scale card, not a
+            WSAVA label card), and a canine
+            kcal-cup handbook so the caloric-density /
+            not-volume grounding is a physical
+            kitchen book (not a jerky-FDA handbook, not a
+            low-impact-walk handbook, not an
+            RER-portion handbook). Educational kitchen
+            checklist, not a ranked clinic list, not a
+            first-aid-kit hop, and not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog label checklist"
+            subtitle="Email the AAFCO-trial chart, fridge dry-matter card, and kcal-cup-handbook notes. No spam."
+            ctaText="Email my dog label checklist"
+            source="nutrition-labels-under-hero"
+          />
+        </div>
+
         <h2 id="aafco">The AAFCO Statement — The Most Important Thing on the Bag</h2>
         <p>The <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Association of American Feed Control Officials (AAFCO)</a> establishes nutrient profiles for dog food. Every complete and balanced dog food must include one of two AAFCO statements:</p>
         <p><strong>Feeding trial statement:</strong> &quot;Animal feeding tests using AAFCO procedures substantiate that [product] provides complete and balanced nutrition for [life stage].&quot; This means dogs actually ate this food during a feeding trial and were monitored for health outcomes. This is the more rigorous and meaningful claim.</p>
@@ -63,6 +108,59 @@ export default function ReadingFoodLabelsPage() {
           <li><strong>&quot;No fillers&quot;</strong> — all carbohydrate sources are called &quot;fillers&quot; by some marketers; rice and oats are not fillers</li>
           <li><strong>Veterinarian-recommended on packaging without context</strong> — verify who recommended it and whether it was a paid endorsement</li>
         </ul>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog AAFCO-trial chart /
+            dog fridge dry-matter card /
+            canine kcal-cup handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs dog-treats-guide /
+            weight-management / feeding-frequency hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog label kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page aafco-feeding-trial-map,
+            dry-matter-log, and
+            kcal-cup-grounding copy — a
+            laminated dog AAFCO-trial chart, a
+            dog fridge dry-matter card, and a
+            canine kcal-cup handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a dog-treats-guide / weight-management /
+            feeding-frequency hop, they are not a
+            first-aid-kit hop, they are not a child
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+aafco+trial+chart?s=nutrition-labels"
+              amazonLabel="Browse laminated dog AAFCO-trial charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+dry+matter+card?s=nutrition-labels"
+              amazonLabel="Browse dog fridge dry-matter cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+kcal+cup+handbook?s=nutrition-labels"
+              amazonLabel="Browse canine kcal-cup handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
