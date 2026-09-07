@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,49 @@ export default function RanchRidingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ranch-riding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ranch-riding checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-ranch-riding-pattern-chart,
+              stall-door-aqha-vrh-card, and
+              equine-extended-lope-handbook notes
+              that match the walk-trot-lope-pattern,
+              aqha-versatility-ranch-horse, and
+              natural-head / extended-lope copy on this
+              page — a laminated horse ranch-riding pattern
+              chart so the extended-trot / both-ways /
+              log-obstacle notes are posted on the stall
+              door (not a hunter under-saddle gait chart,
+              not an equitation position chart), a horse
+              stall-door AQHA VRH card so the AQHA /
+              Versatility Ranch Horse / APHA notes are
+              labeled at the barn (not a USHJA hunter card,
+              not a USEF medal card), and an equine
+              extended-lope handbook so the forward /
+              natural-head / peanut-rolling contrast is a
+              physical barn book (not a hunter-bascule
+              handbook, not a hunter-seat handbook).
+              Educational barn checklist, not a ranked
+              clinic list, not a first-aid-kit hop, and
+              not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Ranch-riding checklist"
+              subtitle="Email the ranch-riding pattern chart, AQHA VRH card, and extended-lope handbook notes. No spam."
+              ctaText="Email my ranch-riding checklist"
+              source="disciplines-ranch-riding-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Ranch Riding Is</h2>
           <p>Ranch riding is a judged pattern class in which horse and rider perform a set sequence of gaits and maneuvers that reflect the work of a versatile ranch horse. It emerged and grew rapidly in the 2010s, championed by the AQHA and other stock-horse associations, as part of a broader ranch-horse movement reacting against the increasingly artificial western pleasure style. The class prizes a horse that is forward, soft, willing, and looks like a genuine working partner.</p>
 
@@ -136,6 +179,59 @@ export default function RanchRidingPage() {
             <li>American Paint Horse Association and Appaloosa Horse Club. Ranch-class rules.</li>
             <li>National Reined Cow Horse and ranch-horse association resources.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse ranch-riding pattern chart /
+              horse stall-door AQHA VRH card /
+              equine extended-lope handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs hunter-under-saddle /
+              equitation hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ranch-riding barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page walk-trot-lope-pattern,
+              aqha-versatility-ranch-horse, and
+              natural-head / extended-lope copy — a
+              laminated horse ranch-riding pattern chart, a
+              horse stall-door AQHA VRH card, and an
+              equine extended-lope handbook. Educational
+              barn searches only. They are not a ranked
+              clinic list, they are not a
+              hunter-under-saddle / equitation hop, they
+              are not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+ranch+riding+pattern+chart?s=discipline-ranch-riding"
+                amazonLabel="Browse laminated horse ranch-riding pattern charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+aqha+vrh+card?s=discipline-ranch-riding"
+                amazonLabel="Browse horse stall-door AQHA VRH cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+extended+lope+handbook?s=discipline-ranch-riding"
+                amazonLabel="Browse equine extended-lope handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
