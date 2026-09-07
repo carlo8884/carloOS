@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -180,6 +182,50 @@ export default function FerretDiarrheaCausesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret diarrhea-causes checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret diarrhea-causes checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-stool-clue-chart,
+              fridge-dehydrate-watch-card, and
+              mustelid-enteritis-clue-handbook notes
+              that match the stool-clue-map,
+              dehydrate-watch-log, and
+              quesenberry-aemv-enteritis-grounding copy on this
+              page — a laminated ferret stool-clue chart
+              so the green-slime / tarry / seedy / pencil-thin
+              map is posted on the fridge (not a lump-weight
+              chart, not a short-fast chart, not a bruxism-map
+              chart), a ferret fridge dehydrate-watch card
+              so lethargy / refuse-food / same-day notes are
+              labeled on the fridge (not a senior-cbc card,
+              not a glucose-temp card, not a baseline-log
+              card), and a mustelid enteritis-clue handbook
+              so the Quesenberry / AEMV ECE-vs-diet-change
+              grounding is a physical kitchen book (not a
+              lymphoma-workup handbook, not an
+              anesthesia-clinic handbook, not a pain-sign
+              handbook). Educational kitchen checklist, not a
+              ranked clinic list, not a first-aid-kit hop, and
+              not a substitute for an exotic-mammal
+              veterinarian. Ferret.com does not sell insurance.
+              Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret diarrhea-causes checklist"
+              subtitle="Email the stool-clue-chart, fridge dehydrate-watch card, and enteritis-clue-handbook notes. No spam."
+              ctaText="Email my ferret diarrhea-causes checklist"
+              source="health-ferret-diarrhea-causes-under-hero"
+            />
+          </div>
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the
@@ -361,6 +407,60 @@ export default function FerretDiarrheaCausesPage() {
             targets the specific cause, with supportive fluids and a recovery
             diet as needed — all at the clinician&apos;s direction.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret stool-clue chart /
+              ferret fridge dehydrate-watch card /
+              mustelid enteritis-clue handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              lymphoma / anesthesia / signs-of-pain hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret diarrhea-causes kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page stool-clue-map,
+              dehydrate-watch-log, and
+              quesenberry-aemv-enteritis-grounding copy — a
+              laminated ferret stool-clue chart, a
+              ferret fridge dehydrate-watch card, and a
+              mustelid enteritis-clue handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / lymphoma / anesthesia hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+stool+clue+chart?s=ferret-diarrhea-causes"
+                amazonLabel="Browse laminated ferret stool-clue charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+dehydrate+watch+card?s=ferret-diarrhea-causes"
+                amazonLabel="Browse ferret fridge dehydrate-watch cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+enteritis+clue+handbook?s=ferret-diarrhea-causes"
+                amazonLabel="Browse mustelid enteritis-clue handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
