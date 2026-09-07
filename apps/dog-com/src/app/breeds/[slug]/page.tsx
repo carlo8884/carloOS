@@ -39,6 +39,7 @@ import {
   SchemaScript,
   EmailCapture,
   RelatedLinks,
+  ShopCtas,
   StockImage,
   AffiliateDisclosure,
 } from '@carloOS/ui'
@@ -582,6 +583,39 @@ export default async function BreedTemplatePage({ params }: PageProps) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8 not-prose">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the breed-profile checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Breed-profile checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the at-a-glance size / energy /
+                shedding / grooming notes, the OFA /
+                CHIC panel, and the first-time-owner
+                fit for this remaining {breed.name}
+                profile — the same AKC-group / lifespan /
+                health-concern rows already on this page
+                (not a handwritten weimaraner spoke, not
+                a breed-feeding calorie table, not a
+                compare-pair vs-row). Educational
+                breed-profile checklist, not a ranked
+                product list, not a substitute for a
+                veterinarian. Dog.com does not sell
+                insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Breed-profile checklist"
+                subtitle="Email the at-a-glance, OFA/CHIC, and first-time-owner notes. No spam."
+                ctaText="Email my breed-profile checklist"
+                source={`breed-${breed.slug}-under-hero`}
+              />
+            </div>
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -761,6 +795,49 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 you actually want to live with?
               </li>
             </ul>
+
+            <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                Shop the breed-profile kitchen kit
+              </div>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                These Amazon category searches match the
+                on-page at-a-glance size / energy /
+                shedding / grooming rows, the OFA /
+                CHIC panel, and the first-time-owner
+                fit — a laminated dog breed glance-OFA
+                chart, a fridge breed energy-size card,
+                and a canine breed-profile handbook.
+                Educational kitchen searches only. They
+                are not a ranked product list, they are
+                not a breed-feeding hop, they are not a
+                compare-pair hop, they are not a
+                weimaraner static-spoke hop, they are
+                not a finger-toothbrush hop, and they
+                do not replace a veterinarian. Existing
+                crate / grooming / bed gear cards stay
+                in place — this block does not add a
+                new crate hop. Dog.com does not sell
+                insurance. Dog.com earns a commission
+                on qualifying purchases at no extra
+                cost to you.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <div className="flex flex-col gap-3 mt-3">
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/laminated+dog+breed+glance+ofa+chart?s=breed-profile"
+                  amazonLabel="Browse laminated dog breed glance-OFA charts on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/dog+fridge+breed+energy+size+card?s=breed-profile"
+                  amazonLabel="Browse fridge breed energy-size cards on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/canine+breed+profile+handbook?s=breed-profile"
+                  amazonLabel="Browse canine breed-profile handbooks on Amazon →"
+                />
+              </div>
+            </div>
 
             {/* Find a vet — cross-portfolio */}
             <h2>Find a Vet</h2>
