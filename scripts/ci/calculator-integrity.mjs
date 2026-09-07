@@ -3709,6 +3709,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1405: horses.com /racing/racing-roles/racing-official is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/racing-roles hub had footer EmailCapture only (source racing-roles-hub, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete racing-roles-checklist offer; keep the existing section capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page jockey-trainer-owner-officials / connections-index / four-role-hub copy (a laminated horse barn racing-roles index chart so the jockey / trainer / owner / official notes are posted on the stall door, a horse stall-door role-cluster card so the connections / licensing notes are labeled at the barn, an equine racing-roles index handbook so the four-role / people-of-racing-index grounding is a physical barn book), never a placeholder ASIN, a sibling official kitchen hop, an owner hop, a people-of-racing hop, a newcomers hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1405 / crate-size / stocking.',
   },
   {
+    id: 'horses · race-types-hub',
+    file: 'apps/horses-com/src/app/racing/race-types/page.tsx',
+    mustInclude: [
+      { re: /source="race-types-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my race-types checklist"/, label: 'concrete race-types-checklist offer, not Subscribe' },
+      { re: /source="race-types-hub"/, label: 'existing section email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+barn\+race\+class\+ladder\+chart\?s=race-types-hub/, label: 'laminated horse barn race-class-ladder-chart search hop (matches on-page maiden / claiming / allowance / stakes copy; unique vs laminated+horse+barn+racing+roles+index+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+maiden\+to\+stakes\+card\?s=race-types-hub/, label: 'horse stall-door maiden-to-stakes-card search hop (matches on-page optional-claiming / graded-stakes copy; unique vs horse+stall+door+role+cluster+card)' },
+      { re: /amazon-brand\/equine\+race\+class\+index\+handbook\?s=race-types-hub/, label: 'equine race-class-index-handbook search hop (matches on-page class-ladder / program-conditions copy; unique vs equine+racing+roles+index+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+racing\+roles\+index\+chart|horse\+stall\+door\+role\+cluster\+card|equine\+racing\+roles\+index\+handbook|laminated\+horse\+race\+class\+maiden\+claiming\+chart|horse\+stall\+door\+graded\+stakes\+card|equine\+condition\+book\+handbook|laminated\+horse\+barn\+newcomer\+race\+card\+chart|horse\+stall\+door\+paddock\+parade\+card|equine\+racing\+silks\+literacy\+handbook|laminated\+horse\+barn\+racing\+section\+map\+chart|horse\+stall\+door\+racing\+prep\+card|equine\+racing\+reference\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop racing-roles / understanding-race-types / newcomers / racing-hub kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-barn-race-class-ladder-chart / horse-stall-door-maiden-to-stakes-card / equine-race-class-index-handbook searches' },
+    ],
+    why: 'Money path leftover after #1406: horses.com /racing/racing-roles hub is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/race-types hub had footer EmailCapture only (source race-types-hub, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete race-types-checklist offer; keep the existing section capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page class-ladder / maiden-claiming-allowance / stakes-graded-handicap copy (a laminated horse barn race-class ladder chart so the maiden / claiming / allowance / stakes notes are posted on the stall door, a horse stall-door maiden-to-stakes card so the optional-claiming / graded-stakes notes are labeled at the barn, an equine race-class index handbook so the class-ladder / program-conditions grounding is a physical barn book), never a placeholder ASIN, a sibling racing-roles kitchen hop, an understanding-race-types hop, a newcomers hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1406 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

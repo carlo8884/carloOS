@@ -15,7 +15,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { raceTypeSpokes } from '@/data/race-types'
 
@@ -75,6 +75,50 @@ export default function RaceTypesHubPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Race Types</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the race-types checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Race-types checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-horse-barn-race-class-ladder-chart,
+            stall-door-maiden-to-stakes-card, and
+            equine-race-class-index-handbook notes
+            that match the class-ladder, maiden-claiming-allowance,
+            and stakes-graded-handicap copy on this hub — a
+            laminated horse barn race-class ladder chart so the
+            maiden / claiming / allowance / stakes notes are
+            posted on the stall door (not a racing-roles index
+            chart, not a maiden-claiming explainer chart, not a
+            newcomer race-card chart), a horse stall-door
+            maiden-to-stakes card so the optional-claiming /
+            graded-stakes notes are labeled at the barn (not a
+            role-cluster card, not a graded-stakes explainer
+            card, not a paddock-parade card), and an equine
+            race-class index handbook so the class-ladder /
+            program-conditions grounding is a physical barn
+            book (not a racing-roles index handbook, not a
+            condition-book handbook, not a racing-silks
+            literacy handbook). Educational barn checklist,
+            not a ranked race list, not a first-aid-kit hop,
+            and not a substitute for a veterinarian.
+            Horses.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Race-types checklist"
+            subtitle="Email the race-class ladder chart, maiden-to-stakes card, and race-class index handbook notes. No spam."
+            ctaText="Email my race-types checklist"
+            source="race-types-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* ── INTRO ──────────────────────────────────────────────────── */}
       <div className="px-container-sm sm:px-container py-12">
@@ -174,6 +218,82 @@ export default function RaceTypesHubPage() {
           </div>
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Race-types kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          class-ladder, maiden-claiming-allowance, and
+          stakes-graded-handicap copy on this hub — a
+          laminated horse barn race-class ladder chart so
+          the maiden / claiming / allowance / stakes notes
+          are posted on the stall door, a horse stall-door
+          maiden-to-stakes card so the optional-claiming /
+          graded-stakes notes are labeled at the barn, and
+          an equine race-class index handbook so the
+          class-ladder / program-conditions grounding is a
+          physical barn book. These are educational kitchen
+          searches, not a ranked race list, not a
+          substitute for a veterinarian, not a racing-roles /
+          understanding-race-types / newcomers hop, and not
+          a first-aid-kit hop. This page does not hop
+          medications or vaccines. This page does not sell
+          insurance. This page does not claim hands-on
+          testing. This page is not a wagering resource.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn race-class ladder chart /
+            horse stall-door maiden-to-stakes card /
+            equine race-class index handbook).
+            Educational kitchen searches only; no Rx hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs racing-roles /
+            understanding-race-types / newcomers hops.
+            Directory import left untouched. Do not
+            re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the race-types kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page class-ladder, maiden-claiming-allowance,
+            and stakes-graded-handicap copy — a laminated
+            horse barn race-class ladder chart, a horse
+            stall-door maiden-to-stakes card, and an equine
+            race-class index handbook. Educational kitchen
+            searches only. They are not a ranked race
+            list, they are not a racing-roles /
+            understanding-race-types / newcomers hop, they
+            are not a first-aid-kit hop, and they do not
+            replace a veterinarian. Horses.com does not
+            sell insurance. Horses.com earns a commission
+            on qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+race+class+ladder+chart?s=race-types-hub"
+              amazonLabel="Browse laminated horse barn race-class ladder charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stall+door+maiden+to+stakes+card?s=race-types-hub"
+              amazonLabel="Browse horse stall-door maiden-to-stakes cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+race+class+index+handbook?s=race-types-hub"
+              amazonLabel="Browse equine race-class index handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
       <section
