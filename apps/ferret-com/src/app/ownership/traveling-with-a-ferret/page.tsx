@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,52 @@ export default function TravelingWithAFerretPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret travel-planning checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret travel-planning checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-trip-decide-chart,
+              fridge-heat-limit-card, and
+              mustelid-trip-plan-handbook notes
+              that match the trip-decide-map,
+              heat-limit-log, and
+              quesenberry-afa-travel-grounding copy on this
+              page — a laminated ferret trip-decide chart
+              so the heat / legality / leave-them-home map
+              is posted on the fridge (not a prey-compat
+              chart, not a kid-handle chart, not an
+              ownership-hub section map), a ferret fridge
+              heat-limit card so never-parked-car / cool-
+              cabin / water-stops notes are labeled on the
+              fridge (not an intro-barrier card, not a
+              supervise-rule card, not a time-money-odor
+              card), and a mustelid trip-plan handbook so
+              the Quesenberry / AFA thermoregulation and
+              stress grounding is a physical kitchen book
+              (not a cross-species handbook, not a
+              family-fit handbook, not an
+              ownership-reference handbook). Educational
+              kitchen checklist, not a ranked carrier
+              list, not a sleep-sack hop, and not a
+              substitute for an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Aging
+              pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret travel-planning checklist"
+              subtitle="Email the trip-decide-chart, fridge heat-limit card, and trip-plan-handbook notes. No spam."
+              ctaText="Email my ferret travel-planning checklist"
+              source="ownership-traveling-with-a-ferret-under-hero"
+            />
+          </div>
+
           <h2 id="decide">Before You Decide to Travel</h2>
           <p>
             Start with the question of whether the trip is for the ferret&apos;s
@@ -185,6 +231,61 @@ export default function TravelingWithAFerretPage() {
             least as safe and comfortable as it would be at home. If it will not,
             do not go with it.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret trip-decide chart /
+              ferret fridge heat-limit card /
+              mustelid trip-plan handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ownership-hub /
+              other-pets / kids / travel-and-carriers
+              product hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret travel-planning kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page trip-decide-map,
+              heat-limit-log, and
+              quesenberry-afa-travel-grounding copy — a
+              laminated ferret trip-decide chart, a
+              ferret fridge heat-limit card, and a
+              mustelid trip-plan handbook.
+              Educational kitchen searches only. They are
+              not a ranked carrier list, they are not
+              an ownership-hub / other-pets / kids hop,
+              they are not a travel-and-carriers product
+              hop, they are not a child toothbrush hop,
+              and they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+trip+decide+chart?s=traveling-with-a-ferret"
+                amazonLabel="Browse laminated ferret trip-decide charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+heat+limit+card?s=traveling-with-a-ferret"
+                amazonLabel="Browse ferret fridge heat-limit cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+trip+plan+handbook?s=traveling-with-a-ferret"
+                amazonLabel="Browse mustelid trip-plan handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>
