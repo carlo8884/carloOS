@@ -3203,6 +3203,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1383: horses.com /disciplines/reining is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/barrel-racing commercial spoke had sidebar EmailCapture only (source discipline-barrel-racing, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete barrel-racing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page cloverleaf-pattern / local jackpot-NBHA-WPRA / rate-into-the-turn copy (a laminated horse cloverleaf barrel chart so the first / second / third-barrel notes are posted on the stall door, a horse stall-door NBHA jackpot card so the 4-H / jackpot / WPRA notes are labeled at the barn, an equine barrel-rate handbook so the collect-and-set-up / rocket-out grounding is a physical barn book), never a placeholder ASIN, a sibling reining kitchen hop, an endurance hop, a gag-bit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1383 / crate-size / stocking.',
   },
   {
+    id: 'horses · combined-driving',
+    file: 'apps/horses-com/src/app/disciplines/combined-driving/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-combined-driving-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my combined-driving checklist"/, label: 'concrete combined-driving-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-combined-driving"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+ads\+driving\+phase\+chart\?s=discipline-combined-driving/, label: 'laminated horse ADS driving-phase-chart search hop (matches on-page dressage / marathon / cones copy; unique vs laminated+horse+cloverleaf+barrel+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+four\+in\+hand\+card\?s=discipline-combined-driving/, label: 'horse stall-door four-in-hand-card search hop (matches on-page singles / pairs / four-in-hand copy; unique vs horse+stall+door+nbha+jackpot+card)' },
+      { re: /amazon-brand\/equine\+cones\+driving\+handbook\?s=discipline-combined-driving/, label: 'equine cones-driving-handbook search hop (matches on-page ball-topped-cones copy; unique vs equine+barrel+rate+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+cloverleaf\+barrel\+chart|horse\+stall\+door\+nbha\+jackpot\+card|equine\+barrel\+rate\+handbook|laminated\+horse\+nrha\+maneuver\+chart|horse\+stall\+door\+nrha\+level\+card|equine\+sliding\+stop\+handbook|carriage\+kit|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop barrel-racing / reining kitchen kits, carriage-kit product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-ads-driving-phase-chart / horse-stall-door-four-in-hand-card / equine-cones-driving-handbook searches' },
+    ],
+    why: 'Money path leftover after #1384: horses.com /disciplines/barrel-racing is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/combined-driving commercial spoke had sidebar EmailCapture only (source discipline-combined-driving, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete combined-driving-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page dressage-marathon-cones / singles-pairs-four-in-hand / ball-topped-cones copy (a laminated horse ADS driving-phase chart so the driven-dressage / marathon / cones notes are posted on the stall door, a horse stall-door four-in-hand card so the singles / pairs / team notes are labeled at the barn, an equine cones-driving handbook so the ball-topped-cone / carriage-track grounding is a physical barn book), never a placeholder ASIN, a sibling barrel-racing kitchen hop, a reining hop, a carriage-kit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1384 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
