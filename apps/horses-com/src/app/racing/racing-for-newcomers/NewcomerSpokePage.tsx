@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
@@ -124,6 +126,48 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             reviewedBy="Editorial team"
           />
 
+          {spoke.slug === 'how-to-read-a-race-card' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the how-to-read-a-race-card checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                How-to-read-a-race-card checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-race-card-field-chart,
+                stall-door-form-line-card, and
+                equine-program-literacy-handbook notes
+                that match the field-by-field program,
+                form-line / connections, and spectator-
+                literacy copy on this page — a laminated
+                horse race-card-field chart so the distance /
+                class / weights notes are posted on the stall
+                door (not a barn-newcomer-race-card chart, not
+                a yearling-sale-catalog chart), a horse
+                stall-door form-line card so the past-performance
+                / box-score notes are labeled at the barn (not
+                a paddock-parade card, not an RNA-clearance
+                card), and an equine program-literacy handbook
+                so the spectator / non-wagering grounding is a
+                physical barn book (not a silks-literacy
+                handbook, not a bloodstock-agent handbook).
+                Educational barn checklist, not a ranked race
+                list, not a first-aid-kit hop, and not a
+                substitute for a veterinarian. Horses.com does
+                not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="How-to-read-a-race-card checklist"
+                subtitle="Email the race-card-field chart, form-line card, and program-literacy handbook notes. No spam."
+                ctaText="Email my how-to-read-a-race-card checklist"
+                source="racing-for-newcomers-how-to-read-a-race-card-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* Key facts quick-reference */}
           <div className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
@@ -166,6 +210,61 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             is a separate activity governed by your jurisdiction&apos;s racing or
             gaming authority.
           </p>
+
+          {spoke.slug === 'how-to-read-a-race-card' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse race-card-field chart /
+                  horse stall-door form-line card /
+                  equine program-literacy handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs racing-for-newcomers
+                  hub / racing-bloodstock hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the how-to-read-a-race-card barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page field-by-field program, form-line /
+                  connections, and spectator-literacy copy — a
+                  laminated horse race-card-field chart, a
+                  horse stall-door form-line card, and an
+                  equine program-literacy handbook. Educational
+                  barn searches only. They are not a ranked
+                  race list, they are not a racing-for-newcomers
+                  hub / racing-bloodstock hop, they are not a
+                  first-aid-kit hop, they are not a child
+                  toothbrush hop, and they do not replace a
+                  veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to you.
+                  Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+race+card+field+chart?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonLabel="Browse laminated horse race-card-field charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+form+line+card?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonLabel="Browse horse stall-door form-line cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+program+literacy+handbook?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonLabel="Browse equine program-literacy handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
       </ArticleLayout>
     </>
