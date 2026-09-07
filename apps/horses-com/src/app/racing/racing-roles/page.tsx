@@ -15,7 +15,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingRoleSpokes } from '@/data/racing-roles'
 
@@ -75,6 +75,53 @@ export default function RacingRolesHubPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Racing Roles</span>
       </nav>
+
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the racing-roles checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Racing-roles checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-horse-barn-racing-roles-index-chart,
+            stall-door-role-cluster-card, and
+            equine-racing-roles-index-handbook notes
+            that match the jockey-trainer-owner-officials,
+            connections-index, and four-role-hub copy on
+            this hub — a laminated horse barn racing-roles
+            index chart so the jockey / trainer / owner /
+            official notes are posted on the stall door
+            (not a stewards-inquiry chart, not an
+            owner-trainer-jockey chart, not a newcomer
+            race-card chart), a horse stall-door role
+            cluster card so the connections / licensing
+            notes are labeled at the barn (not a
+            starter-gate card, not a steward-official
+            card, not a paddock-parade card), and an
+            equine racing-roles index handbook so the
+            four-role / people-of-racing-index grounding
+            is a physical barn book (not a
+            clerk-of-scales handbook, not a
+            backstretch-role handbook, not a racing-silks
+            literacy handbook). Educational barn
+            checklist, not a ranked race list, not a
+            first-aid-kit hop, and not a substitute for a
+            veterinarian. Horses.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Racing-roles checklist"
+            subtitle="Email the racing-roles index chart, role-cluster card, and racing-roles index handbook notes. No spam."
+            ctaText="Email my racing-roles checklist"
+            source="racing-roles-hub-under-hero"
+          />
+        </div>
+      </section>
 
       {/* ── INTRO ──────────────────────────────────────────────────── */}
       <div className="px-container-sm sm:px-container py-12">
@@ -169,6 +216,84 @@ export default function RacingRolesHubPage() {
           </div>
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
+          Racing-roles kitchen kit
+        </h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
+          Everyday physical supplies that match the
+          jockey-trainer-owner-officials, connections-index,
+          and four-role-hub copy on this hub — a laminated
+          horse barn racing-roles index chart so the
+          jockey / trainer / owner / official notes are
+          posted on the stall door, a horse stall-door
+          role-cluster card so the connections / licensing
+          notes are labeled at the barn, and an equine
+          racing-roles index handbook so the four-role /
+          people-of-racing-index grounding is a physical
+          barn book. These are educational kitchen
+          searches, not a ranked race list, not a
+          substitute for a veterinarian, not an official /
+          owner / people-of-racing / newcomers hop, and
+          not a first-aid-kit hop. This page does not hop
+          medications or vaccines. This page does not
+          sell insurance. This page does not claim
+          hands-on testing. This page is not a wagering
+          resource.
+        </p>
+
+        <div className="max-w-content-wide mt-6">
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        </div>
+
+        {/* Money path — live amazon-brand search hops
+            (laminated horse barn racing-roles index chart /
+            horse stall-door role-cluster card /
+            equine racing-roles index handbook).
+            Educational kitchen searches only; no Rx hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs official /
+            owner / people-of-racing / newcomers hops.
+            Directory import left untouched. Do not
+            re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the racing-roles kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page jockey-trainer-owner-officials,
+            connections-index, and four-role-hub copy — a
+            laminated horse barn racing-roles index
+            chart, a horse stall-door role-cluster card,
+            and an equine racing-roles index handbook.
+            Educational kitchen searches only. They are
+            not a ranked race list, they are not an
+            official / owner / people-of-racing /
+            newcomers hop, they are not a first-aid-kit
+            hop, and they do not replace a veterinarian.
+            Horses.com does not sell insurance.
+            Horses.com earns a commission on qualifying
+            purchases at no extra cost to you. Empty
+            Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+horse+barn+racing+roles+index+chart?s=racing-roles-hub"
+              amazonLabel="Browse laminated horse barn racing-roles index charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/horse+stall+door+role+cluster+card?s=racing-roles-hub"
+              amazonLabel="Browse horse stall-door role-cluster cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/equine+racing+roles+index+handbook?s=racing-roles-hub"
+              amazonLabel="Browse equine racing-roles index handbooks on Amazon →"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
       <section
