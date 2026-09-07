@@ -23,6 +23,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -163,6 +165,48 @@ export default function BelmontStakesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the belmont-stakes checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Belmont-stakes checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-white-carnation-chart,
+              stall-door-twelve-furlong-card, and
+              equine-test-of-the-champion-handbook notes
+              that match the white-carnation tradition,
+              mile-and-a-half / twelve-furlong distance, and
+              Test-of-the-Champion copy on this page — a
+              laminated horse white-carnation chart so the
+              floral / New-York-New-York notes are posted on
+              the stall door (not a black-eyed-Susan chart,
+              not a Run-for-the-Roses chart), a horse
+              stall-door twelve-furlong card so the longest-
+              leg / stamina notes are labeled at the barn
+              (not a Pimlico-two-week card, not a Churchill-
+              ten-furlong card), and an equine Test-of-the-
+              Champion handbook so the accumulated-toll /
+              fresh-rival grounding is a physical barn book
+              (not a Woodlawn-Vase handbook, not a Derby-
+              points-prep handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Belmont-stakes checklist"
+              subtitle="Email the white-carnation chart, twelve-furlong card, and Test-of-the-Champion handbook notes. No spam."
+              ctaText="Email my triple-crown-belmont-stakes checklist"
+              source="triple-crown-belmont-stakes-under-hero"
+            />
+          </div>
+
           <h2 id="final-leg">The Final Leg</h2>
           <p>The <strong>Belmont Stakes</strong> is the third and final leg of the American <a href="/racing/triple-crown">Triple Crown</a>, run about three weeks after the <a href="/racing/triple-crown/preakness-stakes">Preakness Stakes</a>. The oldest of the three races — first run in 1867 — it is also the longest and, by reputation, the hardest. It is the race that completes the sweep for the rare horse that wins all three, and the race that ends the bid for almost everyone else.</p>
           <p>This page goes deep on the Belmont alone. For the structure of the full series and the horses that have swept it, see the <a href="/racing/triple-crown">Triple Crown overview</a>. As a heritage and educational reference, this page offers no odds, picks, or wagering guidance.</p>
@@ -203,6 +247,57 @@ export default function BelmontStakesPage() {
               odds commentary, handicapping, or predictions are provided or
               implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse white-carnation chart /
+              horse stall-door twelve-furlong card /
+              equine Test-of-the-Champion handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs preakness-stakes /
+              kentucky-derby / triple-crown hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the belmont-stakes barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page white-carnation, mile-and-a-half /
+              twelve-furlong, and Test-of-the-Champion
+              copy — a laminated horse white-carnation
+              chart, a horse stall-door twelve-furlong card,
+              and an equine Test-of-the-Champion handbook.
+              Educational barn searches only. They are not a
+              ranked race list, they are not a preakness-
+              stakes / kentucky-derby / triple-crown-hub hop,
+              they are not a first-aid-kit hop, they are not
+              a child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+white+carnation+chart?s=triple-crown-belmont-stakes"
+                amazonLabel="Browse laminated horse white-carnation charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+twelve+furlong+card?s=triple-crown-belmont-stakes"
+                amazonLabel="Browse horse stall-door twelve-furlong cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+test+of+the+champion+handbook?s=triple-crown-belmont-stakes"
+                amazonLabel="Browse equine Test-of-the-Champion handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
