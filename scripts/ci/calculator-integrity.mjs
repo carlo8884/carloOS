@@ -4100,6 +4100,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1422: horses.com /racing/triple-crown/belmont-stakes is on main. Remaining horses.com Triple Crown leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/bloodstock commercial page had sidebar EmailCapture only (source racing-bloodstock, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete racing-bloodstock-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page yearling-sale-catalog / RNA-clearance / bloodstock-agent copy (a laminated horse yearling-sale-catalog chart so the eighteen-month / pedigree-promise notes are posted on the stall door, a horse stall-door RNA-clearance card so the reserve-not-attained / sale-health notes are labeled at the barn, an equine bloodstock-agent handbook so the conformation / commission grounding is a physical barn book), never a placeholder ASIN, a sibling belmont-stakes kitchen hop, a /bloodstock-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked auction list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1422 / crate-size / stocking.',
   },
   {
+    id: 'horses · how-to-read-a-race-card',
+    file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
+    mustInclude: [
+      { re: /source="racing-for-newcomers-how-to-read-a-race-card-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my how-to-read-a-race-card checklist"/, label: 'concrete how-to-read-a-race-card-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source=\{`racing-for-newcomers-\$\{spoke\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+race\+card\+field\+chart\?s=racing-for-newcomers-how-to-read-a-race-card/, label: 'laminated horse race-card-field-chart search hop (matches on-page distance / class / weights copy; unique vs laminated+horse+barn+newcomer+race+card+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+form\+line\+card\?s=racing-for-newcomers-how-to-read-a-race-card/, label: 'horse stall-door form-line-card search hop (matches on-page past-performance / box-score copy; unique vs horse+stall+door+paddock+parade+card)' },
+      { re: /amazon-brand\/equine\+program\+literacy\+handbook\?s=racing-for-newcomers-how-to-read-a-race-card/, label: 'equine program-literacy-handbook search hop (matches on-page spectator / non-wagering copy; unique vs equine+racing+silks+literacy+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+barn\+newcomer\+race\+card\+chart|horse\+stall\+door\+paddock\+parade\+card|equine\+racing\+silks\+literacy\+handbook|laminated\+horse\+yearling\+sale\+catalog\+chart|horse\+stall\+door\+rna\+clearance\+card|equine\+bloodstock\+agent\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop racing-for-newcomers-hub / racing-bloodstock kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-race-card-field-chart / horse-stall-door-form-line-card / equine-program-literacy-handbook searches' },
+    ],
+    why: 'Money path leftover after #1423: horses.com /racing/bloodstock is on main. Remaining horses.com Triple Crown leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/racing-for-newcomers/how-to-read-a-race-card commercial spoke had sidebar EmailCapture only (source racing-for-newcomers-<slug>, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete how-to-read-a-race-card-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page race-card-field / form-line / program-literacy copy (a laminated horse race-card-field chart so the distance / class / weights notes are posted on the stall door, a horse stall-door form-line card so the past-performance / box-score notes are labeled at the barn, an equine program-literacy handbook so the spectator / non-wagering grounding is a physical barn book), never a placeholder ASIN, a sibling racing-for-newcomers-hub kitchen hop, a racing-bloodstock hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1423 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
