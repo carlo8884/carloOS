@@ -907,6 +907,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'pony-of-the-americas' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the pony-of-the-americas checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Pony of the Americas checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-iowa-1954-boomhower-chart,
+                  horse-stall-door-leopard-complex-spot-card, and
+                  equine-first-owner-pony-americas-handbook notes
+                  that match the Iowa-1954 Boomhower origin,
+                  leopard-complex spotting, and first-time-owner
+                  copy on this page — a laminated horse Iowa-1954
+                  Boomhower chart so the Shetland-Appaloosa-cross /
+                  children&apos;s-show-pony notes are posted on the
+                  stall door (not a Shetland-Bronze-Age hop, not a
+                  Welsh-section-ABCD hop), a horse stall-door
+                  leopard-complex-spot card so the LP / PATN1 /
+                  spotting notes are labeled at the barn (not a
+                  seaweed-heather hop, not a USDF-level hop), and
+                  an equine first-owner pony-americas handbook so
+                  the YES-with-caveats / ERU / CSNB grounding is a
+                  physical barn book (not a first-owner-shetland-pony
+                  handbook, not a double-bridle hop). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Pony of the Americas checklist"
+                  subtitle="Email the Iowa-1954 Boomhower chart, leopard-complex-spot card, and first-owner handbook notes. No spam."
+                  ctaText="Email my pony-of-the-americas checklist"
+                  source="breed-pony-of-the-americas-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -1674,6 +1715,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+shetland+pony+handbook?s=breed-shetland-pony"
                     amazonLabel="Browse equine first-owner shetland-pony handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'pony-of-the-americas' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the pony-of-the-americas barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Iowa-1954 Boomhower origin, leopard-complex
+                  spotting, and first-time-owner copy — a laminated
+                  horse Iowa-1954 Boomhower chart, a horse stall-door
+                  leopard-complex-spot card, and an equine first-owner
+                  pony-americas handbook. Educational barn searches
+                  only. They are not a ranked tack list, they are
+                  not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying
+                  purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+iowa+1954+boomhower+chart?s=breed-pony-of-the-americas"
+                    amazonLabel="Browse laminated horse Iowa-1954 Boomhower charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+leopard+complex+spot+card?s=breed-pony-of-the-americas"
+                    amazonLabel="Browse horse stall-door leopard-complex-spot cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+pony+americas+handbook?s=breed-pony-of-the-americas"
+                    amazonLabel="Browse equine first-owner pony-americas handbooks on Amazon →"
                   />
                 </div>
               </div>
