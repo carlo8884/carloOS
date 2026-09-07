@@ -2173,6 +2173,49 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'paso-fino' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the paso-fino checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Paso Fino checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-caribbean-jennet-1500s-chart,
+                  horse-stall-door-paso-fino-plantation-card, and
+                  equine-first-owner-paso-fino-handbook notes that
+                  match the Spanish Jennet Caribbean 1500s origin in
+                  Puerto Rico / Colombia, the inherited evenly-timed
+                  lateral four-beat paso fino gait for plantation
+                  work, and first-time-owner notes on this page — a
+                  laminated horse Caribbean Jennet 1500s chart so the
+                  Caribbean / Jennet / 1500s notes are posted on the
+                  stall door (not an Ozark-fox-trot hop, not a
+                  Carthusian-Iberian hop), a horse stall-door paso
+                  fino plantation card so the plantation / four-beat
+                  / trail notes are labeled at the barn (not a
+                  Missouri-1800s-walker hop, not a TWHBEA-running-walk
+                  hop), and an equine first-owner paso-fino handbook
+                  so the NO-typically / DSLD / PSSM2 / navicular /
+                  EMS grounding is a physical barn book (not a
+                  first-owner-missouri-fox-trotter handbook, not a
+                  first-owner-andalusian handbook). Educational barn
+                  checklist, not a ranked tack list, not a substitute
+                  for a veterinarian. Horses.com does not sell
+                  insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Paso Fino checklist"
+                  subtitle="Email the Caribbean Jennet 1500s chart, paso fino plantation card, and first-owner handbook notes. No spam."
+                  ctaText="Email my paso-fino checklist"
+                  source="breed-paso-fino-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -4075,6 +4118,45 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+missouri+fox+trotter+handbook?s=breed-missouri-fox-trotter"
                     amazonLabel="Browse equine first-owner missouri-fox-trotter handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'paso-fino' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the paso-fino barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Spanish Jennet Caribbean 1500s origin in Puerto
+                  Rico / Colombia, the inherited evenly-timed lateral
+                  four-beat paso fino gait for plantation work, and
+                  first-time-owner notes — a laminated horse
+                  Caribbean Jennet 1500s chart, a horse stall-door
+                  paso fino plantation card, and an equine first-owner
+                  paso-fino handbook. Educational barn searches only.
+                  They are not a ranked tack list, they are not a
+                  dressage-overview hop, they are not a first-aid-kit
+                  hop, and they do not replace a veterinarian.
+                  Horses.com does not sell insurance. Horses.com earns
+                  a commission on qualifying purchases at no extra
+                  cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+caribbean+jennet+1500s+chart?s=breed-paso-fino"
+                    amazonLabel="Browse laminated horse Caribbean Jennet 1500s charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+paso+fino+plantation+card?s=breed-paso-fino"
+                    amazonLabel="Browse horse stall-door paso fino plantation cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+paso+fino+handbook?s=breed-paso-fino"
+                    amazonLabel="Browse equine first-owner paso-fino handbooks on Amazon →"
                   />
                 </div>
               </div>
