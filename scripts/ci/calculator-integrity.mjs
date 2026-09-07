@@ -2887,6 +2887,26 @@ const CALCULATORS = [
     why: 'Money path leftover after #1368: dog.com /reviews/best-dental-chews is on main. This existing dog.com /reviews/best-dog-beds commercial spoke had sidebar EmailCapture only (source review-dog-beds, not under-hero) plus live Big Barker / Casper Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dog-bed-checklist offer matching on-page 12–14 hour sleep / Big Barker 7-inch AJVR / Casper washable-cover / Furhaven budget copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1368 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-dry-dog-food',
+    file: 'apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dry-dog-food-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dry-dog-food checklist"/, label: 'concrete dry-dog-food-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source="review-best-dry-dog-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/royal\+canin\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Royal Canin Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Purina Pro Plan Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/hills\+science\+diet\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Hill\'s Science Diet Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/orijen\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Orijen Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1369: dog.com /reviews/best-dog-beds is on main. This existing dog.com /reviews/best-dry-dog-food commercial spoke had sidebar EmailCapture only (source review-best-dry-dog-food, not under-hero) plus live Royal Canin / Purina / Hill\'s / Orijen Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dry-dog-food-checklist offer matching on-page WSAVA / Royal Canin feeding-trial / Purina value / Hill\'s prescription / FDA grain-free DCM copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1369 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
