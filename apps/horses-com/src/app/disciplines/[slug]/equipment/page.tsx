@@ -288,6 +288,48 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             </div>
           ) : null}
 
+          {data.slug === 'eventing' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the eventing-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Eventing-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-beta-level-three-protector-chart,
+                stall-door-medical-armband-card, and
+                equine-stud-kit-xc-handbook notes that match the
+                BETA Level 3 body protector, medical armband, and
+                stud-kit copy on this page — a laminated horse
+                BETA-level-three-protector chart so the USEF EV114
+                / body-protector notes are posted on the stall
+                door (not a USEA-eventing-level chart, not a
+                close-contact-forward-flap chart), a horse
+                stall-door medical-armband card so the
+                wristband / current-medical-info notes are
+                labeled at the barn (not a CCI5-event card, not
+                a shaped-jump-pad card), and an equine stud-kit-
+                xc handbook so the screw-in-stud / grass-grip
+                grounding is a physical barn book (not a
+                frangible-pin handbook, not a
+                figure-eight-grackle-bridle handbook).
+                Educational barn checklist, not a ranked tack
+                list, not a first-aid-kit hop, and not a
+                substitute for a veterinarian. Horses.com does
+                not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Eventing-equipment checklist"
+                subtitle="Email the BETA-level-three-protector chart, medical-armband card, and stud-kit-xc handbook notes. No spam."
+                ctaText="Email my eventing-equipment checklist"
+                source="discipline-equipment-eventing-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
           <p dangerouslySetInnerHTML={{ __html: data.overview }} />
@@ -609,6 +651,62 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+figure+eight+grackle+bridle+handbook?s=discipline-equipment-show-jumping"
                     amazonLabel="Browse equine figure-eight-grackle-bridle handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {data.slug === 'eventing' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse BETA-level-three-protector chart /
+                  horse stall-door medical-armband card /
+                  equine stud-kit-xc handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/eventing
+                  overview / show-jumping-equipment hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the eventing-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page BETA Level 3 body protector, medical
+                  armband, and stud-kit copy — a laminated
+                  horse BETA-level-three-protector chart, a
+                  horse stall-door medical-armband card, and
+                  an equine stud-kit-xc handbook. Educational
+                  barn searches only. They are not a ranked
+                  tack list, they are not an
+                  eventing-overview / show-jumping-equipment
+                  hop, they are not a first-aid-kit hop, they
+                  are not a child toothbrush hop, and they do
+                  not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a
+                  commission on qualifying purchases at no
+                  extra cost to you. Empty Chewy buttons stay
+                  hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+beta+level+three+protector+chart?s=discipline-equipment-eventing"
+                    amazonLabel="Browse laminated horse BETA-level-three-protector charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+medical+armband+card?s=discipline-equipment-eventing"
+                    amazonLabel="Browse horse stall-door medical-armband cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+stud+kit+xc+handbook?s=discipline-equipment-eventing"
+                    amazonLabel="Browse equine stud-kit-xc handbooks on Amazon →"
                   />
                 </div>
               </div>
