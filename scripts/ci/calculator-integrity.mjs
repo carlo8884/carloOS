@@ -6694,6 +6694,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1533: vets.co remaining-med templates are on main. Dog other money is empty (hop-ban flea/heartworm/ozempic/prescription-diets + FAQ/glossary). Ferret handwritten reviews already Pattern B; aging-ferret-care stays held. This existing vets.co /symptoms/[slug] programmatic remaining-sign template (hub /symptoms already Pattern B on main) had no EmailCapture and no amazon-brand kitchen hops (existing AffiliateDisclosure sits above the telehealth CTA only). Keep existing telehealth / find-a-vet / insurance CTAs; add under-hero capture; add amazon-brand kitchen hops matching on-page ER-NOW / same-day / schedule / monitor / red-flag / AVMA-AAHA-ACVIM copy (a laminated pet symptoms-spoke urgency chart so this remaining-sign map is posted on the fridge, a fridge symptoms-spoke flag card so the red-flag notes are labeled in the kitchen, a veterinary symptoms-spoke handbook so the AVMA / AAHA / ACVIM row is a physical kitchen book), never a placeholder ASIN, a sibling symptoms-hub hop, a diagnostics-spoke hop, a first-aid-kit hop, a crate hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Vets.co does not sell insurance. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1533 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'ferret · aging-ferret-care',
+    file: 'apps/ferret-com/src/app/health/aging-ferret-care/page.tsx',
+    mustInclude: [
+      { re: /source="health-aging-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aging-ferret checklist"/, label: 'concrete aging-ferret-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source="health-aging"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+ferret\+senior\+spoke\+qol\+chart\?s=health-aging/, label: 'laminated ferret senior-spoke-qol-chart search hop (matches on-page HHHHHMM / AVMA QoL copy; unique vs laminated+ferret+health+triage+chart)' },
+      { re: /amazon-brand\/ferret\+fridge\+senior\+spoke\+monitor\+card\?s=health-aging/, label: 'ferret fridge senior-spoke-monitor-card search hop (matches on-page 3-6-month senior monitoring cadence; unique vs ferret+fridge+health+library+card)' },
+      { re: /amazon-brand\/mustelid\+senior\+spoke\+handbook\?s=health-aging/, label: 'mustelid senior-spoke-handbook search hop (matches on-page Merck / AEMV / Quesenberry grounding; unique vs mustelid+health+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+health\+triage\+chart|ferret\+fridge\+health\+library\+card|mustelid\+health\+reference\+handbook|carnivore\+care|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b|dose)/, label: 'never hop health-hub kitchen kits, carnivore-care hops, crate hops, first-aid hops, flea / heartworm / vaccine hops, or Rx / dose product hops — this page hops only laminated-ferret-senior-spoke-qol-chart / ferret-fridge-senior-spoke-monitor-card / mustelid-senior-spoke-handbook searches' },
+    ],
+    why: 'Money path leftover after #1534: vets.co /symptoms/[slug] remaining-sign template is on main. Dog other money is empty. Ferret handwritten reviews already Pattern B. Vets remaining-diagnostics / remaining-specialists / remaining-med / remaining-symptoms are on main. Horses /breeds/* exhausted; racing SKIP-class. This existing ferret.com /health/aging-ferret-care page (held until nothing else unique) had sidebar EmailCapture only (source health-aging, not under-hero) and no amazon-brand kitchen hops (existing AffiliateDisclosure sits above Marshall floor-sleep-sack ReviewCard). Keep the existing sidebar capture and existing Marshall CTA; add under-hero capture; add amazon-brand kitchen hops matching on-page HHHHHMM / AVMA QoL / 3-6-month monitoring / Merck-AEMV-Quesenberry copy (a laminated ferret senior-spoke QoL chart so the seven-domain map is posted on the fridge, a fridge senior-spoke monitor card so the bloodwork cadence is labeled in the kitchen, a mustelid senior-spoke handbook so the Merck / AEMV row is a physical kitchen book), never a placeholder ASIN, a sibling health-hub hop, a carnivore-care hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for an exotic-mammal veterinarian. Directory import left untouched. Do not re-open #1165 / #1251–#1534 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

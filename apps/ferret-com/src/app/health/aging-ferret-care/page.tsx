@@ -13,6 +13,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
 } from '@carloOS/ui'
@@ -211,6 +212,47 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aging-ferret checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aging-ferret checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-senior-spoke-qol-chart,
+              fridge-senior-spoke-monitor-card, and
+              mustelid-senior-spoke-handbook notes that
+              match this senior-care page — the HHHHHMM /
+              AVMA quality-of-life copy, the 3–6-month
+              senior monitoring cadence, and the Merck /
+              AEMV / Quesenberry grounding — a laminated
+              ferret senior-spoke QoL chart so the
+              Hurt / Hunger / Hydration / Hygiene /
+              Happiness / Mobility / More-good-days map
+              is posted on the fridge (not a health-hub
+              triage chart), a fridge senior-spoke
+              monitor card so the 3–6-month bloodwork
+              notes are labeled in the kitchen (not a
+              hub library card), and a mustelid
+              senior-spoke handbook so the Merck / AEMV
+              row is a physical kitchen book (not a hub
+              health handbook). Educational kitchen
+              checklist, not a ranked product list, not
+              a medication hop, not a substitute for an
+              exotic-mammal veterinarian. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Aging-ferret checklist"
+              subtitle="Email the QoL chart, monitor card, and senior-spoke handbook notes. No spam."
+              ctaText="Email my aging-ferret checklist"
+              source="health-aging-under-hero"
+            />
+          </div>
 
           <DropCap>
             The senior years are where the structural decisions made earlier
@@ -592,6 +634,51 @@ export default function FerretAgingPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-floor-sleep-sack"
           />
+
+          {/* Money path — live amazon-brand kitchen hops
+              matching on-page HHHHHMM / monitoring /
+              Merck-AEMV copy. Unique vs the ferret
+              health-hub kitchen. Keep the existing
+              Marshall floor-sleep-sack CTA. Educational
+              only — never a flea hop, never an Rx. */}
+          <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aging-ferret kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page HHHHHMM / AVMA quality-of-life
+              copy, the 3–6-month senior monitoring
+              cadence, and the Merck / AEMV /
+              Quesenberry grounding — a laminated ferret
+              senior-spoke QoL chart, a fridge
+              senior-spoke monitor card, and a mustelid
+              senior-spoke handbook. Educational kitchen
+              searches only. They are not a ranked
+              product list, they are not a health-hub
+              hop, they are not a carnivore-care hop,
+              they are not a flea / heartworm / vaccine
+              hop, and they do not replace an
+              exotic-mammal veterinarian. Ferret.com
+              earns a commission on qualifying purchases
+              at no extra cost to you.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+            <div className="flex flex-col gap-3 mt-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+senior+spoke+qol+chart?s=health-aging"
+                amazonLabel="Browse laminated ferret senior-spoke QoL charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+senior+spoke+monitor+card?s=health-aging"
+                amazonLabel="Browse fridge ferret senior-spoke monitor cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+senior+spoke+handbook?s=health-aging"
+                amazonLabel="Browse mustelid senior-spoke handbooks on Amazon →"
+              />
+            </div>
+          </div>
           <p>
             For a senior eating less because of dental pain, insulinoma-related lethargy, post-surgical recovery, or end-of-life inappetence, a high-calorie meat-based paste (such as Oxbow Carnivore Care or Hill&apos;s a/d) is the standard tool for syringe-feeding. This is a vet-directed product: amount, frequency, and the underlying condition all need a clinician&apos;s guidance. It does not treat the underlying disease — it maintains caloric intake while that disease is being addressed, or while quality of life remains acceptable in palliative care. Note that some supportive-feeding diets (e.g. Hill&apos;s a/d) are prescription-only; ask your veterinarian.
           </p>
