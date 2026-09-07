@@ -1236,6 +1236,46 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'irish-sport-horse' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the irish-sport-horse checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Irish Sport Horse checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-irish-draught-thoroughbred-chart,
+                  horse-stall-door-horse-sport-ireland-eventing-card, and
+                  equine-first-owner-irish-sport-horse-handbook notes that
+                  match the Horse Sport Ireland / Irish Draught × Thoroughbred
+                  origin, three-decade international-eventing dominance, and
+                  first-time-owner copy on this page — a laminated horse Irish
+                  Draught Thoroughbred chart so the Horse-Sport-Ireland /
+                  Irish-Draught-cross notes are posted on the stall door
+                  (not a Cleveland-Yorkshire-pack hop, not a Rathore-Marwar-ear
+                  hop), a horse stall-door Horse Sport Ireland eventing card
+                  so the eventing / show-jumping / hunting notes are labeled
+                  at the barn (not a North-Yorkshire-driving hop, not a
+                  Rajasthan-cavalry hop), and an equine first-owner
+                  irish-sport-horse handbook so the NO-typically / OCD /
+                  PSSM2 / WFFS-warmblood / suspensory-desmitis / EGUS-eventer
+                  grounding is a physical barn book (not a first-owner-cleveland-bay
+                  handbook, not a double-bridle hop). Educational barn
+                  checklist, not a ranked tack list, not a substitute for a
+                  veterinarian. Horses.com does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Irish Sport Horse checklist"
+                  subtitle="Email the Irish Draught Thoroughbred chart, Horse Sport Ireland eventing card, and first-owner handbook notes. No spam."
+                  ctaText="Email my irish-sport-horse checklist"
+                  source="breed-irish-sport-horse-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -2300,6 +2340,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+cleveland+bay+handbook?s=breed-cleveland-bay"
                     amazonLabel="Browse equine first-owner cleveland-bay handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'irish-sport-horse' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the irish-sport-horse barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Horse Sport Ireland / Irish Draught × Thoroughbred origin,
+                  three-decade international-eventing dominance, and
+                  first-time-owner copy — a laminated horse Irish Draught
+                  Thoroughbred chart, a horse stall-door Horse Sport Ireland
+                  eventing card, and an equine first-owner irish-sport-horse
+                  handbook. Educational barn searches only. They are not a
+                  ranked tack list, they are not a dressage-overview
+                  hop, they are not a first-aid-kit hop, and they
+                  do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+irish+draught+thoroughbred+chart?s=breed-irish-sport-horse"
+                    amazonLabel="Browse laminated horse Irish Draught Thoroughbred charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+horse+sport+ireland+eventing+card?s=breed-irish-sport-horse"
+                    amazonLabel="Browse horse stall-door Horse Sport Ireland eventing cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+irish+sport+horse+handbook?s=breed-irish-sport-horse"
+                    amazonLabel="Browse equine first-owner irish-sport-horse handbooks on Amazon →"
                   />
                 </div>
               </div>
