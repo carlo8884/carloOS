@@ -3571,6 +3571,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1399: horses.com /racing/off-track-thoroughbred-aftercare is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/racehorse-training-and-conditioning commercial spoke had sidebar EmailCapture only (source racing-training, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete racehorse-training-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page timed-work-breeze / gate-training / hisa-aaep-welfare copy (a laminated horse workout-breeze chart so the Equibase / clocker notes are posted on the stall door, a horse stall-door gate-school card so the starter-approval / break notes are labeled at the barn, an equine HISA welfare handbook so the ADMC / racetrack-safety grounding is a physical barn book), never a placeholder ASIN, a sibling aftercare kitchen hop, a breeders-cup hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1399 / crate-size / stocking.',
   },
   {
+    id: 'horses · the-people-of-racing',
+    file: 'apps/horses-com/src/app/racing/the-people-of-racing/page.tsx',
+    mustInclude: [
+      { re: /source="racing-the-people-of-racing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my people-of-racing checklist"/, label: 'concrete people-of-racing-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="racing-people"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+owner\+trainer\+jockey\+chart\?s=racing-people/, label: 'laminated horse owner-trainer-jockey-chart search hop (matches on-page connections / silks copy; unique vs laminated+horse+workout+breeze+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+steward\+official\+card\?s=racing-people/, label: 'horse stall-door steward-official-card search hop (matches on-page objections / clerk-of-scales copy; unique vs horse+stall+door+gate+school+card)' },
+      { re: /amazon-brand\/equine\+backstretch\+role\+handbook\?s=racing-people/, label: 'equine backstretch-role-handbook search hop (matches on-page groom / hot-walker / valet copy; unique vs equine+hisa+welfare+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+workout\+breeze\+chart|horse\+stall\+door\+gate\+school\+card|equine\+hisa\+welfare\+handbook|laminated\+horse\+taa\+aftercare\+directory\+chart|horse\+stall\+door\+ottb\+letdown\+card|equine\+thoroughbred\+makeover\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop training / aftercare kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-owner-trainer-jockey-chart / horse-stall-door-steward-official-card / equine-backstretch-role-handbook searches' },
+    ],
+    why: 'Money path leftover after #1400: horses.com /racing/racehorse-training-and-conditioning is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/the-people-of-racing commercial spoke had sidebar EmailCapture only (source racing-people, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete people-of-racing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page connections-owner-trainer / steward-raceday-officials / backstretch-groom-exercise-rider copy (a laminated horse owner-trainer-jockey chart so the connections / silks notes are posted on the stall door, a horse stall-door steward-official card so the objections / clerk-of-scales notes are labeled at the barn, an equine backstretch role handbook so the groom / hot-walker / valet grounding is a physical barn book), never a placeholder ASIN, a sibling training kitchen hop, an aftercare hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1400 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
