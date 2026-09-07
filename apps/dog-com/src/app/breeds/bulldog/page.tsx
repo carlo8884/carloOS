@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -45,6 +45,46 @@ export default function BulldogPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the bulldog checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            English Bulldog checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-1835-bull-baiting-ban-chart,
+            dog-fridge-bulldog-75f-walk-card, and
+            canine-first-owner-english-bulldog-handbook notes
+            that match the 1835 bull-baiting ban / companion
+            reshape, the no-walks-above-75°F / no-exercise-
+            above-70°F heat rules, and first-time-owner notes
+            on this page — a laminated dog 1835 bull-baiting
+            ban chart so the companion-reshape notes are
+            posted on the fridge (not a Bullenbeisser 1890s
+            chart, not a Paris 1800s lace chart), a fridge
+            Bulldog 75°F walk card so the heat-stroke survival
+            notes are labeled in the kitchen (not a Frenchie
+            skin-fold card, not a cooling-mat hop), and a
+            first-owner English Bulldog handbook so the
+            YES-typically / BOAS / 8–10-year grounding is a
+            physical kitchen book (not a first-owner Boxer
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="English Bulldog checklist"
+            subtitle="Email the 1835 bull-baiting-ban chart, 75°F walk card, and first-owner handbook notes. No spam."
+            ctaText="Email my bulldog checklist"
+            source="breed-bulldog-under-hero"
+          />
+        </div>
+
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Before You Buy — Be Informed</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>English Bulldogs have a life expectancy of 8-10 years — lower than most breeds. Many require surgical intervention for breathing (BOAS surgery), reproductive (cesarean section is nearly universal — Bulldogs cannot typically whelp naturally), and orthopedic issues. Pet insurance before the first vet visit is not optional for this breed.</p>
@@ -58,10 +98,46 @@ export default function BulldogPage() {
 
         <h2>What to Look for in a Breeder</h2>
         <DropCap>Responsible Bulldog breeders select for health over extreme conformation — slightly wider nostrils, longer muzzle (relative to breed standard), and evidence of BOAS testing in the lines. Ask whether breeding dogs have had BOAS assessments. Ask about cesarean history. Ask about longevity in the lines. Avoid breeders who breed for the most extreme conformation — the flattest face and most wrinkled body is not the healthiest animal.</DropCap>
+        <p>The companion story starts after 1835: English bull-baiting was outlawed, and the 1200s baiting dog was reshaped into today&apos;s sofa companion. That 1835 ban / companion-reshape history is why an English Bulldog still wants cool air and a short dawn walk — not a Schutzhund afternoon. English Bulldogs are typically first-time-owner friendly only when the household accepts the 75°F walk cap, 2–3-day fold cleaning, and the BOAS / heat / 8–10-year load from day one.</p>
 
         <CalloutBox variant="warning" title="Heat is the leading killer">
           A Bulldog exercised at 80°F can develop fatal heat stroke within 15 minutes. Air conditioning, walks restricted to dawn and dusk in summer, and never leaving a Bulldog in a car for any length of time are not preferences — they are survival measures. The breed&apos;s compacted airway prevents the panting that cools other dogs.
         </CalloutBox>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the English Bulldog home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            1835 bull-baiting ban / companion reshape, the
+            no-walks-above-75°F heat rules, and first-time-
+            owner notes — a laminated dog 1835 bull-baiting
+            ban chart, a fridge Bulldog 75°F walk card, and
+            a first-owner English Bulldog handbook.
+            Educational kitchen searches only. They are not a
+            ranked product list, they are not a crate hop,
+            they are not a cooling-mat hop, and they do not
+            replace a veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+1835+bull+baiting+ban+chart?s=breed-bulldog"
+              amazonLabel="Browse laminated dog 1835 bull-baiting-ban charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+bulldog+75f+walk+card?s=breed-bulldog"
+              amazonLabel="Browse fridge Bulldog 75°F walk cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+english+bulldog+handbook?s=breed-bulldog"
+              amazonLabel="Browse first-owner English Bulldog handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
