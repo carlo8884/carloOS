@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dachshund Breed Guide — IVDD Risk, Ramps Required | Dog.com', description: 'Dachshunds have a 25% lifetime risk of IVDD spinal disc disease. Ramps are not optional — they prevent the jumping that herniated discs.', path: '/breeds/dachshund', type: 'article' })
@@ -39,6 +39,46 @@ export default function DachshundPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dachshund checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dachshund checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-dachshund-25pct-ivdd-chart,
+            dog-fridge-dachshund-20deg-ramp-card, and
+            canine-first-owner-dachshund-handbook notes that
+            match the 25% lifetime IVDD risk, the ~20-degree
+            non-slip ramp gradient, and first-time-owner notes
+            on this page — a laminated dog Dachshund 25% IVDD
+            chart so the disc-event odds are posted on the
+            fridge (not an 1835 bull-baiting-ban chart, not a
+            Bullenbeisser 1890s chart), a fridge Dachshund
+            20-degree ramp card so the gentle-gradient notes
+            are labeled in the kitchen (not a generic dog-ramp
+            hop, not a recovery-crate hop), and a first-owner
+            Dachshund handbook so the YES-typically / harness-
+            not-collar / lean-BCS grounding is a physical
+            kitchen book (not a first-owner English Bulldog
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dachshund checklist"
+            subtitle="Email the 25% IVDD chart, 20-degree ramp card, and first-owner handbook notes. No spam."
+            ctaText="Email my dachshund checklist"
+            source="breed-dachshund-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in 1600s Germany: Dachshunds were developed as badger dogs — to follow a sett underground and fight. That long-spine / short-leg history is why a household Dachshund still needs ramps, not a crate-only afternoon. Dachshunds are typically first-time-owner friendly when the household accepts ramps from day one, a harness instead of a neck collar, and the 25% IVDD load.</p>
+
         <BreedHealthCard name="Intervertebral Disc Disease (IVDD)" riskLevel="very-high"
           description="Dachshunds are the breed most commonly affected by IVDD — approximately 25% will experience at least one disc event in their lifetime. Their long spine and chondrodystrophic build causes premature disc mineralization. A disc can herniate suddenly — often triggered by jumping from furniture — compressing the spinal cord. Severity ranges from back pain (Grade 1) to complete hind limb paralysis (Grade 5). Speed matters: the neurological recovery window after paralysis is 24–48 hours. Every Dachshund owner should know the emergency signs and have the nearest 24-hour vet's number saved before they ever need it."
           signs={['Back pain — yelping when touched, hunched posture', 'Reluctance to jump or climb stairs', 'Wobbly or crossing hind legs', 'Hind leg weakness or stumbling', 'Inability to walk on hind legs — emergency', 'Loss of bladder or bowel control — emergency']}
@@ -60,6 +100,41 @@ export default function DachshundPage() {
 
         <h2>Back Pain Signs — Learn These Before an Emergency</h2>
         <p>Dachshund owners should be able to recognize IVDD signs before they become Grade 4 or 5 emergencies. Early signs: yelping when picked up or when touched along the spine, reluctance to jump (may refuse a ramp they previously used willingly), hunched back posture, stiffness after rest. These signs in a Dachshund should prompt a same-day veterinary call — they are not "just stiff from sleeping wrong." Catching and treating at Grade 1–2 allows conservative management; waiting until Grade 3–5 means surgery and a tighter recovery window.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Dachshund home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            25% lifetime IVDD risk, the ~20-degree non-slip
+            ramp gradient, and first-time-owner notes — a
+            laminated dog Dachshund 25% IVDD chart, a fridge
+            Dachshund 20-degree ramp card, and a first-owner
+            Dachshund handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a generic
+            dog-ramp hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying purchases
+            at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+dachshund+25pct+ivdd+chart?s=breed-dachshund"
+              amazonLabel="Browse laminated dog Dachshund 25% IVDD charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+dachshund+20deg+ramp+card?s=breed-dachshund"
+              amazonLabel="Browse fridge Dachshund 20-degree ramp cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+dachshund+handbook?s=breed-dachshund"
+              amazonLabel="Browse first-owner Dachshund handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
