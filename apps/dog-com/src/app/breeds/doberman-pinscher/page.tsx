@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide — DCM Screening, vWD | Dog.com', description: 'Dobermans have the highest DCM rate of any breed (up to 58% by age 7). Annual Holter + echo is required.', path: '/breeds/doberman-pinscher', type: 'article' })
@@ -43,7 +43,49 @@ export default function DobermanPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-                <BreedHealthCard name="Dilated Cardiomyopathy (DCM)" riskLevel="very-high"
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the doberman-pinscher checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Doberman Pinscher checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-doberman-58pct-dcm-chart,
+            dog-fridge-doberman-holter-echo-card, and
+            canine-first-owner-doberman-handbook notes that
+            match the 40–58% DCM-by-age-7 rate, the annual
+            Holter-plus-echo-from-age-3 protocol, and
+            first-time-owner notes on this page — a laminated
+            dog Doberman 58% DCM chart so the occult-phase
+            sudden-death odds are posted on the fridge (not a
+            Chukchi 100-mile chart, not a Rottweiler
+            osteosarcoma chart), a fridge Doberman Holter
+            echo card so the age-3 screening notes are
+            labeled in the kitchen (not a Boxer Holter-ARVC
+            card, not a 6-foot coyote-roller card), and a
+            first-owner Doberman handbook so the NO-typically
+            / vWD-before-surgery / 10–13-year grounding is a
+            physical kitchen book (not a first-owner Siberian
+            Husky handbook). Educational kitchen checklist,
+            not a ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Doberman Pinscher checklist"
+            subtitle="Email the 58% DCM chart, Holter-plus-echo card, and first-owner handbook notes. No spam."
+            ctaText="Email my doberman-pinscher checklist"
+            source="breed-doberman-pinscher-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in 1860s Apolda: Louis Dobermann needed a tax-collector / night-watch dog, and that power / loyalty history is why a household Doberman still needs annual Holter-plus-echo from age 3, not a crate-only afternoon. Doberman Pinschers are typically first-time-owner unfriendly — NO-typically — unless the household already commits to the age-3 cardiac protocol, a vWD DNA test before any surgery, and the 40–58% DCM load.</p>
+
+        <BreedHealthCard name="Dilated Cardiomyopathy (DCM)" riskLevel="very-high"
           description="Doberman Pinschers have the highest prevalence of DCM of any breed studied — multiple studies report 40–58% of Dobermans develop DCM by age 7, and nearly all by age 10. DCM in Dobermans has two phases: the occult (preclinical) phase where the heart muscle is weakening but no clinical signs are present, and the overt phase where CHF or sudden cardiac death occurs. The most dangerous aspect: sudden cardiac death from ventricular tachycardia or fibrillation can occur in occult-phase dogs with no warning. Annual screening is not precautionary — it is the standard of care for this breed."
           signs={['May have no signs until sudden collapse', 'Exercise intolerance', 'Episodic weakness or syncope', 'Cough when CHF develops', 'Abdominal distension (ascites in right-sided CHF)']}
           management="Annual echocardiogram from age 3 to detect cardiac enlargement. Annual 24-hour Holter monitor to detect ventricular premature contractions (VPCs) — the electrical warning of DCM before structural changes appear. Pimobendan started when occult DCM is detected. ACE inhibitor added at first sign of cardiac enlargement. DNA test available for one PDK4 mutation (identifies some but not all affected dogs — negative test does not rule out DCM)." />
@@ -69,6 +111,41 @@ export default function DobermanPage() {
 
         <h2>Exercise and Activity</h2>
         <p>Dobermans are high-energy working dogs that require significant daily exercise — 1–2 hours of vigorous activity for young adults. Mental stimulation (obedience training, scent work, protection sports) is as important as physical exercise for this highly intelligent breed. Without adequate mental and physical outlets, Dobermans develop destructive behaviors and anxiety. However: once DCM is detected, exercise should be moderated — strenuous activity in dogs with significant VPCs or structural cardiac disease carries risk of triggering arrhythmia. Discuss exercise parameters with the cardiologist once cardiac disease is identified.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Doberman Pinscher home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            40–58% DCM-by-age-7 rate, the annual Holter-plus-
+            echo-from-age-3 protocol, and first-time-owner
+            notes — a laminated dog Doberman 58% DCM chart, a
+            fridge Doberman Holter echo card, and a first-
+            owner Doberman handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a crate hop, they are not a
+            pimobendan hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying purchases
+            at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+doberman+58pct+dcm+chart?s=breed-doberman"
+              amazonLabel="Browse laminated dog Doberman 58% DCM charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+doberman+holter+echo+card?s=breed-doberman"
+              amazonLabel="Browse fridge Doberman Holter echo cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+doberman+handbook?s=breed-doberman"
+              amazonLabel="Browse first-owner Doberman handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
