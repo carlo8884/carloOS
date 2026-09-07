@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -108,6 +108,45 @@ export default function GoldenRetrieverBreedPage() {
         <span className="text-brand-text-mid font-medium">Golden Retriever</span>
       </nav>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the golden-retriever checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Golden Retriever checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-tweedmouth-highland-retrieve-chart,
+            dog-slicker-brush-golden-double-coat, and
+            canine-first-owner-golden-retriever-handbook notes that
+            match the mid-1800s Lord Tweedmouth / Scottish Highland
+            waterfowl retrieve story, the dense double coat that sheds
+            year-round and wants 2–3× weekly brushing, and first-time-
+            owner notes on this page — a laminated dog Tweedmouth
+            Highland retrieve chart so the Guisachan / waterfowl notes
+            are posted on the fridge (not a breeds-hub profile chart,
+            not a lymph-node anatomy chart), a slicker for the Golden
+            double coat so spring-and-fall blowouts stay off the sofa
+            (not a generic slicker-brush-dog-grooming hop, not a
+            crate hop), and a first-owner Golden Retriever handbook
+            so the YES-typically family-retriever grounding is a
+            physical kitchen book (not a canine-breeds-reference
+            handbook). Educational kitchen checklist, not a ranked
+            product list, not a substitute for a veterinarian.
+            Dog.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Golden Retriever checklist"
+            subtitle="Email the Tweedmouth Highland retrieve chart, Golden double-coat slicker, and first-owner handbook notes. No spam."
+            ctaText="Email my golden-retriever checklist"
+            source="breed-golden-retriever-under-hero"
+          />
+        </div>
+      </section>
+
       {/* Content */}
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
@@ -116,6 +155,7 @@ export default function GoldenRetrieverBreedPage() {
 
             <h2>Overview</h2>
             <DropCap>The Golden Retriever has ranked among America&apos;s most popular dog breeds for decades — a position earned through an unmatched combination of temperament, trainability, and adaptability. Goldens are gentle with children, tolerant with strangers, responsive to training, and genuinely enthusiastic about life in a way that is infectious. They are also a breed that requires informed ownership — particularly around health monitoring as they age.</DropCap>
+            <p>The retrieve story starts in the mid-1800s Scottish Highlands: Lord Tweedmouth (Dudley Marjoribanks) selected yellow retrieving dogs at Guisachan to work waterfowl. That Tweedmouth / Highland retrieve history is why today&apos;s Golden still wants a fetch, a swim, and a job — not a crate-only afternoon.</p>
 
             <CalloutBox variant="evidence" title="Evidence-anchored">
               Hip dysplasia screening in Goldens uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> hip evaluation as the long-standing US standard. Buy only from breeders who provide OFA hip and elbow certifications on both sire and dam.
@@ -181,6 +221,42 @@ export default function GoldenRetrieverBreedPage() {
               <li><strong>Not ideal for:</strong> Owners away 10+ hours daily, those who cannot commit to exercise</li>
               <li><strong>Financial reality:</strong> Between food, routine vet care, and the real possibility of cancer treatment, Golden ownership has significant long-term financial implications. Enroll pet insurance before any conditions develop.</li>
             </ul>
+
+            <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                Shop the Golden Retriever home kit
+              </div>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                These Amazon category searches match the on-page
+                mid-1800s Lord Tweedmouth / Scottish Highland
+                waterfowl retrieve story, the dense Golden double
+                coat that sheds year-round, and first-time-owner
+                notes — a laminated dog Tweedmouth Highland retrieve
+                chart, a slicker for the Golden double coat, and a
+                first-owner Golden Retriever handbook. Educational
+                kitchen searches only. They are not a ranked product
+                list, they are not a crate hop, they are not a
+                first-aid-kit hop, and they do not replace a
+                veterinarian. Dog.com does not sell insurance.
+                Dog.com earns a commission on qualifying purchases
+                at no extra cost to you.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <div className="flex flex-col gap-3 mt-3">
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/laminated+dog+tweedmouth+highland+retrieve+chart?s=breed-golden-retriever"
+                  amazonLabel="Browse laminated dog Tweedmouth Highland retrieve charts on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
+                  amazonLabel="Browse slickers for the Golden double coat on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/canine+first+owner+golden+retriever+handbook?s=breed-golden-retriever"
+                  amazonLabel="Browse first-owner Golden Retriever handbooks on Amazon →"
+                />
+              </div>
+            </div>
 
             <h2>Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
