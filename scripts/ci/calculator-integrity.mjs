@@ -3157,6 +3157,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1381: horses.com /disciplines/western-pleasure is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/endurance-riding commercial spoke had sidebar EmailCapture only (source discipline-endurance, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete endurance-riding-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page vet-gate / 25-to-100-mile / AERC limited-distance copy (a laminated horse vet-gate recovery chart so the pulse / hydration / gut-sound notes are posted on the stall door, a horse stall-door Tevis 100 card so the 25–35 / 50–100 mile notes are labeled at the barn, an equine AERC limited-distance handbook so the introductory-ride / mentor grounding is a physical barn book — not the trail-riding equine+aerc+endurance+handbook hop), never a placeholder ASIN, a sibling trail-riding kitchen hop, a western-pleasure hop, an electrolyte hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1381 / crate-size / stocking.',
   },
   {
+    id: 'horses · reining',
+    file: 'apps/horses-com/src/app/disciplines/reining/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-reining-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my reining checklist"/, label: 'concrete reining-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-reining"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+nrha\+maneuver\+chart\?s=discipline-reining/, label: 'laminated horse NRHA maneuver-chart search hop (matches on-page sliding-stop / spin / circles copy; unique vs laminated+horse+vet+gate+recovery+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+nrha\+level\+card\?s=discipline-reining/, label: 'horse stall-door NRHA level-card search hop (matches on-page Open / Non-Pro / Level 1–4 copy; unique vs horse+stall+door+tevis+100+card)' },
+      { re: /amazon-brand\/equine\+sliding\+stop\+handbook\?s=discipline-reining/, label: 'equine sliding-stop-handbook search hop (matches on-page sliding-stop / hock-slide copy; unique vs equine+aerc+limited+distance+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+vet\+gate\+recovery\+chart|horse\+stall\+door\+tevis\+100\+card|equine\+aerc\+limited\+distance\+handbook|laminated\+horse\+aqha\+pleasure\+gait\+chart|horse\+stall\+door\+aqha\+world\+show\+card|equine\+shw340\+lope\+handbook|sliding\+shoe|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop endurance / western-pleasure kitchen kits, sliding-shoe product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-nrha-maneuver-chart / horse-stall-door-nrha-level-card / equine-sliding-stop-handbook searches' },
+    ],
+    why: 'Money path leftover after #1382: horses.com /disciplines/endurance-riding is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/reining commercial spoke had sidebar EmailCapture only (source discipline-reining, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete reining-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page sliding-stop / Open-to-Non-Pro / 70-base scoring copy (a laminated horse NRHA maneuver chart so the sliding-stop / spin / rollback notes are posted on the stall door, a horse stall-door NRHA level card so the Level 1–4 / Futurity notes are labeled at the barn, an equine sliding-stop handbook so the hock-slide / sliding-shoe grounding is a physical barn book), never a placeholder ASIN, a sibling endurance kitchen hop, a western-pleasure hop, a sliding-shoe hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1382 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
