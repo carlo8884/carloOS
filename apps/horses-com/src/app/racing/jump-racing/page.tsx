@@ -21,6 +21,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -149,6 +151,48 @@ export default function JumpRacingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the jump-racing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Jump-racing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-hurdle-steeplechase-chart,
+              stall-door-nsa-jump-racing-card, and
+              equine-timber-fence-handbook notes
+              that match the hurdles-steeplechase-timber,
+              nsa-national-hunt, and maryland-hunt-cup
+              copy on this page — a laminated horse
+              hurdle-steeplechase chart so the flexible /
+              brush / ditch-and-water notes are posted on
+              the stall door (not a Quarter Horse
+              sprint-yard chart, not a harness trot-pace
+              chart), a horse stall-door NSA jump-racing
+              card so the National Steeplechase Association
+              / mid-Atlantic meet notes are labeled at the
+              barn (not an AQHA racing card, not a USTA
+              Standardbred card), and an equine timber-fence
+              handbook so the post-and-rail / Maryland Hunt
+              Cup grounding is a physical barn book (not a
+              Quarter Horse sprint handbook, not a
+              sulky-harness handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Jump-racing checklist"
+              subtitle="Email the hurdle-steeplechase chart, NSA jump-racing card, and timber-fence handbook notes. No spam."
+              ctaText="Email my jump-racing checklist"
+              source="racing-jump-racing-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Jump Racing Is</h2>
           <p>Jump racing is horse racing contested over obstacles. In Britain and Ireland it is known as National Hunt racing; in the United States it is most often called steeplechasing or simply jump racing. Where flat racing tests speed over a clear track, jump racing adds the demands of jumping at speed and of stamina over longer distances -- jump races are commonly two miles or more. A jump horse must be fast enough to be competitive, athletic enough to clear obstacles cleanly, and sound and experienced enough to do both repeatedly over a long career.</p>
@@ -181,6 +225,57 @@ export default function JumpRacingPage() {
             <li>American Association of Equine Practitioners (AAEP). Racehorse welfare guidelines. aaep.org.</li>
             <li>The Jockey Club. Thoroughbred registration and the American Stud Book. jockeyclub.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse hurdle-steeplechase chart /
+              horse stall-door NSA jump-racing card /
+              equine timber-fence handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs quarter-horse-racing /
+              harness-racing hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the jump-racing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page hurdles-steeplechase-timber,
+              nsa-national-hunt, and maryland-hunt-cup
+              copy — a laminated horse hurdle-steeplechase
+              chart, a horse stall-door NSA jump-racing
+              card, and an equine timber-fence handbook.
+              Educational barn searches only. They are not
+              a ranked race list, they are not a
+              quarter-horse-racing / harness-racing hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+hurdle+steeplechase+chart?s=racing-jump-racing"
+                amazonLabel="Browse laminated horse hurdle-steeplechase charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+nsa+jump+racing+card?s=racing-jump-racing"
+                amazonLabel="Browse horse stall-door NSA jump-racing cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+timber+fence+handbook?s=racing-jump-racing"
+                amazonLabel="Browse equine timber-fence handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
