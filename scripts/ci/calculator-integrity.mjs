@@ -2960,6 +2960,24 @@ const CALCULATORS = [
     why: 'Money path leftover after #1372: dog.com /reviews/best-dog-food-senior is on main. This existing dog.com /reviews/best-dog-food-small-breed commercial spoke had sidebar EmailCapture only (source review-small-breed-food, not under-hero) plus live Royal Canin Small Adult / Purina Small & Toy Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete small-breed-food-checklist offer matching on-page calorie-density / small-mouth kibble / Royal Canin dental architecture / Purina 30% protein copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1372 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-large-breed-dog-food',
+    file: 'apps/dog-com/src/app/reviews/best-large-breed-dog-food/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-large-breed-dog-food-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my large-breed-food checklist"/, label: 'concrete large-breed-food-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-large-breed-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Royal Canin Large Adult Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+large\+breed\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Purina Pro Plan Large Breed Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1373: dog.com /reviews/best-dog-food-small-breed is on main. This existing dog.com /reviews/best-large-breed-dog-food commercial spoke had sidebar EmailCapture only (source review-large-breed-food, not under-hero) plus live Royal Canin Large Adult / Purina Large Breed Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete large-breed-food-checklist offer matching on-page 50+ lb / controlled calorie density / Royal Canin glucosamine-chondroitin / Purina 26% protein plus EPA copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1373 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
