@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -175,6 +177,51 @@ export default function FerretCanineDistemperPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret distemper-risk checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret distemper-risk checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-cdv-risk-chart,
+              fridge-indoor-carry-card, and
+              mustelid-distemper-risk-handbook notes
+              that match the indoor-carry-map,
+              hard-pad-log, and
+              quesenberry-afa-cdv-grounding copy on this
+              page — a laminated ferret CDV-risk chart
+              so the shoes / clothing / indoor-still-at-risk
+              map is posted on the fridge (not a GI-proof
+              chart, not a can&apos;t-wait chart, not a
+              checkup-map chart), a ferret fridge indoor-carry
+              card so chin-rash / hard-pad / eye-nose-discharge
+              notes are labeled on the fridge (not a
+              rubber-foam card, not a crash-list card, not
+              a carrier-prep card), and a mustelid
+              distemper-risk handbook so the Quesenberry /
+              AEMV near-universal-mortality grounding is a
+              physical kitchen book (not a GI-blockage
+              handbook, not an er-ready handbook, not a
+              clinic-choice handbook). Educational kitchen
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for
+              an exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held. No
+              spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret distemper-risk checklist"
+              subtitle="Email the cdv-risk-chart, fridge indoor-carry card, and distemper-risk-handbook notes. No spam."
+              ctaText="Email my ferret distemper-risk checklist"
+              source="health-canine-distemper-in-ferrets-under-hero"
+            />
+          </div>
+
           <DropCap>
             Of all the diseases a ferret can face, canine distemper is the one
             that turns an experienced exotic-mammal veterinarian grim. It is
@@ -295,6 +342,60 @@ export default function FerretCanineDistemperPage() {
               annual exam.
             </p>
           </CalloutBox>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret CDV-risk chart /
+              ferret fridge indoor-carry card /
+              mustelid distemper-risk handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              GI / emergency / vet-visit hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret distemper-risk kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page indoor-carry-map,
+              hard-pad-log, and
+              quesenberry-afa-cdv-grounding copy — a
+              laminated ferret CDV-risk chart, a
+              ferret fridge indoor-carry card, and a
+              mustelid distemper-risk handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / GI / emergency hop, they are
+              not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+cdv+risk+chart?s=canine-distemper-in-ferrets"
+                amazonLabel="Browse laminated ferret CDV-risk charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+indoor+carry+card?s=canine-distemper-in-ferrets"
+                amazonLabel="Browse ferret fridge indoor-carry cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+distemper+risk+handbook?s=canine-distemper-in-ferrets"
+                amazonLabel="Browse mustelid distemper-risk handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
