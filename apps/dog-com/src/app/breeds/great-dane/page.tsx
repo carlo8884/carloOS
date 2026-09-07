@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
@@ -43,6 +43,49 @@ export default function GreatDanePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the great-dane checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Great Dane checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-dane-boar-hunt-chart,
+            dog-fridge-dane-gastropexy-card, and
+            canine-first-owner-great-dane-handbook notes
+            that match the 1800s German boar-hunt origin, the
+            gastropexy-at-spay-neuter floor, and first-time-
+            owner notes on this page — a laminated dog Dane
+            boar-hunt chart so the mastiff-greyhound / estate-
+            guard notes are posted on the fridge (not a
+            Doodle F1B 75% chart, not a Cocker woodcock-
+            flush chart), a fridge Dane gastropexy card so
+            the GDV-rotation / 24-hour-ER notes are labeled
+            in the kitchen (not a Can-f-1 allergy card, not
+            a finger-toothbrush hop), and a first-owner
+            Great Dane handbook so the YES-typically /
+            7–10-year lifespan / 18–24-month giant-puppy
+            diet grounding is a physical kitchen book (not
+            a first-owner Goldendoodle handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Great Dane checklist"
+            subtitle="Email the boar-hunt chart, gastropexy card, and first-owner handbook notes. No spam."
+            ctaText="Email my great-dane checklist"
+            source="breed-great-dane-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in 1800s Germany: mastiff-greyhound types refined to hunt wild boar and guard estates. That boar-hunt / deep-chest history is why a household Dane still needs a gastropexy conversation at spay/neuter and a 7–10 year lifespan check, not a crate-only afternoon. Great Danes are typically first-time-owner friendly — YES-typically — when the household accepts the giant-puppy diet until 18–24 months, the prophylactic gastropexy recommendation, and the short lifespan.</p>
+
                 <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
           description="GDV is the leading cause of death in Great Danes after cancer. The deep, narrow chest creates the anatomical predisposition: the stomach can fill with gas and rotate on its long axis, trapping gas and cutting off blood supply. This is a true surgical emergency — a Great Dane with GDV has hours, not days. Prophylactic gastropexy (surgically tacking the stomach to the abdominal wall, preventing rotation) performed at the time of spay/neuter is the most impactful preventive measure available and is strongly recommended for Great Danes. It does not prevent bloating (gas accumulation) but prevents the rotation that makes GDV fatal."
           signs={['Unproductive retching — attempting to vomit without producing anything', 'Distended, drum-like abdomen', 'Restlessness followed by sudden lethargy', 'Excessive drooling', 'Pale gums and cardiovascular collapse in advanced disease']}
@@ -65,6 +108,41 @@ export default function GreatDanePage() {
 
         <h2>Wobbler Syndrome (Cervical Spondylomyelopathy)</h2>
         <p>Great Danes, along with Dobermans, are the most commonly affected breeds for Wobbler syndrome — spinal cord compression at the cervical vertebrae causing the characteristic wobbly, ataxic gait. Develops typically in young adults (Danes often affected at 2–3 years — earlier than Dobermans). Management: anti-inflammatory therapy for mild cases, surgical decompression for progressive or severe cases, referral to a veterinary neurologist for diagnosis and treatment planning.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Great Dane home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            1800s German boar-hunt origin, the gastropexy-
+            at-spay-neuter floor, and first-time-owner notes
+            — a laminated dog Dane boar-hunt chart, a fridge
+            Dane gastropexy card, and a first-owner Great
+            Dane handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a finger-
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+dane+boar+hunt+chart?s=breed-great-dane"
+              amazonLabel="Browse laminated dog Dane boar-hunt charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+dane+gastropexy+card?s=breed-great-dane"
+              amazonLabel="Browse fridge Dane gastropexy cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+great+dane+handbook?s=breed-great-dane"
+              amazonLabel="Browse first-owner Great Dane handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
