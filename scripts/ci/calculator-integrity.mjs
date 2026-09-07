@@ -4508,6 +4508,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1440: fish.com /equipment/aquarium-test-kits is on main. fish.com /equipment/aquarium-filters, /equipment/aquarium-heaters, /equipment/aquarium-lighting, and /equipment/aquarium-substrates are on main. horses.com /disciplines/*/equipment siblings are exhausted. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing fish.com /equipment/aquarium-co2-systems commercial buyer-guide spoke had sidebar EmailCapture only (source equipment-<slug>, not under-hero) plus a generic category-name amazon/chewy hop. Add under-hero capture with a concrete aquarium-CO2-systems-checklist offer; keep the existing sidebar capture; keep AffiliateDisclosure; keep the live category Chewy hop; add amazon-brand stand hops matching on-page photoperiod-solenoid / four-dKH-drop / cylinder-duration copy (a laminated aquarium photoperiod-solenoid chart so the overnight-off notes are posted on the stand, an aquarium rim four-dKH-drop card so the green / yellow notes are labeled on the rim, an aquarist cylinder-duration handbook so the 5-pound / paintball grounding is a physical stand book), never a placeholder ASIN, a sibling tools-co2-calculator regulator hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational stand searches only — not a ranked CO2 list, not a substitute for a water test. Fish.com does not sell insurance. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1440 / crate-size / stocking.',
   },
   {
+    id: 'horses · quarter-horse-breed',
+    file: 'apps/horses-com/src/app/breeds/quarter-horse/page.tsx',
+    mustInclude: [
+      { re: /source="breed-quarter-horse-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my quarter-horse checklist"/, label: 'concrete quarter-horse-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="breed-quarter-horse"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+aqha\+five\+panel\+chart\?s=breed-quarter-horse/, label: 'laminated horse AQHA five-panel-chart search hop (matches on-page 5-panel / HYPP / HERDA / PSSM1 copy; unique vs laminated+horse+quarter+horse+sprint+yard+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+fqhb\+saddle\+card\?s=breed-quarter-horse/, label: 'horse stall-door FQHB-saddle-card search hop (matches on-page wide-tree / low-wither / short-back copy; unique vs horse+stall+door+aqha+racing+card)' },
+      { re: /amazon-brand\/equine\+first\+owner\+quarter\+handbook\?s=breed-quarter-horse/, label: 'equine first-owner-quarter-handbook search hop (matches on-page first-time-owner / 5-panel-before-purchase copy; unique vs equine+quarter+horse+sprint+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+quarter\+horse\+sprint\+yard\+chart|horse\+stall\+door\+aqha\+racing\+card|equine\+quarter\+horse\+sprint\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop quarter-horse-racing kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-aqha-five-panel-chart / horse-stall-door-fqhb-saddle-card / equine-first-owner-quarter-handbook searches' },
+    ],
+    why: 'Money path leftover after #1441: fish.com /equipment/aquarium-co2-systems is on main. fish.com /equipment/* siblings are exhausted. horses.com /disciplines/*/equipment siblings are exhausted. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /breeds/quarter-horse commercial breed spoke had sidebar EmailCapture only (source breed-quarter-horse, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete quarter-horse-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page AQHA-5-panel / FQHB-saddle / first-time-owner copy (a laminated horse AQHA five-panel chart so the HYPP / HERDA / PSSM1 notes are posted on the stall door, a horse stall-door FQHB-saddle card so the wide-tree / low-wither notes are labeled at the barn, an equine first-owner quarter handbook so the 5-panel-before-purchase grounding is a physical barn book), never a placeholder ASIN, a sibling quarter-horse-racing kitchen hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked tack list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1441 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, EmailCapture, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -120,6 +120,45 @@ export default function QuarterHorseBreedPage() {
             reviewedBy="Editorial team"
           />
 
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the quarter-horse checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Quarter-horse checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-aqha-five-panel-chart,
+              horse-stall-door-fqhb-saddle-card, and
+              equine-first-owner-quarter-handbook notes that
+              match the AQHA 5-panel, full-quarter-horse-bar
+              saddle, and first-time-owner copy on this page —
+              a laminated horse AQHA five-panel chart so the
+              HYPP / HERDA / PSSM1 notes are posted on the
+              stall door (not a quarter-horse-racing sprint-
+              yard hop, not an AQHA-racing-card hop), a horse
+              stall-door FQHB-saddle card so the wide-tree /
+              low-wither / short-back notes are labeled at the
+              barn (not a flex-tree trail-saddle hop, not a
+              dressage-plain-flap hop), and an equine first-
+              owner quarter handbook so the 5-panel-before-
+              purchase / boarding-cost grounding is a physical
+              barn book (not a quarter-horse-sprint handbook,
+              not a first-aid-kit hop). Educational barn
+              checklist, not a ranked tack list, not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Quarter-horse checklist"
+              subtitle="Email the AQHA five-panel chart, FQHB-saddle card, and first-owner handbook notes. No spam."
+              ctaText="Email my quarter-horse checklist"
+              source="breed-quarter-horse-under-hero"
+            />
+          </div>
+
           <h2 id="history">History &amp; Origins</h2>
           <p>The American Quarter Horse was, before it was a breed, a working type. Seventeenth-century English colonists in Virginia and the Carolinas crossed imported Galloway and Hobby mares with locally adapted Iberian and Chickasaw stock, then later with the Thoroughbred founder Janus (1746) and other early Thoroughbreds. The result was a compact horse that could outrun anything at distances under a quarter mile — hence "Quarter Horse." Match races on Main Street, often run between two horses for a side bet, were the breed's first proving ground (AQHA, &ldquo;Breed History,&rdquo; aqha.com).</p>
 
@@ -207,6 +246,41 @@ export default function QuarterHorseBreedPage() {
           </ul>
 
           <p>The breed's broad market and clear-eyed registry make it one of the cleaner first-horse choices available. The risks are the same as any horse — over-faced training, under-conditioning, undiagnosed lameness — not breed-specific traps.</p>
+
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the quarter-horse barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              AQHA 5-panel, full-quarter-horse-bar saddle, and
+              first-time-owner copy — a laminated horse AQHA
+              five-panel chart, a horse stall-door FQHB-saddle
+              card, and an equine first-owner quarter handbook.
+              Educational barn searches only. They are not a
+              ranked tack list, they are not a quarter-horse-
+              racing hop, they are not a first-aid-kit hop,
+              and they do not replace a veterinarian.
+              Horses.com does not sell insurance. Horses.com
+              earns a commission on qualifying purchases at no
+              extra cost to you.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            <div className="flex flex-col gap-3 mt-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+aqha+five+panel+chart?s=breed-quarter-horse"
+                amazonLabel="Browse laminated horse AQHA five-panel charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+fqhb+saddle+card?s=breed-quarter-horse"
+                amazonLabel="Browse horse stall-door FQHB-saddle cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+first+owner+quarter+handbook?s=breed-quarter-horse"
+                amazonLabel="Browse equine first-owner quarter handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
