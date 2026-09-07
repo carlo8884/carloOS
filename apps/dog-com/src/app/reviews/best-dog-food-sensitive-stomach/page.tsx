@@ -29,6 +29,41 @@ export default function SensitiveStomachFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the sensitive-stomach checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Sensitive-stomach checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the sensitive-stomach notes that
+                match the ranking copy on this page —
+                a sensitive stomach is a description
+                not a diagnosis, Purina Pro Plan
+                Sensitive Skin &amp; Stomach (salmon
+                and rice, no corn/wheat/soy, live
+                probiotics) as the standard vet pick,
+                and the 8–12 week dietary trial before
+                you call a food switch a success.
+                Educational sensitive-stomach
+                checklist, not a new product hop, not
+                a prescription hydrolyzed-diet hop,
+                and not a substitute for a
+                veterinarian. The existing Purina Pro
+                Plan Chewy search stays below. No
+                spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Sensitive-stomach checklist"
+                subtitle="Email the Purina salmon-and-rice and 8–12 week trial notes. No spam."
+                ctaText="Email my sensitive-stomach checklist"
+                source="reviews-best-dog-food-sensitive-stomach-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When to See a Vet First</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Recurring vomiting, chronic diarrhea, blood in stool, significant weight loss, or GI symptoms that have not improved after a proper 8-12 week dietary trial require veterinary workup — not just food switching. A dietary change without diagnosis is guessing. Your vet can determine if the issue is diet, IBD, food allergy, parasites, or another condition requiring specific treatment.</p>
