@@ -15,6 +15,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -185,6 +186,51 @@ export default function FerretBathingGroomingPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret bathing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret bathing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-bath-less-frequency-chart,
+              fridge-shampoo-choice-card, and
+              mustelid-grooming-reference-handbook notes
+              that match the bath-less-smell-less-map,
+              shampoo-no-tea-tree-log, and
+              quesenberry-afa-grooming-grounding copy on this
+              page — a laminated ferret bath-less-frequency
+              chart so the every-2-3-months / one-to-two-baths
+              a-year / bedding-washes-beat-baths map is posted
+              on the fridge (not a care-hub routine chart, not
+              a seasonal-shedding chart, not a supplies
+              buy-first chart), a ferret fridge shampoo-choice
+              card so ferret-specific-pH / unscented-kitten /
+              no-tea-tree notes are labeled on the fridge (not
+              a housing-litter card, not a coat-oil card, not
+              an ear-cleaner hop), and a mustelid grooming
+              reference handbook so the Quesenberry / AFA /
+              AEMV bathing-and-dermatology grounding is a
+              physical kitchen book (not a care-reference
+              handbook, not a supplies-checklist handbook, not
+              a health-reference handbook). Educational kitchen
+              checklist, not a ranked shampoo list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does not
+              sell insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret bathing checklist"
+              subtitle="Email the bath-less-frequency-chart, fridge shampoo-choice card, and grooming-handbook notes. No spam."
+              ctaText="Email my ferret bathing checklist"
+              source="care-bathing-grooming-under-hero"
+            />
+          </div>
 
           <DropCap>
             Most ferret grooming mistakes are corrections in the wrong
@@ -518,6 +564,59 @@ export default function FerretBathingGroomingPage() {
           </CalloutBox>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret bath-less-frequency chart /
+              ferret fridge shampoo-choice card /
+              mustelid grooming-reference handbook).
+              Keep existing Marshall + Chewy review hops.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs care-hub /
+              supplies / seasonal-shedding kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret bathing kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page bath-less-smell-less-map,
+              shampoo-no-tea-tree-log, and
+              quesenberry-afa-grooming-grounding copy — a
+              laminated ferret bath-less-frequency chart, a
+              ferret fridge shampoo-choice card, and a
+              mustelid grooming-reference handbook.
+              Educational kitchen searches only. They are
+              not a ranked shampoo list, they are not a
+              care-hub / supplies / seasonal-shedding hop,
+              they are not a child toothbrush hop, and
+              they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+              Existing Marshall and Chewy review hops stay
+              in the grooming-kit picks below.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+bath+less+frequency+chart?s=bathing-and-grooming"
+                amazonLabel="Browse laminated ferret bath-less-frequency charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+shampoo+choice+card?s=bathing-and-grooming"
+                amazonLabel="Browse ferret fridge shampoo-choice cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+grooming+reference+handbook?s=bathing-and-grooming"
+                amazonLabel="Browse mustelid grooming-reference handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Grooming Kit Picks</h2>
           <p>
