@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cocker Spaniel Guide — Ear Infections, Eye Conditions | Dog.com', description: 'Cocker Spaniels have the highest rate of ear infections of any breed — their ear structure creates a perfect warm, dark environment for yeast and bacteria.', path: '/breeds/cocker-spaniel', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -43,6 +43,48 @@ export default function CockerSpanielPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the cocker-spaniel checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Cocker Spaniel checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-cocker-woodcock-flush-chart,
+            dog-fridge-cocker-monthly-ear-card, and
+            canine-first-owner-cocker-spaniel-handbook notes
+            that match the woodcock-flush origin, the monthly
+            ear-clean floor, and first-time-owner notes on
+            this page — a laminated dog Cocker woodcock-flush
+            chart so the late-1800s American size-down notes
+            are posted on the fridge (not a Bullmastiff
+            night-dog chart, not a Berner 50% cancer chart),
+            a fridge Cocker monthly-ear card so the pendulous
+            flap / yeast-musty notes are labeled in the
+            kitchen (not a slobber-cloth card, not a finger-
+            toothbrush hop), and a first-owner Cocker Spaniel
+            handbook so the YES-typically / monthly-ear /
+            pale-gum IMHA grounding is a physical kitchen
+            book (not a first-owner Bullmastiff handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Cocker Spaniel checklist"
+            subtitle="Email the woodcock-flush chart, monthly-ear card, and first-owner handbook notes. No spam."
+            ctaText="Email my cocker-spaniel checklist"
+            source="breed-cocker-spaniel-under-hero"
+          />
+        </div>
+
+        <p>The working story starts with woodcock: a spaniel bred to flush and retrieve, then sized down in the late-1800s American show ring. That flush / pendulous-ear history is why a household Cocker still needs a monthly ear-clean clock and a pale-gum IMHA watch, not a crate-only afternoon. Cocker Spaniels are typically first-time-owner friendly — YES-typically — when the household accepts monthly ear cleaning, the 6–8 week groom floor, and same-day pale-gum emergency signs.</p>
+
                 <BreedHealthCard name="Chronic Ear Infections (Otitis Externa)" riskLevel="very-high"
           description="American Cocker Spaniels have the highest rate of chronic ear infections of any breed — their long, pendulous, heavily feathered ear flaps create a warm, dark, poorly-ventilated environment that promotes yeast (Malassezia) and bacterial overgrowth. Allergies — which Cockers are also predisposed to — further inflame the ear canal and promote secondary infection. Without preventive maintenance, most Cockers develop chronic otitis within the first few years of life."
           signs={['Head shaking and ear scratching', 'Odor from the ears (yeast has a characteristic musty smell)', 'Brown or dark discharge when ear is cleaned', 'Redness and swelling of the ear canal opening', 'Pain when ear is touched or examined', 'Head tilt (inner ear involvement in severe cases)']}
@@ -60,6 +102,41 @@ export default function CockerSpanielPage() {
 
         <h2>Grooming — The Ongoing Commitment</h2>
         <p>The Cocker Spaniel's beautiful coat requires significant maintenance or it becomes matted, which creates a warm, moisture-trapping environment that leads to skin infections (pyoderma) beneath the mats. Professional grooming every 6-8 weeks for trimming and maintenance. At-home brushing every 2-3 days prevents mat formation between professional appointments. The ears and chest feathering are the areas most prone to matting and require particular attention. The "puppy cut" (coat clipped short and even) dramatically reduces maintenance requirements while maintaining the breed's appearance — the most practical choice for owners who cannot commit to frequent grooming.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Cocker Spaniel home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            woodcock-flush origin, the monthly ear-clean
+            floor, and first-time-owner notes — a laminated
+            dog Cocker woodcock-flush chart, a fridge Cocker
+            monthly-ear card, and a first-owner Cocker
+            Spaniel handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a finger-
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+cocker+woodcock+flush+chart?s=breed-cocker"
+              amazonLabel="Browse laminated dog Cocker woodcock-flush charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+cocker+monthly+ear+card?s=breed-cocker"
+              amazonLabel="Browse fridge Cocker monthly-ear cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+cocker+spaniel+handbook?s=breed-cocker"
+              amazonLabel="Browse first-owner Cocker Spaniel handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
