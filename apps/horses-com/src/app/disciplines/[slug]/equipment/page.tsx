@@ -414,6 +414,49 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             </div>
           ) : null}
 
+          {data.slug === 'trail-riding' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the trail-riding-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Trail-riding-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-flex-tree-trail-saddle-chart,
+                stall-door-halter-bridle-combo-card, and
+                equine-pommel-cantle-bag-handbook notes that
+                match the flex-tree trail/endurance saddle,
+                halter-bridle combination, and pommel/cantle
+                bag copy on this page — a laminated horse
+                flex-tree trail-saddle chart so the D-ring /
+                long-mileage notes are posted on the stall
+                door (not a trail-etiquette chart, not an
+                undercut-pommel reining-saddle chart), a
+                horse stall-door halter-bridle-combo card so
+                the snap-off-bit / vet-check notes are
+                labeled at the barn (not a NATRC-pace card,
+                not a sliding-plate card), and an equine
+                pommel-cantle-bag handbook so the cordura /
+                snack-and-tool grounding is a physical barn
+                book (not an AERC-endurance handbook, not a
+                skid-boot-nrha handbook). Educational barn
+                checklist, not a ranked tack list, not a
+                first-aid-kit hop, and not a substitute for
+                a veterinarian. Horses.com does not sell
+                insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Trail-riding-equipment checklist"
+                subtitle="Email the flex-tree-trail-saddle chart, halter-bridle-combo card, and pommel-cantle-bag handbook notes. No spam."
+                ctaText="Email my trail-riding-equipment checklist"
+                source="discipline-equipment-trail-riding-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
           <p dangerouslySetInnerHTML={{ __html: data.overview }} />
@@ -903,6 +946,63 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+skid+boot+nrha+handbook?s=discipline-equipment-reining"
                     amazonLabel="Browse equine skid-boot-nrha handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {data.slug === 'trail-riding' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse flex-tree trail-saddle chart /
+                  horse stall-door halter-bridle-combo card /
+                  equine pommel-cantle-bag handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/trail-riding
+                  overview / reining-equipment hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the trail-riding-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page flex-tree trail/endurance saddle,
+                  halter-bridle combination, and pommel/cantle
+                  bag copy — a laminated horse flex-tree
+                  trail-saddle chart, a horse stall-door
+                  halter-bridle-combo card, and an equine
+                  pommel-cantle-bag handbook. Educational
+                  barn searches only. They are not a ranked
+                  tack list, they are not a trail-riding-
+                  overview / reining-equipment hop, they are
+                  not a first-aid-kit hop, they are not a
+                  child toothbrush hop, and they do not
+                  replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a
+                  commission on qualifying purchases at no
+                  extra cost to you. Empty Chewy buttons
+                  stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+flex+tree+trail+saddle+chart?s=discipline-equipment-trail-riding"
+                    amazonLabel="Browse laminated horse flex-tree trail-saddle charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+halter+bridle+combo+card?s=discipline-equipment-trail-riding"
+                    amazonLabel="Browse horse stall-door halter-bridle-combo cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+pommel+cantle+bag+handbook?s=discipline-equipment-trail-riding"
+                    amazonLabel="Browse equine pommel-cantle-bag handbooks on Amazon →"
                   />
                 </div>
               </div>
