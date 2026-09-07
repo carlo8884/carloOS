@@ -2942,6 +2942,24 @@ const CALCULATORS = [
     why: 'Money path leftover after #1371: dog.com /reviews/best-dog-food-sensitive-stomach is on main. This existing dog.com /reviews/best-dog-food-senior commercial spoke had sidebar EmailCapture only (source review-senior-food, not under-hero) plus live Bright Mind / Hill\'s 7+ Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete senior-dog-food-checklist offer matching on-page 7+ age / not-low-protein / Bright Mind cognitive-trial / Hill\'s antioxidant copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1371 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-dog-food-small-breed',
+    file: 'apps/dog-com/src/app/reviews/best-dog-food-small-breed/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-food-small-breed-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my small-breed-food checklist"/, label: 'concrete small-breed-food-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-small-breed-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed/, label: 'existing Royal Canin Small Adult Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+small\+toy\+breed\?s=reviews-best-dog-food-small-breed/, label: 'existing Purina Pro Plan Small & Toy Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1372: dog.com /reviews/best-dog-food-senior is on main. This existing dog.com /reviews/best-dog-food-small-breed commercial spoke had sidebar EmailCapture only (source review-small-breed-food, not under-hero) plus live Royal Canin Small Adult / Purina Small & Toy Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete small-breed-food-checklist offer matching on-page calorie-density / small-mouth kibble / Royal Canin dental architecture / Purina 30% protein copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1372 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

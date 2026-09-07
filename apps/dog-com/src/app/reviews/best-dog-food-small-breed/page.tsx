@@ -33,6 +33,38 @@ export default function BestSmallBreedFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the small-breed-food checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Small-breed-food checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the small-breed notes that match
+                the ranking copy on this page — higher
+                calorie density per pound, kibble sized
+                for small mouths, Royal Canin Small
+                Adult for the dental-engineered kibble,
+                and Purina Pro Plan Small &amp; Toy for
+                30% protein plus live probiotics.
+                Educational small-breed checklist, not
+                a new product hop, not a first-aid-kit
+                hop, and not a substitute for a
+                veterinarian. The existing Royal Canin
+                and Purina Chewy searches stay below.
+                No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Small-breed-food checklist"
+                subtitle="Email the kibble-size, Royal Canin, and 30% protein notes. No spam."
+                ctaText="Email my small-breed-food checklist"
+                source="reviews-best-dog-food-small-breed-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why Small Breed Formulas Matter</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Small dogs have faster metabolisms and higher calorie requirements per pound of body weight than large breeds. A 10-lb Yorkshre Terrier needs more calories per kg than a 70-lb Labrador. Small breed formulas provide higher calorie density and are sized for small mouths — large-breed kibble is too big for many small dogs to chew comfortably, contributing to dental disease by bypassing the mechanical cleaning action of chewing.</p>
