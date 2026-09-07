@@ -30,6 +30,40 @@ export default function BestSeniorDogFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the senior-dog-food checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Senior-dog-food checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the senior-food notes that match
+                the ranking copy on this page — dogs
+                are senior at 7+ (5–6 for giant
+                breeds), senior food is not a
+                low-protein category, Purina Pro Plan
+                Bright Mind 7+ for the published
+                cognitive trial, and Hill&apos;s Science
+                Diet 7+ when antioxidant support and
+                easy digestion are the job.
+                Educational senior-food checklist, not
+                a new product hop, not a prescription
+                renal-diet hop, and not a substitute
+                for a veterinarian. The existing
+                Bright Mind and Hill&apos;s Chewy
+                searches stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Senior-dog-food checklist"
+                subtitle="Email the Bright Mind, Hill's 7+, and protein notes. No spam."
+                ctaText="Email my senior-dog-food checklist"
+                source="reviews-best-dog-food-senior-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Senior Food ≠ Low Protein</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Older advice recommended reducing protein in senior dogs. Current consensus is the opposite: aging dogs often need more protein per kg body weight to maintain muscle mass (sarcopenia prevention). Protein restriction is only appropriate with documented kidney disease. Choose senior foods with protein levels at or above adult maintenance levels.</p>
