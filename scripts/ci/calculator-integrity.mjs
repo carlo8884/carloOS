@@ -3318,6 +3318,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1388: horses.com /disciplines/hunter-under-saddle is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/ranch-riding commercial spoke had sidebar EmailCapture only (source discipline-ranch-riding, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete ranch-riding-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page walk-trot-lope-pattern / aqha-vrh / natural-head-extended-lope copy (a laminated horse ranch-riding pattern chart so the extended-trot / both-ways notes are posted on the stall door, a horse stall-door AQHA VRH card so the AQHA / Versatility Ranch Horse notes are labeled at the barn, an equine extended-lope handbook so the forward / natural-head / peanut-rolling contrast is a physical barn book), never a placeholder ASIN, a sibling hunter-under-saddle kitchen hop, an equitation hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1388 / crate-size / stocking.',
   },
   {
+    id: 'horses · vaulting',
+    file: 'apps/horses-com/src/app/disciplines/vaulting/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-vaulting-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my vaulting checklist"/, label: 'concrete vaulting-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-vaulting"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+vaulting\+compulsory\+chart\?s=discipline-vaulting/, label: 'laminated horse vaulting compulsory-chart search hop (matches on-page basic-seat / flag / mill / scissors copy; unique vs laminated+horse+ranch+riding+pattern+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+ava\+vaulting\+card\?s=discipline-vaulting/, label: 'horse stall-door AVA vaulting-card search hop (matches on-page AVA / FEI / pas-de-deux copy; unique vs horse+stall+door+aqha+vrh+card)' },
+      { re: /amazon-brand\/equine\+vaulting\+surcingle\+handbook\?s=discipline-vaulting/, label: 'equine vaulting-surcingle-handbook search hop (matches on-page lunger / roller / back-pad copy; unique vs equine+extended+lope+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+ranch\+riding\+pattern\+chart|horse\+stall\+door\+aqha\+vrh\+card|equine\+extended\+lope\+handbook|laminated\+horse\+hunter\+under\+saddle\+gait\+chart|horse\+stall\+door\+ushja\+hunter\+card|equine\+hunter\+bascule\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop ranch-riding / hunter-under-saddle kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-vaulting-compulsory-chart / horse-stall-door-ava-vaulting-card / equine-vaulting-surcingle-handbook searches' },
+    ],
+    why: 'Money path leftover after #1389: horses.com /disciplines/ranch-riding is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/vaulting commercial spoke had sidebar EmailCapture only (source discipline-vaulting, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete vaulting-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page basic-seat-flag-mill / ava-fei / surcingle-roller copy (a laminated horse vaulting compulsory chart so the scissors / stand / flank notes are posted on the stall door, a horse stall-door AVA vaulting card so the AVA / FEI / pas-de-deux notes are labeled at the barn, an equine vaulting surcingle handbook so the lunger / roller / back-pad grounding is a physical barn book), never a placeholder ASIN, a sibling ranch-riding kitchen hop, a hunter-under-saddle hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1389 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

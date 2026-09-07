@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,48 @@ export default function VaultingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the vaulting checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Vaulting checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-vaulting-compulsory-chart,
+              stall-door-ava-vaulting-card, and
+              equine-vaulting-surcingle-handbook notes
+              that match the basic-seat-flag-mill,
+              ava-fei-vaulting, and surcingle / vaulting
+              roller copy on this page — a laminated horse
+              vaulting compulsory chart so the scissors /
+              stand / flank notes are posted on the stall
+              door (not a ranch-riding pattern chart, not a
+              hunter under-saddle gait chart), a horse
+              stall-door AVA vaulting card so the AVA /
+              FEI / pas-de-deux notes are labeled at the
+              barn (not an AQHA VRH card, not a USHJA
+              hunter card), and an equine vaulting
+              surcingle handbook so the lunger / roller /
+              back-pad grounding is a physical barn book
+              (not an extended-lope handbook, not a
+              hunter-bascule handbook). Educational barn
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Vaulting checklist"
+              subtitle="Email the vaulting compulsory chart, AVA vaulting card, and vaulting-surcingle handbook notes. No spam."
+              ctaText="Email my vaulting checklist"
+              source="disciplines-vaulting-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Vaulting Is</h2>
           <p>Equestrian vaulting is the performance of gymnastic and balletic movements on the back of a moving horse. The horse canters in a circle controlled by a lunger on a lunge line, wearing a surcingle with handles and a thick back pad (the vaulting roller and pad) rather than a saddle, and the vaulter performs mounts, balances, kneeling and standing positions, swings, and dismounts in time with the horse&apos;s rhythm. It blends athleticism, artistry, and a calm partnership with the horse.</p>
 
@@ -136,6 +178,58 @@ export default function VaultingPage() {
             <li>American Vaulting Association (AVA). Rules and resources. americanvaulting.org.</li>
             <li>National vaulting federation resources, current editions.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse vaulting compulsory chart /
+              horse stall-door AVA vaulting card /
+              equine vaulting-surcingle handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ranch-riding /
+              hunter-under-saddle hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the vaulting barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page basic-seat-flag-mill,
+              ava-fei-vaulting, and surcingle / vaulting
+              roller copy — a laminated horse vaulting
+              compulsory chart, a horse stall-door AVA
+              vaulting card, and an equine vaulting
+              surcingle handbook. Educational barn
+              searches only. They are not a ranked clinic
+              list, they are not a ranch-riding /
+              hunter-under-saddle hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+vaulting+compulsory+chart?s=discipline-vaulting"
+                amazonLabel="Browse laminated horse vaulting compulsory charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+ava+vaulting+card?s=discipline-vaulting"
+                amazonLabel="Browse horse stall-door AVA vaulting cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+vaulting+surcingle+handbook?s=discipline-vaulting"
+                amazonLabel="Browse equine vaulting-surcingle handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
