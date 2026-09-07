@@ -3502,6 +3502,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1396: horses.com /racing/understanding-race-types-and-classes is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/triple-crown commercial spoke had sidebar EmailCapture only (source racing-triple-crown, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete triple-crown-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page three-legs-derby-preakness-belmont / test-of-the-champion / thirteen-winners copy (a laminated horse derby-preakness-belmont chart so the 1.25 / 1 3/16 / 1.5-mile notes are posted on the stall door, a horse stall-door Belmont test card so the Test of the Champion / five-week compression notes are labeled at the barn, an equine thirteen-winner handbook so the Sir Barton / Secretariat / American Pharoah grounding is a physical barn book), never a placeholder ASIN, a sibling race-types kitchen hop, a racing-for-newcomers hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1396 / crate-size / stocking.',
   },
   {
+    id: 'horses · breeders-cup',
+    file: 'apps/horses-com/src/app/racing/breeders-cup/page.tsx',
+    mustInclude: [
+      { re: /source="racing-breeders-cup-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my breeders-cup checklist"/, label: 'concrete breeders-cup-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="racing-breeders-cup"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+breeders\+cup\+division\+chart\?s=racing-breeders-cup/, label: 'laminated horse breeders-cup-division-chart search hop (matches on-page Classic / Distaff / Juvenile copy; unique vs laminated+horse+derby+preakness+belmont+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+classic\+dirt\+card\?s=racing-breeders-cup/, label: 'horse stall-door Classic-dirt-card search hop (matches on-page 1.25-mile / Horse of the Year copy; unique vs horse+stall+door+belmont+test+card)' },
+      { re: /amazon-brand\/equine\+win\+and\+youre\+in\+handbook\?s=racing-breeders-cup/, label: 'equine Win-and-You-re-In-handbook search hop (matches on-page Challenge Series / foal-stallion nomination copy; unique vs equine+thirteen+winner+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+derby\+preakness\+belmont\+chart|horse\+stall\+door\+belmont\+test\+card|equine\+thirteen\+winner\+handbook|laminated\+horse\+race\+class\+maiden\+claiming\+chart|horse\+stall\+door\+graded\+stakes\+card|equine\+condition\+book\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop triple-crown / race-types kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-breeders-cup-division-chart / horse-stall-door-classic-dirt-card / equine-win-and-youre-in-handbook searches' },
+    ],
+    why: 'Money path leftover after #1397: horses.com /racing/triple-crown is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/breeders-cup commercial spoke had sidebar EmailCapture only (source racing-breeders-cup, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete breeders-cup-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page two-day-divisional-championships / classic-dirt-mile-and-a-quarter / win-and-youre-in copy (a laminated horse breeders-cup division chart so the Classic / Distaff / Juvenile notes are posted on the stall door, a horse stall-door Classic dirt card so the 1.25-mile / Horse of the Year notes are labeled at the barn, an equine Win and You re In handbook so the Challenge Series / foal-stallion nomination grounding is a physical barn book), never a placeholder ASIN, a sibling triple-crown kitchen hop, a race-types hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1397 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
