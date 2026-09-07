@@ -2129,6 +2129,50 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'missouri-fox-trotter' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the missouri-fox-trotter checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Missouri Fox Trotter checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-ozark-fox-trot-chart,
+                  horse-stall-door-missouri-1800s-walker-card, and
+                  equine-first-owner-missouri-fox-trotter-handbook
+                  notes that match the Ozark Mountains 1800s fox-trot
+                  origin from Morgan / Thoroughbred / Arabian /
+                  Tennessee Walker crosses, the inherited diagonal
+                  fox trot for rough terrain, and first-time-owner
+                  notes on this page — a laminated horse Ozark fox-
+                  trot chart so the Ozark / fox-trot notes are posted
+                  on the stall door (not a TWHBEA-running-walk hop,
+                  not a BWP-1955 hop), a horse stall-door Missouri
+                  1800s-walker card so the Missouri / Tennessee-
+                  Walker-cross / trail / ranch notes are labeled at
+                  the barn (not a Tennessee-Bluegrass hop, not a
+                  single-foot-gait hop), and an equine first-owner
+                  missouri-fox-trotter handbook so the YES-typically /
+                  navicular / PSSM / insulin-resistance / stringhalt
+                  grounding is a physical barn book (not a
+                  first-owner-tennessee-walking handbook, not a
+                  first-owner-rocky-mountain handbook). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does not
+                  sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Missouri Fox Trotter checklist"
+                  subtitle="Email the Ozark fox-trot chart, Missouri 1800s-walker card, and first-owner handbook notes. No spam."
+                  ctaText="Email my missouri-fox-trotter checklist"
+                  source="breed-missouri-fox-trotter-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -3992,6 +4036,45 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+tennessee+walking+handbook?s=breed-tennessee-walking-horse"
                     amazonLabel="Browse equine first-owner tennessee-walking handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'missouri-fox-trotter' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the missouri-fox-trotter barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Ozark Mountains 1800s fox-trot origin from Morgan /
+                  Thoroughbred / Arabian / Tennessee Walker crosses,
+                  the inherited diagonal fox trot for rough terrain,
+                  and first-time-owner notes — a laminated horse
+                  Ozark fox-trot chart, a horse stall-door Missouri
+                  1800s-walker card, and an equine first-owner
+                  missouri-fox-trotter handbook. Educational barn
+                  searches only. They are not a ranked tack list, they
+                  are not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying purchases
+                  at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+ozark+fox+trot+chart?s=breed-missouri-fox-trotter"
+                    amazonLabel="Browse laminated horse Ozark fox-trot charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+missouri+1800s+walker+card?s=breed-missouri-fox-trotter"
+                    amazonLabel="Browse horse stall-door Missouri 1800s-walker cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+missouri+fox+trotter+handbook?s=breed-missouri-fox-trotter"
+                    amazonLabel="Browse equine first-owner missouri-fox-trotter handbooks on Amazon →"
                   />
                 </div>
               </div>
