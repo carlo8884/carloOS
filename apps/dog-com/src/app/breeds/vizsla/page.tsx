@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Vizsla Breed Guide — Velcro Dog, Epilepsy | Dog.com', description: 'Vizslas are the "velcro dog" — they attach themselves to their people and cannot be left alone for long. High exercise needs, epilepsy predisposition.', path: '/breeds/vizsla', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Vizsla Breed Guide', description: 'Separation anxiety, epilepsy, exercise requirements, and care for Vizslas.', url: 'https://dog.com/breeds/vizsla', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -57,6 +57,48 @@ export default function VizslaPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the vizsla checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Vizsla checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-vizsla-magyar-point-chart,
+            dog-fridge-vizsla-velcro-card, and
+            canine-first-owner-vizsla-handbook notes that
+            match the 10th-century Magyar pointing origin, the
+            velcro-dog floor, and first-time-owner notes on
+            this page — a laminated dog Vizsla Magyar-point
+            chart so the Hungarian nobility / upland-game
+            notes are posted on the fridge (not a Shiba
+            underbrush-hunt chart, not a Bernard Alpine-
+            rescue chart), a fridge Vizsla velcro card so
+            the room-to-room / not-a-full-workday notes are
+            labeled in the kitchen (not a scream card, not a
+            finger-toothbrush hop), and a first-owner Vizsla
+            handbook so the NO-typically / 1.5–2-hour run /
+            epilepsy-watch grounding is a physical kitchen
+            book (not a first-owner Shiba Inu handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Vizsla checklist"
+            subtitle="Email the Magyar-point chart, velcro card, and first-owner handbook notes. No spam."
+            ctaText="Email my vizsla checklist"
+            source="breed-vizsla-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in Hungary: a pointing breed dating to at least the 10th century, used by Magyar nobility to point and retrieve upland game and waterfowl. That close-partnership / field-day history is why a household Vizsla still needs a velcro-dog plan and 1.5–2 hours of vigorous running, not a crate-only afternoon. Vizslas are not typically first-time-owner friendly — NO-typically — when the household expects a full unattended workday, a quiet indoor-only dog, or a breed that can be trained out of needing people nearby.</p>
+
                 <h2>The Velcro Dog — What It Actually Means</h2>
         <p>Vizsla owners use "velcro dog" affectionately, but prospective owners should understand what it means practically. Vizslas were bred for close human partnership in the field — hunting together with a human partner over long days. Their social attachment reflects generations of selection for close working partnership. A Vizsla left alone for 8 hours while their owner works is not a dog that settles quietly — it is a dog experiencing genuine distress that may manifest as destructive behavior, excessive vocalization, and anxiety-related health problems over time.</p>
         <p>This is not a dealbreaker for working owners — it requires planning. A dog walker at midday, doggy daycare, a second dog for companionship, work-from-home arrangements, or a compatible lifestyle where the dog can accompany their person manages the Vizsla's social needs adequately. What doesn't work: leaving a Vizsla alone for full workdays without enrichment or social contact. The breed's need for human proximity is a fundamental characteristic that cannot be trained away.</p>
@@ -71,6 +113,41 @@ export default function VizslaPage() {
 
         <h2>Training Sensitivity</h2>
         <p>Vizslas are highly trainable — eager to please, quick to learn, and strongly motivated by positive reinforcement. They are also sensitive to harsh corrections in a way that setback-prone breeds like terriers are not. A Vizsla that is corrected harshly or repeatedly will shut down emotionally and lose the confidence that makes them excellent working and competition dogs. Positive reinforcement methods — clicker training, reward-based obedience — produce the best outcomes. The breed responds particularly well to training that mirrors partnership rather than authority: teaching the dog what you want rather than correcting what you don't.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Vizsla home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            10th-century Magyar pointing origin, the velcro-
+            dog floor, and first-time-owner notes — a
+            laminated dog Vizsla Magyar-point chart, a fridge
+            Vizsla velcro card, and a first-owner Vizsla
+            handbook. Educational kitchen searches only.
+            They are not a ranked product list, they are not
+            a crate hop, they are not a finger-toothbrush
+            hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+vizsla+magyar+point+chart?s=breed-vizsla"
+              amazonLabel="Browse laminated dog Vizsla Magyar-point charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+vizsla+velcro+card?s=breed-vizsla"
+              amazonLabel="Browse fridge Vizsla velcro cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+vizsla+handbook?s=breed-vizsla"
+              amazonLabel="Browse first-owner Vizsla handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
