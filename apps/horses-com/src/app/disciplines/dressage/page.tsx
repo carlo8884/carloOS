@@ -11,6 +11,8 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -171,6 +173,49 @@ export default function DressagePage() {
             updatedAt="2026-05-28"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dressage checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dressage checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-training-pyramid-chart,
+              stall-door-usdf-level-card, and
+              equine-double-bridle-handbook notes
+              that match the training-pyramid,
+              Intro-to-Grand-Prix, and
+              Fourth-Level-plus-double-bridle copy on this
+              page — a laminated horse training-pyramid chart so
+              the rhythm / relaxation / contact / collection
+              notes are posted on the stall door (not a
+              trail-etiquette chart, not a racing
+              section-map chart), a horse stall-door
+              USDF level card so the Introductory-through-
+              Fourth notes are labeled at the barn (not a
+              NATRC pace card, not a racing-prep card),
+              and an equine double-bridle handbook so the
+              optional-from-Fourth / required-at-FEI
+              grounding is a physical barn book (not an
+              AERC endurance handbook, not a racing
+              reference handbook). Educational barn
+              checklist, not a ranked clinic list, not a
+              Weymouth kit hop, not a first-aid-kit hop,
+              and not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Dressage checklist"
+              subtitle="Email the pyramid chart, USDF level card, and double-bridle handbook notes. No spam."
+              ctaText="Email my dressage checklist"
+              source="disciplines-dressage-under-hero"
+            />
+          </div>
+
           <h2 id="tldr">TL;DR</h2>
           <ul>
             <li><strong>What it is:</strong> the systematic gymnastic training of the riding horse, judged against a written test in a standard 20×60 m (or 20×40 m for lower levels) arena.</li>
@@ -318,6 +363,59 @@ export default function DressagePage() {
             <li>FEI World Cup Dressage records and championship results. fei.org.</li>
             <li>Spanish Riding School of Vienna. Public educational materials on classical riding (continuously operating since 1572). srs.at.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse training-pyramid chart /
+              horse stall-door USDF level card /
+              equine double-bridle handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no Weymouth kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs trail-riding /
+              racing-hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dressage barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page training-pyramid, Intro-to-Grand-Prix,
+              and Fourth-Level-plus-double-bridle copy — a
+              laminated horse training-pyramid chart, a
+              horse stall-door USDF level card, and an
+              equine double-bridle handbook.
+              Educational barn searches only. They are
+              not a ranked clinic list, they are not
+              a trail-riding / racing-hub hop,
+              they are not a Weymouth kit hop, they are
+              not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+training+pyramid+chart?s=discipline-dressage"
+                amazonLabel="Browse laminated horse training-pyramid charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+usdf+level+card?s=discipline-dressage"
+                amazonLabel="Browse horse stall-door USDF level cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+double+bridle+handbook?s=discipline-dressage"
+                amazonLabel="Browse equine double-bridle handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
