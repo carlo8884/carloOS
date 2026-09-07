@@ -3134,6 +3134,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1380: horses.com /disciplines/eventing is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/western-pleasure commercial spoke had sidebar EmailCapture only (source discipline-western-pleasure, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete western-pleasure-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page walk-jog-lope rail / 4-H-to-World-Show / AQHA-SHW340 three-beat-lope copy (a laminated horse AQHA pleasure-gait chart so the walk / jog / lope notes are posted on the stall door, a horse stall-door AQHA World Show card so the Open / Amateur / Youth notes are labeled at the barn, an equine SHW340 lope handbook so the three-beat / natural-carriage grounding is a physical barn book), never a placeholder ASIN, a sibling eventing kitchen hop, a show-jumping hop, a silver-saddle hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1380 / crate-size / stocking.',
   },
   {
+    id: 'horses · endurance-riding',
+    file: 'apps/horses-com/src/app/disciplines/endurance-riding/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-endurance-riding-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my endurance-riding checklist"/, label: 'concrete endurance-riding-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-endurance"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+vet\+gate\+recovery\+chart\?s=discipline-endurance/, label: 'laminated horse vet-gate recovery-chart search hop (matches on-page vet-gate pulse / hydration copy; unique vs laminated+horse+aqha+pleasure+gait+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+tevis\+100\+card\?s=discipline-endurance/, label: 'horse stall-door Tevis 100-card search hop (matches on-page 25-to-100-mile / Tevis copy; unique vs horse+stall+door+aqha+world+show+card)' },
+      { re: /amazon-brand\/equine\+aerc\+limited\+distance\+handbook\?s=discipline-endurance/, label: 'equine AERC limited-distance-handbook search hop (matches on-page limited-distance / mentor copy; unique vs equine+aerc+endurance+handbook on trail-riding)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(equine\+aerc\+endurance\+handbook|laminated\+horse\+trail\+etiquette\+chart|horse\+stall\+door\+natrc\+pace\+card|laminated\+horse\+aqha\+pleasure\+gait\+chart|horse\+stall\+door\+aqha\+world\+show\+card|equine\+shw340\+lope\+handbook|electrolyte|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop trail-riding AERC-endurance / western-pleasure kitchen kits, electrolyte product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-vet-gate-recovery-chart / horse-stall-door-tevis-100-card / equine-aerc-limited-distance-handbook searches' },
+    ],
+    why: 'Money path leftover after #1381: horses.com /disciplines/western-pleasure is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/endurance-riding commercial spoke had sidebar EmailCapture only (source discipline-endurance, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete endurance-riding-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page vet-gate / 25-to-100-mile / AERC limited-distance copy (a laminated horse vet-gate recovery chart so the pulse / hydration / gut-sound notes are posted on the stall door, a horse stall-door Tevis 100 card so the 25–35 / 50–100 mile notes are labeled at the barn, an equine AERC limited-distance handbook so the introductory-ride / mentor grounding is a physical barn book — not the trail-riding equine+aerc+endurance+handbook hop), never a placeholder ASIN, a sibling trail-riding kitchen hop, a western-pleasure hop, an electrolyte hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1381 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
