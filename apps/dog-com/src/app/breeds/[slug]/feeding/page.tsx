@@ -19,6 +19,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
+  AffiliateDisclosure,
   ArticleLayout,
   ArticleByline,
   buildArticleSchema,
@@ -31,6 +32,7 @@ import {
   FAQAccordion,
   RelatedLinks,
   SchemaScript,
+  ShopCtas,
   StockImage,
 } from '@carloOS/ui'
 import {
@@ -202,6 +204,57 @@ export default async function BreedFeedingPage({ params }: PageProps) {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey={`dog-com:breed-${slug}`} fallbackKey="dog-com:category-nutrition" alt={`A ${profile.breedName}`} aspect="16:9" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the breed-feeding checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Breed-feeding checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-feed-rer-mer-chart,
+            fridge-feed-life-stage-card, and
+            canine-breed-feeding-handbook notes
+            that match the RER / MER formula
+            (70 × BW<sub>kg</sub>
+            <sup>0.75</sup>), the puppy / adult /
+            senior calorie table, and the WSAVA /
+            AAFCO / AAHA grounding on this
+            {` ${profile.breedName} `}
+            feeding page — a laminated dog feed
+            RER-MER chart so this life-stage calorie
+            map is posted on the fridge (not a
+            nutrition-hub feeding chart, not a
+            how-much BCS-score chart, not a
+            compare-spoke-axis chart), a fridge
+            feed life-stage card so the puppy /
+            adult / senior / BCS 4–5/9 notes are
+            labeled in the kitchen (not a WSAVA
+            label card, not an ideal-weight card,
+            not a compare vs-row card), and a
+            breed-feeding handbook so the WSAVA /
+            AAFCO / AAHA manufacturer-selection
+            row is a physical kitchen book (not a
+            nutrition-reference handbook, not an
+            RER-portion handbook, not a
+            compare-pair handbook). Educational
+            kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Breed-feeding checklist"
+            subtitle="Email the RER-MER chart, life-stage card, and breed-feeding handbook notes. No spam."
+            ctaText="Email my breed-feeding checklist"
+            source={`breed-feeding-${profile.slug}-under-hero`}
+          />
+        </div>
+
         {/* MANDATORY: Veterinary consultation callout */}
         <CalloutBox
           variant="warning"
@@ -432,6 +485,48 @@ export default async function BreedFeedingPage({ params }: PageProps) {
           visit. Body condition is a more reliable target than scale weight or
           the feeding chart printed on a food bag.
         </p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the breed-feeding kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page RER / MER formula, puppy /
+            adult / senior calorie table, BCS
+            4–5/9 target, and WSAVA / AAFCO / AAHA
+            manufacturer-selection copy — a
+            laminated dog feed RER-MER chart, a
+            fridge feed life-stage card, and a
+            canine breed-feeding handbook.
+            Educational kitchen searches only. They
+            are not a ranked product list, they
+            are not a how-much-to-feed hop, they
+            are not a nutrition-hub hop, they are
+            not a compare-pair hop, they are not a
+            crate hop, they are not a
+            finger-toothbrush hop, and they do not
+            replace a veterinarian. Dog.com does
+            not sell insurance. Dog.com earns a
+            commission on qualifying purchases at
+            no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+feed+rer+mer+chart?s=breed-feeding"
+              amazonLabel="Browse laminated dog feed RER-MER charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+feed+life+stage+card?s=breed-feeding"
+              amazonLabel="Browse fridge feed life-stage cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+breed+feeding+handbook?s=breed-feeding"
+              amazonLabel="Browse canine breed-feeding handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         {/* FAQs */}
         <h2>Frequently Asked Questions</h2>
