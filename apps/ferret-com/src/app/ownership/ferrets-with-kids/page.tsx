@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,53 @@ export default function FerretsWithKidsPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret kids-household checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret kids-household checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-kid-handle-chart,
+              fridge-supervise-rule-card, and
+              mustelid-family-fit-handbook notes
+              that match the age-handle-map,
+              supervise-hygiene-log, and
+              quesenberry-afa-family-grounding copy on this
+              page — a laminated ferret kid-handle chart
+              so the school-age / whole-body-support /
+              adult-in-charge map is posted on the fridge
+              (not a fit-check chart, not a bite-inhibition
+              chart, not an ownership-hub section map), a
+              ferret fridge supervise-rule card so
+              never-unsupervised / wash-after / retreat-
+              means-stop notes are labeled on the fridge
+              (not a time-money-odor card, not a
+              bite-type card, not a scent-trust card), and
+              a mustelid family-fit handbook so the
+              Quesenberry / AFA temperament and hygiene
+              grounding is a physical kitchen book (not a
+              fit-decision handbook, not a bite-inhibition
+              handbook, not an ownership-reference
+              handbook). Educational kitchen checklist,
+              not a ranked family-pet list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does
+              not sell insurance. Aging pages stay held.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret kids-household checklist"
+              subtitle="Email the kid-handle-chart, fridge supervise-rule card, and family-fit-handbook notes. No spam."
+              ctaText="Email my ferret kids-household checklist"
+              source="ownership-ferrets-with-kids-under-hero"
+            />
+          </div>
+
           <h2 id="family">Are Ferrets Good Family Pets?</h2>
           <p>
             For the right family, yes. Ferrets are intelligent, social, and genuinely playful, and many children find them captivating. But they suit a particular kind of household: one with an engaged adult who takes ultimate responsibility, older or well-supervised children, and a willingness to invest in training and an exotic-mammal veterinarian over a 6–10 year life. A ferret is a poor match for a home expecting a low-effort, child-managed pet — they need daily out-of-cage time, careful handling, and a level of supervision that a hamster or fish does not.
@@ -129,6 +176,59 @@ export default function FerretsWithKidsPage() {
           <p>
             The honest bottom line: a ferret is an adult's responsibility, even in a family that gets one "for the kids." An adult must own the feeding, the cleaning, the training, the veterinary care, and the supervision — children can and should participate, but the ultimate accountability cannot rest on a child. Families that go in understanding this tend to do wonderfully with ferrets; families expecting a self-managing children's pet tend to struggle. Decide with that reality in view (see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a> for the financial side of the commitment).
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret kid-handle chart /
+              ferret fridge supervise-rule card /
+              mustelid family-fit handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ownership-hub /
+              fit-check / bite / first-week kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret kids-household kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page age-handle-map,
+              supervise-hygiene-log, and
+              quesenberry-afa-family-grounding copy — a
+              laminated ferret kid-handle chart, a
+              ferret fridge supervise-rule card, and a
+              mustelid family-fit handbook.
+              Educational kitchen searches only. They are
+              not a ranked family-pet list, they are not
+              an ownership-hub / fit-check / bite hop,
+              they are not a child toothbrush hop, and
+              they do not replace an exotic-mammal
+              veterinarian. Ferret.com does not sell
+              insurance. Ferret.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+kid+handle+chart?s=ferrets-with-kids"
+                amazonLabel="Browse laminated ferret kid-handle charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+supervise+rule+card?s=ferrets-with-kids"
+                amazonLabel="Browse ferret fridge supervise-rule cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+family+fit+handbook?s=ferrets-with-kids"
+                amazonLabel="Browse mustelid family-fit handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>
