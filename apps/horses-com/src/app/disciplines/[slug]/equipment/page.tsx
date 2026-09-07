@@ -330,6 +330,48 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             </div>
           ) : null}
 
+          {data.slug === 'western-pleasure' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the western-pleasure-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Western-pleasure-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-silver-mounted-show-saddle-chart,
+                stall-door-wool-felt-show-blanket-card, and
+                equine-curb-shank-eight-five-handbook notes that
+                match the silver-mounted show saddle, wool/felt
+                show blanket, and 8.5-inch curb-shank copy on
+                this page — a laminated horse silver-mounted
+                show-saddle chart so the flatter-seat / hand-
+                tooled notes are posted on the stall door (not
+                an AQHA-pleasure-gait chart, not a BETA-level-
+                three-protector chart), a horse stall-door
+                wool-felt-show-blanket card so the Navajo /
+                friction-pad notes are labeled at the barn
+                (not an AQHA-world-show card, not a medical-
+                armband card), and an equine curb-shank-eight-
+                five handbook so the AQHA Rule 444 / shank-
+                length grounding is a physical barn book (not
+                a SHW340-lope handbook, not a stud-kit-xc
+                handbook). Educational barn checklist, not a
+                ranked tack list, not a first-aid-kit hop, and
+                not a substitute for a veterinarian.
+                Horses.com does not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Western-pleasure-equipment checklist"
+                subtitle="Email the silver-mounted-show-saddle chart, wool-felt-show-blanket card, and curb-shank-eight-five handbook notes. No spam."
+                ctaText="Email my western-pleasure-equipment checklist"
+                source="discipline-equipment-western-pleasure-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
           <p dangerouslySetInnerHTML={{ __html: data.overview }} />
@@ -707,6 +749,62 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+stud+kit+xc+handbook?s=discipline-equipment-eventing"
                     amazonLabel="Browse equine stud-kit-xc handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {data.slug === 'western-pleasure' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse silver-mounted show-saddle chart /
+                  horse stall-door wool-felt-show-blanket card /
+                  equine curb-shank-eight-five handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/western-pleasure
+                  overview / eventing-equipment hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the western-pleasure-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page silver-mounted show saddle, wool/felt
+                  show blanket, and 8.5-inch curb-shank copy —
+                  a laminated horse silver-mounted show-saddle
+                  chart, a horse stall-door wool-felt-show-
+                  blanket card, and an equine curb-shank-eight-
+                  five handbook. Educational barn searches
+                  only. They are not a ranked tack list, they
+                  are not a western-pleasure-overview /
+                  eventing-equipment hop, they are not a
+                  first-aid-kit hop, they are not a child
+                  toothbrush hop, and they do not replace a
+                  veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to
+                  you. Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+silver+mounted+show+saddle+chart?s=discipline-equipment-western-pleasure"
+                    amazonLabel="Browse laminated horse silver-mounted show-saddle charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+wool+felt+show+blanket+card?s=discipline-equipment-western-pleasure"
+                    amazonLabel="Browse horse stall-door wool-felt-show-blanket cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+curb+shank+eight+five+handbook?s=discipline-equipment-western-pleasure"
+                    amazonLabel="Browse equine curb-shank-eight-five handbooks on Amazon →"
                   />
                 </div>
               </div>
