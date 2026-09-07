@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency.', path: '/breeds/siberian-husky', type: 'article' })
@@ -57,7 +57,49 @@ export default function SiberianHuskyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-                <h2>Exercise — What "High Energy" Actually Means</h2>
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the siberian-husky checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Siberian Husky checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-chukchi-sled-100mi-chart,
+            dog-fridge-husky-6ft-coyote-roller-card, and
+            canine-first-owner-siberian-husky-handbook notes
+            that match the 100+ mile sled-day history, the
+            6-foot coyote-roller fence, and first-time-owner
+            notes on this page — a laminated dog Chukchi
+            sled 100-mile chart so the 2-hour vigorous
+            exercise floor is posted on the fridge (not a
+            Rottweiler osteosarcoma chart, not a Poodle
+            prcd-PRA chart), a fridge Husky 6-foot coyote-
+            roller card so the climb-and-dig containment
+            notes are labeled in the kitchen (not a SAS echo
+            card, not a five-foot Beagle fence card), and a
+            first-owner Siberian Husky handbook so the
+            NO-typically / off-leash-unreliable / 70°F-run
+            grounding is a physical kitchen book (not a
+            first-owner Rottweiler handbook). Educational
+            kitchen checklist, not a ranked product list,
+            not a substitute for a veterinarian. Dog.com
+            does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Siberian Husky checklist"
+            subtitle="Email the Chukchi 100-mile chart, 6-foot coyote-roller card, and first-owner handbook notes. No spam."
+            ctaText="Email my siberian-husky checklist"
+            source="breed-siberian-husky-under-hero"
+          />
+        </div>
+
+        <p>The working story starts with the Chukchi of Siberia: sled dogs selected to run 100+ miles a day. That endurance / independent-decision history is why a household Husky still needs two hours of vigorous work and a 6-foot coyote-roller fence, not a crate-only afternoon. Siberian Huskies are typically first-time-owner unfriendly — NO-typically — unless the household already commits to the 2-hour run floor, 70°F heat cap, and never-off-leash-near-a-road rule.</p>
+
+        <h2>Exercise — What &quot;High Energy&quot; Actually Means</h2>
         <p>Siberian Huskies were bred to run 100+ miles per day in freezing temperatures pulling sleds. "High energy dog" undersells this significantly. A Husky needs minimum 2 hours of vigorous exercise daily — not a leisurely walk, but running, hiking at pace, bikejoring, canicross, skijoring (their original purpose), or dog sports. In hot climates this exercise must happen in early morning or evening to prevent heat stroke — Huskies are not adapted to warm weather and overheat quickly in temperatures above 70°F during vigorous activity.</p>
         <p>A Husky that does not receive adequate exercise is a destructive Husky. Huskies denied outlets howl (loudly, at length, in ways that distress neighbors), chew (furniture, trim, doors), dig (extensively — yards and sometimes floors), and escape. These are not behavioral failures — they are the predictable result of an animal with extreme exercise needs being kept sedentary.</p>
 
@@ -80,6 +122,41 @@ export default function SiberianHuskyPage() {
 
         <h2>Shedding</h2>
         <p>Huskies have a double coat that sheds moderately year-round and dramatically twice yearly ("blowing coat" in spring and fall — when the undercoat releases in dense clumps over 2–4 weeks). During blow coat season, daily brushing is required to manage the volume. A FURminator or similar undercoat removal tool used weekly manages year-round shedding. Huskies should not be shaved — the double coat provides insulation in both cold and hot weather. A shaved Husky loses its temperature regulation mechanism and may actually overheat more easily than an intact-coated dog.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Siberian Husky home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            100+ mile sled-day history, the 6-foot coyote-
+            roller fence, and first-time-owner notes — a
+            laminated dog Chukchi sled 100-mile chart, a
+            fridge Husky 6-foot coyote-roller card, and a
+            first-owner Siberian Husky handbook. Educational
+            kitchen searches only. They are not a ranked
+            product list, they are not a crate hop, they are
+            not a five-foot Beagle fence hop, and they do
+            not replace a veterinarian. Dog.com does not
+            sell insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+chukchi+sled+100mi+chart?s=breed-husky"
+              amazonLabel="Browse laminated dog Chukchi sled 100-mile charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+husky+6ft+coyote+roller+card?s=breed-husky"
+              amazonLabel="Browse fridge Husky 6-foot coyote-roller cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+siberian+husky+handbook?s=breed-husky"
+              amazonLabel="Browse first-owner Siberian Husky handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
