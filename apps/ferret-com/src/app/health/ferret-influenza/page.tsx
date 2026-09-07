@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -174,6 +176,51 @@ export default function FerretInfluenzaPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret influenza checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret influenza checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-flu-share-chart,
+              fridge-two-way-card, and
+              mustelid-influenza-hygiene-handbook notes
+              that match the two-way-map,
+              sneezing-log, and
+              quesenberry-afa-flu-grounding copy on this
+              page — a laminated ferret flu-share chart
+              so the you-to-ferret / ferret-to-you map is
+              posted on the fridge (not a CDV-risk chart,
+              not a GI-proof chart, not a can&apos;t-wait
+              chart), a ferret fridge two-way card so
+              wash-hands / skip-nuzzle / minimize-handle
+              notes are labeled on the fridge (not an
+              indoor-carry card, not a rubber-foam card,
+              not a crash-list card), and a mustelid
+              influenza-hygiene handbook so the Quesenberry /
+              AEMV research-model and self-limiting
+              grounding is a physical kitchen book (not a
+              distemper-risk handbook, not a GI-blockage
+              handbook, not an er-ready handbook).
+              Educational kitchen checklist, not a ranked
+              clinic list, not a first-aid-kit hop, and not
+              a substitute for an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Aging
+              pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret influenza checklist"
+              subtitle="Email the flu-share-chart, fridge two-way card, and influenza-hygiene-handbook notes. No spam."
+              ctaText="Email my ferret influenza checklist"
+              source="health-ferret-influenza-under-hero"
+            />
+          </div>
+
           <DropCap>
             Influenza is one of the few illnesses you can quite literally share
             with your ferret. The same virus that has you sneezing on the couch
@@ -302,6 +349,60 @@ export default function FerretInfluenzaPage() {
             in the unvaccinated. The rest of the ferret health library is
             organized at the <a href="/health">health hub</a>.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret flu-share chart /
+              ferret fridge two-way card /
+              mustelid influenza-hygiene handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              distemper / GI / emergency hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret influenza kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page two-way-map,
+              sneezing-log, and
+              quesenberry-afa-flu-grounding copy — a
+              laminated ferret flu-share chart, a
+              ferret fridge two-way card, and a
+              mustelid influenza-hygiene handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / distemper / GI hop, they are
+              not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+flu+share+chart?s=ferret-influenza"
+                amazonLabel="Browse laminated ferret flu-share charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+two+way+card?s=ferret-influenza"
+                amazonLabel="Browse ferret fridge two-way cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+influenza+hygiene+handbook?s=ferret-influenza"
+                amazonLabel="Browse mustelid influenza-hygiene handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
