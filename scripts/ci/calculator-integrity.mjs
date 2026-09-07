@@ -4376,6 +4376,28 @@ const CALCULATORS = [
     why: 'Money path leftover after #1434: horses.com /disciplines/reining/equipment is on main. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/trail-riding/equipment commercial buyer-guide spoke had sidebar EmailCapture only (source discipline-equipment-<slug>, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete trail-riding-equipment-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page flex-tree-saddle / halter-bridle-combo / pommel-cantle-bag copy (a laminated horse flex-tree trail-saddle chart so the D-ring / long-mileage notes are posted on the stall door, a horse stall-door halter-bridle-combo card so the snap-off-bit / vet-check notes are labeled at the barn, an equine pommel-cantle-bag handbook so the cordura / snack-and-tool grounding is a physical barn book), never a placeholder ASIN, a sibling trail-riding-overview kitchen hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked tack list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1434 / crate-size / stocking.',
   },
   {
+    id: 'fish · aquarium-filters-equipment',
+    file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
+    mustInclude: [
+      { re: /source="equipment-aquarium-filters-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my aquarium-filters checklist"/, label: 'concrete aquarium-filters-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+aquarium\+hob\+media\+volume\+chart\?s=equipment-aquarium-filters/, label: 'laminated aquarium HOB media-volume-chart search hop (matches on-page hang-on-back / media-volume / bioload copy; unique vs aquaclear+70+filter)' },
+      { re: /amazon-brand\/aquarium\+rim\+canister\+interval\+card\?s=equipment-aquarium-filters/, label: 'aquarium rim canister-interval-card search hop (matches on-page canister 3–6-month / 50-gallon copy; unique vs fluval+307+canister+filter)' },
+      { re: /amazon-brand\/aquarist\+sponge\+fry\+filter\+handbook\?s=equipment-aquarium-filters/, label: 'aquarist sponge-fry-filter-handbook search hop (matches on-page sponge / fry / shrimp / quarantine copy; unique vs hikari+bacto+surge+sponge+filter)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /amazon-brand\/[^?"']*(aquaclear\+70\+filter|fluval\+307\+canister\+filter|hikari\+bacto\+surge\+sponge\+filter|eheim\+jager\+heater|api\+freshwater\+master\+test\+kit|seachem\+prime\+water\+conditioner|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop equipment-hub / best-aquarium-filters kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-aquarium-hob-media-volume-chart / aquarium-rim-canister-interval-card / aquarist-sponge-fry-filter-handbook searches' },
+    ],
+    why: 'Money path leftover after #1435: horses.com /disciplines/trail-riding/equipment is on main. horses.com /disciplines/*/equipment siblings are exhausted. Remaining horses.com bloodstock leftover spokes and Triple Crown / racing leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing fish.com /equipment/aquarium-filters commercial buyer-guide spoke had sidebar EmailCapture only (source equipment-<slug>, not under-hero) plus a generic category-name amazon/chewy hop. Add under-hero capture with a concrete aquarium-filters-checklist offer; keep the existing sidebar capture; keep AffiliateDisclosure; keep the live category Chewy hop; add amazon-brand stand hops matching on-page HOB media-volume / canister-interval / sponge-fry copy (a laminated aquarium HOB media-volume chart so the bioload notes are posted on the stand, an aquarium rim canister-interval card so the 3–6-month cleaning notes are labeled on the rim, an aquarist sponge-fry-filter handbook so the air-driven / shrimp / quarantine grounding is a physical stand book), never a placeholder ASIN, a sibling equipment-hub AquaClear hop, a best-aquarium-filters review hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational stand searches only — not a ranked filter list, not a substitute for a water test. Fish.com does not sell insurance. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1435 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

@@ -196,6 +196,48 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+
+        {category.slug === 'aquarium-filters' ? (
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-filters checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-filters checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-aquarium-hob-media-volume-chart,
+              aquarium-rim-canister-interval-card, and
+              aquarist-sponge-fry-filter-handbook notes that
+              match the hang-on-back media-volume, canister
+              3–6-month cleaning, and sponge / fry copy on
+              this page — a laminated aquarium HOB media-volume
+              chart so the bioload / cartridge notes are posted
+              on the stand (not an AquaClear-70-filter hop, not
+              an equipment-hub gravel-vacuum hop), an aquarium
+              rim canister-interval card so the 50-gallon /
+              hose-disconnect notes are labeled on the rim (not
+              a Fluval-307 hop, not an API-test-kit hop), and
+              an aquarist sponge-fry-filter handbook so the
+              air-driven / shrimp / quarantine grounding is a
+              physical stand book (not a Hikari-Bacto-Surge hop,
+              not a Seachem-Prime hop). Educational stand
+              checklist, not a ranked filter list, not a
+              first-aid-kit hop, and not a substitute for a
+              water test. Fish.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-filters checklist"
+              subtitle="Email the HOB media-volume chart, canister-interval card, and sponge-fry-filter handbook notes. No spam."
+              ctaText="Email my aquarium-filters checklist"
+              source="equipment-aquarium-filters-under-hero"
+            />
+          </div>
+        ) : null}
+
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -388,6 +430,44 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             chewyLabel={`Shop ${category.categoryName} on Chewy →`}
           />
         </div>
+
+        {category.slug === 'aquarium-filters' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-filters stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              hang-on-back media-volume, canister 3–6-month
+              cleaning, and sponge / fry copy — a laminated
+              aquarium HOB media-volume chart, an aquarium rim
+              canister-interval card, and an aquarist sponge-
+              fry-filter handbook. Educational stand searches
+              only. They are not a ranked filter list, they
+              are not an equipment-hub / best-aquarium-filters
+              review hop, they are not a first-aid-kit hop,
+              and they do not replace a water test. Fish.com
+              does not sell insurance. Fish.com earns a
+              commission on qualifying purchases at no extra
+              cost to you. Existing Chewy category buttons
+              stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+aquarium+hob+media+volume+chart?s=equipment-aquarium-filters"
+                amazonLabel="Browse laminated aquarium HOB media-volume charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+rim+canister+interval+card?s=equipment-aquarium-filters"
+                amazonLabel="Browse aquarium rim canister-interval cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarist+sponge+fry+filter+handbook?s=equipment-aquarium-filters"
+                amazonLabel="Browse aquarist sponge-fry-filter handbooks on Amazon →"
+              />
+            </div>
+          </div>
+        ) : null}
 
         <h2 id="further-reading">Further Reading</h2>
         <p>
