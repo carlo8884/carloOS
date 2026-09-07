@@ -612,6 +612,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'percheron' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the percheron checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Percheron checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-gallipoly-1820-sire-chart,
+                  horse-stall-door-perche-normandy-card, and
+                  equine-first-owner-percheron-handbook notes that
+                  match the Gallipoly 1820 foundation stallion,
+                  Perche / Normandy carriage-draft, and
+                  first-time-owner copy on this page — a laminated
+                  horse Gallipoly-1820-sire chart so the Arabian-
+                  blood / medieval-war-horse notes are posted on
+                  the stall door (not a JEB-LAMC2-panel hop, not a
+                  BLM-1971-wild-act hop), a horse stall-door Perche
+                  Normandy card so the heavy-carriage / farm-draft
+                  notes are labeled at the barn (not a Flemish-
+                  Great-Horse hop, not a USDF-level hop), and an
+                  equine first-owner percheron handbook so the
+                  YES-with-caveats / low-energy / PSSM1 grounding
+                  is a physical barn book (not a first-owner-
+                  belgian-draft handbook, not a double-bridle hop).
+                  Educational barn checklist, not a ranked tack
+                  list, not a substitute for a veterinarian.
+                  Horses.com does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Percheron checklist"
+                  subtitle="Email the Gallipoly-1820-sire chart, Perche Normandy card, and first-owner handbook notes. No spam."
+                  ctaText="Email my percheron checklist"
+                  source="breed-percheron-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -1118,6 +1159,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+belgian+draft+handbook?s=breed-belgian-draft"
                     amazonLabel="Browse equine first-owner belgian-draft handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'percheron' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the percheron barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Gallipoly 1820 foundation stallion, Perche /
+                  Normandy carriage-draft, and first-time-owner
+                  copy — a laminated horse Gallipoly-1820-sire
+                  chart, a horse stall-door Perche Normandy card,
+                  and an equine first-owner percheron handbook.
+                  Educational barn searches only. They are not a
+                  ranked tack list, they are not a dressage-overview
+                  hop, they are not a first-aid-kit hop, and they
+                  do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+gallipoly+1820+sire+chart?s=breed-percheron"
+                    amazonLabel="Browse laminated horse Gallipoly-1820-sire charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+perche+normandy+card?s=breed-percheron"
+                    amazonLabel="Browse horse stall-door Perche Normandy cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+percheron+handbook?s=breed-percheron"
+                    amazonLabel="Browse equine first-owner percheron handbooks on Amazon →"
                   />
                 </div>
               </div>
