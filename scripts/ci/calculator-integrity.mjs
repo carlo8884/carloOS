@@ -2869,6 +2869,24 @@ const CALCULATORS = [
     why: 'Money path leftover after #1367: dog.com /nutrition/dog-dna-tests is on main. Dog nutrition leftover hops are exhausted (skip prescription-diets / ozempic-for-dogs Rx-adjacent; skip can-dogs-eat children). This existing dog.com /reviews/best-dental-chews commercial spoke had sidebar EmailCapture only (source review-dental-chews, not under-hero) plus live Greenies / Whimzees Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dental-chew-checklist offer matching on-page VOHC-seal / Greenies plaque-and-tartar / Whimzees plant-based / 25–90 calorie copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1367 / crate-size / stocking.',
   },
   {
+    id: 'dog · best-dog-beds',
+    file: 'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-dog-beds-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my dog-bed checklist"/, label: 'concrete dog-bed-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-dog-beds"/, label: 'existing sidebar email capture kept in place' },
+      { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1368: dog.com /reviews/best-dental-chews is on main. This existing dog.com /reviews/best-dog-beds commercial spoke had sidebar EmailCapture only (source review-dog-beds, not under-hero) plus live Big Barker / Casper Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete dog-bed-checklist offer matching on-page 12–14 hour sleep / Big Barker 7-inch AJVR / Casper washable-cover / Furhaven budget copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1368 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
