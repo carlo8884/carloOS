@@ -11,6 +11,8 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -166,6 +168,48 @@ export default function ReiningPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the reining checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Reining checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-nrha-maneuver-chart,
+              stall-door-nrha-level-card, and
+              equine-sliding-stop-handbook notes
+              that match the sliding-stop / spin / circles,
+              Open-to-Non-Pro, and 70-base scoring copy on
+              this page — a laminated horse NRHA maneuver
+              chart so the sliding-stop / spin / rollback
+              notes are posted on the stall door (not a
+              vet-gate recovery chart, not an AQHA
+              pleasure-gait chart), a horse stall-door
+              NRHA level card so the Level 1–4 / Futurity
+              notes are labeled at the barn (not a Tevis
+              100 card, not an AQHA World Show card), and
+              an equine sliding-stop handbook so the
+              hock-slide / sliding-shoe grounding is a
+              physical barn book (not an AERC
+              limited-distance handbook, not an SHW340
+              lope handbook). Educational barn checklist,
+              not a ranked clinic list, not a sliding-shoe
+              kit hop, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com
+              does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Reining checklist"
+              subtitle="Email the NRHA maneuver chart, NRHA level card, and sliding-stop handbook notes. No spam."
+              ctaText="Email my reining checklist"
+              source="disciplines-reining-under-hero"
+            />
+          </div>
 
           <h2 id="tldr">TL;DR</h2>
           <ul>
@@ -333,6 +377,59 @@ export default function ReiningPage() {
             <li>NRHA Futurity and Derby championship history and prize-money records. nrha.com.</li>
             <li>NRHA Judges Program and certification standards. nrha.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse NRHA maneuver chart /
+              horse stall-door NRHA level card /
+              equine sliding-stop handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no sliding-shoe kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs endurance /
+              western-pleasure hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the reining barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page sliding-stop / spin / circles,
+              Open-to-Non-Pro, and 70-base scoring copy —
+              a laminated horse NRHA maneuver chart, a
+              horse stall-door NRHA level card, and an
+              equine sliding-stop handbook. Educational
+              barn searches only. They are not a ranked
+              clinic list, they are not an endurance /
+              western-pleasure hop, they are not a
+              sliding-shoe kit hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+nrha+maneuver+chart?s=discipline-reining"
+                amazonLabel="Browse laminated horse NRHA maneuver charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+nrha+level+card?s=discipline-reining"
+                amazonLabel="Browse horse stall-door NRHA level cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+sliding+stop+handbook?s=discipline-reining"
+                amazonLabel="Browse equine sliding-stop handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
