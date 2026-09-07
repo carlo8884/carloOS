@@ -9,6 +9,8 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
+  AffiliateDisclosure,
+  ShopCtas,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -127,6 +129,50 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
       }
     >
       <div className="carloOS-article">
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the can-i-give-spoke checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Can-I-give-spoke checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-pet-human-otc-spoke-chart,
+            fridge-human-otc-spoke-card, and
+            veterinary-human-otc-spoke-handbook notes that
+            match this remaining {name} spoke — the
+            never / vet-dose-only / topical-OK verdict,
+            the key-caution / cats-are-different copy,
+            and the ASPCA 888-426-4435 poison-control
+            row — a laminated pet human-OTC spoke chart
+            so this remaining-OTC map is posted on the
+            fridge (not a can-i-give-hub verdict chart,
+            not a medications-spoke safety chart), a
+            fridge human-OTC spoke card so the
+            key-caution notes are labeled in the kitchen
+            (not a hub poison card, not a
+            medications-spoke recheck card), and a
+            human-OTC spoke handbook so the ASPCA /
+            Pet-Poison-Helpline row is a physical
+            kitchen book (not a hub safety handbook,
+            not a medications-spoke handbook).
+            Educational kitchen checklist, not a ranked
+            drug list, not a published dose, not a
+            substitute for a veterinarian. This page does
+            not publish doses. Vets.co does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            title="Can-I-give-spoke checklist"
+            subtitle="Email the spoke chart, caution card, and human-OTC spoke handbook notes. No spam."
+            ctaText="Email my can-i-give-spoke checklist"
+            source={`can-i-give-my-dog-${entry.slug}-under-hero`}
+          />
+        </div>
+
         <div className="rounded-lg border p-5 my-4" style={{ borderColor: meta.color, background: meta.tone === 'good' ? '#f0fdf4' : meta.tone === 'warn' ? '#fffbeb' : '#fef2f2' }}>
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Verdict</span>
           <div className="font-display font-black text-2xl mt-1" style={{ color: meta.color }}>{meta.label}</div>
@@ -175,6 +221,51 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
 
         <h2 id="faq">Frequently asked questions</h2>
         <FAQAccordion items={faqs} />
+
+        {/* Money path — live amazon-brand kitchen hops
+            matching on-page verdict / key-caution /
+            ASPCA poison-control copy. Unique vs the
+            can-i-give hub + medications-spoke kitchens.
+            Educational only — never a dose. */}
+        <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the can-i-give-spoke kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page never / vet-dose-only / topical-OK
+            verdict, the key-caution / cats-are-different
+            copy, and the ASPCA 888-426-4435
+            poison-control row — a laminated pet
+            human-OTC spoke chart, a fridge human-OTC
+            spoke card, and a veterinary human-OTC spoke
+            handbook. Educational kitchen searches only.
+            They are not a ranked drug list, they are
+            not a can-i-give-hub hop, they are not a
+            medications-spoke hop, they are not a
+            published dose, they are not a flea /
+            heartworm / vaccine hop, and they do not
+            replace a veterinarian. This page does not
+            publish doses. Vets.co does not sell
+            insurance. Vets.co earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+pet+human+otc+spoke+chart?s=can-i-give-med"
+              amazonLabel="Browse laminated pet human-OTC spoke charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/pet+fridge+human+otc+spoke+card?s=can-i-give-med"
+              amazonLabel="Browse fridge pet human-OTC spoke cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/veterinary+human+otc+spoke+handbook?s=can-i-give-med"
+              amazonLabel="Browse veterinary human-OTC spoke handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Vets.co editorial team, based on established veterinary pharmacology and toxicology references (ASPCA Animal Poison Control, Pet Poison Helpline, and veterinary literature). It is not a dose and not a substitute for veterinary advice — every medication decision for your pet should be made with a veterinarian. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies).</em>
