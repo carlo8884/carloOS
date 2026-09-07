@@ -42,6 +42,8 @@ import {
   TableOfContents,
   ArticleByline,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   DisciplineEquipmentData,
@@ -203,6 +205,47 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             publishedAt="2026-05-29"
             updatedAt="2026-05-29"
           />
+
+          {data.slug === 'dressage' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dressage-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dressage-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-plain-flap-dressage-saddle-chart,
+                stall-door-white-square-pad-card, and
+                equine-snaffle-eggbutt-bridle-handbook notes
+                that match the plain-flap saddle, white-square
+                pad, and snaffle / eggbutt copy on this page —
+                a laminated horse plain-flap dressage-saddle
+                chart so the long-leg / deep-seat notes are
+                posted on the stall door (not a training-pyramid
+                chart, not a breeze-up-gallop chart), a horse
+                stall-door white-square-pad card so the USDF /
+                competition-presentation notes are labeled at
+                the barn (not a USDF-level card, not a
+                bid-spotter card), and an equine snaffle-
+                eggbutt-bridle handbook so the DR121 bit-list
+                grounding is a physical barn book (not a
+                double-bridle handbook, not a pinhook-sale-
+                topper handbook). Educational barn checklist,
+                not a ranked tack list, not a first-aid-kit
+                hop, and not a substitute for a veterinarian.
+                Horses.com does not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Dressage-equipment checklist"
+                subtitle="Email the plain-flap-saddle chart, white-square-pad card, and snaffle-eggbutt-bridle handbook notes. No spam."
+                ctaText="Email my dressage-equipment checklist"
+                source="discipline-equipment-dressage-under-hero"
+              />
+            </div>
+          ) : null}
 
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
@@ -417,6 +460,62 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             Verify the current edition against the relevant governing body before
             competing.
           </p>
+
+          {data.slug === 'dressage' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse plain-flap dressage-saddle chart /
+                  horse stall-door white-square-pad card /
+                  equine snaffle-eggbutt-bridle handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/dressage
+                  overview / how-thoroughbred-sales-work hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the dressage-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page plain-flap saddle, white-square pad,
+                  and snaffle / eggbutt copy — a laminated
+                  horse plain-flap dressage-saddle chart, a
+                  horse stall-door white-square-pad card, and
+                  an equine snaffle-eggbutt-bridle handbook.
+                  Educational barn searches only. They are not
+                  a ranked tack list, they are not a
+                  dressage-overview / how-thoroughbred-sales-
+                  work hop, they are not a first-aid-kit hop,
+                  they are not a child toothbrush hop, and they
+                  do not replace a veterinarian. Horses.com
+                  does not sell insurance. Horses.com earns a
+                  commission on qualifying purchases at no
+                  extra cost to you. Empty Chewy buttons stay
+                  hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+plain+flap+dressage+saddle+chart?s=discipline-equipment-dressage"
+                    amazonLabel="Browse laminated horse plain-flap dressage-saddle charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+white+square+pad+card?s=discipline-equipment-dressage"
+                    amazonLabel="Browse horse stall-door white-square-pad cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+snaffle+eggbutt+bridle+handbook?s=discipline-equipment-dressage"
+                    amazonLabel="Browse equine snaffle-eggbutt-bridle handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
       </ArticleLayout>
     </>
