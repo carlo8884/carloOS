@@ -325,6 +325,46 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'arabian' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the arabian checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Arabian checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-scid-lfs-ca-panel-chart,
+                  horse-stall-door-bedouin-endurance-card, and
+                  equine-first-owner-arabian-handbook notes that
+                  match the SCID / LFS / CA panel, Bedouin
+                  endurance-mount, and first-time-owner copy on
+                  this page — a laminated horse SCID-LFS-CA panel
+                  chart so the Shin / Brooks / Brault notes are
+                  posted on the stall door (not an AQHA-five-panel
+                  hop, not a three-foundation-sire hop), a horse
+                  stall-door Bedouin endurance card so the war-
+                  mount / stamina notes are labeled at the barn
+                  (not a Tevis-100 hop, not a vet-gate-recovery
+                  hop), and an equine first-owner arabian handbook
+                  so the NO-typically / high-energy grounding is a
+                  physical barn book (not a first-owner-thoroughbred
+                  handbook, not an AERC limited-distance hop).
+                  Educational barn checklist, not a ranked tack
+                  list, not a substitute for a veterinarian.
+                  Horses.com does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Arabian checklist"
+                  subtitle="Email the SCID-LFS-CA panel chart, Bedouin endurance card, and first-owner handbook notes. No spam."
+                  ctaText="Email my arabian checklist"
+                  source="breed-arabian-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -571,6 +611,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+thoroughbred+handbook?s=breed-thoroughbred"
                     amazonLabel="Browse equine first-owner thoroughbred handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'arabian' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the arabian barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  SCID / LFS / CA panel, Bedouin endurance-mount,
+                  and first-time-owner copy — a laminated horse
+                  SCID-LFS-CA panel chart, a horse stall-door
+                  Bedouin endurance card, and an equine first-owner
+                  arabian handbook. Educational barn searches only.
+                  They are not a ranked tack list, they are not an
+                  endurance-riding hop, they are not a first-aid-kit
+                  hop, and they do not replace a veterinarian.
+                  Horses.com does not sell insurance. Horses.com
+                  earns a commission on qualifying purchases at no
+                  extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+scid+lfs+ca+panel+chart?s=breed-arabian"
+                    amazonLabel="Browse laminated horse SCID-LFS-CA panel charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+bedouin+endurance+card?s=breed-arabian"
+                    amazonLabel="Browse horse stall-door Bedouin endurance cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+arabian+handbook?s=breed-arabian"
+                    amazonLabel="Browse equine first-owner arabian handbooks on Amazon →"
                   />
                 </div>
               </div>
