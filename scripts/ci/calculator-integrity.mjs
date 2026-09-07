@@ -6512,6 +6512,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1527: dog.com /nutrition/can-dogs-eat/[food] remaining-food template is on main. All static handwritten dog.com /breeds/<slug> Pattern B leftovers (golden-retriever through weimaraner) are on main. horses.com /breeds/* through icelandic inclusive is exhausted. This existing fish.com /health/[slug] programmatic remaining-disease template (static handwritten health slugs excluded) had sidebar EmailCapture only (source health-${slug}, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture; add under-hero capture; add amazon-brand kitchen hops matching on-page TL;DR urgency / mortality / at-a-glance / WAVMA-UF-IFAS-Yanong diagnostic-ladder copy (a laminated fish health-spoke urgency chart so this remaining-disease map is posted on the fridge, a fridge health ER-flag card so the high-mortality / act-now notes are labeled in the kitchen, an aquarium health-spoke handbook so the treatment-tier / WAVMA / UF-IFAS row is a physical kitchen book), never a placeholder ASIN, a sibling health-hub test-kit hop, a disease-guide hospital-tank hop, a dog health-spoke hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / medication / vaccine hop. Educational kitchen searches only — not a ranked product list, not a treatment hop, not a substitute for an aquatic veterinarian. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1527 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'fish · param-spoke template',
+    file: 'apps/fish-com/src/app/water-parameters/[slug]/page.tsx',
+    mustInclude: [
+      { re: /source=\{`water-parameters-\$\{param\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my param-spoke checklist"/, label: 'concrete param-spoke-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source=\{`water-parameters-\$\{param\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+fish\+param\+spoke\+range\+chart\?s=water-param-spoke/, label: 'laminated fish param-spoke-range-chart search hop (matches on-page at-a-glance / setup-target ranges; unique vs laminated+fish+health+spoke+urgency+chart / api+freshwater+master+test+kit)' },
+      { re: /amazon-brand\/fish\+fridge\+param\+spoke\+crash\+card\?s=water-param-spoke/, label: 'fish fridge param-spoke-crash-card search hop (matches on-page common-problem / out-of-range notes; unique vs fish+fridge+health+er+flag+card / seachem+prime+water+conditioner)' },
+      { re: /amazon-brand\/aquarium\+param\+spoke\+handbook\?s=water-param-spoke/, label: 'aquarium param-spoke-handbook search hop (matches on-page how-to-test / raise / lower copy; unique vs aquarium+health+spoke+handbook / python+water+changer)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+fish\+health\+spoke\+urgency\+chart|fish\+fridge\+health\+er\+flag\+card|aquarium\+health\+spoke\+handbook|api\+freshwater\+master\+test\+kit|seachem\+prime\+water\+conditioner|aquarium\+gravel\+vacuum\+siphon|python\+water\+changer|aquarium\+digital\+thermometer|ich-x|kanaplex|pimafix|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop fish health-spoke / water-parameters-hub product kits, medication hops, crate hops, first-aid hops, or flea / heartworm / vaccine — this page hops only laminated-fish-param-spoke-range-chart / fish-fridge-param-spoke-crash-card / aquarium-param-spoke-handbook searches' },
+    ],
+    why: 'Money path leftover after #1528: fish.com /health/[slug] remaining-disease template is on main. All static handwritten dog.com /breeds/<slug> Pattern B leftovers (golden-retriever through weimaraner) are on main. horses.com /breeds/* through icelandic inclusive is exhausted. This existing fish.com /water-parameters/[slug] programmatic remaining-parameter template (hub /water-parameters already Pattern B on main) had sidebar EmailCapture only (source water-parameters-${slug}, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture; add under-hero capture; add amazon-brand kitchen hops matching on-page at-a-glance / setup-target / how-to-test / raise / lower copy (a laminated fish param-spoke range chart so this remaining-parameter map is posted on the fridge, a fridge param-spoke crash card so the common-problem / out-of-range notes are labeled in the kitchen, an aquarium param-spoke handbook so the how-to-test / raise / lower row is a physical kitchen book), never a placeholder ASIN, a sibling water-parameters-hub test-kit hop, a health-spoke hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / medication / vaccine hop. Educational kitchen searches only — not a ranked product list, not a treatment hop, not a substitute for an aquatic veterinarian. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1528 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
