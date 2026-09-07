@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended.', path: '/breeds/saint-bernard', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -55,6 +55,49 @@ export default function SaintBernardPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the saint-bernard checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Saint Bernard checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-bernard-alpine-rescue-chart,
+            dog-fridge-bernard-drool-rag-card, and
+            canine-first-owner-saint-bernard-handbook notes
+            that match the 1600s hospice Alpine-rescue origin,
+            the slobber-rag floor, and first-time-owner notes
+            on this page — a laminated dog Bernard Alpine-
+            rescue chart so the Great St. Bernard Pass /
+            traveler-storm notes are posted on the fridge
+            (not a Wolfhound Irish-elk chart, not a Setter
+            1700s-bird chart), a fridge Bernard drool-rag
+            card so the pendulous-lip / dedicated-slobber-rag
+            notes are labeled in the kitchen (not a 6to8yr
+            card, not a finger-toothbrush hop), and a first-
+            owner Saint Bernard handbook so the YES-typically
+            / 75°F heat / 18–24-month giant-puppy diet
+            grounding is a physical kitchen book (not a
+            first-owner Irish Wolfhound handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Saint Bernard checklist"
+            subtitle="Email the Alpine-rescue chart, drool-rag card, and first-owner handbook notes. No spam."
+            ctaText="Email my saint-bernard checklist"
+            source="breed-saint-bernard-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in the 1600s at the Great St. Bernard Hospice: Alpine rescue dogs bred to find travelers caught in Swiss-pass storms. That hospice / deep-chest history is why a household Saint Bernard still needs a gastropexy conversation at spay/neuter and a dedicated slobber-rag plan, not a crate-only afternoon. Saint Bernards are typically first-time-owner friendly — YES-typically — when the household accepts continuous drool, poor heat tolerance above 75°F, and giant-puppy nutrition until 18–24 months.</p>
+
                 <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
           description="Saint Bernards are among the highest-risk breeds for GDV — their deep, barrel chest creates the anatomical predisposition. Prophylactic gastropexy (surgically tacking the stomach to prevent rotation) performed at the time of spay/neuter is one of the most impactful preventive health decisions available for this breed. The procedure adds 15-20 minutes to the surgery and effectively eliminates the rotation component of GDV, the part that is rapidly fatal. GDV without surgery has near-100% mortality; with immediate surgery, 70-80% survival — but you may not make it to an emergency vet in time without the gastropexy already in place."
           signs={['Unproductive retching — attempting to vomit without producing anything', 'Distended abdomen that sounds hollow when tapped', 'Extreme restlessness then sudden profound lethargy', 'Excessive drooling beyond the breed baseline', 'Pale gums and signs of cardiovascular shock']}
@@ -74,6 +117,41 @@ export default function SaintBernardPage() {
 
         <h2>Exercise and Heat Management</h2>
         <p>Saint Bernards were bred for cold Alpine work — they have dense double coats and poor heat dissipation. Exercise in temperatures above 75°F risks heat stroke, which in a 150-lb dog is rapidly life-threatening. Exercise should happen in early morning or evening during warm months. They need moderate activity (daily 30-45 minute walks) to maintain cardiovascular health and healthy weight, but high-intensity or prolonged exercise is inappropriate — both for heat reasons and to protect already-stressed joints. A Saint Bernard that pants heavily at rest in warm weather needs to be moved to air conditioning immediately.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Saint Bernard home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            1600s hospice Alpine-rescue origin, the slobber-
+            rag floor, and first-time-owner notes — a
+            laminated dog Bernard Alpine-rescue chart, a
+            fridge Bernard drool-rag card, and a first-owner
+            Saint Bernard handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a crate hop, they are not a
+            finger-toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+bernard+alpine+rescue+chart?s=breed-saint-bernard"
+              amazonLabel="Browse laminated dog Bernard Alpine-rescue charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+bernard+drool+rag+card?s=breed-saint-bernard"
+              amazonLabel="Browse fridge Bernard drool-rag cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+saint+bernard+handbook?s=breed-saint-bernard"
+              amazonLabel="Browse first-owner Saint Bernard handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
