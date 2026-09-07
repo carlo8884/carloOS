@@ -18,6 +18,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -146,6 +148,47 @@ export default function WhatIsBloodstockPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the what-is-bloodstock checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              What-is-bloodstock checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-breeding-trading-asset-chart,
+              stall-door-agent-shortlist-card, and
+              equine-shuttle-stallion-handbook notes
+              that match the term / trade, agent / catalogue,
+              and global / shuttle copy on this page — a
+              laminated horse breeding-trading-asset chart so
+              the supply-chain / capital-market notes are
+              posted on the stall door (not a sire-dam-pedigree
+              chart, not a yearling-sale-catalog chart), a
+              horse stall-door agent-shortlist card so the
+              conformation / fee-transparency notes are labeled
+              at the barn (not a black-type card, not an
+              RNA-clearance card), and an equine shuttle-
+              stallion handbook so the breeding-rights /
+              hemisphere grounding is a physical barn book
+              (not a broodmare-distaff handbook, not a
+              bloodstock-agent handbook). Educational barn
+              checklist, not a ranked auction list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="What-is-bloodstock checklist"
+              subtitle="Email the breeding-trading-asset chart, agent-shortlist card, and shuttle-stallion handbook notes. No spam."
+              ctaText="Email my what-is-bloodstock checklist"
+              source="bloodstock-what-is-under-hero"
+            />
+          </div>
+
           <h2 id="trade">The Term and the Trade</h2>
           <p>Bloodstock refers to Thoroughbred horses bought, sold, and bred for racing and reproduction. The bloodstock world spans breeders who produce foals, owners who race them, stallion farms that stand sires, and the auction houses where they all trade. It is a global market, with horses, shares, and breeding rights moving between major racing nations.</p>
           <p>Think of it as the supply chain and capital market sitting behind the sport. Before a horse ever reaches a starting gate, decisions have already been made about which mare to breed to which stallion, where the resulting foal will be raised, whether it will be sold or kept, and at what stage. The racing record a horse later builds then feeds back into this market, reshaping the value of its sire, its dam, and its siblings.</p>
@@ -168,6 +211,56 @@ export default function WhatIsBloodstockPage() {
             <li>The Jockey Club Information Systems. Fact Book &mdash; breeding and sales statistics. jockeyclub.com.</li>
             <li>International Federation of Horseracing Authorities (IFHA). International breeding and the global Thoroughbred. horseracingintfed.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse breeding-trading-asset chart /
+              horse stall-door agent-shortlist card /
+              equine shuttle-stallion handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs reading-a-pedigree
+              / racing-bloodstock / bloodstock-hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the what-is-bloodstock barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page term / trade, agent / catalogue, and
+              global / shuttle copy — a laminated horse
+              breeding-trading-asset chart, a horse stall-door
+              agent-shortlist card, and an equine shuttle-
+              stallion handbook. Educational barn searches
+              only. They are not a ranked auction list, they
+              are not a reading-a-pedigree / racing-bloodstock
+              hop, they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+breeding+trading+asset+chart?s=bloodstock-what-is-bloodstock"
+                amazonLabel="Browse laminated horse breeding-trading-asset charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+agent+shortlist+card?s=bloodstock-what-is-bloodstock"
+                amazonLabel="Browse horse stall-door agent-shortlist cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+shuttle+stallion+handbook?s=bloodstock-what-is-bloodstock"
+                amazonLabel="Browse equine shuttle-stallion handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
