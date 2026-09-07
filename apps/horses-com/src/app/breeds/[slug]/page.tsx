@@ -1360,6 +1360,49 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'gypsy-vanner' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the gypsy-vanner checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Gypsy Vanner checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-romanichal-caravan-feather-chart,
+                  horse-stall-door-gypsy-vanner-society-card, and
+                  equine-first-owner-gypsy-vanner-handbook notes that
+                  match the late-1800s Romanichal / Irish Traveller
+                  caravan origin, 1990s Gypsy Vanner Horse Society
+                  formalization, and first-time-owner copy on this
+                  page — a laminated horse Romanichal caravan feather
+                  chart so the colorful-feathered / family-caravan
+                  notes are posted on the stall door (not a
+                  Knabstrupgaard-Flaebehoppen hop, not an Anglo-
+                  Thoroughbred-Arabian hop), a horse stall-door Gypsy
+                  Vanner Society card so the UK-Ireland / driving /
+                  trail notes are labeled at the barn (not a Denmark-
+                  leopard-LP hop, not a French-eventing-pre-Selle hop),
+                  and an equine first-owner gypsy-vanner handbook so
+                  the YES-typically / CPL-feathering / EMS-laminitis /
+                  PSSM1 / mallenders-sallenders / eyelid-SCC grounding
+                  is a physical barn book (not a first-owner-knabstrupper
+                  handbook, not a double-bridle hop). Educational barn
+                  checklist, not a ranked tack list, not a substitute
+                  for a veterinarian. Horses.com does not sell
+                  insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Gypsy Vanner checklist"
+                  subtitle="Email the Romanichal caravan feather chart, Gypsy Vanner Society card, and first-owner handbook notes. No spam."
+                  ctaText="Email my gypsy-vanner checklist"
+                  source="breed-gypsy-vanner-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -2536,6 +2579,44 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+knabstrupper+handbook?s=breed-knabstrupper"
                     amazonLabel="Browse equine first-owner knabstrupper handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'gypsy-vanner' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the gypsy-vanner barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  late-1800s Romanichal / Irish Traveller caravan
+                  origin, 1990s Gypsy Vanner Horse Society
+                  formalization, and first-time-owner copy — a
+                  laminated horse Romanichal caravan feather chart,
+                  a horse stall-door Gypsy Vanner Society card, and
+                  an equine first-owner gypsy-vanner handbook.
+                  Educational barn searches only. They are not a
+                  ranked tack list, they are not a dressage-overview
+                  hop, they are not a first-aid-kit hop, and they
+                  do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+romanichal+caravan+feather+chart?s=breed-gypsy-vanner"
+                    amazonLabel="Browse laminated horse Romanichal caravan feather charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+gypsy+vanner+society+card?s=breed-gypsy-vanner"
+                    amazonLabel="Browse horse stall-door Gypsy Vanner Society cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+gypsy+vanner+handbook?s=breed-gypsy-vanner"
+                    amazonLabel="Browse equine first-owner gypsy-vanner handbooks on Amazon →"
                   />
                 </div>
               </div>
