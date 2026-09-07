@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide — Brachycephalic Health, Grooming | Dog.com', description: 'Shih Tzus are brachycephalic with prominent eyes prone to corneal injuries. Daily eye cleaning, professional grooming every 6-8 weeks.', path: '/breeds/shih-tzu', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -55,6 +55,48 @@ export default function ShihTzuPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the shih-tzu checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Shih Tzu checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-shihtzu-68wk-groom-chart,
+            dog-fridge-shihtzu-corneal-ulcer-card, and
+            canine-first-owner-shih-tzu-handbook notes that
+            match the 6–8-week professional-groom floor, the
+            same-day corneal-ulcer watch, and first-time-
+            owner notes on this page — a laminated dog Shih
+            Tzu 6–8-week groom chart so the puppy-cut / mat
+            notes are posted on the fridge (not a Cavalier
+            50% MVD chart, not a Yorkie 42-tooth jaw chart),
+            a fridge Shih Tzu corneal-ulcer card so the
+            squint / same-day eye notes are labeled in the
+            kitchen (not a phantom-scratch card, not a
+            finger-toothbrush hop), and a first-owner Shih
+            Tzu handbook so the YES-typically / 6–8-week
+            groom / heat-sensitive BOAS grounding is a
+            physical kitchen book (not a first-owner
+            Cavalier King Charles handbook). Educational
+            kitchen checklist, not a ranked product list,
+            not a substitute for a veterinarian. Dog.com
+            does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Shih Tzu checklist"
+            subtitle="Email the 6–8-week groom chart, corneal-ulcer card, and first-owner handbook notes. No spam."
+            ctaText="Email my shih-tzu checklist"
+            source="breed-shih-tzu-under-hero"
+          />
+        </div>
+
+        <p>The companion story starts in the Chinese imperial court: a Tibetan temple dog refined as a lap dog for royalty, never a working breed. That palace / flat-face history is why a household Shih Tzu still needs a 6–8 week groom clock and a same-day squint watch, not a crate-only afternoon. Shih Tzus are typically first-time-owner friendly — YES-typically — when the household accepts the 6–8 week professional-groom floor, the corneal-ulcer same-day rule, and heat-sensitive BOAS limits.</p>
+
                 <BreedHealthCard name="Brachycephalic Obstructive Airway Syndrome (BOAS)" riskLevel="high"
           description="The Shih Tzu's flat face compresses anatomical structures — stenotic nares (narrow nostrils), an elongated soft palate, and a hypoplastic trachea restrict airflow. Mild BOAS: snoring and occasional snorting. Moderate BOAS: significant exercise intolerance, loud breathing at rest, sleep apnea. Severe BOAS: open-mouth breathing, cyanosis during exertion, collapse risk. Surgical correction (nare widening, soft palate shortening) dramatically improves quality of life in moderate to severe cases."
           signs={['Loud snoring or snorting at rest', 'Exercise intolerance — tires quickly', 'Open-mouth breathing during activity', 'Gagging or regurgitation', 'Sleep apnea — waking suddenly']}
@@ -74,6 +116,41 @@ export default function ShihTzuPage() {
 
         <h2>Renal Dysplasia — Know the Risk</h2>
         <p>Shih Tzus have a breed predisposition to renal dysplasia — a congenital developmental kidney abnormality. Affected dogs show signs of kidney disease at a young age (under 2 years): PU/PD, poor growth, vomiting. Not all Shih Tzus are affected — but the predisposition warrants including a urine specific gravity check in puppy wellness exams to catch early signs. Responsible breeders are aware of this condition.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Shih Tzu home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            6–8-week professional-groom floor, the same-day
+            corneal-ulcer watch, and first-time-owner notes
+            — a laminated dog Shih Tzu 6–8-week groom chart,
+            a fridge Shih Tzu corneal-ulcer card, and a
+            first-owner Shih Tzu handbook. Educational
+            kitchen searches only. They are not a ranked
+            product list, they are not a crate hop, they are
+            not a finger-toothbrush hop, and they do not
+            replace a veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+shihtzu+68wk+groom+chart?s=breed-shih-tzu"
+              amazonLabel="Browse laminated dog Shih Tzu 6–8-week groom charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+shihtzu+corneal+ulcer+card?s=breed-shih-tzu"
+              amazonLabel="Browse fridge Shih Tzu corneal-ulcer cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+shih+tzu+handbook?s=breed-shih-tzu"
+              amazonLabel="Browse first-owner Shih Tzu handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
