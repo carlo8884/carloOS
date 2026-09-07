@@ -24,6 +24,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
@@ -158,6 +160,48 @@ export default function OttbInShowJumpingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ottb-in-show-jumping checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              OTTB-in-show-jumping checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-ottb-adjustable-canter-chart,
+              stall-door-related-distance-card, and
+              equine-gymnastic-gridwork-handbook notes
+              that match the wait / adjust-stride, related
+              distances / combinations, and gymnastic
+              gridwork copy on this page — a laminated
+              horse OTTB adjustable-canter chart so the
+              lengthen-and-shorten notes are posted on the
+              stall door (not an OTTB cross-country chart,
+              not a jumper-course chart), a horse stall-door
+              related-distance card so the combinations /
+              wait-between-fences notes are labeled at the
+              barn (not a three-phase card, not a USEF
+              jumper-level card), and an equine gymnastic-
+              gridwork handbook so the technique / small-
+              course grounding is a physical barn book (not
+              an eventing-gallop handbook, not an open-
+              front-boot handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="OTTB-in-show-jumping checklist"
+              subtitle="Email the OTTB adjustable-canter chart, related-distance card, and gymnastic-gridwork handbook notes. No spam."
+              ctaText="Email my ottb-in-show-jumping checklist"
+              source="ottb-in-show-jumping-under-hero"
+            />
+          </div>
+
           <h2 id="why">Why Show Jumping Works for the OTTB</h2>
           <p>The off-track Thoroughbred has a long history in the jumper ring. The breed brings scope — the raw ability to jump big — along with athleticism and, once retrained, a rideable temperament. Thoroughbreds and Thoroughbred-cross horses, the Irish Sport Horse being the most familiar example, compete successfully across the lower and middle levels and beyond. At the very top of modern international show jumping, purpose-bred European warmblood studbooks dominate, but that reflects decades of targeted breeding for the discipline rather than any limitation of the Thoroughbred. For how courses, levels, and scoring actually work, see the general <Link href="/disciplines/show-jumping">show-jumping reference</Link>; this page covers only the Thoroughbred-from-the-track angle.</p>
           <p>The athletic qualities that served a horse on the track — power, a quick, responsive way of going, and natural balance at speed — carry over to jumping. The work of retraining is largely about reshaping how that energy is delivered: from racing forward in a straight line to waiting, adjusting, and turning.</p>
@@ -182,6 +226,58 @@ export default function OttbInShowJumpingPage() {
             <li>Thoroughbred Aftercare Alliance (TAA). Aftercare and rehoming framework. thoroughbredaftercare.org.</li>
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse OTTB adjustable-canter chart /
+              horse stall-door related-distance card /
+              equine gymnastic-gridwork handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ottb-in-eventing /
+              disciplines-show-jumping hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ottb-in-show-jumping barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page wait / adjust-stride, related
+              distances / combinations, and gymnastic
+              gridwork copy — a laminated horse OTTB
+              adjustable-canter chart, a horse stall-door
+              related-distance card, and an equine
+              gymnastic-gridwork handbook. Educational
+              barn searches only. They are not a ranked
+              race list, they are not an ottb-in-eventing /
+              disciplines-show-jumping hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+ottb+adjustable+canter+chart?s=ottb-in-show-jumping"
+                amazonLabel="Browse laminated horse OTTB adjustable-canter charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+related+distance+card?s=ottb-in-show-jumping"
+                amazonLabel="Browse horse stall-door related-distance cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+gymnastic+gridwork+handbook?s=ottb-in-show-jumping"
+                amazonLabel="Browse equine gymnastic-gridwork handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
