@@ -2978,6 +2978,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1373: dog.com /reviews/best-dog-food-small-breed is on main. This existing dog.com /reviews/best-large-breed-dog-food commercial spoke had sidebar EmailCapture only (source review-large-breed-food, not under-hero) plus live Royal Canin Large Adult / Purina Large Breed Chewy product hops and AffiliateDisclosure. Add under-hero capture with a concrete large-breed-food-checklist offer matching on-page 50+ lb / controlled calorie density / Royal Canin glucosamine-chondroitin / Purina 26% protein plus EPA copy. Keep the existing sidebar capture and the already-hopped Chewy searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1373 / crate-size / stocking.',
   },
   {
+    id: 'dog · fresh-dog-food-worth-it',
+    file: 'apps/dog-com/src/app/reviews/fresh-dog-food-worth-it/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-fresh-dog-food-worth-it-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my fresh-dog-food checklist"/, label: 'concrete fresh-dog-food-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-fresh-food"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+dog\+fresh\+vs\+kibble\+chart\?s=reviews-fresh-food/, label: 'laminated dog fresh-vs-kibble-chart search hop (matches on-page format-comparison copy; unique vs laminated+dog+cheek+swab+chart / laminated+dog+eight+week+trial+chart / laminated+dog+nasc+seal+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+fresh\+thaw\+card\?s=reviews-fresh-food/, label: 'dog fridge fresh-thaw-card search hop (matches on-page fridge-or-freezer-thaw copy; unique vs dog+fridge+breed+estimate+card / dog+fridge+itch+score+card / dog+fridge+epa+dha+card)' },
+      { re: /amazon-brand\/canine\+gently\+cooked\+handbook\?s=reviews-fresh-food/, label: 'canine gently-cooked-handbook search hop (matches on-page aafco-wsava-kcal copy; unique vs canine+mdr1+vet+handbook / canine+food+challenge+handbook / canine+fish+oil+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+cheek\+swab\+chart|dog\+fridge\+breed\+estimate\+card|canine\+mdr1\+vet\+handbook|laminated\+dog\+eight\+week\+trial\+chart|dog\+fridge\+itch\+score\+card|canine\+food\+challenge\+handbook|laminated\+dog\+nasc\+seal\+chart|dog\+fridge\+epa\+dha\+card|canine\+fish\+oil\+handbook|laminated\+dog\+raw\+salmonella\+chart|dog\+fridge\+zoonotic\+risk\+card|canine\+hpp\+raw\+handbook|farmer|ollie|nom\+nom|the\+farmer|embark|wisdom\+panel|pet\+first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop sibling nutrition kitchen kits, Farmer/Ollie/Nom Nom subscription hops, Embark / Wisdom Panel, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-dog-fresh-vs-kibble-chart / dog-fridge-fresh-thaw-card / canine-gently-cooked-handbook searches' },
+    ],
+    why: 'Money path leftover after #1374: dog.com /reviews/best-large-breed-dog-food is on main. Remaining dog review leftovers with live Chewy hops are exhausted except flea / heartworm / insurance skips. This existing dog.com /reviews/fresh-dog-food-worth-it commercial spoke had sidebar EmailCapture only (source reviews-fresh-food, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete fresh-dog-food-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page format-comparison / fridge-or-freezer-thaw / aafco-wsava-kcal copy (a laminated dog fresh-vs-kibble chart so the cooked-vs-kibble-vs-raw axes are posted on the fridge, a dog fridge fresh-thaw card so refrigerated / frozen thaw and portion notes are labeled on the fridge, a canine gently-cooked handbook so the AAFCO / WSAVA / kcal-density grounding is a physical kitchen book), never a placeholder ASIN, a sibling dog-dna-tests kitchen hop, an elimination-diet hop, a Farmer / Ollie subscription hop, a first-aid-kit hop, a child toothbrush hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1374 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
