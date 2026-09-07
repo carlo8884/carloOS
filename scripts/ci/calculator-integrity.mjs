@@ -3001,6 +3001,24 @@ const CALCULATORS = [
     why: 'Money path leftover after #1374: dog.com /reviews/best-large-breed-dog-food is on main. Remaining dog review leftovers with live Chewy hops are exhausted except flea / heartworm / insurance skips. This existing dog.com /reviews/fresh-dog-food-worth-it commercial spoke had sidebar EmailCapture only (source reviews-fresh-food, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete fresh-dog-food-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page format-comparison / fridge-or-freezer-thaw / aafco-wsava-kcal copy (a laminated dog fresh-vs-kibble chart so the cooked-vs-kibble-vs-raw axes are posted on the fridge, a dog fridge fresh-thaw card so refrigerated / frozen thaw and portion notes are labeled on the fridge, a canine gently-cooked handbook so the AAFCO / WSAVA / kcal-density grounding is a physical kitchen book), never a placeholder ASIN, a sibling dog-dna-tests kitchen hop, an elimination-diet hop, a Farmer / Ollie subscription hop, a first-aid-kit hop, a child toothbrush hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1374 / crate-size / stocking.',
   },
   {
+    id: 'horses · best-winter-horse-blankets',
+    file: 'apps/horses-com/src/app/reviews/best-winter-horse-blankets/page.tsx',
+    mustInclude: [
+      { re: /source="reviews-best-winter-horse-blankets-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my winter-blanket checklist"/, label: 'concrete winter-blanket-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="review-winter-blankets"/, label: 'existing sidebar email capture kept in place' },
+      { re: /smartpak\/rambo-original-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Rambo Original SmartPak hop kept (not an empty leftover button)' },
+      { re: /schneider\/stormshield-euro-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Schneiders StormShield hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+    ],
+    why: 'Money path leftover after #1375: dog.com /reviews/fresh-dog-food-worth-it is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /reviews/best-winter-horse-blankets commercial spoke had sidebar EmailCapture only (source review-winter-blankets, not under-hero) plus live SmartPak Rambo / Schneider StormShield product hops and AffiliateDisclosure. Add under-hero capture with a concrete winter-blanket-checklist offer matching on-page most-horses-do-not-need / turnout-vs-stable / 1000D ballistic / Rambo Original / Schneiders 1680D copy. Keep the existing sidebar capture and the already-hopped SmartPak / Schneider searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1375 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
