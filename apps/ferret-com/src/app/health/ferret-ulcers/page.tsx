@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -174,6 +176,50 @@ export default function FerretUlcersPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret ulcer checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret ulcer checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-tarry-stool-chart,
+              fridge-bruxism-watch-card, and
+              mustelid-helicobacter-ulcer-handbook notes
+              that match the tarry-stool-map,
+              bruxism-watch-log, and
+              quesenberry-aemv-ulcer-grounding copy on this
+              page — a laminated ferret tarry-stool chart
+              so the dark-tarry / off-food / hunched map is
+              posted on the fridge (not a jill-heat chart,
+              not a stool-clue chart, not a lump-weight
+              chart), a ferret fridge bruxism-watch card
+              so teeth-grind / drool / paw-at-mouth notes
+              are labeled on the fridge (not a musk-vs-gland
+              card, not a dehydrate-watch card, not a
+              senior-cbc card), and a mustelid
+              helicobacter-ulcer handbook so the Quesenberry /
+              AEMV H-mustelae-and-rarely-alone grounding is a
+              physical kitchen book (not a spay-timing
+              handbook, not an enteritis-clue handbook, not a
+              lymphoma-workup handbook). Educational kitchen
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does not
+              sell insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret ulcer checklist"
+              subtitle="Email the tarry-stool-chart, fridge bruxism-watch card, and helicobacter-ulcer-handbook notes. No spam."
+              ctaText="Email my ferret ulcer checklist"
+              source="health-ferret-ulcers-under-hero"
+            />
+          </div>
+
           <DropCap>
             A ferret with a stomach ulcer often tells you in a language that is
             easy to overlook: a grinding of the teeth while it lies hunched, a
@@ -317,6 +363,60 @@ export default function FerretUlcersPage() {
             underlying disease. The full ferret health library is organized at
             the <a href="/health">health hub</a>.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret tarry-stool chart /
+              ferret fridge bruxism-watch card /
+              mustelid helicobacter-ulcer handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              spay-neuter / diarrhea / lymphoma hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret ulcer kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page tarry-stool-map,
+              bruxism-watch-log, and
+              quesenberry-aemv-ulcer-grounding copy — a
+              laminated ferret tarry-stool chart, a
+              ferret fridge bruxism-watch card, and a
+              mustelid helicobacter-ulcer handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / spay-neuter / diarrhea hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+tarry+stool+chart?s=ferret-ulcers"
+                amazonLabel="Browse laminated ferret tarry-stool charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+bruxism+watch+card?s=ferret-ulcers"
+                amazonLabel="Browse ferret fridge bruxism-watch cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+helicobacter+ulcer+handbook?s=ferret-ulcers"
+                amazonLabel="Browse mustelid helicobacter-ulcer handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
