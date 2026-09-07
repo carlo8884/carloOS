@@ -3778,6 +3778,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1408: horses.com /racing/race-types/maiden-races is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/race-types/claiming-races commercial spoke had sidebar EmailCapture only (source race-types-claiming, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete claiming-races-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page claim-mechanism / claiming-price / purse-vs-horse copy (a laminated horse claiming-price chart so the for-sale / class-sorter notes are posted on the stall door, a horse stall-door claim-tag card so the lodged-in-advance / gate-opens notes are labeled at the barn, an equine purse-vs-horse handbook so the original-owner purse / claimant-takes-the-horse grounding is a physical barn book), never a placeholder ASIN, a sibling maiden kitchen hop, a race-types-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1408 / crate-size / stocking.',
   },
   {
+    id: 'horses · race-types-allowance',
+    file: 'apps/horses-com/src/app/racing/race-types/allowance-races/page.tsx',
+    mustInclude: [
+      { re: /source="race-types-allowance-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my allowance-races checklist"/, label: 'concrete allowance-races-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-allowance"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+allowance\+conditions\+chart\?s=race-types-allowance/, label: 'laminated horse allowance-conditions-chart search hop (matches on-page not-for-sale / mid-tier copy; unique vs laminated+horse+claiming+price+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+nw1x\+nw2x\+card\?s=race-types-allowance/, label: 'horse stall-door NW1X-NW2X-card search hop (matches on-page non-winners-of-two / step-up copy; unique vs horse+stall+door+claim+tag+card)' },
+      { re: /amazon-brand\/equine\+weight\+allowance\+handbook\?s=race-types-allowance/, label: 'equine weight-allowance-handbook search hop (matches on-page less-weight / maiden-to-stakes copy; unique vs equine+purse+vs+horse+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+claiming\+price\+chart|horse\+stall\+door\+claim\+tag\+card|equine\+purse\+vs\+horse\+handbook|laminated\+horse\+breaking\+maiden\+chart|horse\+stall\+door\+maiden\+special\+weight\+card|equine\+maiden\+proving\+ground\+handbook|laminated\+horse\+barn\+race\+class\+ladder\+chart|horse\+stall\+door\+maiden\+to\+stakes\+card|equine\+race\+class\+index\+handbook|equine\+condition\+book\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop claiming / maiden / race-types-hub kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-allowance-conditions-chart / horse-stall-door-nw1x-nw2x-card / equine-weight-allowance-handbook searches' },
+    ],
+    why: 'Money path leftover after #1409: horses.com /racing/race-types/claiming-races is on main. Remaining horses.com discipline leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/race-types/allowance-races commercial spoke had sidebar EmailCapture only (source race-types-allowance, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete allowance-races-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page conditions-ladder / NW1X-NW2X / weight-allowance copy (a laminated horse allowance-conditions chart so the not-for-sale / mid-tier notes are posted on the stall door, a horse stall-door NW1X-NW2X card so the non-winners-of-two / step-up notes are labeled at the barn, an equine weight-allowance handbook so the less-weight / maiden-to-stakes grounding is a physical barn book), never a placeholder ASIN, a sibling claiming kitchen hop, a maiden hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1409 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
