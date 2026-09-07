@@ -6739,6 +6739,28 @@ const CALCULATORS = [
     why: 'Money path leftover after #1535: ferret.com /health/aging-ferret-care is on main. Dog static /breeds/<slug> Pattern B empty after weimaraner. Fish remaining-disease / remaining-parameter exhausted. Ferret remaining-food + aging done. Vets remaining-diagnostics / remaining-specialists / remaining-med / remaining-symptoms done. Horses /breeds/* exhausted; racing SKIP-class. This existing dog.com /breeds/<slug>/insurance shared renderer (static breed folders + /breeds/[slug]/insurance) had AffiliateDisclosure above compare/funnel CTAs only — no EmailCapture and no amazon-brand kitchen hops. Keep existing compare / pet-insurance funnel CTAs; add under-hero capture; add amazon-brand kitchen hops matching on-page hereditary cost-driver / risk-tier / enroll-before-the-first-note / OFA-CHIC-AKC copy (a laminated dog insurance-spoke risk chart so this remaining-breed cost map is posted on the fridge, a fridge insurance-spoke enroll card so the pre-existing-exclusion reminder is labeled in the kitchen, a canine insurance-spoke handbook so the OFA / CHIC / quote-check row is a physical kitchen book), never a placeholder ASIN, a sibling breeds-hub hop, a vets insurance-hub hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian or an insurer. Dog.com does not sell insurance. Directory import left untouched. Do not re-open #1165 / #1251–#1535 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'dog · breed-insurance hub',
+    file: 'apps/dog-com/src/app/breeds/insurance/page.tsx',
+    mustInclude: [
+      { re: /source="breed-insurance-hub-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my breed-insurance-hub checklist"/, label: 'concrete breed-insurance-hub-checklist offer, not Subscribe' },
+      { re: /amazon-brand\/laminated\+dog\+ins\+hub\+breed\+chart\?s=breed-insurance-hub/, label: 'laminated dog ins-hub-breed-chart search hop (matches on-page why-breed-matters / hereditary-risk map; unique vs laminated+dog+breeds+profile+chart / laminated+pet+insurance+policy+map+chart / laminated+dog+ins+spoke+risk+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+ins\+hub\+timing\+card\?s=breed-insurance-hub/, label: 'dog fridge ins-hub-timing-card search hop (matches on-page enroll-before-a-sign copy; unique vs dog+fridge+breeds+library+card / pet+fridge+insurance+levers+card / dog+fridge+ins+spoke+enroll+card)' },
+      { re: /amazon-brand\/canine\+ins\+hub\+handbook\?s=breed-insurance-hub/, label: 'canine ins-hub-handbook search hop (matches on-page breed-health / quote-check copy; unique vs canine+breeds+reference+handbook / veterinary+insurance+reference+handbook / canine+ins+spoke+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+breeds\+profile\+chart|dog\+fridge\+breeds\+library\+card|canine\+breeds\+reference\+handbook|laminated\+pet\+insurance\+policy\+map\+chart|pet\+fridge\+insurance\+levers\+card|veterinary\+insurance\+reference\+handbook|laminated\+dog\+ins\+spoke\+risk\+chart|dog\+fridge\+ins\+spoke\+enroll\+card|canine\+ins\+spoke\+handbook|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b|dose)/, label: 'never hop breeds-hub / vets insurance-hub / breed-insurance-spoke kitchen kits, first-aid hops, crate hops, flea / heartworm / vaccine hops, or Rx / dose product hops — this page hops only laminated-dog-ins-hub-breed-chart / dog-fridge-ins-hub-timing-card / canine-ins-hub-handbook searches' },
+    ],
+    why: 'Money path leftover after #1536: dog.com /breeds/<slug>/insurance shared renderer is on main. This existing dog.com /breeds/insurance commercial hub had AffiliateDisclosure above compare/funnel CTAs only — no EmailCapture and no amazon-brand kitchen hops. Keep existing compare / pet-insurance funnel CTAs; add under-hero capture; add amazon-brand kitchen hops matching on-page why-breed-matters / hereditary-risk / enroll-before-a-sign / breed-health quote-check copy (a laminated dog insurance-hub breed chart so the breed-specific case map is posted on the fridge, a fridge insurance-hub timing card so the enroll-before-a-sign reminder is labeled in the kitchen, a canine insurance-hub handbook so the breed-health / quote-check row is a physical kitchen book), never a placeholder ASIN, a sibling breeds-hub hop, a vets insurance-hub hop, a breed-insurance-spoke hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian or an insurer. Dog.com does not sell insurance. Directory import left untouched. Do not re-open #1165 / #1251–#1536 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
