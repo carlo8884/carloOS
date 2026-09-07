@@ -372,6 +372,48 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             </div>
           ) : null}
 
+          {data.slug === 'reining' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the reining-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Reining-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-undercut-pommel-reining-saddle-chart,
+                stall-door-sliding-plate-card, and
+                equine-skid-boot-nrha-handbook notes that match
+                the undercut-pommel reining saddle, sliding
+                plates, and skid-boot copy on this page — a
+                laminated horse undercut-pommel reining-saddle
+                chart so the close-contact-skirt / deep-slick-
+                seat notes are posted on the stall door (not
+                an NRHA-maneuver chart, not a silver-mounted
+                show-saddle chart), a horse stall-door
+                sliding-plate card so the hind-shoe / farrier
+                notes are labeled at the barn (not an NRHA-
+                level card, not a wool-felt-show-blanket
+                card), and an equine skid-boot-nrha handbook
+                so the Section 9 / hind-fetlock grounding is
+                a physical barn book (not a sliding-stop
+                handbook, not a curb-shank-eight-five
+                handbook). Educational barn checklist, not a
+                ranked tack list, not a first-aid-kit hop, and
+                not a substitute for a veterinarian.
+                Horses.com does not sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Reining-equipment checklist"
+                subtitle="Email the undercut-pommel-reining-saddle chart, sliding-plate card, and skid-boot-nrha handbook notes. No spam."
+                ctaText="Email my reining-equipment checklist"
+                source="discipline-equipment-reining-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
           <p dangerouslySetInnerHTML={{ __html: data.overview }} />
@@ -805,6 +847,62 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+curb+shank+eight+five+handbook?s=discipline-equipment-western-pleasure"
                     amazonLabel="Browse equine curb-shank-eight-five handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {data.slug === 'reining' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse undercut-pommel reining-saddle chart /
+                  horse stall-door sliding-plate card /
+                  equine skid-boot-nrha handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/reining
+                  overview / western-pleasure-equipment hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the reining-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page undercut-pommel reining saddle,
+                  sliding plates, and skid-boot copy — a
+                  laminated horse undercut-pommel reining-
+                  saddle chart, a horse stall-door sliding-
+                  plate card, and an equine skid-boot-nrha
+                  handbook. Educational barn searches only.
+                  They are not a ranked tack list, they are
+                  not a reining-overview / western-pleasure-
+                  equipment hop, they are not a first-aid-kit
+                  hop, they are not a child toothbrush hop,
+                  and they do not replace a veterinarian.
+                  Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying
+                  purchases at no extra cost to you. Empty
+                  Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+undercut+pommel+reining+saddle+chart?s=discipline-equipment-reining"
+                    amazonLabel="Browse laminated horse undercut-pommel reining-saddle charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+sliding+plate+card?s=discipline-equipment-reining"
+                    amazonLabel="Browse horse stall-door sliding-plate cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+skid+boot+nrha+handbook?s=discipline-equipment-reining"
+                    amazonLabel="Browse equine skid-boot-nrha handbooks on Amazon →"
                   />
                 </div>
               </div>
