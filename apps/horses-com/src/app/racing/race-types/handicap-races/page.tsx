@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -152,6 +154,47 @@ export default function HandicapRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the handicap-races checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Handicap-races checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-handicap-weight-chart,
+              stall-door-lead-pad-card, and
+              equine-theoretical-dead-heat-handbook notes
+              that match the assigned-weight method, saddle /
+              lead-pad carry, and equal-chance / theoretical
+              dead-heat copy on this page — a laminated horse
+              handicap-weight chart so the official-rating /
+              more-for-better-horses notes are posted on the
+              stall door (not a grade-one-two-three chart,
+              not a stakes-nomination chart), a horse
+              stall-door lead-pad card so the saddle / lead-
+              pad carry notes are labeled at the barn (not a
+              graded-vs-group card, not a black-type card),
+              and an equine theoretical-dead-heat handbook
+              so the equal-chance / improving-horse grounding
+              is a physical barn book (not an American
+              graded-committee handbook, not an overnight-
+              stakes handbook). Educational barn checklist,
+              not a ranked race list, not a first-aid-kit
+              hop, and not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Handicap-races checklist"
+              subtitle="Email the handicap-weight chart, lead-pad card, and theoretical-dead-heat handbook notes. No spam."
+              ctaText="Email my handicap-races checklist"
+              source="race-types-handicap-under-hero"
+            />
+          </div>
+
           <h2 id="method">A Method, Not a Class</h2>
           <p>The <strong>handicap</strong> is different in kind from the other categories in this cluster. <a href="/racing/race-types/maiden-races">Maiden</a>, <a href="/racing/race-types/claiming-races">claiming</a>, <a href="/racing/race-types/allowance-races">allowance</a>, and <a href="/racing/race-types/stakes-races">stakes</a> races describe <em>levels</em> on the class ladder. A handicap describes a <em>way of assigning weight</em> that can cut across those levels &mdash; you can have a modest handicap or a major handicap stakes worth a fortune. What unifies them is the principle, not the prize.</p>
           <p>One note on the word itself: in racing, &ldquo;handicap&rdquo; in this sense means the official weighting method described here, not the popular shorthand for studying a race to place a wager. This page is about the former &mdash; the sport&apos;s weight mechanics &mdash; and contains no wagering guidance.</p>
@@ -189,6 +232,58 @@ export default function HandicapRacesPage() {
               betting tips, odds commentary, or wagering guidance is provided or
               implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse handicap-weight chart /
+              horse stall-door lead-pad card /
+              equine theoretical-dead-heat handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs graded-stakes /
+              stakes hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the handicap-races barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page assigned-weight method, saddle /
+              lead-pad carry, and equal-chance /
+              theoretical dead-heat copy — a laminated
+              horse handicap-weight chart, a horse
+              stall-door lead-pad card, and an equine
+              theoretical-dead-heat handbook. Educational
+              barn searches only. They are not a ranked
+              race list, they are not a graded-stakes /
+              stakes hop, they are not a first-aid-kit
+              hop, they are not a child toothbrush hop,
+              and they do not replace a veterinarian.
+              Horses.com does not sell insurance.
+              Horses.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+handicap+weight+chart?s=race-types-handicap"
+                amazonLabel="Browse laminated horse handicap-weight charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+lead+pad+card?s=race-types-handicap"
+                amazonLabel="Browse horse stall-door lead-pad cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+theoretical+dead+heat+handbook?s=race-types-handicap"
+                amazonLabel="Browse equine theoretical-dead-heat handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
