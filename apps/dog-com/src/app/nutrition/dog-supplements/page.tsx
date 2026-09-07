@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Supplements — What Works, What\'s Overhyped | Dog.com', description: 'Evidence-graded guide to dog supplements. Fish oil, joint supplements, probiotics, and more — what the research actually shows and what\'s pure marketing.', path: '/nutrition/dog-supplements', type: 'article' })
@@ -41,6 +41,51 @@ export default function DogSupplementsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog supplement checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog supplement checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-nasc-seal-chart,
+            fridge-epa-dha-card, and
+            canine-fish-oil-handbook notes
+            that match the nasc-seal-map,
+            fish-oil-epa-log, and
+            glucosamine-onset-grounding copy on this
+            page — a laminated dog NASC-seal chart so
+            the third-party-audit map is posted on the
+            fridge (not a raw-salmonella chart, not an
+            FDA-DCM chart, not a WSAVA-six chart), a
+            dog fridge EPA-DHA card so marine-source
+            fish-oil notes are labeled on the fridge
+            (not a zoonotic-risk card, not a
+            high-legume card, not a manufacturer-first
+            card), and a canine fish-oil handbook so
+            the 20–55 mg EPA/DHA per kg grounding is a
+            physical kitchen book (not an HPP-raw
+            handbook, not a taurine-switch handbook,
+            not a DACVN-staff handbook). Educational
+            kitchen checklist, not a ranked clinic
+            list, not a Dasuquin / Nordic / Cosequin
+            product hop, not a first-aid-kit hop, and
+            not a substitute for a veterinarian.
+            Dog.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog supplement checklist"
+            subtitle="Email the NASC-seal chart, fridge EPA-DHA card, and fish-oil-handbook notes. No spam."
+            ctaText="Email my dog supplement checklist"
+            source="nutrition-supplements-under-hero"
+          />
+        </div>
+
         <div style={{ background: 'rgba(200,149,42,0.06)', border: '1px solid rgba(200,149,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-warning)', marginBottom: '8px' }}>NASC Quality Seal</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The pet supplement industry has minimal regulatory oversight. The National Animal Supplement Council (NASC) quality seal indicates the manufacturer has undergone third-party audits, maintains adverse event reporting, and meets quality standards. It is not a guarantee of efficacy — but it is the best available quality signal. Look for it on any supplement you consider.</p>
@@ -70,6 +115,61 @@ export default function DogSupplementsPage() {
             </div>
           )
         })}
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog NASC-seal chart /
+            dog fridge EPA-DHA card /
+            canine fish-oil handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs raw-diet-risks /
+            grain-free-dcm / wsava-explained hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog supplement kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page nasc-seal-map,
+            fish-oil-epa-log, and
+            glucosamine-onset-grounding copy — a
+            laminated dog NASC-seal chart, a
+            dog fridge EPA-DHA card, and a
+            canine fish-oil handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a raw-diet-risks / grain-free-dcm /
+            wsava-explained hop, they are not a
+            Dasuquin / Nordic / Cosequin product hop,
+            they are not a first-aid-kit hop, they are
+            not a child toothbrush hop, and they do
+            not replace a veterinarian. Dog.com does
+            not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no
+            extra cost to you. Empty Chewy buttons
+            stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+nasc+seal+chart?s=nutrition-supplements"
+              amazonLabel="Browse laminated dog NASC-seal charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+epa+dha+card?s=nutrition-supplements"
+              amazonLabel="Browse dog fridge EPA-DHA cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+fish+oil+handbook?s=nutrition-supplements"
+              amazonLabel="Browse canine fish-oil handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
