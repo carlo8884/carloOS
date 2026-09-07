@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry.', path: '/breeds/shiba-inu', type: 'article' })
@@ -55,6 +55,47 @@ export default function ShibaInuPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the shiba-inu checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Shiba Inu checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-shiba-underbrush-hunt-chart,
+            dog-fridge-shiba-scream-card, and
+            canine-first-owner-shiba-inu-handbook notes that
+            match the Japanese mountain-underbrush origin, the
+            Shiba-scream floor, and first-time-owner notes on
+            this page — a laminated dog Shiba underbrush-hunt
+            chart so the six-native-breed / small-game notes
+            are posted on the fridge (not a Bernard Alpine-
+            rescue chart, not a Wolfhound Irish-elk chart), a
+            fridge Shiba scream card so the bath / nail-trim
+            protest notes are labeled in the kitchen (not a
+            drool-rag card, not a finger-toothbrush hop), and
+            a first-owner Shiba Inu handbook so the NO-
+            typically / leash-only / 6-foot-fence grounding
+            is a physical kitchen book (not a first-owner
+            Saint Bernard handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Shiba Inu checklist"
+            subtitle="Email the underbrush-hunt chart, scream card, and first-owner handbook notes. No spam."
+            ctaText="Email my shiba-inu checklist"
+            source="breed-shiba-inu-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in Japan: one of six native breeds, selected to flush small game in dense mountain underbrush. That independent-hunt / prey-drive history is why a household Shiba still needs a leash-only rule and a 6-foot fence, not a crate-only afternoon. Shiba Inus are not typically first-time-owner friendly — NO-typically — when the household expects Labrador-style recall, off-leash trails, or a dog that complies because you asked.</p>
+
                 <h2>The Shiba Personality — What It Actually Means</h2>
         <p>Shiba Inus are described as cat-like, and the comparison is accurate: they are clean, self-grooming, fastidious dogs that dislike being dirty or wet. They are independent and do not seek validation the way retrievers or herding breeds do — they observe their owners with cool assessment rather than eager attention. They form deep bonds with their family but show it differently than more demonstratively affectionate breeds — through proximity, attention, and occasional dramatic affection rather than continuous tail-wagging enthusiasm.</p>
         <p>This independence manifests in training: Shibas are intelligent — they understand what you're asking. They may simply decide the reward is not sufficient motivation at this moment. Positive reinforcement with high-value rewards and short, engaging sessions work far better than extended drilling. Harsh corrections produce a dog that shuts down or redirects, not increased compliance. Early socialization and training establishes the patterns that make a Shiba manageable — starting at 8-12 weeks and being consistent through adolescence.</p>
@@ -70,6 +111,41 @@ export default function ShibaInuPage() {
 
         <h2>Health and Grooming</h2>
         <p>Shibas are a generally healthy primitive breed with fewer genetic diseases than many selectively bred dogs. The primary health concerns: hip dysplasia (OFA clearances on parents recommended), progressive retinal atrophy (DNA test available), and glaucoma (CAER exam). Median lifespan of 12-16 years is excellent for a purebred dog. Their double coat is dense and sheds heavily twice yearly (the "coat blow" — massive, impressive shedding for 2-3 weeks). Regular brushing during coat blows with a slicker brush and undercoat rake significantly reduces the hair distributed through the house. Between coat blows, they are low-maintenance groomers — their fastidious nature keeps them clean.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Shiba Inu home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            Japanese mountain-underbrush origin, the Shiba-
+            scream floor, and first-time-owner notes — a
+            laminated dog Shiba underbrush-hunt chart, a
+            fridge Shiba scream card, and a first-owner
+            Shiba Inu handbook. Educational kitchen searches
+            only. They are not a ranked product list, they
+            are not a crate hop, they are not a finger-
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+shiba+underbrush+hunt+chart?s=breed-shiba"
+              amazonLabel="Browse laminated dog Shiba underbrush-hunt charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+shiba+scream+card?s=breed-shiba"
+              amazonLabel="Browse fridge Shiba scream cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+shiba+inu+handbook?s=breed-shiba"
+              amazonLabel="Browse first-owner Shiba Inu handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
