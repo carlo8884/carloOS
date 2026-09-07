@@ -1703,6 +1703,48 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'american-saddlebred' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the american-saddlebred checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  American Saddlebred checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-kentucky-saddle-seat-chart,
+                  horse-stall-door-narragansett-pacer-card, and
+                  equine-first-owner-american-saddlebred-handbook notes
+                  that match the Kentucky Narragansett-Pacer / Canadian-
+                  Pacer / Thoroughbred plantation and Civil War officer
+                  origin, USEF saddle-seat / five-gaited / three-gaited
+                  copy, and first-time-owner notes on this page — a
+                  laminated horse Kentucky saddle-seat chart so the
+                  USEF / saddle-seat / five-gaited notes are posted on
+                  the stall door (not a Nez-Perce-Palouse hop, not an
+                  APHA-overo-color hop), a horse stall-door Narragansett
+                  Pacer card so the Kentucky / plantation / Civil War
+                  officer notes are labeled at the barn (not a buffalo-
+                  war-horse hop, not an Impressive-Poco-Bueno hop), and
+                  an equine first-owner american-saddlebred handbook so
+                  the NO-typically / lordosis-swayback / PSSM2 /
+                  anhidrosis / stringhalt grounding is a physical barn
+                  book (not a first-owner-appaloosa handbook, not a
+                  double-bridle hop). Educational barn checklist, not a
+                  ranked tack list, not a substitute for a veterinarian.
+                  Horses.com does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="American Saddlebred checklist"
+                  subtitle="Email the Kentucky saddle-seat chart, Narragansett Pacer card, and first-owner handbook notes. No spam."
+                  ctaText="Email my american-saddlebred checklist"
+                  source="breed-american-saddlebred-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -3184,6 +3226,45 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+appaloosa+handbook?s=breed-appaloosa"
                     amazonLabel="Browse equine first-owner appaloosa handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'american-saddlebred' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the american-saddlebred barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Kentucky Narragansett-Pacer / Canadian-Pacer /
+                  Thoroughbred plantation and Civil War officer origin,
+                  USEF saddle-seat / five-gaited / three-gaited copy,
+                  and first-time-owner notes — a laminated horse
+                  Kentucky saddle-seat chart, a horse stall-door
+                  Narragansett Pacer card, and an equine first-owner
+                  american-saddlebred handbook. Educational barn
+                  searches only. They are not a ranked tack list, they
+                  are not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying purchases
+                  at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+kentucky+saddle+seat+chart?s=breed-american-saddlebred"
+                    amazonLabel="Browse laminated horse Kentucky saddle-seat charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+narragansett+pacer+card?s=breed-american-saddlebred"
+                    amazonLabel="Browse horse stall-door Narragansett Pacer cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+american+saddlebred+handbook?s=breed-american-saddlebred"
+                    amazonLabel="Browse equine first-owner american-saddlebred handbooks on Amazon →"
                   />
                 </div>
               </div>
