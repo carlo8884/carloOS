@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -51,6 +51,46 @@ export default function FrenchBulldogBreedPage() {
         <Link href="/breeds" className="hover:text-brand-primary no-underline">Breeds</Link><span>›</span>
         <span className="text-brand-text-mid font-medium">French Bulldog</span>
       </nav>
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-content-wide mx-auto">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the french-bulldog checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            French Bulldog checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-paris-1800s-lace-chart,
+            dog-fridge-frenchie-skin-fold-card, and
+            canine-first-owner-french-bulldog-handbook notes
+            that match the 1800s Paris / Nottingham lace
+            companion story, the daily facial-fold / tail-
+            pocket cleaning, and first-time-owner notes on
+            this page — a laminated dog Paris 1800s lace
+            chart so the companion-breed notes are posted
+            on the fridge (not a Stephanitz 1899 herding
+            chart, not a POMC 2016 satiety chart), a fridge
+            Frenchie skin-fold card so daily fold cleaning
+            is labeled in the kitchen (not a cooling-mat
+            hop, not a cooling-vest hop), and a first-owner
+            French Bulldog handbook so the YES-typically /
+            BOAS / IVDD / heat grounding is a physical
+            kitchen book (not a first-owner German Shepherd
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="French Bulldog checklist"
+            subtitle="Email the Paris 1800s lace chart, Frenchie skin-fold card, and first-owner handbook notes. No spam."
+            ctaText="Email my french-bulldog checklist"
+            source="breed-french-bulldog-under-hero"
+          />
+        </div>
+      </section>
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
@@ -59,6 +99,7 @@ export default function FrenchBulldogBreedPage() {
             <CalloutBox variant="warning" title="BOAS — emergency awareness">
               Brachycephalic Airway Syndrome severely limits a Frenchie&apos;s ability to thermoregulate. Heat distress (frantic panting, blue/purple gums, collapse) is an emergency — cool the dog and transport to an ER immediately. Never leave a Frenchie in a parked car, even with windows cracked.
             </CalloutBox>
+            <p>The companion story starts in 1800s Paris: Nottingham lace workers brought English toy bulldogs to France, and the smaller Paris type became today&apos;s French Bulldog. That lace-trade / companion history is why a Frenchie still wants a sofa and a short cool-hour walk — not a Schutzhund afternoon.</p>
 
             <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.15)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 28px' }}>
               <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '7px' }}>Before You Buy</div>
@@ -70,7 +111,43 @@ export default function FrenchBulldogBreedPage() {
             <BreedHealthCard name="Heat Intolerance" riskLevel="very-high" description="Compromised airway severely limits panting. Heatstroke can develop at temperatures comfortable for humans. Never in a parked car. Limit outdoor activity in warm weather. Walk only in cool morning/evening hours in summer." />
             <BreedHealthCard name="Skin Fold Infections" riskLevel="very-high" description="Facial folds, tail pocket, and body folds trap moisture and bacteria. Daily cleaning is non-negotiable maintenance. Veterinary treatment when infected. Severe cases may require surgical fold correction." />
             <h2>Financial Reality</h2>
-            <p>Realistic lifetime medical costs for a Frenchie with typical challenges: BOAS surgery ($1,500–5,000), IVDD treatment ($5,000–8,000+ for surgery), ongoing skin fold management, regular ear and eye care. Enroll pet insurance before the first vet visit. Compare policies specifically for BOAS and spinal coverage.</p>
+            <p>Realistic lifetime medical costs for a Frenchie with typical challenges: BOAS surgery ($1,500–5,000), IVDD treatment ($5,000–8,000+ for surgery), ongoing skin fold management, regular ear and eye care. Enroll pet insurance before the first vet visit. Compare policies specifically for BOAS and spinal coverage. French Bulldogs are typically first-time-owner friendly only when the household accepts daily fold cleaning, cool-hour walks, ramps instead of jumps, and the BOAS / IVDD / heat load from day one.</p>
+
+            <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                Shop the French Bulldog home kit
+              </div>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                These Amazon category searches match the on-page
+                1800s Paris / Nottingham lace companion story,
+                the daily facial-fold / tail-pocket cleaning,
+                and first-time-owner notes — a laminated dog
+                Paris 1800s lace chart, a fridge Frenchie
+                skin-fold card, and a first-owner French
+                Bulldog handbook. Educational kitchen searches
+                only. They are not a ranked product list, they
+                are not a crate hop, they are not a cooling-mat
+                hop, and they do not replace a veterinarian.
+                Dog.com does not sell insurance. Dog.com earns
+                a commission on qualifying purchases at no extra
+                cost to you.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <div className="flex flex-col gap-3 mt-3">
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/laminated+dog+paris+1800s+lace+chart?s=breed-french-bulldog"
+                  amazonLabel="Browse laminated dog Paris 1800s lace charts on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/dog+fridge+frenchie+skin+fold+card?s=breed-french-bulldog"
+                  amazonLabel="Browse fridge Frenchie skin-fold cards on Amazon →"
+                />
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/canine+first+owner+french+bulldog+handbook?s=breed-french-bulldog"
+                  amazonLabel="Browse first-owner French Bulldog handbooks on Amazon →"
+                />
+              </div>
+            </div>
 
             <h2>Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
