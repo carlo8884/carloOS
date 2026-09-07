@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Boxer Breed Guide — Cancer Risk, Aortic Stenosis | Dog.com', description: 'Boxers have the highest cancer rate of any breed. Mast cell tumors, brain tumors, and heart disease (ARVC, SAS) are the primary concerns.', path: '/breeds/boxer', type: 'article' })
@@ -44,6 +44,46 @@ export default function BoxerPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the boxer checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Boxer checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-bullenbeisser-1890s-chart,
+            dog-fridge-boxer-holter-arvc-card, and
+            canine-first-owner-boxer-handbook notes that
+            match the late-1800s Bullenbeisser / Germany
+            working-dog story, the annual 24-hour Holter /
+            ARVC notes, and first-time-owner notes on this
+            page — a laminated dog Bullenbeisser 1890s chart
+            so the catch-dog / messenger notes are posted on
+            the fridge (not a hare scent-pack chart, not a
+            Paris 1800s lace chart), a fridge Boxer Holter
+            ARVC card so the age-3 annual monitor notes are
+            labeled in the kitchen (not a five-foot Beagle
+            fence card), and a first-owner Boxer handbook so
+            the YES-typically / mast-cell / heat grounding is
+            a physical kitchen book (not a first-owner Beagle
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Boxer checklist"
+            subtitle="Email the Bullenbeisser 1890s chart, Holter ARVC card, and first-owner handbook notes. No spam."
+            ctaText="Email my boxer checklist"
+            source="breed-boxer-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in late-1800s Germany: Boxers were developed from Bullenbeisser stock as a hunting catch dog and military messenger. That Bullenbeisser / messenger history is why a Boxer still wants a job and a family — not a crate-only afternoon.</p>
+
         <BreedHealthCard name="Cancer — Highest Rate of Any Breed" riskLevel="very-high"
           description="Boxers have the highest cancer incidence of any breed studied. The most significant cancer types: mast cell tumors (skin tumors that can be benign or highly malignant — any new skin lump on a Boxer requires immediate fine needle aspirate, not watchful waiting), brain tumors (gliomas and meningiomas — Boxers and brachycephalic breeds are disproportionately affected, presenting with new-onset seizures, behavior changes, or neurological signs in a middle-aged to older dog), lymphoma, and histiocytic sarcoma. The average age of cancer death in Boxers is approximately 6–7 years."
           signs={['Any new skin lump — aspirate immediately', 'New-onset seizures in adult', 'Rapid neurological changes', 'Unexplained weight loss', 'Lymph node enlargement']}
@@ -75,6 +115,42 @@ export default function BoxerPage() {
           <li>MRI for any adult Boxer with new-onset seizures or behavioral change</li>
           <li>Pet insurance obtained as a puppy before conditions develop</li>
         </ul>
+        <p>Boxers are typically first-time-owner friendly when the household accepts the aspirate-every-lump habit, annual Holter monitoring from age 3, cool-hour walks, and the cancer / ARVC / SAS load from day one.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Boxer home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            late-1800s Bullenbeisser / Germany working-dog
+            story, the annual 24-hour Holter / ARVC notes,
+            and first-time-owner notes — a laminated dog
+            Bullenbeisser 1890s chart, a fridge Boxer Holter
+            ARVC card, and a first-owner Boxer handbook.
+            Educational kitchen searches only. They are not a
+            ranked product list, they are not a crate hop,
+            they are not a first-aid-kit hop, and they do not
+            replace a veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+bullenbeisser+1890s+chart?s=breed-boxer"
+              amazonLabel="Browse laminated dog Bullenbeisser 1890s charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+boxer+holter+arvc+card?s=breed-boxer"
+              amazonLabel="Browse fridge Boxer Holter ARVC cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+boxer+handbook?s=breed-boxer"
+              amazonLabel="Browse first-owner Boxer handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
