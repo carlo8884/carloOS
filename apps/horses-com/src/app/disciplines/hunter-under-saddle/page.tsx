@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,48 @@ export default function HunterUnderSaddlePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the hunter-under-saddle checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Hunter-under-saddle checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-hunter-under-saddle-gait-chart,
+              stall-door-ushja-hunter-card, and
+              equine-hunter-bascule-handbook notes
+              that match the walk-trot-canter-flat,
+              ushja-usef-hunter, and bascule / field-hunter
+              copy on this page — a laminated horse hunter
+              under-saddle gait chart so the ground-covering
+              / level-topline / both-reins notes are posted
+              on the stall door (not an equitation position
+              chart, not a cutting cow-work chart), a horse
+              stall-door USHJA hunter card so the USHJA /
+              USEF hunter / rated-show notes are labeled at
+              the barn (not a USEF medal card, not an NCHA
+              cutting card), and an equine hunter-bascule
+              handbook so the over-fences / foxhunting /
+              effortless-style grounding is a physical barn
+              book (not a hunter-seat handbook, not a
+              cutting cow-sense handbook). Educational barn
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Hunter-under-saddle checklist"
+              subtitle="Email the hunter under-saddle gait chart, USHJA hunter card, and hunter-bascule handbook notes. No spam."
+              ctaText="Email my hunter-under-saddle checklist"
+              source="disciplines-hunter-under-saddle-under-hero"
+            />
+          </div>
+
           <h2 id="what">What the Hunters Are</h2>
           <p>The hunters are a group of English show classes rooted in the traditions of foxhunting, where the prized horse was a calm, brave, comfortable mount with smooth gaits and good jumping form. In the show ring this translates into subjective judging of style and manners rather than the objective faults-and-time scoring of show jumping. There are flat classes (hunter under saddle) and over-fences classes, and the same qualities -- smoothness, consistency, and effortless style -- are sought in both.</p>
 
@@ -136,6 +178,58 @@ export default function HunterUnderSaddlePage() {
             <li>United States Equestrian Federation (USEF). Hunter division rules. usef.org.</li>
             <li>British Show Horse and hunter society resources, current editions.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse hunter under-saddle gait chart /
+              horse stall-door USHJA hunter card /
+              equine hunter-bascule handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs equitation /
+              cutting hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the hunter-under-saddle barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page walk-trot-canter-flat,
+              ushja-usef-hunter, and bascule /
+              field-hunter copy — a laminated horse hunter
+              under-saddle gait chart, a horse stall-door
+              USHJA hunter card, and an equine
+              hunter-bascule handbook. Educational barn
+              searches only. They are not a ranked clinic
+              list, they are not an equitation / cutting
+              hop, they are not a first-aid-kit hop, they
+              are not a child toothbrush hop, and they do
+              not replace a veterinarian. Horses.com does
+              not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+hunter+under+saddle+gait+chart?s=discipline-hunter-under-saddle"
+                amazonLabel="Browse laminated horse hunter under-saddle gait charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+ushja+hunter+card?s=discipline-hunter-under-saddle"
+                amazonLabel="Browse horse stall-door USHJA hunter cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+hunter+bascule+handbook?s=discipline-hunter-under-saddle"
+                amazonLabel="Browse equine hunter-bascule handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>

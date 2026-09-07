@@ -3272,6 +3272,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1386: horses.com /disciplines/cutting is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/equitation commercial spoke had sidebar EmailCapture only (source discipline-equitation, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete equitation-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page ear-hip-heel / usef-medal-aspc-maclay / hunter-seat copy (a laminated horse equitation position chart so the heels-down / ear-to-hip-to-heel notes are posted on the stall door, a horse stall-door USEF medal card so the USEF Medal / ASPCA Maclay / WIHS notes are labeled at the barn, an equine hunter-seat handbook so the rider-not-horse / George Morris grounding is a physical barn book), never a placeholder ASIN, a sibling cutting kitchen hop, a combined-driving hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1386 / crate-size / stocking.',
   },
   {
+    id: 'horses · hunter-under-saddle',
+    file: 'apps/horses-com/src/app/disciplines/hunter-under-saddle/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-hunter-under-saddle-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my hunter-under-saddle checklist"/, label: 'concrete hunter-under-saddle-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-hunter"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+hunter\+under\+saddle\+gait\+chart\?s=discipline-hunter-under-saddle/, label: 'laminated horse hunter under-saddle gait-chart search hop (matches on-page walk-trot-canter / ground-covering copy; unique vs laminated+horse+equitation+position+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+ushja\+hunter\+card\?s=discipline-hunter-under-saddle/, label: 'horse stall-door USHJA hunter-card search hop (matches on-page USHJA / USEF hunter copy; unique vs horse+stall+door+usef+medal+card)' },
+      { re: /amazon-brand\/equine\+hunter\+bascule\+handbook\?s=discipline-hunter-under-saddle/, label: 'equine hunter-bascule-handbook search hop (matches on-page over-fences / foxhunting / field-hunter copy; unique vs equine+hunter+seat+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+equitation\+position\+chart|horse\+stall\+door\+usef\+medal\+card|equine\+hunter\+seat\+handbook|laminated\+horse\+cutting\+cow\+work\+chart|horse\+stall\+door\+ncha\+cutting\+card|equine\+cutting\+cow\+sense\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop equitation / cutting kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-hunter-under-saddle-gait-chart / horse-stall-door-ushja-hunter-card / equine-hunter-bascule-handbook searches' },
+    ],
+    why: 'Money path leftover after #1387: horses.com /disciplines/equitation is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/hunter-under-saddle commercial spoke had sidebar EmailCapture only (source discipline-hunter, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete hunter-under-saddle-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page walk-trot-canter-flat / ushja-usef-hunter / bascule-field-hunter copy (a laminated horse hunter under-saddle gait chart so the ground-covering / level-topline notes are posted on the stall door, a horse stall-door USHJA hunter card so the USHJA / USEF hunter notes are labeled at the barn, an equine hunter-bascule handbook so the over-fences / foxhunting grounding is a physical barn book), never a placeholder ASIN, a sibling equitation kitchen hop, a cutting hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1387 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
