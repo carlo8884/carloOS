@@ -2085,6 +2085,50 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'tennessee-walking-horse' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the tennessee-walking-horse checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Tennessee Walking Horse checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-twhbea-running-walk-chart,
+                  horse-stall-door-tennessee-bluegrass-card, and
+                  equine-first-owner-tennessee-walking-handbook notes
+                  that match the Tennessee Bluegrass running-walk
+                  origin from Narragansett Pacer / Canadian Pacer /
+                  Standardbred / Thoroughbred / Morgan crosses, the
+                  TWHBEA four-beat running walk, and first-time-owner
+                  notes on this page — a laminated horse TWHBEA
+                  running-walk chart so the TWHBEA / running-walk
+                  notes are posted on the stall door (not a
+                  Narragansett-pacer hop, not a BWP-1955 hop), a
+                  horse stall-door Tennessee Bluegrass card so the
+                  Bluegrass / trail / flat-shod notes are labeled at
+                  the barn (not a Kentucky-saddle-seat hop, not a
+                  BWP-draft-independent hop), and an equine
+                  first-owner tennessee-walking handbook so the
+                  YES-typically / soring-HPA / navicular / PSSM /
+                  EMS-laminitis grounding is a physical barn book
+                  (not a first-owner-american-saddlebred handbook,
+                  not a first-owner-belgian-warmblood handbook).
+                  Educational barn checklist, not a ranked tack list,
+                  not a substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Tennessee Walking Horse checklist"
+                  subtitle="Email the TWHBEA running-walk chart, Tennessee Bluegrass card, and first-owner handbook notes. No spam."
+                  ctaText="Email my tennessee-walking-horse checklist"
+                  source="breed-tennessee-walking-horse-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -3909,6 +3953,45 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+belgian+warmblood+handbook?s=breed-belgian-warmblood"
                     amazonLabel="Browse equine first-owner belgian-warmblood handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'tennessee-walking-horse' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the tennessee-walking-horse barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  Tennessee Bluegrass running-walk origin from
+                  Narragansett Pacer / Canadian Pacer / Standardbred /
+                  Thoroughbred / Morgan crosses, the TWHBEA four-beat
+                  running walk, and first-time-owner notes — a
+                  laminated horse TWHBEA running-walk chart, a horse
+                  stall-door Tennessee Bluegrass card, and an equine
+                  first-owner tennessee-walking handbook. Educational
+                  barn searches only. They are not a ranked tack list,
+                  they are not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying purchases
+                  at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+twhbea+running+walk+chart?s=breed-tennessee-walking-horse"
+                    amazonLabel="Browse laminated horse TWHBEA running-walk charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+tennessee+bluegrass+card?s=breed-tennessee-walking-horse"
+                    amazonLabel="Browse horse stall-door Tennessee Bluegrass cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+tennessee+walking+handbook?s=breed-tennessee-walking-horse"
+                    amazonLabel="Browse equine first-owner tennessee-walking handbooks on Amazon →"
                   />
                 </div>
               </div>
