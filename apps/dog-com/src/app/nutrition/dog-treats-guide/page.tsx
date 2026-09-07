@@ -6,6 +6,8 @@ import {
   EmailCapture,
   RelatedLinks,
   TableOfContents,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -143,6 +145,50 @@ export default function DogTreatsGuidePage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog treats checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog treats checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-dog-treat-kcal-chart,
+              fridge-vohc-seal-card, and
+              canine-jerky-fda-handbook notes
+              that match the treat-kcal-budget-map,
+              vohc-seal-log, and
+              jerky-fda-grounding copy on this
+              page — a laminated dog treat-kcal chart so
+              the 10% / write-max-count-on-the-bag map is
+              posted on the fridge (not a rib-waist chart,
+              not a twice-daily chart, not a
+              ten-percent-treat chart), a dog fridge
+              VOHC-seal card so dental-chew / Seal-of-Acceptance
+              notes are labeled on the fridge (not a
+              kcal-scale card, not a life-stage-meal
+              card, not an ideal-weight card), and a canine
+              jerky-FDA handbook so the 2007–2017 CVM
+              investigation grounding is a physical
+              kitchen book (not a low-impact-walk handbook,
+              not a GDV-timing handbook, not an
+              RER-portion handbook). Educational kitchen
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Dog.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog treats checklist"
+              subtitle="Email the treat-kcal chart, fridge VOHC-seal card, and jerky-FDA-handbook notes. No spam."
+              ctaText="Email my dog treats checklist"
+              source="nutrition-treats-under-hero"
+            />
+          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — How to treat without sabotaging the diet">
             <p>
@@ -348,6 +394,59 @@ export default function DogTreatsGuidePage() {
               FDA Center for Veterinary Medicine, &ldquo;Jerky Pet Treat Update&rdquo; final consumer communications, 2017 (with ongoing safety reporting guidance). • Veterinary Oral Health Council (VOHC) accepted products list, vohc.org. • AAFCO Official Publication, Chapter 6 — Model Regulations for Pet Food and Specialty Pet Food. • WSAVA Global Nutrition Committee — Global Nutrition Guidelines (treats 10% rule). • AAHA Nutritional Assessment Guidelines for Dogs and Cats. • FDA CVM — &ldquo;No Bones (or Bone Treats) About It: Reasons Not to Give Your Dog Bones.&rdquo;
             </p>
           </CalloutBox>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated dog treat-kcal chart /
+              dog fridge VOHC-seal card /
+              canine jerky-FDA handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs weight-management /
+              feeding-frequency / how-much-to-feed hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog treats kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page treat-kcal-budget-map,
+              vohc-seal-log, and
+              jerky-fda-grounding copy — a
+              laminated dog treat-kcal chart, a
+              dog fridge VOHC-seal card, and a
+              canine jerky-FDA handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a weight-management / feeding-frequency /
+              how-much-to-feed hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Dog.com does not sell
+              insurance. Dog.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+dog+treat+kcal+chart?s=nutrition-treats"
+                amazonLabel="Browse laminated dog treat-kcal charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+fridge+vohc+seal+card?s=nutrition-treats"
+                amazonLabel="Browse dog fridge VOHC-seal cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/canine+jerky+fda+handbook?s=nutrition-treats"
+                amazonLabel="Browse canine jerky-FDA handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
