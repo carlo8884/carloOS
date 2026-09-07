@@ -570,6 +570,48 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'belgian-draft' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the belgian-draft checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Belgian Draft checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-jeb-lamc2-panel-chart,
+                  horse-stall-door-flemish-great-horse-card, and
+                  equine-first-owner-belgian-draft-handbook notes
+                  that match the JEB LAMC2 / Spirito 2002 panel,
+                  Flemish Great Horse / logging draft, and
+                  first-time-owner copy on this page — a laminated
+                  horse JEB-LAMC2-panel chart so the lethal-foal /
+                  PSSM1 / CPL notes are posted on the stall door
+                  (not a BLM-1971-wild-act hop, not a
+                  B4GALT7-dwarfism-panel hop), a horse stall-door
+                  Flemish Great Horse card so the medieval-Flemish /
+                  North-America-largest-draft-population notes are
+                  labeled at the barn (not a BLM-auction hop, not a
+                  USDF-level hop), and an equine first-owner
+                  belgian-draft handbook so the YES-with-caveats /
+                  low-energy grounding is a physical barn book (not
+                  a first-owner-mustang handbook, not a
+                  double-bridle hop). Educational barn checklist,
+                  not a ranked tack list, not a substitute for a
+                  veterinarian. Horses.com does not sell insurance.
+                  No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Belgian Draft checklist"
+                  subtitle="Email the JEB-LAMC2-panel chart, Flemish Great Horse card, and first-owner handbook notes. No spam."
+                  ctaText="Email my belgian-draft checklist"
+                  source="breed-belgian-draft-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -1039,6 +1081,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+mustang+handbook?s=breed-mustang"
                     amazonLabel="Browse equine first-owner mustang handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'belgian-draft' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the belgian-draft barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  JEB LAMC2 / Spirito 2002 panel, Flemish Great
+                  Horse / logging draft, and first-time-owner copy
+                  — a laminated horse JEB-LAMC2-panel chart, a
+                  horse stall-door Flemish Great Horse card, and an
+                  equine first-owner belgian-draft handbook.
+                  Educational barn searches only. They are not a
+                  ranked tack list, they are not a dressage-overview
+                  hop, they are not a first-aid-kit hop, and they
+                  do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+jeb+lamc2+panel+chart?s=breed-belgian-draft"
+                    amazonLabel="Browse laminated horse JEB-LAMC2-panel charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+flemish+great+horse+card?s=breed-belgian-draft"
+                    amazonLabel="Browse horse stall-door Flemish Great Horse cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+belgian+draft+handbook?s=breed-belgian-draft"
+                    amazonLabel="Browse equine first-owner belgian-draft handbooks on Amazon →"
                   />
                 </div>
               </div>
