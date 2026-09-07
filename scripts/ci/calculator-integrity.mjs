@@ -4008,6 +4008,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1418: horses.com /racing/ottb-second-careers/ottb-in-dressage is on main. Remaining horses.com race-types leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/ottb-second-careers/ottb-in-trail-and-pleasure commercial spoke had sidebar EmailCapture only (source ottb-in-trail-and-pleasure, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete ottb-in-trail-and-pleasure-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page trail-confidence / graduated-exposure / calm-pleasure copy (a laminated horse OTTB trail-confidence chart so the low-pressure / buddy-horse notes are posted on the stall door, a horse stall-door graduated-exposure card so the water-crossing / traffic / solo-outing notes are labeled at the barn, an equine OTTB calm-pleasure handbook so the quiet-mount / everyday-hacking grounding is a physical barn book), never a placeholder ASIN, a sibling ottb-in-dressage kitchen hop, a disciplines-trail-riding hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1418 / crate-size / stocking.',
   },
   {
+    id: 'horses · kentucky-derby',
+    file: 'apps/horses-com/src/app/racing/triple-crown/kentucky-derby/page.tsx',
+    mustInclude: [
+      { re: /source="triple-crown-kentucky-derby-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my triple-crown-kentucky-derby checklist"/, label: 'concrete triple-crown-kentucky-derby-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="triple-crown-kentucky-derby"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+run\+for\+the\+roses\+chart\?s=triple-crown-kentucky-derby/, label: 'laminated horse Run-for-the-Roses-chart search hop (matches on-page garland / first-Saturday-in-May copy; unique vs laminated+horse+derby+preakness+belmont+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+churchill\+ten\+furlong\+card\?s=triple-crown-kentucky-derby/, label: 'horse stall-door Churchill-ten-furlong-card search hop (matches on-page mile-and-a-quarter / crowded-field copy; unique vs horse+stall+door+belmont+test+card)' },
+      { re: /amazon-brand\/equine\+derby\+points\+prep\+handbook\?s=triple-crown-kentucky-derby/, label: 'equine Derby-points-prep-handbook search hop (matches on-page qualifying-series / road-to-the-Derby copy; unique vs equine+thirteen+winner+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+derby\+preakness\+belmont\+chart|horse\+stall\+door\+belmont\+test\+card|equine\+thirteen\+winner\+handbook|laminated\+horse\+ottb\+trail\+confidence\+chart|horse\+stall\+door\+graduated\+exposure\+card|equine\+ottb\+calm\+pleasure\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop triple-crown-hub / ottb-in-trail-and-pleasure kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-run-for-the-roses-chart / horse-stall-door-churchill-ten-furlong-card / equine-derby-points-prep-handbook searches' },
+    ],
+    why: 'Money path leftover after #1419: horses.com /racing/ottb-second-careers/ottb-in-trail-and-pleasure is on main. Remaining horses.com ottb-second-careers leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/triple-crown/kentucky-derby commercial spoke had sidebar EmailCapture only (source triple-crown-kentucky-derby, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete triple-crown-kentucky-derby-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page Run-for-the-Roses / Churchill-ten-furlong / Derby-points-prep copy (a laminated horse Run-for-the-Roses chart so the garland / first-Saturday-in-May notes are posted on the stall door, a horse stall-door Churchill-ten-furlong card so the mile-and-a-quarter / crowded-field notes are labeled at the barn, an equine Derby-points-prep handbook so the qualifying-series / road-to-the-Derby grounding is a physical barn book), never a placeholder ASIN, a sibling triple-crown-hub kitchen hop, an ottb-in-trail-and-pleasure hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1419 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
