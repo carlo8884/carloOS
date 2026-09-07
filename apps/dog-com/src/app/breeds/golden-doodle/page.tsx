@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Goldendoodle Guide — F1 vs F1B, Coat Types | Dog.com', description: 'Goldendoodles: F1 (50% Golden/Poodle) vs F1B (75% Poodle) coat and shedding differences explained.', path: '/breeds/golden-doodle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Goldendoodle Breed Guide', description: 'F1 vs F1B generations, coat types, health testing, and realistic expectations for Goldendoodles.', url: 'https://dog.com/breeds/golden-doodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -44,6 +44,48 @@ export default function GoldendoodlePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the golden-doodle checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Goldendoodle checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-doodle-f1b-75pct-chart,
+            dog-fridge-doodle-canf1-allergy-card, and
+            canine-first-owner-goldendoodle-handbook notes
+            that match the F1B 75% Poodle coat floor, the
+            Can f 1 allergy notes, and first-time-owner notes
+            on this page — a laminated dog Doodle F1B 75%
+            chart so the 50/50 F1 vs 75% F1B notes are
+            posted on the fridge (not a Cocker woodcock-flush
+            chart, not a Bullmastiff night-dog chart), a
+            fridge Doodle Can-f-1 allergy card so the not-
+            truly-hypoallergenic notes are labeled in the
+            kitchen (not a monthly-ear card, not a finger-
+            toothbrush hop), and a first-owner Goldendoodle
+            handbook so the YES-typically / 6–8-week groom /
+            hybrid-vigor-myth grounding is a physical kitchen
+            book (not a first-owner Cocker Spaniel handbook).
+            Educational kitchen checklist, not a ranked
+            product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Goldendoodle checklist"
+            subtitle="Email the F1B 75% chart, Can f 1 allergy card, and first-owner handbook notes. No spam."
+            ctaText="Email my golden-doodle checklist"
+            source="breed-golden-doodle-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in the 1990s: a Golden Retriever × Poodle companion cross sold as a low-shedding household dog. That designer-cross / coat-lottery history is why a household Goldendoodle still needs an F1-vs-F1B generation check and a 6–8 week groom clock, not a crate-only afternoon. Goldendoodles are typically first-time-owner friendly — YES-typically — when the household accepts that no dog is truly hypoallergenic, that F1 coats are unpredictable, and that curlier F1B coats mat without 6–8 week professional grooming.</p>
+
                 <h2>Generations — Why This Matters More Than Anything</h2>
         <p>The most common Goldendoodle misunderstanding: assuming any Goldendoodle will be low-shedding and "hypoallergenic." Goldendoodle coat outcome depends almost entirely on generation. Each dog inherits a random combination of genes from both parents — in an F1 (first generation), the range is enormous.</p>
         <p><strong>F1 (50% Golden / 50% Poodle):</strong> Coat ranges from essentially a Golden Retriever coat (straight, sheds heavily) to a curly Poodle-like coat (minimal shedding). The majority fall somewhere in between — a wavy coat that sheds moderately. There is no way to predict the coat of an F1 Goldendoodle puppy at birth with certainty.</p>
@@ -62,6 +104,41 @@ export default function GoldendoodlePage() {
 
         <h2>Size Options</h2>
         <p>Goldendoodles are available in standard (45–90 lbs), medium (25–45 lbs), and miniature (15–30 lbs — Golden × Miniature Poodle cross). Miniature Goldendoodles have a different health profile than standard — Miniature Poodle health concerns (patellar luxation, hypoglycemia, Legg-Calvé-Perthes disease) replace or add to Standard Poodle concerns. Miniature Goldendoodles are generally not a Golden × Miniature Poodle direct cross — the size difference makes natural breeding impossible. Most are produced through artificial insemination or through intermediate generations.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Goldendoodle home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            F1B 75% Poodle coat floor, the Can f 1 allergy
+            notes, and first-time-owner notes — a laminated
+            dog Doodle F1B 75% chart, a fridge Doodle Can-f-1
+            allergy card, and a first-owner Goldendoodle
+            handbook. Educational kitchen searches only.
+            They are not a ranked product list, they are not
+            a crate hop, they are not a finger-toothbrush
+            hop, and they do not replace a veterinarian.
+            Dog.com does not sell insurance. Dog.com earns a
+            commission on qualifying purchases at no extra
+            cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+doodle+f1b+75pct+chart?s=breed-goldendoodle"
+              amazonLabel="Browse laminated dog Doodle F1B 75% charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+doodle+canf1+allergy+card?s=breed-goldendoodle"
+              amazonLabel="Browse fridge Doodle Can f 1 allergy cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+goldendoodle+handbook?s=breed-goldendoodle"
+              amazonLabel="Browse first-owner Goldendoodle handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
