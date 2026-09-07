@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -148,6 +150,47 @@ export default function HarnessRacingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the harness-racing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Harness-racing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-harness-trot-pace-chart,
+              stall-door-usta-standardbred-card, and
+              equine-sulky-harness-handbook notes
+              that match the trot-vs-pace,
+              usta-standardbred, and sulky-race-bike
+              copy on this page — a laminated horse
+              harness trot-pace chart so the diagonal /
+              lateral / hobble notes are posted on the stall
+              door (not a Thoroughbred flat-surface chart,
+              not a racing-hub section-map chart), a horse
+              stall-door USTA Standardbred card so the
+              USTA / Standardbred-registry notes are
+              labeled at the barn (not an American Stud
+              Book card, not a racing-prep card), and an
+              equine sulky-harness handbook so the race-bike /
+              jog-cart / traces grounding is a physical
+              barn book (not a furlong-distance handbook,
+              not a racing reference handbook). Educational
+              barn checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Harness-racing checklist"
+              subtitle="Email the harness trot-pace chart, USTA Standardbred card, and sulky-harness handbook notes. No spam."
+              ctaText="Email my harness-racing checklist"
+              source="racing-harness-racing-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Harness Racing Is</h2>
           <p>Harness racing is a racing discipline in which the horse is not ridden but driven, pulling a lightweight two-wheeled vehicle called a sulky. The driver sits on the sulky behind the horse and guides it through the reins. Unlike flat racing, where the primary objective is simply to run as fast as possible, harness racing adds a gait constraint: the competing horse must maintain either a trot or a pace throughout the race. A horse that breaks from its prescribed gait must be taken to the outside of the track and slowed until it resumes the correct gait, a significant competitive penalty.</p>
@@ -192,6 +235,57 @@ export default function HarnessRacingPage() {
             <li>American Association of Equine Practitioners (AAEP). Equine athlete welfare guidelines. aaep.org.</li>
             <li>International Trotting Association (UET). International rules of trotting. uet-trotting.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse harness trot-pace chart /
+              horse stall-door USTA Standardbred card /
+              equine sulky-harness handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs thoroughbred-flat-racing /
+              racing-hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the harness-racing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page trot-vs-pace,
+              usta-standardbred, and sulky-race-bike
+              copy — a laminated horse harness trot-pace
+              chart, a horse stall-door USTA Standardbred
+              card, and an equine sulky-harness handbook.
+              Educational barn searches only. They are not
+              a ranked race list, they are not a
+              Thoroughbred-flat-racing / racing-hub hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+harness+trot+pace+chart?s=racing-harness-racing"
+                amazonLabel="Browse laminated horse harness trot-pace charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+usta+standardbred+card?s=racing-harness-racing"
+                amazonLabel="Browse horse stall-door USTA Standardbred cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+sulky+harness+handbook?s=racing-harness-racing"
+                amazonLabel="Browse equine sulky-harness handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
