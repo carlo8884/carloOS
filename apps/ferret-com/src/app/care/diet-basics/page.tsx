@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -171,6 +171,51 @@ export default function FerretDietBasicsPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret diet-basics checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret diet-basics checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-obligate-macro-chart,
+              fridge-diet-ladder-card, and
+              mustelid-diet-basics-handbook notes
+              that match the obligate-carnivore-macro-map,
+              commercial-diet-ladder-log, and
+              quesenberry-afa-diet-grounding copy on this
+              page — a laminated ferret obligate-macro chart
+              so the 32–40% protein / 18–22% fat /
+              under-3% carb map is posted on the fridge
+              (not a diet-hub feeding chart, not a
+              protein-fat chart, not a kibble-panel
+              chart), a ferret fridge diet-ladder
+              card so premium / mid / entry-tier notes
+              are labeled on the fridge (not a diet-label
+              card, not a carb-by-difference card, not a
+              mix-ratio card), and a mustelid diet-basics
+              handbook so the Quesenberry / AFA / AVMA
+              obligate-carnivore grounding is a physical
+              kitchen book (not a diet-reference handbook,
+              not a macro-target handbook, not a
+              kibble-panel handbook). Educational kitchen
+              checklist, not a ranked kibble list, not a
+              sleep-sack hop, and not a substitute for an
+              exotic-mammal veterinarian. Ferret.com does not
+              sell insurance. Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret diet-basics checklist"
+              subtitle="Email the obligate-macro-chart, fridge diet-ladder card, and diet-basics-handbook notes. No spam."
+              ctaText="Email my ferret diet-basics checklist"
+              source="care-diet-basics-under-hero"
+            />
+          </div>
+
           <h2 id="physiology">Obligate Carnivore Physiology</h2>
           <p>
             Ferrets descend from the European polecat and retain a strictly carnivorous digestive system. The gastrointestinal tract is short (roughly 5× body length, compared to 8–9× in cats and 4–6× in dogs) and lacks the long fermenting colon that grain-eating mammals use to extract energy from plant cell walls. Transit time from ingestion to defecation is approximately 3–4 hours. The pancreas does not produce the carbohydrate-handling enzyme profile seen in omnivores, and there is no functional cecum.
@@ -249,6 +294,59 @@ export default function FerretDietBasicsPage() {
           </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret obligate-macro chart /
+              ferret fridge diet-ladder card /
+              mustelid diet-basics handbook).
+              Keep existing Wysong / Marshall /
+              Carniwhole review hops.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs diet-hub /
+              protein-fat / kibble / odor kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret diet-basics kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page obligate-carnivore-macro-map,
+              commercial-diet-ladder-log, and
+              quesenberry-afa-diet-grounding copy — a
+              laminated ferret obligate-macro chart, a
+              ferret fridge diet-ladder card, and a
+              mustelid diet-basics handbook.
+              Educational kitchen searches only. They are
+              not a ranked kibble list, they are not a
+              diet-hub / protein-fat / odor hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Ferret.com
+              earns a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons stay
+              hidden. Existing Wysong, Marshall, and
+              Carniwhole hops below stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+obligate+macro+chart?s=diet-basics"
+                amazonLabel="Browse laminated ferret obligate-macro charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+diet+ladder+card?s=diet-basics"
+                amazonLabel="Browse ferret fridge diet-ladder cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+diet+basics+handbook?s=diet-basics"
+                amazonLabel="Browse mustelid diet-basics handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="picks">Diet Picks</h2>
           <p>
