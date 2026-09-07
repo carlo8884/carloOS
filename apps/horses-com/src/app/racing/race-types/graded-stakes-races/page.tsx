@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -151,6 +153,48 @@ export default function GradedStakesRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the graded-stakes checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Graded-stakes checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-grade-one-two-three-chart,
+              stall-door-graded-vs-group-card, and
+              equine-american-graded-committee-handbook notes
+              that match the Grade 1/2/3 ranking, Graded vs
+              Group / Pattern, and rolling-committee-review
+              copy on this page — a laminated horse
+              grade-one-two-three chart so the I / II / III
+              ranking notes are posted on the stall door
+              (not a stakes-nomination chart, not an
+              optional-claiming hybrid chart), a horse
+              stall-door graded-vs-group card so the North
+              America Graded / Europe Group notes are labeled
+              at the barn (not a black-type card, not a
+              for-the-tag card), and an equine American
+              graded-committee handbook so the retrospective
+              / promote-or-demote grounding is a physical
+              barn book (not an overnight-stakes handbook,
+              not a field-fill handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Graded-stakes checklist"
+              subtitle="Email the grade-one-two-three chart, graded-vs-group card, and graded-committee handbook notes. No spam."
+              ctaText="Email my graded-stakes checklist"
+              source="race-types-graded-stakes-under-hero"
+            />
+          </div>
+
           <h2 id="elite">The Elite Subset of Stakes</h2>
           <p><strong>Graded stakes</strong> are the very best <a href="/racing/race-types/stakes-races">stakes races</a> &mdash; the elite layer at the top of the entire class structure. Not every stakes race is graded: below the graded ranks sit numerous ungraded or &ldquo;listed&rdquo; stakes that are still important regional events. The graded designation marks out the small number of races that consistently attract the strongest fields in the sport.</p>
           <p>A Grade 1 win is the highest achievement in racing short of a Classic, and the grade attached to a race is one of the first things participants and the breeding industry look at. This page treats grading as a structural classification; it contains no wagering guidance.</p>
@@ -186,6 +230,57 @@ export default function GradedStakesRacesPage() {
               structural subject. It is not a wagering resource: no betting tips,
               odds commentary, or handicapping guidance is provided or implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse grade-one-two-three chart /
+              horse stall-door graded-vs-group card /
+              equine American graded-committee handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs stakes /
+              optional-claiming hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the graded-stakes barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page Grade 1/2/3 ranking, Graded vs Group
+              / Pattern, and rolling-committee-review
+              copy — a laminated horse grade-one-two-three
+              chart, a horse stall-door graded-vs-group
+              card, and an equine American graded-committee
+              handbook. Educational barn searches only.
+              They are not a ranked race list, they are
+              not a stakes / optional-claiming hop, they
+              are not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+grade+one+two+three+chart?s=race-types-graded-stakes"
+                amazonLabel="Browse laminated horse grade-one-two-three charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+graded+vs+group+card?s=race-types-graded-stakes"
+                amazonLabel="Browse horse stall-door graded-vs-group cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+american+graded+committee+handbook?s=race-types-graded-stakes"
+                amazonLabel="Browse equine American graded-committee handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
