@@ -1319,6 +1319,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'knabstrupper' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the knabstrupper checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Knabstrupper checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-knabstrupgaard-flaebehoppen-chart,
+                  horse-stall-door-denmark-leopard-lp-card, and
+                  equine-first-owner-knabstrupper-handbook notes that
+                  match the 1812 Knabstrupgaard / Flaebehoppen origin,
+                  Denmark leopard-complex LP spotting, and first-time-
+                  owner copy on this page — a laminated horse
+                  Knabstrupgaard Flaebehoppen chart so the 1812 / spotted
+                  Iberian-cross / Frederiksborg notes are posted on the
+                  stall door (not an Anglo-Thoroughbred-Arabian hop, not
+                  an Irish-Draught-Thoroughbred hop), a horse stall-door
+                  Denmark leopard LP card so the leopard-complex / circus
+                  / driving notes are labeled at the barn (not a French-
+                  eventing-pre-Selle hop, not a Horse-Sport-Ireland-
+                  eventing hop), and an equine first-owner knabstrupper
+                  handbook so the YES-typically / ERU-LP / CSNB-LP-LP /
+                  PSSM2 / OCD grounding is a physical barn book (not a
+                  first-owner-anglo-arabian handbook, not a double-bridle
+                  hop). Educational barn checklist, not a ranked tack
+                  list, not a substitute for a veterinarian. Horses.com
+                  does not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Knabstrupper checklist"
+                  subtitle="Email the Knabstrupgaard Flaebehoppen chart, Denmark leopard LP card, and first-owner handbook notes. No spam."
+                  ctaText="Email my knabstrupper checklist"
+                  source="breed-knabstrupper-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -2458,6 +2499,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+anglo+arabian+handbook?s=breed-anglo-arabian"
                     amazonLabel="Browse equine first-owner anglo-arabian handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'knabstrupper' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the knabstrupper barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  1812 Knabstrupgaard / Flaebehoppen origin, Denmark
+                  leopard-complex LP spotting, and first-time-owner
+                  copy — a laminated horse Knabstrupgaard Flaebehoppen
+                  chart, a horse stall-door Denmark leopard LP card,
+                  and an equine first-owner knabstrupper handbook.
+                  Educational barn searches only. They are not a
+                  ranked tack list, they are not a dressage-overview
+                  hop, they are not a first-aid-kit hop, and they
+                  do not replace a veterinarian. Horses.com does
+                  not sell insurance. Horses.com earns a commission
+                  on qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+knabstrupgaard+flaebehoppen+chart?s=breed-knabstrupper"
+                    amazonLabel="Browse laminated horse Knabstrupgaard Flaebehoppen charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+denmark+leopard+lp+card?s=breed-knabstrupper"
+                    amazonLabel="Browse horse stall-door Denmark leopard LP cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+knabstrupper+handbook?s=breed-knabstrupper"
+                    amazonLabel="Browse equine first-owner knabstrupper handbooks on Amazon →"
                   />
                 </div>
               </div>
