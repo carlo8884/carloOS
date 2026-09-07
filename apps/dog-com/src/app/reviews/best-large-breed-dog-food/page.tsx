@@ -30,6 +30,38 @@ export default function BestLargeBreedFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the large-breed-food checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Large-breed-food checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the large-breed notes that match
+                the ranking copy on this page — 50+ lb
+                dogs, controlled calorie density during
+                growth, Royal Canin Large Adult for
+                glucosamine plus chondroitin, and
+                Purina Pro Plan Large Breed for 26%
+                protein plus EPA. Educational
+                large-breed checklist, not a new
+                product hop, not a first-aid-kit hop,
+                and not a substitute for a
+                veterinarian. The existing Royal Canin
+                and Purina Chewy searches stay below.
+                No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Large-breed-food checklist"
+                subtitle="Email the 50+ lb, Royal Canin, and 26% protein notes. No spam."
+                ctaText="Email my large-breed-food checklist"
+                source="reviews-best-large-breed-dog-food-under-hero"
+              />
+            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Puppy vs Adult — Feed the Right Formula</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas. Large breed puppy formulas have controlled calcium and phosphorus and lower caloric density to slow growth rate, preventing the rapid growth that contributes to hip dysplasia and other developmental orthopedic diseases. Switch to adult large breed formula at 12–18 months depending on breed size.</p>
