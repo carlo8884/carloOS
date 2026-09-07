@@ -280,6 +280,47 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           </div>
         ) : null}
 
+        {category.slug === 'aquarium-lighting' ? (
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-lighting checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-lighting checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-aquarium-photoperiod-par-chart,
+              aquarium-rim-programmable-led-dimmer-card, and
+              aquarist-light-mount-height-handbook notes that
+              match the 6–8-hour planted photoperiod, PAR-not-
+              watts, and mount-height copy on this page — a
+              laminated aquarium photoperiod-PAR chart so the
+              6–8-hour / algae-trigger notes are posted on the
+              stand (not a Hygger-957 hop, not an
+              equipment-hub lighting hop), an aquarium rim
+              programmable-LED-dimmer card so the ramp /
+              intensity notes are labeled on the rim (not a
+              Nicrew-Classic hop, not an aquarium-light-timer
+              setup hop), and an aquarist light-mount-height
+              handbook so the 12-inch hang / rim-sit PAR
+              grounding is a physical stand book (not a
+              Kessil-A360X hop, not a Finnex hop). Educational
+              stand checklist, not a ranked lighting list, not
+              a first-aid-kit hop, and not a substitute for a
+              water test. Fish.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-lighting checklist"
+              subtitle="Email the photoperiod-PAR chart, programmable-LED-dimmer card, and light-mount-height handbook notes. No spam."
+              ctaText="Email my aquarium-lighting checklist"
+              source="equipment-aquarium-lighting-under-hero"
+            />
+          </div>
+        ) : null}
+
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -544,6 +585,44 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarist+heater+controller+handbook?s=equipment-aquarium-heaters"
                 amazonLabel="Browse aquarist heater-controller handbooks on Amazon →"
+              />
+            </div>
+          </div>
+        ) : null}
+
+        {category.slug === 'aquarium-lighting' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-lighting stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              6–8-hour planted photoperiod, PAR-not-watts, and
+              mount-height copy — a laminated aquarium
+              photoperiod-PAR chart, an aquarium rim
+              programmable-LED-dimmer card, and an aquarist
+              light-mount-height handbook. Educational stand
+              searches only. They are not a ranked lighting
+              list, they are not an equipment-hub /
+              best-aquarium-lighting review hop, they are not
+              a first-aid-kit hop, and they do not replace a
+              water test. Fish.com does not sell insurance.
+              Fish.com earns a commission on qualifying
+              purchases at no extra cost to you. Existing
+              Chewy category buttons stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+aquarium+photoperiod+par+chart?s=equipment-aquarium-lighting"
+                amazonLabel="Browse laminated aquarium photoperiod-PAR charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+rim+programmable+led+dimmer+card?s=equipment-aquarium-lighting"
+                amazonLabel="Browse aquarium rim programmable-LED-dimmer cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarist+light+mount+height+handbook?s=equipment-aquarium-lighting"
+                amazonLabel="Browse aquarist light-mount-height handbooks on Amazon →"
               />
             </div>
           </div>
