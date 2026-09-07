@@ -321,6 +321,48 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           </div>
         ) : null}
 
+        {category.slug === 'aquarium-substrates' ? (
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-substrates checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-substrates checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-aquarium-substrate-depth-chart,
+              aquarium-rim-species-substrate-card, and
+              aquarist-vinegar-carbonate-handbook notes that
+              match the 1.5–2.5-inch bed, species-first sand /
+              aragonite / aquasoil, and vinegar-test copy on
+              this page — a laminated aquarium substrate-depth
+              chart so the anaerobic-pocket / 3-inch-sand notes
+              are posted on the stand (not an aquarium-gravel
+              hop, not a substrate-calculator bag hop), an
+              aquarium rim species-substrate card so the cory-
+              sand / cichlid-aragonite / planted-aquasoil notes
+              are labeled on the rim (not an aquarium-sand hop,
+              not an aqua-soil planted hop), and an aquarist
+              vinegar-carbonate handbook so the pH-buffer /
+              inert-vs-crushed-coral grounding is a physical
+              stand book (not a crushed-coral GH hop, not a
+              substrate-vacuum hop). Educational stand
+              checklist, not a ranked substrate list, not a
+              first-aid-kit hop, and not a substitute for a
+              water test. Fish.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-substrates checklist"
+              subtitle="Email the substrate-depth chart, species-substrate card, and vinegar-carbonate handbook notes. No spam."
+              ctaText="Email my aquarium-substrates checklist"
+              source="equipment-aquarium-substrates-under-hero"
+            />
+          </div>
+        ) : null}
+
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -623,6 +665,43 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarist+light+mount+height+handbook?s=equipment-aquarium-lighting"
                 amazonLabel="Browse aquarist light-mount-height handbooks on Amazon →"
+              />
+            </div>
+          </div>
+        ) : null}
+
+        {category.slug === 'aquarium-substrates' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-substrates stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              1.5–2.5-inch bed, species-first sand / aragonite /
+              aquasoil, and vinegar-test copy — a laminated
+              aquarium substrate-depth chart, an aquarium rim
+              species-substrate card, and an aquarist vinegar-
+              carbonate handbook. Educational stand searches
+              only. They are not a ranked substrate list, they
+              are not an equipment-hub / substrate-calculator
+              hop, they are not a first-aid-kit hop, and they
+              do not replace a water test. Fish.com does not
+              sell insurance. Fish.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Existing Chewy category buttons stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+aquarium+substrate+depth+chart?s=equipment-aquarium-substrates"
+                amazonLabel="Browse laminated aquarium substrate-depth charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+rim+species+substrate+card?s=equipment-aquarium-substrates"
+                amazonLabel="Browse aquarium rim species-substrate cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarist+vinegar+carbonate+handbook?s=equipment-aquarium-substrates"
+                amazonLabel="Browse aquarist vinegar-carbonate handbooks on Amazon →"
               />
             </div>
           </div>
