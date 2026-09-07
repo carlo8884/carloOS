@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -186,6 +186,50 @@ export default function ToxicFoodsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the dog toxic-foods checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Dog toxic-foods checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-dog-xylitol-critical-chart,
+              fridge-grape-kidney-card, and
+              canine-poison-protocol-handbook notes
+              that match the xylitol-critical-map,
+              grape-kidney-dose-log, and
+              aspca-protocol-grounding copy on this
+              page — a laminated dog xylitol-critical chart
+              so the no-safe-dose / gum / peanut-butter map
+              is posted on the fridge (not a chocolate-grape
+              chart, not a nutrition-feeding chart, not a
+              puppy-week-schedule chart), a dog fridge
+              grape-kidney card so grape / raisin / currant
+              kidney-failure notes are labeled on the fridge
+              (not a xylitol-onion card, not a WSAVA label
+              card, not a puppy-milestone card), and a canine
+              poison-protocol handbook so the ASPCA 888-426-4435
+              / do-not-induce-vomiting grounding is a physical
+              kitchen book (not a food-safety handbook, not a
+              nutrition reference handbook, not a puppy-schedule
+              handbook). Educational kitchen checklist, not a
+              ranked clinic list, not a first-aid-kit hop, and
+              not a substitute for a veterinarian. Dog.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="dog-com"
+              title="Dog toxic-foods checklist"
+              subtitle="Email the xylitol-critical chart, fridge grape-kidney card, and poison-protocol-handbook notes. No spam."
+              ctaText="Email my dog toxic-foods checklist"
+              source="nutrition-toxic-foods-under-hero"
+            />
+          </div>
+
           <div id="critical" style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.2)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Emergency Contact</div>
             <p style={{ fontSize: '15px', fontWeight: 600, color: 'var(--brand-dark)', margin: 0 }}>ASPCA Animal Poison Control: <strong>888-426-4435</strong> — available 24/7. Consultation fee applies. Call immediately for suspected poisoning — do not wait for symptoms.</p>
@@ -226,6 +270,59 @@ export default function ToxicFoodsPage() {
             <li><strong>Call or go to your vet.</strong> For critical exposures (xylitol, grape/raisin, raw yeast dough, alcohol), go to an emergency vet immediately while calling Poison Control.</li>
             <li><strong>Note the time of ingestion</strong> — treatment options narrow significantly as time passes for some toxins. Earlier treatment equals better outcomes.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated dog xylitol-critical chart /
+              dog fridge grape-kidney card /
+              canine poison-protocol handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs can-dogs-eat /
+              nutrition-hub / puppy-schedule hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the dog toxic-foods kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page xylitol-critical-map,
+              grape-kidney-dose-log, and
+              aspca-protocol-grounding copy — a
+              laminated dog xylitol-critical chart, a
+              dog fridge grape-kidney card, and a
+              canine poison-protocol handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a can-dogs-eat / nutrition-hub /
+              puppy-schedule hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Dog.com does not sell
+              insurance. Dog.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+dog+xylitol+critical+chart?s=nutrition-toxic-foods"
+                amazonLabel="Browse laminated dog xylitol-critical charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+fridge+grape+kidney+card?s=nutrition-toxic-foods"
+                amazonLabel="Browse dog fridge grape-kidney cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/canine+poison+protocol+handbook?s=nutrition-toxic-foods"
+                amazonLabel="Browse canine poison-protocol handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
