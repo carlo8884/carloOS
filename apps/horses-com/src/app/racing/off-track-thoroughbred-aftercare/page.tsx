@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -153,6 +155,47 @@ export default function OttbAftercarePage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ottb-aftercare checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ottb-aftercare checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-taa-aftercare-directory-chart,
+              stall-door-ottb-letdown-card, and
+              equine-thoroughbred-makeover-handbook notes
+              that match the taa-accreditation-directory,
+              letdown-decompression, and thoroughbred-makeover
+              copy on this page — a laminated horse TAA
+              aftercare-directory chart so the accredited
+              facility / grant notes are posted on the stall
+              door (not a breeders-cup division chart, not a
+              derby-preakness-belmont chart), a horse
+              stall-door OTTB letdown card so the turnout /
+              rest-period notes are labeled at the barn
+              (not a Classic dirt card, not a Belmont test
+              card), and an equine Thoroughbred Makeover
+              handbook so the Retired Racehorse Project /
+              second-career grounding is a physical barn
+              book (not a Win-and-You-re-In handbook, not a
+              thirteen-winner handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Ottb-aftercare checklist"
+              subtitle="Email the TAA aftercare-directory chart, OTTB letdown card, and Thoroughbred Makeover handbook notes. No spam."
+              ctaText="Email my ottb-aftercare checklist"
+              source="racing-off-track-thoroughbred-aftercare-under-hero"
+            />
+          </div>
 
           <h2 id="ecosystem">The Aftercare Ecosystem</h2>
           <p>The Thoroughbred aftercare ecosystem is a network of organizations, programs, and individuals dedicated to ensuring that horses that retire from racing have a safe, appropriate transition to a second life. It encompasses nonprofit rescue and retraining organizations, breed-specific adoption programs, track-based aftercare initiatives, industry-funded programs, and private individuals who retrain and rehome former racehorses.</p>
@@ -205,6 +248,56 @@ export default function OttbAftercarePage() {
             <li>Retired Racehorse Project. Thoroughbred Makeover; OTTB retraining resources. retiredracehorseproject.org.</li>
             <li>Equibase. North American Thoroughbred racing records database. equibase.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse TAA aftercare-directory chart /
+              horse stall-door OTTB letdown card /
+              equine Thoroughbred Makeover handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs breeders-cup /
+              triple-crown hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ottb-aftercare barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page taa-accreditation-directory,
+              letdown-decompression, and thoroughbred-makeover
+              copy — a laminated horse TAA aftercare-directory
+              chart, a horse stall-door OTTB letdown card,
+              and an equine Thoroughbred Makeover handbook.
+              Educational barn searches only. They are not
+              a ranked race list, they are not a breeders-cup /
+              triple-crown hop, they are not a first-aid-kit
+              hop, they are not a child toothbrush hop, and
+              they do not replace a veterinarian. Horses.com
+              does not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+taa+aftercare+directory+chart?s=racing-ottb-aftercare"
+                amazonLabel="Browse laminated horse TAA aftercare-directory charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+ottb+letdown+card?s=racing-ottb-aftercare"
+                amazonLabel="Browse horse stall-door OTTB letdown cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+thoroughbred+makeover+handbook?s=racing-ottb-aftercare"
+                amazonLabel="Browse equine Thoroughbred Makeover handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
