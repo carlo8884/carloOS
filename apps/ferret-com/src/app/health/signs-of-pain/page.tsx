@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -180,6 +182,50 @@ export default function FerretSignsOfPainPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret signs-of-pain checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret signs-of-pain checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-bruxism-map-chart,
+              fridge-baseline-log-card, and
+              mustelid-pain-sign-handbook notes
+              that match the bruxism-map,
+              baseline-log, and
+              quesenberry-aemv-pain-grounding copy on this
+              page — a laminated ferret bruxism-map chart
+              so the teeth-grind / hunched / tucked-abdomen
+              map is posted on the fridge (not a coffee-grounds
+              chart, not a stamina-map chart, not a flu-share
+              chart), a ferret fridge baseline-log card
+              so usual-energy / appetite / kitchen-scale notes
+              are labeled on the fridge (not a household-treat
+              card, not a breathing-rate card, not a two-way
+              card), and a mustelid pain-sign handbook so the
+              Quesenberry / AEMV hide-pain and vet-only-analgesia
+              grounding is a physical kitchen book (not an
+              otodectes-swab handbook, not a cardio-echo
+              handbook, not an influenza-hygiene handbook).
+              Educational kitchen checklist, not a ranked clinic
+              list, not a first-aid-kit hop, and not a
+              substitute for an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Aging pages
+              stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret signs-of-pain checklist"
+              subtitle="Email the bruxism-map-chart, fridge baseline-log card, and pain-sign-handbook notes. No spam."
+              ctaText="Email my ferret signs-of-pain checklist"
+              source="health-signs-of-pain-under-hero"
+            />
+          </div>
 
           <DropCap>
             A ferret in pain rarely cries out. The species evolved as both a
@@ -362,6 +408,60 @@ export default function FerretSignsOfPainPage() {
             amount is always the clinician&apos;s, made with knowledge of the
             specific ferret and its diagnosis.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret bruxism-map chart /
+              ferret fridge baseline-log card /
+              mustelid pain-sign handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / nsaid / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              ear-mites / heart-disease / influenza hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret signs-of-pain kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page bruxism-map,
+              baseline-log, and
+              quesenberry-aemv-pain-grounding copy — a
+              laminated ferret bruxism-map chart, a
+              ferret fridge baseline-log card, and a
+              mustelid pain-sign handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / ear-mites / heart-disease hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+bruxism+map+chart?s=signs-of-pain"
+                amazonLabel="Browse laminated ferret bruxism-map charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+baseline+log+card?s=signs-of-pain"
+                amazonLabel="Browse ferret fridge baseline-log cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+pain+sign+handbook?s=signs-of-pain"
+                amazonLabel="Browse mustelid pain-sign handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
