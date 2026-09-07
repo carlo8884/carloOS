@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -146,6 +148,47 @@ export default function BloodstockPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the racing-bloodstock checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Racing-bloodstock checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-yearling-sale-catalog-chart,
+              stall-door-rna-clearance-card, and
+              equine-bloodstock-agent-handbook notes
+              that match the yearling-sale / catalogue,
+              RNA / clearance-rate, and bloodstock-agent
+              copy on this page — a laminated horse yearling-
+              sale-catalog chart so the eighteen-month /
+              pedigree-promise notes are posted on the stall
+              door (not a white-carnation chart, not a barn
+              bloodstock section-map chart), a horse stall-door
+              RNA-clearance card so the reserve-not-attained /
+              sale-health notes are labeled at the barn (not a
+              twelve-furlong card, not a bloodstock-prep card),
+              and an equine bloodstock-agent handbook so the
+              conformation / commission grounding is a physical
+              barn book (not a Test-of-the-Champion handbook,
+              not a bloodstock-reference handbook). Educational
+              barn checklist, not a ranked auction list, not a
+              first-aid-kit hop, and not a substitute for a
+              veterinarian. Horses.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Racing-bloodstock checklist"
+              subtitle="Email the yearling-sale-catalog chart, RNA-clearance card, and bloodstock-agent handbook notes. No spam."
+              ctaText="Email my racing-bloodstock checklist"
+              source="racing-bloodstock-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Bloodstock Means</h2>
           <p>&quot;Bloodstock&quot; is the word the racing world uses for Thoroughbred horses regarded as breeding and trading assets -- the commercial and genetic side of the sport that runs alongside the racing itself. Where the racetrack is about performance, bloodstock is about pedigree, production, and value: which mares are bred to which stallions, what their offspring are worth, and how horses are bought and sold.</p>
           <p>The bloodstock world spans several kinds of participant. Breeders plan matings and raise foals. Stallion farms stand sires and sell breeding seasons. Owners of broodmares produce the next generation. Auction houses host the sales where horses change hands, and bloodstock agents advise buyers and sellers. It is a global business -- horses, stallion seasons, and breeding shares move between the major racing nations of North America, Europe, Japan, and Australasia.</p>
@@ -185,6 +228,57 @@ export default function BloodstockPage() {
             <li>Fasig-Tipton. Thoroughbred auction sales and digital sales. fasigtipton.com.</li>
             <li>Thoroughbred Owners and Breeders Association (TOBA). Owner and breeder education. toba.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse yearling-sale-catalog chart /
+              horse stall-door RNA-clearance card /
+              equine bloodstock-agent handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs belmont-stakes /
+              /bloodstock hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the racing-bloodstock barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page yearling-sale / catalogue, RNA /
+              clearance-rate, and bloodstock-agent copy — a
+              laminated horse yearling-sale-catalog chart, a
+              horse stall-door RNA-clearance card, and an
+              equine bloodstock-agent handbook. Educational
+              barn searches only. They are not a ranked
+              auction list, they are not a belmont-stakes /
+              /bloodstock-hub hop, they are not a first-aid-
+              kit hop, they are not a child toothbrush hop,
+              and they do not replace a veterinarian.
+              Horses.com does not sell insurance. Horses.com
+              earns a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+yearling+sale+catalog+chart?s=racing-bloodstock"
+                amazonLabel="Browse laminated horse yearling-sale-catalog charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+rna+clearance+card?s=racing-bloodstock"
+                amazonLabel="Browse horse stall-door RNA-clearance cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+bloodstock+agent+handbook?s=racing-bloodstock"
+                amazonLabel="Browse equine bloodstock-agent handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>

@@ -4077,6 +4077,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1421: horses.com /racing/triple-crown/preakness-stakes is on main. Remaining horses.com ottb-second-careers leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/triple-crown/belmont-stakes commercial spoke had sidebar EmailCapture only (source triple-crown-belmont-stakes, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete triple-crown-belmont-stakes-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page white-carnation / twelve-furlong / Test-of-the-Champion copy (a laminated horse white-carnation chart so the floral / New-York-New-York notes are posted on the stall door, a horse stall-door twelve-furlong card so the longest-leg / stamina notes are labeled at the barn, an equine Test-of-the-Champion handbook so the accumulated-toll / fresh-rival grounding is a physical barn book), never a placeholder ASIN, a sibling preakness-stakes kitchen hop, a kentucky-derby hop, a triple-crown-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1421 / crate-size / stocking.',
   },
   {
+    id: 'horses · racing-bloodstock',
+    file: 'apps/horses-com/src/app/racing/bloodstock/page.tsx',
+    mustInclude: [
+      { re: /source="racing-bloodstock-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my racing-bloodstock checklist"/, label: 'concrete racing-bloodstock-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="racing-bloodstock"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+yearling\+sale\+catalog\+chart\?s=racing-bloodstock/, label: 'laminated horse yearling-sale-catalog-chart search hop (matches on-page eighteen-month / pedigree-promise copy; unique vs laminated+horse+white+carnation+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+rna\+clearance\+card\?s=racing-bloodstock/, label: 'horse stall-door RNA-clearance-card search hop (matches on-page reserve-not-attained / sale-health copy; unique vs horse+stall+door+twelve+furlong+card)' },
+      { re: /amazon-brand\/equine\+bloodstock\+agent\+handbook\?s=racing-bloodstock/, label: 'equine bloodstock-agent-handbook search hop (matches on-page conformation / commission copy; unique vs equine+test+of+the+champion+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+white\+carnation\+chart|horse\+stall\+door\+twelve\+furlong\+card|equine\+test\+of\+the\+champion\+handbook|laminated\+horse\+barn\+bloodstock\+section\+map\+chart|horse\+stall\+door\+bloodstock\+prep\+card|equine\+bloodstock\+reference\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop belmont-stakes / /bloodstock-hub kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-yearling-sale-catalog-chart / horse-stall-door-rna-clearance-card / equine-bloodstock-agent-handbook searches' },
+    ],
+    why: 'Money path leftover after #1422: horses.com /racing/triple-crown/belmont-stakes is on main. Remaining horses.com Triple Crown leftover spokes are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/bloodstock commercial page had sidebar EmailCapture only (source racing-bloodstock, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete racing-bloodstock-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page yearling-sale-catalog / RNA-clearance / bloodstock-agent copy (a laminated horse yearling-sale-catalog chart so the eighteen-month / pedigree-promise notes are posted on the stall door, a horse stall-door RNA-clearance card so the reserve-not-attained / sale-health notes are labeled at the barn, an equine bloodstock-agent handbook so the conformation / commission grounding is a physical barn book), never a placeholder ASIN, a sibling belmont-stakes kitchen hop, a /bloodstock-hub hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked auction list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1422 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
