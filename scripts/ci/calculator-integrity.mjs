@@ -6535,6 +6535,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1528: fish.com /health/[slug] remaining-disease template is on main. All static handwritten dog.com /breeds/<slug> Pattern B leftovers (golden-retriever through weimaraner) are on main. horses.com /breeds/* through icelandic inclusive is exhausted. This existing fish.com /water-parameters/[slug] programmatic remaining-parameter template (hub /water-parameters already Pattern B on main) had sidebar EmailCapture only (source water-parameters-${slug}, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture; add under-hero capture; add amazon-brand kitchen hops matching on-page at-a-glance / setup-target / how-to-test / raise / lower copy (a laminated fish param-spoke range chart so this remaining-parameter map is posted on the fridge, a fridge param-spoke crash card so the common-problem / out-of-range notes are labeled in the kitchen, an aquarium param-spoke handbook so the how-to-test / raise / lower row is a physical kitchen book), never a placeholder ASIN, a sibling water-parameters-hub test-kit hop, a health-spoke hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / medication / vaccine hop. Educational kitchen searches only — not a ranked product list, not a treatment hop, not a substitute for an aquatic veterinarian. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1528 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'ferret · food-spoke template',
+    file: 'apps/ferret-com/src/app/diet/can-ferrets-eat/[food]/page.tsx',
+    mustInclude: [
+      { re: /source=\{`can-ferrets-eat-\$\{entry\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ferret-food-spoke checklist"/, label: 'concrete ferret-food-spoke-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source="can-ferrets-eat"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+ferret\+food\+spoke\+verdict\+chart\?s=can-ferrets-eat-food/, label: 'laminated ferret food-spoke-verdict-chart search hop (matches on-page safe / caution / toxic verdict map; unique vs laminated+ferret+meat+egg+chart / laminated+dog+food+spoke+verdict+chart)' },
+      { re: /amazon-brand\/ferret\+fridge\+food\+spoke\+risk\+card\?s=can-ferrets-eat-food/, label: 'ferret fridge food-spoke-risk-card search hop (matches on-page plant / sugar / fiber notes; unique vs ferret+fridge+plant+sugar+card / dog+fridge+food+spoke+risk+card)' },
+      { re: /amazon-brand\/mustelid\+food\+spoke\+handbook\?s=can-ferrets-eat-food/, label: 'mustelid food-spoke-handbook search hop (matches on-page ASPCA / Pet-Poison-Helpline grounding; unique vs mustelid+food+safety+handbook / canine+food+spoke+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+ferret\+meat\+egg\+chart|ferret\+fridge\+plant\+sugar\+card|mustelid\+food\+safety\+handbook|laminated\+dog\+food\+spoke\+verdict\+chart|dog\+fridge\+food\+spoke\+risk\+card|canine\+food\+spoke\+handbook|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop can-ferrets-eat-hub / dog food-spoke kitchen kits, finger-toothbrush hops, crate hops, first-aid hops, or flea / heartworm / vaccine — this page hops only laminated-ferret-food-spoke-verdict-chart / ferret-fridge-food-spoke-risk-card / mustelid-food-spoke-handbook searches' },
+    ],
+    why: 'Money path leftover after #1529: fish.com /water-parameters/[slug] remaining-parameter template is on main. Fish remaining-disease + remaining-parameter templates are exhausted. This existing ferret.com /diet/can-ferrets-eat/[food] programmatic remaining-food template (hub /diet/can-ferrets-eat already Pattern B on main) had sidebar EmailCapture only (shared source can-ferrets-eat, not under-hero) and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture; add under-hero capture; add amazon-brand kitchen hops matching on-page safe / caution / toxic verdict / obligate-carnivore / insulinoma / GI-blockage / ASPCA 888-426-4435 copy (a laminated ferret food-spoke verdict chart so this remaining-food map is posted on the fridge, a fridge food-spoke risk card so the plant / sugar / fiber notes are labeled in the kitchen, a mustelid food-spoke handbook so the ASPCA / Pet-Poison-Helpline row is a physical kitchen book), never a placeholder ASIN, a sibling can-ferrets-eat-hub hop, a dog food-spoke hop, a crate hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian familiar with ferrets. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1529 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
