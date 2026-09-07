@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +101,52 @@ export default function AdoptionVsBuyingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret source-choice checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret source-choice checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-source-compare-chart,
+              fridge-rescue-vs-store-card, and
+              mustelid-source-choice-handbook notes
+              that match the three-source-compare-map,
+              altering-descenting-log, and
+              quesenberry-afa-source-grounding copy on this
+              page — a laminated ferret source-compare chart
+              so the rescue / breeder / pet-store map is
+              posted on the fridge (not an ownership-hub
+              section map, not a first-week-map chart, not a
+              startup-budget chart), a ferret fridge
+              rescue-vs-store card so adult-vs-kit /
+              history / early-alter notes are labeled on
+              the fridge (not an adoption-red-flag card,
+              not a monthly-cost card, not an arrival-day
+              card), and a mustelid source-choice handbook
+              so the Quesenberry / AFA altering and
+              estrogen-toxicity grounding is a physical
+              kitchen book (not a cost-planning handbook,
+              not a first-week handbook, not an
+              ownership-reference handbook). Educational
+              kitchen checklist, not a ranked breeder list,
+              not a sleep-sack hop, and not a substitute
+              for an exotic-mammal veterinarian. Ferret.com
+              does not sell insurance. Aging pages stay
+              held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret source-choice checklist"
+              subtitle="Email the source-compare-chart, fridge rescue-vs-store card, and source-choice-handbook notes. No spam."
+              ctaText="Email my ferret source-choice checklist"
+              source="ownership-adoption-vs-buying-under-hero"
+            />
+          </div>
+
           <h2 id="sources-overview">The Three Sources</h2>
           <p>
             Most people acquire a ferret from one of three places: a <strong>shelter or breed-specific rescue</strong>, a <strong>private breeder</strong>, or a <strong>pet store</strong> (which in much of North America means a large-scale commercially bred ferret). Each has a characteristic profile. None is automatically right — the best choice depends on whether you want a kit or are open to an adult, how much background information you need, and your stance on supporting rescue versus breeding. Before any of this, confirm ferrets are legal where you live (see <a href="/ownership/ferret-legality-by-state">legality by state</a>).
@@ -135,6 +181,59 @@ export default function AdoptionVsBuyingPage() {
           <p>
             A reasonable default: if you are open to an adult and want to support ferret welfare, start with a rescue. If you specifically want a kit with known parentage and are willing to vet a breeder carefully, a reputable breeder is a strong choice. A pet store is the most convenient and often the cheapest entry point, with the least background information. Across all three, plan for the real cost of the years ahead — the veterinary line item dominates the lifetime total (see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>).
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret source-compare chart /
+              ferret fridge rescue-vs-store card /
+              mustelid source-choice handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs ownership-hub /
+              first-week / cost / supplies kitchen kits.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret source-choice kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page three-source-compare-map,
+              altering-descenting-log, and
+              quesenberry-afa-source-grounding copy — a
+              laminated ferret source-compare chart, a
+              ferret fridge rescue-vs-store card, and a
+              mustelid source-choice handbook.
+              Educational kitchen searches only. They are
+              not a ranked breeder list, they are not an
+              ownership-hub / first-week / cost hop, they
+              are not a child toothbrush hop, and they do
+              not replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance. Ferret.com
+              earns a commission on qualifying purchases at
+              no extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+source+compare+chart?s=adoption-vs-buying"
+                amazonLabel="Browse laminated ferret source-compare charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+rescue+vs+store+card?s=adoption-vs-buying"
+                amazonLabel="Browse ferret fridge rescue-vs-store cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+source+choice+handbook?s=adoption-vs-buying"
+                amazonLabel="Browse mustelid source-choice handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="sources">Sources</h2>
           <p>
