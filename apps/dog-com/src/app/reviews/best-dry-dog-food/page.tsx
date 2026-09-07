@@ -73,6 +73,40 @@ export default function BestDogFoodPage() {
           <div>
             <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+            {/* Under-hero capture — source must end in under-hero so it always renders. */}
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the dry-dog-food checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Dry-dog-food checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the WSAVA dry-food notes that
+                match the ranking copy on this page —
+                Royal Canin as the feeding-trial top
+                pick, Purina Pro Plan as the same
+                scientific standard at a better price,
+                Hill&apos;s when a prescription formula
+                is the job, and the FDA grain-free /
+                high-legume DCM flag as the skip list.
+                Educational dry-food checklist, not a
+                new product hop, not a first-aid-kit
+                hop, and not a substitute for a
+                veterinarian. The existing Royal Canin,
+                Purina Pro Plan, Hill&apos;s, and Orijen
+                Chewy searches stay below. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="dog-com"
+                title="Dry-dog-food checklist"
+                subtitle="Email the WSAVA, Royal Canin, and grain-free DCM notes. No spam."
+                ctaText="Email my dry-dog-food checklist"
+                source="reviews-best-dry-dog-food-under-hero"
+              />
+            </div>
+
             {/* TL;DR */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
               <strong className="not-italic">TL;DR.</strong> Royal Canin is our top dry dog food pick — it meets WSAVA guidelines, runs AAFCO feeding trials, and employs board-certified veterinary nutritionists. Purina Pro Plan is the best value at the same scientific standard. Hill&apos;s Science Diet leads on prescription formulas. Avoid grain-free formulas heavy in peas, lentils, or chickpeas — the FDA flagged these in its DCM investigation.
