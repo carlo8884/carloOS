@@ -247,6 +247,47 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             </div>
           ) : null}
 
+          {data.slug === 'show-jumping' ? (
+            <div className="mb-8">
+              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                Keep the show-jumping-equipment checklist
+              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                Show-jumping-equipment checklist
+              </h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                Email the laminated-horse-close-contact-forward-flap-chart,
+                stall-door-shaped-jump-pad-card, and
+                equine-figure-eight-grackle-bridle-handbook notes
+                that match the close-contact / forward-cut-flap saddle,
+                square-or-shaped jump pad, and flash / figure-eight
+                (grackle) copy on this page — a laminated horse
+                close-contact forward-flap chart so the flatter-seat /
+                knee-block notes are posted on the stall door (not a
+                jumper-course chart, not a plain-flap dressage-saddle
+                chart), a horse stall-door shaped-jump-pad card so the
+                schooling / competition-pad notes are labeled at the
+                barn (not a USEF-jumper-level card, not a
+                white-square-pad card), and an equine figure-eight-
+                grackle-bridle handbook so the USEF JP / flash-noseband
+                grounding is a physical barn book (not an
+                open-front-boot handbook, not a snaffle-eggbutt-bridle
+                handbook). Educational barn checklist, not a ranked
+                tack list, not a first-aid-kit hop, and not a
+                substitute for a veterinarian. Horses.com does not
+                sell insurance. No spam.
+              </p>
+              <EmailCapture
+                variant="inline"
+                siteId="horses-com"
+                title="Show-jumping-equipment checklist"
+                subtitle="Email the close-contact-forward-flap chart, shaped-jump-pad card, and figure-eight-grackle-bridle handbook notes. No spam."
+                ctaText="Email my show-jumping-equipment checklist"
+                source="discipline-equipment-show-jumping-under-hero"
+              />
+            </div>
+          ) : null}
+
           {/* ─── 1. Overview ──────────────────────────────────────── */}
           <h2 id="overview">Overview</h2>
           <p dangerouslySetInnerHTML={{ __html: data.overview }} />
@@ -511,6 +552,63 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+snaffle+eggbutt+bridle+handbook?s=discipline-equipment-dressage"
                     amazonLabel="Browse equine snaffle-eggbutt-bridle handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          {data.slug === 'show-jumping' ? (
+            <>
+              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+              {/* Money path — live amazon-brand search hops
+                  (laminated horse close-contact forward-flap chart /
+                  horse stall-door shaped-jump-pad card /
+                  equine figure-eight-grackle-bridle handbook).
+                  No existing product hop to keep.
+                  Educational barn searches only; no Rx /
+                  vaccine / flea / heartworm / nsaid hops.
+                  ShopCtas hides empty Chewy; never href="#"
+                  or PLACEHOLDER. Unused vs /disciplines/show-jumping
+                  overview / dressage-equipment hops.
+                  Directory import left untouched.
+                  Do not re-open #1165 / what-to-expect. */}
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the show-jumping-equipment barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the
+                  on-page close-contact / forward-cut-flap
+                  saddle, square-or-shaped jump pad, and flash /
+                  figure-eight (grackle) copy — a laminated
+                  horse close-contact forward-flap chart, a
+                  horse stall-door shaped-jump-pad card, and
+                  an equine figure-eight-grackle-bridle
+                  handbook. Educational barn searches only.
+                  They are not a ranked tack list, they are
+                  not a show-jumping-overview /
+                  dressage-equipment hop, they are not a
+                  first-aid-kit hop, they are not a child
+                  toothbrush hop, and they do not replace a
+                  veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to
+                  you. Empty Chewy buttons stay hidden.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+close+contact+forward+flap+chart?s=discipline-equipment-show-jumping"
+                    amazonLabel="Browse laminated horse close-contact forward-flap charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+shaped+jump+pad+card?s=discipline-equipment-show-jumping"
+                    amazonLabel="Browse horse stall-door shaped-jump-pad cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+figure+eight+grackle+bridle+handbook?s=discipline-equipment-show-jumping"
+                    amazonLabel="Browse equine figure-eight-grackle-bridle handbooks on Amazon →"
                   />
                 </div>
               </div>
