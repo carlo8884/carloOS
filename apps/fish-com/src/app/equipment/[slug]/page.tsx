@@ -403,6 +403,48 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           </div>
         ) : null}
 
+        {category.slug === 'aquarium-co2-systems' ? (
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the aquarium-co2-systems checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Aquarium-CO2-systems checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-aquarium-photoperiod-solenoid-chart,
+              aquarium-rim-four-dkh-drop-card, and
+              aquarist-cylinder-duration-handbook notes that
+              match the solenoid-timed photoperiod, 4 dKH drop
+              checker, and 5-pound / paintball duration copy on
+              this page — a laminated aquarium photoperiod-
+              solenoid chart so the 30-minutes-before-lights /
+              overnight-off notes are posted on the stand (not
+              a CO2-regulator-solenoid calculator hop, not a
+              24/7 injection hop), an aquarium rim four-dKH-
+              drop card so the green / yellow / fish-gasping
+              notes are labeled on the rim (not a
+              co2-drop-checker calculator hop, not a Flourish-
+              Excel hop), and an aquarist cylinder-duration
+              handbook so the 5-pound / 6–9-month / paintball
+              grounding is a physical stand book (not a
+              diffuser hop, not a yeast-DIY hop). Educational
+              stand checklist, not a ranked CO2 list, not a
+              first-aid-kit hop, and not a substitute for a
+              water test. Fish.com does not sell insurance.
+              No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Aquarium-CO2-systems checklist"
+              subtitle="Email the photoperiod-solenoid chart, four-dKH-drop card, and cylinder-duration handbook notes. No spam."
+              ctaText="Email my aquarium-CO2-systems checklist"
+              source="equipment-aquarium-co2-systems-under-hero"
+            />
+          </div>
+        ) : null}
+
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 
@@ -780,6 +822,43 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarist+daylight+color+match+handbook?s=equipment-aquarium-test-kits"
                 amazonLabel="Browse aquarist daylight-color-match handbooks on Amazon →"
+              />
+            </div>
+          </div>
+        ) : null}
+
+        {category.slug === 'aquarium-co2-systems' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-CO2-systems stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page
+              solenoid-timed photoperiod, 4 dKH drop checker,
+              and 5-pound / paintball duration copy — a
+              laminated aquarium photoperiod-solenoid chart, an
+              aquarium rim four-dKH-drop card, and an aquarist
+              cylinder-duration handbook. Educational stand
+              searches only. They are not a ranked CO2 list,
+              they are not a tools-co2-calculator hop, they
+              are not a first-aid-kit hop, and they do not
+              replace a water test. Fish.com does not sell
+              insurance. Fish.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Existing Chewy category buttons stay in place.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+aquarium+photoperiod+solenoid+chart?s=equipment-aquarium-co2-systems"
+                amazonLabel="Browse laminated aquarium photoperiod-solenoid charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarium+rim+four+dkh+drop+card?s=equipment-aquarium-co2-systems"
+                amazonLabel="Browse aquarium rim four-dKH-drop cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/aquarist+cylinder+duration+handbook?s=equipment-aquarium-co2-systems"
+                amazonLabel="Browse aquarist cylinder-duration handbooks on Amazon →"
               />
             </div>
           </div>
