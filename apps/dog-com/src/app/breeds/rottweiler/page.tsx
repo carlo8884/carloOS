@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -62,6 +62,47 @@ export default function RottweilerPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the rottweiler checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Rottweiler checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-rottweiler-osteosarcoma-chart,
+            dog-fridge-rottweiler-sas-echo-card, and
+            canine-first-owner-rottweiler-handbook notes that
+            match the osteosarcoma / unremitting-lameness
+            urgency, the SAS murmur-to-echo path, and
+            first-time-owner notes on this page — a laminated
+            dog Rottweiler osteosarcoma chart so the
+            days-not-weeks imaging rule is posted on the
+            fridge (not a Poodle prcd-PRA chart, not a
+            Dachshund 25% IVDD chart), a fridge Rottweiler
+            SAS echo card so the cardiologist-referral notes
+            are labeled in the kitchen (not a 6–8-week groom
+            card, not an atenolol hop), and a first-owner
+            Rottweiler handbook so the NO-typically /
+            structure-from-day-one / 12–18-month alter
+            grounding is a physical kitchen book (not a
+            first-owner Poodle handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Rottweiler checklist"
+            subtitle="Email the osteosarcoma chart, SAS echo card, and first-owner handbook notes. No spam."
+            ctaText="Email my rottweiler checklist"
+            source="breed-rottweiler-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in Rottweil, Germany: butcher&apos;s drover dogs that moved cattle to market and guarded the purse. That power / confidence history is why a household Rottweiler still needs structure from week eight, not a crate-only afternoon. Rottweilers are typically first-time-owner unfriendly — NO-typically — unless the household already commits to positive-reinforcement puppy class, Canine Good Citizen work, and the osteosarcoma / SAS screening load.</p>
+
         <BreedHealthCard name="Osteosarcoma (Bone Cancer)" riskLevel="very-high"
           description="Rottweilers have one of the highest osteosarcoma rates of any breed — exceeded only by Giant breeds (Irish Wolfhound, Great Dane). Osteosarcoma is an aggressive malignant bone tumor that most commonly affects the long bones of the limbs — distal radius (just above the wrist), proximal humerus (shoulder), and distal femur. It is locally destructive and metastasizes to the lungs early — typically before diagnosis. Median survival without treatment is 1–2 months; with limb amputation plus chemotherapy, approximately 10–12 months. Surgical alternatives (limb-sparing surgery) preserve the limb in some cases."
           signs={['Progressive single-limb lameness that does not respond to NSAIDs', 'Localized swelling at a specific bone site', 'Pain on palpation of the affected limb', 'Pathological fracture through the tumor site']}
@@ -87,6 +128,41 @@ export default function RottweilerPage() {
 
         <h2>Early Spay/Neuter and Cancer Risk</h2>
         <p>Research on Rottweilers specifically has found associations between early spay/neuter (before 1 year) and increased risk of bone cancer and certain joint disorders. A published study found that Rottweilers spayed or neutered before 1 year had a significantly higher osteosarcoma rate than intact dogs or those altered after 1 year. This aligns with similar findings in other large breeds and is one reason many internists and oncologists recommend delaying spay/neuter in large breed dogs until 12–18 months. Discuss the timing with your veterinarian in the context of your specific household situation.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Rottweiler home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            osteosarcoma / unremitting-lameness urgency, the
+            SAS murmur-to-echo path, and first-time-owner
+            notes — a laminated dog Rottweiler osteosarcoma
+            chart, a fridge Rottweiler SAS echo card, and a
+            first-owner Rottweiler handbook. Educational
+            kitchen searches only. They are not a ranked
+            product list, they are not a crate hop, they are
+            not an atenolol hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying purchases
+            at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+rottweiler+osteosarcoma+chart?s=breed-rottweiler"
+              amazonLabel="Browse laminated dog Rottweiler osteosarcoma charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+rottweiler+sas+echo+card?s=breed-rottweiler"
+              amazonLabel="Browse fridge Rottweiler SAS echo cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+rottweiler+handbook?s=breed-rottweiler"
+              amazonLabel="Browse first-owner Rottweiler handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
