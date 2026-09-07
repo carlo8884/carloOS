@@ -1111,6 +1111,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'akhal-teke' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the akhal-teke checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Akhal-Teke checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-nfs-st14-teke-chart,
+                  horse-stall-door-akhal-oasis-gold-card, and
+                  equine-first-owner-akhal-teke-handbook notes
+                  that match the NFS / ST14 panel, Akhal-oasis
+                  golden-sheen origin, and first-time-owner copy
+                  on this page — a laminated horse NFS ST14 Teke
+                  chart so the Bauer-2017 / Naked-Foal notes are
+                  posted on the stall door (not a Norfolk-Yorkshire
+                  trotter hop, not a Justin-Morgan-1789 hop), a
+                  horse stall-door Akhal-oasis gold card so the
+                  Teke-tribe / metallic-golden-sheen notes are
+                  labeled at the barn (not a high-action-carriage
+                  hop, not a USDF-level hop), and an equine
+                  first-owner akhal-teke handbook so the
+                  NO-typically / desert-war-mount grounding is a
+                  physical barn book (not a first-owner-hackney
+                  handbook, not a double-bridle hop). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Akhal-Teke checklist"
+                  subtitle="Email the NFS ST14 Teke chart, Akhal-oasis gold card, and first-owner handbook notes. No spam."
+                  ctaText="Email my akhal-teke checklist"
+                  source="breed-akhal-teke-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -2063,6 +2104,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+hackney+handbook?s=breed-hackney"
                     amazonLabel="Browse equine first-owner hackney handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'akhal-teke' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the akhal-teke barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  NFS / ST14 panel, Akhal-oasis golden-sheen origin,
+                  and first-time-owner copy — a laminated horse NFS
+                  ST14 Teke chart, a horse stall-door Akhal-oasis
+                  gold card, and an equine first-owner akhal-teke
+                  handbook. Educational barn searches only. They
+                  are not a ranked tack list, they are not a
+                  dressage-overview hop, they are not a first-aid-kit
+                  hop, and they do not replace a veterinarian.
+                  Horses.com does not sell insurance. Horses.com
+                  earns a commission on qualifying purchases at no
+                  extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+nfs+st14+teke+chart?s=breed-akhal-teke"
+                    amazonLabel="Browse laminated horse NFS ST14 Teke charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+akhal+oasis+gold+card?s=breed-akhal-teke"
+                    amazonLabel="Browse horse stall-door Akhal-oasis gold cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+akhal+teke+handbook?s=breed-akhal-teke"
+                    amazonLabel="Browse equine first-owner akhal-teke handbooks on Amazon →"
                   />
                 </div>
               </div>
