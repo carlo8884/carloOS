@@ -11,6 +11,8 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -167,6 +169,49 @@ export default function EventingPage() {
             updatedAt="2026-05-28"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the eventing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Eventing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-usea-eventing-level-chart,
+              stall-door-cci5-event-card, and
+              equine-frangible-pin-handbook notes
+              that match the three-phase,
+              Beginner-Novice-to-CCI5*, and
+              frangible-pin copy on this
+              page — a laminated horse USEA eventing-level
+              chart so the dressage / cross-country /
+              show-jumping notes are posted on the stall
+              door (not a jumper-course chart, not a
+              training-pyramid chart), a horse stall-door
+              CCI5* event card so the Badminton / Burghley /
+              Kentucky / Pau / Maryland notes are labeled
+              at the barn (not a USEF jumper-level card,
+              not a USDF level card), and an equine
+              frangible-pin handbook so the MIM-clip /
+              deformable-fence grounding is a physical
+              barn book (not an open-front-boot handbook,
+              not a double-bridle handbook). Educational
+              barn checklist, not a ranked clinic list,
+              not a jump-saddle kit hop, not a first-aid-kit
+              hop, and not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Eventing checklist"
+              subtitle="Email the USEA level chart, CCI5* event card, and frangible-pin handbook notes. No spam."
+              ctaText="Email my eventing checklist"
+              source="disciplines-eventing-under-hero"
+            />
+          </div>
+
           <h2 id="tldr">TL;DR</h2>
           <ul>
             <li><strong>What it is:</strong> a single combined-test competition of three phases — dressage, cross-country, and show jumping — judged on a combined penalty score; lowest score wins.</li>
@@ -306,6 +351,58 @@ export default function EventingPage() {
             <li>British Eventing. Long-running national federation reference for the discipline. britisheventing.com.</li>
             <li>US Pony Clubs. Pony Club Eventing curriculum and rated competition pathway. ponyclub.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse USEA eventing-level chart /
+              horse stall-door CCI5* event card /
+              equine frangible-pin handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no jump-saddle kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs show-jumping /
+              dressage hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the eventing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page three-phase, Beginner-Novice-to-CCI5*,
+              and frangible-pin copy — a laminated horse
+              USEA eventing-level chart, a horse stall-door
+              CCI5* event card, and an equine frangible-pin
+              handbook. Educational barn searches only.
+              They are not a ranked clinic list, they are
+              not a show-jumping / dressage hop, they are
+              not a jump-saddle kit hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+usea+eventing+level+chart?s=discipline-eventing"
+                amazonLabel="Browse laminated horse USEA eventing-level charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+cci5+event+card?s=discipline-eventing"
+                amazonLabel="Browse horse stall-door CCI5* event cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+frangible+pin+handbook?s=discipline-eventing"
+                amazonLabel="Browse equine frangible-pin handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>

@@ -3088,6 +3088,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1378: horses.com /disciplines/dressage is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/show-jumping commercial spoke had sidebar EmailCapture only (source discipline-show-jumping, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete show-jumping-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page 12-foot-stride course / Schooling-to-Grand-Prix / open-front-boot copy (a laminated horse jumper-course chart so the related-distance / one-stride / jump-off notes are posted on the stall door, a horse stall-door USEF jumper level card so the 2\'3"-to-1.60 m notes are labeled at the barn, an equine open-front-boot handbook so the carefulness / fetlock-boot grounding is a physical barn book), never a placeholder ASIN, a sibling dressage kitchen hop, a trail-riding hop, a jump-saddle kit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1378 / crate-size / stocking.',
   },
   {
+    id: 'horses · eventing',
+    file: 'apps/horses-com/src/app/disciplines/eventing/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-eventing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my eventing checklist"/, label: 'concrete eventing-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-eventing"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+usea\+eventing\+level\+chart\?s=discipline-eventing/, label: 'laminated horse USEA eventing-level-chart search hop (matches on-page three-phase / BN-to-Advanced copy; unique vs laminated+horse+jumper+course+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+cci5\+event\+card\?s=discipline-eventing/, label: 'horse stall-door CCI5* event-card search hop (matches on-page five-CCI5* copy; unique vs horse+stall+door+usef+jumper+level+card)' },
+      { re: /amazon-brand\/equine\+frangible\+pin\+handbook\?s=discipline-eventing/, label: 'equine frangible-pin-handbook search hop (matches on-page frangible-pin / MIM-clip copy; unique vs equine+open+front+boot+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+jumper\+course\+chart|horse\+stall\+door\+usef\+jumper\+level\+card|equine\+open\+front\+boot\+handbook|laminated\+horse\+training\+pyramid\+chart|horse\+stall\+door\+usdf\+level\+card|equine\+double\+bridle\+handbook|jump\+saddle|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop show-jumping / dressage kitchen kits, jump-saddle product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-usea-eventing-level-chart / horse-stall-door-cci5-event-card / equine-frangible-pin-handbook searches' },
+    ],
+    why: 'Money path leftover after #1379: horses.com /disciplines/show-jumping is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/eventing commercial spoke had sidebar EmailCapture only (source discipline-eventing, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete eventing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page three-phase / Beginner-Novice-to-CCI5* / frangible-pin copy (a laminated horse USEA eventing-level chart so the dressage / cross-country / show-jumping notes are posted on the stall door, a horse stall-door CCI5* event card so the Badminton / Burghley / Kentucky / Pau / Maryland notes are labeled at the barn, an equine frangible-pin handbook so the MIM-clip / deformable-fence grounding is a physical barn book), never a placeholder ASIN, a sibling show-jumping kitchen hop, a dressage hop, a jump-saddle kit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1379 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
