@@ -19,6 +19,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -151,6 +153,46 @@ export default function ClaimingRacesPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the claiming-races checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Claiming-races checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-claiming-price-chart,
+              stall-door-claim-tag-card, and
+              equine-purse-vs-horse-handbook notes
+              that match the claim-mechanism, claiming-price,
+              and purse-vs-horse copy on this page — a laminated
+              horse claiming-price chart so the for-sale /
+              class-sorter notes are posted on the stall door
+              (not a breaking-maiden chart, not a race-class
+              ladder chart), a horse stall-door claim-tag card
+              so the lodged-in-advance / gate-opens notes are
+              labeled at the barn (not a maiden-special-weight
+              card, not a maiden-to-stakes card), and an equine
+              purse-vs-horse handbook so the original-owner
+              purse / claimant-takes-the-horse grounding is a
+              physical barn book (not a maiden proving-ground
+              handbook, not a race-class index handbook).
+              Educational barn checklist, not a ranked race
+              list, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Claiming-races checklist"
+              subtitle="Email the claiming-price chart, claim-tag card, and purse-vs-horse handbook notes. No spam."
+              ctaText="Email my claiming-races checklist"
+              source="race-types-claiming-under-hero"
+            />
+          </div>
+
           <h2 id="claim">How the Claim Works</h2>
           <p>A claiming race is defined by one feature: <strong>every horse in the field is for sale</strong> at the same fixed price, the <strong>claiming price</strong>, which is published in the race&apos;s conditions. Before the race is run, a licensed owner &mdash; usually acting through a trainer &mdash; can submit a <strong>claim</strong> for any horse entered, putting up that price.</p>
           <p>The timing is what makes the system distinctive. The claim is lodged in advance, but ownership effectively transfers the instant the starting gate opens. From that moment the horse belongs to the claimant, who assumes all the risk of the running &mdash; including the possibility that the horse is injured during the race. The new owner is buying the horse blind to how the race itself will unfold.</p>
@@ -188,6 +230,57 @@ export default function ClaimingRacesPage() {
               organizing mechanic, not as betting signals. No wagering tips, odds
               commentary, or handicapping guidance is provided or implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse claiming-price chart /
+              horse stall-door claim-tag card /
+              equine purse-vs-horse handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs maiden /
+              race-types hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the claiming-races barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page claim-mechanism, claiming-price, and
+              purse-vs-horse copy — a laminated horse
+              claiming-price chart, a horse stall-door
+              claim-tag card, and an equine purse-vs-horse
+              handbook. Educational barn searches only.
+              They are not a ranked race list, they are
+              not a maiden / race-types-hub hop, they are
+              not a first-aid-kit hop, they are not a
+              child toothbrush hop, and they do not
+              replace a veterinarian. Horses.com does not
+              sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+claiming+price+chart?s=race-types-claiming"
+                amazonLabel="Browse laminated horse claiming-price charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+claim+tag+card?s=race-types-claiming"
+                amazonLabel="Browse horse stall-door claim-tag cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+purse+vs+horse+handbook?s=race-types-claiming"
+                amazonLabel="Browse equine purse-vs-horse handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
