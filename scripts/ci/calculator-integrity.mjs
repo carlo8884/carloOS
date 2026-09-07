@@ -6783,6 +6783,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1537: dog.com /breeds/insurance hub is on main. This existing dog.com /breeds/match decision wizard had AffiliateDisclosure above food/breed CTAs only — no EmailCapture and no amazon-brand kitchen hops. Keep existing compare-food / browse-breed CTAs and the no-email-gate quiz; add under-hero capture; add amazon-brand kitchen hops matching on-page seven-question / may-fit / worth-a-closer-look / persona-table / AKC-ASPCA copy (a laminated dog match-tier-fit chart so the two-tier map is posted on the fridge, a fridge match-persona card so the first-time / apartment / active-household notes are labeled in the kitchen, a canine match AKC-ASPCA handbook so the AKC / ASPCA row is a physical kitchen book), never a placeholder ASIN, a sibling breeds-hub hop, a breed-insurance-hub hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not an email gate on the quiz, not a substitute for meeting a breeder or rescue. Dog.com does not sell insurance. Directory import left untouched. Do not re-open #1165 / #1251–#1537 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'dog · breed-health template',
+    file: 'apps/dog-com/src/app/breeds/_health/BreedHealthContent.tsx',
+    mustInclude: [
+      { re: /source=\{`breed-health-\$\{record\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my breed-health checklist"/, label: 'concrete breed-health-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,280}source=\{`breed-health-\$\{record\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+dog\+bh\+spoke\+issue\+chart\?s=breed-health-spoke/, label: 'laminated dog bh-spoke-issue-chart search hop (matches on-page common / occasional / rare issue map; unique vs laminated+dog+health+spoke+urgency+chart / laminated+dog+breeds+profile+chart)' },
+      { re: /amazon-brand\/dog\+fridge\+bh\+spoke\+screen\+card\?s=breed-health-spoke/, label: 'dog fridge bh-spoke-screen-card search hop (matches on-page OFA / CHIC screening table; unique vs dog+fridge+health+er+flag+card / dog+fridge+breeds+library+card)' },
+      { re: /amazon-brand\/canine\+bh\+spoke\+handbook\?s=breed-health-spoke/, label: 'canine bh-spoke-handbook search hop (matches on-page OFA / CHIC / AVMA / breed-club copy; unique vs canine+health+spoke+handbook / canine+breeds+reference+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+dog\+health\+spoke\+urgency\+chart|dog\+fridge\+health\+er\+flag\+card|canine\+health\+spoke\+handbook|laminated\+dog\+breeds\+profile\+chart|dog\+fridge\+breeds\+library\+card|canine\+breeds\+reference\+handbook|laminated\+dog\+match\+tier\+fit\+chart|dog\+fridge\+match\+persona\+card|canine\+match\+akc\+aspca\+handbook|finger\+toothbrush|dog\+crate|first\+aid\+kit|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b|dose)/, label: 'never hop health-spoke / breeds-hub / breed-match kitchen kits, first-aid hops, crate hops, flea / heartworm / vaccine hops, or Rx / dose product hops — this page hops only laminated-dog-bh-spoke-issue-chart / dog-fridge-bh-spoke-screen-card / canine-bh-spoke-handbook searches' },
+    ],
+    why: 'Money path leftover after #1538: dog.com /breeds/match wizard is on main. This existing dog.com /breeds/<slug>/health shared renderer (static breed folders + /breeds/[slug]/health) had sidebar EmailCapture only (source breed-health-${slug}, not under-hero), insurance CTAs, and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture and existing insurance CTAs; add under-hero capture; add amazon-brand kitchen hops matching on-page common / occasional / rare issue map / OFA-CHIC screening table / AVMA-breed-club copy (a laminated dog breed-health-spoke issue chart so this remaining-breed map is posted on the fridge, a fridge breed-health-spoke screen card so the OFA / CHIC notes are labeled in the kitchen, a canine breed-health-spoke handbook so the OFA / CHIC / AVMA row is a physical kitchen book), never a placeholder ASIN, a sibling health-spoke hop, a breeds-hub hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Dog.com does not sell insurance. Directory import left untouched. Do not re-open #1165 / #1251–#1538 / crate-size / stocking / horses-breeds.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [

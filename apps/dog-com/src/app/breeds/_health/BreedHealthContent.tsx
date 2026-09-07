@@ -23,6 +23,7 @@
 
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   ArticleLayout,
   ArticleByline,
   CalloutBox,
@@ -30,6 +31,7 @@ import {
   EmailCapture,
   RelatedLinks,
   SchemaScript,
+  ShopCtas,
   StockImage,
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -206,6 +208,49 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         alt={`A ${record.breedName}`}
         aspect="16:9"
       />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8 not-prose">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the breed-health checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Breed-health checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-bh-spoke-issue-chart,
+            fridge-bh-spoke-screen-card, and
+            canine-bh-spoke-handbook notes that match
+            this remaining {record.breedName} health
+            spoke — the common / occasional / rare
+            issue map, the OFA / CHIC screening table,
+            and the AVMA / breed-club grounding — a
+            laminated dog breed-health-spoke issue
+            chart so this remaining-breed map is posted
+            on the fridge (not a health-spoke urgency
+            chart, not a breeds-hub profile chart), a
+            fridge breed-health-spoke screen card so
+            the OFA / CHIC / age-recommended notes are
+            labeled in the kitchen (not a health ER-flag
+            card, not a breeds library card), and a
+            breed-health-spoke handbook so the OFA /
+            CHIC / AVMA row is a physical kitchen book
+            (not a health-spoke handbook, not a
+            breeds-reference handbook). Educational
+            kitchen checklist, not a ranked product
+            list, not a vaccine hop, not a substitute
+            for a veterinarian. Dog.com does not sell
+            insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Breed-health checklist"
+            subtitle="Email the issue chart, screen card, and breed-health handbook notes. No spam."
+            ctaText="Email my breed-health checklist"
+            source={`breed-health-${record.slug}-under-hero`}
+          />
+        </div>
 
       {/* Mandatory top callout */}
       <CalloutBox variant="note" title="Educational reference, not medical advice">
@@ -394,6 +439,51 @@ export function BreedHealthContent({ slug }: { slug: string }) {
           Compare pet insurance providers for {record.breedName}s →
         </Link>
       </p>
+
+      {/* Money path — live amazon-brand kitchen hops
+          matching on-page issue-frequency / OFA-CHIC
+          screening / AVMA-breed-club copy. Unique vs
+          the health-spoke + breeds-hub kitchens.
+          Educational only — never a vaccine hop,
+          never an Rx hop. */}
+      <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
+        <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+          Shop the breed-health kitchen kit
+        </div>
+        <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+          These Amazon category searches match the
+          on-page common / occasional / rare issue map,
+          the OFA / CHIC screening table, and the AVMA
+          / breed-club grounding — a laminated dog
+          breed-health-spoke issue chart, a fridge
+          breed-health-spoke screen card, and a canine
+          breed-health-spoke handbook. Educational
+          kitchen searches only. They are not a ranked
+          product list, they are not a health-spoke hop,
+          they are not a breeds-hub hop, they are not a
+          crate hop, they are not a first-aid-kit hop,
+          they are not a flea / heartworm / vaccine hop,
+          and they do not replace a veterinarian.
+          Dog.com does not sell insurance. Dog.com earns
+          a commission on qualifying purchases at no
+          extra cost to you.
+        </p>
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <div className="flex flex-col gap-3 mt-3">
+          <ShopCtas
+            amazonHref="/go/amazon-brand/laminated+dog+bh+spoke+issue+chart?s=breed-health-spoke"
+            amazonLabel="Browse laminated dog breed-health-spoke issue charts on Amazon →"
+          />
+          <ShopCtas
+            amazonHref="/go/amazon-brand/dog+fridge+bh+spoke+screen+card?s=breed-health-spoke"
+            amazonLabel="Browse fridge dog breed-health-spoke screen cards on Amazon →"
+          />
+          <ShopCtas
+            amazonHref="/go/amazon-brand/canine+bh+spoke+handbook?s=breed-health-spoke"
+            amazonLabel="Browse canine breed-health-spoke handbooks on Amazon →"
+          />
+        </div>
+      </div>
 
       {/* ── Section: FAQs ─────────────────────────────────────────────────── */}
       <h2 id="faqs">Frequently Asked Questions</h2>
