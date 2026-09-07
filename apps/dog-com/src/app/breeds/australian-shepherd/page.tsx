@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts.', path: '/breeds/australian-shepherd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -43,6 +43,48 @@ export default function AustralianShepherdPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the australian-shepherd checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Australian Shepherd checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-aussie-50pct-mdr1-chart,
+            dog-fridge-aussie-10hr-herd-card, and
+            canine-first-owner-australian-shepherd-handbook
+            notes that match the ~50% MDR1 mutation, the
+            10-hour mountain-herd / 1.5–2+ hour vigorous
+            work floor, and first-time-owner notes on this
+            page — a laminated dog Aussie 50% MDR1 chart so
+            the ivermectin / loperamide warning is posted on
+            the fridge (not a Doberman 58% DCM chart, not a
+            Chukchi 100-mile chart), a fridge Aussie 10-hour
+            herd card so the 2-hour vigorous-work notes are
+            labeled in the kitchen (not a Holter echo card,
+            not an Imodium hop), and a first-owner Australian
+            Shepherd handbook so the YES-typically / heel-
+            nipping / MDR1-before-meds grounding is a
+            physical kitchen book (not a first-owner Doberman
+            handbook). Educational kitchen checklist, not a
+            ranked product list, not a substitute for a
+            veterinarian. Dog.com does not sell insurance.
+            No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Australian Shepherd checklist"
+            subtitle="Email the 50% MDR1 chart, 10-hour herd card, and first-owner handbook notes. No spam."
+            ctaText="Email my australian-shepherd checklist"
+            source="breed-australian-shepherd-under-hero"
+          />
+        </div>
+
+        <p>The working story starts in the American West: Basque herding dogs that arrived via Australia were reshaped into today&apos;s Aussie — that 10-hour mountain-herd history is why a household Australian Shepherd still needs 1.5–2+ hours of vigorous work, not a crate-only afternoon. Australian Shepherds are typically first-time-owner friendly — YES-typically — when the household accepts the MDR1 DNA test before any listed drug, the 2-hour work floor, and heel-nipping management around children.</p>
+
         <BreedHealthCard name="MDR1 Gene Mutation (Drug Sensitivity)" riskLevel="high"
           description="The MDR1 (ABCB1) gene mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in dogs without the mutation. The MDR1 protein (P-glycoprotein) normally pumps drugs out of the brain — dogs with two mutant copies of the gene lack this protective mechanism, allowing normal doses of certain drugs to accumulate to toxic levels in the brain. The classic example: ivermectin at the low doses used for routine heartworm prevention is safe in all dogs; at the higher doses used in some parasite treatments, MDR1-affected dogs suffer neurological toxicity and death. This affects dozens of drugs including loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs."
           signs={['Drug-specific: ataxia, blindness, seizures, coma after exposure to affected drugs', 'Signs appear within hours of drug administration']}
@@ -59,6 +101,41 @@ export default function AustralianShepherdPage() {
 
         <h2>Health Beyond MDR1</h2>
         <p>Epilepsy is more common in Australian Shepherds than most breeds — onset typically at 1–3 years. Collie Eye Anomaly (CEA) is a hereditary eye condition affecting the choroid — DNA test available. Multiple Ocular Anomalies (MOA/CEA) — most Australian Shepherd breeders test breeding stock. Hip dysplasia at moderate prevalence — OFA clearances on breeding dogs are appropriate. Hereditary cataracts — OFA CAER eye exam on breeding dogs. Nasal solar dermatitis ("Collie nose") in merle and heavily white-factored dogs.</p>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the Australian Shepherd home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            ~50% MDR1 mutation, the 10-hour mountain-herd /
+            1.5–2+ hour vigorous work floor, and first-time-
+            owner notes — a laminated dog Aussie 50% MDR1
+            chart, a fridge Aussie 10-hour herd card, and a
+            first-owner Australian Shepherd handbook.
+            Educational kitchen searches only. They are not a
+            ranked product list, they are not a crate hop,
+            they are not an Imodium hop, and they do not
+            replace a veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+aussie+50pct+mdr1+chart?s=breed-aussie"
+              amazonLabel="Browse laminated dog Aussie 50% MDR1 charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+aussie+10hr+herd+card?s=breed-aussie"
+              amazonLabel="Browse fridge Aussie 10-hour herd cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+australian+shepherd+handbook?s=breed-aussie"
+              amazonLabel="Browse first-owner Australian Shepherd handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
