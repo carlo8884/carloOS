@@ -3111,6 +3111,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1379: horses.com /disciplines/show-jumping is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/eventing commercial spoke had sidebar EmailCapture only (source discipline-eventing, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete eventing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page three-phase / Beginner-Novice-to-CCI5* / frangible-pin copy (a laminated horse USEA eventing-level chart so the dressage / cross-country / show-jumping notes are posted on the stall door, a horse stall-door CCI5* event card so the Badminton / Burghley / Kentucky / Pau / Maryland notes are labeled at the barn, an equine frangible-pin handbook so the MIM-clip / deformable-fence grounding is a physical barn book), never a placeholder ASIN, a sibling show-jumping kitchen hop, a dressage hop, a jump-saddle kit hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1379 / crate-size / stocking.',
   },
   {
+    id: 'horses · western-pleasure',
+    file: 'apps/horses-com/src/app/disciplines/western-pleasure/page.tsx',
+    mustInclude: [
+      { re: /source="disciplines-western-pleasure-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my western-pleasure checklist"/, label: 'concrete western-pleasure-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-western-pleasure"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+aqha\+pleasure\+gait\+chart\?s=discipline-western-pleasure/, label: 'laminated horse AQHA pleasure-gait-chart search hop (matches on-page walk-jog-lope rail copy; unique vs laminated+horse+usea+eventing+level+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+aqha\+world\+show\+card\?s=discipline-western-pleasure/, label: 'horse stall-door AQHA World Show-card search hop (matches on-page 4-H-to-World-Show copy; unique vs horse+stall+door+cci5+event+card)' },
+      { re: /amazon-brand\/equine\+shw340\+lope\+handbook\?s=discipline-western-pleasure/, label: 'equine SHW340 lope-handbook search hop (matches on-page three-beat-lope / natural-carriage copy; unique vs equine+frangible+pin+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+usea\+eventing\+level\+chart|horse\+stall\+door\+cci5\+event\+card|equine\+frangible\+pin\+handbook|laminated\+horse\+jumper\+course\+chart|horse\+stall\+door\+usef\+jumper\+level\+card|equine\+open\+front\+boot\+handbook|silver\+saddle|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop eventing / show-jumping kitchen kits, silver-saddle product hops, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-aqha-pleasure-gait-chart / horse-stall-door-aqha-world-show-card / equine-shw340-lope-handbook searches' },
+    ],
+    why: 'Money path leftover after #1380: horses.com /disciplines/eventing is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /disciplines/western-pleasure commercial spoke had sidebar EmailCapture only (source discipline-western-pleasure, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete western-pleasure-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page walk-jog-lope rail / 4-H-to-World-Show / AQHA-SHW340 three-beat-lope copy (a laminated horse AQHA pleasure-gait chart so the walk / jog / lope notes are posted on the stall door, a horse stall-door AQHA World Show card so the Open / Amateur / Youth notes are labeled at the barn, an equine SHW340 lope handbook so the three-beat / natural-carriage grounding is a physical barn book), never a placeholder ASIN, a sibling eventing kitchen hop, a show-jumping hop, a silver-saddle hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked clinic list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1380 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
