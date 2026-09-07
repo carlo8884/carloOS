@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols.', path: '/nutrition/weight-management', type: 'article' })
@@ -23,6 +23,50 @@ export default function WeightManagementPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the dog weight-loss checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Dog weight-loss checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-rib-waist-chart,
+            fridge-kcal-scale-card, and
+            canine-low-impact-walk-handbook notes
+            that match the rib-waist-tuck-map,
+            kcal-scale-log, and
+            low-impact-walk-grounding copy on this
+            page — a laminated dog rib-waist chart so
+            the feel-ribs / see-waist / abdominal-tuck
+            map is posted on the fridge (not a twice-daily
+            chart, not a BCS-score chart, not a
+            nutrition-feeding chart), a dog fridge
+            kcal-scale card so 1–2%-per-month / kitchen-scale
+            notes are labeled on the fridge (not a
+            life-stage-meal card, not an ideal-weight
+            card, not a WSAVA label card), and a canine
+            low-impact-walk handbook so the 10–15 minute
+            flat-walk / swimming grounding is a physical
+            kitchen book (not a GDV-timing handbook, not
+            an RER-portion handbook, not a safe-share
+            handbook). Educational kitchen checklist, not
+            a ranked clinic list, not a first-aid-kit hop,
+            and not a substitute for a veterinarian.
+            Dog.com does not sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Dog weight-loss checklist"
+            subtitle="Email the rib-waist chart, fridge kcal-scale card, and low-impact-walk-handbook notes. No spam."
+            ctaText="Email my dog weight-loss checklist"
+            source="nutrition-weight-under-hero"
+          />
+        </div>
+
         <h2 id="assess">Is My Dog Overweight? The Body Condition Score</h2>
         <p>Scale weight is misleading without body condition context. A large-framed dog may be 80 lbs and lean; a small-framed dog may be 60 lbs and obese. Body condition scoring (BCS) is the correct tool.</p>
         <p><strong>Run your hands along both sides of your dog&apos;s ribcage.</strong> Can you feel each rib easily without pressing? Can you see a waist when you look down from above? Can you see an abdominal tuck (belly rising toward hindquarters) when viewed from the side? If yes to all three: ideal weight. If ribs are difficult to feel, no waist is visible, and no tuck: overweight. If ribs are buried under fat, abdomen is distended: obese.</p>
@@ -68,6 +112,59 @@ export default function WeightManagementPage() {
           <li>Target: reach ideal weight, then recalculate maintenance intake at the new weight and maintain indefinitely</li>
         </ul>
         <p>Weight management is lifelong, not temporary. A dog that loses weight on a restricted diet and then returns to previous intake will regain the weight. Maintenance monitoring — BCS monthly, weight every 3 months — is the correct long-term approach.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+
+        {/* Money path — live amazon-brand search hops
+            (laminated dog rib-waist chart /
+            dog fridge kcal-scale card /
+            canine low-impact-walk handbook).
+            No existing product hop to keep.
+            Educational kitchen searches only; no Rx /
+            vaccine / flea / heartworm / nsaid hops.
+            ShopCtas hides empty Chewy; never href="#"
+            or PLACEHOLDER. Unused vs feeding-frequency /
+            how-much-to-feed / safe-human-foods hops.
+            Directory import left untouched.
+            Do not re-open #1165 / what-to-expect. */}
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the dog weight-loss kitchen kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the
+            on-page rib-waist-tuck-map,
+            kcal-scale-log, and
+            low-impact-walk-grounding copy — a
+            laminated dog rib-waist chart, a
+            dog fridge kcal-scale card, and a
+            canine low-impact-walk handbook.
+            Educational kitchen searches only. They are
+            not a ranked clinic list, they are not
+            a feeding-frequency / how-much-to-feed /
+            safe-human-foods hop, they are not a
+            first-aid-kit hop, they are not a child
+            toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell
+            insurance. Dog.com earns a commission on
+            qualifying purchases at no extra cost to
+            you. Empty Chewy buttons stay hidden.
+          </p>
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+rib+waist+chart?s=nutrition-weight"
+              amazonLabel="Browse laminated dog rib-waist charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+kcal+scale+card?s=nutrition-weight"
+              amazonLabel="Browse dog fridge kcal-scale cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+low+impact+walk+handbook?s=nutrition-weight"
+              amazonLabel="Browse canine low-impact-walk handbooks on Amazon →"
+            />
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
