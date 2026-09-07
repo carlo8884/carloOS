@@ -3916,6 +3916,29 @@ const CALCULATORS = [
     why: 'Money path leftover after #1414: horses.com /racing/race-types/handicap-races is on main. Remaining horses.com race-types leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/ottb-second-careers hub had section EmailCapture only (source ottb-second-careers-hub, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete ottb-second-careers-checklist offer; keep the existing section capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page discipline-ladder / foundation-flatwork / letdown-to-restart copy (a laminated horse OTTB discipline-ladder chart so the eventing / jumping / dressage / trail notes are posted on the stall door, a horse stall-door foundation-flatwork card so the new vocabulary of leg / seat / rein notes are labeled at the barn, an equine letdown-to-restart handbook so the decompression / discipline-specific-work grounding is a physical barn book), never a placeholder ASIN, a sibling ottb-aftercare kitchen hop, a handicap hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1414 / crate-size / stocking.',
   },
   {
+    id: 'horses · ottb-in-eventing',
+    file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-eventing/page.tsx',
+    mustInclude: [
+      { re: /source="ottb-in-eventing-under-hero"/, label: 'under-hero email capture source tag' },
+      { re: /ctaText="Email my ottb-in-eventing checklist"/, label: 'concrete ottb-in-eventing-checklist offer, not Subscribe' },
+      { re: /variant="sidebar"[\s\S]{0,240}source="ottb-in-eventing"/, label: 'existing sidebar email capture kept in place' },
+      { re: /amazon-brand\/laminated\+horse\+ottb\+cross\+country\+chart\?s=ottb-in-eventing/, label: 'laminated horse OTTB cross-country-chart search hop (matches on-page solid-obstacles / distance copy; unique vs laminated+horse+ottb+discipline+ladder+chart)' },
+      { re: /amazon-brand\/horse\+stall\+door\+three\+phase\+card\?s=ottb-in-eventing/, label: 'horse stall-door three-phase-card search hop (matches on-page dressage / XC / show-jumping copy; unique vs horse+stall+door+foundation+flatwork+card)' },
+      { re: /amazon-brand\/equine\+eventing\+gallop\+handbook\?s=ottb-in-eventing/, label: 'equine eventing-gallop-handbook search hop (matches on-page cardiovascular / upper-level-blood copy; unique vs equine+letdown+to+restart+handbook)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /amazon-brand\/[^?"']*(laminated\+horse\+ottb\+discipline\+ladder\+chart|horse\+stall\+door\+foundation\+flatwork\+card|equine\+letdown\+to\+restart\+handbook|laminated\+horse\+taa\+aftercare\+directory\+chart|horse\+stall\+door\+ottb\+letdown\+card|equine\+thoroughbred\+makeover\+handbook|laminated\+horse\+usea\+eventing\+level\+chart|horse\+stall\+door\+cci5\+event\+card|equine\+frangible\+pin\+handbook|pet\+first\+aid\+kit|first\+aid\+kit|finger\+toothbrush|heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription|vaccine|vaccination|rx\b)/, label: 'never hop ottb-second-careers-hub / aftercare / disciplines-eventing kitchen kits, first-aid / toothbrush hops, or Rx / flea / heartworm / vaccine — this page hops only laminated-horse-ottb-cross-country-chart / horse-stall-door-three-phase-card / equine-eventing-gallop-handbook searches' },
+    ],
+    why: 'Money path leftover after #1415: horses.com /racing/ottb-second-careers is on main. Remaining horses.com race-types leftovers are exhausted. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /racing/ottb-second-careers/ottb-in-eventing commercial spoke had sidebar EmailCapture only (source ottb-in-eventing, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete ottb-in-eventing-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand barn hops matching on-page cross-country / three-phase / gallop copy (a laminated horse OTTB cross-country chart so the solid-obstacles / distance notes are posted on the stall door, a horse stall-door three-phase card so the dressage / XC / show-jumping notes are labeled at the barn, an equine eventing-gallop handbook so the cardiovascular / upper-level-blood grounding is a physical barn book), never a placeholder ASIN, a sibling ottb-second-careers-hub kitchen hop, an aftercare hop, a disciplines-eventing hop, a first-aid-kit hop, or a flea / heartworm / nsaid / vaccine hop. Educational barn searches only — not a ranked race list, not a substitute for a veterinarian. Horses.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1415 / crate-size / stocking.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
