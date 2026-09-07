@@ -1152,6 +1152,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'marwari' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the marwari checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Marwari checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-rathore-marwar-ear-chart,
+                  horse-stall-door-rajasthan-cavalry-card, and
+                  equine-first-owner-marwari-handbook notes that
+                  match the inward-turned-ear / Rathore origin,
+                  Rajasthan desert-cavalry use, and first-time-owner
+                  copy on this page — a laminated horse Rathore
+                  Marwar ear chart so the 12th-century / inward-
+                  turned-ear-tip notes are posted on the stall door
+                  (not an NFS-ST14-Teke hop, not a Norfolk-Yorkshire
+                  trotter hop), a horse stall-door Rajasthan cavalry
+                  card so the India-Rajasthan / desert-cavalry notes
+                  are labeled at the barn (not an Akhal-oasis-gold
+                  hop, not a USDF-level hop), and an equine
+                  first-owner marwari handbook so the NO-typically /
+                  PSSM2-import / Wobbler / heat-stress grounding is
+                  a physical barn book (not a first-owner-akhal-teke
+                  handbook, not a double-bridle hop). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Marwari checklist"
+                  subtitle="Email the Rathore Marwar ear chart, Rajasthan cavalry card, and first-owner handbook notes. No spam."
+                  ctaText="Email my marwari checklist"
+                  source="breed-marwari-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -2141,6 +2182,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+akhal+teke+handbook?s=breed-akhal-teke"
                     amazonLabel="Browse equine first-owner akhal-teke handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'marwari' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the marwari barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  inward-turned-ear / Rathore origin, Rajasthan
+                  desert-cavalry use, and first-time-owner copy —
+                  a laminated horse Rathore Marwar ear chart, a
+                  horse stall-door Rajasthan cavalry card, and an
+                  equine first-owner marwari handbook. Educational
+                  barn searches only. They are not a ranked tack
+                  list, they are not a dressage-overview hop, they
+                  are not a first-aid-kit hop, and they do not
+                  replace a veterinarian. Horses.com does not sell
+                  insurance. Horses.com earns a commission on
+                  qualifying purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+rathore+marwar+ear+chart?s=breed-marwari"
+                    amazonLabel="Browse laminated horse Rathore Marwar ear charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+rajasthan+cavalry+card?s=breed-marwari"
+                    amazonLabel="Browse horse stall-door Rajasthan cavalry cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+marwari+handbook?s=breed-marwari"
+                    amazonLabel="Browse equine first-owner marwari handbooks on Amazon →"
                   />
                 </div>
               </div>
