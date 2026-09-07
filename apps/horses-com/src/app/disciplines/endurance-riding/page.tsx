@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,48 @@ export default function EnduranceRidingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the endurance-riding checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Endurance-riding checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-vet-gate-recovery-chart,
+              stall-door-tevis-100-card, and
+              equine-aerc-limited-distance-handbook notes
+              that match the vet-gate, 25-to-100-mile, and
+              AERC limited-distance copy on this page — a
+              laminated horse vet-gate recovery chart so
+              the pulse / hydration / gut-sound notes are
+              posted on the stall door (not an AQHA
+              pleasure-gait chart, not a USEA eventing-level
+              chart), a horse stall-door Tevis 100 card so
+              the 25–35 / 50–100 mile notes are labeled at
+              the barn (not an AQHA World Show card, not a
+              CCI5* event card), and an equine AERC
+              limited-distance handbook so the
+              introductory-ride / mentor grounding is a
+              physical barn book (not an AERC endurance
+              handbook already used on trail-riding, not
+              an SHW340 lope handbook). Educational barn
+              checklist, not a ranked clinic list, not an
+              electrolyte kit hop, not a first-aid-kit hop,
+              and not a substitute for a veterinarian.
+              Horses.com does not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Endurance-riding checklist"
+              subtitle="Email the vet-gate chart, Tevis 100 card, and AERC limited-distance handbook notes. No spam."
+              ctaText="Email my endurance-riding checklist"
+              source="disciplines-endurance-riding-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Endurance Riding Is</h2>
           <p>Endurance riding tests a horse and rider over long distances of natural trail against the clock, but with a crucial twist: the horse must pass veterinary inspections throughout, and any horse judged unfit to continue is eliminated. The ethos -- captured in the motto to finish is to win -- places the horse&apos;s soundness and metabolic health above raw speed. It is one of the few equestrian sports where finishing a tough ride is itself a celebrated achievement.</p>
 
@@ -136,6 +178,61 @@ export default function EnduranceRidingPage() {
             <li>FEI. Endurance discipline rules. inside.fei.org.</li>
             <li>Nagy A, et al. Research on endurance horse elimination, metabolism, and recovery, various.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse vet-gate recovery chart /
+              horse stall-door Tevis 100 card /
+              equine AERC limited-distance handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops
+              and no electrolyte kit hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs trail-riding
+              AERC-endurance handbook / western-pleasure
+              hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the endurance-riding barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page vet-gate, 25-to-100-mile, and AERC
+              limited-distance copy — a laminated horse
+              vet-gate recovery chart, a horse stall-door
+              Tevis 100 card, and an equine AERC
+              limited-distance handbook. Educational barn
+              searches only. They are not a ranked clinic
+              list, they are not a trail-riding AERC
+              endurance-handbook hop, they are not a
+              western-pleasure hop, they are not an
+              electrolyte kit hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission
+              on qualifying purchases at no extra cost
+              to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+vet+gate+recovery+chart?s=discipline-endurance"
+                amazonLabel="Browse laminated horse vet-gate recovery charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+tevis+100+card?s=discipline-endurance"
+                amazonLabel="Browse horse stall-door Tevis 100 cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+aerc+limited+distance+handbook?s=discipline-endurance"
+                amazonLabel="Browse equine AERC limited-distance handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
