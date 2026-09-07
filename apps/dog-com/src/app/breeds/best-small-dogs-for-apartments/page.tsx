@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ShopCtas, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,49 @@ export default function BestSmallDogsForApartmentsPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
 
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Keep the apartment-dog checklist
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+            Apartment-dog checklist
+          </h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+            Email the laminated-dog-apt-shared-wall-chart,
+            dog-fridge-apt-pee-pad-card, dog-apt-puzzle-feeder,
+            dog-apt-quiet-chew, and
+            canine-first-owner-apartment-handbook notes that
+            match the shared-wall noise floor, the third-floor
+            potty logistics, and indoor-exercise notes on this
+            page — a laminated dog apt shared-wall chart so
+            the barking / neighbor notes are posted on the
+            fridge (not a Weim Weimar-court chart, not a
+            Vizsla Magyar-point chart), a fridge apt pee-pad
+            card so the small-bladder / downstairs-trip notes
+            are labeled in the kitchen (not a gray-ghost card,
+            not a finger-toothbrush hop), a puzzle feeder so
+            indoor mental work is on the counter (not a crate
+            hop), a quiet chew so shared-wall chewing stays
+            low-noise, and a first-owner apartment handbook
+            so the temperament-over-size / no-yard grounding
+            is a physical kitchen book (not a first-owner
+            Weimaraner handbook). Educational kitchen
+            checklist, not a ranked product list, not a
+            substitute for a veterinarian. Dog.com does not
+            sell insurance. No spam.
+          </p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Apartment-dog checklist"
+            subtitle="Email the shared-wall chart, pee-pad card, puzzle feeder, quiet chew, and first-owner handbook notes. No spam."
+            ctaText="Email my apartment-dog checklist"
+            source="breeds-apartment-dogs-under-hero"
+          />
+        </div>
+
+        <p>The working story starts with shared walls: apartment living rewards energy, noise, and exercise needs that fit a no-yard, neighbor-close floor plan — not the smallest weight on the scale. That shared-wall / indoor-exercise history is why a household apartment dog still needs a potty-logistics plan and a quiet indoor kit, not a crate-only afternoon. First-time apartment owners typically do better when they accept daily walks without a yard, a backup indoor potty plan on a third-floor unit, and training for alert-barking before they pick a high-drive toy.</p>
+
         <h2 id="short">The Short Answer</h2>
         <p>The best apartment dogs are not simply the smallest — they are the ones whose <strong>energy, noise, and exercise needs fit a shared-wall, no-yard life.</strong> A calm, quiet companion breed in a one-bedroom is a better match than a vocal, high-drive dog of the same weight. Size helps, but temperament decides. Below are the four traits that actually matter, then a set of small breeds that tend to do well in apartments — each linked to its full profile where we have one.</p>
         <p>As always, individual dogs vary, and the right choice depends on your routine. The <a href="/breeds/match">breed-match wizard</a> can turn these trade-offs into a personalized shortlist.</p>
@@ -111,6 +154,49 @@ export default function BestSmallDogsForApartmentsPage() {
           <li><strong>Compare your two finalists</strong> head-to-head with the <a href="/compare">breed comparison tool</a>.</li>
           <li><strong>Talk to your veterinarian</strong> about any breed-specific health considerations — especially for flat-faced breeds — before you commit.</li>
         </ol>
+
+        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Shop the apartment-dog home kit
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            shared-wall noise floor, the third-floor potty
+            logistics, and indoor-exercise notes — a laminated
+            dog apt shared-wall chart, a fridge apt pee-pad
+            card, a puzzle feeder, a quiet chew, and a first-
+            owner apartment handbook. Educational kitchen
+            searches only. They are not a ranked product
+            list, they are not a crate hop, they are not a
+            finger-toothbrush hop, and they do not replace a
+            veterinarian. Dog.com does not sell insurance.
+            Dog.com earns a commission on qualifying
+            purchases at no extra cost to you.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <div className="flex flex-col gap-3 mt-3">
+            <ShopCtas
+              amazonHref="/go/amazon-brand/laminated+dog+apt+shared+wall+chart?s=breeds-apartment-dogs"
+              amazonLabel="Browse laminated dog apt shared-wall charts on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+fridge+apt+pee+pad+card?s=breeds-apartment-dogs"
+              amazonLabel="Browse fridge apt pee-pad cards on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+apt+puzzle+feeder?s=breeds-apartment-dogs"
+              amazonLabel="Browse apartment-dog puzzle feeders on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/dog+apt+quiet+chew?s=breeds-apartment-dogs"
+              amazonLabel="Browse apartment-dog quiet chews on Amazon →"
+            />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/canine+first+owner+apartment+handbook?s=breeds-apartment-dogs"
+              amazonLabel="Browse first-owner apartment-dog handbooks on Amazon →"
+            />
+          </div>
+        </div>
 
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS} />
