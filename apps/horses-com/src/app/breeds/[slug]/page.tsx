@@ -948,6 +948,47 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </div>
             ) : null}
 
+            {breed.slug === 'connemara-pony' ? (
+              <div className="mb-8">
+                <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+                  Keep the connemara-pony checklist
+                </p>
+                <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+                  Connemara Pony checklist
+                </h2>
+                <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+                  Email the laminated-horse-hwsd-serpinb11-chart,
+                  horse-stall-door-western-ireland-rock-card, and
+                  equine-first-owner-connemara-pony-handbook notes
+                  that match the HWSD / SERPINB11 panel, western
+                  Ireland rocky-terrain origin, and first-time-owner
+                  copy on this page — a laminated horse HWSD
+                  SERPINB11 chart so the Finno-2015 / hoof-wall
+                  notes are posted on the stall door (not an
+                  Iowa-1954-Boomhower hop, not a Shetland-Bronze-Age
+                  hop), a horse stall-door western-Ireland rock
+                  card so the only-native-Irish-pony / post-1923
+                  notes are labeled at the barn (not a
+                  leopard-complex-spot hop, not a USDF-level hop),
+                  and an equine first-owner connemara-pony handbook
+                  so the YES-with-caveats / HWSD grounding is a
+                  physical barn book (not a first-owner-pony-americas
+                  handbook, not a double-bridle hop). Educational
+                  barn checklist, not a ranked tack list, not a
+                  substitute for a veterinarian. Horses.com does
+                  not sell insurance. No spam.
+                </p>
+                <EmailCapture
+                  variant="inline"
+                  siteId="horses-com"
+                  title="Connemara Pony checklist"
+                  subtitle="Email the HWSD SERPINB11 chart, western-Ireland rock card, and first-owner handbook notes. No spam."
+                  ctaText="Email my connemara-pony checklist"
+                  source="breed-connemara-pony-under-hero"
+                />
+              </div>
+            ) : null}
+
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
@@ -1752,6 +1793,43 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                   <ShopCtas
                     amazonHref="/go/amazon-brand/equine+first+owner+pony+americas+handbook?s=breed-pony-of-the-americas"
                     amazonLabel="Browse equine first-owner pony-americas handbooks on Amazon →"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {breed.slug === 'connemara-pony' ? (
+              <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+                <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+                  Shop the connemara-pony barn kit
+                </div>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+                  These Amazon category searches match the on-page
+                  HWSD / SERPINB11 panel, western-Ireland rocky-terrain
+                  origin, and first-time-owner copy — a laminated
+                  horse HWSD SERPINB11 chart, a horse stall-door
+                  western-Ireland rock card, and an equine first-owner
+                  connemara-pony handbook. Educational barn searches
+                  only. They are not a ranked tack list, they are
+                  not a dressage-overview hop, they are not a
+                  first-aid-kit hop, and they do not replace a
+                  veterinarian. Horses.com does not sell insurance.
+                  Horses.com earns a commission on qualifying
+                  purchases at no extra cost to you.
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="horses-com" />
+                <div className="flex flex-col gap-3 mt-3">
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/laminated+horse+hwsd+serpinb11+chart?s=breed-connemara-pony"
+                    amazonLabel="Browse laminated horse HWSD SERPINB11 charts on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/horse+stall+door+western+ireland+rock+card?s=breed-connemara-pony"
+                    amazonLabel="Browse horse stall-door western-Ireland rock cards on Amazon →"
+                  />
+                  <ShopCtas
+                    amazonHref="/go/amazon-brand/equine+first+owner+connemara+pony+handbook?s=breed-connemara-pony"
+                    amazonLabel="Browse equine first-owner connemara-pony handbooks on Amazon →"
                   />
                 </div>
               </div>
