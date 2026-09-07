@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -160,6 +162,47 @@ export default function PeopleOfRacingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the people-of-racing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              People-of-racing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-owner-trainer-jockey-chart,
+              stall-door-steward-official-card, and
+              equine-backstretch-role-handbook notes
+              that match the connections-owner-trainer,
+              steward-raceday-officials, and
+              backstretch-groom-exercise-rider copy on this
+              page — a laminated horse owner-trainer-jockey
+              chart so the connections / silks notes are
+              posted on the stall door (not a workout-breeze
+              chart, not a TAA aftercare-directory chart), a
+              horse stall-door steward-official card so the
+              objections / clerk-of-scales notes are labeled
+              at the barn (not a gate-school card, not an
+              OTTB letdown card), and an equine backstretch
+              role handbook so the groom / hot-walker /
+              valet grounding is a physical barn book (not a
+              HISA welfare handbook, not a Thoroughbred
+              Makeover handbook). Educational barn
+              checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="People-of-racing checklist"
+              subtitle="Email the owner-trainer-jockey chart, steward-official card, and backstretch-role handbook notes. No spam."
+              ctaText="Email my people-of-racing checklist"
+              source="racing-the-people-of-racing-under-hero"
+            />
+          </div>
 
           <p>It is useful to picture the people of racing as three overlapping circles. The <em>connections</em> -- owner, breeder, and trainer -- hold the commercial and competitive responsibility for a horse. The <em>riders</em> -- the jockey in the afternoon and the exercise rider in the morning -- are the athletes who partner the horse at speed. And the <em>backstretch and raceday staff</em> -- grooms, hot walkers, farriers, veterinarians, and the officials who govern the meet -- form the surrounding infrastructure without which no horse reaches the gate. The sections below walk through each circle in turn; the celebrated runners profiled in the <a href="/racing/great-racehorses">great racehorses</a> collection were every one of them the product of teams like these.</p>
 
@@ -220,6 +263,57 @@ export default function PeopleOfRacingPage() {
             <li>Association of Racing Commissioners International (ARCI). Model rules and licensing of racing participants. arci.com.</li>
             <li>American Association of Equine Practitioners (AAEP). Equine welfare and veterinary guidance. aaep.org.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse owner-trainer-jockey chart /
+              horse stall-door steward-official card /
+              equine backstretch role handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs training /
+              aftercare hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the people-of-racing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page connections-owner-trainer,
+              steward-raceday-officials, and
+              backstretch-groom-exercise-rider copy — a
+              laminated horse owner-trainer-jockey chart,
+              a horse stall-door steward-official card,
+              and an equine backstretch role handbook.
+              Educational barn searches only. They are not
+              a ranked race list, they are not a training /
+              aftercare hop, they are not a first-aid-kit
+              hop, they are not a child toothbrush hop, and
+              they do not replace a veterinarian. Horses.com
+              does not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no extra
+              cost to you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+owner+trainer+jockey+chart?s=racing-people"
+                amazonLabel="Browse laminated horse owner-trainer-jockey charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+steward+official+card?s=racing-people"
+                amazonLabel="Browse horse stall-door steward-official cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+backstretch+role+handbook?s=racing-people"
+                amazonLabel="Browse equine backstretch-role handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
