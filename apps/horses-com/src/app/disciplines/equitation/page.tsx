@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,48 @@ export default function EquitationPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the equitation checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Equitation checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-equitation-position-chart,
+              stall-door-usef-medal-card, and
+              equine-hunter-seat-handbook notes
+              that match the ear-hip-heel, usef-medal /
+              aspc-maclay, and hunter-seat copy on this
+              page — a laminated horse equitation position
+              chart so the heels-down / ear-to-hip-to-heel
+              / independent-seat notes are posted on the
+              stall door (not a cutting cow-work chart,
+              not an ADS driving-phase chart), a horse
+              stall-door USEF medal card so the USEF Medal
+              / ASPCA Maclay / WIHS notes are labeled at
+              the barn (not an NCHA cutting card, not a
+              four-in-hand card), and an equine hunter-seat
+              handbook so the rider-not-horse / George
+              Morris grounding is a physical barn book
+              (not a cutting cow-sense handbook, not a
+              cones-driving handbook). Educational barn
+              checklist, not a ranked clinic list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Equitation checklist"
+              subtitle="Email the equitation position chart, USEF medal card, and hunter-seat handbook notes. No spam."
+              ctaText="Email my equitation checklist"
+              source="disciplines-equitation-under-hero"
+            />
+          </div>
+
           <h2 id="what">What Equitation Is</h2>
           <p>Equitation is the art and judged discipline of correct, effective riding, where the focus is entirely on the rider. The horse is the vehicle; the rider&apos;s seat, position, use of the aids, and overall effectiveness are what the judge assesses. Strong equitation -- a balanced, quiet, secure position from which the rider can influence the horse subtly -- underpins success in every other English discipline, which is why it is the cornerstone of junior and amateur development in the hunter/jumper world.</p>
 
@@ -142,6 +184,57 @@ export default function EquitationPage() {
             <li>United States Hunter Jumper Association (USHJA). Equitation resources. ushja.org.</li>
             <li>Classic equitation texts (e.g., George Morris, Hunter Seat Equitation).</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse equitation position chart /
+              horse stall-door USEF medal card /
+              equine hunter-seat handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs cutting /
+              combined-driving hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the equitation barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page ear-hip-heel, usef-medal /
+              aspc-maclay, and hunter-seat copy — a
+              laminated horse equitation position chart, a
+              horse stall-door USEF medal card, and an
+              equine hunter-seat handbook. Educational
+              barn searches only. They are not a ranked
+              clinic list, they are not a cutting /
+              combined-driving hop, they are not a
+              first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to
+              you. Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+equitation+position+chart?s=discipline-equitation"
+                amazonLabel="Browse laminated horse equitation position charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+usef+medal+card?s=discipline-equitation"
+                amazonLabel="Browse horse stall-door USEF medal cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+hunter+seat+handbook?s=discipline-equitation"
+                amazonLabel="Browse equine hunter-seat handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
