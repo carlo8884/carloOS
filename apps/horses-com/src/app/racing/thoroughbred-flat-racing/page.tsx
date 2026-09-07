@@ -20,6 +20,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -149,6 +151,47 @@ export default function ThoroughbredFlatRacingPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the thoroughbred-flat-racing checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Thoroughbred flat-racing checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-thoroughbred-flat-surface-chart,
+              stall-door-american-stud-book-card, and
+              equine-furlong-distance-handbook notes
+              that match the dirt-turf-synthetic,
+              jockey-club-stud-book, and furlong-sprint-stayer
+              copy on this page — a laminated horse
+              Thoroughbred flat-surface chart so the dirt /
+              turf / synthetic notes are posted on the stall
+              door (not a vaulting compulsory chart, not a
+              racing-hub section-map chart), a horse
+              stall-door American Stud Book card so The
+              Jockey Club / closed-studbook notes are
+              labeled at the barn (not an AVA vaulting
+              card, not a racing-prep card), and an equine
+              furlong-distance handbook so the six-furlong /
+              mile-and-a-quarter grounding is a physical
+              barn book (not a vaulting-surcingle handbook,
+              not a racing reference handbook). Educational
+              barn checklist, not a ranked race list, not a
+              first-aid-kit hop, and not a substitute for
+              a veterinarian. Horses.com does not sell
+              insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Thoroughbred flat-racing checklist"
+              subtitle="Email the Thoroughbred flat-surface chart, American Stud Book card, and furlong-distance handbook notes. No spam."
+              ctaText="Email my thoroughbred-flat-racing checklist"
+              source="racing-thoroughbred-flat-racing-under-hero"
+            />
+          </div>
 
           <h2 id="what">What Flat Racing Is</h2>
           <p>Flat racing is a form of horse racing in which horses carry a jockey and compete over a defined distance on a level or gently undulating track, without jumps or obstacles. The winner is determined by which horse crosses the finish line first. It is distinguished from jump racing (steeplechase and hurdles) by the absence of obstacles, and from harness racing by the fact that the horse is ridden rather than driven.</p>
@@ -194,6 +237,58 @@ export default function ThoroughbredFlatRacingPage() {
             <li>Horseracing Integrity and Safety Authority (HISA). Rulemaking and safety standards. hisaus.org.</li>
             <li>Racing Medication and Testing Consortium (RMTC). Uniform medication guidelines. rmtcnet.com.</li>
           </ol>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse Thoroughbred flat-surface chart /
+              horse stall-door American Stud Book card /
+              equine furlong-distance handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs vaulting /
+              racing-hub hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the thoroughbred-flat-racing barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page dirt-turf-synthetic,
+              jockey-club-stud-book, and furlong-sprint-stayer
+              copy — a laminated horse Thoroughbred
+              flat-surface chart, a horse stall-door
+              American Stud Book card, and an equine
+              furlong-distance handbook. Educational barn
+              searches only. They are not a ranked race
+              list, they are not a vaulting / racing-hub
+              hop, they are not a first-aid-kit hop, they
+              are not a child toothbrush hop, and they do
+              not replace a veterinarian. Horses.com does
+              not sell insurance. Horses.com earns a
+              commission on qualifying purchases at no
+              extra cost to you. Empty Chewy buttons stay
+              hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+thoroughbred+flat+surface+chart?s=racing-thoroughbred-flat-racing"
+                amazonLabel="Browse laminated horse Thoroughbred flat-surface charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+american+stud+book+card?s=racing-thoroughbred-flat-racing"
+                amazonLabel="Browse horse stall-door American Stud Book cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+furlong+distance+handbook?s=racing-thoroughbred-flat-racing"
+                amazonLabel="Browse equine furlong-distance handbooks on Amazon →"
+              />
+            </div>
+          </div>
         </div>
       </ArticleLayout>
     </>
