@@ -23,6 +23,8 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
+  AffiliateDisclosure,
+  ShopCtas,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -163,6 +165,48 @@ export default function KentuckyDerbyPage() {
             reviewedBy="Editorial team"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the kentucky-derby checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Kentucky-derby checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-horse-run-for-the-roses-chart,
+              stall-door-churchill-ten-furlong-card, and
+              equine-derby-points-prep-handbook notes
+              that match the Run-for-the-Roses tradition,
+              Churchill Downs / mile-and-a-quarter, and
+              points-based-prep-series copy on this page — a
+              laminated horse Run-for-the-Roses chart so the
+              garland / first-Saturday-in-May notes are
+              posted on the stall door (not a Derby-Preakness-
+              Belmont chart, not an OTTB trail-confidence
+              chart), a horse stall-door Churchill-ten-furlong
+              card so the mile-and-a-quarter / crowded-field
+              notes are labeled at the barn (not a Belmont-test
+              card, not a graduated-exposure card), and an
+              equine Derby-points-prep handbook so the
+              qualifying-series / road-to-the-Derby grounding
+              is a physical barn book (not a thirteen-winner
+              handbook, not an OTTB calm-pleasure handbook).
+              Educational barn checklist, not a ranked race
+              list, not a first-aid-kit hop, and not a
+              substitute for a veterinarian. Horses.com does
+              not sell insurance. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="horses-com"
+              title="Kentucky-derby checklist"
+              subtitle="Email the Run-for-the-Roses chart, Churchill-ten-furlong card, and Derby-points-prep handbook notes. No spam."
+              ctaText="Email my triple-crown-kentucky-derby checklist"
+              source="triple-crown-kentucky-derby-under-hero"
+            />
+          </div>
+
           <h2 id="first-leg">The First Leg</h2>
           <p>The <strong>Kentucky Derby</strong> is the opening leg of the American <a href="/racing/triple-crown">Triple Crown</a> and the most widely watched horse race in the United States. First run in 1875, it is restricted to three-year-old Thoroughbreds, run once a year on the first Saturday in May, and watched by an audience that includes millions of people who follow no other racing all year. Because it comes first, the Derby sets the narrative for the entire Triple Crown season: every spring, the story of who might sweep all three legs begins here.</p>
           <p>This page goes deep on the Derby itself. For how the three legs combine into the rarely-won sweep, and the history of the horses that have managed it, see the <a href="/racing/triple-crown">Triple Crown overview</a>. This reference treats the race as a heritage and educational subject; it offers no odds, picks, or wagering guidance.</p>
@@ -203,6 +247,57 @@ export default function KentuckyDerbyPage() {
               odds commentary, handicapping, or predictions are provided or
               implied.
             </p>
+          </div>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated horse Run-for-the-Roses chart /
+              horse stall-door Churchill-ten-furlong card /
+              equine Derby-points-prep handbook).
+              No existing product hop to keep.
+              Educational barn searches only; no Rx /
+              vaccine / flea / heartworm / nsaid hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs triple-crown hub /
+              ottb-in-trail-and-pleasure hops.
+              Directory import left untouched.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the kentucky-derby barn kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page Run-for-the-Roses, Churchill Downs /
+              mile-and-a-quarter, and points-based-prep
+              copy — a laminated horse Run-for-the-Roses
+              chart, a horse stall-door Churchill-ten-furlong
+              card, and an equine Derby-points-prep handbook.
+              Educational barn searches only. They are not a
+              ranked race list, they are not a triple-crown
+              hub / ottb-in-trail-and-pleasure hop, they are
+              not a first-aid-kit hop, they are not a child
+              toothbrush hop, and they do not replace a
+              veterinarian. Horses.com does not sell
+              insurance. Horses.com earns a commission on
+              qualifying purchases at no extra cost to you.
+              Empty Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+horse+run+for+the+roses+chart?s=triple-crown-kentucky-derby"
+                amazonLabel="Browse laminated horse Run-for-the-Roses charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/horse+stall+door+churchill+ten+furlong+card?s=triple-crown-kentucky-derby"
+                amazonLabel="Browse horse stall-door Churchill-ten-furlong cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/equine+derby+points+prep+handbook?s=triple-crown-kentucky-derby"
+                amazonLabel="Browse equine Derby-points-prep handbooks on Amazon →"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>
