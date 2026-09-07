@@ -11,6 +11,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  AffiliateDisclosure,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -174,6 +176,50 @@ export default function FerretEarMitesPage() {
             updatedAt="2026-06-01"
           />
 
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Keep the ferret ear-mite checklist
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
+              Ferret ear-mite checklist
+            </h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the laminated-ferret-coffee-grounds-chart,
+              fridge-household-treat-card, and
+              mustelid-otodectes-swab-handbook notes
+              that match the coffee-grounds-map,
+              household-treat-all, and
+              quesenberry-aemv-mite-grounding copy on this
+              page — a laminated ferret coffee-grounds chart
+              so the head-shake / coffee-grounds / ear-scratch
+              map is posted on the fridge (not a stamina-map
+              chart, not a flu-share chart, not a CDV-risk
+              chart), a ferret fridge household-treat card
+              so treat-every-ferret-dog-cat notes are labeled
+              on the fridge (not a breathing-rate card, not a
+              two-way card, not an indoor-carry card), and a
+              mustelid otodectes-swab handbook so the
+              Quesenberry / AEMV ear-swab-first and
+              whole-household-together grounding is a physical
+              kitchen book (not a cardio-echo handbook, not an
+              influenza-hygiene handbook, not a distemper-risk
+              handbook). Educational kitchen checklist, not a
+              ranked clinic list, not a first-aid-kit hop, and
+              not a substitute for an exotic-mammal
+              veterinarian. Ferret.com does not sell insurance.
+              Aging pages stay held. No spam.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              title="Ferret ear-mite checklist"
+              subtitle="Email the coffee-grounds-chart, fridge household-treat card, and otodectes-swab-handbook notes. No spam."
+              ctaText="Email my ferret ear-mite checklist"
+              source="health-ear-mites-under-hero"
+            />
+          </div>
+
           <DropCap>
             A ferret that suddenly starts shaking its head, scratching at its
             ears with a hind foot, and accumulating dark crumbly debris in the
@@ -331,6 +377,60 @@ export default function FerretEarMitesPage() {
             internal-parasite picture, and the <a href="/health">health hub</a>{' '}
             links the rest of the ferret health library.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          {/* Money path — live amazon-brand search hops
+              (laminated ferret coffee-grounds chart /
+              ferret fridge household-treat card /
+              mustelid otodectes-swab handbook).
+              No existing product hop to keep.
+              Educational kitchen searches only; no Rx /
+              vaccine / flea / heartworm / aging hops.
+              ShopCtas hides empty Chewy; never href="#"
+              or PLACEHOLDER. Unused vs health-hub /
+              heart-disease / influenza / distemper hops.
+              Directory import left untouched. Ferret
+              aging stays held.
+              Do not re-open #1165 / what-to-expect. */}
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the ferret ear-mite kitchen kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page coffee-grounds-map,
+              household-treat-all, and
+              quesenberry-aemv-mite-grounding copy — a
+              laminated ferret coffee-grounds chart, a
+              ferret fridge household-treat card, and a
+              mustelid otodectes-swab handbook.
+              Educational kitchen searches only. They are
+              not a ranked clinic list, they are not
+              a health-hub / heart-disease / influenza hop,
+              they are not a first-aid-kit hop, they are
+              not a child toothbrush hop, and they do not
+              replace an exotic-mammal veterinarian.
+              Ferret.com does not sell insurance.
+              Ferret.com earns a commission on qualifying
+              purchases at no extra cost to you. Empty
+              Chewy buttons stay hidden.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/laminated+ferret+coffee+grounds+chart?s=ear-mites"
+                amazonLabel="Browse laminated ferret coffee-grounds charts on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+fridge+household+treat+card?s=ear-mites"
+                amazonLabel="Browse ferret fridge household-treat cards on Amazon →"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/mustelid+otodectes+swab+handbook?s=ear-mites"
+                amazonLabel="Browse mustelid otodectes-swab handbooks on Amazon →"
+              />
+            </div>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
