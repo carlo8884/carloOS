@@ -6,6 +6,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -53,6 +54,14 @@ export default function LowTechPlantedTankPage() {
         <CalloutBox variant="info" title="Match light to CO2">
           In a no-CO2 tank, more light does not mean more plant growth — it means more algae. Modest lighting on a 6 to 8 hour aquarium light timer is the single most important low-tech setting.
         </CalloutBox>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/aquarium-cycling-guide"
+          nextLabel="Cycle the low-tech tank before you stock it"
+          nextBlurb="The light trap is the low-tech setting — 6 to 8 hours on a timer, no extra light that feeds algae. Ammonia and nitrite still have to read zero before fish go in. The hop below is the same aquarium light-timer search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank"
+          resourceLabel="Browse aquarium light timers on Amazon →"
+        />
 
         <h2>Choosing Forgiving Plants</h2>
         <p>Low-tech success depends on selecting plants that thrive in low CO2 and modest light. Anubias and Java fern are nearly indestructible epiphytes that attach to wood and rock and tolerate almost any conditions. Cryptocoryne species make excellent root-feeding midground plants once they settle. Vallisneria and Amazon swords provide background height, hornwort and water sprite grow fast enough to soak up excess nutrients, and Java moss and other mosses fill in cover and carpeting roles at any light level. Avoid demanding carpeting plants and red stem species that genuinely require CO2 — they will melt or stall in a low-tech tank and become an algae magnet.</p>

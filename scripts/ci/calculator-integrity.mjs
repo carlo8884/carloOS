@@ -8777,6 +8777,9 @@ const CALCULATORS = [
     id: 'fish · low-tech-planted-tank hops',
     file: 'apps/fish-com/src/app/setup/low-tech-planted-tank/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the light-trap / 6–8 hour timer answer' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+light\+timer\?s=setup-low-tech-planted-tank"/, label: 'journey hop reuses the existing light-timer search' },
       { re: /amazon-brand\/aquarium\+light\+timer\?s=setup-low-tech-planted-tank/, label: 'aquarium light-timer search hop (matches on-page 6–8 hour photoperiod copy; unique vs #993–#1021 setup-hub filter / heater / test-kit, aquascaping Seiryu / spiderwood, and algae-control scraper hops)' },
       { re: /amazon-brand\/aquarium\+plant\+root\+tabs\?s=setup-low-tech-planted-tank/, label: 'aquarium plant root-tabs search hop (matches on-page swords / crypts root-feeder copy; unique vs setup-hub / aquascaping / algae-control / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -8787,8 +8790,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete low-tech planted-checklist offer; every gear CTA is an amazon-brand category search matching on-page no-CO2 copy (aquarium light timer for the six-to-eight-hour photoperiod, aquarium plant root tabs for swords and crypts), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, a #1021 magnetic-scraper / handheld-algae-scraper hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a liquid-fertilizer hop, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the light-trap / 6–8 hour timer answer, next step is cycling + the existing light-timer hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · how-to-take-dogs-temperature hops',
