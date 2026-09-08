@@ -11895,6 +11895,9 @@ const CALCULATORS = [
     id: 'fish · best-planted-tank-fertilizers hops',
     file: 'apps/fish-com/src/app/reviews/best-planted-tank-fertilizers/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the macro vs micro nutrient rule' },
+      { re: /nextHref="\/tools\/co2-calculator"/, label: 'next step is the CO2 calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers"/, label: 'journey hop reuses the existing Easy Green search' },
       { re: /amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Easy-Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/seachem\+flourish\+comprehensive\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Seachem-Flourish amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/nilocg\+thrive\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing NilocG-Thrive amazon-brand hop kept (do not re-ship a new query)' },
@@ -11905,8 +11908,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1189: keep the existing sidebar capture and the already-hopped Easy Green / Seachem Flourish / NilocG Thrive amazon-brand searches; add under-hero capture with a concrete planted-fertilizer-checklist offer matching on-page low-tech / store-run / high-tech-CO2 copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the macro vs micro nutrient rule, next step is the CO2 calculator + the existing Easy Green hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · betta-fish hops',

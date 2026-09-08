@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog beds JourneyNext after #1613)
+**Last updated:** 2026-09-08 (COO — fish fertilizers JourneyNext after #1614)
 
-> **COO dog beds journey (2026-09-08):** After #1613. Orthopedic vs everyday foam rule → `/tools/dog-crate-size-calculator` + existing Big Barker `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-beds-journey.md`.
+> **COO fish fertilizers journey (2026-09-08):** After #1614. Macro vs micro nutrient rule → `/tools/co2-calculator` + existing Easy Green `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-fertilizers-journey.md`.
+
+> **COO dog beds journey (2026-09-08):** After #1613. Orthopedic vs everyday foam rule → `/tools/dog-crate-size-calculator` + existing Big Barker `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-beds-journey.md`. #1614 merged.
 
 > **COO fish lighting journey (2026-09-08):** After #1612. PAR-band rule → `/tools/co2-calculator` + existing Hygger 957 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-lighting-journey.md`. #1613 merged.
 
