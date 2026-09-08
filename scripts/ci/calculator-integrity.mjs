@@ -6982,6 +6982,9 @@ const CALCULATORS = [
     id: 'dog · training-leash-reactivity hops',
     file: 'apps/dog-com/src/app/training/leash-reactivity/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the management protocol' },
+      { re: /nextHref="\/tools\/harness-collar-size"/, label: 'next step is harness-size, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=training-leash-reactivity"/, label: 'journey hop reuses the existing front-clip harness search' },
       { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=training-leash-reactivity/, label: 'front-clip no-pull harness search hop (same query as loose-leash / exercise / harness-collar-size)' },
       { re: /amazon-brand\/6\+ft\+dog\+leash\?s=training-leash-reactivity/, label: '6-ft dog leash search hop (same query as loose-leash)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-leash-reactivity/, label: 'treat pouch search hop (same query as loose-leash / basic-commands)' },
@@ -6992,8 +6995,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the leash-reactivity plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete leash-reactivity-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy harness button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the CC/DS management protocol, next step is harness-size + the existing front-clip harness hop. Empty Keep-the-leash-reactivity husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-separation-anxiety hops',

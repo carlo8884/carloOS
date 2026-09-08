@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -90,15 +91,6 @@ export default function LeashReactivityPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the leash-reactivity plan
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Leash-reactivity protocol
-          </h2>
-
-        </div>
 
         <h2 id="why">Why Leash Reactivity Happens</h2>
         <p>Leash reactivity is almost always one of two things: frustration or fear — or a combination of both. Understanding which is driving your dog&apos;s behavior shapes the protocol.</p>
@@ -130,6 +122,14 @@ export default function LeashReactivityPage() {
           <li><strong>Emergency U-turn:</strong> If you encounter a trigger suddenly and cannot create enough distance: turn 180°, move quickly in the opposite direction, then feed when the dog is moving with you. Avoid yelling, jerking the leash, or any aversive response — these increase arousal and worsen reactivity.</li>
           <li><strong>&quot;Look at that&quot; (LAT) cue:</strong> Once your dog can see a trigger below threshold, you can add a cue: &quot;look at that&quot; as they notice the dog, followed by marking when they look at you. This puts the orienting response on cue and is useful for warning you about incoming triggers.</li>
         </ul>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/tools/harness-collar-size"
+          nextLabel="Size the front-clip harness before the next threshold walk"
+          nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The hop below is the same front-clip harness search already on this page."
+          resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
+          resourceLabel="Browse no-pull harnesses on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (leash-reactivity kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
