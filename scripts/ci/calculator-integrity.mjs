@@ -10997,6 +10997,9 @@ const CALCULATORS = [
     id: 'fish · quarantine-tank-guide hops',
     file: 'apps/fish-com/src/app/setup/quarantine-tank-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 4-week minimum' },
+      { re: /nextHref="\/health\/ich-treatment"/, label: 'next step is ich protocol, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide"/, label: 'journey hop reuses the existing quarantine-tank-kit search' },
       { re: /amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide/, label: 'existing quarantine-tank-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11005,8 +11008,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1154: keep the existing sidebar capture and the already-hopped quarantine-tank-kit amazon-brand search; add under-hero capture with a concrete quarantine-tank-checklist offer matching on-page seeded-sponge-filter / four-to-six-week-minimum / bare-bottom-observation copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the 4-week minimum, next step is the ich treatment guide + the existing quarantine-tank-kit hop. Shop dump stays below. No invented kitchen hops. Do not re-ship a new Amazon query.',
   },
 
   {
