@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish cycling-estimator JourneyNext after #1571)
+**Last updated:** 2026-09-08 (COO — dog socialization-window JourneyNext after #1572)
 
-> **COO fish cycling-estimator journey (2026-09-08):** After #1571. Cycling estimator week range → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the timeline” husk removed. Shop dump stays after the estimate. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-cycling-estimator-journey.md`.
+> **COO dog socialization-window journey (2026-09-08):** After #1572. Socialization 100+ exposure list → `/training/puppy-schedule` + existing divider-crate `/go`. Empty “Keep the window plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-socialization-window-journey.md`.
+
+> **COO fish cycling-estimator journey (2026-09-08):** After #1571. Cycling estimator week range → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the timeline” husk removed. Shop dump stays after the estimate. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-cycling-estimator-journey.md`. #1572 merged.
 
 > **COO dog harness-size journey (2026-09-08):** After #1570. Harness/collar size → `/tools/new-puppy-checklist` + existing Julius-K9 harness `/go`. Empty “Keep the size chart” husk removed. Shop dump stays after the size result. Details: `ops/handoffs/2026-09-08-coo-dog-harness-size-journey.md`. #1571 merged.
 
