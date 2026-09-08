@@ -12625,6 +12625,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the puppy vs adult formula rule, next step is puppy-nutrition + the existing Royal Canin Large Adult hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'dog · best-dental-chews hops',
+    file: 'apps/dog-com/src/app/reviews/best-dental-chews/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the VOHC seal rule' },
+      { re: /nextHref="\/tools\/dog-calorie-calculator"/, label: 'next step is calorie calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews"/, label: 'journey hop reuses the existing Greenies Chewy search' },
+      { re: /chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Greenies Chewy hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/whimzees\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Whimzees Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the VOHC seal / calorie-count rule, next step is calorie calculator + the existing Greenies hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [
