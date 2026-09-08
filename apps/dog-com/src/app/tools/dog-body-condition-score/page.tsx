@@ -10,6 +10,7 @@ import {
   CrossPortfolioCard,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -147,6 +148,14 @@ export default function DogBodyConditionScorePage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-ideal-weight-calculator"
+            nextLabel="Turn the score into a target weight"
+            nextBlurb="BCS is the rib, waist, and tuck check. The ideal-weight calculator turns that score into a number to aim for — then the vet confirms it. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs"
+            resourceLabel="Browse portion-control food scales on Amazon →"
+          />
         </div>
       </section>
 

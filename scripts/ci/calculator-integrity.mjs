@@ -6746,6 +6746,9 @@ const CALCULATORS = [
     id: 'dog · dog-body-condition-score hops',
     file: 'apps/dog-com/src/app/tools/dog-body-condition-score/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the BCS estimate' },
+      { re: /nextHref="\/tools\/dog-ideal-weight-calculator"/, label: 'next step is ideal weight, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-bcs"/, label: 'journey hop reuses the existing portion-scale search' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-bcs/, label: 'measuring tape / BCS chart search hop' },
       { re: /amazon-brand\/elevated\+slow\+feeder\+bowl\+dog\?s=tools-dog-bcs/, label: 'elevated slow-feeder bowl search hop' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-bcs/, label: 'portion-control food scale search hop' },
@@ -6758,8 +6761,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete dog-BCS-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret BCS hops.',
+    why: '2026-09-08 journeys: after the BCS estimate, next step is the ideal-weight calculator + the existing portion-control scale hop. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · dog-exercise-calculator hops',
