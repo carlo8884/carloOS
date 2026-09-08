@@ -7567,6 +7567,9 @@ const CALCULATORS = [
     id: 'vets · er-vs-clinic hops',
     file: 'apps/vets-co/src/app/tools/er-vs-clinic/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the setting chooser' },
+      { re: /nextHref="\/guides\/when-to-go-to-the-vet"/, label: 'next step is the watch vs ER guide, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/soft\+pet\+carrier\?s=tools-er-vs-clinic"/, label: 'journey hop reuses the existing carrier search' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-er-vs-clinic/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-er-vs-clinic/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/soft\+pet\+carrier\?s=tools-er-vs-clinic/, label: 'soft pet carrier search hop' },
@@ -7578,8 +7581,11 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /ER vs clinic cheat sheet/, label: 'empty husk heading removed' },
+      { re: /href=["']\/inquire["']/, label: 'do not send owners to the quiet buyer inquire screen' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete ER vs clinic cheat sheet; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the setting, next step is when-to-go-to-the-vet + the existing carrier hop. Shop dump stays below. /inquire stays the quiet buyer path. No invented kitchen hops.',
   },
   {
     id: 'ferret · is-this-a-ferret-emergency',
