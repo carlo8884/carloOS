@@ -7120,6 +7120,9 @@ const CALCULATORS = [
     id: 'fish · health-disease-guide hops',
     file: 'apps/fish-com/src/app/health/fish-disease-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the hospital-tank answer' },
+      { re: /nextHref="\/setup\/quarantine-tank-guide"/, label: 'next step is quarantine setup, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-disease-guide"/, label: 'journey hop reuses the existing hospital-tank search' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-disease-guide/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-symptom)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-disease-guide/, label: 'quarantine / hospital tank search hop (same query as disease-symptom checker)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-disease-guide/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph)' },
@@ -7131,8 +7134,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the hospital-tank plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete hospital-tank-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the hospital-tank answer, next step is the quarantine guide + the existing hospital-tank hop. Empty Keep-the-hospital-tank husk removed. Shop dump stays below. No invented kitchen hops. No medication hops.',
   },
   {
     id: 'fish · health-dropsy hops',
