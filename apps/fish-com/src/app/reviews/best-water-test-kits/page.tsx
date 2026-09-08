@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -48,6 +48,14 @@ export default function BestWaterTestKitsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater keepers the <strong>API Freshwater Master Kit</strong> is our overall pick — liquid reagents (more accurate than strips), around 800 tests, covering pH, ammonia, nitrite, and nitrate. Reef keepers should add <strong>Salifert</strong> individual tests for reef-grade alkalinity, calcium, and magnesium accuracy. For reagent-free convenience, <strong>Apogee or Bluelab</strong> digital pH/TDS meters.</p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/water-parameters"
+              nextLabel="Read the weekly test-order table next"
+              nextBlurb="The callout is the kit pick — API Master for freshwater pH, ammonia, nitrite, and nitrate. The water-parameters table is the weekly order and the target ranges. The hop below is the same API Master Test Kit search already on this page."
+              resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
+              resourceLabel="Browse API Freshwater Master Test Kit on Amazon →"
+            />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="api" badge="Best Overall" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" score={9.3} winner
